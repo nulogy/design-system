@@ -1,14 +1,17 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import t, { colours } from '@nulogy/tokens';
+
+console.log(t);
 
 const Button = styled.button`
-  background-color: white;
-  border: 2px solid Coral;
-  color: Coral;
+  background-color: ${colours.secondary};
+  border: 2px solid ${colours.primary};
+  color: ${colours.primary};
   padding: 1rem 2rem;
-  border-radius: .4rem;
+  border-radius: ${t.borderRadius};
   &:hover {
-    background-color: Coral;
+    background-color: ${colours.primary};
     color: white;
   }
 `;

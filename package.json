@@ -2,7 +2,8 @@
   "name": "@nulogy/nucleus",
   "workspaces": [
     "style-guide",
-    "components"
+    "components",
+    "tokens"
   ],
   "version": "0.1.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",

@@ -1,0 +1,10 @@
+{
+  "name": "@nulogy/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for the Nulogy's Nucleus design system - http://nulody.design",
+  "main": "index.js",
+  "repository": "https://github.com/nulogy/nucleus.git",
+  "author": "\"Nulogy <info@nulogy.com> (https://github.com/nulogy)\"",
+  "license": "MIT",
+  "private": false
+}
