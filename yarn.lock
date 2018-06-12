@@ -138,10 +138,6 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@nulogy/components@^0.0.*":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-0.0.6.tgz#326a2ae830994f8f4d7957c1e23b3d848880ecd9"
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
