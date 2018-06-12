@@ -1,0 +1,119 @@
+{
+  "name": "components",
+  "version": "0.0.6",
+  "description": "Component library for Nucleus: the Nulogy Design System - http://nulogy.design",
+  "private": false,
+  "license": "MIT",
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "contributors": [
+    "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
+  ],
+  "homepage": "http://nulogy.design",
+  "repository": "https://github.com/nulogy/components",
+  "bugs": {
+    "url": "https://github.com/nulogy/components/issues"
+  },
+  "keywords": [
+    "nulogy",
+    "nucleus",
+    "NDS",
+    "react",
+    "components",
+    "component library",
+    "design system"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "webpack --mode development",
+    "build": "webpack --mode production --config webpack.config.js",
+    "test": "jest",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addon-links": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
+    "@storybook/react": "^3.4.5",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "autoprefixer": "8.5.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "8.2.3",
+    "babel-jest": "22.4.4",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-runtime": "6.26.0",
+    "case-sensitive-paths-webpack-plugin": "2.1.2",
+    "css-loader": "0.28.11",
+    "eslint": "4.19.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-flowtype": "2.46.3",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.8.2",
+    "jest": "22.4.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6",
+    "url-loader": "1.0.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

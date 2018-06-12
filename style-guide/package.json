@@ -1,0 +1,41 @@
+{
+  "name": "@nulogy/style-guide",
+  "version": "0.0.1",
+  "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
+  "private": false,
+  "license": "MIT",
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "contributors": [
+    "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
+  ],
+  "homepage": "http://nulogy.design",
+  "repository": "https://github.com/nulogy/design-system",
+  "bugs": {
+    "url": "https://github.com/nulogy/design-system/issues"
+  },
+  "keywords": [
+    "nulogy",
+    "nucleus",
+    "NDS",
+    "design system"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "main": "dist/index.html",
+
+  "dependencies": {
+    "@nulogy/components": "^0.0.*",
+    "catalog": "^3.5.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
+  },
+  "scripts": {
+    "start": "catalog start",
+    "build": "catalog build --out dist/"
+  },
+  "devDependencies": {
+    "webpack-merge": "^4.1.2"
+  }
+}
