@@ -1,9 +1,9 @@
 export const colours = {
-  primary: 'coral',
-  secondary: 'white'
+  primary: '#1c6aa6',
+  secondary: 'white',
 };
 
 export default {
   colours,
-  borderRadius: '0.4rem'
+  borderRadius: '0.4rem',
 };
