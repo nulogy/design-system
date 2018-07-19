@@ -5,7 +5,7 @@ export default [
   {
     path: '/',
     title: 'Welcome',
-    content: pageLoader(() => import('../../README.md'))
+    content: pageLoader(() => import('../README.md'))
   },
   {
     title: 'Foundation',

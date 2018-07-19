@@ -9,19 +9,23 @@ const config = {
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
   theme: {
-    fontFamily: "'Rubik', serif",
-    fontHeading: "'Rubik', serif",
-    background: '#F3F1F2',
-    textColor: '#58595b',
+    fontFamily: "'Rubik', sans-serif",
+    fontHeading: "'Rubik', sans-serif",
+
+    background: 'white',
+    linkHoverColor: 'black',
+    lightColor: '#F0B41C',
+
+    sidebarColor: '#F8F8F8',
+    sidebarColorText: '#1C68A5',
+    sidebarColorTextActive: '#003B5C',
+
     codeColor: '#1C68A5',
     linkColor: '#1C68A5',
-    linkHoverColor: '#0E77D2',
-    lightColor: '#F0B41C',
-    pageHeadingBackground: '#0E77D2',
-    pageHeadingTextColor: '#fff',
-    sidebarColor: 'white',
-    sidebarColorText: '#1C68A5',
-    sidebarColorTextActive: '#F0B41C'
+    pageHeadingBackground: '#1C68A5',
+    pageHeadingTextColor: '#F8F8F8',
+
+    navBarBackground: 'white'
   }
 };
 

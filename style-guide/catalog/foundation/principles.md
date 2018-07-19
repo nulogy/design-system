@@ -4,18 +4,11 @@
 
 ###### PRINCIPLES
 
-## Guiding
-* Allow effortless interactions
-* Introduce friction when needed (help error prevention, confirmations)
+## Provide direction over choice
+The system should strive to limit choice focusing on the most valuable and important workflows.
 
-## Predictable
-* Anticipate expectation
-* Get what you’re looking for
+## Predictable Interactions create trust
+We are the backbone of trust between suppliers and their brands. Predictable and reliable interactions create trust between our users and Nulogy.
 
-## Decisive
-* Empower user decisions with data
-* Just enough information; always helpful
-
-## Reassuring
-* Connect user and system
-* Dependable stability
+## Just enough information; always helpful
+Enterprise systems are burdened with overloaded pages. We seek to find the “contextual balance” where information is helpful providing decision support, recommendations and insights.

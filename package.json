@@ -8,8 +8,6 @@
   "version": "0.1.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "main": "index.js",
-  "repository": "https://github.com/nulogy/nucleus",
-  "author": "\"Nulogy <info@nulogy.com> (https://github.com/nulogy)\"",
   "license": "MIT",
   "private": true,
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
