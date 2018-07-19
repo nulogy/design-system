@@ -24,5 +24,8 @@
     "nucleus",
     "NDS",
     "design system"
-  ]
+  ],
+  "scripts": {
+    "build-docs": "cd docs && yarn run build"
+  }
 }
