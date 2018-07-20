@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "docs": "yarn workspace @nulogy/nulogy-design",
-    "components": "yarn workspace @nulogy/components"
+    "components": "yarn workspace @nulogy/components",
+    "build-docs": "yarn components build && yarn docs build"
   }
 }

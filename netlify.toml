@@ -1,4 +1,3 @@
 [build]
-  command = "yarn run docs build"
+  command = "yarn run build-docs"
   publish = "docs/dist"
-
