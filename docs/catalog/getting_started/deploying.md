@@ -10,7 +10,7 @@ This means that you can trigger a new deploy automatically simply by merging a p
 
 ## Configuration
 
-There is a [`netlify.toml`](https://www.netlify.com/docs/netlify-toml-reference/) in the root of the repo that tells Netlify how to build the project. At this time the only package that is deployed to Netlify is the [nulogy.design](http://nulogy.design) website in the `docs/` folder / `@nulogy/nulogy-design` package. Some additional configureation is done through the [Netlify web UI](https://app.netlify.com/sites/nulogy-design-system/).
+There is a [`netlify.toml`](https://www.netlify.com/docs/netlify-toml-reference/) in the root of the repo that tells Netlify how to build the project. At this time the only package that is deployed to Netlify is the [nulogy.design](http://nulogy.design) website in the `docs/` folder / `@nulogy/nulogy-design` package. Some additional configuration is done through the [Netlify web UI](https://app.netlify.com/sites/nulogy-design-system/).
 
 ## Setting up a fork to publish to Netlify
 
