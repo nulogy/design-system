@@ -26,6 +26,7 @@
     "design system"
   ],
   "scripts": {
-    "docs": "yarn workspace @nulogy/nulogy-design"
+    "docs": "yarn workspace @nulogy/nulogy-design",
+    "components": "yarn workspace @nulogy/components"
   }
 }
