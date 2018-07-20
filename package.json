@@ -26,6 +26,6 @@
     "design system"
   ],
   "scripts": {
-    "build-docs": "cd docs && yarn run build"
+    "docs": "yarn workspace @nulogy/nulogy-design"
   }
 }
