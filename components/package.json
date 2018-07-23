@@ -9,18 +9,17 @@
     "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
   ],
   "homepage": "http://nulogy.design",
-  "repository": "https://github.com/nulogy/components",
+  "repository": "https://github.com/nulogy/design-system",
   "bugs": {
-    "url": "https://github.com/nulogy/components/issues"
+    "url": "https://github.com/nulogy/design-system/issues"
   },
   "keywords": [
     "nulogy",
-    "nucleus",
+    "design system",
     "NDS",
     "react",
     "components",
-    "component library",
-    "design system"
+    "component library"
   ],
   "engines": {
     "node": "*"
@@ -76,9 +75,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
