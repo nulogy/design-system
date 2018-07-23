@@ -3,5 +3,4 @@
   publish = "docs/dist"
 
 [context.production.environment]
-  YARN_VERSION = "1.7"
-  
+  YARN_VERSION = "1.7.0"
