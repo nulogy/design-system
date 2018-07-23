@@ -25,6 +25,10 @@
     "NDS",
     "design system"
   ],
+  "engines": {
+    "node": "^9.11",
+    "yarn": "^1.7.0"
+  },
   "scripts": {
     "docs": "yarn workspace @nulogy/nulogy-design",
     "components": "yarn workspace @nulogy/components",
