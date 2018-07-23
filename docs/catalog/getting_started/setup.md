@@ -125,7 +125,29 @@ $ catalog start
  [I]  Catalog is running at http://localhost:4000/
  ```
 
+### Aliases
 
+There are also aliases in the root `package.json` that make it easier to work with the sub-packages. 
+
+From the repo root you can run:
+
+```code
+lang: sh
+---
+$ yarn docs start
+```
+
+And you'll see out put like the following:
+
+```code
+lang: sh
+---
+yarn run v1.7.0
+$ yarn workspace @nulogy/nulogy-design start
+$ catalog start
+
+  Starting Catalog …
+```
 
 
 
