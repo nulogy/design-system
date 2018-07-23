@@ -1,3 +1,7 @@
 [build]
   command = "yarn run build-docs"
   publish = "docs/dist"
+
+[context.production.environment]
+  YARN_VERSION = "1.7"
+  
