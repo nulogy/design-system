@@ -20,7 +20,7 @@ On GitHub, create a fork of the [https://github.com/nulogy/design-system](https:
 
 ### `netlifyctl` command line tool
 
-The `netlifyctl` tool allows you to interact with the netlify service from the command line.
+The `netlifyctl` tool allows you to interact with the Netlify service from the command line.
 
 Install the `netlifyctl` via [instructions on github](https://github.com/netlify/netlifyctl).
 
