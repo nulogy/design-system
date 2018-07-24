@@ -18,6 +18,73 @@ $ cd design-system
 
 # Installation
 
+You will need to install NVM, Node, Direnv, and Yarn.
+
+## NVM
+
+[NVM is the Node Version Manager](https://github.com/creationix/nvm). It allows you to install and switch between multiple versions of Node.
+
+### Make sure your shell profile is setup
+
+It seems that some Macs don't have a `~/.profile` set by default. You will need a shell profile set. 
+
+Before installing NVM you will need to check if you have a shell profile: look for one of the following files: `~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc`.
+
+If you don't have any of these, add one:
+
+```code
+lang:sh
+---
+$ touch ~/.profile
+```
+### Install NVM
+
+[Follow the instructions on the NVM repo](https://github.com/creationix/nvm#installation).
+
+## Node
+
+Now that you have NVM installed, ensure that you have the correct version of node. 
+
+Note that at the time of writing the correct version of node for NDS is `v8.11.3`, however you can check the version in the project's [`.nvmrc`](https://github.com/nulogy/design-system/blob/master/.nvmrc)
+
+```code
+lang:sh
+---
+$ nvm install node 8.11.3
+```
+
+## Direnv (optional)
+
+[Direnv](https://github.com/direnv/direnv) is a utility that will automatically set your environment to use the correct version of node.
+
+Direnv can be installed from homebrew:
+
+```code
+lang:sh
+---
+$ brew install direnv
+```
+
+You will need to hook it into your shell. 
+
+For bash add the following to your `/.bash_profile`:
+
+```code
+lang:sh
+---
+eval "$(direnv hook bash)"
+```
+
+For zsh add the following to your `/.zshrc`:
+
+```code
+lang:sh
+---
+eval "$(direnv hook zsh)"
+```
+
+[Check out the docs](https://github.com/direnv/direnv#setup) for installation on other shells.
+
 ## Yarn
 
 Nulogy Design System uses the [Yarn package](https://yarnpkg.com/) manager to manage [npm](https://www.npmjs.com/) dependencies. 
