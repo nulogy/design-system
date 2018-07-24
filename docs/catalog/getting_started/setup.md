@@ -47,7 +47,7 @@ bash: command not found: yarn
 
 ## Install dependencies and link local packages
 
-Yarn workspaces allows you to install dependencies for all packages in the monorepo in one command.
+The project uses Yarn Workspaces to allow you to install dependencies for all packages in the monorepo in one command.
 
 From the repo root, type:
 
