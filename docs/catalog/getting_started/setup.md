@@ -140,7 +140,7 @@ This will start the dev server for the catalog website, while also building the 
 
 # Working with packages
 
-You have a few options for how to work in the package. You can work directly in that package folder by `cd`ing to the `/docs` directory. You can also use the `yarn workspace <package name>` command to target commands to a particular package.
+You have a few options for how to work in the project's sub-package. You can work directly in that package folder by `cd`ing to the package's directory. You can also use the `yarn workspace <package name>` command to target commands to a particular package. Finally there are aliases in the root to all the packages.
 
 ## Working in the `/docs` directory
 
@@ -165,12 +165,12 @@ Alternately, you can use the `yarn workspace` command to direct script commands 
 To run commands on the `@nulogy/nulogy-design` package from anywhere in the project type:
 
 ```code
-lang: sj
+lang: sh
 ---
 $ yarn workspace @nulogy/components storybook
 ```
 
-### Aliases
+## Aliases
 
 There are also aliases in the root `package.json` that make it easier to work with the sub-packages. 
 
