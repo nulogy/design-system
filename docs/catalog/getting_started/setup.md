@@ -128,11 +128,24 @@ That's it! Yarn should pull down and install all project dependencies. Yarn will
 
 # Run the development server
 
-The [nulogy.design](http://nulgoy.design) website is located in the `@nulogy/nulogy-design` package in the [`\docs`](https://github.com/nulogy/design-system/tree/master/docs) directory. 
+To start a dev server that live-reloads your changes in the browser, run the following command from the repo root:
+
+```code
+lang: sh
+---
+$ yarn start
+```
+
+This will start the dev server for the catalog website, while also building the components package in watch mode.
+
+# Working with packages
 
 You have a few options for how to work in the package. You can work directly in that package folder by `cd`ing to the `/docs` directory. You can also use the `yarn workspace <package name>` command to target commands to a particular package.
 
-## Working in the /doc directory
+## Working in the `/docs` directory
+
+
+The [nulogy.design](http://nulgoy.design) website is located in the `@nulogy/nulogy-design` package in the [`/docs`](https://github.com/nulogy/design-system/tree/master/docs) directory. 
 
 Working in the `/docs` directory is the simplest way of working on the docs package. 
 

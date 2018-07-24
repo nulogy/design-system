@@ -30,8 +30,12 @@
     "yarn": "^1.7.0"
   },
   "scripts": {
+    "start": "concurrently 'yarn components watch' 'yarn docs start'",
     "docs": "yarn workspace @nulogy/nulogy-design",
     "components": "yarn workspace @nulogy/components",
     "build-docs": "yarn components build && yarn docs build"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1"
   }
 }
