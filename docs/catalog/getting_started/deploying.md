@@ -50,4 +50,4 @@ If all goes well you will be given a Netlify url. Now whenever you push or merge
 
 ## Netlify account
 
-At the moment, the Netlify account is run by [Ned Schwartz](https://github.com/nulogy). Get in touch if you need help!
+At the moment, the Netlify account is run by [Ned Schwartz](https://github.com/theinterned). Get in touch if you need help!
