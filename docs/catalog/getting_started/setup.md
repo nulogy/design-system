@@ -149,30 +149,13 @@ The [nulogy.design](http://nulgoy.design) website is located in the `@nulogy/nul
 
 Working in the `/docs` directory is the simplest way of working on the docs package. 
 
-To run the dev server type the following form the repo root:
+To run the dev server type the following from the repo root:
 
 ```code
 lang: sh
 ---
 $ cd docs/
 $ yarn start
-```
-
-You should see output like the following:
-
-```code
-lang: sh
----
-yarn run v1.7.0
-$ catalog start
-
-  Starting Catalog …
-
-
-
- [DONE]  Compiled successfully in 5690ms    11:47:41
-
- [I]  Catalog is running at http://localhost:4000/
 ```
 
 ## Working with the `yarn workspace` command
@@ -184,26 +167,8 @@ To run commands on the `@nulogy/nulogy-design` package from anywhere in the proj
 ```code
 lang: sj
 ---
-$ yarn workspace @nulogy/nulogy-design start
+$ yarn workspace @nulogy/components storybook
 ```
-
-You should see output like the following:
-
-```code
-lang:sh
----
-yarn workspace v1.7.0
-yarn run v1.7.0
-$ catalog start
-
-  Starting Catalog …
-
-
-
- [DONE]  Compiled successfully in 6331ms    12:06:41
-
- [I]  Catalog is running at http://localhost:4000/
- ```
 
 ### Aliases
 
@@ -214,19 +179,7 @@ From the repo root you can run:
 ```code
 lang: sh
 ---
-$ yarn docs start
-```
-
-And you'll see out put like the following:
-
-```code
-lang: sh
----
-yarn run v1.7.0
-$ yarn workspace @nulogy/nulogy-design start
-$ catalog start
-
-  Starting Catalog …
+$ yarn docs build
 ```
 
 
