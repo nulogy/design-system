@@ -32,4 +32,4 @@ storiesOf('My topic', module)
 ));
 ```
 
-[src/Ned/minimumViable.story.js](src/Ned/minimumViable.story.js)
+[src/examples/minimumViable.story.js](src/examples/minimumViable.story.js)
