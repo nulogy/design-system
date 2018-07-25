@@ -12,7 +12,7 @@ $ yarn hack
 
 ## Storybook
 
-The sandboxes are built with storybook, for more on how to work with Storybook, [check out the docs.](https://storybook.js.org)
+The sandbox are built with storybook, for more on how to work with Storybook, [check out the docs.](https://storybook.js.org)
 
 ## To add a new story
 
