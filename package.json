@@ -1,7 +1,7 @@
 {
   "name": "@nulogy/nucleus",
   "workspaces": [
-    "style-guide",
+    "docs",
     "components",
     "tokens"
   ],
@@ -24,5 +24,19 @@
     "nucleus",
     "NDS",
     "design system"
-  ]
+  ],
+  "engines": {
+    "node": "^8.11.3",
+    "yarn": "^1.7.0"
+  },
+  "scripts": {
+    "start": "concurrently 'yarn components watch' 'yarn docs start'",
+    "build-docs": "yarn components build && yarn docs build",
+    "docs": "yarn workspace @nulogy/nulogy-design",
+    "components": "yarn workspace @nulogy/components",
+    "tokens": "yarn workspace @nulogy/tokens"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1"
+  }
 }

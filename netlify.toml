@@ -1,9 +1,12 @@
 [build]
-  command = "yarn build"
-  publish = "dist/"
+  command = "yarn run build-docs"
+  publish = "docs/dist"
 
 # The following redirect is intended for use with most SPA's that handles routing internally.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  
+[context.production.environment]
+  YARN_VERSION = "1.7.0"

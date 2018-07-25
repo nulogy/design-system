@@ -94,9 +94,9 @@ export default [
     title: 'Getting Started',
     pages: [
       {
-        path: '/getting_started/designer',
-        title: 'Designer',
-        content: pageLoader(() => import('./getting_started/designer.md'))
+        path: '/getting_started/setup',
+        title: 'Set up',
+        content: pageLoader(() => import('./getting_started/setup.md'))
       },
       {
         path: '/getting_started/writing',

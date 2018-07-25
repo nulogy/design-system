@@ -1,8 +1,8 @@
 {
-  "name": "@nulogy/style-guide",
+  "name": "@nulogy/nulogy-design",
   "version": "0.1.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "contributors": [
@@ -23,7 +23,6 @@
     "node": "*"
   },
   "main": "dist/index.html",
-
   "dependencies": {
     "@nulogy/components": "^0.1",
     "catalog": "^3.5.3",
