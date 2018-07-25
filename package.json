@@ -32,6 +32,7 @@
   },
   "scripts": {
     "start": "concurrently 'yarn components watch' 'yarn docs start'",
+    "hack": "concurrently 'yarn components watch' 'yarn sandboxes start'",
     "build-docs": "yarn components build && yarn docs build",
     "docs": "yarn workspace @nulogy/nulogy-design",
     "components": "yarn workspace @nulogy/components",
