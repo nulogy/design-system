@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button } from '@storybook/react/demo';
 
-import styles from "./index.css";
+import styles from "./Ned.css";
 
 storiesOf('Button', module)
   .add('Type fun times', () => (
