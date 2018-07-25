@@ -1,5 +1,5 @@
 {
-  "name": "sandboxes",
+  "name": "@nulogy/sandboxes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
