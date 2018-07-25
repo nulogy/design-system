@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { Button } from "@nulogy/components";
 
 import styles from "./Ned.css";
 
@@ -10,6 +11,6 @@ storiesOf('Ned', module)
       <p>As you add stuff ... it just works.</p>
     </div>
   ))
-  .add('Another fun time', () => (
-    <p>Another fun time</p>
+  .add('NDS Button', () => (
+    <Button>Another fun time</Button>
   ));
