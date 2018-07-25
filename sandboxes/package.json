@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009",
+    "hack": "concurrently 'yarn workspace @nulogy/components watch' 'yarn start'",
     "build": "build-storybook",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
