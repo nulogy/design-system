@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Button } from "@nulogy/components";
 
-import styles from "./examples.scss";
+import "./examples.scss";
 
 storiesOf('Examples', module)
   .add('Importing stuff', () => (
