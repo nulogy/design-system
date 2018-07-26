@@ -1,10 +1,10 @@
 @import 'rootVars';
-@import 'nedVars';
+@import 'examplesVars';
 
-.parent {
+.outer {
   color: $rootColour;
 
-  .nested {
+  .inner {
     color: $nedColour;
   }
 }

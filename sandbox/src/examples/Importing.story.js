@@ -6,9 +6,9 @@ import styles from "./examples.scss";
 
 storiesOf('Examples', module)
   .add('Importing stuff', () => (
-    <div className='parent'>
-      <p>Some styled text</p>
-      <p className='nested'>Some styled text</p>
+    <div className='outer'>
+      <p>Styled by the <code>.outer</code> class.</p>
+      <p className='inner'>Styled by the <code>.inner</code> class.</p>
       <Button>A @nulogy/components Button</Button>
     </div>
   ));
