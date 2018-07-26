@@ -17,6 +17,11 @@ const fantasyMixin = (colour) => `
   font-style: italic;
 `;
 
+const objectMixin = () => ({
+  fontFamily: 'sans-serif',
+  fontSize: '1.2em'
+})
+
 injectGlobal `
   .styled {
     &-component {
@@ -41,6 +46,10 @@ injectGlobal `
 
     &-fantasy-mixin-brown {
       ${ fantasyMixin('brown') }
+    }
+
+    &-object-mixin {
+      ${ objectMixin() }
     }
  }
 `
