@@ -4,7 +4,7 @@ This is a place for the Design ops team to build experiments and tinker with ide
 
 # Get hacking
 
-To start hacking away in the sandbox, type the following from the repo root, or form this directory:
+To start hacking away in the sandbox, type the following from the repo root, or from this directory:
 
 ```shell
 $ yarn hack
@@ -12,7 +12,7 @@ $ yarn hack
 
 ## Storybook
 
-The sandboxes are built with storybook, for more on how to work with Storybook, [check out the docs.](https://storybook.js.org)
+The sandbox are built with Storybook, for more on how to work with Storybook, [check out the docs.](https://storybook.js.org)
 
 ## To add a new story
 
@@ -28,7 +28,7 @@ import { storiesOf } from '@storybook/react';
 
 storiesOf('My topic', module)
 .add('My example', () => (
-  <div></div>
+  <div>👋</div>
 ));
 ```
 
