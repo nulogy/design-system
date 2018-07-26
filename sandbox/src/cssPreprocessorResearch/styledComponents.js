@@ -1,6 +1,6 @@
 import {injectGlobal} from 'styled-components'
 
-export const colours = [
+const colours = [
   'red',
   'purple',
   'blue',
