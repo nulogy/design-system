@@ -5,9 +5,9 @@ import styles from "./Colours.css";
 
 storiesOf('colours', module)
   .add('Type fun times', () => (
-    <div className="foo">
+    <div className="parent">
       <p>You're rolling</p>
-      <p>As you add stuff ... it just works.</p>
+      <p className="nested"> As you add stuff ... it just works.</p>
     </div>
   ))
   .add('Another fun time', () => (

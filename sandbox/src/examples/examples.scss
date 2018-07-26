@@ -1,0 +1,10 @@
+@import 'rootVars';
+@import 'examplesVars';
+
+.outer {
+  color: $rootColour;
+
+  .inner {
+    color: $nedColour;
+  }
+}
