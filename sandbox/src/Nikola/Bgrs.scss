@@ -1,0 +1,472 @@
+$grey-light: #EDEDF2;
+$grey-lighter: #f5f5f7;
+$grey-lightest: #f7f8f9;
+
+$grey-dark: #1B447D;
+$grey-darker: #1B2B4D;
+
+$white: #fcfcfc;
+
+$shadow-1: 0px 3px 10px 0px rgba(218,218,230,.75);
+$shadow-2: 0px 3px 20px 0px rgba(218,218,230,.95);
+
+
+// From variables file
+// UI
+$ui-color: #dbdbdb;
+$ui-unit: 8px;
+$ui-unit-x2: 16px;
+$ui-unit-x4: 32px;
+$ui-unit-x8: 64px;
+$ui-unit-half: 4px;
+$ui-border-radius: 3px;
+
+// Blue
+$blue-lightest: #e6eff2;
+$blue-lighter: #a9d3e6;
+$blue-light: #4f9cc8;
+$blue: #1c61a5;
+$blue-dark: #04407c;
+$blue-darker: #01224d;
+$blue-darkest: #021533;
+
+// Orange
+$orange: #F0B41C;
+$orange-darker: #CC9423;
+
+// Grey
+$grey-lightest: #f4f4f4;
+$grey-lighter: #f4f7f6;
+$grey-light: #edf2f2;
+$grey: #c5c8cc;
+$grey-dark: #76777a;
+$grey-darker: #515154;
+$grey-darkest: #2a2a2b;
+
+// Neutrals - Luis
+$nu-lightest: #f7f8f9;
+$nu-lighter: #f5f5f7;
+$nu-light: #EDEDF2;
+$nu: #1c61a5;
+$nu-dark: #333C4D;
+$nu-darker: #172033;
+$nu-darkest: #030B1A;
+
+// Neutrals - Nikola
+$nu2-lightest: #F7F8F9;
+$nu2-lighter: #EDEDF2;
+$nu2-light: #CFD6E6;
+$nu2: $blue;
+$nu2-dark: #1B447D;
+$nu2-darker: #1B2B4D;
+$nu2-darkest: #14161A; //black
+
+// Nu3
+$nu3-white: #FFFFFF;
+$nu3-lightest: #FAFAFA;
+$nu3-lighter: #F5F5F5;
+$nu3-lighter: #efefef;
+$nu3-light: #dbdbdb;
+$nu3-neutral: #A3A6A8;
+$nu3-dark: #6C7780;
+$nu3-darker: #525D66;
+$nu3-darkest: #263540;
+$nu3-black: #03101A;
+
+$nu3-blue-lightest: #EDEFF2;
+$nu3-blue-lighter: #CFD6E6;
+$nu3-blue-light: #AFB4CC;
+$nu3-blue: #1C6AA6;
+$nu3-blue-darker: #1B447D;
+$nu3-blue-darkest: #1B2B4D;
+
+// Nu4
+$nu4-white: #FFFFFF;
+$nu4-lightest: #FAFAFA;
+$nu4-lighter: #F0F0F0;
+$nu4-light: #D9DADB;
+$nu4-neutral: #AEB6BD;
+$nu4-dark: #6C7780;
+$nu4-darker: #525D66;
+$nu4-darkest: #263540;
+$nu4-black: #03101A;
+
+$nu4-blue-lightest: #EDF1F2;
+$nu4-blue-lighter: #C3D8E6;
+$nu4-blue-light: #8FB3CC;
+$nu4-blue: #1C6AA6;
+$nu4-blue-darker: #1B447D;
+$nu4-blue-darkest: #1B2B4D;
+
+$green-lightest: #e6f2f0;
+$green-lighter: #afdbd2;
+$green: #2b8466;
+$green-darker: #105e3e;
+$green-darkest: #053a1f;
+
+$red-lightest: #EDE3E3;
+$red-lighter: #F2BFC1;
+$red: #D3395A;
+$red-darker: #A81448;
+$red-darkest: #6B0538;
+
+// Nu5
+$nu5-white: #FFFFFF;
+$nu5-lightest: #F7F7F7;
+$nu5-lighter: #EBEBEB;
+$nu5-light: #D2D3D4;
+$nu5-neutral: #A9B1B8;
+$nu5-dark: #6C7780;
+$nu5-darker: #525D66;
+$nu5-darkest: #263540;
+$nu5-black: #03101A;
+
+$nu5-blue-lightest: #F2F6F7;
+$nu5-blue-lighter: #D3E2EB;
+$nu5-blue-light: #B6C7D4;
+$nu5-blue: #1C6AA6;
+$nu5-blue-darker: #1B447D;
+$nu5-blue-darkest: #1B2B4D;
+
+$nu5-green-lightest: #EDF7F6;
+$nu5-green-lighter: #BCEBE1;
+$nu5-green: #2b8466;
+$nu5-green-darker: #105e3e;
+$nu5-green-darkest: #053a1f;
+
+$nu5-red-lightest: #F7EDED;
+$nu5-red-lighter: #EBBCBE;
+$nu5-red: #D3395A;
+$nu5-red-darker: #A81448;
+$nu5-red-darkest: #6B0538;
+
+// Nu6
+$nu6-white: #FFFFFF;
+$nu6-lightest: #F7F7F7;
+$nu6-lighter: #E8EAEB;
+$nu6-light: #C9CFD4;
+$nu6-neutral: #A9B1B8;
+$nu6-dark: #6C7780;
+$nu6-darker: #525D66;
+$nu6-darkest: #263540;
+$nu6-black: #03101A;
+
+$nu6-blue-lightest: #F5F8FA;
+$nu6-blue-lighter: #DDE8F0;
+$nu6-blue-light: #C3D4E0;
+$nu6-blue: #1C6AA6;
+$nu6-blue-darker: #1B447D;
+$nu6-blue-darkest: #1B2B4D;
+
+$nu6-green-lightest: #F2F7F7;
+$nu6-green-lighter: #DAEBE7;
+$nu6-green: #2b8466;
+$nu6-green-darker: #105e3e;
+$nu6-green-darkest: #053a1f;
+
+$nu6-red-lightest: #FCF7F7;
+$nu6-red-lighter: #F7E4E5;
+$nu6-red: #D3395A;
+$nu6-red-darker: #A81448;
+$nu6-red-darkest: #6B0538;
+
+
+// Nu7
+$nu7-white: #FFFFFF;
+$nu7-lightest: #F7F7F7;
+$nu7-lighter: #E8EAEB;
+$nu7-light: #C9CFD4;
+$nu7-neutral: #A9B1B8;
+$nu7-dark: #6C7780;
+$nu7-darker: #525D66;
+$nu7-darkest: #263540;
+$nu7-black: #03101A;
+
+$nu7-blue-lightest: #F0F3F5;
+$nu7-blue-lighter: #DDE8ED;
+$nu7-blue-light: #BDD0DB;
+$nu7-blue: #1C6AA6;
+$nu7-blue-darker: #1B447D;
+$nu7-blue-darkest: #1B2B4D;
+
+$nu7-green-lightest: #EBF5F3;
+$nu7-green-lighter: #C1E8E0;
+$nu7-green: #2b8466;
+$nu7-green-darker: #105e3e;
+$nu7-green-darkest: #053a1f;
+
+$nu7-red-lightest: #F7EDED;
+$nu7-red-lighter: #F0C7C9;
+$nu7-red: #D3395A;
+$nu7-red-darker: #A81448;
+$nu7-red-darkest: #6B0538;
+
+
+// Semantics
+
+//$green-lighter: #e6f2ee;
+//$green-light: #95dbc7;
+//$green: #52b29c;
+//$green-dark: #227a6a;
+//$green-darker: #07332d;
+
+//$red-lighter: #f2e6ea;
+//$red-light: #f998b4;
+//$red: #dd5275;
+//$red-dark: #9b2039;
+//$red-darker: #33070e;
+
+$white: #fff;
+
+// General - Pulled from main .scss
+body{
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+// Reset
+
+ol, li, dl{
+  margin: 0;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+div, section{
+  box-sizing: border-box;
+  margin:0;
+  padding-left: 0;
+}
+
+// Typography
+h1{
+  font-size:1.5em;
+  line-height: 1;
+}
+
+h2{
+  font-size:1.25em;
+  line-height: 1;
+}
+
+p{
+  font-size:.875em;
+  line-height:1.5;
+}
+
+// Utilities
+.unlist{
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.bgrs{
+  .nav-bar{
+    background: $nu7-lighter;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .content-wrapper{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px;
+    .sidebar{
+      background: $nu7-lightest;
+      width: 20%;
+    }
+    .content{
+      width: 80%;
+      background: $nu7-white;
+      box-shadow: $shadow-1;
+      margin-top: $ui-unit-half;
+      z-index:100;
+    }
+  }
+  .button{
+    &__float{
+      position: fixed;
+      z-index: 200;
+      right: $ui-unit-x2;
+      bottom: $ui-unit-x2;
+      padding: $ui-unit;
+      font-size: 32px;
+      line-height: 1;
+      width: 52px;
+      border-radius: $ui-border-radius;
+      background: $orange;
+      color: $white;
+      box-shadow: $shadow-2;
+      cursor: pointer;
+      &:hover{
+        background: $orange-darker;
+      }
+    }
+  }
+  .modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:300;
+    padding:0;
+    margin:0;
+    pointer-events: none;
+    .modal--box{
+      background: $white;
+      width: 640px;
+      //border:solid 1px $nu7-blue;
+      border:solid 1px $nu7-light;
+      border-radius: $ui-border-radius;
+      overflow: hidden;
+      box-shadow: $shadow-2;
+    }
+    .modal--title{
+      height: $ui-unit-x4;
+      padding:0;
+      margin:0;
+    }
+    .modal--content{
+      height: 360px;
+    }
+  }
+}
+
+.action-set{
+  display: flex;
+  &--button{
+    height: $ui-unit-x8;
+    width: 100%;
+    background: none;
+    border:none;
+    cursor: pointer;
+    .fly-in &{
+      width: 100%;
+      height: 50%;
+    }
+    &__positive{
+      background-color: $nu7-blue;
+      border-radius: 0 0 $ui-border-radius 0;
+      &:hover{
+        background-color: $nu7-blue-darker;
+      }
+    }
+    &__destructive{
+      background: $nu7-blue-lightest;
+      border-radius: 0 $ui-border-radius 0 0;
+      &:hover{
+        background: $nu7-blue-lighter;
+      }
+    }
+  }
+  .fly-in &{
+    flex-direction: column;
+    width:96px;
+    height:100%;
+  }
+}
+.fly-in{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border:solid 1px $nu7-light;
+  border-radius: $ui-border-radius;
+  height: 66px;
+  position: absolute;
+  right: $ui-unit-x2;
+  top: 72px;
+  z-index: 400;
+  padding:0;
+  box-shadow: $shadow-2;
+  .fly-in--type{
+    width: $ui-unit-x2;
+    background-color: $nu7-blue;
+    height:100%;
+    width: 36px;
+    border-radius: $ui-border-radius 0 0 $ui-border-radius;
+  }
+  .fly-in--content{
+    width: 360px;
+    height: 100%;
+    background-color: $white;
+  }
+}
+
+.drop-down{
+  width: 120px;
+  border: solid 1px $nu7-light;
+  border-radius: $ui-border-radius;
+  background: $white;
+  margin: -20px 40px 0 -20px;
+  @extend .unlist;
+  float: left;
+  position: relative;
+  &--item{
+    font-size: .875em;
+    padding:0;
+    margin:0;
+  }
+  &--link{
+    text-decoration: none;
+    display:block;
+    padding: $ui-unit;
+    &:hover{
+      cursor: pointer!important;
+    }
+  }
+  &__dark &{
+    &--link{
+      background: $nu7-darker;
+      color: $white;
+      &:hover{
+        background-color: $nu7-darkest;
+      }
+    }
+  }
+  &__dark {
+    border: solid 1px $nu7-darker;
+    .drop-down--item:first-child a{
+      border-bottom: solid 1px $nu7-dark;
+    }
+  }
+  &__blue &{
+    &--link{
+      background: $nu7-blue;
+      color: $white;
+      &:hover{
+        background-color: $nu7-blue-darker;
+      }
+    }
+  }
+  &__blue {
+    border: solid 1px $nu7-blue-darker;
+    .drop-down--item:first-child a{
+      border-bottom: solid 1px $nu7-blue-darker;
+    }
+  }
+  &__light{
+    .drop-down--link{
+      background: $nu7-lightest;
+      color: $nu7-darkest;
+      &:hover{
+        background: $nu7-lighter;
+      }
+    }
+
+    .drop-down--item:first-child a{
+      border-bottom: solid 1px $nu7-light;
+    }
+  }
+}
