@@ -13,7 +13,7 @@ storiesOf('CSS preprocessor', module)
         but I turn {aColour()} when I hover.
       </p>
       <p className='styled-nested'>
-        I'm <code>.styled-nested</code> I am normally {aColour()}.
+        I'm <code>.styled-nested</code>. I'm normally {aColour()}.
       </p>
 
       <div className='parent'>
