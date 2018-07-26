@@ -1,0 +1,10 @@
+@import 'rootVars';
+@import 'nedVars';
+
+.parent {
+  color: $rootColour;
+
+  .nested {
+    color: $nedColour;
+  }
+}
