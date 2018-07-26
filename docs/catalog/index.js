@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import nulogyLogoMark from './static/nulogy_mark.svg';
 import pages from './routes';
+import tokens from '../../tokens/index.js';
 
 const config = {
   title: 'Nulogy Design System',
