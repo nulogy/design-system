@@ -1,5 +1,5 @@
 # Writing content
 
-## Mardown
+## Markdown
 
 # Adding a page

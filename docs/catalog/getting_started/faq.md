@@ -1,2 +1,2 @@
-**Q Can we replaces the designer page with this FAQ**
+**Q. Do we need a FAQ**
 A. Let's find out!
