@@ -10,8 +10,8 @@ const config = {
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
   theme: {
-    fontFamily: tokens.type.fontFamily,
-    fontHeading: tokens.type.fontFamily,
+    fontFamily: tokens.font.family.regular,
+    fontHeading: tokens.font.family.regular,
 
     background: 'white',
     linkHoverColor: 'black',

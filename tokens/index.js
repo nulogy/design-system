@@ -3,12 +3,14 @@ export const colours = {
   secondary: 'white',
 };
 
-export const type = {
-  fontFamily: "'IBM Plex Sans', sans",
+export const font = {
+  family: {
+    regular: "'IBM Plex Sans', sans",
+  },
 };
 
 export default {
   colours,
-  type,
+  font,
   borderRadius: '0.4rem',
 };
