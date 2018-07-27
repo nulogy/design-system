@@ -35,7 +35,7 @@
 }
 
 .button{
-  &__float{
+  &--float{
     position: fixed;
     z-index: 200;
     right: $ui-unit-x2;
@@ -69,7 +69,7 @@
   padding:0;
   margin:0;
   pointer-events: none;
-  .modal--box{
+  .modal__box{
     background: $white;
     width: 640px;
     //border:solid 1px $grey-light;
@@ -78,19 +78,19 @@
     overflow: hidden;
     box-shadow: $shadow-2;
   }
-  .modal--title{
+  .modal__title{
     height: $ui-unit-x4;
     padding:0;
     margin:0;
   }
-  .modal--content{
+  .modal__content{
     height: 360px;
   }
 }
 
 .action-set{
   display: flex;
-  &--button{
+  &__button{
     height: $ui-unit-x8;
     width: 100%;
     background: none;
@@ -100,14 +100,14 @@
       width: 100%;
       height: 50%;
     }
-    &__positive{
+    &--positive{
       background-color: $blue-dark;
       border-radius: 0 0 $ui-border-radius 0;
       &:hover{
         background-color: $blue-darker;
       }
     }
-    &__destructive{
+    &--destructive{
       background: $blue-lightest;
       border-radius: 0 $ui-border-radius 0 0;
       &:hover{
@@ -135,14 +135,14 @@
   z-index: 400;
   padding:0;
   box-shadow: $shadow-2;
-  .fly-in--type{
+  .fly-in__type{
     width: $ui-unit-x2;
     background-color: $blue-dark;
     height:100%;
     width: 36px;
     border-radius: $ui-border-radius 0 0 $ui-border-radius;
   }
-  .fly-in--content{
+  .fly-in__content{
     width: 360px;
     height: 100%;
     background-color: $white;
@@ -158,12 +158,12 @@
   @extend .unlist;
   float: left;
   position: relative;
-  &--item{
+  &__item{
     font-size: .875em;
     padding:0;
     margin:0;
   }
-  &--link{
+  &__link{
     text-decoration: none;
     display:block;
     padding: $ui-unit;
@@ -171,8 +171,8 @@
       cursor: pointer!important;
     }
   }
-  &__dark &{
-    &--link{
+  &--dark &{
+    &__link{
       background: $grey-darker;
       color: $white;
       &:hover{
@@ -180,14 +180,14 @@
       }
     }
   }
-  &__dark {
+  &--dark {
     border: solid 1px $grey-darker;
-    .drop-down--item:first-child a{
+    .drop-down__item:first-child a{
       border-bottom: solid 1px $grey-dark;
     }
   }
-  &__blue &{
-    &--link{
+  &--blue &{
+    &__link{
       background: $blue-dark;
       color: $white;
       &:hover{
@@ -195,14 +195,14 @@
       }
     }
   }
-  &__blue {
+  &--blue {
     border: solid 1px $blue-darker;
-    .drop-down--item:first-child a{
+    .drop-down__item:first-child a{
       border-bottom: solid 1px $blue-darker;
     }
   }
-  &__light{
-    .drop-down--link{
+  &--light{
+    .drop-down__link{
       background: $grey-lightest;
       color: $grey-darkest;
       &:hover{
