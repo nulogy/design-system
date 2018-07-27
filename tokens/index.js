@@ -23,10 +23,20 @@ export const font = {
     bold: 500
   }
 };
+
+export const space = {
+  half: '4px',
+  x1: '8px',
+  x2: '16px',
+  x3: '24px',
+  x4: '32px',
+  x6: '48px',
+  x8: '64px'
 };
 
 export default {
   colours,
   font,
+  space,
   borderRadius: '0.4rem',
 };
