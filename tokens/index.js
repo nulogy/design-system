@@ -23,7 +23,6 @@ export const font = {
     bold: 500
   }
 };
-};
 
 export default {
   colours,
