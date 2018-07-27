@@ -4,7 +4,8 @@ const colours = [
   'red',
   'purple',
   'blue',
-  'green'
+  'green',
+  'white'
 ];
 
 export const makeColourSequencePicker = (idx = 0) => () => colours[idx++];
@@ -19,7 +20,8 @@ const fantasyMixin = (colour) => `
 
 const objectMixin = () => ({
   fontFamily: 'sans-serif',
-  fontSize: '1.2em'
+  backgroundColor: 'black',
+  color: colours[4],
 })
 
 injectGlobal `

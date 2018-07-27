@@ -1,5 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, getStorybook } from '@storybook/react';
+import {css, injectGlobal} from 'styled-components';
 // the following line loads the global styles as a side effect as well as importing `makeColourSequencePicker`
 import { makeColourSequencePicker } from './styledComponents';
 
@@ -12,6 +13,7 @@ storiesOf('CSS preprocessor', module)
         I'm' <code>.styled-component</code>. I'm {aColour()}, 
         but I turn {aColour()} when I hover.
       </p>
+
       <p className='styled-nested'>
         I'm <code>.styled-nested</code>. I'm normally {aColour()}.
       </p>
@@ -37,4 +39,29 @@ storiesOf('CSS preprocessor', module)
         defined as an object, rather than a template literal.
       </p>
     </div>
-  ));
+  ))
+  .add('Utility classes with styled components', () => {
+    const baseFontSize = 8;
+    const fontSizeScale = 2;
+    const maxFontSize = 100;
+
+    let scale = [];
+
+    let scaleMixins = [];
+
+    for (let fontSize = baseFontSize; fontSize < maxFontSize; fontSize = fontSize * fontSizeScale) {
+      scale.push(fontSize);
+      scaleMixins.push(css`font-size:  ${fontSize}px`);
+    }
+
+    return (
+      <React.Fragment>
+        <p className="fontSize1x"><code>.fontSize1x</code></p>
+        <p className="fontSize2x"><code>.fontSize2x</code></p>
+        <p className="fontSize3x"><code>.fontSize3x</code></p>
+        <p className="fontSize4x"><code>.fontSize4x</code></p>
+      </React.Fragment>
+    )
+  });
+
+  
