@@ -19,6 +19,10 @@ export const font = {
     get sectionTitle() {return this.larger},
     get subsectionTitle() {return this.large}
   },
+  weight: {
+    bold: 500
+  }
+};
 };
 
 export default {
