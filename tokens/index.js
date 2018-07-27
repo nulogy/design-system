@@ -6,6 +6,7 @@ export const colours = {
 export const font = {
   family: {
     regular: "'IBM Plex Sans', sans",
+    mono: "'IBM Plex Mono', monospace"
   },
 };
 
