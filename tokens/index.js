@@ -3,12 +3,29 @@ export const colours = {
   secondary: 'white',
 };
 
-export const type = {
-  fontFamily: "'IBM Plex Sans', sans",
+export const font = {
+  family: {
+    regular: "'IBM Plex Sans', sans",
+    mono: "'IBM Plex Mono', monospace"
+  },
+  size: {
+    smaller: 12,
+    small: 14,
+    medium: 16,
+    large: 20,
+    larger: 24,
+    largest: 28,
+    get pageTitle() {return this.largest},
+    get sectionTitle() {return this.larger},
+    get subsectionTitle() {return this.large}
+  },
+  weight: {
+    bold: 500
+  }
 };
 
 export default {
   colours,
-  type,
+  font,
   borderRadius: '0.4rem',
 };

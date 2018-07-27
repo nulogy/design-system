@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import nulogyLogoMark from './static/nulogy_mark.svg';
 import pages from './routes';
-import tokens from '../../tokens/index.js';
+import tokens from '@nulogy/tokens';
 
 const config = {
   title: 'Nulogy Design System',
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
   theme: {
-    fontFamily: tokens.type.fontFamily,
-    fontHeading: tokens.type.fontFamily,
+    fontFamily: tokens.font.family.regular,
+    fontHeading: tokens.font.family.regular,
 
     background: 'white',
     linkHoverColor: 'black',
