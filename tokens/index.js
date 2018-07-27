@@ -8,6 +8,17 @@ export const font = {
     regular: "'IBM Plex Sans', sans",
     mono: "'IBM Plex Mono', monospace"
   },
+  size: {
+    smaller: 12,
+    small: 14,
+    medium: 16,
+    large: 20,
+    larger: 24,
+    largest: 28,
+    get pageTitle() {return this.largest},
+    get sectionTitle() {return this.larger},
+    get subsectionTitle() {return this.large}
+  },
 };
 
 export default {
