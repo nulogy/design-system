@@ -58,7 +58,7 @@ storiesOf('CSS preprocessor', module)
     const baseFontSize = 8; // the smallest font size
     const fontSizeScale = 2; // the scale multiplier
     const maxFontSize = 100; // we don't want our system to include fonts bigger than this
-    const Type = {}; // This will hold our Type styled-components
+    const Text = {}; // This will hold our Text styled-components
 
     for (
       let fontSize = baseFontSize; 
@@ -74,7 +74,7 @@ storiesOf('CSS preprocessor', module)
         }
       `
       // Create a styled component for this font-size
-      Type[key] = styled.p`
+      Text[key] = styled.p`
         ${mx.scale[key]}
         ${mx.lineHeight}
         ${mx.noMargin}
@@ -89,11 +89,11 @@ storiesOf('CSS preprocessor', module)
       padding-left: 1ch;
     `
 
-    const P = styled(Type.x2)`
+    const P = styled(Text.x2)`
       margin-bottom: 1em;
     `;
 
-    const Heading = styled(Type.x4)`
+    const Heading = styled(Text.x4)`
       margin: 2em 0 1em;
     `
 
@@ -118,19 +118,19 @@ storiesOf('CSS preprocessor', module)
         <Table>
           <tbody>
             <tr>
-              <th><Type.x1>Type.x1</Type.x1></th>
+              <th><Text.x1>Text.x1</Text.x1></th>
               <td><Code>{mx.scale.x1}</Code></td>
             </tr>
             <tr>
-              <th><Type.x2>Type.x2</Type.x2></th>
+              <th><Text.x2>Text.x2</Text.x2></th>
               <td><Code>{mx.scale.x2}</Code></td>
             </tr>
             <tr>
-              <th><Type.x4>Type.x4</Type.x4></th>
+              <th><Text.x4>Text.x4</Text.x4></th>
               <td><Code>{mx.scale.x4}</Code></td>
             </tr>
             <tr>
-              <th><Type.x8>Type.x8</Type.x8></th>
+              <th><Text.x8>Text.x8</Text.x8></th>
               <td><Code>{mx.scale.x8}</Code></td>
             </tr>
           </tbody>
