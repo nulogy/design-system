@@ -140,25 +140,23 @@ storiesOf('CSS preprocessor', module)
         <Table>
           <tbody>
             <tr>
-            <th><p  className="sizeX1 lineHeight noMargin fontFamily">1x <Code>.sizeX1</Code></p></th>
-            <td><Code>{mx.scale.x1}</Code></td>
+              <th><p  className="sizeX1 lineHeight noMargin fontFamily">1x <Code>.sizeX1</Code></p></th>
+              <td><Code>{mx.scale.x1}</Code></td>
             </tr>
             <tr>
-            <th><p  className="sizeX2 lineHeight noMargin fontFamily">2x <Code>.sizeX2</Code></p></th>
-            <td><Code>{mx.scale.x2}</Code></td>
+              <th><p  className="sizeX2 lineHeight noMargin fontFamily">2x <Code>.sizeX2</Code></p></th>
+              <td><Code>{mx.scale.x2}</Code></td>
             </tr>
             <tr>
-            <th><p  className="sizeX4 lineHeight noMargin fontFamily">4x <Code>.sizeX4</Code></p></th>
-            <td><Code>{mx.scale.x4}</Code></td>
+              <th><p  className="sizeX4 lineHeight noMargin fontFamily">4x <Code>.sizeX4</Code></p></th>
+              <td><Code>{mx.scale.x4}</Code></td>
             </tr>
             <tr>
-            <th><p  className="sizeX8 lineHeight noMargin fontFamily">8x <Code>.sizeX8</Code></p></th>
-            <td><Code>{mx.scale.x8}</Code></td>
+              <th><p  className="sizeX8 lineHeight noMargin fontFamily">8x <Code>.sizeX8</Code></p></th>
+              <td><Code>{mx.scale.x8}</Code></td>
             </tr>
           </tbody>
         </Table>
       </React.Fragment>
     )
   });
-
-  
