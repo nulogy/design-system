@@ -42,33 +42,38 @@ storiesOf('CSS preprocessor', module)
   ))
 
   .add('Utility classes with styled components', () => {
-    const baseFontSize = 8;
-    const fontSizeScale = 2;
-    const maxFontSize = 100;
-    
+    // Set up some general utility mixins.
     const mx = {
-      lineHeight: css`line-height: 1`,
-      noMargin: css`margin: 0`,
+      lineHeight: css`line-height: 1;`,
+      noMargin: css`margin: 0;`,
       fontFamily: css`font-family: sans-serif;`,
       scale: {}
     }
+    // create global utility classes from those mixins
+    Object.entries(mx)
+      .filter(([className]) => className !== 'scale') // don't create a util class for `scale` - it's value is a scale-map not a css rule
+      .forEach(([className, rule]) => injectGlobal`.${className} { ${rule} }`);
 
-    Object.entries(mx).forEach(([className, value]) => injectGlobal`.${className} { ${value} }`);
+    // Programmatically build classes and components for our font-scale
+    const baseFontSize = 8; // the smallest font size
+    const fontSizeScale = 2; // the scale multiplier
+    const maxFontSize = 100; // we don't want our system to include fonts bigger than this
+    const Type = {}; // This will hold our Type styled-components
 
-    const scale = {};
-    const Type = {};
-
-    for (let fontSize = baseFontSize; fontSize < maxFontSize; fontSize = fontSize * fontSizeScale) {
-      const key = `x${fontSize / baseFontSize}`;
-      scale[key] = fontSize;
-      mx.scale[key] = css`font-size: ${fontSize}px;`;
-      
+    for (
+      let fontSize = baseFontSize; 
+      fontSize < maxFontSize; 
+      fontSize = fontSize * fontSizeScale
+    ) {
+      const key = `x${fontSize / baseFontSize}`; // our scale values are prefixed with an x and are the amount the value is multiplied by the base
+      mx.scale[key] = css`font-size: ${fontSize}px;`; // add a mixin for this iteration's scale
+      // add a global util class for this font-size
       injectGlobal`
         .size${key.toUpperCase()} {
           ${mx.scale[key]}
         }
       `
-
+      // Create a styled component for this font-size
       Type[key] = styled.p`
         ${mx.scale[key]}
         ${mx.lineHeight}
@@ -77,60 +82,80 @@ storiesOf('CSS preprocessor', module)
       `;
     }
 
+    // ... and a few util Components to layout the story
+    const Note = styled.div`
+      color: grey;
+      border-left: 3px solid;
+      padding-left: 1ch;
+    `
+
+    const P = styled(Type.x2)`
+      margin-bottom: 1em;
+    `;
+
+    const Heading = styled(Type.x4)`
+      margin: 2em 0 1em;
+    `
+
     const Code = styled.code`
       color: grey;
       background-color: whitesmoke;
-      margin-left: 24px;
+      border-radius: 4px;
     `;
 
-    const Table = styled.th`
-      > tr > th { text-align: left; }
+    const Table = styled.table`
+     > tbody > tr > th { text-align: left; }
     `;
-
-    console.log('scale :', scale);
-    console.log('mixins :', mx);
-    console.log('Type :', Type);
 
     return (
       <React.Fragment>
-        <h1>With styled components</h1>
+        <Note>
+          <P>This is an example of using the <a href="https://www.styled-components.com/docs/api#injectglobal"><Code>injectGlobal</Code></a> from Styled Components to define global utility classes.</P>
+          <P>The utility classes a driven by mixins that are shared with styled-component in React.</P>
+        </Note>
+
+        <Heading>With styled components</Heading>
         <Table>
-          <tr>
-            <th><Type.x1>Type.x1</Type.x1></th>
-            <td><Code>{mx.scale.x1}</Code></td>
-          </tr>
-          <tr>
-            <th><Type.x2>Type.x2</Type.x2></th>
-            <td><Code>{mx.scale.x2}</Code></td>
-          </tr>
-          <tr>
-            <th><Type.x4>Type.x4</Type.x4></th>
-            <td><Code>{mx.scale.x4}</Code></td>
-          </tr>
-          <tr>
-            <th><Type.x8>Type.x8</Type.x8></th>
-            <td><Code>{mx.scale.x8}</Code></td>
-          </tr>
+          <tbody>
+            <tr>
+              <th><Type.x1>Type.x1</Type.x1></th>
+              <td><Code>{mx.scale.x1}</Code></td>
+            </tr>
+            <tr>
+              <th><Type.x2>Type.x2</Type.x2></th>
+              <td><Code>{mx.scale.x2}</Code></td>
+            </tr>
+            <tr>
+              <th><Type.x4>Type.x4</Type.x4></th>
+              <td><Code>{mx.scale.x4}</Code></td>
+            </tr>
+            <tr>
+              <th><Type.x8>Type.x8</Type.x8></th>
+              <td><Code>{mx.scale.x8}</Code></td>
+            </tr>
+          </tbody>
         </Table>
 
-        <h1>With global utility classes</h1>
+        <Heading>With global utility classes</Heading>
         <Table>
-          <tr>
-           <th><p  className="sizeX1 lineHeight noMargin fontFamily">1x <Code>.sizeX1</Code></p></th>
-           <td><Code>{mx.scale.x1}</Code></td>
-          </tr>
-          <tr>
-           <th><p  className="sizeX2 lineHeight noMargin fontFamily">2x <Code>.sizeX2</Code></p></th>
-           <td><Code>{mx.scale.x2}</Code></td>
-          </tr>
-          <tr>
-           <th><p  className="sizeX4 lineHeight noMargin fontFamily">4x <Code>.sizeX4</Code></p></th>
-           <td><Code>{mx.scale.x4}</Code></td>
-          </tr>
-          <tr>
-           <th><p  className="sizeX8 lineHeight noMargin fontFamily">8x <Code>.sizeX8</Code></p></th>
-           <td><Code>{mx.scale.x8}</Code></td>
-          </tr>
+          <tbody>
+            <tr>
+            <th><p  className="sizeX1 lineHeight noMargin fontFamily">1x <Code>.sizeX1</Code></p></th>
+            <td><Code>{mx.scale.x1}</Code></td>
+            </tr>
+            <tr>
+            <th><p  className="sizeX2 lineHeight noMargin fontFamily">2x <Code>.sizeX2</Code></p></th>
+            <td><Code>{mx.scale.x2}</Code></td>
+            </tr>
+            <tr>
+            <th><p  className="sizeX4 lineHeight noMargin fontFamily">4x <Code>.sizeX4</Code></p></th>
+            <td><Code>{mx.scale.x4}</Code></td>
+            </tr>
+            <tr>
+            <th><p  className="sizeX8 lineHeight noMargin fontFamily">8x <Code>.sizeX8</Code></p></th>
+            <td><Code>{mx.scale.x8}</Code></td>
+            </tr>
+          </tbody>
         </Table>
       </React.Fragment>
     )
