@@ -10,7 +10,7 @@ storiesOf('CSS preprocessor', module)
   .add('Styled Components for global styles', () => (
     <div>
       <p className='styled-component'>
-        I'm' <code>.styled-component</code>. I'm {aColour()}, 
+        I'm <code>.styled-component</code>. I'm {aColour()}, 
         but I turn {aColour()} when I hover.
       </p>
 
@@ -24,17 +24,17 @@ storiesOf('CSS preprocessor', module)
         </p>
       </div>
 
-      <p className="styled-fantasy-mixin">
+      <p className='styled-fantasy-mixin'>
         I'm <code>.styled-fantasy-mixin</code>, 
         my styles were defined using a mixin.
       </p>
 
-      <p className="styled-fantasy-mixin-brown">
+      <p className='styled-fantasy-mixin-brown'>
         I'm <code>.styled-fantasy-mixin-brown</code>, 
         built with the same mixin, but with a colour passed as an arg to the mixin.
       </p>
       
-      <p className="styled-object-mixin">
+      <p className='styled-object-mixin'>
         I'm <code>.styled-object-mixin</code>, 
         defined as an object, rather than a template literal.
       </p>
