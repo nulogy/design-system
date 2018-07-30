@@ -19,7 +19,7 @@ const fantasyMixin = (colour) => `
 `;
 
 const objectMixin = () => ({
-  fontFamily: 'sans-serif',
+  fontFamily: "sans-serif",
   backgroundColor: 'black',
   color: colours[4],
 })
