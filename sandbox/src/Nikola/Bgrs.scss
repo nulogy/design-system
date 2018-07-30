@@ -3,91 +3,188 @@
 @import 'Bgrs/typography';
 @import 'Bgrs/utilities';
 
-
-.nav-bar{
-  background: $grey-lighter;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.content-wrapper{
-  display: flex;
-  height: 100vh;
-  position: relative;
-  padding-top: 60px;
-}
-
-.sidebar{
-  background: $grey-lightest;
-  width: 20%;
-}
-
-.content{
-  width: 80%;
-  background: $white;
-  box-shadow: $shadow-1;
-  margin-top: $ui-unit-half;
-  z-index:100;
-}
-
-.button{
-  &--float{
+.bgrs{
+  .nav-bar{
+    background: $grey-lighter;
+    height: 60px;
     position: fixed;
-    z-index: 200;
-    right: $ui-unit-x2;
-    bottom: $ui-unit-x2;
-    padding: $ui-unit;
-    font-size: 32px;
-    line-height: 1;
-    width: 52px;
-    height: 52px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .content-wrapper{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px;
+  }
+
+  .sidebar{
+    background: $grey-lightest;
+    width: 20%;
+  }
+
+  .content{
+    width: 80%;
+    background: $white;
+    box-shadow: $shadow-1;
+    margin-top: $ui-unit-half;
+    z-index:100;
+  }
+
+  .drop-down{
+    width: 120px;
+    border: solid 1px $grey-light;
     border-radius: $ui-border-radius;
-    background: $yellow-dark;
-    color: $white;
-    box-shadow: $shadow-2;
-    cursor: pointer;
-    &:hover{
-      background: $yellow-darker;
+    background: $white;
+    margin: -20px 40px 0 -20px;
+    @extend .unlist;
+    float: left;
+    position: relative;
+    &__item{
+      font-size: .875em;
+      padding:0;
+      margin:0;
+    }
+    &__link{
+      text-decoration: none;
+      display:block;
+      padding: $ui-unit;
+      &:hover{
+        cursor: pointer!important;
+      }
+    }
+    &--dark &{
+      /* &__link{
+        background: $grey-darker;
+        color: $white;
+        &:hover{
+          background-color: $grey-darkest;
+        }
+      } */ // deosnt work in storybook
+    }
+    &--dark {
+      border: solid 1px $grey-darker;
+      .drop-down__link{
+        background: $grey-darker;
+        color: $white;
+        &:hover{
+          background-color: $grey-darkest;
+        }
+      }
+      .drop-down__item:first-child a{
+        border-bottom: solid 1px $grey-dark;
+      }
+    }
+    &--blue &{
+      /* &__link{
+        background: $blue-dark;
+        color: $white;
+        &:hover{
+          background-color: $blue-darker;
+        }
+      } */ // deosnt work in storybook
+    }
+    &--blue {
+      .drop-down__link{
+        background: $blue-dark;
+        color: $white;
+        &:hover{
+          background-color: $blue-darker;
+        }
+      }
+      border: solid 1px $blue-darker;
+      .drop-down__item:first-child a{
+        border-bottom: solid 1px $blue-darker;
+      }
+    }
+    &--light{
+      .drop-down__link{
+        background: $grey-lightest;
+        color: $grey-darkest;
+        &:hover{
+          background: $grey-lighter;
+        }
+      }
+
+      .drop-down__item:first-child a{
+        border-bottom: solid 1px $grey-light;
+      }
     }
   }
 }
 
-.modal{
+
+
+
+
+
+
+// Fly-in component
+.fly-in{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width:100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  border:solid 1px $grey-light;
+  border-radius: $ui-border-radius;
+  height: 66px;
   position: absolute;
-  top:0;
-  left:0;
-  z-index:300;
+  right: $ui-unit-x2;
+  top: 72px;
+  z-index: 400;
   padding:0;
-  margin:0;
-  pointer-events: none;
-  .modal__box{
-    background: $white;
-    width: 640px;
-    //border:solid 1px $grey-light;
-    border:solid 1px $blue-light;
-    border-radius: $ui-border-radius;
-    overflow: hidden;
-    box-shadow: $shadow-2;
+  box-shadow: $shadow-2;
+  .fly-in__type{
+    width: $ui-unit-x2;
+    background-color: $blue-dark;
+    height:calc(100% + 2px);
+    width: 36px;
+    border-radius: $ui-border-radius 0 0 $ui-border-radius;
+    height:calc(100% + 2px);
+    margin-top:-1px;
+    margin-left:-1px;
   }
-  .modal__title{
-    height: $ui-unit-x4;
-    padding:0;
-    margin:0;
+  .fly-in__content{
+    width: 360px;
+    height: 100%;
+    background-color: $white;
+    padding: $ui-unit;
+    font-size: .875em;
   }
-  .modal__content{
-    height: 360px;
+  &--fail{
+    .fly-in__type{
+      background-color: $red-dark;
+      background-color: #D13D3D;
+    }
+    .fly-in__content{
+      color: $red-dark;
+      color: #D13D3D;
+    }
+  }
+  &--pass{
+    .fly-in__type{
+      background-color: $green-dark;
+      //background-color: #47A079;
+    }
+    .fly-in__content{
+      color: $green-dark;
+      //color: #56915A;
+    }
+  }
+  &--warning{
+    .fly-in__type{
+      background-color: $yellow-dark;
+      //background-color: #EDD84E;
+    }
+    .fly-in__content{
+      color: $black;
+    }
   }
 }
 
+// Action set component
 .action-set{
   display: flex;
   &__button{
@@ -122,96 +219,666 @@
   }
 }
 
-.fly-in{
+// Modal component
+.modal{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border:solid 1px $grey-light;
-  border-radius: $ui-border-radius;
-  height: 66px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:100vw;
   position: absolute;
-  right: $ui-unit-x2;
-  top: 72px;
-  z-index: 400;
+  top:0;
+  left:0;
+  z-index:300;
   padding:0;
-  box-shadow: $shadow-2;
-  .fly-in__type{
-    width: $ui-unit-x2;
-    background-color: $blue-dark;
-    height:100%;
-    width: 36px;
-    border-radius: $ui-border-radius 0 0 $ui-border-radius;
+  margin:0;
+  pointer-events: none;
+  .modal__box{
+    background: $white;
+    width: 640px;
+    //border:solid 1px $grey-light;
+    border:solid 1px $blue-light;
+    border-radius: $ui-border-radius;
+    overflow: hidden;
+    box-shadow: $shadow-2;
   }
-  .fly-in__content{
-    width: 360px;
-    height: 100%;
-    background-color: $white;
-  }
-}
-
-.drop-down{
-  width: 120px;
-  border: solid 1px $grey-light;
-  border-radius: $ui-border-radius;
-  background: $white;
-  margin: -20px 40px 0 -20px;
-  @extend .unlist;
-  float: left;
-  position: relative;
-  &__item{
-    font-size: .875em;
+  .modal__title{
+    height: $ui-unit-x4;
     padding:0;
     margin:0;
   }
-  &__link{
-    text-decoration: none;
-    display:block;
+  .modal__content{
+    height: 360px;
+  }
+}
+
+// Create button
+.button{
+  &--float{
+    position: fixed;
+    z-index: 200;
+    right: $ui-unit-x2;
+    bottom: $ui-unit-x2;
     padding: $ui-unit;
+    font-size: 32px;
+    line-height: 1;
+    width: 52px;
+    height: 52px;
+    border-radius: $ui-border-radius;
+    background: $orange-dark;
+    color: $white;
+    box-shadow: $shadow-2;
+    cursor: pointer;
     &:hover{
-      cursor: pointer!important;
+      background: $orange-darker;
     }
   }
-  &--dark &{
-    &__link{
-      background: $grey-darker;
-      color: $white;
-      &:hover{
-        background-color: $grey-darkest;
+}
+
+
+
+
+
+section{
+  margin-bottom: $ui-unit;
+  border-bottom: solid 1px $grey-light;
+  padding: $ui-unit;
+}
+
+.wrapper{
+  display: flex;
+  padding: $ui-unit-x2;
+  background-color: $white;
+  border: solid 1px $grey-light;
+  .main{
+    padding: 0 $ui-unit-x2;
+  }
+  aside{
+    background: $blue-lightest;
+    width: 20%;
+    .nav{
+      @extend .unlist;
+      padding: $ui-unit-x2;
+      .nav--item{
+        padding: $ui-unit-half 0;
+        display: block;
+        text-decoration: none;
+        font-size: .913em;
       }
     }
   }
-  &--dark {
-    border: solid 1px $grey-darker;
-    .drop-down__item:first-child a{
-      border-bottom: solid 1px $grey-dark;
-    }
-  }
-  &--blue &{
-    &__link{
-      background: $blue-dark;
-      color: $white;
-      &:hover{
-        background-color: $blue-darker;
+}
+
+
+
+
+
+
+.color-set{
+  padding: $ui-unit;
+  border-bottom: solid 1px $grey-light;
+  padding: $ui-unit-x2;
+  .block{
+    padding: $ui-unit-x4 0;
+    &--palette{
+      @extend .unlist;
+      display:flex;
+      .block--palette-item{
+        width:92px;
+        height:92px;
       }
     }
-  }
-  &--blue {
-    border: solid 1px $blue-darker;
-    .drop-down__item:first-child a{
-      border-bottom: solid 1px $blue-darker;
+    &--button-set{
+      display:flex;
+      padding: $ui-unit-x2;
+      border: solid 1px $grey-light;
+      .button{
+        padding:.5em .75em;
+        font-size: 1em;
+        border-radius: .125em;
+        cursor: pointer;
+        margin:0 .25em;
+        &:first-child{
+          margin-left:0;
+        }
+        &:last-child{
+          margin-right:0;
+        }
+      }
+      &__alt{
+        margin-top: $ui-unit;
+        background:$grey-darkest;
+        border:solid 1px $grey-darkest;
+      }
+      &__pass{
+        margin-top:$ui-unit;
+      }
+      &__fail{
+        margin-top:$ui-unit;
+      }
     }
-  }
-  &--light{
-    .drop-down__link{
-      background: $grey-lightest;
-      color: $grey-darkest;
-      &:hover{
-        background: $grey-lighter;
+    &--card{
+      display: flex;
+      flex-direction: column;
+      width:250px;
+      border-radius: $ui-border-radius;
+      .card-img{
+        height:125px;
+        border-radius: $ui-border-radius $ui-border-radius 0 0;
+        i{
+          font-size:3em;
+          line-height:125px;
+          width:250px;
+          text-align:center;
+          display:block;
+        }
+      }
+      .card--inset{
+        padding: $ui-unit;
+        border-radius:0 0 $ui-border-radius $ui-border-radius;
+        .actions{
+          @extend .unlist;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: $ui-unit;
+          .action-item{
+            font-size: .913em;
+            cursor: pointer;
+            padding: $ui-unit;
+            border-radius: $ui-border-radius;
+          }
+        }
+      }
+    }
+    &--notification{
+      border-radius: $ui-border-radius;
+      padding: 0 $ui-unit-x2;
+      border-width: 5px 1px 1px 1px;
+      width: 644px;
+    }
+    &--table{
+      table{
+        width:644px;
+        thead{
+          tr{
+            th{
+              font-size: .875em;
+              text-transform: uppercase;
+              letter-spacing: .0625em;
+              font-weight: 400;
+            }
+          }
+        }
+        tr{
+          td, th{
+            padding: $ui-unit;
+            text-align: left;
+          }
+        }
+      }
+    }
+    &--form{
+      ol{
+        @extend .unlist;
+        width:480px;
+        li{
+          padding-bottom: $ui-unit-x2;
+          label{
+            display:block;
+            font-size: .875em;
+            padding-bottom: $ui-unit-half;
+          }
+          input{
+            padding: $ui-unit;
+            font-size: 1em;
+          }
+        }
       }
     }
 
-    .drop-down__item:first-child a{
-      border-bottom: solid 1px $grey-light;
+    &--tinies{
+      display:flex;
+      padding: $ui-unit-x2;
+      border: solid 1px $grey-light;
     }
+  }
+
+
+
+
+
+
+
+      color: $black;
+      .wrapper{
+        background-color: $white;
+        border: solid 1px $grey-light;
+        .main{
+        }
+        aside{
+          background: $grey-lighter;
+          .nav{
+            .nav--item{
+              color: $blue-dark;
+              &:hover{
+                color: $grey-darker;
+              }
+              &__active{
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+      .block{
+        &--palette{
+          .block--palette-item{
+            &:nth-child(1){
+              background-color: $grey-lightest;
+            }
+            &:nth-child(2){
+              background-color: $grey-lighter;
+            }
+            &:nth-child(3){
+              background-color: $grey-light;
+            }
+            &:nth-child(4){
+              background-color: $blue-dark;
+            }
+            &:nth-child(5){
+              background-color: $grey-dark;
+            }
+            &:nth-child(6){
+              background-color: $grey-darker;
+            }
+            &:nth-child(7){
+              background-color: $grey-darkest;
+            }
+          }
+        }
+        &--button-set{
+          .button{
+            &__primary{
+                background-color:$blue-dark;
+                color: $white;
+                border: solid 1px $blue-dark;
+                &:hover{
+                  background-color: $blue-darker;
+                  color: $white;
+                  border: solid 1px $blue-darker;
+                }
+            }
+            &__secondary{
+              background-color: $grey-lightest;
+              color: $blue-dark;
+              border: solid 1px $grey-lightest;
+              &__outlined{
+                background: transparent;
+                color: $blue-dark;
+                border:solid 1px $blue-dark;
+                &:hover{
+                  background-color: $blue-darker;
+                  color: $white;
+                  border: solid 1px $blue-darker;
+                }
+              }
+              &:hover{
+                background-color: $grey-lighter;
+                color: $blue-darker;
+                border: solid 1px $grey-lighter;
+              }
+            }
+            &__tertiary{
+              color:$blue-dark;
+              background-color:$white;
+              border:solid 1px $white;
+              &:hover{
+                  color:$blue-darker;
+              }
+            }
+            &__disabled{
+              //color:$blue-light;
+              //background-color: $blue-lightest;
+              //border:solid 1px  $blue-lightest;
+              color:$grey;
+              background-color: $grey-lighter;
+              border:solid 1px  $grey-lighter;
+              &:hover{
+                  cursor: default;
+              }
+            }
+          }
+          &__alt{
+            .button{
+              &__primary{
+                  background-color:$blue-dark;
+                  color: $white;
+                  border: solid 1px $blue-dark;
+                  &:hover{
+                    background-color: $white;
+                    color: $blue-dark;
+                    border: solid 1px $white;
+                  }
+              }
+              &__secondary{
+                background-color: $grey-darker;
+                color: $blue-lightest;
+                border: solid 1px $grey-darker;
+                &:hover{
+                  background-color: $grey-dark;
+                  color: $white;
+                  border: solid 1px $grey-dark;
+                }
+                &__outlined{
+                  background: transparent;
+                  color: $white;
+                  border:solid 1px $white;
+                  &:hover{
+                    background-color: $white;
+                    color: $blue-dark;
+                    border: solid 1px $white;
+                  }
+                }
+              }
+              &__tertiary{
+                color:$white;
+                background-color: transparent;
+                border:solid 1px transparent;
+                &:hover{
+                    color:$grey-light;
+                }
+              }
+              &__disabled{
+                color:$grey-darkest;
+                background-color: $grey-darker;
+                border:solid 1px  $grey-darker;
+                &:hover{
+                    cursor: default;
+                }
+              }
+            }
+          }
+          &__pass{
+            .button{
+              &__primary{
+                  background-color:$green-dark;
+                  color: $green-lightest;
+                  border: solid 1px $green-dark;
+                  &:hover{
+                    background-color: $green-darker;
+                    color: $white;
+                    border: solid 1px $green-darker;
+                  }
+              }
+              &__secondary{
+                background-color: $grey-lightest;
+                color: $green-dark;
+                border: solid 1px $grey-lightest;
+                &:hover{
+                  background-color: $grey-lighter;
+                  color: $green-darker;
+                  border: solid 1px $grey-lighter;
+                }
+                &__outlined{
+                  background: transparent;
+                  color: $green-dark;
+                  border:solid 1px $green-dark;
+                  &:hover{
+                    background-color: $green-darker;
+                    color: $white;
+                    border: solid 1px $green-darker;
+                  }
+                }
+              }
+              &__tertiary{
+                color:$green-dark;
+                background-color:transparent;
+                border:solid 1px $white;
+                &:hover{
+                    color:$green-darker;
+                }
+              }
+
+            }
+          }
+          &__fail{
+            .button{
+              &__primary{
+                  background-color:$red-dark;
+                  color: $red-lightest;
+                  border: solid 1px $red-dark;
+                  &:hover{
+                    background-color: $red-darker;
+                    color: $white;
+                    border: solid 1px $red-darker;
+                  }
+              }
+              &__secondary{
+                background-color: $grey-lightest;
+                color: $red-dark;
+                border: solid 1px $grey-lightest;
+                &:hover{
+                  background-color: $grey-lighter;
+                  color: $red-darker;
+                  border: solid 1px $grey-lighter;
+                }
+                &__outlined{
+                  background: transparent;
+                  color: $red-dark;
+                  border:solid 1px $red-dark;
+                  &:hover{
+                    background-color: $red-darker;
+                    color: $white;
+                    border: solid 1px $red-darker;
+                  }
+                }
+              }
+              &__tertiary{
+                color:$red-dark;
+                background-color:transparent;
+                border:solid 1px $white;
+                &:hover{
+                    color:$red-darker;
+                }
+              }
+
+            }
+          }
+        }
+        &--card{
+          .card-img{
+            //background: $blue-light;
+            background: $blue-light;
+            //border:solid 1px $blue-light;
+            border:none;
+            i{
+              color: $grey-lightest;
+            }
+          }
+          .card--inset{
+            border:solid 1px $blue-light;
+            background: $grey-lightest;
+            background: linear-gradient($grey-lightest, $white);
+            .actions{
+              margin:$ui-unit-x4 0 $ui-unit-x2;
+              .action-item{
+                &__positive{
+                  color: $white;
+                  background: $blue-dark;
+                  border: solid 1px $blue-dark;
+                  &:hover{
+                    border: solid 1px $blue-darker;
+                    background: $blue-darker;
+                    color: $white;
+                  }
+                }
+                &__destructive{
+                  color: $blue-dark;
+                  &:hover{
+                    color: $blue-darker;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &--notification{
+          border:solid 1px $blue-light;
+          border-top-width: 5px;
+          background:$grey-lightest;
+          background: linear-gradient($grey-lightest, $white);
+        }
+        &--table{
+          table{
+            thead{
+              tr{
+                border-bottom: solid 3px $blue-light;
+                background: $grey-lightest;
+                th{
+                  color: $grey-darkest;
+                }
+              }
+            }
+            tr{
+              border-bottom: solid 1px $grey-lighter;
+              td, th{
+              }
+            }
+          }
+        }
+        &--form{
+          ol{
+            li{
+              label{
+                color: $grey-darker;
+              }
+              input{
+                border: solid 1px $grey-light;
+                color: $blue-dark;
+                background-color: $grey-lightest;
+                width:50%;
+                &:focus{
+                  border: solid 1px $blue-dark;
+                  background-color: white;
+                  color: $grey-darkest;
+                  outline:0;
+                }
+              }
+              &.val-status{
+                &__error{
+                  input{
+                    border: solid 1px $red-dark;
+                    color: $red-dark;
+                    background-color: $grey-lightest;
+                  }
+                  .val{
+                    padding: $ui-unit-half 0;
+                    color: $red-dark;
+                    font-size: .75em;
+                    font-style: italic;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+}
+
+// Semantics
+.status{
+  font-size: .75em;
+  text-transform: uppercase;
+  .status--status-indicator{
+    display: block;
+    float: left;
+    margin: $ui-unit-half $ui-unit-half 0 0;
+    width: $ui-unit;
+    height: $ui-unit;
+    border-radius: 50%;
+  }
+  &__pass{
+    color: $green-darker;
+    .status--status-indicator{
+      background: $green-dark;
+    }
+  }
+  &__fail{
+    color: $red-darker;
+    .status--status-indicator{
+      background: $red-dark;
+    }
+  }
+}
+
+.pill{
+  padding: 2px $ui-unit-half;
+  border-radius: $ui-unit-x2;
+  margin-right: $ui-unit;
+  font-size: .613em;
+  text-transform: uppercase;
+  &__solid{
+    &__pass{
+      color: $white;
+      border: solid 1px $green-dark;
+      background: $green-dark;
+    }
+    &__fail{
+      color: $white;
+      border: solid 1px $red-dark;
+      background: $red-dark;
+    }
+  }
+  &__inverted{
+    &__pass{
+      border: solid 1px $green-dark;
+      color: $green-darker;
+    }
+    &__fail{
+      border: solid 1px $red-dark;
+      color: $red-darker;
+    }
+  }
+}
+
+.notification{
+  padding: $ui-unit-half $ui-unit;
+  margin-bottom: 0;
+  &--fail{
+    background: $red-dark;
+    color:$white;
+  }
+  &--pass{
+    background: $green-dark;
+    color:$white;
+  }
+  &--announcement{
+    background: $blue-dark;
+    color:$white;
+  }
+  &--warning{
+    background: $yellow-dark;
+    color:$black;
+  }
+  &__title{
+    font-weight: 500;
+    margin-right: $ui-unit;
+  }
+  &__description{
+    font-weight: 100;
+    font-size: 12px;
+  }
+}
+
+.button{
+  &__primary{
+    background: $blue-dark;
+    border: solid 1px $blue-dark;
+    color: $white;
+    padding: 4px;
+    border-radius: 2px;
   }
 }
