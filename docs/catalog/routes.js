@@ -79,28 +79,28 @@ export default [
     ]
   },
   {
-    title: 'Guidelines',
+    title: 'Visual Style',
     pages: [
       {
-        path: '/guidlines/colour',
+        path: '/visual_style/colour',
         title: 'Colour',
-        content: pageLoader(() => import('./guidlines/colour.md')),
+        content: pageLoader(() => import('./visual_style/colour.md')),
         imports: colourImports
       },
       {
-        path: '/guidlines/typography',
+        path: '/visual_style/typography',
         title: 'Typography',
-        content: pageLoader(() => import('./guidlines/typography.md'))
+        content: pageLoader(() => import('./visual_style/typography.md'))
       },
       {
-        path: '/guidlines/spacing',
+        path: '/visual_style/spacing',
         title: 'Spacing',
-        content: pageLoader(() => import('./guidlines/spacing.md'))
+        content: pageLoader(() => import('./visual_style/spacing.md'))
       },
       {
-        path: '/guidlines/iconography',
+        path: '/visual_style/iconography',
         title: 'Iconography',
-        content: pageLoader(() => import('./guidlines/iconography.md'))
+        content: pageLoader(() => import('./visual_style/iconography.md'))
       },
     ]
   },
