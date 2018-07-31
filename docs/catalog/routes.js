@@ -46,14 +46,14 @@ export default [
         content: pageLoader(() => import('./guidlines/typography.md'))
       },
       {
+        path: '/guidlines/spacing',
+        title: 'Spacing',
+        content: pageLoader(() => import('./guidlines/spacing.md'))
+      },
+      {
         path: '/guidlines/iconography',
         title: 'Iconography',
         content: pageLoader(() => import('./guidlines/iconography.md'))
-      },
-      {
-        path: '/guidlines/layout',
-        title: 'Layout',
-        content: pageLoader(() => import('./guidlines/layout.md'))
       },
       {
         path: '/guidlines/depth',
