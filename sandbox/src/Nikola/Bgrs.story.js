@@ -94,6 +94,14 @@ storiesOf('Backgrounds', module)
             <button class="button button__disabled">Another Button</button>
             <button class="button button__tertiary">Tertiary</button>
           </div>
+          <div class="block block--button-set block--button-set__warning">
+            <button class="button button__primary">Primary Button</button>
+            <button class="button button__secondary">Secondary</button>
+            <button class="button button__secondary">Button</button>
+            <button class="button button__secondary__outlined">Secondary Button</button>
+            <button class="button button__disabled">Another Button</button>
+            <button class="button button__tertiary">Tertiary</button>
+          </div>
 
           <div class="block block--card">
             <div class="card-img">
@@ -172,7 +180,7 @@ storiesOf('Backgrounds', module)
           </div>
         </div>
       </div>
-      <section class="fly-in">
+      <section class="fly-in fly-in--warning">
         <div class="fly-in__type"></div>
         <div class="fly-in__content">Some text</div>
         <nav class="action-set">

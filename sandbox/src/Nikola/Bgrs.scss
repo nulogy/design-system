@@ -156,27 +156,22 @@
   &--fail{
     .fly-in__type{
       background-color: $red-dark;
-      background-color: #D13D3D;
     }
     .fly-in__content{
       color: $red-dark;
-      color: #D13D3D;
     }
   }
   &--pass{
     .fly-in__type{
       background-color: $green-dark;
-      //background-color: #47A079;
     }
     .fly-in__content{
       color: $green-dark;
-      //color: #56915A;
     }
   }
   &--warning{
     .fly-in__type{
       background-color: $yellow-dark;
-      //background-color: #EDD84E;
     }
     .fly-in__content{
       color: $black;
@@ -265,12 +260,12 @@
     width: 52px;
     height: 52px;
     border-radius: $ui-border-radius;
-    background: $orange-dark;
+    background: $yellow-dark;
     color: $white;
     box-shadow: $shadow-2;
     cursor: pointer;
     &:hover{
-      background: $orange-darker;
+      background: $yellow-darker;
     }
   }
 }
@@ -642,6 +637,50 @@ section{
 
             }
           }
+          &__warning{
+            margin-top: $ui-unit;
+            .button{
+              &__primary{
+                  background-color:$yellow-dark;
+                  color: $black;
+                  border: solid 1px $yellow-dark;
+                  &:hover{
+                    background-color: $yellow-darker;
+                    color: $white;
+                    border: solid 1px $yellow-darker;
+                  }
+              }
+              &__secondary{
+                background-color: $grey-lightest;
+                color: $yellow-darkest;
+                border: solid 1px $grey-lightest;
+                &:hover{
+                  background-color: $grey-lighter;
+                  color: $yellow-darker;
+                  border: solid 1px $grey-lighter;
+                }
+                &__outlined{
+                  background: transparent;
+                  color: $black;
+                  border:solid 1px $yellow-dark;
+                  &:hover{
+                    background-color: $yellow-darker;
+                    color: $white;
+                    border: solid 1px $yellow-darker;
+                  }
+                }
+              }
+              &__tertiary{
+                color:$yellow-dark;
+                background-color:transparent;
+                border:solid 1px $white;
+                &:hover{
+                    color:$yellow-darker;
+                }
+              }
+
+            }
+          }
           &__fail{
             .button{
               &__primary{
@@ -689,17 +728,17 @@ section{
         &--card{
           .card-img{
             //background: $blue-light;
-            background: $blue-light;
+            background: $grey-light;
             //border:solid 1px $blue-light;
             border:none;
             i{
-              color: $grey-lightest;
+              color: $grey-light;
             }
           }
           .card--inset{
-            border:solid 1px $blue-light;
+            border:solid 1px $grey-light;
             background: $grey-lightest;
-            background: linear-gradient($grey-lightest, $white);
+            background: $grey-lightest;
             .actions{
               margin:$ui-unit-x4 0 $ui-unit-x2;
               .action-item{
@@ -724,16 +763,15 @@ section{
           }
         }
         &--notification{
-          border:solid 1px $blue-light;
+          border:solid 1px $grey-light;
           border-top-width: 5px;
           background:$grey-lightest;
-          background: linear-gradient($grey-lightest, $white);
         }
         &--table{
           table{
             thead{
               tr{
-                border-bottom: solid 3px $blue-light;
+                border-bottom: solid 3px $grey-light;
                 background: $grey-lightest;
                 th{
                   color: $grey-darkest;
