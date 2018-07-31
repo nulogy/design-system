@@ -53,7 +53,7 @@ There are two important factors to consider when spacing: **size** and **related
 * Use less spacing inside smaller elements or between functionally related elements.
 * Use more spacing inside larger elements or between less functionally related elements.
 
-Note: .5x should mostly be used for spacing related items within an element, e.g a button's text and it's icon.
+Note: `half` should mostly be used for spacing related items within an element, e.g a button's text and it's icon.
 
 ## Tokens
 
