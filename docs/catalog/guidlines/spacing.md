@@ -1,7 +1,7 @@
 > A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.
 
 ## Baseline
-Nulogy uses a scale based on 8px with modifiers from half (4px) to 8x (64px).
+Nulogy uses a scale based on `8px` with modifiers from `half (4px)` to `8x (64px)`.
 
 ## Scale
 
