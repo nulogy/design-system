@@ -35,8 +35,8 @@ export const space = {
 };
 
 export default {
-  colours,
-  font,
-  space,
+  colours: colours,
+  font: font,
+  space: space,
   borderRadius: '0.4rem',
 };
