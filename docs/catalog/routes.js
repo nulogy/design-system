@@ -108,11 +108,6 @@ export default [
     title: 'Components',
     pages: [
       {
-        path: '/components/tokens',
-        title: 'Design Tokens',
-        content: pageLoader(() => import('./components/tokens.md'))
-      },
-      {
         path: '/components/button',
         title: 'Button',
         content: pageLoader(() => import('./components/button.md')),
@@ -121,6 +116,11 @@ export default [
         }
       }
     ]
+  },
+  {
+    title: 'Tokens',
+    path: '/tokens',
+    content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {
     title: 'Getting Started',
