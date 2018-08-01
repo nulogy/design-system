@@ -45,9 +45,9 @@ storiesOf('CSS preprocessor', module)
   .add('Utility classes with styled components', () => {
     // Set up some general utility mixins.
     const mx = {
-      lineHeight: css`line-height: ${t.font.baseline};`,
+      lineHeight: css`line-height: ${t.font.baseline.regular};`,
       noMargin: css`margin: 0;`,
-      fontFamily: css`font-family: ${t.font.family};`,
+      fontFamily: css`font-family: ${t.font.family.regular};`,
       fontFamilyMono: css`font-family: ${t.font.family.mono};`,
       scale: {}
     }

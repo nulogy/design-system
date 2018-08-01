@@ -1,24 +1,21 @@
 import { Colgroup } from "../node_modules/glamorous";
 
-const clone =  value => new value.constructor(value);
-const assignDefault = (base, values) => Object.assign(clone(values[base]), values);
-
 export const colours = {
   primary: '#1c6aa6',
   secondary: 'white',
 };
 
 export const font = {
-  baseline: assignDefault('regular', {
+  baseline: {
     compact: 1.25,
     regular: 1.5,
     roomy: 2
-  }),
-  family: assignDefault('regular', {
+  },
+  family: {
     regular: '"IBM Plex Sans", sans',
     mono: '"IBM Plex Mono", monospace'
-  }),
-  size: assignDefault('medium', {
+  },
+  size: {
     smaller: 12,
     small: 14,
     medium: 16,
@@ -28,14 +25,15 @@ export const font = {
     get pageTitle() {return this.largest},
     get sectionTitle() {return this.larger},
     get subsectionTitle() {return this.large}
-  }),
-  weight: assignDefault('normal', {
+  },
+  weight: {
     normal: 400,
-    bold: 500
-  })
+    bold: 500,
+    bolder: 700,
+  }
 };
 
-export const space = assignDefault('x2', {
+export const space = {
   half: '4px',
   x1: '8px',
   x2: '16px',
@@ -43,7 +41,7 @@ export const space = assignDefault('x2', {
   x4: '32px',
   x6: '48px',
   x8: '64px'
-});
+};
 
 export default {
   colours: colours,
