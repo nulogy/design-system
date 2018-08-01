@@ -45,9 +45,10 @@ storiesOf('CSS preprocessor', module)
   .add('Utility classes with styled components', () => {
     // Set up some general utility mixins.
     const mx = {
-      lineHeight: css`line-height: ${t.font.baseline.medium};`,
+      lineHeight: css`line-height: ${t.font.baseline};`,
       noMargin: css`margin: 0;`,
-      fontFamily: css`font-family: ${t.font.family.regular};`,
+      fontFamily: css`font-family: ${t.font.family};`,
+      fontFamilyMono: css`font-family: ${t.font.family.mono};`,
       scale: {}
     }
     // create global utility classes from those mixins
@@ -99,6 +100,7 @@ storiesOf('CSS preprocessor', module)
     `
 
     const Code = styled.code`
+      ${ mx.fontFamilyMono }
       color: grey;
       background-color: whitesmoke;
       border-radius: 4px;
