@@ -1,5 +1,3 @@
-import { Colgroup } from "../node_modules/glamorous";
-
 export const colours = {
   primary: '#1c6aa6',
   secondary: 'white',
