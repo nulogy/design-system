@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled, {css, injectGlobal} from 'styled-components';
+import t from '@nulogy/tokens';
 // the following line loads the global styles as a side effect as well as importing `makeColourSequencePicker`
 import { makeColourSequencePicker } from './styledComponents';
 
@@ -44,9 +45,9 @@ storiesOf('CSS preprocessor', module)
   .add('Utility classes with styled components', () => {
     // Set up some general utility mixins.
     const mx = {
-      lineHeight: css`line-height: 1;`,
+      lineHeight: css`line-height: ${t.font.baseline.medium};`,
       noMargin: css`margin: 0;`,
-      fontFamily: css`font-family: sans-serif;`,
+      fontFamily: css`font-family: ${t.font.family.regular};`,
       scale: {}
     }
     // create global utility classes from those mixins
