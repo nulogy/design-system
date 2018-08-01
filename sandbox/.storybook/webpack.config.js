@@ -16,6 +16,9 @@ module.exports = {
             options: {
               includePaths: [srcPath]
             }
+          },
+          {
+            loader: "js-to-styles-var-loader"
           }
         ]
       },
