@@ -1,8 +1,13 @@
 require('./localTokens.js');
 require('./localTokens.js').size;
+require('./localTokens.js').colours;
 
 html {
   font-family: $fontFamily;
+}
+
+code {
+  background-color: $codeBg;
 }
 
 .local {

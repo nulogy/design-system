@@ -17,10 +17,11 @@ storiesOf('CSS preprocessor', module)
       <h2>Cons</h2>
       <ol>
         <li>Scss mixins and Javascript functions can't be shared. Two sets of helpers would have to be maintained: One set for Scss and one for JS.</li>
-        <li>Scss as a language lacks the expressiveness of Javascript.</li>
+        <li>It seems you can only require local JS files: my attempts to require <code>@nulogy/tokens</code> failed. I tried importing them directly into the <code>.scss</code> file with <code>require('@nulogy/tokens');</code> and also requiring and re-exporting them from the <code>localTokens.js</code> file.</li>
         <li>Variables must be imported as a single-level key-value map. Nested values need to be imported separately.</li>
         <li>Variables in Sass are global. When there are multiple requires or imports its hard to trace where things are coming from.</li>
         <li>Variables defined in JS can't be renamed on import - they are still in a global name space and suspectable to collisions.</li>
+        <li>Scss as a language lacks the expressiveness of Javascript.</li>
         <li>node-sass is slow and monolithic - in the end you will need to recompile all Sass on every change.</li>
       </ol>
     </React.Fragment>

@@ -4,5 +4,8 @@ module.exports = {
   size: {
     x1: '16px',
     x4: '64px',
+  },
+  colours: {
+    codeBg: 'whitesmoke',
   }
 }
