@@ -1,9 +1,16 @@
+import { Colgroup } from "../node_modules/glamorous";
+
 export const colours = {
   primary: '#1c6aa6',
   secondary: 'white',
 };
 
 export const font = {
+  baseline: {
+    compact: 1.25,
+    regular: 1.5,
+    roomy: 2
+  },
   family: {
     regular: "'IBM Plex Sans', sans",
     mono: "'IBM Plex Mono', monospace"
@@ -23,6 +30,9 @@ export const font = {
     bold: 500
   }
 };
+
+console.log('font.family :', font.family);
+console.log('font.family.regular :', font.family.regular);
 
 export const space = {
   half: '4px',
