@@ -4,7 +4,7 @@ import './sass.scss';
 
 storiesOf('CSS preprocessors', module)
   .add('Sass', () => (
-    <React.Fragment>
+    <div className="sass">
       <p className="local_vars">This text is styled with local vars</p>
 
       <p>This solution uses <a href="https://github.com/tompascall/js-to-styles-var-loader">js-to-styles-var-loader</a> to enable loading of JS variables into sass.</p>
@@ -24,5 +24,5 @@ storiesOf('CSS preprocessors', module)
         <li>Scss as a language lacks the expressiveness of Javascript.</li>
         <li>node-sass is slow and monolithic - in the end you will need to recompile all Sass on every change.</li>
       </ol>
-    </React.Fragment>
+    </div>
   ))

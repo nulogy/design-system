@@ -2,28 +2,28 @@ require('./localTokens.js');
 require('./localTokens.js').size;
 require('./localTokens.js').colours;
 
-html {
+.sass {
   font-family: $fontFamily;
-}
 
-code {
-  background-color: $codeBg;
-}
-
-.local {
-  &_vars {
-    font-family: $fontFamily;
-    line-height: $line;
-    color: pink;
-    font-size: $x4;
+  code {
+    background-color: $codeBg;
   }
-}
 
-.npm {
-  &_vars {
-    font-family: $fontFamily;
-    line-height: $line;
-    color: pink;
-    font-size: $x4;
+  .local {
+    &_vars {
+      font-family: $fontFamily;
+      line-height: $line;
+      color: pink;
+      font-size: $x4;
+    }
+  }
+
+  .npm {
+    &_vars {
+      font-family: $fontFamily;
+      line-height: $line;
+      color: pink;
+      font-size: $x4;
+    }
   }
 }
