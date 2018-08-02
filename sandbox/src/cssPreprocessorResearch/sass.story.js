@@ -24,5 +24,8 @@ storiesOf('CSS preprocessors', module)
         <li>Scss as a language lacks the expressiveness of Javascript.</li>
         <li>node-sass is slow and monolithic - in the end you will need to recompile all Sass on every change.</li>
       </ol>
+
+      <h2>Recommendation</h2>
+      <p>If we were going to go with sass, it would probably be better to do some static build of sass-vars file from the tokens. This would give us more control of variable naming, and we could for example turn object paths into variable names: So <code>{" { colour: { blue: { 600: 'blue' } } } "}</code> could become <code>$nds-colour-blue-600: 'blue';</code></p>
     </div>
   ))
