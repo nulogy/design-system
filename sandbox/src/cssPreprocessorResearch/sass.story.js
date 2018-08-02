@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import './sassWithJSTokens.scss';
+import './sass.scss';
 
-storiesOf('CSS preprocessor', module)
-  .add('Sass loading JS vars', () => (
+storiesOf('CSS preprocessors', module)
+  .add('Sass', () => (
     <React.Fragment>
       <p className="local_vars">This text is styled with local vars</p>
 
