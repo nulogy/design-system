@@ -7,5 +7,7 @@ module.exports = {
   },
   colours: {
     codeBg: 'whitesmoke',
+    sassColour: 'pink',
+    lessColour: 'lime'
   }
 }
