@@ -8,7 +8,7 @@ import { makeColourSequencePicker } from './styledComponents';
 const aColour = makeColourSequencePicker();
 
 storiesOf('CSS preprocessors', module)
-  .add('Styled Components for global styles', () => (
+  .add('Styled Components – global styles', () => (
     <div>
       <p className='styled-component'>
         I'm <code>.styled-component</code>. I'm {aColour()}, 
@@ -42,7 +42,7 @@ storiesOf('CSS preprocessors', module)
     </div>
   ))
 
-  .add('Utility classes with styled components', () => {
+  .add('Styled Components – Utility classes', () => {
     // Set up some general utility mixins.
     const mx = {
       lineHeight: css`line-height: ${t.font.baseline.regular};`,
