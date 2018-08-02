@@ -1,5 +1,12 @@
 import { pageLoader } from 'catalog';
-// import { Button } from '@nulogy/components';
+import { colour } from '@nulogy/tokens';
+
+const mapColours = key => 
+  Object.entries(colour[key]).map(
+    ([name, value]) => ({ name: `${key} ${name}`, value })
+  );
+
+console.log('🥪', mapColours('neutral'))
 
 export default [
   {
@@ -40,7 +47,7 @@ export default [
         title: 'Colour',
         content: pageLoader(() => import('./guidlines/colour.md')),
         imports: {
-          colour: require('@nulogy/tokens').colour
+          neutral: mapColours('neutral'),
         }
       },
       {

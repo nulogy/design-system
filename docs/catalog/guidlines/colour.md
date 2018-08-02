@@ -4,16 +4,7 @@
 Neutral colours are used for UI elements such as backgrounds, borders, dividers, text and drop-shadows.
 
 ```color-palette
-colors:
-  - {name: "N100 (white)", value: "#FFF"}
-  - {name: "N200", value: "#F7F7F7"}
-  - {name: "N300", value: "#EBEBEB"}
-  - {name: "N400", value: "#C7CED4"}
-  - {name: "N500", value: "#98A9B8"}
-  - {name: "N600", value: "#607180"}
-  - {name: "N700", value: "#475866"}
-  - {name: "N800", value: "#203140"}
-  - {name: "N900 (black)", value: "#000E1A"}
+colors: !import neutral
 ```
 
 ```table
