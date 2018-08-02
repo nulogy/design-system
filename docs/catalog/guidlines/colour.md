@@ -74,7 +74,7 @@ rows:
   - Name: B500
     Usage:
     Suggested Pairing: N900
-  - Name: B600
+  - Name: B600 (base)
     Usage: Interactivity, focus
     Suggested Pairing: N100
   - Name: B700
@@ -117,7 +117,7 @@ rows:
   - Name: Y500
     Usage:
     Suggested Pairing: N900
-  - Name: Y600
+  - Name: Y600 (base)
     Usage: Special interactivity, warning
     Suggested Pairing: N900
   - Name: Y700
@@ -160,7 +160,7 @@ rows:
   - Name: G500
     Usage:
     Suggested Pairing: N900
-  - Name: G600
+  - Name: G600 (base)
     Usage: Passing, success colour
     Suggested Pairing: N100
   - Name: G700
@@ -203,7 +203,7 @@ rows:
   - Name: R500
     Usage:
     Suggested Pairing: N900
-  - Name: R600
+  - Name: R600 (base)
     Usage: Failing, error colour
     Suggested Pairing: N100
   - Name: R700
@@ -219,6 +219,7 @@ rows:
 ```table
 columns:
   - Token
+  - Alias
   - HEX
   - RGB
 rows:
