@@ -1,7 +1,6 @@
 [build]
   command = "yarn run build-docs"
   publish = "docs/dist"
-  YARN_VERSION = "1.7.0"
 
 [build.environment]
   YARN_VERSION = "1.7.0"
