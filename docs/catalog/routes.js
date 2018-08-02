@@ -38,7 +38,10 @@ export default [
       {
         path: '/guidlines/colour',
         title: 'Colour',
-        content: pageLoader(() => import('./guidlines/colour.md'))
+        content: pageLoader(() => import('./guidlines/colour.md')),
+        imports: {
+          colour: require('@nulogy/tokens').colour
+        }
       },
       {
         path: '/guidlines/typography',
