@@ -17,13 +17,4 @@ require('./localTokens.js').colours;
       font-size: $x4;
     }
   }
-
-  .npm {
-    &_vars {
-      font-family: $fontFamily;
-      line-height: $line;
-      color: $sassColour;
-      font-size: $x4;
-    }
-  }
 }
