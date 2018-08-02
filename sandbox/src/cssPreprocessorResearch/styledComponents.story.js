@@ -7,7 +7,7 @@ import { makeColourSequencePicker } from './styledComponents';
 
 const aColour = makeColourSequencePicker();
 
-storiesOf('CSS preprocessor', module)
+storiesOf('CSS preprocessors', module)
   .add('Styled Components for global styles', () => (
     <div>
       <p className='styled-component'>
