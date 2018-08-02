@@ -1,3 +1,5 @@
+export const borderRadius ='0.4rem';
+
 export const font = {
   family: {
     regular: "'IBM Plex Sans', sans",
@@ -29,8 +31,14 @@ export const space = {
   x8: '64px'
 };
 
-export const colours = {
-  N: {
+export const colour = {
+  get primary() {return colour.blue['600']},
+  get success() {return colour.green['600']},
+  get warning() {return colour.yellow['600']},
+  get error() {return colour.red['600']},
+  get white() {return this.neutral['100']},
+  get black() {return this.neutral['900']},
+  neutral: {
     100: '#FFFFFF',
     200: '#F7F7F7',
     300: '#EBEBEB',
@@ -41,16 +49,16 @@ export const colours = {
     800: '#203140',
     900: '#03101A'
   },
-  B: {
+  blue: {
     200: '#F0F3F5',
     300: '#DDE8ED',
     400: '#C2E0F0',
     500: '#63B5E8',
     600: '#0E77D2',
     700: '#054CA3',
-    800: '#1B2B4D'
+    800: '#1B2B4D',
   },
-  Y: {
+  yellow: {
     200: '#F5F3F0',
     300: '#F2EADA',
     400: '#FAE5AF',
@@ -59,7 +67,7 @@ export const colours = {
     700: '#CEA10C',
     800: '#B3751E'
   },
-  G: {
+  green: {
     200: '#EBF5F3',
     300: '#C1E8E0',
     400: '#8DD6C8',
@@ -68,7 +76,7 @@ export const colours = {
     700: '#02613C',
     800: '#053A1F'
   },
-  R: {
+  red: {
     200: '#F7EEED',
     300: '#F2CECB',
     400: '#F2B2AE',
@@ -80,8 +88,8 @@ export const colours = {
 };
 
 export default {
-  colours: colours,
+  borderRadius: borderRadius,  
+  colour: colour,
   font: font,
   space: space,
-  borderRadius: '0.4rem',
 };
