@@ -17,9 +17,16 @@ module.exports = {
               includePaths: [srcPath]
             }
           },
-          {
-            loader: "js-to-styles-var-loader"
-          }
+          { loader: "js-to-styles-var-loader" }
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' }, 
+          { loader: 'css-loader' }, 
+          { loader: 'less-loader' },
+          { loader: "js-to-styles-var-loader" }
         ]
       },
       {

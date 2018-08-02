@@ -1,0 +1,30 @@
+require('./localTokens.js');
+require('./localTokens.js').size;
+require('./localTokens.js').colours;
+
+
+.less {
+  font-family: @fontFamily;
+
+  code {
+    background-color: @codeBg;
+  }
+
+  .local {
+    &_vars {
+      font-family: @fontFamily;
+      line-height: @line;
+      color: pink;
+      font-size: @x4;
+    }
+  }
+
+  .npm {
+    &_vars {
+      font-family: @fontFamily;
+      line-height: @line;
+      color: pink;
+      font-size: @x4;
+    }
+  }
+}
