@@ -51,7 +51,7 @@ colors:
   - {name: "B300", value: "#DDE8ED"}
   - {name: "B400", value: "#C2E0F0"}
   - {name: "B500", value: "#63B5E8"}
-  - {name: "B600 (base)", value: "#0E77D2"}
+  - {name: "B600 (blue)", value: "#0E77D2"}
   - {name: "B700", value: "#054CA3"}
   - {name: "B800", value: "#1B2B4D"}
 ```
@@ -74,7 +74,7 @@ rows:
   - Name: B500
     Usage:
     Suggested Pairing: N900
-  - Name: B600 (base)
+  - Name: B600 (blue)
     Usage: Interactivity, focus
     Suggested Pairing: N100
   - Name: B700
@@ -94,7 +94,7 @@ colors:
   - {name: "Y300", value: "#F2EADA"}
   - {name: "Y400", value: "#FAE5AF"}
   - {name: "Y500", value: "#FCDA7B"}
-  - {name: "Y600 (base)", value: "#FDCF00"}
+  - {name: "Y600 (yellow)", value: "#FDCF00"}
   - {name: "Y700", value: "#CEA10C"}
   - {name: "Y800", value: "#B3751E"}
 ```
@@ -117,7 +117,7 @@ rows:
   - Name: Y500
     Usage:
     Suggested Pairing: N900
-  - Name: Y600 (base)
+  - Name: Y600 (yellow)
     Usage: Special interactivity, warning
     Suggested Pairing: N900
   - Name: Y700
@@ -137,7 +137,7 @@ colors:
   - {name: "G300", value: "#C1E8E0"}
   - {name: "G400", value: "#8DD6C8"}
   - {name: "G500", value: "#10B297"}
-  - {name: "G600 (base)", value: "#008763"}
+  - {name: "G600 (green)", value: "#008763"}
   - {name: "G700", value: "#02613C"}
   - {name: "G800", value: "#053A1F"}
 ```
@@ -160,7 +160,7 @@ rows:
   - Name: G500
     Usage:
     Suggested Pairing: N900
-  - Name: G600 (base)
+  - Name: G600 (green)
     Usage: Passing, success colour
     Suggested Pairing: N100
   - Name: G700
@@ -180,7 +180,7 @@ colors:
   - {name: "R300", value: "#F2CECB"}
   - {name: "R400", value: "#F2B2AE"}
   - {name: "R500", value: "#DB807D"}
-  - {name: "R600 (base)", value: "#D13D3D"}
+  - {name: "R600 (red)", value: "#D13D3D"}
   - {name: "R700", value: "#9E131A"}
   - {name: "R800", value: "#78060F"}
 ```
@@ -203,7 +203,7 @@ rows:
   - Name: R500
     Usage:
     Suggested Pairing: N900
-  - Name: R600 (base)
+  - Name: R600 (red)
     Usage: Failing, error colour
     Suggested Pairing: N100
   - Name: R700
@@ -265,6 +265,7 @@ rows:
     HEX: "#63B5E8"
     RGB:
   - Token: colour.blue[600]
+    Alias: colour.red
     HEX: "#0E77D2"
     RGB:
   - Token: colour.blue[700]
