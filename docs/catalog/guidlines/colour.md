@@ -222,8 +222,54 @@ columns:
   - HEX
   - RGB
 rows:
-  - Token: colour.N.100
-    HEX: #FFFFFF
+  - Token: colour.neutral[100]
+    Alias: colour.white
+    HEX: "#FFFFFF"
     RGB: (255, 255, 255)
-
+  - Token: colour.neutral[200]
+    HEX: "#F7F7F7"
+    RGB:
+  - Token: colour.neutral[300]
+    HEX: "#EBEBEB"
+    RGB:
+  - Token: colour.neutral[400]
+    HEX: "#C7CED4"
+    RGB:
+  - Token: colour.neutral[500]
+    HEX: "#98A9B8"
+    RGB:
+  - Token: colour.neutral[600]
+    HEX: "#607180"
+    RGB:
+  - Token: colour.neutral[700]
+    HEX: "#475866"
+    RGB:
+  - Token: colour.neutral[800]
+    HEX: "#203140"
+    RGB:
+  - Token: colour.neutral[900]
+    Alias: colour.black
+    HEX: "#03101A"
+    RGB:
+  - Token: colour.blue[200]
+    HEX: "#F0F3F5"
+    RGB:
+  - Token: colour.blue[300]
+    HEX: "#DDE8ED"
+    RGB:
+  - Token: colour.blue[400]
+    HEX: "#C2E0F0"
+    RGB:
+  - Token: colour.blue[500]
+    HEX: "#63B5E8"
+    RGB:
+  - Token: colour.blue[600]
+    HEX: "#0E77D2"
+    RGB:
+  - Token: colour.blue[700]
+    HEX: "#054CA3"
+    RGB:
+  - Token: colour.blue[800]
+    HEX: "#1B2B4D"
+    RGB:
 ```
