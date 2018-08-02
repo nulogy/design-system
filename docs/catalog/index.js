@@ -19,7 +19,7 @@ const config = {
     textColor: colour.black,
     background: colour.white,
     linkHoverColor: colour.black,
-    lightColor: colour.yellow['600'],
+    lightColor: colour.yellow['700'],
 
     sidebarColor: colour.neutral['200'],
     sidebarColorText: colour.neutral['600'],
