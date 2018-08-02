@@ -1,9 +1,9 @@
 import { pageLoader } from 'catalog';
 import { colour } from '@nulogy/tokens';
 
-const mapColours = key => 
+const mapColours = (key, notes = {}) => 
   Object.entries(colour[key]).map(
-    ([name, value]) => ({ name: `${key} ${name}`, value })
+    ([name, value]) => ({ name: `${key} ${name} ${notes[name] || ''}`, value })
   );
 
 console.log('🥪', mapColours('neutral'))
@@ -47,7 +47,7 @@ export default [
         title: 'Colour',
         content: pageLoader(() => import('./guidlines/colour.md')),
         imports: {
-          neutral: mapColours('neutral'),
+          neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
         }
       },
       {
