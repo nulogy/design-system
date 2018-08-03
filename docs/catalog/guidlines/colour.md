@@ -144,10 +144,10 @@ rows:
     Suggested Pairing: neutral.100
   - Name: green.700
     Usage: Text colour, hover
-    Suggested Pairing: neutral.100, G400
+    Suggested Pairing: neutral.100, green.400
   - Name: green.800
     Usage: Chrome
-    Suggested Pairing: neutral.100, G400
+    Suggested Pairing: neutral.100, green.400
 ```
 
 ## Red Palette
