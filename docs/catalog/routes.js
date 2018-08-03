@@ -1,8 +1,7 @@
 import { pageLoader } from 'catalog';
 import { colour } from '@nulogy/tokens';
 
-const getColourName = (colourKey, name, notes, base) => 
-  (console.log(base, colour[colourKey][name]), `${colourKey}.${name} ${(base && base === colour[colourKey][name]) ? `(${colourKey}.base)` : ''} ${notes[name] || ''}`);
+const getColourName = (key, name, notes) => `${key}.${name} ${notes[name] || ''}`;
 
 const mergeNotesWithBase = ((base, name, value, notes) => (base.value && base.value === value) ? { ...notes, [name]: base.name } : notes);
 
