@@ -4,7 +4,21 @@ import "@nulogy/css";
 
 storiesOf('Global CSS', module)
   .add('basic', () => (
-    <div className="test">
-      Hi there
-    </div>
+    <React.Fragment>
+      <div className="nds--test">
+        .test
+      </div>
+
+      <div className="nds--external">
+        .external
+      </div>
+
+      <div className="nds--externalInjected">
+        .externalInjected
+      </div>
+      
+      <div className="nds--mixin">
+        .mixin
+      </div>
+    </React.Fragment>
   ));

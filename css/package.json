@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "start": "webpack --mode development",
-    "build": "webpack --mode production --config webpack.config.js"
+    "build": "webpack --mode production --config webpack.config.js",
+    "watch": "yarn build --watch"
   },
   "peerDependencies": {
     "react": "^16.3.2",
@@ -17,6 +18,7 @@
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
+    "@nulogy/tokens": "^0.1",
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
