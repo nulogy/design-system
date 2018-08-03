@@ -13,37 +13,37 @@ columns:
   - Usage
   - Suggested Pairing
 rows:
-  - Name: N100
-    Usage: Background colour
-    Suggested Pairing: N900, B700
-  - Name: N200
-    Usage: Background colour
-    Suggested Pairing: N900, B700
-  - Name: N300
-    Usage: Background colour
-    Suggested Pairing: N900, B700
-  - Name: N400
-    Usage: Borders, dividers, hover state
-    Suggested Pairing: N900, B700
-  - Name: N500
+  - Name: neutral.100
+    Usage: background colour
+    Suggested Pairing: neutral.900, blue.700
+  - Name: neutral.200
+    Usage: background colour
+    Suggested Pairing: neutral.900, blue.700
+  - Name: neutral.300
+    Usage: background colour
+    Suggested Pairing: neutral.900, blue.700
+  - Name: neutral.400
+    Usage: borders, dividers, hover state
+    Suggested Pairing: neutral.900, blue.700
+  - Name: neutral.500
     Usage: Disabled text
-    Suggested Pairing: N900
-  - Name: N600
-    Usage: Borders, dividers, hover state
-    Suggested Pairing: N100
-  - Name: N700
-    Usage: Background colour
-    Suggested Pairing: N100
-  - Name: N800
-    Usage: Background colour
-    Suggested Pairing: N100
-  - Name: N900
-    Usage: Background colour
-    Suggested Pairing: N100
+    Suggested Pairing: neutral.900
+  - Name: neutral.600
+    Usage: borders, dividers, hover state
+    Suggested Pairing: neutral.100
+  - Name: neutral.700
+    Usage: background colour
+    Suggested Pairing: neutral.100
+  - Name: neutral.800
+    Usage: background colour
+    Suggested Pairing: neutral.100
+  - Name: neutral.900
+    Usage: background colour
+    Suggested Pairing: neutral.100
 ```
 
-## Blue Palette
-Blue colour represents our brand and is used as the main interactive colour. Also, Blue is used as the semantic colour.
+## blue Palette
+Blue colour represents our brand and is used as the main interactive colour. Also, blue.lue is used as the semantic colour.
 
 ```color-palette
 colors: !import blue
@@ -55,27 +55,27 @@ columns:
   - Usage
   - Suggested Pairing
 rows:
-  - Name: B200
+  - Name: blue.200
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: B300
+    Suggested Pairing: neutral.900, blue.700
+  - Name: blue.300
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: B400
+    Suggested Pairing: neutral.900, blue.700
+  - Name: blue.400
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: B500
+    Suggested Pairing: neutral.900, blue.700
+  - Name: blue.500
     Usage:
-    Suggested Pairing: N900
-  - Name: B600 (blue, base)
+    Suggested Pairing: neutral.900
+  - Name: blue.600 (blue.base)
     Usage: Interactivity, focus
-    Suggested Pairing: N100
-  - Name: B700
+    Suggested Pairing: neutral.100
+  - Name: blue.700
     Usage: Text colour, active, hover
-    Suggested Pairing: N100, B400
-  - Name: B800
+    Suggested Pairing: neutral.100, blue.400
+  - Name: blue.800
     Usage: Chrome
-    Suggested Pairing: N100, B400
+    Suggested Pairing: neutral.100, blue.400
 ```
 
 ## Yellow Palette
@@ -91,27 +91,27 @@ columns:
   - Usage
   - Suggested Pairing
 rows:
-  - Name: Y200
+  - Name: yellow.200
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: Y300
+    Suggested Pairing: neutral.900, blue.700
+  - Name: yellow.300
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: Y400
+    Suggested Pairing: neutral.900, blue.700
+  - Name: yellow.400
     Usage:
-    Suggested Pairing: N900, B700
-  - Name: Y500
+    Suggested Pairing: neutral.900, blue.700
+  - Name: yellow.500
     Usage:
-    Suggested Pairing: N900
-  - Name: Y600 (yellow)
+    Suggested Pairing: neutral.900
+  - Name: yellow.600 (yellow.base)
     Usage: Special interactivity, warning
-    Suggested Pairing: N900
-  - Name: Y700
+    Suggested Pairing: neutral.900
+  - Name: yellow.700
     Usage: Hover
-    Suggested Pairing: N900
-  - Name: Y800
+    Suggested Pairing: neutral.900
+  - Name: yellow.800
     Usage: Chrome
-    Suggested Pairing: N900
+    Suggested Pairing: neutral.900
 ```
 
 ## Green (luisgreen) Palette
@@ -129,25 +129,25 @@ columns:
 rows:
   - Name: G200
     Usage:
-    Suggested Pairing: N900, B700, G700
+    Suggested Pairing: neutral.900, blue.700, G700
   - Name: G300
     Usage:
-    Suggested Pairing: N900, B700, G700
+    Suggested Pairing: neutral.900, blue.700, G700
   - Name: G400
     Usage:
-    Suggested Pairing: N900, B700, G700
+    Suggested Pairing: neutral.900, blue.700, G700
   - Name: G500
     Usage:
-    Suggested Pairing: N900
-  - Name: G600 (green)
+    Suggested Pairing: neutral.900
+  - Name: G600 (green.base)
     Usage: Passing, success colour
-    Suggested Pairing: N100
+    Suggested Pairing: neutral.100
   - Name: G700
     Usage: Text colour, hover
-    Suggested Pairing: N100, G400
+    Suggested Pairing: neutral.100, G400
   - Name: G800
     Usage: Chrome
-    Suggested Pairing: N100, G400
+    Suggested Pairing: neutral.100, G400
 ```
 
 ## Red Palette
@@ -165,25 +165,25 @@ columns:
 rows:
   - Name: R200
     Usage:
-    Suggested Pairing: N900, B700, R700
+    Suggested Pairing: neutral.900, blue.700, R700
   - Name: R300
     Usage:
-    Suggested Pairing: N900, B700, R700
+    Suggested Pairing: neutral.900, blue.700, R700
   - Name: R400
     Usage:
-    Suggested Pairing: N900, B700, R700
+    Suggested Pairing: neutral.900, blue.700, R700
   - Name: R500
     Usage:
-    Suggested Pairing: N900
-  - Name: R600 (red)
+    Suggested Pairing: neutral.900
+  - Name: R600 (red.base)
     Usage: Failing, error colour
-    Suggested Pairing: N100
+    Suggested Pairing: neutral.100
   - Name: R700
     Usage: Text colour, hover
-    Suggested Pairing: N100, R400
+    Suggested Pairing: neutral.100, R400
   - Name: R800
     Usage: Chrome
-    Suggested Pairing: N100, R400
+    Suggested Pairing: neutral.100, R400
 ```
 
 ## Tokens
@@ -198,54 +198,54 @@ columns:
 rows:
   - Token: colour.neutral[100]
     Alias: colour.white
-    Colour: N100 (white)
+    Colour: neutral100 (white)
     HEX: "#FFFFFF"
     RGB: (255, 255, 255)
   - Token: colour.neutral[200]
     HEX: "#F7F7F7"
-    Colour: N200
+    Colour: neutral200
   - Token: colour.neutral[300]
     HEX: "#EBEBEB"
-    Colour: N300
+    Colour: neutral300
   - Token: colour.neutral[400]
     HEX: "#C7CED4"
-    Colour: N400
+    Colour: neutral400
   - Token: colour.neutral[500]
     HEX: "#98A9B8"
-    Colour: N500
+    Colour: neutral500
   - Token: colour.neutral[600]
     HEX: "#607180"
-    Colour: N600
+    Colour: neutral600
   - Token: colour.neutral[700]
     HEX: "#475866"
-    Colour: N700
+    Colour: neutral700
   - Token: colour.neutral[800]
     HEX: "#203140"
-    Colour: N800
+    Colour: neutral800
   - Token: colour.neutral[900]
     Alias: colour.black
     HEX: "#03101A"
-    Colour: N900
+    Colour: neutral900
   - Token: colour.blue[200]
     HEX: "#F0F3F5"
-    Colour: B200
+    Colour: blue.200
   - Token: colour.blue[300]
     HEX: "#DDE8ED"
-    Colour: B300
+    Colour: blue.300
   - Token: colour.blue[400]
     HEX: "#C2E0F0"
-    Colour: B400
+    Colour: blue.400
   - Token: colour.blue[500]
     HEX: "#63B5E8"
-    Colour: B500
+    Colour: blue.500
   - Token: colour.blue[600]
     Alias: colour.blue, colour.base
     HEX: "#0E77D2"
-    Colour: B600 (blue, base)
+    Colour: blue.600 (blue, base)
   - Token: colour.blue[700]
     HEX: "#054CA3"
-    Colour: B700
+    Colour: blue.700
   - Token: colour.blue[800]
     HEX: "#1B2B4D"
-    Colour: B800
+    Colour: blue.800
 ```

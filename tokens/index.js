@@ -50,6 +50,7 @@ export const colour = {
     900: '#03101A'
   },
   blue: {
+    get base() {return this['600']},
     200: '#F0F3F5',
     300: '#DDE8ED',
     400: '#C2E0F0',
@@ -59,6 +60,7 @@ export const colour = {
     800: '#1B2B4D',
   },
   yellow: {
+    get base() {return this['600']},
     200: '#F5F3F0',
     300: '#F2EADA',
     400: '#FAE5AF',
@@ -68,6 +70,7 @@ export const colour = {
     800: '#B3751E'
   },
   green: {
+    get base() {return this['600']},
     200: '#EBF5F3',
     300: '#C1E8E0',
     400: '#8DD6C8',
@@ -77,6 +80,7 @@ export const colour = {
     800: '#053A1F'
   },
   red: {
+    get base() {return this['600']},
     200: '#F7EEED',
     300: '#F2CECB',
     400: '#F2B2AE',
@@ -88,7 +92,7 @@ export const colour = {
 };
 
 export default {
-  borderRadius: borderRadius,  
+  borderRadius: borderRadius,
   colour: colour,
   font: font,
   space: space,

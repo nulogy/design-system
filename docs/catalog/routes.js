@@ -47,10 +47,10 @@ export default [
         content: pageLoader(() => import('./guidlines/colour.md')),
         imports: {
           neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
-          blue: mapColours('blue', { 600: '(base)'}),
-          yellow: mapColours('yellow', { 600: '(yellow)'}),
-          green: mapColours('green', { 600: '(green)'}),
-          red: mapColours('red', { 600: '(red)'}),
+          blue: mapColours('blue', { 600: '(blue.base)'}),
+          yellow: mapColours('yellow', { 600: '(yellow.base)'}),
+          green: mapColours('green', { 600: '(green.base)'}),
+          red: mapColours('red', { 600: '(red.base)'}),
         }
       },
       {
