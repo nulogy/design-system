@@ -1,8 +1,14 @@
 const path = require("path");
 
 const srcPath = path.resolve('src');
-const nodeModules = path.resolve('node_modules')
-const rootNodeModules = path.resolve('../node_modules')
+const nodeModules = path.resolve('node_modules');
+const rootNodeModules = path.resolve('../node_modules');
+
+const loaderPaths = [
+  srcPath,
+  nodeModules,
+  rootNodeModules
+];
 
 module.exports = {
   module: {
@@ -15,7 +21,7 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              includePaths: [srcPath]
+              includePaths: loaderPaths
             }
           },
           { loader: "js-to-styles-var-loader" }
@@ -29,11 +35,7 @@ module.exports = {
           { 
             loader: 'less-loader', 
             options: {
-              paths: [
-                srcPath,
-                nodeModules,
-                rootNodeModules
-              ]
+              paths: loaderPaths
             }
           },
           { loader: "js-to-styles-var-loader" }
