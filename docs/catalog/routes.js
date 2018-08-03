@@ -1,7 +1,7 @@
 import { pageLoader } from 'catalog';
 import { colour } from '@nulogy/tokens';
 
-const getColourName = (key, name, notes) => `${key[0].toUpperCase()}${name} ${notes[name] || ''}`;
+const getColourName = (key, name, notes) => `${key}.${name} ${notes[name] || ''}`;
 const mapColours = (key, notes = {}) =>
   Object.entries(colour[key]).map(
     ([name, value]) => ({ name: getColourName(key, name, notes), value })
