@@ -30,7 +30,7 @@ const toRGB = hex => {
   return rgb.join(', ')
 }
 
-const colourTokenTableRows = Object.entries(colour)
+const baseRows = Object.entries(colour)
   .filter(([_, value]) => typeof value === 'string')
   .map(([colourName, hex]) => ({
     Token: `colour.${colourName}`,
@@ -38,6 +38,25 @@ const colourTokenTableRows = Object.entries(colour)
     HEX: hex,
     RGB: toRGB(hex)
   }));
+
+
+const scaleRows = Object.entries(colour)
+  .filter(([_, value]) => typeof value !== 'string')
+  .reduce((result, [scaleName, scale]) => ([
+    ...result,
+    ...Object.entries(scale).map(([colourName, hex]) => ({
+      Token: 'colour.neutral.100',
+      Alias: null,
+      HEX: colour.neutral['100'],
+      RGB: '255, 255, 255'
+    }))
+  ]), [])
+
+const colourTokenTableRows = [ ...baseRows, ...scaleRows]
+
+
+
+
 
 const colourImports = {
   neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
