@@ -46,14 +46,7 @@ rows:
 Blue colour represents our brand and is used as the main interactive colour. Also, Blue is used as the semantic colour.
 
 ```color-palette
-colors:
-  - {name: "B200", value: "#F0F3F5"}
-  - {name: "B300", value: "#DDE8ED"}
-  - {name: "B400", value: "#C2E0F0"}
-  - {name: "B500", value: "#63B5E8"}
-  - {name: "B600 (blue)", value: "#0E77D2"}
-  - {name: "B700", value: "#054CA3"}
-  - {name: "B800", value: "#1B2B4D"}
+colors: !import blue
 ```
 
 ```table
@@ -74,7 +67,7 @@ rows:
   - Name: B500
     Usage:
     Suggested Pairing: N900
-  - Name: B600 (blue)
+  - Name: B600 (blue, base)
     Usage: Interactivity, focus
     Suggested Pairing: N100
   - Name: B700
@@ -89,14 +82,7 @@ rows:
 Yellow colour represents our brand and is used as the semantic colour.
 
 ```color-palette
-colors:
-  - {name: "Y200", value: "#F5F3F0"}
-  - {name: "Y300", value: "#F2EADA"}
-  - {name: "Y400", value: "#FAE5AF"}
-  - {name: "Y500", value: "#FCDA7B"}
-  - {name: "Y600 (yellow)", value: "#FDCF00"}
-  - {name: "Y700", value: "#CEA10C"}
-  - {name: "Y800", value: "#B3751E"}
+colors: !import yellow
 ```
 
 ```table
@@ -132,14 +118,7 @@ rows:
 Green is used as the semantic colour.
 
 ```color-palette
-colors:
-  - {name: "G200", value: "#EBF5F3"}
-  - {name: "G300", value: "#C1E8E0"}
-  - {name: "G400", value: "#8DD6C8"}
-  - {name: "G500", value: "#10B297"}
-  - {name: "G600 (green)", value: "#008763"}
-  - {name: "G700", value: "#02613C"}
-  - {name: "G800", value: "#053A1F"}
+colors: !import green
 ```
 
 ```table
@@ -175,14 +154,7 @@ rows:
 Red is used as the semantic colour.
 
 ```color-palette
-colors:
-  - {name: "R200", value: "#F7EEED"}
-  - {name: "R300", value: "#F2CECB"}
-  - {name: "R400", value: "#F2B2AE"}
-  - {name: "R500", value: "#DB807D"}
-  - {name: "R600 (red)", value: "#D13D3D"}
-  - {name: "R700", value: "#9E131A"}
-  - {name: "R800", value: "#78060F"}
+colors: !import red
 ```
 
 ```table
@@ -220,58 +192,60 @@ rows:
 columns:
   - Token
   - Alias
+  - Colour
   - HEX
   - RGB
 rows:
   - Token: colour.neutral[100]
     Alias: colour.white
+    Colour: N100 (white)
     HEX: "#FFFFFF"
     RGB: (255, 255, 255)
   - Token: colour.neutral[200]
     HEX: "#F7F7F7"
-    RGB:
+    Colour: N200
   - Token: colour.neutral[300]
     HEX: "#EBEBEB"
-    RGB:
+    Colour: N300
   - Token: colour.neutral[400]
     HEX: "#C7CED4"
-    RGB:
+    Colour: N400
   - Token: colour.neutral[500]
     HEX: "#98A9B8"
-    RGB:
+    Colour: N500
   - Token: colour.neutral[600]
     HEX: "#607180"
-    RGB:
+    Colour: N600
   - Token: colour.neutral[700]
     HEX: "#475866"
-    RGB:
+    Colour: N700
   - Token: colour.neutral[800]
     HEX: "#203140"
-    RGB:
+    Colour: N800
   - Token: colour.neutral[900]
     Alias: colour.black
     HEX: "#03101A"
-    RGB:
+    Colour: N900
   - Token: colour.blue[200]
     HEX: "#F0F3F5"
-    RGB:
+    Colour: B200
   - Token: colour.blue[300]
     HEX: "#DDE8ED"
-    RGB:
+    Colour: B300
   - Token: colour.blue[400]
     HEX: "#C2E0F0"
-    RGB:
+    Colour: B400
   - Token: colour.blue[500]
     HEX: "#63B5E8"
-    RGB:
+    Colour: B500
   - Token: colour.blue[600]
-    Alias: colour.red
+    Alias: colour.blue, colour.base
     HEX: "#0E77D2"
-    RGB:
+    Colour: B600 (blue, base)
   - Token: colour.blue[700]
     HEX: "#054CA3"
-    RGB:
+    Colour: B700
   - Token: colour.blue[800]
     HEX: "#1B2B4D"
-    RGB:
+    Colour: B800
 ```
