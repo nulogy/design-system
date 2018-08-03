@@ -1,5 +1,43 @@
 > Colours are used to set a visual tone, communicate meaning, provide guidance, and create coherent experience between Nulogy product(s) and physical environment. We are committed to complying with AA standard contrast ratios.
 
+## Base Colours
+
+```color
+span: 1
+name: "blue.base (blue.600)"
+value: "#0E77D2"
+```
+
+```color
+span: 1
+name: "yellow.base (yellow.600)"
+value: "#FDCF00"
+```
+
+```color
+span: 1
+name: "green.base (green.600)"
+value: "#008763"
+```
+
+```color
+span: 1
+name: "red.base (red.600)"
+value: "#D13D3D"
+```
+
+```color
+span: 1
+name: "white (neutral.100)"
+value: "#FFFFFF"
+```
+
+```color
+span: 1
+name: "black (neutral.900)"
+value: "#03101A"
+```
+
 ## Neutral Palette
 Neutral colours are used for UI elements such as backgrounds, borders, dividers, text and drop-shadows.
 
