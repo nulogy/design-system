@@ -10,12 +10,12 @@ const mapColours = (key, notes = {}) => {
     name: `(${key}.base)`,
     value: colour[key].base, // '#0E77D2'
   };
-  return Object.entries(colour[key]) 
+  return Object.entries(colour[key])
     .filter(([name]) => name !== 'base')
     .map(([name, value]) => ({ name: getColourName(key, name, mergeNotesWithBase(base, name, value, notes)), value }));
   }
 
-const colourTokenTableRows = [
+const _colourTokenTableRows = [
   {
     Token: 'colour.neutral.100',
     Alias: null,
@@ -23,6 +23,16 @@ const colourTokenTableRows = [
     RGB: '255, 255, 255'
   }
 ];
+
+const colourTokenTableRows = Object.entries(colour)
+  .filter(([_, value]) => typeof value === 'string')
+  .map(([colourName, hex]) => ({
+    Token: `colour.${colourName}`,
+    Alias: null,
+    HEX: hex,
+    RGB: ''
+  }));
+
 
 const colourImports = {
   neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
@@ -38,7 +48,7 @@ export default [
     path: '/',
     title: 'Welcome',
     content: pageLoader(() => import('../../README.md'))
-  },  
+  },
   {
     title: 'Foundation',
     pages: [
