@@ -17,4 +17,12 @@ require('./localTokens.js').colours;
       font-size: @x4;
     }
   }
+
+  .plugin {
+    @plugin './lessPlugin.js';
+    @token: 'test';
+    &_vars {
+      color: pluginToken(@token);
+    }
+  }
 }

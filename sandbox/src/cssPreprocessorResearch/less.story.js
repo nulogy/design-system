@@ -8,6 +8,8 @@ storiesOf('CSS preprocessors', module)
       <p className="local_vars">This text is styled with local JS vars using Less.</p>
 
       <p>This solution uses <a href="https://github.com/tompascall/js-to-styles-var-loader">js-to-styles-var-loader</a> to enable loading of JS variables into less.</p>
+
+      <p className="plugin_vars">This text is styled with a <a href="http://lesscss.org/features/#plugin-atrules-feature">less @plugin</a> loaded <a href="https://github.com/webpack-contrib/less-loader#plugins">via webpack</a></p>
       
       <h2>Pros</h2>
       <ol>
