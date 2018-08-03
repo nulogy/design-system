@@ -42,8 +42,8 @@ rows:
     Suggested Pairing: neutral.100
 ```
 
-## blue Palette
-Blue colour represents our brand and is used as the main interactive colour. Also, blue.lue is used as the semantic colour.
+## Blue Palette
+Blue colour represents our brand and is used as the main interactive colour. Also, Blue is used as the semantic colour.
 
 ```color-palette
 colors: !import blue
