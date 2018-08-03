@@ -1,7 +1,8 @@
 const path = require("path");
 
-const basePath = path.join(__dirname, '..');
-const srcPath = path.join(basePath, 'src');
+const srcPath = path.resolve('src');
+const nodeModules = path.resolve('node_modules')
+const rootNodeModules = path.resolve('../node_modules')
 
 module.exports = {
   module: {
@@ -25,7 +26,16 @@ module.exports = {
         use: [
           { loader: 'style-loader' }, 
           { loader: 'css-loader' }, 
-          { loader: 'less-loader' },
+          { 
+            loader: 'less-loader', 
+            options: {
+              paths: [
+                srcPath,
+                nodeModules,
+                rootNodeModules
+              ]
+            }
+          },
           { loader: "js-to-styles-var-loader" }
         ]
       },
