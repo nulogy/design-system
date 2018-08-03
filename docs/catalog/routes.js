@@ -3,9 +3,9 @@ import { colour } from '@nulogy/tokens';
 
 const getColourName = (key, name, notes) => `${key}.${name} ${notes[name] || ''}`;
 const mapColours = (key, notes = {}) =>
-  Object.entries(colour[key]).map(
-    ([name, value]) => ({ name: getColourName(key, name, notes), value })
-  );
+  Object.entries(colour[key])
+    .filter(([name]) => name !== 'base')
+    .map(([name, value]) => ({ name: getColourName(key, name, notes), value }));
 
 export default [
   {
