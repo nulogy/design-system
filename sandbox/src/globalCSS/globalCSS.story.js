@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import "@nulogy/css";
+
+// @nulogy/css is imported in ../../.storybook/config.js
 
 storiesOf('Global CSS', module)
   .add('basic', () => (
