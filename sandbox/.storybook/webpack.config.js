@@ -34,9 +34,6 @@ module.exports = {
           { loader: 'css-loader' }, 
           { 
             loader: 'less-loader', 
-            options: {
-              paths: loaderPaths
-            }
           },
           { loader: "js-to-styles-var-loader" }
         ]
