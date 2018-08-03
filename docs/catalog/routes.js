@@ -1,18 +1,26 @@
 import { pageLoader } from 'catalog';
 import { colour } from '@nulogy/tokens';
 
-const getColourName = (key, name, notes) => `${key}.${name} ${notes[name] || ''}`;
-const mapColours = (key, notes = {}) =>
-  Object.entries(colour[key])
-    .filter(([name]) => name !== 'base')
-    .map(([name, value]) => ({ name: getColourName(key, name, notes), value }));
+const getColourName = (colourKey, name, notes, base) => 
+  (console.log(base, colour[colourKey][name]), `${colourKey}.${name} ${(base && base === colour[colourKey][name]) ? `(${colourKey}.base)` : ''} ${notes[name] || ''}`);
 
+const mergeNotesWithBase = ((base, name, value, notes) => (base.value && base.value === value) ? { ...notes, [name]: base.name } : notes);
+
+const mapColours = (key, notes = {}) => {
+  const base = {
+    name: `(${key}.base)`,
+    value: colour[key].base, // '#0E77D2'
+  };
+  return Object.entries(colour[key]) 
+    .filter(([name]) => name !== 'base')
+    .map(([name, value]) => ({ name: getColourName(key, name, mergeNotesWithBase(base, name, value, notes)), value }));
+  }
 const colourImports = {
   neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
-  blue: mapColours('blue', { 600: '(blue.base)'}),
-  yellow: mapColours('yellow', { 600: '(yellow.base)'}),
-  green: mapColours('green', { 600: '(green.base)'}),
-  red: mapColours('red', { 600: '(red.base)'}),
+  blue: mapColours('blue'),
+  yellow: mapColours('yellow'),
+  green: mapColours('green'),
+  red: mapColours('red'),
 };
 
 export default [
@@ -20,7 +28,7 @@ export default [
     path: '/',
     title: 'Welcome',
     content: pageLoader(() => import('../../README.md'))
-  },
+  },  
   {
     title: 'Foundation',
     pages: [
