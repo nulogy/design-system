@@ -188,6 +188,10 @@ rows:
 
 ## Tokens
 
+```hint|neutral
+Whenever possible Alias colour names should be used.
+```
+
 ```table
 columns:
   - Token
