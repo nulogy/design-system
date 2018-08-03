@@ -1,10 +1,11 @@
 {
   "name": "@nulogy/nucleus",
   "workspaces": [
-    "docs",
     "components",
-    "tokens",
-    "sandbox"
+    "css",
+    "docs",
+    "sandbox",
+    "tokens"
   ],
   "version": "0.1.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
@@ -34,10 +35,11 @@
     "start": "concurrently 'yarn components watch' 'yarn docs start'",
     "hack": "yarn sandbox hack",
     "build-docs": "yarn components build && yarn docs build",
-    "docs": "yarn workspace @nulogy/nulogy-design",
     "components": "yarn workspace @nulogy/components",
-    "tokens": "yarn workspace @nulogy/tokens",
-    "sandbox": "yarn workspace @nulogy/sandbox"
+    "css": "yarn workspace @nulogy/css",
+    "docs": "yarn workspace @nulogy/nulogy-design",
+    "sandbox": "yarn workspace @nulogy/sandbox",
+    "tokens": "yarn workspace @nulogy/tokens"
   },
   "devDependencies": {
     "concurrently": "^3.6.1"
