@@ -1,5 +1,6 @@
 import { pageLoader } from 'catalog';
 import { colour } from '@nulogy/tokens';
+import colourConvert from 'color-convert';
 
 const getColourName = (key, name, notes) => `${key}.${name} ${notes[name] || ''}`;
 
@@ -24,15 +25,19 @@ const _colourTokenTableRows = [
   }
 ];
 
+const toRGB = hex => {
+  const rgb = colourConvert.hex.rgb(hex);
+  return rgb.join(', ')
+}
+
 const colourTokenTableRows = Object.entries(colour)
   .filter(([_, value]) => typeof value === 'string')
   .map(([colourName, hex]) => ({
     Token: `colour.${colourName}`,
     Alias: null,
     HEX: hex,
-    RGB: ''
+    RGB: toRGB(hex)
   }));
-
 
 const colourImports = {
   neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
