@@ -16,36 +16,34 @@ const mapColours = (key, notes = {}) => {
     .map(([name, value]) => ({ name: getColourName(key, name, mergeNotesWithBase(base, name, value, notes)), value }));
   }
 
-const _colourTokenTableRows = [
-  {
-    Token: 'colour.neutral.100',
-    Alias: null,
-    HEX: colour.neutral['100'],
-    RGB: '255, 255, 255'
-  }
-];
-
 const toRGB = hex => {
   const rgb = colourConvert.hex.rgb(hex);
   return rgb.join(', ')
 }
 
-const mapRow = ([colourName, hex]) => ({
-  Token: `colour.${colourName}`,
-  Alias: null,
+const getAlias = (colourName, hex, scale) => {
+  const alias = scale.find(([name, value]) => colourName !== 'base' && name !== colourName && value === hex);
+  return alias && alias[0];
+}
+
+const addPrefix = (pre, str) => str &&  `${pre}.${str}`;
+
+const mapRow = prefix => ([colourName, hex], _, scale) => ({
+  Token: addPrefix(prefix, colourName),
+  Alias: addPrefix(prefix, getAlias(colourName, hex, scale)),
   HEX: hex,
   RGB: toRGB(hex)
 })
 
 const baseRows = Object.entries(colour)
   .filter(([_, value]) => typeof value === 'string')
-  .map(mapRow);
+  .map(mapRow('colour'));
 
 const scaleRows = Object.entries(colour)
   .filter(([_, value]) => typeof value !== 'string')
   .reduce((result, [scaleName, scale]) => ([
     ...result,
-    ...Object.entries(scale).map(mapRow)
+    ...Object.entries(scale).map(mapRow(`colour.${scaleName}`))
   ]), [])
 
 const colourTokenTableRows = [ ...baseRows, ...scaleRows]

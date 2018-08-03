@@ -231,10 +231,5 @@ Whenever possible Alias colour names should be used.
 ```
 
 ```table
-columns:
-  - Token
-  - Alias
-  - HEX
-  - RGB
 rows: !import colourTokenTableRows
 ```
