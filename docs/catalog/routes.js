@@ -7,6 +7,14 @@ const mapColours = (key, notes = {}) =>
     .filter(([name]) => name !== 'base')
     .map(([name, value]) => ({ name: getColourName(key, name, notes), value }));
 
+const colourImports = {
+  neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
+  blue: mapColours('blue', { 600: '(blue.base)'}),
+  yellow: mapColours('yellow', { 600: '(yellow.base)'}),
+  green: mapColours('green', { 600: '(green.base)'}),
+  red: mapColours('red', { 600: '(red.base)'}),
+};
+
 export default [
   {
     path: '/',
@@ -45,13 +53,7 @@ export default [
         path: '/guidlines/colour',
         title: 'Colour',
         content: pageLoader(() => import('./guidlines/colour.md')),
-        imports: {
-          neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
-          blue: mapColours('blue', { 600: '(blue.base)'}),
-          yellow: mapColours('yellow', { 600: '(yellow.base)'}),
-          green: mapColours('green', { 600: '(green.base)'}),
-          red: mapColours('red', { 600: '(red.base)'}),
-        }
+        imports: colourImports
       },
       {
         path: '/guidlines/typography',
