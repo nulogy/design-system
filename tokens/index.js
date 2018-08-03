@@ -1,7 +1,4 @@
-export const colours = {
-  primary: '#1c6aa6',
-  secondary: 'white',
-};
+export const borderRadius ='0.4rem';
 
 export const font = {
   family: {
@@ -34,9 +31,69 @@ export const space = {
   x8: '64px'
 };
 
+export const colour = {
+  get base() {return colour.blue['600']},
+  get success() {return colour.green['600']},
+  get warning() {return colour.yellow['600']},
+  get error() {return colour.red['600']},
+  get white() {return this.neutral['100']},
+  get black() {return this.neutral['900']},
+  neutral: {
+    100: '#FFFFFF',
+    200: '#F7F7F7',
+    300: '#EBEBEB',
+    400: '#C7CED4',
+    500: '#98A9B8',
+    600: '#607180',
+    700: '#475866',
+    800: '#203140',
+    900: '#03101A'
+  },
+  blue: {
+    get base() {return this['600']},
+    200: '#F0F3F5',
+    300: '#DDE8ED',
+    400: '#C2E0F0',
+    500: '#63B5E8',
+    600: '#0E77D2',
+    700: '#054CA3',
+    800: '#1B2B4D',
+  },
+  yellow: {
+    get base() {return this['600']},
+    200: '#F5F3F0',
+    300: '#F2EADA',
+    400: '#FAE5AF',
+    500: '#FCDA7B',
+    600: '#FDCF00',
+    700: '#CEA10C',
+    800: '#B3751E'
+  },
+  green: {
+    get base() {return this['600']},
+    200: '#EBF5F3',
+    300: '#C1E8E0',
+    400: '#8DD6C8',
+    500: '#10B297',
+    600: '#008763',
+    700: '#02613C',
+    800: '#053A1F'
+  },
+  red: {
+    get base() {return this['600']},
+    200: '#F7EEED',
+    300: '#F2CECB',
+    400: '#F2B2AE',
+    500: '#DB807D',
+    600: '#D13D3D',
+    700: '#9E131A',
+    800: '#78060F'
+  }
+};
+
 export default {
-  colours: colours,
+  borderRadius: borderRadius,
+  colour: colour,
   font: font,
   space: space,
-  borderRadius: '0.4rem',
 };
