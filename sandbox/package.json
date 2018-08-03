@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "@nulogy/components": "^0.1",
+    "@nulogy/css": "^0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
-    "hack": "concurrently 'yarn workspace @nulogy/components watch' 'yarn start'",
+    "hack": "concurrently 'yarn workspace @nulogy/components watch' 'yarn workspace @nulogy/css watch' 'yarn start'",
     "build": "build-storybook",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
