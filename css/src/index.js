@@ -7,7 +7,7 @@ injectGlobal`
 .nds {
   &--test {
     color: pink;
-    font-size: ${font.size.smallest}px;
+    font-size: ${font.size.larger}px;
   }
 
   &--mixin {
