@@ -127,25 +127,25 @@ columns:
   - Usage
   - Suggested Pairing
 rows:
-  - Name: G200
+  - Name: green.200
     Usage:
-    Suggested Pairing: neutral.900, blue.700, G700
-  - Name: G300
+    Suggested Pairing: neutral.900, blue.700, green.700
+  - Name: green.300
     Usage:
-    Suggested Pairing: neutral.900, blue.700, G700
-  - Name: G400
+    Suggested Pairing: neutral.900, blue.700, green.700
+  - Name: green.400
     Usage:
-    Suggested Pairing: neutral.900, blue.700, G700
-  - Name: G500
+    Suggested Pairing: neutral.900, blue.700, green.700
+  - Name: green.500
     Usage:
     Suggested Pairing: neutral.900
-  - Name: G600 (green.base)
+  - Name: green.600 (green.base)
     Usage: Passing, success colour
     Suggested Pairing: neutral.100
-  - Name: G700
+  - Name: green.700
     Usage: Text colour, hover
     Suggested Pairing: neutral.100, G400
-  - Name: G800
+  - Name: green.800
     Usage: Chrome
     Suggested Pairing: neutral.100, G400
 ```
@@ -163,27 +163,27 @@ columns:
   - Usage
   - Suggested Pairing
 rows:
-  - Name: R200
+  - Name: red.200
     Usage:
-    Suggested Pairing: neutral.900, blue.700, R700
-  - Name: R300
+    Suggested Pairing: neutral.900, blue.700, red.700
+  - Name: red.300
     Usage:
-    Suggested Pairing: neutral.900, blue.700, R700
-  - Name: R400
+    Suggested Pairing: neutral.900, blue.700, red.700
+  - Name: red.400
     Usage:
-    Suggested Pairing: neutral.900, blue.700, R700
-  - Name: R500
+    Suggested Pairing: neutral.900, blue.700, red.700
+  - Name: red.500
     Usage:
     Suggested Pairing: neutral.900
-  - Name: R600 (red.base)
+  - Name: red.600 (red.base)
     Usage: Failing, error colour
     Suggested Pairing: neutral.100
-  - Name: R700
+  - Name: red.700
     Usage: Text colour, hover
-    Suggested Pairing: neutral.100, R400
-  - Name: R800
+    Suggested Pairing: neutral.100, red.400
+  - Name: red.800
     Usage: Chrome
-    Suggested Pairing: neutral.100, R400
+    Suggested Pairing: neutral.100, red.400
 ```
 
 ## Tokens
@@ -192,60 +192,43 @@ rows:
 columns:
   - Token
   - Alias
-  - Colour
   - HEX
   - RGB
 rows:
   - Token: colour.neutral[100]
-    Alias: colour.white
-    Colour: neutral100 (white)
     HEX: "#FFFFFF"
     RGB: (255, 255, 255)
+    Alias: colour.white
   - Token: colour.neutral[200]
     HEX: "#F7F7F7"
-    Colour: neutral200
   - Token: colour.neutral[300]
     HEX: "#EBEBEB"
-    Colour: neutral300
   - Token: colour.neutral[400]
     HEX: "#C7CED4"
-    Colour: neutral400
   - Token: colour.neutral[500]
     HEX: "#98A9B8"
-    Colour: neutral500
   - Token: colour.neutral[600]
     HEX: "#607180"
-    Colour: neutral600
   - Token: colour.neutral[700]
     HEX: "#475866"
-    Colour: neutral700
   - Token: colour.neutral[800]
     HEX: "#203140"
-    Colour: neutral800
   - Token: colour.neutral[900]
-    Alias: colour.black
     HEX: "#03101A"
-    Colour: neutral900
+    Alias: colour.black
   - Token: colour.blue[200]
     HEX: "#F0F3F5"
-    Colour: blue.200
   - Token: colour.blue[300]
     HEX: "#DDE8ED"
-    Colour: blue.300
   - Token: colour.blue[400]
     HEX: "#C2E0F0"
-    Colour: blue.400
   - Token: colour.blue[500]
     HEX: "#63B5E8"
-    Colour: blue.500
   - Token: colour.blue[600]
-    Alias: colour.blue, colour.base
     HEX: "#0E77D2"
-    Colour: blue.600 (blue, base)
+    Alias: colour.blue.base
   - Token: colour.blue[700]
     HEX: "#054CA3"
-    Colour: blue.700
   - Token: colour.blue[800]
     HEX: "#1B2B4D"
-    Colour: blue.800
 ```
