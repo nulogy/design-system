@@ -64,21 +64,6 @@ export default [
     content: pageLoader(() => import('../../README.md'))
   },
   {
-    title: 'Foundation',
-    pages: [
-      {
-        path: '/foundation/principles',
-        title: 'Design Principles',
-        content: pageLoader(() => import('./foundation/principles.md'))
-      },
-      {
-        path: '/foundation/environments',
-        title: 'Environments',
-        content: pageLoader(() => import('./foundation/environments.md'))
-      }
-    ]
-  },
-  {
     title: 'Visual Style',
     pages: [
       {
