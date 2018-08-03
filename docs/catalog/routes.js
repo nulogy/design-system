@@ -14,12 +14,23 @@ const mapColours = (key, notes = {}) => {
     .filter(([name]) => name !== 'base')
     .map(([name, value]) => ({ name: getColourName(key, name, mergeNotesWithBase(base, name, value, notes)), value }));
   }
+
+const colourTokenTableRows = [
+  {
+    Token: 'colour.neutral.100',
+    Alias: null,
+    HEX: colour.neutral['100'],
+    RGB: '255, 255, 255'
+  }
+];
+
 const colourImports = {
   neutral: mapColours('neutral', { 100: '(white)', 900: '(black)'}),
   blue: mapColours('blue'),
   yellow: mapColours('yellow'),
   green: mapColours('green'),
   red: mapColours('red'),
+  colourTokenTableRows: colourTokenTableRows,
 };
 
 export default [
