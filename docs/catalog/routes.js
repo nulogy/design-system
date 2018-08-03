@@ -30,8 +30,8 @@ const toRGB = hex => {
   return rgb.join(', ')
 }
 
-const mapRow = ([colourName, hex]) => ({
-  Token: `colour.${colourName}`,
+const mapRow = prefix => ([colourName, hex]) => ({
+  Token: `${prefix}.${colourName}`,
   Alias: null,
   HEX: hex,
   RGB: toRGB(hex)
@@ -39,13 +39,13 @@ const mapRow = ([colourName, hex]) => ({
 
 const baseRows = Object.entries(colour)
   .filter(([_, value]) => typeof value === 'string')
-  .map(mapRow);
+  .map(mapRow('colour'));
 
 const scaleRows = Object.entries(colour)
   .filter(([_, value]) => typeof value !== 'string')
   .reduce((result, [scaleName, scale]) => ([
     ...result,
-    ...Object.entries(scale).map(mapRow)
+    ...Object.entries(scale).map(mapRow(`colour.${scaleName}`))
   ]), [])
 
 const colourTokenTableRows = [ ...baseRows, ...scaleRows]
