@@ -21,8 +21,16 @@ const toRGB = hex => {
   return rgb.join(', ')
 }
 
-const mapRow = prefix => ([colourName, hex]) => ({
-  Token: `${prefix}.${colourName}`,
+const getAlias = (colourName, hex, scale) => {
+  const alias = scale.find(([name, value]) => colourName !== 'base' && name !== colourName && value === hex);
+  return alias && alias[0];
+}
+
+const addPrefix = (pre, str) => str &&  `${pre}.${str}`;
+
+const mapRow = prefix => ([colourName, hex], _, scale) => ({
+  Token: addPrefix(prefix, colourName),
+  Alias: addPrefix(prefix, getAlias(colourName, hex, scale)),
   HEX: hex,
   RGB: toRGB(hex)
 })
