@@ -5,22 +5,23 @@ import external, { mixin } from "./external"
 
 injectGlobal`
 .nds {
-  &--test {
+  /* 2. this is your bread and butter pre-processed css */
+  &--global {
     color: pink;
     font-size: ${font.size.larger}px;
   }
 
   &--mixin {
-    /* 2. */
+    /* 3. */
     ${mixin}
   }
 }
 
-/* 3. */
+/* 4. */
 ${external}
 `
 
-// 4. here is an example of defining mixins and dynamically creating utility classes from them in a loop
+// 5. here is an example of defining mixins and dynamically creating utility classes from them in a loop
 const mx = {
   lineHeight: css`line-height: 1.5`,
   noMargin: css`margin: 0;`,

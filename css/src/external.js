@@ -7,10 +7,10 @@ injectGlobal`
 }
 `;
 
-// 2. this mixin just returns props
+// 3. this mixin just returns props
 export const mixin = css`color: red;`
 
-// 3. this returns an entire css string 
+// 4. this returns an entire css string 
 export default css`
 .nds--external {
   color: orange;

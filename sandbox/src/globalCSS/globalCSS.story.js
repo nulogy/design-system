@@ -5,25 +5,25 @@ import { storiesOf } from '@storybook/react';
 
 storiesOf('Global CSS', module)
   .add('basic', () => (
-    <React.Fragment>
-      <div className="nds--test">
-        .test
-      </div>
-
-      <div className="nds--external">
-        .external
-      </div>
-
-      <div className="nds--externalInjected">
+    <ol>
+      <li className="nds--externalInjected">
         .externalInjected
-      </div>
+      </li>
       
-      <div className="nds--mixin">
+      <li className="nds--global">
+        .test
+      </li>
+      
+      <li className="nds--mixin">
         .mixin
-      </div>
+      </li>
 
-      <p className="lineHeight noMargin fontFamilyMono">
+      <li className="nds--external">
+        .external
+      </li>    
+
+      <li className="lineHeight noMargin fontFamilyMono">
         This class has utility classes applied that were created dynamically
-      </p>
-    </React.Fragment>
+      </li>
+    </ol>
   ));
