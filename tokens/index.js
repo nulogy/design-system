@@ -32,7 +32,7 @@ export const space = {
 };
 
 export const colour = {
-  get primary() {return colour.blue['600']},
+  get base() {return colour.blue['600']},
   get success() {return colour.green['600']},
   get warning() {return colour.yellow['600']},
   get error() {return colour.red['600']},
