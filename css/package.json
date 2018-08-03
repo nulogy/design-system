@@ -11,13 +11,21 @@
     "start": "webpack --mode development",
     "build": "webpack --mode production --config webpack.config.js"
   },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^3.1.0"
+    "react-dom": "^16.3.2",
+    "react": "^16.3.2",
+    "styled-components": "^3.2.6",
+    "webpack-cli": "^3.1.0",
+    "webpack": "^4.8.3"
   }
 }
