@@ -16,15 +16,6 @@ const mapColours = (key, notes = {}) => {
     .map(([name, value]) => ({ name: getColourName(key, name, mergeNotesWithBase(base, name, value, notes)), value }));
   }
 
-const _colourTokenTableRows = [
-  {
-    Token: 'colour.neutral.100',
-    Alias: null,
-    HEX: colour.neutral['100'],
-    RGB: '255, 255, 255'
-  }
-];
-
 const toRGB = hex => {
   const rgb = colourConvert.hex.rgb(hex);
   return rgb.join(', ')
@@ -32,7 +23,6 @@ const toRGB = hex => {
 
 const mapRow = prefix => ([colourName, hex]) => ({
   Token: `${prefix}.${colourName}`,
-  Alias: null,
   HEX: hex,
   RGB: toRGB(hex)
 })
