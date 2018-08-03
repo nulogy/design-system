@@ -4,9 +4,14 @@ export const colours = {
 };
 
 export const font = {
+  baseline: {
+    compact: 1.25,
+    regular: 1.5,
+    roomy: 2
+  },
   family: {
-    regular: "'IBM Plex Sans', sans",
-    mono: "'IBM Plex Mono', monospace"
+    regular: '"IBM Plex Sans", sans',
+    mono: '"IBM Plex Mono", monospace'
   },
   size: {
     smaller: 12,
@@ -20,7 +25,9 @@ export const font = {
     get subsectionTitle() {return this.large}
   },
   weight: {
-    bold: 500
+    normal: 400,
+    bold: 500,
+    bolder: 700,
   }
 };
 

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import t, { colours } from '@nulogy/tokens';
 
-console.log(t);
-
 const Button = styled.button`
   background-color: ${colours.secondary};
   border: 2px solid ${colours.primary};
