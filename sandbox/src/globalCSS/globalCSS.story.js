@@ -21,5 +21,9 @@ storiesOf('Global CSS', module)
       <div className="nds--mixin">
         .mixin
       </div>
+
+      <p className="lineHeight noMargin fontFamilyMono">
+        This class has utility classes applied that were created dynamically
+      </p>
     </React.Fragment>
   ));
