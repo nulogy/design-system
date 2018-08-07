@@ -1,6 +1,6 @@
 # Nulogy Style Guide
 
-The [nulogy.design](http://nulgoy.design) website.
+The [nulogy.design](http://nulogy.design) website.
 
 This package provides documentation of the principles that form core of the Nulogy Design System. 
 
