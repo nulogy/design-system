@@ -1,14 +1,19 @@
-# Modern Enterprise Design for the Industrial Environment
+> The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.
 
-[Nulogy](http://nulogy.com) is building a Design System to help us consolidate and modernize the UI of our products.
+## Visual Style
+Learn how to create consistent, beautiful interfaces using Nulogy's visual language.
 
-## Hiring
-[Get in touch](https://nulogy.com/about/careers/) if you're interested in working on our Design System.
+* [Colour](/visual_style/colour)
+* [Typography](/visual_style/typography)
+* [Spacing](/visual_style/spacing)
+* [Iconography](/visual_style/iconography)
 
-We're actively seeking a [Design Ops Coach](https://boards.greenhouse.io/nulogy/jobs/4017600002#.WtZp6GRKhds).
+## Components
+*Coming soon*. A set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
 
-## Stay tuned
+## Guides
+* [Developing the Design System](/getting_started/setup)
+* [Deploying to the web](/getting_started/deploying)
 
-There isn't much here now, but we want to be as transparent as possible as we develop our thinking so [follow us on Github](https://github.com/nulogy/nucleus) for updates.
 
-🤘
+
