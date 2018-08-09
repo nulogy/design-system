@@ -1,4 +1,4 @@
-<p style="font-family: 'IBM Plex Sans'; line-height: 1.5; font-size: 24px;">The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.</p>
+> The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.
 
 ## Visual Style
 Learn how to create consistent, beautiful interfaces using Nulogy's visual language.
