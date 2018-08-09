@@ -64,79 +64,34 @@ export default [
     content: pageLoader(() => import('../../README.md'))
   },
   {
-    title: 'Foundation',
+    title: 'Visual Style',
     pages: [
       {
-        path: '/foundation/principles',
-        title: 'Design Principles',
-        content: pageLoader(() => import('./foundation/principles.md'))
-      },
-      {
-        path: '/foundation/audience',
-        title: 'Our Users',
-        content: pageLoader(() => import('./foundation/audience.md'))
-      },
-      {
-        path: '/foundation/environments',
-        title: 'Environments',
-        content: pageLoader(() => import('./foundation/environments.md'))
-      }
-    ]
-  },
-  {
-    title: 'Guidelines',
-    pages: [
-      {
-        path: '/guidlines/language',
-        title: 'Language',
-        content: pageLoader(() => import('./guidlines/language.md'))
-      },
-      {
-        path: '/guidlines/colour',
+        path: '/visual_style/colour',
         title: 'Colour',
-        content: pageLoader(() => import('./guidlines/colour.md')),
+        content: pageLoader(() => import('./visual_style/colour.md')),
         imports: colourImports
       },
       {
-        path: '/guidlines/typography',
+        path: '/visual_style/typography',
         title: 'Typography',
-        content: pageLoader(() => import('./guidlines/typography.md'))
+        content: pageLoader(() => import('./visual_style/typography.md'))
       },
       {
-        path: '/guidlines/spacing',
+        path: '/visual_style/spacing',
         title: 'Spacing',
-        content: pageLoader(() => import('./guidlines/spacing.md'))
+        content: pageLoader(() => import('./visual_style/spacing.md'))
       },
       {
-        path: '/guidlines/iconography',
+        path: '/visual_style/iconography',
         title: 'Iconography',
-        content: pageLoader(() => import('./guidlines/iconography.md'))
+        content: pageLoader(() => import('./visual_style/iconography.md'))
       },
-      {
-        path: '/guidlines/depth',
-        title: 'Depth',
-        content: pageLoader(() => import('./guidlines/depth.md'))
-      },
-      {
-        path: '/guidlines/motion',
-        title: 'Motion',
-        content: pageLoader(() => import('./guidlines/motion.md'))
-      },
-      {
-        path: '/guidlines/accessibility',
-        title: 'Accessibility',
-        content: pageLoader(() => import('./guidlines/accessibility.md'))
-      }
     ]
   },
   {
     title: 'Components',
     pages: [
-      {
-        path: '/components/tokens',
-        title: 'Design Tokens',
-        content: pageLoader(() => import('./components/tokens.md'))
-      },
       {
         path: '/components/button',
         title: 'Button',
@@ -148,6 +103,11 @@ export default [
     ]
   },
   {
+    title: 'Tokens',
+    path: '/tokens',
+    content: pageLoader(() => import('./tokens/tokens.md'))
+  },
+  {
     title: 'Getting Started',
     pages: [
       {
@@ -156,20 +116,10 @@ export default [
         content: pageLoader(() => import('./getting_started/setup.md'))
       },
       {
-        path: '/getting_started/writing',
-        title: 'Writing content and adding pages',
-        content: pageLoader(() => import('./getting_started/writing.md'))
-      },
-      {
         path: '/getting_started/deploying',
         title: 'Deploying to the web',
         content: pageLoader(() => import('./getting_started/deploying.md'))
       },
-      {
-        path: '/getting_started/faq',
-        title: 'FAQ',
-        content: pageLoader(() => import('./getting_started/faq.md'))
-      }
     ]
   },
 ];
