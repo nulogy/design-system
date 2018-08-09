@@ -9,7 +9,7 @@ Learn how to create consistent, beautiful interfaces using Nulogy's visual langu
 * [Iconography](/visual_style/iconography)
 
 ## Components
-*Coming soon*. A set of React UI Components designed to allow quick and consistent development of Nulogy's interfaces.
+*Coming soon*. A set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
 
 ## Guides
 * [Developing the Design System](/getting_started/setup)
