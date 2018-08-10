@@ -1,4 +1,4 @@
-export const borderRadius ='0.4rem';
+export const borderRadius ='3px';
 
 export const font = {
   family: {
@@ -44,12 +44,12 @@ export const colour = {
   neutral: {
     100: '#FFFFFF',
     200: '#F7F7F7',
-    300: '#EBEBEB',
-    400: '#C7CED4',
-    500: '#98A9B8',
+    x300: '#EBEBEB',
+    x400: '#C7CED4',
+    x500: '#98A9B8',
     600: '#607180',
     700: '#475866',
-    800: '#203140',
+    x800: '#203140',
     900: '#03101A'
   },
   blue: {
@@ -57,10 +57,10 @@ export const colour = {
     200: '#F0F3F5',
     300: '#DDE8ED',
     400: '#C2E0F0',
-    500: '#63B5E8',
+    x500: '#63B5E8',
     600: '#0E77D2',
-    700: '#054CA3',
-    800: '#1B2B4D',
+    x700: '#054CA3',
+    x800: '#1B2B4D',
   },
   yellow: {
     get base() {return this['600']},
@@ -89,7 +89,7 @@ export const colour = {
     400: '#F2B2AE',
     500: '#DB807D',
     600: '#D13D3D',
-    700: '#9E131A',
+    x700: '#9E131A',
     800: '#78060F'
   }
 };
