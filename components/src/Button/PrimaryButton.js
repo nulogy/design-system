@@ -5,14 +5,14 @@ import sharedStyles from './sharedStyles';
 
 const PrimaryButton = styled.button`
   ${sharedStyles}
+
   background-color: ${colour.blue.base};
   color: ${colour.white};
-  &:hover, &:focus {
-    box-shadow: 0 5px 15px rgba(5, 76, 163, .2);
+
+  &:hover{
     background-color: ${colour.blue.x700};
-    color: white;
+    color: ${colour.blue.x200};
   }
 `;
 
 export default PrimaryButton;
-
