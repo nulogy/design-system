@@ -43,20 +43,20 @@ export const colour = {
   get black() {return this.neutral['900']},
   neutral: {
     100: '#FFFFFF',
-    200: '#F7F7F7',
+    x200: '#F7F7F7',
     x300: '#EBEBEB',
     x400: '#C7CED4',
     x500: '#98A9B8',
-    600: '#607180',
-    700: '#475866',
+    x600: '#607180',
+    x700: '#475866',
     x800: '#203140',
     900: '#03101A'
   },
   blue: {
     get base() {return this['600']},
-    200: '#F0F3F5',
-    300: '#DDE8ED',
-    400: '#C2E0F0',
+    x200: '#F0F3F5',
+    x300: '#DDE8ED',
+    x400: '#C2E0F0',
     x500: '#63B5E8',
     600: '#0E77D2',
     x700: '#054CA3',
@@ -64,33 +64,33 @@ export const colour = {
   },
   yellow: {
     get base() {return this['600']},
-    200: '#F5F3F0',
-    300: '#F2EADA',
-    400: '#FAE5AF',
-    500: '#FCDA7B',
+    x200: '#F5F3F0',
+    x300: '#F2EADA',
+    x400: '#FAE5AF',
+    x500: '#FCDA7B',
     600: '#FDCF00',
-    700: '#CEA10C',
-    800: '#B3751E'
+    x700: '#CEA10C',
+    x800: '#B3751E'
   },
   green: {
     get base() {return this['600']},
-    200: '#EBF5F3',
-    300: '#C1E8E0',
-    400: '#8DD6C8',
-    500: '#10B297',
+    x200: '#EBF5F3',
+    x300: '#C1E8E0',
+    x400: '#8DD6C8',
+    x500: '#10B297',
     600: '#008763',
-    700: '#02613C',
-    800: '#053A1F'
+    x700: '#02613C',
+    x800: '#053A1F'
   },
   red: {
     get base() {return this['600']},
-    200: '#F7EEED',
-    300: '#F2CECB',
-    400: '#F2B2AE',
-    500: '#DB807D',
+    x200: '#F7EEED',
+    x300: '#F2CECB',
+    x400: '#F2B2AE',
+    x500: '#DB807D',
     600: '#D13D3D',
     x700: '#9E131A',
-    800: '#78060F'
+    x800: '#78060F'
   }
 };
 
@@ -99,4 +99,5 @@ export default {
   colour: colour,
   font: font,
   space: space,
+  space: corner,
 };
