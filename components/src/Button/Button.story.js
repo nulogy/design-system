@@ -4,27 +4,27 @@ import { action } from '@storybook/addon-actions';
 import sharedStyles from './sharedStyles';
 import Button from "./Button";
 import PrimaryButton from "./PrimaryButton";
-import DangerButton from "./DangerButton";
-import LinkButton from "./LinkButton";
-import DisabledButton from "./DisabledButton";
 import ApprovalButton from "./ApprovalButton";
+import DangerButton from "./DangerButton";
+import DisabledButton from "./DisabledButton";
+import LinkButton from "./LinkButton";
+import CreateButton from "./CreateButton";
 import TriggerButton from "./TriggerButton";
 import GhostButton from "./GhostButton";
 import SmallButton from "./SmallButton";
 import LargeButton from "./LargeButton";
-import CreateButton from "./CreateButton";
 import FullWidthButton from "./FullWidthButton";
 
 storiesOf('Button', module)
   .add('Default', () => (<Button>Default Button</Button>))
   .add('Primary', () => <PrimaryButton onClick={action('clicked')}>Primary Button</PrimaryButton>)
-  .add('Danger', () => (<DangerButton>Danger Button</DangerButton>))
-  .add('Link', () => (<LinkButton>Link Button</LinkButton>))
-  .add('Disabled', () => (<DisabledButton>Disabled Button</DisabledButton>))
   .add('Approval', () => (<ApprovalButton>Approval Button</ApprovalButton>))
+  .add('Danger', () => (<DangerButton>Danger Button</DangerButton>))
+  .add('Disabled', () => (<DisabledButton>Disabled Button</DisabledButton>))
+  .add('Link', () => (<LinkButton>Link Button</LinkButton>))
+  .add('Create', () => (<CreateButton>+</CreateButton>))
   .add('Trigger', () => (<TriggerButton>Trigger Button</TriggerButton>))
   .add('Ghost', () => (<GhostButton>Ghost Button</GhostButton>))
   .add('Small', () => (<SmallButton>Small Button</SmallButton>))
   .add('Large', () => (<LargeButton>Large Button</LargeButton>))
-  .add('Create', () => (<CreateButton>+</CreateButton>))
   .add('FullWidth', () => (<FullWidthButton>Full Width Button</FullWidthButton>));
