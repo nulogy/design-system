@@ -9,6 +9,7 @@ import LinkButton from "./LinkButton";
 import DisabledButton from "./DisabledButton";
 import ApprovalButton from "./ApprovalButton";
 import TriggerButton from "./TriggerButton";
+import GhostButton from "./GhostButton";
 
 storiesOf('Button', module)
   .add('Default', () => (<Button>Default Button</Button>))
@@ -17,4 +18,5 @@ storiesOf('Button', module)
   .add('Link', () => (<LinkButton>Link Button</LinkButton>))
   .add('Disabled', () => (<DisabledButton>Disabled Button</DisabledButton>))
   .add('Approval', () => (<ApprovalButton>Approval Button</ApprovalButton>))
-  .add('Trigger', () => (<TriggerButton>Trigger Button</TriggerButton>));
+  .add('Trigger', () => (<TriggerButton>Trigger Button</TriggerButton>))
+  .add('Ghost', () => (<GhostButton>Ghost Button</GhostButton>));
