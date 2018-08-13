@@ -103,10 +103,12 @@ export const corner = {
 };
 
 export const shadow = {
-  pressed: '0 .033em .25em rgba(3,16,26,0.175);',//needs better naming
-  close: '0 .125em .75em rgba(3,16,26,0.175);',
-  middle: '4px',
-  far: '8px'
+  pressed: '0 1px 4px 0 rgba(3,16,26, 0.175);',
+  close: '0 2px 12px 0 rgba(3,16,26, 0.2);',
+  middle: '0 3px 12px 0 rgba(3,16,26, 0.25);',
+  far: '0 6px 15px 0 rgba(3,16,26, 0.33);'
+
+
 };
 
 export default {
