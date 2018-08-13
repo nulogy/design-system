@@ -5,8 +5,10 @@ import sharedStyles from './sharedStyles';
 import Button from "./Button";
 import PrimaryButton from "./PrimaryButton";
 import DangerButton from "./DangerButton";
+import LinkButton from "./LinkButton";
 
 storiesOf('Button', module)
   .add('Default', () => (<Button>Default Button</Button>))
   .add('Primary', () => <PrimaryButton onClick={action('clicked')}>Primary Button</PrimaryButton>)
   .add('Danger', () => (<DangerButton>Danger Button</DangerButton>));
+  .add('Link', () => (<LinkButton>Link Button</LinkButton>))
