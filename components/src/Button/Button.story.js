@@ -12,6 +12,7 @@ import TriggerButton from "./TriggerButton";
 import GhostButton from "./GhostButton";
 import SmallButton from "./SmallButton";
 import LargeButton from "./LargeButton";
+import CreateButton from "./CreateButton";
 
 storiesOf('Button', module)
   .add('Default', () => (<Button>Default Button</Button>))
@@ -23,4 +24,5 @@ storiesOf('Button', module)
   .add('Trigger', () => (<TriggerButton>Trigger Button</TriggerButton>))
   .add('Ghost', () => (<GhostButton>Ghost Button</GhostButton>))
   .add('Small', () => (<SmallButton>Small Button</SmallButton>))
-  .add('Large', () => (<LargeButton>Large Button</LargeButton>));
+  .add('Large', () => (<LargeButton>Large Button</LargeButton>))
+  .add('Create', () => (<CreateButton>+</CreateButton>));
