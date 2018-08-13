@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
-import { borderRadius, colour, space, font } from '@nulogy/tokens';
+import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 
 const sharedStyles = css`
   border: none;

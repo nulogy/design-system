@@ -94,6 +94,18 @@ export const colour = {
   }
 };
 
+export const corner = {
+  small: '2px',
+  medium: '4px',
+  large: '8px'
+};
+
+export const shadow = {
+  close: '0 .125em .75em rgba(3,16,26,0.175);',
+  middle: '4px',
+  far: '8px'
+};
+
 export default {
   borderRadius: borderRadius,
   colour: colour,
