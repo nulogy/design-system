@@ -13,6 +13,7 @@ import GhostButton from "./GhostButton";
 import SmallButton from "./SmallButton";
 import LargeButton from "./LargeButton";
 import CreateButton from "./CreateButton";
+import FullWidthButton from "./FullWidthButton";
 
 storiesOf('Button', module)
   .add('Default', () => (<Button>Default Button</Button>))
@@ -25,4 +26,5 @@ storiesOf('Button', module)
   .add('Ghost', () => (<GhostButton>Ghost Button</GhostButton>))
   .add('Small', () => (<SmallButton>Small Button</SmallButton>))
   .add('Large', () => (<LargeButton>Large Button</LargeButton>))
-  .add('Create', () => (<CreateButton>+</CreateButton>));
+  .add('Create', () => (<CreateButton>+</CreateButton>))
+  .add('FullWidth', () => (<FullWidthButton>Full Width Button</FullWidthButton>));
