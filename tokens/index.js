@@ -17,6 +17,7 @@ export const font = {
     get subsectionTitle() {return this.large}
   },
   weight: {
+    normal: 400,
     medium: 500,
     bold: 700
   },
