@@ -11,7 +11,6 @@ const ApprovalButton = styled.button`
 
   &:hover{
     background-color: ${colour.green.x700};
-    color: ${colour.green.x200};
   }
 `
 

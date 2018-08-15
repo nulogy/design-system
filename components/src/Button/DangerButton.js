@@ -11,7 +11,6 @@ const DangerButton = styled.button`
 
   &:hover{
     background-color: ${colour.red.x700};
-    color: ${colour.red.x200};
   }
 `
 

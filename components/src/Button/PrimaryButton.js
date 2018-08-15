@@ -11,8 +11,8 @@ const PrimaryButton = styled.button`
 
   &:hover{
     background-color: ${colour.blue.x700};
-    color: ${colour.blue.x200};
   }
+
 `;
 
 export default PrimaryButton;
