@@ -22,12 +22,8 @@ const CreateButton = styled.button`
     box-shadow: ${shadow.far};
   }
 
-  &:focus{
-    box-shadow: ${shadow.close};
-  }
-
   &:active {
-    box-shadow: ${shadow.close};
+    box-shadow: none;
   }
 `;
 

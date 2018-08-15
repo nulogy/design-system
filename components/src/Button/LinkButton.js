@@ -11,7 +11,6 @@ const LinkButton = styled.button`
 
   &:hover{
     color: ${colour.blue.x700};
-    transform: scale(1);
   };
 `
 

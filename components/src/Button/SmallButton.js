@@ -9,7 +9,7 @@ const SmallButton = styled.button`
   background-color: ${colour.neutral.x300};
   color: ${colour.neutral.x700};
 
-  &:hover{
+  &:hover, &:focus{
     background-color: ${colour.neutral.x400};
     color: ${colour.neutral.x800};
   }
