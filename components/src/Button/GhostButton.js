@@ -7,14 +7,13 @@ const GhostButton = styled.button`
   ${sharedStyles}
 
   background-color: transparent;
-  color: ${colour.neutral.x700};
+  color: ${colour.neutral.x600};
   border: solid 2px ${colour.neutral.x600};
-  border-radius: 3px;
 
   &:hover{
-    background-color: ${colour.neutral.x700};
-    color: ${colour.neutral.x200};
-    border: solid 2px ${colour.neutral.x700};
+    background-color: ${colour.neutral.x600};
+    color: ${colour.white};
+    border: solid 2px ${colour.neutral.x600};
   }
 `;
 
