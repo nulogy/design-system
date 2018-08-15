@@ -6,11 +6,11 @@ import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/token
 
 const sharedStyles = css`
   box-sizing: border-box;
-  border: none;
-  outline: none;
-  cursor: pointer;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  border: none;
+  cursor: pointer;
 
   font-size: ${font.size.medium}px;
   font-weight: ${font.weight.medium};
@@ -19,18 +19,14 @@ const sharedStyles = css`
   transition: .1s  ease-in-out;
 
   &:hover{
-    transform: scale(1.02);
     box-shadow: ${shadow.close};
   }
 
-  &:focus{
-    transform: scale(1);
-    box-shadow: ${shadow.pressed};
-  }
-
   &:active {
-    transform: scale(1);
-    box-shadow: ${shadow.pressed};
+    box-shadow: none;
+    outline: none; // test this
+    transform: scale(0.98);
+    transition: .05s  ease-in;
   }
 `
 
