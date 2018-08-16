@@ -17,16 +17,16 @@ import LargeButton from "./LargeButton";
 import FullWidthButton from "./FullWidthButton";
 
 storiesOf('Button', module)
-  .add('Default', () => (<Button>Default Button</Button>))
+  .add('Default', () => <Button onClick={action('clicked')}>Default Button</Button>)
   .add('Primary', () => <PrimaryButton onClick={action('clicked')}>Primary Button</PrimaryButton>)
-  .add('Approval', () => (<ApprovalButton>Approval Button</ApprovalButton>))
-  .add('Danger', () => (<DangerButton>Danger Button</DangerButton>))
-  .add('Disabled', () => (<DisabledButton disabled>Disabled Button</DisabledButton>))
-  .add('Link', () => (<LinkButton>Link Button</LinkButton>))
-  .add('Create', () => (<CreateButton>+</CreateButton>))
-  .add('Trigger', () => (<TriggerButton>Trigger Button</TriggerButton>))
-  .add('Ghost', () => (<GhostButton>Ghost Button</GhostButton>))
-  .add('Small', () => (<SmallButton>Small Button</SmallButton>))
-  .add('Large', () => (<LargeButton>Large Button</LargeButton>))
-  .add('FullWidth', () => (<FullWidthButton>Full Width Button</FullWidthButton>));
+  .add('Approval', () => <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>)
+  .add('Danger', () => <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>)
+  .add('Disabled', () => <DisabledButton disabled>Disabled Button</DisabledButton>)
+  .add('Link', () => <LinkButton onClick={action('clicked')}>Link Button</LinkButton>)
+  .add('Create', () => <CreateButton onClick={action('clicked')}>+</CreateButton>)
   .add('Action', () => <ActionButton onClick={action('clicked')}>+</ActionButton>)
+  .add('Trigger', () => <TriggerButton onClick={action('clicked')}><span className="label">Trigger Button</span><span className="icon">i</span></TriggerButton>)
+  .add('Ghost', () => <GhostButton onClick={action('clicked')}>Ghost Button</GhostButton>)
+  .add('Small', () => <SmallButton onClick={action('clicked')}>Small Button</SmallButton>)
+  .add('Large', () => <LargeButton onClick={action('clicked')}>Large Button</LargeButton>)
+  .add('FullWidth', () => <FullWidthButton onClick={action('clicked')}>Full Width Button</FullWidthButton>);
