@@ -16,7 +16,7 @@ const LargeButton = styled.button`
 
   font-size: ${font.size.large}px;
   font-weight: ${font.weight.medium};
-  padding: ${space.x2} ${space.x3};
+  padding: ${space.x1} ${space.x2};
 
 `;
 

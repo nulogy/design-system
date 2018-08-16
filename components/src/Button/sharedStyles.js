@@ -12,9 +12,10 @@ const sharedStyles = css`
   border: none;
   cursor: pointer;
 
-  font-size: ${font.size.medium}px;
+  font-size: ${font.size.small}px;
   font-weight: ${font.weight.medium};
-  padding: ${space.x2} ${space.x3};
+  line-height: 1.3; // Adjust when introduce cropTool
+  padding: ${space.x1} ${space.x2};
   border-radius: ${corner.small};
   transition: .1s  ease-in-out;
 

@@ -14,7 +14,7 @@ const SmallButton = styled.button`
     color: ${colour.neutral.x800};
   }
 
-  font-size: ${font.size.small}px;
+  font-size: ${font.size.smaller}px;
   font-weight: ${font.weight.normal};
   padding: ${space.x1} ${space.x2};
 
