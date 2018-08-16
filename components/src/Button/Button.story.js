@@ -9,6 +9,7 @@ import DangerButton from "./DangerButton";
 import DisabledButton from "./DisabledButton";
 import LinkButton from "./LinkButton";
 import CreateButton from "./CreateButton";
+import ActionButton from "./ActionButton";
 import TriggerButton from "./TriggerButton";
 import GhostButton from "./GhostButton";
 import SmallButton from "./SmallButton";
@@ -28,3 +29,4 @@ storiesOf('Button', module)
   .add('Small', () => (<SmallButton>Small Button</SmallButton>))
   .add('Large', () => (<LargeButton>Large Button</LargeButton>))
   .add('FullWidth', () => (<FullWidthButton>Full Width Button</FullWidthButton>));
+  .add('Action', () => <ActionButton onClick={action('clicked')}>+</ActionButton>)
