@@ -8,12 +8,24 @@ const TriggerButton = styled.button`
   ${sharedStyles}
   //${Button} - Doesn't like it, Why?
 
+  padding-right: 0;
+  line-height: 1;
+
   background-color: ${colour.neutral.x300};
   color: ${colour.neutral.x700};
 
   &:hover{
     background-color: ${colour.neutral.x400};
     color: ${colour.neutral.x800};
+  }
+
+  .icon{
+    border: solid 1px lime;
+    margin: 0 ${space.x2};
+  }
+
+  .label{
+    line-height: 1.3;
   }
 `;
 

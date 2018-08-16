@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { css } from 'styled-components';
 import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 
-
 const sharedStyles = css`
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +10,10 @@ const sharedStyles = css`
 
   border: none;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-size: ${font.size.small}px;
   font-weight: ${font.weight.medium};
