@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 import sharedStyles from './sharedStyles';
-import textCrop from './textCrop';
 
 const Button = styled.button`
   ${sharedStyles}
