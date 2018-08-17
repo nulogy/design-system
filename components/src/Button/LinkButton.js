@@ -6,7 +6,7 @@ import sharedStyles from './sharedStyles';
 const LinkButton = styled.button`
   ${sharedStyles}
 
-  background-color: trasnsparent;
+  background: none;
   color: ${colour.blue.base};
 
   &:hover{
