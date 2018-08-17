@@ -1,6 +1,6 @@
 > Buttons are used to make common actions immediately detectable and easy to perform.
 
-## Default Button
+## Button
 Used for standard interactions without any special needs.
 ```react
 <Button>Do Something</Button>
@@ -31,7 +31,7 @@ Used for submiting a form that can not be edited.
 ## Destructive Button
 Used for deleteng/discarding and confirming any destructive actions.
 ```react
-<DestructiveButton>Delete</DestructiveButton>
+<DangerButton>Delete</DangerButton>
 ```
 Examples: Delete/Discard button, Delete confiramtion button.
 
@@ -42,28 +42,30 @@ Use for actions that aren’t currently available.
 ```
 
 ## Link Button
-TBD.
+Used as a companion of a Primary Button that clears, cancels or exits current activity.
 ```react
 <LinkButton>Cancel</LinkButton>
 ```
+Examples: Cancel, Clear, Exit, No.
 
 ## Create Button
 Used for special Create shortcut action.
 ```react
-<CreateButton>Delete</CreateButton>
+<CreateButton>+</CreateButton>
 ```
 
 ## Ghost Button
-TBD.
+Used on darker backgrounds.
 ```react
 <GhostButton>Delete</GhostButton>
 ```
 
 ## Action Button
-TBD.
+Used for well established actions that don't belong to primary actions.
 ```react
 <ActionButton>+</ActionButton>
 ```
+Examples: Edit, Delete, Change View ... .
 
 ## Related Components
 Button Set
