@@ -6,7 +6,7 @@ import sharedStyles from './sharedStyles';
 const CreateButton = styled.button`
   ${sharedStyles}
 
-  position: fixed;
+  //position: fixed; // Breaks catalog
   z-index: 100;
   right: ${space.x2};
   bottom: ${space.x2};
