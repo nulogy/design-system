@@ -16,4 +16,12 @@ const ActionButton = styled.button`
   };
 `
 
-export default ActionButton;
+export default class App extends React.Component {
+  render() {
+    return (
+      <ActionButton>
+        <span className="label">+</span>
+      </ActionButton>
+    );
+  }
+}

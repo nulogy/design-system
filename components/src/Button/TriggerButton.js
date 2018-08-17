@@ -19,7 +19,7 @@ const TriggerButton = styled.button`
     color: ${colour.neutral.x800};
   }
 
-  .icon{
+  .trigger{
     border: solid 1px lime;
     margin: 0 ${space.x2};
   }
@@ -29,4 +29,13 @@ const TriggerButton = styled.button`
   }
 `;
 
-export default TriggerButton;
+export default class App extends React.Component {
+  render() {
+    return (
+      <TriggerButton>
+        <span className="label">Trigger Button</span>
+        <span className="trigger">i</span>
+      </TriggerButton>
+    );
+  }
+}
