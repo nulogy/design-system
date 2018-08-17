@@ -23,17 +23,17 @@ Whenever possible follow action verb with a noun.
 ```
 
 ## Approval Button
-Used for the special action that concludes the ... process.
+Used for submiting a form that can not be edited.
 ```react
 <ApprovalButton>Approve</ApprovalButton>
 ```
 
 ## Destructive Button
-TBD.
+Used for deleteng/discarding and confirming any destructive actions.
 ```react
 <DestructiveButton>Delete</DestructiveButton>
 ```
-Examples: Delete confiramtion button, ... .
+Examples: Delete/Discard button, Delete confiramtion button.
 
 ## Disabled Button
 Use for actions that aren’t currently available.
