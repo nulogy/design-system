@@ -59,5 +59,11 @@ TBD.
 <GhostButton>Delete</GhostButton>
 ```
 
+## Action Button
+TBD.
+```react
+<ActionButton>+</ActionButton>
+```
+
 ## Related Components
 Button Set
