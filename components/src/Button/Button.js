@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
+import { colour, space, font } from '@nulogy/tokens';
 import sharedStyles from './sharedStyles';
 
 const type = ({ type = 'button' }) => (({
@@ -40,7 +40,6 @@ const size = ({ size }) => (({
 
 const Button = styled.button`
   ${sharedStyles}
-
   ${ size }
   ${ type }
 
