@@ -5,7 +5,7 @@ import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
 
-storiesOf('Button', module)
+storiesOf('Buttons / Button', module)
   .add('Default', () => <Button onClick={action('clicked')}>Default Button</Button>)
   .add('Submit', () => <Button type="submit" onClick={action('clicked')}>Submit Button</Button>)
   .add('With an icon', () => <Button onClick={action('clicked')}>➕</Button>)
@@ -13,9 +13,8 @@ storiesOf('Button', module)
   .add('Disabled', () => <Button disabled onClick={action('clicked')}>Disabled Button</Button>)
   .add('Small', () => <Button size="small" onClick={action('clicked')}>Small Button</Button>)
   .add('Large', () => <Button size="large" onClick={action('clicked')}>Large Button</Button>)
-  .add('Danger', () => <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>)
 
-storiesOf('Primary Button', module)
+storiesOf('Buttons / Primary Button', module)
   .add('Default', () => <Button type="submit" onClick={action('clicked')}>Default Button</Button>)
   .add('With an icon', () => <Button type="submit" onClick={action('clicked')}>➕</Button>)
   .add('With an icon and text', () => <Button type="submit" onClick={action('clicked')}>✏️ Edit this thing</Button>)
@@ -23,7 +22,7 @@ storiesOf('Primary Button', module)
   .add('Small', () => <Button type="submit" size="small" onClick={action('clicked')}>Small Button</Button>)
   .add('Large', () => <Button type="submit" size="large" onClick={action('clicked')}>Large Button</Button>)
 
-storiesOf('Approval Button', module)
+storiesOf('Buttons / Approval Button', module)
   .add('Default', () => <ApprovalButton onClick={action('clicked')}>Default Button</ApprovalButton>)
   .add('Submit', () => <ApprovalButton type="submit" onClick={action('clicked')}>Submit Button</ApprovalButton>)
   .add('With an icon', () => <ApprovalButton onClick={action('clicked')}>➕</ApprovalButton>)
@@ -32,7 +31,7 @@ storiesOf('Approval Button', module)
   .add('Small', () => <ApprovalButton size="small" onClick={action('clicked')}>Small Button</ApprovalButton>)
   .add('Large', () => <ApprovalButton size="large" onClick={action('clicked')}>Large Button</ApprovalButton>)
 
-storiesOf('Danger Button', module)
+storiesOf('Buttons / Danger Button', module)
   .add('Default', () => <DangerButton onClick={action('clicked')}>Default Button</DangerButton>)
   .add('Submit', () => <DangerButton type="submit" onClick={action('clicked')}>Submit Button</DangerButton>)
   .add('With an icon', () => <DangerButton onClick={action('clicked')}>➕</DangerButton>)
