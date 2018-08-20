@@ -20,6 +20,19 @@ color: ${colour.white};
   background-color: ${colour.blue.x700};
 }`
 
+const sizeCSS = {
+  large: css`
+    font-size: ${font.size.large}px;
+    font-weight: ${font.weight.medium};
+    padding: ${space.x1} ${space.x2};
+  `,
+  small: css`
+    font-size: ${font.size.smaller}px;
+    font-weight: ${font.weight.normal};
+    padding: ${space.x1} ${space.x2};
+  `
+}
+
 const Button = styled.button`
   ${sharedStyles}
 

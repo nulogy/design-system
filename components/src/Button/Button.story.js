@@ -4,8 +4,6 @@ import { action } from '@storybook/addon-actions';
 import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
-import SmallButton from "./SmallButton";
-import LargeButton from "./LargeButton";
 
 storiesOf('Button', module)
   .add('Button', () => <Button onClick={action('clicked')}>Default Button</Button>)
@@ -23,5 +21,6 @@ storiesOf('Button', module)
 
   .add('Approval', () => <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>)
   .add('Danger', () => <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>)
-  .add('Small', () => <SmallButton onClick={action('clicked')}>Small Button</SmallButton>)
-  .add('Large', () => <LargeButton onClick={action('clicked')}>Large Button</LargeButton>)
+
+  .add('Small', () => <Button size="small" onClick={action('clicked')}>Small Button</Button>)
+  .add('Large', () => <Button size="large" onClick={action('clicked')}>Large Button</Button>)
