@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 import sharedStyles from './sharedStyles';
 
-const typeCSS = {
+const type = ({ type = 'button' }) => (({
   button: css`
     color: ${colour.blue.base};
     background-color: colour.white;
@@ -22,28 +22,27 @@ const typeCSS = {
       background-color: ${colour.blue.x700};
     }
   `
-}
+})[type]);
 
-const sizeCSS = {
+const size = ({ size }) => (({
   large: css`
     font-size: ${font.size.large}px;
     font-weight: ${font.weight.medium};
     padding: ${space.x1} ${space.x2};
   `,
-  
+
   small: css`
     font-size: ${font.size.smaller}px;
     font-weight: ${font.weight.normal};
     padding: ${space.x1} ${space.x2};
   `
-}
+})[size]);
 
 const Button = styled.button`
   ${sharedStyles}
 
-  ${ ({size}) => sizeCSS[size] }
-
-  ${ ({type = 'button'}) => typeCSS[type] }
+  ${ size }
+  ${ type }
 
   &:disabled {
     background-color: ${colour.neutral.x300};
