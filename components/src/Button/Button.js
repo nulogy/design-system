@@ -27,6 +27,14 @@ const Button = styled.button`
 
   ${ props => (props.type === "submit") ? submitCSS : buttonCSS }
 
+  &:disabled {
+    background-color: ${colour.neutral.x300};
+    color: ${colour.neutral.x500};
+    pointer-events: none;
+
+    &:hover{
+      box-shadow: none;
+    }
   }
 `;
 
