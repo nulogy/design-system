@@ -1,16 +1,32 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 import sharedStyles from './sharedStyles';
+
+const buttonCSS = css`
+  color: ${colour.blue.base};
+  background-color: colour.white;
+  border: solid 1px ${colour.neutral.x200};
+
+  &:hover{
+    color: ${colour.blue.x700};
+  };
+`
+
+const submitCSS = css`background-color: ${colour.blue.base};
+color: ${colour.white};
+
+&:hover{
+  background-color: ${colour.blue.x700};
+}`
 
 const Button = styled.button`
   ${sharedStyles}
 
-  background-color: ${colour.neutral.x300};
-  color: ${colour.neutral.x700};
+  ${ ({size}) => sizeCSS[size] }
 
-  &:hover{
-    background-color: ${colour.neutral.x400};
+  ${ props => (props.type === "submit") ? submitCSS : buttonCSS }
+
   }
 `;
 
