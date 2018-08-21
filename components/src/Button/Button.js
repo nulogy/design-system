@@ -21,6 +21,10 @@ const type = ({ type = 'button' }) => (({
     &:hover{
       background-color: ${colour.blue['700']};
     }
+
+    &:active {
+      background-color: ${colour.blue.base};
+    }
   `
 })[type]);
 
