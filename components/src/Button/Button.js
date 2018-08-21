@@ -5,7 +5,7 @@ import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 const type = ({ type = 'button' }) => (({
   button: css`
     color: ${colour.blue.base};
-    background-color: colour.white;
+    background-color: ${colour.white};
     border: solid 1px ${colour.neutral['300']};
 
     &:hover{
