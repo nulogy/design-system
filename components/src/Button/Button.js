@@ -50,7 +50,7 @@ const Button = styled.button`
   border-width: 1px;
   appearance: none;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   line-height: 1.3;
