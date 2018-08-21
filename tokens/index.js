@@ -96,10 +96,10 @@ export const colour = {
   }
 };
 
-export const corner = {
+export const radius = {
   small: '2px',
   medium: '4px',
-  large: '8px'
+  large: '6px'
 };
 
 export const shadow = {
@@ -116,5 +116,5 @@ export default {
   colour: colour,
   font: font,
   space: space,
-  space: corner,
+  radius: radius,
 };

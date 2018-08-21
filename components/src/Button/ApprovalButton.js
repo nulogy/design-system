@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { borderRadius, colour, space, font, corner, shadow } from '@nulogy/tokens';
 import sharedStyles from './sharedStyles';
+import { borderRadius, colour, space, font, radius, shadow } from '@nulogy/tokens';
 
 const ApprovalButton = styled.button`
   ${sharedStyles}

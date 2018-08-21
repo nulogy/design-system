@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { colour, space, font, corner, shadow } from '@nulogy/tokens';
+import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 
 const type = ({ type = 'button' }) => (({
   button: css`
