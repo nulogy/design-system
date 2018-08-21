@@ -1,21 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
-import { borderRadius, colour, space, font, radius, shadow } from '@nulogy/tokens';
+import styled, { css } from 'styled-components';
+import { colour } from '@nulogy/tokens';
 import Button from './Button';
 
-const ApprovalButton = styled(Button)`
-  background-color: ${colour.green.base};
-  border-color: ${colour.green.base};
-  color: ${colour.white};
+const type = ({ type = 'button' }) => (({
+  submit: css`
+    color: ${colour.white};
+    background-color: ${colour.green.base};
+    border-color: ${colour.green.base};
+  `
+})[type]);
 
-  &:hover{
+const ApprovalButton = styled(Button)`
+  ${ type }
+
+  &:hover {
+    color: ${colour.white};
     background-color: ${colour.green['700']};
     border-color: ${colour.green['700']};
-    color:  ${colour.white};
   }
 
   &:active{
+    color: ${colour.white};
     background-color: ${colour.green.base};
+    border-color: ${colour.green.base};
   }
 `
 
