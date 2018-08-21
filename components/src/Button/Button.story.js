@@ -5,6 +5,17 @@ import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
 
+storiesOf('Buttons / All Buttons', module)
+  .add('Default', () => (
+    <React.Fragment>
+      <Button onClick={action('clicked')}>Button</Button>
+      <Button type="submit" onClick={action('clicked')}>Primary Button</Button>
+      <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>
+      <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>
+    </React.Fragment>
+));
+
+
 storiesOf('Buttons / Button', module)
   .add('Default', () => <Button onClick={action('clicked')}>Default Button</Button>)
   .add('Submit', () => <Button type="submit" onClick={action('clicked')}>Submit Button</Button>)
