@@ -6,7 +6,7 @@ const type = ({ type = 'button' }) => (({
   button: css`
     color: ${colour.blue.base};
     background-color: colour.white;
-    border: solid 1px ${colour.neutral['200']};
+    border: solid 1px ${colour.neutral['300']};
 
     &:hover{
       color: ${colour.blue['700']};
@@ -61,7 +61,7 @@ const Button = styled.button`
 
   &:active {
     box-shadow: none;
-    outline: none; // test this
+    outline: none;
     transform: scale(0.98);
     transition: .05s  ease-in;
   }
@@ -71,10 +71,6 @@ const Button = styled.button`
     border-color: ${colour.neutral['300']};
     color: ${colour.neutral['500']};
     pointer-events: none;
-
-    &:hover{
-      box-shadow: none;
-    }
   }
 `;
 
