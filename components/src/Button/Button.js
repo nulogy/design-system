@@ -68,9 +68,9 @@ const Button = styled.button`
 
   &:disabled {
     background-color: ${colour.neutral['300']};
-    color: ${colour.neutral.x500};
-    pointer-events: none;
     border-color: ${colour.neutral['300']};
+    color: ${colour.neutral['500']};
+    pointer-events: none;
 
     &:hover{
       box-shadow: none;
