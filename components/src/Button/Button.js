@@ -6,10 +6,10 @@ const type = ({ type = 'button' }) => (({
   button: css`
     color: ${colour.blue.base};
     background-color: colour.white;
-    border: solid 1px ${colour.neutral.x200};
+    border: solid 1px ${colour.neutral['200']};
 
     &:hover{
-      color: ${colour.blue.x700};
+      color: ${colour.blue['700']};
     };
   `,
 
@@ -19,7 +19,7 @@ const type = ({ type = 'button' }) => (({
     border-color: ${colour.blue.base};
 
     &:hover{
-      background-color: ${colour.blue.x700};
+      background-color: ${colour.blue['700']};
     }
   `
 })[type]);
@@ -48,8 +48,9 @@ const Button = styled.button`
   align-items: center;
   line-height: 1.3;
   padding: ${space.x1} ${space.x2};
-  border-radius: ${corner.small};
+  border-radius: ${radius.small};
   transition: .1s  ease-in-out;
+  text-align: left;
 
   ${ size }
   ${ type }
@@ -66,10 +67,10 @@ const Button = styled.button`
   }
 
   &:disabled {
-    background-color: ${colour.neutral.x300};
+    background-color: ${colour.neutral['300']};
     color: ${colour.neutral.x500};
     pointer-events: none;
-    border-color: ${colour.neutral.x300};
+    border-color: ${colour.neutral['300']};
 
     &:hover{
       box-shadow: none;
