@@ -4,18 +4,18 @@ import { borderRadius, colour, space, font, radius, shadow } from '@nulogy/token
 import Button from './Button';
 
 const DangerButton = styled(Button)`
-  --colour-bg: ${colour.red.base};
-  background-color: var(--colour-bg);
-  border-color: var(--colour-bg);
+  background-color: ${colour.red.base};
+  border-color: ${colour.red.base};
   color: ${colour.white};
 
   &:hover{
-    --colour-bg: ${colour.red['700']};
+    background-color: ${colour.red['700']};
+    border-color: ${colour.red['700']};
     color:  ${colour.white};
   }
 
   &:active{
-    --colour-bg: ${colour.green['700']};
+    background-color: ${colour.red.base};
   }
 `
 
