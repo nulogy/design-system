@@ -6,7 +6,7 @@ const type = ({ type = 'button' }) => (({
   button: css`
     color: ${colour.blue.base};
     background-color: ${colour.white};
-    border: solid 1px ${colour.neutral['300']};
+    border-colour: ${colour.neutral['300']};
 
     &:hover{
       color: ${colour.blue['700']};
@@ -14,8 +14,8 @@ const type = ({ type = 'button' }) => (({
   `,
 
   submit: css`
-    background-color: ${colour.blue.base};
     color: ${colour.white};
+    background-color: ${colour.blue.base};
     border-color: ${colour.blue.base};
 
     &:hover{
@@ -46,6 +46,9 @@ const size = ({ size = 'medium' }) => (({
 })[size]);
 
 const Button = styled.button`
+  border-style: solid;
+  border-width: 1px;
+  appearance: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -64,6 +67,7 @@ const Button = styled.button`
   }
 
   &:active {
+    border-style: solid;
     box-shadow: none;
     outline: none;
     transform: scale(0.98);
