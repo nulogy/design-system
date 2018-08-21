@@ -5,16 +5,44 @@ import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
 
-storiesOf('Buttons / All Buttons', module)
-  .add('Default', () => (
+const Nbsp = () => <React.Fragment>{" "}</React.Fragment>;
+
+storiesOf('Buttons / Examples', module)
+  .add('All Buttons', () => (
     <React.Fragment>
       <Button onClick={action('clicked')}>Button</Button>
-      <Button type="submit" onClick={action('clicked')}>Primary Button</Button>
+      <Nbsp />
       <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>
+      <Nbsp />      
       <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>
+      <Nbsp />      
+      <Button type="submit" onClick={action('clicked')}>Primary Button</Button>
+      <Nbsp />      
+      <ApprovalButton type="submit" onClick={action('clicked')}>Primary Approval Button</ApprovalButton>
+      <Nbsp />      
+      <DangerButton type="submit" onClick={action('clicked')}>Primary Danger Button</DangerButton>
     </React.Fragment>
-));
-
+  ))
+  .add('Some Actions', () => (
+    <div>
+      <h1>Some thing</h1>
+      <p>Sed at sapien nibh. Donec urna turpis</p>
+      <p>feugiat sed nisi vel, maximus euismod lorem. Etiam ac lobortis ex, vitae suscipit magna.</p>
+      <DangerButton onClick={action('clicked')}>Delete</DangerButton>
+      <Nbsp />
+      <Button onClick={action('clicked')}>Cancel</Button>
+      <Nbsp />
+      <Button type="submit" onClick={action('clicked')}>Save</Button>
+    </div>
+  ))
+  .add('Delete Dialog', () => (
+    <div>
+      <h1>Are you sure you want to delete?</h1>
+      <Button onClick={action('clicked')}>Cancel</Button>
+      <Nbsp /> 
+      <DangerButton type="submit" onClick={action('clicked')}>Delete</DangerButton>
+    </div>
+  ))
 
 storiesOf('Buttons / Button', module)
   .add('Default', () => <Button onClick={action('clicked')}>Default Button</Button>)
