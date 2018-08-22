@@ -97,16 +97,10 @@ export default [
         title: 'Buttons',
         content: pageLoader(() => import('./components/buttons.md')),
         imports: {
-          ActionButton: require('@nulogy/components').ActionButton,
           ApprovalButton: require('@nulogy/components').ApprovalButton,
           Button: require('@nulogy/components').Button,
-          CreateButton: require('@nulogy/components').CreateButton,
           DangerButton: require('@nulogy/components').DangerButton,
-          DisabledButton: require('@nulogy/components').DisabledButton,
-          GhostButton: require('@nulogy/components').GhostButton,
-          LinkButton: require('@nulogy/components').LinkButton,
-          PrimaryButton: require('@nulogy/components').PrimaryButton,
-          TriggerButton: require('@nulogy/components').TriggerButton
+          LinkButton: require('@nulogy/components').LinkButton
         }
       }
     ]
