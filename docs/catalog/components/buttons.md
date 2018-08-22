@@ -1,71 +1,85 @@
 > Buttons are used to make common actions immediately detectable and easy to perform.
 
-## Button
-Used for standard interactions without any special needs.
-```react
-<Button>Do Something</Button>
-```
-```hint|directive
-Always lead with strong, actionable verbs.
-```
-
 ## Primary Button
 Used to emphasize the primary action in a particular context. Not every page requires Primary Button.
 ```react
-<PrimaryButton>Send</PrimaryButton>
+<Button type="submit">Submit</Button>
 ```
-Examples: Form submition button, strongest call to action.
 ```hint|warning
 Avoid using more than 1 Primary Button per screen at a given time.
 ```
-```hint|directive
-Whenever possible follow action verb with a noun.
-```
+### Specialty Primary Buttons
+Used to convey additional meaning. Following options are available.
 
-## Approval Button
-Used for submiting a form that can not be edited.
+#### Approval Primary Button
+Used for submitting a form that can not be edited.
 ```react
-<ApprovalButton>Approve</ApprovalButton>
+<ApprovalButton type="submit">Approve</ApprovalButton>
 ```
 
-## Destructive Button
-Used for deleteng/discarding and confirming any destructive actions.
+#### Danger Primary Button
+Used for primary actions that result in the deletion of a particular item.
+```react
+<DangerButton type="submit">Delete</DangerButton>
+```
+Examples: Delete confirmation button.
+
+#### Primary Disabled Button
+Use for actions that are not currently available.
+```react
+<Button type="submit" disabled>Submit</Button>
+```
+
+## Secondary Button
+Used for alternative actions to Primary Button action. They are usually paired with the Primary Button but they can stand on their own. A number of the Secondary button should be limited to a few, ideally one or two.
+```react
+<Button>Cancel</Button>
+```
+```hint|warning
+Avoid using more than 1 Primary Button per screen at a given time.
+```
+
+### Specialty Secondary Buttons
+
+#### Danger Secondary Button
+Used for secondary actions that could result in a deletion of a particular item.
 ```react
 <DangerButton>Delete</DangerButton>
 ```
-Examples: Delete/Discard button, Delete confiramtion button.
-
-## Disabled Button
-Use for actions that aren’t currently available.
-```react
-<DisabledButton>Submit</DisabledButton>
+Examples: Delete/Discard button.
+```hint|directive
+Whenever possible follow this action with a confirmation modal dialog.
 ```
 
-## Link Button
-Used as a companion of a Primary Button that clears, cancels or exits current activity.
+#### Disabled Button
+Use for actions that are not currently available.
 ```react
-<LinkButton>Cancel</LinkButton>
-```
-Examples: Cancel, Clear, Exit, No.
-
-## Create Button
-Used for special Create shortcut action.
-```react
-<CreateButton>+</CreateButton>
+<Button disabled>Submit</Button>
 ```
 
-## Ghost Button
-Used on darker backgrounds.
+## Tertiary Button
+Use for tertiary actions, toolbars, or inline within complex components.
 ```react
-<GhostButton>Delete</GhostButton>
+<LinkButton>Other Options</LinkButton>
+```
+Examples: Table inline actions.
+```hint|directive
+Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
 ```
 
-## Action Button
-Used for well established actions that don't belong to primary actions.
+## Button Sizes
 ```react
-<ActionButton>+</ActionButton>
+<Button type="submit" size="small">Submit</Button>
 ```
-Examples: Edit, Delete, Change View ... .
+```react
+<Button type="submit">Submit</Button>
+```
+```react
+<Button type="submit" size="large">Submit</Button>
+```
+## Language
+- Always lead with strong, actionable verbs
+- Whenever possible follow by an object noun on Primary Button
 
 ## Related Components
-Button Set
+N/A
