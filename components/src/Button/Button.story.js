@@ -6,24 +6,43 @@ import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
 import LinkButton from "./LinkButton";
 
+const Title = ({ children }) => <h1>{ children }</h1>
 const Nbsp = () => <React.Fragment>{" "}</React.Fragment>;
 
 storiesOf('Buttons / Examples', module)
   .add('All Buttons', () => (
     <React.Fragment>
+      <Title>Buttons</Title>
       <Button onClick={action('clicked')}>Button</Button>
       <Nbsp />
       <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>
       <Nbsp />
       <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>
+      
       <Nbsp />
+      <Button disabled onClick={action('clicked')}>Button</Button>
+      <Nbsp />
+      <ApprovalButton disabled onClick={action('clicked')}>Approval Button</ApprovalButton>
+      <Nbsp />
+      <DangerButton disabled onClick={action('clicked')}>Danger Button</DangerButton>
+
+      <Title>Primary Buttons</Title>
       <Button type="submit" onClick={action('clicked')}>Primary Button</Button>
       <Nbsp />
       <ApprovalButton type="submit" onClick={action('clicked')}>Primary Approval Button</ApprovalButton>
       <Nbsp />
       <DangerButton type="submit" onClick={action('clicked')}>Primary Danger Button</DangerButton>
       <Nbsp />
-      <LinkButton type="submit" onClick={action('clicked')}>Primary Link Button</LinkButton>
+      <Button type="submit" disabled onClick={action('clicked')}>Primary Button</Button>
+      <Nbsp />
+      <ApprovalButton type="submit" disabled onClick={action('clicked')}>Primary Approval Button</ApprovalButton>
+      <Nbsp />
+      <DangerButton type="submit" disabled onClick={action('clicked')}>Primary Danger Button</DangerButton>
+      
+      <Title>Tertiary Buttons</Title>
+      <LinkButton onClick={action('clicked')}>Link Button</LinkButton>
+      <Nbsp />
+      <LinkButton disabled onClick={action('clicked')}>Disabled Link Button</LinkButton>
     </React.Fragment>
   ))
   .add('Some Actions', () => (
