@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
+import LinkButton from "./LinkButton";
 
 const Nbsp = () => <React.Fragment>{" "}</React.Fragment>;
 
@@ -13,14 +14,16 @@ storiesOf('Buttons / Examples', module)
       <Button onClick={action('clicked')}>Button</Button>
       <Nbsp />
       <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>
-      <Nbsp />      
+      <Nbsp />
       <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>
-      <Nbsp />      
+      <Nbsp />
       <Button type="submit" onClick={action('clicked')}>Primary Button</Button>
-      <Nbsp />      
+      <Nbsp />
       <ApprovalButton type="submit" onClick={action('clicked')}>Primary Approval Button</ApprovalButton>
-      <Nbsp />      
+      <Nbsp />
       <DangerButton type="submit" onClick={action('clicked')}>Primary Danger Button</DangerButton>
+      <Nbsp />
+      <LinkButton type="submit" onClick={action('clicked')}>Primary Link Button</LinkButton>
     </React.Fragment>
   ))
   .add('Some Actions', () => (
@@ -39,7 +42,7 @@ storiesOf('Buttons / Examples', module)
     <div>
       <h1>Are you sure you want to delete?</h1>
       <Button onClick={action('clicked')}>Cancel</Button>
-      <Nbsp /> 
+      <Nbsp />
       <DangerButton type="submit" onClick={action('clicked')}>Delete</DangerButton>
     </div>
   ))
@@ -78,3 +81,12 @@ storiesOf('Buttons / Danger Button', module)
   .add('Disabled', () => <DangerButton disabled onClick={action('clicked')}>Disabled Button</DangerButton>)
   .add('Small', () => <DangerButton size="small" onClick={action('clicked')}>Small Button</DangerButton>)
   .add('Large', () => <DangerButton size="large" onClick={action('clicked')}>Large Button</DangerButton>)
+
+  storiesOf('Buttons / Link Button', module)
+    .add('Default', () => <LinkButton onClick={action('clicked')}>Default Button</LinkButton>)
+    .add('Submit', () => <LinkButton type="submit" onClick={action('clicked')}>Submit Button</LinkButton>)
+    .add('With an icon', () => <LinkButton onClick={action('clicked')}>➕</LinkButton>)
+    .add('With an icon and text', () => <LinkButton onClick={action('clicked')}>✏️ Edit this thing</LinkButton>)
+    .add('Disabled', () => <LinkButton disabled onClick={action('clicked')}>Disabled Button</LinkButton>)
+    .add('Small', () => <LinkButton size="small" onClick={action('clicked')}>Small Button</LinkButton>)
+    .add('Large', () => <LinkButton size="large" onClick={action('clicked')}>Large Button</LinkButton>)
