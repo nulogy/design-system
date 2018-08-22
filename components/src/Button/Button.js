@@ -2,38 +2,40 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 
-export const buttonColours = ({
-  text = colour.white,
-  background = colour.blue.base,
-  border = background,
-} = {}) => css`
-  color: ${text};
-  background-color: ${background};
-  border-color: ${border};
+export const buttonColours = (mainColour = colour.blue.base) => css`
+  color: ${mainColour};
+  background-color: ${colour.white};
+  border-color: ${mainColour};
+`
+
+export const primaryButtonColours = (mainColour = colour.blue.base) => css`
+  color: ${colour.white};
+  background-color: ${mainColour};
+  border-color: ${mainColour};
 `
 
 const type = ({ type = 'button' }) => (({
   button: css`
-    ${buttonColours({
-      text: colour.blue.base,
-      background: colour.white,
-      border: colour.neutral['300']
-    })}
+    ${buttonColours()}
     
-    &:hover{
-      color: ${colour.blue['700']};
+    &:hover {
+      ${buttonColours(colour.blue[700])};
     };
+
+    &:active {
+      ${buttonColours()}
+    }
   `,
 
   submit: css`
-    ${buttonColours()}
+    ${primaryButtonColours()}
 
-    &:hover{
-      ${buttonColours({ background: colour.blue[700] })}
+    &:hover {
+      ${primaryButtonColours(colour.blue[700])}
     }
 
     &:active {
-      ${buttonColours({ background: colour.blue.base })}
+      ${primaryButtonColours()}
     }
   `
 })[type]);
