@@ -56,6 +56,7 @@ const size = ({ size = 'medium' }) => (({
   large: css`
     font-size: ${font.size.large}px;
     font-weight: ${font.weight.medium};
+    padding: ${space.x2} ${space.x3};
   `,
 
   medium: css`
@@ -66,6 +67,7 @@ const size = ({ size = 'medium' }) => (({
   small: css`
     font-size: ${font.size.smaller}px;
     font-weight: ${font.weight.normal};
+    padding: ${space.half} ${space.x1};
   `
 })[size]);
 
