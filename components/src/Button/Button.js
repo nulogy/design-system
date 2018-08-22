@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 
-export const buttonColours = (mainColour = colour.blue.base) => css`
+export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
   border-color: ${mainColour};
@@ -27,9 +27,8 @@ const type = ({ type = 'button' }) => (({
     }
 
     &:disabled {
-      background-color: ${colour.white};
+      ${buttonColours(colour.neutral[400])};
       border-color: ${colour.neutral['300']};
-      color: ${colour.neutral['400']};
     }
   `,
 
@@ -45,8 +44,7 @@ const type = ({ type = 'button' }) => (({
     }
 
     &:disabled {
-      background-color: ${colour.neutral['300']};
-      border-color: ${colour.neutral['300']};
+      ${primaryButtonColours(colour.neutral['300'])}
       color: ${colour.neutral['500']};
     }
   `
