@@ -17,13 +17,19 @@ export const primaryButtonColours = (mainColour = colour.blue.base) => css`
 const type = ({ type = 'button' }) => (({
   button: css`
     ${buttonColours()}
-    
+
     &:hover {
       ${buttonColours(colour.blue[700])};
     };
 
     &:active {
       ${buttonColours()}
+    }
+
+    &:disabled {
+      background-color: ${colour.white};
+      border-color: ${colour.neutral['300']};
+      color: ${colour.neutral['400']};
     }
   `,
 
@@ -36,6 +42,12 @@ const type = ({ type = 'button' }) => (({
 
     &:active {
       ${primaryButtonColours()}
+    }
+
+    &:disabled {
+      background-color: ${colour.neutral['300']};
+      border-color: ${colour.neutral['300']};
+      color: ${colour.neutral['500']};
     }
   `
 })[type]);
@@ -87,11 +99,9 @@ const Button = styled.button`
   }
 
   &:disabled {
-    background-color: ${colour.neutral['300']};
-    border-color: ${colour.neutral['300']};
-    color: ${colour.neutral['500']};
     pointer-events: none;
   }
+
 `;
 
 export default Button;
