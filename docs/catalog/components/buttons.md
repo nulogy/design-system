@@ -8,7 +8,7 @@ Used to emphasize the primary action in a particular context. Not every page req
 ```hint|warning
 Avoid using more than 1 Primary Button per screen at a given time.
 ```
-### Specialty Primary Buttons
+### Specialty Primary Buttons and States
 Used to convey additional meaning. Following options are available.
 
 #### Approval Primary Button
@@ -24,7 +24,7 @@ Used for primary actions that result in the deletion of a particular item.
 ```
 Examples: Delete confirmation button.
 
-#### Primary Disabled Button
+#### Primary Disabled Status
 Use for actions that are not currently available.
 ```react
 <Button type="submit" disabled>Submit</Button>
@@ -39,7 +39,7 @@ Used for alternative actions to Primary Button action. They are usually paired w
 Avoid using more than 1 Primary Button per screen at a given time.
 ```
 
-### Specialty Secondary Buttons
+### Specialty Secondary Buttons and Statuses
 
 #### Danger Secondary Button
 Used for secondary actions that could result in a deletion of a particular item.
@@ -51,7 +51,7 @@ Examples: Delete/Discard button.
 Whenever possible follow this action with a confirmation modal dialog.
 ```
 
-#### Disabled Button
+#### Disabled Button Status
 Use for actions that are not currently available.
 ```react
 <Button disabled>Submit</Button>
@@ -68,12 +68,15 @@ Always reserve sufficient space surrounding the button to separate each from mul
 ```
 
 ## Button Sizes
+Small
 ```react
 <Button type="submit" size="small">Submit</Button>
 ```
+Medium
 ```react
 <Button type="submit">Submit</Button>
 ```
+Large
 ```react
 <Button type="submit" size="large">Submit</Button>
 ```
