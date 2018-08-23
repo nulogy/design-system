@@ -1,6 +1,9 @@
+> This document will guide you through the steps necessary to start working on Nulogy Design System. 
+
 These docs are part of the larger [@nulogy/design-system](https://github.com/nulogy/design-system) project. This project uses [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to manage multiple packages in one repository.
 
-To work on Nulogy Design System, you will need to clone the repo to your machine, install necessary dependencies and run the development server. This document will guide you through that process.
+You will need to clone the repo to your machine, install necessary dependencies and run the development server. we'll cover all these steps below.
+
 
 # Clone the repo to your local machine
 
