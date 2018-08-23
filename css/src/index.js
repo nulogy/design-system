@@ -2,6 +2,7 @@ import {injectGlobal, css} from 'styled-components';
 import { font } from '@nulogy/tokens';
 // 1. you don't see it, but the .externalInjected class was created just by importing @nulogy/styles
 import external, { mixin } from "./external"
+import typography from "./typography"
 
 injectGlobal`
 .nds {
