@@ -116,6 +116,11 @@ export default [
         content: pageLoader(() => import('./guides/setup.md'))
       },
       {
+        path: '/guides/scripts',
+        title: 'Package Scripts',
+        content: pageLoader(() => import('./guides/scripts.md'))
+      },
+      {
         path: '/guides/deploying',
         title: 'Deploying to the web',
         content: pageLoader(() => import('./guides/deploying.md'))
