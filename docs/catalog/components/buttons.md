@@ -1,7 +1,7 @@
 > Buttons are used to make common actions immediately detectable and easy to perform.
 
 ## Primary Button
-Used to emphasize the primary action in a particular context. Not every page requires Primary Button.
+Used to emphasize the primary action in a particular context. Not every page requires a Primary Button.
 ```react
 <Button type="submit">Submit</Button>
 ```
@@ -9,7 +9,7 @@ Used to emphasize the primary action in a particular context. Not every page req
 Avoid using more than 1 Primary Button per screen at a given time.
 ```
 ### Specialty Primary Buttons and States
-Used to convey additional meaning. Following options are available.
+Used to convey additional meaning. The following options are available.
 
 #### Approval Primary Button
 Used for submitting a form that can not be edited.
@@ -34,9 +34,6 @@ Use for actions that are not currently available.
 Used for alternative actions to Primary Button action. They are usually paired with the Primary Button but they can stand on their own. A number of the Secondary button should be limited to a few, ideally one or two.
 ```react
 <Button>Cancel</Button>
-```
-```hint|warning
-Avoid using more than 1 Primary Button per screen at a given time.
 ```
 
 ### Specialty Secondary Buttons and Statuses
