@@ -111,6 +111,11 @@ export default [
     title: 'Guides',
     pages: [
       {
+        path: '/guides/quickstart',
+        title: 'Quick start',
+        content: pageLoader(() => import('./guides/quickstart.md'))
+      },
+      {
         path: '/guides/setup',
         title: 'Set up',
         content: pageLoader(() => import('./guides/setup.md'))
