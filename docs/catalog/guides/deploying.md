@@ -16,7 +16,7 @@ There is a [`netlify.toml`](https://www.netlify.com/docs/netlify-toml-reference/
 
 You may want to publish your fork to the web to share with others. You can configure Netlify from the command line to get this working.
 
-On GitHub, create a fork of the [https://github.com/nulogy/design-system](https://github.com/nulogy/design-system) repo and clone the fork to your machine. Follow the [setup instructions](getting_started/setup) to get your fork running locally.
+On GitHub, create a fork of the [https://github.com/nulogy/design-system](https://github.com/nulogy/design-system) repo and clone the fork to your machine. Follow the [setup instructions](guides/setup) to get your fork running locally.
 
 ### `netlifyctl` command line tool
 
