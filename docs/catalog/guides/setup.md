@@ -1,4 +1,4 @@
-> This document will guide you through the steps necessary to start working on Nulogy Design System. 
+> This document will help you build and run Nulogy Design System for local development on your machine. 
 
 These docs are part of the larger [@nulogy/design-system](https://github.com/nulogy/design-system) project. This project uses [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to manage multiple packages in one repository.
 
