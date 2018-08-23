@@ -139,51 +139,12 @@ lang: sh
 $ yarn start
 ```
 
-This will start the dev server for the catalog website, while also building the components package in watch mode.
+This will start the [Storybook](https://storybook.js.org) for the [@nulogy/components](https://www.npmjs.com/package/@nulogy/components) project.
 
-# Working with packages
+# Package Scripts
 
-You have a few options for how to work in the project's sub-package. You can work directly in that package folder by `cd`ing to the package's directory. You can also use the `yarn workspace <package name>` command to target commands to a particular package. Finally there are aliases in the root to all the packages.
+For information about other scripts available to you see the [Package Scripts guide](guides/scripts).
 
-## Working in the `/docs` directory
-
-
-The [nulogy.design](http://nulgoy.design) website is located in the `@nulogy/nulogy-design` package in the [`/docs`](https://github.com/nulogy/design-system/tree/master/docs) directory. 
-
-Working in the `/docs` directory is the simplest way of working on the docs package. 
-
-To run the dev server type the following from the repo root:
-
-```code
-lang: sh
----
-$ cd docs/
-$ yarn start
-```
-
-## Working with the `yarn workspace` command
-
-Alternately, you can use the `yarn workspace` command to direct script commands to a particular sub package. 
-
-To run commands on the `@nulogy/nulogy-design` package from anywhere in the project type:
-
-```code
-lang: sh
----
-$ yarn workspace @nulogy/components storybook
-```
-
-## Aliases
-
-There are also aliases in the root `package.json` that make it easier to work with the sub-packages. 
-
-From the repo root you can run:
-
-```code
-lang: sh
----
-$ yarn docs build
-```
 
 
 
