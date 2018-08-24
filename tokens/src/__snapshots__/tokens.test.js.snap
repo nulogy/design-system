@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tokens is valid js 1`] = `
+exports[`tokens matches snapshot 1`] = `
 Object {
   "borderRadius": "3px",
   "colour": Object {
