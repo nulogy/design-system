@@ -8,10 +8,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "start-storybook -p 6006",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
-    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
