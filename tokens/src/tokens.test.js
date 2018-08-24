@@ -1,5 +1,7 @@
+import tokens from './tokens';
+
 describe('tokens', () => {
   it('is valid js', () => {
-    expect(true).toBeTruthy();
+    expect(tokens).toMatchSnapshot();
   });
 });
