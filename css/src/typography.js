@@ -1,7 +1,7 @@
 import {css, injectGlobal} from 'styled-components';
 import { font } from '@nulogy/tokens';
 
-const fontCSS = {
+export const fontMixins = {
   // Size
   'font-size--smaller': css`font-size: ${font.size.smaller}px`,
   'font-size--small': css`font-size: ${font.size.small}px`,
@@ -22,6 +22,6 @@ const fontCSS = {
   'line-height--regular': css`line-height: ${font.lineHeight.regular}`,
 }
 
-Object.entries(fontCSS)
+Object.entries(fontMixins)
   .forEach(([className, rule]) => injectGlobal`.${className} { ${rule} }`);
 
