@@ -1,7 +1,15 @@
 import { configure } from '@storybook/react';
+import '../src/index';
+
+const req = require.context(
+  "../src",       // path where stories live
+  true,           // recursive?
+  /\.story.js$/, // story files match this pattern
+);
 
 function loadStories() {
-  require('../stories');
+  // iterate on all the stories and require them
+  req.keys().forEach(story => req(story));
 }
 
 configure(loadStories, module);
