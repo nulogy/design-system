@@ -10,7 +10,9 @@
   "scripts": {
     "start": "webpack --mode development",
     "build": "webpack --mode production --config webpack.config.js",
-    "watch": "yarn build --watch"
+    "watch": "yarn build --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "^16.3.2",
@@ -28,6 +30,9 @@
     "react": "^16.3.2",
     "styled-components": "^3.2.6",
     "webpack-cli": "^3.1.0",
-    "webpack": "^4.8.3"
+    "webpack": "^4.8.3",
+    "@storybook/react": "^3.4.10",
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10"
   }
 }
