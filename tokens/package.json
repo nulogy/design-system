@@ -2,13 +2,32 @@
   "name": "@nulogy/tokens",
   "version": "0.1.0",
   "description": "Design tokens for the Nulogy Design System - http://nulody.design",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
   "repository": "https://github.com/nulogy/design-system.git",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "build": "babel src --out-dir dist",
+    "watch": "yarn build --watch"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
 }
