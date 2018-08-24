@@ -9,6 +9,7 @@ storiesOf('CSS', module)
         <p className="font-size--medium">.font-size--medium</p>
         <p className="font-size--large">.font-size--large</p>
         <p className="font-size--larger">.font-size--larger</p>
+        <p className="font-size--largest">.font-size--largest</p>
         <p className="font-family--regular">.font-family--regular</p>
         <p className="font-family--mono">.font-family--mono</p>
         <p className="font-weight--bold">.font-weight--bold</p>
