@@ -108,17 +108,27 @@ export default [
     content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {
-    title: 'Getting Started',
+    title: 'Guides',
     pages: [
       {
-        path: '/getting_started/setup',
-        title: 'Set up',
-        content: pageLoader(() => import('./getting_started/setup.md'))
+        path: '/guides/quickstart',
+        title: 'Quick start',
+        content: pageLoader(() => import('./guides/quickstart.md'))
       },
       {
-        path: '/getting_started/deploying',
+        path: '/guides/setup',
+        title: 'Set up',
+        content: pageLoader(() => import('./guides/setup.md'))
+      },
+      {
+        path: '/guides/scripts',
+        title: 'Package Scripts',
+        content: pageLoader(() => import('./guides/scripts.md'))
+      },
+      {
+        path: '/guides/deploying',
         title: 'Deploying to the web',
-        content: pageLoader(() => import('./getting_started/deploying.md'))
+        content: pageLoader(() => import('./guides/deploying.md'))
       },
     ]
   },

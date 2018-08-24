@@ -12,8 +12,8 @@ Learn how to create consistent, beautiful interfaces using Nulogy's visual langu
 *Coming soon*. A set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
 
 ## Guides
-* [Developing the Design System](http://nulogy.design/getting_started/setup)
-* [Deploying to the web](http://nulogy.design/getting_started/deploying)
+* [Developing the Design System](http://nulogy.design/guides/setup)
+* [Deploying to the web](http://nulogy.design/guides/deploying)
 
 
 
