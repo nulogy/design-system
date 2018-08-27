@@ -18,6 +18,9 @@ export const font = {
   },
   weight: {
     bold: 500
+  },
+  lineHeight: {
+    regular: 1.5
   }
 };
 

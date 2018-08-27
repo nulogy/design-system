@@ -1,5 +1,5 @@
 import { configure } from '@storybook/react';
-import '@nulogy/css';
+import '../src/index';
 
 const req = require.context(
   "../src",       // path where stories live
