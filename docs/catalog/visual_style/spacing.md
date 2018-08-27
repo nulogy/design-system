@@ -44,7 +44,7 @@ noSource: true
 
 ```image
 plain: true
-src: "/spacing-example.png"
+src: "/spacing-example.svg"
 ```
 
 ## How to choose spacing
