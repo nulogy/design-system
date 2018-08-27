@@ -18,7 +18,7 @@ storiesOf('Buttons / Examples', module)
       <ApprovalButton onClick={action('clicked')}>Approval Button</ApprovalButton>
       <Nbsp />
       <DangerButton onClick={action('clicked')}>Danger Button</DangerButton>
-      
+
       <Nbsp />
       <Button disabled onClick={action('clicked')}>Button</Button>
       <Nbsp />
@@ -38,8 +38,8 @@ storiesOf('Buttons / Examples', module)
       <ApprovalButton type="submit" disabled onClick={action('clicked')}>Primary Approval Button</ApprovalButton>
       <Nbsp />
       <DangerButton type="submit" disabled onClick={action('clicked')}>Primary Danger Button</DangerButton>
-      
-      <Title>Tertiary Buttons</Title>
+
+      <Title>Link Button</Title>
       <LinkButton onClick={action('clicked')}>Link Button</LinkButton>
       <Nbsp />
       <LinkButton disabled onClick={action('clicked')}>Disabled Link Button</LinkButton>

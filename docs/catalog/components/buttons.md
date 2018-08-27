@@ -37,6 +37,16 @@ Examples: Delete confirmation button.
 <DangerButton type="submit">Delete Item</DangerButton>
 ```
 
+## Link Button
+Use for low importance actions, toolbars, or inline within complex components.
+Examples: Table inline actions.
+```react
+<LinkButton>Actions</LinkButton>
+```
+```hint|directive
+Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
+```
+
 ## Disabled Button
 Use for actions that are not currently available.
 
@@ -48,15 +58,9 @@ Primary Button, QCloud Aproval Button, Danger Primary Button
 ```react
 <Button type="submit" disabled>Submit Form</Button>
 ```
-
-## Link Button
-Use for low importance actions, toolbars, or inline within complex components.
-Examples: Table inline actions.
+Link Button
 ```react
-<LinkButton>Actions</LinkButton>
-```
-```hint|directive
-Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
+<LinkButton disabled>Actions</LinkButton>
 ```
 
 ## Button Sizes
