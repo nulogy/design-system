@@ -5,6 +5,14 @@ import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
 import LinkButton from "./LinkButton";
+import styled, { css } from 'styled-components';
+import { font } from '@nulogy/tokens';
+
+const Text = styled.p`
+  font-size: ${font.size.medium}px;
+  font-family: ${font.family.regular};
+  line-height: 1.5;
+`;
 
 const Title = ({ children }) => <h1>{ children }</h1>
 const Nbsp = () => <React.Fragment>{" "}</React.Fragment>;
@@ -125,3 +133,14 @@ storiesOf('Buttons / Link Button', module)
   .add('Disabled', () => <LinkButton disabled onClick={action('clicked')}>Disabled Button</LinkButton>)
   .add('Small', () => <LinkButton size="small" onClick={action('clicked')}>Small Button</LinkButton>)
   .add('Large', () => <LinkButton size="large" onClick={action('clicked')}>Large Button</LinkButton>)
+
+storiesOf('Buttons / Size', module)
+  .add('Small', () => <Button size="small" type="submit" onClick={action('clicked')}>Submit</Button>)
+  .add('Medium', () => <Button type="submit" onClick={action('clicked')}>Submit</Button>)
+  .add('Large', () => <Button type="submit" size="large" onClick={action('clicked')}>Create Project</Button>)
+  .add('Small within the line of text', () => <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam erat, in placerat nisi semper vitae. Donec ipsum urna, eleifend nec sem in, tincidunt bibendum lorem. Sed dolor ante, sollicitudin a libero sit amet, finibus <Button size="small" type="submit" onClick={action('clicked')}>More details</Button> iaculis ligula. Suspendisse lacus nisl, convallis quis tincidunt nec, fermentum a odio. Nulla ex lacus, pulvinar eu vestibulum eget, suscipit vitae justo. Aliquam orci nisi, pharetra nec arcu et, gravida scelerisque quam. Suspendisse potenti. Pellentesque condimentum eget elit nec varius. Donec dictum magna ac ante dictum molestie. Maecenas a sapien ac massa lacinia maximus et pharetra lacus. Nunc at neque sit amet justo lobortis sollicitudin.</Text>)
+
+storiesOf('Buttons / Long Labels', module)
+  .add('Small', () => <Button size="small" type="submit" onClick={action('clicked')}>Super Long Labels Pellentesque condimentum eget elit nec varius</Button>)
+  .add('Medium', () => <Button type="submit" onClick={action('clicked')}>Super Long Labels Pellentesque condimentum eget elit nec varius</Button>)
+  .add('Large', () => <Button size="large" type="submit" onClick={action('clicked')}>Super Long Labels Pellentesque condimentum eget elit nec varius</Button>)
