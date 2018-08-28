@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table works 1`] = `
+Object {
+  "Body": [Function],
+  "Cell": [Function],
+  "Header": [Function],
+  "HeaderCell": [Function],
+  "Row": [Function],
+  "Table": [Function],
+}
+`;

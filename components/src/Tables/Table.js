@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Object } from 'core-js';
 
 const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
 
