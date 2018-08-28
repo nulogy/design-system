@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Object } from 'core-js';
 
 const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
 
@@ -24,3 +25,15 @@ export const Table = styled.table`
   border-collapse: collapse;
   border-top: ${borderStyle};
 `;
+
+const DefaultTable =  styled(Table)``;
+
+Object.entries({
+  Cell,
+  Row,
+  Header,
+  Body,
+  HeaderCell,
+}).map(([key, val]) => DefaultTable[key] = val);
+
+export default DefaultTable;
