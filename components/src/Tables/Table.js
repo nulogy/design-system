@@ -5,12 +5,15 @@ const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
 
 export const Cell = styled.td`
   padding: 1rem;
+  text-align: left;
   border-bottom: ${borderStyle};
 `;
 
 export const Row = styled.tr``;
 
-export const HeaderRow = styled(Row.withComponent('thead'))``;
+export const Header = styled.thead``;
+
+export const Body = styled.tbody``;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
   font-weight: bold;
