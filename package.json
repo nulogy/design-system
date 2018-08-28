@@ -32,11 +32,11 @@
     "yarn": "^1.7.0"
   },
   "scripts": {
-    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css watch",
+    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
     "start": "yarn components start",
-    "document": "concurrently 'yarn components watch' 'yarn docs start'",
+    "document": "yarn docs start",
     "hack": "yarn sandbox hack",
-    "build-docs": "yarn components build && yarn docs build",
+    "build-docs": "yarn docs build",
     "components": "yarn workspace @nulogy/components",
     "css": "yarn workspace @nulogy/css",
     "docs": "yarn workspace @nulogy/nulogy-design",
