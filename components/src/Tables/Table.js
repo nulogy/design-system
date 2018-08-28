@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const borderColour = 'lightgrey';
-
+const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
 
 export const Cell = styled.td`
-  border-bottom: 1px solid ${borderColour};
   padding: 1rem;
+  border-bottom: ${borderStyle};
 `;
 
 export const Row = styled.tr``;
@@ -20,5 +19,5 @@ export const HeaderCell = styled(Cell.withComponent('th'))`
 
 export const Table = styled.table`
   border-collapse: collapse;
-  border-top: 1px solid ${borderColour};
+  border-top: ${borderStyle};
 `;
