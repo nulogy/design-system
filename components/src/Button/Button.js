@@ -8,6 +8,10 @@ const withoutBorder = value => value - borderWidth;
 
 const smallButtonPaddingY = 1;
 
+const lineHeight16 = value => 16 / value;
+
+const lineHeight24 = value => 24 / value;
+
 export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
@@ -59,23 +63,23 @@ const type = ({ type = 'button' }) => (({
 const size = ({ size = 'medium' }) => (({
   large: css`
     font-size: ${font.size.large}px;
-    line-height: 1.2;
+    line-height: ${lineHeight24(font.size.large)};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px ${space.x3}px;
   `,
 
   medium: css`
     font-size: ${font.size.small}px;
-    line-height: 1.1429;
+    line-height: ${lineHeight16(font.size.small)};
     font-weight: ${font.weight.medium};
-    padding: ${withoutBorder(space.x1)}px ${space.x2};
+    padding: ${withoutBorder(space.x1)}px ${space.x2}px;
   `,
 
   small: css`
     font-size: ${font.size.smaller}px;
-    line-height: 1.3334;
+    line-height: ${lineHeight16(font.size.smaller)};
     font-weight: ${font.weight.normal};
-    padding: ${smallButtonPaddingY} ${space.half}px;
+    padding: ${smallButtonPaddingY}px ${space.half}px;
   `
 })[size]);
 
