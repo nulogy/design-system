@@ -22,6 +22,7 @@ export const font = {
     bold: 700
   },
   lineHeight: {
+    smaller: 1,
     regular: 1.5
   }
 };
