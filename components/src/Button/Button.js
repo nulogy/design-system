@@ -6,10 +6,6 @@ export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
   border-color: ${mainColour};
-
-  //color: ${colour.blue[700]};
-  //background-color: ${colour.blue[300]};
-  //border-color: ${colour.neutral[300]};
 `
 
 export const primaryButtonColours = (mainColour = colour.blue.base) => css`
