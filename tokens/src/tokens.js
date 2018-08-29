@@ -27,6 +27,7 @@ export const font = {
 };
 
 export const space = {
+  quarter: '2px',
   half: '4px',
   x1: '8px',
   x2: '16px',

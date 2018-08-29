@@ -6,6 +6,10 @@ export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
   border-color: ${mainColour};
+
+  //color: ${colour.blue[700]};
+  //background-color: ${colour.blue[300]};
+  //border-color: ${colour.neutral[300]};
 `
 
 export const primaryButtonColours = (mainColour = colour.blue.base) => css`
@@ -53,19 +57,23 @@ const type = ({ type = 'button' }) => (({
 const size = ({ size = 'medium' }) => (({
   large: css`
     font-size: ${font.size.large}px;
+    line-height: 1.2;
     font-weight: ${font.weight.medium};
-    padding: ${space.x2} ${space.x3};
+    padding: calc(${space.x2} - 1px) ${space.x3}
   `,
 
   medium: css`
     font-size: ${font.size.small}px;
+    line-height: 1.1429;
     font-weight: ${font.weight.medium};
+    padding: calc(${space.x1} - 1px) ${space.x2};
   `,
 
   small: css`
     font-size: ${font.size.smaller}px;
+    line-height: 1.3334;
     font-weight: ${font.weight.normal};
-    padding: ${space.half} ${space.x1};
+    padding: calc(${space.quarter} - 1px) ${space.half};
   `
 })[size]);
 
@@ -77,8 +85,6 @@ const Button = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.3;
-  padding: ${space.x1} ${space.x2};
   border-radius: ${radius.small};
   transition: .1s  ease-in-out;
   text-align: left;
