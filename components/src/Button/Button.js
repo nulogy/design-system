@@ -8,10 +8,6 @@ const withoutBorder = value => value - borderWidth;
 
 const smallButtonPaddingY = 1;
 
-const lineHeightPx = font.lineHeight.regular * font.size.medium;
-
-const smallerLineHeightPx = font.lineHeight.smaller * font.size.medium;
-
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
 export const buttonColours = (mainColour = colour.blue.base, ) => css`
