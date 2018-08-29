@@ -78,6 +78,7 @@ const size = ({ size = 'medium' }) => (({
 })[size]);
 
 const Button = styled.button`
+  box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   appearance: none;
