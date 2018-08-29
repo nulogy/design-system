@@ -27,7 +27,6 @@ export const font = {
 };
 
 export const space = {
-  quarter: 2,
   half: 4,
   x1: 8,
   x2: 16,
