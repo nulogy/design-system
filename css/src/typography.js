@@ -19,9 +19,9 @@ export const fontMixins = {
 
   // Weight
   'font-weight--bold': css`font-weight: ${font.weight.bold}`,
-  'line-height--regular': css`line-height: ${font.lineHeight.regular}`,
+  'line-height--regular': css`line-height: ${font.lineHeight.smaller}`,
+  'line-height--smaller': css`line-height: ${font.lineHeight.normal}`,
 }
 
 Object.entries(fontMixins)
   .forEach(([className, rule]) => injectGlobal`.${className} { ${rule} }`);
-

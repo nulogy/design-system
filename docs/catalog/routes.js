@@ -94,10 +94,13 @@ export default [
     pages: [
       {
         path: '/components/button',
-        title: 'Button',
-        content: pageLoader(() => import('./components/button.md')),
+        title: 'Buttons',
+        content: pageLoader(() => import('./components/buttons.md')),
         imports: {
-          Button: require('@nulogy/components').Button
+          ApprovalButton: require('@nulogy/components').ApprovalButton,
+          Button: require('@nulogy/components').Button,
+          DangerButton: require('@nulogy/components').DangerButton,
+          LinkButton: require('@nulogy/components').LinkButton
         }
       }
     ]

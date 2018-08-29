@@ -48,6 +48,7 @@ storiesOf('Typography', module)
   ))
   .add('Line heights', () => (
     <React.Fragment>
+      <Specimen className="line-height--smaller" />
       <Specimen className="line-height--regular" />
     </React.Fragment>
   ));

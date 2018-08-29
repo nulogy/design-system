@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApprovalButton matches snapshot 1`] = `[Function]`;
+
+exports[`Button matches snapshot 1`] = `[Function]`;
+
+exports[`DangerButton matches snapshot 1`] = `[Function]`;
+
+exports[`LinkButton matches snapshot 1`] = `[Function]`;
