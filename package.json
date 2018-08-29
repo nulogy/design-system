@@ -37,6 +37,7 @@
     "document": "yarn docs start",
     "hack": "yarn sandbox hack",
     "build-docs": "yarn tokens build && yarn components build && yarn docs build",
+    "clean": "git clean -fdX .",
     "components": "yarn workspace @nulogy/components",
     "css": "yarn workspace @nulogy/css",
     "docs": "yarn workspace @nulogy/nulogy-design",

@@ -23,6 +23,10 @@ rows:
 - Script: yarn all
   Task: Run the whole project.
   Result: Start up storybooks in all packages as well as build all packages in watch mode.
+
+- Script: yarn clean
+  Task: That squeaky clean fresh install feel.
+  Result: Cleans out all build and installation files (`/dist`, `/node_modules` etc.) by running `git clean -fdX .` and removing any files not tracked in git – even those in `.gitignore`.
 ```
 
 # Working with packages
