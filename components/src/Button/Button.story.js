@@ -14,6 +14,19 @@ const Text = styled.p`
   line-height: 1.5;
 `;
 
+const InlineText = styled.p`
+  font-size: ${font.size.medium}px;
+  font-family: ${font.family.regular};
+  line-height: 1.5;
+  display: inline;
+`;
+
+const Section = styled.section`
+  font-size: ${font.size.medium}px;
+  font-family: ${font.family.regular};
+  line-height: 1.5;
+`;
+
 const Title = ({ children }) => <h1>{ children }</h1>
 const Nbsp = () => <React.Fragment>{" "}</React.Fragment>;
 
@@ -139,6 +152,7 @@ storiesOf('Buttons / Size', module)
   .add('Medium', () => <Button type="submit" onClick={action('clicked')}>Submit</Button>)
   .add('Large', () => <Button type="submit" size="large" onClick={action('clicked')}>Create Project</Button>)
   .add('Small within the line of text', () => <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam erat, in placerat nisi semper vitae. Donec ipsum urna, eleifend nec sem in, tincidunt bibendum lorem. Sed dolor ante, sollicitudin a libero sit amet, finibus <Button size="small" type="submit" onClick={action('clicked')}>More details</Button> iaculis ligula. Suspendisse lacus nisl, convallis quis tincidunt nec, fermentum a odio. Nulla ex lacus, pulvinar eu vestibulum eget, suscipit vitae justo. Aliquam orci nisi, pharetra nec arcu et, gravida scelerisque quam. Suspendisse potenti. Pellentesque condimentum eget elit nec varius. Donec dictum magna ac ante dictum molestie. Maecenas a sapien ac massa lacinia maximus et pharetra lacus. Nunc at neque sit amet justo lobortis sollicitudin.</Text>)
+  .add('Small after the line of text', () => <Section><InlineText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam erat, in placerat nisi semper vitae. Donec ipsum urna, eleifend nec sem in, tincidunt bibendum lorem. Sed dolor ante, sollicitudin a libero sit amet, finibus iaculis ligula. Suspendisse lacus nisl, convallis quis tincidunt nec, fermentum a odio. Nulla ex lacus, pulvinar eu vestibulum eget, suscipit vitae justo. Aliquam orci nisi, pharetra nec arcu et, gravida scelerisque quam. Suspendisse potenti. Pellentesque condimentum eget elit nec varius. Donec dictum magna ac ante dictum molestie. Maecenas a sapien ac massa lacinia maximus et pharetra lacus. Nunc at neque sit amet justo lobortis sollicitudin.</InlineText> <Button size="small" type="submit" onClick={action('clicked')}>More details</Button></Section>)
 
 
 storiesOf('Buttons / Long Labels', module)
