@@ -12,7 +12,7 @@ const lineHeightPx = font.lineHeight.regular * font.size.medium;
 
 const smallerLineHeightPx = font.lineHeight.smaller * font.size.medium;
 
-const lineHeight = (fontSize, targetLineHeight = smallerLineHeightPx) => targetLineHeight / fontSize;
+const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
 export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
@@ -65,21 +65,21 @@ const type = ({ type = 'button' }) => (({
 const size = ({ size = 'medium' }) => (({
   large: css`
     font-size: ${font.size.large}px;
-    line-height: ${lineHeight(font.size.large, lineHeightPx)};
+    line-height: ${lineHeight('regular') / font.size.large};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px ${space.x3}px;
   `,
 
   medium: css`
     font-size: ${font.size.small}px;
-    line-height: ${lineHeight(font.size.small)};
+    line-height: ${lineHeight('smaller') / font.size.small};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px ${space.x2}px;
   `,
 
   small: css`
     font-size: ${font.size.smaller}px;
-    line-height: ${lineHeight(font.size.smaller)};
+    line-height: ${lineHeight('smaller') / font.size.smaller};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
   `
