@@ -67,6 +67,9 @@ Object {
       "mono": "'IBM Plex Mono', monospace",
       "regular": "'IBM Plex Sans', sans",
     },
+    "lineHeight": Object {
+      "regular": 1.5,
+    },
     "size": Object {
       "large": 20,
       "larger": 24,
