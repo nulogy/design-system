@@ -13,7 +13,7 @@ const LinkButton = styled(Button)`
   background-color: transparent;
   border-color: transparent;
   color: ${colour.blue.base};
-  padding: ${space.x1};
+  padding: ${space.x1}px;
 
   &:hover {
     ${buttonColours({ background: colour.green[700] })}

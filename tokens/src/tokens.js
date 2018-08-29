@@ -27,14 +27,14 @@ export const font = {
 };
 
 export const space = {
-  quarter: '2px',
-  half: '4px',
-  x1: '8px',
-  x2: '16px',
-  x3: '24px',
-  x4: '32px',
-  x6: '48px',
-  x8: '64px'
+  quarter: 2,
+  half: 4,
+  x1: 8,
+  x2: 16,
+  x3: 24,
+  x4: 32,
+  x6: 48,
+  x8: 64
 };
 
 export const colour = {
@@ -98,9 +98,9 @@ export const colour = {
 };
 
 export const radius = {
-  small: '2px',
-  medium: '4px',
-  large: '6px'
+  small: 2,
+  medium: 4,
+  large: 6
 };
 
 export const shadow = {

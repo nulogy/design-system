@@ -2,6 +2,12 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 
+const borderWidth = 1;
+
+const withoutBorder = value => value - borderWidth;
+
+const smallButtonPaddingY = 1;
+
 export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
@@ -55,34 +61,34 @@ const size = ({ size = 'medium' }) => (({
     font-size: ${font.size.large}px;
     line-height: 1.2;
     font-weight: ${font.weight.medium};
-    padding: calc(${space.x2} - 1px) ${space.x3}
+    padding: ${withoutBorder(space.x2)}px ${space.x3}px;
   `,
 
   medium: css`
     font-size: ${font.size.small}px;
     line-height: 1.1429;
     font-weight: ${font.weight.medium};
-    padding: calc(${space.x1} - 1px) ${space.x2};
+    padding: ${withoutBorder(space.x1)}px ${space.x2};
   `,
 
   small: css`
     font-size: ${font.size.smaller}px;
     line-height: 1.3334;
     font-weight: ${font.weight.normal};
-    padding: calc(${space.quarter} - 1px) ${space.half};
+    padding: ${smallButtonPaddingY} ${space.half}px;
   `
 })[size]);
 
 const Button = styled.button`
   box-sizing: border-box;
   border-style: solid;
-  border-width: 1px;
+  border-width: ${borderWidth}px;
   appearance: none;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: ${radius.small};
+  border-radius: ${radius.small}px;
   transition: .1s  ease-in-out;
   text-align: left;
 
