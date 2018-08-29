@@ -29,7 +29,7 @@
     "start": "start-storybook -p 9009",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
-    "test": "jest",
+    "test": "yarn workspace @nulogy/tokens build && jest",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
