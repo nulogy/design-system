@@ -24,10 +24,13 @@ Used to emphasize the primary action in a particular context. Not every page req
 Avoid using more than 1 Primary Button per screen at a given time.
 ```
 
-## QCloud Aproval Button
+## QCloud Approval Button (Deprecated)
 Used for submitting a form that can not be edited in QCloud.
 ```react
 <ApprovalButton type="submit">Submit Record</ApprovalButton>
+```
+```hint|warning
+Avoid using this button since it was depricated.
 ```
 
 ## Primary Danger Button
@@ -54,7 +57,7 @@ Button, Danger Button
 ```react
 <Button disabled>Delete</Button>
 ```
-Primary Button, QCloud Aproval Button, Danger Primary Button
+Primary Button, QCloud Approval Button, Danger Primary Button
 ```react
 <Button type="submit" disabled>Submit Form</Button>
 ```
