@@ -17,7 +17,8 @@ export const font = {
     get subsectionTitle() {return this.large}
   },
   weight: {
-    bold: 500
+    medium: 500,
+    bold: 700
   },
   lineHeight: {
     regular: 1.5
@@ -101,6 +102,7 @@ export const corner = {
 };
 
 export const shadow = {
+  pressed: '0 .033em .25em rgba(3,16,26,0.175);',//needs better naming
   close: '0 .125em .75em rgba(3,16,26,0.175);',
   middle: '4px',
   far: '8px'
