@@ -6,15 +6,21 @@ const defaultProps = { theme: tokens };
 
 const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
 
+const lineHeight = name => font.lineHeight[name] * font.size.medium;
+
 export const Cell = styled.td`
-  padding: 1rem;
-  text-align: left;
-  border-bottom: ${borderStyle};
+  font-size: ${font.size.small}px;
+  line-height: ${lineHeight('smaller') / font.size.small};
+  padding: ${space.x2}px ${space.half}px;
 `;
 
 Cell.defaultProps = defaultProps;
 
-export const Row = styled.tr``;
+export const Row = styled.tr`
+  &:nth-child(odd){
+    background-color: ${colour.neutral['300']};
+  }
+`;
 
 export const Header = styled.thead``;
 
@@ -22,12 +28,13 @@ export const Body = styled.tbody``;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
   font-weight: bold;
-  border-bottom-width: 2px;
+  text-align: left;
+  background-color: ${colour.white}; // sloppy
 `;
 
 export const Table = styled.table`
   border-collapse: collapse;
-  border-top: ${borderStyle};
+  width: 100%;
 `;
 
 Table.defaultProps = defaultProps;
