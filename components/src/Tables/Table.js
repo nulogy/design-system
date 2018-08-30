@@ -12,6 +12,13 @@ export const Cell = styled.td`
   font-size: ${font.size.small}px;
   line-height: ${lineHeight('smaller') / font.size.small};
   padding: ${space.x2}px ${space.half}px;
+
+  &:first-child{
+    padding-left: ${space.x1}px
+  }
+  &:last-child{
+    padding-right: ${space.x1}px
+  }
 `;
 
 Cell.defaultProps = defaultProps;
@@ -24,7 +31,9 @@ export const Row = styled.tr`
 
 export const Header = styled.thead``;
 
-export const Body = styled.tbody``;
+export const Header = styled.thead`
+  text-align: left;
+`;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
   font-weight: bold;
