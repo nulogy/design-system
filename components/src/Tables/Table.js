@@ -36,6 +36,7 @@ const DefaultTable =  styled(Table)``;
 
 Object.entries({
   Cell,
+  ActionCell,
   Row,
   Header,
   Body,
