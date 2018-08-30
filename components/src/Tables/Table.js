@@ -29,7 +29,9 @@ export const Row = styled.tr`
   }
 `;
 
-export const Header = styled.thead``;
+export const CreateRow = styled.tr`
+  background-color: ${colour.green['300']};
+`;
 
 export const Header = styled.thead`
   text-align: left;
@@ -40,6 +42,13 @@ export const HeaderCell = styled(Cell.withComponent('th'))`
   text-align: left;
   background-color: ${colour.white}; // sloppy
 `;
+
+export const CreateRowCell = styled(Cell.withComponent('th'))`
+  font-weight: ${font.weight.normal};
+  padding: ${space.x1}px ${space.half}px;
+`;
+
+export const Body = styled.tbody``;
 
 export const Table = styled.table`
   border-collapse: collapse;
@@ -54,6 +63,8 @@ Object.entries({
   Cell,
   ActionCell,
   Row,
+  CreateRowCell,
+  CreateRow,
   Header,
   Body,
   HeaderCell,
