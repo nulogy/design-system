@@ -29,7 +29,7 @@
     "start": "start-storybook -p 9009",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
-    "test": "jest",
+    "test": "yarn workspace @nulogy/tokens build && jest",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
@@ -67,6 +67,7 @@
     "jest": "22.4.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "storybook-addon-styled-component-theme": "^1.0.3",
     "styled-components": "^3.2.6",
     "url-loader": "1.0.1",
     "webpack": "^4.8.3",

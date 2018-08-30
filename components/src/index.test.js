@@ -1,35 +1,8 @@
-import {
-  Button,
-  ApprovalButton,
-  DangerButton,
-  LinkButton,
-} from './';
+import * as AllComponents from './';
 
-describe('Button', () => {
+describe('All Components', () => {
   it('matches snapshot', () => {
-    expect(Button).toBeDefined();
-    expect(Button).toMatchSnapshot();
+    expect(AllComponents).toBeDefined();
+    expect(AllComponents).toMatchSnapshot();
   });
 });
-
-describe('ApprovalButton', () => {
-  it('matches snapshot', () => {
-    expect(ApprovalButton).toBeDefined();
-    expect(ApprovalButton).toMatchSnapshot();
-  });
-});
-
-describe('DangerButton', () => {
-  it('matches snapshot', () => {
-    expect(DangerButton).toBeDefined();
-    expect(DangerButton).toMatchSnapshot();
-  });
-});
-
-describe('LinkButton', () => {
-  it('matches snapshot', () => {
-    expect(LinkButton).toBeDefined();
-    expect(LinkButton).toMatchSnapshot();
-  });
-});
-  

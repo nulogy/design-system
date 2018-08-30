@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`All Components matches snapshot 1`] = `
+exports[`Table works 1`] = `
 Object {
-  "ApprovalButton": [Function],
   "Body": [Function],
-  "Button": [Function],
   "Cell": [Function],
-  "DangerButton": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
-  "LinkButton": [Function],
   "Row": [Function],
   "Table": [Function],
 }
