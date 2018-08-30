@@ -3,6 +3,12 @@ import styled, { css } from 'styled-components';
 import { colour, space } from '@nulogy/tokens';
 import Button, { buttonColours } from './Button';
 
+const borderWidth = 1;
+
+const withoutBorder = value => value - borderWidth;
+
+const smallButtonPaddingY = 1;
+
 const type = ({ type = 'button' }) => (({
   submit: buttonColours({ background: colour.green.base })
 })[type]);
@@ -13,7 +19,7 @@ const LinkButton = styled(Button)`
   background-color: transparent;
   border-color: transparent;
   color: ${colour.blue.base};
-  padding: ${space.x1}px;
+  padding: ${withoutBorder(space.x1)}px ${space.x1}px;
 
   &:hover {
     ${buttonColours({ background: colour.green[700] })}
