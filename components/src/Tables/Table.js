@@ -25,12 +25,8 @@ Cell.defaultProps = defaultProps;
 
 export const Row = styled.tr`
   &:nth-child(odd){
-    background-color: ${colour.neutral['300']};
+    background-color: ${colour.blue['200']};
   }
-`;
-
-export const CreateRow = styled.tr`
-  background-color: ${colour.green['300']};
 `;
 
 export const Header = styled.thead`
@@ -39,8 +35,11 @@ export const Header = styled.thead`
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
   font-weight: bold;
-  text-align: left;
   background-color: ${colour.white}; // sloppy
+`;
+
+export const CreateRow = styled.tr`
+  background-color: ${colour.blue[400]};
 `;
 
 export const CreateRowCell = styled(Cell.withComponent('th'))`
