@@ -2,7 +2,7 @@ import {
   Button,
   ApprovalButton,
   DangerButton,
-  LinkButton,
+  QuietButton,
 } from './';
 
 describe('Button', () => {
@@ -26,10 +26,10 @@ describe('DangerButton', () => {
   });
 });
 
-describe('LinkButton', () => {
+describe('QuietButton', () => {
   it('matches snapshot', () => {
-    expect(LinkButton).toBeDefined();
-    expect(LinkButton).toMatchSnapshot();
+    expect(QuietButton).toBeDefined();
+    expect(QuietButton).toMatchSnapshot();
   });
 });
   

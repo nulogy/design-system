@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Table, Cell, ActionCell, CreateRowCell, Row, CreateRow, Body, Header, HeaderCell } from './';
-import LinkButton from ".././Button/LinkButton";
+import QuietButton from ".././Button/QuietButton";
 
 storiesOf('Table / Inventory Statuses Table', module)
   .add('Read Only', () => (
@@ -51,22 +51,22 @@ storiesOf('Table / Inventory Statuses Table', module)
           <Cell>Row 1, Cell 1</Cell>
           <Cell>Row 1, Cell 2</Cell>
           <Cell>Row 1, Cell 3</Cell>
-          <ActionCell><LinkButton>+</LinkButton></ActionCell>
+          <ActionCell><QuietButton>+</QuietButton></ActionCell>
         </Row>
         <Row>
           <Cell>Row 2, Cell 1</Cell>
           <Cell>Row 2, Cell 2</Cell>
           <Cell>Row 2, Cell 3</Cell>
           <ActionCell>
-            <LinkButton>+</LinkButton>
-            <LinkButton>+</LinkButton>
+            <QuietButton>+</QuietButton>
+            <QuietButton>+</QuietButton>
           </ActionCell>
         </Row>
         <Row>
           <Cell>Row 3, Cell 1</Cell>
           <Cell>Row 3, Cell 2</Cell>
           <Cell>Row 3, Cell 3</Cell>
-          <ActionCell><LinkButton>+</LinkButton></ActionCell>
+          <ActionCell><QuietButton>+</QuietButton></ActionCell>
         </Row>
       </Body>
     </Table>
@@ -81,10 +81,10 @@ storiesOf('Table / Inventory Statuses Table', module)
           <HeaderCell></HeaderCell>
         </Row>
         <CreateRow>
-          <CreateRowCell><LinkButton>+</LinkButton></CreateRowCell>
+          <CreateRowCell><QuietButton>+</QuietButton></CreateRowCell>
           <CreateRowCell></CreateRowCell>
           <CreateRowCell></CreateRowCell>
-          <ActionCell><LinkButton>+</LinkButton></ActionCell>
+          <ActionCell><QuietButton>+</QuietButton></ActionCell>
         </CreateRow>
       </Header>
       <Body>
@@ -92,22 +92,22 @@ storiesOf('Table / Inventory Statuses Table', module)
           <Cell>Row 1, Cell 1</Cell>
           <Cell>Row 1, Cell 2</Cell>
           <Cell>Row 1, Cell 3</Cell>
-          <ActionCell><LinkButton>+</LinkButton></ActionCell>
+          <ActionCell><QuietButton>+</QuietButton></ActionCell>
         </Row>
         <Row>
           <Cell>Row 2, Cell 1</Cell>
           <Cell>Row 2, Cell 2</Cell>
           <Cell>Row 2, Cell 3</Cell>
           <ActionCell>
-            <LinkButton>+</LinkButton>
-            <LinkButton>+</LinkButton>
+            <QuietButton>+</QuietButton>
+            <QuietButton>+</QuietButton>
           </ActionCell>
         </Row>
         <Row>
           <Cell>Row 3, Cell 1</Cell>
           <Cell>Row 3, Cell 2</Cell>
           <Cell>Row 3, Cell 3</Cell>
-          <ActionCell><LinkButton>+</LinkButton></ActionCell>
+          <ActionCell><QuietButton>+</QuietButton></ActionCell>
         </Row>
       </Body>
     </Table>

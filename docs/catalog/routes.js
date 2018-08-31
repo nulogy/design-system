@@ -100,7 +100,7 @@ export default [
           ApprovalButton: require('@nulogy/components').ApprovalButton,
           Button: require('@nulogy/components').Button,
           DangerButton: require('@nulogy/components').DangerButton,
-          LinkButton: require('@nulogy/components').LinkButton
+          QuietButton: require('@nulogy/components').QuietButton
         }
       }, {
         path: '/components/links',

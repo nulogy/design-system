@@ -13,7 +13,7 @@ const type = ({ type = 'button' }) => (({
   submit: buttonColours({ background: colour.green.base })
 })[type]);
 
-const LinkButton = styled(Button)`
+const QuietButton = styled(Button)`
   ${ type }
 
   background-color: transparent;
@@ -41,4 +41,4 @@ const LinkButton = styled(Button)`
 
 `
 
-export default LinkButton;
+export default QuietButton;

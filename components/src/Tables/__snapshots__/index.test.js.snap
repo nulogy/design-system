@@ -2,8 +2,11 @@
 
 exports[`Table works 1`] = `
 Object {
+  "ActionCell": [Function],
   "Body": [Function],
   "Cell": [Function],
+  "CreateRow": [Function],
+  "CreateRowCell": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
   "Row": [Function],

@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Button from "./Button";
 import ApprovalButton from "./ApprovalButton";
 import DangerButton from "./DangerButton";
-import LinkButton from "./LinkButton";
+import QuietButton from "./QuietButton";
 import styled, { css } from 'styled-components';
 import { font } from '@nulogy/tokens';
 
@@ -61,9 +61,9 @@ storiesOf('Buttons / Examples', module)
       <DangerButton type="submit" disabled onClick={action('clicked')}>Primary Danger Button</DangerButton>
 
       <Title>Link Button</Title>
-      <LinkButton onClick={action('clicked')}>Link Button</LinkButton>
+      <QuietButton onClick={action('clicked')}>Link Button</QuietButton>
       <Nbsp />
-      <LinkButton disabled onClick={action('clicked')}>Disabled Link Button</LinkButton>
+      <QuietButton disabled onClick={action('clicked')}>Disabled Link Button</QuietButton>
     </React.Fragment>
   ))
   .add('Some Actions', () => (
@@ -139,13 +139,13 @@ storiesOf('Buttons / Primary Danger Button', module)
   .add('Large', () => <DangerButton type="submit" size="large" onClick={action('clicked')}>Large Button</DangerButton>)
 
 storiesOf('Buttons / Link Button', module)
-  .add('Default', () => <LinkButton onClick={action('clicked')}>Default Button</LinkButton>)
-  .add('Submit', () => <LinkButton type="submit" onClick={action('clicked')}>Submit Button</LinkButton>)
-  .add('With an icon', () => <LinkButton onClick={action('clicked')}>➕</LinkButton>)
-  .add('With an icon and text', () => <LinkButton onClick={action('clicked')}>✏️ Edit this thing</LinkButton>)
-  .add('Disabled', () => <LinkButton disabled onClick={action('clicked')}>Disabled Button</LinkButton>)
-  .add('Small', () => <LinkButton size="small" onClick={action('clicked')}>Small Button</LinkButton>)
-  .add('Large', () => <LinkButton size="large" onClick={action('clicked')}>Large Button</LinkButton>)
+  .add('Default', () => <QuietButton onClick={action('clicked')}>Default Button</QuietButton>)
+  .add('Submit', () => <QuietButton type="submit" onClick={action('clicked')}>Submit Button</QuietButton>)
+  .add('With an icon', () => <QuietButton onClick={action('clicked')}>➕</QuietButton>)
+  .add('With an icon and text', () => <QuietButton onClick={action('clicked')}>✏️ Edit this thing</QuietButton>)
+  .add('Disabled', () => <QuietButton disabled onClick={action('clicked')}>Disabled Button</QuietButton>)
+  .add('Small', () => <QuietButton size="small" onClick={action('clicked')}>Small Button</QuietButton>)
+  .add('Large', () => <QuietButton size="large" onClick={action('clicked')}>Large Button</QuietButton>)
 
 storiesOf('Buttons / Size', module)
   .add('Small', () => <Button size="small" type="submit" onClick={action('clicked')}>Submit</Button>)

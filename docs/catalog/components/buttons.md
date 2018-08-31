@@ -44,7 +44,7 @@ Examples: Delete confirmation button.
 Use for low importance actions, toolbars, or inline within complex components.
 Examples: Table inline actions.
 ```react
-<LinkButton>Actions</LinkButton>
+<QuietButton>Actions</QuietButton>
 ```
 ```hint|directive
 Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
@@ -63,7 +63,7 @@ Primary Button, QCloud Approval Button, Danger Primary Button
 ```
 Link Button
 ```react
-<LinkButton disabled>Actions</LinkButton>
+<QuietButton disabled>Actions</QuietButton>
 ```
 
 ## Button Sizes
