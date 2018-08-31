@@ -11,7 +11,7 @@ const Link = styled.a`
       color: ${theme.colour.blue[800]};
     }
   `}
-  ${ ({ underline = true }) => css`
+  ${ ({ underline }) => css`
     text-decoration: ${underline ? 'underline' : 'none' };
   `}
 `;
@@ -21,7 +21,8 @@ Link.propTypes = {
 }
 
 Link.defaultProps = {
-  theme: tokens
+  theme: tokens,
+  underline: true,
 }
 
 export default Link;
