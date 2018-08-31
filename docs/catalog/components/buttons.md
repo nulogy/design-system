@@ -50,6 +50,19 @@ Examples: Table inline actions.
 Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
 ```
 
+## Link Button
+Use when you need a button that sits in text like a link.
+
+```react
+<LinkButton>No I don't want to sign up for your email newsletter!</LinkButton>
+```
+
+Can be rendered without an underline
+
+```react
+<LinkButton underline={false}>Click me</LinkButton>
+```
+
 ## Disabled Button
 Use for actions that are not currently available.
 
@@ -64,6 +77,10 @@ Primary Button, QCloud Approval Button, Danger Primary Button
 Quiet Button
 ```react
 <QuietButton disabled>Actions</QuietButton>
+```
+Link Button
+```react
+<LinkButton disabled>Link Button</LinkButton>
 ```
 
 ## Button Sizes
