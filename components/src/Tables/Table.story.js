@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Table, Cell, ActionCell, CreateRowCell, Row, CreateRow, Body, Header, HeaderCell } from './';
 import QuietButton from ".././Button/QuietButton";
 
-storiesOf('Table / Inventory Statuses Table', module)
+storiesOf('Table', module)
   .add('Read Only', () => (
     <Table>
       <Header>
