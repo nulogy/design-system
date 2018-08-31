@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import tokens from '@nulogy/tokens';
 
 const Link = styled.a`
   ${ ({ theme }) => css`
@@ -17,6 +18,10 @@ const Link = styled.a`
 
 Link.propTypes = {
   underline: PropTypes.bool
+}
+
+Link.defaultProps = {
+  theme: tokens
 }
 
 export default Link;
