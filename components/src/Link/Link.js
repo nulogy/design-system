@@ -11,8 +11,8 @@ const Link = styled.a`
       color: ${theme.colour.blue[800]};
     }
   `}
-  ${ ({ underline = true }) => !underline && css`
-    text-decoration: none;
+  ${ ({ underline = true }) => css`
+    text-decoration: ${underline ? 'underline' : 'none' };
   `}
 `;
 
