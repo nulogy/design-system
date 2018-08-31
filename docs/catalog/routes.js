@@ -102,6 +102,13 @@ export default [
           DangerButton: require('@nulogy/components').DangerButton,
           LinkButton: require('@nulogy/components').LinkButton
         }
+      }, {
+        path: '/components/links',
+        title: 'Links',
+        content: pageLoader(() => import('./components/links.md')),
+        imports: {
+          Link: require('@nulogy/components').Link
+        }
       }
     ]
   },
