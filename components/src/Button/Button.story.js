@@ -60,10 +60,10 @@ storiesOf('Buttons / Examples', module)
       <Nbsp />
       <DangerButton type="submit" disabled onClick={action('clicked')}>Primary Danger Button</DangerButton>
 
-      <Title>Link Button</Title>
-      <QuietButton onClick={action('clicked')}>Link Button</QuietButton>
+      <Title>Quiet Button</Title>
+      <QuietButton onClick={action('clicked')}>Quiet Button</QuietButton>
       <Nbsp />
-      <QuietButton disabled onClick={action('clicked')}>Disabled Link Button</QuietButton>
+      <QuietButton disabled onClick={action('clicked')}>Disabled Quiet Button</QuietButton>
     </React.Fragment>
   ))
   .add('Some Actions', () => (
@@ -138,7 +138,7 @@ storiesOf('Buttons / Primary Danger Button', module)
   .add('Small', () => <DangerButton type="submit" size="small" onClick={action('clicked')}>Small Button</DangerButton>)
   .add('Large', () => <DangerButton type="submit" size="large" onClick={action('clicked')}>Large Button</DangerButton>)
 
-storiesOf('Buttons / Link Button', module)
+storiesOf('Buttons / Quiet Button', module)
   .add('Default', () => <QuietButton onClick={action('clicked')}>Default Button</QuietButton>)
   .add('Submit', () => <QuietButton type="submit" onClick={action('clicked')}>Submit Button</QuietButton>)
   .add('With an icon', () => <QuietButton onClick={action('clicked')}>➕</QuietButton>)

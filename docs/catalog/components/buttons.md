@@ -40,7 +40,7 @@ Examples: Delete confirmation button.
 <DangerButton type="submit">Delete Item</DangerButton>
 ```
 
-## Link Button
+## Quiet Button
 Use for low importance actions, toolbars, or inline within complex components.
 Examples: Table inline actions.
 ```react
@@ -61,7 +61,7 @@ Primary Button, QCloud Approval Button, Danger Primary Button
 ```react
 <Button type="submit" disabled>Submit Form</Button>
 ```
-Link Button
+Quiet Button
 ```react
 <QuietButton disabled>Actions</QuietButton>
 ```
