@@ -9,6 +9,7 @@ Object {
   "DangerButton": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
+  "Link": [Function],
   "LinkButton": [Function],
   "Row": [Function],
   "Table": [Function],
