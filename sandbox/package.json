@@ -13,7 +13,6 @@
     "start": "start-storybook -p 8008",
     "hack": "concurrently 'yarn workspace @nulogy/components watch' 'yarn workspace @nulogy/css watch' 'yarn start'",
     "build": "build-storybook",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
