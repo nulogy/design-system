@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --ignore *.test*",
     "watch": "yarn build --watch"
   },
   "devDependencies": {
