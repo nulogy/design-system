@@ -27,7 +27,7 @@ rows:
   Result: Depending on the project, the dev server will either be Storybook or something else (Catalog dev server for example).
 
 - Script: yarn all
-  Task: __Not recommended__. Build the whole project in watch mode and run all dev servers. This can be taxing on your CPU and the terminal output may be hard to read, but offers a quick way to sanity test the project.
+  Task: __Not recommended__. Build the whole project in watch mode and run all dev servers. This can be slow and taxing on your CPU and the terminal output may be hard to read, but offers a quick way to sanity test the project.
   Result: All build (`yarn watch`) and dev servers (`yarn start:all`) will be run concurrently and their output will be streamed together to the console.
 ```
 
@@ -52,8 +52,8 @@ The following scripts are used to build the project.
 ```table
 rows:
 - Script: yarn watch
-  Task: Build all packages in watch mode. Useful to run in parallel to a script in the **Dev Servers** section above.
-  Result: Uses Lerna to run the `watch` command in all workspaces concurrently.
+  Task: Useful to run in parallel to a script in the **Dev Servers** section above. Builds all library packages in watch mode. 
+  Result: Uses Lerna to run the `watch` command in all workspaces concurrently. See `build:public` below for an explanation of what is considered a "library package".
  
 - Script: yarn build
   Task: Build all packages.

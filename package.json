@@ -43,7 +43,7 @@
     
     "build": "lerna run build --stream",
     "build:public": "yarn build --no-private",
-    "watch": "lerna run watch --stream --parallel",
+    "watch": "lerna run watch --no-private --stream --parallel",
     
     "clean": "lerna exec 'rm -rf dist'",
     "clean:all": "git clean -fdX .",
