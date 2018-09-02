@@ -1,5 +1,9 @@
 > This guide documents the scripts available to you in the root [package.json](https://github.com/nulogy/design-system/blob/master/package.json).
 
+# Dev servers
+
+The following scripts start dev servers for various packages.
+
 ```table
 rows:
 - Script: yarn start
@@ -23,10 +27,35 @@ rows:
 - Script: yarn all
   Task: Run the whole project.
   Result: Start up storybooks in all packages as well as build all packages in watch mode.
+```
 
+# Testing
+
+The following scripts are useful for testing
+
+```table
+rows:
+- Script: yarn test
+  Task: Run all tests since master.
+  Result: 
+    1. Builds all the public npm modules (see **yarn build:public** below)  that have changed since master.
+
+    2. Runs tests in any package with files that have changed since master.
+```
+
+# Building
+
+The following scripts are used to build the project.
+
+```table
+rows:
 - Script: yarn build
   Task: Build all packages.
   Result: Uses Lerna to build all workspaces.
+
+- Script: yarn build:public
+  Task: Build the library packages – not documentation and sandboxes.
+  Result: Build only packages where `pkg.private` is not set to `true`.
 
 - Script: yarn clean
   Task: Removes all build artifacts.
