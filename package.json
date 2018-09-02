@@ -36,6 +36,8 @@
     "start": "yarn components start",
     "document": "yarn docs start",
     "hack": "yarn sandbox hack",
+    "test": "lerna run test --stream",
+    "pretest": "lerna run build --ignore '@nulogy/{nulogy-design,sandbox}'",
     "build": "lerna run build --stream",
     "clean": "lerna exec 'rm -rf dist'",
     "clean:all": "git clean -fdX .",

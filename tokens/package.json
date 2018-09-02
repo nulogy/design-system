@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Design tokens for the Nulogy Design System - http://nulody.design",
   "main": "dist/tokens.js",
-  "module": "src/tokens.js",
   "repository": "https://github.com/nulogy/design-system.git",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "license": "MIT",
