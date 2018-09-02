@@ -35,13 +35,14 @@
     "start": "yarn components start",
     "document": "yarn docs start",
     "hack": "yarn sandbox hack",
-    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
-
+    "all": "lerna run start --stream --parallel",
+    
     "test": "lerna run test --stream --include-filtered-dependents --since master",
     "pretest": "yarn build:public --include-filtered-dependencies --since master",
     
     "build": "lerna run build --stream",
     "build:public": "yarn build --no-private",
+    "watch": "lerna run watch --stream --parallel",
     
     "clean": "lerna exec 'rm -rf dist'",
     "clean:all": "git clean -fdX .",

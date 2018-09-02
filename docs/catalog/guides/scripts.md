@@ -25,8 +25,8 @@ rows:
     2. Builds the components and css workspaces in watch mode.
 
 - Script: yarn all
-  Task: Run the whole project.
-  Result: Start up storybooks in all packages as well as build all packages in watch mode.
+  Task: __Not recommended__. Run the dev servers for the whole project. Note that you will likely want to run `yarn watch` as well.
+  Result: Depending on the project, the dev server will either be Storybook or something else (Catalog dev server for example).
 ```
 
 # Testing
@@ -49,6 +49,10 @@ The following scripts are used to build the project.
 
 ```table
 rows:
+- Script: yarn watch
+  Task: Build all packages in watch mode. Useful to run in parallel to a script in the **Dev Servers** section above.
+  Result: Uses Lerna to run the `watch` command in all workspaces concurrently.
+ 
 - Script: yarn build
   Task: Build all packages.
   Result: Uses Lerna to build all workspaces.
