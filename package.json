@@ -37,8 +37,8 @@
     "hack": "yarn sandbox hack",
     "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
 
-    "test": "lerna run test --stream --since master",
     "pretest": "yarn build:public --since master",
+    "test": "lerna run test --stream --include-filtered-dependents --since master",
     
     "build": "lerna run build --stream",
     "build:public": "yarn build --no-private",
