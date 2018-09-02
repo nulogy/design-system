@@ -45,6 +45,7 @@
     "tokens": "yarn workspace @nulogy/tokens"
   },
   "devDependencies": {
-    "concurrently": "^3.6.1"
+    "concurrently": "^3.6.1",
+    "lerna": "^3.2.1"
   }
 }
