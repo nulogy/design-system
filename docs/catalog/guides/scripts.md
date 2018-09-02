@@ -4,6 +4,10 @@
 
 The following scripts start dev servers for various packages.
 
+```hint|neutral
+While developing, you may want to run `yarn watch` to build the rest of the project in watch mode. For more see below.
+```
+
 ```table
 rows:
 - Script: yarn start
@@ -12,21 +16,19 @@ rows:
 
 - Script: yarn document
   Task: Write documentation to appear on [nulogy.design](http://nulogy.design).
-  Result: 
-    1. Starts [Catalog](https://www.catalog.style/) on [port 4000](http://localhost:4000).  
-
-    2. Builds the @nulogy/components package in watch mode.
+  Result: Starts [Catalog](https://www.catalog.style/) on [port 4000](http://localhost:4000).  
 
 - Script: yarn hack
   Task: Build a prototype interface to test NDS components.
-  Result: 
-    1. Starts the storybook in the [sandbox workspace](https://github.com/nulogy/design-system/tree/master/sandbox) on [port 8008](http://localhost:8008).
+  Result: Starts the storybook in the [sandbox workspace](https://github.com/nulogy/design-system/tree/master/sandbox) on [port 8008](http://localhost:8008).
 
-    2. Builds the components and css workspaces in watch mode.
+- Script: start:all
+  Task: __Not recommended__. Run all dev servers for the whole project. Note that you will likely want to run `yarn watch` as well.
+  Result: Depending on the project, the dev server will either be Storybook or something else (Catalog dev server for example).
 
 - Script: yarn all
-  Task: __Not recommended__. Run the dev servers for the whole project. Note that you will likely want to run `yarn watch` as well.
-  Result: Depending on the project, the dev server will either be Storybook or something else (Catalog dev server for example).
+  Task: __Not recommended__. Build the whole project in watch mode and run all dev servers. This can be taxing on your CPU and the terminal output may be hard to read, but offers a quick way to sanity test the project.
+  Result: All build (`yarn watch`) and dev servers (`yarn start:all`) will be run concurrently and their output will be streamed together to the console.
 ```
 
 # Testing

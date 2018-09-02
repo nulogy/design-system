@@ -34,8 +34,9 @@
   "scripts": {
     "start": "yarn components start",
     "document": "yarn docs start",
-    "hack": "yarn sandbox hack",
-    "all": "lerna run start --stream --parallel",
+    "hack": "yarn sandbox start",
+    "start:all": "lerna run start --stream --parallel",
+    "all": "concurrently 'yarn watch' 'yarn start:all'",
     
     "test": "lerna run test --stream --include-filtered-dependents --since master",
     "pretest": "yarn build:public --include-filtered-dependencies --since master",
