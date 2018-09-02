@@ -32,10 +32,10 @@
     "yarn": "^1.7.0"
   },
   "scripts": {
-    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
     "start": "yarn components start",
     "document": "yarn docs start",
     "hack": "yarn sandbox hack",
+    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
 
     "test": "lerna run test --stream --since master",
     "pretest": "yarn build:public --since master",
