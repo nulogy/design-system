@@ -47,20 +47,12 @@
     "@storybook/react": "^3.4.5",
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "8.2.3",
     "babel-jest": "22.4.4",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-runtime": "6.26.0",
-    "eslint": "4.19.1",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-loader": "2.0.0",
-    "eslint-plugin-flowtype": "2.46.3",
-    "eslint-plugin-import": "2.12.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.8.2",
     "jest": "22.4.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -78,8 +70,5 @@
       "react",
       "stage-2"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
