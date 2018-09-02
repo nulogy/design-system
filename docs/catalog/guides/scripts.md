@@ -24,7 +24,15 @@ rows:
   Task: Run the whole project.
   Result: Start up storybooks in all packages as well as build all packages in watch mode.
 
+- Script: yarn build
+  Task: Build all packages.
+  Result: Uses Lerna to build all workspaces.
+
 - Script: yarn clean
+  Task: Removes all build artifacts.
+  Result: Runs `rm -rf dist` in all workspaces.
+
+- Script: yarn clean:all
   Task: That squeaky-clean fresh install feel.
   Result: Cleans out all build and installation files (`/dist`, `/node_modules` etc.) by running `git clean -fdX .` and removing any files not tracked in git – even those in `.gitignore`.
 ```
