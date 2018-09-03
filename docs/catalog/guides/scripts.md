@@ -67,7 +67,7 @@ rows:
   Task: Removes all build artifacts.
   Result: Runs `rm -rf dist` in all workspaces.
 
-- Script: yarn clean:all
+- Script: yarn pristine
   Task: That squeaky-clean fresh install feel.
   Result: Cleans out all build and installation files (`/dist`, `/node_modules` etc.) by running `git clean -fdX .` and removing any files not tracked in git – even those in `.gitignore`.
 ```

@@ -46,7 +46,7 @@
     "watch": "lerna run watch --no-private --stream --parallel",
     
     "clean": "lerna exec 'rm -rf dist'",
-    "clean:all": "git clean -fdX .",
+    "pristine": "git clean -fdX .",
     
     "components": "yarn workspace @nulogy/components",
     "css": "yarn workspace @nulogy/css",
