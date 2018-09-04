@@ -4,24 +4,35 @@ import tokens from '@nulogy/tokens';
 
 const defaultProps = { theme: tokens };
 
-const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
+const borderWidth = 1;
+
+const withoutBorder = value => value - borderWidth;
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
 export const Cell = styled.td`
   font-size: ${font.size.small}px;
   line-height: ${lineHeight('smaller') / font.size.small};
-  padding: ${space.x2}px ${space.half}px;
-
+  padding: ${space.x2}px ${space.x1}px;
   &:first-child{
-    padding-left: ${space.x1}px
+    padding-left: ${space.x2}px;
   }
   &:last-child{
-    padding-right: ${space.x1}px
+    padding-right: ${space.x2}px;
+    width:72px; // not the right place
   }
 `;
 
 Cell.defaultProps = defaultProps;
+
+export const ActionCell = styled(Cell)`
+  padding: ${space.x1}px ${space.x2}px ${space.x1}px ${space.x1}px;
+  display: flex;
+  justify-content: flex-end;
+  & > button:not(:last-child) {
+    margin-right: ${space.half}px;
+  }
+`;
 
 export const Row = styled.tr`
   &:nth-child(odd){
@@ -39,18 +50,36 @@ export const HeaderCell = styled(Cell.withComponent('th'))`
 `;
 
 export const CreateRow = styled.tr`
-  background-color: ${colour.blue[400]};
+  background-color: ${colour.blue[800]};
 `;
 
-export const CreateRowCell = styled(Cell.withComponent('th'))`
+export const CreateRowCell = styled(HeaderCell.withComponent('th'))`
   font-weight: ${font.weight.normal};
-  padding: ${space.x1}px ${space.half}px;
+  padding: ${space.x1}px ${space.x1}px;
+`;
+
+export const Button = styled(QuietButton)`
+  padding: ${withoutBorder(space.half)}px;
+`;
+
+export const TextInput = styled.input`
+  height:24px;
+  width:100%;
+  border: none;
+  background: ${colour.blue[300]};
+  font-size: ${font.size.small}px;
+  padding: ${space.half}px;
+  border-radius: ${radius.small}px;
+  &:focus{
+    background: ${colour.white};
+  }
 `;
 
 export const Body = styled.tbody``;
 
 export const Table = styled.table`
   border-collapse: collapse;
+  table-layout: fixed;
   width: 100%;
 `;
 
@@ -67,6 +96,8 @@ Object.entries({
   Header,
   Body,
   HeaderCell,
+  Button,
+  TextInput
 }).map(([key, val]) => DefaultTable[key] = val);
 
 export default DefaultTable;
