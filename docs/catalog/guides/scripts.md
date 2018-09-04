@@ -15,6 +15,10 @@ rows:
   Result: Runs storybook on [port 9009](http://localhost:9009) for the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components).
 
 - Script: yarn document
+- Script: yarn css start
+  Task: Write global css in the [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css) package.
+  Result: Starts the storybook in the [css](https://github.com/nulogy/design-system/tree/master/css) on [port 6006](http://localhost:6006).
+
   Task: Write documentation to appear on [nulogy.design](http://nulogy.design).
   Result: Starts [Catalog](https://www.catalog.style/) on [port 4000](http://localhost:4000).  
 
