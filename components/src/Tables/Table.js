@@ -66,7 +66,7 @@ export const Button = styled(QuietButton)`
 
 export const TextInput = styled.input`
   box-sizing: border-box;
-  height:24px; // Temporary
+  height:32px; // Temporary
   width:100%;
   border: none;
   background: ${colour.blue[300]};
