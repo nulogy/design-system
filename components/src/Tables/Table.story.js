@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Table, Cell, ActionCell, CreateRowCell, Row, CreateRow, Body, Header, HeaderCell, Button, TextInput } from './';
+import { Table, Cell, ActionCell, InputCell, Row, CreateRow, Body, Header, HeaderCell, Button, TextInput } from './';
 import QuietButton from "../Button/QuietButton";
 
 storiesOf('Table', module)
@@ -117,9 +117,9 @@ storiesOf('Table', module)
           <HeaderCell></HeaderCell>
         </Row>
         <CreateRow>
-          <CreateRowCell><TextInput></TextInput></CreateRowCell>
-          <CreateRowCell><TextInput></TextInput></CreateRowCell>
-          <CreateRowCell><TextInput></TextInput></CreateRowCell>
+          <InputCell><TextInput></TextInput></InputCell>
+          <InputCell><TextInput></TextInput></InputCell>
+          <InputCell><TextInput></TextInput></InputCell>
           <ActionCell>
             <Button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

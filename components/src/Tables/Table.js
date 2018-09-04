@@ -49,7 +49,7 @@ export const CreateRow = styled.tr`
   background-color: ${colour.blue[800]};
 `;
 
-export const CreateRowCell = styled(HeaderCell.withComponent('th'))`
+export const InputCell = styled(HeaderCell.withComponent('th'))`
   font-weight: ${font.weight.normal};
   padding: ${space.x1}px;
   position: relative;
@@ -94,7 +94,7 @@ Object.entries({
   Cell,
   ActionCell,
   Row,
-  CreateRowCell,
+  InputCell,
   CreateRow,
   Header,
   Body,
