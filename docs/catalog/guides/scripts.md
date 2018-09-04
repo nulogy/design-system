@@ -17,19 +17,19 @@ rows:
 
     yarn components start
   Task: Component development in the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) package.
-  Result: Starts the storybook in the [components workspace](https://github.com/nulogy/design-system/tree/master/components) on [port 9009](http://localhost:9009).
+  Result: Starts the storybook in the [components workspace](https://github.com/nulogy/design-system/tree/master/components) on [port 8080](http://localhost:8080).
 
 - Script: yarn css start
   Task: Write global css in the [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css) package.
-  Result: Starts the storybook in the [css workspace](https://github.com/nulogy/design-system/tree/master/css) on [port 6006](http://localhost:6006).
+  Result: Starts the storybook in the [css workspace](https://github.com/nulogy/design-system/tree/master/css) on [port 7070](http://localhost:7070).
 
 - Script: yarn docs start
   Task: Write documentation to appear on [nulogy.design](http://nulogy.design).
-  Result: Starts [Catalog](https://www.catalog.style/) on [port 4000](http://localhost:4000).  
+  Result: Starts [Catalog](https://www.catalog.style/) on [port 9090](http://localhost:9090).  
 
 - Script: yarn sandbox start
   Task: Build a prototype interface to test NDS components.
-  Result: Starts the storybook in the [sandbox workspace](https://github.com/nulogy/design-system/tree/master/sandbox) on [port 8008](http://localhost:8008).
+  Result: Starts the storybook in the [sandbox workspace](https://github.com/nulogy/design-system/tree/master/sandbox) on [port 6060](http://localhost:6060).
 
 - Script: start:all
   Task: __Not recommended__. Run all dev servers for the whole project. Note that you will likely want to run `yarn watch` as well.

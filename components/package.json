@@ -26,7 +26,7 @@
   },
   "main": "dist/main.js",
   "scripts": {
-    "start": "start-storybook -p 9009",
+    "start": "start-storybook -p 8080",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
     "test": "jest",

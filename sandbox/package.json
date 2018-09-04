@@ -10,7 +10,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "start-storybook -p 8008",
+    "start": "start-storybook -p 6060",
     "build": "build-storybook",
     "eject": "react-scripts eject"
   },

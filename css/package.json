@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "start-storybook -p 6006",
+    "start": "start-storybook -p 7070",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
     "build-storybook": "build-storybook"
