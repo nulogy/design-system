@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import * as MaterialIcons from 'rmdi';
 
-const Border = styled.span`
-  font-size: 120px;
+const SvgIcon = MaterialIcons.Icon.default;
+
+const iconNames = Object.keys(MaterialIcons);
+
+const Wrapper = styled.span`
   border: .15em dashed red;
   display: block;
   width: 2em;
@@ -14,8 +18,15 @@ const Border = styled.span`
   line-height: 2em;
 `;
 
-const Icon = props => <Border>🐮</Border>
-Icon.propTypes = {}
+const Icon = ({ name }) => (
+  <Wrapper>
+    <SvgIcon  name={name} />
+  </Wrapper>
+);
+
+Icon.propTypes = {
+  name: PropTypes.oneOf(iconNames).isRequired
+}
 
 Icon.defaultProps = {}
 
