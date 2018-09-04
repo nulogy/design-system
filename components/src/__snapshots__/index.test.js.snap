@@ -5,6 +5,7 @@ Object {
   "ApprovalButton": [Function],
   "Button": [Function],
   "DangerButton": [Function],
+  "Icon": [Function],
   "Link": [Function],
   "LinkButton": [Function],
   "QuietButton": [Function],
