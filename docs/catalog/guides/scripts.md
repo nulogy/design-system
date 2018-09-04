@@ -97,7 +97,7 @@ lang: sh
 $ yarn docs build
 ```
 ```hint
-These aliases will only work from the project root. The next section explains how to run commands on one workspaces when `cd`-ed into another.
+These aliases will only work from the project root. The next section explains how to run commands on one workspace when `cd`-ed into another.
 ```
 
 ```hint|neutral
@@ -118,7 +118,7 @@ To run commands on the `@nulogy/nulogy-design` package from anywhere in the proj
 ```code
 lang: sh
 ---
-$ yarn workspace @nulogy/docs build
+$ yarn workspace @nulogy/nulogy-design build
 ```
 
 ## Working in the package's directory
