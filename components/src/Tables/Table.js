@@ -4,10 +4,6 @@ import tokens from '@nulogy/tokens';
 
 const defaultProps = { theme: tokens };
 
-const borderWidth = 1;
-
-const withoutBorder = value => value - borderWidth;
-
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
 export const Cell = styled.td`
@@ -55,20 +51,27 @@ export const CreateRow = styled.tr`
 
 export const CreateRowCell = styled(HeaderCell.withComponent('th'))`
   font-weight: ${font.weight.normal};
-  padding: ${space.x1}px ${space.x1}px;
+  padding: ${space.x1}px;
+  position: relative;
 `;
 
 export const Button = styled(QuietButton)`
-  padding: ${withoutBorder(space.half)}px;
+  padding: ${space.half}px;
+  border-width: 0;
+  border-radius: 50%;
+  &:hover{
+    background-color: ${colour.blue[300]};
+  }
 `;
 
 export const TextInput = styled.input`
-  height:24px;
+  box-sizing: border-box;
+  height:24px; // Temporary
   width:100%;
   border: none;
   background: ${colour.blue[300]};
   font-size: ${font.size.small}px;
-  padding: ${space.half}px;
+  padding: ${space.half}px ${space.x1}px;
   border-radius: ${radius.small}px;
   &:focus{
     background: ${colour.white};
