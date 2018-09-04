@@ -1,8 +1,16 @@
 {
   "name": "@nulogy/components",
   "version": "0.1.0",
-  "description": "Component library for Nucleus: the Nulogy Design System - http://nulogy.design",
+  "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
+  "scripts": {
+    "start": "start-storybook -p 8080",
+    "build": "webpack --mode production --config webpack.config.js",
+    "watch": "yarn build --watch",
+    "test": "jest",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "contributors": [
@@ -25,14 +33,6 @@
     "node": "*"
   },
   "main": "dist/main.js",
-  "scripts": {
-    "start": "start-storybook -p 8080",
-    "build": "webpack --mode production --config webpack.config.js",
-    "watch": "yarn build --watch",
-    "test": "jest",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
-  },
   "peerDependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
+  "scripts": {
+    "start": "catalog start -p 9090",
+    "build": "catalog build --out dist/"
+  },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "contributors": [
@@ -30,10 +34,6 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "styled-components": "^3.2.6"
-  },
-  "scripts": {
-    "start": "catalog start -p 9090",
-    "build": "catalog build --out dist/"
   },
   "devDependencies": {
     "webpack-merge": "^4.1.2"

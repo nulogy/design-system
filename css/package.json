@@ -2,10 +2,6 @@
   "name": "@nulogy/css",
   "version": "0.1.0",
   "description": "Global Styles for Nulogy Design System",
-  "main": "dist/main.js",
-  "repository": "https://github.com/nulogy/design-system",
-  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
-  "license": "MIT",
   "private": false,
   "scripts": {
     "start": "start-storybook -p 7070",
@@ -13,6 +9,10 @@
     "watch": "yarn build --watch",
     "build-storybook": "build-storybook"
   },
+  "main": "dist/main.js",
+  "repository": "https://github.com/nulogy/design-system",
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
