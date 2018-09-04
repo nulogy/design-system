@@ -30,6 +30,15 @@ export const ActionCell = styled(Cell)`
   }
 `;
 
+export const Button = styled(QuietButton)`
+  padding: ${space.half}px;
+  border-width: 0;
+  border-radius: 50%;
+  &:hover{
+    background-color: ${colour.blue[300]};
+  }
+`;
+
 export const Row = styled.tr`
   &:nth-child(odd){
     background-color: ${colour.blue['200']};
@@ -53,15 +62,6 @@ export const InputCell = styled(HeaderCell.withComponent('th'))`
   font-weight: ${font.weight.normal};
   padding: ${space.x1}px;
   position: relative;
-`;
-
-export const Button = styled(QuietButton)`
-  padding: ${space.half}px;
-  border-width: 0;
-  border-radius: 50%;
-  &:hover{
-    background-color: ${colour.blue[300]};
-  }
 `;
 
 export const TextInput = styled.input`
