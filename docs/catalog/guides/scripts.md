@@ -83,23 +83,31 @@ rows:
 
 # Working with packages
 
-You have a few options for how to work in the project's sub-package. You can work directly in that package folder by `cd`ing to the package's directory. You can also use the `yarn workspace <package name>` command to target commands to a particular package. Finally there are aliases in the root to all the packages.
+You have a few options for how to work in the project's sub-package. There are aliases in the project root to run scripts in each packages using it's folder name. You can use the `yarn workspace <package name>` command to target commands to a particular package. Finally You can work directly in that package folder by `cd`ing to the package's directory.
 
-## Working in the `/docs` directory
+## Aliases
 
+There are aliases in the root `package.json` that make it easier to work with the sub-packages directly form the project root. 
 
-The [nulogy.design](http://nulgoy.design) website is located in the `@nulogy/nulogy-design` package in the [`/docs`](https://github.com/nulogy/design-system/tree/master/docs) directory. 
-
-Working in the `/docs` directory is the simplest way of working on the docs package. 
-
-To run the dev server type the following from the repo root:
+For example, to work with the `@nulogy/nulogy-design` package located in the `docs/` folder, you can run:
 
 ```code
 lang: sh
 ---
-$ cd docs/
-$ yarn start
+$ yarn docs build
 ```
+```hint
+These aliases will only work from the project root. The next section explains how to run commands on one workspaces when `cd`-ed into another.
+```
+
+```hint|neutral
+### Tab completion
+As these aliases are named after the directory that the package lives in you can use tab completion (depending on your shell). 
+
+For example type `yarn com` and hit tab and you will get `yarn components/` hit space and the trailing `/` will be remove. Keep typing to run a command on that package.
+```
+
+
 
 ## Working with the `yarn workspace` command
 
@@ -110,17 +118,18 @@ To run commands on the `@nulogy/nulogy-design` package from anywhere in the proj
 ```code
 lang: sh
 ---
-$ yarn workspace @nulogy/components storybook
+$ yarn workspace @nulogy/docs build
 ```
 
-## Aliases
+## Working in the package's directory
 
-There are also aliases in the root `package.json` that make it easier to work with the sub-packages. 
+You can of course simply `cd` into a package's directory and run it's package scripts directly.
 
-From the repo root you can run:
+For example you can `cd` into the `docs/` directory and run scripts defined in `@nulogy/nulogy-design`'s `package.json`:
 
 ```code
 lang: sh
 ---
-$ yarn docs build
+$ cd docs/
+$ yarn start
 ```
