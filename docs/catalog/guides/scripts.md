@@ -17,11 +17,11 @@ rows:
 
     yarn components start
   Task: Component development in the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) package.
-  Result: Runs storybook on [port 9009](http://localhost:9009) for the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components).
+  Result: Starts the storybook in the [components workspace](https://github.com/nulogy/design-system/tree/master/components) on [port 9009](http://localhost:9009).
 
 - Script: yarn css start
   Task: Write global css in the [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css) package.
-  Result: Starts the storybook in the [css](https://github.com/nulogy/design-system/tree/master/css) on [port 6006](http://localhost:6006).
+  Result: Starts the storybook in the [css workspace](https://github.com/nulogy/design-system/tree/master/css) on [port 6006](http://localhost:6006).
 
 - Script: yarn docs start
   Task: Write documentation to appear on [nulogy.design](http://nulogy.design).
