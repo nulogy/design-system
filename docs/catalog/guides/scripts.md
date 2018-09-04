@@ -10,19 +10,24 @@ While developing, you may want to run `yarn watch` to build the rest of the proj
 
 ```table
 rows:
-- Script: yarn start
-  Task: Component development in the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) package
+- Script: 
+    yarn start 
+    
+    *– or –* 
+
+    yarn components start
+  Task: Component development in the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) package.
   Result: Runs storybook on [port 9009](http://localhost:9009) for the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components).
 
-- Script: yarn document
 - Script: yarn css start
   Task: Write global css in the [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css) package.
   Result: Starts the storybook in the [css](https://github.com/nulogy/design-system/tree/master/css) on [port 6006](http://localhost:6006).
 
+- Script: yarn docs start
   Task: Write documentation to appear on [nulogy.design](http://nulogy.design).
   Result: Starts [Catalog](https://www.catalog.style/) on [port 4000](http://localhost:4000).  
 
-- Script: yarn hack
+- Script: yarn sandbox start
   Task: Build a prototype interface to test NDS components.
   Result: Starts the storybook in the [sandbox workspace](https://github.com/nulogy/design-system/tree/master/sandbox) on [port 8008](http://localhost:8008).
 

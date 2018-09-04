@@ -33,8 +33,6 @@
   },
   "scripts": {
     "start": "yarn components start",
-    "document": "yarn docs start",
-    "hack": "yarn sandbox start",
     "start:all": "lerna run start --stream --parallel",
     "all": "concurrently 'yarn watch' 'yarn start:all'",
     
