@@ -69,6 +69,7 @@ Object {
     },
     "lineHeight": Object {
       "regular": 1.5,
+      "smaller": 1,
     },
     "size": Object {
       "large": 20,
@@ -87,6 +88,7 @@ Object {
       "normal": 400,
     },
   },
+  "name": "Nulogy Design System",
   "radius": Object {
     "large": 6,
     "medium": 4,
@@ -94,7 +96,6 @@ Object {
   },
   "space": Object {
     "half": 4,
-    "quarter": 2,
     "x1": 8,
     "x2": 16,
     "x3": 24,

@@ -1,5 +1,8 @@
 {
   "name": "@nulogy/nucleus",
+  "version": "0.1.0",
+  "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
+  "private": true,
   "workspaces": [
     "components",
     "css",
@@ -7,11 +10,29 @@
     "sandbox",
     "tokens"
   ],
-  "version": "0.1.0",
-  "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
+  "scripts": {
+    "start": "yarn components start",
+    "start:all": "lerna run start --stream --parallel",
+    "all": "concurrently 'yarn watch' 'yarn start:all'",
+    
+    "test": "lerna run test --stream --include-filtered-dependents --since master",
+    "pretest": "yarn build:public --include-filtered-dependencies --since master",
+    
+    "build": "lerna run build --stream",
+    "build:public": "yarn build --no-private",
+    "watch": "lerna run watch --no-private --stream --parallel",
+    
+    "clean": "lerna exec 'rm -rf dist'",
+    "pristine": "git clean -fdX .",
+    
+    "components": "yarn workspace @nulogy/components",
+    "css": "yarn workspace @nulogy/css",
+    "docs": "yarn workspace @nulogy/nulogy-design",
+    "sandbox": "yarn workspace @nulogy/sandbox",
+    "tokens": "yarn workspace @nulogy/tokens"
+  },
   "main": "index.js",
   "license": "MIT",
-  "private": true,
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "contributors": [
     "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
@@ -31,20 +52,8 @@
     "node": "^8.11.3",
     "yarn": "^1.7.0"
   },
-  "scripts": {
-    "all": "concurrently `yarn start' 'yarn document' 'yarn hack' 'yarn css start'",
-    "start": "yarn components start",
-    "document": "yarn docs start",
-    "hack": "yarn sandbox hack",
-    "build-docs": "yarn tokens build && yarn components build && yarn docs build",
-    "clean": "git clean -fdX .",
-    "components": "yarn workspace @nulogy/components",
-    "css": "yarn workspace @nulogy/css",
-    "docs": "yarn workspace @nulogy/nulogy-design",
-    "sandbox": "yarn workspace @nulogy/sandbox",
-    "tokens": "yarn workspace @nulogy/tokens"
-  },
   "devDependencies": {
-    "concurrently": "^3.6.1"
+    "concurrently": "^3.6.1",
+    "lerna": "^3.2.1"
   }
 }

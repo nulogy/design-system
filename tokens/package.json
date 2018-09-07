@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "description": "Design tokens for the Nulogy Design System - http://nulody.design",
   "main": "dist/tokens.js",
-  "module": "src/tokens.js",
   "repository": "https://github.com/nulogy/design-system.git",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "react-scripts test --env=jsdom",
-    "build": "babel src --out-dir dist",
+    "test": "jest",
+    "build": "babel src --out-dir dist --ignore *.test*",
     "watch": "yarn build --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-jest": "22.4.4",
+    "jest": "22.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "babel": {
     "presets": [
       [

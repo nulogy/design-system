@@ -1,8 +1,16 @@
 {
   "name": "@nulogy/components",
   "version": "0.1.0",
-  "description": "Component library for Nucleus: the Nulogy Design System - http://nulogy.design",
+  "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
+  "scripts": {
+    "start": "start-storybook -p 8080",
+    "build": "webpack --mode production --config webpack.config.js",
+    "watch": "yarn build --watch",
+    "test": "jest",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "contributors": [
@@ -25,14 +33,6 @@
     "node": "*"
   },
   "main": "dist/main.js",
-  "scripts": {
-    "start": "start-storybook -p 9009",
-    "build": "webpack --mode production --config webpack.config.js",
-    "watch": "yarn build --watch",
-    "test": "yarn workspace @nulogy/tokens build && jest",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
-  },
   "peerDependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -46,63 +46,23 @@
     "@storybook/addons": "^3.4.5",
     "@storybook/react": "^3.4.5",
     "@storybook/storybook-deployer": "^2.3.0",
-    "autoprefixer": "8.5.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "8.2.3",
     "babel-jest": "22.4.4",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-runtime": "6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.2",
-    "css-loader": "0.28.11",
-    "eslint": "4.19.1",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-loader": "2.0.0",
-    "eslint-plugin-flowtype": "2.46.3",
-    "eslint-plugin-import": "2.12.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.8.2",
     "jest": "22.4.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "storybook-addon-styled-component-theme": "^1.0.3",
     "styled-components": "^3.2.6",
-    "url-loader": "1.0.1",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/.jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/.jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
+    "testEnvironment": "node"
   },
   "babel": {
     "presets": [
@@ -110,8 +70,5 @@
       "react",
       "stage-2"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

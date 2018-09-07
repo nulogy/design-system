@@ -2,6 +2,11 @@
   "name": "@nulogy/sandbox",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "start-storybook -p 6060",
+    "build": "build-storybook",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@nulogy/components": "^0.1",
     "@nulogy/css": "^0.1",
@@ -9,18 +14,10 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
-  "scripts": {
-    "start": "start-storybook -p 8008",
-    "hack": "concurrently 'yarn workspace @nulogy/components watch' 'yarn workspace @nulogy/css watch' 'yarn start'",
-    "build": "build-storybook",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-links": "^3.4.8",
     "@storybook/react": "^3.4.8",
-    "concurrently": "^3.6.1",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3"
   }
