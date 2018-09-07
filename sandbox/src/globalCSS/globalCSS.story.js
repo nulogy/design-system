@@ -21,7 +21,7 @@ storiesOf('Global CSS', module)
         .external
       </li>    
 
-      <li className="lineHeight noMargin fontFamilyMono">
+      <li className="lineHeight noMargin fontFamilyMono colour">
         This class has utility classes applied that were created dynamically
       </li>
     </ol>

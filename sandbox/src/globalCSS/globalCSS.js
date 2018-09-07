@@ -7,7 +7,7 @@ injectGlobal`
 .nds {
   /* 2. this is your bread and butter pre-processed css */
   &--global {
-    color: pink;
+    color: orange;
     font-size: ${font.size.larger}px;
   }
 
@@ -27,6 +27,7 @@ const mx = {
   noMargin: css`margin: 0;`,
   fontFamily: css`font-family: ${font.family.regular};`,
   fontFamilyMono: css`font-family: ${font.family.mono};`,
+  colour: css`color: purple;`
 }
 // create global utility classes from those mixins
 Object.entries(mx)
