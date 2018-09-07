@@ -9,6 +9,10 @@ $ git clone https://github.com/nulogy/design-system.git design-system
 $ yarn install
 ```
 
+```hint|neutral
+Note that `yarn install` will subsequently run `yarn build`. This will prepare the project for development using any dev server script below.
+```
+
 ## To develop React components for the [@nulogy/components](https://www.npmjs.com/package/@nulogy/components) package.
 
 ```code

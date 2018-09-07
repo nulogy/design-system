@@ -5,7 +5,11 @@
 The following scripts start dev servers for various packages.
 
 ```hint|neutral
-While developing, you may want to run `yarn watch` to build the rest of the project in watch mode. For more see below.
+Note that `yarn install` will subsequently run `yarn build`. This will prepare the project for development using the dev server scripts below.
+```
+
+```hint|neutral
+While developing, you may want to run `yarn watch` to build the rest of the project in watch mode. For more the [Building section](#building) below.
 ```
 
 ```table
