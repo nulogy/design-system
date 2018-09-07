@@ -7,7 +7,6 @@ Object {
   "Button": [Function],
   "Cell": [Function],
   "CreateRow": [Function],
-  "CreateRowActionCell": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
   "Row": [Function],

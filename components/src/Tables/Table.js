@@ -30,7 +30,8 @@ Cell.defaultProps = defaultProps;
 
 export const ActionCell = styled(Cell)`
   ${ ({ theme }) => css`
-    padding: ${theme.space.x1}px ${theme.space.x2}px ${theme.space.x1}px ${theme.space.x1}px;
+    padding-top: ${theme.space.x1}px;
+    padding-bottom: ${theme.space.x1}px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -86,20 +87,14 @@ HeaderCell.defaultProps = defaultProps;
 export const CreateRow = styled.tr`
   ${ ({ theme }) => css`
     background-color: ${theme.colour.blue[800]};
+    ${ ActionCell } {
+      padding-top: ${theme.space.x2}px;
+      padding-bottom: ${theme.space.x2}px;
+    }
   `}
 `;
 
 CreateRow.defaultProps - defaultProps;
-
-export const CreateRowActionCell = styled(HeaderCell.withComponent('th'), ActionCell)`
-  ${ ({ theme }) => css`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  `}
-`;
-
-CreateRowActionCell.defaultProps - defaultProps;
 
 export const TextInput = styled.input`
   ${ ({ theme }) => css`
