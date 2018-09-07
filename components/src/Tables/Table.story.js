@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Table, Cell, ActionCell, InputCell, Row, CreateRow, Body, Header, HeaderCell, Button, TextInput } from './';
-import QuietButton from "../Button/QuietButton";
 
 storiesOf('Table', module)
   .add('Read Only', () => (
