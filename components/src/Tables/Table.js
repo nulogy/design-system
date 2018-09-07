@@ -124,22 +124,3 @@ export const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
 `;
-
-Table.defaultProps = defaultProps;
-
-const DefaultTable =  styled(Table)``;
-
-Object.entries({
-  Cell,
-  ActionCell,
-  Row,
-  InputCell,
-  CreateRow,
-  Header,
-  Body,
-  HeaderCell,
-  Button,
-  TextInput
-}).map(([key, val]) => DefaultTable[key] = val);
-
-export default DefaultTable;

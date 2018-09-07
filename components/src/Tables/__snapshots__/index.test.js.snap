@@ -4,12 +4,14 @@ exports[`Table works 1`] = `
 Object {
   "ActionCell": [Function],
   "Body": [Function],
+  "Button": [Function],
   "Cell": [Function],
   "CreateRow": [Function],
-  "CreateRowCell": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
+  "InputCell": [Function],
   "Row": [Function],
   "Table": [Function],
+  "TextInput": [Function],
 }
 `;
