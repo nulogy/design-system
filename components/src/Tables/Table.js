@@ -21,7 +21,7 @@ export const Cell = styled.td`
     }
     &:last-child{
       padding-right: ${theme.space.x2}px;
-      width:72px; // not the right place
+
     }
   `}
 `;
@@ -122,7 +122,6 @@ export const Body = styled.tbody``;
 
 export const Table = styled.table`
   border-collapse: collapse;
-  table-layout: fixed;
   width: 100%;
 `;
 
