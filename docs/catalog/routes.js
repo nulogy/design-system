@@ -110,6 +110,16 @@ export default [
         imports: {
           Link: require('@nulogy/components').Link
         }
+      }, {
+        path: '/components/tables',
+        title: 'Table',
+        content: pageLoader(() => import('./components/tables.md')),
+        imports: {
+          Table: require('@nulogy/components').Tables.Table,
+          Body: require('@nulogy/components').Tables.Body,
+          Row: require('@nulogy/components').Tables.Row,
+          Cell: require('@nulogy/components').Tables.Cell,
+        }
       }
     ]
   },
