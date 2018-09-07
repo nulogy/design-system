@@ -16,6 +16,7 @@ export const Cell = styled.td`
     font-size: ${theme.font.size.small}px;
     line-height: ${lineHeight(theme)('smaller') / theme.font.size.small};
     padding: ${theme.space.x2}px ${theme.space.x1}px;
+    vertical-align: top;
     &:first-child{
       padding-left: ${theme.space.x2}px;
     }
@@ -32,9 +33,9 @@ export const ActionCell = styled(Cell)`
   ${ ({ theme }) => css`
     padding-top: ${theme.space.x1}px;
     padding-bottom: ${theme.space.x1}px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    text-align:right;
+    white-space: nowrap;
+    vertical-align: middle;
     & > button:not(:last-child) {
       margin-right: ${theme.space.half}px;
     }
@@ -78,6 +79,7 @@ export const Header = styled.thead`
 export const HeaderCell = styled(Cell.withComponent('th'))`
   ${ ({ theme }) => css`
     font-weight: bold;
+    vertical-align: bottom;
     background-color: ${theme.colour.white}; // sloppy
   `}
 `;
@@ -87,6 +89,7 @@ HeaderCell.defaultProps = defaultProps;
 export const CreateRow = styled.tr`
   ${ ({ theme }) => css`
     background-color: ${theme.colour.blue[800]};
+    color: ${theme.colour.white};
     ${ ActionCell } {
       padding-top: ${theme.space.x2}px;
       padding-bottom: ${theme.space.x2}px;
