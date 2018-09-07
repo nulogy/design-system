@@ -33,6 +33,7 @@ export const ActionCell = styled(Cell)`
     padding: ${theme.space.x1}px ${theme.space.x2}px ${theme.space.x1}px ${theme.space.x1}px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     & > button:not(:last-child) {
       margin-right: ${theme.space.half}px;
     }
@@ -90,15 +91,15 @@ export const CreateRow = styled.tr`
 
 CreateRow.defaultProps - defaultProps;
 
-export const InputCell = styled(HeaderCell.withComponent('th'))`
-  ${  ({ theme }) => css`
-    font-weight: ${theme.font.weight.normal};
-    padding: ${theme.space.x1}px;
-    position: relative;
+export const CreateRowActionCell = styled(HeaderCell.withComponent('th'), ActionCell)`
+  ${ ({ theme }) => css`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   `}
 `;
 
-InputCell.defaultProps = defaultProps;
+CreateRowActionCell.defaultProps - defaultProps;
 
 export const TextInput = styled.input`
   ${ ({ theme }) => css`
