@@ -34,8 +34,13 @@ export const Button = styled(QuietButton)`
   padding: ${space.half}px;
   border-width: 0;
   border-radius: 50%;
+  transition: none;
   &:hover{
     background-color: ${colour.blue[300]};
+    transform: scale(1.25);
+    svg{
+      transform: scale(0.8);
+    }
   }
 `;
 
