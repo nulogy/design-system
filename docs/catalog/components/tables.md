@@ -113,9 +113,3 @@ Always place actions at the end of the row.
   
 </Table>
 ```
-
-## Related Components
-Coming soon
-
-## Token List
-Coming soon
