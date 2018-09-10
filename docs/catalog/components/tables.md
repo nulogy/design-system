@@ -34,7 +34,8 @@
 </Table>
 ```
 ```hint|directive
-Always reserve first row for a row indentifier.
+Try to use an row identifier in the first column of a table. An identifier can 
+be a name, date, code, number etc. that uniquely identifies the data in the row.
 ```
 
 ## Editable Row
