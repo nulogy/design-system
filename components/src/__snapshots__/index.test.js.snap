@@ -18,7 +18,7 @@ Object {
     "HeaderCell": [Function],
     "Row": [Function],
     "Table": [Function],
-    "TextInput": [Function],
+    "TemporaryTextInput": [Function],
   },
 }
 `;
