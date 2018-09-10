@@ -1,43 +1,17 @@
-import {
-  Button,
-  ApprovalButton,
-  DangerButton,
-  QuietButton,
-  LinkButton
-} from './';
+import * as Buttons from './';
 
-describe('Button', () => {
+describe('Buttons', () => {
   it('matches snapshot', () => {
-    expect(Button).toBeDefined();
-    expect(Button).toMatchSnapshot();
+    expect(Buttons).toBeDefined();
+    expect(Buttons).toMatchSnapshot();
   });
 });
 
-describe('ApprovalButton', () => {
-  it('matches snapshot', () => {
-    expect(ApprovalButton).toBeDefined();
-    expect(ApprovalButton).toMatchSnapshot();
-  });
-});
-
-describe('DangerButton', () => {
-  it('matches snapshot', () => {
-    expect(DangerButton).toBeDefined();
-    expect(DangerButton).toMatchSnapshot();
-  });
-});
-
-describe('QuietButton', () => {
-  it('matches snapshot', () => {
-    expect(QuietButton).toBeDefined();
-    expect(QuietButton).toMatchSnapshot();
-  });
-});
-  
-describe('LinkButton', () => {
-  it('matches snapshot', () => {
-    expect(LinkButton).toBeDefined();
-    expect(LinkButton).toMatchSnapshot();
-  });
-});
-  
+Object.keys(Buttons).forEach(name => (
+  describe(name, () => {
+    it('matches snapshot', () => {
+      expect(Buttons[name]).toBeDefined();
+      expect(Buttons[name]).toMatchSnapshot();
+    });
+  })
+));
