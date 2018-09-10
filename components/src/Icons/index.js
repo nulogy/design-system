@@ -1,1 +1,6 @@
-export {default as Icon} from "./Icon";
+import * as icons from './Icon';
+const { default: Icon, ...rest } = icons;
+export const Icons = {
+  Icon, 
+  ...rest,
+};
