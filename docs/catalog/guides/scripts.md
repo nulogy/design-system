@@ -5,7 +5,11 @@
 The following scripts start dev servers for various packages.
 
 ```hint|neutral
-While developing, you may want to run `yarn watch` to build the rest of the project in watch mode. For more see below.
+Note that `yarn install` will subsequently run `yarn build`. This will prepare the project for development using the dev server scripts below.
+```
+
+```hint|neutral
+While developing, you may want to run `yarn watch` to build the rest of the project in watch mode. For more the [Building section](#building) below.
 ```
 
 ```table
@@ -65,12 +69,16 @@ rows:
   Result: Uses Lerna to run the `watch` command in all workspaces concurrently. See `build:public` below for an explanation of what is considered a "library package".
  
 - Script: yarn build
-  Task: Build all packages.
+  Task: Build the library packages – not documentation and sandboxes.
+  Result: Build only dependency packages – where `pkg.private` is not set to `true`.
+
+- Script: yarn build:all
+  Task: Build all packages including the docs and sandbox.
   Result: Uses Lerna to build all workspaces.
 
-- Script: yarn build:public
-  Task: Build the library packages – not documentation and sandboxes.
-  Result: Build only packages where `pkg.private` is not set to `true`.
+- Script: yarn build:docs
+  Task: Used in CI to deploy the docs to http://nulogy.design.
+  Result: Builds the public packages, then builds the docs.
 
 - Script: yarn clean
   Task: Removes all build artifacts.

@@ -18,9 +18,11 @@
     "test": "lerna run test --stream --include-filtered-dependents --since master",
     "pretest": "yarn build:public --include-filtered-dependencies --since master",
     
-    "build": "lerna run build --stream",
-    "build:public": "yarn build --no-private",
+    "build:all": "lerna run build --stream",
+    "build": "yarn build:all --no-private",
+    "build:docs": "yarn build && yarn docs build",
     "watch": "lerna run watch --no-private --stream --parallel",
+    "prepare": "yarn build",
     
     "clean": "lerna exec 'rm -rf dist'",
     "pristine": "git clean -fdX .",
