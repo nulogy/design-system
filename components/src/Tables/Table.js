@@ -58,13 +58,7 @@ export const Button = styled(QuietButton)`
 
 Button.defaultProps = defaultProps;
 
-export const Row = styled.tr`
-  ${ ({ theme }) => css`
-    &:nth-child(odd){
-      background-color: ${theme.colour.blue['200']};
-    }
-  `}
-`;
+export const Row = styled.tr``;
 
 Row.defaultProps = defaultProps;
 
@@ -76,7 +70,6 @@ export const HeaderCell = styled(Cell.withComponent('th'))`
   ${ ({ theme }) => css`
     font-weight: bold;
     vertical-align: bottom;
-    background-color: ${theme.colour.white}; // sloppy
   `}
 `;
 
@@ -113,7 +106,13 @@ export const TextInput = styled.input`
 
 TextInput.defaultProps = defaultProps;
 
-export const Body = styled.tbody``;
+export const Body = styled.tbody`
+  ${ ({ theme }) => css`
+    ${Row}:nth-of-type(odd){
+      background-color: ${theme.colour.blue['200']};
+    }
+  `}
+`;
 
 export const Table = styled.table`
   ${ ({ theme }) => css`
