@@ -7,10 +7,6 @@ const defaultProps = { theme: tokens };
 
 const lineHeight = theme => name => theme.font.lineHeight[name] * theme.font.size.medium;
 
-const defaultProps = {
-  theme: tokens
-}
-
 export const Cell = styled.td`
   ${ ({ theme }) => css`
     font-size: ${theme.font.size.small}px;
