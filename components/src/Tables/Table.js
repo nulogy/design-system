@@ -5,12 +5,12 @@ import QuietButton from '../Button/QuietButton';
 
 const defaultProps = { theme: tokens };
 
-const lineHeight = theme => name => theme.font.lineHeight[name] * theme.font.size.medium;
+const lineHeight = name => ({ theme }) => theme.font.lineHeight[name] * theme.font.size.medium;
 
 export const Cell = styled.td`
   ${ ({ theme }) => css`
     font-size: ${theme.font.size.small}px;
-    line-height: ${lineHeight(theme)('smaller') / theme.font.size.small};
+    line-height: ${lineHeight('smaller')({ theme }) / theme.font.size.small};
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
     &:first-child{
