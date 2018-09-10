@@ -6,4 +6,6 @@ exports[`Button matches snapshot 1`] = `[Function]`;
 
 exports[`DangerButton matches snapshot 1`] = `[Function]`;
 
+exports[`LinkButton matches snapshot 1`] = `[Function]`;
+
 exports[`QuietButton matches snapshot 1`] = `[Function]`;

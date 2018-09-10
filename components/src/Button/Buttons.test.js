@@ -3,6 +3,7 @@ import {
   ApprovalButton,
   DangerButton,
   QuietButton,
+  LinkButton
 } from './';
 
 describe('Button', () => {
@@ -30,6 +31,13 @@ describe('QuietButton', () => {
   it('matches snapshot', () => {
     expect(QuietButton).toBeDefined();
     expect(QuietButton).toMatchSnapshot();
+  });
+});
+  
+describe('LinkButton', () => {
+  it('matches snapshot', () => {
+    expect(LinkButton).toBeDefined();
+    expect(LinkButton).toMatchSnapshot();
   });
 });
   
