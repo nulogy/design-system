@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import * as MaterialIcons from 'rmdi';
+import { 
+  Edit as edit,
+} from 'rmdi';
 
-const SvgIcon = MaterialIcons.Icon.default;
-
-const iconNames = Object.keys(MaterialIcons);
 
 const Wrapper = styled.span`
   border: .15em dashed red;
@@ -18,11 +17,20 @@ const Wrapper = styled.span`
   line-height: 2em;
 `;
 
-const Icon = ({ name }) => (
-  <Wrapper>
-    <SvgIcon  name={name} />
-  </Wrapper>
-);
+const Icons = {
+  edit
+}
+
+const iconNames = Object.keys(Icons);
+
+const Icon = ({ name }) => {
+  const IconSvg = Icons[name];
+  return (
+    <Wrapper>
+      <IconSvg />
+    </Wrapper>
+  );
+};
 
 Icon.propTypes = {
   name: PropTypes.oneOf(iconNames).isRequired

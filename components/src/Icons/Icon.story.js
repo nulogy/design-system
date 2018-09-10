@@ -4,5 +4,5 @@ import Icon from './Icon';
 
 storiesOf('Icon', module)
   .add('Default', () => (
-    <Icon name="Edit" />
+    <Icon name="edit" />
   ));
