@@ -44,8 +44,8 @@ const Wrapper = styled.span`
 
 `;
 
-const Icon = ({ name, IconSvg = Icons[name] }) => (
-  <Wrapper>
+const Icon = ({ name, IconSvg = Icons[name], ...props }) => (
+  <Wrapper {...props} >
     <IconSvg />
   </Wrapper>
 );

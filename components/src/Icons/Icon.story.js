@@ -38,9 +38,9 @@ storiesOf("Icon", module)
       ))}
     </React.Fragment>
   ))
-  // .add("Accepts a className", () => (
-  //   <Icon name="late" className="storybookTestClass" />
-  // ))
+  .add("Accepts a className", () => (
+    <Icon name="check" className="storybookTestClass" />
+  ))
   // .add("Just the svg files", () => (
   //   <React.Fragment>
   //     {Object.keys(Icons).map(key => {
