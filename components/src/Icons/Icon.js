@@ -12,7 +12,7 @@ import {
   Save,
 } from 'rmdi';
 
-const IconNames = {
+export const Svgs = {
   add: AddCircle,
   cancel: Cancel,
   check: CheckCircle,
@@ -23,12 +23,12 @@ const IconNames = {
   unlock: LockOpen,
 }
 
-export const names = Object.keys(IconNames);
+export const names = Object.keys(Svgs);
 
 const iconSizeRatio = 1.25;
 
 const Icons = {} 
-names.map(name => Icons[name] = styled(IconNames[name])`
+names.map(name => Icons[name] = styled(Svgs[name])`
   height: ${iconSizeRatio}em;
   width: ${iconSizeRatio}em;
   top: 0;

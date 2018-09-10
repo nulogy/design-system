@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon, { names } from './Icon';
+import Icon, { names, Svgs } from './Icon';
 
 const IconCode = ({ name }) => (
   <code>
@@ -41,15 +41,15 @@ storiesOf("Icon", module)
   .add("Accepts a className", () => (
     <Icon name="check" className="storybookTestClass" />
   ))
-  // .add("Just the svg files", () => (
-  //   <React.Fragment>
-  //     {Object.keys(Icons).map(key => {
-  //       const IconValue = Icons[key];
-  //       return (
-  //         <p key={key}>
-  //           <IconValue /> <code>{key}.icon.svg</code>
-  //         </p>
-  //       );
-  //     })}
-  //   </React.Fragment>
-  // ));
+  .add("Just the svg files", () => (
+    <React.Fragment>
+      {names.map(iconName => {
+        const RawSvgIcon = Svgs[iconName];
+        return (
+          <p key={iconName}>
+            <RawSvgIcon /> <code>Icons.Svgs['{iconName}']</code>
+          </p>
+        );
+      })}
+    </React.Fragment>
+  ));
