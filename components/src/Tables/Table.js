@@ -60,8 +60,6 @@ Button.defaultProps = defaultProps;
 
 export const Row = styled.tr``;
 
-Row.defaultProps = defaultProps;
-
 export const Header = styled.thead`
   text-align: left;
 `;
@@ -113,6 +111,8 @@ export const Body = styled.tbody`
     }
   `}
 `;
+
+Body.defaultProps = defaultProps;
 
 export const Table = styled.table`
   ${ ({ theme }) => css`
