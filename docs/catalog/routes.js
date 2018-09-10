@@ -116,9 +116,21 @@ export default [
         content: pageLoader(() => import('./components/tables.md')),
         imports: {
           Table: require('@nulogy/components').Tables.Table,
+<<<<<<< HEAD
           Body: require('@nulogy/components').Tables.Body,
           Row: require('@nulogy/components').Tables.Row,
           Cell: require('@nulogy/components').Tables.Cell,
+=======
+          Header: require('@nulogy/components').Tables.Header,
+          Body: require('@nulogy/components').Tables.Body,
+          Row: require('@nulogy/components').Tables.Row,
+          Cell: require('@nulogy/components').Tables.Cell,
+          ActionCell: require('@nulogy/components').Tables.ActionCell,
+          HeaderCell: require('@nulogy/components').Tables.HeaderCell,
+          Button: require('@nulogy/components').Tables.Button,
+          CreateRow: require('@nulogy/components').Tables.CreateRow,
+          TextInput: require('@nulogy/components').Tables.TextInput,
+>>>>>>> Adds initial table documentation
         }
       }
     ]
