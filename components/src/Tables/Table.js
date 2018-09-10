@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import tokens from '@nulogy/tokens';
 
-const borderStyle = ({ theme }) => `1px solid ${theme.colour.neutral[400]}`;
+const borderStyle = ({ theme = tokens }) => `1px solid ${theme.colour.neutral[400]}`;
 
 export const Cell = styled.td`
   padding: 1rem;
