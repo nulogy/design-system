@@ -12,7 +12,7 @@ import {
   Save,
 } from 'rmdi';
 
-const Icons = {
+const IconNames = {
   add: AddCircle,
   cancel: Cancel,
   check: CheckCircle,
@@ -23,18 +23,26 @@ const Icons = {
   unlock: LockOpen,
 }
 
-const Wrapper = styled.span`
-  border: .15em dashed red;
-  display: block;
-  width: 2em;
-  height: 2em;
-  border-radius: 2em;
-  background-color: pink;
-  text-align: center;
-  line-height: 2em;
-`;
+export const names = Object.keys(IconNames);
 
-export const names = Object.keys(Icons);
+const iconSizeRatio = 1.25;
+
+const Icons = {} 
+names.map(name => Icons[name] = styled(IconNames[name])`
+  height: ${iconSizeRatio}em;
+  width: ${iconSizeRatio}em;
+  top: 0;
+  position: absolute;
+`);
+
+const Wrapper = styled.span`
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: ${iconSizeRatio}em;
+
+`;
 
 const Icon = ({ name, IconSvg = Icons[name] }) => (
   <Wrapper>
