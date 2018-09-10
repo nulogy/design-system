@@ -131,9 +131,9 @@ storiesOf('Table', module)
       </Header>
       <Body>
         <Row>
-          <Cell>Row 1, Cell 1</Cell>
-          <Cell>Row 1, Cell 2</Cell>
-          <Cell>Row 1, Cell 3</Cell>
+          <Cell>Good</Cell>
+          <Cell>Good</Cell>
+          <Cell>1</Cell>
           <ActionCell>
             <Button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -150,9 +150,9 @@ storiesOf('Table', module)
           </ActionCell>
         </Row>
         <Row>
-          <Cell>Row 2, Cell 1</Cell>
-          <Cell>Row 2, Cell 2</Cell>
-          <Cell>Row 2, Cell 3</Cell>
+          <Cell>Quarantined</Cell>
+          <Cell>Quarantined</Cell>
+          <Cell>2</Cell>
           <ActionCell>
             <Button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -169,9 +169,9 @@ storiesOf('Table', module)
           </ActionCell>
         </Row>
         <Row>
-          <Cell>Row 3, Cell 1</Cell>
-          <Cell>Row 3, Cell 2</Cell>
-          <Cell>Row 3, Cell 3</Cell>
+          <Cell>Rejected</Cell>
+          <Cell>Rejected</Cell>
+          <Cell>3</Cell>
           <ActionCell>
             <Button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
