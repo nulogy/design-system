@@ -2,9 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { 
-  Edit as edit,
+  AddCircle,
+  Cancel,
+  CheckCircle,
+  Delete,
+  Edit,
+  Lock,
+  LockOpen,
+  Save,
 } from 'rmdi';
 
+const Icons = {
+  add: AddCircle,
+  cancel: Cancel,
+  check: CheckCircle,
+  delete: Delete,
+  edit: Edit,
+  lock: Lock,
+  save: Save,
+  unlock: LockOpen,
+}
 
 const Wrapper = styled.span`
   border: .15em dashed red;
@@ -17,23 +34,16 @@ const Wrapper = styled.span`
   line-height: 2em;
 `;
 
-const Icons = {
-  edit
-}
+export const names = Object.keys(Icons);
 
-const iconNames = Object.keys(Icons);
-
-const Icon = ({ name }) => {
-  const IconSvg = Icons[name];
-  return (
-    <Wrapper>
-      <IconSvg />
-    </Wrapper>
-  );
-};
+const Icon = ({ name, IconSvg = Icons[name] }) => (
+  <Wrapper>
+    <IconSvg />
+  </Wrapper>
+);
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(iconNames).isRequired
+  name: PropTypes.oneOf(names).isRequired
 }
 
 Icon.defaultProps = {}

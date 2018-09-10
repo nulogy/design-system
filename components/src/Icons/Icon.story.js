@@ -1,8 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon from './Icon';
+import Icon, { names } from './Icon';
 
 storiesOf('Icon', module)
   .add('Default', () => (
-    <Icon name="edit" />
+    <React.Fragment>
+      { names.map(iconName => 
+        <Icon name={iconName} key={iconName}/>
+      )}
+    </React.Fragment>
   ));
