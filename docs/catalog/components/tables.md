@@ -3,16 +3,6 @@
 ## Basic (Read Only) Table
 ```react
 <Table>
-<<<<<<< HEAD
-  <Body>
-    <Row>
-      <Cell>One thing</Cell>
-      <Cell>And then the other</Cell>
-    </Row>
-    <Row>
-      <Cell>One thing</Cell>
-      <Cell>And then the other</Cell>
-=======
   <Header>
     <Row>
       <HeaderCell>Name</HeaderCell>
@@ -39,17 +29,10 @@
       <Cell>Rejected</Cell>
       <Cell>3</Cell>
       <ActionCell></ActionCell>
->>>>>>> Adds initial table documentation
     </Row>
   </Body>
 </Table>
 ```
-<<<<<<< HEAD
-
-## Editable Row
-
-## Table with Record Creation Row
-=======
 ```hint|directive
 Always reserve first row for a row indentifier.
 ```
@@ -156,4 +139,3 @@ Coming soon
 
 ## Token List
 Coming soon
->>>>>>> Adds initial table documentation
