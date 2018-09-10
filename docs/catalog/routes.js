@@ -124,7 +124,7 @@ export default [
           HeaderCell: require('@nulogy/components').Tables.HeaderCell,
           Button: require('@nulogy/components').Tables.Button,
           CreateRow: require('@nulogy/components').Tables.CreateRow,
-          TextInput: require('@nulogy/components').Tables.TextInput,
+          TextInput: require('@nulogy/components').Tables.TemporaryTextInput,
         }
       }
     ]

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Table, Cell, ActionCell, Row, CreateRow, Body, Header, HeaderCell, Button, TextInput } from './';
+import { Table, Cell, ActionCell, Row, CreateRow, Body, Header, HeaderCell, Button, TemporaryTextInput } from './';
 
 storiesOf('Table', module)
   .add('Read Only', () => (
@@ -116,9 +116,9 @@ storiesOf('Table', module)
           <HeaderCell></HeaderCell>
         </Row>
         <CreateRow>
-          <Cell><TextInput></TextInput></Cell>
-          <Cell><TextInput></TextInput></Cell>
-          <Cell><TextInput></TextInput></Cell>
+          <Cell><TemporaryTextInput></TemporaryTextInput></Cell>
+          <Cell><TemporaryTextInput></TemporaryTextInput></Cell>
+          <Cell><TemporaryTextInput></TemporaryTextInput></Cell>
           <ActionCell>
             <Button>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -199,8 +199,8 @@ storiesOf('Table', module)
           <HeaderCell></HeaderCell>
         </Row>
         <CreateRow>
-          <Cell><TextInput></TextInput></Cell>
-          <Cell><TextInput></TextInput></Cell>
+          <Cell><TemporaryTextInput></TemporaryTextInput></Cell>
+          <Cell><TemporaryTextInput></TemporaryTextInput></Cell>
           <Cell>Some text</Cell>
           <ActionCell>
             <Button>

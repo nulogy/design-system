@@ -86,7 +86,7 @@ export const CreateRow = styled.tr`
 
 CreateRow.defaultProps = defaultProps;
 
-export const TextInput = styled.input`
+export const TemporaryTextInput = styled.input`
   ${ ({ theme }) => css`
     box-sizing: border-box;
     height:32px; // Temporary
@@ -102,7 +102,7 @@ export const TextInput = styled.input`
   `}
 `;
 
-TextInput.defaultProps = defaultProps;
+TemporaryTextInput.defaultProps = defaultProps;
 
 export const Body = styled.tbody`
   ${ ({ theme }) => css`
