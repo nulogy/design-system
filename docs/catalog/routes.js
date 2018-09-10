@@ -100,6 +100,7 @@ export default [
           ApprovalButton: require('@nulogy/components').ApprovalButton,
           Button: require('@nulogy/components').Button,
           DangerButton: require('@nulogy/components').DangerButton,
+          QuietButton: require('@nulogy/components').QuietButton,
           LinkButton: require('@nulogy/components').LinkButton
         }
       }, {
@@ -108,6 +109,22 @@ export default [
         content: pageLoader(() => import('./components/links.md')),
         imports: {
           Link: require('@nulogy/components').Link
+        }
+      }, {
+        path: '/components/tables',
+        title: 'Table',
+        content: pageLoader(() => import('./components/tables.md')),
+        imports: {
+          Table: require('@nulogy/components').Tables.Table,
+          Header: require('@nulogy/components').Tables.Header,
+          Body: require('@nulogy/components').Tables.Body,
+          Row: require('@nulogy/components').Tables.Row,
+          Cell: require('@nulogy/components').Tables.Cell,
+          ActionCell: require('@nulogy/components').Tables.ActionCell,
+          HeaderCell: require('@nulogy/components').Tables.HeaderCell,
+          Button: require('@nulogy/components').Tables.Button,
+          CreateRow: require('@nulogy/components').Tables.CreateRow,
+          TextInput: require('@nulogy/components').Tables.TemporaryTextInput,
         }
       }
     ]

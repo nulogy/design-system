@@ -40,14 +40,27 @@ Examples: Delete confirmation button.
 <DangerButton type="submit">Delete Item</DangerButton>
 ```
 
-## Link Button
+## Quiet Button
 Use for low importance actions, toolbars, or inline within complex components.
 Examples: Table inline actions.
 ```react
-<LinkButton>Actions</LinkButton>
+<QuietButton>Actions</QuietButton>
 ```
 ```hint|directive
 Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
+```
+
+## Link Button
+Use when you need a button that sits in text like a link.
+
+```react
+<LinkButton>No I don't want to sign up for your email newsletter!</LinkButton>
+```
+
+Can be rendered without an underline
+
+```react
+<LinkButton underline={false}>Click me</LinkButton>
 ```
 
 ## Disabled Button
@@ -61,9 +74,13 @@ Primary Button, QCloud Approval Button, Danger Primary Button
 ```react
 <Button type="submit" disabled>Submit Form</Button>
 ```
+Quiet Button
+```react
+<QuietButton disabled>Actions</QuietButton>
+```
 Link Button
 ```react
-<LinkButton disabled>Actions</LinkButton>
+<LinkButton disabled>Link Button</LinkButton>
 ```
 
 ## Button Sizes

@@ -10,6 +10,17 @@ const smallButtonPaddingY = 1;
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
+export const buttonReset = css`
+  box-sizing: border-box;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  appearance: none;
+  outline: none;
+  font-size: inherit;
+  cursor: pointer;
+`;
+
 export const buttonColours = (mainColour = colour.blue.base, ) => css`
   color: ${mainColour};
   background-color: ${colour.white};
@@ -82,11 +93,9 @@ const size = ({ size = 'medium' }) => (({
 })[size]);
 
 const Button = styled.button`
-  box-sizing: border-box;
+  ${buttonReset}
   border-style: solid;
   border-width: ${borderWidth}px;
-  appearance: none;
-  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;

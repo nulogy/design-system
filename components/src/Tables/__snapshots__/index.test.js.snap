@@ -2,11 +2,15 @@
 
 exports[`Table works 1`] = `
 Object {
+  "ActionCell": [Function],
   "Body": [Function],
+  "Button": [Function],
   "Cell": [Function],
+  "CreateRow": [Function],
   "Header": [Function],
   "HeaderCell": [Function],
   "Row": [Function],
   "Table": [Function],
+  "TemporaryTextInput": [Function],
 }
 `;

@@ -3,15 +3,22 @@
 exports[`All Components matches snapshot 1`] = `
 Object {
   "ApprovalButton": [Function],
-  "Body": [Function],
   "Button": [Function],
-  "Cell": [Function],
   "DangerButton": [Function],
-  "Header": [Function],
-  "HeaderCell": [Function],
   "Link": [Function],
   "LinkButton": [Function],
-  "Row": [Function],
-  "Table": [Function],
+  "QuietButton": [Function],
+  "Tables": Object {
+    "ActionCell": [Function],
+    "Body": [Function],
+    "Button": [Function],
+    "Cell": [Function],
+    "CreateRow": [Function],
+    "Header": [Function],
+    "HeaderCell": [Function],
+    "Row": [Function],
+    "Table": [Function],
+    "TemporaryTextInput": [Function],
+  },
 }
 `;

@@ -4,6 +4,18 @@ exports[`ApprovalButton matches snapshot 1`] = `[Function]`;
 
 exports[`Button matches snapshot 1`] = `[Function]`;
 
+exports[`Buttons matches snapshot 1`] = `
+Object {
+  "ApprovalButton": [Function],
+  "Button": [Function],
+  "DangerButton": [Function],
+  "LinkButton": [Function],
+  "QuietButton": [Function],
+}
+`;
+
 exports[`DangerButton matches snapshot 1`] = `[Function]`;
 
 exports[`LinkButton matches snapshot 1`] = `[Function]`;
+
+exports[`QuietButton matches snapshot 1`] = `[Function]`;
