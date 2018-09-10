@@ -16,7 +16,7 @@
     "all": "concurrently 'yarn watch' 'yarn start:all'",
     
     "test": "lerna run test --stream --include-filtered-dependents --since master",
-    "pretest": "yarn build:public --include-filtered-dependencies --since master",
+    "pretest": "yarn build --include-filtered-dependencies --since master",
     
     "build:all": "lerna run build --stream",
     "build": "yarn build:all --no-private",

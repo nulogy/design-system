@@ -3,16 +3,16 @@ import {css, injectGlobal} from 'styled-components';
 injectGlobal`
 /* 1. this style is created by importing this module */
 .nds--externalInjected {
-  color: green;
+  color: red;
 }
 `;
 
 // 3. this mixin just returns props
-export const mixin = css`color: red;`
+export const mixin = css`color: green;`
 
 // 4. this returns an entire css string 
 export default css`
 .nds--external {
-  color: orange;
+  color: blue;
 }
 `

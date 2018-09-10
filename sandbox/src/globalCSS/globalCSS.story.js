@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
-// @nulogy/css is imported in ../../.storybook/config.js
+import './globalCSS';
 
 storiesOf('Global CSS', module)
   .add('basic', () => (
@@ -22,7 +21,7 @@ storiesOf('Global CSS', module)
         .external
       </li>    
 
-      <li className="lineHeight noMargin fontFamilyMono">
+      <li className="lineHeight noMargin fontFamilyMono colour">
         This class has utility classes applied that were created dynamically
       </li>
     </ol>

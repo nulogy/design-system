@@ -1,6 +1,10 @@
 import {css, injectGlobal} from 'styled-components';
 import { font } from '@nulogy/tokens';
 
+export const loadIBMPlexFont = css`
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i,700,700i');
+`;
+
 export const fontMixins = {
   // Size
   'font-size--smaller': css`font-size: ${font.size.smaller}px`,
