@@ -52,4 +52,19 @@ storiesOf("Icon", module)
         );
       })}
     </React.Fragment>
+  ))
+  .add('Aligns with text', () => (
+    <React.Fragment>
+      <p><Icon name="check" /> Cras dignissim mattis dictum.</p>
+      <p><Icon name="check" /> Etiam condimentum laoreet velit, quis euismod massa. <Icon name="check" /></p>
+      <p>
+        <Icon name="check" /> Cras dignissim mattis dictum.  Donec dapibus ante 
+        justo, quis gravida ligula ullamcorper ac. Fusce neque nibh, pretium a 
+        massa nec, iaculis sodales justo. Nullam eu maximus felis. Pellentesque 
+        ut <Icon name="check" /> risus vel tortor gravida interdum. Aliquam 
+        eget tincidunt. Morbi mattis venenatis ante at tincidunt. Pellentesque 
+        venenatis nec felis non bibendum. Donec venenatis mattis pulvinar. 
+        Quisque in tempus augue. Proin rhoncus, dolor sed. <Icon name="check" />
+      </p>
+    </React.Fragment>
   ));
