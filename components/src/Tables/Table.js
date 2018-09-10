@@ -120,6 +120,11 @@ TextInput.defaultProps = defaultProps;
 export const Body = styled.tbody``;
 
 export const Table = styled.table`
-  border-collapse: collapse;
-  width: 100%;
+  ${ ({ theme }) => css`
+    border-collapse: collapse;
+    width: 100%;
+    background-color: ${theme.colour.white};
+  `}
 `;
+
+Table.defaultProps - defaultProps;
