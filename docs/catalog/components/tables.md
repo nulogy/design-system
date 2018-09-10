@@ -87,7 +87,7 @@ be a name, date, code, number etc. that uniquely identifies the data in the row.
 Always place actions at the end of the row.
 ```
 
-## Table with Create Row
+## Create Row
 ```react
 <Table>
   <Header>
@@ -113,4 +113,7 @@ Always place actions at the end of the row.
   </Header>
   
 </Table>
+```
+```hint|directive
+Always place actions at the end of the row.
 ```
