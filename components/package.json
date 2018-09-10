@@ -3,6 +3,9 @@
   "version": "0.1.1",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "start-storybook -p 8080",
     "build": "webpack --mode production --config webpack.config.js",

@@ -3,6 +3,9 @@
   "version": "0.1.1",
   "description": "Global Styles for Nulogy Design System",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "start-storybook -p 7070",
     "build": "webpack --mode production --config webpack.config.js",
