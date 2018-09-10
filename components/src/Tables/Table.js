@@ -97,7 +97,7 @@ export const CreateRow = styled.tr`
   `}
 `;
 
-CreateRow.defaultProps - defaultProps;
+CreateRow.defaultProps = defaultProps;
 
 export const TextInput = styled.input`
   ${ ({ theme }) => css`
@@ -127,4 +127,4 @@ export const Table = styled.table`
   `}
 `;
 
-Table.defaultProps - defaultProps;
+Table.defaultProps = defaultProps;
