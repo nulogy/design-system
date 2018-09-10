@@ -1,6 +1,7 @@
 > Tables structure content in a grid to make it easier to see relationships and to facilitate understanding.
 
 ## Basic (Read Only) Table
+The order of columns should be in logical order where the first row is reserved for a row identifier. An identifier can be a name, date, code, number etc. that uniquely identifies the data in the row. Always use table headings and make sure they precisely describe the content in the column.
 ```react
 <Table>
   <Header>
@@ -33,12 +34,9 @@
   </Body>
 </Table>
 ```
-```hint|directive
-Try to use an row identifier in the first column of a table. An identifier can 
-be a name, date, code, number etc. that uniquely identifies the data in the row.
-```
 
 ## Editable Row
+Editable row is used for the row that can be edited and deleted and consists of form input elements and the action options at the end of the row.
 ```react
   <Table>
     <Body>
@@ -83,11 +81,9 @@ be a name, date, code, number etc. that uniquely identifies the data in the row.
     </Body>
   </Table>
 ```
-```hint|directive
-Always place actions at the end of the row.
-```
 
 ## Create Row
+Create row is used for adding records to the table. It appears at the top of the table.
 ```react
 <Table>
   <Header>
@@ -111,9 +107,6 @@ Always place actions at the end of the row.
       </ActionCell>
     </CreateRow>
   </Header>
-  
+
 </Table>
-```
-```hint|directive
-Always place actions at the end of the row.
 ```
