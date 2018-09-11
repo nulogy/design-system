@@ -5,11 +5,11 @@ import { Text, P, Title, SectionTitle, SubsectionTitle } from './Type';
 storiesOf('Type', module)
   .add('All components', () => (
     <React.Fragment>
-      <Text>Text component is for inline content.</Text>
-      <P>The P component is for block text.</P>
       <Title>The Title component is for page titles.</Title>
       <SectionTitle>The SectionTitle component is for sub-sections of a page.</SectionTitle>
       <SubsectionTitle>The SubsectionTitle component is for sub-sections of a page.</SubsectionTitle>
+      <P>The P component is for block text.</P>
+      <Text>Text component is for inline content.</Text>
     </React.Fragment>
   ))
   .add('Text', () => (
