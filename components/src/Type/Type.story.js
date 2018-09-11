@@ -12,6 +12,41 @@ storiesOf('Type', module)
       <Text>Text component is for inline content.</Text>
     </React.Fragment>
   ))
+  .add('Conent with a mix of headings and paragraphs', () => (
+    <React.Fragment>
+      <Title>Nunc vitae nisl vestibulum</Title>
+      <P>
+        Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam 
+        pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, 
+        consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper 
+        fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat  
+        sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, 
+        dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales  
+        dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. 
+        Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
+      </P>
+      <SectionTitle>Donec leo felis</SectionTitle>
+      <P>
+        Nunc tempor eget mauris id facilisis. Morbi convallis mauris at 
+        fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero 
+        vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo 
+        molestie dolor, vel tristique orci efficitur eu. Nullam eleifend  
+        malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique,  
+        lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum 
+        primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. 
+        Maecenas sit amet leo dui. Integer semper porta dignissim.
+      </P>
+      <SubsectionTitle>Fusce varius fringilla nunc vitae tincidunt.</SubsectionTitle>
+      <P>
+        Vestibulum interdum mi est, quis imperdiet lacus sodales a. Cras 
+        consectetur ullamcorper risus, id pharetra neque malesuada eu. Duis ac 
+        sapien dictum, hendrerit nunc in, dictum sem. Pellentesque finibus, 
+        turpis nec auctor tempor, erat eros facilisis orci, ultrices laoreet leo
+        ligula et ipsum. Vivamus mattis vel dui vel lacinia. Mauris placerat mi 
+        nisl, ut commodo nisl feugiat ac. Pellentesque ut cursus justo.
+      </P>
+    </React.Fragment>
+  ))
   .add('Text', () => (
     <React.Fragment>
       <Text>This is a line of text.\n</Text>
