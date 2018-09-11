@@ -44,7 +44,11 @@ Object {
     "TemporaryTextInput": [Function],
   },
   "Type": Object {
+    "P": [Function],
+    "SectionTitle": [Function],
+    "SubsectionTitle": [Function],
     "Text": [Function],
+    "Title": [Function],
   },
 }
 `;
