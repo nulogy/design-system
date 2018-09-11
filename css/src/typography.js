@@ -22,9 +22,13 @@ export const fontMixins = {
   'font-family--mono': css`font-family: ${font.family.mono}`,
 
   // Weight
+  'font-weight--normal': css`font-weight: ${font.weight.normal}`,
+  'font-weight--medium': css`font-weight: ${font.weight.medium}`,
   'font-weight--bold': css`font-weight: ${font.weight.bold}`,
-  'line-height--regular': css`line-height: ${font.lineHeight.smaller}`,
-  'line-height--smaller': css`line-height: ${font.lineHeight.normal}`,
+
+  // Line Height
+  'line-height--regular': css`line-height: ${font.lineHeight.regular}`,
+  'line-height--smaller': css`line-height: ${font.lineHeight.smaller}`,
 }
 
 Object.entries(fontMixins)
