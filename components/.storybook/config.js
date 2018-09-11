@@ -3,6 +3,7 @@ import { addDecorator } from '@storybook/react';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import tokens from '@nulogy/tokens';
 import '@nulogy/css';
+import './stories.css.js';
 
 addDecorator(withThemesProvider([tokens]));
 
