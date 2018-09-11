@@ -26,7 +26,7 @@ storiesOf('Typography', module)
     <React.Fragment>
       <Specimen className="font-size--page-title" />
       <Specimen className="font-size--section-title" />
-      <Specimen className="font-size--section-title" />
+      <Specimen className="font-size--subsection-title" />
       <Specimen className="font-size--smaller" />
       <Specimen className="font-size--small" />
       <Specimen className="font-size--medium" />
