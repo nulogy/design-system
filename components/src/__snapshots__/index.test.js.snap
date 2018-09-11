@@ -43,5 +43,8 @@ Object {
     "Table": [Function],
     "TemporaryTextInput": [Function],
   },
+  "Type": Object {
+    "Text": [Function],
+  },
 }
 `;

@@ -3,3 +3,4 @@ export const Tables = TableComponents;
 export * from "./Button";
 export * from "./Link";
 export * from "./Icons";
+export * from "./Type";

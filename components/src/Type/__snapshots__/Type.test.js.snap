@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Type matches snapshot 1`] = `
+Object {
+  "Text": [Function],
+}
+`;
+
+exports[`Type.Text matches snapshot 1`] = `[Function]`;
