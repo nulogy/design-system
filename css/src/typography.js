@@ -15,7 +15,7 @@ export const fontMixins = {
   'font-size--largest': css`font-size: ${font.size.largest}px`,
   'font-size--page-title': css`font-size: ${font.size.pageTitle}px`,
   'font-size--section-title': css`font-size: ${font.size.sectionTitle}px`,
-  'font-size--subsection-title': css`font-size: ${font.size.sectionTitle}px`,
+  'font-size--subsection-title': css`font-size: ${font.size.subsectionTitle}px`,
 
   // Family
   'font-family--regular': css`font-family: ${font.family.regular}`,
