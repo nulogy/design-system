@@ -7,6 +7,10 @@ ${ styledNormalize }
 ${ loadIBMPlexFont }
 
 body {
-  ${ fontMixins["font-family--regular"] }
+  ${ fontMixins["font-family--regular", "line-height--regular"] }
+}
+
+h1, h2, h3, h4 {
+	${ fontMixins["font-weight--medium"]
 }
 `
