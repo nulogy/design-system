@@ -6,21 +6,28 @@ import {
   Cancel,
   CheckCircle,
   Delete,
+  Domain,
   Edit,
   Lock,
   LockOpen,
+  Person,
   Save,
+  Search,
 } from 'rmdi';
 
 export const Svgs = {
   add: AddCircle,
   cancel: Cancel,
   check: CheckCircle,
+  company: Domain,
   delete: Delete,
   edit: Edit,
   lock: Lock,
   save: Save,
+  search: Search,
+  site: Domain,
   unlock: LockOpen,
+  user: Person,
 }
 
 export const names = Object.keys(Svgs);
