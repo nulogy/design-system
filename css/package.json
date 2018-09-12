@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/css",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Global Styles for Nulogy Design System",
   "private": false,
   "publishConfig": {
