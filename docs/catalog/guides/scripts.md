@@ -56,6 +56,9 @@ rows:
     1. Builds all the public npm modules (see **yarn build:public** below)  that have changed since master.
 
     2. Runs tests in any package with files that have changed since master.
+- Script: yarn components test:watch
+  Task: Test components while working on them.
+  Result: Runs the `@nulogy/components` [Jest](https://jestjs.io) tests in watch mode and report pass/failures via your OS's notification system (i.e. Notification Center on macOS).
 ```
 
 # Building

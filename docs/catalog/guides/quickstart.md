@@ -15,6 +15,7 @@ Note that `yarn install` will subsequently run `yarn build`. This will prepare t
 
 ## To develop React components for the [@nulogy/components](https://www.npmjs.com/package/@nulogy/components) package.
 
+### Start a dev server (Storybook)
 ```code
 lang: sh
 ---
@@ -22,6 +23,16 @@ $ yarn start
 ```
 
 This will start a [Storybook](https://storybook.js.org) on [port 8080](http://localhost:8080).
+
+### Run tests (Jest) 
+```code
+lang: sh
+---
+$ yarn components test:watch
+```
+
+this will run [Jest](https://jestjs.io) in watch mode and report pass/failures via your OS's notification system (i.e. Notification Center on macOS).
+
 
 ## To write documentation to appear on [nulogy.design](http://nulgoy.design)
 
