@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { 
-  AddCircle,
+  Add,
   Cancel,
-  CheckCircle,
+  Check,
   Delete,
   Domain,
   Edit,
@@ -16,9 +16,9 @@ import {
 } from 'rmdi';
 
 export const Svgs = {
-  add: AddCircle,
+  add: Add,
   cancel: Cancel,
-  check: CheckCircle,
+  check: Check,
   company: Domain,
   delete: Delete,
   edit: Edit,
