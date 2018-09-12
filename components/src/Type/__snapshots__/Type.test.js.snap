@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Type matches snapshot 1`] = `
+Object {
+  "P": [Function],
+  "SectionTitle": [Function],
+  "SubsectionTitle": [Function],
+  "Text": [Function],
+  "Title": [Function],
+}
+`;
+
+exports[`Type.P matches snapshot 1`] = `[Function]`;
+
+exports[`Type.SectionTitle matches snapshot 1`] = `[Function]`;
+
+exports[`Type.SubsectionTitle matches snapshot 1`] = `[Function]`;
+
+exports[`Type.Text matches snapshot 1`] = `[Function]`;
+
+exports[`Type.Title matches snapshot 1`] = `[Function]`;

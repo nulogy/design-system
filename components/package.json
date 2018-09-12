@@ -11,6 +11,7 @@
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
     "test": "jest",
+    "test:watch": "jest --watch --notify",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
