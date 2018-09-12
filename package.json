@@ -22,7 +22,9 @@
     "build": "yarn build:all --no-private",
     "build:docs": "yarn build && yarn docs build",
     "watch": "lerna run watch --no-private --stream --parallel",
-    "prepare": "yarn build",
+    
+    "prepublishOnly": "yarn install && yarn build",
+    "postinstall": "yarn build",
     
     "clean": "lerna exec 'rm -rf dist'",
     "pristine": "git clean -fdX .",
