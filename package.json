@@ -23,7 +23,7 @@
     "build:docs": "yarn build && yarn docs build",
     "watch": "lerna run watch --no-private --stream --parallel",
     
-    "prepublishOnly": "yarn install && yarn build",
+    "prepublishOnly": "yarn install",
     "postinstall": "yarn build",
     
     "clean": "lerna exec 'rm -rf dist'",
