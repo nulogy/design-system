@@ -3,6 +3,7 @@
 ### TOC
 - [Component Design / React](#component-design--react)
 - [CSS](#CSS)
+- [Layout](#Layout)
 
 # Component Design / React
 
@@ -26,3 +27,9 @@ I particularly like the rules around what Sass nesting is allowed: in our contex
 ## [CSS Modules; Welcome to the Future by Glen Maddern](https://glenmaddern.com/articles/css-modules)
 
 This article completely blew me away and changed everything I believed in about CSS.
+
+# Layout
+
+## [Learning from Lego: A Step Forward in Modular Web Design by Samantha Zhang](https://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design)
+
+When you are designing components that can be arbitrarily nested, it's hard to develop a strategy for applying whitespace that works. This is one solid strategy.
