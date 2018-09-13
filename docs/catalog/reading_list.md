@@ -4,6 +4,7 @@
 - [Component Design / React](#component-design--react)
 - [CSS](#css)
 - [Layout](#layout)
+- [Maintenance](#maintenance)
 - [Type](#type)
 
 # Component Design / React
@@ -34,6 +35,12 @@ This article completely blew me away and changed everything I believed in about 
 ## [Learning from Lego: A Step Forward in Modular Web Design by Samantha Zhang](https://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design)
 
 When you are designing components that can be arbitrarily nested, it's hard to develop a strategy for applying whitespace that works. This is one solid strategy.
+
+# Maintenance
+
+## [Versioning & Breaking Changes from Morningstar Design System](http://designsystem.morningstar.com/about/versioning.html)
+
+Guidelines for how to use [semver](https://semver.org) in a design system context. Takes into account _API changes_ as well as _visual changes_; and what is considered a "breaking visual change".
 
 # Type
 
