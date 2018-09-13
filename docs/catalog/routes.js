@@ -95,7 +95,7 @@ export default [
       {
         path: '/components',
         title: 'Introduction',
-        content: pageLoader(() => import('./components/intro.md'))
+        content: pageLoader(() => import('../../components/README.md'))
       },
       {
         path: '/components/button',
