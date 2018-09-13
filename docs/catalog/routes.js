@@ -93,6 +93,11 @@ export default [
     title: 'Components',
     pages: [
       {
+        path: '/components',
+        title: 'Introduction',
+        content: pageLoader(() => import('./components/intro.md'))
+      },
+      {
         path: '/components/button',
         title: 'Buttons',
         content: pageLoader(() => import('./components/buttons.md')),

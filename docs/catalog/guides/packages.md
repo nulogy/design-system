@@ -14,7 +14,7 @@ The [React](https://reactjs.org) component library is the primary means of build
 
 **This package should be your first choice for building interfaces with NDS.**
 
-- Docs: [http://nulogy.design/components/button](http://nulogy.design/components/)
+- Docs: [http://nulogy.design/components](http://nulogy.design/components)
 - npm: [https://www.npmjs.com/package/@nulogy/components](https://www.npmjs.com/package/@nulogy/components)  
 - GitHub: [https://github.com/nulogy/design-system/tree/master/components](https://github.com/nulogy/design-system/tree/master/components)
 
