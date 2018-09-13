@@ -18,4 +18,6 @@ Great advice about how to keep your CSS scalable and maintainable, even though s
 
 I particularly like the rules around what Sass nesting is allowed: in our context that would translate to: only media queries, parent selectors, and states (as BEM modifiers aren't needed).
 
+## [CSS Modules; Welcome to the Future by Glen Maddern](https://glenmaddern.com/articles/css-modules)
 
+This article completely blew me away and changed everything I believed in about CSS.
