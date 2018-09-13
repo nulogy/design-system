@@ -159,4 +159,9 @@ export default [
       },
     ]
   },
+  {
+    title: 'Reading list',
+    path: '/reading_list',
+    content: pageLoader(() => import('./reading_list.md'))
+  }
 ];
