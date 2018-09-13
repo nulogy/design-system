@@ -46,5 +46,7 @@ See [Guides/Quick start](http://nulogy.design/guides/quickstart) for instruction
 
 # Links
 
-- `@nulogy/components` on npm: [https://www.npmjs.com/package/@nulogy/components](https://www.npmjs.com/package/@nulogy/components)  
-- Monorepo workspace on GitHub: [https://github.com/nulogy/design-system/tree/master/components](https://github.com/nulogy/design-system/tree/master/components)
+* [Component Docs](http://nulogy.design/components)
+* [Components Storybook](https://nulogy.github.io/design-system/)
+* [`@nulogy/components` package on npm](https://www.npmjs.com/package/@nulogy/components)  
+* [Workspace in the NDS GitHub repo](https://github.com/nulogy/design-system/tree/master/components)

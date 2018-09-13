@@ -11,7 +11,8 @@ Learn how to create consistent, beautiful interfaces using Nulogy's visual langu
 ## Components
 `@nulogy/components` is a set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
 
-* [Documentation](http://nulogy.design/components)
+* [Component Docs](http://nulogy.design/components)
+* [Components Storybook](https://nulogy.github.io/design-system/)
 * [`@nulogy/components` package on npm](https://www.npmjs.com/package/@nulogy/components)  
 * [Workspace in the NDS GitHub repo](https://github.com/nulogy/design-system/tree/master/components)
 
