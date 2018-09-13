@@ -1,13 +1,16 @@
-> Nulogy Design System is made available as a number of packages published to the [npm package repository](https://www.npmjs.com). We use [Lerna](https://lernajs.io) to manage these packages in a [yarn workspaces monorepo](https://yarnpkg.com/lang/en/docs/workspaces/). 
+> Nulogy Design System uses [Lerna](https://lernajs.io) to manage versioning and publishing packages in the monorepo, and [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to manage dependencies.
 >
 > This guide will help you to publish the NDS packages to npm.
 
+```hint
+NDS can only be published by administrators of the GitHub project.
+```
+
+```hint|warning
+This process is under development and definitely involves some hacky steps. Proceed with caution.
+```
+
 ### TOC
-- [Packages](#packages)
--- [`@nulogy/components`](#nulogycomponents)
--- [`@nulogy/tokens`](#nulogytokens)
--- [`@nulogy/css`](#nulogycss)
-- [Publishing to NPM with Lerna](#publishing-to-npm-with-lerna)
 [1. Ensure that you are on the master branch and that everything is up to date](#1-ensure-that-you-are-on-the-master-branch-and-that-everything-is-up-to-date)
 [2. Check for updated packages](#2-check-for-updated-packages)
 [3. Make sure tests are passing](#3-make-sure-tests-are-passing)
@@ -15,55 +18,6 @@
 [5. Publish a new version of the packages to npm](#5-publish-a-new-version-of-the-packages-to-npm)
 [6. Re-enable branch protection on the `master` branch -- HACK](#6-re-enable-branch-protection-on-the-master-branch----hack)
 
-
-# Packages
-
-> NDS is made available as several related packages. Here is a list of the available packages:
-
-## `@nulogy/components`
-
-The [React](https://reactjs.org) component library is the primary means of building interfaces with NDS. It is broken down into elements that encode the principles of the Nulogy Design System. 
-
-**This package should be your first choice for building interfaces with NDS.**
-
-- Docs: [http://nulogy.design/components/button](http://nulogy.design/components/)
-- npm: [https://www.npmjs.com/package/@nulogy/components](https://www.npmjs.com/package/@nulogy/components)  
-- GitHub: [https://github.com/nulogy/design-system/tree/master/components](https://github.com/nulogy/design-system/tree/master/components)
-
-## `@nulogy/tokens`
-
-The tokens package contains the basic values (colours, spacing ...) that form the bases of the Nulogy Design System. These values are made available as a Javascript module.
-
-- Docs: [http://nulogy.design/tokens](http://nulogy.design/tokens)
-- npm: [https://www.npmjs.com/package/@nulogy/tokens](https://www.npmjs.com/package/@nulogy/tokens)  
-- GitHub: [https://github.com/nulogy/design-system/tree/master/tokens](https://github.com/nulogy/design-system/tree/master/tokens)
-
-```hint
- Rather than use the `@nulogy/tokens` directly in your code, it is encouraged that you look to `@nulogy/components`, where the token values are expressed as interface elements,  first.
-```
-
-## `@nulogy/css`
-
-The `nulogy/css` package contains several CSS files for use in NDS projects. These files include a reset and small number global styles, as well as CSS utility classes.
-
-- npm: [https://www.npmjs.com/package/@nulogy/css](https://www.npmjs.com/package/@nulogy/css)  
-- GitHub: [https://github.com/nulogy/design-system/tree/master/css](https://github.com/nulogy/design-system/tree/master/css)
-
-```hint|neutral
-The CSS utility classes are meant as a fallback for legacy applications that can not use the React components in `@nulogy/components`. Please make an effort to use the React components first.
-```
-
-# Publishing to NPM with Lerna
-
-> NDS uses [Lerna](https://lernajs.io) to manage versioning and publishing packages in the monorepo, and [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) to manage dependencies.
-
-```hint
-New versions of NDS can only be published by administrators of the GitHub project.
-```
-
-```hint|warning
-This process is under development and definitely involves some hacky steps. Proceed with caution.
-```
 ## 1. Ensure that you are on the `master` branch and that everything is up to date.
 
 ```code

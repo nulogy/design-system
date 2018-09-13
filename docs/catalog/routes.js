@@ -158,6 +158,11 @@ export default [
         content: pageLoader(() => import('./guides/deploying.md'))
       },
       {
+        path: '/guides/packages',
+        title: 'npm packages',
+        content: pageLoader(() => import('./guides/packages.md'))
+      },
+      {
         path: '/guides/publishing',
         title: 'Publishing packages to npm',
         content: pageLoader(() => import('./guides/publishing.md'))
