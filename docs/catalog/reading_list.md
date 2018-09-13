@@ -9,6 +9,10 @@
 
 # Component Design / React
 
+## [Atomic Design by Brad Frost](http://bradfrost.com/blog/post/atomic-web-design/)
+
+Brad Frost's biology metaphor is a bit strained, but his categorization of UI elements into nested buckets of reusability is pivotal to the way we think about component-based UI architecture.
+
 ## [Defining Component APIs in React by Brent Jackson](http://jxnblk.com/writing/posts/defining-component-apis-in-react/#defining-component-apis-in-react)
 
 Pragmatic guide to designing design system components that are robust, composable and easy to understand. Focuses on keeping things simple and minimal even when that leads to more obvious, less graceful code. The section [Keep props APIs parallel](http://jxnblk.com/writing/posts/defining-component-apis-in-react/#keep-props-apis-parallel) Succinctly explians the value of [Liskov Substitution](https://en.wikipedia.org/wiki/Liskov_substitution_principle) in component libraries.
