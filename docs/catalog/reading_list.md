@@ -35,6 +35,10 @@ I particularly like the rules around what Sass nesting is allowed: in our contex
 
 This article completely blew me away and changed everything I believed in about CSS.
 
+## [A Unified Styling Language by Mark Dalgleish](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+
+A cogent argument for the value of component-based-CSS and the power of writing CSS in Javascript.
+
 ## [Align SVG Icons to Text and Say Goodbye to Font Icons by Elliot Dahl](https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4)
 
 This influenced the approach we use in our own [Icon component](https://nulogy.design/components/icons).
