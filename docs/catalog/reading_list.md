@@ -5,6 +5,7 @@
 - [CSS](#css)
 - [Layout](#layout)
 - [Maintenance](#maintenance)
+- [Theory](#theory)
 - [Type](#type)
 
 # Component Design / React
@@ -49,6 +50,12 @@ When you are designing components that can be arbitrarily nested, it's hard to d
 ## [Versioning & Breaking Changes from Morningstar Design System](http://designsystem.morningstar.com/about/versioning.html)
 
 Guidelines for how to use [semver](https://semver.org) in a design system context. Takes into account _API changes_ as well as _visual changes_; and what is considered a "breaking visual change".
+
+# Theory
+
+## [The Design Tool Dilemma by Colm Tuite](https://medium.freecodecamp.org/the-design-tool-dilemma-225541c4ad1d)
+
+Where does digital product design live? In images of the product drawn in design tools? Or in code? 
 
 # Type
 
