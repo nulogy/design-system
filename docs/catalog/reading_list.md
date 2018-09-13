@@ -4,7 +4,7 @@
 - [Component Design / React](#component-design--react)
 - [CSS](#css)
 - [Layout](#layout)
-- [Maintenance](#maintenance)
+- [Maintenance and practices](#maintenance-and-practices)
 - [Theory](#theory)
 - [Type](#type)
 
@@ -66,7 +66,12 @@ When you are designing components that can be arbitrarily nested, it's hard to d
 
 
 
-# Maintenance
+# Maintenance and practices
+
+## [Storybook Driven Development by Ned Schwartz](https://medium.com/nulogy/storybook-driven-development-a3c517276c07)
+
+This is how we do visual TDD of our components at Nulogy.
+
 
 ## [Versioning & Breaking Changes from Morningstar Design System](http://designsystem.morningstar.com/about/versioning.html)
 
