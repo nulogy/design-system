@@ -2,7 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
 
-export const List = styled.dl``;
+export const List = styled.dl`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+`;
 
 List.displayName = 'NDS.DataList.List';
 List.defaultProps = { theme: tokens };
