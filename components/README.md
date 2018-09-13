@@ -31,9 +31,7 @@ import { Button, P, Title } from '@nulogy/components';
 const App = props => (
   <React.Fragment>
     <Title>My App</Title>
-
     <P>This is a paragraph.</P>
-
     <Button>Click me!</Button>
   </React.Fragment>
 );
@@ -42,7 +40,9 @@ ReactDOM.render(<App />, document.getElementById('root'))
 ```
 ---
 
-See [Guides/Quick start](http://nulogy.design/guides/quickstart) for instructions on how to install and work with the project, and [Guides/Package Scripts](http://nulogy.design/guides/scripts) for more details on the commands available in the project.
+# Contributing
+
+See [Guides/Quick start](http://nulogy.design/guides/quickstart) for instructions on how to install and work with this  project, and [Guides/Package Scripts](http://nulogy.design/guides/scripts) for more details on the commands available in the project.
 
 # Links
 
