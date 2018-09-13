@@ -29,10 +29,10 @@ Value.defaultProps = { theme: tokens };
 const DataList = ({ data }) => (
   <List>
     {data.map(([key, value]) => (
-      <React.Fragment>
+      <span key={`${key}-${value}`}>
         <Key>{key}</Key>
         <Value>{value}</Value>
-      </React.Fragment>
+      </span>
     ))}
   </List>
 )
