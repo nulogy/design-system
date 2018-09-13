@@ -30,6 +30,10 @@ I particularly like the rules around what Sass nesting is allowed: in our contex
 
 This article completely blew me away and changed everything I believed in about CSS.
 
+## [Align SVG Icons to Text and Say Goodbye to Font Icons by Elliot Dahl](https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4)
+
+This influenced the approach we use in our own [Icon component](https://nulogy.design/components/icons).
+
 # Layout
 
 ## [Learning from Lego: A Step Forward in Modular Web Design by Samantha Zhang](https://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design)
