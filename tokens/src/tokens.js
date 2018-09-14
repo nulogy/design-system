@@ -108,15 +108,28 @@ export const shadow = {
   close: '0 2px 12px 0 rgba(3,16,26, 0.2);',
   middle: '0 3px 12px 0 rgba(3,16,26, 0.25);',
   far: '0 6px 15px 0 rgba(3,16,26, 0.33);'
-
-
 };
+
+export const breakpoints = {
+  mobile: 768,
+  desktop: 1024,
+  hd: 1920,
+}
 
 export default {
   name: 'Nulogy Design System',
+<<<<<<< HEAD
   borderRadius,
   colour,
   font,
   space,
   radius
+=======
+  borderRadius: borderRadius,
+  colour: colour,
+  font: font,
+  space: space,
+  radius: radius,
+  breakpoints,
+>>>>>>> NDS-280: adds breakpoints
 };

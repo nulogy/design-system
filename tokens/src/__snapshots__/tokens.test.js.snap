@@ -3,6 +3,11 @@
 exports[`tokens matches snapshot 1`] = `
 Object {
   "borderRadius": "3px",
+  "breakpoints": Object {
+    "desktop": 1024,
+    "hd": 1920,
+    "mobile": 768,
+  },
   "colour": Object {
     "base": "#0E77D2",
     "black": "#03101A",
