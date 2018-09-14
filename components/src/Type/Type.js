@@ -34,6 +34,7 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.font.size.pageTitle}px;
     font-weight: ${theme.font.weight.medium};
+    margin-bottom: ${theme.space.x3}px;
   `}
 `;
 
@@ -43,6 +44,7 @@ Title.defaultProps = { theme: tokens };
 export const SectionTitle = styled(Title.withComponent('h2'))`
   ${({ theme }) => ({
     fontSize: `${theme.font.size.sectionTitle}px`,
+    marginBottom: `${theme.space.x2}px`
   })}
 `;
 
@@ -52,6 +54,7 @@ SectionTitle.defaultProps = { theme: tokens };
 export const SubsectionTitle = styled(Title.withComponent('h3'))`
   ${({ theme }) => ({
     fontSize: `${theme.font.size.subsectionTitle}px`,
+    marginBottom: `${theme.space.x2}px`
   })}
 `;
 
