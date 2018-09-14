@@ -9,7 +9,12 @@ Learn how to create consistent, beautiful interfaces using Nulogy's visual langu
 * [Iconography](http://nulogy.design/visual_style/iconography)
 
 ## Components
-*Coming soon*. A set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
+`@nulogy/components` is a set of React UI Components designed to allow fast and consistent development of Nulogy's interfaces.
+
+* [Component Docs](http://nulogy.design/components)
+* [Components Storybook](https://nulogy.github.io/design-system/)
+* [`@nulogy/components` package on npm](https://www.npmjs.com/package/@nulogy/components)  
+* [Workspace in the NDS GitHub repo](https://github.com/nulogy/design-system/tree/master/components)
 
 ## Guides
 * [Developing the Design System](http://nulogy.design/guides/setup)

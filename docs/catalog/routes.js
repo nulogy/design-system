@@ -93,6 +93,11 @@ export default [
     title: 'Components',
     pages: [
       {
+        path: '/components',
+        title: 'Introduction',
+        content: pageLoader(() => import('../../components/README.md'))
+      },
+      {
         path: '/components/button',
         title: 'Buttons',
         content: pageLoader(() => import('./components/buttons.md')),
@@ -156,6 +161,16 @@ export default [
         path: '/guides/deploying',
         title: 'Deploying to the web',
         content: pageLoader(() => import('./guides/deploying.md'))
+      },
+      {
+        path: '/guides/packages',
+        title: 'npm packages',
+        content: pageLoader(() => import('./guides/packages.md'))
+      },
+      {
+        path: '/guides/publishing',
+        title: 'Publishing packages to npm',
+        content: pageLoader(() => import('./guides/publishing.md'))
       },
     ]
   },
