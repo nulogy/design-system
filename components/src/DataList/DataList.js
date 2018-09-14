@@ -4,18 +4,21 @@ import tokens from '@nulogy/tokens';
 
 export const List = styled.dl`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-`;
+  grid-auto-flow: column dense;
+  ${({count = 1, columns = 3}) => css`
+    grid-template-columns: repeat(${columns}, 1fr);
+    grid-template-rows: repeat(${Math.ceil(count/columns)}, 1fr);
+  `}
 
+`;
 List.displayName = 'NDS.DataList.List';
-List.defaultProps = { theme: tokens };
 
 export const Key = styled.dt`
   ${({theme}) => css`
     font-weight: ${theme.font.weight.bold};
+    position: relative;
   `}
 `;
-
 Key.displayName = 'NDS.DataList.Key';
 Key.defaultProps = { theme: tokens };
 
@@ -25,17 +28,19 @@ export const Value = styled.dd`
     margin-bottom: ${theme.space.x1}px;
   `}
 `;
-
 Value.displayName = 'NDS.DataList.Value';
 Value.defaultProps = { theme: tokens };
 
+export const Pair = styled.span``;
+Pair.displayName = 'NDS.DataList.Pair';
+
 const DataList = ({ data }) => (
-  <List>
+  <List count={data.length} columns={3}>
     {data.map(([key, value]) => (
-      <span key={`${key}-${value}`}>
+      <Pair key={`${key}-${value}`}>
         <Key>{key}</Key>
         <Value>{value}</Value>
-      </span>
+      </Pair>
     ))}
   </List>
 )
