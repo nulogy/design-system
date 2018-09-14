@@ -116,20 +116,24 @@ export const breakpoints = {
   hd: 1920,
 }
 
+export const mediaQueries = {
+  desktop: `@media screen and (min-width: ${breakpoints.mobile + 1}px)`,
+  hd: `@media screen and (min-width: ${breakpoints.desktop + 1}px)`,
+  cinema: `@media screen and (min-width: ${breakpoints.hd + 1}px)`,
+  max:  {
+    mobile: `@media screen and (max-width: ${breakpoints.mobile}px)`,
+    desktop: `@media screen and (max-width: ${breakpoints.desktop}px)`,
+    hd: `@media screen and (max-width: ${breakpoints.hd}px)`,
+  }
+}
+
 export default {
   name: 'Nulogy Design System',
-<<<<<<< HEAD
   borderRadius,
   colour,
   font,
   space,
-  radius
-=======
-  borderRadius: borderRadius,
-  colour: colour,
-  font: font,
-  space: space,
-  radius: radius,
+  radius,
   breakpoints,
->>>>>>> NDS-280: adds breakpoints
+  mediaQueries
 };
