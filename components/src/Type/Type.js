@@ -11,25 +11,28 @@ const textBlock = ({ theme }) => css`
 `
 
 export const Text = styled.span`
-  ${({ theme }) => ({
-    fontSize: `${theme.font.size.medium}px`
+  ${({ theme, fontSize }) => ({
+    fontSize: `${theme.font.size[fontSize]}px`
   })}
 `;
 
 Text.displayName = 'NDS.Type.Text';
-Text.defaultProps = defaultProps;
+Text.defaultProps = { ...defaultProps, fontSize: 'medium' };
 
 export const P = styled(Text.withComponent('p'))`
   ${textBlock}
+  ${({ theme, fontSize }) => ({
+    fontSize: `${theme.font.size[fontSize]}px`
+  })}
 `;
 
 P.displayName = 'NDS.Type.P';
-P.defaultProps = defaultProps;
+P.defaultProps = { ...defaultProps, fontSize: 'medium' };
 
 export const Title = styled.h1`
   ${textBlock}
   ${({ theme }) => css`
-    font-size: ${theme.font.size.pageTitle}px,
+    font-size: ${theme.font.size.pageTitle}px;
     font-weight: ${theme.font.weight.medium};
   `}
 `;
