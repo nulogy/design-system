@@ -11,8 +11,8 @@ const lineHeight = name => ({ theme }) => theme.font.lineHeight[name] * theme.fo
 
 export const Cell = styled.td`
   ${ ({ theme }) => css`
-    font-size: ${theme.font.size.small}px;
-    line-height: ${lineHeight('smaller')({ theme }) / theme.font.size.small};
+    font-size: ${theme.font.size.medium}px;
+    line-height: ${theme.font.lineHeight.regular};
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
     &:first-child{
@@ -98,7 +98,7 @@ export const TemporaryTextInput = styled.input`
     width:100%;
     border: none;
     background: ${theme.colour.blue[300]};
-    font-size: ${theme.font.size.small}px;
+    font-size: ${theme.font.size.medium}px;
     padding: ${theme.space.half}px ${theme.space.x1}px;
     border-radius: ${theme.radius.small}px;
     &:focus{
