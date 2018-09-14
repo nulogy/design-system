@@ -34,8 +34,8 @@ Value.defaultProps = { theme: tokens };
 export const Pair = styled.span``;
 Pair.displayName = 'NDS.DataList.Pair';
 
-const DataList = ({ data }) => (
-  <List count={data.length} columns={3}>
+const DataList = ({ data, columns }) => (
+  <List count={data.length} columns={columns}>
     {data.map(([key, value]) => (
       <Pair key={`${key}-${value}`}>
         <Key>{key}</Key>
