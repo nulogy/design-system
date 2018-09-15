@@ -1,17 +1,24 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import facepaint from 'facepaint';
 import tokens from '@nulogy/tokens';
+
+const mq = theme => facepaint(Object.values(theme.mediaQueries));
+const responsiveColours = mq(tokens)({color: ['red', 'blue', 'green']})
+console.log('responsiveColours :', responsiveColours);
 
 export const List = styled.dl`
   display: grid;
   grid-auto-flow: column dense;
-  ${({count = 1, columns = 3}) => css`
+  ${({theme, count = 1, columns = 3, colour = ['red', 'blue', 'green']}) => css`
     grid-template-columns: repeat(${columns}, 1fr);
     grid-template-rows: repeat(${Math.ceil(count/columns)}, 1fr);
+    
+    ${responsiveColours}
   `}
-
 `;
 List.displayName = 'NDS.DataList.List';
+List.defaultProps = { theme: tokens };
 
 export const Key = styled.dt`
   ${({theme}) => css`
