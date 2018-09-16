@@ -111,3 +111,7 @@ One weird trick to win the struggle against whitespace issues. We do this in our
 ### [Deep dive CSS: font metrics, line-height and vertical-align — Vincent De Oliveira](http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 
 Sigh. What a mess.
+
+---
+
+_A version of this article was also published on [Medium](https://medium.com/@nulogy/a-design-systems-reading-list-8f492413281)._
