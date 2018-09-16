@@ -69,7 +69,7 @@ _"An icon is a symbol equally incomprehensible in all human languages."_ Lovely 
 
 ## [Space in Design Systems by Nathan Curtis](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62)
 
-_"Space epitomizes the “I design this way, you build that way” gap between design and dev."_
+_"Space epitomizes the 'I design this way, you build that way' gap between design and dev."_
 
 Inset, squish, stretch, stack, inline, and grid: Nathan Curtis gives us the tools and language to develop a systematic approach to spacing that bridges the gap between design and dev. 
 
