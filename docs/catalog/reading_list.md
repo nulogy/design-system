@@ -61,6 +61,11 @@ A cogent argument for the value of component-based-CSS and the power of writing 
 This influenced the approach we use in our own [Icon component](https://nulogy.design/components/icons).
 
 
+## [On Icons by Oliver Reichenstein](https://ia.net/topics/on-icons)
+
+_"An icon is a symbol equally incomprehensible in all human languages."_ Lovely illustrations.
+
+
 
 # Layout
 
