@@ -9,7 +9,12 @@
 - [Theory](#theory)
 - [Type](#type)
 
-
+CSS
+Icons
+Layout
+Maintenance and practices
+Theory
+Type
 
 # Component Design / React
 
@@ -100,7 +105,7 @@ Where does digital product design live? In images of the product drawn in design
 
 ## [Cropping Away Negative Impacts of Line Height by Kevin Powell](https://medium.com/eightshapes-llc/cropping-away-negative-impacts-of-line-height-84d744e016ce)
 
-One weird trick to win the struggle against weird whitespace issues. We do this in our [Type components](https://nulogy.design/components/type).
+One weird trick to win the struggle against whitespace issues. We do this in our [Type components](https://nulogy.design/components/type).
 
 
 ## [Deep dive CSS: font metrics, line-height and vertical-align by Vincent De Oliveira](http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
