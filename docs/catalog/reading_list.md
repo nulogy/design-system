@@ -3,6 +3,7 @@
 ### TOC
 - [Component Design / React](#component-design--react)
 - [CSS](#css)
+- [Icons](#icons)
 - [Layout](#layout)
 - [Maintenance and practices](#maintenance-and-practices)
 - [Theory](#theory)
@@ -51,6 +52,9 @@ This article completely blew me away and changed everything I believed in about 
 
 A cogent argument for the value of component-based-CSS and the power of writing CSS in Javascript.
 
+
+
+# Icons 
 
 ## [Align SVG Icons to Text and Say Goodbye to Font Icons by Elliot Dahl](https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4)
 
