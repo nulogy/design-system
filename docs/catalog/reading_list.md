@@ -1,4 +1,4 @@
-> Here's a list of books and articles that were helpful to the Design Ops team at Nulogy as we were designing and building Nulogy Design System.
+> A list of books and articles that have been helpful to the Design Ops team at Nulogy as we design and build Nulogy Design System.
 
 ### TOC
 - [Component Design / React](#component-design--react)
