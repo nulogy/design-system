@@ -9,13 +9,6 @@
 - [Theory](#theory)
 - [Type](#type)
 
-CSS
-Icons
-Layout
-Maintenance and practices
-Theory
-Type
-
 # Component Design / React
 
 ## [Atomic Design by Brad Frost](http://bradfrost.com/blog/post/atomic-web-design/)
@@ -77,6 +70,13 @@ _"An icon is a symbol equally incomprehensible in all human languages."_ Lovely 
 ## [Learning from Lego: A Step Forward in Modular Web Design by Samantha Zhang](https://alistapart.com/article/learning-from-lego-a-step-forward-in-modular-web-design)
 
 When you are designing components that can be arbitrarily nested, it's hard to develop a strategy for applying whitespace that works. This is one solid strategy.
+
+
+## [Space in Design Systems by Nathan Curtis](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62)
+
+_"Space epitomizes the “I design this way, you build that way” gap between design and dev."_
+
+Inset, squish, stretch, stack, inline, and grid: Nathan Curtis gives us the tools and language to develop a systematic approach to spacing that bridges the gap between design and dev. 
 
 
 
