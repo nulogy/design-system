@@ -131,7 +131,18 @@ export default [
           CreateRow: require('@nulogy/components').Tables.CreateRow,
           TextInput: require('@nulogy/components').Tables.TemporaryTextInput,
         }
-      }
+      }, {
+        path: '/components/type',
+        title: 'Type',
+        content: pageLoader(() => import('./components/type.md')),
+        imports: {
+          Title: require('@nulogy/components').Type.Title,
+          SectionTitle: require('@nulogy/components').Type.SectionTitle,
+          SubsectionTitle: require('@nulogy/components').Type.SubsectionTitle,
+          P: require('@nulogy/components').Type.P,
+          Text: require('@nulogy/components').Type.Text
+        }
+      },   
     ]
   },
   {

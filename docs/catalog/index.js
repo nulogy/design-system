@@ -4,6 +4,7 @@ import { Catalog } from 'catalog';
 import nulogyLogoMark from './static/nulogy_mark.svg';
 import pages from './routes';
 import { colour, font } from '@nulogy/tokens';
+import css from '@nulogy/css';
 
 const config = {
   title: 'Nulogy Design System',
