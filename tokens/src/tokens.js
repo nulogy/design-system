@@ -111,19 +111,18 @@ export const shadow = {
 };
 
 export const breakpoints = {
-  mobile: 768,
-  desktop: 1024,
-  hd: 1920,
+  medium: 640,
+  large: 1024,
 }
 
 export const mediaQueries = {
-  desktop: `@media screen and (min-width: ${breakpoints.mobile + 1}px)`,
-  hd: `@media screen and (min-width: ${breakpoints.desktop + 1}px)`,
-  cinema: `@media screen and (min-width: ${breakpoints.hd + 1}px)`,
+  min: {
+    medium: `@media screen and (min-width: ${breakpoints.medium + 1}px)`,
+    large: `@media screen and (min-width: ${breakpoints.large + 1}px)`,
+  },
   max:  {
-    mobile: `@media screen and (max-width: ${breakpoints.mobile}px)`,
-    desktop: `@media screen and (max-width: ${breakpoints.desktop}px)`,
-    hd: `@media screen and (max-width: ${breakpoints.hd}px)`,
+    medium: `@media screen and (max-width: ${breakpoints.medium}px)`,
+    large: `@media screen and (max-width: ${breakpoints.large}px)`,
   }
 }
 
