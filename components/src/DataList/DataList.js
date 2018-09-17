@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import facepaint from 'facepaint';
 import tokens from '@nulogy/tokens';
+
+const defaultProps = { theme: tokens };
+const propTypes = { theme: PropTypes.object };
 
 const mq = theme => facepaint(Object.values(theme.mediaQueries.min));
 
@@ -25,10 +29,18 @@ export const List = styled.dl`
 `;
 List.displayName = 'NDS.DataList.List';
 List.defaultProps = { 
-  theme: tokens,
+  ...defaultProps,
   count: 1,
   columns: [1, 2, 3],
 };
+List.propTypes = {
+  ...propTypes,
+  count: PropTypes.number,
+  columns: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.number)
+  ])
+}
 
 export const Key = styled.dt`
   ${({theme}) => css`
@@ -37,7 +49,8 @@ export const Key = styled.dt`
   `}
 `;
 Key.displayName = 'NDS.DataList.Key';
-Key.defaultProps = { theme: tokens };
+Key.defaultProps = { ...defaultProps };
+Key.propTypes = { ...propTypes };
 
 export const Value = styled.dd`
   margin-left: 0;
@@ -46,7 +59,8 @@ export const Value = styled.dd`
   `}
 `;
 Value.displayName = 'NDS.DataList.Value';
-Value.defaultProps = { theme: tokens };
+Value.defaultProps = { ...defaultProps };
+Value.propTypes = { ...propTypes };
 
 export const Pair = styled.span``;
 Pair.displayName = 'NDS.DataList.Pair';
@@ -61,4 +75,15 @@ const DataList = ({ data, columns }) => (
     ))}
   </List>
 );
+DataList.displayName = 'NDS.DataList';
+DataList.defaultProps = { 
+  columns: [1, 2, 3],
+};
+DataList.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.array).isRequired,
+  columns: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.number)
+  ])
+}
 export default DataList;
