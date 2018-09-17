@@ -13,11 +13,14 @@ const castArray = val => {
 const columns = ({theme, count, columns}) => mq(theme)({
   gridTemplateColumns: castArray(columns).map(cols => `repeat(${cols}, 1fr)`),
   gridTemplateRows: castArray(columns).map(cols => `repeat(${Math.ceil(count/cols)}, 1fr)`),
+  display: ['block', 'grid'],
+  marginBottom: [`${theme.space.x1}px`, 0],
+  gridAutoFlow: 'column dense',
+  gridGap: `${theme.space.x1}px`
 });
 
 export const List = styled.dl`
-  display: grid;
-  grid-auto-flow: column dense;
+  margin: 0;
   ${ columns }
 `;
 List.displayName = 'NDS.DataList.List';
