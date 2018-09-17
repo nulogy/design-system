@@ -9,6 +9,7 @@ Object {
     "DataList": [Function],
     "Key": [Function],
     "List": [Function],
+    "Pair": [Function],
     "Value": [Function],
   },
   "Icons": Object {
