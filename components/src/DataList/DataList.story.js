@@ -40,6 +40,21 @@ storiesOf('DataList', module)
       <DataList data={data(18)} columns={10} />
     </React.Fragment>
   ))
+  .add('BUG: doesn\'t fill all columns with certain column / item# combos', () => (
+    <React.Fragment>
+      <Type.SubsectionTitle>4 items / 3 cols (only renders 2 cols)</Type.SubsectionTitle>
+      <DataList data={data(4)} columns={3} />
+
+      <Type.SubsectionTitle>5 items / 4 cols (only renders 3 cols)</Type.SubsectionTitle>
+      <DataList data={data(5)} columns={4} />
+      
+      <Type.SubsectionTitle>6 items / 4 cols (only renders 3 cols)</Type.SubsectionTitle>
+      <DataList data={data(6)} columns={4} />
+      
+      <Type.SubsectionTitle>6 items / 8 cols (only renders 5 cols)</Type.SubsectionTitle>
+      <DataList data={data(9)} columns={8} />
+    </React.Fragment>
+  ))
   .add('Custom rendering via children as render prop', () => (
     <DataList data={data(6)}>
       {(key, value) => (
