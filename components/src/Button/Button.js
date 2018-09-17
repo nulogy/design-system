@@ -106,7 +106,7 @@ const Wrapper = styled.span`
   & + & {
     margin-left: 2px;
   }
-  
+
   > *:first-child {
     left: -0.143em;
     > svg {
