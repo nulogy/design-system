@@ -65,12 +65,18 @@ Value.propTypes = { ...propTypes };
 export const Pair = styled.span``;
 Pair.displayName = 'NDS.DataList.Pair';
 
-const DataList = ({ data, columns }) => (
+const render = (key, value) => (
+  <React.Fragment>
+    <Key>{key}</Key>
+    <Value>{value}</Value>
+  </React.Fragment>
+);
+
+const DataList = ({ data, columns, children = render }) => (
   <List count={data.length} columns={columns}>
     {data.map(([key, value]) => (
       <Pair key={`${key}-${value}`}>
-        <Key>{key}</Key>
-        <Value>{value}</Value>
+        {children(key, value)}
       </Pair>
     ))}
   </List>
@@ -84,6 +90,7 @@ DataList.propTypes = {
   columns: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.number)
-  ])
+  ]),
+  children: PropTypes.func
 }
 export default DataList;

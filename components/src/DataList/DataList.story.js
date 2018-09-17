@@ -39,5 +39,15 @@ storiesOf('DataList', module)
       <Type.SubsectionTitle>10 Column</Type.SubsectionTitle>
       <DataList data={data(18)} columns={10} />
     </React.Fragment>
+  ))
+  .add('Custom rendering via children as render prop', () => (
+    <DataList data={data(6)}>
+      {(key, value) => (
+        <React.Fragment>
+          <h1><b>"{key}"</b> is in an <code>h1</code> tag</h1>
+          <p><b>"{value}"</b> is in a <code>p</code> tag</p>
+        </React.Fragment>
+      )}
+    </DataList>
   ));
 
