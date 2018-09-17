@@ -35,5 +35,12 @@
     "styled-normalize": "^8.0.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-1"
+    ]
   }
 }
