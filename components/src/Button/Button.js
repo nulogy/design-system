@@ -127,8 +127,8 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children }) => (
-  <StyledButton>
+const Button = ({ children, ...props }) => (
+  <StyledButton {...props}>
     {Array.isArray(children) ? children.map(child => <Wrapper>{child}</Wrapper>) : children}
   </StyledButton>
 );
