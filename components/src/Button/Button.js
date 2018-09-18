@@ -80,7 +80,11 @@ const size = ({ size = 'medium' }) => (({
   medium: css`
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
-    padding: ${withoutBorder(space.x1)}px;
+    padding: ${withoutBorder(space.x1)}px
+    > *:first-child {
+      height: ${lineHeight('smaller') / font.size.small}em;
+      width: ${lineHeight('smaller') / font.size.small}em;
+    }
   `,
 
   small: css`
@@ -92,7 +96,10 @@ const size = ({ size = 'medium' }) => (({
 
 const Wrapper = styled.span`
   & + & {
-    margin-left: ${space.half}px;
+    margin-left: 2px;
+  }
+  > *:first-child {
+    left: -0.125em;
   }
 `;
 
@@ -106,6 +113,10 @@ const StyledButton = styled.button`
   border-radius: ${radius.small}px;
   transition: .1s  ease-in-out;
   text-align: left;
+  > *:first-child {
+    top: -0.065em;
+    left: -0.065em;
+  }
 
   ${ size }
   ${ type }
