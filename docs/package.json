@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/nulogy-design",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "main": "dist/index.html",
   "dependencies": {
-    "@nulogy/components": "^0.1.11",
+    "@nulogy/components": "^0.1.12",
     "catalog": "^3.5.3",
     "color-convert": "^1.9.2",
     "react": "^16.3.2",
