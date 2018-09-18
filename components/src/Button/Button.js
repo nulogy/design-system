@@ -91,10 +91,9 @@ const size = ({ size = 'medium' }) => (({
 })[size]);
 
 const Wrapper = styled.span`
-  margin-left: ${space.half}px;
-  margin-right: ${space.half}px;
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
+  & + & {
+    margin-left: ${space.half}px;
+  }
 `;
 
 const StyledButton = styled.button`
