@@ -20,7 +20,7 @@ const config = {
     textColor: colour.black,
     background: colour.white,
     linkHoverColor: colour.black,
-    lightColor: colour.yellow['700'],
+    lightColor: colour.neutral['300'],
 
     sidebarColor: colour.neutral['800'],
     sidebarColorText: colour.neutral['500'],
@@ -29,7 +29,7 @@ const config = {
 
     codeColor: colour.blue['800'],
     linkColor: colour.blue['600'],
-    
+
     pageHeadingBackground: colour.blue['300'],
     pageHeadingTextColor: colour.blue['800'],
 
