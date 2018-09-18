@@ -26,18 +26,6 @@ name: "red.base (red.600)"
 value: "#D13D3D"
 ```
 
-```color
-span: 1
-name: "white (neutral.100)"
-value: "#FFFFFF"
-```
-
-```color
-span: 1
-name: "black (neutral.900)"
-value: "#03101A"
-```
-
 ## Neutral Palette
 Neutral colours are used for UI elements such as backgrounds, borders, dividers, text and drop-shadows.
 
