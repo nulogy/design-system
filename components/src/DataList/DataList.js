@@ -28,7 +28,7 @@ export const List = styled.dl`
   ${ columns }
 `;
 List.displayName = 'NDS.DataList.List';
-List.defaultProps = { 
+List.defaultProps = {
   ...defaultProps,
   count: 1,
   columns: [1, 2, 3],
@@ -44,7 +44,12 @@ List.propTypes = {
 
 export const Key = styled.dt`
   ${({theme}) => css`
-    font-weight: ${theme.font.weight.bold};
+    //font-weight: ${theme.font.weight.bold};
+    font-size: ${theme.font.size.small}px;
+    color: ${theme.colour.neutral[600]};
+    text-transform: uppercase;
+    letter-spacing: .075em;
+    line-height: 1.413;
     position: relative;
   `}
 `;
@@ -55,7 +60,7 @@ Key.propTypes = { ...propTypes };
 export const Value = styled.dd`
   margin-left: 0;
   ${({theme}) => css`
-    margin-bottom: ${theme.space.x1}px;
+    margin-bottom: ${theme.space.x2}px;
   `}
 `;
 Value.displayName = 'NDS.DataList.Value';
@@ -82,7 +87,7 @@ const DataList = ({ data, columns, children = render }) => (
   </List>
 );
 DataList.displayName = 'NDS.DataList';
-DataList.defaultProps = { 
+DataList.defaultProps = {
   columns: [1, 2, 3],
 };
 DataList.propTypes = {
