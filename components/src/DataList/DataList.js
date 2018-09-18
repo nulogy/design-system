@@ -49,7 +49,7 @@ export const Key = styled.dt`
     color: ${theme.colour.neutral[600]};
     text-transform: uppercase;
     letter-spacing: .075em;
-    line-height: 1.413;
+    line-height: 1.413; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
     position: relative;
   `}
 `;
