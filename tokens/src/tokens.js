@@ -114,9 +114,9 @@ export const shadow = {
 
 export default {
   name: 'Nulogy Design System',
-  borderRadius: borderRadius,
-  colour: colour,
-  font: font,
-  space: space,
-  radius: radius,
+  borderRadius,
+  colour,
+  font,
+  space,
+  radius
 };
