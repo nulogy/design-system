@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1"
   },
   "dependencies": {
     "babel-jest": "22.4.4",
@@ -28,14 +29,8 @@
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
+      "env",
+      "stage-1"
     ]
   }
 }
