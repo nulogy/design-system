@@ -1,4 +1,4 @@
-## Typography 
+## Typography
 
 ```table
 span: 4

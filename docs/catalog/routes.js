@@ -142,7 +142,7 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      },   
+      },
     ]
   },
   {

@@ -4,8 +4,7 @@
 ```react
 <Link>Link</Link>
 ```
-
-## Link Without Underline
+Can be rendered without an underline.
 ```react
 <Link underline={false}>Link</Link>
 ```
