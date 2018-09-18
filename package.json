@@ -20,7 +20,7 @@
     
     "build:all": "lerna run build --stream",
     "build": "yarn build:all --no-private",
-    "build:docs": "yarn build && yarn docs build",
+    "build:docs": "yarn docs build",
     "watch": "lerna run watch --no-private --stream --parallel",
     
     "prepublishOnly": "yarn pristine && yarn install",
