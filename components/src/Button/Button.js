@@ -75,6 +75,10 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
+    > *:first-child {
+      height: ${lineHeight('regular') / font.size.large}em;
+      width: ${lineHeight('regular') / font.size.large}em;
+    }
   `,
 
   medium: css`
@@ -91,6 +95,10 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
+    > *:first-child {
+      height: ${lineHeight('smaller') / font.size.smallest}em;
+      width: ${lineHeight('smaller') / font.size.smallest}em;
+    }
   `
 })[size]);
 
