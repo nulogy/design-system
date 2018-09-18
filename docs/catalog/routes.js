@@ -148,6 +148,7 @@ export default [
   {
     title: 'Tokens',
     path: '/tokens',
+    imports: colourImports,
     content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {
