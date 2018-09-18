@@ -3,11 +3,10 @@
 exports[`tokens matches snapshot 1`] = `
 Object {
   "borderRadius": "3px",
-  "breakpoints": Object {
-    "desktop": 1024,
-    "hd": 1920,
-    "mobile": 768,
-  },
+  "breakpoints": Array [
+    640,
+    1024,
+  ],
   "colour": Object {
     "base": "#0E77D2",
     "black": "#03101A",
@@ -91,6 +90,16 @@ Object {
       "bold": 700,
       "medium": 500,
       "normal": 400,
+    },
+  },
+  "mediaQueries": Object {
+    "max": Object {
+      "large": "@media screen and (max-width: 1024px)",
+      "medium": "@media screen and (max-width: 640px)",
+    },
+    "min": Object {
+      "large": "@media screen and (min-width: 1025px)",
+      "medium": "@media screen and (min-width: 641px)",
     },
   },
   "name": "Nulogy Design System",

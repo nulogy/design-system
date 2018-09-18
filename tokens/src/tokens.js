@@ -110,19 +110,19 @@ export const shadow = {
   far: '0 6px 15px 0 rgba(3,16,26, 0.33);'
 };
 
-export const breakpoints = {
-  medium: 640,
-  large: 1024,
-}
+export const breakpoints = [
+  640,
+  1024,
+]
 
 export const mediaQueries = {
   min: {
-    medium: `@media screen and (min-width: ${breakpoints.medium + 1}px)`,
-    large: `@media screen and (min-width: ${breakpoints.large + 1}px)`,
+    medium: `@media screen and (min-width: ${breakpoints[0] + 1}px)`,
+    large: `@media screen and (min-width: ${breakpoints[1] + 1}px)`,
   },
   max:  {
-    medium: `@media screen and (max-width: ${breakpoints.medium}px)`,
-    large: `@media screen and (max-width: ${breakpoints.large}px)`,
+    medium: `@media screen and (max-width: ${breakpoints[0]}px)`,
+    large: `@media screen and (max-width: ${breakpoints[1]}px)`,
   }
 }
 
