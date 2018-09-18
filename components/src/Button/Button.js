@@ -75,34 +75,29 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
-    * {
-      height: ${lineHeight('regular') / font.size.large}em;
-      width: ${lineHeight('regular') / font.size.large}em;
-    }
   `,
 
   medium: css`
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px;
-    * {
-      height: ${lineHeight('smaller') / font.size.small}em;
-      width: ${lineHeight('smaller') / font.size.small}em;
-    }
   `,
 
   small: css`
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
-    * {
-      height: ${lineHeight('smaller') / font.size.smaller}em;
-      width: ${lineHeight('smaller') / font.size.smaller}em;
-    }
   `
 })[size]);
 
-const Button = styled.button`
+const Wrapper = styled.span`
+  margin-left: ${space.half}px;
+  margin-right: ${space.half}px;
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+`;
+
+const StyledButton = styled.button`
   ${buttonReset}
   border-style: solid;
   border-width: ${borderWidth}px;
@@ -131,10 +126,12 @@ const Button = styled.button`
   &:disabled {
     pointer-events: none;
   }
-
-  * {
-    position: relative;
-  }
 `;
+
+const Button = ({ children }) => (
+  <StyledButton>
+    {Array.isArray(children) ? children.map(child => <Wrapper>{child}</Wrapper>) : children}
+  </StyledButton>
+);
 
 export default Button;
