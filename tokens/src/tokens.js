@@ -108,9 +108,23 @@ export const shadow = {
   close: '0 2px 12px 0 rgba(3,16,26, 0.2);',
   middle: '0 3px 12px 0 rgba(3,16,26, 0.25);',
   far: '0 6px 15px 0 rgba(3,16,26, 0.33);'
-
-
 };
+
+export const breakpoints = {
+  medium: 640,
+  large: 1024,
+}
+
+export const mediaQueries = {
+  min: {
+    medium: `@media screen and (min-width: ${breakpoints.medium + 1}px)`,
+    large: `@media screen and (min-width: ${breakpoints.large + 1}px)`,
+  },
+  max:  {
+    medium: `@media screen and (max-width: ${breakpoints.medium}px)`,
+    large: `@media screen and (max-width: ${breakpoints.large}px)`,
+  }
+}
 
 export default {
   name: 'Nulogy Design System',
@@ -118,5 +132,7 @@ export default {
   colour,
   font,
   space,
-  radius
+  radius,
+  breakpoints,
+  mediaQueries
 };
