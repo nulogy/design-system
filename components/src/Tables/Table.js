@@ -59,7 +59,11 @@ export const Button = styled(QuietButton)`
 
 Button.defaultProps = defaultProps;
 
-export const Row = styled.tr``;
+export const Row = styled.tr`
+  ${ ({ theme }) => css`
+    border-bottom: solid 1px ${theme.colour.blue['300']};
+  `}
+`;
 
 export const Header = styled.thead`
   text-align: left;
@@ -67,7 +71,12 @@ export const Header = styled.thead`
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
   ${ ({ theme }) => css`
-    font-weight: bold;
+    font-size: ${theme.font.size.small}px;
+    color: ${theme.colour.neutral[600]};
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1.143; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
+    font-weight: normal;
     vertical-align: bottom;
   `}
 `;
@@ -106,11 +115,6 @@ export const TemporaryTextInput = styled.input`
 TemporaryTextInput.defaultProps = defaultProps;
 
 export const Body = styled.tbody`
-  ${ ({ theme }) => css`
-    ${Row}:nth-of-type(odd){
-      background-color: ${theme.colour.blue['200']};
-    }
-  `}
 `;
 
 Body.defaultProps = defaultProps;
