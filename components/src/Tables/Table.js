@@ -8,7 +8,7 @@ import QuietButton from '../Button/QuietButton';
 const defaultProps = { theme: tokens };
 
 export const Cell = styled.td`
-  ${fontMetrics()}
+  ${'' /* ${fontMetrics()} */}
   ${ ({ theme }) => css`
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;

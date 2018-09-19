@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { colour, space, font, radius, shadow, fontMetrics } from '@nulogy/tokens';
+import { colour, space, font, radius, shadow } from '@nulogy/tokens';
+import { fontMetrics } from '../utils.js';
 
 const borderWidth = 1;
 
@@ -71,19 +72,19 @@ const type = ({ type = 'button' }) => (({
 
 const size = ({ size = 'medium' }) => (({
   large: css`
-    ${fontMetrics('large', 'medium')}
+    ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px ${space.x3}px;
   `,
 
   medium: css`
-    ${fontMetrics()}
+    ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px ${space.x2}px;
   `,
 
   small: css`
-    ${fontMetrics('smaller', 'small')}
+    ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
   `

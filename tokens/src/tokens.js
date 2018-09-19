@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components';
-
 export const borderRadius ='3px';
 
 export const font = {
@@ -36,11 +34,6 @@ export const font = {
     }
   }
 };
-
-export const fontMetrics = (size = 'medium', target = 'medium') => ({ theme = { font } }) => css`
-  font-size: ${theme.font.size[size]}px;
-  line-height: ${font.lineHeight.target[target] / font.size[size]};
-`;
 
 export const space = {
   half: 4,
