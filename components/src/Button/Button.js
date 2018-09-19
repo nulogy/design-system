@@ -106,10 +106,11 @@ const Wrapper = styled.span`
   & + & {
     margin-left: 2px;
   }
+  
   > *:first-child {
-    left: -0.125em;
+    left: -0.143em;
     > svg {
-      top: -0.0625em;
+      top: -0.0765em;
     }
   }
 `;
