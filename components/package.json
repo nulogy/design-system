@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -47,7 +47,7 @@
     "rmdi": "^1.0.1"
   },
   "devDependencies": {
-    "@nulogy/tokens": "^0.1.12",
+    "@nulogy/tokens": "^0.1.13",
     "@storybook/addon-actions": "^3.4.5",
     "@storybook/addon-links": "^3.4.5",
     "@storybook/addon-options": "^3.4.10",
