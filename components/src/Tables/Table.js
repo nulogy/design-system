@@ -123,3 +123,28 @@ export const Table = styled.table`
 `;
 
 Table.defaultProps = defaultProps;
+
+export const DataTable = ({ headers, data }) => (
+  <Table>
+    <Header>
+      <Row>
+      {headers.map(header => (
+        <HeaderCell>
+          {header}
+        </HeaderCell>
+      ))}
+      </Row>
+    </Header>
+    <Body>
+    {data.map(row => (
+      <Row>
+      {row.map(cell => (
+        <Cell>
+          {cell}
+        </Cell>
+      ))}
+      </Row>
+    ))}
+    </Body>
+  </Table>
+)
