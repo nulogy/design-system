@@ -131,7 +131,7 @@ export const DataTable = ({ data, headers }) => (
     <Header>
       <Row>
       {headers.map(header => (
-        <HeaderCell>
+        <HeaderCell key={`DataTableHeader_${header}`}>
           {header}
         </HeaderCell>
       ))}
@@ -141,9 +141,9 @@ export const DataTable = ({ data, headers }) => (
 
     <Body>
     {data.map(row => (
-      <Row key={`row${row}`}>
+      <Row key={`DataTableHeaderRow_${row}`}>
       {row.map(cell => (
-        <Cell key={`cell${row}${cell}`}>
+        <Cell key={`DataTableHeaderCell_${row}_${cell}`}>
           {cell}
         </Cell>
       ))}
