@@ -44,7 +44,6 @@ List.propTypes = {
 
 export const Key = styled.dt`
   ${({theme}) => css`
-    //font-weight: ${theme.font.weight.bold};
     font-size: ${theme.font.size.small}px;
     color: ${theme.colour.neutral[600]};
     text-transform: uppercase;
