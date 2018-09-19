@@ -60,3 +60,15 @@ export const SubsectionTitle = styled(Title.withComponent('h3'))`
 
 SubsectionTitle.displayName = 'NDS.Type.SubsectionTitle';
 SubsectionTitle.defaultProps = { theme: tokens };
+
+export const labelStyles = ({theme}) => css`
+  font-size: ${theme.font.size.small}px;
+  color: ${theme.colour.neutral[600]};
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 1.143; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
+`;
+
+export const Label = styled.label`
+  ${labelStyles}
+`;

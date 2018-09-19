@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Text, P, Title, SectionTitle, SubsectionTitle } from './Type';
+import { Text, P, Title, SectionTitle, SubsectionTitle, Label } from './Type';
 
 storiesOf('Type', module)
   .add('All components', () => (
@@ -10,6 +10,7 @@ storiesOf('Type', module)
       <SubsectionTitle>The SubsectionTitle component is for sub-sections of a page.</SubsectionTitle>
       <P>The P component is for block text.</P>
       <Text>Text component is for inline content.</Text>
+      <Label>Label component is for labeling things.</Label>
     </React.Fragment>
   ))
   .add('Conent with a mix of headings and paragraphs', () => (
@@ -79,5 +80,12 @@ storiesOf('Type', module)
       <SubsectionTitle>This is a block of text.</SubsectionTitle>
       <SubsectionTitle>The SubsectionTitle component is for page Subsectiontitles. It gives you a standard font size and line height.</SubsectionTitle>
       <SubsectionTitle>Aliquam erat volutpat. Integer elementum orci vestibulum porta venenatis. Phasellus porta quam ligula, eu venenatis nisl rutrum gravida. Aliquam ultricies sollicitudin accumsan. Duis consequat ex sit amet mi laoreet, sed fringilla augue interdum. Vivamus pharetra laoreet gravida. Pellentesque varius vitae erat ullamcorper vestibulum. Nunc ornare lectus risus, eu dapibus nisl iaculis sit amet. Pellentesque aliquet orci mi, quis elementum tellus viverra in. Mauris sit amet mi diam. Cras rhoncus, justo et consectetur tempor, quam odio pulvinar velit, ut vulputate urna mi ut tortor. Quisque ac tortor pretium, volutpat neque sed, molestie mauris. Duis eros nisi, faucibus quis orci sit amet, ornare dignissim purus. Proin eu sem ex.</SubsectionTitle>
+    </React.Fragment>
+  ))
+  .add('Label', () => (
+    <React.Fragment>
+      <Label>This is a block of text.</Label>
+      <Label>The Label component is for page Labels. It gives you a standard font size and line height.</Label>
+      <Label>Aliquam erat volutpat. Integer elementum orci vestibulum porta venenatis. Phasellus porta quam ligula, eu venenatis nisl rutrum gravida. Aliquam ultricies sollicitudin accumsan. Duis consequat ex sit amet mi laoreet, sed fringilla augue interdum. Vivamus pharetra laoreet gravida. Pellentesque varius vitae erat ullamcorper vestibulum. Nunc ornare lectus risus, eu dapibus nisl iaculis sit amet. Pellentesque aliquet orci mi, quis elementum tellus viverra in. Mauris sit amet mi diam. Cras rhoncus, justo et consectetur tempor, quam odio pulvinar velit, ut vulputate urna mi ut tortor. Quisque ac tortor pretium, volutpat neque sed, molestie mauris. Duis eros nisi, faucibus quis orci sit amet, ornare dignissim purus. Proin eu sem ex.</Label>
     </React.Fragment>
   ));

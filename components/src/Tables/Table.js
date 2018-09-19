@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
+import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
 
 const defaultProps = { theme: tokens };
@@ -59,17 +60,20 @@ export const Button = styled(QuietButton)`
 
 Button.defaultProps = defaultProps;
 
-export const Row = styled.tr``;
+export const Row = styled.tr`
+  ${ ({ theme }) => css`
+    border-bottom: solid 1px ${theme.colour.blue['300']};
+  `}
+`;
 
 export const Header = styled.thead`
   text-align: left;
 `;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
-  ${ ({ theme }) => css`
-    font-weight: bold;
-    vertical-align: bottom;
-  `}
+  ${labelStyles}
+  font-weight: normal;
+  vertical-align: bottom;
 `;
 
 HeaderCell.defaultProps = defaultProps;
@@ -106,11 +110,6 @@ export const TemporaryTextInput = styled.input`
 TemporaryTextInput.defaultProps = defaultProps;
 
 export const Body = styled.tbody`
-  ${ ({ theme }) => css`
-    ${Row}:nth-of-type(odd){
-      background-color: ${theme.colour.blue['200']};
-    }
-  `}
 `;
 
 Body.defaultProps = defaultProps;
