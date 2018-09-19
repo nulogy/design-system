@@ -62,11 +62,13 @@ Object {
     "TemporaryTextInput": [Function],
   },
   "Type": Object {
+    "Label": [Function],
     "P": [Function],
     "SectionTitle": [Function],
     "SubsectionTitle": [Function],
     "Text": [Function],
     "Title": [Function],
+    "labelStyles": [Function],
   },
 }
 `;
