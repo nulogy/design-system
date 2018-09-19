@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
 import QuietButton from '../Button/QuietButton';
@@ -124,7 +125,7 @@ export const Table = styled.table`
 
 Table.defaultProps = defaultProps;
 
-export const DataTable = ({ headers, data }) => (
+export const DataTable = ({ data, headers }) => (
   <Table>
     <Header>
       <Row>
@@ -147,4 +148,9 @@ export const DataTable = ({ headers, data }) => (
     ))}
     </Body>
   </Table>
-)
+);
+
+DataTable.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.array).isRequired,
+  headers: PropTypes.array
+}
