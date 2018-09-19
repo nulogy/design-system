@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
+import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
 
 const defaultProps = { theme: tokens };
@@ -70,15 +71,9 @@ export const Header = styled.thead`
 `;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
-  ${ ({ theme }) => css`
-    font-size: ${theme.font.size.small}px;
-    color: ${theme.colour.neutral[600]};
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    line-height: 1.143; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
-    font-weight: normal;
-    vertical-align: bottom;
-  `}
+  ${labelStyles}
+  font-weight: normal;
+  vertical-align: bottom;
 `;
 
 HeaderCell.defaultProps = defaultProps;
