@@ -108,6 +108,9 @@ const Wrapper = styled.span`
   }
   > *:first-child {
     left: -0.125em;
+    > svg {
+      top: -0.0625em;
+    }
   }
 `;
 
