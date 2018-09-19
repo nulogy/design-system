@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import facepaint from 'facepaint';
 import tokens from '@nulogy/tokens';
+import { labelStyles } from '../Type/Type';
 
 const defaultProps = { theme: tokens };
 const propTypes = { theme: PropTypes.object };
@@ -43,14 +44,7 @@ List.propTypes = {
 }
 
 export const Key = styled.dt`
-  ${({theme}) => css`
-    font-size: ${theme.font.size.small}px;
-    color: ${theme.colour.neutral[600]};
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    line-height: 1.413; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
-    position: relative;
-  `}
+  ${labelStyles}
 `;
 Key.displayName = 'NDS.DataList.Key';
 Key.defaultProps = { ...defaultProps };
