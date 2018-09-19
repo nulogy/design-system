@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { tokens, fontMetrics } from '@nulogy/tokens';
+import { tokens } from '@nulogy/tokens';
+import { fontMetrics } from '../utils';
 import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
 
 const defaultProps = { theme: tokens };
 
 export const Cell = styled.td`
-  ${'' /* ${fontMetrics()} */}
+  ${fontMetrics()}
   ${ ({ theme }) => css`
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
