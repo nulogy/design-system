@@ -5,7 +5,11 @@ import { DataTable, Table, Cell, ActionCell, Row, CreateRow, Body, Header, Heade
 storiesOf('Table/DataTable', module)
   .add('default', () => (
     <DataTable 
-      headers={['Header 1', 'Header 2', 'Header 3']} 
+      headers={[
+        'Header 1', 
+        'Header 2', 
+        'Header 3'
+      ]} 
       data={[
         [1, 2, 3],
         [11, 22, 33],
