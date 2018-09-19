@@ -22,8 +22,16 @@ export const font = {
     bold: 700
   },
   lineHeight: {
-    smaller: 1,
-    regular: 1.5
+    target: {
+      small: 16,
+      medium: 24,
+      large: 32,
+    },
+    ratio: {
+      smaller: 1,
+      small: 1.2,
+      medium: 1.5
+    }
   }
 };
 

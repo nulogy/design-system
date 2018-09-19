@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import tokens from '@nulogy/tokens';
+import { tokens } from '@nulogy/tokens';
+import { fontMetrics } from '../utils';
 import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
 
 const defaultProps = { theme: tokens };
 
-const lineHeight = name => ({ theme }) => theme.font.lineHeight[name] * theme.font.size.medium;
-
 export const Cell = styled.td`
+  ${fontMetrics()}
   ${ ({ theme }) => css`
-    font-size: ${theme.font.size.small}px;
-    line-height: ${lineHeight('smaller')({ theme }) / theme.font.size.small};
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
     &:first-child{
@@ -98,7 +96,7 @@ export const TemporaryTextInput = styled.input`
     width:100%;
     border: none;
     background: ${theme.colour.blue[300]};
-    font-size: ${theme.font.size.small}px;
+    font-size: ${theme.font.size.medium}px;
     padding: ${theme.space.half}px ${theme.space.x1}px;
     border-radius: ${theme.radius.small}px;
     &:focus{
