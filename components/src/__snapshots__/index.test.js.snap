@@ -54,6 +54,7 @@ Object {
     "Button": [Function],
     "Cell": [Function],
     "CreateRow": [Function],
+    "DataTable": [Function],
     "Header": [Function],
     "HeaderCell": [Function],
     "Row": [Function],
