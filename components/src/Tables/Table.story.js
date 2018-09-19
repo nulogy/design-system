@@ -1,8 +1,31 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Table, Cell, ActionCell, Row, CreateRow, Body, Header, HeaderCell, Button, TemporaryTextInput } from './';
+import { DataTable, Table, Cell, ActionCell, Row, CreateRow, Body, Header, HeaderCell, Button, TemporaryTextInput } from './';
 
-storiesOf('Table', module)
+storiesOf('Table/DataTable', module)
+  .add('default', () => (
+    <DataTable 
+      headers={[
+        'Header 1', 
+        'Header 2', 
+        'Header 3'
+      ]} 
+      data={[
+        [1, 2, 3],
+        [11, 22, 33],
+        [111, 222, 333]
+      ]} />
+  ))
+  .add('with no headers', () => (
+    <DataTable 
+      data={[
+        [1, 2, 3],
+        [11, 22, 33],
+        [111, 222, 333]
+      ]} />
+  ));
+
+storiesOf('Table/primitives', module)
   .add('Read Only', () => (
     <Table>
       <Header>
