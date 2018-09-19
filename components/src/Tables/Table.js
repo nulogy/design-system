@@ -127,6 +127,7 @@ Table.defaultProps = defaultProps;
 
 export const DataTable = ({ data, headers }) => (
   <Table>
+    { headers && 
     <Header>
       <Row>
       {headers.map(header => (
@@ -136,6 +137,8 @@ export const DataTable = ({ data, headers }) => (
       ))}
       </Row>
     </Header>
+    }
+
     <Body>
     {data.map(row => (
       <Row>
