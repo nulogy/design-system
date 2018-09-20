@@ -38,6 +38,11 @@ const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
 export const iconSizeRatio = 1.25;
 
+export const iconSizeRatioForLineHeight = 
+  lineHeight => 
+  ({ theme }) => 
+    (iconSizeRatio / theme.font.lineHeight.ratio[lineHeight]);
+
 const Icons = {}
 names.map(name => Icons[name] = styled(Svgs[name])`
   height: ${iconSizeRatio}em;

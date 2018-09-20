@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
-import { fontMetrics } from '../utils.js';
-import {Wrapper as IconWrapper, iconSizeRatio as iconSizeRatioValue} from '../Icons/Icon';
+import { fontMetrics, lineHeightRatio } from '../utils.js';
+import {Wrapper as IconWrapper, iconSizeRatioForLineHeight} from '../Icons/Icon';
 
 const borderWidth = 1;
 
@@ -10,12 +10,10 @@ const withoutBorder = value => value - borderWidth;
 
 const smallButtonPaddingY = 1;
 
-const lineHeight = name => font.lineHeight[name] * font.size.medium;
-
 const iconSizeRatio = 
   (fontSize = 'medium', lineHeight = 'medium') => 
   ({ theme }) => 
-    ((theme.font.lineHeight.target[lineHeight] / theme.font.size[fontSize]) * (iconSizeRatioValue / theme.font.lineHeight.ratio[lineHeight]));
+    (lineHeightRatio(fontSize, lineHeight) * iconSizeRatioForLineHeight(lineHeight));
 
 export const buttonReset = css`
   box-sizing: border-box;
