@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils fontMetrics given a font size and line height matches snapshot 1`] = `
+Array [
+  "
+  font-size: ",
+  "10",
+  "px;
+  line-height: ",
+  [Function],
+  ";
+",
+]
+`;
+
+exports[`utils fontMetrics given a font size and no line height matches snapshot 1`] = `
+Array [
+  "
+  font-size: ",
+  "10",
+  "px;
+  line-height: ",
+  [Function],
+  ";
+",
+]
+`;
+
+exports[`utils fontMetrics given a line height and no font size matches snapshot 1`] = `
+Array [
+  "
+  font-size: ",
+  "16",
+  "px;
+  line-height: ",
+  [Function],
+  ";
+",
+]
+`;

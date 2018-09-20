@@ -19,6 +19,9 @@ Object {
       "unlock": [Function],
       "user": [Function],
     },
+    "Wrapper": [Function],
+    "iconSizeRatio": 1.25,
+    "iconSizeRatioForLineHeight": [Function],
     "names": Array [
       "add",
       "cancel",
@@ -56,6 +59,9 @@ Object {
     "unlock": [Function],
     "user": [Function],
   },
+  "Wrapper": [Function],
+  "iconSizeRatio": 1.25,
+  "iconSizeRatioForLineHeight": [Function],
   "names": Array [
     "add",
     "cancel",

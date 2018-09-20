@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
-import { fontMetrics } from '../utils.js';
+import { fontMetrics, lineHeightRatio } from '../utils.js';
+import {Wrapper as IconWrapper, iconSizeRatioForLineHeight} from '../Icons/Icon';
 
 const borderWidth = 1;
 
@@ -9,7 +10,10 @@ const withoutBorder = value => value - borderWidth;
 
 const smallButtonPaddingY = 1;
 
-const lineHeight = name => font.lineHeight[name] * font.size.medium;
+const iconSizeRatio = 
+  (fontSize = 'medium', lineHeight = 'medium') => 
+  ({ theme }) => 
+    (lineHeightRatio(fontSize, lineHeight) * iconSizeRatioForLineHeight(lineHeight));
 
 export const buttonReset = css`
   box-sizing: border-box;
@@ -70,27 +74,70 @@ const type = ({ type = 'button' }) => (({
   `
 })[type]);
 
+const Wrapper = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & + & {
+    margin-left: ${space.half}px;
+  }
+`;
+
 const size = ({ size = 'medium' }) => (({
   large: css`
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
-    padding: ${withoutBorder(space.x2)}px ${space.x3}px;
+    padding: ${withoutBorder(space.x2)}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio('large', 'medium')({theme: {font}})}em;
+    }
+    ${IconWrapper}{
+      width: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
+      height: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
+    }
+    ${IconWrapper} > svg{
+      height: 100%;
+      width: 100%;
+    }
   `,
 
   medium: css`
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
-    padding: ${withoutBorder(space.x1)}px ${space.x2}px;
+    padding: ${withoutBorder(space.x1)}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio()({theme: {font}})}em;
+    }
+    ${IconWrapper}{
+      width: ${iconSizeRatio()({theme: {font}})}em;
+      height: ${iconSizeRatio()({theme: {font}})}em;
+    }
+    ${IconWrapper} > svg{
+      height: 100%;
+      width: 100%;
+    }
   `,
 
   small: css`
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio('smaller', 'small')({theme: {font}})}em;
+    }
+    ${IconWrapper}{
+      width: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
+      height: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
+    }
+    ${IconWrapper} > svg{
+      height: 100%;
+      width: 100%;
+    }
   `
 })[size]);
 
-const Button = styled.button`
+const StyledButton = styled.button`
   ${buttonReset}
   border-style: solid;
   border-width: ${borderWidth}px;
@@ -119,7 +166,12 @@ const Button = styled.button`
   &:disabled {
     pointer-events: none;
   }
-
 `;
+
+const Button = ({ children, ...props }) => (
+  <StyledButton {...props}>
+    {Array.isArray(children) ? children.map(child => <Wrapper>{child}</Wrapper>) : <Wrapper>{children}</Wrapper>}
+  </StyledButton>
+);
 
 export default Button;
