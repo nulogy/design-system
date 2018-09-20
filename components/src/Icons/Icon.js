@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { 
+import {
   Add,
   Cancel,
   Check,
@@ -34,12 +34,12 @@ export const Svgs = {
 
 export const names = Object.keys(Svgs);
 
-const iconSizeRatio = 1.25;
+const iconSizeRatio = 1.5; '' /* Large - 1.2; Small - 1.143; */
 
-const Icons = {} 
+const Icons = {}
 names.map(name => Icons[name] = styled(Svgs[name])`
-  height: ${iconSizeRatio}em;
-  width: ${iconSizeRatio}em;
+  height: ${iconSizeRatio}rem;
+  width: ${iconSizeRatio}rem;
   top: 0;
   position: absolute;
 `);
@@ -48,9 +48,8 @@ const Wrapper = styled.span`
   display: inline-flex;
   align-self: center;
   position: relative;
-  height: 1em;
-  width: ${iconSizeRatio}em;
-
+  height: ${iconSizeRatio}rem;
+  width: ${iconSizeRatio}rem;
 `;
 
 const Icon = ({ name, IconSvg = Icons[name], ...props }) => (

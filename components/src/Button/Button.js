@@ -7,7 +7,7 @@ const borderWidth = 1;
 
 const withoutBorder = value => value - borderWidth;
 
-const smallButtonPaddingY = 1;
+const smallButtonPaddingY = 2;
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
@@ -76,18 +76,18 @@ const size = ({ size = 'medium' }) => (({
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
     > *:first-child {
-      height: ${lineHeight('regular') / font.size.large}em;
-      width: ${lineHeight('regular') / font.size.large}em;
+      height: 1.2em; ${'' /* height: ${lineHeight('medium') / font.size.large}em; */}
+      height: 1.2em; ${'' /* width: ${lineHeight('medium') / font.size.large}em; */}
     }
   `,
 
   medium: css`
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
-    padding: ${withoutBorder(space.x1)}px
+    padding: ${withoutBorder(space.x1)}px;
     > *:first-child {
-      height: ${lineHeight('smaller') / font.size.small}em;
-      width: ${lineHeight('smaller') / font.size.small}em;
+      height: 1.5em; ${'' /* height: ${lineHeight() / font.size.medium}em; */}
+      width: 1.5em;
     }
   `,
 
@@ -96,22 +96,15 @@ const size = ({ size = 'medium' }) => (({
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
     > *:first-child {
-      height: ${lineHeight('smaller') / font.size.smallest}em;
-      width: ${lineHeight('smaller') / font.size.smallest}em;
+      height: 1.143em; ${'' /* height: ${lineHeight('smaller') / font.size.small}em; */}
+      width: 1.143em; ${'' /* width: ${lineHeight('smaller') / font.size.small}em; */}
     }
   `
 })[size]);
 
 const Wrapper = styled.span`
   & + & {
-    margin-left: 2px;
-  }
-
-  > *:first-child {
-    left: -0.143em;
-    > svg {
-      top: -0.0765em;
-    }
+    margin-left: ${space.half}px;
   }
 `;
 
@@ -125,10 +118,7 @@ const StyledButton = styled.button`
   border-radius: ${radius.small}px;
   transition: .1s  ease-in-out;
   text-align: left;
-  > *:first-child {
-    top: -0.065em;
-    left: -0.065em;
-  }
+  min-height: 22px;
 
   ${ size }
   ${ type }
