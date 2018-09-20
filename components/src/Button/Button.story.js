@@ -190,6 +190,17 @@ storiesOf('Buttons / Long Labels', module)
   .add('Large', () => <Button size="large" type="submit" onClick={action('clicked')}>Super Long Labels Pellentesque condimentum eget elit nec varius</Button>)
 
 storiesOf('Buttons / Icons', module)
+  .add('All sizes', () => (
+    <React.Fragment>
+      <Button size="small" ><Icon name="save" /></Button>
+      <Button size="medium" ><Icon name="save" /></Button>
+      <Button size="large" ><Icon name="save" /></Button>
+      
+      <Button size="small" ><Icon name="save" /> Foo</Button>
+      <Button size="medium" ><Icon name="save" /> Foo</Button>
+      <Button size="large" ><Icon name="save" /> Foo</Button>
+    </React.Fragment>
+  ))
   .add('With an icon', () => <Button onClick={action('clicked')}><Icon name="save" /></Button>)
   .add('With an icon and text', () => <Button onClick={action('clicked')}><Icon name="save" /> Edit this thing</Button>)
   .add('With an icon and long text', () => <Button onClick={action('clicked')}><Icon name="delete" /> Edit this thing Etiam id viverra ligula. Praesent suscipit egestas nulla, vel fermentum felis viverra id. Cras scelerisque ante tincidunt magna faucibus dapibus. Proin dui felis, tempor facilisis nisl ut, elementum finibus tortor. Curabitur euismod, elit vitae ullamcorper pharetra, est felis imperdiet sem, eget porta sem erat condimentum nibh. Etiam pellentesque blandit tincidunt. Integer dapibus erat non orci mattis, et eleifend erat viverra.</Button>)
