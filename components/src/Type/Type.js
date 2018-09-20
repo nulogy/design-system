@@ -72,3 +72,5 @@ export const labelStyles = ({theme}) => css`
 export const Label = styled.label`
   ${labelStyles}
 `;
+Label.displayName = 'NDS.Type.Label';
+Label.defaultProps = { theme: tokens };
