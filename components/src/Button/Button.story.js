@@ -193,12 +193,14 @@ storiesOf('Buttons / Icons', module)
   .add('All sizes', () => (
     <React.Fragment>
       <Button size="small" ><Icon name="save" /></Button>
-      <Button size="medium" ><Icon name="save" /></Button>
-      <Button size="large" ><Icon name="save" /></Button>
-      
       <Button size="small" ><Icon name="save" /> Foo</Button>
+      <Button size="small" >Foo</Button>
+      <Button size="medium" ><Icon name="save" /></Button>
       <Button size="medium" ><Icon name="save" /> Foo</Button>
+      <Button size="medium" >Foo</Button>
+      <Button size="large" ><Icon name="save" /></Button>
       <Button size="large" ><Icon name="save" /> Foo</Button>
+      <Button size="large" >Foo</Button>
     </React.Fragment>
   ))
   .add('With an icon', () => <Button onClick={action('clicked')}><Icon name="save" /></Button>)

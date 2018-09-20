@@ -74,11 +74,24 @@ const type = ({ type = 'button' }) => (({
   `
 })[type]);
 
+const Wrapper = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & + & {
+    margin-left: ${space.half}px;
+  }
+`;
+
 const size = ({ size = 'medium' }) => (({
   large: css`
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio('large', 'medium')({theme: {font}})}em;
+    }
     ${IconWrapper}{
       width: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
       height: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
@@ -93,6 +106,9 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio()({theme: {font}})}em;
+    }
     ${IconWrapper}{
       width: ${iconSizeRatio()({theme: {font}})}em;
       height: ${iconSizeRatio()({theme: {font}})}em;
@@ -107,6 +123,9 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
+    ${Wrapper} {
+      min-height: ${lineHeightRatio('smaller', 'small')({theme: {font}})}em;
+    }
     ${IconWrapper}{
       width: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
       height: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
@@ -117,16 +136,6 @@ const size = ({ size = 'medium' }) => (({
     }
   `
 })[size]);
-
-const Wrapper = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  & + & {
-    margin-left: ${space.half}px;
-  }
-`;
 
 const StyledButton = styled.button`
   ${buttonReset}
