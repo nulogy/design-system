@@ -10,17 +10,19 @@ const withoutBorder = value => value - borderWidth;
 
 const smallButtonPaddingY = 1;
 
+const themeProp = { theme: { font } };
+
 const iconSizeRatio = 
   (fontSize = 'medium', lineHeight = 'medium') => 
   ({ theme }) => 
-    (lineHeightRatio(fontSize, lineHeight) * iconSizeRatioForLineHeight(lineHeight));
+    (lineHeightRatio(fontSize, lineHeight)(themeProp) * iconSizeRatioForLineHeight(lineHeight)(themeProp));
 
 export const buttonReset = css`
+  appearance: none;
   box-sizing: border-box;
   padding: 0;
   border-width: 0;
   border-style: solid;
-  appearance: none;
   outline: none;
   font-size: inherit;
   cursor: pointer;
@@ -86,15 +88,15 @@ const Wrapper = styled.span`
 
 const size = ({ size = 'medium' }) => (({
   large: css`
-    ${fontMetrics('large', 'medium')({theme: {font}})};
+    ${fontMetrics('large', 'medium')(themeProp)};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
     ${Wrapper} {
-      min-height: ${lineHeightRatio('large', 'medium')({theme: {font}})}em;
+      min-height: ${lineHeightRatio('large', 'medium')(themeProp)}em;
     }
     ${IconWrapper}{
-      width: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
-      height: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
+      width: ${iconSizeRatio('large', 'medium')(themeProp)}em;
+      height: ${iconSizeRatio('large', 'medium')(themeProp)}em;
     }
     ${IconWrapper} > svg{
       height: 100%;
@@ -103,15 +105,15 @@ const size = ({ size = 'medium' }) => (({
   `,
 
   medium: css`
-    ${fontMetrics()({theme: {font}})};
+    ${fontMetrics()(themeProp)};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px;
     ${Wrapper} {
-      min-height: ${lineHeightRatio()({theme: {font}})}em;
+      min-height: ${lineHeightRatio()(themeProp)}em;
     }
     ${IconWrapper}{
-      width: ${iconSizeRatio()({theme: {font}})}em;
-      height: ${iconSizeRatio()({theme: {font}})}em;
+      width: ${iconSizeRatio()(themeProp)}em;
+      height: ${iconSizeRatio()(themeProp)}em;
     }
     ${IconWrapper} > svg{
       height: 100%;
@@ -120,15 +122,15 @@ const size = ({ size = 'medium' }) => (({
   `,
 
   small: css`
-    ${fontMetrics('smaller', 'small')({theme: {font}})};
+    ${fontMetrics('smaller', 'small')(themeProp)};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
     ${Wrapper} {
-      min-height: ${lineHeightRatio('smaller', 'small')({theme: {font}})}em;
+      min-height: ${lineHeightRatio('smaller', 'small')(themeProp)}em;
     }
     ${IconWrapper}{
-      width: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
-      height: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
+      width: ${iconSizeRatio('smaller', 'small')(themeProp)}em;
+      height: ${iconSizeRatio('smaller', 'small')(themeProp)}em;
     }
     ${IconWrapper} > svg{
       height: 100%;
