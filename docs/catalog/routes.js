@@ -67,6 +67,11 @@ export default [
     title: 'Visual Style',
     pages: [
       {
+        path: '/visual_style/logo',
+        title: 'Logo',
+        content: pageLoader(() => import('./visual_style/logo.md'))
+      },
+      {
         path: '/visual_style/colour',
         title: 'Colour',
         content: pageLoader(() => import('./visual_style/colour.md')),
@@ -142,7 +147,7 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      },   
+      },
     ]
   },
   {

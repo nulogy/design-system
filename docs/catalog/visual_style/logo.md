@@ -1,33 +1,81 @@
-> Logo
+> Logo is a visual representation of our brand.
 
-## Nulogy
-```download|span-6
-{
-    "title": "Catalog Logo (.svg)",
-    "filename": "catalog-logo",
-    "subtitle": "8 KB",
-    "url": "/assets/catalog_logo.svg"
-}
-```
-```download|span-6
-{
-    "title": "Catalog Logo (.svg)",
-    "filename": "catalog-logo",
-    "subtitle": "8 KB",
-    "url": "/assets/catalog_logo.svg"
-}
-```
-```download|span-6
-{
-    "title": "Catalog Logo (.svg)",
-    "filename": "catalog-logo",
-    "subtitle": "8 KB",
-    "url": "/assets/catalog_logo.svg"
-}
+## Nulogy Logos
+
+```download|span-2
+title: Full Colour Logo (.svg)
+filename: Nulogy_Full_Color.svg
+url: /static/logos/Nulogy_Full_Color.svg
 ```
 
-## PackManager
+```download|span-2
+title: White and Yellow Logo (.svg)
+url: /static/logos/Nulogy_white_yellow.svg
+```
 
-## QCloud
+```download|span-2
+title: White Logo (.svg)
+url: /static/logos/Nulogy_white.svg
+```
 
-## Go
+Please refer to Visual Visual Brand Guidlines for apropriate use of Nulogy logo.
+
+## PackManager Logos
+
+```download|span-2
+title: Default Logo (.png)
+filename: PackManager.png
+url: ./static/logos/PackManager.png
+```
+
+```download|span-2
+title: Stacked Logo (.png)
+filename: PackManager_Stacked.png
+url: ./static/logos/PackManager_Stacked.png
+```
+
+```download|span-2
+title: White Logo (.png)
+filename: PackManager_White.png
+url: ./static/logos/PackManager_White.png
+```
+
+## QCloud Logos
+
+```download|span-2
+title: Default Logo (.png)
+filename: QCloud.png
+url: ./static/logos/QCloud.png
+```
+
+```download|span-2
+title: Stacked Logo (.png)
+filename: QCloud_Stacked.png
+url: ./static/logos/QCloud_Stacked.png
+```
+
+```download|span-2
+title: White Logo (.png)
+filename: QCloud_White.png
+url: ./static/logos/QCloud_White.png
+```
+
+## Go Logos
+
+```download|span-2
+title: White Text Logo (.png)
+filename: GO_white.png
+url: ./static/logos/GO_white.png
+```
+
+```download|span-2
+title: Stacked Logo (.png)
+filename: GO_Stacked.png
+url: ./static/logos/GO_Stacked.png
+```
+
+```download|span-2
+title: Stacked White Text Logo (.png)
+filename: GO_Stacked_white.png
+url: ./static/logos/GO_Stacked_white.png
+```
