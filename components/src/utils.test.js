@@ -1,4 +1,5 @@
-import { lineHeightRatio } from './utils';
+import {css} from 'styled-components';
+import { lineHeightRatio, fontMetrics } from './utils';
 
 const fontSizeMd = 16;
 const fontSizeSm = 10;
@@ -46,6 +47,35 @@ describe('utils', () => {
       it('returns a function', () => {
         expect(() => lineHeightRatio(_, 'small')()).toThrow("Cannot read property 'theme' of undefined");
         expect(() => lineHeightRatio(_, 'small')({})).toThrow("Cannot read property 'font' of undefined");
+      });
+    });
+  });
+
+  describe('fontMetrics', () => {
+    describe('given a font size and line height', () => {
+      it('matches snapshot', () => {
+        expect(fontMetrics('small', 'small')({ theme })).toMatchSnapshot();
+      });
+    });
+    describe('given a font size and no line height', () => {
+      it('matches snapshot', () => {
+        expect(fontMetrics('small')({ theme })).toMatchSnapshot();
+      });
+    });
+    describe('given a line height and no font size', () => {
+      it('matches snapshot', () => {
+        expect(fontMetrics(_, 'small')({ theme })).toMatchSnapshot();
+      });
+    });
+    describe('when only the inner function is called', () => {
+      it('returns a function', () => {
+        expect(() => fontMetrics(_, 'small')).toBeInstanceOf(Function);
+      });
+    });
+    describe('when no theme is provided', () => {
+      it('returns a function', () => {
+        expect(() => fontMetrics(_, 'small')()).toThrow("Cannot read property 'theme' of undefined");
+        expect(() => fontMetrics(_, 'small')({})).toThrow("Cannot read property 'font' of undefined");
       });
     });
   });
