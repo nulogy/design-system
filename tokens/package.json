@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/tokens",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Design tokens for the Nulogy Design System - http://nulody.design",
   "main": "dist/tokens.js",
   "repository": "https://github.com/nulogy/design-system.git",
