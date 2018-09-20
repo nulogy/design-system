@@ -34,22 +34,24 @@ export const Svgs = {
 
 export const names = Object.keys(Svgs);
 
-const iconSizeRatio = 1.5; '' /* Large Button - 1.2; Small Button - 1.143; */
+const lineHeight = name => font.lineHeight[name] * font.size.medium;
+
+const iconSizeRatio = 1.25; '' /* Large Button - 1.2; Small Button - 1.5; */
 
 const Icons = {}
 names.map(name => Icons[name] = styled(Svgs[name])`
-  height: ${iconSizeRatio}rem;
-  width: ${iconSizeRatio}rem;
+  height: ${iconSizeRatio}em;
+  width: ${iconSizeRatio}em;
   top: 0;
   position: absolute;
 `);
 
-const Wrapper = styled.span`
+export const Wrapper = styled.span`
   display: inline-flex;
   align-self: center;
   position: relative;
-  height: ${iconSizeRatio}rem;
-  width: ${iconSizeRatio}rem;
+  height: 1em;
+  width: ${iconSizeRatio}em;
 `;
 
 const Icon = ({ name, IconSvg = Icons[name], ...props }) => (

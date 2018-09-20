@@ -2,12 +2,13 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { colour, space, font, radius, shadow } from '@nulogy/tokens';
 import { fontMetrics } from '../utils.js';
+import {Wrapper as IconWrapper} from '../Icons/Icon';
 
 const borderWidth = 1;
 
 const withoutBorder = value => value - borderWidth;
 
-const smallButtonPaddingY = 2;
+const smallButtonPaddingY = 1;
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
@@ -75,19 +76,31 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
-    > *:first-child {
-      height: 1.2em; ${'' /* height: ${lineHeight('medium') / font.size.large}em; */}
-      height: 1.2em; ${'' /* width: ${lineHeight('medium') / font.size.large}em; */}
+    //outline: solid 1px red;
+    ${IconWrapper}{
+      width: 100%;
+      height: ${1.2}em;
+      //outline: solid 1px black;
     }
+    ${IconWrapper} > svg{
+      //outline: solid 1px lime;
+      height: 100%;
+      width: 100%;
   `,
 
   medium: css`
     ${fontMetrics()({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px;
-    > *:first-child {
-      height: 1.5em; ${'' /* height: ${lineHeight() / font.size.medium}em; */}
-      width: 1.5em;
+    ${IconWrapper}{
+      width: 100%;
+      height: ${1.5}em;
+      //outline: solid 1px black;
+    }
+    ${IconWrapper} > svg{
+      //outline: solid 1px lime;
+      height: 100%;
+      width: 100%;
     }
   `,
 
@@ -95,14 +108,27 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
-    > *:first-child {
-      height: 1.143em; ${'' /* height: ${lineHeight('smaller') / font.size.small}em; */}
-      width: 1.143em; ${'' /* width: ${lineHeight('smaller') / font.size.small}em; */}
+    min-height: 20px;
+    ${IconWrapper}{
+      width: 100%;
+      height: ${1.143}em;
+      //outline: solid 1px black;
+    }
+    ${IconWrapper} > svg{
+      //outline: solid 1px lime;
+      height: 100%;
+      width: 100%;
     }
   `
 })[size]);
 
 const Wrapper = styled.span`
+  //outline: solid 1px blue;
+  min-width: ${1.143}em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   & + & {
     margin-left: ${space.half}px;
   }
@@ -118,7 +144,6 @@ const StyledButton = styled.button`
   border-radius: ${radius.small}px;
   transition: .1s  ease-in-out;
   text-align: left;
-  min-height: 22px;
 
   ${ size }
   ${ type }
@@ -142,7 +167,7 @@ const StyledButton = styled.button`
 
 const Button = ({ children, ...props }) => (
   <StyledButton {...props}>
-    {Array.isArray(children) ? children.map(child => <Wrapper>{child}</Wrapper>) : children}
+    {Array.isArray(children) ? children.map(child => <Wrapper>{child}</Wrapper>) : <Wrapper>{children}</Wrapper>}
   </StyledButton>
 );
 
