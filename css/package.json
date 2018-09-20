@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/css",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Global Styles for Nulogy Design System",
   "private": false,
   "publishConfig": {
@@ -22,7 +22,7 @@
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
-    "@nulogy/tokens": "^0.1.14",
+    "@nulogy/tokens": "^0.1.15",
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
@@ -43,5 +43,4 @@
       "stage-1"
     ]
   }
-  
 }
