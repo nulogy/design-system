@@ -36,7 +36,7 @@ export const names = Object.keys(Svgs);
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
-const iconSizeRatio = 1.25; '' /* Large Button - 1.2; Small Button - 1.5; */
+const iconSizeRatio = 1.25;
 
 const Icons = {}
 names.map(name => Icons[name] = styled(Svgs[name])`

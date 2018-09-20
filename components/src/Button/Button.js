@@ -12,6 +12,11 @@ const smallButtonPaddingY = 1;
 
 const lineHeight = name => font.lineHeight[name] * font.size.medium;
 
+const iconSizeRatio = 
+  (fontSize = 'medium', lineHeight = 'medium') => 
+  ({ theme }) => 
+    ((theme.font.lineHeight.target[lineHeight] / theme.font.size[fontSize]) * (1.25 / theme.font.lineHeight.ratio[lineHeight]));
+
 export const buttonReset = css`
   box-sizing: border-box;
   padding: 0;
@@ -76,16 +81,14 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('large', 'medium')({theme: {font}})};
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x2)}px;
-    //outline: solid 1px red;
     ${IconWrapper}{
-      width: 100%;
-      height: ${1.2}em;
-      //outline: solid 1px black;
+      width: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
+      height: ${iconSizeRatio('large', 'medium')({theme: {font}})}em;
     }
     ${IconWrapper} > svg{
-      //outline: solid 1px lime;
       height: 100%;
       width: 100%;
+    }
   `,
 
   medium: css`
@@ -93,12 +96,10 @@ const size = ({ size = 'medium' }) => (({
     font-weight: ${font.weight.medium};
     padding: ${withoutBorder(space.x1)}px;
     ${IconWrapper}{
-      width: 100%;
-      height: ${1.5}em;
-      //outline: solid 1px black;
+      width: ${iconSizeRatio()({theme: {font}})}em;
+      height: ${iconSizeRatio()({theme: {font}})}em;
     }
     ${IconWrapper} > svg{
-      //outline: solid 1px lime;
       height: 100%;
       width: 100%;
     }
@@ -108,14 +109,11 @@ const size = ({ size = 'medium' }) => (({
     ${fontMetrics('smaller', 'small')({theme: {font}})};
     font-weight: ${font.weight.normal};
     padding: ${smallButtonPaddingY}px ${space.half}px;
-    min-height: 20px;
     ${IconWrapper}{
-      width: 100%;
-      height: ${1.143}em;
-      //outline: solid 1px black;
+      width: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
+      height: ${iconSizeRatio('smaller', 'small')({theme: {font}})}em;
     }
     ${IconWrapper} > svg{
-      //outline: solid 1px lime;
       height: 100%;
       width: 100%;
     }
@@ -123,8 +121,6 @@ const size = ({ size = 'medium' }) => (({
 })[size]);
 
 const Wrapper = styled.span`
-  //outline: solid 1px blue;
-  min-width: ${1.143}em;
   display: flex;
   flex-direction: column;
   justify-content: center;
