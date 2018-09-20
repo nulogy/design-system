@@ -114,6 +114,13 @@ export default [
           LinkButton: require('@nulogy/components').LinkButton
         }
       }, {
+        path: '/components.data_list',
+        title: 'Data List',
+        content: pageLoader(() => import('./components/data_list.md')),
+        imports: {
+          DataList: require('@nulogy/components').DataList
+        }
+      }, {
         path: '/components/links',
         title: 'Links',
         content: pageLoader(() => import('./components/links.md')),
