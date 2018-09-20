@@ -37,5 +37,16 @@ describe('utils', () => {
         expect(lineHeightRatio(_, 'small')({ theme })).toEqual(lineHeightSm/fontSizeMd);
       });
     });
+    describe('when only the inner function is called', () => {
+      it('returns a function', () => {
+        expect(() => lineHeightRatio(_, 'small')).toBeInstanceOf(Function);
+      });
+    });
+    describe('when no theme is provided', () => {
+      it('returns a function', () => {
+        expect(() => lineHeightRatio(_, 'small')()).toThrow("Cannot read property 'theme' of undefined");
+        expect(() => lineHeightRatio(_, 'small')({})).toThrow("Cannot read property 'font' of undefined");
+      });
+    });
   });
 });
