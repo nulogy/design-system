@@ -72,8 +72,16 @@ Object {
       "regular": "'IBM Plex Sans', sans",
     },
     "lineHeight": Object {
-      "regular": 1.5,
-      "smaller": 1,
+      "ratio": Object {
+        "medium": 1.5,
+        "small": 1.2,
+        "smaller": 1,
+      },
+      "target": Object {
+        "large": 32,
+        "medium": 24,
+        "small": 16,
+      },
     },
     "size": Object {
       "large": 20,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { tokens } from '@nulogy/tokens';
+import tokens from '@nulogy/tokens';
 import { fontMetrics } from '../utils';
 import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
@@ -63,6 +63,7 @@ export const Row = styled.tr`
     border-bottom: solid 1px ${theme.colour.blue['300']};
   `}
 `;
+Row.defaultProps = defaultProps;
 
 export const Header = styled.thead`
   text-align: left;
