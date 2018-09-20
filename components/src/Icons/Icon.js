@@ -34,7 +34,7 @@ export const Svgs = {
 
 export const names = Object.keys(Svgs);
 
-const iconSizeRatio = 1.5; '' /* Large - 1.2; Small - 1.143; */
+const iconSizeRatio = 1.5; '' /* Large Button - 1.2; Small Button - 1.143; */
 
 const Icons = {}
 names.map(name => Icons[name] = styled(Svgs[name])`
