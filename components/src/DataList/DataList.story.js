@@ -5,7 +5,7 @@ import { Type } from '../Type';
 import DataList from './DataList';
 
 const dataTemplate = num => [`key ${num}`, `value ${num}`];
-const lipsumTemplate = num => [loremIpsum(), loremIpsum()];
+const lipsumTemplate = num => [loremIpsum({ sentenceUpperBound: 5 }), loremIpsum()];
 
 const data = (count, template = dataTemplate) => Array.apply(null, {length: count}).map(
   (_, i) => template(i + 1)
