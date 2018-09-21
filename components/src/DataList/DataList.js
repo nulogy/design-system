@@ -19,9 +19,9 @@ const columns = ({theme, count, columns}) => mq(theme)({
   gridTemplateColumns: castArray(columns).map(cols => `repeat(${cols}, 1fr)`),
   gridTemplateRows: castArray(columns).map(cols => `repeat(${Math.ceil(count/cols)}, 1fr)`),
   display: ['block', 'grid'],
-  marginBottom: [`${theme.space.x1}px`, 0],
+  marginBottom: [`${theme.space.x2}px`, 0],
   gridAutoFlow: 'column dense',
-  gridGap: `${theme.space.x1}px`
+  gridGap: `${theme.space.x3}px ${theme.space.x2}px`
 });
 
 export const List = styled.dl`
@@ -45,6 +45,9 @@ List.propTypes = {
 
 export const Key = styled.dt`
   ${labelStyles}
+  ${({theme}) => css`
+    margin-bottom: ${theme.space.x1}px;
+  `}
 `;
 Key.displayName = 'NDS.DataList.Key';
 Key.defaultProps = { ...defaultProps };
@@ -52,9 +55,6 @@ Key.propTypes = { ...propTypes };
 
 export const Value = styled.dd`
   margin-left: 0;
-  ${({theme}) => css`
-    margin-bottom: ${theme.space.x2}px;
-  `}
 `;
 Value.displayName = 'NDS.DataList.Value';
 Value.defaultProps = { ...defaultProps };
