@@ -21,7 +21,7 @@ const columns = ({theme, count, columns}) => mq(theme)({
   display: ['block', 'grid'],
   marginBottom: [`${theme.space.x2}px`, 0],
   gridAutoFlow: 'column dense',
-  gridGap: `${theme.space.x3}px ${theme.space.x2}px`
+  gridGap: `${theme.space.x3}px`
 });
 
 export const List = styled.dl`
@@ -55,6 +55,9 @@ Key.propTypes = { ...propTypes };
 
 export const Value = styled.dd`
   margin-left: 0;
+  ${({ theme }) => mq(theme)({
+    marginBottom: [`${theme.space.x4}px`, 0]
+  })}
 `;
 Value.displayName = 'NDS.DataList.Value';
 Value.defaultProps = { ...defaultProps };
