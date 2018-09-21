@@ -118,7 +118,7 @@ export default [
         title: 'Data List',
         content: pageLoader(() => import('./components/data_list.md')),
         imports: {
-          DataList: require('@nulogy/components').DataList
+          DataList: require('@nulogy/components').DataList.DataList
         }
       }, {
         path: '/components/links',

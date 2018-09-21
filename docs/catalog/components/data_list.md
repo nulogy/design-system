@@ -1,6 +1,6 @@
 > Data List displays label and value pairs in a multi-column list.
 
-```code
+```react
 <DataList data={[
   ['Name', 'Doug Allen'],
   ['Age', '27'],
