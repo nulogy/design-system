@@ -65,7 +65,7 @@ export const labelStyles = ({theme}) => css`
   font-size: ${theme.font.size.small}px;
   color: ${theme.colour.neutral[600]};
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: .02em;
   line-height: 1.143; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
 `;
 
