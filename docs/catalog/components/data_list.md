@@ -1,6 +1,5 @@
 > Data List displays label and value pairs in a multi-column list.
 
-## Basic Data List
 ```code
 <DataList data={[
   ['Name', 'Doug Allen'],
