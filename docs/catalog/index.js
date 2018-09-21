@@ -20,20 +20,23 @@ const config = {
     textColor: colour.black,
     background: colour.white,
     linkHoverColor: colour.black,
-    lightColor: colour.yellow['700'],
+    lightColor: colour.neutral['300'],
 
-    sidebarColor: colour.neutral['200'],
-    sidebarColorText: colour.neutral['600'],
-    sidebarColorTextActive: colour.blue['600'],
+    sidebarColor: colour.neutral['800'],
+    sidebarColorText: colour.neutral['500'],
+    sidebarColorTextActive: colour.white,
+    sidebarColorLine: colour.neutral['800'],
 
     codeColor: colour.blue['800'],
     linkColor: colour.blue['600'],
-    
-    pageHeadingBackground: colour.blue['600'],
-    pageHeadingTextColor: colour.blue['200'],
+
+    pageHeadingBackground: colour.blue['300'],
+    pageHeadingTextColor: colour.blue['800'],
 
     navBarBackground: colour.white,
     navBarTextColor: colour.blue['600'],
+
+    pageHeadingHeight: 180,
   }
 };
 

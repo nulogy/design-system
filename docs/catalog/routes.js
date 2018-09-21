@@ -142,12 +142,13 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      },   
+      },
     ]
   },
   {
     title: 'Tokens',
     path: '/tokens',
+    imports: colourImports,
     content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {

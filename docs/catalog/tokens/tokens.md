@@ -1,7 +1,6 @@
-## Typography 
+## Typography
 
 ```table
-span: 4
 rows:
   - Token: font.size.smaller
     CSS: .font-size--smaller
@@ -39,4 +38,8 @@ rows:
     CSS: .font-size--subsection-title
     px: 20
     rem: 1.25
+```
+## Colour
+```table
+rows: !import colourTokenTableRows
 ```

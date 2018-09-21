@@ -7,47 +7,32 @@ Used for alternative actions to Primary Button action. They are usually paired w
 ```
 
 ## Danger Button
-Used for secondary actions that could result in a deletion of a particular item.
-Examples: Delete/Discard button.
+Used for secondary actions that could result in a deletion of a particular item. Whenever possible follow this action with a confirmation modal dialog. Examples: Delete/Discard button.
 ```react
 <DangerButton>Delete</DangerButton>
 ```
-```hint|directive
-Whenever possible follow this action with a confirmation modal dialog.
-```
 ## Primary Button
-Used to emphasize the primary action in a particular context. Not every page requires a Primary Button.
+Used to emphasize the primary action in a particular context. Not every page requires a Primary Button. Avoid using more than 1 Primary Button per screen at a given time.
 ```react
 <Button type="submit">Submit Form</Button>
 ```
-```hint|warning
-Avoid using more than 1 Primary Button per screen at a given time.
-```
 
 ## QCloud Approval Button (Deprecated)
-Used for submitting a form that can not be edited in QCloud.
+Used for submitting a form that can not be edited in QCloud. Avoid using this button since it was depricated.
 ```react
 <ApprovalButton type="submit">Submit Record</ApprovalButton>
 ```
-```hint|warning
-Avoid using this button since it was depricated.
-```
 
 ## Primary Danger Button
-Used for primary actions that result in the deletion of a particular item.
-Examples: Delete confirmation button.
+Used for primary actions that result in the deletion of a particular item. Examples: Delete confirmation button.
 ```react
 <DangerButton type="submit">Delete Item</DangerButton>
 ```
 
 ## Quiet Button
-Use for low importance actions, toolbars, or inline within complex components.
-Examples: Table inline actions.
+Use for low importance actions, toolbars, or inline within complex components. Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements. Examples: Table inline actions.
 ```react
 <QuietButton>Actions</QuietButton>
-```
-```hint|directive
-Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements.
 ```
 
 ## Link Button
@@ -57,7 +42,7 @@ Use when you need a button that sits in text like a link.
 <LinkButton>No I don't want to sign up for your email newsletter!</LinkButton>
 ```
 
-Can be rendered without an underline
+Can be rendered without an underline.
 
 ```react
 <LinkButton underline={false}>Click me</LinkButton>
@@ -99,6 +84,3 @@ Large
 ## Language
 - Always lead with strong, actionable verbs
 - Whenever possible follow by an object noun on Primary Button. Example: Submit Form, Aprove Form.
-
-## Related Components
-N/A
