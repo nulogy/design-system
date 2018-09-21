@@ -87,6 +87,11 @@ export default [
         title: 'Iconography',
         content: pageLoader(() => import('./visual_style/iconography.md'))
       },
+      {
+        path: '/visual_style/logo',
+        title: 'Logo',
+        content: pageLoader(() => import('./visual_style/logo.md'))
+      }
     ]
   },
   {
@@ -107,6 +112,13 @@ export default [
           DangerButton: require('@nulogy/components').DangerButton,
           QuietButton: require('@nulogy/components').QuietButton,
           LinkButton: require('@nulogy/components').LinkButton
+        }
+      }, {
+        path: '/components.data_list',
+        title: 'Data List',
+        content: pageLoader(() => import('./components/data_list.md')),
+        imports: {
+          DataList: require('@nulogy/components').DataList.DataList
         }
       }, {
         path: '/components/links',
