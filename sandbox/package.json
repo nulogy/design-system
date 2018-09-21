@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/sandbox",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "private": true,
   "scripts": {
     "start": "start-storybook -p 6060",
@@ -8,8 +8,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@nulogy/components": "^0.1.16",
-    "@nulogy/css": "^0.1.15",
+    "@nulogy/components": "^0.1.17",
+    "@nulogy/css": "^0.1.17",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
