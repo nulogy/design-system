@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
-import { fontMetrics } from '../utils';
 import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
+import { fontMetrics } from '../utils.js';
+import { Wrapper as IconWrapper } from '../Icons/Icon';
 
 const defaultProps = { theme: tokens };
 
@@ -25,6 +26,33 @@ export const Cell = styled.td`
 
 Cell.defaultProps = defaultProps;
 
+export const Button = styled(QuietButton)`
+  ${ ({ theme }) => css`
+    padding: ${theme.space.half}px;
+    border-width: 0;
+    border-radius: 50%;
+    transition: none;
+    color: ${theme.colour.neutral[600]};
+    ${IconWrapper}{
+      width: 1.5em;
+      height: 1.5em;
+    }
+    ${IconWrapper} > svg{
+      height: 100%;
+      width: 100%;
+    }
+    &:hover{
+      background-color: ${theme.colour.blue[300]};
+      transform: scale(1.25);
+      svg{
+        transform: scale(0.8);
+      }
+    }
+  `}
+`;
+
+Button.defaultProps = defaultProps;
+
 export const ActionCell = styled(Cell)`
   ${ ({ theme }) => css`
     padding-top: ${theme.space.x1}px;
@@ -39,24 +67,6 @@ export const ActionCell = styled(Cell)`
 `;
 
 ActionCell.defaultProps = defaultProps;
-
-export const Button = styled(QuietButton)`
-  ${ ({ theme }) => css`
-    padding: ${theme.space.half}px;
-    border-width: 0;
-    border-radius: 50%;
-    transition: none;
-    &:hover{
-      background-color: ${theme.colour.blue[300]};
-      transform: scale(1.25);
-      svg{
-        transform: scale(0.8);
-      }
-    }
-  `}
-`;
-
-Button.defaultProps = defaultProps;
 
 export const Row = styled.tr`
   ${ ({ theme }) => css`
@@ -84,6 +94,12 @@ export const CreateRow = styled.tr`
     ${ ActionCell } {
       padding-top: ${theme.space.x2}px;
       padding-bottom: ${theme.space.x2}px;
+      ${ Button } {
+        color: ${theme.colour.blue[300]};
+        &:hover{
+          background: ${theme.colour.neutral[600]};
+        }
+      }
     }
   `}
 `;
@@ -125,7 +141,7 @@ Table.defaultProps = defaultProps;
 
 export const DataTable = ({ data, headers }) => (
   <Table>
-    { headers && 
+    { headers &&
     <Header>
       <Row>
       {headers.map(header => (
