@@ -52,6 +52,7 @@ export const primaryButtonColours = (mainColour = colour.blue.base) => css`
   color: ${colour.white};
   background-color: ${mainColour};
   border-color: ${mainColour};
+  border-color: transparent;
 
   ${ Ripple(mainColour) }
 `
@@ -76,7 +77,6 @@ const type = ({ type = 'button' }) => (({
 
   submit: css`
     ${primaryButtonColours()}
-    border-color: transparent;
 
     &:hover {
       ${primaryButtonColours(colour.blue[700])}
