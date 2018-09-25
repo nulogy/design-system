@@ -41,12 +41,33 @@ export const Button = styled(QuietButton)`
       height: 100%;
       width: 100%;
     }
+
     &:hover{
-      background-color: ${theme.colour.blue[300]};
-      transform: scale(1.25);
-      svg{
-        transform: scale(0.8);
-      }
+      color: ${theme.colour.neutral[600]};
+      transform: scale(1);
+    }
+    &::before {
+      content: '';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        transition-duration: .15s;
+        transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        transition-property: transform,opacity;
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+    }
+    &:hover::before {
+        opacity: 1;
+        transform: scale(1.25);
+        background-color: ${theme.colour.blue[200]};
     }
   `}
 `;
@@ -96,8 +117,8 @@ export const CreateRow = styled.tr`
       padding-bottom: ${theme.space.x2}px;
       ${ Button } {
         color: ${theme.colour.blue[300]};
-        &:hover{
-          background: ${theme.colour.neutral[600]};
+        &::before {
+          background-color: ${theme.colour.neutral[700]};
         }
       }
     }
