@@ -2,9 +2,9 @@
 
 ## Default Link
 ```react
-<Link>Link</Link>
+<Link href="#">Link</Link>
 ```
 Can be rendered without an underline.
 ```react
-<Link underline={false}>Link</Link>
+<Link underline={false} href="#">Link</Link>
 ```
