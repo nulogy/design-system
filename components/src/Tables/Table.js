@@ -82,7 +82,7 @@ export const ActionCell = styled(Cell)`
     white-space: nowrap;
     vertical-align: middle;
     & > button:not(:last-child) {
-      margin-right: ${theme.space.half}px;
+      margin-right: ${theme.space.x1}px;
     }
   `}
 `;
