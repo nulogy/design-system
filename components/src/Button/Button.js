@@ -12,9 +12,9 @@ const smallButtonPaddingY = 1;
 
 const themeProp = { theme: { font } };
 
-const iconSizeRatio = 
-  (fontSize = 'medium', lineHeight = 'medium') => 
-  ({ theme }) => 
+const iconSizeRatio =
+  (fontSize = 'medium', lineHeight = 'medium') =>
+  ({ theme }) =>
     (lineHeightRatio(fontSize, lineHeight)(themeProp) * iconSizeRatioForLineHeight(lineHeight)(themeProp));
 
 export const buttonReset = css`
@@ -28,16 +28,32 @@ export const buttonReset = css`
   cursor: pointer;
 `;
 
-export const buttonColours = (mainColour = colour.blue.base, ) => css`
+export const buttonColours = (mainColour = colour.blue.base) => css`
   color: ${mainColour};
   background-color: ${colour.white};
   border-color: ${mainColour};
+`
+
+export const Ripple = (mainColour = colour.blue[700]) => css`
+  background-position: center;
+
+  &:hover {
+    background: ${mainColour} radial-gradient(circle, transparent 1%, ${mainColour} 1%) center/15000%;
+    transition: all 0.75s;
+  }
+
+  &:active {
+    background-size: 100%;
+    transition: background 0s;
+  }
 `
 
 export const primaryButtonColours = (mainColour = colour.blue.base) => css`
   color: ${colour.white};
   background-color: ${mainColour};
   border-color: ${mainColour};
+
+  ${ Ripple(mainColour) }
 `
 
 const type = ({ type = 'button' }) => (({
@@ -60,6 +76,7 @@ const type = ({ type = 'button' }) => (({
 
   submit: css`
     ${primaryButtonColours()}
+    border-color: transparent;
 
     &:hover {
       ${primaryButtonColours(colour.blue[700])}
@@ -159,9 +176,8 @@ const StyledButton = styled.button`
 
   &:active {
     border-style: solid;
-    box-shadow: none;
+    //box-shadow: none;
     outline: none;
-    transform: scale(0.98);
     transition: .05s  ease-in;
   }
 
