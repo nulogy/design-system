@@ -1,5 +1,7 @@
 ## Typography
 
+### Font Size
+
 ```table
 rows:
   - Token: font.size.smaller
@@ -39,6 +41,31 @@ rows:
     px: 20
     rem: 1.25
 ```
+
+### Line Height
+
+```table
+rows:
+  - Token: font.lineHeight.target.small
+    px: 16
+    ratio:
+  - Token: font.lineHeight.target.medium
+    px: 24
+    ratio:
+  - Token: font.lineHeight.target.large
+    px: 32
+    ratio:
+  - Token: font.lineHeight.ratio.smaller
+    px:
+    ratio: 1
+  - Token: font.lineHeight.ratio.small
+    px:
+    ratio: 1.2
+  - Token: font.lineHeight.ratio.medium
+    px:
+    ratio: 1.5
+```
+
 ## Colour
 ```table
 rows: !import colourTokenTableRows
