@@ -1,4 +1,4 @@
-> Nulogy applications are data heavy and used in varying environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes available to use for Nulogy applications. 
+> Nulogy applications are data heavy and used in varying environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes available to use for Nulogy applications.
 
 ## Typeface
 ### IBM Plex Sans
@@ -11,9 +11,9 @@ There are three levels of headings available for typographic heirarchy in an app
 {
   "font": "'IBM Plex Sans', sans-serif",
   "headings": [
-    { "label": "Title", "value": 28 },
-    { "label": "Section title", "value": 24 },
-    { "label": "Subsection title", "value": 20 }, 
+    { "label": "Title", "value": 28/32 },
+    { "label": "Section title", "value": 24/32 },
+    { "label": "Subsection title", "value": 20/24 },
   ]
 }
 ```
@@ -25,9 +25,9 @@ By default, interface text should be set at 16px. Smaller text may be desirable 
 {
   "font": "'IBM Plex Sans', sans-serif",
   "headings": [
-    { "label": "Text", "value": 16 },
-    { "label": "Small text", "value": 14 },
-    { "label": "Smaller text", "value": 12 },    
+    { "label": "Text", "value": 16/24 },
+    { "label": "Small text", "value": 14/16(24) },
+    { "label": "Smaller text", "value": 12/16 },
   ]
 }
 ```
