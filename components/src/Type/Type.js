@@ -7,7 +7,6 @@ const defaultProps = { theme: tokens };
 const textBlock = ({ theme }) => css`
   line-height: ${theme.font.lineHeight.regular};
   margin-top: 0;
-  margin-bottom: ${theme.space.x1}px;
 `
 
 export const Text = styled.span`
@@ -23,6 +22,7 @@ export const P = styled(Text.withComponent('p'))`
   ${textBlock}
   ${({ theme, fontSize }) => ({
     fontSize: `${theme.font.size[fontSize]}px`
+    marginBottom: `${theme.space.x3}px`
   })}
 `;
 
@@ -44,7 +44,7 @@ Title.defaultProps = { theme: tokens };
 export const SectionTitle = styled(Title.withComponent('h2'))`
   ${({ theme }) => ({
     fontSize: `${theme.font.size.sectionTitle}px`,
-    marginBottom: `${theme.space.x2}px`
+    marginBottom: `${theme.space.x1}px`
   })}
 `;
 
@@ -54,7 +54,7 @@ SectionTitle.defaultProps = { theme: tokens };
 export const SubsectionTitle = styled(Title.withComponent('h3'))`
   ${({ theme }) => ({
     fontSize: `${theme.font.size.subsectionTitle}px`,
-    marginBottom: `${theme.space.x2}px`
+    marginBottom: `${theme.space.x1}px`
   })}
 `;
 
@@ -67,6 +67,7 @@ export const labelStyles = ({theme}) => css`
   text-transform: uppercase;
   letter-spacing: .02em;
   line-height: 1.143; // related to https://github.com/nulogy/design-system/pull/43#discussion_r218503006
+  word-spacing: .333em;
 `;
 
 export const Label = styled.label`
