@@ -35,5 +35,8 @@ By default, interface text should be set at 16px with the line height of 1.5(24p
 ## Usage
 There are type components for headings and interface text available via React and token references for all sizes and line heights. There is also fontMetrics utility function that calculates the line heigh ratio based on the font size and the target line height input.
 
+### fontMerics
+Function takes in font size and line height values and returns CSS fragment with font size and line height properties, where line height is unitless. Default arguments are font.size.medium (16px) and font.lineHeight.target.medium (24px) which results in line height value of 1.5.
+
 [React components](/components/type)
 [Tokens](/tokens#typography)
