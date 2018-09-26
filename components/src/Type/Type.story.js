@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { Text, P, Title, SectionTitle, SubsectionTitle, Label } from './Type';
+import { Table, Cell, ActionCell, Row, Body, Header, HeaderCell } from '../Tables/Table';
 
 import Button from '../Button/Button';
 //import imageFile from '.Type/grid-8.png';
@@ -12,7 +13,7 @@ const image = {
 
 export const LineHeightWrapper = styled.section`
   padding: 16px;
-  //background: transparent url(https://4.bp.blogspot.com/-OKzyzA3fXMU/Vzt9kdt5P6I/AAAAAAAAGHU/ChcrTPdGHL0BpEmNCuy2L9V83D5vJV6iwCLcB/s1600/8pxGrid_1024x1024.png) repeat center -1px;
+  background: transparent url(https://4.bp.blogspot.com/-OKzyzA3fXMU/Vzt9kdt5P6I/AAAAAAAAGHU/ChcrTPdGHL0BpEmNCuy2L9V83D5vJV6iwCLcB/s1600/8pxGrid_1024x1024.png) repeat center -1px;
 `
 
 storiesOf('Type', module)
@@ -122,7 +123,8 @@ storiesOf('Type', module)
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
           consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
-          fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat
+          fringilla in, dignissim congue velit.</P>
+        <P>Nunc id arcu sagittis, volutpat
           sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper,
           dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales
           dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
@@ -150,6 +152,36 @@ storiesOf('Type', module)
           Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
         </P>
         <Button>Submit</Button>
+        <Table>
+          <Header>
+            <Row>
+              <HeaderCell>Name</HeaderCell>
+              <HeaderCell>Key</HeaderCell>
+              <HeaderCell>Integration Key</HeaderCell>
+              <HeaderCell></HeaderCell>
+            </Row>
+          </Header>
+          <Body>
+            <Row>
+              <Cell>Good</Cell>
+              <Cell>Good</Cell>
+              <Cell>1</Cell>
+              <ActionCell></ActionCell>
+            </Row>
+            <Row>
+              <Cell>Quarantined</Cell>
+              <Cell>Quarantined</Cell>
+              <Cell>2</Cell>
+              <ActionCell></ActionCell>
+            </Row>
+            <Row>
+              <Cell>Rejected</Cell>
+              <Cell>Rejected</Cell>
+              <Cell>3</Cell>
+              <ActionCell></ActionCell>
+            </Row>
+          </Body>
+        </Table>
     </LineHeightWrapper>
     </React.Fragment>
   ));
