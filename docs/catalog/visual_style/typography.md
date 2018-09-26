@@ -1,4 +1,4 @@
-> Nulogy applications are data heavy and used in varying environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes available to use for Nulogy applications.
+> Nulogy applications are data heavy and used in varying environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.
 
 ## Typeface
 ### IBM Plex Sans
@@ -19,7 +19,7 @@ There are three levels of headings available for typographic heirarchy in an app
 ```
 
 ## Interface text
-By default, interface text should be set at 16px. Smaller text may be desirable for certain purposes and can be set at either 14px or 12px.
+By default, interface text should be set at 16px with the line height of 1.5(24px). Smaller text may be desirable for certain purposes and can be set at either 14px or 12px. Other available line height values are 16px and 32px.
 
 ```type
 {
@@ -33,7 +33,7 @@ By default, interface text should be set at 16px. Smaller text may be desirable 
 ```
 
 ## Usage
-There are type components for headings and interface text available via React and token references for all sizes.
+There are type components for headings and interface text available via React and token references for all sizes and line heights. There is also fontMetrics utility function that calculates the line heigh ratio based on the font size and the target line height input.
 
 [React components](/components/type)
 [Tokens](/tokens#typography)
