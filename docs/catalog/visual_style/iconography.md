@@ -28,7 +28,7 @@ showSource: false
 If your interface requires an icon not listed here, please post a message in the [#design-system](slack://channel?id=CBAFQ4X7X/) slack channel.
 
 ## Sizes
-Icons can be 16px, 32px, 48px or 64px in size.
+Icons can be 8, 16, 32, 48 or 64 pixels in size.
 
 ```react
 showSource: false
