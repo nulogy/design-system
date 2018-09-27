@@ -1,3 +1,6 @@
+const rootDir = process.env.PWD;
+
 module.exports = {
-  testEnvironment: "node"
+  testEnvironment: "node",
+  rootDir
 };
