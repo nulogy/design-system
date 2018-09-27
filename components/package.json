@@ -10,8 +10,8 @@
     "start": "start-storybook -p 8080",
     "build": "webpack --mode production --config webpack.config.js",
     "watch": "yarn build --watch",
-    "test": "jest",
-    "test:watch": "jest --watch --notify",
+    "test": "jest --config ../jest.config.js --rootDir ./",
+    "test:watch": "yarn test --watch --notify",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
@@ -55,13 +55,11 @@
     "@storybook/react": "^3.4.5",
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.3",
-    "babel-jest": "22.4.4",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-runtime": "6.26.0",
-    "jest": "22.4.4",
     "lorem-ipsum": "^1.0.6",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -70,9 +68,6 @@
     "styled-components": "^3.2.6",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
-  },
-  "jest": {
-    "testEnvironment": "node"
   },
   "babel": {
     "presets": [

@@ -18,6 +18,6 @@ This package provides the following dependencies:
 
 | Purpose | Package | Package Script | Configuration |
 | ------- | ------- | -------------- | ------------- |
-| Testing | [Jest](https://jestjs.io) | `test: "jest --config ../jest.config.js --rootDir ./"` | [`/jest.config.js`](/jest.config.js)
+| Testing | [Jest](https://jestjs.io) | `"test": "jest --config ../jest.config.js --rootDir ./"` | [`/jest.config.js`](/jest.config.js)
 
 
