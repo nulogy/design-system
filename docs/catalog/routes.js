@@ -85,7 +85,10 @@ export default [
       {
         path: '/visual_style/iconography',
         title: 'Iconography',
-        content: pageLoader(() => import('./visual_style/iconography.md'))
+        content: pageLoader(() => import('./visual_style/iconography.md')),
+        imports: {
+          Icon: require('@nulogy/components').Icons.Icon
+        }        
       },
       {
         path: '/visual_style/logo',
@@ -125,7 +128,7 @@ export default [
         title: 'Icons',
         content: pageLoader(() => import('./components/icons.md')),
         imports: {
-          Icons: require('@nulogy/components').Icons
+          Icon: require('@nulogy/components').Icons.Icon
         }
       }, {
         path: '/components/links',
