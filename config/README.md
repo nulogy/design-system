@@ -1,12 +1,12 @@
 # `@nulogy/config`
 
-This package contains shared configuration for building, testing, linting and formatting used by all packages in this repo.
+This package contains shared configuration for building, testing, linting and formatting used by all packages in the monorepo.
 
 ## Scripts 
 
 If a package uses the default dependencies and configurations from this package, it can simply opt into the dependency's functionality by declaring the appropriate package script from the table below.
 
-For example if you would like to add testing to your package, you can just copy the json snippet from the **Package Script** column of Testing row (`test: "jest --config ../jest.config.js --rootDir ./"`).
+For example if you would like to add testing to your package, you can just copy the json snippet from the _"Package Script"_ column of the _"Testing"_ row (`test: "jest --config ../jest.config.js --rootDir ./"`), and paste it into the `scripts` block of your `package.json`.
 
 ## Configuration
 
