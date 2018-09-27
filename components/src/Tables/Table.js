@@ -10,7 +10,6 @@ import { Wrapper as IconWrapper } from '../Icons/Icon';
 const defaultProps = { theme: tokens };
 
 export const Cell = styled.td`
-  ${'' /* ${fontMetrics()} */}
   ${ ({ theme }) => css`
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
@@ -33,6 +32,25 @@ export const Button = styled(QuietButton)`
     border-radius: 50%;
     transition: none;
     color: ${theme.colour.neutral[600]};
+    &:hover{
+      color: ${theme.colour.neutral[600]};
+      transform: scale(1);
+    }
+    &:hover::before {
+        opacity: 1;
+        transform: scale(1.25);
+        background-color: ${theme.colour.blue[200]};
+    }
+    ${ CreateRow } & {
+        color: ${theme.colour.blue[300]};
+        &:hover::before{
+          background-color: ${theme.colour.neutral[700]};
+        }
+      }
+      &::before {
+        background-color: ${theme.colour.neutral[700]};
+      }
+    }
     ${IconWrapper}{
       width: 1.5em;
       height: 1.5em;
@@ -40,11 +58,6 @@ export const Button = styled(QuietButton)`
     ${IconWrapper} > svg{
       height: 100%;
       width: 100%;
-    }
-
-    &:hover{
-      color: ${theme.colour.neutral[600]};
-      transform: scale(1);
     }
     &::before {
       content: '';
@@ -64,11 +77,6 @@ export const Button = styled(QuietButton)`
         width: 2em;
         border-radius: 50%;
     }
-    &:hover::before {
-        opacity: 1;
-        transform: scale(1.25);
-        background-color: ${theme.colour.blue[200]};
-    }
   `}
 `;
 
@@ -81,8 +89,8 @@ export const ActionCell = styled(Cell)`
     text-align:right;
     white-space: nowrap;
     vertical-align: middle;
-    & > button:not(:last-child) {
-      margin-right: ${theme.space.x1}px;
+    & > ${Button}:not(:last-child) {
+      margin-right: ${theme.space.x2}px;
     }
   `}
 `;
@@ -112,16 +120,6 @@ export const CreateRow = styled.tr`
   ${ ({ theme }) => css`
     background-color: ${theme.colour.blue[800]};
     color: ${theme.colour.white};
-    ${ ActionCell } {
-      padding-top: ${theme.space.x2}px;
-      padding-bottom: ${theme.space.x2}px;
-      ${ Button } {
-        color: ${theme.colour.blue[300]};
-        &::before {
-          background-color: ${theme.colour.neutral[700]};
-        }
-      }
-    }
   `}
 `;
 
