@@ -1,4 +1,4 @@
-## Icons
+> Icons can be used alongside text to help assist users in finding certain actions on a page.
 
 Icons accept a prop for the name of the icon, which can be selected from the following list. They will be the same size and colour as their surrounding text.
 
