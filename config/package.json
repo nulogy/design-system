@@ -17,7 +17,10 @@
     "url": "https://github.com/nulogy/design-system/issues"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "22.4.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
     "jest": "22.4.4"
   }
 }
