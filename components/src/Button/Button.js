@@ -34,27 +34,11 @@ export const buttonColours = (mainColour = colour.blue.base) => css`
   border-color: ${mainColour};
 `
 
-export const Ripple = (mainColour = colour.blue[700]) => css`
-  background-position: center;
-
-  &:hover {
-    background: ${mainColour} radial-gradient(circle, transparent 1%, ${mainColour} 1%) center/15000%;
-    transition: all 0.75s;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-  }
-`
-
 export const primaryButtonColours = (mainColour = colour.blue.base) => css`
   color: ${colour.white};
   background-color: ${mainColour};
   border-color: ${mainColour};
   border-color: transparent;
-
-  ${ Ripple(mainColour) }
 `
 
 const type = ({ type = 'button' }) => (({
@@ -176,7 +160,7 @@ const StyledButton = styled.button`
 
   &:active {
     border-style: solid;
-    //box-shadow: none;
+    box-shadow: none;
     outline: none;
     transition: .05s  ease-in;
   }
