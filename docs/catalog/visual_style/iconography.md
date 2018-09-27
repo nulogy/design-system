@@ -36,9 +36,9 @@ showSource: false
 <div>
     <Icon name="add" style={{fontSize: 8}}/>
     <Icon name="add" style={{fontSize: 16}}/>
-    <Icon name="add" style={{fontSize: 32}}/></span>
-    <Icon name="add" style={{fontSize: 48}}/></span>
-    <Icon name="add" style={{fontSize: 64}}/></span>
+    <Icon name="add" style={{fontSize: 32}}/>
+    <Icon name="add" style={{fontSize: 48}}/>
+    <Icon name="add" style={{fontSize: 64}}/>
 </div>
 ```
 
