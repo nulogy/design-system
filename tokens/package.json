@@ -11,7 +11,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "jest --config ../jest.config.js",
+    "test": "jest --config ../jest.config.js --rootDir ./",
     "build": "babel src --out-dir dist --ignore *.test*",
     "watch": "yarn build --watch"
   },
@@ -19,10 +19,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-1": "^6.24.1"
-  },
-  "peerDependencies": {
-    "babel-jest": "*",
-    "jest": "*"
   },
   "babel": {
     "presets": [
