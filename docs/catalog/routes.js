@@ -121,6 +121,13 @@ export default [
           DataList: require('@nulogy/components').DataList.DataList
         }
       }, {
+        path: '/components/icons',
+        title: 'Icons',
+        content: pageLoader(() => import('./components/icons.md')),
+        imports: {
+          Icons: require('@nulogy/components').Icons
+        }
+      }, {
         path: '/components/links',
         title: 'Links',
         content: pageLoader(() => import('./components/links.md')),
@@ -154,14 +161,7 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      }, {
-        path: '/components/icons',
-        title: 'Icons',
-        content: pageLoader(() => import('./components/icons.md')),
-        imports: {
-          Icons: require('@nulogy/components').Icons
-        }
-      },  
+      }, 
     ]
   },
   {
