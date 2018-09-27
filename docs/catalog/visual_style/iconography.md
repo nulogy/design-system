@@ -8,7 +8,7 @@ Nulogy uses a selection of solid style [Material Design](https://material.io/too
 ```react
 showSource: false
 ---
-<div>
+<div style={{fontSize: 48, color: '#03101A'}}>
     <Icon name="add" />
     <Icon name="cancel" />
     <Icon name="check" />
@@ -28,17 +28,17 @@ showSource: false
 If your interface requires an icon not listed here, please post a message in the [#design-system](slack://channel?id=CBAFQ4X7X/) slack channel.
 
 ## Sizes
-Icons can be used at any size in our spacing scale from 16px to 64px. 
+Icons can be 16px, 32px, 48px or 64px in size.
 
 ```react
 showSource: false
 ---
 <div>
-    <p style="font-size: 16px;"><Icon name="add" /></p>
-    <p style="font-size: 24px;"><Icon name="add" /></p>
-    <p style="font-size: 32px;"><Icon name="add" /></p>
-    <p style="font-size: 48px;"><Icon name="add" /></p>
-    <p style="font-size: 64px;"><Icon name="add" /></p>
+    <Icon name="add" style={{fontSize: 8}}/>
+    <Icon name="add" style={{fontSize: 16}}/>
+    <Icon name="add" style={{fontSize: 32}}/></span>
+    <Icon name="add" style={{fontSize: 48}}/></span>
+    <Icon name="add" style={{fontSize: 64}}/></span>
 </div>
 ```
 
