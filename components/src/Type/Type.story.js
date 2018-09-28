@@ -118,7 +118,7 @@ storiesOf('Type', module)
           primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
           Maecenas sit amet leo dui. Integer semper porta dignissim.
         </P>
-        <SubsectionTitle>Fusce varius fringilla nunc vitae tincidunt vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SubsectionTitle>
+        <SubsectionTitle>Two Paragraphs and a Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now?</SubsectionTitle>
         <P>
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
@@ -130,7 +130,7 @@ storiesOf('Type', module)
           dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
           Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
         </P>
-        <SubsectionTitle>Fusce varius fringilla nunc vitae tincidunt.</SubsectionTitle>
+        <SubsectionTitle>This is small text (14px) with medium(default) line height (24px).</SubsectionTitle>
         <P fontSize="small">
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
@@ -141,6 +141,7 @@ storiesOf('Type', module)
           dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
           Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
         </P>
+        <SubsectionTitle>This is small text (14px) with small line height (16px).</SubsectionTitle>
         <P fontSize="small" lineHeight="small">
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
@@ -151,6 +152,7 @@ storiesOf('Type', module)
           dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
           Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
         </P>
+        <SubsectionTitle>This is smaller text (12px) with small line height (16px).</SubsectionTitle>
         <P fontSize="smaller" lineHeight="small">
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
