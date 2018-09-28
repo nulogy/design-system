@@ -86,6 +86,7 @@ export const ActionCell = styled(Cell)`
   ${ ({ theme }) => css`
     padding-top: ${theme.space.x1}px;
     padding-bottom: ${theme.space.x1}px;
+    padding-left: ${theme.space.x3}px;
     text-align:right;
     white-space: nowrap;
     vertical-align: middle;
