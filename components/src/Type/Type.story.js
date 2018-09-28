@@ -1,8 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import loremIpsum from 'lorem-ipsum';
 import styled from 'styled-components';
 import { Text, P, Title, SectionTitle, SubsectionTitle, Label } from './Type';
 import { Table, Cell, ActionCell, Row, Body, Header, HeaderCell } from '../Tables/Table';
+import DataList from '../DataList/DataList';
+
+const dataTemplate = num => [`key ${num}`, `value ${num}`];
+const lipsumTemplate = num => [loremIpsum({ sentenceUpperBound: 5 }), loremIpsum()];
+
+const data = (count, template = dataTemplate) => Array.apply(null, {length: count}).map(
+  (_, i) => template(i + 1)
+);
+const lipsum = num => data(num, lipsumTemplate);
 
 import Button from '../Button/Button';
 //import imageFile from '.Type/grid-8.png';
@@ -194,6 +204,7 @@ storiesOf('Type', module)
             </Row>
           </Body>
         </Table>
+        <DataList data={lipsum(10)} />
     </LineHeightWrapper>
     </React.Fragment>
   ));
