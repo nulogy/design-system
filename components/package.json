@@ -48,7 +48,6 @@
   },
   "devDependencies": {
     "@nulogy/tokens": "^0.1.17",
-    "babel-loader": "7.1.4",
     "lorem-ipsum": "^1.0.6",
     "react-dom": "^16.3.2",
     "react": "^16.3.2",
