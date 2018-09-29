@@ -1,5 +1,5 @@
 {
-  "name": "@nulogy/config",
+  "name": "@nulogy/common",
   "version": "0.1.17",
   "description": "Shared configuration for Nulogy Design System",
   "private": true,
