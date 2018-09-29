@@ -48,18 +48,10 @@
   },
   "devDependencies": {
     "@nulogy/tokens": "^0.1.17",
-    "@storybook/addon-actions": "^3.4.5",
-    "@storybook/addon-links": "^3.4.5",
-    "@storybook/addon-options": "^3.4.10",
-    "@storybook/addons": "^3.4.5",
-    "@storybook/react": "^3.4.5",
-    "@storybook/storybook-deployer": "^2.3.0",
     "babel-loader": "7.1.4",
     "lorem-ipsum": "^1.0.6",
     "react-dom": "^16.3.2",
     "react": "^16.3.2",
-    "storybook-addon-scissors": "^4.0.1",
-    "storybook-addon-styled-component-theme": "^1.0.3",
     "styled-components": "^3.2.6",
     "webpack-cli": "^3.1.0",
     "webpack": "^4.8.3"
