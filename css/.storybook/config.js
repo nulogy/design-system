@@ -1,4 +1,5 @@
-import configureStorybook from '@nulogy/config/storybook/config';
+import configureStorybook from '@nulogy/common/storybook/config';
+import '../src';
 
 configureStorybook(require.context(
   "../src",       // path where stories live

@@ -1,7 +1,16 @@
 import { configure } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
+import { setOptions } from '@storybook/addon-options';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import tokens from '@nulogy/tokens';
+import './stories.css.js';
 
-const rootDir = process.env.PWD;
-console.log('rootDir :', rootDir);
+setOptions({
+  name: 'Nulogy Design System',
+  addonPanelInRight: true,
+});
+
+addDecorator(withThemesProvider([tokens]));
 
 export default requireContext => {
   function loadStories() {
