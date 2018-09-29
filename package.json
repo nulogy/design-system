@@ -4,8 +4,8 @@
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "workspaces": [
+    "common",
     "components",
-    "config",
     "css",
     "docs",
     "sandbox",
@@ -30,6 +30,7 @@
     "clean": "lerna exec 'rm -rf dist'",
     "pristine": "git clean -fdX .",
     
+    "common": "yarn workspace @nulogy/common",
     "components": "yarn workspace @nulogy/components",
     "css": "yarn workspace @nulogy/css",
     "docs": "yarn workspace @nulogy/nulogy-design",

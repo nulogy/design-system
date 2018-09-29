@@ -1,4 +1,4 @@
-# `@nulogy/config`
+# `@nulogy/common`
 
 This package contains shared configuration for building, testing, linting and formatting used by all packages in the monorepo.
 
