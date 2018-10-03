@@ -85,7 +85,10 @@ export default [
       {
         path: '/visual_style/iconography',
         title: 'Iconography',
-        content: pageLoader(() => import('./visual_style/iconography.md'))
+        content: pageLoader(() => import('./visual_style/iconography.md')),
+        imports: {
+          Icon: require('@nulogy/components').Icons.Icon
+        }        
       },
       {
         path: '/visual_style/logo',
@@ -121,6 +124,13 @@ export default [
           DataList: require('@nulogy/components').DataList.DataList
         }
       }, {
+        path: '/components/icons',
+        title: 'Icons',
+        content: pageLoader(() => import('./components/icons.md')),
+        imports: {
+          Icon: require('@nulogy/components').Icons.Icon
+        }
+      }, {
         path: '/components/links',
         title: 'Links',
         content: pageLoader(() => import('./components/links.md')),
@@ -154,7 +164,7 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      },
+      }, 
     ]
   },
   {
