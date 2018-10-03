@@ -6,7 +6,7 @@ This package contains shared configuration for building, testing, linting and fo
 
 If a package uses the default dependencies and configurations from this package, it can simply opt into the dependency's functionality by declaring the appropriate package script from the table below.
 
-For example if you would like to add testing to your package, you can just copy the json snippet from the _"Package Script"_ column of the _"Testing"_ row (`test: "jest --config ../jest.config.js --rootDir ./"`), and paste it into the `scripts` block of your `package.json`.
+For example if you would like to add testing to your package, you can just copy the json snippet from the _"Package Script"_ column of the _"Testing"_ row (`test: "jest --config ../jest.config.js"`), and paste it into the `scripts` block of your `package.json`.
 
 ## Configuration
 
@@ -18,7 +18,7 @@ This package provides the following dependencies:
 
 | Purpose | Package | Package Script | Configuration |
 | ------- | ------- | -------------- | ------------- |
-| Testing | [Jest](https://jestjs.io) | `"test": "jest --config ../jest.config.js --rootDir ./"` | [`/jest.config.js`](/jest.config.js)
+| Testing | [Jest](https://jestjs.io) | `"test": "jest --config ../jest.config.js"` | [`/jest.config.js`](/jest.config.js)
 | Building | [Babel](https://babeljs.io) | `"build": "babel src --out-dir dist --ignore *.test*"` | [`/.babelrc`](/.babelrc)
 | Building | [Webpack](https://webpack.js.org) | `"build": "webpack --mode production --config ../webpack.config.js"` | [`/webpack.config.js`](/webpack.config.js)
 | Dev server | [Storybook](http://storybook.js.org) | `"start": "start-storybook -p X0X0X0` _(replace `X0X0X0` with a port.)_ | [`/common/storybook`](/common/storybook) _– See note on configuring storybook below_.
