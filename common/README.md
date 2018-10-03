@@ -29,6 +29,8 @@ This package provides the following dependencies:
 
 Storybook configuration is a bit funky and must be declared individually in each package that runs a storybook. However, this package contains files with most of the config boilerplate that you can just import into your package's `.storybook/config`. 
 
+### 1. Create a `.storybook/` config folder
+
 You will need to create a folder called `.storybook/` in your package root. This folder must contain two files: `config.js` and `addons.js`.
 
 Your directory should look like:
@@ -40,16 +42,22 @@ myPackage/
     config.js
 ```
 
-The `config.js` and `addons.js` files can mostly get away with just importing their contents from this package:
+### 2. `.storybook/addons.js`
 
-### `.storybook/config.js`
+The `addons.js` files just needs to import the addons config from this package:
+
+```js
+import '@nulogy/common/storybook/addons';
+```
+
+### 3. `.storybook/config.js`
+
+Your pacakges `config.js` is a bit more involved, and should look like this:
 
 ```js
 import configureStorybook from '@nulogy/common/storybook/config';
 import '@nulogy/css'; // remove this if you don't want the global css
 
-// this call to require.context must happen inside your package and is the main 
-// reason the storybook config can't be centralized.
 configureStorybook(require.context(
   "../src",       // path where stories live - must be a string literal!
   true,           // recursive?
@@ -57,8 +65,4 @@ configureStorybook(require.context(
 ));
 ```
 
-### `.storybook/addons.js`
-
-```js
-import '@nulogy/common/storybook/addons';
-```
+The `config.js` has a call to [Webpack's `require.context`](https://webpack.js.org/guides/dependency-management/#require-context). Due to the way Webpack resolves `require.context`, it can't be dynamic and must be called from inside your package.
