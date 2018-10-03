@@ -11,26 +11,8 @@
     "access": "public"
   },
   "scripts": {
-    "test": "jest",
-    "build": "babel src --out-dir dist --ignore *.test*",
+    "test": "jest --config ../jest.config.js",
+    "build": "babel src --out-dir dist",
     "watch": "yarn build --watch"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-1": "^6.24.1"
-  },
-  "dependencies": {
-    "babel-jest": "22.4.4",
-    "jest": "22.4.4"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "stage-1"
-    ]
   }
 }

@@ -10,14 +10,11 @@
   "dependencies": {
     "@nulogy/components": "^0.1.17",
     "@nulogy/css": "^0.1.17",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.8",
-    "@storybook/addon-links": "^3.4.8",
-    "@storybook/react": "^3.4.8",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3"
   }

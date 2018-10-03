@@ -1,0 +1,43 @@
+{
+  "name": "@nulogy/common",
+  "version": "0.1.17",
+  "description": "Shared configuration for Nulogy Design System",
+  "private": true,
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "contributors": [
+    "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
+  ],
+  "homepage": "https://nulogy.design",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nulogy/design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nulogy/design-system/issues"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^3.4.11",
+    "@storybook/addon-links": "^3.4.11",
+    "@storybook/addon-options": "^3.4.11",
+    "@storybook/addons": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "22.4.4",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-runtime": "^6",
+    "jest": "22.4.4",
+    "prop-types": "^15.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "storybook-addon-scissors": "^4.0.1",
+    "storybook-addon-styled-component-theme": "^1.0.3",
+    "styled-components": "^3.2.6",
+    "webpack": "^4.8.3"
+  }
+}

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 7070",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "webpack --mode production --config ../webpack.config.js",
     "watch": "yarn build --watch",
     "build-storybook": "build-storybook"
   },
@@ -23,24 +23,11 @@
   },
   "devDependencies": {
     "@nulogy/tokens": "^0.1.17",
-    "@storybook/react": "^3.4.10",
-    "babel-core": "^6.26.3",
-    "babel-loader": "7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "styled-components": "^3.2.6",
     "styled-normalize": "^8.0.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-1"
-    ]
   }
 }
