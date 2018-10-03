@@ -19,7 +19,7 @@ This package provides the following dependencies:
 | Purpose | Package | Package Script | Configuration |
 | ------- | ------- | -------------- | ------------- |
 | Testing | [Jest](https://jestjs.io) | `"test": "jest --config ../jest.config.js"` | [`/jest.config.js`](/jest.config.js)
-| Building | [Babel](https://babeljs.io) | `"build": "babel src --out-dir dist --ignore *.test*"` | [`/.babelrc`](/.babelrc)
+| Building | [Babel](https://babeljs.io) | `"build": "babel src --out-dir dist` | [`/.babelrc`](/.babelrc)
 | Building | [Webpack](https://webpack.js.org) | `"build": "webpack --mode production --config ../webpack.config.js"` | [`/webpack.config.js`](/webpack.config.js)
 | Dev server | [Storybook](http://storybook.js.org) | `"start": "start-storybook -p X0X0X0` _(replace `X0X0X0` with a port.)_ | [`/common/storybook`](/common/storybook) _– See note on configuring storybook below_.
 

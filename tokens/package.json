@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest --config ../jest.config.js",
-    "build": "babel src --out-dir dist --ignore *.test*",
+    "build": "babel src --out-dir dist",
     "watch": "yarn build --watch"
   }
 }
