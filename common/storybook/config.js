@@ -41,9 +41,8 @@ addDecorator(withStyles({
 
 addDecorator(backgrounds([
   { name: 'none', value: '', default: true },
-  { name: 'grid', value: 'hsla(187, 46%, 92%, 1)' },
+  { name: 'grid', value: 'hsl(187, 46%, 92%)' },
   ...Object.entries(tokens.colour.neutral).map(([name, value]) => ({ name: `neutral[${name}]`, value })),
-  { name: 'black', value: tokens.colour.black }
 ]));
 
 export default requireContext => {
