@@ -2,9 +2,9 @@ import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
-import backgrounds from '@storybook/addon-backgrounds';
-import tokens from '@nulogy/tokens';
+import withBackgrounds from '@storybook/addon-backgrounds';
 import withStyles from '@sambego/storybook-styles';
+import tokens from '@nulogy/tokens';
 import './stories.css.js';
 
 setOptions({
@@ -39,7 +39,7 @@ addDecorator(withStyles({
   minHeight: `calc(100vh - ${px(grid.major.size * 2)})`
 }));
 
-addDecorator(backgrounds([
+addDecorator(withBackgrounds([
   { name: 'none', value: '', default: true },
   { name: 'grid', value: 'hsl(187, 46%, 92%)' },
   ...Object.entries(tokens.colour.neutral).map(([name, value]) => ({ name: `neutral[${name}]`, value })),
