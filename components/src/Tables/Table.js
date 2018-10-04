@@ -9,10 +9,11 @@ import QuietButton from '../Button/QuietButton';
 const defaultProps = { theme: tokens };
 
 export const Cell = styled.td`
-  ${'' /* ${fontMetrics()} */}
+  ${fontMetrics()}
   ${ ({ theme }) => css`
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
+    ${fontMetrics()};
     &:first-child{
       padding-left: ${theme.space.x2}px;
     }
@@ -70,7 +71,8 @@ export const Header = styled.thead`
 `;
 
 export const HeaderCell = styled(Cell.withComponent('th'))`
-  ${labelStyles}
+  ${labelStyles};
+  ${fontMetrics('small', 'medium')};
   font-weight: normal;
   vertical-align: bottom;
 `;
@@ -125,7 +127,7 @@ Table.defaultProps = defaultProps;
 
 export const DataTable = ({ data, headers }) => (
   <Table>
-    { headers && 
+    { headers &&
     <Header>
       <Row>
       {headers.map(header => (
