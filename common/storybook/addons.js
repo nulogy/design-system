@@ -1,10 +1,9 @@
-import '@storybook/addon-options/register';
 import '@storybook/addon-actions/register';
-import '@storybook/addon-links/register';
-import 'storybook-addon-styled-component-theme/dist/register';
+import '@storybook/addon-actions/register';
 import '@storybook/addon-backgrounds/register';
-import '@storybook/addon-actions/register';
-
+import '@storybook/addon-links/register';
+import '@storybook/addon-options/register';
+import 'storybook-addon-styled-component-theme/dist/register';
 import registerScissors from 'storybook-addon-scissors';
 import devicesJSON from './devices.json';
 
