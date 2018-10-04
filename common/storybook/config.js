@@ -14,9 +14,10 @@ setOptions({
 
 addDecorator(withThemesProvider([tokens]));
 
+const px = value => `${value}px`;
 const grid = {
-  major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${tokens.font.lineHeight.target.medium}px`},
-  base: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${tokens.space.x1}px`}
+  major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: tokens.font.lineHeight.target.medium },
+  base: { colour: 'hsla(120, 100%, 100%, 0.4)', size: tokens.space.x1 }
 }
 
 addDecorator(withStyles({
@@ -26,13 +27,16 @@ addDecorator(withStyles({
     linear-gradient(${grid.base.colour} 1px, transparent 1px),
     linear-gradient(90deg, ${grid.base.colour} 1px, transparent 1px)`,
   backgroundSize: `
-    ${grid.major.size} ${grid.major.size},
-    ${grid.major.size} ${grid.major.size},
-    ${grid.base.size} ${grid.base.size},
-    ${grid.base.size} ${grid.base.size}`,
+    ${px(grid.major.size)} ${px(grid.major.size)},
+    ${px(grid.major.size)} ${px(grid.major.size)},
+    ${px(grid.base.size)} ${px(grid.base.size)},
+    ${px(grid.base.size)} ${px(grid.base.size)}
+  `,
   backgroundPosition: '-1px -1px',
   borderTop: '1px solid red',
-  marginTop: '-1px'
+  marginTop: '-1px',
+  padding: `${px(grid.major.size)}`,
+  minHeight: `calc(100vh - ${px(grid.major.size * 2)})`
 }));
 
 addDecorator(backgrounds([
