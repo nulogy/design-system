@@ -14,22 +14,22 @@ setOptions({
 
 addDecorator(withThemesProvider([tokens]));
 
-const gridMarks = [
-  tokens.font.lineHeight.target.medium + 'px',
-  tokens.space.x1 + 'px'
-];
-
-const gridColours = [
-  'hsla(120, 100%, 100%, 0.5)',
-  'hsla(120, 100%, 100%, 0.4)'
-];
+const grid = {
+  major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${tokens.font.lineHeight.target.medium}px`},
+  base: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${tokens.space.x1}px`}
+}
 
 addDecorator(withStyles({
-  backgroundImage: `linear-gradient(${gridColours[0]} 1px, transparent 1px),
-    linear-gradient(90deg, ${gridColours[0]} 1px, transparent 1px),
-    linear-gradient(${gridColours[1]} 1px, transparent 1px),
-    linear-gradient(90deg, ${gridColours[1]} 1px, transparent 1px)`,
-	backgroundSize: `${gridMarks[0]} ${gridMarks[0]}, ${gridMarks[0]} ${gridMarks[0]}, ${gridMarks[1]} ${gridMarks[1]}, ${gridMarks[1]} ${gridMarks[1]}`,
+  backgroundImage: `
+    linear-gradient(${grid.major.colour} 1px, transparent 1px),
+    linear-gradient(90deg, ${grid.major.colour} 1px, transparent 1px),
+    linear-gradient(${grid.base.colour} 1px, transparent 1px),
+    linear-gradient(90deg, ${grid.base.colour} 1px, transparent 1px)`,
+  backgroundSize: `
+    ${grid.major.size} ${grid.major.size},
+    ${grid.major.size} ${grid.major.size},
+    ${grid.base.size} ${grid.base.size},
+    ${grid.base.size} ${grid.base.size}`,
   backgroundPosition: '-1px -1px',
   borderTop: '1px solid red',
   marginTop: '-1px'
