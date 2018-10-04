@@ -4,6 +4,7 @@ import { setOptions } from '@storybook/addon-options';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import backgrounds from '@storybook/addon-backgrounds';
 import tokens from '@nulogy/tokens';
+import withStyles from '@sambego/storybook-styles';
 import './stories.css.js';
 
 setOptions({
@@ -13,9 +14,26 @@ setOptions({
 
 addDecorator(withThemesProvider([tokens]));
 
+const gridColours = [
+  'hsla(120, 100%, 100%, 0.5)',
+  'hsla(120, 100%, 100%, 0.4)'
+];
+
+addDecorator(withStyles({
+  backgroundImage: `linear-gradient(${gridColours[0]} 1px, transparent 1px),
+    linear-gradient(90deg, ${gridColours[0]} 1px, transparent 1px),
+    linear-gradient(${gridColours[1]} 1px, transparent 1px),
+    linear-gradient(90deg, ${gridColours[1]} 1px, transparent 1px)`,
+	backgroundSize: '24px 24px, 24px 24px, 8px 8px, 8px 8px',
+  backgroundPosition: '-1px -1px',
+  borderTop: '1px solid red',
+  marginTop: '-1px'
+}));
+
 const bgs = [
-  { name: 'white', value: tokens.colour.white, default: true },
-  ...Object.entries(tokens.colour.neutral).map(([name, value]) => ({ name, value })),
+  { name: 'none', value: '', default: true },
+  { name: 'grid', value: 'hsla(187, 46%, 92%, 1)' },
+  ...Object.entries(tokens.colour.neutral).map(([name, value]) => ({ name: `neutral[${name}]`, value })),
   { name: 'black', value: tokens.colour.black }
 ];
 

@@ -17,6 +17,7 @@
     "url": "https://github.com/nulogy/design-system/issues"
   },
   "dependencies": {
+    "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/addon-backgrounds": "^3.4.11",
     "@storybook/addon-links": "^3.4.11",
