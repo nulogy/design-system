@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.11",
+    "@storybook/addon-backgrounds": "^3.4.11",
     "@storybook/addon-links": "^3.4.11",
     "@storybook/addon-options": "^3.4.11",
     "@storybook/addons": "^3.4.11",
