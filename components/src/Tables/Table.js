@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import tokens from '@nulogy/tokens';
-import { fontMetrics } from '../utils';
 import { labelStyles } from '../Type/Type';
 import QuietButton from '../Button/QuietButton';
+import { fontMetrics } from '../utils.js';
+import { Wrapper as IconWrapper } from '../Icons/Icon';
 
 const defaultProps = { theme: tokens };
 
 export const Cell = styled.td`
-  ${'' /* ${fontMetrics()} */}
   ${ ({ theme }) => css`
     padding: ${theme.space.x2}px ${theme.space.x1}px;
     vertical-align: top;
@@ -25,38 +25,78 @@ export const Cell = styled.td`
 
 Cell.defaultProps = defaultProps;
 
-export const ActionCell = styled(Cell)`
-  ${ ({ theme }) => css`
-    padding-top: ${theme.space.x1}px;
-    padding-bottom: ${theme.space.x1}px;
-    text-align:right;
-    white-space: nowrap;
-    vertical-align: middle;
-    & > button:not(:last-child) {
-      margin-right: ${theme.space.half}px;
-    }
-  `}
-`;
-
-ActionCell.defaultProps = defaultProps;
-
 export const Button = styled(QuietButton)`
   ${ ({ theme }) => css`
     padding: ${theme.space.half}px;
     border-width: 0;
     border-radius: 50%;
     transition: none;
+    color: ${theme.colour.neutral[600]};
     &:hover{
-      background-color: ${theme.colour.blue[300]};
-      transform: scale(1.25);
-      svg{
-        transform: scale(0.8);
+      color: ${theme.colour.neutral[600]};
+      transform: scale(1);
+    }
+    &:hover::before {
+        opacity: 1;
+        transform: scale(1.25);
+        background-color: ${theme.colour.blue[200]};
+    }
+    ${ CreateRow } & {
+        color: ${theme.colour.blue[300]};
+        &:hover::before{
+          background-color: ${theme.colour.neutral[700]};
+        }
       }
+      &::before {
+        background-color: ${theme.colour.neutral[700]};
+      }
+    }
+    ${IconWrapper}{
+      width: 1.5em;
+      height: 1.5em;
+    }
+    ${IconWrapper} > svg{
+      height: 100%;
+      width: 100%;
+    }
+    &::before {
+      content: '';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        transition-duration: .15s;
+        transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        transition-property: transform,opacity;
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
     }
   `}
 `;
 
 Button.defaultProps = defaultProps;
+
+export const ActionCell = styled(Cell)`
+  ${ ({ theme }) => css`
+    padding-top: ${theme.space.x1}px;
+    padding-bottom: ${theme.space.x1}px;
+    padding-left: ${theme.space.x3}px;
+    text-align:right;
+    white-space: nowrap;
+    vertical-align: middle;
+    & > ${Button}:not(:last-child) {
+      margin-right: ${theme.space.x2}px;
+    }
+  `}
+`;
+
+ActionCell.defaultProps = defaultProps;
 
 export const Row = styled.tr`
   ${ ({ theme }) => css`
@@ -81,10 +121,6 @@ export const CreateRow = styled.tr`
   ${ ({ theme }) => css`
     background-color: ${theme.colour.blue[800]};
     color: ${theme.colour.white};
-    ${ ActionCell } {
-      padding-top: ${theme.space.x2}px;
-      padding-bottom: ${theme.space.x2}px;
-    }
   `}
 `;
 
@@ -125,7 +161,7 @@ Table.defaultProps = defaultProps;
 
 export const DataTable = ({ data, headers }) => (
   <Table>
-    { headers && 
+    { headers &&
     <Header>
       <Row>
       {headers.map(header => (

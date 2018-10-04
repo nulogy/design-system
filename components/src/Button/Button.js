@@ -12,9 +12,9 @@ const smallButtonPaddingY = 1;
 
 const themeProp = { theme: { font } };
 
-const iconSizeRatio = 
-  (fontSize = 'medium', lineHeight = 'medium') => 
-  ({ theme }) => 
+const iconSizeRatio =
+  (fontSize = 'medium', lineHeight = 'medium') =>
+  ({ theme }) =>
     (lineHeightRatio(fontSize, lineHeight)(themeProp) * iconSizeRatioForLineHeight(lineHeight)(themeProp));
 
 export const buttonReset = css`
@@ -28,7 +28,7 @@ export const buttonReset = css`
   cursor: pointer;
 `;
 
-export const buttonColours = (mainColour = colour.blue.base, ) => css`
+export const buttonColours = (mainColour = colour.blue.base) => css`
   color: ${mainColour};
   background-color: ${colour.white};
   border-color: ${mainColour};
@@ -38,6 +38,7 @@ export const primaryButtonColours = (mainColour = colour.blue.base) => css`
   color: ${colour.white};
   background-color: ${mainColour};
   border-color: ${mainColour};
+  border-color: transparent;
 `
 
 const type = ({ type = 'button' }) => (({
@@ -161,7 +162,6 @@ const StyledButton = styled.button`
     border-style: solid;
     box-shadow: none;
     outline: none;
-    transform: scale(0.98);
     transition: .05s  ease-in;
   }
 
