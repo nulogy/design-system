@@ -23,7 +23,7 @@ const image = {
 
 export const LineHeightWrapper = styled.section`
   padding: 16px;
-  background: transparent url(https://4.bp.blogspot.com/-OKzyzA3fXMU/Vzt9kdt5P6I/AAAAAAAAGHU/ChcrTPdGHL0BpEmNCuy2L9V83D5vJV6iwCLcB/s1600/8pxGrid_1024x1024.png) repeat center -1px;
+  background: transparent url(https://4.bp.blogspot.com/-OKzyzA3fXMU/Vzt9kdt5P6I/AAAAAAAAGHU/ChcrTPdGHL0BpEmNCuy2L9V83D5vJV6iwCLcB/s1600/8pxGrid_1024x1024.png) repeat -1px -1px;
 `
 
 storiesOf('Type', module)
@@ -134,6 +134,18 @@ storiesOf('Type', module)
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
           consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
           fringilla in, dignissim congue velit.</P>
+          <SectionTitle>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SectionTitle>
+          <SubsectionTitle>Donec leo felis vitae nisl vestibulum</SubsectionTitle>
+          <P>
+            Nunc tempor eget mauris id facilisis. Morbi convallis mauris at
+            fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero
+            vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo
+            molestie dolor, vel tristique orci efficitur eu. Nullam eleifend
+            malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique,
+            lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum
+            primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
+            Maecenas sit amet leo dui. Integer semper porta dignissim.
+          </P>
         <P>Nunc id arcu sagittis, volutpat
           sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper,
           dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales
@@ -151,7 +163,18 @@ storiesOf('Type', module)
           dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
           Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
         </P>
-        <SubsectionTitle>This is small text (14px) with small line height (16px).</SubsectionTitle>
+        <SubsectionTitle>This is smaller text (12px) with small line height (24px).</SubsectionTitle>
+        <P fontSize="smaller">
+          Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
+          pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
+          consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
+          fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat
+          sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper,
+          dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales
+          dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
+          Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
+        </P>
+        <SubsectionTitle>This is small text (14px) with small line height (16px). Reserved for buttons, inputs, maybe tables ...</SubsectionTitle>
         <P fontSize="small" lineHeight="small">
           Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
           pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,

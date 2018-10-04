@@ -32,10 +32,10 @@ P.defaultProps = { ...defaultProps, fontSize: 'medium', lineHeight: 'medium' };
 
 export const Title = styled.h1`
   ${textBlock}
-  ${fontMetrics('largest', 'large')}
+  ${fontMetrics('largest', 'larger')}
   ${({ theme }) => css`
     font-weight: ${theme.font.weight.medium};
-    margin-bottom: ${theme.space.x3}px;
+    margin-bottom: ${theme.space.x6}px;
   `}
 `;
 
@@ -45,7 +45,7 @@ Title.defaultProps = { theme: tokens };
 export const SectionTitle = styled(Title.withComponent('h2'))`
   ${fontMetrics('larger', 'large')}
   ${({ theme }) => ({
-    marginBottom: `${theme.space.x1}px`
+    marginBottom: `${theme.space.x2}px`
   })}
 `;
 
