@@ -14,6 +14,11 @@ setOptions({
 
 addDecorator(withThemesProvider([tokens]));
 
+const gridMarks = [
+  tokens.font.lineHeight.target.medium + 'px',
+  tokens.space.x1 + 'px'
+];
+
 const gridColours = [
   'hsla(120, 100%, 100%, 0.5)',
   'hsla(120, 100%, 100%, 0.4)'
@@ -24,7 +29,7 @@ addDecorator(withStyles({
     linear-gradient(90deg, ${gridColours[0]} 1px, transparent 1px),
     linear-gradient(${gridColours[1]} 1px, transparent 1px),
     linear-gradient(90deg, ${gridColours[1]} 1px, transparent 1px)`,
-	backgroundSize: '24px 24px, 24px 24px, 8px 8px, 8px 8px',
+	backgroundSize: `${gridMarks[0]} ${gridMarks[0]}, ${gridMarks[0]} ${gridMarks[0]}, ${gridMarks[1]} ${gridMarks[1]}, ${gridMarks[1]} ${gridMarks[1]}`,
   backgroundPosition: '-1px -1px',
   borderTop: '1px solid red',
   marginTop: '-1px'
