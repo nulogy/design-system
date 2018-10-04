@@ -27,20 +27,5 @@ showSource: false
 
 If your interface requires an icon not listed here, please post a message in the [#design-system](slack://channel?id=CBAFQ4X7X/) slack channel.
 
-## Sizes
-Icons can be 8, 16, 32, 48 or 64 pixels in size.
-
-```react
-showSource: false
----
-<div>
-    <Icon name="add" style={{fontSize: 8}}/>
-    <Icon name="add" style={{fontSize: 16}}/>
-    <Icon name="add" style={{fontSize: 32}}/>
-    <Icon name="add" style={{fontSize: 48}}/>
-    <Icon name="add" style={{fontSize: 64}}/>
-</div>
-```
-
 ## Usage
 [Icon component](/components/icons)
