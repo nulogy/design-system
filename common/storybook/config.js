@@ -35,16 +35,12 @@ addDecorator(withStyles({
   marginTop: '-1px'
 }));
 
-const bgs = [
+addDecorator(backgrounds([
   { name: 'none', value: '', default: true },
   { name: 'grid', value: 'hsla(187, 46%, 92%, 1)' },
   ...Object.entries(tokens.colour.neutral).map(([name, value]) => ({ name: `neutral[${name}]`, value })),
   { name: 'black', value: tokens.colour.black }
-];
-
-addDecorator(
-  backgrounds(bgs)
-);
+]));
 
 export default requireContext => {
   function loadStories() {
