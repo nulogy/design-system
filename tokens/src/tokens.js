@@ -11,7 +11,7 @@ export const font = {
     medium: 16,
     large: 18,
     larger: 26,
-    largest: 42,
+    largest: 36,
     get pageTitle() {return this.largest},
     get sectionTitle() {return this.larger},
     get subsectionTitle() {return this.large}
@@ -26,7 +26,7 @@ export const font = {
       small: 16,
       medium: 24,
       large: 32,
-      larger: 48,
+      larger: 40,
     },
     ratio: {
       smaller: 1,
