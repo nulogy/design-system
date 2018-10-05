@@ -31,7 +31,7 @@ Paragraph text appears on its own line and has a space around it.
 ```
 
 ```react
-<P fontSize="small" lineHeight="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat pulvinar urna sit amet fringilla. Nulla euismod libero ante, ut scelerisque leo dapibus vel. Dapibus ac ultricies sed, aliquet bibendum lacus.</P>
+<P fontSize="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat pulvinar urna sit amet fringilla. Nulla euismod libero ante, ut scelerisque leo dapibus vel. Dapibus ac ultricies sed, aliquet bibendum lacus.</P>
 ```
 
 
