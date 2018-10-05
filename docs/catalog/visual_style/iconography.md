@@ -1,6 +1,6 @@
 > Icons can be used alongside text to help assist users in finding certain actions on a page.
 
-Try to avoid using icons without labels unless the meaning is ubiquitous, like print. 
+Avoid using icons without labels unless the meaning is ubiquitous, like print. 
 _For more information on icon usability and recognition, see this study from Nielsen Norman Group: [Icon Usability](https://www.nngroup.com/articles/icon-usability/)._
 
 ## Icon set
