@@ -18,28 +18,28 @@ rows:
     rem: 1
   - Token: font.size.large
     CSS: .font-size--large
-    px: 20
-    rem: 1.25
+    px: 18
+    rem: 1.125
   - Token: font.size.larger
     CSS: .font-size--larger
-    px: 24
-    rem: 1.5
+    px: 26
+    rem: 1.625
   - Token: font.size.largest
     CSS: .font-size--largest
-    px: 28
-    rem: 1.75
+    px: 36
+    rem: 2.25
   - Token: font.size.pageTitle
     CSS: .font-size--page-title
-    px: 28
-    rem: 1.75
+    px: 36
+    rem: 2.25
   - Token: font.size.sectionTitle
     CSS: .font-size--section-title
-    px: 24
-    rem: 1.5
+    px: 26
+    rem: 1.625
   - Token: font.size.subsectionTitle
     CSS: .font-size--subsection-title
-    px: 20
-    rem: 1.25
+    px: 18
+    rem: 1.125
 ```
 
 ### Line Height
@@ -54,6 +54,9 @@ rows:
     ratio:
   - Token: font.lineHeight.target.large
     px: 32
+    ratio:
+  - Token: font.lineHeight.target.larger
+    px: 40
     ratio:
   - Token: font.lineHeight.ratio.smaller
     px:
