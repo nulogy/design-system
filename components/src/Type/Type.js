@@ -7,11 +7,13 @@ const defaultProps = { theme: tokens };
 
 const textBlock = ({ theme }) => css`
   margin-top: 0;
+  margin-right: 0;
 `
 
 export const Text = styled.span`
   ${({ theme, fontSize }) => ({
-    fontSize: `${theme.font.size[fontSize]}px`
+    fontSize: `${theme.font.size[fontSize]}px`,
+    marginRight: `${theme.space.x1}px`
   })}
 `;
 
