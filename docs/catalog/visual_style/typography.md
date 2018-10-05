@@ -11,9 +11,9 @@ There are three levels of headings available for typographic heirarchy in an app
 {
   "font": "'IBM Plex Sans', sans-serif",
   "headings": [
-    { "label": "Title", "value": 36/40 },
-    { "label": "Section title", "value": 26/32 },
-    { "label": "Subsection title", "value": 18/24 },
+    { "label": "Title", "value": 36 },
+    { "label": "Section title", "value": 26 },
+    { "label": "Subsection title", "value": 18 },
   ]
 }
 ```
@@ -25,9 +25,9 @@ By default, interface text should be set at 16px with the line height of 1.5(24p
 {
   "font": "'IBM Plex Sans', sans-serif",
   "headings": [
-    { "label": "Text", "value": 16/24 },
-    { "label": "Small text", "value": 14/24 },
-    { "label": "Smaller text", "value": 12/24 },
+    { "label": "Text", "value": 16 },
+    { "label": "Small text", "value": 14 },
+    { "label": "Smaller text", "value": 12 },
   ]
 }
 ```
