@@ -15,16 +15,6 @@ const data = (count, template = dataTemplate) => Array.apply(null, {length: coun
 const lipsum = num => data(num, lipsumTemplate);
 
 import Button from '../Button/Button';
-//import imageFile from '.Type/grid-8.png';
-
-const image = {
-  //src: imageFile
-};
-
-export const LineHeightWrapper = styled.section`
-  padding: 16px;
-  background: transparent url(https://4.bp.blogspot.com/-OKzyzA3fXMU/Vzt9kdt5P6I/AAAAAAAAGHU/ChcrTPdGHL0BpEmNCuy2L9V83D5vJV6iwCLcB/s1600/8pxGrid_1024x1024.png) repeat -1px -1px;
-`
 
 storiesOf('Type', module)
   .add('All components', () => (
@@ -115,7 +105,6 @@ storiesOf('Type', module)
   ))
   .add('Vertical Rythm', () => (
     <React.Fragment>
-      <LineHeightWrapper>
         <Title>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Title>
         <SectionTitle>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SectionTitle>
         <P>
@@ -228,6 +217,5 @@ storiesOf('Type', module)
           </Body>
         </Table>
         <DataList data={lipsum(10)} />
-    </LineHeightWrapper>
     </React.Fragment>
   ));
