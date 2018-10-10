@@ -9,9 +9,9 @@ export const font = {
     smaller: 12,
     small: 14,
     medium: 16,
-    large: 20,
-    larger: 24,
-    largest: 28,
+    large: 18,
+    larger: 26,
+    largest: 36,
     get pageTitle() {return this.largest},
     get sectionTitle() {return this.larger},
     get subsectionTitle() {return this.large}
@@ -26,6 +26,7 @@ export const font = {
       small: 16,
       medium: 24,
       large: 32,
+      larger: 40,
     },
     ratio: {
       smaller: 1,

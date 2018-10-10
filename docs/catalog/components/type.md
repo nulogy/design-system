@@ -1,7 +1,7 @@
-> Headings and text components provide typographic hierarchy, weights and default margins. 
+> Headings and text components provide typographic hierarchy, weights and default margins.
 
 ## Headings
-Headings are used to provide heirarchy in an application. They're bold, larger in size and display on their own line. 
+Headings are used to provide heirarchy in an application. They're bold, larger in size and display on their own line.
 
 ### Title
 Used for the title of a page.
@@ -22,25 +22,25 @@ Used to further organize context within a section.
 ```
 
 ## Interface text
-Interface text can appear inline or as a block with margins around it. It can accepts a fontSize property from the available font tokens.
+Interface text can appear inline or as a block with margins around it. It can accept fontSize and lineHeight property from the available font tokens.
 
-### Paragraph 
+### Paragraph
 Paragraph text appears on its own line and has a space around it.
 ```react
-<P>Lorem ipsum dolor sit amet</P>
+<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat pulvinar urna sit amet fringilla. Nulla euismod libero ante, ut scelerisque leo dapibus vel. Dapibus ac ultricies sed, aliquet bibendum lacus.</P>
 ```
 
 ```react
-<P fontSize="small">Lorem ipsum dolor sit amet</P>
+<P fontSize="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat pulvinar urna sit amet fringilla. Nulla euismod libero ante, ut scelerisque leo dapibus vel. Dapibus ac ultricies sed, aliquet bibendum lacus.</P>
 ```
 
 
 ### Text
-The text component is for inline text. 
+The text component is for inline text.
 
 ```react
 <Text>Lorem ipsum dolor sit amet</Text>
 ```
 ```react
-<Text fontSize="small">Lorem ipsum dolor sit amet</Text>
+<Text fontSize="small" lineHeight="small">Lorem ipsum dolor sit amet</Text>
 ```

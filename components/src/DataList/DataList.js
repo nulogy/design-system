@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import facepaint from 'facepaint';
 import tokens from '@nulogy/tokens';
 import { labelStyles } from '../Type/Type';
+import { fontMetrics } from '../utils';
 
 const defaultProps = { theme: tokens };
 const propTypes = { theme: PropTypes.object };
@@ -54,6 +55,7 @@ Key.defaultProps = { ...defaultProps };
 Key.propTypes = { ...propTypes };
 
 export const Value = styled.dd`
+  ${fontMetrics()}
   margin-left: 0;
   ${({ theme }) => mq(theme)({
     marginBottom: [`${theme.space.x4}px`, 0]
