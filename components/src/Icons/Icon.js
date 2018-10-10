@@ -61,14 +61,16 @@ export const Wrapper = styled.span`
 
 const Icon = ({ name, IconSvg = Icons[name], ...props }) => (
   <Wrapper {...props} >
-    <IconSvg />
+      <IconSvg title={props.title} aria-hidden={!props.title} />
   </Wrapper>
 );
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(names).isRequired
+  name: PropTypes.oneOf(names).isRequired,
+  title: PropTypes.string
 }
 
 Icon.defaultProps = {}
 
 export default Icon;
+
