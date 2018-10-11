@@ -20,9 +20,11 @@ plain: true
 src: "text.svg"
 ```
 
-## Usage
-There are type components for headings and interface text available via React and token references for all sizes and line heights. There is also fontMetrics utility function that calculates the line heigh ratio based on the font size and the target line height input.
+### Line height
+The default line heights above should be appropriate for most interfaces but if your design requires a different line height you can use 16px, 32px or 40px. 
 
+## Usage
+There are type components for headings and interface text available via React as well as token references for all sizes and line heights. 
 
 [React components](/components/type)
 [Tokens](/tokens#typography)
