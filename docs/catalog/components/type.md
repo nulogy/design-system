@@ -44,3 +44,6 @@ The text component is for inline text.
 ```react
 <Text fontSize="small" lineHeight="small">Lorem ipsum dolor sit amet</Text>
 ```
+
+## fontMetrics
+The fontMetrics function takes in font size and line height values and returns CSS fragments with font size and unitless line height properties. Default arguments are `font.size.medium` (16px) and `font.lineHeight.target.medium` (24px) which results in line height value of `1.5`.
