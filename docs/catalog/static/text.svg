@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="318px" height="186px" viewBox="0 0 318 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Typography" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Text" transform="translate(0.000000, -3.000000)">
+            <g font-size="16">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans, IBM Plex Sans" font-weight="normal" fill="#1B2B4D">
+                    <tspan x="0" y="44">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Text-(16px-/-24px)" font-family="IBMPlexSans-Light, IBM Plex Sans" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Text (16px / 24px)</tspan>
+                </text>
+            </g>
+            <g transform="translate(0.000000, 72.000000)">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" fill="#1B2B4D">
+                    <tspan x="0" y="44">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Small-text-(14px-/-2" font-family="IBMPlexSans-Light, IBM Plex Sans" font-size="16" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Small text (14px / 24px)</tspan>
+                </text>
+            </g>
+            <g transform="translate(0.000000, 142.000000)">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" fill="#1B2B4D">
+                    <tspan x="0" y="44">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Smaller-text-(12px-/" font-family="IBMPlexSans-Light, IBM Plex Sans" font-size="16" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Smaller text (12px / 16px)</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
