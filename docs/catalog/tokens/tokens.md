@@ -73,3 +73,31 @@ rows:
 ```table
 rows: !import colourTokenTableRows
 ```
+
+## Spacing
+
+```table
+span: 3
+rows:
+  - Token: space.half
+    px: 4
+    rem: 0.25
+  - Token: space.x1
+    px: 8
+    rem: 0.5
+  - Token: space.x2
+    px: 16
+    rem: 1
+  - Token: space.x3
+    px: 24
+    rem: 1.5
+  - Token: space.x4
+    px: 32
+    rem: 2
+  - Token: space.x6
+    px: 48
+    rem: 3
+  - Token: space.x8
+    px: 64
+    rem: 4
+```
