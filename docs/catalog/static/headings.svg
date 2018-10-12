@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="731px" height="240px" viewBox="0 0 731 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Headings</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Typography" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Headings" transform="translate(0.000000, -3.000000)">
+            <g id="Subsection" transform="translate(0.000000, 184.000000)">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="18" font-weight="400" fill="#1B2B4D">
+                    <tspan x="0" y="55">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Subsection-title-(18" font-family="IBMPlexSans-Light, IBM Plex Sans" font-size="16" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Subsection title (18px / 24px)</tspan>
+                </text>
+            </g>
+            <g id="Section" transform="translate(0.000000, 99.000000)">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="26" font-weight="400" fill="#1B2B4D">
+                    <tspan x="0" y="55">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Section-title-(26px" font-family="IBMPlexSans-Light, IBM Plex Sans" font-size="16" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Section title (26px / 32px)</tspan>
+                </text>
+            </g>
+            <g id="Title">
+                <text id="The-quick-brown-fox" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="36" font-weight="400" fill="#1B2B4D">
+                    <tspan x="0" y="65">The quick brown fox jumps over the lazy dog</tspan>
+                </text>
+                <text id="Title-(36px-/-40px)" font-family="IBMPlexSans-Light, IBM Plex Sans" font-size="16" font-weight="300" fill="#98A9B8">
+                    <tspan x="0" y="16">Title (36px / 40px)</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
