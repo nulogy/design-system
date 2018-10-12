@@ -174,7 +174,12 @@ export default [
     content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {
-    title: 'Guides',
+    title: 'Designers Guide',    
+    path: '/guides/designers',
+    content: pageLoader(() => import('./guides/designers.md'))
+  }, 
+  {
+    title: 'Developers Guide',    
     pages: [
       {
         path: '/guides/quickstart',
@@ -210,9 +215,9 @@ export default [
         path: '/guides/publishing',
         title: 'Publishing packages to npm',
         content: pageLoader(() => import('./guides/publishing.md'))
-      },
-    ]
-  },
+      },      
+    ],
+  },   
   {
     title: 'Reading list',
     path: '/reading_list',
