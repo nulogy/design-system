@@ -9,7 +9,7 @@ There are three levels of headings available for typographic heirarchy in an app
 
 ```image
 plain: true
-src: "headings.svg"
+src: "typography/headings.svg"
 ```
 
 ## Interface text
@@ -17,7 +17,7 @@ By default, interface text should be set at 16px with a line height of 24px. Sma
 
 ```image
 plain: true
-src: "text.svg"
+src: "typography/text.svg"
 ```
 
 ### Line height
