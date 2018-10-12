@@ -2,7 +2,7 @@
 
 ```image
 plain: true
-src: "/spacing-example.svg"
+src: "/spacing/spacing-example.svg"
 ```
 
 ## Baseline
@@ -12,7 +12,7 @@ Nulogy uses a scale based on `8px` with modifiers from `half (4px)` to `8x (64px
 
 ```image
 plain: true
-src: "/spacing-values.svg"
+src: "/spacing/spacing-values.svg"
 ```
 
 ## How to choose spacing
