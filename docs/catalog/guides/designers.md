@@ -31,7 +31,7 @@ url: /visual_style/logo
 ```image
 plain: true
 span: 1
-src: "/sketch.png"
+src: "/designers-guide/sketch.png"
 ```
 Nulogy uses [Sketch](https://www.sketchapp.com/) as our primary design tool. There are a few things you can do to start working with the Nulogy Design System in Sketch.
 
@@ -42,7 +42,7 @@ Nulogy employees should have received a Sketch license as part of your on boardi
 ```image
 plain: true
 span: 3
-src: "/sketch-nudging.png"
+src: "/designers-guide/sketch-nudging.png"
 ```
 Our spacing system uses an 8px unit of measurement, so it's helpful to have nudging settings that match. These can be found in `Preferences > Nudging Settings`
 
@@ -52,7 +52,7 @@ The Sketch Master File is a collection of colour palettes, type styles and compo
 ```image
 plain: true
 span: 4
-src: "/sketch-master-file.png"
+src: "/designers-guide/sketch-master-file.png"
 ```
 
 **_Coming soon_**
