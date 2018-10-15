@@ -1,0 +1,32 @@
+/* 
+
+Catalog hax 
+
+
+*/
+
+/* force Catalog to use Nulogy's header sizes since you can't use CSS  */
+h1 {font-size: 36px !important; line-height: 40px !important;}
+h2[class$="headingStyle"] {font-size: 26px !important; line-height: 32px !important;}
+h3[class$="headingStyle"] {font-size: 18px !important; line-height: 24px !important;}
+h4 {font-size: 16px !important;}
+blockquote {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    color: #607180 !important;
+}
+
+.catalog-186n6im-Menu-Menu{
+    margin-bottom: 0.5em;
+}
+
+/* There's a bug in Catalog where if you make the sidebar
+dark, the submenu hovers look broken. This is because they're
+set to have no top padding while also set to do a :hov bg that
+can't be removed in index.js. This horrible looking css smashes
+proper paddings into place so that everything looks nice.
+*/
+ul li ul li a[class$="linkStyle-linkStyle-linkStyle"] {
+    padding: 8px 24px 8px 64px !important;
+}
+
