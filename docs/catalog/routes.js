@@ -183,7 +183,7 @@ export default [
       },
       {
         path: '/guides/componentdocumentation',
-        title: 'Writting Component Documentation',
+        title: 'Writing Component Documentation',
         content: pageLoader(() => import('./guides/componentdocumentation.md'))
       }
     ]
