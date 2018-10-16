@@ -59,7 +59,7 @@ Themeing implications on a particular component are explained here.
 More complex components may need to be broken down into smaller, more digestible parts. In that case, you can dedicate a subsection to a particular part of the component. These subsections can contain all the subsections that Design section has (Anatomy, Specs, States, Best Practices, Hierarchy, Placement, Accessibility Guidelines, Animation Guidelines, Responsive Design Guidelines, Props, Themes, and Parts of Components).
 ### Custom Category
 Sometimes there will be a need to communicate something that doesn't fit in any of the categories listed above. In that case, a new category should be created. The category should be named to best describe the content of the section and placed in the most appropriate place.
-### Dos and Donts*
+### Dos and Donts
 Dos and Donts are used to give concrete examples of a proper and improper use of the component. They can be are part of all the subsections listed above. Dos and Donts have a consistent look and writing style. To convey strictness level they start the copy with "Always … ", "Whenever Possible … ", "Try Using … ", or "Never …".
 ## Content
 ```image
