@@ -88,7 +88,7 @@ export default [
         content: pageLoader(() => import('./visual_style/iconography.md')),
         imports: {
           Icon: require('@nulogy/components').Icons.Icon
-        }        
+        }
       },
       {
         path: '/visual_style/logo',
@@ -164,7 +164,7 @@ export default [
           P: require('@nulogy/components').Type.P,
           Text: require('@nulogy/components').Type.Text
         }
-      }, 
+      },
     ]
   },
   {
@@ -174,12 +174,22 @@ export default [
     content: pageLoader(() => import('./tokens/tokens.md'))
   },
   {
-    title: 'Designers Guide',    
-    path: '/guides/designers',
-    content: pageLoader(() => import('./guides/designers.md'))
-  }, 
+    title: 'Designers Guide',
+    pages: [
+      {
+        path: '/guides/gettingstarted',
+        title: 'Getting Started with Designing Nulogy Products',
+        content: pageLoader(() => import('./guides/gettingstarted.md'))
+      },
+      {
+        path: '/guides/componentdocumentation',
+        title: 'Writing Component Documentation',
+        content: pageLoader(() => import('./guides/componentdocumentation.md'))
+      }
+    ]
+  },
   {
-    title: 'Developers Guide',    
+    title: 'Developers Guide',
     pages: [
       {
         path: '/guides/quickstart',
@@ -215,9 +225,9 @@ export default [
         path: '/guides/publishing',
         title: 'Publishing packages to npm',
         content: pageLoader(() => import('./guides/publishing.md'))
-      },      
+      },
     ],
-  },   
+  },
   {
     title: 'Reading list',
     path: '/reading_list',
