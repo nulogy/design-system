@@ -61,7 +61,8 @@ export default [
   {
     path: '/',
     title: 'Welcome',
-    content: pageLoader(() => import('../../README.md'))
+    content: pageLoader(() => import('./visual_style/welcome.js')),
+    styles: ['/welcome.css'],          
   },
   {
     title: 'Visual Style',
@@ -71,11 +72,10 @@ export default [
         title: 'Colour',
         content: pageLoader(() => import('./visual_style/colour.md')),
         imports: colourImports
-      },
-      {
+      }, {
         path: '/visual_style/typography',
         title: 'Typography',
-        content: pageLoader(() => import('./visual_style/typography.md'))
+        content: pageLoader(() => import('./visual_style/typography.md')),
       },
       {
         path: '/visual_style/spacing',
