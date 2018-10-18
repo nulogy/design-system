@@ -12,8 +12,6 @@ export default () => (
       </div>
     </section>
 
-    <a class="latest-version-button" href="//github.com/nulogy/design-system">Download latest version ({packageJson.version})</a>
-
     <section className="welcome-container">
       <div className="flex-container">
         <div>
