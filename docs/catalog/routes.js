@@ -178,7 +178,7 @@ export default [
     pages: [
       {
         path: '/guides/gettingstarted',
-        title: 'Getting Started with Designing Nulogy Products',
+        title: 'Getting Started',
         content: pageLoader(() => import('./guides/gettingstarted.md'))
       },
       {
