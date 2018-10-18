@@ -57,11 +57,11 @@ rows:
   - Section: Placement
     Purpose: Instructions on how a component should be placed on the page.
   - Section: Accessibility Guidelines
-    Purpose: Requirements for accessibility related to a certain component
+    Purpose: Requirements for accessibility related to a certain component.
   - Section: Animation Guidelines
-    Purpose: Anything to be aware of regarding animating the component 
+    Purpose: Anything to be aware of regarding animating the component.
   - Section: Responsive Guidelines
-    Purpose: Any specific instruction for how a component should behave at different screen sizes
+    Purpose: Any specific instruction for how a component should behave at different screen sizes.
   - Section: Props 
     Purpose: _Props_ are properties of a component. Components can be small, medium or large, have compact or spaced-out padding... Props are shown and explained under this section.
   - Section: Variations
