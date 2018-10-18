@@ -10,7 +10,6 @@ const config = {
   title: 'Nulogy Design System',
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
-  styles: ['/docs.css'],  
   theme: {
     fontFamily: font.family.regular,
     fontHeading: font.family.regular,
