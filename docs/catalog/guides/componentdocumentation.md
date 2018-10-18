@@ -33,7 +33,7 @@ rows:
 ```
 
 ## Design
-The _Design_ section takes a closer look at a component. It demonstrates how to use the component and what variations are available. The Design section can contain following subsections
+The _Design_ section takes a closer look at a component. It demonstrates how to use the component and what variations are available. The Design section can contain following subsections:
 
 
 ```image
