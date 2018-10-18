@@ -1,7 +1,10 @@
+body {
+    line-height: 1.5;
+}
+
 /* 
 
 Catalog hax 
-
 
 */
 
@@ -29,4 +32,3 @@ proper paddings into place so that everything looks nice.
 ul li ul li a[class$="linkStyle-linkStyle-linkStyle"] {
     padding: 8px 24px 8px 64px !important;
 }
-
