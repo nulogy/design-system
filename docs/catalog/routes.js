@@ -62,7 +62,6 @@ export default [
     path: '/',
     title: 'Welcome',
     content: pageLoader(() => import('./visual_style/welcome.js')),
-    styles: ['/welcome.css'],
   },
   {
     title: 'Visual Style',
