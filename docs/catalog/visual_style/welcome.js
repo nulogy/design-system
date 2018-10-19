@@ -5,6 +5,57 @@ import packageJson from '../../package.json';
 export default () => (
   <main className="welcome">
 
+    <style dangerouslySetInnerHTML={{__html: `
+      /* beware! you're about to look at a horrible hack for hiding the page header on the welcome page */
+      .catalog-jfwi2-PageHeader-PageHeader {display: none}
+      /* don't worry! the hacks are over */
+
+      .welcome-container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 3rem 2rem;
+      }
+
+      .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+
+      .flex-container div {text-align: center;}
+      @media screen and (min-width: 600px) {
+          .flex-container div {
+              width: 45%;
+              text-align: left;
+          }
+      }
+
+      .intro {
+          background: #DDE8ED !important;
+          padding: 3rem 0;
+          text-align: center;
+      }
+
+      .intro__logo {margin-bottom: 2rem;}
+      .intro__text {color: #203140 !important;}
+
+      .latest-version-button {
+          display: block;
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 2rem;
+          background: #0E77D2;
+          margin-top: -50px;
+          color: #fff;
+          border-radius: 3px;
+          text-decoration: none;
+          transition: .3s;
+      }
+
+      .latest-version-button:hover {background: #054CA3;}
+    `}} />
+
     <section class="intro">
       <div className="welcome-container">
         <img className="intro__logo" src="/logos/Nulogy_Full_Color.svg" style={{maxWidth: '100%'}} />
