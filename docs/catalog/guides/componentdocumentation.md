@@ -49,7 +49,7 @@ rows:
   - Subsection: Specs
     Purpose: Provide a component's specific measurements. Can be combined with an Anatomy subsection.
   - Subsection: States
-    Purpose: Show the _States_ of the component, e.g default, hover, active, onFocus, disabled. 
+    Purpose: Show the _States_ of the component, e.g default, hover, active, onFocus, disabled.
   - Subsection: Best Practices
     Purpose: Add tips on how to make the most out of a component, e.g "Use modals sparingly. Modals are disruptive. Their sudden appearance forces users to stop their current task and focus on the modal content."
   - Subsection: Hierarchy
@@ -62,7 +62,7 @@ rows:
     Purpose: Anything to be aware of regarding animating the component.
   - Subsection: Responsive Guidelines
     Purpose: Any specific instruction for how a component should behave at different screen sizes.
-  - Subsection: Props 
+  - Subsection: Props
     Purpose: _Props_ are properties of a component. Components can be small, medium or large, have compact or spaced-out padding... Props are shown and explained under this section.
   - Subsection: Variations
     Purpose: List any types and variations of your component here. Each type or variation may have some or all of the subsections listed in the _Design_ section. Be sure to call out any unique qualities or attributes here.
@@ -73,7 +73,7 @@ rows:
   - Subsection: Custom Category
     Purpose: If none of the above sections fit for what you need to document, you may need to create a custom category. Give the category a name that describes its contents accurately, and arrange it in the correct location in your component documentation.
   - Subsection: Dos and Don'ts
-    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “When possible … “, “Try using … “, or “Never …”.      
+    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “When possible … “, “Try using … “, or “Never …”.
 ```
 
 ## Content
