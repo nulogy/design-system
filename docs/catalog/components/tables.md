@@ -110,3 +110,15 @@ Create row is used for adding records to the table. It appears at the top of the
 
 </Table>
 ```
+
+## UX Guidelines 
+
+### Alignment
+Columns should be aligned based on their content types, according to the following rules: 
+* Left align text
+* Right align numerical data
+* Match heading alignment to column content
+* Do not center anything
+
+### Truncation
+When possible, wrap content instead of truncating. This helps avoid ambiguity, especially with content that starts with the same letters. If necessary, consider adding a Tooltip.
