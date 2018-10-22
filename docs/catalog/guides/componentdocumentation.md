@@ -22,13 +22,13 @@ src: "/designers-guide/intro-ia.svg"
 
 ```table
 rows:
-  - Subsection: Component Name
+  - Section: Component Name
     Purpose: An easy to understand name for your component. Choose clear over "clever" names. If the component is known by multiple names add "Also known as …" in the subheader. The Components Name subtitle also displays the current version of the component.
-  - Subsection: Deck / Description
+  - Section: Deck / Description
     Purpose: A concise description of a component. Keep your Deck under 144 characters long.
-  - Subsection: When to Use
+  - Section: When to Use
     Purpose: Explicitly state the scenarios where a component should be used. Designers often have a particular scenario in mind when they look for the right component. This section should provide a quick breakdown of the most typical scenarios.
-  - Subsection: Example
+  - Section: Example
     Purpose: A graphical representation of the component. Whenever possible examples should be neither too simple nor too complex. Oversimplified examples do not convey the full potential of the component and complex examples can be overwhelming.
 ```
 
@@ -44,36 +44,36 @@ src: "/designers-guide/design-ia.svg"
 
 ```table
 rows:
-  - Subsection: Anatomy
+  - Section: Anatomy
     Purpose: Identifies parts of the component and visually demonstrates how they relate to each other.
-  - Subsection: Specs
+  - Section: Specs
     Purpose: Provide a component's specific measurements. Can be combined with an Anatomy subsection.
-  - Subsection: States
-    Purpose: Show the _States_ of the component, e.g default, hover, active, onFocus, disabled.
-  - Subsection: Best Practices
+  - Section: States
+    Purpose: Show the _States_ of the component, e.g default, hover, active, onFocus, disabled. 
+  - Section: Best Practices
     Purpose: Add tips on how to make the most out of a component, e.g "Use modals sparingly. Modals are disruptive. Their sudden appearance forces users to stop their current task and focus on the modal content."
-  - Subsection: Hierarchy
+  - Section: Hierarchy
     Purpose: Explain how a particular component relates to other components.
-  - Subsection: Placement
+  - Section: Placement
     Purpose: Instructions on how a component should be placed on the page.
-  - Subsection: Accessibility Guidelines
+  - Section: Accessibility Guidelines
     Purpose: Requirements for accessibility related to a certain component.
-  - Subsection: Animation Guidelines
+  - Section: Animation Guidelines
     Purpose: Anything to be aware of regarding animating the component.
-  - Subsection: Responsive Guidelines
+  - Section: Responsive Guidelines
     Purpose: Any specific instruction for how a component should behave at different screen sizes.
-  - Subsection: Props
+  - Section: Props 
     Purpose: _Props_ are properties of a component. Components can be small, medium or large, have compact or spaced-out padding... Props are shown and explained under this section.
-  - Subsection: Variations
-    Purpose: List any types and variations of your component here. Each type or variation may have some or all of the subsections listed in the _Design_ section. Be sure to call out any unique qualities or attributes here.
-  - Subsection: Themes
+  - Section: Variations
+    Purpose: List any types and variations of your component here. Each type or variation may have some or all of the subsections listed in the _Design_ section. Be sure to call out any unique qualities or attributes here.                     
+  - Section: Themes
     Purpose: Note any implications related to themes and your component here.
-  - Subsection: Parts of Component
+  - Section: Parts of Component
     Purpose: More complex components may need to be broken down into smaller, more digestible parts. In that case, you can dedicate a subsection to a particular part of the component. Refer to the _Design_ subsections for a list of the subsections that can be used here.
-  - Subsection: Custom Category
+  - Section: Custom Category
     Purpose: If none of the above sections fit for what you need to document, you may need to create a custom category. Give the category a name that describes its contents accurately, and arrange it in the correct location in your component documentation.
-  - Subsection: Dos and Don'ts
-    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “Whenever Possible … “, “Try Using … “, or “Never …”.
+  - Section: Dos and Don'ts
+    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “When possible … “, “Try using … “, or “Never …”.      
 ```
 
 ## Content
