@@ -65,7 +65,7 @@ rows:
   - Subsection: Props 
     Purpose: _Props_ are properties of a component. Components can be small, medium or large, have compact or spaced-out padding... Props are shown and explained under this section.
   - Subsection: Variations
-    Purpose: List any types and variations of your component here. Each type or variation may have some or all of the subsections listed in the _Design_ section. Be sure to call out any unique qualities or attributes here.                     
+    Purpose: List any types and variations of your component here. Each type or variation may have some or all of the subsections listed in the _Design_ section. Be sure to call out any unique qualities or attributes here.
   - Subsection: Themes
     Purpose: Note any implications related to themes and your component here.
   - Subsection: Parts of Component
