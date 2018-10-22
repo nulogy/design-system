@@ -121,4 +121,5 @@ Columns should be aligned based on their content types, according to the followi
 * Do not center anything
 
 ### Truncation
-When possible, wrap content instead of truncating. This helps avoid ambiguity, especially with content that starts with the same letters. If necessary, consider adding a Tooltip.
+When possible, content should wrap instead of truncating. However, sometimes truncation can be necessary. When truncating, use an ellipses (...) to indicate that content has been truncated, and include a tooltip with the full text.
+
