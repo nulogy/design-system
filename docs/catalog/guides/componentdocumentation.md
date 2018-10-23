@@ -73,7 +73,7 @@ rows:
   - Subsection: Custom Category
     Purpose: If none of the above sections fit for what you need to document, you may need to create a custom category. Give the category a name that describes its contents accurately, and arrange it in the correct location in your component documentation.
   - Subsection: Dos and Don'ts
-    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “Whenever Possible … “, “Try Using … “, or “Never …”.
+    Purpose: Concrete examples of the proper and improper use of a component. To convey strictness level they start the copy with “Always … “, “When possible … “, “Try using … “, or “Never …”.
 ```
 
 ## Content
