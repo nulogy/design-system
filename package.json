@@ -15,21 +15,16 @@
     "start": "yarn components start",
     "start:all": "lerna run start --stream --parallel",
     "all": "concurrently 'yarn watch' 'yarn start:all'",
-    
     "test": "lerna run test --stream --include-filtered-dependents --since master",
     "pretest": "yarn build --include-filtered-dependencies --since master",
-    
     "build:all": "lerna run build --stream",
     "build": "yarn build:all --no-private",
     "build:docs": "yarn docs build",
     "watch": "lerna run watch --no-private --stream --parallel",
-    
     "prepublishOnly": "yarn pristine && yarn install",
     "postinstall": "yarn build",
-    
     "clean": "lerna exec 'rm -rf dist'",
     "pristine": "git clean -fdX .",
-    
     "common": "yarn workspace @nulogy/common",
     "components": "yarn workspace @nulogy/components",
     "css": "yarn workspace @nulogy/css",
@@ -60,6 +55,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
-    "lerna": "^3.2.1"
+    "lerna": "^3.2.1",
+    "style-dictionary": "^2.5.0"
   }
 }
