@@ -10,8 +10,6 @@
     "start": "start-storybook -p 8080",
     "build": "webpack --mode production --config ../webpack.config.js",
     "watch": "yarn build --watch",
-    "test": "jest --config ../jest.config.js",
-    "test:watch": "yarn test --watch --notify",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
