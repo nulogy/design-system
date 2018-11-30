@@ -1,9 +1,7 @@
-import configureStorybook from '@nulogy/common/storybook/config';
-import '@nulogy/css';
+import { configure } from '@storybook/react';
 
-configureStorybook(require.context(
-  "../src",       // path where stories live
-  true,           // recursive?
-  /\.story.js$/, // story files match this pattern
-));
+function loadStories() {
+  require('../src/Link/Link.story.js');
+}
 
+configure(loadStories, module);
