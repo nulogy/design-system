@@ -1,17 +1,10 @@
 # @nulogy/css
+This package allows you to write CSS using Nulogy Design tokens. 
 
 ## Usage 
 
 ### Development
-`yarn dev` to start a webpack-dev-server at [localhost:8080](http://localhost:8080)
+`yarn dev` will watch *.scss files, compile them to nds-dev.css and launch a storybook dev environment [localhost:8080](http://localhost:8080) 
 
 ### Production
 `yarn build` will rebuild nds.css. 
-
-## Writing CSS
-Functional CSS do one thing
-BEM components starting with capital letter
-
-## TO DO 
-Add version to nds.css file.
-Set storybook back up? 
