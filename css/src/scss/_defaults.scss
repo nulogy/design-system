@@ -1,0 +1,32 @@
+
+// Reset
+body, html, li, ul, h1, h2, h3, h4, p  {margin: 0; padding: 0;}
+
+// Box sizing
+* {box-sizing: border-box;}
+
+// Default typography
+body {
+	font-family: $font-family-base;
+	// line-height: $line-height;
+}
+
+a:visited {color: inherit;}
+
+h1, h2, h3, h4 {
+	font-weight: $weight-font-medium;
+	// line-height: 1.5;
+}
+
+h1 {font-size: $size-font-largest;}
+h2 {font-size: $size-font-larger;}
+h3 {font-size: $size-font-large;}
+
+code {font-family: $font-family-mono;}
+
+// Responsive
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
