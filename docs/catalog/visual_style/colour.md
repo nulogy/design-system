@@ -1,4 +1,4 @@
-> Colours are used to set a visual tone, communicate meaning, provide guidance, and create coherent experience between Nulogy product(s) and physical environment. We are committed to complying with AA standard contrast ratios.
+<!-- > Colours are used to set a visual tone, communicate meaning, provide guidance, and create coherent experience between Nulogy product(s) and physical environment. We are committed to complying with AA standard contrast ratios.
 
 ## Base Colours
 
@@ -220,4 +220,4 @@ Whenever possible Alias colour names should be used.
 
 ```table
 rows: !import colourTokenTableRows
-```
+``` -->
