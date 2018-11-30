@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import tokens from '@nulogy/tokens';
+import * as tokens from '../../../tokens/build/exports.js';
 
 const Link = styled.a`
-  ${ ({ theme }) => css`
-    color: ${theme.colour.blue.base};
+    color: red;
     background-color: transparent;
+    font-size: ${tokens.size_font_largest};
     &:hover{
-      color: ${theme.colour.blue[800]};
+      color: black};
     }
-  `}
+
   ${ ({ underline }) => css`
     text-decoration: ${underline ? 'underline' : 'none' };
   `}
@@ -21,7 +21,6 @@ Link.propTypes = {
 }
 
 Link.defaultProps = {
-  theme: tokens,
   underline: true,
 }
 
