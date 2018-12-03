@@ -492,7 +492,7 @@ img {
   font-size: 36px !important; }
 
 .text--monospace {
-  font-family: Times !important; }
+  font-family: "IBM Plex Mono", monospace !important; }
 
 .rounded-corners {
   border-radius: 4px; }
