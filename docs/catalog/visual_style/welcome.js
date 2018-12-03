@@ -1,14 +1,16 @@
 import React from 'react';
-import {Type, Link} from '@nulogy/components';
 import packageJson from '../../package.json';
+import * as tokens from '../../../tokens/build/exports.js';
 
 export default () => (
   <main className="welcome">
 
     <style dangerouslySetInnerHTML={{__html: `
       /* beware! you're about to look at a horrible hack for hiding the page header on the welcome page */
-      .catalog-jfwi2-PageHeader-PageHeader {display: none}
+      .catalog-1vxks3w-PageHeader-PageHeader {display: none}
       /* don't worry! the hacks are over */
+
+      body {font-family: ${tokens.font_family_base}}
 
       .welcome-container {
           max-width: 800px;
@@ -66,14 +68,14 @@ export default () => (
     <section className="welcome-container">
       <div className="flex-container">
         <div>
-          <Type.SectionTitle>Visual Style</Type.SectionTitle>
-            <Type.Text>Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</Type.Text>
-            <p><Link href="/visual_style/colour">Learn how to design for Nulogy</Link></p>
+          <h2>Visual Style</h2>
+            <p>Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</p>
+            <p><a href="/visual_style/colour">Learn how to design for Nulogy</a></p>
         </div>
         <div>
-          <Type.SectionTitle>Components</Type.SectionTitle>
-          <Type.Text>Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</Type.Text>
-          <p><Link href="/components">Use our components</Link></p>
+          <h2>Components</h2>
+          <p>Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</p>
+          <p><a href="/components">Use our components</a></p>
         </div>
       </div>
     </section>
