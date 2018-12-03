@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "watch": "node-sass src/scss/nds.scss > src/nds-dev.css && node-sass --watch --recursive src/scss/nds.scss src/nds-dev.css",
     "build": "node-sass --build --output-style compact src/scss/ -o dist/",
-    "dev": "yarn run storybook & yarn run watch"
+    "start": "yarn run storybook & yarn run watch"
   },
   "repository": "https://github.com/nulogy/design-system",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
@@ -25,6 +25,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.0.4",
     "babel-runtime": "^6.26.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.10.0"
   }
 }
