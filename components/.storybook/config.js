@@ -7,6 +7,8 @@ import '../../css/src/nds-dev.css';
 
 function loadStories() {
   require('../src/Link/Link.story.js');
+  require('../src/Box/Box.story.js');
+  require('../src/Flex/Flex.story.js');
 }
 
 addDecorator((story) => (
