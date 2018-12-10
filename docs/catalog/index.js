@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
-import nulogyLogoMark from './static/logos/nulogy_mark.svg';
+import nulogyLogoMark from './static/logos/nulogy.svg';
 import pages from './routes';
 import * as tokens from '../../tokens/build/exports.js';
-
 
 const config = {
   title: 'Nulogy Design System',
@@ -15,28 +14,28 @@ const config = {
     fontHeading: tokens.font_family_base,
     fontMono: tokens.font_family_mono,
 
-    brandColor: tokens.color_blue_700,
+    brandColor: tokens.color_base_black_blue,
 
-    textColor: tokens.color_neutral_black,
-    background: tokens.color_neutral_white,
-    linkHoverColor: tokens.color_neutral_black,
-    lightColor: tokens.color_neutral_300,
+    textColor: tokens.color_base_black,
+    background: tokens.color_base_white,
+    linkHoverColor: tokens.color_base_black,
+    lightColor: tokens.color_base_dark_grey,
 
-    sidebarColor: tokens.color_neutral_800,
-    sidebarColorText: tokens.color_neutral_500,
-    sidebarColorTextActive: tokens.color_neutral_white,
-    sidebarColorLine: tokens.color_neutral_800,
+    sidebarColor: tokens.color_base_white,
+    sidebarColorText: tokens.color_base_blue,
+    sidebarColorTextActive: tokens.color_base_blue,
+    sidebarColorLine: tokens.color_base_white,
 
-    codeColor: tokens.color_blue_800,
-    linkColor: tokens.color_blue_800,
+    codeColor: tokens.color_base_black_blue,
+    linkColor: tokens.color_base_blue,
 
-    pageHeadingBackground: tokens.color_blue_300,
-    pageHeadingTextColor: tokens.color_blue_800,
+    pageHeadingBackground: tokens.color_base_white,
+    pageHeadingTextColor: tokens.color_base_black,
 
-    navBarBackground: tokens.color_neutral_white,
-    navBarTextColor: tokens.color_blue_600,
+    // navBarBackground: tokens.color_neutral_white,
+    // navBarTextColor: tokens.color_blue_600,
 
-    pageHeadingHeight: 180,
+    pageHeadingHeight: 144,
   }
 };
 

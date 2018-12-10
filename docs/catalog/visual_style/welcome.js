@@ -7,15 +7,15 @@ export default () => (
 
     <style dangerouslySetInnerHTML={{__html: `
       /* beware! you're about to look at a horrible hack for hiding the page header on the welcome page */
-      .catalog-1vxks3w-PageHeader-PageHeader {display: none}
+      .catalog-1vssmo9-PageHeader-PageHeader {display: none}
       /* don't worry! the hacks are over */
 
       body {font-family: ${tokens.font_family_base}}
 
       .welcome-container {
           max-width: 800px;
-          margin: 0 auto;
-          padding: 3rem 2rem;
+          padding: 2rem;
+          background: ${tokens.color_base_black_blue}
       }
 
       .flex-container {
@@ -33,8 +33,8 @@ export default () => (
       }
 
       .intro {
-          background: #DDE8ED !important;
-          padding: 3rem 0;
+          background: ${tokens.color_base_white_} !important;
+          // padding: 3rem 0;
           text-align: center;
       }
 
@@ -60,7 +60,6 @@ export default () => (
 
     <section class="intro">
       <div className="welcome-container">
-        <img className="intro__logo" src="/logos/Nulogy_Full_Color.svg" style={{maxWidth: '100%'}} />
         <blockquote class="intro__text">The <strong>Nulogy Design System</strong> is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.</blockquote>
       </div>
     </section>
