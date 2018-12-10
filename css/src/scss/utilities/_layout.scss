@@ -1,9 +1,0 @@
-// .w-10 {width: 10%} to .w-100 {width: 100%};
-@for $i from 1 through 10 {
-    $width: $i / 10;
-    .width--#{$i}0 {width: percentage($width);}
-}
-
-
-
-
