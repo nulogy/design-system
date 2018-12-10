@@ -38,16 +38,18 @@
     "styled-components": "^3.2.6"
   },
   "dependencies": {
-    "tokens": "file:../tokens",
     "facepaint": "^1.2.1",
-    "rmdi": "^1.0.1"
+    "rmdi": "^1.0.1",
+    "styled-system": "^3.1.11",
+    "tokens": "file:../tokens"
   },
   "devDependencies": {
+    "@storybook/addon-storysource": "^4.0.12",
     "@storybook/react": "^4.0.11",
     "lorem-ipsum": "^1.0.6",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "styled-components": "^3.2.6",
+    "styled-components": "^3.4.10",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   }
