@@ -11,7 +11,8 @@
     "build": "webpack --mode production --config ../webpack.config.js",
     "watch": "yarn build --watch",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "sketch": "story2sketch --url http://localhost:8080/iframe.html --output stories.asketch.json"
   },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
@@ -49,6 +50,7 @@
     "lorem-ipsum": "^1.0.6",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "story2sketch": "^1.4.0",
     "styled-components": "^3.4.10",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
