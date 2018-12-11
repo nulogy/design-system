@@ -493,25 +493,6 @@ img {
 .no-underline {
   text-decoration: none; }
 
-button {
-  margin-right: 1rem; }
-
-/*
-
-
-Actually use:
-
-.primary-button,
-
-
-To Test:
-
-Standard button set
-Standard/primary/tertierary 
-Standard/DANGER
-Save/Cancel as a set with two 50% buttons
-
-*/
 /* -----------------------------------------
     ## Base button styles
 ----------------------------------------- */
@@ -533,147 +514,79 @@ Save/Cancel as a set with two 50% buttons
     ## Variations
 ----------------------------------------- */
 .Button {
-  color: #00438f;
-  background: #e1ebfa; }
+  color: #216beb;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border: 1px solid #00438f; }
   .Button:hover {
-    background: #b5cef3;
-    box-shadow: 3px 3px rgba(33, 107, 235, 0.25); }
+    background: #f2f2f2; }
   .Button:active {
-    background: #b5cef3;
-    box-shadow: none;
+    background: #d9d9d9;
     transform: scale(0.98);
     transition: .2s ease-in; }
+  .Button:disabled {
+    opacity: .5; }
+    .Button:disabled:hover {
+      background: #ffffff;
+      color: #216beb; }
+  .Button:hover {
+    background: #e1ebfa;
+    color: #00438f;
+    border: 1px solid #00438f; }
 
 .PrimaryButton {
   color: #ffffff;
-  background: #216beb; }
+  background: #216beb;
+  border: 1px solid #216beb; }
   .PrimaryButton:hover {
-    background: #1254c7;
-    box-shadow: 3px 3px rgba(0, 67, 143, 0.25); }
+    background: #145ede; }
   .PrimaryButton:active {
-    background: #1254c7;
-    box-shadow: none;
+    background: #104ab0;
     transform: scale(0.98);
     transition: .2s ease-in; }
+  .PrimaryButton:disabled {
+    opacity: .5; }
+    .PrimaryButton:disabled:hover {
+      background: #216beb;
+      color: #ffffff; }
 
 .DangerButton {
   color: #ffffff;
-  background: #cc1439; }
+  background: #cc1439;
+  border: 1px solid #cc1439; }
   .DangerButton:hover {
-    background: #9e0f2c;
-    box-shadow: 3px 3px rgba(204, 20, 57, 0.25); }
+    background: #b51233; }
   .DangerButton:active {
-    background: #9e0f2c;
-    box-shadow: none;
+    background: #860d26;
     transform: scale(0.98);
     transition: .2s ease-in; }
+  .DangerButton:disabled {
+    opacity: .5; }
+    .DangerButton:disabled:hover {
+      background: #cc1439;
+      color: #ffffff; }
 
 .QuietButton {
-  background: none;
   color: #00438f;
   text-decoration: underline; }
   .QuietButton:hover {
-    color: #216beb;
-    box-shadow: none; }
-  .QuietButton:focus {
-    text-decoration: none;
-    font-style: italic; }
-
-/* -----------------------------------------
-    ## States
------------------------------------------ */
-.Button:disabled {
-  opacity: .5; }
-  .Button:disabled:hover {
-    box-shadow: none; }
+    color: #216beb; }
 
 /* -----------------------------------------
     ## Sizes
 ----------------------------------------- */
-.Button--small {
+.Button.small,
+.PrimaryButton.small,
+.DangerButton.small,
+.QuietButton.small {
   font-size: 14px !important;
   padding: 4px 8px !important; }
 
-.Button--large {
+.Button.large,
+.PrimaryButton.large,
+.DangerButton.large,
+.QuietButton.large {
   padding: 16px 24px !important; }
-
-.OutlineButton {
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  border: 0;
-  font-size: 16px;
-  border-radius: 4px;
-  padding: 8px 16px;
-  transition: .2s;
-  border: 1px solid #00438f;
-  color: #00438f; }
-  .OutlineButton:hover {
-    cursor: pointer;
-    background: #216beb;
-    color: #fff;
-    border: 1px solid #00438f; }
-  .OutlineButton:active {
-    transform: scale(0.98);
-    transition: .02s ease-in; }
-
-/* Button set hax
-
-Everything below here should be refactored after design approval 
-
-
-*/
-.mr-0 {
-  margin-right: 0; }
-
-.br-0 {
-  border-radius: 0; }
-
-.brr-0 {
-  border-radius: 2px 0 0 2px; }
-
-.brl-0 {
-  border-radius: 0px 2px 2px 0px; }
-
-.set button {
-  display: block;
-  float: left; }
-
-.set:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.set:first-child {
-  border-left: 1px solid #00438f; }
-
-.set .Button {
-  border-right: 1px solid #00438f;
-  border-top: 1px solid #00438f;
-  border-bottom: 1px solid #00438f; }
-
-.set .Button:hover {
-  box-shadow: none; }
-
-.set .OutlineButton {
-  border-right: 0; }
-
-.set .OutlineButton:first-child {
-  border-left: 0; }
-
-.set .OutlineButton:last-child {
-  border-right: 1px solid #00438f; }
-
-.set .Button.active {
-  background: #216beb;
-  color: #fff; }
-
-.set .OutlineButton.active {
-  background: #216beb;
-  color: #fff;
-  font-weight: bold; }
-
-.set {
-  border-radius: 2px; }
 
 .Title {
   font-size: 36px; }
