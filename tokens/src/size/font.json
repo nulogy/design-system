@@ -6,7 +6,7 @@
         "medium": { "value": "16" },
         "large" : { "value": "18" },
         "larger" : { "value": "26" },
-        "largest" : { "value": "36" },                
+        "largest" : { "value": "46" },                
         "base"  : { "value": "{size.font.medium.value}" },
         "pageTitle"  : { "value": "{size.font.largest.value}" },
         "sectionTitle"  : { "value": "{size.font.larger.value}" },
