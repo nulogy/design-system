@@ -131,6 +131,12 @@ img {
 .float-right {
   float: right; }
 
+.block {
+  display: block; }
+
+.inline {
+  display: inline !important; }
+
 .inline-block {
   display: inline-block !important; }
 
