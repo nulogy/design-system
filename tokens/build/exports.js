@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Dec 2018 15:58:24 GMT
+ * Generated on Wed, 12 Dec 2018 18:52:06 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -28,9 +28,9 @@ export const size_font_small = "14px";
 export const size_font_medium = "16px";
 export const size_font_large = "18px";
 export const size_font_larger = "26px";
-export const size_font_largest = "36px";
+export const size_font_largest = "46px";
 export const size_font_base = "16px";
-export const size_font_page_title = "36px";
+export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "18px";
 export const size_padding_half = "4px";
@@ -41,6 +41,7 @@ export const size_padding_x_4 = "32px";
 export const size_padding_x_6 = "48px";
 export const size_padding_x_8 = "64px";
 export const size_padding_base = "16px";
+export const weight_font_light = "100";
 export const weight_font_normal = "400";
 export const weight_font_medium = "500";
-export const weight_font_bold = "700";
+export const weight_font_bold = "600";

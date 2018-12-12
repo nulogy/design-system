@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Dec 2018 15:58:24 GMT
+ * Generated on Wed, 12 Dec 2018 18:52:06 GMT
  */
 body, html, li, ul, h1, h2, h3, h4, p {
   margin: 0;
@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
   font-weight: 500; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 46px; }
 
 h2 {
   font-size: 26px; }
@@ -449,7 +449,7 @@ img {
   font-size: 26px !important; }
 
 .font-size--largest {
-  font-size: 36px !important; }
+  font-size: 46px !important; }
 
 .font-family--base {
   font-family: "IBM Plex Sans", sans !important; }
@@ -464,7 +464,7 @@ img {
   font-weight: 500; }
 
 .font-weight--bold {
-  font-weight: 700; }
+  font-weight: 600; }
 
 .rounded-corners {
   border-radius: 4px; }
@@ -582,10 +582,13 @@ img {
   padding: 16px 24px !important; }
 
 .Title {
-  font-size: 36px; }
+  font-size: 46px;
+  font-weight: 100; }
 
 .SectionTitle {
-  font-size: 26px; }
+  font-size: 26px;
+  font-weight: 600; }
 
 .SubsectionTitle {
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: 600; }

@@ -1,13 +1,16 @@
 .Title {
-    font-size: $size-font-largest;
+    font-size: $size-font-page-title;
+    font-weight: $weight-font-light;
 }
 
 .SectionTitle {
-    font-size: $size-font-larger;
+    font-size: $size-font-section-title;
+    font-weight: $weight-font-bold;
 }
 
 .SubsectionTitle {
-    font-size: $size-font-large;
+    font-size: $size-font-subsection-title;
+    font-weight: $weight-font-bold;
 }
 
 
