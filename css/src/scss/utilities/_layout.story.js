@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/html';
 
 storiesOf('Utilities/Layout', module)
   .add('Floats', () => `
-    <div class="clearfix">
+    <div class="clearfix" style="width: 400px;">
         <p class="float-left">.float-left</p>
         <p class="float-right">.float-right</p>
     </div>
