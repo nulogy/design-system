@@ -69,11 +69,6 @@ rows:
     ratio: 1.5
 ```
 
-## Colour
-```table
-rows: !import colourTokenTableRows
-```
-
 ## Spacing
 
 ```table

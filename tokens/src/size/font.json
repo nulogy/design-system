@@ -1,0 +1,18 @@
+{
+    "size": {
+      "font": {
+        "smaller" : { "value": "12" },        
+        "small" : { "value": "14" },
+        "medium": { "value": "16" },
+        "large" : { "value": "18" },
+        "larger" : { "value": "26" },
+        "largest" : { "value": "36" },                
+        "base"  : { "value": "{size.font.medium.value}" },
+        "pageTitle"  : { "value": "{size.font.largest.value}" },
+        "sectionTitle"  : { "value": "{size.font.larger.value}" },
+        "subsectionTitle"  : { "value": "{size.font.large.value}" }
+      }
+    }
+  }
+
+

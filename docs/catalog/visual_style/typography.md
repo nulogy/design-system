@@ -13,7 +13,7 @@ src: "typography/headings.svg"
 ```
 
 ## Interface text
-By default, interface text should be set at 16px with a line height of 24px. Smaller text may be desirable for certain purposes and can be set at either 14px or 12px.
+By default, interface text should be set at 16px with a line height of 24px. Smaller text may be desirable for certain purposes and can be set at either 14px.
 
 ```image
 plain: true

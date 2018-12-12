@@ -1,0 +1,8 @@
+{
+    "radius": {
+      "background": {
+        "small" : { "value": "2px" },        
+        "medium" : { "value": "4px" }
+      }
+    }
+  }

@@ -1,0 +1,67 @@
+/* global document */
+import { storiesOf } from '@storybook/html';
+
+storiesOf('Utilities/Space', module)
+  .add('Padding', () => `
+        <div class="background--light-grey margin-bottom--x1 padding--x1">.padding--x1</div>
+        <div class="background--light-grey margin-bottom--x1 padding--x2">.padding--x2</div>
+        <div class="background--light-grey margin-bottom--x1 padding--x3">.padding--x3</div>
+        <div class="background--light-grey margin-bottom--x1 padding--x4">.padding--x4</div>
+        <div class="background--light-grey margin-bottom--x1 padding--x6">.padding--x6</div>
+        <div class="background--light-grey margin-bottom--x1 padding--x8">.padding--x8</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x1">.padding-top--x1</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x2">.padding-top--x2</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x3">.padding-top--x3</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x4">.padding-top--x4</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x6">.padding-top--x6</div>
+        <div class="background--light-grey margin-bottom--x1 padding-top--x8">.padding-top--x8</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x1">.padding-bottom--x1</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x2">.padding-bottom--x2</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x3">.padding-bottom--x3</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x4">.padding-bottom--x4</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x6">.padding-bottom--x6</div>
+        <div class="background--light-grey margin-bottom--x1 padding-bottom--x8">.padding-bottom--x8</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x1">.padding-left--x1</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x2">.padding-left--x2</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x3">.padding-left--x3</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x4">.padding-left--x4</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x6">.padding-left--x6</div>
+        <div class="background--light-grey margin-bottom--x1 padding-left--x8">.padding-left--x8</div>  
+        <div class="background--light-grey margin-bottom--x1 padding-right--x1">.padding-right--x1</div>
+        <div class="background--light-grey margin-bottom--x1 padding-right--x2">.padding-right--x2</div>
+        <div class="background--light-grey margin-bottom--x1 padding-right--x3">.padding-right--x3</div>
+        <div class="background--light-grey margin-bottom--x1 padding-right--x4">.padding-right--x4</div>
+        <div class="background--light-grey margin-bottom--x1 padding-right--x6">.padding-right--x6</div>
+        <div class="background--light-grey margin-bottom--x1 padding-right--x8">.padding-right--x8</div>  
+    `).add('Margin', () => `
+        <div class="background--light-grey margin--x1">.margin--x1</div>
+        <div class="background--light-grey margin--x2">.margin--x2</div>
+        <div class="background--light-grey margin--x3">.margin--x3</div>
+        <div class="background--light-grey margin--x4">.margin--x4</div>
+        <div class="background--light-grey margin--x6">.margin--x6</div>
+        <div class="background--light-grey margin--x8">.margin--x8</div>
+        <div class="background--light-grey margin-top--x1">.margin-top--x1</div>
+        <div class="background--light-grey margin-top--x2">.margin-top--x2</div>
+        <div class="background--light-grey margin-top--x3">.margin-top--x3</div>
+        <div class="background--light-grey margin-top--x4">.margin-top--x4</div>
+        <div class="background--light-grey margin-top--x6">.margin-top--x6</div>
+        <div class="background--light-grey margin-top--x8">.margin-top--x8</div>
+        <div class="background--light-grey margin-bottom--x1">.margin-bottom--x1</div>
+        <div class="background--light-grey margin-bottom--x2">.margin-bottom--x2</div>
+        <div class="background--light-grey margin-bottom--x3">.margin-bottom--x3</div>
+        <div class="background--light-grey margin-bottom--x4">.margin-bottom--x4</div>
+        <div class="background--light-grey margin-bottom--x6">.margin-bottom--x6</div>
+        <div class="background--light-grey margin-bottom--x8">.margin-bottom--x8</div>
+        <div class="background--light-grey margin-left--x1">.margin-left--x1</div>
+        <div class="background--light-grey margin-left--x2">.margin-left--x2</div>
+        <div class="background--light-grey margin-left--x3">.margin-left--x3</div>
+        <div class="background--light-grey margin-left--x4">.margin-left--x4</div>
+        <div class="background--light-grey margin-left--x6">.margin-left--x6</div>
+        <div class="background--light-grey margin-left--x8">.margin-left--x8</div>  
+        <div class="background--light-grey margin-right--x1">.margin-right--x1</div>
+        <div class="background--light-grey margin-right--x2">.margin-right--x2</div>
+        <div class="background--light-grey margin-right--x3">.margin-right--x3</div>
+        <div class="background--light-grey margin-right--x4">.margin-right--x4</div>
+        <div class="background--light-grey margin-right--x6">.margin-right--x6</div>
+        <div class="background--light-grey margin-right--x8">.margin-right--x8</div>  
+  `);

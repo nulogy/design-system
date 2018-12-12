@@ -1,42 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
-import nulogyLogoMark from './static/logos/nulogy_mark.svg';
+import nulogyLogoMark from './static/logos/nulogy.svg';
 import pages from './routes';
-import { colour, font } from '@nulogy/tokens';
-import css from '@nulogy/css';
+import * as tokens from '../../tokens/build/exports.js';
 
 const config = {
   title: 'Nulogy Design System',
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
   theme: {
-    fontFamily: font.family.regular,
-    fontHeading: font.family.regular,
-    fontMono: font.family.mono,
+    fontFamily: tokens.font_family_base,
+    fontHeading: tokens.font_family_base,
+    fontMono: tokens.font_family_mono,
 
-    brandColor: colour.blue['700'],
+    brandColor: tokens.color_base_black_blue,
 
-    textColor: colour.black,
-    background: colour.white,
-    linkHoverColor: colour.black,
-    lightColor: colour.neutral['300'],
+    textColor: tokens.color_base_black,
+    background: tokens.color_base_white,
+    linkHoverColor: tokens.color_base_black,
+    lightColor: tokens.color_base_dark_grey,
 
-    sidebarColor: colour.neutral['800'],
-    sidebarColorText: colour.neutral['500'],
-    sidebarColorTextActive: colour.white,
-    sidebarColorLine: colour.neutral['800'],
+    sidebarColor: tokens.color_base_white,
+    sidebarColorText: tokens.color_base_blue,
+    sidebarColorTextActive: tokens.color_base_blue,
+    sidebarColorLine: tokens.color_base_white,
 
-    codeColor: colour.blue['800'],
-    linkColor: colour.blue['600'],
+    codeColor: tokens.color_base_black_blue,
+    linkColor: tokens.color_base_blue,
 
-    pageHeadingBackground: colour.blue['300'],
-    pageHeadingTextColor: colour.blue['800'],
+    pageHeadingBackground: tokens.color_base_white,
+    pageHeadingTextColor: tokens.color_base_black,
 
-    navBarBackground: colour.white,
-    navBarTextColor: colour.blue['600'],
+    // navBarBackground: tokens.color_neutral_white,
+    // navBarTextColor: tokens.color_blue_600,
 
-    pageHeadingHeight: 180,
+    pageHeadingHeight: 144,
   }
 };
 

@@ -1,0 +1,10 @@
+.rounded-corners {border-radius: $radius-background-medium;}
+.clearfix:after {content: ""; display: table; clear: both;}
+
+// Turning CSS properties things into classes
+
+.vertical-align--top {vertical-align: top;}
+.vertical-align--middle {vertical-align: middle}
+.vertical-align--bottom {vertical-align: bottom}
+
+.no-underline {text-decoration: none}

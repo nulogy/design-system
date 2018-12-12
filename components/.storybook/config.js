@@ -1,9 +1,20 @@
-import configureStorybook from '@nulogy/common/storybook/config';
-import '@nulogy/css';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { configure, addDecorator } from '@storybook/react';
+import theme from '../src/theme';
 
-configureStorybook(require.context(
-  "../src",       // path where stories live
-  true,           // recursive?
-  /\.story.js$/, // story files match this pattern
-));
+import '../../css/src/nds-dev.css';
 
+function loadStories() {
+  require('../src/Link/Link.story.js');
+  require('../src/Box/Box.story.js');
+  require('../src/Flex/Flex.story.js');
+}
+
+addDecorator((story) => (
+  <ThemeProvider theme={theme}>
+    {story()}
+  </ThemeProvider>
+))
+
+configure(loadStories, module);

@@ -1,0 +1,10 @@
+{
+    "font": {
+      "family": {
+        "base" : { "value": "'IBM Plex Sans', sans" },        
+        "mono" : { "value": "'IBM Plex Mono', monospace" }
+      }
+    }
+  }
+
+

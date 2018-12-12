@@ -1,8 +1,7 @@
 {
   "name": "@nulogy/tokens",
-  "version": "0.1.17",
-  "description": "Design tokens for the Nulogy Design System - http://nulody.design",
-  "main": "dist/tokens.js",
+  "version": "0.2.0",
+  "description": "Design tokens for the Nulogy Design System - http://nulogy.design",
   "repository": "https://github.com/nulogy/design-system.git",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "license": "MIT",
@@ -11,8 +10,9 @@
     "access": "public"
   },
   "scripts": {
-    "test": "jest --config ../jest.config.js",
-    "build": "babel src --out-dir dist",
-    "watch": "yarn build --watch"
+    "build": "style-dictionary build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^2.5.0"
   }
 }

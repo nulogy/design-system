@@ -1,1 +1,1 @@
-import '@nulogy/common/storybook/addons';
+import '@storybook/addon-storysource/register';

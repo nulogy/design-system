@@ -1,9 +1,6 @@
-# Nulogy Style Guide
+# @nulogy/docs 
+This package contains the documentation seen at [nulogy.design](http://nulogy.design).
 
-The [nulogy.design](http://nulogy.design) website.
+`yarn start` will run a local copy of Catalog at `http://localhost:9091`
 
-This package provides documentation of the principles that form core of the Nulogy Design System. 
-
-Built with [Catalog](https://catalog.style).
-
-For setup instructions see [http://nulogy.design/guides/setup](http://nulogy.design/guides/setup)
+_Publishing instructions to come_

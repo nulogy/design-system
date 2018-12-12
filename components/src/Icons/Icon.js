@@ -1,3 +1,5 @@
+// BUG : Default icons @ 16px do not track text anymore, see in storybook */ 
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -73,4 +75,3 @@ Icon.propTypes = {
 Icon.defaultProps = {}
 
 export default Icon;
-

@@ -1,56 +1,23 @@
 {
-  "name": "@nulogy/nucleus",
-  "version": "0.1.0",
+  "name": "@nulogy/nds",
+  "version": "0.2.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "workspaces": [
-    "common",
     "components",
     "css",
     "docs",
-    "sandbox",
     "tokens"
   ],
   "scripts": {
-    "start": "yarn components start",
-    "start:all": "lerna run start --stream --parallel",
-    "all": "concurrently 'yarn watch' 'yarn start:all'",
-    
-    "test": "lerna run test --stream --include-filtered-dependents --since master",
-    "pretest": "yarn build --include-filtered-dependencies --since master",
-    
-    "build:all": "lerna run build --stream",
-    "build": "yarn build:all --no-private",
-    "build:docs": "yarn docs build",
-    "watch": "lerna run watch --no-private --stream --parallel",
-    
-    "prepublishOnly": "yarn pristine && yarn install",
-    "postinstall": "yarn build",
-    
-    "clean": "lerna exec 'rm -rf dist'",
-    "pristine": "git clean -fdX .",
-    
-    "common": "yarn workspace @nulogy/common",
-    "components": "yarn workspace @nulogy/components",
-    "css": "yarn workspace @nulogy/css",
-    "docs": "yarn workspace @nulogy/nulogy-design",
-    "sandbox": "yarn workspace @nulogy/sandbox",
-    "tokens": "yarn workspace @nulogy/tokens"
   },
   "main": "index.js",
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
-  "contributors": [
-    "Ned Schwartz <neds@nulogy.com> (http://guthub.com/theinterned)"
-  ],
   "homepage": "http://nulogy.design",
-  "repository": "https://github.com/nulogy/nucleus",
-  "bugs": {
-    "url": "https://github.com/nulogy/nucleus/issues"
-  },
+  "repository": "https://github.com/nulogy/design-system",
   "keywords": [
     "nulogy",
-    "nucleus",
     "NDS",
     "design system"
   ],
@@ -59,7 +26,8 @@
     "yarn": "^1.7.0"
   },
   "devDependencies": {
-    "concurrently": "^3.6.1",
-    "lerna": "^3.2.1"
+    "lerna": "^3.2.1",
+    "style-dictionary": "^2.5.0"
   }
 }
+

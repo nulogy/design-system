@@ -1,6 +1,10 @@
-@nulogy/css uses styled-components [Inject Global](https://www.styled-components.com/docs/api#injectglobal) to apply default styles to your application, including:
+# @nulogy/css
+This package allows you to write CSS using Nulogy Design tokens. 
 
-1) CSS reset [Normalize.css](https://github.com/necolas/normalize.css/)
-2) [IBM Plex](https://www.ibm.com/plex/), the new typeface of Nulogy applications
+## Usage 
 
-It will also expose the collection of CSS classes referenced throughout [nulogy.design](http://nulogy.design).
+### Development
+`yarn start` will watch *.scss files, compile them to nds-dev.css and launch a storybook dev environment [localhost:8080](http://localhost:8080) 
+
+### Production
+`yarn build` will rebuild nds.css. 
