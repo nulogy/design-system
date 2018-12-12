@@ -10,7 +10,7 @@ storiesOf('Utilities/Type', module)
   `).add('Font family', () => `
     <p class="text--base">.text--base</p>
     <p class="text--monospace">.text--monospace</p>
-  `).add('Font family', () => `
+  `).add('Font weight', () => `
     <p class="font-weight--normal">.font-weight--normal</p>
     <p class="font-weight--medium">.font-weight--medium</p>
     <p class="font-weight--bold">.font-weight--bold</p>
