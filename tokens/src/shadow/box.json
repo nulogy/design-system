@@ -1,10 +1,7 @@
 {
     "shadow": {
       "box": {
-        "pressed" : { "value": "0 1px 4px 0 rgba(3,16,26, 0.175)" },        
-        "close" : { "value": "0 2px 12px 0 rgba(3,16,26, 0.2)" },
-        "middle": { "value": "0 3px 12px 0 rgba(3,16,26, 0.25)" },
-        "far": { "value": "0 6px 15px 0 rgba(3,16,26, 0.33)" }
+        "small" : { "value": "0 1px 1px rgba(27,31,35,0.1)" }       
       }
     }
   }
