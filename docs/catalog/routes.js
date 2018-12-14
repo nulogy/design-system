@@ -54,6 +54,11 @@ export default [
           Link: require('@nulogy/components').Link
         }
       },
+      , {
+        path: '/components/form',
+        title: 'Form',
+        content: pageLoader(() => import('./components/form.md'))
+      },
     ]
   },
   {

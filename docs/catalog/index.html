@@ -17,18 +17,41 @@
     /* !!! do not move these into their own file. it will cause flashes !!! */
 
     body {line-height: 1.5; padding: 32px 64px; border-top: 32px solid #122b47;}
-    
+
     /* force Catalog to use Nulogy's header sizes since you can't use CSS  */
     h1 {font-size: 46px !important; line-height: 48px !important; font-weight: 100 !important;}
     h2[class$="headingStyle"] {font-size: 26px !important; line-height: 32px !important; font-weight: 600 !important;}
     h3[class$="headingStyle"] {font-size: 18px !important; line-height: 24px !important; font-weight: 600 !important;}
 
-    h4 {font-size: 16px !important;}
+    h4 {
+      font-size: 14px !important;
+      color: #434D59 !important;
+      text-transform: uppercase;
+    }
+
+    h5{
+      font-size: 14px !important;
+      text-align: right;
+      border-bottom: solid 1px #E4E7EB;
+      padding: 8px;
+      margin: 32px 0!important;
+      opacity: .5;
+    }
+
+    h5:hover{
+      opacity: 1;
+    }
+
+    blockquote{
+      margin-top: 0!important;
+      margin-bottom: 16px!important;
+    }
     blockquote p {
-      font-size: 16px !important;
+      font-size: 21.333px !important;
       line-height: 32px !important;
       max-width: 720px !important;
-      padding: 32px 0;
+      color: #434D59 !important;
+      padding: 8px 0;
     }
     h2[class$="PageHeader-PageHeader"] {text-transform: uppercase; font-size: 16px !important; font-family: 'IBM Plex Mono'}
 
@@ -36,6 +59,10 @@
       width: 50% !important;
       margin-bottom: 0px !important;
       padding: 2rem !important;
+    }
+
+    h4{
+      font-weight: bold!important;
     }
 
     ul[class$="Menu-Menu"] {padding-top: 16px;}
@@ -48,8 +75,8 @@
 
     pre {box-shadow: 0 1px 1px rgba(27,31,35,0.1) !important;}
 
-    div[class$="Page-Page"] {padding-top: 0 !important;}    
-            
+    div[class$="Page-Page"] {padding-top: 0 !important;}
+
     .catalog-47lna6-AppLayout-AppLayout {
       padding: 32px;
       margin-top: 32px;
@@ -59,9 +86,9 @@
 
     div[class$="ReactSpecimen-ReactSpecimen"] {
       background: #fff;
-      box-shadow: 0 1px 1px rgba(27,31,35,0.1) !important; 
-    }    
-    
+      box-shadow: 0 1px 1px rgba(27,31,35,0.1) !important;
+    }
+
     /* There's a bug in Catalog where if you make the sidebar
     dark, the submenu hovers look broken. This is because they're
     set to have no top padding while also set to do a :hov bg that
