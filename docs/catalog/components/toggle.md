@@ -1,6 +1,8 @@
 ##### Intro
 Toggle lets users quickly switch between two possible states.
 
+**Use when**
+- Users need to enable/disable, turn on/off, make visible/invisible or switch between any other 2 binary states.
 
 ```image
 span: 4
@@ -19,7 +21,7 @@ src: "form/toggle-anatomy.png"
 
 ## General guidelines
 
-- Always use toggle value label to clearly comunicate the selected state
+- Always use toggle value label to clearly comunicate the selected state.
 
 ## States
 
