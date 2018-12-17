@@ -53,11 +53,14 @@ export default [
         imports: {
           Link: require('@nulogy/components').Link
         }
-      },
-      , {
+      }, {
         path: '/components/form',
         title: 'Form',
         content: pageLoader(() => import('./components/form.md'))
+      }, {
+        path: '/components/text-input',
+        title: 'Text input',
+        content: pageLoader(() => import('./components/text-input.md'))
       },
     ]
   },
