@@ -63,6 +63,10 @@ Labels inform users what the corresponding input field means. A label is always 
 
 ### `G` Help text (optional)
 Help text provides assistance on how to fill out a field. It can also provide an explanation of why the information is needed and how it will be used. Help text can contain the expected format of the entry. Help text is placed below the label.
+```image
+span: 6
+src: "form/help-text-anatomy.png"
+```
 
 ### `H` Input fields
 Input fields enable users to provide information. Information can be entered through a variety of different inputs.
@@ -76,7 +80,11 @@ Input fields enable users to provide information. Information can be entered thr
 - `Toggle` for boolean choices
 
 ### `I` Optional vs required label (optional)
-If a field is optional or required, it should be visually apparent before submission. Use only optional or only required label to indicate which fields are optional/required. Apply the label to the slammer group.
+If a field is optional or required, it should be visually apparent before submission. Use only optional or only required label to indicate which fields are optional/required. Apply the label to the smaller of the two groups.
+```image
+span: 6
+src: "form/optional-required-anatomy.png"
+```
 
 ### `J` Placeholder text (optional)
 Placeholder text is used to provide an example of an entry. Placeholder text should start with 'e.g..' Placeholders are not replacements for labels, as they are not treated as labels by assistive technology and they disappear when a user tries interacting with a field.
