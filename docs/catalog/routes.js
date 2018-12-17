@@ -65,6 +65,10 @@ export default [
         path: '/components/select',
         title: 'Select',
         content: pageLoader(() => import('./components/select.md'))
+      }, {
+        path: '/components/toggle',
+        title: 'Toggle',
+        content: pageLoader(() => import('./components/toggle.md'))
       }
     ]
   },
