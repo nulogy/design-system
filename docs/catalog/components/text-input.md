@@ -29,17 +29,29 @@ Text field is used for single line text data.
 ### Textarea
 Text area is used when you anticipate the user to input more than one sentence.
 
+### Specialty inputs
+Other form fields include:
+- Number
+- Phone
+- Date and time
+- Password
+- Email
+- Url ...
+
 ## States
 
 ### Default
-```image
-span: 4
-src: "form/text-input-state-default.png"
-```
-### Placeholder text
+#### Before input
 ```image
 span: 4
 src: "form/text-input-state-default-placeholder.png"
+```
+Placeholder text is optional.
+
+#### After input
+```image
+span: 4
+src: "form/text-input-state-default.png"
 ```
 
 ### Active
@@ -68,14 +80,7 @@ src: "form/text-input-state-disabled.png"
 ```
 
 ### Size
-Input size should match the expected length of the input.
-
-There are 3 suggested sizes:
-- Full size that fills the container entirely with the maximum of TBD
-- Half size that occupies 1/2 of the containers
-- Third size that occupies 1/3 of the container
-
-
+Whenever possible input match the width of the input field with expected length of the input. If that is not possible fill the entire width of the container.
 
 ##### Related
 
