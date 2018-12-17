@@ -61,7 +61,11 @@ export default [
         path: '/components/text-input',
         title: 'Text input',
         content: pageLoader(() => import('./components/text-input.md'))
-      },
+      }, {
+        path: '/components/select',
+        title: 'Select',
+        content: pageLoader(() => import('./components/select.md'))
+      }
     ]
   },
   {
