@@ -193,5 +193,4 @@ By default, placeholder text in every major browser does not meet minimum contra
 [Select](/components/select)
 [Checkbox](/components/checkbox)
 [Radio button](/components/radio-button)
-[Number input](/components/number-input)
 [Toggle](/components/toggle)

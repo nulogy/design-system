@@ -89,5 +89,4 @@ Whenever possible input match the width of the input field with expected length 
 [Select](/components/select)
 [Checkbox](/components/checkbox)
 [Radio button](/components/radio-button)
-[Number input](/components/number-input)
 [Toggle](/components/toggle)
