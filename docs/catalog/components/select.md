@@ -1,5 +1,6 @@
 ##### Intro
-Select lets users choose one option from a large list of options.
+
+> Select lets users choose one option from a large list of options.
 
 **Use when**
 - Users need to choose a single option from a list of mutually exclusive options.
@@ -55,7 +56,7 @@ src: "form/select-disabled.png"
 
 ##### Related
 
-## Realted components
+## Related components
 [Form](/components/form)
 [Text Input](/components/text-input)
 [Checkbox](/components/checkbox)

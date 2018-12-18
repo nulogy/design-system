@@ -80,11 +80,11 @@ src: "form/text-input-state-disabled.png"
 ```
 
 ### Size
-Whenever possible input match the width of the input field with expected length of the input. If that is not possible fill the entire width of the container.
+Whenever possible match the width of the input field with the expected length of the input. If that is not possible fill the entire width of the container.
 
 ##### Related
 
-## Realted components
+## Related components
 [Form](/components/form)
 [Select](/components/select)
 [Checkbox](/components/checkbox)

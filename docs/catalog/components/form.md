@@ -1,6 +1,6 @@
 ##### Intro
 
-> Form allows users to submit data ~~provide information~~.
+> Form allows users to submit data.
 
 **Use when**
 - Users need to complete a task that first requires them to provide information.
@@ -24,7 +24,7 @@ src: "form/anatomy.png"
 
 - Always order items in their logical order whether it’s alphabetical, numerical, time-based or any other
 - Whenever possible group items together into fieldsets that are clearly labeled (described) with a 'legend' tag
-- Always lay out form in a single column
+- Always lay out the form in a single column
 - Always place actions on the bottom of the form
 
 ## Accessibility guidelines
@@ -188,7 +188,7 @@ By default, placeholder text in every major browser does not meet minimum contra
 
 ##### Related
 
-## Realted components
+## Related components
 [Text input](/components/text-input)
 [Select](/components/select)
 [Checkbox](/components/checkbox)

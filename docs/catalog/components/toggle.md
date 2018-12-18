@@ -1,5 +1,6 @@
 ##### Intro
-Toggle lets users quickly switch between two possible states.
+
+> Toggle lets users quickly switch between two possible states.
 
 **Use when**
 - Users need to enable/disable, turn on/off, make visible/invisible or switch between any other 2 binary states.
@@ -21,7 +22,7 @@ src: "form/toggle-anatomy.png"
 
 ## General guidelines
 
-- Always use toggle value label to clearly comunicate the selected state.
+- Always use the toggle value label to clearly communicate the selected state.
 
 ## States
 
@@ -53,7 +54,7 @@ src: "form/toggle-off-disabled.png"
 
 ##### Related
 
-## Realted components
+## Related components
 [Form](/components/form)
 [Text Input](/components/text-input)
 [Checkbox](/components/checkbox)
