@@ -8,6 +8,7 @@ src: "form/checkbox-basic.png"
 ##### Design
 
 ## Anatomy
+<!-- TO-DO: Add the "show all" button to the Anatomy -->
 
 ```image
 span: 6
