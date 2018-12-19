@@ -13,7 +13,6 @@ src: "form/toggle-on.png"
 span: 6
 src: "form/toggle-anatomy.png"
 ```
-[Spacing scale](/visual_style/spacing) is based on the base unit of 8px.
 
 ## General guidelines
 

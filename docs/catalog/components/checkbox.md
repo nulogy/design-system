@@ -13,7 +13,6 @@ src: "form/checkbox-basic.png"
 span: 6
 src: "form/checkbox-anatomy.png"
 ```
-[Spacing scale](/visual_style/spacing) is based on the base unit of 8px.
 
 ## General guidelines
 

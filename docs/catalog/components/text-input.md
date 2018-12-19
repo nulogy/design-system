@@ -18,7 +18,6 @@ src: "form/text-input-basic.png"
 span: 6
 src: "form/text-input-anatomy.png"
 ```
-[Spacing scale](/visual_style/spacing) is based on the base unit of 8px.
 
 ## Variations
 
