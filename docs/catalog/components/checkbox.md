@@ -20,19 +20,19 @@ src: "form/checkbox-anatomy.png"
 
 ## States
 
-#### Default
+### Default
 ```image
 span: 4
 src: "form/checkbox-default.png"
 ```
 
-#### Checked
+### Checked
 ```image
 span: 4
 src: "form/checkbox-checked.png"
 ```
 
-#### Disabled
+### Disabled
 ```image
 span: 4
 src: "form/checkbox-disabled.png"
