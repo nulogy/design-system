@@ -27,15 +27,6 @@ Text field is used for single line text data.
 ### Textarea
 Text area is used when you anticipate the user to input more than one sentence.
 
-### Specialty inputs
-Other form fields include:
-- Number
-- Phone
-- Date and time
-- Password
-- Email
-- Url ...
-
 ## States
 
 ### Default
