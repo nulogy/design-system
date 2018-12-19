@@ -20,13 +20,13 @@ src: "form/select-anatomy.png"
 
 ## States
 
-### Before input
+### Default
 ```image
 span: 4
 src: "form/select-state-default.png"
 ```
 
-### After input
+### With input
 ```image
 span: 4
 src: "form/select-state-selected.png"
