@@ -22,26 +22,21 @@ src: "form/toggle-anatomy.png"
 ## States
 
 ### Default
-#### "On"
 ```image
 span: 4
 src: "form/toggle-on.png"
 ```
 
-#### "Off"
 ```image
 span: 4
 src: "form/toggle-off.png"
 ```
 
 ### Disabled
-#### "On"
 ```image
 span: 4
 src: "form/toggle-on-disabled.png"
 ```
-
-#### "Off"
 ```image
 span: 4
 src: "form/toggle-off-disabled.png"
