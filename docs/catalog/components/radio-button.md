@@ -33,19 +33,19 @@ Users should be able to select the radio button by clicking on the box directly 
 
 ## States
 
-### Default
+#### Default
 ```image
 span: 4
 src: "form/radio-button-unselected.png"
 ```
 
-### Selected
+#### Selected
 ```image
 span: 4
 src: "form/radio-button-selected.png"
 ```
 
-### Disabled
+#### Disabled
 ```image
 span: 4
 src: "form/radio-button-disabled.png"

@@ -26,30 +26,28 @@ src: "form/select-anatomy.png"
 
 ## States
 
-### Default
-#### Before input
+### Before input
 ```image
 span: 4
 src: "form/select-state-default.png"
 ```
 
-#### After input
+### After input
 ```image
 span: 4
 src: "form/select-state-selected.png"
+```
+
+### Disabled
+```image
+span: 4
+src: "form/select-disabled.png"
 ```
 
 ### Active
 ```image
 span: 4
 src: "form/select-basic.png"
-```
-*Animation coming soon*
-
-### Disabled
-```image
-span: 4
-src: "form/select-disabled.png"
 ```
 
 ##### Related
