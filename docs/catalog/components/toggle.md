@@ -7,7 +7,7 @@ src: "form/toggle-on.png"
 
 ##### Design
 
-## Anatomy and specs
+## Anatomy
 
 ```image
 span: 6

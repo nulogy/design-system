@@ -12,7 +12,7 @@ src: "form/text-input-basic.png"
 
 ##### Design
 
-## Anatomy and specs
+## Anatomy
 
 ```image
 span: 6

@@ -7,7 +7,7 @@ src: "form/basic.png"
 
 ##### Design
 
-## Anatomy and specs
+## Anatomy
 
 ```image
 span: 6

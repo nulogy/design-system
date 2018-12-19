@@ -11,7 +11,7 @@ src: "form/radio-button-basic.png"
 
 ##### Design
 
-## Anatomy and specs
+## Anatomy
 
 ```image
 span: 6
