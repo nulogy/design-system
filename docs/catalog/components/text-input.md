@@ -69,7 +69,7 @@ src: "form/text-input-state-disabled.png"
 ```
 
 ### Size
-Whenever possible match the width of the input field with the expected length of the input. If that is not possible fill the entire width of the container.
+Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.
 
 ##### Related
 
