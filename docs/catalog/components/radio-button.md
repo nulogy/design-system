@@ -21,14 +21,8 @@ src: "form/radio-button-anatomy.png"
 ## Guidelines
 
 - Whenever possible use radio buttons for short lists (~ 5-7)
-- Consider using select for long lists
-- When needed use help text to provide any type of clarification
-- Whenever possible base the order of options based on context, popularity or alphabetically
-
-## Accessibility guidelines
-
-### Target area
-Users should be able to select the radio button by clicking on the box directly or by clicking on its label.
+- Consider using a [Select](/components/select) dropdown for long lists
+- Users should be able to select the radio button by clicking on the box directly or by clicking on its label.
 
 ## States
 

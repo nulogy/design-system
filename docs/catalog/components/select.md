@@ -18,11 +18,6 @@ span: 6
 src: "form/select-anatomy.png"
 ```
 
-## General guidelines
-
-- Consider using select when you have more than 7 options
-- Whenever possible match the width of the select with the width of the container.
-
 ## States
 
 ### Before input
