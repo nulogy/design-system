@@ -14,7 +14,7 @@ span: 6
 src: "form/toggle-anatomy.png"
 ```
 
-## General guidelines
+## Guidelines
 
 - Always use the toggle value label to clearly communicate the selected state.
 

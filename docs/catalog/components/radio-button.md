@@ -18,7 +18,7 @@ span: 6
 src: "form/radio-button-anatomy.png"
 ```
 
-## General guidelines
+## Guidelines
 
 - Whenever possible use radio buttons for short lists (~ 5-7)
 - Consider using select for long lists
