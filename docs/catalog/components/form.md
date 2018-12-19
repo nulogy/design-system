@@ -1,9 +1,4 @@
-##### Intro
-
-> Form allows users to submit data.
-
-**Use when**
-- Users need to complete a task that first requires them to provide information.
+> Forms are a collection of inputs that allow users to submit data.
 
 ```image
 span: 4

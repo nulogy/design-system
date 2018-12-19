@@ -1,15 +1,13 @@
-##### Intro
-
-> Select lets users choose one option from a large list of options.
-
-**Use when**
-- Users need to choose a single option from a list of mutually exclusive options.
-- Users need to choose from a large data set that would be impractical for a group of radio buttons or a toggle.
+> For making one selection from a large list of options.
 
 ```image
 span: 4
 src: "form/select-basic.png"
 ```
+
+**Use when**
+- Users need to choose a single option from a list of mutually exclusive options.
+- There is a large data set that would be impractical for radio buttons or a toggle.
 
 ##### Design
 

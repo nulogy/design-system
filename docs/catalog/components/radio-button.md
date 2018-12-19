@@ -1,15 +1,13 @@
-##### Intro
-
-> Radio buttons are used when the user must select only one from a list of two or more options.
-
-**Use when**
-- Users need to make a single choice from a set of mutually exclusive options.
-- You want to show all available choices to the user to reduce the cognitive load needed to make a selection and remove the click required in a drop-down menu.
+> Radio buttons allow one selection from a group of options
 
 ```image
 span: 4
 src: "form/radio-button-basic.png"
 ```
+
+**Use when**
+- Users need to make a single choice from a set of mutually exclusive options
+- In place of a dropdown when it would be beneficial to see all items up front
 
 ##### Design
 

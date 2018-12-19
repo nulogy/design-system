@@ -1,9 +1,4 @@
-##### Intro
-
-> Toggle lets users quickly switch between two possible states.
-
-**Use when**
-- Users need to enable/disable, turn on/off, make visible/invisible or switch between any other 2 binary states.
+> For quickly switching between two possible states.
 
 ```image
 span: 4

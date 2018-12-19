@@ -1,9 +1,4 @@
-##### Intro
-
-> Checkboxes allow users to select any number of options from a predefined list.
-
-**Use when**
-- A user needs to make a choice
+> Checkboxes allow users to select any number of options from a list.
 
 ```image
 span: 4

@@ -1,15 +1,14 @@
-##### Intro
-
-> Text input is an input field that users can type into.
-
-**Use when**
-- Users need to enter information that is best communicated in text form.
-- You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.
+> An input field that users can type into.
 
 ```image
 span: 4
 src: "form/text-input-basic.png"
 ```
+
+**Use when**
+- Users need to enter information that is best communicated in text form.
+- You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.
+
 
 ##### Design
 
