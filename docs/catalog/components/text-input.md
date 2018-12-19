@@ -85,8 +85,8 @@ Whenever possible match the width of the input field with the expected length of
 ##### Related
 
 ## Related components
-[Form](/components/form)
-[Select](/components/select)
 [Checkbox](/components/checkbox)
+[Form](/components/form)
 [Radio button](/components/radio-button)
+[Select](/components/select)
 [Toggle](/components/toggle)

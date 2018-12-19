@@ -70,7 +70,7 @@ src: "form/checkbox-disabled.png"
 
 ## Related components
 [Form](/components/form)
+[Radio button](/components/radio-button)
 [Select](/components/select)
 [Text input](/components/text-input)
-[Radio button](/components/radio-button)
 [Toggle](/components/toggle)

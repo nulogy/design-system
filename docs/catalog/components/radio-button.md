@@ -56,8 +56,8 @@ src: "form/radio-button-disabled.png"
 ##### Related
 
 ## Related components
+[Checkbox](/components/checkbox)
 [Form](/components/form)
 [Select](/components/select)
 [Text input](/components/text-input)
-[Checkbox](/components/checkbox)
 [Toggle](/components/toggle)

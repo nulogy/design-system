@@ -57,8 +57,8 @@ src: "form/select-disabled.png"
 ##### Related
 
 ## Related components
-[Form](/components/form)
-[Text Input](/components/text-input)
 [Checkbox](/components/checkbox)
+[Form](/components/form)
 [Radio button](/components/radio-button)
+[Text Input](/components/text-input)
 [Toggle](/components/toggle)
