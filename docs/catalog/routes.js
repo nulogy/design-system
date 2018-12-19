@@ -53,8 +53,11 @@ export default [
         imports: {
           Link: require('@nulogy/components').Link
         }
-      },
-    ]
+      }, {
+        path: '/components/table',
+        title: 'Table',
+        content: pageLoader(() => import('./components/table.md'))
+      }    ]
   },
   {
     title: 'Tokens',
