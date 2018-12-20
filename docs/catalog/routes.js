@@ -77,7 +77,11 @@ export default [
         path: '/components/toggle',
         title: 'Toggle',
         content: pageLoader(() => import('./components/toggle.md'))
-      }
+      }, {
+        path: '/components/table',
+        title: 'Table',
+        content: pageLoader(() => import('./components/table.md'))
+      }    
     ]
   },
   {
