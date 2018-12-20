@@ -1,6 +1,5 @@
 [build]
-  base    = "docs"
-  command = "yarn build"
+  command = "yarn workspace @nulogy/docs build"
   publish = "docs/dist"
 
 [build.environment]
