@@ -53,13 +53,6 @@ export default [
         title: 'Form',
         content: pageLoader(() => import('./components/form.md'))
       }, {
-        path: '/components/links',
-        title: 'Links',
-        content: pageLoader(() => import('./components/links.md')),
-        imports: {
-          Link: require('@nulogy/components').Link
-        }
-      }, {
         path: '/components/radio-button',
         title: 'Radio button',
         content: pageLoader(() => import('./components/radio-button.md'))
