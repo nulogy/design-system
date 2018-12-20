@@ -18,16 +18,16 @@ const config = {
 
     textColor: tokens.color_base_black,
     background: tokens.color_base_white,
-    linkHoverColor: tokens.color_base_black,
     lightColor: tokens.color_base_dark_grey,
 
     sidebarColor: tokens.color_base_white,
     sidebarColorText: tokens.color_base_blue,
-    sidebarColorTextActive: tokens.color_base_blue,
+    sidebarColorTextActive: tokens.color_base_black_blue,
     sidebarColorLine: tokens.color_base_white,
 
     codeColor: tokens.color_base_black_blue,
     linkColor: tokens.color_base_blue,
+    linkHoverColor: tokens.color_base_black,
 
     pageHeadingBackground: tokens.color_base_white,
     pageHeadingTextColor: tokens.color_base_black,
