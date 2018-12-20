@@ -1,86 +1,23 @@
-> Buttons are used to make common actions immediately detectable and easy to perform.
+> Buttons make common actions immediately detectable and easy to perform.
 
-## Button
-Used for alternative actions to Primary Button action. They are usually paired with the Primary Button but they can stand on their own.
-```react
-<Button>Cancel</Button>
-```
+## Anatomy
+
+## Default Button
+Default button is used for actions that do not require any special emphasis and covers most of standard cases.
+
+## Primary Button
+Primary buttons are used for primary action in a particular context. There is usually not more then one primary button per screen and not all of the screens require Primary button.
 
 ## Danger Button
-Used for secondary actions that could result in a deletion of a particular item. Whenever possible follow this action with a confirmation modal dialog. Examples: Delete/Discard button.
-```react
-<DangerButton>Delete</DangerButton>
-```
-## Primary Button
-Used to emphasize the primary action in a particular context. Not every page requires a Primary Button. Avoid using more than 1 Primary Button per screen at a given time.
-```react
-<Button type="submit">Submit Form</Button>
-```
-
-## QCloud Approval Button (Deprecated)
-Used for submitting a form that can not be edited in QCloud. Avoid using this button since it was depricated.
-```react
-<ApprovalButton type="submit">Submit Record</ApprovalButton>
-```
-
-## Primary Danger Button
-Used for primary actions that result in the deletion of a particular item. Examples: Delete confirmation button.
-```react
-<DangerButton type="submit">Delete Item</DangerButton>
-```
+Danger button is used for destructive action such as deleting. They are most likely to appear in confirmation dialogs.
 
 ## Quiet Button
-Use for low importance actions, toolbars, or inline within complex components. Always reserve sufficient space surrounding the button to separate each from multiple instances and nearby elements. Examples: Table inline actions.
-```react
-<QuietButton>Actions</QuietButton>
-```
+Quiet button is used for less important actions such as “Cancel" or actions that are not dirrectly realted with the context of the page (actions such as *Learn more ...*). Quiet button is often paired with Primary button.
 
-## Link Button
-Use when you need a button that sits in text like a link.
+## Button Size
 
-```react
-<LinkButton>No I don't want to sign up for your email newsletter!</LinkButton>
-```
 
-Can be rendered without an underline.
-
-```react
-<LinkButton underline={false}>Click me</LinkButton>
-```
-
-## Disabled Button
-Use for actions that are not currently available.
-
-Button, Danger Button
-```react
-<Button disabled>Delete</Button>
-```
-Primary Button, QCloud Approval Button, Danger Primary Button
-```react
-<Button type="submit" disabled>Submit Form</Button>
-```
-Quiet Button
-```react
-<QuietButton disabled>Actions</QuietButton>
-```
-Link Button
-```react
-<LinkButton disabled>Link Button</LinkButton>
-```
-
-## Button Sizes
-Small
-```react
-<Button type="submit" size="small">Submit</Button>
-```
-Medium
-```react
-<Button type="submit">Submit</Button>
-```
-Large
-```react
-<Button type="submit" size="large">Submit</Button>
-```
-## Language
-- Always lead with strong, actionable verbs
-- Whenever possible follow by an object noun on Primary Button. Example: Submit Form, Aprove Form.
+### Writing Guidlines
+- Always lead with an actionable verb
+- Whenever possible follow by an object noun on Primary Button to reduce ambiguity. Example: Submit Form, Aprove Form.
+- Always use sentence case
