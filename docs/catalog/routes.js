@@ -47,6 +47,14 @@ export default [
         title: 'Getting Started',
         content: pageLoader(() => import('../../components/README.md'))
       }, {
+        path: '/components/checkbox',
+        title: 'Checkbox',
+        content: pageLoader(() => import('./components/checkbox.md'))
+      }, {
+        path: '/components/form',
+        title: 'Form',
+        content: pageLoader(() => import('./components/form.md'))
+      }, {
         path: '/components/links',
         title: 'Links',
         content: pageLoader(() => import('./components/links.md')),
@@ -54,10 +62,27 @@ export default [
           Link: require('@nulogy/components').Link
         }
       }, {
+        path: '/components/radio-button',
+        title: 'Radio button',
+        content: pageLoader(() => import('./components/radio-button.md'))
+      }, {
+        path: '/components/select',
+        title: 'Select',
+        content: pageLoader(() => import('./components/select.md'))
+      }, {
+        path: '/components/text-input',
+        title: 'Text input',
+        content: pageLoader(() => import('./components/text-input.md'))
+      }, {
+        path: '/components/toggle',
+        title: 'Toggle',
+        content: pageLoader(() => import('./components/toggle.md'))
+      }, {
         path: '/components/table',
         title: 'Table',
         content: pageLoader(() => import('./components/table.md'))
-      }    ]
+      }    
+    ]
   },
   {
     title: 'Tokens',
