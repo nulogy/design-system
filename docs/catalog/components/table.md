@@ -6,11 +6,6 @@ src: "/table/basic.png"
 
 ##### Design
 
-## General/accessibility guidelines
-
-### Proportional sizing
-
-Use proportional sizing rather than absolute to help a table be more accessible as well by allowing the cells to grow to accommodate content when enlarging text.
 
 ## Funcionality
 
@@ -68,29 +63,6 @@ Edit mode allows users to make edits across multiple columns and submit the chan
 src: "/table/edit.png"
 ```
 
-##### Developement
-
-## Accessibility guidelines
-
-#### Headings
-- Always use ` <TH> ` tag for headings
-
-#### Rows and columns
-- Use ` <TH scope="row"> ` when the heading is for a row
-- Use ` <TH scope="col"> ` when the heading is for a column
-
-#### Cell
-- Use ` <TD> ` tag for body content
-
-#### Description
-- Use ` <Caption> ` to provide a title or description for the table
-- Use ` <Summary> ` to provide additional information about the structure of an unusual table. This tag is rarely used and shouldn't duplicate the caption's content.
-
-#### Pagination
-- Make sure to use appropriate aria content for pagination, e.g ` aria-label="Go to page 1" ` for navigation links as well as ` aria-label="Current page, page 3" ` and ` aria-current="page" `
-- When an option is disabled, use ` aria-disabled="true" ` and ` tabindex"=-1" `
-- Wrap in a ` <nav> ` element, e.g ` <nav aria-label="Pagination Navigation"> `
-- Make sure pagination is accessible through keyboard navigation
 
 ## Related
 
