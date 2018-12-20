@@ -28,9 +28,7 @@ export default [
         path: '/visual_style/iconography',
         title: 'Iconography',
         content: pageLoader(() => import('./visual_style/iconography.md')),
-        imports: {
-          // Icon: require('@nulogy/components').Icons.Icon
-        }
+        imports: {}
       },
       {
         path: '/visual_style/logo',
@@ -46,14 +44,7 @@ export default [
         path: '/components',
         title: 'Getting Started',
         content: pageLoader(() => import('../../components/README.md'))
-      }, {
-        path: '/components/links',
-        title: 'Links',
-        content: pageLoader(() => import('./components/links.md')),
-        imports: {
-          Link: require('@nulogy/components').Link
-        }
-      },
+      }
     ]
   },
   {
