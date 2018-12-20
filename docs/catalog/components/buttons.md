@@ -51,7 +51,7 @@ src: "buttons/size.png"
 
 ##### Content
 
-### Writing guidelines
+## Writing guidelines
 - Always lead with an actionable verb
 - Whenever possible follow by an object noun on Primary button to reduce ambiguity. Example: Create shipment, Approve delivery.
 - Always use sentence case
