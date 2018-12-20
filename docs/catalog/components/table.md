@@ -1,4 +1,4 @@
-> Table structures data into a grid making data easier to understand and compare.
+> Tables structure data into a grid making it easier to understand and compare.
 
 ```image
 src: "/table/basic.png"
@@ -6,57 +6,54 @@ src: "/table/basic.png"
 
 ##### Design
 
-
-## Funcionality
+## Functionality
 
 ### Actions
 There are 2 types of actions:
-- Row-level actions that allow data manipulation within a single row, and
-- Table level actions that allow actions to be performed on multiple rows or the entire table. Table level actions also include actions such as Create, Print, Import/Export.
-
+- **Row** actions allow data manipulation within a single row
+- **Table** actions allow actions to be performed on multiple rows or the entire table. This also includes actions such as Create, Print and Import/Export.
 
 ```image
 src: "/table/actions.png"
 ```
 
 ### Pagination
-Pagination allows the content of the table to be broken down into smaller more digestible pieces. (More information: Pagination component)
+Pagination breaks the content of a table into smaller more digestable peices.
 ```image
 src: "/table/pagination.png"
 ```
 
 ### Sorting
-Sorting improves usability by allowing users to change the order of the rows based on particular criteria.
+Sorting allows users to sort columns in ascending or descending order based on headings.
 ```image
 src: "/table/sorting.png"
 ```
-*Animation coming soon*
 
 ### Table customization bar
 The content of the table can be customized by
 - Applying search criteria
-- Applying filters, and
-- Manipulating the table view by selecting custom columns and number of rows to be displayed.
+- Applying filters
+- Hiding and showing specific columns
+- Changing the number of rows displayed per page
 
 ```image
 src: "/table/customization-bar.png"
 ```
 
 ### Drag and drop
-Drag and drop functionality allows rows of to be ordered in a customized way.
+Drag and drop functionality allows users to change a row's order.
 ```image
 src: "/table/drag-and-drop.png"
 ```
-*Animation coming soon*
 
 ### Multi-select
-Multi-select allows multiple rows to be selected at the same time making batch editing possible.
+Multi-select allows multiple rows to be selected at the same time for batch editing.
 ```image
 src: "/table/multi-select.png"
 ```
 
 ### Edit mode
-Edit mode allows users to make edits across multiple columns and submit the changes through a single server request.
+Edit mode allows users to make edits across multiple columns and submit all the changes at once through a single server request.
 ```image
 src: "/table/edit.png"
 ```
