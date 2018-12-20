@@ -183,8 +183,8 @@ By default, placeholder text in every major browser does not meet minimum contra
 ##### Related
 
 ## Related components
-[Text input](/components/text-input)
-[Select](/components/select)
 [Checkbox](/components/checkbox)
 [Radio button](/components/radio-button)
+[Select](/components/select)
+[Text input](/components/text-input)
 [Toggle](/components/toggle)
