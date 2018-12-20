@@ -14,7 +14,6 @@ There are 2 types of actions:
 - Row-level actions that allow data manipulation within a single row, and
 - Table level actions that allow actions to be performed on multiple rows or the entire table. Table level actions also include actions such as Create, Print, Import/Export.
 
-(More information: Actions component)
 
 ```image
 src: "/table/actions.png"
@@ -38,7 +37,6 @@ The content of the table can be customized by
 - Applying search criteria
 - Applying filters, and
 - Manipulating the table view by selecting custom columns and number of rows to be displayed.
-(More information: Table customization component, Search component, Table filter component)
 
 ```image
 src: "/table/customization-bar.png"
@@ -62,13 +60,3 @@ Edit mode allows users to make edits across multiple columns and submit the chan
 ```image
 src: "/table/edit.png"
 ```
-
-
-## Related
-
-- Table customization bar component
-- Table actions component
-- Pagination component
-- Dropdown component
-- Search component
-- Table filter component
