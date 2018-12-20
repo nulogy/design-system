@@ -28,9 +28,7 @@ export default [
         path: '/visual_style/iconography',
         title: 'Iconography',
         content: pageLoader(() => import('./visual_style/iconography.md')),
-        imports: {
-          // Icon: require('@nulogy/components').Icons.Icon
-        }
+        imports: {}
       },
       {
         path: '/visual_style/logo',

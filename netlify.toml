@@ -1,5 +1,5 @@
 [build]
-  base    = "docs/"
+  base    = "docs"
   command = "yarn build"
   publish = "docs/dist"
 
