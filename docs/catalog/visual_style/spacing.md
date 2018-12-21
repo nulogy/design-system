@@ -2,7 +2,7 @@
 
 ```image
 plain: true
-src: "/spacing/spacing-example.svg"
+src: "/buttons/anatomy.png"
 ```
 
 ## Baseline
