@@ -45,6 +45,10 @@ export default [
         title: 'Getting Started',
         content: pageLoader(() => import('../../components/README.md'))
       }, {
+        path: '/components/buttons',
+        title: 'Buttons',
+        content: pageLoader(() => import('./components/buttons.md'))
+      }, {
         path: '/components/checkbox',
         title: 'Checkbox',
         content: pageLoader(() => import('./components/checkbox.md'))
@@ -72,7 +76,7 @@ export default [
         path: '/components/table',
         title: 'Table',
         content: pageLoader(() => import('./components/table.md'))
-      }    
+      }
     ]
   },
   {
