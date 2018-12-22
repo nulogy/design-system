@@ -13,18 +13,12 @@ src: "typography/headings.svg"
 ```
 
 ## Interface text
-By default, interface text should be set at 16px with a line height of 24px. Smaller text may be desirable for certain purposes and can be set at either 14px.
+By default, interface text should be set at 16px with a line height of 24px. Smaller text may be desirable for certain purposes and can be set at 14px.
 
 ```image
 plain: true
 src: "typography/text.svg"
 ```
 
-### Line height
-The default line heights above should be appropriate for most interfaces but if your design requires a different line height you can use 16px, 32px or 40px. 
-
-## Usage
-There are type components for headings and interface text available via React as well as token references for all sizes and line heights. 
-
-[React components](/components/type)
-[Tokens](/tokens#typography)
+## Line height
+The default line heights above should be appropriate for most interfaces but if your design requires a different line height you can use 16px, 32px or 40px and keep vertical rhythm. 
