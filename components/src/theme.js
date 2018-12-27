@@ -55,6 +55,12 @@ export default {
         tokens.size_font_larger,
         tokens.size_font_largest
     ],
+    fontWeights: [
+      tokens.weight_font_light,
+      tokens.weight_font_normal,
+      tokens.weight_font_medium,
+      tokens.weight_font_bold
+    ],
     space: [
         tokens.size_padding_half,
         tokens.size_padding_x_1,
@@ -70,6 +76,6 @@ export default {
     },
     borders: [],
     shadows: [],
-    radii: [tokens.radius_background_small, tokens.radius_background_medium, tokens.radius_background_large]
+    radii: [tokens.radius_background_small, tokens.radius_background_medium]
 
   }
