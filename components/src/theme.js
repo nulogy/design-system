@@ -55,6 +55,12 @@ export default {
         tokens.size_font_larger,
         tokens.size_font_largest
     ],
+    fontWeights: [
+      tokens.weight_font_light,
+      tokens.weight_font_normal,
+      tokens.weight_font_medium,
+      tokens.weight_font_bold
+    ],
     space: [
         tokens.size_padding_half,
         tokens.size_padding_x_1,
