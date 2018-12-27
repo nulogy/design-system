@@ -70,6 +70,6 @@ export default {
     },
     borders: [],
     shadows: [],
-    radii: [tokens.radius_background_small, tokens.radius_background_medium, tokens.radius_background_large]
+    radii: [tokens.radius_background_small, tokens.radius_background_medium]
 
   }
