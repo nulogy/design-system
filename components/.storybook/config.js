@@ -10,6 +10,7 @@ function loadStories() {
   require('../src/Link/Link.story.js');
   require('../src/Box/Box.story.js');
   require('../src/Flex/Flex.story.js');
+  require('../src/Type/Type.story.js');
 }
 
 addDecorator((story) => (
