@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
+import Box from '../src/Box/Box';
 
 import '../../css/src/nds-dev.css';
 
@@ -13,7 +14,7 @@ function loadStories() {
 
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
-    {story()}
+    <Box p={1}>{story()}</Box>
   </ThemeProvider>
 ))
 
