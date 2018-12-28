@@ -1,9 +1,11 @@
 // TO-DO: https://www.npmjs.com/package/gatsby-plugin-layout
 
 import React from 'react'
-import { NavItem, Nav} from '../components/Nav'
+import { NavItem, Nav, NavLink} from '../components/Nav'
+import styled, {ThemeProvider} from 'styled-components'
 import { Flex } from '../../../components/src/Flex'
 import { Box } from '../../../components/src/Box'
+import theme from '../../../components/src/theme'
 import '../../../css/dist/nds.css';
 
 import logo from '../images/nulogy.svg'

@@ -1,9 +1,12 @@
 import React from "react"
-import styled from "styled-components"
-import { Flex } from '../../../../components/src/Box'
+import { Flex } from '../../../../components/src/Flex'
 import { Box } from '../../../../components/src/Box'
+import Text from '../../../../components/src/Type/Text';
+
 import Layout from '../../components/layout'
 import Intro from '../../components/Intro'
+import {Title, SectionTitle} from '@nulogy/components';
+
 import * as tokens from '../../../../tokens/build/exports.js'
 
 const Palette = props => (

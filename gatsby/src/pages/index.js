@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import {Box, Flex, Text, Title, SectionTitle} from '@nulogy/components';
 import Intro from '../components/Intro'
 import Layout from '../components/layout'
 
