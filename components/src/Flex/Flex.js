@@ -1,13 +1,6 @@
 import Box from '../Box/Box';
-
 import styled from 'styled-components'
-import {
-  alignItems,
-  justifyContent,
-  flexWrap,
-  flexDirection,
-  propTypes
-} from 'styled-system';
+import {alignItems,justifyContent,flexWrap,flexDirection} from 'styled-system';
 
 const Flex = styled(Box)({
   display: 'flex'
