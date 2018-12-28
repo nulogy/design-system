@@ -6,7 +6,7 @@ const Intro = styled.p`
     max-width: 720px;
     color: #434d59;
     padding: 24px 0;
+    -webkit-font-smoothing: antialiased;
 `
   
 export default Intro
-
