@@ -1,7 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Text from './Text';
+import Text from './Text'
+import theme from '../theme.js'
 
 const Title = Text.withComponent('h1')
 Title.defaultProps = {
