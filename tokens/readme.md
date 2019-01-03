@@ -12,3 +12,11 @@ This is where Nulogy's design tokens are stored and converted using [Style Dicti
 Your application can them import and use whichever format is required.
 
 New export formats can be added in `config.js`. 
+
+## Usage
+`$ yarn add @nulogy/tokens`
+
+### In JS 
+`import * as tokens from '@nulogy/tokens'`
+`Black is: {tokens.color_base_black}`
+
