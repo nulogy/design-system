@@ -12,6 +12,7 @@
   "scripts": {
     "build": "style-dictionary build"
   },
+  "main": "build/exports.js",
   "devDependencies": {
     "style-dictionary": "^2.5.0"
   }
