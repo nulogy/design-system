@@ -11,6 +11,7 @@ const Text = styled.div`
   ${fontFamily}
   ${textAlign}
   -webkit-font-smoothing: antialiased;
+  display: ${props => props.inline ? 'inline-block': 'block'}
 `
 Text.propTypes = {
   ...space.propTypes,
@@ -22,7 +23,8 @@ Text.propTypes = {
 
 Text.defaultProps = {
   fontSize: 1,
-  lineHeight: 1.5
+  lineHeight: 1.5,
+  mb: 2
 }
 
 export default Text
