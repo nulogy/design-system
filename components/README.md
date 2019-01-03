@@ -1,39 +1,28 @@
->`@nulogy/components` is a component library built with React that makes it easy for you to build interfaces that conform to the principles of the Nulogy Design system. 
+# @nulogy/components
+Built with React, Nulogy compononents make it easy to build interfaces that conform to the principles of the Nulogy Design System.
 
 ## Installation
 
 ```code
-$ yarn add react react-dom styled-components
-$ yarn add @nulogy/components 
+$ yarn add @nulogy/components
 ```
 
 ## Usage
 
-Please see the docs for the individual components for details on their use, but in general components can be imported and rendered as you would expect:
+Components can then be imported for use in your application. 
 
-```code
-lang: javascript
----
-import React from 'react'
-import ReactDOM from 'react-dom';
-import { Button, P, Title } from '@nulogy/components';
-
-const App = props => (
-  <React.Fragment>
-    <Title>My App</Title>
-    <P>This is a paragraph.</P>
-    <Button>Click me!</Button>
-  </React.Fragment>
-);
-
-ReactDOM.render(<App />, document.getElementById('root'))
 ```
----
+import React from 'react'
+import { Box, Title } from '@nulogy/components';
 
-## Contributing
+const View = props => (
+    <Box pr={3}>
+      <Title>My App</Title>
+    </Box>
+);
+```
 
-See [Guides/Quick start](http://nulogy.design/guides/quickstart) for instructions on how to install and work with this  project, and [Guides/Package Scripts](http://nulogy.design/guides/scripts) for more details on the commands available in the project.
+Please see the [docs](http://nulogy.design/components) for instructions on how best to use each component. 
 
-## Links
 
-* [Components Storybook](https://nulogy.github.io/design-system/)
+
