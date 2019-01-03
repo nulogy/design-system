@@ -1,9 +1,6 @@
 import React from "react"
 import {Box, Flex, Text, Title, SectionTitle, SubsectionTitle} from '@nulogy/components';
-import Layout from '../../components/layout'
-import Intro from '../../components/Intro'
-import DocSection from '../../components/DocSection'
-import ComponentUsage from '../../components/components/UsageBox'
+import {Layout, Intro, DocSection, ComponentUsage} from '../../components/'
 
 export default () => (
     <Layout>

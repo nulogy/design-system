@@ -1,9 +1,7 @@
 import React from "react"
-import Layout from '../../components/layout'
-import Intro from '../../components/Intro'
-import DocSection from '../../components/DocSection'
 import {Box, Flex, Text, Title, SectionTitle} from '@nulogy/components';
 import * as tokens from '@nulogy/tokens';
+import {Layout, Intro, DocSection} from '../../components'
 
 const Palette = props => (
     <Box width={{md: 1/3, lg: 1/3}} mb={"24px"}>

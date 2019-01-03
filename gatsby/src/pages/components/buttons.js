@@ -1,10 +1,6 @@
 import React from "react"
-import Layout from '../../components/layout'
-import Intro from '../../components/Intro'
-import DocSection from '../../components/DocSection'
-import CheckList from '../../components/CheckList'
-import ComponentUsage from '../../components/components/UsageBox'
-import {Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, Text, SectionTitle, Title} from '@nulogy/components';
+import {Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, Text, SectionTitle, Title} from '@nulogy/components'
+import {Layout, Intro, DocSection, CheckList, ComponentUsage} from '../../components'
 
 export default () => (
     <Layout>

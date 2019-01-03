@@ -1,8 +1,6 @@
 import React from "react"
-import {Box, Text, Title, SectionTitle} from '@nulogy/components';
-import Layout from '../../components/layout'
-import Intro from '../../components/Intro'
-import DocSection from '../../components/DocSection'
+import {Box, Text, Title, SectionTitle} from '@nulogy/components'
+import {Layout, Intro, DocSection} from '../../components'
 import anatomy from '../../images/spacing-anatomy.png'
 import scale from '../../images/spacing-scale.svg'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import {Button, Box, Flex, Text, Title, SectionTitle} from '@nulogy/components';
-import Intro from '../components/Intro'
-import Layout from '../components/layout'
+import {Intro, Layout} from '../components/'
 
 const IndexPage = () => (
   <Layout>
