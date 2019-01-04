@@ -19,7 +19,7 @@ export default () => (
             <Intro>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</Intro>
         </DocSection>
         <Box mb={3}>
-            <SectionTitle mb={2}>Text & Interactive Colours</SectionTitle>
+            <SectionTitle>Text & Interactive Colours</SectionTitle>
             <Flex>
                 <Palette name="Black" colour={tokens.color_base_black}></Palette>
                 <Palette name="Black Blue" colour={tokens.color_base_black_blue}></Palette>
@@ -30,7 +30,7 @@ export default () => (
         </Box>
 
         <Box mb={3}>
-            <SectionTitle mb={2}>UI & Background Colours</SectionTitle>
+            <SectionTitle>UI & Background Colours</SectionTitle>
             <Flex>
                 <Palette name="Dark Grey" colour={tokens.color_base_dark_grey}></Palette>
                 <Palette name="Grey" colour={tokens.color_base_grey}></Palette>
@@ -40,7 +40,7 @@ export default () => (
             </Flex>
         </Box>
         <Box mb={3}>
-            <SectionTitle mb={2}>Contextual Colours</SectionTitle>
+            <SectionTitle>Contextual Colours</SectionTitle>
             <Flex>
                 <Palette name="Green" colour={tokens.color_base_green}></Palette>
                 <Palette name="Red" colour={tokens.color_base_red}></Palette>
