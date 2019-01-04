@@ -5,7 +5,8 @@ Built with React, compononents make it easy to create interfaces that conform to
 `$ yarn add @nulogy/components`
 
 ## Development
-`$ yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development. 
+* `$ yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development. 
+
 `$ yarn build` will rebuild the package exports for production.
 
 ## Usage
@@ -22,4 +23,4 @@ const View = props => (
 );
 ```
 
-Please see the [docs](http://nulogy.design/components) for instructions on how best to use each component. 
+Please see the [documentation](http://nulogy.design/components) for instructions on how best to use each component. 
