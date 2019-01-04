@@ -1,4 +1,3 @@
-// To-Do: Add small variant
 import styled from 'styled-components';
 import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from 'styled-system'
 

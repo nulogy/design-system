@@ -15,8 +15,6 @@ function loadStories() {
   require('../src/Type/Text.story.js');
 }
 
-// addDecorator(withInfo)
-
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
     <Box p={2}>
