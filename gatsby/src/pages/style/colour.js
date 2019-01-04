@@ -4,7 +4,8 @@ import * as tokens from '@nulogy/tokens';
 import {Layout, Intro, DocSection} from '../../components'
 
 const Palette = props => (
-    <Box width={{md: 1/3, lg: 1/3}} mb={"24px"}>
+    // <Box width={{md: 1/3, lg: 1/3}} mb={"24px"}>
+    <Box width={1/3} mb={3}>
         <Box mr={2} pt={6} pb={6} mb={1} bg={props.colour} borderRadius={1}></Box>
         <Text mb={0}>{props.name}</Text>
         <Text fontSize={0}>{props.colour}</Text>
