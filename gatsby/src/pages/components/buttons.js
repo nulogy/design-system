@@ -23,7 +23,7 @@ export default () => (
                     <PrimaryButton>Primary Button</PrimaryButton>
                 </Box>
                 <Box width={3/4}>
-                    <Text>Primary buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
+                    <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
                 </Box>
             </Flex>        
             <Flex mb={6}>              
@@ -31,7 +31,7 @@ export default () => (
                     <DangerButton>Danger Button</DangerButton>
                 </Box>
                 <Box width={3/4}>
-                    <Text>Danger buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
+                    <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
                 </Box>
             </Flex>   
             <Flex>              
@@ -39,29 +39,33 @@ export default () => (
                     <QuietButton>Quiet Button</QuietButton>
                 </Box>
                 <Box width={3/4}>
-                    <Text>Quiet buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
+                    <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
                 </Box>
             </Flex>            
         </DocSection>               
         
         <DocSection>
             <SectionTitle>Sizes</SectionTitle>
-            <Text>All buttons are available in three sizes</Text>
-            <Button size="small" mr={3}>Small</Button>
-            <Button size="medium" mr={3}>Medium</Button>
-            <Button size="large">Large</Button>
+            <Text>All buttons are available in three sizes and a full-width option.</Text>
+            <Button size="small" mr={3} mb={2}>Small</Button>
+            <Button size="medium" mr={3} mb={2}>Medium</Button>
+            <Button size="large" mb={2}>Large</Button>
+            <Button fullWidth>Large</Button>
         </DocSection>
 
         <DocSection>
             <SectionTitle>States</SectionTitle>
             <Text>All buttons can be disabled. When a button is disabled, it's greyed out and unable to be clicked.</Text>
-            <Button disabled>Create project</Button>
+            <Button mr={3} disabled>Create project</Button>
+            <PrimaryButton mr={3} disabled>Create project</PrimaryButton>
+            <DangerButton mr={3} disabled>Delete project</DangerButton>
+            <QuietButton disabled>Edit project</QuietButton>
         </DocSection>
 
         <DocSection>
             <SectionTitle>Content guidelines</SectionTitle>
                 <CheckList>Always lead with an actionable verb</CheckList>
-                <CheckList>Whenever possible follow by an object noun on Primary button to reduce ambiguity. Example: Create shipment, Approve delivery.</CheckList>
+                <CheckList>Whenever possible follow with a clear noun Example: Create shipment, Approve delivery.</CheckList>
                 <CheckList>Always use sentence case</CheckList>
         </DocSection>
 
