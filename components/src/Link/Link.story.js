@@ -10,6 +10,6 @@ storiesOf('Link', module)
     <Link underline={false} href="http://nulogy.design">Link</Link>
   ))
   .add('With a different color', () => (
-    <Link color='white' href="http://nulogy.design">Link</Link>
+    <Link color='red' href="http://nulogy.design">Link</Link>
   ))      
   ;

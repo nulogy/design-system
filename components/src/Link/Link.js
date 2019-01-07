@@ -6,11 +6,7 @@ import theme from '../theme.js'
 
 const Link = styled.a`
   ${color}
-
-  ${ ({ underline }) => css`
-    text-decoration: ${underline ? 'underline' : 'none' };
-  `}
-
+  text-decoration: ${props => props.underline ? 'underline' : 'none'}}
 `;
 
 Link.propTypes = {
