@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Intro = styled.p`
     font-size: 21.333px;

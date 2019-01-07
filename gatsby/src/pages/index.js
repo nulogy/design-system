@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Box, Flex, Text, Title, SectionTitle} from '@nulogy/components';
+import {Button, Box, Flex, Text, Title, SectionTitle} from '@nulogy/components'
 import {Intro, Layout} from '../components/'
 
 const IndexPage = () => (

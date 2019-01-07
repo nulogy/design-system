@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import {Box, Flex, Text, Title, SectionTitle, SubsectionTitle} from '@nulogy/components';
 import {Layout, Intro, DocSection, ComponentUsage} from '../../components/'
 
