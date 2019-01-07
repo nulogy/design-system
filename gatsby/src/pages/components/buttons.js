@@ -4,11 +4,12 @@ import {Layout, Intro, DocSection, CheckList, ComponentUsage} from '../../compon
 
 export default () => (
     <Layout>
-    <Box>
+    
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
             <Title mb={0}>Buttons</Title>   
             <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
         </Box>
+
         <DocSection>
             <Flex mb={6}>
                 <Box width={1/4}>
@@ -70,7 +71,5 @@ export default () => (
         </DocSection>
 
         <ComponentUsage storybookLink='http://localhost:8080/?selectedKind=Button' source='/components/buttons/buttons.js'></ComponentUsage>
-
-    </Box>
     </Layout>
 )
