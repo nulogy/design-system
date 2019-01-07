@@ -7,6 +7,9 @@ import theme from '../theme.js'
 const Link = styled.a`
   ${color}
   text-decoration: ${props => props.underline ? 'underline' : 'none'}}
+  &:hover {
+    color: ${props => props.theme.colors['darkBlue']}
+  }
 `;
 
 Link.propTypes = {
