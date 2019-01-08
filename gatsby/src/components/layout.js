@@ -1,9 +1,8 @@
 import React from 'react'
-// import { NavItem, Nav, NavLink} from '../components/Nav'
-import styled, {ThemeProvider} from 'styled-components'
-import {Box, Flex} from '@nulogy/components'
+import { NavItem, Nav, NavLink} from '../components/Nav'
+import ThemeProvider from '../../../components/src/ThemeProvider/ThemeProvider'
+import {Box, Flex, Link, Text} from '@nulogy/components'
 import theme from '../../../components/src/theme'
-import '../../../css/dist/nds.css';
 
 import logo from '../images/nulogy.svg'
 
