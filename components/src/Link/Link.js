@@ -1,11 +1,11 @@
 
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { color } from 'styled-system'
+import { color, space } from 'styled-system'
 import theme from '../theme.js'
 
 const Link = styled.a`
-  ${color}
+  ${color} ${space}
   text-decoration: ${props => props.underline ? 'underline' : 'none'}}
   &:hover {
     color: ${props => props.theme.colors['darkBlue']}
