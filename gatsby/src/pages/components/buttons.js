@@ -66,7 +66,7 @@ export default () => (
         <DocSection>
             <SectionTitle>Content guidelines</SectionTitle>
                 <CheckList>Always lead with an actionable verb</CheckList>
-                <CheckList>Whenever possible follow with a clear noun Example: Create shipment, Approve delivery.</CheckList>
+                <CheckList>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></CheckList>
                 <CheckList>Always use sentence case</CheckList>
         </DocSection>
 
