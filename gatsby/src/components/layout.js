@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavItem, Nav, NavLink} from '../components/Nav'
+import {NavItem, Nav} from '../components/Nav'
 import ThemeProvider from '../../../components/src/ThemeProvider/ThemeProvider'
 import {Box, Flex, Link, Text} from '@nulogy/components'
 import theme from '../../../components/src/theme'
