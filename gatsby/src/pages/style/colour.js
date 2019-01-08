@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 import {Box, Flex, Text, Title, SectionTitle} from '@nulogy/components'
 import {Layout, Intro, DocSection} from '../../components'
 import * as tokens from '@nulogy/tokens'
@@ -13,6 +14,9 @@ const Palette = props => (
 
 export default () => (
     <Layout>
+        <Helmet>
+            <title>Colour</title>
+        </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
             <Title>Colour</Title>   
             <Intro>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</Intro>

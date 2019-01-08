@@ -1,9 +1,13 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 import {Box, Flex, Text, Title, SectionTitle, SubsectionTitle} from '@nulogy/components';
 import {Layout, Intro, DocSection, ComponentUsage} from '../../components/'
 
 export default () => (
     <Layout>
+        <Helmet>
+            <title>Typography</title>
+        </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
             <Title>Typography</Title>   
             <Intro>Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.</Intro>

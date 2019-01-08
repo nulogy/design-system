@@ -3,12 +3,18 @@ import { NavItem, Nav, NavLink} from '../components/Nav'
 import ThemeProvider from '../../../components/src/ThemeProvider/ThemeProvider'
 import {Box, Flex, Link, Text} from '@nulogy/components'
 import theme from '../../../components/src/theme'
+import { Helmet } from 'react-helmet'
 
 import logo from '../images/nulogy.svg'
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>
     <Box>
+      <Helmet titleTemplate="%s | Nulogy Design System">
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>Welcome</title>
+      </Helmet>
       <Box bg='blackBlue' align='center' mb={3} p={3}>
         <Box pl={4} pr={4} maxWidth={1240} m='auto'>
           <Flex>

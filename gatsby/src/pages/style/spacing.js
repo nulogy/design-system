@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 import {Box, Text, Title, SectionTitle} from '@nulogy/components'
 import {Layout, Intro, DocSection, CheckList} from '../../components'
 import anatomy from '../../images/spacing-anatomy.png'
@@ -6,6 +7,9 @@ import scale from '../../images/spacing-scale.svg'
 
 export default () => (
     <Layout>
+        <Helmet>
+            <title>Spacing</title>
+        </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
             <Title>Spacing</Title>   
             <Intro>A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.</Intro>

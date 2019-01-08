@@ -1,10 +1,13 @@
 import React from "react"
+import {Helmet} from 'react-helmet'
 import {Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, Text, SectionTitle, Title} from '@nulogy/components'
 import {Layout, Intro, DocSection, CheckList, ComponentUsage} from '../../components'
 
 export default () => (
     <Layout>
-    
+        <Helmet>
+            <title>Buttons</title>
+        </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
             <Title mb={0}>Buttons</Title>   
             <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
