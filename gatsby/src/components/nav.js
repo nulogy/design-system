@@ -4,12 +4,8 @@ const Nav = styled.ul`
 `
 
 const NavItem = styled.li`
-    margin: 24px;
-
-    a {
-        color: rgb(33, 107, 235);
-        text-decoration: none;
-    }    
+    margin: 16px;
+    list-style: none;  
 `
 
 export { NavItem, Nav }
