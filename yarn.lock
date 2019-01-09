@@ -1487,6 +1487,10 @@
 "@nulogy/tokens@file:tokens", "tokens@file:tokens":
   version "0.2.0"
 
+"@sambego/storybook-styles@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sambego/storybook-styles/-/storybook-styles-1.0.0.tgz#4f840ee26dd0b25dcb803a75caa42e16071dcaae"
+
 "@storybook/addon-info@^4.1.4":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.4.tgz#f370543a9151a31a6b2ec7fa5bbea544dcc15eff"
@@ -8518,7 +8522,6 @@ pkginfo@0.4.1:
 polished@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.1.tgz#557ea07e5bcb1b9c7d71935a01d0315831234d48"
-  integrity sha512-0mGyvVrHVRN92wfohriBWmMF4JLEnGgpZbpwPrNDhpB8NrX6lYI8GGWXEfrmrF+ZXg52Jkwd+D0rxViOvXM9RQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
 

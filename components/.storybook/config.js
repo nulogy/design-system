@@ -18,7 +18,8 @@ function loadStories() {
 
 addDecorator(withStyles({
   backgroundSize: '8px 8px',
-  backgroundImage: 'linear-gradient(to right, transparent 7px, #E4E7EB 1px), linear-gradient(to bottom, transparent 7px, #E4E7EB 1px)'
+  backgroundImage: 'linear-gradient(to right, transparent 7px, #F0F2F5 1px), linear-gradient(to bottom, transparent 7px, #F0F2F5 1px)',
+  minHeight: 'calc(100vh - 32px)',
 }));
 
 addDecorator((story) => (
