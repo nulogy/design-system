@@ -22,8 +22,8 @@ export default ({ children }) => (
               <Link href="/"><img src={logo} alt="Logo" width="56px" /></Link>
             </Box>
             <Box width={3/4} textAlign='right'>
-              <Link href='/style/colour' mr={3} color='white'>Visual Style</Link>
-              <Link href='/components/buttons' color='white'>Components</Link>
+              <Link href='/style/colour' mr={3} color='white' hover='white' >Visual Style</Link>
+              <Link href='/components/buttons' color='white' hover='white'>Components</Link>
             </Box>
           </Flex>
         </Box>
