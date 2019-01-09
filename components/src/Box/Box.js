@@ -1,22 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { color, space, width, fontSize, maxWidth } from 'styled-system'
-import * as tokens from '../../../tokens/build/exports.js';
+import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
+import theme from '../theme.js'
 
 const Box = styled.div`
  ${color}
  ${space}
  ${width}
  ${maxWidth}
+ ${borderRadius}
+ ${boxShadow}
+ ${textAlign}
 `;
 
 Box.propTypes = {
+    ...color.propTypes,
     ...space.propTypes,
     ...width.propTypes,
-    ...color.propTypes,
-    ...maxWidth.propTypes,    
-  }
+    ...maxWidth.propTypes,  
+    ...borderRadius.propTypes,
+    ...boxShadow.propTypes,
+    ...textAlign.propTypes  
+}
+
+Box.defaultProps = {
+  theme: theme
+}
   
 export default Box
 

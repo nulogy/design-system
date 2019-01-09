@@ -1,31 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 /**
  * Do not edit directly
- * Generated on Wed, 12 Dec 2018 18:52:06 GMT
+ * Generated on Fri, 28 Dec 2018 15:18:35 GMT
  */
-body, html, li, ul, h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0; }
+html, body {
+  margin: 0; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: "IBM Plex Sans", sans; }
-
-a:visited {
-  color: inherit; }
-
-h1, h2, h3, h4 {
-  font-weight: 500; }
-
-h1 {
-  font-size: 46px; }
-
-h2 {
-  font-size: 26px; }
-
-h3 {
-  font-size: 18px; }
+  font-family: "IBM Plex Sans", sans;
+  line-height: 1.5; }
 
 code {
   font-family: "IBM Plex Mono", monospace; }

@@ -6,7 +6,10 @@ storiesOf('Link', module)
   .add('Default', () => (
     <Link href="http://nulogy.design">Link</Link>
   ))
-  .add('With underline', () => (
+  .add('Without underline', () => (
     <Link underline={false} href="http://nulogy.design">Link</Link>
-  ))  
+  ))
+  .add('With a different color', () => (
+    <Link color='black' hover='red' href="http://nulogy.design">Link</Link>
+  ))      
   ;

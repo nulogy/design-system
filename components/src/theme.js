@@ -1,35 +1,5 @@
-import * as tokens from '../../tokens/build/exports.js';
+import * as tokens from '@nulogy/tokens'
 
-/* 
-    
-this is just to demo using styled system
-
-we should actually be creating a proper transform in @tokens to create a theme file
-https://amzn.github.io/style-dictionary/#/extending
-
-
-theme.js 
-
-const theme = {
-  fontSizes: [
-    12, 14, 16, 24, 32, 48, 64, 96, 128
-  ],
-  space: [
-    // margin and padding
-    0, 4, 8, 16, 32, 64, 128, 256
-  ],
-  colors: {
-    blue: '#07c',
-    red: '#e10',
-  }
-}
-
-https://jxnblk.com/styled-system/
-https://github.com/jxnblk/styled-system/blob/master/docs/api.md
-
-*/ 
-
-// theme.js
 export default {
     colors: {
       black: tokens.color_base_black,
@@ -75,7 +45,7 @@ export default {
       mono: tokens.font_family_mono
     },
     borders: [],
-    shadows: [],
+    boxShadows: [tokens.shadow_box_small],
     radii: [tokens.radius_background_small, tokens.radius_background_medium]
 
   }
