@@ -18,14 +18,13 @@ function loadStories() {
 }
 
 addDecorator(withStyles({
-<<<<<<< HEAD
   backgroundSize: '24px 24px',
   backgroundImage: 'linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)',
   minHeight: 'calc(100vh - 32px)',
 =======
-  backgroundSize: '8px 8px',
-  backgroundImage: 'linear-gradient(to right, transparent 7px, #E4E7EB 1px), linear-gradient(to bottom, transparent 7px, #E4E7EB 1px)'
->>>>>>> Adds background grid styles to storybook
+  backgroundImage: 'linear-gradient(to right, transparent 7px, #F0F2F5 1px), linear-gradient(to bottom, transparent 7px, #F0F2F5 1px)',
+  minHeight: 'calc(100vh - 32px)',
+>>>>>>> Adds storybook styles using yarn and adjusts the height of the grid
 }));
 
 addDecorator((story) => (
