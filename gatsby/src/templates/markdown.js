@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Intro from '../components/Intro'
-import Layout from '../components/layout'
+import {Helmet} from 'react-helmet'
+import {Layout, DocSection} from '../components'
 import {Title} from '@nulogy/components'
 
 export default function Template({
@@ -11,16 +11,16 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
       <Layout>
-        <div>
-        <div>
-            <Title>{frontmatter.title}</Title>
-            <Intro>{frontmatter.intro}</Intro>
-            <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-            />
-        </div>
-        </div>
+        <Helmet>
+            <title>{frontmatter.title} </title>
+        </Helmet>
+        <DocSection bg='whiteGrey' p={5} borderRadius={1}>
+            <Title mb={0}>{frontmatter.title}</Title>
+          </DocSection>
+          <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+          />
     </Layout>
   )
 }
