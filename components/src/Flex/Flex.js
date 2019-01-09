@@ -11,15 +11,11 @@ const Flex = styled(Box)({
   justifyContent
 )
 
-Flex.displayName = 'Flex'
-
 Flex.propTypes = {
   ...flexWrap.propTypes,
   ...flexDirection.propTypes,
   ...alignItems.propTypes,
   ...justifyContent.propTypes,
 }
-
-Flex.displayName = 'Flex'
 
 export default Flex

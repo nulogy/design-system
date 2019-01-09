@@ -1352,15 +1352,17 @@
 "@nulogy/components@file:../components":
   version "0.1.2"
   dependencies:
+    "@nulogy/tokens" "file:../../../Library/Caches/Yarn/v1/npm-@nulogy/tokens"
     "@storybook/addon-info" "^4.1.4"
     facepaint "^1.2.1"
     lerna "^3.2.1"
+    polished "^2.3.1"
     rmdi "^1.0.1"
     style-dictionary "^2.5.0"
     styled-system "^3.1.11"
     tokens "file:../../../Library/Caches/Yarn/v1/npm-@nulogy/tokens"
 
-"@nulogy/tokens@file:../tokens":
+"@nulogy/tokens@file:../tokens", "tokens@file:../tokens":
   version "0.2.0"
 
 "@reach/router@^1.1.1":
@@ -9143,6 +9145,12 @@ pngquant-bin@^5.0.0:
     execa "^0.10.0"
     logalot "^2.0.0"
 
+polished@^2.3.1:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.3.tgz#bdbaba962ba8271b0e11aa287f2befd4c87be99a"
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -11528,9 +11536,6 @@ to-regex@^3.0.1, to-regex@^3.0.2:
 toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
-
-"tokens@file:../tokens":
-  version "0.2.0"
 
 topo@2.x.x:
   version "2.0.2"

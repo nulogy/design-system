@@ -13,10 +13,13 @@ const Box = styled.div`
 `;
 
 Box.propTypes = {
+    ...color.propTypes,
     ...space.propTypes,
     ...width.propTypes,
-    ...color.propTypes,
-    ...maxWidth.propTypes,    
+    ...maxWidth.propTypes,  
+    ...borderRadius.propTypes,
+    ...boxShadow.propTypes,
+    ...textAlign.propTypes  
 }
 
 Box.defaultProps = {

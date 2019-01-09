@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from 'styled-system'
 
 const Text = styled.div`
@@ -18,6 +19,9 @@ Text.propTypes = {
   ...fontWeight.propTypes,
   ...lineHeight.propTypes,
   ...color.propTypes,
+  ...fontFamily.propTypes,
+  ...textAlign.propTypes,
+  inline: PropTypes.bool,  
 }
 
 Text.defaultProps = {
