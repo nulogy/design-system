@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@nulogy/tokens": "file:../tokens",
+    "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-info": "^4.1.4",
     "facepaint": "^1.2.1",
     "lerna": "^3.2.1",
