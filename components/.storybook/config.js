@@ -5,6 +5,7 @@ import theme from '../src/theme';
 import Box from '../src/Box/Box';
 import '../../css/src/nds-dev.css';
 // import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
+import withStyles from "@sambego/storybook-styles";
 
 function loadStories() {
   require('../src/Box/Box.story.js');
@@ -15,6 +16,11 @@ function loadStories() {
   require('../src/Type/Text.story.js');
   require('../src/Typography/Typography.story.js');
 }
+
+addDecorator(withStyles({
+  backgroundSize: '8px 8px',
+  backgroundImage: 'linear-gradient(to right, transparent 7px, #E4E7EB 1px), linear-gradient(to bottom, transparent 7px, #E4E7EB 1px)'
+}));
 
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
