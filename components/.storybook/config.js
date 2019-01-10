@@ -13,6 +13,7 @@ function loadStories() {
   require('../src/Type/Headings.story.js');
   require('../src/Link/Link.story.js');
   require('../src/Type/Text.story.js');
+  require('../src/Icon/Icon.story.js');
 }
 
 addDecorator((story) => (
