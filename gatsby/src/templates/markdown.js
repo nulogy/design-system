@@ -1,5 +1,5 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import {graphql} from "gatsby"
 import {Helmet} from 'react-helmet'
 import {Layout, DocSection} from '../components'
 import {Title} from '@nulogy/components'
@@ -16,11 +16,11 @@ export default function Template({
         </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
             <Title mb={0}>{frontmatter.title}</Title>
-          </DocSection>
-          <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-          />
+        </DocSection>
+        <div
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+        />
     </Layout>
   )
 }
