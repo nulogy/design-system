@@ -1,10 +1,8 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
 import Box from '../src/Box/Box';
-import '../../css/src/nds-dev.css';
-// import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
+import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 import withStyles from "@sambego/storybook-styles";
 
 function loadStories() {
