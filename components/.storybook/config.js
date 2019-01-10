@@ -5,6 +5,8 @@ import Box from '../src/Box/Box';
 import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 import withStyles from "@sambego/storybook-styles";
 
+const req = require.context('../src', true, /\.story\.js$/);
+
 function loadStories() {
   require('../src/Box/Box.story.js');
   require('../src/Button/Button.story.js');
