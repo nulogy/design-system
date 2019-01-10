@@ -23,13 +23,13 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  inline: PropTypes.bool,  
+  inline: PropTypes.bool,
 }
 
 Text.defaultProps = {
   fontSize: 1,
   lineHeight: 1.5,
-  mb: 2
+  mb: 3
 }
 
 export default Text
