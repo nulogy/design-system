@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from 'styled-system'
 
 const Text = styled.div`
+  margin:0;
+  border: solid 1px lime;
   ${space}
   ${fontSize}
   ${fontWeight}
