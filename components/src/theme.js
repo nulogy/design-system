@@ -46,6 +46,6 @@ export default {
     },
     borders: [],
     boxShadows: [tokens.shadow_box_small],
-    radii: [tokens.radius_background_small, tokens.radius_background_medium]
-
+    radii: [tokens.radius_background_small, tokens.radius_background_medium],
+    breakpoints: [tokens.size_breakpoint_small, tokens.size_breakpoint_medium, tokens.size_breakpoint_large]
   }
