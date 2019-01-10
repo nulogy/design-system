@@ -4,7 +4,7 @@ import Text from './Text';
 import {Title, SectionTitle, SubsectionTitle} from './Headings';
 
 storiesOf('Text', module)
-  .add('Default', () => (
+  .add('Text', () => (
       <Text>Default text</Text>
   ))
   .add('With a color', () => (
@@ -13,11 +13,12 @@ storiesOf('Text', module)
   .add('With a size', () => (
     <Text fontSize={0}>Small text</Text>
   ))
-  .add('With custom margin', () => (
+  .add('With a custom margin', () => (
     <React.Fragment>
     <Text mb={4}>Default text</Text>
     <Text>Default text</Text>
     </React.Fragment>
+<<<<<<< HEAD
   ))
   .add('Set to inline', () => (
     <React.Fragment>
@@ -25,3 +26,13 @@ storiesOf('Text', module)
       <Text inline>Default text</Text>
     </React.Fragment>
   ));
+=======
+))  
+.add('Set to inline', () => (
+  <React.Fragment>
+    <Text inline mr={2}>Default text</Text>
+    <Text inline>Default text</Text>
+  </React.Fragment>
+))
+;
+>>>>>>> updates story names to new format

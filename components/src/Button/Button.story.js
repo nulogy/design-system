@@ -19,17 +19,17 @@ storiesOf('Buttons', module)
   .add('QuietButton', () => (
     <QuietButton>Create project</QuietButton>
   ))  
-  .add('Sizes', () => (
+  .add('With a selected size', () => (
     <React.Fragment>
      <Button size="small">Create project</Button>
      <Button size="medium">Create project</Button>
      <Button size="large">Create project</Button>
    </React.Fragment>
   ))
-  .add('Full width', () => (
+  .add('Set to full width', () => (
     <PrimaryButton fullWidth>Create project</PrimaryButton>
   )) 
-  .add('Disabled', () => (
+  .add('Set to disabled', () => (
     <PrimaryButton disabled>Create project</PrimaryButton>
   ))                  
 ;

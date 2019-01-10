@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info'
 import Box from './Box';
 
 storiesOf('Box', module)
-  .add('Box component', withInfo({
+  .add('Box', withInfo({
     inline: false
   })(() => (
     <Box p={3}>
@@ -26,7 +26,7 @@ storiesOf('Box', module)
       p={3}
       width={[1, 1/2, 1/4]}
       bg='whiteGrey'>
-      Half Width 
+      Half Width
     </Box>
   ))
   .add('With a responsive width', () => (
@@ -36,7 +36,7 @@ storiesOf('Box', module)
       bg='whiteGrey'>
       Full width on small screens, 1/2 width on medium and 1/4 width on large
     </Box>
-  ))  
+  ))
   .add('With padding', () => (
     <Box p={3}>
       <Box m={1} p={3} bg='whiteGrey'>Padding</Box>
@@ -61,4 +61,4 @@ storiesOf('Box', module)
   ))
   .add('With a shadow', () => (
     <Box boxShadow={0}>Shadow</Box>
-  ))  
+  ))
