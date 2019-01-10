@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Icon, { names, Svgs } from './Icon';
 import {injectGlobal} from 'styled-components';
+import theme from '../theme.js'
 
 injectGlobal`
 .storybookTestClass {
@@ -48,7 +49,7 @@ storiesOf("Icon", module)
   ))  
   .add("With color", () => (
     <React.Fragment>
-      {["red", "orange", "yellow", "green", "blue", "purple"].map(color => (
+      {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
         <div style={{ color }} key={color}>
         {names.map(iconName => <Icon name={iconName} key={iconName} />)}
         </div>
