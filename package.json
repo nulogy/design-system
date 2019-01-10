@@ -22,8 +22,8 @@
     "design system"
   ],
   "engines": {
-    "node": "^8.11.3",
-    "yarn": "^1.7.0"
+    "node": "^10.15.0",
+    "yarn": "^1.13.0"
   },
   "devDependencies": {
     "lerna": "^3.2.1",
