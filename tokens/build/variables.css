@@ -49,6 +49,9 @@
  --size-padding-x-6: 48px;
  --size-padding-x-8: 64px;
  --size-padding-base: 16px;
+ --size-breakpoint-small: 540px;
+ --size-breakpoint-medium: 768px;
+ --size-breakpoint-large: 1024px;
  --weight-font-light: 100;
  --weight-font-normal: 400;
  --weight-font-medium: 500;
