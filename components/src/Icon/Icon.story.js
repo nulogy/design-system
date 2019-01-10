@@ -1,16 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Icon, { names, Svgs } from './Icon';
-import {injectGlobal} from 'styled-components';
 import theme from '../theme.js'
-
-injectGlobal`
-.storybookTestClass {
-  color: red;
-  outline: .5rem orange dotted !important;
-  font-family: "comic sans", "marker felt", fantasy;
-}
-`
+import './Icon.example.css';
 
 const IconCode = ({ name }) => (
   <code>
