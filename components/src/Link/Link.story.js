@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Link from './Link';
 
 storiesOf('Link', module)
-  .add('Default', () => (
+  .add('Link', () => (
     <Link href="http://nulogy.design">Link</Link>
   ))
   .add('Without underline', () => (

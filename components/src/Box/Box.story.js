@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info'
 import Box from './Box';
 
 storiesOf('Box', module)
-  .add('Box component', withInfo({
+  .add('Box', withInfo({
     inline: false
   })(() => (
     <Box p={3}>
