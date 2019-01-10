@@ -4,7 +4,6 @@ import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily }
 
 const Text = styled.div`
   margin:0;
-  border: solid 1px lime;
   ${space}
   ${fontSize}
   ${fontWeight}
