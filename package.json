@@ -26,8 +26,7 @@
     "yarn": "^1.13.0"
   },
   "devDependencies": {
-    "lerna": "^3.2.1",
-    "style-dictionary": "^2.5.0"
+    "lerna": "^3.2.1"
   }
 }
 
