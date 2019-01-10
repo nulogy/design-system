@@ -6,13 +6,10 @@ import Box from '../src/Box/Box';
 import '../../css/src/nds-dev.css';
 // import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 
+const req = require.context('../src', true, /\.story\.js$/);
+
 function loadStories() {
-  require('../src/Box/Box.story.js');
-  require('../src/Button/Button.story.js');  
-  require('../src/Flex/Flex.story.js');
-  require('../src/Type/Headings.story.js');
-  require('../src/Link/Link.story.js');
-  require('../src/Type/Text.story.js');
+  req.keys().forEach(filename => req(filename));
 }
 
 addDecorator((story) => (
