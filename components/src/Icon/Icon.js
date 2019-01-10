@@ -34,9 +34,18 @@ export const names = Object.keys(Svgs);
 
 const iconSizeRatio = "1em";
 
-const Icon = ({name, IconSvg = Svgs[name],...props}) => (
-    <IconSvg aria-hidden={!props.title} style={{top: (props.size/8)||"0.125em",position: "relative"}} size={props.size||iconSizeRatio} {...props}/>
-);
+const ABC = () => (<div/>);
+
+const Icon = ({name, IconSvg = Svgs[name], ...props}) => {
+  return(
+    <IconSvg 
+      aria-hidden={!props.title}
+        style={{top: (props.size/8)||"0.125em", position: "relative"}} 
+        size={props.size||iconSizeRatio} 
+          {...props}
+      />
+  )
+};
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,  

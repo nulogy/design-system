@@ -40,7 +40,7 @@ storiesOf("Icon", module)
   ))
   .add('With set size', () => (
     <React.Fragment>
-      <Icon name="delete" mr="120px" size="48"/><span style={{ fontSize: "48px" }} > ABC</span>
+      <Icon name="delete" size="48" /><span style={{ fontSize: "48px" }} > ABC</span>
       <Icon name="delete" size="32"/><span style={{ fontSize: "32px" }} > ABC</span>
       <Icon name="delete" size="16"/><span style={{ fontSize: "16px" }} > ABC</span>
       <Icon name="delete" size="8"/><span style={{ fontSize: "8px" }} > ABC</span>
