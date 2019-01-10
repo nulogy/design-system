@@ -4,26 +4,26 @@ import theme from '../theme.js'
 const Title = Text.withComponent('h1')
 Title.defaultProps = {
   fontSize: 4,
-  lineHeight: 1.04, 
+  lineHeight: 1.043478,
   fontWeight: 0,
-  mb: 2,
+  mb: 3,
   theme: theme
 }
 
-const SectionTitle = Text.withComponent('h1')
+const SectionTitle = Text.withComponent('h2')
 SectionTitle.defaultProps = {
   fontSize: 3,
   fontWeight: 2,
-  lineHeight: 1.23, 
+  lineHeight: 1.230769,
   mb: 2,
   theme: theme
 }
 
-const SubsectionTitle = Text.withComponent('h1')
+const SubsectionTitle = Text.withComponent('h3')
 SubsectionTitle.defaultProps = {
   fontSize: 2,
   fontWeight: 2,
-  lineHeight: 1.33,
+  lineHeight: 1.333333,
   mb: 1,
   theme: theme
 }
