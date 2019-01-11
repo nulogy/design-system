@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon, { names, Svgs } from './Icon';
+import Icon, { names, Svg } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
+import Box from '../Box/Box';
 
 const IconCode = ({ name }) => (
   <code>
@@ -11,7 +12,7 @@ const IconCode = ({ name }) => (
 );
 
 storiesOf("Icon", module)
-  .add("Icon component", () => (
+  .add("Icon", () => (
     <React.Fragment>
       {names.map(iconName => (
         <p key={iconName}>
@@ -31,15 +32,7 @@ storiesOf("Icon", module)
       ))}
     </React.Fragment>
   ))
-  .add('With set size', () => (
-    <React.Fragment>
-      <Icon name="delete" size="48" /><span style={{ fontSize: "48px" }} > ABC</span>
-      <Icon name="delete" size="32"/><span style={{ fontSize: "32px" }} > ABC</span>
-      <Icon name="delete" size="16"/><span style={{ fontSize: "16px" }} > ABC</span>
-      <Icon name="delete" size="8"/><span style={{ fontSize: "8px" }} > ABC</span>
-    </React.Fragment>
-  ))  
-  .add("With color", () => (
+  .add("With inhereted color", () => (
     <React.Fragment>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
         <div style={{ color }} key={color}>
@@ -47,6 +40,25 @@ storiesOf("Icon", module)
         </div>
       ))}
     </React.Fragment>
+  ))
+  .add("With overwritted color and size", () => (
+    <React.Fragment>
+      <div style={{color: "red"}}>
+        <Icon name="delete" color={theme.colors.blue} size="64px"/>
+        This Icon uses the color and size prop to override inhereted style
+      </div>
+    </React.Fragment>
+  ))
+  .add("With added margin", () => (
+    <div style={{margin:"24px"}}>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon m={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mt={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mr={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mb={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon ml={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mx={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon my={3} name='delete'/></div>
+    </div>
   ))
   .add("With applied className", () => (
     <React.Fragment>
@@ -61,15 +73,3 @@ storiesOf("Icon", module)
       <p><Icon name="user"/> This doesn't have a title attribute, so it has aria-hidden set true instead.</p>
     </React.Fragment>    
   ))
-  .add("Svg files", () => (
-    <React.Fragment>
-      {names.map(iconName => {
-        const RawSvgIcon = Svgs[iconName];
-        return (
-          <p key={iconName}>
-            <RawSvgIcon /> <code>Icons.Svgs['{iconName}']</code>
-          </p>
-        );
-      })}
-    </React.Fragment>
-  ));

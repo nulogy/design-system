@@ -41,22 +41,15 @@
   "dependencies": {
     "@nulogy/tokens": "file:../tokens",
     "@sambego/storybook-styles": "^1.0.0",
-    "@storybook/addon-info": "^4.1.4",
-    "facepaint": "^1.2.1",
-    "lerna": "^3.2.1",
-    "polished": "^2.3.1",
-    "rmdi": "^1.0.1",
-    "style-dictionary": "^2.5.0",
-    "styled-system": "^3.1.11",
-    "tokens": "file:../tokens"
-  },
-  "devDependencies": {
     "@storybook/addon-storysource": "^4.0.12",
+    "@storybook/addon-info": "^4.1.4",
     "@storybook/react": "^4.1.4",
-    "lorem-ipsum": "^1.0.6",
+    "polished": "^2.3.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.3.2",    
+    "rmdi": "^1.0.1",
     "story2sketch": "^1.4.0",
+    "webfontloader": "^1.6.28",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   }
