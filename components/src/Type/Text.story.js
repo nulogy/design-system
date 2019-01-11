@@ -65,7 +65,7 @@ storiesOf('Text', module)
       Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </Text>
     <SubsectionTitle>This is small text (14px) with medium(default) line height (24px).</SubsectionTitle>
-    <Text fontSize={0}>
+    <Text fontSize={0} lineHeight={1.714286}>
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
       pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
       consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
@@ -76,15 +76,11 @@ storiesOf('Text', module)
       Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </Text>
     <SubsectionTitle>This is small text (14px) with small line height (16px). Reserved for buttons, inputs, maybe tables ...</SubsectionTitle>
-    <Text fontSize={0}>
+    <Text fontSize={0} lineHeight={1.142857}>
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
       pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
       consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
-      fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat
-      sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper,
-      dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales
-      dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
-      Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
+      fringilla in, dignissim congue velit.
     </Text>
   </React.Fragment>
 ));
