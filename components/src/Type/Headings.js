@@ -3,6 +3,7 @@ import theme from '../theme.js'
 
 const Title = Text.withComponent('h1')
 Title.defaultProps = {
+  m: 0,
   fontSize: 4,
   lineHeight: 1.043478,
   fontWeight: 0,
@@ -12,6 +13,7 @@ Title.defaultProps = {
 
 const SectionTitle = Text.withComponent('h2')
 SectionTitle.defaultProps = {
+  m: 0,
   fontSize: 3,
   fontWeight: 2,
   lineHeight: 1.230769,
@@ -21,6 +23,7 @@ SectionTitle.defaultProps = {
 
 const SubsectionTitle = Text.withComponent('h3')
 SubsectionTitle.defaultProps = {
+  m: 0,
   fontSize: 2,
   fontWeight: 2,
   lineHeight: 1.333333,

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from 'styled-system'
 
 const Text = styled.p`
-  margin:0;
   ${space}
   ${fontSize}
   ${fontWeight}
@@ -26,6 +25,7 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
+  m: 0,
   fontSize: 1,
   lineHeight: 1.5,
   mb: 3
