@@ -18,10 +18,10 @@ storiesOf('Text', module)
     <Text mb={4}>Default text</Text>
     <Text>Default text</Text>
     </React.Fragment>
-))
-.add('Set to inline', () => (
-  <React.Fragment>
-    <Text inline mr={2}>Default text</Text>
-    <Text inline>Default text</Text>
-  </React.Fragment>
-));
+  ))
+  .add('Set to inline', () => (
+    <React.Fragment>
+      <Text inline mr={2}>Default text</Text>
+      <Text inline>Default text</Text>
+    </React.Fragment>
+  ));
