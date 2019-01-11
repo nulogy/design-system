@@ -42,7 +42,7 @@ export default ({ children }) => (
             </Nav>
             <Nav>
               <Text color='darkGrey' fontWeight={2}>Resources</Text>
-              <NavItem><Link href="/" underline={false}>Getting started</Link></NavItem>
+              <NavItem><Link href="/guides/get-started" underline={false}>Get started</Link></NavItem>
               <NavItem><Link href="https://github.com/nulogy/design-system" underline={false}>Github</Link></NavItem>
             </Nav>
         </Box>

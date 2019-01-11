@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 28 Dec 2018 15:18:35 GMT
+ * Generated on Thu, 10 Jan 2019 14:27:57 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -41,6 +41,9 @@ export const size_padding_x_4 = "32px";
 export const size_padding_x_6 = "48px";
 export const size_padding_x_8 = "64px";
 export const size_padding_base = "16px";
+export const size_breakpoint_small = "540px";
+export const size_breakpoint_medium = "768px";
+export const size_breakpoint_large = "1024px";
 export const weight_font_light = "100";
 export const weight_font_normal = "400";
 export const weight_font_medium = "500";
