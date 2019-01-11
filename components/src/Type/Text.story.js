@@ -18,6 +18,7 @@ storiesOf('Text', module)
     <Text mb={4}>Default text</Text>
     <Text>Default text</Text>
     </React.Fragment>
+<<<<<<< HEAD
   ))
   .add('Set to inline', () => (
     <React.Fragment>
@@ -86,5 +87,16 @@ storiesOf('Text', module)
       dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
       Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </Text>
+=======
+<<<<<<< HEAD
+))  
+=======
+))
+>>>>>>> Resolves conflict
+.add('Set to inline', () => (
+  <React.Fragment>
+    <Text inline mr={2}>Default text</Text>
+    <Text inline>Default text</Text>
+>>>>>>> Resolves conflict
   </React.Fragment>
 ));
