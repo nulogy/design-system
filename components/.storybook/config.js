@@ -10,16 +10,7 @@ import withStyles from "@sambego/storybook-styles";
 const req = require.context('../src', true, /\.story\.js$/);
 
 function loadStories() {
-<<<<<<< HEAD
   req.keys().forEach(filename => req(filename));
-=======
-  require('../src/Box/Box.story.js');
-  require('../src/Button/Button.story.js');
-  require('../src/Flex/Flex.story.js');
-  require('../src/Type/Headings.story.js');
-  require('../src/Link/Link.story.js');
-  require('../src/Type/Text.story.js');
->>>>>>> master
 }
 
 addDecorator(withStyles({
