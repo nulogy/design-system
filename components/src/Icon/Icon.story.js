@@ -1,9 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon, { names, Svg } from './Icon';
+import Icon, { names } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
-import Box from '../Box/Box';
+
+import Button from '../Button/Button.js'
+import DangerButton from  '../Button/DangerButton.js'
+import PrimaryButton from  '../Button/PrimaryButton.js'
 
 const IconCode = ({ name }) => (
   <code>
@@ -12,6 +15,60 @@ const IconCode = ({ name }) => (
 );
 
 storiesOf("Icon", module)
+.add("TEMP TESTER", () => (
+  <React.Fragment>
+    <div style={{fontSize:"12px"}}>
+    ABCD <Icon name="delete" size="12"/>
+    </div>
+    <div style={{fontSize:"24px"}}>
+    ABCD <Icon name="delete" size="24"/>
+    </div>
+    <div style={{fontSize:"48px"}}>
+    ABCD <Icon name="delete" size="48"/>
+    </div>
+    <div style={{fontSize:"48px"}}>
+    ABCD <Icon name="delete" size="20"/> <span style={{fontSize:"24px"}}>abc</span>
+    </div>
+    <div style={{fontSize:"24px"}}>
+    ABCD <Icon name="delete" size="48"/> <span style={{fontSize:"48px"}}>abc</span>
+    </div>
+    <br/>
+    Text text text text text text text text text text text text text text text
+    text text text text text text text <Icon name="delete"/> text text text text text text text text text text text text text
+    text text text text text text text text text text text text text text text text
+    text text text text text text text text text <Icon name="add"/> text text text text text text text
+    text text text <Icon name="check"/>text text text text text text text text text text text text text
+    <br/>
+    <div style={{bgColor:'red'}}>
+      <span style={{}}/>
+    </div>
+    <br/>
+    <div>
+      <Button size="small" m={1}>
+        Edit Record 
+      </Button>
+      <Button size="small" m={1}>
+        Edit Record <Icon name="edit"/>
+      </Button>
+    </div>
+    <div>
+      <DangerButton size="medium" m={1}>
+        Delete Record 
+      </DangerButton>
+      <DangerButton size="medium" m={1}>
+        Delete Record <Icon name="delete"/>
+      </DangerButton>
+    </div>
+    <div>
+      <PrimaryButton size="large" m={1}>
+        Save Record 
+      </PrimaryButton>
+      <PrimaryButton size="large" m={1}>
+        Save Record <Icon name="save"/>
+      </PrimaryButton>
+    </div>
+  </React.Fragment>
+))
   .add("Icon", () => (
     <React.Fragment>
       {names.map(iconName => (
@@ -41,10 +98,10 @@ storiesOf("Icon", module)
       ))}
     </React.Fragment>
   ))
-  .add("With overwritted color and size", () => (
+  .add("With overwritten color and size", () => (
     <React.Fragment>
       <div style={{color: "red"}}>
-        <Icon name="delete" color={theme.colors.blue} size="64px"/>
+        <Icon name="delete" color={theme.colors.blue} size="64"/>
         This Icon uses the color and size prop to override inhereted style
       </div>
     </React.Fragment>
