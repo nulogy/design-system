@@ -47,15 +47,9 @@
     "polished": "^2.3.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",    
-<<<<<<< HEAD
-    "svg-sprite-loader": "^3.8.0",
-    "story2sketch": "^1.4.0",
-=======
-    "rmdi": "^1.0.1",
-    "story2sketch": "^1.4.0",
-    "styled-components": "^4.1.3",      
+    "story2sketch": "^1.4.0", 
     "styled-system": "^3.2.0",
->>>>>>> master
+    "svg-sprite-loader": "^3.8.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   }
