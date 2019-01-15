@@ -1,10 +1,6 @@
 /**
  * Do not edit directly
-<<<<<<< HEAD
  * Generated on Tue, 15 Jan 2019 19:08:06 GMT
-=======
- * Generated on Tue, 15 Jan 2019 15:35:23 GMT
->>>>>>> Adds line heights to token file
  */
 
 export const color_base_black = "#011e38";
@@ -43,7 +39,6 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "18px";
-<<<<<<< HEAD
 export const size_base_none = "0px";
 export const size_base_half = "4px";
 export const size_base_x_1 = "8px";
@@ -56,21 +51,6 @@ export const size_base_base = "16px";
 export const size_breakpoint_small = "540px";
 export const size_breakpoint_medium = "768px";
 export const size_breakpoint_large = "1024px";
-=======
-export const size_line_height_base = "24px";
-export const size_line_height_compressed = "16px";
-export const size_line_height_page_title = "48px";
-export const size_line_height_section_title = "32px";
-export const size_line_height_subsection_title = "24px";
-export const size_padding_half = "4px";
-export const size_padding_x_1 = "8px";
-export const size_padding_x_2 = "16px";
-export const size_padding_x_3 = "24px";
-export const size_padding_x_4 = "32px";
-export const size_padding_x_6 = "48px";
-export const size_padding_x_8 = "64px";
-export const size_padding_base = "16px";
->>>>>>> Adds line heights to token file
 export const weight_font_light = "100";
 export const weight_font_normal = "400";
 export const weight_font_medium = "500";
