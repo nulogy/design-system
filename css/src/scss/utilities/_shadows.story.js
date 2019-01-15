@@ -3,5 +3,5 @@ import { storiesOf } from '@storybook/html';
 
 storiesOf('Utilities/Shadows', module)
   .add('All', () => `
-    <p class="rounded-corners margin--x2 padding--x2 background--white shadow">.shadow</p>
+    <p class="nds-rounded-corners nds-margin--x2 nds-padding--x2 nds-background--white nds-shadow">.nds-shadow</p>
   `)
