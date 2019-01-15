@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 17:04:00 GMT
+ * Generated on Tue, 15 Jan 2019 17:27:02 GMT
  */
 
 :root {
@@ -39,6 +39,7 @@
  --size-font-page-title: 46px;
  --size-font-section-title: 26px;
  --size-font-subsection-title: 18px;
+ --size-padding-blank: 0px;
  --size-padding-half: 4px;
  --size-padding-x-1: 8px;
  --size-padding-x-2: 16px;

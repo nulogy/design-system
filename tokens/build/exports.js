@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 17:04:00 GMT
+ * Generated on Tue, 15 Jan 2019 17:27:02 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -38,6 +38,7 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "18px";
+export const size_padding_blank = "0px";
 export const size_padding_half = "4px";
 export const size_padding_x_1 = "8px";
 export const size_padding_x_2 = "16px";

@@ -39,6 +39,7 @@ export default {
       tokens.weight_font_bold
     ],
     space: [
+        tokens.size_padding_blank,
         tokens.size_padding_half,
         tokens.size_padding_x_1,
         tokens.size_padding_x_2,
