@@ -9,7 +9,7 @@
     text-decoration: none;
     font-size: $size-font-base;
     border-radius: $radius-background-medium;
-    padding: $size-padding-x-1 $size-padding-x-2;
+    padding: $size-base-x-1 $size-base-x-2;
     transition: .2s;
     &:hover {cursor: pointer;}
     &:focus {outline: none;}
@@ -82,12 +82,12 @@
 .DangerButton.small, 
 .QuietButton.small {
     font-size: $size-font-small !important;     
-    padding: $size-padding-half $size-padding-x-1 !important;
+    padding: $size-base-half $size-base-x-1 !important;
 }
 
 .Button.large, 
 .PrimaryButton.large, 
 .DangerButton.large, 
 .QuietButton.large {
-    padding: $size-padding-x-2 $size-padding-x-3 !important;
+    padding: $size-base-x-2 $size-base-x-3 !important;
 }

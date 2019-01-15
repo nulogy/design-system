@@ -32,13 +32,13 @@ export default {
       tokens.weight_font_bold
     ],
     space: [
-        tokens.size_padding_half,
-        tokens.size_padding_x_1,
-        tokens.size_padding_x_2,
-        tokens.size_padding_x_3,
-        tokens.size_padding_x_4,
-        tokens.size_padding_x_6,
-        tokens.size_padding_x_8        
+        tokens.size_base_half,
+        tokens.size_base_x_1,
+        tokens.size_base_x_2,
+        tokens.size_base_x_3,
+        tokens.size_base_x_4,
+        tokens.size_base_x_6,
+        tokens.size_base_x_8        
     ],
     fonts: {
       base: tokens.font_family_base, 

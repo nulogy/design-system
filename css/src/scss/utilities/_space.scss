@@ -1,12 +1,12 @@
 $scale: (
   none: 0,
-  half: $size-padding-half,
-  x1: $size-padding-x-1,
-  x2: $size-padding-x-2,
-  x3: $size-padding-x-3,
-  x4: $size-padding-x-4,
-  x6: $size-padding-x-6,
-  x8: $size-padding-x-8,
+  half: $size-base-half,
+  x1: $size-base-x-1,
+  x2: $size-base-x-2,
+  x3: $size-base-x-3,
+  x4: $size-base-x-4,
+  x6: $size-base-x-6,
+  x8: $size-base-x-8,
 );
 
 $properties: ['margin', 'padding'];
