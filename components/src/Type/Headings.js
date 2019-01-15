@@ -5,7 +5,7 @@ const Title = Text.withComponent('h1')
 Title.defaultProps = {
   m: 0,
   fontSize: 4,
-  lineHeight: theme.lineHeights['pageTitle'],
+  lineHeight: 'compressed',
   fontWeight: 0,
   mb: 6,
   theme: theme
@@ -16,7 +16,7 @@ SectionTitle.defaultProps = {
   m: 0,
   fontSize: 3,
   fontWeight: 2,
-  lineHeight: theme.lineHeights['sectionTitle'],
+  lineHeight: 'sectionTitle',
   mb: 2,
   theme: theme
 }
@@ -26,7 +26,7 @@ SubsectionTitle.defaultProps = {
   m: 0,
   fontSize: 2,
   fontWeight: 2,
-  lineHeight: theme.lineHeights['subsectionTitle'],
+  lineHeight: 'subsectionTitle',
   mb: 1,
   theme: theme
 }

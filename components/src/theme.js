@@ -25,13 +25,13 @@ export default {
         tokens.size_font_larger,
         tokens.size_font_largest
     ],
-    lineHeights: [
-        tokens.size_line_height_base,
-        tokens.size_line_height_compressed,
-        tokens.size_line_height_page_title,
-        tokens.size_line_height_section_title,
-        tokens.size_line_height_subsection_title
-    ],
+    lineHeights: {
+        base: tokens.line_height_base,
+        compressed: tokens.line_height_compressed,
+        title: tokens.line_height_page_title,
+        sectionTitle: tokens.line_height_section_title,
+        subsectionTitle: tokens.line_height_subsection_title
+    },
     fontWeights: [
       tokens.weight_font_light,
       tokens.weight_font_normal,
