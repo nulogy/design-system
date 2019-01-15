@@ -28,7 +28,7 @@ export default {
     lineHeights: {
         base: tokens.line_height_base,
         compressed: tokens.line_height_compressed,
-        pageTitle: tokens.line_height_page_title,
+        title: tokens.line_height_title,
         sectionTitle: tokens.line_height_section_title,
         subsectionTitle: tokens.line_height_subsection_title
     },

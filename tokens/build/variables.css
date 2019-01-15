@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 16:46:15 GMT
+ * Generated on Tue, 15 Jan 2019 17:04:00 GMT
  */
 
 :root {
@@ -23,7 +23,7 @@
  --font-family-mono: 'IBM Plex Mono', monospace;
  --line-height-base: 1.5;
  --line-height-compressed: 1.142857;
- --line-height-page-title: 1.043478;
+ --line-height-title: 1.043478;
  --line-height-section-title: 1.230769;
  --line-height-subsection-title: 1.333333;
  --radius-background-small: 2px;

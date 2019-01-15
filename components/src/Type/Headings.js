@@ -5,7 +5,7 @@ const Title = Text.withComponent('h1')
 Title.defaultProps = {
   m: 0,
   fontSize: 4,
-  lineHeight: theme.lineHeights['pageTitle'],
+  lineHeight: theme.lineHeights['title'],
   fontWeight: 0,
   mb: 6,
   theme: theme

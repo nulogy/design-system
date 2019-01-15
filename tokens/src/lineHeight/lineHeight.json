@@ -2,7 +2,7 @@
     "lineHeight": {
         "base"  : { "value": "1.5" },
         "compressed"  : { "value": "1.142857" },
-        "pageTitle"  : { "value": "1.043478" },
+        "title"  : { "value": "1.043478" },
         "sectionTitle"  : { "value": "1.230769" },
         "subsectionTitle"  : { "value": "1.333333" }
     }
