@@ -2,9 +2,9 @@
 The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.
 
 ## Getting Started
-1. Download and install the latest LTS version of (Node (10.15.0))[https://nodejs.org/en/]
-2. Download and install the package manager Yarn[https://yarnpkg.com/en/docs/install#mac-stable]
-3. In the directy you want to install the design system, run `git clone https://github.com/nulogy/design-system/`
+1. Download and install the latest LTS version of [Node (10.15.0)](https://nodejs.org/en/)
+2. Download and install the package manager [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
+3. In the directory you want to install the design system, run `git clone https://github.com/nulogy/design-system/`
 4. Run `yarn` to install dependencies 
 
 Congratulations, you've installed the design system! Usage instructions for each package can be found below. 
