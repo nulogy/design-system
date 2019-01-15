@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 17:27:02 GMT
+ * Generated on Tue, 15 Jan 2019 17:51:50 GMT
  */
 
 export const color_base_black = "#011e38";
