@@ -9,7 +9,7 @@ storiesOf('Headings', module)
   ))
   .add('Section Title', () => (
       <SectionTitle>Section Title</SectionTitle>
-  ))  
+  ))
   .add('Subsection Title', () => (
     <SubsectionTitle>SubsectionTitle</SubsectionTitle>
   ))
@@ -18,5 +18,5 @@ storiesOf('Headings', module)
       <Title mb={6}>Title</Title>
       <Text>Lorem ipsum</Text>
     </React.Fragment>
-))    
+))
 ;
