@@ -1,12 +1,7 @@
 {
     "size": {
-<<<<<<< HEAD:tokens/src/size/padding.json
-      "padding": {
-        "blank"     : { "value": "0" },
-=======
       "base": {
         "none"     : { "value": "0"},
->>>>>>> renames padding tokens to base:tokens/src/size/base.json
         "half"     : { "value": "4" },
         "x1"    : { "value": "8" },
         "x2"   : { "value": "16" },
