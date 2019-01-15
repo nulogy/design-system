@@ -1,41 +1,49 @@
 import React from 'react'
-import './icons.svg'
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { space } from 'styled-system'
+import { space, color } from 'styled-system'
+import icons from '../../icons/icons.json'
 
-export const names = [
-  "add",
-  "building",
-  "cancel",
-  "check",
-  "delete",
-  "edit",
-  "lock",
-  "menu",
-  "save",
-  "search",
-  "unlock",
-  "user"
-];
+export const names = Object.keys(icons)
+
+const Svg = (props) => {
+  if (!icons[props.name]) return false
+  return(
+    <svg
+      aria-hidden={props.title == null ? true : false}
+      width={props.size}
+      height={props.size}
+      fill="currentcolor"
+      viewBox={icons[props.name].viewBox}
+      {...props}
+    > 
+      <path d={icons[props.name].path}/>
+    </svg>
+  )
+}
+
+const Icon = styled(Svg)`
+  ${space}
+  ${color}  
+`
+
+Icon.defaultProps = {
+  size: 24
+}
+
+Icon.propTypes = {
+  name: PropTypes.oneOf(names).isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  color: PropTypes.string
+} 
 
 const iconSizeRatio = 1.25;
-
-export const Svg = (props) => (
-  <svg 
-    aria-hidden={props.title==null? true:false}
-    height={props.size} 
-    width={props.size} 
-    fill={props.fill} 
-      {...props}
-  >
-    <use xlinkHref={`#icons_${props.name}`} />
-  </svg>
-)
 
 const CenteredIcon = styled(Svg)`
   top: 0;
   position: absolute;
+  ${color}
 `
 
 const IconContainer = styled.span`
@@ -47,8 +55,8 @@ const IconContainer = styled.span`
   ${space}
 `
 
-const Icon = ({title,fill,color,name, ...space}) => (
-  <IconContainer {...space}>
+export const InlineIcon = ({title,fill,color,name, ...props}) => (
+  <IconContainer {...props}>
     <CenteredIcon 
       title={title} 
       fill={fill||color||"currentColor"} 
@@ -58,7 +66,7 @@ const Icon = ({title,fill,color,name, ...space}) => (
   </IconContainer>
 )
 
-Icon.propTypes = {
+InlineIcon.propTypes = {
   name: PropTypes.oneOf(names).isRequired,  
   title: PropTypes.string,
   fill: PropTypes.string,

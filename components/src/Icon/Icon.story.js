@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon, { names } from './Icon';
+import Icon, { InlineIcon, names } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
 
@@ -25,31 +25,32 @@ storiesOf("Icon", module)
       ))}
     </React.Fragment>
   ))
-  .add("With inhereted size", () => (
+  .add("InlineIcon", () => (
     <React.Fragment>
       {[1, 2, 3, 4].map(size => (
         <p style={{ fontSize: `${size}em` }} key={size}>
           @{size}em: &nbsp;
-          {names.map(iconName => <Icon name={iconName} key={iconName} />)}
+          {names.map(iconName => <InlineIcon name={iconName} key={iconName} />)}
         </p>
       ))}
     </React.Fragment>
   ))
-  .add("With inhereted color", () => (
+  .add("With a color", () => (
     <React.Fragment>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
-        <div style={{ color }} key={color}>
-        {names.map(iconName => <Icon name={iconName} key={iconName} />)}
+        <div>
+        {names.map(iconName => <Icon name={iconName} color= {color} key={iconName} />)}
         </div>
       ))}
     </React.Fragment>
   ))
-  .add("With overwritten color", () => (
+  .add("With a size", () => (
     <React.Fragment>
-      <div style={{color: "red"}}>
-        <Icon name="delete" color={theme.colors.blue} size="64"/>
-        This Icon uses the color prop to override inhereted style
-      </div>
+      {["16","32","48"].map(size => (
+        <div>
+        {names.map(iconName => <Icon name={iconName} size= {size} key={iconName} />)}
+        </div>
+      ))}
     </React.Fragment>
   ))
   .add("With added margin", () => (
