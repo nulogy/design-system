@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 17:27:02 GMT
+ * Generated on Tue, 15 Jan 2019 17:51:50 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -21,10 +21,11 @@ export const color_base_yellow = "#ffbb00";
 export const font_family_base = "'IBM Plex Sans', sans";
 export const font_family_mono = "'IBM Plex Mono', monospace";
 export const line_height_base = "1.5";
-export const line_height_compressed = "1.142857";
 export const line_height_title = "1.043478";
 export const line_height_section_title = "1.230769";
 export const line_height_subsection_title = "1.333333";
+export const line_height_small_text_base = "1.714285";
+export const line_height_small_text_compressed = "1.142857";
 export const radius_background_small = "2px";
 export const radius_background_medium = "4px";
 export const shadow_box_small = "0 1px 1px rgba(27,31,35,0.1)";
