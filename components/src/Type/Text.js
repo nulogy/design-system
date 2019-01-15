@@ -28,7 +28,7 @@ Text.defaultProps = {
   m: 0,
   fontSize: 1,
   lineHeight: 1.5,
-  mb: 3
+  mb: 4
 }
 
 export default Text

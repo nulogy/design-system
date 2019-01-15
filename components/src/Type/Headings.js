@@ -17,7 +17,7 @@ SectionTitle.defaultProps = {
   fontSize: 3,
   fontWeight: 2,
   lineHeight: theme.lineHeights['sectionTitle'],
-  mb: 2,
+  mb: 3,
   theme: theme
 }
 
@@ -27,7 +27,7 @@ SubsectionTitle.defaultProps = {
   fontSize: 2,
   fontWeight: 2,
   lineHeight: theme.lineHeights['subsectionTitle'],
-  mb: 1,
+  mb: 2,
   theme: theme
 }
 
