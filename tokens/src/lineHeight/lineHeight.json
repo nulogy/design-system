@@ -1,17 +1,10 @@
 {
     "lineHeight": {
         "base"  : { "value": "1.5" },
-<<<<<<< HEAD
         "title"  : { "value": "1.043478" },
         "sectionTitle"  : { "value": "1.230769" },
         "subsectionTitle"  : { "value": "1.333333" },
         "small-text-base"  : { "value": "1.714285" },
         "small-text-compressed"  : { "value": "1.142857" }
-=======
-        "compressed"  : { "value": "1" },
-        "title"  : { "value": "48" },
-        "sectionTitle"  : { "value": "32" },
-        "subsectionTitle"  : { "value": "24" }
->>>>>>> adds unitless lineHeight values to tokens
     }
   }
