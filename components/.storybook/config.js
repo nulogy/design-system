@@ -10,11 +10,7 @@ const req = require.context('../src', true, /\.story\.js$/);
 function loadStories() {
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  req.keys().forEach(filename => req(filename));
-=======
->>>>>>> Resolves conflict
+>>>>>>> Reverts storybook config
   require('../src/Box/Box.story.js');
   require('../src/Button/Button.story.js');
   require('../src/Flex/Flex.story.js');
@@ -24,11 +20,11 @@ function loadStories() {
   require('../src/Typography/Typography.story.js');
 <<<<<<< HEAD
 =======
->>>>>>> Removes article story from type component and creates generic Typography folder
-=======
   req.keys().forEach(filename => req(filename));
 >>>>>>> Resolves conflict
 >>>>>>> Resolves conflict
+=======
+>>>>>>> Reverts storybook config
 }
 
 addDecorator(withStyles({
