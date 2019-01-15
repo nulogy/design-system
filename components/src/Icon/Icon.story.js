@@ -4,10 +4,6 @@ import Icon, { InlineIcon, names } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
 
-import Button from '../Button/Button.js'
-import DangerButton from  '../Button/DangerButton.js'
-import PrimaryButton from  '../Button/PrimaryButton.js'
-
 const IconCode = ({ name }) => (
   <code>
     &lt;Icon name="<b>{name}</b>" /&gt;
@@ -46,7 +42,7 @@ storiesOf("Icon", module)
   ))
   .add("With a size", () => (
     <React.Fragment>
-      {["16","32","48"].map(size => (
+      {[theme.space[2],theme.space[3],theme.space[4]].map(size => (
         <div>
         {names.map(iconName => <Icon name={iconName} size= {size} key={iconName} />)}
         </div>
