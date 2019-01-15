@@ -1,0 +1,11 @@
+{
+    "size": {
+      "lineHeight": {
+        "base"  : { "value": "24" },
+        "compressed"  : { "value": "16" },
+        "pageTitle"  : { "value": "48" },
+        "sectionTitle"  : { "value": "32" },
+        "subsectionTitle"  : { "value": "24" }
+      }
+    }
+  }

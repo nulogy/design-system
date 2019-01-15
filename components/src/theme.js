@@ -25,6 +25,13 @@ export default {
         tokens.size_font_larger,
         tokens.size_font_largest
     ],
+    lineHeights: [
+        tokens.size_line_height_base,
+        tokens.size_line_height_compressed,
+        tokens.size_line_height_page_title,
+        tokens.size_line_height_section_title,
+        tokens.size_line_height_subsection_title
+    ],
     fontWeights: [
       tokens.weight_font_light,
       tokens.weight_font_normal,
@@ -38,10 +45,10 @@ export default {
         tokens.size_padding_x_3,
         tokens.size_padding_x_4,
         tokens.size_padding_x_6,
-        tokens.size_padding_x_8        
+        tokens.size_padding_x_8
     ],
     fonts: {
-      base: tokens.font_family_base, 
+      base: tokens.font_family_base,
       mono: tokens.font_family_mono
     },
     borders: [],
