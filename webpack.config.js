@@ -23,7 +23,11 @@ module.exports = {
         test: /\.stories\.jsx?$/,
         loaders: [require.resolve('@storybook/addon-storysource/loader')],
         enforce: 'pre',
-      },      
+      },    
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
+      }  
     ]
   }
 }

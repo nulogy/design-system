@@ -7,9 +7,13 @@ module.exports = {
           enforce: 'pre',
         },
         {
-            test: /\.css$/,
-            loaders: ["style-loader", "css-loader"]
-          }
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader'
+        },
+        {
+          test: /\.css$/,
+          loaders: ["style-loader", "css-loader"]
+        }
       ],
     },
   };
