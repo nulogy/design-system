@@ -1,6 +1,7 @@
 {
     "size": {
       "base": {
+        "none"    : { "value": "0"},
         "half"     : { "value": "4" },
         "x1"    : { "value": "8" },
         "x2"   : { "value": "16" },
