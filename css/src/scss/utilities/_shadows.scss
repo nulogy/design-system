@@ -1,1 +1,3 @@
-.shadow {box-shadow: $shadow-box-small}
+#{$namespace} {  
+    &shadow {box-shadow: $shadow-box-small}
+}
