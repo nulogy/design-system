@@ -1,0 +1,10 @@
+{
+    "lineHeight": {
+        "base"  : { "value": "1.5" },
+        "title"  : { "value": "1.04347826" },
+        "sectionTitle"  : { "value": "1.23076923" },
+        "subsectionTitle"  : { "value": "1.33333333" },
+        "small-text-base"  : { "value": "1.71428571" },
+        "small-text-compressed"  : { "value": "1.14285714" }
+    }
+  }

@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from 'styled-system'
+import theme from '../theme.js'
 
-const Text = styled.div`
+const Text = styled.p`
   ${space}
   ${fontSize}
   ${fontWeight}
@@ -21,13 +22,14 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  inline: PropTypes.bool,  
+  inline: PropTypes.bool,
 }
 
 Text.defaultProps = {
+  m: 0,
   fontSize: 1,
-  lineHeight: 1.5,
-  mb: 2
+  lineHeight: theme.lineHeights['base'],
+  mb: 4
 }
 
 export default Text

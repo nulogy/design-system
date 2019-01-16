@@ -25,6 +25,14 @@ export default {
         tokens.size_font_larger,
         tokens.size_font_largest
     ],
+    lineHeights: {
+        base: tokens.line_height_base,
+        title: tokens.line_height_title,
+        sectionTitle: tokens.line_height_section_title,
+        subsectionTitle: tokens.line_height_subsection_title,
+        smallTextBase: tokens.line_height_small_text_base,
+        smallTextCompressed: tokens.line_height_small_text_compressed,
+    },
     fontWeights: [
       tokens.weight_font_light,
       tokens.weight_font_normal,
@@ -39,14 +47,14 @@ export default {
         tokens.size_base_x_3,
         tokens.size_base_x_4,
         tokens.size_base_x_6,
-        tokens.size_base_x_8        
+        tokens.size_base_x_8
     ],
     fonts: {
-      base: tokens.font_family_base, 
+      base: tokens.font_family_base,
       mono: tokens.font_family_mono
     },
     borders: [],
     boxShadows: [tokens.shadow_box_small],
     radii: [tokens.radius_background_small, tokens.radius_background_medium],
     breakpoints: [tokens.size_breakpoint_small, tokens.size_breakpoint_medium, tokens.size_breakpoint_large]
-  }
+ }

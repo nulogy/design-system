@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 19:08:06 GMT
+ * Generated on Wed, 16 Jan 2019 17:30:17 GMT
  */
 
 $color-base-black: #011e38;
@@ -20,9 +20,24 @@ $color-base-light-red: #faebec;
 $color-base-yellow: #ffbb00;
 $font-family-base: 'IBM Plex Sans', sans;
 $font-family-mono: 'IBM Plex Mono', monospace;
+$line-height-base: 1.5;
+$line-height-title: 1.04347826;
+$line-height-section-title: 1.23076923;
+$line-height-subsection-title: 1.33333333;
+$line-height-small-text-base: 1.71428571;
+$line-height-small-text-compressed: 1.14285714;
 $radius-background-small: 2px;
 $radius-background-medium: 4px;
 $shadow-box-small: 0 1px 1px rgba(27,31,35,0.1);
+$size-base-none: 0px;
+$size-base-half: 4px;
+$size-base-x-1: 8px;
+$size-base-x-2: 16px;
+$size-base-x-3: 24px;
+$size-base-x-4: 32px;
+$size-base-x-6: 48px;
+$size-base-x-8: 64px;
+$size-base-base: 16px;
 $size-font-smaller: 12px;
 $size-font-small: 14px;
 $size-font-medium: 16px;
@@ -33,15 +48,6 @@ $size-font-base: 16px;
 $size-font-page-title: 46px;
 $size-font-section-title: 26px;
 $size-font-subsection-title: 18px;
-$size-base-none: 0px;
-$size-base-half: 4px;
-$size-base-x-1: 8px;
-$size-base-x-2: 16px;
-$size-base-x-3: 24px;
-$size-base-x-4: 32px;
-$size-base-x-6: 48px;
-$size-base-x-8: 64px;
-$size-base-base: 16px;
 $size-breakpoint-small: 540px;
 $size-breakpoint-medium: 768px;
 $size-breakpoint-large: 1024px;

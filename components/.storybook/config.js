@@ -21,7 +21,7 @@ addDecorator(withStyles({
 
 addDecorator((story) => (
   <ThemeProvider theme={theme}>
-    <Box p={2}>
+    <Box p={3}>
       {story()}
     </Box>
   </ThemeProvider>
