@@ -5,9 +5,9 @@ import {ReactLogo} from 'styled-icons/fa-brands/ReactLogo'
 import {Github as GithubLogo} from 'styled-icons/fa-brands/Github'
 
 const ComponentUsage = props => (  
-  <Box mb={6}>
+  <Box mb={7}>
       <SectionTitle>Usage</SectionTitle>
-      <Flex bg='whiteGrey' p={3}>
+      <Flex bg='whiteGrey' p={4}>
           <Box width={1/3}>
               <SketchLogo style={{marginRight: '8px', verticalAlign: 'middle'}} size="56" />
               <a href="/">NDS UI-Kit</a> 
