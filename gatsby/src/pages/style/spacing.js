@@ -10,7 +10,7 @@ export default () => (
         <Helmet>
             <title>Spacing</title>
         </Helmet>
-        <DocSection bg='whiteGrey' p={5} borderRadius={1}>
+        <DocSection bg='whiteGrey' p={6} borderRadius={1}>
             <Title>Spacing</Title>   
             <Intro>A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.</Intro>
         </DocSection>
@@ -29,7 +29,7 @@ export default () => (
         <DocSection>
             <SectionTitle>How to choose spacing</SectionTitle>
             <Text>There are two important factors to consider when choosing spacing: <em>size</em> and <em>relatedness</em></Text>
-            <Box mb={2}>
+            <Box mb={3}>
             <CheckList>Use less spacing inside smaller elements or between functionally related elements.</CheckList>
             <CheckList>Use more spacing inside larger elements or between less functionally related elements</CheckList>
             </Box>

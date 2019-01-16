@@ -8,13 +8,13 @@ export default () => (
         <Helmet>
             <title>Buttons</title>
         </Helmet>
-        <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
+        <Box bg='whiteGrey' p={6} borderRadius={1} mb={7}>
             <Title mb={0}>Buttons</Title>   
             <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
         </Box>
 
         <DocSection>
-            <Flex mb={6}>
+            <Flex mb={7}>
                 <Box width={1/4}>
                     <Button>Button</Button>
                 </Box>
@@ -22,7 +22,7 @@ export default () => (
                     <Text>Buttons are used for actions that do not require any special emphasis and cover most cases.</Text>
                 </Box>
             </Flex>
-            <Flex mb={6}>
+            <Flex mb={7}>
                 <Box width={1/4}>
                     <PrimaryButton>Primary Button</PrimaryButton>
                 </Box>
@@ -30,7 +30,7 @@ export default () => (
                     <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
                 </Box>
             </Flex>        
-            <Flex mb={6}>              
+            <Flex mb={7}>              
                 <Box width={1/4}>
                     <DangerButton>Danger Button</DangerButton>
                 </Box>
@@ -51,18 +51,18 @@ export default () => (
         <DocSection>
             <SectionTitle>Sizes</SectionTitle>
             <Text>All buttons are available in three sizes and a full-width option.</Text>
-            <Button size="small" mr={3} mb={2}>Small</Button>
-            <Button size="medium" mr={3} mb={2}>Medium</Button>
-            <Button size="large" mb={2}>Large</Button>
+            <Button size="small" mr={4} mb={3}>Small</Button>
+            <Button size="medium" mr={4} mb={3}>Medium</Button>
+            <Button size="large" mb={3}>Large</Button>
             <Button fullWidth>Large</Button>
         </DocSection>
 
         <DocSection>
             <SectionTitle>States</SectionTitle>
             <Text>All buttons can be disabled. When a button is disabled, it's greyed out and unable to be clicked.</Text>
-            <Button mr={3} disabled>Create project</Button>
-            <PrimaryButton mr={3} disabled>Create project</PrimaryButton>
-            <DangerButton mr={3} disabled>Delete project</DangerButton>
+            <Button mr={4} disabled>Create project</Button>
+            <PrimaryButton mr={4} disabled>Create project</PrimaryButton>
+            <DangerButton mr={4} disabled>Delete project</DangerButton>
             <QuietButton disabled>Edit project</QuietButton>
         </DocSection>
 

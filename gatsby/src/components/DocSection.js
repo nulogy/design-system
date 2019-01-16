@@ -9,7 +9,7 @@ const DocSection = styled(Box)({
 )
 
 DocSection.defaultProps = {
-  mb: 6
+  mb: 7
 }
 
 export default DocSection
