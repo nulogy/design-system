@@ -7,23 +7,23 @@ const size = props => {
       case 'small':
         return {
           fontSize: `${props.theme.fontSizes[0]}`,
-          padding: `${props.theme.space[0]} ${props.theme.space[1]}`
+          padding: `${props.theme.space[1]} ${props.theme.space[2]}`
         }
       case 'medium':
         return {
           fontSize: `${props.theme.fontSizes[1]}`,
-          padding: `${props.theme.space[1]} ${props.theme.space[2]}`
+          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
         }
       case 'large':
         return {
           fontSize: `${props.theme.fontSizes[2]}`,
-          padding: `${props.theme.space[1]} ${props.theme.space[2]}`
+          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
 
         }
       default:
         return {
             fontSize: `${props.theme.fontSizes[1]}`,
-            padding: `${props.theme.space[1]} ${props.theme.space[2]}`
+            padding: `${props.theme.space[2]} ${props.theme.space[3]}`
         }
     }
   }
@@ -42,9 +42,9 @@ const Button = styled.button`
     color: ${props => props.theme.colors['blue']};
     border: 1px solid ${props => props.theme.colors['darkBlue']};
     border-radius: ${props => props.theme.radii[1]};
-    
+
     ${fullWidth} ${size} ${space};
-    
+
     &:hover {
       background-color: ${props => props.disabled ? null : props.theme.colors.lightBlue};
     }
