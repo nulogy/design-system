@@ -1,8 +1,10 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
 import Box from '../src/Box/Box';
-import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
+import '../../css/src/nds-dev.css';
+// import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 import withStyles from "@sambego/storybook-styles";
 
 const req = require.context('../src', true, /\.story\.js$/);

@@ -24,18 +24,12 @@ $colors: (
     }
   }
 
-/* Text modifiers
-    i.e .text--light-green {color: light-green;)
+/* Text colour and background modifiers
+  .text--light-green {color: light-green;)
+  .background--light-green {color: background-green;)
 */ 
 
-  .text {
-    @include color-modifiers($attribute: 'color');
-  }
-
-/* Background modifiers
-    i.e .background--light-green {background: light-green;)
-*/   
-
-  .background {
-    @include color-modifiers($attribute: 'background');
-  }
+#{$namespace} {
+  &text { @include color-modifiers($attribute: 'color'); }
+  &background {@include color-modifiers($attribute: 'background');}
+}

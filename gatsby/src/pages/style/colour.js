@@ -5,9 +5,9 @@ import {Layout, Intro, DocSection} from '../../components'
 import * as tokens from '@nulogy/tokens'
 
 const Palette = props => (
-    <Box width={1/3} mb={3}>
-        <Box mr={2} pt={6} pb={6} mb={1} bg={props.colour} borderRadius={1}></Box>
-        <Text mb={0}>{props.name}</Text>
+    <Box width={1/3} mb={4}>
+        <Box mr={3} pt={7} pb={7} mb={2} bg={props.colour} borderRadius={1}></Box>
+        <Text mb={1}>{props.name}</Text>
         <Text fontSize={0}>{props.colour}</Text>
     </Box>
 )
@@ -17,12 +17,12 @@ export default () => (
         <Helmet>
             <title>Colour</title>
         </Helmet>
-        <DocSection bg='whiteGrey' p={5} borderRadius={1}>
+        <DocSection bg='whiteGrey' p={6} borderRadius={1}>
             <Title>Colour</Title>   
             <Intro>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</Intro>
         </DocSection>
         
-        <DocSection mb={3}>
+        <DocSection mb={4}>
             <SectionTitle>Text & Interactive Colours</SectionTitle>
             <Flex>
                 <Palette name="Black" colour={tokens.color_base_black}></Palette>
@@ -33,7 +33,7 @@ export default () => (
             </Flex>
         </DocSection>
 
-        <DocSection mb={3}>
+        <DocSection mb={4}>
             <SectionTitle>UI & Background Colours</SectionTitle>
             <Flex>
                 <Palette name="Dark Grey" colour={tokens.color_base_dark_grey}></Palette>
@@ -44,7 +44,7 @@ export default () => (
             </Flex>
         </DocSection>
 
-        <DocSection mb={3}>
+        <DocSection mb={4}>
             <SectionTitle>Contextual Colours</SectionTitle>
             <Flex>
                 <Palette name="Green" colour={tokens.color_base_green}></Palette>

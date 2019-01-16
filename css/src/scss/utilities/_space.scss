@@ -14,10 +14,12 @@ $directions: ['top', 'right', 'bottom', 'left'];
 
 @each $name, $value in $scale {
   @each $property in $properties {
-    .#{$property}--#{$name} {#{$property}: $value !important;} // all
-    .#{$property}--none {#{$property}: 0 !important;} // none
-    @each $direction in $directions {
-      .#{$property}-#{$direction}--#{$name} {#{$property}-#{$direction}: $value !important;}
+    #{$namespace} {
+      &#{$property}--#{$name} {#{$property}: $value !important;} // all
+      &#{$property}--none {#{$property}: 0 !important;} // none
+      @each $direction in $directions {
+        &#{$property}-#{$direction}--#{$name} {#{$property}-#{$direction}: $value !important;}
+      }
     }
   }
 }
