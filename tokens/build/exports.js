@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Jan 2019 16:13:53 GMT
+ * Generated on Wed, 16 Jan 2019 17:30:17 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -48,15 +48,6 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "18px";
-export const size_base_none = "0px";
-export const size_base_half = "4px";
-export const size_base_x_1 = "8px";
-export const size_base_x_2 = "16px";
-export const size_base_x_3 = "24px";
-export const size_base_x_4 = "32px";
-export const size_base_x_6 = "48px";
-export const size_base_x_8 = "64px";
-export const size_base_base = "16px";
 export const size_breakpoint_small = "540px";
 export const size_breakpoint_medium = "768px";
 export const size_breakpoint_large = "1024px";
