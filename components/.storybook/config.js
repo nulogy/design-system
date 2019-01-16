@@ -8,9 +8,6 @@ import withStyles from "@sambego/storybook-styles";
 const req = require.context('../src', true, /\.story\.js$/);
 
 function loadStories() {
-<<<<<<< HEAD
-=======
->>>>>>> Reverts storybook config
   require('../src/Box/Box.story.js');
   require('../src/Button/Button.story.js');
   require('../src/Flex/Flex.story.js');
@@ -18,13 +15,8 @@ function loadStories() {
   require('../src/Link/Link.story.js');
   require('../src/Type/Text.story.js');
   require('../src/Typography/Typography.story.js');
-<<<<<<< HEAD
-=======
-  req.keys().forEach(filename => req(filename));
->>>>>>> Resolves conflict
->>>>>>> Resolves conflict
-=======
->>>>>>> Reverts storybook config
+
+  //req.keys().forEach(filename => req(filename));
 }
 
 addDecorator(withStyles({

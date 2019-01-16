@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Jan 2019 17:51:50 GMT
+ * Generated on Tue, 15 Jan 2019 22:35:43 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -29,6 +29,15 @@ export const line_height_small_text_compressed = "1.142857";
 export const radius_background_small = "2px";
 export const radius_background_medium = "4px";
 export const shadow_box_small = "0 1px 1px rgba(27,31,35,0.1)";
+export const size_base_none = "0px";
+export const size_base_half = "4px";
+export const size_base_x_1 = "8px";
+export const size_base_x_2 = "16px";
+export const size_base_x_3 = "24px";
+export const size_base_x_4 = "32px";
+export const size_base_x_6 = "48px";
+export const size_base_x_8 = "64px";
+export const size_base_base = "16px";
 export const size_font_smaller = "12px";
 export const size_font_small = "14px";
 export const size_font_medium = "16px";
@@ -39,15 +48,6 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "18px";
-export const size_base_none = "0px";
-export const size_base_half = "4px";
-export const size_base_x_1 = "8px";
-export const size_base_x_2 = "16px";
-export const size_base_x_3 = "24px";
-export const size_base_x_4 = "32px";
-export const size_base_x_6 = "48px";
-export const size_base_x_8 = "64px";
-export const size_base_base = "16px";
 export const size_breakpoint_small = "540px";
 export const size_breakpoint_medium = "768px";
 export const size_breakpoint_large = "1024px";
