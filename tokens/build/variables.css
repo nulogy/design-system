@@ -49,6 +49,15 @@
  --size-font-page-title: 46px;
  --size-font-section-title: 26px;
  --size-font-subsection-title: 18px;
+ --size-base-none: 0px;
+ --size-base-half: 4px;
+ --size-base-x-1: 8px;
+ --size-base-x-2: 16px;
+ --size-base-x-3: 24px;
+ --size-base-x-4: 32px;
+ --size-base-x-6: 48px;
+ --size-base-x-8: 64px;
+ --size-base-base: 16px;
  --size-breakpoint-small: 540px;
  --size-breakpoint-medium: 768px;
  --size-breakpoint-large: 1024px;

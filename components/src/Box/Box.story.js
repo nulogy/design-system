@@ -26,7 +26,7 @@ storiesOf('Box', module)
       p={4}
       width={[1, 1/2, 1/4]}
       bg='whiteGrey'>
-      Half Width
+      Half Width 
     </Box>
   ))
   .add('With a responsive width', () => (
@@ -36,7 +36,7 @@ storiesOf('Box', module)
       bg='whiteGrey'>
       Full width on small screens, 1/2 width on medium and 1/4 width on large
     </Box>
-  ))
+  ))  
   .add('With padding', () => (
     <Box p={3}>
       <Box m={2} p={4} bg='whiteGrey'>Padding</Box>
