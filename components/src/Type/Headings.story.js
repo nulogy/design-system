@@ -18,5 +18,4 @@ storiesOf('Headings', module)
       <Title mb={6}>Title</Title>
       <Text>Lorem ipsum</Text>
     </React.Fragment>
-))
-;
+));
