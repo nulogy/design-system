@@ -19,7 +19,7 @@ storiesOf('Typography', module)
         primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
         Maecenas sit amet leo dui. Integer semper porta dignissim.
       </Text>
-      <SubsectionTitle>Two Paragraphs and a Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now?</SubsectionTitle>
+      <SubsectionTitle>Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?</SubsectionTitle>
       <Text>
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
         pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
@@ -27,7 +27,7 @@ storiesOf('Typography', module)
         fringilla in, dignissim congue velit.
       </Text>
       <SectionTitle>Donec leo felis</SectionTitle>
-      <SubsectionTitle>Nunc lacinia a odio eu rutrum</SubsectionTitle>
+      <SubsectionTitle>Two pargraphs and moderatly long title</SubsectionTitle>
       <Text>
           Nunc tempor eget mauris id facilisis. Morbi convallis mauris at
           fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero
@@ -38,7 +38,8 @@ storiesOf('Typography', module)
           primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
           Maecenas sit amet leo dui. Integer semper porta dignissim.
       </Text>
-      <Text>Nunc id arcu sagittis, volutpat
+      <Text>
+      Nunc id arcu sagittis, volutpat
         sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper,
         dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales
         dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel.
