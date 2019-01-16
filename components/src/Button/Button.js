@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
 import theme from '../theme'
-import {InlineIcon} from '../Icon/Icon.js'
+import {InlineIcon, names} from '../Icon/Icon.js'
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const size = props => {
     switch (props.size) {
@@ -68,6 +69,13 @@ const Button = styled(BaseButton)`
     &:active {transform: scale(0.98); transition: .2s ease-in;}
     &:disabled {opacity: .5;}
 `
+Button.propTypes = {
+  size: PropTypes.oneOf(["small","medium","large"]),  
+  disabled: PropTypes.bool,
+  iconName: PropTypes.oneOf(names),
+  iconSide: PropTypes.oneOf(["left","right"]),
+  ...space.propTypes
+}
 
 Button.defaultProps = {
     theme: theme,
