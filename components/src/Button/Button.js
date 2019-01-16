@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
 import theme from '../theme'
+import {InlineIcon, names} from '../Icon/Icon.js'
+import React from 'react'
+import PropTypes from 'prop-types';
 
 const size = props => {
     switch (props.size) {
@@ -30,7 +33,21 @@ const size = props => {
 
 const fullWidth = props => (props.fullWidth ? { width: '100%' } : null)
 
-const Button = styled.button`
+const BaseButton = (props) => {
+  return(
+    <button {...props}> 
+      {(props.iconName && props.iconSide === "left") &&
+        <InlineIcon mr={0} name={props.iconName}/>
+      }
+      {props.children}
+      {(props.iconName && props.iconSide === "right") &&
+        <InlineIcon ml={0} name={props.iconName}/>
+      }
+    </button>
+  )
+}
+
+const Button = styled(BaseButton)`
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
     border: 0;
@@ -52,9 +69,17 @@ const Button = styled.button`
     &:active {transform: scale(0.98); transition: .2s ease-in;}
     &:disabled {opacity: .5;}
 `
+Button.propTypes = {
+  size: PropTypes.oneOf(["small","medium","large"]),  
+  disabled: PropTypes.bool,
+  iconName: PropTypes.oneOf(names),
+  iconSide: PropTypes.oneOf(["left","right"]),
+  ...space.propTypes
+}
 
 Button.defaultProps = {
-    theme: theme
+    theme: theme,
+    iconSide: "right"
 }
 
 export default Button
