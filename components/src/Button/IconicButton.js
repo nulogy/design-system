@@ -41,7 +41,7 @@ const Wrapper = styled.button`
     min-width: 32px;
   }
   ${Text} {
-    display: ${props => props.label && props.labelVisibility == 'visible' ? 'block' : 'none'};
+    display: ${props => props.labelVisibility == 'visible' ? 'block' : 'none'};
     position: ${props => props.labelVisibility == 'hidden' ? 'absolute' : null};
     font-size: ${props => props.labelVisibility == 'hidden' ? props.theme.fontSizes[0] : null};
     font-weight: ${props => props.labelVisibility == 'visible' ? '600' : '400'};
@@ -60,7 +60,7 @@ const Wrapper = styled.button`
         background ${theme.colors['lightBlue']};
     }
     ${Text} {
-      display: ${props => props.label && props.labelVisibility == 'hidden' ? 'block' : null};
+      display: ${props => props.labelVisibility == 'hidden' ? 'block' : null};
     }
   }
   &:focus {outline: none;}
@@ -77,17 +77,18 @@ const Wrapper = styled.button`
         transform: none;
       }
       ${Text} {
-        display: ${props => props.label && props.labelVisibility == 'hidden' ? 'none' : null};
+        display: ${props => props.labelVisibility == 'hidden' ? 'none' : null};
       }
     }
   }
 `
 
 const IconicButton = (props) => {
+  console.log(props.children);
   return (
     <Wrapper { ...props } >
       <Icon size={theme.space[5]} name='delete' p={1} />
-      <Text mr={1} mb={0} ml={1}>{props.label}</Text>
+      <Text mr={1} mb={0} ml={1}>{props.children}</Text>
     </Wrapper>
   )
 }
