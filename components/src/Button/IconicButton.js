@@ -25,6 +25,36 @@ const labelVisibility = props => {
     }
   }
 
+const labelVisibilityText = props => {
+  switch (props.labelVisibility) {
+    case 'visible':
+      return {
+        display: 'block',
+        fontWeight: '600'
+      }
+    case 'hidden':
+      return {
+        display: 'none',
+        position: 'absolute',
+        fontSize: props.theme.fontSizes[0],
+        fontWeight: '400',
+        lineHeight: props.theme.colors['smallTextCompressed'],
+        padding: props.theme.space[1],
+        zIndex: '10',
+        top: '40px',
+        left: '-12px',
+        borderRadius: props.theme.radii[0],
+        background: props.theme.colors['lightBlue'] ,
+        pointerEvents: 'none' 
+      }
+    default:
+      return {
+        display: 'block',
+        fontWeight: '600'
+      }
+  }
+}
+
 const Wrapper = styled.button`
   background: transparent;
   border: none;
@@ -41,19 +71,8 @@ const Wrapper = styled.button`
     min-width: 32px;
   }
   ${Text} {
-    display: ${props => props.labelVisibility == 'visible' ? 'block' : 'none'};
-    position: ${props => props.labelVisibility == 'hidden' ? 'absolute' : null};
-    font-size: ${props => props.labelVisibility == 'hidden' ? props.theme.fontSizes[0] : null};
-    font-weight: ${props => props.labelVisibility == 'visible' ? '600' : '400'};
-    line-height: ${props => props.labelVisibility == 'hidden' ? props.theme.colors['smallTextCompressed'] : null};
+    ${labelVisibilityText}
     text-align: left;
-    padding: ${props => props.labelVisibility == 'hidden' ? props.theme.space[1] : null};
-    z-index: ${props => props.labelVisibility == 'hidden' ? '10' : null};
-    top: ${props => props.labelVisibility == 'hidden' ? '40px' : null};
-    left: ${props => props.labelVisibility == 'hidden' ? '-12px' : null}; // hard coded, needs function
-    border-radius: ${props => props.labelVisibility == 'hidden' ? props.theme.radii[0] : null};
-    background: ${props => props.labelVisibility == 'hidden' ? props.theme.colors['lightBlue'] : null};
-    pointer-events: ${props => props.labelVisibility == 'hidden' ? 'none' : null};
   }
   &:hover{
     ${Icon} {
