@@ -27,14 +27,14 @@ const labelVisibilityText = props => {
     case 'visible':
       return {
         display: 'block',
-        fontWeight: '600'
+        fontWeight: props.theme.fontWeights[2]
       }
     case 'hidden':
       return {
         display: 'none',
         position: 'absolute',
         fontSize: props.theme.fontSizes[0],
-        fontWeight: '400',
+        fontWeight: props.theme.fontWeights[1],
         lineHeight: props.theme.colors['smallTextCompressed'],
         padding: props.theme.space[1],
         zIndex: '10',
@@ -47,7 +47,7 @@ const labelVisibilityText = props => {
     default:
       return {
         display: 'block',
-        fontWeight: '600'
+        fontWeight: props.theme.fontWeights[2]
       }
   }
 }
