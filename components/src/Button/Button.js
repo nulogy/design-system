@@ -4,29 +4,31 @@ import theme from '../theme'
 import {InlineIcon, names} from '../Icon/Icon.js'
 import React from 'react'
 import PropTypes from 'prop-types';
+import {addPx, subPx, multPx} from '../utils.js';
 
 const size = props => {
     switch (props.size) {
       case 'small':
         return {
           fontSize: `${props.theme.fontSizes[0]}`,
-          padding: `${props.theme.space[1]} ${props.theme.space[2]}`
+          lineHeight: `${subPx(multPx(props.theme.lineHeights.smallTextBase,props.theme.fontSizes[0]),2)}`,
+          padding: `${props.theme.space[0]} ${props.theme.space[2]}`
         }
       case 'medium':
         return {
           fontSize: `${props.theme.fontSizes[1]}`,
-          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+          padding: `${subPx(props.theme.space[2],1)} ${props.theme.space[3]}`
         }
       case 'large':
         return {
-          fontSize: `${props.theme.fontSizes[2]}`,
-          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+          fontSize: `${props.theme.fontSizes[1]}`,
+          padding: `${subPx(addPx(props.theme.space[1],props.theme.space[2]))} ${props.theme.space[3]}`
 
         }
       default:
         return {
             fontSize: `${props.theme.fontSizes[1]}`,
-            padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+            padding: `${subPx(props.theme.space[2])} ${props.theme.space[3]}`
         }
     }
   }
@@ -37,11 +39,11 @@ const BaseButton = (props) => {
   return(
     <button {...props}> 
       {(props.iconName && props.iconSide === "left") &&
-        <InlineIcon mr={0} name={props.iconName}/>
+        <InlineIcon mr={1} name={props.iconName}/>
       }
       {props.children}
       {(props.iconName && props.iconSide === "right") &&
-        <InlineIcon ml={0} name={props.iconName}/>
+        <InlineIcon ml={1} name={props.iconName}/>
       }
     </button>
   )
@@ -72,6 +74,7 @@ const Button = styled(BaseButton)`
 Button.propTypes = {
   size: PropTypes.oneOf(["small","medium","large"]),  
   disabled: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   iconName: PropTypes.oneOf(names),
   iconSide: PropTypes.oneOf(["left","right"]),
   ...space.propTypes
