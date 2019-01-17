@@ -35,15 +35,15 @@ const size = props => {
 
 const fullWidth = props => (props.fullWidth ? { width: '100%' } : null)
 
-const BaseButton = (props) => {
+const BaseButton = ({fullWidth, children, iconSide, iconName, ...props}) => {
   return(
     <button {...props}> 
-      {(props.iconName && props.iconSide === "left") &&
-        <InlineIcon mr={1} name={props.iconName}/>
+      {(iconName && iconSide === "left") &&
+        <InlineIcon mr={1} name={iconName}/>
       }
-      {props.children}
-      {(props.iconName && props.iconSide === "right") &&
-        <InlineIcon ml={1} name={props.iconName}/>
+      {children}
+      {(iconName && iconSide === "right") &&
+        <InlineIcon ml={1} name={iconName}/>
       }
     </button>
   )
