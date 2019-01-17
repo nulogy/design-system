@@ -10,16 +10,13 @@ const labelVisibility = props => {
     switch (props.labelVisibility) {
       case 'visible':
         return {
-          display: 'flex',
           alignItems: 'center'
         }
       case 'hidden':
         return {
-          display: 'block'
         }
       default:
         return {
-          display: 'flex',
           alignItems: 'center'
         }
     }
@@ -45,7 +42,7 @@ const labelVisibilityText = props => {
         left: '-12px',
         borderRadius: props.theme.radii[0],
         background: props.theme.colors['lightBlue'] ,
-        pointerEvents: 'none' 
+        pointerEvents: 'none'
       }
     default:
       return {
@@ -59,9 +56,12 @@ const Wrapper = styled.button`
   background: transparent;
   border: none;
   position: relative;
+  display: inline-flex;
+  alignItems: ${props => props.disabled ? 'arrow' : 'pointer'};
+
   padding: ${theme.space[1]} ${theme.space[0]};
   color: ${theme.colors['darkBlue']};
-  cursor: ${props => props.disabled ? 'arrow' : 'pointer'};
+  cursor: ${props => props.disabled ? 'center' : null};
 
   ${labelVisibility}
 
