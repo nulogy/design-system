@@ -20,7 +20,13 @@ storiesOf('Buttons', module)
     <QuietButton>Create project</QuietButton>
   ))
   .add('IconicButton', () => (
-    <IconicButton>Print</IconicButton>
+    <React.Fragment>
+      <IconicButton label='Delete' labelVisibility='visible' />
+      <IconicButton label='Delete' labelVisibility='hidden' />
+      <IconicButton label='I am Iconic Button with really really really long label' labelVisibility='visible' />
+      <IconicButton label='Delete' labelVisibility='visible' disabled />
+      <IconicButton label='Delete' labelVisibility='hidden' disabled />
+    </React.Fragment>
   ))
   .add('With a selected size', () => (
     <React.Fragment>
@@ -34,7 +40,7 @@ storiesOf('Buttons', module)
       <Button iconName="add" iconSide="left">Create project</Button>
       <Button iconName="add" iconSide="right">Create project</Button>
     </React.Fragment>
-  ))   
+  ))
   .add('Set to full width', () => (
     <PrimaryButton fullWidth>Create project</PrimaryButton>
   ))
