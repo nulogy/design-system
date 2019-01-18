@@ -39,11 +39,20 @@ export default ({ children }) => (
             <Nav>
               <Text color='darkGrey' fontWeight={2}>Components</Text>
               <NavItem><Link href="/components/buttons" underline={false}>Buttons</Link></NavItem>
+              <NavItem><Link href="/components/checkbox" underline={false}>Checkbox</Link></NavItem>
+              <NavItem><Link href="/components/form" underline={false}>Form</Link></NavItem>
+              <NavItem><Link href="/components/radio-button" underline={false}>Radio button</Link></NavItem>
+              <NavItem><Link href="/components/select" underline={false}>Select</Link></NavItem>
+              <NavItem><Link href="/components/table" underline={false}>Table</Link></NavItem>
+              <NavItem><Link href="/components/text-input" underline={false}>Text input</Link></NavItem>
+              <NavItem><Link href="/components/toggle" underline={false}>Toggle</Link></NavItem>
             </Nav>
             <Nav>
               <Text color='darkGrey' fontWeight={2}>Resources</Text>
               <NavItem><Link href="/guides/get-started" underline={false}>Get started</Link></NavItem>
               <NavItem><Link href="https://github.com/nulogy/design-system" underline={false}>Github</Link></NavItem>
+              <NavItem><Link href="/tokens" underline={false}>Tokens</Link></NavItem>
+              <NavItem><Link href="/guides/reading-list" underline={false}>Reading list</Link></NavItem>
             </Nav>
         </Box>
         <Box width={'70%'}>
