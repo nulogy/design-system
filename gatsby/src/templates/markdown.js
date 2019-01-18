@@ -1,8 +1,14 @@
 import React from 'react'
 import {graphql} from "gatsby"
 import {Helmet} from 'react-helmet'
-import {Layout, DocSection} from '../components'
-import {Title} from '@nulogy/components'
+import {Intro, Layout, DocSection} from '../components'
+import {Title, Box} from '@nulogy/components'
+import styled from 'styled-components'
+
+const MarkdownStyles = styled.div`
+  h1 {font-weight: 100 !important;}
+  h1, h2, h3, h4 {font-weight: 500;}
+`
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,16 +17,21 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
       <Layout>
-        <Helmet>
-            <title>{frontmatter.title} </title>
-        </Helmet>
-        <DocSection bg='whiteGrey' p={5} borderRadius={1}>
-            <Title mb={0}>{frontmatter.title}</Title>
-        </DocSection>
-        <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MarkdownStyles>
+          <Helmet>
+              <title>{frontmatter.title} Nulogy Design System </title>
+          </Helmet>
+          <DocSection bg='whiteGrey' p={5} borderRadius={1}>
+              <Title m={0}>{frontmatter.title}</Title>
+              <Intro>{frontmatter.intro} test</Intro>
+          </DocSection>
+          <Box maxWidth={800}>
+          <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+          />
+          </Box>
+        </MarkdownStyles>
     </Layout>
   )
 }
@@ -30,6 +41,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        intro
         path
         title
       }
