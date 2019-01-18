@@ -4,7 +4,6 @@ import {Helmet} from 'react-helmet'
 import {Intro, Layout, DocSection} from '../components'
 import {Title, Box} from '@nulogy/components'
 import styled from 'styled-components'
-import * as tokens from '@nulogy/tokens'
 
 const MarkdownStyles = styled.div`
   h1 {font-weight: 100 !important;}

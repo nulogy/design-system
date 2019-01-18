@@ -1,11 +1,10 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import {Box, Flex, Text, SectionTitle, SubsectionTitle, Title} from '@nulogy/components'
+import {Box, SectionTitle, SubsectionTitle, Title} from '@nulogy/components'
 import {Layout, Intro, DocSection, CheckList, Image} from '../../components'
 import anatomy from '../../images/checkbox/checkbox-anatomy.png'
 import basic from '../../images/checkbox/checkbox-basic.png'
 import default_state from '../../images/checkbox/checkbox-default.png'
-import collapsed from '../../images/checkbox/checkbox-collapsed.png'
 import checked from '../../images/checkbox/checkbox-checked.png'
 import disabled from '../../images/checkbox/checkbox-disabled.png'
 

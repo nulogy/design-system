@@ -1,13 +1,12 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import {Box, Flex, Text, SectionTitle, SubsectionTitle, Title} from '@nulogy/components'
+import {Box, SectionTitle, SubsectionTitle, Title} from '@nulogy/components'
 import {Layout, Intro, DocSection, CheckList, Image} from '../../components'
 import anatomy from '../../images/select/select-anatomy.png'
 import basic from '../../images/select/select-basic.png'
 import default_state from '../../images/select/select-state-default.png'
 import selected from '../../images/select/select-state-selected.png'
 import disabled from '../../images/select/select-disabled.png'
-
 
 export default () => (
     <Layout>

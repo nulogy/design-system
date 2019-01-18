@@ -1,6 +1,6 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import {Box, Flex, Text, SectionTitle, SubsectionTitle, Link, Title} from '@nulogy/components'
+import {Box, Text, SectionTitle, SubsectionTitle, Link, Title} from '@nulogy/components'
 import {Layout, Intro, DocSection, CheckList, Image} from '../../components'
 import anatomy from '../../images/form/anatomy.png'
 import basic from '../../images/form/basic.png'
