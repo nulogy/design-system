@@ -32,7 +32,7 @@ storiesOf('Buttons', module)
     </React.Fragment>
   ))   
   .add('Set to full width', () => (
-    <PrimaryButton fullWidth>Create project</PrimaryButton>
+    <PrimaryButton fullWidth >Create project</PrimaryButton>
   )) 
   .add('Set to disabled', () => (
     <PrimaryButton disabled>Create project</PrimaryButton>

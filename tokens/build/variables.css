@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Jan 2019 17:30:17 GMT
+ * Generated on Fri, 18 Jan 2019 16:36:32 GMT
  */
 
 :root {
@@ -24,7 +24,7 @@
  --line-height-base: 1.5;
  --line-height-title: 1.04347826;
  --line-height-section-title: 1.23076923;
- --line-height-subsection-title: 1.33333333;
+ --line-height-subsection-title: 1.2;
  --line-height-small-text-base: 1.71428571;
  --line-height-small-text-compressed: 1.14285714;
  --radius-background-small: 2px;
@@ -42,13 +42,13 @@
  --size-font-smaller: 12px;
  --size-font-small: 14px;
  --size-font-medium: 16px;
- --size-font-large: 18px;
+ --size-font-large: 20px;
  --size-font-larger: 26px;
  --size-font-largest: 46px;
  --size-font-base: 16px;
  --size-font-page-title: 46px;
  --size-font-section-title: 26px;
- --size-font-subsection-title: 18px;
+ --size-font-subsection-title: 20px;
  --size-breakpoint-small: 540px;
  --size-breakpoint-medium: 768px;
  --size-breakpoint-large: 1024px;
