@@ -5,6 +5,7 @@ import theme from '../theme'
 import Icon from '../Icon/Icon.js';
 import Text from '../Type/Text.js';
 import Flex from '../Flex/Flex.js';
+import icons from '../../icons/icons.json'
 
 const labelVisibilityText = props => {
   switch (props.labelVisibility) {
@@ -88,16 +89,19 @@ const IconicButton = (props) => {
   console.log(props.children);
   return (
     <Wrapper { ...props } >
-      <Icon size={theme.space[5]} name='delete' p={1} />
+      <Icon size={theme.space[5]} name={props.icon} p={1} />
       <Text mr={1} mb={0} ml={1}>{props.children}</Text>
     </Wrapper>
   )
 }
 
+export const names = Object.keys(icons)
+
 IconicButton.propTypes = {
   disabled: PropTypes.bool,
   label: PropTypes.string,
-  labelVisibility: PropTypes.oneOf(["visible","hidden"])
+  labelVisibility: PropTypes.oneOf(["visible","hidden"]),
+  icon: PropTypes.oneOf(names).isRequired
 }
 
 IconicButton.defaultProps = {
