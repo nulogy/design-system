@@ -8,8 +8,8 @@ export default () => (
         <Helmet>
             <title>Buttons</title>
         </Helmet>
-        <Box bg='whiteGrey' p={6} borderRadius={1} mb={7}>
-            <Title mb={0}>Buttons</Title>   
+        <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
+            <Title m={0}>Buttons</Title>   
             <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
         </Box>
 
