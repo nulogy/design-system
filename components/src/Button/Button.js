@@ -1,59 +1,65 @@
 import styled from 'styled-components';
 import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
 import theme from '../theme'
-import {InlineIcon, names} from '../Icon/Icon.js'
+import Icon, {names} from '../Icon/Icon.js'
 import React from 'react'
 import PropTypes from 'prop-types';
+import {addPx, subPx, multPx} from '../utils.js';
 
 const size = props => {
     switch (props.size) {
       case 'small':
         return {
           fontSize: `${props.theme.fontSizes[0]}`,
-          padding: `${props.theme.space[1]} ${props.theme.space[2]}`
+          lineHeight: `${props.theme.lineHeights.smallTextCompressed}`,
+          padding: `${subPx(props.theme.space[1])} ${props.theme.space[2]}`
         }
       case 'medium':
         return {
           fontSize: `${props.theme.fontSizes[1]}`,
-          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+          padding: `${subPx(props.theme.space[2],1)} ${props.theme.space[3]}`
         }
       case 'large':
         return {
           fontSize: `${props.theme.fontSizes[2]}`,
-          padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+          lineHeight: `${props.theme.lineHeights.subsectionTitle}`,
+          padding: `${subPx(props.theme.space[3])} ${props.theme.space[4]}`
 
         }
       default:
         return {
             fontSize: `${props.theme.fontSizes[1]}`,
-            padding: `${props.theme.space[2]} ${props.theme.space[3]}`
+            padding: `${subPx(props.theme.space[2])} ${props.theme.space[3]}`
         }
     }
   }
 
 const fullWidth = props => (props.fullWidth ? { width: '100%' } : null)
 
-const BaseButton = (props) => {
+const BaseButton = ({fullWidth, children, iconSide, iconName, ...props}) => {
   return(
     <button {...props}> 
-      {(props.iconName && props.iconSide === "left") &&
-        <InlineIcon mr={0} name={props.iconName}/>
+      {(iconName && iconSide === "left") &&
+        <Icon style={{minWidth: '1.14285714em'}} size="1.14285714em" mr={1} name={iconName}/>
       }
-      {props.children}
-      {(props.iconName && props.iconSide === "right") &&
-        <InlineIcon ml={0} name={props.iconName}/>
+      {children}
+      {(iconName && iconSide === "right") &&
+        <Icon style={{minWidth: '1.14285714em'}} size="1.14285714em" ml={1} name={iconName}/>
       }
     </button>
   )
 }
 
 const Button = styled(BaseButton)`
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     -webkit-font-smoothing: antialiased;
-    font-weight: 600;
+    font-weight: ${props => props.theme.fontWeights[2]};
     border: 0;
     text-decoration: none;
     vertical-align: middle;
-    line-height: 1.5;
+    line-height: ${props => props.theme.lineHeights.base};
     transition: .2s;
     cursor: ${props => props.disabled ? 'arrow' : 'pointer'}};
     color: ${props => props.theme.colors['blue']};
@@ -72,6 +78,7 @@ const Button = styled(BaseButton)`
 Button.propTypes = {
   size: PropTypes.oneOf(["small","medium","large"]),  
   disabled: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   iconName: PropTypes.oneOf(names),
   iconSide: PropTypes.oneOf(["left","right"]),
   ...space.propTypes

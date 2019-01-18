@@ -36,5 +36,4 @@ storiesOf('Buttons', module)
   ))
   .add('Set to disabled', () => (
     <PrimaryButton disabled>Create project</PrimaryButton>
-  ))
-;
+  ));

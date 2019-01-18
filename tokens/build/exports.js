@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Jan 2019 17:30:17 GMT
+ * Generated on Fri, 18 Jan 2019 16:36:32 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -23,7 +23,7 @@ export const font_family_mono = "'IBM Plex Mono', monospace";
 export const line_height_base = "1.5";
 export const line_height_title = "1.04347826";
 export const line_height_section_title = "1.23076923";
-export const line_height_subsection_title = "1.33333333";
+export const line_height_subsection_title = "1.2";
 export const line_height_small_text_base = "1.71428571";
 export const line_height_small_text_compressed = "1.14285714";
 export const radius_background_small = "2px";
@@ -41,13 +41,13 @@ export const size_base_base = "16px";
 export const size_font_smaller = "12px";
 export const size_font_small = "14px";
 export const size_font_medium = "16px";
-export const size_font_large = "18px";
+export const size_font_large = "20px";
 export const size_font_larger = "26px";
 export const size_font_largest = "46px";
 export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
-export const size_font_subsection_title = "18px";
+export const size_font_subsection_title = "20px";
 export const size_breakpoint_small = "540px";
 export const size_breakpoint_medium = "768px";
 export const size_breakpoint_large = "1024px";

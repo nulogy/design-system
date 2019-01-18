@@ -4,7 +4,7 @@
         "smaller" : { "value": "12" },        
         "small" : { "value": "14" },
         "medium": { "value": "16" },
-        "large" : { "value": "18" },
+        "large" : { "value": "20" },
         "larger" : { "value": "26" },
         "largest" : { "value": "46" },                
         "base"  : { "value": "{size.font.medium.value}" },
