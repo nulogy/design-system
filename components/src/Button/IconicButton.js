@@ -5,25 +5,7 @@ import theme from '../theme'
 import Icon from '../Icon/Icon.js';
 import Text from '../Type/Text.js';
 import Flex from '../Flex/Flex.js';
-
-const labelVisibility = props => {
-    switch (props.labelVisibility) {
-      case 'visible':
-        return {
-          display: 'flex',
-          alignItems: 'center'
-        }
-      case 'hidden':
-        return {
-          display: 'block'
-        }
-      default:
-        return {
-          display: 'flex',
-          alignItems: 'center'
-        }
-    }
-  }
+import icons from '../../icons/icons.json'
 
 function getTextWidth(text, font) {
     // re-use canvas object for better performance
@@ -48,15 +30,15 @@ const labelVisibilityText = props => {
     case 'visible':
       return {
         display: 'block',
-        fontWeight: '600'
+        fontWeight: props.theme.fontWeights[2]
       }
     case 'hidden':
       return {
         display: 'none',
         position: 'absolute',
         fontSize: props.theme.fontSizes[0],
-        fontWeight: '400',
-        lineHeight: props.theme.colors['smallTextCompressed'],
+        fontWeight: props.theme.fontWeights[1],
+        lineHeight: props.theme.lineHeights['smallTextCompressed'],
         padding: props.theme.space[1],
         zIndex: '10',
         top: '40px',
@@ -64,12 +46,12 @@ const labelVisibilityText = props => {
         marginLeft: getLeftDisplacement(props.label,`${props.theme.fontSizes[0]} IBM Plex Sans`,`${props.theme.space[1]}`),
         borderRadius: props.theme.radii[0],
         background: props.theme.colors['lightBlue'] ,
-        pointerEvents: 'none' 
+        pointerEvents: 'none'
       }
     default:
       return {
         display: 'block',
-        fontWeight: '600'
+        fontWeight: props.theme.fontWeights[2]
       }
   }
 }
@@ -78,11 +60,12 @@ const Wrapper = styled.button`
   background: transparent;
   border: none;
   position: relative;
+  display: inline-flex;
+  align-items: ${props => props.labelVisibility ? 'center' : null};
+
   padding: ${theme.space[1]} ${theme.space[0]};
   color: ${theme.colors['darkBlue']};
   cursor: ${props => props.disabled ? 'arrow' : 'pointer'};
-
-  ${labelVisibility}
 
   ${Icon} {
     border-radius: 50%;
@@ -124,15 +107,24 @@ const Wrapper = styled.button`
 const IconicButton = (props) => {
   return (
     <Wrapper label={props.children} { ...props } >
-      <Icon size={theme.space[5]} name='delete' p={1} />
+      <Icon size={theme.space[5]} name={props.icon} p={1} />
       <Text mr={1} mb={0} ml={1}>{props.children}</Text>
     </Wrapper>
   )
 }
 
+export const names = Object.keys(icons)
+
 IconicButton.propTypes = {
   disabled: PropTypes.bool,
-  label: PropTypes.string
+  label: PropTypes.string,
+  labelVisibility: PropTypes.oneOf(["visible","hidden"]),
+  icon: PropTypes.oneOf(names).isRequired
+}
+
+IconicButton.defaultProps = {
+    theme: theme,
+    labelVisibility: "hidden"
 }
 
 export default IconicButton
