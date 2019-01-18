@@ -25,6 +25,24 @@ const labelVisibility = props => {
     }
   }
 
+function getTextWidth(text, font) {
+    // re-use canvas object for better performance
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = font;
+    var metrics = context.measureText(text);
+    console.log(text)
+    console.log(metrics.width);
+    return metrics.width;
+}
+
+function getLeftDisplacement(text, font, padding){
+  var width = getTextWidth(text, font)
+  
+  return `-${(width/2)+parseInt(padding.replace('.px',''))}px`
+}
+
+
 const labelVisibilityText = props => {
   switch (props.labelVisibility) {
     case 'visible':
@@ -42,7 +60,8 @@ const labelVisibilityText = props => {
         padding: props.theme.space[1],
         zIndex: '10',
         top: '40px',
-        left: '-12px',
+        left: '50%',
+        marginLeft: getLeftDisplacement(props.label,`${props.theme.fontSizes[0]} IBM Plex Sans`,`${props.theme.space[1]}`),
         borderRadius: props.theme.radii[0],
         background: props.theme.colors['lightBlue'] ,
         pointerEvents: 'none' 
@@ -103,9 +122,8 @@ const Wrapper = styled.button`
 `
 
 const IconicButton = (props) => {
-  console.log(props.children);
   return (
-    <Wrapper { ...props } >
+    <Wrapper label={props.children} { ...props } >
       <Icon size={theme.space[5]} name='delete' p={1} />
       <Text mr={1} mb={0} ml={1}>{props.children}</Text>
     </Wrapper>

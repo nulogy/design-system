@@ -26,6 +26,11 @@ storiesOf('Buttons', module)
       <IconicButton labelVisibility='visible'>I am Iconic Button with really really really long label</IconicButton>
       <IconicButton labelVisibility='visible' disabled >Delete</IconicButton>
       <IconicButton labelVisibility='hidden' disabled >Delete</IconicButton>
+      <IconicButton labelVisibility='hidden'>AA</IconicButton>
+      <IconicButton labelVisibility='hidden'>AAAA</IconicButton>
+      <IconicButton labelVisibility='hidden'>AAAAAA</IconicButton>
+      <IconicButton labelVisibility='hidden'>|</IconicButton>
+      <span>Delete</span>
     </React.Fragment>
   ))
   .add('With a selected size', () => (
