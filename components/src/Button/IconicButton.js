@@ -35,7 +35,7 @@ const labelVisibilityText = props => {
         position: 'absolute',
         fontSize: props.theme.fontSizes[0],
         fontWeight: props.theme.fontWeights[1],
-        lineHeight: props.theme.colors['smallTextCompressed'],
+        lineHeight: props.theme.lineHeights['smallTextCompressed'],
         padding: props.theme.space[1],
         zIndex: '10',
         top: '40px',
