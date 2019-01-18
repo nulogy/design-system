@@ -57,11 +57,11 @@ const Wrapper = styled.button`
   border: none;
   position: relative;
   display: inline-flex;
-  alignItems: ${props => props.disabled ? 'arrow' : 'pointer'};
+  alignItems: ${props => props.disabled ? 'center' : null};
 
   padding: ${theme.space[1]} ${theme.space[0]};
   color: ${theme.colors['darkBlue']};
-  cursor: ${props => props.disabled ? 'default' : 'pointer'};
+  cursor: ${props => props.disabled ? 'arrow' : 'pointer'};
 
   ${labelVisibility}
 
