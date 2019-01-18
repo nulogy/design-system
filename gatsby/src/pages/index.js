@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Box, Flex, Text, Title, SectionTitle} from '@nulogy/components'
+import {Box, Flex, Link, Text, Title, SectionTitle} from '@nulogy/components'
 import {Intro, Layout} from '../components/'
 
 const IndexPage = () => (
@@ -10,16 +10,16 @@ const IndexPage = () => (
     </Box>
 
     <Flex>
-        <Box boxShadow={0} mb={4} pr={4}>
+        <Box width={'50%'} boxShadow={0} mb={4} pr={4}>
             <SectionTitle mb={4}>Visual Style</SectionTitle>
             <Text mb={4}>Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</Text>
-            <Button href="/style/colour">Learn how to design for Nulogy</Button>
+            <Link href="/style/colour">Learn how to design for Nulogy</Link>
         </Box>
 
-        <Box boxShadow={1} mb={4} pl={4}>
+        <Box width={'50%'} boxShadow={1} mb={4} pl={4}>
             <SectionTitle mb={4}>Components</SectionTitle>
             <Text mb={4}>Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</Text>
-            <Button href="components">Use our components</Button>
+            <Link href="components">Use our components</Link>
         </Box>
     </Flex> 
   </Layout>
