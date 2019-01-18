@@ -5,6 +5,7 @@ export function getTextWidth(text, font) {
     context.font = font;
     var metrics = context.measureText(text);
     return metrics.width;
+}
 
 export const addPx = (val1, val2) => {
     const val2Str = !val2 ? '1px' : `${val2}` ;
