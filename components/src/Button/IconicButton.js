@@ -6,22 +6,6 @@ import Icon from '../Icon/Icon.js';
 import Text from '../Type/Text.js';
 import Flex from '../Flex/Flex.js';
 
-const labelVisibility = props => {
-    switch (props.labelVisibility) {
-      case 'visible':
-        return {
-          alignItems: 'center'
-        }
-      case 'hidden':
-        return {
-        }
-      default:
-        return {
-          alignItems: 'center'
-        }
-    }
-  }
-
 const labelVisibilityText = props => {
   switch (props.labelVisibility) {
     case 'visible':
@@ -57,13 +41,11 @@ const Wrapper = styled.button`
   border: none;
   position: relative;
   display: inline-flex;
-  alignItems: ${props => props.disabled ? 'center' : null};
+  align-items: ${props => props.labelVisibility ? 'center' : null};
 
   padding: ${theme.space[1]} ${theme.space[0]};
   color: ${theme.colors['darkBlue']};
   cursor: ${props => props.disabled ? 'arrow' : 'pointer'};
-
-  ${labelVisibility}
 
   ${Icon} {
     border-radius: 50%;
@@ -114,7 +96,13 @@ const IconicButton = (props) => {
 
 IconicButton.propTypes = {
   disabled: PropTypes.bool,
-  label: PropTypes.string
+  label: PropTypes.string,
+  labelVisibility: PropTypes.oneOf(["visible","hidden"])
+}
+
+IconicButton.defaultProps = {
+    theme: theme,
+    labelVisibility: "hidden"
 }
 
 export default IconicButton

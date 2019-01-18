@@ -14,6 +14,7 @@ storiesOf('IconicButton', module)
   ))
   .add('Disabled', () => (
     <React.Fragment>
+      <IconicButton>Delete</IconicButton>
       <IconicButton labelVisibility='visible' disabled >Delete</IconicButton>
       <IconicButton labelVisibility='hidden' disabled >Delete</IconicButton>
     </React.Fragment>
