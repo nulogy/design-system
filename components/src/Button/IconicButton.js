@@ -1,36 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import theme from '../theme'
+import {space} from 'styled-system';
+import theme from '../theme';
 import Icon from '../Icon/Icon.js';
 import Text from '../Type/Text.js';
 import Flex from '../Flex/Flex.js';
 import icons from '../../icons/icons.json'
+import { getTextWidth } from '../utils.js'
 
-function getTextWidth(text, font) {
-    // re-use canvas object for better performance
-    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
-    var context = canvas.getContext("2d");
-    context.font = font;
-    var metrics = context.measureText(text);
-    console.log(text)
-    console.log(metrics.width);
-    return metrics.width;
-}
-
-function getLeftDisplacement(text, font, padding){
+//BUG: the imposed width of the hidden label is slightly off and creates the look of increased horizontal padding - likely a calculation error in getMargin
+function getMargin(text, font, padding, maxWidth){
   var width = getTextWidth(text, font)
-  
-  return `-${(width/2)+parseInt(padding.replace('.px',''))}px`
+  var paddingInt = parseInt(padding.replace('.px',''));
+  return (
+    (width + 2 * paddingInt) > maxWidth ?
+    `-${maxWidth/2}px` :
+    `-${(width/2)+paddingInt}px`
+    )
 }
-
 
 const labelVisibilityText = props => {
   switch (props.labelVisibility) {
     case 'visible':
       return {
         display: 'block',
-        fontWeight: props.theme.fontWeights[2]
+        fontWeight: props.theme.fontWeights[2],
+        textAlign: 'left'
       }
     case 'hidden':
       return {
@@ -42,8 +38,12 @@ const labelVisibilityText = props => {
         padding: props.theme.space[1],
         zIndex: '10',
         top: '40px',
-        left: '50%',
-        marginLeft: getLeftDisplacement(props.label,`${props.theme.fontSizes[0]} IBM Plex Sans`,`${props.theme.space[1]}`),
+      
+        marginRight: getMargin(props.label,`${props.theme.fontSizes[0]} IBM Plex Sans`,`${props.theme.space[1]}px`,`${props.hiddlenLabelMaxWidth}`),
+        left: '25%',
+        right: '25%',
+        marginLeft: getMargin(props.label,`${props.theme.fontSizes[0]} IBM Plex Sans`,`${props.theme.space[1]}px`,`${props.hiddlenLabelMaxWidth}`),
+
         borderRadius: props.theme.radii[0],
         background: props.theme.colors['lightBlue'] ,
         pointerEvents: 'none'
@@ -51,12 +51,14 @@ const labelVisibilityText = props => {
     default:
       return {
         display: 'block',
-        fontWeight: props.theme.fontWeights[2]
+        fontWeight: props.theme.fontWeights[2],
+        textAlign: 'left'
       }
   }
 }
 
 const Wrapper = styled.button`
+  ${space}
   background: transparent;
   border: none;
   position: relative;
@@ -74,7 +76,6 @@ const Wrapper = styled.button`
   }
   ${Text} {
     ${labelVisibilityText}
-    text-align: left;
   }
   &:hover{
     ${Icon} {
@@ -119,12 +120,14 @@ IconicButton.propTypes = {
   disabled: PropTypes.bool,
   label: PropTypes.string,
   labelVisibility: PropTypes.oneOf(["visible","hidden"]),
-  icon: PropTypes.oneOf(names).isRequired
+  icon: PropTypes.oneOf(names).isRequired,
+  hiddlenLabelMaxWidth: PropTypes.number
 }
 
 IconicButton.defaultProps = {
     theme: theme,
-    labelVisibility: "hidden"
+    labelVisibility: "hidden",
+    hiddlenLabelMaxWidth: "500"
 }
 
 export default IconicButton

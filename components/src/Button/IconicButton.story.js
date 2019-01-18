@@ -13,25 +13,15 @@ storiesOf('IconicButton', module)
     </React.Fragment>
   ))
   .add('With a long label', () => (
-    <IconicButton icon='user' labelVisibility='visible'>I am Iconic Button with really really really long label</IconicButton>
+    <React.Fragment>
+      <IconicButton icon='user' labelVisibility='visible'>I am Iconic Button with really really really long label</IconicButton>
+      <br/>
+      <IconicButton ml={200} icon='user' labelVisibility='hidden'>I am Iconic Button with really really really long label</IconicButton>
+    </React.Fragment>
   ))
   .add('Disabled', () => (
     <React.Fragment>
       <IconicButton icon='cancel' labelVisibility='visible' disabled >Cancel</IconicButton>
       <IconicButton icon='lock' labelVisibility='hidden' disabled >Lock</IconicButton>
-    </React.Fragment>
-  ))
-  .add('Testing', () => (
-    <React.Fragment>
-      <IconicButton icon='delete' labelVisibility='visible'>Delete</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden'>Delete</IconicButton>
-      <IconicButton icon='delete' labelVisibility='visible'>I am Iconic Button with really really really long label</IconicButton>
-      <IconicButton icon='delete' labelVisibility='visible' disabled >Delete</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden' disabled >Delete</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden'>AA</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden'>AAAA</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden'>AAAAAA</IconicButton>
-      <IconicButton icon='delete' labelVisibility='hidden'>|</IconicButton>
-      <span>Delete</span>
     </React.Fragment>
   ));
