@@ -9,27 +9,27 @@ import logo from '../images/nulogy.svg'
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>
-    <Box>
+    <Box pb={3}>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Welcome</title>
       </Helmet>
-      <Box bg='blackBlue' align='center' mb={4} p={4}>
-        <Box pl={5} pr={5} maxWidth={1240} m='auto'>
+      <Box bg='blackBlue' align='center' mb={3} p={3}>
+        <Box pl={4} pr={4} maxWidth={960} m='auto'>
           <Flex>
             <Box width={1/4}>
               <Link href="/"><img src={logo} alt="Logo" width="56px" /></Link>
             </Box>
-            <Box width={3/4} textAlign='right'>
-              <Link href='/style/colour' mr={4} color='white' hover='white' >Visual Style</Link>
+            <Box width={3/4} textAlign={'right'}>
+              <Link href='/style/colour' mr={3} color='white' hover='white' >Visual Style</Link>
               <Link href='/components/buttons' color='white' hover='white'>Components</Link>
             </Box>
           </Flex>
         </Box>
       </Box>
-      <Flex maxWidth={1240} m='auto'>
-        <Box pt={7} width={'20%'}>
+      <Flex width={1040} m='auto'>
+        <Box pt={7} width={'30%'}>
           <Nav>
               <Text color='darkGrey' fontWeight={2}>Visual Style</Text>
                 <NavItem><Link href="/style/colour" underline={false}>Colour</Link></NavItem>            
@@ -46,7 +46,7 @@ export default ({ children }) => (
               <NavItem><Link href="https://github.com/nulogy/design-system" underline={false}>Github</Link></NavItem>
             </Nav>
         </Box>
-        <Box width={'80%'}>
+        <Box width={'70%'}>
         {children}
         </Box>        
       </Flex>
