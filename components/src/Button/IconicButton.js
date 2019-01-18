@@ -61,7 +61,7 @@ const Wrapper = styled.button`
 
   padding: ${theme.space[1]} ${theme.space[0]};
   color: ${theme.colors['darkBlue']};
-  cursor: ${props => props.disabled ? 'center' : null};
+  cursor: ${props => props.disabled ? 'default' : 'pointer'};
 
   ${labelVisibility}
 
