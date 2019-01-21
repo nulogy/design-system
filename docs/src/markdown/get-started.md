@@ -30,7 +30,7 @@ Congratulations, you've installed the design system! Please see the READMEs link
 
 Nulogy uses Sketch as our primary design tool. There are a few things you can do to start working with the Nulogy Design System in Sketch.
 
-#### Download Sketch Library
+#### [Download Sketch Library](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
 The Sketch Library is a collection of colour palettes, type styles and components. Start each project with this file to ensure you’re able to use the Nulogy Design System to its fullest.
 
 #### Update Nudging Settings
