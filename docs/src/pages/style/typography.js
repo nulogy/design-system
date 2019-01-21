@@ -1,7 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 import {Box, Flex, Text, Title, SectionTitle, SubsectionTitle} from '@nulogy/components';
-import {Layout, Intro, DocSection, ComponentUsage} from '../../components/'
+import {Layout, Intro, DocSection} from '../../components/'
 
 export default () => (
     <Layout>
@@ -44,7 +44,5 @@ export default () => (
             <SectionTitle>Interface text</SectionTitle>
             <Text>Standard text should set at 16px for most cases, but 14px is also available.</Text>
         </DocSection>
-
-        <ComponentUsage storybookLink='http://localhost:8080/?selectedKind=Button' source='/components/buttons/buttons.js'></ComponentUsage>
     </Layout>
 )
