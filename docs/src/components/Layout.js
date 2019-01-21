@@ -28,7 +28,7 @@ export default ({ children }) => (
           </Flex>
         </Box>
       </Box>
-      <Flex width={1040} m='auto'>
+      <Flex width={960} m='auto'>
         <Box pt={7} width={'30%'}>
           <Nav>
               <Text color='darkGrey' fontWeight={2}>Visual Style</Text>
