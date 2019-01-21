@@ -19,7 +19,7 @@ const IndexPage = () => (
         <Box width={'50%'} boxShadow={1} mb={4} pl={4}>
             <SectionTitle mb={4}>Components</SectionTitle>
             <Text mb={4}>Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</Text>
-            <Link href="components">Use our components</Link>
+            <Link href="components/buttons">Use our components</Link>
         </Box>
     </Flex> 
   </Layout>
