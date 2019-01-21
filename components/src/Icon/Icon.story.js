@@ -51,13 +51,13 @@ storiesOf("Icon", module)
   ))
   .add("With added margin", () => (
     <div style={{margin:"24px"}}>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon m={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mt={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mr={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mb={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon ml={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mx={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon my={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon m={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon mt={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon mr={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon mb={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon ml={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon mx={3} name='delete'/></div>
+      <div style={{display: "inline-block",margin:"24px",backgroundColor:`${theme.colors.lightGrey}`}}><Icon my={3} name='delete'/></div>
     </div>
   ))
   .add("With applied className", () => (
