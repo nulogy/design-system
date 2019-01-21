@@ -1,9 +1,6 @@
 # @nulogy/components
 Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System. Components are [styled-components](https://www.styled-components.com/) written using [styled-system](https://jxnblk.com/styled-system/). This makes it possible to write CSS directly in JS and pass props based on our design constraints. 
 
-## Installation
-`$ yarn add @nulogy/components`
-
 ## Development
 `$ yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development. 
 

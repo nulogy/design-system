@@ -13,6 +13,11 @@ export const GlobalStyles = styled.div`
   * {
     box-sizing: border-box; 
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 `
 
 const ThemeProvider = ({ ...props }) => {
