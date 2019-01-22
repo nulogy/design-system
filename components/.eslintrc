@@ -25,6 +25,7 @@
     "quote-props": ["off"],
     "quotes": ["error", "double"],
     "react/jsx-filename-extension": ["off"],
+    "react/jsx-one-expression-per-line": ["off"],
     "react/jsx-uses-react": ["warn"],
     "react/jsx-curly-spacing": ["error", "always"],
     "react/jsx-max-props-per-line": ["error", { "maximum": 3 }],

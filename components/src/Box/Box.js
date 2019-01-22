@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
-import theme from '../theme.js'
+import styled from "styled-components";
+import {
+  color, space, width, maxWidth, boxShadow, borderRadius, textAlign,
+} from "styled-system";
+import theme from "../theme.js";
 
 const Box = styled.div`
  ${color}
@@ -13,18 +15,17 @@ const Box = styled.div`
 `;
 
 Box.propTypes = {
-    ...color.propTypes,
-    ...space.propTypes,
-    ...width.propTypes,
-    ...maxWidth.propTypes,  
-    ...borderRadius.propTypes,
-    ...boxShadow.propTypes,
-    ...textAlign.propTypes  
-}
+  ...color.propTypes,
+  ...space.propTypes,
+  ...width.propTypes,
+  ...maxWidth.propTypes,
+  ...borderRadius.propTypes,
+  ...boxShadow.propTypes,
+  ...textAlign.propTypes,
+};
 
 Box.defaultProps = {
-  theme: theme
-}
-  
-export default Box
+  theme,
+};
 
+export default Box;
