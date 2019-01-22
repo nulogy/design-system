@@ -1,5 +1,5 @@
 import Text from "./Text";
-import theme from "../theme.js";
+import theme from "../theme";
 
 const Title = Text.withComponent("h1");
 Title.defaultProps = {

@@ -1,9 +1,9 @@
 
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { color, space, themeGet } from "styled-system";
 import { darken } from "polished";
-import theme from "../theme.js";
+import theme from "../theme";
 
 const getHoverColor = props => (
   props.hover

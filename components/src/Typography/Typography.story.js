@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Text from "../Type/Text";
 import { Title, SectionTitle, SubsectionTitle } from "../Type/Headings";
-import theme from "../theme.js";
+import theme from "../theme";
 
 storiesOf("Typography", module)
   .add("Article", () => (
