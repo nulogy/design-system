@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Icon, { InlineIcon, names } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
+import Box from '../Box/Box.js'
 
 const IconCode = ({ name }) => (
   <code>
@@ -34,31 +35,31 @@ storiesOf("Icon", module)
   .add("With a color", () => (
     <React.Fragment>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
-        <div>
+        <Box>
         {names.map(iconName => <Icon name={iconName} color= {color} key={iconName} />)}
-        </div>
+        </Box>
       ))}
     </React.Fragment>
   ))
   .add("With a size", () => (
     <React.Fragment>
       {[theme.space[2],theme.space[3],theme.space[4]].map(size => (
-        <div>
+        <Box>
         {names.map(iconName => <Icon name={iconName} size= {size} key={iconName} />)}
-        </div>
+        </Box>
       ))}
     </React.Fragment>
   ))
   .add("With added margin", () => (
-    <div style={{margin:"24px"}}>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon m={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mt={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mr={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mb={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon ml={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon mx={3} name='delete'/></div>
-      <div style={{display: "inline-block",margin:"24px",backgroundColor:"lightgrey"}}><Icon my={3} name='delete'/></div>
-    </div>
+    <Box m={4}>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon m={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon mt={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon mr={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon mb={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon ml={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon mx={3} name='delete'/></Box>
+      <Box style={{display: "inline-block"}} m={4} bg="lightGrey"><Icon my={3} name='delete'/></Box>
+    </Box>
   ))
   .add("With applied className", () => (
     <React.Fragment>
