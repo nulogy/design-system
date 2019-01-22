@@ -54,7 +54,7 @@ export default () => (
         </DocSection>
         <DocSection>
             <SectionTitle>Expandable rows</SectionTitle>
-            <Text>Rows of the table can expand and collapse allowing nonessential information to reside in collapsible portion of the row.</Text>
+            <Text>Rows of the table can expand and collapse allowing non-essential information to reside in the collapsible portion of the row.</Text>
             <Image src={expandable_row_collapsed} alt="Expandable example - collapsed row" style={{width: '100%', marginBottom: '8px'}} />
             <Text fontSize='small'>Collapsed rows</Text>
             <Image src={expandable_row_expanded} alt="Expandable example - expanded row" style={{width: '100%', marginBottom: '8px'}} />
