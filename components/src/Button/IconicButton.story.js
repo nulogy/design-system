@@ -14,8 +14,19 @@ storiesOf("IconicButton", module)
   ))
   .add("With a long label", () => (
     <React.Fragment>
-      <IconicButton icon="user" labelVisibility="always">I am an Iconic Button with a really really really long label</IconicButton>
-      <IconicButton ml={ 200 } icon="user" labelVisibility="hover">I am an Iconic Button with a really really really long label</IconicButton>
+      <IconicButton
+        icon="user"
+        labelVisibility="always"
+      >
+        I am an Iconic Button with a really really really long label
+      </IconicButton>
+      <IconicButton
+        ml={ 200 }
+        icon="user"
+        labelVisibility="hover"
+      >
+        I am an Iconic Button with a really really really long label
+      </IconicButton>
     </React.Fragment>
   ))
   .add("Disabled", () => (

@@ -116,25 +116,33 @@ const Wrapper = styled.button`
   }
 `;
 
-const IconicButton = props => (
-  <Wrapper label={ props.children } { ...props }>
-    <Icon size={ theme.space[5] } name={ props.icon } p={ 1 } />
-    <Text mr={ 1 } mb={ 0 } ml={ 1 }>{props.children}</Text>
-  </Wrapper>
-);
+const IconicButton = props => {
+  const {
+    children,
+    icon,
+  } = props;
+
+  return (
+    <Wrapper label={ children } { ...props }>
+      <Icon size={ theme.space[5] } name={ icon } p={ 1 } />
+      <Text mr={ 1 } mb={ 0 } ml={ 1 }>{ children }</Text>
+    </Wrapper>
+  );
+};
 
 export const names = Object.keys(icons);
 
 IconicButton.propTypes = {
+  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  theme: PropTypes.shape({}).isRequired,
   labelVisibility: PropTypes.oneOf(["always", "hover"]),
   icon: PropTypes.oneOf(names).isRequired,
   hiddlenLabelMaxWidth: PropTypes.number,
 };
 
 IconicButton.defaultProps = {
-  theme,
+  disabled: false,
   labelVisibility: "hover",
   hiddlenLabelMaxWidth: "500",
 };
