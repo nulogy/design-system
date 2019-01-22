@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color, space, width, maxWidth, boxShadow, borderRadius, textAlign } from 'styled-system'
 import theme from '../theme'
-import Icon, {names} from '../Icon/Icon.js'
+import Icon, {iconNames} from '../Icon/Icon.js'
 import React from 'react'
 import PropTypes from 'prop-types';
 import {addPx, subPx, multPx} from '../utils.js';
@@ -79,7 +79,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(["small","medium","large"]),  
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
-  iconName: PropTypes.oneOf(names),
+  iconName: PropTypes.oneOf(iconNames),
   iconSide: PropTypes.oneOf(["left","right"]),
   ...space.propTypes
 }
