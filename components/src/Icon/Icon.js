@@ -7,36 +7,43 @@ import icons from "../../icons/icons.json";
 export const iconNames = Object.keys(icons);
 
 const Svg = props => {
-  if (!icons[props.name]) return false;
+  const {
+    name,
+    title,
+    size,
+  } = props;
+
+  if (!icons[name]) return false;
   return (
     <svg
-      aria-hidden={ props.title == null }
-      width={ props.size }
-      height={ props.size }
+      aria-hidden={ title == null }
+      width={ size }
+      height={ size }
       fill="currentcolor"
-      viewBox={ icons[props.name].viewBox }
+      viewBox={ icons[name].viewBox }
       { ...props }
     >
-      <path d={ icons[props.name].path } />
+      <path d={ icons[name].path } />
     </svg>
   );
+};
+
+Svg.propTypes = {
+  name: PropTypes.oneOf(names).isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  color: PropTypes.string.isRequired,
+};
+
+Svg.defaultProps = {
+  title: null,
+  size: 24,
 };
 
 const Icon = styled(Svg)`
   ${space}
   ${color}  
 `;
-
-Icon.defaultProps = {
-  size: 24,
-};
-
-Icon.propTypes = {
-  name: PropTypes.oneOf(iconNames).isRequired,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  title: PropTypes.string,
-  color: PropTypes.string,
-};
 
 const iconSizeRatio = 1.25;
 
@@ -56,24 +63,26 @@ const IconContainer = styled.span`
 `;
 
 export const InlineIcon = ({
-  title, fill, color, name, ...props
+  fill, color, ...props
 }) => (
   <IconContainer { ...props }>
     <CenteredIcon
-      title={ title }
-      fill={ fill || color || "currentColor" }
+      fill={ fill || color }
       size={ `${iconSizeRatio}em` }
-      name={ name }
+      { ...props }
     />
   </IconContainer>
 );
 
 InlineIcon.propTypes = {
-  name: PropTypes.oneOf(iconNames).isRequired,  
-  title: PropTypes.string,
   fill: PropTypes.string,
   color: PropTypes.string,
   ...space.propTypes,
+};
+
+InlineIcon.defaultProps = {
+  fill: "",
+  color: "currentColor",
 };
 
 export default Icon;
