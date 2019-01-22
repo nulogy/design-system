@@ -24,6 +24,7 @@
     "no-use-before-define": ["error", { "functions": false }],
     "quote-props": ["off"],
     "quotes": ["error", "double"],
+    "react/button-has-type": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/jsx-one-expression-per-line": ["off"],
     "react/jsx-uses-react": ["warn"],

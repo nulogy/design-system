@@ -4,11 +4,7 @@ import styled from "styled-components";
 import { space, color } from "styled-system";
 import icons from "../../icons/icons.json";
 
-<<<<<<< HEAD
-export const iconNames = Object.keys(icons)
-=======
-export const names = Object.keys(icons);
->>>>>>> Apply eslint auto-fixes
+export const iconNames = Object.keys(icons);
 
 const Svg = props => {
   if (!icons[props.name]) return false;
