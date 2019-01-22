@@ -3,18 +3,20 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
 import theme from "../theme";
-import Icon from "../Icon/Icon.js";
-import Text from "../Type/Text.js";
-import Flex from "../Flex/Flex.js";
+import Icon from "../Icon/Icon";
+import Text from "../Type/Text";
 import icons from "../../icons/icons.json";
-import { getTextWidth } from "../utils.js";
+import { getTextWidth } from "../utils";
 
-// BUG: the imposed width of the hidden label is slightly off and creates the look of increased horizontal padding - likely a calculation error in getMargin
+/*
+BUG: the imposed width of the hidden label is slightly off and creates the look of
+increased horizontal padding - likely a calculation error in getMargin
+*/
 function getMargin(text, font, padding, maxWidth) {
   const width = getTextWidth(text, font);
-  const paddingInt = parseInt(padding.replace(".px", ""));
+  const paddingInt = parseInt(padding.replace(".px", ""), 10);
   return (
-    (width + 2 * paddingInt) > maxWidth
+    (width + (2 * paddingInt)) > maxWidth
       ? `-${maxWidth / 2}px`
       : `-${(width / 2) + paddingInt}px`
   );
@@ -39,10 +41,20 @@ const labelVisibilityText = props => {
         padding: props.theme.space[1],
         zIndex: "10",
         top: "40px",
-        marginRight: getMargin(props.label, `${props.theme.fontSizes[0]} IBM Plex Sans`, `${props.theme.space[1]}px`, `${props.hiddlenLabelMaxWidth}`),
+        marginRight: getMargin(
+          props.label,
+          `${props.theme.fontSizes[0]} IBM Plex Sans`,
+          `${props.theme.space[1]}px`,
+          `${props.hiddlenLabelMaxWidth}`
+        ),
         left: "25%",
         right: "25%",
-        marginLeft: getMargin(props.label, `${props.theme.fontSizes[0]} IBM Plex Sans`, `${props.theme.space[1]}px`, `${props.hiddlenLabelMaxWidth}`),
+        marginLeft: getMargin(
+          props.label,
+          `${props.theme.fontSizes[0]} IBM Plex Sans`,
+          `${props.theme.space[1]}px`,
+          `${props.hiddlenLabelMaxWidth}`
+        ),
         borderRadius: props.theme.radii[0],
         background: props.theme.colors.lightBlue,
         pointerEvents: "none",
@@ -81,7 +93,7 @@ const Wrapper = styled.button`
         background ${theme.colors.lightBlue};
     }
     ${Text} {
-      display: ${props => (props.labelVisibility == "hover" ? "block" : null)};
+      display: ${props => (props.labelVisibility === "hover" ? "block" : null)};
     }
   }
   &:focus {outline: none;}
@@ -98,7 +110,7 @@ const Wrapper = styled.button`
         transform: none;
       }
       ${Text} {
-        display: ${props => (props.labelVisibility == "hover" ? "none" : null)};
+        display: ${props => (props.labelVisibility === "hover" ? "none" : null)};
       }
     }
   }
