@@ -42,7 +42,8 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@nulogy/tokens": "file:../tokens"
+    "@nulogy/tokens": "file:../tokens",
+    "eslint-config-airbnb": "17.1.0"
   },
   "dependencies": {
     "@sambego/storybook-styles": "^1.0.0",

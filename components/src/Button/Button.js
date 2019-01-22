@@ -3,8 +3,8 @@ import { space } from "styled-system";
 import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import Icon, { iconNames } from "../Icon/Icon.js";
-import { subPx } from "../utils.js";
+import Icon, { iconNames } from "../Icon/Icon";
+import { subPx } from "../utils";
 
 const size = props => {
   switch (props.size) {
@@ -38,27 +38,32 @@ const fullWidth = props => (props.fullWidth ? { width: "100%" } : null);
 
 const BaseButton = ({
   _fullWidth, children, iconSide, iconName, ...props
-}) => (
-  <button { ...props }>
-    {(iconName && iconSide === "left")
-        && (
-        <Icon
-          style={ { minWidth: `${props.theme.lineHeights.smallTextCompressed}` } } size="1.14285714em" mr={ 1 }
-          name={ iconName }
-        />
-        )
-      }
-    {children}
-    {(iconName && iconSide === "right")
-        && (
-        <Icon
-          style={ { minWidth: `${props.theme.lineHeights.smallTextCompressed}` } } size="1.14285714em" ml={ 1 }
-          name={ iconName }
-        />
-        )
-      }
-  </button>
-);
+}) => {
+  const { theme: { lineHeights: { smallTextCompressed } } } = props;
+
+  return (
+    <button { ...props }>
+      {(iconName && iconSide === "left")
+          && (
+          <Icon
+            style={ { minWidth: `${smallTextCompressed}` } } size="1.14285714em" mr={ 1 }
+            name={ iconName }
+          />
+          )
+        }
+      {children}
+      {(iconName && iconSide === "right")
+          && (
+          <Icon
+            style={ { minWidth: `${smallTextCompressed}` } } size="1.14285714em" ml={ 1 }
+            name={ iconName }
+          />
+          )
+        }
+    </button>
+  );
+};
+
 
 const Button = styled(BaseButton)`
     display: inline-flex;
