@@ -24,7 +24,7 @@ export default function Template({
               <title>{frontmatter.title} Nulogy Design System </title>
           </Helmet>
           <DocSection bg='whiteGrey' p={5} borderRadius={1}>
-              <Title m={0}>{frontmatter.title}</Title>
+              <Title mb={0}>{frontmatter.title}</Title>
               <Intro>{frontmatter.intro} test</Intro>
           </DocSection>
           <Box maxWidth={800}>

@@ -15,21 +15,21 @@ export default ({ children }) => (
         <meta charSet="utf-8" />
         <title>Welcome</title>
       </Helmet>
-      <Box bg='blackBlue' align='center' mb={3} p={3}>
+      <Box bg='blackBlue' align='center' mb={6} p={3}>
         <Box pl={4} pr={4} maxWidth={960} m='auto'>
           <Flex>
             <Box width={1/4}>
               <Link href="/"><img src={logo} alt="Logo" width="56px" /></Link>
             </Box>
-            <Box width={3/4} textAlign={'right'}>
-              <Link href='/style/colour' mr={3} color='white' hover='white' >Visual Style</Link>
-              <Link href='/components/buttons' color='white' hover='white'>Components</Link>
+            <Box width={3/4} textAlign={'right'} style={{position: 'relative', top: '14px'}}>
+              <Link href='/style/colour' mr={3} color='white'>Visual Style</Link>
+              <Link href='/components/buttons' color='white'>Components</Link>
             </Box>
           </Flex>
         </Box>
       </Box>
       <Flex width={960} m='auto'>
-        <Box pt={7} width={'30%'}>
+        <Box width={'30%'}>
           <Nav>
               <Text color='darkGrey' fontWeight={2}>Visual Style</Text>
                 <NavItem><Link href="/style/colour" underline={false}>Colour</Link></NavItem>            

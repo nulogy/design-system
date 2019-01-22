@@ -14,7 +14,7 @@ export default () => (
             <title>Form</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Form</Title>   
+            <Title mb={0}>Form</Title>   
             <Intro>Forms are a collection of inputs that allow users to submit data.</Intro>
         </Box>
         <DocSection>

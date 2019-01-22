@@ -17,7 +17,7 @@ export default () => (
             <title>Table</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Table</Title>   
+            <Title mb={0}>Table</Title>   
             <Intro>Tables structure data into a grid making it easier to understand and compare.</Intro>
         </Box>
         <DocSection>
