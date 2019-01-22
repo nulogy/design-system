@@ -41,6 +41,7 @@ export default ({ children }) => (
               <NavItem><Link href="/components/buttons" underline={false}>Buttons</Link></NavItem>
               <NavItem><Link href="/components/checkbox" underline={false}>Checkbox</Link></NavItem>
               <NavItem><Link href="/components/form" underline={false}>Form</Link></NavItem>
+              <NavItem><Link href="/components/icons" underline={false}>Icons</Link></NavItem>
               <NavItem><Link href="/components/radio-button" underline={false}>Radio button</Link></NavItem>
               <NavItem><Link href="/components/select" underline={false}>Select</Link></NavItem>
               <NavItem><Link href="/components/table" underline={false}>Table</Link></NavItem>
