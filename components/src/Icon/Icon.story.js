@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
 import Icon, { InlineIcon, iconNames } from "./Icon";
 import theme from "../theme";
@@ -7,11 +8,15 @@ import Box from "../Box/Box";
 
 const IconCode = ({ name }) => (
   <code>
-    &lt;Icon name="
+    &lt;Icon name=&quot;
     <b>{name}</b>
-" /&gt;
+    &quot;&gt;
   </code>
 );
+
+IconCode.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 
 storiesOf("Icon", module)
   .add("Icon", () => (

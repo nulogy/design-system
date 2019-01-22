@@ -37,7 +37,7 @@ const size = props => {
 const fullWidth = props => (props.fullWidth ? { width: "100%" } : null);
 
 const BaseButton = ({
-  _fullWidth, children, iconSide, iconName, ...props
+  fullWidth, children, iconSide, iconName, ...props
 }) => {
   const { theme: { lineHeights: { smallTextCompressed } } } = props;
 
@@ -62,6 +62,13 @@ const BaseButton = ({
         }
     </button>
   );
+};
+
+BaseButton.propTypes = {
+  theme: PropTypes.shape({}).isRequired,
+  children: PropTypes.node.isRequired,
+  iconSide: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
 };
 
 
