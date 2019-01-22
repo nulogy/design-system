@@ -40,11 +40,11 @@ const BaseButton = ({fullWidth, children, iconSide, iconName, ...props}) => {
   return(
     <button {...props}> 
       {(iconName && iconSide === "left") &&
-        <Icon style={{minWidth: '1.14285714em'}} size="1.14285714em" mr={1} name={iconName}/>
+        <Icon style={{minWidth: `${props.theme.lineHeights.smallTextCompressed}`}} size="1.14285714em" mr={1} name={iconName}/>
       }
       {children}
       {(iconName && iconSide === "right") &&
-        <Icon style={{minWidth: '1.14285714em'}} size="1.14285714em" ml={1} name={iconName}/>
+        <Icon style={{minWidth: `${props.theme.lineHeights.smallTextCompressed}`}} size="1.14285714em" ml={1} name={iconName}/>
       }
     </button>
   )
