@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
   color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily,
 } from "styled-system";
-import theme from "../theme.js";
+import theme from "../theme";
 
 const Text = styled.p`
   ${space}

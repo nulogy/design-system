@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { createGlobalStyle, ThemeProvider as StyledThemeProvider } from "styled-components";
-import theme from "../theme.js";
+import theme from "../theme";
 
 const Reset = createGlobalStyle`body {
   margin: 0;
