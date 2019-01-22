@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import {
-  color, space, width, maxWidth, boxShadow, borderRadius, textAlign,
-} from "styled-system";
+import { space } from "styled-system";
 import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import Icon, { iconNames } from "../Icon/Icon.js";
-import { addPx, subPx, multPx } from "../utils.js";
+import { subPx } from "../utils.js";
 
 const size = props => {
   switch (props.size) {
@@ -39,7 +37,7 @@ const size = props => {
 const fullWidth = props => (props.fullWidth ? { width: "100%" } : null);
 
 const BaseButton = ({
-  fullWidth, children, iconSide, iconName, ...props
+  _fullWidth, children, iconSide, iconName, ...props
 }) => (
   <button { ...props }>
     {(iconName && iconSide === "left")
