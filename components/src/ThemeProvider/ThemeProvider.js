@@ -1,10 +1,10 @@
-import React from 'react'
-import styled, {createGlobalStyle, ThemeProvider as StyledThemeProvider} from 'styled-components'
-import theme from '../theme.js'
+import React from "react";
+import styled, { createGlobalStyle, ThemeProvider as StyledThemeProvider } from "styled-components";
+import theme from "../theme.js";
 
 const Reset = createGlobalStyle`body {
   margin: 0;
-}`
+}`;
 
 export const GlobalStyles = styled.div`
     font-family: 'IBM Plex Sans';
@@ -18,17 +18,15 @@ export const GlobalStyles = styled.div`
     max-width: 100%;
     height: auto;
   }
-`
+`;
 
-const ThemeProvider = ({ ...props }) => {
-  return (
-    <React.Fragment>
-      <Reset />
-      <StyledThemeProvider theme={theme}>
-        <GlobalStyles {...props} />
-      </StyledThemeProvider>
-    </React.Fragment>
-  )
-}
+const ThemeProvider = ({ ...props }) => (
+  <React.Fragment>
+    <Reset />
+    <StyledThemeProvider theme={ theme }>
+      <GlobalStyles { ...props } />
+    </StyledThemeProvider>
+  </React.Fragment>
+);
 
-export default ThemeProvider
+export default ThemeProvider;

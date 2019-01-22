@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import Button from './Button'
-import theme from '../theme'
-import { darken } from 'polished'
+import styled from "styled-components";
+import { darken } from "polished";
+import Button from "./Button";
+import theme from "../theme";
 
 const DangerButton = styled(Button)`
     color: ${theme.colors.white};
@@ -9,13 +9,13 @@ const DangerButton = styled(Button)`
     background-color: ${theme.colors.red};
 
   &:hover {
-    background-color: ${props => props.disabled ? null : darken(0.1, theme.colors.red)};
-    border-color: ${props => props.disabled ? null : darken(0.1, theme.colors.red)};
+    background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};
+    border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};
   }
-`
+`;
 
 DangerButton.defaultProps = {
-  theme: theme
-}
+  theme,
+};
 
-export default DangerButton
+export default DangerButton;

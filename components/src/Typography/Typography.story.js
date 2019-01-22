@@ -1,11 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Text from '../Type/Text';
-import {Title, SectionTitle, SubsectionTitle} from '../Type/Headings';
-import theme from '../theme.js';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Text from "../Type/Text";
+import { Title, SectionTitle, SubsectionTitle } from "../Type/Headings";
+import theme from "../theme.js";
 
-storiesOf('Typography', module)
-  .add('Article', () => (
+storiesOf("Typography", module)
+  .add("Article", () => (
     <React.Fragment>
       <Title>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Title>
       <SectionTitle>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SectionTitle>
@@ -46,7 +46,7 @@ storiesOf('Typography', module)
         Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </Text>
       <SubsectionTitle>This is small text (14px) with medium(default) line height (24px).</SubsectionTitle>
-      <Text fontSize={0} lineHeight={theme.lineHeights['smallTextBase']}>
+      <Text fontSize={ 0 } lineHeight={ theme.lineHeights.smallTextBase }>
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
         pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
         consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
@@ -57,7 +57,7 @@ storiesOf('Typography', module)
         Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </Text>
       <SubsectionTitle>This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...</SubsectionTitle>
-      <Text fontSize={0} lineHeight={theme.lineHeights['smallTextCompressed']}>
+      <Text fontSize={ 0 } lineHeight={ theme.lineHeights.smallTextCompressed }>
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
         pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
         consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper
