@@ -20,7 +20,6 @@ module.exports = {
         name: "markdown-pages",
       },
     },    
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-sharp',
     {
