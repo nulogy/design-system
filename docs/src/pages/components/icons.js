@@ -39,11 +39,13 @@ export default () => (
         </DocSection>               
 
         <DocSection>
-            <SectionTitle>Content guidelines</SectionTitle>
+            <SectionTitle>Guidelines</SectionTitle>
                 <CheckList>Avoid using icons without labels unless the meaning is ubiquitous, like print</CheckList>
-                <CheckList><i>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href='https://www.nngroup.com/articles/icon-usability/'>Icon Usability.</Link></i></CheckList>
         </DocSection>
-
+        <DocSection>
+            <SectionTitle>Learn more</SectionTitle>
+            <Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href='https://www.nngroup.com/articles/icon-usability/'>Icon Usability.</Link></Text>
+        </DocSection>
         <ComponentUsage storybookLink='http://localhost:8080/?selectedKind=Icon' source='/components/src/icon/icon.js'></ComponentUsage>
     </Layout>
 )
