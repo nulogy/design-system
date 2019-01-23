@@ -1,39 +1,43 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import theme from '../theme'
 import Text from '../Type/Text'
 import Icon from '../Icon/Icon'
+import Flex from '../Flex/Flex'
+import Box from '../Box/Box'
+import icons from '../../icons/icons.json'
 
+export const iconNames = Object.keys(icons)
 
-export const InlineValidationMessage = styled.div`
-  display: flex;
-  color: ${theme.colors['red']};
-`
-
-const InlineValidationList = styled.ul`
+const List = styled.ul`
+  -webkit-font-smoothing: antialiased;
   margin: 0;
 `
 
-const InlineValidationListItem = styled.li`
-  font-size: ${theme.fontSizes['small']};
-  line-height: ${theme.lineHeights['smallTextCompressed']};
-`
-
-const Wrapper = styled.div`
-`
-
-const InlineValidation = ({message, list}) => {
+const InlineValidation = (props) => {
   return (
-    <Wrapper>
-      <InlineValidationMessage>
-        <Icon size={theme.space[4]} name='error' mr={1} />
-        <Text mb={0}>{message}</Text>
-      </InlineValidationMessage>
-      <InlineValidationList>
-        <InlineValidationListItem>{list}</InlineValidationListItem>
-      </InlineValidationList>
-    </Wrapper>
+    <Box color ={props.color}>
+      <Flex my={2}>
+        <Icon size={theme.space[4]} name={props.icon} mr={1} />
+        <Text mb={0}>{props.message}</Text>
+      </Flex>
+      <List>
+        {props.children}
+      </List>
+    </Box>
   )
 }
+
+InlineValidation.defaultProps = {
+  color: 'red',
+  icon: 'error'
+}
+
+InlineValidation.propTypes = {
+  icon: PropTypes.oneOf(iconNames).isRequired,
+  message: PropTypes.string,
+  color: PropTypes.string
+} 
 
 export default InlineValidation
