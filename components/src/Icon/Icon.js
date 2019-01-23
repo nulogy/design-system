@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { space, color } from 'styled-system'
 import icons from '../../icons/icons.json'
 
-export const names = Object.keys(icons)
+export const iconNames = Object.keys(icons)
 
 const Svg = (props) => {
   if (!icons[props.name]) return false
@@ -32,7 +32,7 @@ Icon.defaultProps = {
 }
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(names).isRequired,
+  name: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   color: PropTypes.string
@@ -67,7 +67,7 @@ export const InlineIcon = ({title,fill,color,name, ...props}) => (
 )
 
 InlineIcon.propTypes = {
-  name: PropTypes.oneOf(names).isRequired,  
+  name: PropTypes.oneOf(iconNames).isRequired,  
   title: PropTypes.string,
   fill: PropTypes.string,
   color: PropTypes.string,

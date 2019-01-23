@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Icon, { InlineIcon, names } from './Icon';
+import Icon, { InlineIcon, iconNames } from './Icon';
 import theme from '../theme.js'
 import './Icon.example.css';
 import Box from '../Box/Box.js'
@@ -14,7 +14,7 @@ const IconCode = ({ name }) => (
 storiesOf("Icon", module)
   .add("Icon", () => (
     <React.Fragment>
-      {names.map(iconName => (
+      {iconNames.map(iconName => (
         <p key={iconName}>
           <Icon mr="20px" name={iconName}/>
           <IconCode name={iconName} />
@@ -27,7 +27,7 @@ storiesOf("Icon", module)
       {[1, 2, 3, 4].map(size => (
         <p style={{ fontSize: `${size}em` }} key={size}>
           @{size}em: &nbsp;
-          {names.map(iconName => <InlineIcon name={iconName} key={iconName} />)}
+          {iconNames.map(iconName => <InlineIcon name={iconName} key={iconName} />)}
         </p>
       ))}
     </React.Fragment>
@@ -35,9 +35,9 @@ storiesOf("Icon", module)
   .add("With a color", () => (
     <React.Fragment>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
-        <Box>
-        {names.map(iconName => <Icon name={iconName} color= {color} key={iconName} />)}
-        </Box>
+        <div>
+        {iconNames.map(iconName => <Icon name={iconName} color= {color} key={iconName} />)}
+        </div>
       ))}
     </React.Fragment>
   ))
