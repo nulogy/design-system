@@ -14,8 +14,8 @@ const Text = styled.p`
   ${fontFamily}
   ${textAlign}
   -webkit-font-smoothing: antialiased;
-  display: ${props => (props.inline ? "inline-block" : "block")}
-`;
+  display: ${props => props.display}
+`
 Text.propTypes = {
   ...space.propTypes,
   ...fontSize.propTypes,
@@ -24,8 +24,8 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  inline: PropTypes.bool,
-};
+  display: PropTypes.String,
+}
 
 Text.defaultProps = {
   m: 0,
