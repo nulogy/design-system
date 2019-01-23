@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import styled from "styled-components";
 import { color, space, themeGet } from "styled-system";
@@ -58,6 +59,8 @@ const TextInput = (props) => {
 >>>>>>> adds help text and format text to label component
 
 =======
+=======
+>>>>>>> fix merge conflict
 import React from 'react';
 import PropTypes from 'prop-types';
 import theme from '../theme.js';
