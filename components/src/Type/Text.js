@@ -34,10 +34,14 @@ Text.defaultProps = {
   mb: 4,
   color: "currentColor",
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   display: "block",
 };
 >>>>>>> sets up files for Label rename to Field
+=======
+}
+>>>>>>> adds Label component and changes proptype for display on Text component
 
 export default Text;
