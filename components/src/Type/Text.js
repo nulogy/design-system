@@ -30,8 +30,15 @@ Text.propTypes = {
 Text.defaultProps = {
   m: 0,
   fontSize: 1,
+<<<<<<< HEAD
   lineHeight: theme.lineHeights.base,
   mb: 4,
 };
+=======
+  lineHeight: theme.lineHeights['base'],
+  mb: 4,
+  color: 'black'
+}
+>>>>>>> adds help text and format text to label component
 
 export default Text;
