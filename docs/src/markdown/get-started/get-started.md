@@ -4,6 +4,8 @@ title: "Get started"
 intro: "Learn how to start designing and developing using the Nulogy Design System"
 ---
 
+![Nulogy logos](logos.png)
+
 # Developers
 The Nulogy Design System is a monorepo consisting of four packages. Here you'll find instructions for downloading all the packages.
 
@@ -27,14 +29,17 @@ Congratulations, you've installed the design system! Please see the READMEs link
 <div style="margin-bottom: 64px;"></div>
 
 # Designers
-
 Nulogy uses Sketch as our primary design tool. There are a few things you can do to start working with the Nulogy Design System in Sketch.
 
-#### [Download Sketch Library](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
+### [Download Sketch UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
 The Sketch Library is a collection of colour palettes, type styles and components. Start each project with this file to ensure you’re able to use the Nulogy Design System to its fullest.
 
-#### Update Nudging Settings
+[![Download UI Kit](UI-kit.png)](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
+
+### Update Nudging Settings
 Our spacing system uses an 8px unit of measurement, so it’s helpful to have nudging settings that match. These can be found in `Preferences > Nudging Settings`
+
+![Sketch nudging settings screenshot](sketch-nudging.png)
 
 <div style="margin-bottom: 64px;"></div>
 
