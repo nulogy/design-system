@@ -29,7 +29,7 @@ const Svg = props => {
 };
 
 Svg.propTypes = {
-  name: PropTypes.oneOf(names).isRequired,
+  name: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   color: PropTypes.string.isRequired,
