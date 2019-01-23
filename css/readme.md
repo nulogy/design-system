@@ -1,10 +1,16 @@
 # @nulogy/css
-This package provides sass variables and atomic CSS classes for writing CSS using Nulogy design tokens.
+Sass variables and atomic classes for writing CSS using Nulogy design tokens. These variables can be used to create CSS versions of our React components and the atomic classes can be 
+
+## Installation 
+`npm install @nulogy/css --save`
 
 ## Usage
+1. Include the CSS 
+`<link rel="stylesheet" href="'/node_modules/@nulogy/tokens/build/nds.css' />`
 
-### Development
-`yarn start` will watch `*.scss` files, compile them to `nds-dev.css` and launch a storybook dev environment at [http://localhost:8080](http://localhost:8080) 
+2. Use the utility classes as needed in your HTML
+`<p class='text--grey'>Grey text</p>`
 
-### Production
-`yarn build` will rebuild nds.css. 
+If you'd prefer to create your own classes using Scss variables, see [@nulogy/tokens](https://www.npmjs.com/package/@nulogy/tokens). 
+
+
