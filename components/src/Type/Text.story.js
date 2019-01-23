@@ -21,7 +21,7 @@ storiesOf('Text', module)
   ))  
   .add('Set to inline', () => (
     <React.Fragment>
-      <Text inline mr={2}>Default text</Text>
-      <Text inline>Default text</Text>
+      <Text display='inline-block' mr={2}>Default text</Text>
+      <Text display='inline-block'>Default text</Text>
     </React.Fragment>
   ));
