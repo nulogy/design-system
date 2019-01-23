@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 import theme from '../theme.js';
 import InputField from './InputField.js';
 import Text from '../Type/Text';
 import Box from '../Box/Box';
-=======
-import theme from '../theme.js'
-import InputField from './InputField.js'
-import Text from '../Type/Text'
-import Box from '../Box/Box'
->>>>>>> 8dac71d64d0687e499151fe8db2ccdf824b9f0b5
 
 //TEMPORARY TextInput
 const TextInput = (props) => {
