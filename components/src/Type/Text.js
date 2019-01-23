@@ -15,7 +15,7 @@ const Text = styled.p`
   ${textAlign}
   -webkit-font-smoothing: antialiased;
   display: ${props => props.display}
-`
+`;
 Text.propTypes = {
   ...space.propTypes,
   ...fontSize.propTypes,
@@ -25,7 +25,7 @@ Text.propTypes = {
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
   display: PropTypes.String,
-}
+};
 
 Text.defaultProps = {
   m: 0,
