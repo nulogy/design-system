@@ -2,7 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Text from "../Type/Text";
 import { Title, SectionTitle, SubsectionTitle } from "../Type/Headings";
+import List from "../List/List";
 import theme from "../theme";
+import { space } from "styled-system";
 
 storiesOf("Typography", module)
   .add("Article", () => (
@@ -37,6 +39,24 @@ storiesOf("Typography", module)
           lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum
           primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
           Maecenas sit amet leo dui. Integer semper porta dignissim.
+      </Text>
+      <SubsectionTitle>Two pargraphs with List</SubsectionTitle>
+      <Text>
+        Nunc tempor eget mauris id facilisis. Morbi convallis mauris at
+        fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero
+        vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo
+        molestie dolor, vel tristique orci efficitur eu. Nullam eleifend
+        malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique,
+        lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum
+        primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
+        Maecenas sit amet leo dui. Integer semper porta dignissim.
+      </Text>
+      <List></List>
+      <Text>
+        Nam luctus blandit dignissim. Mauris eu odio tristique,
+        lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum
+        primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
+        Maecenas sit amet leo dui. Integer semper porta dignissim.
       </Text>
       <Text>
       Nunc id arcu sagittis, volutpat
