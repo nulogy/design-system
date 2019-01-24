@@ -32,7 +32,7 @@ Text.defaultProps = {
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
   mb: 4,
-  color: 'black',
+  color: "black",
 };
 
 export default Text;
