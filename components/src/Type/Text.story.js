@@ -20,12 +20,7 @@ storiesOf("Text", module)
   ))
   .add("Set to inline", () => (
     <React.Fragment>
-<<<<<<< HEAD
-      <Text display="inline-block" mr={ 2 }>Default text</Text>
-      <Text display="inline-block">Default text</Text>
-=======
       <Text display='inline-block' mr={ 2 }>Default text</Text>
       <Text display='inline-block'>Default text</Text>
->>>>>>> adds Label component and changes proptype for display on Text component
     </React.Fragment>
   ));
