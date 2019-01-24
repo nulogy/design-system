@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, color, fontSize, fontWeight, lineHeight } from "styled-system";
 import theme from "../theme";
 import Text from "../Type/Text";
 
@@ -13,12 +13,16 @@ const ListWrapper = styled.ul`
   padding-left: ${theme.space[4]};
 
   ${space}
+  ${color}
+  ${fontSize}
+  ${fontWeight}
+  ${lineHeight}
 
 `;
 
 const ListItem = styled.li`
   display: flex;
-  margin-bottom: ${theme.space[2]};
+  margin-bottom: ${props => (props.spacing === 'compact' ? '0' : props.theme.space[2] )};
   &:before{
     content: "•";
     margin-right: ${theme.space[3]};
@@ -29,20 +33,23 @@ const ListItem = styled.li`
 `
 
 const List = props => (
-    <ListWrapper>
-      <ListItem><Text mb={0}>Yo</Text></ListItem>
-      <ListItem>List item 2 that is really relly really really really relly really really really relly really really long</ListItem>
-      <ListItem>List item 3</ListItem>
-      <ListItem>List item 4</ListItem>
+    <ListWrapper { ... props }>
+      <ListItem spacing={ props.spacing }><Text mb={0}>List item 1</Text></ListItem>
+      <ListItem spacing={ props.spacing }>List item 2 that is really relly really really really relly really really really relly really really long</ListItem>
+      <ListItem spacing={ props.spacing }>List item 3</ListItem>
+      <ListItem spacing={ props.spacing }>List item 4</ListItem>
     </ListWrapper>
 );
 
 ListWrapper.propTypes = {
-  ...space.propTypes
+  ...space.propTypes,
+  ...color.propTypes,
+  spacing: PropTypes.oneOf(['compact', 'default'])
 };
 
 ListWrapper.defaultProps = {
-  mb: 4
+  mb: 4,
+  spacing: 'default'
 };
 
 export default List;
