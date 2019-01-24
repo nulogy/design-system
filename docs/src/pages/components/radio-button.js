@@ -15,7 +15,7 @@ export default () => (
             <title>Radio button</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Radio button</Title>   
+            <Title mb={0}>Radio button</Title>   
             <Intro>Radio buttons allow one selection from a group of options</Intro>
         </Box>
         <DocSection>
