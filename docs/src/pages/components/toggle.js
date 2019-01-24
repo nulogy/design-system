@@ -14,7 +14,7 @@ export default () => (
             <title>Toggle</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Toggle</Title>   
+            <Title mb={0}>Toggle</Title>   
             <Intro>For quickly switching between two possible states.</Intro>
         </Box>
         <DocSection>
