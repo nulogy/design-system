@@ -51,7 +51,11 @@ storiesOf("Typography", module)
         primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci.
         Maecenas sit amet leo dui. Integer semper porta dignissim.
       </Text>
-      <List></List>
+      <List>
+        <ListItem>List Item 1</ListItem>
+        <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
+        <ListItem>List Item 3</ListItem>
+      </List>
       <Text>
         Nam luctus blandit dignissim. Mauris eu odio tristique,
         lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum
