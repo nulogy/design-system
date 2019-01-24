@@ -1,5 +1,5 @@
-import fs from "fs";
-import SVG from "svgi";
+const fs = require("fs");
+const SVG = require("svgi");
 
 const jsonPath = "icons/icons.json";
 const svgPath = "icons";
