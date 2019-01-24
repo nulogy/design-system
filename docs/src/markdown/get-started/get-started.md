@@ -4,7 +4,7 @@ title: "Get started"
 intro: "Learn how to start designing and developing using the Nulogy Design System"
 ---
 
-s](logos.png)
+![Nulogy logos](logos.png)
 
 # Developers
 The Nulogy Design System is a monorepo consisting of four packages. Here you'll find instructions for downloading all the packages.
