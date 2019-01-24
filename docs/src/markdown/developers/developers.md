@@ -1,12 +1,9 @@
 ---
-path: "/guides/get-started"
-title: "Get started"
-intro: "Learn how to start designing and developing using the Nulogy Design System"
+path: "/guides/developers"
+title: "Developers"
+intro: "Learn how to get started using the Nulogy Design System"
 ---
 
-![Nulogy logos](logos.png)
-
-# Developers
 The Nulogy Design System is a monorepo consisting of four packages. Here you'll find instructions for downloading all the packages.
 
 ### Getting Started
@@ -25,26 +22,3 @@ Congratulations, you've installed the design system! Please see the READMEs link
 | **[@nulogy/css](https://github.com/nulogy/design-system/tree/master/docs)** | The css package provides sass variables and css classes to apply our visual style to legacy applications that can't import React components. 
  |
 | **[@nulogy/docs](https://github.com/nulogy/design-system/tree/master/components)**  | This documentation site, built with Gatsby  |
-
-<div style="margin-bottom: 64px;"></div>
-
-# Designers
-Nulogy uses Sketch as our primary design tool. There are a few things you can do to start working with the Nulogy Design System in Sketch.
-
-### [Download Sketch UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
-The Sketch Library is a collection of colour palettes, type styles and components. Start each project with this file to ensure you’re able to use the Nulogy Design System to its fullest.
-
-[![Download UI Kit](UI-kit.png)](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
-
-### Update Nudging Settings
-Our spacing system uses an 8px unit of measurement, so it’s helpful to have nudging settings that match. These can be found in `Preferences > Nudging Settings`
-
-![Sketch nudging settings screenshot](sketch-nudging.png)
-
-<div style="margin-bottom: 64px;"></div>
-
-# Contributing
-There’s no official process for contributing to the design system yet. If you notice something is missing, please post in the [#design-system](slack://channel?id=CBAFQ4X7X/) slack channel and we’ll add it to the roadmap.
-
-
-
