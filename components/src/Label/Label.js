@@ -26,7 +26,7 @@ const Label = props => (
 );
 
 Label.propTypes = {
-  requirementText: PropTypes.oneOf(["(Optional)", "(Required)"]),
+  requirementText: PropTypes.string,
   helpText: PropTypes.string,
   formatText: PropTypes.string,
 };
