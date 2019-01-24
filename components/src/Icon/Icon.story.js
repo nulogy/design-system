@@ -86,7 +86,7 @@ This has a title attribute so it will be read by assistive devices.
       <p>
         <Icon name="user" />
         {" "}
-This doesn't have a title attribute, so it has aria-hidden set true instead.
+This doesn&apos;t have a title attribute, so it has aria-hidden set true instead.
       </p>
     </React.Fragment>
   ));
