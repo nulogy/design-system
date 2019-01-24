@@ -9,7 +9,7 @@ storiesOf("List", module)
     <React.Fragment>
       <List>
         <ListItem>List Item 1</ListItem>
-        <ListItem>List Item 2</ListItem>
+        <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
         <ListItem>List Item 3</ListItem>
       </List>
     </React.Fragment>
@@ -18,7 +18,7 @@ storiesOf("List", module)
     <React.Fragment>
       <List color='red'>
         <ListItem>List Item 1</ListItem>
-        <ListItem>List Item 2</ListItem>
+        <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
         <ListItem>List Item 3</ListItem>
       </List>
     </React.Fragment>
@@ -27,7 +27,7 @@ storiesOf("List", module)
     <React.Fragment>
       <List fontSize={ 0 } lineHeight='smallTextBase'>
         <ListItem>List Item 1</ListItem>
-        <ListItem>List Item 2</ListItem>
+        <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
         <ListItem>List Item 3</ListItem>
       </List>
     </React.Fragment>
@@ -36,7 +36,7 @@ storiesOf("List", module)
     <React.Fragment>
       <List compact>
         <ListItem>List Item 1</ListItem>
-        <ListItem>List Item 2</ListItem>
+        <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
         <ListItem>List Item 3</ListItem>
       </List>
     </React.Fragment>
