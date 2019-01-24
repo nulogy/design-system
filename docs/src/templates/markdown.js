@@ -27,7 +27,7 @@ export default function Template({
               <Title mb={0}>{frontmatter.title}</Title>
               <Intro>{frontmatter.intro} test</Intro>
           </DocSection>
-          <Box maxWidth={800}>
+          <Box maxWidth={800} mb={5}>
           <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
