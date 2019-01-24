@@ -34,7 +34,7 @@ const ListItem = styled.li`
 
 const List = props => (
     <ListWrapper { ... props }>
-      <ListItem spacing={ props.spacing }><Text mb={0}>List item 1</Text></ListItem>
+      <ListItem spacing={ props.spacing }><Text fontSize={ props.fontSize } lineHeight={ props.lineHeight } mb={0}>List item 1</Text></ListItem>
       <ListItem spacing={ props.spacing }>List item 2 that is really relly really really really relly really really really relly really really long</ListItem>
       <ListItem spacing={ props.spacing }>List item 3</ListItem>
       <ListItem spacing={ props.spacing }>List item 4</ListItem>
@@ -44,12 +44,11 @@ const List = props => (
 ListWrapper.propTypes = {
   ...space.propTypes,
   ...color.propTypes,
-  spacing: PropTypes.oneOf(['compact', 'default'])
+  spacing: PropTypes.oneOf(['compact'])
 };
 
 ListWrapper.defaultProps = {
-  mb: 4,
-  spacing: 'default'
+  mb: 4
 };
 
 export default List;
