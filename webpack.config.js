@@ -1,6 +1,7 @@
 module.exports = {
   output: {
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    globalObject: `(typeof self !== 'undefined' ? self : this)`    
   },
   externals: [
     "react",
