@@ -24,7 +24,7 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  display: PropTypes.String,
+  display: PropTypes.string,
 };
 
 Text.defaultProps = {
