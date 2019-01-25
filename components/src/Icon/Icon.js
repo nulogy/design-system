@@ -36,6 +36,7 @@ Svg.propTypes = {
 };
 
 Svg.defaultProps = {
+  color: "currentColor",
   title: null,
   size: 24,
 };

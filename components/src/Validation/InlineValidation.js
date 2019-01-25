@@ -13,7 +13,7 @@ export const iconNames = Object.keys(icons);
 const InlineValidation = props => (
   <Box color={ props.color }>
     <Flex my={ 2 }>
-      <Icon size={ theme.space[4] } name={ props.icon } mr={ 1 } />
+      <Icon {...props.icon} size={ theme.space[4] } mr={ 1 } />
       <Text mb={ 0 }>{props.message}</Text>
     </Flex>
     {props.children}
@@ -22,11 +22,11 @@ const InlineValidation = props => (
 
 InlineValidation.defaultProps = {
   color: "red",
-  icon: "error",
+  icon: { name: "error" },
 };
 
 InlineValidation.propTypes = {
-  icon: PropTypes.oneOf(iconNames).isRequired,
+  icon: PropTypes.shape({}).isRequired,
   message: PropTypes.string.isRequired,
   color: PropTypes.string,
 };
