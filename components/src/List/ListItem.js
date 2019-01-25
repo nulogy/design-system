@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space, color } from "styled-system";
 import theme from "../theme";
@@ -22,7 +21,7 @@ ListItem.propTypes = {
 };
   
 ListItem.defaultProps = {
-  color: 'black',
+  color: 'currentColor',
   mb: 2,
 };
   

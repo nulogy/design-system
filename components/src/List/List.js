@@ -28,7 +28,7 @@ List.propTypes = {
 
 List.defaultProps = {
   mb: 4,
-  color: 'black',
+  color: 'inheretColor',
 };
 
 export default List;
