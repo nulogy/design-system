@@ -8,27 +8,69 @@ import theme from "../theme.js";
 import Text from "../Type/Text.js";
 import Box from "../Box/Box.js";
 
+const LabelText = props => (
+  <Text 
+    display="inline" 
+    mb={ 0 } 
+    fontSize={ theme.fontSizes[1] }
+  >
+    {props.children}
+  </Text>
+)
+
+const RequirementText = props => (
+  <Text 
+    display="inline" 
+    mb={ 0 } 
+    ml={ 2 }
+    fontSize="12px"
+    color="darkGrey"
+  >
+    {props.children}
+  </Text>
+)
+
+const HelpText = props => (
+  <Text 
+    mb={ 0 } 
+    fontSize={ theme.fontSizes[0] }
+    lineHeight={ theme.lineHeights.smallTextBase }
+  >
+  {props.children}
+  </Text>
+)
+
+const FormatText = props => (
+  <Text 
+    mb={ 0 } 
+    fontSize="12px"
+    lineHeight="16px"
+    color="darkGrey"
+  >
+  {props.children}
+  </Text>
+)
+
 const Label = props => (
   <Box { ...props }>
-    <Text display="inline" mb={ 0 } fontSize={ theme.fontSizes[1] }>{props.children}</Text>
-    <Text
-      display="inline" mb={ 0 } ml={ 2 }
-      fontSize="12px" color="darkGrey"
-    >{props.requirementText}
-    </Text>
-    <Text mb={ 0 } fontSize={ theme.fontSizes[0] } lineHeight={ theme.lineHeights.smallTextBase }>{props.helpText}</Text>
-    <Text
-      mb={ 0 } fontSize="12px" lineHeight="16px"
-      color="darkGrey"
-    >{props.formatText}
-    </Text>
+    <LabelText { ...props.labelText }/>
+    <RequirementText { ...props.requirementText }/>
+    <HelpText { ...props.helpText }/>
+    <FormatText { ...props.formatText }/>
   </Box>
 );
 
 Label.propTypes = {
-  requirementText: PropTypes.string,
-  helpText: PropTypes.string,
-  formatText: PropTypes.string,
+  labelText: PropTypes.shape({}).isRequired,
+  requirementText: PropTypes.shape({}),
+  helpText: PropTypes.shape({}),
+  formatText: PropTypes.shape({}),
+};
+
+Label.defaultProps = {
+  requirementText: {message: null},
+  helpText: {message: null},
+  formatText: {message: null},
 };
 
 export default Label;
