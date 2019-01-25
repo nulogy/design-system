@@ -24,7 +24,7 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  display: PropTypes.String,
+  display: PropTypes.string,
 };
 
 Text.defaultProps = {
@@ -33,6 +33,7 @@ Text.defaultProps = {
   lineHeight: theme.lineHeights.base,
   mb: 4,
   color: "black",
+  display: "block",
 };
 
 export default Text;

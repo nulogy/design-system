@@ -5,18 +5,13 @@ import Text from "../Type/Text";
 import Box from "../Box/Box";
 
 export const LabelText = props => {
-  const {
-    children,
-  } = props;
   return (
     <Text
       display="inline"
       mb={ 0 }
       fontSize={ theme.fontSizes[1] }
       { ...props }
-    >
-      {children}
-    </Text>
+    />
   );
 };
 
@@ -32,9 +27,6 @@ LabelText.defaultProps = {
 };
 
 export const RequirementText = props => {
-  const {
-    children,
-  } = props;
   return (
     <Text
       display="inline"
@@ -43,9 +35,7 @@ export const RequirementText = props => {
       fontSize="12px"
       color="darkGrey"
       { ...props }
-    >
-      {children}
-    </Text>
+    />
   );
 };
 
@@ -61,18 +51,13 @@ RequirementText.defaultProps = {
 };
 
 export const HelpText = props => {
-  const {
-    children,
-  } = props;
   return (
     <Text
       mb={ 0 }
       fontSize={ theme.fontSizes[0] }
       lineHeight={ theme.lineHeights.smallTextBase }
       { ...props }
-    >
-      {children}
-    </Text>
+    />
   );
 };
 
@@ -88,9 +73,6 @@ HelpText.defaultProps = {
 };
 
 export const FormatText = props => {
-  const {
-    children,
-  } = props;
   return (
     <Text
       mb={ 0 }
@@ -98,9 +80,7 @@ export const FormatText = props => {
       lineHeight="16px"
       color="darkGrey"
       { ...props }
-    >
-      {children}
-    </Text>
+    />
   );
 };
 
