@@ -33,10 +33,11 @@ Svg.propTypes = {
   name: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 Svg.defaultProps = {
+  color: "currentColor",
   title: null,
   size: 24,
 };
@@ -71,14 +72,5 @@ export const InlineIcon = (props => (
     />
   </IconContainer>
 ));
-
-InlineIcon.propTypes = {
-  color: PropTypes.string,
-  ...space.propTypes,
-};
-
-InlineIcon.defaultProps = {
-  color: "currentColor",
-};
 
 export default Icon;
