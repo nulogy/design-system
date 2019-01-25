@@ -11,7 +11,7 @@ export default () => (
             <title>Spacing</title>
         </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
-            <Title m={0}>Spacing</Title>   
+            <Title mb={0}>Spacing</Title>   
             <Intro>A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.</Intro>
         </DocSection>
 

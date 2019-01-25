@@ -80,13 +80,11 @@ storiesOf("Icon", module)
     <React.Fragment>
       <p>
         <Icon name="user" title="User account" />
-        {" "}
-This has a title attribute so it will be read by assistive devices.
+        {" This has a title attribute so it will be read by assistive devices."}
       </p>
       <p>
         <Icon name="user" />
-        {" "}
-This doesn't have a title attribute, so it has aria-hidden set true instead.
+        {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
       </p>
     </React.Fragment>
   ));

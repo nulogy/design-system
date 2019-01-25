@@ -34,10 +34,9 @@ const size = props => {
   }
 };
 
-const fullWidth = props => (props.fullWidth ? { width: "100%" } : null);
 
 const BaseButton = ({
-  fullWidth, children, iconSide, iconName, ...props
+  children, iconSide, iconName, ...props
 }) => {
   const { theme: { lineHeights: { smallTextCompressed } } } = props;
 
@@ -83,12 +82,14 @@ const Button = styled(BaseButton)`
     vertical-align: middle;
     line-height: ${props => props.theme.lineHeights.base};
     transition: .2s;
-    cursor: ${props => (props.disabled ? "arrow" : "pointer")}};
+    cursor: ${props => (props.disabled ? "arrow" : "pointer")};
     color: ${props => props.theme.colors.blue};
     border: 1px solid ${props => props.theme.colors.darkBlue};
     border-radius: ${props => props.theme.radii[1]};
 
-    ${fullWidth} ${size} ${space};
+    ${props => (props.fullWidth ? { width: "100%;" } : null)}
+    ${size}
+    ${space}
 
     &:hover {
       background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};

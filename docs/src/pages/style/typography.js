@@ -9,9 +9,9 @@ export default () => (
             <title>Typography</title>
         </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
-            <Title m={0}>Typography</Title>   
+            <Title mb={0}>Typography</Title>   
             <Intro>Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.</Intro>
-            <SectionTitle>Typeface</SectionTitle>
+            <SectionTitle mt={5}>Typeface</SectionTitle>
             <Flex>
                 <Box pr={3}>
                     <SubsectionTitle>IBM Plex Sans</SubsectionTitle>
