@@ -9,24 +9,37 @@ import icons from "../../icons/icons.json";
 
 export const iconNames = Object.keys(icons);
 
-const InlineValidation = props => (
-  <Box color={ props.color }>
-    <Flex my={ 2 }>
-      <Icon { ...props.icon } size={ theme.space[4] } mr={ 1 } />
-      <Text mb={ 0 }>{props.message}</Text>
-    </Flex>
-    {props.children}
-  </Box>
-);
+const InlineValidation = props => {
+  const {
+    color,
+    icon,
+    message,
+    children,
+  } = props;
+  return (
+    <Box color={ color }>
+      <Flex my={ 2 }>
+        <Icon { ...icon } />
+        <Text mb={ 0 }>{message}</Text>
+      </Flex>
+      {children}
+    </Box>
+  );
+};
 
 InlineValidation.defaultProps = {
   color: "red",
-  icon: { name: "error" },
+  icon: { 
+    name: "error",
+    size: theme.space[4],
+    mr: 1, 
+  },
+  children: {},
 };
 
 InlineValidation.propTypes = {
-  icon: PropTypes.shape({}).isRequired,
   message: PropTypes.string.isRequired,
+  icon: PropTypes.shape({}),
   color: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
