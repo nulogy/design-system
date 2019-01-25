@@ -13,6 +13,7 @@ export const LabelText = props => {
       display="inline"
       mb={ 0 }
       fontSize={ theme.fontSizes[1] }
+      { ...props }
     >
       {children}
     </Text>
@@ -41,6 +42,7 @@ export const RequirementText = props => {
       ml={ 2 }
       fontSize="12px"
       color="darkGrey"
+      { ...props }
     >
       {children}
     </Text>
@@ -67,6 +69,7 @@ export const HelpText = props => {
       mb={ 0 }
       fontSize={ theme.fontSizes[0] }
       lineHeight={ theme.lineHeights.smallTextBase }
+      { ...props }
     >
       {children}
     </Text>
@@ -94,6 +97,7 @@ export const FormatText = props => {
       fontSize="12px"
       lineHeight="16px"
       color="darkGrey"
+      { ...props }
     >
       {children}
     </Text>
