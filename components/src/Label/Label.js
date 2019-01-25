@@ -1,9 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import {
-  color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily,
-} from "styled-system";
 import theme from "../theme.js";
 import Text from "../Type/Text.js";
 import Box from "../Box/Box.js";
@@ -51,26 +47,34 @@ const FormatText = props => (
   </Text>
 )
 
-const Label = props => (
-  <Box { ...props }>
-    <LabelText { ...props.labelText }/>
-    <RequirementText { ...props.requirementText }/>
-    <HelpText { ...props.helpText }/>
-    <FormatText { ...props.formatText }/>
-  </Box>
-);
+const Label = props => {
+  const {
+    labelText,
+    requirementText,
+    helpText,
+    formatText,
+  } = props;
+  return(
+    <Box { ...props }>
+      <LabelText>{labelText}</LabelText>
+      <RequirementText>{requirementText}</RequirementText>
+      <HelpText>{helpText}</HelpText>
+      <FormatText>{formatText}</FormatText>
+    </Box>
+  )
+};
 
 Label.propTypes = {
-  labelText: PropTypes.shape({}).isRequired,
-  requirementText: PropTypes.shape({}),
-  helpText: PropTypes.shape({}),
-  formatText: PropTypes.shape({}),
+  labelText: PropTypes.string.isRequired,
+  requirementText: PropTypes.string,
+  helpText: PropTypes.string,
+  formatText: PropTypes.string,
 };
 
 Label.defaultProps = {
-  requirementText: {message: null},
-  helpText: {message: null},
-  formatText: {message: null},
+  requirementText: null,
+  helpText: null,
+  formatText: null,
 };
 
 export default Label;
