@@ -1,51 +1,115 @@
 import React from "react";
 import PropTypes from "prop-types";
-import theme from "../theme.js";
-import Text from "../Type/Text.js";
-import Box from "../Box/Box.js";
+import theme from "../theme";
+import Text from "../Type/Text";
+import Box from "../Box/Box";
 
-const LabelText = props => (
-  <Text 
-    display="inline" 
-    mb={ 0 } 
-    fontSize={ theme.fontSizes[1] }
-  >
-    {props.children}
-  </Text>
-)
+export const LabelText = props => {
+  const {
+    children,
+  } = props;
+  return (
+    <Text
+      display="inline"
+      mb={ 0 }
+      fontSize={ theme.fontSizes[1] }
+    >
+      {children}
+    </Text>
+  );
+};
 
-const RequirementText = props => (
-  <Text 
-    display="inline" 
-    mb={ 0 } 
-    ml={ 2 }
-    fontSize="12px"
-    color="darkGrey"
-  >
-    {props.children}
-  </Text>
-)
+LabelText.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
 
-const HelpText = props => (
-  <Text 
-    mb={ 0 } 
-    fontSize={ theme.fontSizes[0] }
-    lineHeight={ theme.lineHeights.smallTextBase }
-  >
-  {props.children}
-  </Text>
-)
+LabelText.defaultProps = {
+  children: null,
+};
 
-const FormatText = props => (
-  <Text 
-    mb={ 0 } 
-    fontSize="12px"
-    lineHeight="16px"
-    color="darkGrey"
-  >
-  {props.children}
-  </Text>
-)
+export const RequirementText = props => {
+  const {
+    children,
+  } = props;
+  return (
+    <Text
+      display="inline"
+      mb={ 0 }
+      ml={ 2 }
+      fontSize="12px"
+      color="darkGrey"
+    >
+      {children}
+    </Text>
+  );
+};
+
+RequirementText.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+RequirementText.defaultProps = {
+  children: null,
+};
+
+export const HelpText = props => {
+  const {
+    children,
+  } = props;
+  return (
+    <Text
+      mb={ 0 }
+      fontSize={ theme.fontSizes[0] }
+      lineHeight={ theme.lineHeights.smallTextBase }
+    >
+      {children}
+    </Text>
+  );
+};
+
+HelpText.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+HelpText.defaultProps = {
+  children: null,
+};
+
+export const FormatText = props => {
+  const {
+    children,
+  } = props;
+  return (
+    <Text
+      mb={ 0 }
+      fontSize="12px"
+      lineHeight="16px"
+      color="darkGrey"
+    >
+      {children}
+    </Text>
+  );
+};
+
+FormatText.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+
+FormatText.defaultProps = {
+  children: null,
+};
 
 const Label = props => {
   const {
@@ -54,14 +118,14 @@ const Label = props => {
     helpText,
     formatText,
   } = props;
-  return(
+  return (
     <Box { ...props }>
       <LabelText>{labelText}</LabelText>
       <RequirementText>{requirementText}</RequirementText>
       <HelpText>{helpText}</HelpText>
       <FormatText>{formatText}</FormatText>
     </Box>
-  )
+  );
 };
 
 Label.propTypes = {

@@ -5,9 +5,6 @@ import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
 import Box from "../Box/Box";
-import icons from "../../icons/icons.json";
-
-export const iconNames = Object.keys(icons);
 
 const InlineValidation = props => {
   const {
@@ -29,10 +26,10 @@ const InlineValidation = props => {
 
 InlineValidation.defaultProps = {
   color: "red",
-  icon: { 
+  icon: {
     name: "error",
     size: theme.space[4],
-    mr: 1, 
+    mr: 1,
   },
   children: [],
 };
