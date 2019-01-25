@@ -24,7 +24,7 @@ storiesOf("Box", module)
   .add("With a set width", () => (
     <Box
       p={ 4 }
-      width={ 1 / 2  }
+      width={ 1 / 2 }
       bg="whiteGrey"
     >
       Half Width
