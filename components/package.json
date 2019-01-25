@@ -43,7 +43,9 @@
   },
   "devDependencies": {
     "@nulogy/tokens": "file:../tokens",
-    "eslint-config-airbnb": "17.1.0"
+    "@storybook/addon-storyshots": "4.1.11",
+    "eslint-config-airbnb": "17.1.0",
+    "jest": "24.0.0"
   },
   "dependencies": {
     "@sambego/storybook-styles": "^1.0.0",
