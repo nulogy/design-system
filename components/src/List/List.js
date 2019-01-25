@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, color, fontSize, fontWeight, lineHeight } from "styled-system";
+import {
+  space, color, fontSize, fontWeight, lineHeight,
+} from "styled-system";
 import theme from "../theme";
 import ListItem from "./ListItem";
 
@@ -16,7 +18,7 @@ const List = styled.ul`
   ${lineHeight}
 
   ${ListItem} {
-    margin-bottom: ${props => (props.compact ? "0" : props.theme.space[2] )};
+    margin-bottom: ${props => (props.compact ? "0" : props.theme.space[2])};
   }
 `;
 
@@ -28,7 +30,7 @@ List.propTypes = {
 
 List.defaultProps = {
   mb: 4,
-  color: 'inheretColor',
+  color: "inheretColor",
 };
 
 export default List;

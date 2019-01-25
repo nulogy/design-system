@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import Text from "../Type/Text";
 import { Title, SectionTitle, SubsectionTitle } from "../Type/Headings";
 import List from "../List/List";
+import ListItem from "../List/ListItem";
 import theme from "../theme";
-import { space } from "styled-system";
 
 storiesOf("Typography", module)
   .add("Article", () => (

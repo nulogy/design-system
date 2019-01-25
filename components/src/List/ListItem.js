@@ -19,10 +19,10 @@ ListItem.propTypes = {
   ...space.propTypes,
   ...color.propTypes,
 };
-  
+
 ListItem.defaultProps = {
-  color: 'currentColor',
+  color: "currentColor",
   mb: 2,
 };
-  
-  export default ListItem;
+
+export default ListItem;
