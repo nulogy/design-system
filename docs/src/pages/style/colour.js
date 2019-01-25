@@ -18,7 +18,7 @@ export default () => (
             <title>Colour</title>
         </Helmet>
         <DocSection bg='whiteGrey' p={5} borderRadius={1}>
-            <Title m={0}>Colour</Title>   
+            <Title mb={0}>Colour</Title>   
             <Intro>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</Intro>
         </DocSection>
         

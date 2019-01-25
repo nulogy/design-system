@@ -1,28 +1,25 @@
 const fs = require("fs");
-const svgi = require("SVGI");
+const SVG = require("svgi");
 
 const jsonPath = "icons/icons.json";
 const svgPath = "icons";
 
 const parseSvg = svg => {
-  const { nodes } = new svgi(svg).report();
+  const { nodes } = new SVG(svg).report();
   const path = getPath(nodes);
-  const viewBox = getViewBox(nodes);
+  const { properties: { viewBox } } = nodes;
+
   return {
     viewBox,
     path,
   };
+
+  function getPath({ children }) {
+    return children
+      .filter(child => (child.type === "path" && child.properties.fill !== "none"))
+      .map(child => child.properties.d);
+  }
 };
-
-const getPath = nodes => (
-  nodes.children
-    .filter(child => (child.type === "path" && child.properties.fill != "none"))
-    .map(child => child.properties.d)
-);
-
-const getViewBox = nodes => (
-  nodes.properties.viewBox
-);
 
 const icons = fs
   .readdirSync(svgPath)
@@ -38,11 +35,9 @@ const icons = fs
 
 const iconData = {};
 
-icons.forEach(icon => {
-  path = parseSvg(icon.svg).path;
-  viewBox = parseSvg(icon.svg).viewBox;
-  name = icon.name;
-  iconData[name] = { "path": path, "viewBox": viewBox };
+icons.forEach(({ svg, name }) => {
+  const { path, viewBox } = parseSvg(svg);
+  iconData[name] = { path, viewBox };
 });
 
 const json = JSON.stringify(iconData, null, "  ");
