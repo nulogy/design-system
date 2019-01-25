@@ -32,7 +32,7 @@ Svg.propTypes = {
   name: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 Svg.defaultProps = {

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import theme from "../theme";
 import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
@@ -13,7 +12,7 @@ export const iconNames = Object.keys(icons);
 const InlineValidation = props => (
   <Box color={ props.color }>
     <Flex my={ 2 }>
-      <Icon {...props.icon} size={ theme.space[4] } mr={ 1 } />
+      <Icon { ...props.icon } size={ theme.space[4] } mr={ 1 } />
       <Text mb={ 0 }>{props.message}</Text>
     </Flex>
     {props.children}
@@ -29,6 +28,10 @@ InlineValidation.propTypes = {
   icon: PropTypes.shape({}).isRequired,
   message: PropTypes.string.isRequired,
   color: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default InlineValidation;

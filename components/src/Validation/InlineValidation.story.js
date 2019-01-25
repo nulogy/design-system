@@ -13,7 +13,7 @@ storiesOf("Inline Validation", module)
     </InlineValidation>
   ))
   .add("With custom style", () => (
-    <InlineValidation color="green" icon={{name: "check", color: "yellow"}} message="Good job.">
+    <InlineValidation color="green" icon={ { name: "check", color: "yellow" } } message="Good job.">
       <ul style={ { margin: 0, WebkitFontSmoothing: "antialiased" } }>
         <li>Everything is as expected</li>
         <li><a href="#">Learn more</a></li>
