@@ -4,7 +4,7 @@ title: "Get started"
 intro: "Learn how to start designing and developing using the Nulogy Design System"
 ---
 
-s](logos.png)
+![Nulogy logos](logos.png)
 
 # Developers
 The Nulogy Design System is a monorepo consisting of four packages. Here you'll find instructions for downloading all the packages.
@@ -29,7 +29,6 @@ Congratulations, you've installed the design system! Please see the READMEs link
 <div style="margin-bottom: 64px;"></div>
 
 # Designers
-
 Nulogy uses Sketch as our primary design tool. There are a few things you can do to start working with the Nulogy Design System in Sketch.
 
 ### [Download Sketch UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
