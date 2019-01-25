@@ -5,9 +5,6 @@ import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
 import Box from "../Box/Box";
-import icons from "../../icons/icons.json";
-
-export const iconNames = Object.keys(icons);
 
 const InlineValidation = props => {
   const {
