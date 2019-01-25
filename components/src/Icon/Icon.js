@@ -11,6 +11,7 @@ const Svg = props => {
     name,
     title,
     size,
+    color: fillColor,
   } = props;
 
   if (!icons[name]) return false;
@@ -19,7 +20,7 @@ const Svg = props => {
       aria-hidden={ title == null }
       width={ size }
       height={ size }
-      fill="currentcolor"
+      fill={ fillColor }
       viewBox={ icons[name].viewBox }
       { ...props }
     >
@@ -32,10 +33,11 @@ Svg.propTypes = {
   name: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 Svg.defaultProps = {
+  color: "currentColor",
   title: null,
   size: 24,
 };
@@ -62,27 +64,13 @@ const IconContainer = styled.span`
   ${space}
 `;
 
-export const InlineIcon = ({
-  fill, color, ...props
-}) => (
+export const InlineIcon = (props => (
   <IconContainer { ...props }>
     <CenteredIcon
-      fill={ fill || color }
       size={ `${iconSizeRatio}em` }
       { ...props }
     />
   </IconContainer>
-);
-
-InlineIcon.propTypes = {
-  fill: PropTypes.string,
-  color: PropTypes.string,
-  ...space.propTypes,
-};
-
-InlineIcon.defaultProps = {
-  fill: "",
-  color: "currentColor",
-};
+));
 
 export default Icon;

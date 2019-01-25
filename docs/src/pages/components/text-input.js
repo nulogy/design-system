@@ -17,7 +17,7 @@ export default () => (
             <title>Text input</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Text input</Title>   
+            <Title mb={0}>Text input</Title>   
             <Intro>An input field that users can type into.</Intro>
         </Box>
         <DocSection>

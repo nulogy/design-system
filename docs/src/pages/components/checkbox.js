@@ -8,14 +8,13 @@ import default_state from '../../images/checkbox/checkbox-default.png'
 import checked from '../../images/checkbox/checkbox-checked.png'
 import disabled from '../../images/checkbox/checkbox-disabled.png'
 
-
 export default () => (
     <Layout>
         <Helmet>
             <title>Checkbox</title>
         </Helmet>
         <Box bg='whiteGrey' p={5} borderRadius={1} mb={6}>
-            <Title m={0}>Checkbox</Title>   
+            <Title mb={0}>Checkbox</Title>   
             <Intro>Checkboxes allow users to select any number of options from a list.</Intro>
         </Box>
         <DocSection>

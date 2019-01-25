@@ -9,5 +9,6 @@ export { default as Text } from "./Type/Text";
 export { default as Link } from "./Link/Link";
 export { default as Icon } from "./Icon/Icon";
 export { default as TextInput } from "./TextInput/TextInput";
+export { default as InlineValidation } from "./InlineValidation/InlineValidation";
 export * from "./Type/Headings";
 export { default as ThemeProvider } from "./ThemeProvider/ThemeProvider";
