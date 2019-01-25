@@ -34,7 +34,7 @@ InlineValidation.defaultProps = {
     size: theme.space[4],
     mr: 1, 
   },
-  children: {},
+  children: [],
 };
 
 InlineValidation.propTypes = {
