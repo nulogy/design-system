@@ -73,13 +73,4 @@ export const InlineIcon = (props => (
   </IconContainer>
 ));
 
-InlineIcon.propTypes = {
-  color: PropTypes.string,
-  ...space.propTypes,
-};
-
-InlineIcon.defaultProps = {
-  color: "currentColor",
-};
-
 export default Icon;
