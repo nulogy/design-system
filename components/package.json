@@ -45,11 +45,19 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
     "@nulogy/tokens": "file:../tokens",
     "@storybook/addon-storyshots": "4.1.11",
-    "jest": "24.0.0"
+    "babel-jest": "24.0.0",
+    "babel-plugin-require-context-hook": "1.0.0",
+    "babel-preset-react": "6.24.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "24.0.0",
+    "react-test-renderer": "16.7.0"
   },
   "dependencies": {
+    "@nulogy/tokens": "0.2.1",
     "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-info": "^4.1.4",
     "@storybook/addon-storysource": "^4.0.12",
@@ -66,6 +74,21 @@
     "webpack-cli": "^3.1.0"
   },
   "jest": {
-    "testRegex": "(/spec/.*|(\\.|/)-spec)\\.js$"
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|sass)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@nulogy)"
+    ],
+    "testRegex": ".*spec\\.js$",
+    "setupFiles": [
+      "<rootDir>/spec/support/registerContext.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/spec/support/specHelper.js"
+    ]
   }
 }
