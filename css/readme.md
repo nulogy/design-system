@@ -6,7 +6,7 @@ Sass variables and atomic classes for writing CSS using Nulogy design tokens. Th
 
 ## Usage
 1. Include the CSS 
-`<link rel="stylesheet" href="'/node_modules/@nulogy/tokens/build/nds.css' />`
+`<link rel="stylesheet" href="/node_modules/@nulogy/tokens/build/nds.css" />`
 
 2. Use the utility classes as needed in your HTML
 `<p class='text--grey'>Grey text</p>`
