@@ -1,7 +1,7 @@
 module.exports = {
   output: {
     libraryTarget: "umd",
-    globalObject: `(typeof self !== 'undefined' ? self : this)`    
+    globalObject: `(typeof self !== 'undefined' ? self : this)` // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
   },
   externals: [
     "react",
