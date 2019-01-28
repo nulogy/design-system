@@ -23,11 +23,11 @@ export default function Template({
           <Helmet>
               <title>{frontmatter.title} Nulogy Design System </title>
           </Helmet>
-          <DocSection bg='whiteGrey' p={5} borderRadius={1}>
+          <DocSection bg='whiteGrey' mb={5} p={5} borderRadius={1}>
               <Title mb={0}>{frontmatter.title}</Title>
               <Intro>{frontmatter.intro} test</Intro>
           </DocSection>
-          <Box maxWidth={800}>
+          <Box maxWidth={800} mb={5}>
           <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
