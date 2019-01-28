@@ -29,10 +29,10 @@ const InlineValidation = props => {
 
 InlineValidation.defaultProps = {
   color: "red",
-  icon: { 
+  icon: {
     name: "error",
     size: theme.space[4],
-    mr: 1, 
+    mr: 1,
   },
   children: [],
 };
