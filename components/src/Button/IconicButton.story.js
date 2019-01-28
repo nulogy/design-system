@@ -4,14 +4,8 @@ import IconicButton from "./IconicButton";
 
 storiesOf("IconicButton", module)
   .add("With label", () => (
-    <IconicButton icon="delete" >Delete</IconicButton>
+    <IconicButton icon="delete">Delete</IconicButton>
   ))
-  // .add("With hidden label", () => (
-  //   <React.Fragment>
-  //     <IconicButton icon="edit">Edit</IconicButton>
-  //     <IconicButton icon="delete" >Delete</IconicButton>
-  //   </React.Fragment>
-  // ))
   .add("With a long label", () => (
     <React.Fragment>
       <IconicButton icon="user">
