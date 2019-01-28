@@ -8,7 +8,6 @@ import ListItem from "./ListItem";
 
 const List = styled.ul`
   list-style: none;
-  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding-left: ${theme.space[4]};
   ${space}
@@ -18,7 +17,7 @@ const List = styled.ul`
   ${lineHeight}
 
   ${ListItem} {
-    margin-bottom: ${props => (props.compact ? "0" : props.theme.space[2])};
+    margin-bottom: ${({compact, theme}) => compact ? "0" : theme.space[2]};
   }
 `;
 
@@ -30,7 +29,7 @@ List.propTypes = {
 
 List.defaultProps = {
   mb: 4,
-  color: "inheretColor",
+  color: "currentColor",
 };
 
 export default List;
