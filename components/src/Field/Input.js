@@ -3,7 +3,7 @@ import { color, space, themeGet } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const InputField = styled.input`
+const Input = styled.input`
     width: 100%
     border: 1px solid;
     border-color: ${props => (
@@ -25,8 +25,8 @@ const InputField = styled.input`
     }
 `;
 
-InputField.defaultProps = {
+Input.defaultProps = {
   theme,
 };
 
-export default InputField;
+export default Input;

@@ -33,6 +33,11 @@ Text.defaultProps = {
   lineHeight: theme.lineHeights["base"],
   mb: 4,
   color: "currentColor",
+<<<<<<< HEAD
 }
+=======
+  display: "block",
+};
+>>>>>>> sets up files for Label rename to Field
 
 export default Text;
