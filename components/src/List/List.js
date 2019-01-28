@@ -17,7 +17,7 @@ const List = styled.ul`
   ${lineHeight}
 
   ${ListItem} {
-    margin-bottom: ${({compact, theme}) => compact ? "0" : theme.space[2]};
+    margin-bottom: ${props => (props.compact ? "0" : theme.space[2])};
   }
 `;
 
