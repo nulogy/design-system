@@ -5,10 +5,10 @@ The Nulogy Design System is a collection of Visual Guidelines and UI Components 
 The primary way to interface with the system is by using our React components. They can be found in a package called [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components).
 
 ## CSS 
-If your application can't use React components we also provide atomic CSS classes and Sass variables to build your own interface in Nulogy's style. These can be found in a package called [@nulogy/css](https://github.com/nulogy/design-system/tree/master/docs).
+If your application can't use React components we also provide atomic CSS classes and Sass variables to build your own interface in Nulogy's style. These can be found in a package called [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css).
 
 ## Tokens
-Design tokens are stored in their own package called [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/components). These are mostly used to build our Components and CSS packages above, but can also be imported directly into your application if needed. 
+Design tokens are stored in their own package called [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/tokens). These are mostly used to build our Components and CSS packages above, but can also be imported directly into your application if needed. 
 
 ## UI Kit
 Designers can use the Nulogy Design System in Sketch by downloading the [Sketch UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
