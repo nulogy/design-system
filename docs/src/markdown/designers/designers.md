@@ -20,6 +20,6 @@ Our spacing system uses an 8px unit of measurement, so it’s helpful to have nu
 
 ![Sketch nudging settings screenshot](sketch-nudging.png)
 
-Make sure to familiarize yourself with our [spacing scale](http://localhost:8000/style/spacing) to ensure your designs are easy to code consistently.
+Make sure to familiarize yourself with our [spacing scale](/style/spacing) to ensure your designs are easy to code consistently.
 
 _That's it! Now you should be all set to design with the Nulogy Design System._
