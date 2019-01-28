@@ -1,6 +1,7 @@
 module.exports = {
   output: {
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    globalObject: `(typeof self !== 'undefined' ? self : this)` // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
   },
   externals: [
     "react",
@@ -23,11 +24,11 @@ module.exports = {
         test: /\.stories\.jsx?$/,
         loaders: [require.resolve('@storybook/addon-storysource/loader')],
         enforce: 'pre',
-      },    
+      },
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader'
-      }  
+      }
     ]
   }
 }
