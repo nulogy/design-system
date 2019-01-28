@@ -4,16 +4,14 @@ import theme from "../theme";
 import Text from "../Type/Text";
 import Box from "../Box/Box";
 
-export const LabelText = props => {
-  return (
-    <Text
-      display="inline"
-      mb={ 0 }
-      fontSize={ theme.fontSizes[1] }
-      { ...props }
-    />
-  );
-};
+export const LabelText = props => (
+  <Text
+    display="inline"
+    mb={ 0 }
+    fontSize={ theme.fontSizes[1] }
+    { ...props }
+  />
+);
 
 LabelText.propTypes = {
   children: PropTypes.oneOfType([
@@ -26,18 +24,16 @@ LabelText.defaultProps = {
   children: null,
 };
 
-export const RequirementText = props => {
-  return (
-    <Text
-      display="inline"
-      mb={ 0 }
-      ml={ 2 }
-      fontSize="12px"
-      color="darkGrey"
-      { ...props }
-    />
-  );
-};
+export const RequirementText = props => (
+  <Text
+    display="inline"
+    mb={ 0 }
+    ml={ 2 }
+    fontSize="12px"
+    color="darkGrey"
+    { ...props }
+  />
+);
 
 RequirementText.propTypes = {
   children: PropTypes.oneOfType([
@@ -50,16 +46,14 @@ RequirementText.defaultProps = {
   children: null,
 };
 
-export const HelpText = props => {
-  return (
-    <Text
-      mb={ 0 }
-      fontSize={ theme.fontSizes[0] }
-      lineHeight={ theme.lineHeights.smallTextBase }
-      { ...props }
-    />
-  );
-};
+export const HelpText = props => (
+  <Text
+    mb={ 0 }
+    fontSize={ theme.fontSizes[0] }
+    lineHeight={ theme.lineHeights.smallTextBase }
+    { ...props }
+  />
+);
 
 HelpText.propTypes = {
   children: PropTypes.oneOfType([
@@ -72,17 +66,15 @@ HelpText.defaultProps = {
   children: null,
 };
 
-export const FormatText = props => {
-  return (
-    <Text
-      mb={ 0 }
-      fontSize="12px"
-      lineHeight="16px"
-      color="darkGrey"
-      { ...props }
-    />
-  );
-};
+export const FormatText = props => (
+  <Text
+    mb={ 0 }
+    fontSize="12px"
+    lineHeight="16px"
+    color="darkGrey"
+    { ...props }
+  />
+);
 
 FormatText.propTypes = {
   children: PropTypes.oneOfType([
@@ -95,15 +87,15 @@ FormatText.defaultProps = {
   children: null,
 };
 
-const Label = props => {
-  const {
-    labelText,
-    requirementText,
-    helpText,
-    formatText,
-  } = props;
+const Label = ({
+  labelText, 
+  requirementText, 
+  helpText, 
+  formatText, 
+  ...boxProps,
+}) => {
   return (
-    <Box { ...props }>
+    <Box { ...boxProps }>
       <LabelText>{labelText}</LabelText>
       <RequirementText>{requirementText}</RequirementText>
       <HelpText>{helpText}</HelpText>

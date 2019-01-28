@@ -1,33 +1,33 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Label from "./Label";
+import Field from "./Field";
 
-storiesOf("Label", module)
+storiesOf("Field", module)
   .add("Label", () => (
-    <Label
+    <Field
       labelText="Default label"
     />
   ))
   .add("With requirement text", () => (
-    <Label
+    <Field
       labelText="Default label"
       requirementText="(Optional)"
     />
   ))
   .add("With help text", () => (
-    <Label
+    <Field
       labelText="Default label"
       helpText="Enter a date below"
     />
   ))
   .add("With format text", () => (
-    <Label
+    <Field
       labelText="Default label"
       formatText="(DD-MM-YYYY)"
     />
   ))
   .add("With all additional text", () => (
-    <Label
+    <Field
       labelText="Default label"
       requirementText="(Optional)"
       helpText="Enter a date below"
@@ -35,7 +35,7 @@ storiesOf("Label", module)
     />
   ))
   .add("With a long text", () => (
-    <Label
+    <Field
       labelText="Long long long long long long long long long long long long long long label"
       requirementText="(Optional)"
       helpText="Help text help text help text help text help text help text help text help text"
