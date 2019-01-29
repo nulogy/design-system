@@ -4,30 +4,36 @@ import { color, space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const stateStyle = props => {
-  if (props.disabled) {
-    return ([
-      theme.colors.lightGrey,
-      theme.colors.lightGrey,
-    ]);
-  } else if (props.error) {
-    return ([
-      theme.colors.red,
-      theme.colors.red,
-    ]);
-  } else {
-    return ([
-      theme.colors.black,
-      theme.colors.grey,
-    ]);
-  }
+const inputStyles = {
+  disabled: {
+    color: theme.colors.lightGrey,
+    "border-color": theme.colors.lightGrey,
+  },
+  error: {
+    color: theme.colors.red,
+    "border-color": theme.colors.red,
+  },
+  default: {
+    color: theme.colors.black,
+    "border-color": theme.colors.grey,
+  },
 };
+
+const getInputStyle = props => {
+  if (props.disabled) { return inputStyles.disabled; }
+  if (props.error) { return inputStyles.error; }
+
+  return inputStyles.default;
+};
+
+const getColor = props => getInputStyle(props).color;
+const getBorderColor = props => getInputStyle(props).borderColor;
 
 const Input = styled.input`
     width: 100%
-    color: ${props => stateStyle(props)[0]}; 
+    color: ${getColor}; 
     border: 1px solid;
-    border-color: ${props => stateStyle(props)[1]}; 
+    border-color: ${getBorderColor}; 
     border-radius: ${theme.radii[1]};
     padding: ${subPx(theme.space[2])};
     font-size: ${theme.fontSizes[1]};
