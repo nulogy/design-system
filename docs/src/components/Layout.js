@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavItem, Nav} from '../components/Nav'
-import ThemeProvider from '../../../components/src/ThemeProvider/ThemeProvider'
+import NDSProvider from '../../../components/src/NDSProvider/NDSProvider'
 import {Box, Flex, Link, Text} from '@nulogy/components'
 import theme from '../../../components/src/theme'
 import { Helmet } from 'react-helmet'
@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 import logo from '../images/nulogy.svg'
 
 export default ({ children }) => (
-  <ThemeProvider theme={theme}>
+  <NDSProvider theme={theme}>
     <Box pb={3}>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
@@ -62,5 +62,5 @@ export default ({ children }) => (
         </Box>        
       </Flex>
     </Box>
-  </ThemeProvider>
+  </NDSProvider>
 )
