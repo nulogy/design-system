@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Box from "../Box/Box";
 import Label from "./Label";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
@@ -15,10 +16,12 @@ const Field = ({
 }) => {
   return (
     <Label { ...labelProps }>
-      {labelText}
-      <RequirementText>{requirementText}</RequirementText>
-      <HelpText>{helpText}</HelpText>
-      <FormatText>{formatText}</FormatText>
+      <Box mb = { 2 }>
+        {labelText}
+        <RequirementText>{requirementText}</RequirementText>
+        <HelpText>{helpText}</HelpText>
+        <FormatText>{formatText}</FormatText>
+      </Box>
       {children}
     </Label>
   );

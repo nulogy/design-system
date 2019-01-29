@@ -56,7 +56,7 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   error: false,
-  theme,
+  mb: 2,
 };
 
 export default Input;
