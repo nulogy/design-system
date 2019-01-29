@@ -1,120 +1,41 @@
 import React from "react";
 import PropTypes from "prop-types";
-import theme from "../theme";
-import Text from "../Type/Text";
-import Box from "../Box/Box";
+import Label from "./Label";
+import RequirementText from "./RequirementText";
+import HelpText from "./HelpText";
+import FormatText from "./FormatText";
 
-export const LabelText = props => (
-  <Text
-    display="inline"
-    mb={ 0 }
-    fontSize={ theme.fontSizes[1] }
-    { ...props }
-  />
-);
-
-LabelText.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-LabelText.defaultProps = {
-  children: null,
-};
-
-export const RequirementText = props => (
-  <Text
-    display="inline"
-    mb={ 0 }
-    ml={ 2 }
-    fontSize="12px"
-    color="darkGrey"
-    { ...props }
-  />
-);
-
-RequirementText.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-RequirementText.defaultProps = {
-  children: null,
-};
-
-export const HelpText = props => (
-  <Text
-    mb={ 0 }
-    fontSize={ theme.fontSizes[0] }
-    lineHeight={ theme.lineHeights.smallTextBase }
-    { ...props }
-  />
-);
-
-HelpText.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-HelpText.defaultProps = {
-  children: null,
-};
-
-export const FormatText = props => (
-  <Text
-    mb={ 0 }
-    fontSize="12px"
-    lineHeight="16px"
-    color="darkGrey"
-    { ...props }
-  />
-);
-
-FormatText.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-FormatText.defaultProps = {
-  children: null,
-};
-
-const Label = ({
+const Field = ({
   labelText, 
   requirementText, 
   helpText, 
-  formatText, 
-  ...boxProps,
+  formatText,
+  children, 
+  ...labelProps,
 }) => {
   return (
-    <Box { ...boxProps }>
-      <LabelText>{labelText}</LabelText>
+    <Label mb = { 10 } { ...labelProps }>
+      {labelText}
       <RequirementText>{requirementText}</RequirementText>
       <HelpText>{helpText}</HelpText>
       <FormatText>{formatText}</FormatText>
-    </Box>
+      {children}
+    </Label>
   );
 };
 
-Label.propTypes = {
+Field.propTypes = {
   labelText: PropTypes.string.isRequired,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
   formatText: PropTypes.string,
+  children: PropTypes.node,
 };
 
-Label.defaultProps = {
+Field.defaultProps = {
   requirementText: null,
   helpText: null,
   formatText: null,
 };
 
-export default Label;
+export default Field;

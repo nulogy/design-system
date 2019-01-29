@@ -1,12 +1,17 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Field from "./Field";
+import Input from "../Input/Input";
+import InlineValidation from "../Validation/InlineValidation"
 
 storiesOf("Field", module)
-  .add("Label", () => (
+  .add("Field", () => (
     <Field
       labelText="Default label"
-    />
+    >
+      <Input/>
+      <InlineValidation message="There has been an error"/>
+    </Field>
   ))
   .add("With requirement text", () => (
     <Field
