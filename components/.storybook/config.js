@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
 import Box from '../src/Box/Box';

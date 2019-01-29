@@ -9,6 +9,8 @@ const Reset = createGlobalStyle`body {
 export const GlobalStyles = styled.div`
     font-family: 'IBM Plex Sans';
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
   * {
     box-sizing: border-box; 
