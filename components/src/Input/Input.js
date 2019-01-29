@@ -5,23 +5,21 @@ import theme from "../theme";
 import { subPx } from "../utils";
 
 const stateStyle = props => {
-  if (props.disabled){ 
+  if (props.disabled) {
     return ([
       theme.colors.lightGrey,
       theme.colors.lightGrey,
-    ])
-  }
-  else if (props.error){ 
+    ]);
+  } else if (props.error) {
     return ([
       theme.colors.red,
       theme.colors.red,
-    ])
-  }
-  else{ 
+    ]);
+  } else {
     return ([
       theme.colors.black,
       theme.colors.grey,
-    ])
+    ]);
   }
 };
 

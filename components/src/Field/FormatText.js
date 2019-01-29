@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Text from "../Type/Text";
 
-export const FormatText = props => (
+const FormatText = props => (
   <Text
     mb={ 0 }
     fontSize="12px"

@@ -16,8 +16,8 @@ storiesOf("Field", module)
     <Field
       labelText="Default label"
     >
-      <Input/>
-      <InlineValidation message="There has been an error"/>
+      <Input />
+      <InlineValidation message="There has been an error" />
     </Field>
   ))
   .add("With requirement text", () => (
@@ -45,7 +45,7 @@ storiesOf("Field", module)
       helpText="Enter a date below"
       formatText="(DD-MM-YYYY)"
     >
-      <Input/>
+      <Input />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>

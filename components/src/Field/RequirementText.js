@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Text from "../Type/Text";
 
-export const RequirementText = props => (
+const RequirementText = props => (
   <Text
     display="inline"
     mb={ 0 }

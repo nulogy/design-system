@@ -11,18 +11,16 @@ const InlineValidation = ({
   icon,
   message,
   children,
-  ...boxProps,
-}) => {
-  return (
-    <Box color={ color } mb = { 2 } { ...boxProps }>
-      <Flex>
-        <Icon { ...icon } />
-        <Text mb={ 0 }>{message}</Text>
-      </Flex>
-      {children}
-    </Box>
-  );
-};
+  ...boxProps
+}) => (
+  <Box color={ color } mb={ 2 } { ...boxProps }>
+    <Flex>
+      <Icon { ...icon } />
+      <Text mb={ 0 }>{message}</Text>
+    </Flex>
+    {children}
+  </Box>
+);
 
 
 InlineValidation.propTypes = {

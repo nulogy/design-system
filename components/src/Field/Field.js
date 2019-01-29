@@ -7,25 +7,23 @@ import HelpText from "./HelpText";
 import FormatText from "./FormatText";
 
 const Field = ({
-  labelText, 
-  requirementText, 
-  helpText, 
+  labelText,
+  requirementText,
+  helpText,
   formatText,
-  children, 
-  ...labelProps,
-}) => {
-  return (
-    <Label { ...labelProps }>
-      <Box mb = { 2 }>
-        {labelText}
-        <RequirementText>{requirementText}</RequirementText>
-        <HelpText>{helpText}</HelpText>
-        <FormatText>{formatText}</FormatText>
-      </Box>
-      {children}
-    </Label>
-  );
-};
+  children,
+  ...labelProps
+}) => (
+  <Label { ...labelProps }>
+    <Box mb={ 2 }>
+      {labelText}
+      <RequirementText>{requirementText}</RequirementText>
+      <HelpText>{helpText}</HelpText>
+      <FormatText>{formatText}</FormatText>
+    </Box>
+    {children}
+  </Label>
+);
 
 Field.propTypes = {
   labelText: PropTypes.string.isRequired,
@@ -36,10 +34,10 @@ Field.propTypes = {
 };
 
 Field.defaultProps = {
+  children: [],
   requirementText: null,
   helpText: null,
   formatText: null,
-  mb: 5,
 };
 
 export default Field;
