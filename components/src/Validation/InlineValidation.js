@@ -6,16 +6,16 @@ import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
 import Box from "../Box/Box";
 
-const InlineValidation = props => {
-  const {
-    color,
-    icon,
-    message,
-    children,
-  } = props;
+const InlineValidation = ({
+  color,
+  icon,
+  message,
+  children,
+  ...boxProps,
+}) => {
   return (
-    <Box color={ color }>
-      <Flex my={ 2 }>
+    <Box color={ color } mb = { 2 } { ...boxProps }>
+      <Flex>
         <Icon { ...icon } />
         <Text mb={ 0 }>{message}</Text>
       </Flex>

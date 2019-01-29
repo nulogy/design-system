@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 
 export const Label = styled.label`
+  width: 100%;
   display: inline-block;
   font-size: ${theme.fontSizes[1]};
   ${space}

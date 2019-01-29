@@ -14,7 +14,7 @@ const Field = ({
   ...labelProps,
 }) => {
   return (
-    <Label mb = { 10 } { ...labelProps }>
+    <Label { ...labelProps }>
       {labelText}
       <RequirementText>{requirementText}</RequirementText>
       <HelpText>{helpText}</HelpText>
@@ -36,6 +36,7 @@ Field.defaultProps = {
   requirementText: null,
   helpText: null,
   formatText: null,
+  mb: 5,
 };
 
 export default Field;
