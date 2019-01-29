@@ -1,159 +1,59 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import Text from "../Type/Text";
+import Text from "../Type/Text"
 import theme from "../theme";
-import Flex from "../Flex/Flex";
-
-const ToggleContainer = styled(Flex)`
-position: relative;
-cursor: pointer;
-background-color: transparent;
-`;
-
-const focusedStyle = focus => {
-  if (focus) {
-    return (
-      {
-        outline: "none",
-        boxShadow: `0 0 10px ${theme.colors.blue}`,
-      }
-    );
-  } else {
-    return false;
-  }
-};
-
-const ToggleBG = styled.div`
-width: 64px;
-height: 40px;
-border: 4px solid ${props => props.fill};
-border-radius: 20px;
-
-transition: all 0.25s ease;
-background-color: ${props => (props.toggled ? props.fill : theme.colors.white)};
-
-${props => focusedStyle(props.focused)}
-`;
-
-const ToggleFG = styled.div`
-position: absolute;
-top: 0px;
-left: 0px;
-width: 40px;
-height: 40px;
-border: 4px solid ${props => props.fill};
-border-radius: 20px;
-background-color: ${theme.colors.white};
-
-transition: all 0.25s ease;
-left: ${props => (props.toggled ? "24px" : null)};
-`;
-
-const HiddenInput = styled.input`
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); 
-`;
 
 class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      toggled: (props.toggled || props.defaultToggled),
-      focused: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            toggled: props.defaultOn
+        };
+        this.handleClick = this.handleClick.bind(this);
+        this.getToggleSvg = this.getToggleSvg.bind(this);
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
-  }
+    handleClick(){
+        this.setState({toggled: !this.state.toggled})
+    };
 
-  handleClick() {
-    this.setState(prevState => ({
-      toggled: !prevState.toggled,
-    }));
-    this.input.focus();
-  }
+    getToggleSvg(){
+      return(
+        this.state.toggled ?
+        "M0,20 C0,8.96875 8.96875,0 20,0 L44,0 C55.03125,0 64,8.96875 64,20 C64,31.03125 55.03125,40 44,40 L20,40 C8.96875,40 0,31.03125 0,20 Z M44,36 C52.8125,36 60,28.8125 60,20 C60,11.1875 52.8125,4 44,4 C35.1875,4 28,11.1875 28,20 C28,28.8125 35.1875,36 44,36 Z" :
+        "M36,20 C36,11.1875 28.8125,4 20,4 C11.1875,4 4,11.1875 4,20 C4,28.8125 11.1875,36 20,36 C28.8125,36 36,28.8125 36,20 Z M60,20 C60,11.1875 52.8125,4 44,4 L31.9375,4 C36.8125,7.65625 40,13.46875 40,20 C40,26.53125 36.8125,32.34375 31.9375,36 L44,36 C52.8125,36 60,28.8125 60,20 Z M64,20 C64,31.03125 55.03125,40 44,40 L20,40 C8.96875,40 0,31.03125 0,20 C0,8.96875 8.96875,0 20,0 L44,0 C55.03125,0 64,8.96875 64,20 Z"
+      )
+    }
 
-  handleFocus() {
-    this.setState({ focused: true });
-  }
-
-  handleBlur() {
-    this.setState({ focused: false });
-  }
-
-  render() {
-    const {
-      onToggle,
-      id,
-      onText,
-      offText,
-      disabled,
-      ...props
-    } = this.props;
-    const {
-      toggled,
-      focused,
-    } = this.state;
-    const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
-    return (
-      <Flex
-        alignItems="center"
-      >
-        <ToggleContainer
-          onClick={ e => {
-            if (!disabled) {
-              this.handleClick(e);
-              onToggle(!toggled, id, e);
-            }
-          } }
-        >
-          <ToggleBG
-            toggled={ toggled }
-            fill={ fill }
-            focused={ focused }
-          />
-          <ToggleFG
-            toggled={ toggled }
-            fill={ fill }
-          />
-        </ToggleContainer>
-        <Text mb={ 0 } ml={ 2 }>
-          {toggled ? onText : offText}
-        </Text>
-        <HiddenInput
-          id={ id }
-          ref={ ref => { this.input = ref; } }
-          onClick={ this.handleClick }
-          onFocus={ this.handleFocus }
-          onBlur={ this.handleBlur }
-          { ...props }
-          disabled={ disabled }
-          type="checkbox"
+    render(){
+    return(
+      <label style = {{display: "flex", alignItems: "center"}}>
+        <input
+          id = {this.props.id}
+          type = "button"
+          style = {{display: "none"}}
+          onClick = {e => {
+            this.handleClick(e);
+            this.props.onToggle(!this.state.toggled, this.props.id, e)
+          }}
         />
-      </Flex>
-    );
-  }
-}
+        <svg height="40px" width="64px" viewBox ="0 0 64 40" fill = {theme.colors.darkBlue}>
+          <path d={this.getToggleSvg()}/>
+        </svg>
+        <Text mb ={0} ml={1}>
+          {this.state.toggled ? this.props.onText : this.props.offText}
+        </Text>
+      </label>
+    )}
+};
 
 Toggle.propTypes = {
   onToggle: PropTypes.func,
-  toggled: PropTypes.bool,
-  defaultToggled: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onText: PropTypes.string,
-  offText: PropTypes.string,
-  id: PropTypes.string,
+  defaultOn: PropTypes.bool,
 };
 
 Toggle.defaultProps = {
   onToggle: () => {},
-  toggled: false,
-  defaultToggled: false,
-  disabled: false,
-  onText: null,
-  offText: null,
-  id: null,
+  defaultOn: false,
 };
 
 
