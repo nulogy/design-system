@@ -28,7 +28,6 @@ List.propTypes = {
 };
 
 List.defaultProps = {
-  mb: 4,
   color: "currentColor",
 };
 
