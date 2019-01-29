@@ -18,20 +18,17 @@ const HeaderValidation = props => {
       <Flex mb={ theme.space[2] }>
         <Icon name="error" size={ theme.space[6] } mr={ theme.space[3] } />
         <Box>
-          <SubsectionTitle mb={ 0 }>{ title }</SubsectionTitle>
-          <Text mb={ theme.space[0] }>{ message }</Text>
+          <SubsectionTitle mb={ 0 }>{ props.title }</SubsectionTitle>
+          <Text mb={ theme.space[0] }>{ props.message }</Text>
         </Box>
       </Flex>
-      {children}
+      {props.children}
     </Box>
   );
 };
 
 HeaderValidation.defaultProps = {
-  children: [{
-     mb: 0,
-     pl: 7,
-  }]
+  children: []
 };
 
 HeaderValidation.propTypes = {
