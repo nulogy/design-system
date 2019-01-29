@@ -11,5 +11,6 @@ export { default as Icon } from "./Icon/Icon";
 export { default as InlineValidation } from "./Validation/InlineValidation";
 export { default as Field } from "./Field/Field";
 export { default as Input } from "./Input/Input";
+export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export * from "./Type/Headings";
 export { default as NDSProvider } from "./NDSProvider/NDSProvider";
