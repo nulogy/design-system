@@ -10,6 +10,7 @@
     "tokens"
   ],
   "scripts": {
+    "test": "cd components && yarn test"
   },
   "main": "index.js",
   "license": "MIT",
