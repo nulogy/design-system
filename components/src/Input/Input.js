@@ -7,15 +7,15 @@ import { subPx } from "../utils";
 const inputStyles = {
   disabled: {
     color: theme.colors.lightGrey,
-    "border-color": theme.colors.lightGrey,
+    borderColor: theme.colors.lightGrey,
   },
   error: {
     color: theme.colors.red,
-    "border-color": theme.colors.red,
+    borderColor: theme.colors.red,
   },
   default: {
     color: theme.colors.black,
-    "border-color": theme.colors.grey,
+    borderColor: theme.colors.grey,
   },
 };
 

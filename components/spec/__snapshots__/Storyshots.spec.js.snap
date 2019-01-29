@@ -1416,7 +1416,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           />
         </div>
         <input
-          className="sc-gqjmRU buNDcm"
+          className="sc-gqjmRU fjeDEd"
           disabled={false}
         />
         <div
@@ -1566,7 +1566,7 @@ exports[`Storyshots Field With all additional components 1`] = `
           </p>
         </div>
         <input
-          className="sc-gqjmRU buNDcm"
+          className="sc-gqjmRU fjeDEd"
           disabled={false}
         />
         <div
@@ -7549,7 +7549,7 @@ exports[`Storyshots Input Input 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU buNDcm"
+        className="sc-gqjmRU fjeDEd"
         disabled={false}
       />
     </div>
@@ -7574,7 +7574,7 @@ exports[`Storyshots Input Set to disabled 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU iTFwwf"
+        className="sc-gqjmRU cVwzUy"
         disabled={true}
       />
     </div>
@@ -7599,7 +7599,7 @@ exports[`Storyshots Input Set to error 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU iwmObS"
+        className="sc-gqjmRU drbBKf"
         disabled={false}
       />
     </div>
