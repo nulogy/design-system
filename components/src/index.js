@@ -11,4 +11,4 @@ export { default as Icon } from "./Icon/Icon";
 export { default as TextInput } from "./TextInput/TextInput";
 export { default as InlineValidation } from "./Validation/InlineValidation";
 export * from "./Type/Headings";
-export { default as ThemeProvider } from "./ThemeProvider/ThemeProvider";
+export { default as NDSProvider } from "./NDSProvider/NDSProvider";

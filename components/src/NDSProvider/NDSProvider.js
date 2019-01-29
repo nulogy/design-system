@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { createGlobalStyle, ThemeProvider as StyledThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../theme";
 
 const Reset = createGlobalStyle`body {
@@ -13,7 +13,7 @@ export const GlobalStyles = styled.div`
     -moz-osx-font-smoothing: grayscale;
 
   * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
 
   img {
@@ -22,13 +22,13 @@ export const GlobalStyles = styled.div`
   }
 `;
 
-const ThemeProvider = ({ ...props }) => (
+const NDSProvider = ({ ...props }) => (
   <React.Fragment>
     <Reset />
-    <StyledThemeProvider theme={ theme }>
+    <ThemeProvider theme={ theme }>
       <GlobalStyles { ...props } />
-    </StyledThemeProvider>
+    </ThemeProvider>
   </React.Fragment>
 );
 
-export default ThemeProvider;
+export default NDSProvider;
