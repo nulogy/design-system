@@ -24,6 +24,14 @@ const InlineValidation = props => {
   );
 };
 
+
+InlineValidation.propTypes = {
+  message: PropTypes.string.isRequired,
+  icon: PropTypes.shape({}),
+  color: PropTypes.string,
+  children: PropTypes.node,
+};
+
 InlineValidation.defaultProps = {
   color: "red",
   icon: {
@@ -32,16 +40,6 @@ InlineValidation.defaultProps = {
     mr: 1,
   },
   children: [],
-};
-
-InlineValidation.propTypes = {
-  message: PropTypes.string.isRequired,
-  icon: PropTypes.shape({}),
-  color: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
 };
 
 export default InlineValidation;
