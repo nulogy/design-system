@@ -4,15 +4,16 @@ module.exports = {
       "@babel/preset-env",
       {
         "targets": { "browsers": "defaults" },
-         "useBuiltIns": "entry" }
+        "useBuiltIns": "entry",
+      },
     ],
-    "@babel/preset-react"
+    "@babel/preset-react",
   ],
   "env": {
     "test": {
       "plugins": [
-        "require-context-hook"
-      ]
-    }
-  }
+        "require-context-hook",
+      ],
+    },
+  },
 };
