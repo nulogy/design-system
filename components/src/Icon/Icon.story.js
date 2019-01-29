@@ -41,8 +41,8 @@ storiesOf("Icon", module)
   ))
   .add("With a color", () => (
     <React.Fragment>
-      {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
-        <Box>
+      {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map((color, i) => (
+        <Box key={i}>
           {iconNames.map(iconName => <Icon name={ iconName } color={ color } key={ iconName } />)}
         </Box>
       ))}
@@ -50,8 +50,8 @@ storiesOf("Icon", module)
   ))
   .add("With a size", () => (
     <React.Fragment>
-      {[theme.space[2], theme.space[3], theme.space[4]].map(size => (
-        <Box>
+      {[theme.space[2], theme.space[3], theme.space[4]].map((size, i) => (
+        <Box key={i}>
           {iconNames.map(iconName => <Icon name={ iconName } size={ size } key={ iconName } />)}
         </Box>
       ))}
