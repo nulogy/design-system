@@ -1325,6 +1325,471 @@ exports[`Storyshots Buttons With a selected size 1`] = `
 </div>
 `;
 
+exports[`Storyshots Field Field 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          />
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          />
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With Input and InlineValidation 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          />
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          />
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          />
+        </div>
+        <input
+          className="sc-gqjmRU buNDcm"
+          disabled={false}
+        />
+        <div
+          className="sc-bwzfXH ctAaoN"
+          color="red"
+        >
+          <div
+            className="sc-bwzfXH sc-VigVT bQkokP"
+          >
+            <svg
+              aria-hidden={true}
+              className="sc-htpNat ifPDoX"
+              color="currentColor"
+              fill="currentColor"
+              height="24px"
+              mr={1}
+              name="error"
+              size="24px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d={
+                  Array [
+                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                  ]
+                }
+              />
+            </svg>
+            <p
+              className="sc-dnqmqq ktOAGB"
+              color="currentColor"
+              display="block"
+              fontSize={1}
+            >
+              There has been an error
+            </p>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With a long text 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Long long long long long long long long long long long long long long label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          >
+            (Optional)
+          </p>
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          >
+            Help text help text help text help text help text help text help text help text
+          </p>
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          >
+            (DD-MM-YYYY)
+          </p>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With all additional components 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          >
+            (Optional)
+          </p>
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          >
+            Enter a date below
+          </p>
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          >
+            (DD-MM-YYYY)
+          </p>
+        </div>
+        <input
+          className="sc-gqjmRU buNDcm"
+          disabled={false}
+        />
+        <div
+          className="sc-bwzfXH ctAaoN"
+          color="red"
+        >
+          <div
+            className="sc-bwzfXH sc-VigVT bQkokP"
+          >
+            <svg
+              aria-hidden={true}
+              className="sc-htpNat ifPDoX"
+              color="currentColor"
+              fill="currentColor"
+              height="24px"
+              mr={1}
+              name="error"
+              size="24px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d={
+                  Array [
+                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                  ]
+                }
+              />
+            </svg>
+            <p
+              className="sc-dnqmqq ktOAGB"
+              color="currentColor"
+              display="block"
+              fontSize={1}
+            >
+              There has been an error
+            </p>
+          </div>
+          <ul
+            className="sc-fjdhpX jHOcwl"
+            color="currentColor"
+          >
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              Something has gone wrong.
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              Entry must be atleast 3 characters long
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              <a
+                href="https://nulogy.design/"
+              >
+                See here
+              </a>
+            </li>
+          </ul>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With format text 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          />
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          />
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          >
+            (DD-MM-YYYY)
+          </p>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With help text 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          />
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          >
+            Enter a date below
+          </p>
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With requirement text 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Default label
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          >
+            (Optional)
+          </p>
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          />
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Flex Flex 1`] = `
 <div
   className="sc-bdVaJa fahXYn"
@@ -1345,7 +1810,7 @@ exports[`Storyshots Flex Flex 1`] = `
         className="sc-bwzfXH QLQWs"
       >
         <div
-          className="sc-bwzfXH sc-gZMcBi cBnykj"
+          className="sc-bwzfXH sc-VigVT bQkokP"
         >
           <div
             className="sc-bwzfXH kIQjGB"
@@ -1385,7 +1850,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-cSHVUG qjhCN"
+        className="sc-kAzzGY fCtsYY"
         fontSize={3}
         fontWeight={2}
       >
@@ -1413,7 +1878,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
@@ -1441,7 +1906,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-jzJRlG iNVWJB"
+        className="sc-cSHVUG bcDUhd"
         fontSize={4}
         fontWeight={0}
       >
@@ -1469,14 +1934,16 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-jzJRlG iNVWJB"
+        className="sc-cSHVUG bcDUhd"
         fontSize={4}
         fontWeight={0}
       >
         Title
       </h1>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Lorem ipsum
@@ -6679,7 +7146,9 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq bXZdPr"
+          className="sc-dnqmqq ckRCkz"
+          color="currentColor"
+          display="block"
           fontSize={1}
         >
           Cancel
@@ -6712,7 +7181,9 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq bXZdPr"
+          className="sc-dnqmqq ckRCkz"
+          color="currentColor"
+          display="block"
           fontSize={1}
         >
           Lock
@@ -6766,7 +7237,9 @@ exports[`Storyshots IconicButton With a long label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq bXZdPr"
+          className="sc-dnqmqq ckRCkz"
+          color="currentColor"
+          display="block"
           fontSize={1}
         >
           I am an Iconic Button with a really really really long label
@@ -6820,7 +7293,9 @@ exports[`Storyshots IconicButton With label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq bXZdPr"
+          className="sc-dnqmqq ckRCkz"
+          color="currentColor"
+          display="block"
           fontSize={1}
         >
           Delete
@@ -6848,11 +7323,11 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ejFxxE"
+        className="sc-bwzfXH ctAaoN"
         color="red"
       >
         <div
-          className="sc-bwzfXH sc-gZMcBi cCVJkU"
+          className="sc-bwzfXH sc-VigVT bQkokP"
         >
           <svg
             aria-hidden={true}
@@ -6876,30 +7351,32 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
             />
           </svg>
           <p
-            className="sc-dnqmqq fIGPXl"
+            className="sc-dnqmqq ktOAGB"
+            color="currentColor"
+            display="block"
             fontSize={1}
           >
             Something has gone wrong
           </p>
         </div>
         <ul
-          className="sc-jTzLTM fAvCQR"
+          className="sc-fjdhpX jHOcwl"
           color="currentColor"
         >
           <li
-            className="sc-VigVT fhzkZR"
+            className="sc-jTzLTM daoydl"
             color="currentColor"
           >
             Something has gone wrong.
           </li>
           <li
-            className="sc-VigVT fhzkZR"
+            className="sc-jTzLTM daoydl"
             color="currentColor"
           >
             Entry must be atleast 3 characters long
           </li>
           <li
-            className="sc-VigVT fhzkZR"
+            className="sc-jTzLTM daoydl"
             color="currentColor"
           >
             <a
@@ -6932,11 +7409,11 @@ exports[`Storyshots Inline Validation With custom style 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH efvTmC"
+        className="sc-bwzfXH eAazog"
         color="green"
       >
         <div
-          className="sc-bwzfXH sc-gZMcBi cCVJkU"
+          className="sc-bwzfXH sc-VigVT bQkokP"
         >
           <svg
             aria-hidden={true}
@@ -6959,28 +7436,30 @@ exports[`Storyshots Inline Validation With custom style 1`] = `
             />
           </svg>
           <p
-            className="sc-dnqmqq fIGPXl"
+            className="sc-dnqmqq ktOAGB"
+            color="currentColor"
+            display="block"
             fontSize={1}
           >
             Good job.
           </p>
         </div>
         <ul
-          className="sc-jTzLTM fAvCQR"
+          className="sc-fjdhpX jHOcwl"
           color="currentColor"
         >
           <li
-            className="sc-VigVT fhzkZR"
+            className="sc-jTzLTM daoydl"
             color="currentColor"
           >
             Everything is as expected
           </li>
           <li
-            className="sc-VigVT fhzkZR"
+            className="sc-jTzLTM daoydl"
             color="currentColor"
           >
             <a
-              className="sc-gqjmRU iAIJJz"
+              className="sc-jzJRlG bjlrap"
               color="blue"
               href="https://nulogy.design/"
             >
@@ -7011,11 +7490,11 @@ exports[`Storyshots Inline Validation Without list items 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ejFxxE"
+        className="sc-bwzfXH ctAaoN"
         color="red"
       >
         <div
-          className="sc-bwzfXH sc-gZMcBi cCVJkU"
+          className="sc-bwzfXH sc-VigVT bQkokP"
         >
           <svg
             aria-hidden={true}
@@ -7039,13 +7518,90 @@ exports[`Storyshots Inline Validation Without list items 1`] = `
             />
           </svg>
           <p
-            className="sc-dnqmqq fIGPXl"
+            className="sc-dnqmqq ktOAGB"
+            color="currentColor"
+            display="block"
             fontSize={1}
           >
             Something has gone wrong
           </p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Input 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <input
+        className="sc-gqjmRU buNDcm"
+        disabled={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Set to disabled 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <input
+        className="sc-gqjmRU iTFwwf"
+        disabled={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Set to error 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <input
+        className="sc-gqjmRU iwmObS"
+        disabled={false}
+      />
     </div>
   </div>
 </div>
@@ -7068,7 +7624,7 @@ exports[`Storyshots Link Link 1`] = `
       }
     >
       <a
-        className="sc-gqjmRU iAIJJz"
+        className="sc-jzJRlG bjlrap"
         color="blue"
         href="http://nulogy.design"
       >
@@ -7096,7 +7652,7 @@ exports[`Storyshots Link With a different color 1`] = `
       }
     >
       <a
-        className="sc-gqjmRU fSXZkT"
+        className="sc-jzJRlG flQlCc"
         color="black"
         href="http://nulogy.design"
       >
@@ -7124,7 +7680,7 @@ exports[`Storyshots Link Without underline 1`] = `
       }
     >
       <a
-        className="sc-gqjmRU eCNkQS"
+        className="sc-jzJRlG cqlYMA"
         color="blue"
         href="http://nulogy.design"
       >
@@ -7152,23 +7708,23 @@ exports[`Storyshots List List 1`] = `
       }
     >
       <ul
-        className="sc-jTzLTM bIVjiG"
+        className="sc-fjdhpX jmwcER"
         color="currentColor"
       >
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 3
@@ -7196,23 +7752,23 @@ exports[`Storyshots List With compact spacing 1`] = `
       }
     >
       <ul
-        className="sc-jTzLTM fAvCQR"
+        className="sc-fjdhpX jHOcwl"
         color="currentColor"
       >
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 3
@@ -7240,23 +7796,23 @@ exports[`Storyshots List With custom colour 1`] = `
       }
     >
       <ul
-        className="sc-jTzLTM jGAlVk"
+        className="sc-fjdhpX iIUbCT"
         color="red"
       >
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 3
@@ -7284,24 +7840,24 @@ exports[`Storyshots List With custom font size and line height 1`] = `
       }
     >
       <ul
-        className="sc-jTzLTM lnNrIF"
+        className="sc-fjdhpX dpLZY"
         color="currentColor"
         fontSize={0}
       >
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 3
@@ -7329,13 +7885,17 @@ exports[`Storyshots Text Set to inline 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq cOPwqD"
+        className="sc-dnqmqq dthqyh"
+        color="currentColor"
+        display="inline-block"
         fontSize={1}
       >
         Default text
       </p>
       <p
-        className="sc-dnqmqq iteRsR"
+        className="sc-dnqmqq jEqgGU"
+        color="currentColor"
+        display="inline-block"
         fontSize={1}
       >
         Default text
@@ -7362,7 +7922,9 @@ exports[`Storyshots Text Text 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Default text
@@ -7391,6 +7953,7 @@ exports[`Storyshots Text With a color 1`] = `
       <p
         className="sc-dnqmqq eufYHD"
         color="blue"
+        display="block"
         fontSize={1}
       >
         Small text
@@ -7417,13 +7980,17 @@ exports[`Storyshots Text With a custom margin 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Default text
       </p>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Default text
@@ -7450,46 +8017,13 @@ exports[`Storyshots Text With a size 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq kjAQpa"
+        className="sc-dnqmqq rCOAk"
+        color="currentColor"
+        display="block"
         fontSize={0}
       >
         Small text
       </p>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots TextInput Testing 1`] = `
-<div
-  className="sc-bdVaJa fahXYn"
->
-  <div
-    className="sc-bwzfXH ehOaqE"
-  >
-    <div
-      style={
-        Object {
-          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
-          "backgroundSize": "24px 24px",
-          "minHeight": "calc(100vh - 32px)",
-        }
-      }
-    >
-      <div>
-        <input
-          className="sc-fjdhpX kAqNrW"
-        />
-        <input
-          className="sc-fjdhpX dkDHfB"
-          color="grey"
-          disabled={true}
-        />
-        <input
-          className="sc-fjdhpX gldLwZ"
-          color="red"
-        />
-      </div>
     </div>
   </div>
 </div>
@@ -7512,128 +8046,144 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-jzJRlG iNVWJB"
+        className="sc-cSHVUG bcDUhd"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-cSHVUG qjhCN"
+        className="sc-kAzzGY fCtsYY"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h2>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
         Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
       </h3>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-cSHVUG qjhCN"
+        className="sc-kAzzGY fCtsYY"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs and moderatly long title
       </h3>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs with List
       </h3>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <ul
-        className="sc-jTzLTM bIVjiG"
+        className="sc-fjdhpX jmwcER"
         color="currentColor"
       >
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-VigVT fhzkZR"
+          className="sc-jTzLTM daoydl"
           color="currentColor"
         >
           List Item 3
         </li>
       </ul>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <p
-        className="sc-dnqmqq dvVwdC"
+        className="sc-dnqmqq fvbRqb"
+        color="currentColor"
+        display="block"
         fontSize={1}
       >
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with medium(default) line height (24px).
       </h3>
       <p
-        className="sc-dnqmqq hzPCSW"
+        className="sc-dnqmqq iPawWf"
+        color="currentColor"
+        display="block"
         fontSize={0}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-kAzzGY kBshWd"
+        className="sc-chPdSV gawXxS"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
       </h3>
       <p
-        className="sc-dnqmqq fSHObF"
+        className="sc-dnqmqq cKhClK"
+        color="currentColor"
+        display="block"
         fontSize={0}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
