@@ -19,7 +19,7 @@
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
-    "test": "jest"
+    "test": "jest && yarn run lint"
   },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
