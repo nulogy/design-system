@@ -36,7 +36,14 @@ _Coming soon_
 _Coming soon_
 
 ## Testing
-_Coming soon_
+
+* To run everything:
+  * `cd components; yarn test`
+* To run just storyshots:
+  * `cd components; yarn run storyshots`
+* To update storyshot snapshots because they were intended changes:
+  * `cd components; yarn run storyshots:update`
+
 
 ## Documentation 
 The main documentation can be found at [http://nulogy.design](http://nulogy.design). It's a static site created with [GatsbyJS](https://gatsbyjs.org) managed in `@nulogy/docs`. 
