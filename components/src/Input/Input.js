@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { color, space, themeGet } from "styled-system";
+import { color, space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
