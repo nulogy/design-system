@@ -16,9 +16,7 @@ const focusedStyle = focus => {
     return(
       {
         outline: "none",
-        color: `${theme.colors.black}`,
-        borderColor: `${theme.colors.blue}`,
-        boxShadow: `0 0 3px ${theme.colors.blue}`,
+        boxShadow: `0 0 10px ${theme.colors.blue}`,
       }
     );  
   }
