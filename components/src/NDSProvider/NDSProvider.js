@@ -4,6 +4,7 @@ import theme from "../theme";
 
 const Reset = createGlobalStyle`body {
   margin: 0;
+  color: ${theme.colors.black};
 }`;
 
 export const GlobalStyles = styled.div`
