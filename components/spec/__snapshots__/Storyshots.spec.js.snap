@@ -1850,7 +1850,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-kpOJdX coWVuW"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
@@ -1878,7 +1878,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -1906,7 +1906,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-kGXeez bBjjWN"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
@@ -1934,7 +1934,7 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-kGXeez bBjjWN"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
@@ -8045,25 +8045,24 @@ exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
         }
       }
     >
-      <div>
-        
-      </div>
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY lnIlZF"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
             fill="#00438f"
           />
-          <div
-            className="sc-chPdSV iNcBxZ"
-            fill="#00438f"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8073,31 +8072,31 @@ exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
           off
         </p>
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={false}
-          id="toggle1"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY eUymuR"
+          <path
+            d="M0,20C0,9,9,0,20,0h24c11,0,20,9,20,20s-9,20-20,20H20C9,40,0,31,0,20z M44,36 c8.8,0,16-7.2,16-16S52.8,4,44,4s-16,7.2-16,16S35.2,36,44,36z"
             fill="#00438f"
           />
-          <div
-            className="sc-chPdSV fHjRhO"
-            fill="#00438f"
+          <circle
+            cx="44"
+            cy="20"
+            fill="#ffffff"
+            r="16"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8107,31 +8106,29 @@ exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
           on
         </p>
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={false}
-          id="toggle2"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY lnIlZF"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
             fill="#00438f"
           />
-          <div
-            className="sc-chPdSV iNcBxZ"
-            fill="#00438f"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8141,31 +8138,29 @@ exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
           off
         </p>
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={false}
-          id="toggle3"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY fgecPF"
-            fill="#c0c8d1"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#e4e7eb"
           />
-          <div
-            className="sc-chPdSV cVbGZj"
-            fill="#c0c8d1"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8175,12 +8170,8 @@ exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
           off
         </p>
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={true}
-          id="toggle3"
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
@@ -8208,19 +8199,21 @@ exports[`Storyshots Toggle Toggle 1`] = `
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY lnIlZF"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
             fill="#00438f"
           />
-          <div
-            className="sc-chPdSV iNcBxZ"
-            fill="#00438f"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8228,12 +8221,8 @@ exports[`Storyshots Toggle Toggle 1`] = `
           fontSize={1}
         />
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={false}
-          id={null}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
@@ -8289,19 +8278,21 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
         <div
           className="sc-bwzfXH sc-VigVT gdygBP"
         >
-          <div
-            className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+          <svg
+            height="40px"
             onClick={[Function]}
+            viewBox="0 0 64 40"
+            width="64px"
           >
-            <div
-              className="sc-kAzzGY lnIlZF"
+            <path
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
               fill="#00438f"
             />
-            <div
-              className="sc-chPdSV iNcBxZ"
-              fill="#00438f"
+            <path
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+              fill="#ffffff"
             />
-          </div>
+          </svg>
           <p
             className="sc-dnqmqq cpoikb"
             color="currentColor"
@@ -8311,12 +8302,8 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
             off
           </p>
           <input
-            className="sc-kgoBCf iHTgfh"
+            className="sc-cSHVUG iocbHX"
             disabled={false}
-            id={null}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
             type="checkbox"
           />
         </div>
@@ -8345,19 +8332,21 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY fgecPF"
-            fill="#c0c8d1"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#e4e7eb"
           />
-          <div
-            className="sc-chPdSV cVbGZj"
-            fill="#c0c8d1"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8365,12 +8354,8 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           fontSize={1}
         />
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={true}
-          id={null}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
@@ -8398,19 +8383,21 @@ exports[`Storyshots Toggle With text 1`] = `
       <div
         className="sc-bwzfXH sc-VigVT gdygBP"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT sc-cSHVUG cJzoAk"
+        <svg
+          height="40px"
           onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
         >
-          <div
-            className="sc-kAzzGY lnIlZF"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
             fill="#00438f"
           />
-          <div
-            className="sc-chPdSV iNcBxZ"
-            fill="#00438f"
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
           />
-        </div>
+        </svg>
         <p
           className="sc-dnqmqq cpoikb"
           color="currentColor"
@@ -8420,12 +8407,8 @@ exports[`Storyshots Toggle With text 1`] = `
           off
         </p>
         <input
-          className="sc-kgoBCf iHTgfh"
+          className="sc-cSHVUG iocbHX"
           disabled={false}
-          id={null}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
           type="checkbox"
         />
       </div>
@@ -8451,14 +8434,14 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-kGXeez bBjjWN"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-kpOJdX coWVuW"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
@@ -8473,7 +8456,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8488,14 +8471,14 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-kpOJdX coWVuW"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8510,7 +8493,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8564,7 +8547,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8579,7 +8562,7 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-dxgOiQ kmIAYo"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
