@@ -1,14 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Text from "../Type/Text"
 import theme from "../theme";
 import Flex from "../Flex/Flex";
+
+const HiddenInput = styled.input`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`;
 
 class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggled: props.toggled,
+            toggled: (props.toggled || props.defaultToggled),
             disabled: props.disabled,
         };
         this.handleClick = this.handleClick.bind(this);
@@ -32,7 +44,7 @@ class Toggle extends React.Component {
               fill = {this.state.disabled ? theme.colors.lightGrey : theme.colors.darkBlue}
             />
             <circle 
-              class="st1" cx="44" cy="20" r="16"
+              cx="44" cy="20" r="16"
               fill = { theme.colors.white }
             />  
           </React.Fragment>)
@@ -54,10 +66,17 @@ class Toggle extends React.Component {
     }
 
     render(){
+      const {   
+        onToggle,
+        id,
+        onText,
+        offText,
+        disabled,
+        ...props
+      } = this.props;
     return(
-      <Flex alignItems="center"
-        id={this.props.id}
-        { ...this.props }   
+      <Flex 
+        alignItems="center"
       >
         <svg 
           height="40px" 
@@ -66,15 +85,20 @@ class Toggle extends React.Component {
           onClick = {e => {
             if (!this.state.disabled){
               this.handleClick(e);
-              this.props.onToggle(!this.state.toggled, this.props.id, e);
+              onToggle(!this.state.toggled, id, e);
             };
           }}
         >
           {this.getToggleSvg()}
         </svg>
         <Text mb ={0} ml={2}>
-          {this.state.toggled ? this.props.onText : this.props.offText}
+          {this.state.toggled ? onText : offText}
         </Text>
+        <HiddenInput
+          { ...props }
+          disabled={ disabled }
+          type="checkbox"
+        />
       </Flex>
     )}
 };
@@ -82,6 +106,7 @@ class Toggle extends React.Component {
 Toggle.propTypes = {
   onToggle: PropTypes.func,
   toggled: PropTypes.bool,
+  defaultToggled: PropTypes.bool,
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
@@ -90,6 +115,7 @@ Toggle.propTypes = {
 Toggle.defaultProps = {
   onToggle: () => {},
   toggled: false,
+  defaultToggled: false,
   disabled: false,
   onText: null,
   offText: null,
