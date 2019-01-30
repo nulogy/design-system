@@ -11,7 +11,7 @@ storiesOf("Header Validation", module)
       message="Instructions and description of an error"
       title="Error has occured ..."
     >
-      <List compact mb={ 0 } pl={ 7 }>
+      <List compact>
         <ListItem>Affected field</ListItem>
         <ListItem>Unmet criteria</ListItem>
         <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
