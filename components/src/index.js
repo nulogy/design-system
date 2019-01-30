@@ -12,4 +12,4 @@ export { default as InlineValidation } from "./Validation/InlineValidation";
 export { default as Field } from "./Field/Field";
 export { default as Input } from "./Input/Input";
 export * from "./Type/Headings";
-export { default as ThemeProvider } from "./ThemeProvider/ThemeProvider";
+export { default as NDSProvider } from "./NDSProvider/NDSProvider";

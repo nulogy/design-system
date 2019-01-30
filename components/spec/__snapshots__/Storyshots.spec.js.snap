@@ -2,7 +2,7 @@
 
 exports[`Storyshots Box Box 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -28,7 +28,7 @@ exports[`Storyshots Box Box 1`] = `
 
 exports[`Storyshots Box With a background colour 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -55,7 +55,7 @@ exports[`Storyshots Box With a background colour 1`] = `
 
 exports[`Storyshots Box With a responsive width 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -88,7 +88,7 @@ exports[`Storyshots Box With a responsive width 1`] = `
 
 exports[`Storyshots Box With a set width 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -115,7 +115,7 @@ exports[`Storyshots Box With a set width 1`] = `
 
 exports[`Storyshots Box With a shadow 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -141,7 +141,7 @@ exports[`Storyshots Box With a shadow 1`] = `
 
 exports[`Storyshots Box With a text colour 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -168,7 +168,7 @@ exports[`Storyshots Box With a text colour 1`] = `
 
 exports[`Storyshots Box With margin 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -228,7 +228,7 @@ exports[`Storyshots Box With margin 1`] = `
 
 exports[`Storyshots Box With padding 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -288,7 +288,7 @@ exports[`Storyshots Box With padding 1`] = `
 
 exports[`Storyshots Buttons Button 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -383,7 +383,7 @@ exports[`Storyshots Buttons Button 1`] = `
 
 exports[`Storyshots Buttons DangerButton 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -478,7 +478,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
 
 exports[`Storyshots Buttons PrimaryButton 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -573,7 +573,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
 
 exports[`Storyshots Buttons QuietButton 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -668,7 +668,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
 
 exports[`Storyshots Buttons Set to disabled 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -764,7 +764,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
 
 exports[`Storyshots Buttons Set to full width 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -860,7 +860,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
 
 exports[`Storyshots Buttons With a selected Icon 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1081,7 +1081,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
 
 exports[`Storyshots Buttons With a selected size 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1327,7 +1327,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
 
 exports[`Storyshots Field Field 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1375,7 +1375,7 @@ exports[`Storyshots Field Field 1`] = `
 
 exports[`Storyshots Field With Input and InlineValidation 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1465,7 +1465,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
 
 exports[`Storyshots Field With a long text 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1519,7 +1519,7 @@ exports[`Storyshots Field With a long text 1`] = `
 
 exports[`Storyshots Field With all additional components 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1642,7 +1642,7 @@ exports[`Storyshots Field With all additional components 1`] = `
 
 exports[`Storyshots Field With format text 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1692,7 +1692,7 @@ exports[`Storyshots Field With format text 1`] = `
 
 exports[`Storyshots Field With help text 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1742,7 +1742,7 @@ exports[`Storyshots Field With help text 1`] = `
 
 exports[`Storyshots Field With requirement text 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1792,7 +1792,7 @@ exports[`Storyshots Field With requirement text 1`] = `
 
 exports[`Storyshots Flex Flex 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1835,7 +1835,7 @@ exports[`Storyshots Flex Flex 1`] = `
 
 exports[`Storyshots Headings Section Title 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1863,7 +1863,7 @@ exports[`Storyshots Headings Section Title 1`] = `
 
 exports[`Storyshots Headings Subsection Title 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1891,7 +1891,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
 
 exports[`Storyshots Headings Title 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1919,7 +1919,7 @@ exports[`Storyshots Headings Title 1`] = `
 
 exports[`Storyshots Headings With a custom margin 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1955,7 +1955,7 @@ exports[`Storyshots Headings With a custom margin 1`] = `
 
 exports[`Storyshots Icon Icon 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -2456,7 +2456,7 @@ exports[`Storyshots Icon Icon 1`] = `
 
 exports[`Storyshots Icon InlineIcon 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -4121,7 +4121,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
 
 exports[`Storyshots Icon With a color 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -5762,7 +5762,7 @@ exports[`Storyshots Icon With a color 1`] = `
 
 exports[`Storyshots Icon With a size 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -6755,7 +6755,7 @@ exports[`Storyshots Icon With a size 1`] = `
 
 exports[`Storyshots Icon With accessibility title 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -6822,7 +6822,7 @@ exports[`Storyshots Icon With accessibility title 1`] = `
 
 exports[`Storyshots Icon With added margin 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7057,7 +7057,7 @@ exports[`Storyshots Icon With added margin 1`] = `
 
 exports[`Storyshots Icon With applied className 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7105,7 +7105,7 @@ exports[`Storyshots Icon With applied className 1`] = `
 
 exports[`Storyshots IconicButton Disabled 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7196,7 +7196,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
 
 exports[`Storyshots IconicButton With a long label 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7252,7 +7252,7 @@ exports[`Storyshots IconicButton With a long label 1`] = `
 
 exports[`Storyshots IconicButton With label 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7308,7 +7308,7 @@ exports[`Storyshots IconicButton With label 1`] = `
 
 exports[`Storyshots Inline Validation Inline Validation 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7394,7 +7394,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
 
 exports[`Storyshots Inline Validation With custom style 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7475,7 +7475,7 @@ exports[`Storyshots Inline Validation With custom style 1`] = `
 
 exports[`Storyshots Inline Validation Without list items 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7534,7 +7534,7 @@ exports[`Storyshots Inline Validation Without list items 1`] = `
 
 exports[`Storyshots Input Input 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7559,7 +7559,7 @@ exports[`Storyshots Input Input 1`] = `
 
 exports[`Storyshots Input Set to disabled 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7584,7 +7584,7 @@ exports[`Storyshots Input Set to disabled 1`] = `
 
 exports[`Storyshots Input Set to error 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7609,7 +7609,7 @@ exports[`Storyshots Input Set to error 1`] = `
 
 exports[`Storyshots Link Link 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7637,7 +7637,7 @@ exports[`Storyshots Link Link 1`] = `
 
 exports[`Storyshots Link With a different color 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7665,7 +7665,7 @@ exports[`Storyshots Link With a different color 1`] = `
 
 exports[`Storyshots Link Without underline 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7693,7 +7693,7 @@ exports[`Storyshots Link Without underline 1`] = `
 
 exports[`Storyshots List List 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7737,7 +7737,7 @@ exports[`Storyshots List List 1`] = `
 
 exports[`Storyshots List With compact spacing 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7781,7 +7781,7 @@ exports[`Storyshots List With compact spacing 1`] = `
 
 exports[`Storyshots List With custom colour 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7825,7 +7825,7 @@ exports[`Storyshots List With custom colour 1`] = `
 
 exports[`Storyshots List With custom font size and line height 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7870,7 +7870,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
 
 exports[`Storyshots Text Set to inline 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7907,7 +7907,7 @@ exports[`Storyshots Text Set to inline 1`] = `
 
 exports[`Storyshots Text Text 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7936,7 +7936,7 @@ exports[`Storyshots Text Text 1`] = `
 
 exports[`Storyshots Text With a color 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -7965,7 +7965,7 @@ exports[`Storyshots Text With a color 1`] = `
 
 exports[`Storyshots Text With a custom margin 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -8002,7 +8002,7 @@ exports[`Storyshots Text With a custom margin 1`] = `
 
 exports[`Storyshots Text With a size 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -8031,7 +8031,7 @@ exports[`Storyshots Text With a size 1`] = `
 
 exports[`Storyshots Typography Article 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"

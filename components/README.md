@@ -7,18 +7,18 @@ Built with React, compononents make it easy to create interfaces that conform to
 ## Usage
 
 ### 1. Wrap your appliction in our theme provider 
-Wrap your application in our ThemeProvider to access Nulogy's theme values and add typographic defaults. 
+Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults. 
 
 ```
 import React from 'react'
-import { ThemeProvider } from '@nulogy/components'
+import { NDSProvider } from '@nulogy/components'
 
 class App extends React.Component {
   render() {
     return (
-      <ThemeProvider>
+      <NDSProvider>
         // your application 
-      </ThemeProvider>
+      </NDSProvider>
     )
   }
 }
