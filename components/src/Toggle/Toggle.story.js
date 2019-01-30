@@ -3,10 +3,55 @@ import { storiesOf } from "@storybook/react";
 import Toggle from "./Toggle";
 import Field from "../Field/Field";
 
-const onToggleDemo = (toggled, id) => {
-  const message = `Toggle id: (${id}) has been turned ${toggled ? "on!" : "off!"}`;
-  console.log(message);
-};
+class ToggleStateDisplay extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "",
+    };
+    this.updateMessage = this.updateMessage.bind(this);
+  }
+
+  updateMessage(toggled, id) {
+    const message = `Toggle id: (${id}) has been turned ${toggled ? "on!" : "off!"}`;
+    this.setState({ message });
+  }
+
+  render() {
+    const { message } = this.state;
+    return (
+      <React.Fragment>
+        <div>{message}</div>
+        <Toggle
+          id="toggle1"
+          onToggle={ this.updateMessage }
+          onText="on"
+          offText="off"
+        />
+        <Toggle
+          id="toggle2"
+          onToggle={ this.updateMessage }
+          onText="on"
+          offText="off"
+          toggled
+        />
+        <Toggle
+          id="toggle3"
+          onToggle={ this.updateMessage }
+          onText="on"
+          offText="off"
+        />
+        <Toggle
+          disabled
+          id="toggle3"
+          onToggle={ this.updateMessage }
+          onText="on"
+          offText="off"
+        />
+      </React.Fragment>
+    );
+  }
+}
 
 storiesOf("Toggle", module)
   .add("Toggle", () => (
@@ -33,32 +78,5 @@ storiesOf("Toggle", module)
     </Field>
   ))
   .add("<TEMP> Toggle demo", () => (
-    <React.Fragment>
-      <Toggle
-        id="toggle1"
-        onToggle={ onToggleDemo }
-        onText="on"
-        offText="off"
-      />
-      <Toggle
-        id="toggle2"
-        onToggle={ onToggleDemo }
-        onText="on"
-        offText="off"
-        toggled
-      />
-      <Toggle
-        id="toggle3"
-        onToggle={ onToggleDemo }
-        onText="on"
-        offText="off"
-      />
-      <Toggle
-        disabled
-        id="toggle3"
-        onToggle={ onToggleDemo }
-        onText="on"
-        offText="off"
-      />
-    </React.Fragment>
+    <ToggleStateDisplay />
   ));
