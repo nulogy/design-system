@@ -11,6 +11,20 @@ cursor: pointer;
 background-color: transparent;
 `;
 
+const focusedStyle = focus => {
+  if(focus) {
+    return(
+      {
+        outline: "none",
+        color: `${theme.colors.black}`,
+        borderColor: `${theme.colors.blue}`,
+        boxShadow: `0 0 3px ${theme.colors.blue}`,
+      }
+    );  
+  }
+  return;
+};
+
 const ToggleBG = styled.div`
 width: 64px;
 height: 40px;
@@ -19,6 +33,8 @@ border-radius: 20px;
 
 transition: all 0.25s ease;
 background-color: ${props => props.toggled ? props.fill : theme.colors.white};
+
+${props => focusedStyle(props.focused)}
 `;
 
 const ToggleFG = styled.div`
@@ -36,7 +52,8 @@ left: ${props => props.toggled ? "24px" : null};
 `;
 
 const HiddenInput = styled.input`
-  display: none;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); 
 `;
 
 class Toggle extends React.Component {
@@ -44,14 +61,26 @@ class Toggle extends React.Component {
     super(props);
     this.state = {
       toggled: (props.toggled || props.defaultToggled),
+      focused: false,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleClick() {
     this.setState(prevState => ({
       toggled: !prevState.toggled,
     }));
+    this.input.focus();
+  }
+
+  handleFocus() {
+    this.setState({ focused: true })
+  }
+
+  handleBlur() {
+    this.setState({ focused: false })
   }
 
   render() {
@@ -63,7 +92,10 @@ class Toggle extends React.Component {
       disabled,
       ...props
     } = this.props;
-    const { toggled } = this.state;
+    const { 
+      toggled, 
+      focused,
+    } = this.state;
     const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
     return (
       <Flex
@@ -77,14 +109,25 @@ class Toggle extends React.Component {
             }
           } }
         >
-        <ToggleBG toggled={toggled} fill={fill}/>
-        <ToggleFG toggled={toggled} fill={fill}/>
+          <ToggleBG 
+            toggled={toggled} 
+            fill={fill}
+            focused={focused}
+          />
+          <ToggleFG 
+            toggled={toggled} 
+            fill={fill}
+          />
         </ToggleContainer>
         <Text mb={ 0 } ml={ 2 }>
           {toggled ? onText : offText}
         </Text>
         <HiddenInput
           id = { id }
+          ref={ref => {this.input = ref}}
+          onClick = {this.handleClick}
+          onFocus = {this.handleFocus}
+          onBlur = {this.handleBlur}
           { ...props }
           disabled={ disabled }
           type="checkbox"
