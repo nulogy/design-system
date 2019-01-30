@@ -2,18 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import Text from "../Type/Text"
 import theme from "../theme";
+import Flex from "../Flex/Flex";
 
 class Toggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggled: props.defaultOn
+            toggled: props.toggled,
+            disabled: props.disabled,
         };
         this.handleClick = this.handleClick.bind(this);
         this.getToggleSvg = this.getToggleSvg.bind(this);
     };
+
     handleClick(){
-        this.setState({toggled: !this.state.toggled})
+      this.setState(prevState => ({
+        toggled: !prevState.toggled
+      }));
     };
 
     getToggleSvg(){
@@ -26,34 +31,43 @@ class Toggle extends React.Component {
 
     render(){
     return(
-      <label style = {{display: "flex", alignItems: "center"}}>
-        <input
-          id = {this.props.id}
-          type = "button"
-          style = {{display: "none"}}
+      <Flex alignItems="center"
+        id={this.props.id}
+        { ...this.props }
+      >
+        <svg
+          height="40px"
+          width="64px"
+          viewBox ="0 0 64 40"
+          fill = {this.state.disabled ? theme.colors.lightGrey : theme.colors.darkBlue}
           onClick = {e => {
-            this.handleClick(e);
-            this.props.onToggle(!this.state.toggled, this.props.id, e)
+            if (!this.state.disabled){
+              this.handleClick(e);
+              this.props.onToggle(!this.state.toggled, this.props.id, e);
+            };
           }}
-        />
-        <svg height="40px" width="64px" viewBox ="0 0 64 40" fill = {theme.colors.darkBlue}>
+        >
           <path d={this.getToggleSvg()}/>
         </svg>
         <Text mb ={0} ml={1}>
           {this.state.toggled ? this.props.onText : this.props.offText}
         </Text>
-      </label>
+      </Flex>
     )}
 };
 
 Toggle.propTypes = {
   onToggle: PropTypes.func,
-  defaultOn: PropTypes.bool,
+  toggled: PropTypes.bool,
+  onText: PropTypes.string,
+  offText: PropTypes.string,
 };
 
 Toggle.defaultProps = {
   onToggle: () => {},
-  defaultOn: false,
+  toggled: false,
+  onText: null,
+  offText: null,
 };
 
 

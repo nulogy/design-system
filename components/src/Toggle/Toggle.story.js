@@ -21,8 +21,16 @@ storiesOf("Toggle", module)
         onToggle = {onToggleDemo}
         onText = "on"
         offText = "off"
+        toggled = {true}
       />
       <Toggle
+        id = "toggle3"
+        onToggle = {onToggleDemo}
+        onText = "on"
+        offText = "off"
+      />
+      <Toggle
+        disabled
         id = "toggle3"
         onToggle = {onToggleDemo}
         onText = "on"
