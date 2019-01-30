@@ -22,11 +22,35 @@ class Toggle extends React.Component {
     };
 
     getToggleSvg(){
-      return(
-        this.state.toggled ?
-        "M0,20 C0,8.96875 8.96875,0 20,0 L44,0 C55.03125,0 64,8.96875 64,20 C64,31.03125 55.03125,40 44,40 L20,40 C8.96875,40 0,31.03125 0,20 Z M44,36 C52.8125,36 60,28.8125 60,20 C60,11.1875 52.8125,4 44,4 C35.1875,4 28,11.1875 28,20 C28,28.8125 35.1875,36 44,36 Z" :
-        "M36,20 C36,11.1875 28.8125,4 20,4 C11.1875,4 4,11.1875 4,20 C4,28.8125 11.1875,36 20,36 C28.8125,36 36,28.8125 36,20 Z M60,20 C60,11.1875 52.8125,4 44,4 L31.9375,4 C36.8125,7.65625 40,13.46875 40,20 C40,26.53125 36.8125,32.34375 31.9375,36 L44,36 C52.8125,36 60,28.8125 60,20 Z M64,20 C64,31.03125 55.03125,40 44,40 L20,40 C8.96875,40 0,31.03125 0,20 C0,8.96875 8.96875,0 20,0 L44,0 C55.03125,0 64,8.96875 64,20 Z"
-      )
+   
+      if (this.state.toggled) {
+        return(
+          <React.Fragment>
+            <path 
+              d="M0,20C0,9,9,0,20,0h24c11,0,20,9,20,20s-9,20-20,20H20C9,40,0,31,0,20z M44,36
+			          c8.8,0,16-7.2,16-16S52.8,4,44,4s-16,7.2-16,16S35.2,36,44,36z"
+              fill = {this.state.disabled ? theme.colors.lightGrey : theme.colors.darkBlue}
+            />
+            <circle 
+              class="st1" cx="44" cy="20" r="16"
+              fill = { theme.colors.white }
+            />  
+          </React.Fragment>)
+      }else{
+        return(
+          <React.Fragment>		
+            <path 
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20
+                c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z M64,20c0,11-9,20-20,20H20
+                C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+              fill = {this.state.disabled ? theme.colors.lightGrey : theme.colors.darkBlue}
+            />
+            <path 
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20
+                c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+              fill = { theme.colors.white }
+            />
+        </React.Fragment>)}
     }
 
     render(){
@@ -35,11 +59,18 @@ class Toggle extends React.Component {
         id={this.props.id}
         { ...this.props }
       >
+<<<<<<< HEAD
         <svg
           height="40px"
           width="64px"
           viewBox ="0 0 64 40"
           fill = {this.state.disabled ? theme.colors.lightGrey : theme.colors.darkBlue}
+=======
+        <svg 
+          height="40px" 
+          width="64px" 
+          viewBox ="0 0 64 40" 
+>>>>>>> refactor svg display
           onClick = {e => {
             if (!this.state.disabled){
               this.handleClick(e);
@@ -47,9 +78,9 @@ class Toggle extends React.Component {
             };
           }}
         >
-          <path d={this.getToggleSvg()}/>
+          {this.getToggleSvg()}
         </svg>
-        <Text mb ={0} ml={1}>
+        <Text mb ={0} ml={2}>
           {this.state.toggled ? this.props.onText : this.props.offText}
         </Text>
       </Flex>
@@ -59,6 +90,7 @@ class Toggle extends React.Component {
 Toggle.propTypes = {
   onToggle: PropTypes.func,
   toggled: PropTypes.bool,
+  disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
 };
@@ -66,6 +98,7 @@ Toggle.propTypes = {
 Toggle.defaultProps = {
   onToggle: () => {},
   toggled: false,
+  disabled: false,
   onText: null,
   offText: null,
 };
