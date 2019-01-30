@@ -1850,7 +1850,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-kAzzGY fCtsYY"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
@@ -1878,7 +1878,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -1906,7 +1906,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-cSHVUG bcDUhd"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
@@ -1934,7 +1934,7 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-cSHVUG bcDUhd"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
@@ -8029,6 +8029,394 @@ exports[`Storyshots Text With a size 1`] = `
 </div>
 `;
 
+exports[`Storyshots Toggle <TEMP> Toggle demo 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#00438f"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        >
+          off
+        </p>
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={false}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M0,20C0,9,9,0,20,0h24c11,0,20,9,20,20s-9,20-20,20H20C9,40,0,31,0,20z M44,36 c8.8,0,16-7.2,16-16S52.8,4,44,4s-16,7.2-16,16S35.2,36,44,36z"
+            fill="#00438f"
+          />
+          <circle
+            cx="44"
+            cy="20"
+            fill="#ffffff"
+            r="16"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        >
+          on
+        </p>
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={false}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#00438f"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        >
+          off
+        </p>
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={false}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#e4e7eb"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        >
+          off
+        </p>
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={true}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle Toggle 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#00438f"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        />
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={false}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle Toggle Field 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <label
+        className="sc-gZMcBi cKwrJy"
+      >
+        <div
+          className="sc-bwzfXH jrEgFn"
+        >
+          Setting
+          <p
+            className="sc-dnqmqq jmddBv"
+            color="darkGrey"
+            display="inline"
+            fontSize="12px"
+          />
+          <p
+            className="sc-dnqmqq bgjEga"
+            color="currentColor"
+            display="block"
+            fontSize="14px"
+          >
+            Turns setting on/off
+          </p>
+          <p
+            className="sc-dnqmqq cPhHqy"
+            color="darkGrey"
+            display="block"
+            fontSize="12px"
+          />
+        </div>
+        <div
+          className="sc-bwzfXH sc-VigVT gdygBP"
+        >
+          <svg
+            height="40px"
+            onClick={[Function]}
+            viewBox="0 0 64 40"
+            width="64px"
+          >
+            <path
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+              fill="#00438f"
+            />
+            <path
+              d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+              fill="#ffffff"
+            />
+          </svg>
+          <p
+            className="sc-dnqmqq cpoikb"
+            color="currentColor"
+            display="block"
+            fontSize={1}
+          >
+            off
+          </p>
+          <input
+            className="sc-cSHVUG iocbHX"
+            disabled={false}
+            type="checkbox"
+          />
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle Toggle set to disabled 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#e4e7eb"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        />
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={true}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle With text 1`] = `
+<div
+  className="sc-bdVaJa fahXYn"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-VigVT gdygBP"
+      >
+        <svg
+          height="40px"
+          onClick={[Function]}
+          viewBox="0 0 64 40"
+          width="64px"
+        >
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60, 20z M64,20c0,11-9,20-20,20H20C9,40,0,31,0,20S9,0,20,0h24C55,0,64,9,64,20z"
+            fill="#00438f"
+          />
+          <path
+            d="M36,20c0-8.8-7.2-16-16-16S4,11.2,4,20s7.2,16,16,16S36,28.8,36,20z M60,20 c0-8.8-7.2-16-16-16H31.9c4.9,3.7,8.1,9.5,8.1,16s-3.2,12.3-8.1,16H44C52.8,36,60,28.8,60,20z"
+            fill="#ffffff"
+          />
+        </svg>
+        <p
+          className="sc-dnqmqq cpoikb"
+          color="currentColor"
+          display="block"
+          fontSize={1}
+        >
+          off
+        </p>
+        <input
+          className="sc-cSHVUG iocbHX"
+          disabled={false}
+          type="checkbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Typography Article 1`] = `
 <div
   className="sc-bdVaJa iITmcr"
@@ -8046,14 +8434,14 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-cSHVUG bcDUhd"
+        className="sc-kAzzGY gFVogv"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-kAzzGY fCtsYY"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
@@ -8068,7 +8456,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8083,14 +8471,14 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-kAzzGY fCtsYY"
+        className="sc-chPdSV kzlCnL"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8105,7 +8493,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8159,7 +8547,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
@@ -8174,7 +8562,7 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-chPdSV gawXxS"
+        className="sc-kgoBCf ebjvcv"
         fontSize={2}
         fontWeight={2}
       >
