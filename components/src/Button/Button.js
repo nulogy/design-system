@@ -66,8 +66,13 @@ const BaseButton = ({
 BaseButton.propTypes = {
   theme: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
-  iconSide: PropTypes.string.isRequired,
-  iconName: PropTypes.string.isRequired,
+  iconName: PropTypes.oneOf(iconNames),
+  iconSide: PropTypes.oneOf(["left", "right"]),
+};
+
+BaseButton.defaultProps = {
+  iconName: null,
+  iconSide: "right",
 };
 
 
@@ -102,14 +107,11 @@ Button.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
-  iconName: PropTypes.oneOf(iconNames),
-  iconSide: PropTypes.oneOf(["left", "right"]),
   ...space.propTypes,
 };
 
 Button.defaultProps = {
   theme,
-  iconSide: "right",
 };
 
 export default Button;

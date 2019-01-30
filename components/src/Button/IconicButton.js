@@ -69,7 +69,6 @@ export const names = Object.keys(icons);
 IconicButton.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
-  theme: PropTypes.shape({}).isRequired,
   icon: PropTypes.oneOf(names).isRequired,
 };
 

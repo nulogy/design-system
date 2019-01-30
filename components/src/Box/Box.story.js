@@ -1,16 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import Box from "./Box";
 
 storiesOf("Box", module)
-  .add("Box", withInfo({
-    inline: false,
-  })(() => (
+  .add("Box", () => (
     <Box p={ 4 }>
       Hello World
     </Box>
-  )))
+  ))
   .add("With a text colour", () => (
     <Box p={ 4 } color="blue">
       Hello World
