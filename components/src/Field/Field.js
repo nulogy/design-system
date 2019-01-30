@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Box from "../Box/Box";
 import Label from "./Label";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
 
-const Field = ({
+const BaseField = ({
   labelText,
   requirementText,
   helpText,
@@ -24,6 +25,9 @@ const Field = ({
     {children}
   </Label>
 );
+
+const Field = styled(BaseField)`
+`
 
 Field.propTypes = {
   labelText: PropTypes.string.isRequired,
