@@ -29,7 +29,7 @@ const SubsectionTitle = styled(SubsectionTitleBase)`
   font-size: ${theme.fontSizes[2]};
   font-weight: ${theme.fontWeights[2]};
   line-height: ${theme.lineHeights.subsectionTitle};
-`
+`;
 
 SubsectionTitle.defaultProps = {
   mb: 2,

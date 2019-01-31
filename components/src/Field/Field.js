@@ -27,7 +27,7 @@ const BaseField = ({
 );
 
 const Field = styled(BaseField)`
-`
+`;
 
 Field.propTypes = {
   labelText: PropTypes.string.isRequired,

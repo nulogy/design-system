@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import { SubsectionTitle } from "../Type/Headings";
-import Box from "../Box/Box";
 import Field from "../Field/Field";
 
 const FormSectionTitle = SubsectionTitle.withComponent("legend");
@@ -11,19 +10,17 @@ const FormSectionTitle = SubsectionTitle.withComponent("legend");
 const BaseFormSection = ({
   title,
   children,
-  ...props,
-}) => {
-  return (
-    <fieldset { ...props }>
-      { (title != null)
+  ...props
+}) => (
+  <fieldset { ...props }>
+    { (title != null)
         && (
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
-      { children }
-    </fieldset>
-  )
-};
+    { children }
+  </fieldset>
+);
 
 const FormSection = styled(BaseFormSection)`
   padding: 0;
@@ -31,7 +28,7 @@ const FormSection = styled(BaseFormSection)`
   border: none;
   ${FormSectionTitle} {
     padding:0;
-    margin-bottom: ${props => (props.title ? theme.space[4] : '0')};
+    margin-bottom: ${props => (props.title ? theme.space[4] : "0")};
   }
   ${Field} {
     margin-bottom: ${theme.space[4]};

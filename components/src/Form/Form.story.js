@@ -57,43 +57,44 @@ storiesOf("Form", module)
   .add("With form sections", () => (
     <Form
       title="New Profile"
-    ><FormSection
-      title="Personal Information"
     >
-      <Field
-        labelText="Name"
+      <FormSection
+        title="Personal Information"
       >
-        <Input />
-      </Field>
-      <Field
-        labelText="Date of birth"
-        requirementText="(Optional)"
-        helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)"
+        <Field
+          labelText="Name"
+        >
+          <Input />
+        </Field>
+        <Field
+          labelText="Date of birth"
+          requirementText="(Optional)"
+          helpText="Enter a date below"
+          formatText="(DD-MM-YYYY)"
+        >
+          <Input />
+        </Field>
+        <Field
+          labelText="Place of birth"
+          requirementText="(Optional)"
+        >
+          <Input />
+        </Field>
+      </FormSection>
+      <FormSection
+        title="General Information"
       >
-        <Input />
-      </Field>
-      <Field
-        labelText="Place of birth"
-        requirementText="(Optional)"
-      >
-        <Input />
-      </Field>
-    </FormSection>
-    <FormSection
-      title="General Information"
-    >
-      <Field
-        labelText="Gender"
-      >
-        <Input />
-      </Field>
-      <Field
-        labelText="Ocupation"
-      >
-        <Input />
-      </Field>
-    </FormSection>
+        <Field
+          labelText="Gender"
+        >
+          <Input />
+        </Field>
+        <Field
+          labelText="Ocupation"
+        >
+          <Input />
+        </Field>
+      </FormSection>
     </Form>
   ))
   .add("With form sections without titles", () => (
@@ -134,5 +135,4 @@ storiesOf("Form", module)
         </Field>
       </FormSection>
     </Form>
-  ))
-;
+  ));
