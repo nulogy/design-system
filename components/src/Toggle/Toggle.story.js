@@ -24,27 +24,27 @@ class ToggleStateDisplay extends React.Component {
         <div>{message}</div>
         <Toggle
           id="toggle1"
-          onToggle={ this.updateMessage }
+          onChange={ this.updateMessage }
           onText="on"
           offText="off"
         />
         <Toggle
           id="toggle2"
-          onToggle={ this.updateMessage }
+          onChange={ this.updateMessage }
           onText="on"
           offText="off"
           toggled
         />
         <Toggle
           id="toggle3"
-          onToggle={ this.updateMessage }
+          onChange={ this.updateMessage }
           onText="on"
           offText="off"
         />
         <Toggle
           disabled
           id="toggle3"
-          onToggle={ this.updateMessage }
+          onChange={ this.updateMessage }
           onText="on"
           offText="off"
         />

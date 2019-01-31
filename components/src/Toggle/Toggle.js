@@ -31,7 +31,7 @@ border: 4px solid ${props => props.fill};
 border-radius: 20px;
 
 transition: all 0.25s ease;
-background-color: ${props => (props.toggled ? props.fill : theme.colors.white)};
+background-color: ${props => (props.value ? props.fill : theme.colors.white)};
 
 ${props => focusedStyle(props.focused)}
 `;
@@ -47,7 +47,7 @@ border-radius: 20px;
 background-color: ${theme.colors.white};
 
 transition: all 0.25s ease;
-left: ${props => (props.toggled ? "24px" : null)};
+left: ${props => (props.value ? "24px" : null)};
 `;
 
 const HiddenInput = styled.input`
@@ -59,7 +59,7 @@ class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggled: (props.toggled || props.defaultToggled),
+      value: (props.value || props.defaultValue),
       focused: false,
     };
     this.handleClick = this.handleClick.bind(this);
@@ -69,7 +69,7 @@ class Toggle extends React.Component {
 
   handleClick() {
     this.setState(prevState => ({
-      toggled: !prevState.toggled,
+      value: !prevState.value,
     }));
     this.input.focus();
   }
@@ -84,7 +84,7 @@ class Toggle extends React.Component {
 
   render() {
     const {
-      onToggle,
+      onChange,
       id,
       onText,
       offText,
@@ -92,7 +92,7 @@ class Toggle extends React.Component {
       ...props
     } = this.props;
     const {
-      toggled,
+      value,
       focused,
     } = this.state;
     const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
@@ -104,22 +104,22 @@ class Toggle extends React.Component {
           onClick={ e => {
             if (!disabled) {
               this.handleClick(e);
-              onToggle(!toggled, id, e);
+              onChange(!value, id, e);
             }
           } }
         >
           <ToggleBG
-            toggled={ toggled }
+            value={ value }
             fill={ fill }
             focused={ focused }
           />
           <ToggleFG
-            toggled={ toggled }
+            value={ value }
             fill={ fill }
           />
         </ToggleContainer>
         <Text mb={ 0 } ml={ 2 }>
-          {toggled ? onText : offText}
+          {value ? onText : offText}
         </Text>
         <HiddenInput
           id={ id }
@@ -137,9 +137,9 @@ class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
-  onToggle: PropTypes.func,
-  toggled: PropTypes.bool,
-  defaultToggled: PropTypes.bool,
+  onChange: PropTypes.func,
+  value: PropTypes.bool,
+  defaultValue: PropTypes.bool,
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
@@ -147,9 +147,9 @@ Toggle.propTypes = {
 };
 
 Toggle.defaultProps = {
-  onToggle: () => {},
-  toggled: false,
-  defaultToggled: false,
+  onChange: () => {},
+  value: false,
+  defaultValue: false,
   disabled: false,
   onText: null,
   offText: null,
