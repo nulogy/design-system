@@ -11,13 +11,10 @@ import Icon from "../Icon/Icon";
 
 const Wrapper = styled.div`
   ${space}
-
-  border: solid 1px lime;
   ${Text} {
     margin-bottom: ${theme.space[2]};
   }
   > *:last-child {
-   border: solid 1px red;
    margin-bottom: 0;
  }
 `;
