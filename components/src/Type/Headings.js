@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import Text from "./Text";
 import theme from "../theme";
 
@@ -21,12 +22,16 @@ SectionTitle.defaultProps = {
   theme,
 };
 
-const SubsectionTitle = Text.withComponent("h3");
+const SubsectionTitleBase = Text.withComponent("h3");
+
+const SubsectionTitle = styled(SubsectionTitleBase)`
+  margin: 0;
+  font-size: ${theme.fontSizes[2]};
+  font-weight: ${theme.fontWeights[2]};
+  line-height: ${theme.lineHeights.subsectionTitle};
+`
+
 SubsectionTitle.defaultProps = {
-  m: 0,
-  fontSize: 2,
-  fontWeight: 2,
-  lineHeight: theme.lineHeights.subsectionTitle,
   mb: 2,
   theme,
 };
