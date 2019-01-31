@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Box from "../Box/Box";
 import Label from "./Label";
 import RequirementText from "./RequirementText";
