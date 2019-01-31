@@ -12,12 +12,18 @@ const BaseFormSection = ({
   title,
   children,
   ...props,
-}) => (
-  <fieldset { ...props }>
-    <FormSectionTitle>{ title }</FormSectionTitle>
-    { children }
-  </fieldset>
-);
+}) => {
+  return (
+    <fieldset { ...props }>
+      { (title != null)
+        && (
+          <FormSectionTitle>{ title }</FormSectionTitle>
+        )
+      }
+      { children }
+    </fieldset>
+  )
+};
 
 const FormSection = styled(BaseFormSection)`
   padding: 0;
