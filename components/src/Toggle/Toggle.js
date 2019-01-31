@@ -74,6 +74,8 @@ class Toggle extends React.Component {
     this.setState({
       toggled: toggled,
     })
+    console.log("input checked : " + e.target.checked)
+    console.log("React toggled : " + toggled)
   }
 
   handleFocus() {
@@ -98,6 +100,7 @@ class Toggle extends React.Component {
       toggled,
       focused,
     } = this.state;
+    console.log(id + " : " + toggled)
     const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
     return (
       <Flex
@@ -129,7 +132,7 @@ class Toggle extends React.Component {
           value={ value }
           checked={ toggled }
           ref={ ref => { this.input = ref; } }
-          onChange={ this.handleClick }
+          onChange={ e => { this.handleClick(e); } }
           onFocus={ this.handleFocus }
           onBlur={ this.handleBlur }
           { ...props }
