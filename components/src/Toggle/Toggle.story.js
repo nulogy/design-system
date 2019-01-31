@@ -33,18 +33,18 @@ class ToggleStateDisplay extends React.Component {
           onToggle={ this.updateMessage }
           onText="on"
           offText="off"
-          toggled
+          defaultToggled
         />
         <Toggle
           id="toggle3"
           onToggle={ this.updateMessage }
           onText="on"
           offText="off"
+          disabled
         />
         <Toggle
-          disabled
-          id="toggle3"
-          onToggle={ this.updateMessage }
+          id="toggle4"
+          onChange={ this.updateMessage }
           onText="on"
           offText="off"
         />
@@ -76,6 +76,22 @@ storiesOf("Toggle", module)
         offText="off"
       />
     </Field>
+  ))
+  .add("Controlled Toggle", () => (
+    <React.Fragment>
+      <Toggle
+        toggled={true}
+        onText="on"
+        offText="off"
+        onChange={() => console.log('hello')}
+      />
+      <Toggle
+        toggled={false}
+        onText="on"
+        offText="off"
+        onChange={() => console.log('hello')}
+      />
+    </React.Fragment>
   ))
   .add("<TEMP> Toggle demo", () => (
     <ToggleStateDisplay />

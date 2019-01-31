@@ -52,14 +52,18 @@ left: ${props => (props.toggled ? "24px" : null)};
 
 const HiddenInput = styled.input`
   position: absolute;
-  clip: rect(1px 1px 1px 1px); 
+  clip: rect(1px 1px 1px 1px);
 `;
 
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+<<<<<<< HEAD
       toggled: (props.toggled || props.defaultToggled),
+=======
+      toggled: !!(props.toggled || props.defaultToggled),
+>>>>>>> allows toggle to be controlled and uncontrolled based on props
       focused: false,
     };
     this.handleClick = this.handleClick.bind(this);
@@ -67,11 +71,15 @@ class Toggle extends React.Component {
     this.handleBlur = this.handleBlur.bind(this);
   }
 
-  handleClick() {
-    this.setState(prevState => ({
-      toggled: !prevState.toggled,
-    }));
+  handleClick(e) {
+    this.props.onChange(!this.state.toggled, this.props.id, e);
+    e.preventDefault();
+    const toggled = this.props.hasOwnProperty("toggled") ? this.props.toggled : e.target.checked;
+    this.setState({
+      toggled: toggled,
+    })
     this.input.focus();
+    this.input.click();
   }
 
   handleFocus() {
@@ -89,6 +97,7 @@ class Toggle extends React.Component {
       onText,
       offText,
       disabled,
+      value,
       ...props
     } = this.props;
     const {
@@ -103,8 +112,8 @@ class Toggle extends React.Component {
         <ToggleContainer
           onClick={ e => {
             if (!disabled) {
-              this.handleClick(e);
-              onToggle(!toggled, id, e);
+              this.input.focus();
+              this.input.click();
             }
           } }
         >
@@ -123,8 +132,10 @@ class Toggle extends React.Component {
         </Text>
         <HiddenInput
           id={ id }
+          value={ value }
+          checked={ toggled }
           ref={ ref => { this.input = ref; } }
-          onClick={ this.handleClick }
+          onChange={ this.handleClick }
           onFocus={ this.handleFocus }
           onBlur={ this.handleBlur }
           { ...props }
@@ -137,19 +148,18 @@ class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
-  onToggle: PropTypes.func,
+  onChange: PropTypes.func,
   toggled: PropTypes.bool,
   defaultToggled: PropTypes.bool,
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
   id: PropTypes.string,
+  value: PropTypes.string,
 };
 
 Toggle.defaultProps = {
-  onToggle: () => {},
-  toggled: false,
-  defaultToggled: false,
+  value: "on",
   disabled: false,
   onText: null,
   offText: null,
