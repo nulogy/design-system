@@ -1420,33 +1420,33 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           disabled={false}
         />
         <div
-          className="sc-bwzfXH ctAaoN"
+          className="sc-bwzfXH sc-VigVT gQxrKI"
           color="red"
         >
-          <div
-            className="sc-bwzfXH sc-VigVT bQkokP"
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat ifPDoX"
+            color="currentColor"
+            fill="currentColor"
+            height="24px"
+            mr={1}
+            name="error"
+            size="24px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="24px"
           >
-            <svg
-              aria-hidden={true}
-              className="sc-htpNat ifPDoX"
-              color="currentColor"
-              fill="currentColor"
-              height="24px"
-              mr={1}
-              name="error"
-              size="24px"
-              title={null}
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d={
-                  Array [
-                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                  ]
-                }
-              />
-            </svg>
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-bwzfXH crzhMj"
+          >
             <p
               className="sc-dnqmqq ktOAGB"
               color="currentColor"
@@ -1570,33 +1570,33 @@ exports[`Storyshots Field With all additional components 1`] = `
           disabled={false}
         />
         <div
-          className="sc-bwzfXH ctAaoN"
+          className="sc-bwzfXH sc-VigVT gQxrKI"
           color="red"
         >
-          <div
-            className="sc-bwzfXH sc-VigVT bQkokP"
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat ifPDoX"
+            color="currentColor"
+            fill="currentColor"
+            height="24px"
+            mr={1}
+            name="error"
+            size="24px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="24px"
           >
-            <svg
-              aria-hidden={true}
-              className="sc-htpNat ifPDoX"
-              color="currentColor"
-              fill="currentColor"
-              height="24px"
-              mr={1}
-              name="error"
-              size="24px"
-              title={null}
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d={
-                  Array [
-                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                  ]
-                }
-              />
-            </svg>
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-bwzfXH crzhMj"
+          >
             <p
               className="sc-dnqmqq ktOAGB"
               color="currentColor"
@@ -1605,34 +1605,34 @@ exports[`Storyshots Field With all additional components 1`] = `
             >
               There has been an error
             </p>
-          </div>
-          <ul
-            className="sc-fjdhpX jHOcwl"
-            color="currentColor"
-          >
-            <li
-              className="sc-jTzLTM daoydl"
+            <ul
+              className="sc-fjdhpX gnSYwP"
               color="currentColor"
             >
-              Something has gone wrong.
-            </li>
-            <li
-              className="sc-jTzLTM daoydl"
-              color="currentColor"
-            >
-              Entry must be atleast 3 characters long
-            </li>
-            <li
-              className="sc-jTzLTM daoydl"
-              color="currentColor"
-            >
-              <a
-                href="https://nulogy.design/"
+              <li
+                className="sc-jTzLTM daoydl"
+                color="currentColor"
               >
-                See here
-              </a>
-            </li>
-          </ul>
+                Something has gone wrong.
+              </li>
+              <li
+                className="sc-jTzLTM daoydl"
+                color="currentColor"
+              >
+                Entry must be atleast 3 characters long
+              </li>
+              <li
+                className="sc-jTzLTM daoydl"
+                color="currentColor"
+              >
+                <a
+                  href="https://nulogy.design/"
+                >
+                  See here
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </label>
     </div>
@@ -1835,7 +1835,7 @@ exports[`Storyshots Flex Flex 1`] = `
 
 exports[`Storyshots Header Validation Header Validation 1`] = `
 <div
-  className="sc-bdVaJa fahXYn"
+  className="sc-bdVaJa iITmcr"
 >
   <div
     className="sc-bwzfXH ehOaqE"
@@ -1850,78 +1850,142 @@ exports[`Storyshots Header Validation Header Validation 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ejFxxE"
+        className="sc-bwzfXH sc-VigVT jSBCoW"
         color="red"
       >
-        <div
-          className="sc-bwzfXH sc-gZMcBi bEQrZV"
-        >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat hvSQNF"
-            color="currentColor"
-            fill="currentColor"
-            height="48px"
-            mr="16px"
-            name="error"
-            size="48px"
-            title={null}
-            viewBox="0 0 24 24"
-            width="48px"
-          >
-            <path
-              d={
-                Array [
-                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                ]
-              }
-            />
-          </svg>
-          <div
-            className="sc-bwzfXH crzhMj"
-          >
-            <h3
-              className="sc-kAzzGY blDUpJ"
-              fontSize={2}
-              fontWeight={2}
-            >
-              Error has occured ...
-            </h3>
-            <p
-              className="sc-dnqmqq fIGPXl"
-              fontSize={1}
-            >
-              Instructions and description of an error
-            </p>
-          </div>
-        </div>
-        <ul
-          className="sc-jTzLTM fzbGlZ"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat hvSQNF"
           color="currentColor"
+          fill="currentColor"
+          height="48px"
+          mr="16px"
+          name="error"
+          size="48px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="48px"
         >
-          <li
-            className="sc-VigVT fhzkZR"
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-kgoBCf henqly"
+        >
+          <h3
+            className="sc-chPdSV jqLwcQ"
+            fontSize={2}
+            fontWeight={2}
+          >
+            Error has occured ...
+          </h3>
+          <p
+            className="sc-dnqmqq ktOAGB"
+            color="currentColor"
+            display="block"
+            fontSize={1}
+          >
+            Instructions and description of an error
+          </p>
+          <ul
+            className="sc-fjdhpX gnSYwP"
             color="currentColor"
           >
-            Affected field
-          </li>
-          <li
-            className="sc-VigVT fhzkZR"
-            color="currentColor"
-          >
-            Unmet criteria
-          </li>
-          <li
-            className="sc-VigVT fhzkZR"
-            color="currentColor"
-          >
-            <a
-              href="https://nulogy.design/"
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
             >
               Affected field
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              Unmet criteria
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              <a
+                href="https://nulogy.design/"
+              >
+                Affected field
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Header Validation With message only 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-VigVT jSBCoW"
+        color="red"
+      >
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat hvSQNF"
+          color="currentColor"
+          fill="currentColor"
+          height="48px"
+          mr="16px"
+          name="error"
+          size="48px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="48px"
+        >
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-kgoBCf henqly"
+        >
+          <h3
+            className="sc-chPdSV jqLwcQ"
+            fontSize={2}
+            fontWeight={2}
+          >
+            Error has occured ...
+          </h3>
+          <p
+            className="sc-dnqmqq ktOAGB"
+            color="currentColor"
+            display="block"
+            fontSize={1}
+          >
+            Instructions and description of an error
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -7418,33 +7482,33 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ctAaoN"
+        className="sc-bwzfXH sc-VigVT gQxrKI"
         color="red"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat ifPDoX"
+          color="currentColor"
+          fill="currentColor"
+          height="24px"
+          mr={1}
+          name="error"
+          size="24px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat ifPDoX"
-            color="currentColor"
-            fill="currentColor"
-            height="24px"
-            mr={1}
-            name="error"
-            size="24px"
-            title={null}
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d={
-                Array [
-                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                ]
-              }
-            />
-          </svg>
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-bwzfXH crzhMj"
+        >
           <p
             className="sc-dnqmqq ktOAGB"
             color="currentColor"
@@ -7453,34 +7517,34 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
           >
             Something has gone wrong
           </p>
-        </div>
-        <ul
-          className="sc-fjdhpX jHOcwl"
-          color="currentColor"
-        >
-          <li
-            className="sc-jTzLTM daoydl"
+          <ul
+            className="sc-fjdhpX gnSYwP"
             color="currentColor"
           >
-            Something has gone wrong.
-          </li>
-          <li
-            className="sc-jTzLTM daoydl"
-            color="currentColor"
-          >
-            Entry must be atleast 3 characters long
-          </li>
-          <li
-            className="sc-jTzLTM daoydl"
-            color="currentColor"
-          >
-            <a
-              href="https://nulogy.design/"
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
             >
-              See here
-            </a>
-          </li>
-        </ul>
+              Something has gone wrong.
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              Entry must be atleast 3 characters long
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              <a
+                href="https://nulogy.design/"
+              >
+                See here
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -7504,32 +7568,32 @@ exports[`Storyshots Inline Validation With custom style 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH eAazog"
+        className="sc-bwzfXH sc-VigVT cmrwKr"
         color="green"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat dwztBi"
+          color="blue"
+          fill="blue"
+          height={24}
+          name="check"
+          size={24}
+          title={null}
+          viewBox="0 0 24 24"
+          width={24}
         >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat dwztBi"
-            color="blue"
-            fill="blue"
-            height={24}
-            name="check"
-            size={24}
-            title={null}
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <path
-              d={
-                Array [
-                  "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
-                ]
-              }
-            />
-          </svg>
+          <path
+            d={
+              Array [
+                "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-bwzfXH crzhMj"
+        >
           <p
             className="sc-dnqmqq ktOAGB"
             color="currentColor"
@@ -7538,30 +7602,30 @@ exports[`Storyshots Inline Validation With custom style 1`] = `
           >
             Good job.
           </p>
-        </div>
-        <ul
-          className="sc-fjdhpX jHOcwl"
-          color="currentColor"
-        >
-          <li
-            className="sc-jTzLTM daoydl"
+          <ul
+            className="sc-fjdhpX gnSYwP"
             color="currentColor"
           >
-            Everything is as expected
-          </li>
-          <li
-            className="sc-jTzLTM daoydl"
-            color="currentColor"
-          >
-            <a
-              className="sc-jzJRlG bjlrap"
-              color="blue"
-              href="https://nulogy.design/"
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
             >
-              Learn more
-            </a>
-          </li>
-        </ul>
+              Everything is as expected
+            </li>
+            <li
+              className="sc-jTzLTM daoydl"
+              color="currentColor"
+            >
+              <a
+                className="sc-jzJRlG bjlrap"
+                color="blue"
+                href="https://nulogy.design/"
+              >
+                Learn more
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -7585,33 +7649,33 @@ exports[`Storyshots Inline Validation Without list items 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ctAaoN"
+        className="sc-bwzfXH sc-VigVT gQxrKI"
         color="red"
       >
-        <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat ifPDoX"
+          color="currentColor"
+          fill="currentColor"
+          height="24px"
+          mr={1}
+          name="error"
+          size="24px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat ifPDoX"
-            color="currentColor"
-            fill="currentColor"
-            height="24px"
-            mr={1}
-            name="error"
-            size="24px"
-            title={null}
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d={
-                Array [
-                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                ]
-              }
-            />
-          </svg>
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-bwzfXH crzhMj"
+        >
           <p
             className="sc-dnqmqq ktOAGB"
             color="currentColor"
@@ -7803,7 +7867,7 @@ exports[`Storyshots List List 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX jmwcER"
+        className="sc-fjdhpX kzsNyP"
         color="currentColor"
       >
         <li
@@ -7847,7 +7911,7 @@ exports[`Storyshots List With compact spacing 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX jHOcwl"
+        className="sc-fjdhpX gnSYwP"
         color="currentColor"
       >
         <li
@@ -7891,7 +7955,7 @@ exports[`Storyshots List With custom colour 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX iIUbCT"
+        className="sc-fjdhpX bwoUIs"
         color="red"
       >
         <li
@@ -7935,7 +7999,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX dpLZY"
+        className="sc-fjdhpX eCubxA"
         color="currentColor"
         fontSize={0}
       >
@@ -8215,7 +8279,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <ul
-        className="sc-fjdhpX jmwcER"
+        className="sc-fjdhpX kzsNyP"
         color="currentColor"
       >
         <li
