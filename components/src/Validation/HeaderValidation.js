@@ -10,17 +10,20 @@ import { SubsectionTitle } from "../Type/Headings";
 import Icon from "../Icon/Icon";
 
 
-const Stack = styled.div`
+const Wrapper = styled.div`
   ${space}
 
   border: solid 1px lime;
-
- ${ Flex } div &:last-child {
+  ${ Text } {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
    border: solid 1px red;
    margin-bottom: 0;
+ }
 `;
 
-Stack.propTypes = {
+Wrapper.propTypes = {
   ...space.propTypes,
 };
 
@@ -31,13 +34,11 @@ const HeaderValidation = ({
 }) => (
     <Flex color="red">
       <Icon name="error" size={ theme.space[6] } mr={ theme.space[3] } />
-      <div>
+      <Wrapper>
         <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
-        <Stack mb={ theme.space[2] }>
-          <Text mb={ theme.space[0] }>{ message }</Text>
-        </Stack>
+        <Text mb={ theme.space[0] }>{ message }</Text>
         { children }
-      </div>
+      </Wrapper>
     </Flex>
 );
 
