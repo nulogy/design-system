@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import HeaderValidation from "./HeaderValidation";
 import List from "../List/List";
 import ListItem from "../List/ListItem";
-import Link from "../Link/Link";
 
 storiesOf("Header Validation", module)
   .add("Header Validation", () => (

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
-import Box from "../Box/Box";
 import Text from "../Type/Text";
 import { SubsectionTitle } from "../Type/Headings";
 import Icon from "../Icon/Icon";
@@ -14,7 +13,7 @@ const Wrapper = styled.div`
   ${space}
 
   border: solid 1px lime;
-  ${ Text } {
+  ${Text} {
     margin-bottom: ${theme.space[2]};
   }
   > *:last-child {
@@ -32,18 +31,18 @@ const HeaderValidation = ({
   message,
   children,
 }) => (
-    <Flex color="red">
-      <Icon name="error" size={ theme.space[6] } mr={ theme.space[3] } />
-      <Wrapper>
-        <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
-        <Text mb={ theme.space[0] }>{ message }</Text>
-        { children }
-      </Wrapper>
-    </Flex>
+  <Flex color="red">
+    <Icon name="error" size={ theme.space[6] } mr={ theme.space[3] } />
+    <Wrapper>
+      <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
+      <Text mb={ theme.space[0] }>{ message }</Text>
+      { children }
+    </Wrapper>
+  </Flex>
 );
 
 HeaderValidation.defaultProps = {
-  children: null
+  children: null,
 };
 
 HeaderValidation.propTypes = {
