@@ -12,10 +12,10 @@ const BaseForm = ({
   children,
   ...props
 }) => (
-  <Box { ...props }>
+  <form { ...props }>
     <SectionTitle>{ title }</SectionTitle>
     { children }
-  </Box>
+  </form>
 );
 
 const Form = styled(BaseForm)`
