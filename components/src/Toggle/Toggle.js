@@ -78,8 +78,6 @@ class Toggle extends React.Component {
     this.setState({
       toggled: toggled,
     })
-    this.input.focus();
-    this.input.click();
   }
 
   handleFocus() {
