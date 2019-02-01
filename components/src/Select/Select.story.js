@@ -22,4 +22,7 @@ storiesOf("Select", module)
       options={ options }
       isDisabled="true"
     />
+  ))
+  .add("Set to error", () => (
+    <Select placeholder="Please select inventory status" options={ options } error="true" />
   ));
