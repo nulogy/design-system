@@ -8,7 +8,8 @@ const getCustomStyles = error => (
   {
     control: (base, state) => ({
       ...base,
-      padding: 0,
+      paddingLeft: subPx(theme.space[2]),
+      paddingRight: subPx(theme.space[2]),
       borderTopLeftRadius: theme.radii[1],
       borderTopRightRadius: theme.radii[1],
       boxShadow: state.isFocused ? theme.boxShadows[0] : "none",
@@ -30,14 +31,30 @@ const getCustomStyles = error => (
       borderTopRightRadius: 0,
       boxShadow: theme.boxShadows[0],
     }),
+    placeholder: base => ({
+      ...base,
+      marginLeft: 0,
+      marginRight: 0
+    }),
+    singleValue: base => ({
+      ...base,
+      marginLeft: 0,
+      marginRight: 0,
+      color: theme.colors.black
+    }),
     menuList: base => ({
       ...base,
       padding: "0px",
       borderColor: error ? theme.colors.red : theme.colors.blue,
       borderWidth: "1px",
       borderBottomStyle: "solid",
+      borderTopLeftRadius: 0,
+      borderTopRightRadius: 0,
       borderBottomLeftRadius: theme.radii[1],
       borderBottomRightRadius: theme.radii[1],
+    }),
+    valueContainer: () => ({
+      padding: 0,
     }),
     option: (base, state) => ({
       ...base,
