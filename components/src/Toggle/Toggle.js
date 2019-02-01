@@ -5,44 +5,45 @@ import Text from "../Type/Text";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
 
-const ToggleContainer = styled(Flex)`
-position: relative;
+const ToggleHitBox = styled(Flex)`
 cursor: pointer;
 background-color: transparent;
 `;
 
-const focusedStyle = focus => {
-  if (focus) {
+const focusedStyle = focused => {
+  if (focused) {
     return (
       {
         outline: "none",
         boxShadow: `0 0 10px ${theme.colors.blue}`,
       }
-    );
-  } else {
-    return false;
-  }
+    )};
+  return null;
 };
 
-const ToggleBG = styled.div`
+const getFill = disabled => {
+  return disabled ? theme.colors.grey : theme.colors.darkBlue; 
+}
+
+const ToggleOuter = styled.div`
 width: 64px;
 height: 40px;
-border: 4px solid ${props => props.fill};
+border: 4px solid ${props => getFill(props.disabled)};
 border-radius: 20px;
 
 transition: all 0.25s ease;
-background-color: ${props => (props.toggled ? props.fill : theme.colors.white)};
+background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
 
 ${props => focusedStyle(props.focused)}
 `;
 
-const ToggleFG = styled.div`
+const ToggleInner = styled.div`
 position: absolute;
 top: 0px;
 left: 0px;
 width: 40px;
 height: 40px;
-border: 4px solid ${props => props.fill};
+border: 4px solid ${props => getFill(props.disabled)};
 border-radius: 20px;
 background-color: ${theme.colors.white};
 
@@ -54,6 +55,23 @@ const HiddenInput = styled.input`
   position: absolute;
   clip: rect(1px 1px 1px 1px); 
 `;
+
+const VisualToggleWrapper = styled(Flex)`
+  position: relative;
+`
+
+const VisualToggle = ({toggled, disabled, focused}) =>(
+  <VisualToggleWrapper>
+    <ToggleOuter
+      toggled={ toggled }
+      disabled={ disabled }
+      focused={ focused }/>
+    <ToggleInner
+      toggled={ toggled }
+      disabled={ disabled }
+    />
+  </VisualToggleWrapper>
+);
 
 class Toggle extends React.Component {
   constructor(props) {
@@ -68,14 +86,13 @@ class Toggle extends React.Component {
   }
 
   handleClick(e) {
-    this.props.onChange(!this.state.toggled, this.props.id, e);
     e.preventDefault();
-    const toggled = this.props.hasOwnProperty("toggled") ? this.props.toggled : e.target.checked;
-    this.setState({
-      toggled: toggled,
-    })
-    console.log("input checked : " + e.target.checked)
-    console.log("React toggled : " + toggled)
+    this.props.onChange(e);
+    if (!this.props.hasOwnProperty("toggled")){
+      this.setState({
+        toggled: e.target.checked,
+      })
+    }
   }
 
   handleFocus() {
@@ -103,42 +120,32 @@ class Toggle extends React.Component {
     console.log(id + " : " + toggled)
     const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
     return (
-      <Flex
-        alignItems="center"
-      >
-        <ToggleContainer
-          onClick={ e => {
-            if (!disabled) {
-              this.input.focus();
-              this.input.click();
-            }
-          } }
-        >
-          <ToggleBG
-            toggled={ toggled }
-            fill={ fill }
-            focused={ focused }
+      <Flex alignItems="center" >  
+        <ToggleHitBox onClick={ () => {
+          this.input.focus();
+          this.input.click(); 
+          }}>
+          <VisualToggle
+            toggled = { toggled }
+            disabled = { disabled }
+            focused = { focused }  
           />
-          <ToggleFG
-            toggled={ toggled }
-            fill={ fill }
+          <HiddenInput
+            id={ id }
+            value={ value }
+            checked={ toggled }
+            ref={ ref => { this.input = ref; } }
+            onChange={ e => { this.handleClick(e); } }
+            onFocus={ this.handleFocus }
+            onBlur={ this.handleBlur }
+            { ...props }
+            disabled={ disabled }
+            type="checkbox"
           />
-        </ToggleContainer>
+        </ToggleHitBox>
         <Text mb={ 0 } ml={ 2 }>
           {toggled ? onText : offText}
         </Text>
-        <HiddenInput
-          id={ id }
-          value={ value }
-          checked={ toggled }
-          ref={ ref => { this.input = ref; } }
-          onChange={ e => { this.handleClick(e); } }
-          onFocus={ this.handleFocus }
-          onBlur={ this.handleBlur }
-          { ...props }
-          disabled={ disabled }
-          type="checkbox"
-        />
       </Flex>
     );
   }
