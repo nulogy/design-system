@@ -14,7 +14,7 @@ storiesOf("Inline Validation", module)
     <List compact>
       <ListItem>Something has gone wrong.</ListItem>
       <ListItem>Entry must be atleast 3 characters long</ListItem>
-      <ListItem><a href="https://nulogy.design/">See here</a></ListItem>
+      <ListItem><Link href="https://nulogy.design/">See here</Link></ListItem>
     </List>
   </InlineValidation>
   ));
