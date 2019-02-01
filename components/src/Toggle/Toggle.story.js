@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Toggle from "./Toggle";
-import { ToggleWithText } from "./Toggle";
+import ToggleWithText, { Toggle } from "./Toggle";
 import Field from "../Field/Field";
 
 storiesOf("Toggle", module)
