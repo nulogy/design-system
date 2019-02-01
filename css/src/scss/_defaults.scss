@@ -1,12 +1,13 @@
-html, body { 
+html, body {
 	margin: 0
 }
 
 * {box-sizing: border-box;}
 
 body {
-	font-family: $font-family-base;
-	line-height: 1.5;
+  color: $color-base-black;
+  font-family: $font-family-base;
+  line-height: 1.5;
 }
 
 code {

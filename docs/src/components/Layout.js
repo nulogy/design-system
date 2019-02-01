@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavItem, Nav} from '../components/Nav'
-import ThemeProvider from '../../../components/src/ThemeProvider/ThemeProvider'
+import NDSProvider from '../../../components/src/NDSProvider/NDSProvider'
 import {Box, Flex, Link, Text} from '@nulogy/components'
 import theme from '../../../components/src/theme'
 import { Helmet } from 'react-helmet'
@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 import logo from '../images/nulogy.svg'
 
 export default ({ children }) => (
-  <ThemeProvider theme={theme}>
+  <NDSProvider theme={theme}>
     <Box pb={3}>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
@@ -32,7 +32,7 @@ export default ({ children }) => (
         <Box width={'30%'}>
           <Nav>
               <Text color='darkGrey' fontWeight={2}>Visual Style</Text>
-                <NavItem><Link href="/style/colour" underline={false}>Colour</Link></NavItem>            
+                <NavItem><Link href="/style/colour" underline={false}>Colour</Link></NavItem>
                 <NavItem><Link href="/style/typography" underline={false}>Typography</Link></NavItem>
                 <NavItem><Link href="/style/spacing" underline={false}>Spacing</Link></NavItem>
             </Nav>
@@ -51,7 +51,7 @@ export default ({ children }) => (
             <Nav>
               <Text color='darkGrey' fontWeight={2}>Resources</Text>
               <NavItem><Link href="/guides/designers" underline={false}>For Designers</Link></NavItem>
-              <NavItem><Link href="/guides/developers" underline={false}>For Developers</Link></NavItem> 
+              <NavItem><Link href="/guides/developers" underline={false}>For Developers</Link></NavItem>
               <NavItem><Link href="https://github.com/nulogy/design-system" underline={false}>Github</Link></NavItem>
               <NavItem><Link href="/tokens" underline={false}>Tokens</Link></NavItem>
               <NavItem><Link href="/guides/reading-list" underline={false}>Reading list</Link></NavItem>
@@ -59,8 +59,8 @@ export default ({ children }) => (
         </Box>
         <Box width={'70%'}>
         {children}
-        </Box>        
+        </Box>
       </Flex>
     </Box>
-  </ThemeProvider>
+  </NDSProvider>
 )

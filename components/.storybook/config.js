@@ -1,10 +1,9 @@
 import React from 'react';
-import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
+import NDSProvider from '../src/NDSProvider/NDSProvider';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
 import Box from '../src/Box/Box';
 import '../../css/src/nds-dev.css';
-// import ThemeProvider from '../src/ThemeProvider/ThemeProvider';
 import withStyles from "@sambego/storybook-styles";
 
 const req = require.context('../src', true, /\.story\.js$/);
@@ -20,11 +19,11 @@ addDecorator(withStyles({
 }));
 
 addDecorator((story) => (
-  <ThemeProvider theme={theme}>
+  <NDSProvider theme={theme}>
     <Box p={3}>
       {story()}
     </Box>
-  </ThemeProvider>
+  </NDSProvider>
 ))
 
 configure(loadStories, module);
