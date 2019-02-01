@@ -46,6 +46,9 @@ const getCustomStyles = error => (
       padding: theme.space[2],
       fontWeight: state.isSelected ? "bold" : "normal",
       background: state.isSelected ? "none" : "default",
+      "&:hover": {
+        background: theme.colors.lightBlue
+      }
     }),
     indicatorSeparator: () => ({
       display: "none",
