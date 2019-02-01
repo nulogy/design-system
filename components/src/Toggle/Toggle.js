@@ -5,89 +5,73 @@ import Text from "../Type/Text";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
 
-const ToggleHitBox = styled(Flex)`
-cursor: pointer;
-background-color: transparent;
-`;
-
-const focusedStyle = focused => {
-  if (focused) {
-    return (
-      {
-        outline: "none",
-        boxShadow: `0 0 10px ${theme.colors.blue}`,
-      }
-    )};
-  return null;
-};
-
 const getFill = disabled => {
   return disabled ? theme.colors.grey : theme.colors.darkBlue; 
 }
 
-const ToggleOuter = styled.div`
-width: 64px;
-height: 40px;
-border: 4px solid ${props => getFill(props.disabled)};
-border-radius: 20px;
-
-transition: all 0.25s ease;
-background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
-
-${props => focusedStyle(props.focused)}
-`;
-
-const ToggleInner = styled.div`
-position: absolute;
-top: 0px;
-left: 0px;
-width: 40px;
-height: 40px;
-border: 4px solid ${props => getFill(props.disabled)};
-border-radius: 20px;
-background-color: ${theme.colors.white};
-
-transition: all 0.25s ease;
-left: ${props => (props.toggled ? "24px" : null)};
-`;
-
-const HiddenInput = styled.input`
+const Slider = styled.span`
   position: absolute;
-  clip: rect(1px 1px 1px 1px); 
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid ${props => getFill(props.disabled)};
+  background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
+  border-radius: 20px;
+  
+  transition: .25s;
+  &:before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: -4px;
+    bottom: -4px;
+    border: 4px solid ${props => getFill(props.disabled)};
+    border-radius: 20px;
+    background-color: white;
+    transition: .25s;
+  }
+
 `;
 
-const VisualToggleWrapper = styled(Flex)`
+const Switch = styled.label`
   position: relative;
-`
+  display: inline-block;
+  width: 64px;
+  height: 40px;
 
-const VisualToggle = ({toggled, disabled, focused}) =>(
-  <VisualToggleWrapper>
-    <ToggleOuter
-      toggled={ toggled }
-      disabled={ disabled }
-      focused={ focused }/>
-    <ToggleInner
-      toggled={ toggled }
-      disabled={ disabled }
-    />
-  </VisualToggleWrapper>
-);
+  input {
+    opacity: 0;
+    width: 1;
+    height: 1;
+  }
+`;
+
+const ToggleInput = styled.input`
+  &:checked + ${Slider}:before{
+    transform: translateX(24px);
+  }
+  &:checked + ${Slider} {
+    background-color: ${theme.colors.darkBlue};
+  }
+  &:focus + ${Slider} {
+    box-shadow: 0 0 10px ${theme.colors.blue};
+  }
+`;
 
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       toggled: !!(props.toggled || props.defaultToggled),
-      focused: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleClick(e) {
-    e.preventDefault();
-    this.props.onChange(e);
     if (!this.props.hasOwnProperty("toggled")){
       this.setState({
         toggled: e.target.checked,
@@ -95,54 +79,32 @@ class Toggle extends React.Component {
     }
   }
 
-  handleFocus() {
-    this.setState({ focused: true });
-  }
-
-  handleBlur() {
-    this.setState({ focused: false });
-  }
-
   render() {
     const {
+      disabled,
       onChange,
-      id,
       onText,
       offText,
-      disabled,
-      value,
       ...props
     } = this.props;
     const {
       toggled,
-      focused,
     } = this.state;
-    console.log(id + " : " + toggled)
-    const fill = disabled ? theme.colors.grey : theme.colors.darkBlue;
+    console.log(props.id + " : " + toggled)
     return (
       <Flex alignItems="center" >  
-        <ToggleHitBox onClick={ () => {
-          this.input.focus();
-          this.input.click(); 
-          }}>
-          <VisualToggle
-            toggled = { toggled }
-            disabled = { disabled }
-            focused = { focused }  
-          />
-          <HiddenInput
-            id={ id }
-            value={ value }
-            checked={ toggled }
-            ref={ ref => { this.input = ref; } }
-            onChange={ e => { this.handleClick(e); } }
-            onFocus={ this.handleFocus }
-            onBlur={ this.handleBlur }
-            { ...props }
-            disabled={ disabled }
-            type="checkbox"
-          />
-        </ToggleHitBox>
+        <Switch>
+            <ToggleInput 
+              ref={ ref => { this.input = ref; }}
+              checked={ toggled } 
+              onChange = { onChange }
+              onClick={ e => { this.handleClick(e); }}
+              type="checkbox"
+              disabled = { disabled }
+              { ...props }
+            />
+            <Slider disabled = { disabled }/>
+        </Switch>
         <Text mb={ 0 } ml={ 2 }>
           {toggled ? onText : offText}
         </Text>
@@ -163,6 +125,7 @@ Toggle.propTypes = {
 };
 
 Toggle.defaultProps = {
+  onChange: () => {},
   value: "on",
   disabled: false,
   onText: null,
