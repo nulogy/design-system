@@ -11,8 +11,6 @@ const getCustomStyles = error => (
       padding: 0,
       borderTopLeftRadius: theme.radii[1],
       borderTopRightRadius: theme.radii[1],
-      borderBottomLeftRadius: state.isFocused ? 0 : theme.radii[1],
-      borderBottomRightRadius: state.isFocused ? 0 : theme.radii[1],
       boxShadow: state.isFocused ? theme.boxShadows[0] : "none",
       outline: "none",
       borderColor: error ? theme.colors.red : (state.isDisabled ? theme.colors.lightGrey : (state.isFocused ? theme.colors.blue : theme.colors.grey)),
