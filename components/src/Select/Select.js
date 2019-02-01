@@ -11,7 +11,6 @@ const customStyles = {
     borderTopRightRadius: theme.radii[1],
     borderBottomLeftRadius: state.isFocused ? 0 : theme.radii[1],
     borderBottomRightRadius: state.isFocused ? 0 : theme.radii[1],
-    borderColor: state.isFocused ? theme.colors.blue : theme.colors.grey,
     boxShadow: state.isFocused ? theme.boxShadows[0] : "none",
     outline: "none",
     borderColor: state.isDisabled ? theme.colors.lightGrey : (state.isFocused ? theme.colors.blue : theme.colors.grey),
