@@ -25,12 +25,9 @@ const customStyles = {
     borderWidth: "1px",
     borderLeftStyle: "solid",
     borderRightStyle: "solid",
-    borderBottomStyle: "solid",
     marginTop: 0,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
-    borderBottomLeftRadius: theme.radii[1],
-    borderBottomRightRadius: theme.radii[1],
     boxShadow: theme.boxShadows[0],
   }),
   menuList: base => ({
@@ -38,18 +35,16 @@ const customStyles = {
     padding: "0px",
     borderColor: theme.colors.blue,
     borderWidth: "1px",
+    borderBottomStyle: "solid",
+    borderBottomLeftRadius: theme.radii[1],
+    borderBottomRightRadius: theme.radii[1],
   }),
   option: (base, state) => ({
     ...base,
     color: theme.colors.black,
     padding: theme.space[2],
-    fontWeight: state.isSelected ? 'bold' : 'normal',
+    fontWeight: state.isSelected ? "bold" : "normal",
     background: state.isSelected ? "none" : "default",
-    "&:last-child": {
-      // fixes overlap with container border
-      borderBottomLeftRadius: theme.radii[1],
-      borderBottomRightRadius: theme.radii[1],
-    },
   }),
   indicatorSeparator: () => ({
     display: "none",
