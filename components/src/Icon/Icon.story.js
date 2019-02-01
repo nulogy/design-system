@@ -5,6 +5,7 @@ import Icon, { InlineIcon, iconNames } from "./Icon";
 import theme from "../theme";
 import "./Icon.example.css";
 import Box from "../Box/Box";
+import Flex from "../Flex/Flex";
 
 const IconCode = ({ name }) => (
   <code>
@@ -22,10 +23,10 @@ storiesOf("Icon", module)
   .add("Icon", () => (
     <React.Fragment>
       {iconNames.map(iconName => (
-        <p key={ iconName }>
+        <Flex my={ 3 } key={ iconName }>
           <Icon mr="20px" name={ iconName } />
           <IconCode name={ iconName } />
-        </p>
+        </Flex>
       ))}
     </React.Fragment>
   ))
