@@ -80,19 +80,17 @@ storiesOf("Toggle", module)
   .add("Controlled Toggle", () => (
     <React.Fragment>
       <Toggle
-        toggled={true}
+        toggled
         onText="on"
         offText="off"
-        onChange={() => console.log('hello')}
       />
       <Toggle
-        toggled={false}
+        toggled={ false }
         onText="on"
         offText="off"
-        onChange={() => console.log('hello')}
       />
     </React.Fragment>
   ))
   .add("<TEMP> Toggle demo", () => (
-    <ToggleStateDisplay/>
+    <ToggleStateDisplay />
   ));
