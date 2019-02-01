@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactSelect from "react-select";
 import theme from "../theme";
+import { subPx } from "../utils";
 
 const getCustomStyles = error => (
   {
@@ -43,7 +44,7 @@ const getCustomStyles = error => (
     option: (base, state) => ({
       ...base,
       color: theme.colors.black,
-      padding: theme.space[2],
+      padding: subPx(theme.space[2]),
       fontWeight: state.isSelected ? "bold" : "normal",
       background: state.isSelected ? "none" : "default",
       "&:hover": {
