@@ -5,9 +5,7 @@ import Text from "../Type/Text";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
 
-const getFill = disabled => {
-  return disabled ? theme.colors.grey : theme.colors.darkBlue; 
-}
+const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlue);
 
 const Slider = styled.span`
   position: absolute;
@@ -72,10 +70,10 @@ class Toggle extends React.Component {
   }
 
   handleClick(e) {
-    if (!this.props.hasOwnProperty("toggled")){
+    if (!this.props.hasOwnProperty("toggled")) {
       this.setState({
         toggled: e.target.checked,
-      })
+      });
     }
   }
 
@@ -90,20 +88,17 @@ class Toggle extends React.Component {
     const {
       toggled,
     } = this.state;
-    console.log(props.id + " : " + toggled)
     return (
-      <Flex alignItems="center" >  
+      <Flex alignItems="center">
         <Switch>
-            <ToggleInput 
-              ref={ ref => { this.input = ref; }}
-              checked={ toggled } 
-              onChange = { onChange }
-              onClick={ e => { this.handleClick(e); }}
-              type="checkbox"
-              disabled = { disabled }
-              { ...props }
-            />
-            <Slider disabled = { disabled }/>
+          <ToggleInput
+            type="checkbox" 
+            checked={ toggled } onChange={ onChange } disabled={ disabled }
+            ref={ ref => { this.input = ref; } }         
+            onClick={ e => { this.handleClick(e); } }
+            { ...props }
+          />
+          <Slider disabled={ disabled } />
         </Switch>
         <Text mb={ 0 } ml={ 2 }>
           {toggled ? onText : offText}
