@@ -22,12 +22,13 @@ const List = styled.ul`
 `;
 
 List.propTypes = {
+  compact: PropTypes.bool,
   ...space.propTypes,
   ...color.propTypes,
-  spacing: PropTypes.bool,
 };
 
 List.defaultProps = {
+  compact: false,
   color: "currentColor",
 };
 
