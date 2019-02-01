@@ -12,8 +12,8 @@ class ToggleStateDisplay extends React.Component {
     this.updateMessage = this.updateMessage.bind(this);
   }
 
-  updateMessage(toggled, id) {
-    const message = `Toggle id: (${id}) has been turned ${toggled ? "on!" : "off!"}`;
+  updateMessage(e) {
+    const message = `Toggle id: (${e.target.id}) has been turned ${e.target.checked ? "on!" : "off!"}`;
     this.setState({ message });
   }
 
@@ -94,5 +94,5 @@ storiesOf("Toggle", module)
     </React.Fragment>
   ))
   .add("<TEMP> Toggle demo", () => (
-    <ToggleStateDisplay />
+    <ToggleStateDisplay/>
   ));
