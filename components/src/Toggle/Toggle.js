@@ -17,8 +17,7 @@ const Slider = styled.span`
   border: 4px solid ${props => getFill(props.disabled)};
   background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
   border-radius: 20px;
-
-  transition: .25s;
+  transition: 0.25s;
   &:before {
     box-sizing: border-box;
     position: absolute;
@@ -60,7 +59,17 @@ const ToggleInput = styled.input`
   }
 `;
 
-class Toggle extends React.Component {
+const Toggle = props => (
+  <Switch>
+    <ToggleInput
+      type="checkbox"
+      { ...props }
+    />
+    <Slider disabled={ props.disabled } />
+  </Switch>
+);
+
+export class ToggleWithText extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -91,17 +100,13 @@ class Toggle extends React.Component {
       toggled,
     } = this.state;
     return (
-      <Flex alignItems="center">
-        <Switch>
-          <ToggleInput
-            type="checkbox"
-            checked={ toggled } onChange={ onChange } disabled={ disabled }
-            ref={ ref => { this.input = ref; } }
-            onClick={ e => { this.handleClick(e); } }
-            { ...props }
-          />
-          <Slider disabled={ disabled } />
-        </Switch>
+      <Flex flexDirection="row" alignItems="center">
+        <Toggle
+          checked={ toggled } onChange={ onChange } disabled={ disabled }
+          ref={ ref => { this.input = ref; } }
+          onClick={ e => { this.handleClick(e); } }
+          { ...props }
+        />
         <Text mb={ 0 } ml={ 2 }>
           {toggled ? onText : offText}
         </Text>
@@ -129,6 +134,5 @@ Toggle.defaultProps = {
   offText: null,
   id: null,
 };
-
 
 export default Toggle;
