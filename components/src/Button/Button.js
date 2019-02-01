@@ -34,28 +34,30 @@ const size = props => {
   }
 };
 
-
 const BaseButton = ({
-  children, iconSide, iconName, ...props
+  children,
+  iconSide,
+  icon,
+  ...props
 }) => {
   const { theme: { lineHeights: { smallTextCompressed } } } = props;
 
   return (
     <button { ...props }>
-      {(iconName && iconSide === "left")
+      {(icon && iconSide === "left")
           && (
           <Icon
             style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } mr={ 1 }
-            name={ iconName }
+            name={ icon }
           />
           )
         }
       {children}
-      {(iconName && iconSide === "right")
+      {(icon && iconSide === "right")
           && (
           <Icon
             style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } ml={ 1 }
-            name={ iconName }
+            name={ icon }
           />
           )
         }
@@ -66,12 +68,12 @@ const BaseButton = ({
 BaseButton.propTypes = {
   theme: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
-  iconName: PropTypes.oneOf(iconNames),
+  icon: PropTypes.oneOf(iconNames),
   iconSide: PropTypes.oneOf(["left", "right"]),
 };
 
 BaseButton.defaultProps = {
-  iconName: null,
+  icon: null,
   iconSide: "right",
 };
 
