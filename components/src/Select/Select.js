@@ -53,25 +53,68 @@ const getCustomStyles = error => (
   }
 );
 
-const Select = props => (
+// https://github.com/JedWatson/react-select/issues/1827#issuecomment-409343434
+const InnerSelect = ({
+  error,
+  ...props
+}) => (
   <ReactSelect
-    styles={ getCustomStyles(props.error) }
+    styles={ getCustomStyles(error) }
     blurInputOnSelect="true"
     { ...props }
   />
 );
 
+InnerSelect.propTypes = {
+  error: PropTypes.bool,
+};
+
+InnerSelect.defaultProps = {
+  error: false,
+};
+
+const Select = ({
+  value,
+  required,
+  onChange,
+  ...props
+}) => (
+  <div>
+    <InnerSelect
+      ref={ ref => { this.select = ref; } }
+      { ...props }
+    />
+    <input
+      tabIndex={ -1 }
+      value={ value }
+      required={ required }
+      onChange={ onChange }
+      style={ {
+        opacity: 0,
+        width: 0,
+        height: 0,
+        position: "absolute",
+      } }
+      onFocus={ () => this.select.focus() }
+    />
+  </div>
+);
+
 Select.propTypes = {
   placeholder: PropTypes.string.isRequired,
-  error: PropTypes.bool,
+  value: PropTypes.string,
   options: PropTypes.shape({
     label: PropTypes.string,
     value: PropTypes.string,
   }).isRequired,
+  required: PropTypes.bool,
+  onChange: PropTypes.func,
 };
 
 Select.defaultProps = {
-  error: false,
+  value: null,
+  required: false,
+  onChange: null,
 };
 
 export default Select;

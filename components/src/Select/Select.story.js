@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Select from "./Select";
+import PrimaryButton from "../Button/PrimaryButton";
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -25,4 +26,10 @@ storiesOf("Select", module)
   ))
   .add("Set to error", () => (
     <Select placeholder="Please select inventory status" options={ options } error="true" />
+  ))
+  .add("Set to required", () => (
+    <form>
+      <Select placeholder="Please select inventory status" options={ options } required="true" />
+      <PrimaryButton mt={ 2 } type="submit">Submit</PrimaryButton>
+    </form>
   ));
