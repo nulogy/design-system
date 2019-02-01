@@ -59,17 +59,28 @@ const ToggleInput = styled.input`
   }
 `;
 
-const Toggle = props => (
-  <Switch>
-    <ToggleInput
-      type="checkbox"
-      { ...props }
-    />
-    <Slider disabled={ props.disabled } />
-  </Switch>
-);
+export const Toggle = props => {
+  const { disabled } = props;
+  return (
+    <Switch>
+      <ToggleInput
+        type="checkbox"
+        { ...props }
+      />
+      <Slider disabled={ disabled } />
+    </Switch>
+  );
+};
 
-export class ToggleWithText extends React.Component {
+Toggle.propTypes = {
+  disabled: PropTypes.bool,
+};
+
+Toggle.defaultProps = {
+  disabled: false,
+};
+
+class ToggleWithText extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,7 +90,8 @@ export class ToggleWithText extends React.Component {
   }
 
   handleClick(e) {
-    if (!this.props.hasOwnProperty("toggled")) {
+    const { toggled } = this.props;
+    if (toggled === null) {
       this.setState({
         toggled: e.target.checked,
       });
@@ -101,7 +113,6 @@ export class ToggleWithText extends React.Component {
       <Flex flexDirection="row" alignItems="center">
         <Toggle
           checked={ toggled } onChange={ onChange } disabled={ disabled }
-          ref={ ref => { this.input = ref; } }
           onClick={ e => { this.handleClick(e); } }
           { ...props }
         />
@@ -113,7 +124,7 @@ export class ToggleWithText extends React.Component {
   }
 }
 
-Toggle.propTypes = {
+ToggleWithText.propTypes = {
   onChange: PropTypes.func,
   toggled: PropTypes.bool,
   defaultToggled: PropTypes.bool,
@@ -124,8 +135,10 @@ Toggle.propTypes = {
   value: PropTypes.string,
 };
 
-Toggle.defaultProps = {
+ToggleWithText.defaultProps = {
   onChange: () => {},
+  toggled: null,
+  defaultToggled: null,
   value: "on",
   disabled: false,
   onText: null,
@@ -133,4 +146,4 @@ Toggle.defaultProps = {
   id: null,
 };
 
-export default Toggle;
+export default ToggleWithText;
