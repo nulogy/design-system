@@ -74,7 +74,7 @@ storiesOf("Icon", module)
       <Icon name="check" className="storybookTestClass" />
       <br />
       <br />
-      <span className="storybookTestClass">Applied Class</span>
+      <Flex className="storybookTestClass">Applied Class</Flex>
     </React.Fragment>
   ))
   .add("With accessibility title", () => (
