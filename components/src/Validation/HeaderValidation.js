@@ -10,7 +10,6 @@ import Icon from "../Icon/Icon";
 
 
 const Wrapper = styled.div`
-  ${space}
   ${Text} {
     margin-bottom: ${theme.space[2]};
   }
@@ -18,10 +17,6 @@ const Wrapper = styled.div`
    margin-bottom: 0;
  }
 `;
-
-Wrapper.propTypes = {
-  ...space.propTypes,
-};
 
 const HeaderValidation = ({
   title,
