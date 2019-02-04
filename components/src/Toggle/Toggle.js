@@ -17,21 +17,20 @@ const Slider = styled.span`
   border: 4px solid ${props => getFill(props.disabled)};
   background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
   border-radius: 20px;
-  transition: 0.25s;
+  transition: .2s ease;
   &:before {
     box-sizing: border-box;
     position: absolute;
     content: "";
-    height: 40px;
-    width: 40px;
-    left: -4px;
-    bottom: -4px;
-    border: 4px solid ${props => getFill(props.disabled)};
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
     border-radius: 20px;
-    background-color: white;
-    transition: .25s;
+    box-sizing: content;
+    background-color: ${theme.colors.darkBlue};
+    transition: .2s ease;
   }
-
 `;
 
 const Switch = styled.label`
@@ -39,7 +38,6 @@ const Switch = styled.label`
   display: inline-block;
   width: 64px;
   height: 40px;
-
   input {
     opacity: 0;
     width: 1;
@@ -50,12 +48,13 @@ const Switch = styled.label`
 const ToggleInput = styled.input`
   &:checked + ${Slider}:before{
     transform: translateX(24px);
+    background-color: ${theme.colors.white};
   }
   &:checked + ${Slider} {
     background-color: ${theme.colors.darkBlue};
   }
   &:focus + ${Slider} {
-    box-shadow: 0 0 10px ${theme.colors.blue};
+    box-shadow: 0 0 6px ${theme.colors.blue};
   }
 `;
 
