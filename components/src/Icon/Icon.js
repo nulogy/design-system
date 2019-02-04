@@ -8,29 +8,29 @@ export const iconNames = Object.keys(icons);
 
 const Svg = props => {
   const {
-    name,
+    icon,
     title,
     size,
     color: fillColor,
   } = props;
 
-  if (!icons[name]) return false;
+  if (!icons[icon]) return false;
   return (
     <svg
       aria-hidden={ title == null }
       width={ size }
       height={ size }
       fill={ fillColor }
-      viewBox={ icons[name].viewBox }
+      viewBox={ icons[icon].viewBox }
       { ...props }
     >
-      <path d={ icons[name].path } />
+      <path d={ icons[icon].path } />
     </svg>
   );
 };
 
 Svg.propTypes = {
-  name: PropTypes.oneOf(iconNames).isRequired,
+  icon: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   color: PropTypes.string,
