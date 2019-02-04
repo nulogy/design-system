@@ -42,11 +42,6 @@ Svg.defaultProps = {
   size: "24px",
 };
 
-
-const getMinWidth = inputString => {
-
-}
-
 const Icon = styled(Svg)`
   min-width: ${props => props.size};
   ${space}

@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Text from "../Type/Text";
-import { Title, SectionTitle, SubsectionTitle } from "../Type/Headings";
+import Text from "./Text";
+import { Title, SectionTitle, SubsectionTitle } from "./Headings";
 import List from "../List/List";
 import ListItem from "../List/ListItem";
 import theme from "../theme";
