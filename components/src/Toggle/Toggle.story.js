@@ -7,6 +7,9 @@ storiesOf("Toggle", module)
   .add("Toggle", () => (
     <Toggle />
   ))
+  .add("Toggle set to defaultToggled", () => (
+    <Toggle defaultToggled />
+  ))
   .add("Toggle set to disabled", () => (
     <Toggle disabled />
   ))
