@@ -42,9 +42,9 @@ const Field = ({
   >
     <Box mb={ 2 }>
       <Label { ...labelProps }>{labelText}</Label>
-      <RequirementText>{requirementText}</RequirementText>
-      <HelpText>{helpText}</HelpText>
-      <FormatText>{formatText}</FormatText>
+      {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
+      {helpText && (<HelpText>{helpText}</HelpText>)}
+      {formatText && (<FormatText>{formatText}</FormatText>)}
     </Box>
     {children}
   </FieldWrapper>
