@@ -76,10 +76,12 @@ export const Toggle = props => {
 };
 
 Toggle.propTypes = {
+  defaultToggled: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
 Toggle.defaultProps = {
+  defaultToggled: undefined,
   disabled: false,
 };
 
@@ -96,7 +98,7 @@ class ToggleWithText extends React.Component {
 
   handleClick(e) {
     const { toggled } = this.props;
-    if (toggled === null) {
+    if (toggled === undefined) {
       this.setState({
         toggled: e.target.checked,
       });
@@ -142,8 +144,8 @@ ToggleWithText.propTypes = {
 
 ToggleWithText.defaultProps = {
   onChange: () => {},
-  toggled: null,
-  defaultToggled: null,
+  toggled: undefined,
+  defaultToggled: undefined,
   value: "on",
   disabled: false,
   onText: null,
