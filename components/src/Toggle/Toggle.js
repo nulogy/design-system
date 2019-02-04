@@ -9,7 +9,7 @@ const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlu
 
 const Slider = styled.span`
   position: absolute;
-  cursor: ${props => (props.disabled ? null : "pointer")};
+  cursor: ${props => props.disabled ? null : "pointer"};
   top: 0;
   left: 0;
   right: 0;
@@ -59,11 +59,15 @@ const ToggleInput = styled.input`
 `;
 
 export const Toggle = props => {
-  const { disabled } = props;
+  const { 
+    disabled,
+    defaultToggled,
+  } = props;
   return (
     <Switch>
       <ToggleInput
         type="checkbox"
+        defaultChecked = {defaultToggled}
         { ...props }
       />
       <Slider disabled={ disabled } />
