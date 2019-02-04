@@ -2,6 +2,7 @@ import Text from "./Text";
 import theme from "../theme";
 
 const Title = Text.withComponent("h1");
+
 Title.defaultProps = {
   m: 0,
   fontSize: 4,
@@ -12,6 +13,7 @@ Title.defaultProps = {
 };
 
 const SectionTitle = Text.withComponent("h2");
+
 SectionTitle.defaultProps = {
   m: 0,
   fontSize: 3,
@@ -22,6 +24,7 @@ SectionTitle.defaultProps = {
 };
 
 const SubsectionTitle = Text.withComponent("h3");
+
 SubsectionTitle.defaultProps = {
   m: 0,
   fontSize: 2,

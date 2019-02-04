@@ -21,7 +21,6 @@ const Wrapper = styled.button`
   ${Icon} {
     border-radius: 50%;
     transition: .2s;
-    min-width: 32px;
   }
   ${Text} {
     display: "block",
@@ -58,18 +57,18 @@ const IconicButton = props => {
 
   return (
     <Wrapper label={ children } { ...props }>
-      <Icon size={ theme.space[5] } name={ icon } p={ 1 } />
+      <Icon size={ theme.space[5] } icon={ icon } p={ 1 } />
       <Text mr={ 1 } mb={ 0 } ml={ 1 }>{ children }</Text>
     </Wrapper>
   );
 };
 
-export const names = Object.keys(icons);
+export const iconNames = Object.keys(icons);
 
 IconicButton.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
-  icon: PropTypes.oneOf(names).isRequired,
+  icon: PropTypes.oneOf(iconNames).isRequired,
 };
 
 IconicButton.defaultProps = {

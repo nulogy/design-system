@@ -21,6 +21,7 @@ const Link = styled.a`
 
 Link.propTypes = {
   underline: PropTypes.bool,
+  hover: PropTypes.string,
   ...color.propTypes,
 };
 
