@@ -21,7 +21,6 @@ const Wrapper = styled.button`
   ${Icon} {
     border-radius: 50%;
     transition: .2s;
-    min-width: 32px;
   }
   ${Text} {
     display: "block",

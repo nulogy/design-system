@@ -39,13 +39,32 @@ Svg.propTypes = {
 Svg.defaultProps = {
   color: "currentColor",
   title: null,
-  size: 24,
+  size: "24px",
 };
 
+
+const getMinWidth = inputString => {
+
+}
+
 const Icon = styled(Svg)`
+  min-width: ${props => props.size};
   ${space}
   ${color}  
 `;
+
+Icon.propTypes = {
+  icon: PropTypes.oneOf(iconNames).isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string,
+  color: PropTypes.string,
+};
+
+Icon.defaultProps = {
+  color: "currentColor",
+  title: null,
+  size: "24px",
+};
 
 const iconSizeRatio = 1.25;
 
