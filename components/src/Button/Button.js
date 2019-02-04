@@ -46,19 +46,13 @@ const BaseButton = ({
     <button { ...props }>
       {(icon && iconSide === "left")
           && (
-          <Icon
-            style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } mr={ 1 }
-            icon={ icon }
-          />
+          <Icon size={ `${smallTextCompressed}em` } mr={ 1 } icon={ icon } />
           )
         }
       {children}
       {(icon && iconSide === "right")
           && (
-          <Icon
-            style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } ml={ 1 }
-            icon={ icon }
-          />
+          <Icon size={ `${smallTextCompressed}em` } ml={ 1 } icon={ icon } />
           )
         }
     </button>
