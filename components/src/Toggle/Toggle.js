@@ -9,7 +9,7 @@ const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlu
 
 const Slider = styled.span`
   position: absolute;
-  cursor: ${props => props.disabled ? null : "pointer"};
+  cursor: ${props => (props.disabled ? null : "pointer")};
   top: 0;
   left: 0;
   right: 0;
@@ -28,7 +28,7 @@ const Slider = styled.span`
     bottom: 4px;
     border-radius: 20px;
     box-sizing: content;
-    background-color: ${theme.colors.darkBlue};
+    background-color: ${props => getFill(props.disabled)};
     transition: .2s ease;
   }
 `;
@@ -59,7 +59,7 @@ const ToggleInput = styled.input`
 `;
 
 export const Toggle = props => {
-  const { 
+  const {
     disabled,
     defaultToggled,
   } = props;
@@ -67,7 +67,7 @@ export const Toggle = props => {
     <Switch>
       <ToggleInput
         type="checkbox"
-        defaultChecked = {defaultToggled}
+        defaultChecked={ defaultToggled }
         { ...props }
       />
       <Slider disabled={ disabled } />
