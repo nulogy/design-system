@@ -4,18 +4,26 @@ import ReactSelect from "react-select";
 import theme from "../theme";
 import { subPx } from "../utils";
 
+const getBorderColor = (errored, focused, disabled) => {
+  if (errored) { return theme.colors.red; }
+  if (disabled) { return theme.colors.lightGrey; }
+  if (focused) { return theme.colors.blue; }
+
+  return theme.colors.grey;
+};
+
 const getCustomStyles = error => (
   {
-    control: (base, state) => ({
+    control: (base, { isDisabled, isFocused }) => ({
       ...base,
       paddingLeft: subPx(theme.space[2]),
       paddingRight: subPx(theme.space[2]),
       borderTopLeftRadius: theme.radii[1],
       borderTopRightRadius: theme.radii[1],
-      boxShadow: state.isFocused ? theme.boxShadows[0] : "none",
+      boxShadow: isFocused ? theme.boxShadows[0] : "none",
       outline: "none",
-      borderColor: error ? theme.colors.red : (state.isDisabled ? theme.colors.lightGrey : (state.isFocused ? theme.colors.blue : theme.colors.grey)),
-      background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+      borderColor: getBorderColor(error, isFocused, isDisabled),
+      background: isDisabled ? theme.colors.whiteGrey : theme.colors.white,
       "&:hover": {
         borderColor: error ? theme.colors.red : theme.colors.blue,
       },
