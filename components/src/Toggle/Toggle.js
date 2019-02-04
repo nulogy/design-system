@@ -9,7 +9,7 @@ const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlu
 
 const Slider = styled.span`
   position: absolute;
-  cursor: pointer;
+  cursor: ${props => (props.disabled ? null : "pointer")};
   top: 0;
   left: 0;
   right: 0;
