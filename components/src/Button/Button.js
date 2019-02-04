@@ -48,7 +48,7 @@ const BaseButton = ({
           && (
           <Icon
             style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } mr={ 1 }
-            name={ icon }
+            icon={ icon }
           />
           )
         }
@@ -57,7 +57,7 @@ const BaseButton = ({
           && (
           <Icon
             style={ { minWidth: `${smallTextCompressed}em` } } size={ `${smallTextCompressed}em` } ml={ 1 }
-            name={ icon }
+            icon={ icon }
           />
           )
         }
