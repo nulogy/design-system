@@ -7,25 +7,15 @@ import FormSection from "./FormSection";
 
 storiesOf("Form", module)
   .add("Form", () => (
-    <Form
-      title="New Profile"
-    >
-      <Field
-        labelText="Name"
-      >
+    <Form title="New Profile">
+      <Field labelText="Name">
         <Input />
       </Field>
-      <Field
-        labelText="Date of birth"
-        requirementText="(Optional)"
-        helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)"
-      >
+      <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        formatText="(DD-MM-YYYY)">
         <Input />
       </Field>
-      <Field
-        labelText="Place of birth"
-        requirementText="(Optional)"
+      <Field labelText="Place of birth" requirementText="(Optional)"
       >
         <Input />
       </Field>
@@ -33,104 +23,60 @@ storiesOf("Form", module)
   ))
   .add("Without title", () => (
     <Form>
-      <Field
-        labelText="Name"
-      >
+      <Field labelText="Name">
         <Input />
       </Field>
-      <Field
-        labelText="Date of birth"
-        requirementText="(Optional)"
-        helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)"
-      >
+      <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" formatText="(DD-MM-YYYY)">
         <Input />
       </Field>
-      <Field
-        labelText="Place of birth"
-        requirementText="(Optional)"
-      >
+      <Field labelText="Place of birth" requirementText="(Optional)">
         <Input />
       </Field>
     </Form>
   ))
   .add("With form sections", () => (
-    <Form
-      title="New Profile"
-    >
-      <FormSection
-        title="Personal Information"
-      >
-        <Field
-          labelText="Name"
-        >
+    <Form title="New Profile">
+      <FormSection title="Personal Information">
+        <Field labelText="Name">
           <Input />
         </Field>
-        <Field
-          labelText="Date of birth"
-          requirementText="(Optional)"
-          helpText="Enter a date below"
-          formatText="(DD-MM-YYYY)"
-        >
+        <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        formatText="(DD-MM-YYYY)">
           <Input />
         </Field>
-        <Field
-          labelText="Place of birth"
-          requirementText="(Optional)"
-        >
+        <Field labelText="Place of birth" requirementText="(Optional)">
           <Input />
         </Field>
       </FormSection>
-      <FormSection
-        title="General Information"
-      >
-        <Field
-          labelText="Gender"
-        >
+      <FormSection title="General Information">
+        <Field labelText="Gender">
           <Input />
         </Field>
-        <Field
-          labelText="Ocupation"
-        >
+        <Field labelText="Ocupation">
           <Input />
         </Field>
       </FormSection>
     </Form>
   ))
   .add("With form sections without titles", () => (
-    <Form
-      title="New Profile"
-    >
+    <Form title="New Profile">
       <FormSection>
-        <Field
-          labelText="Name"
-        >
+        <Field labelText="Name">
           <Input />
         </Field>
-        <Field
-          labelText="Date of birth"
-          requirementText="(Optional)"
-          helpText="Enter a date below"
-          formatText="(DD-MM-YYYY)"
-        >
+        <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        formatText="(DD-MM-YYYY)">
           <Input />
         </Field>
-        <Field
-          labelText="Place of birth"
-          requirementText="(Optional)"
-        >
+        <Field labelText="Place of birth" requirementText="(Optional)">
           <Input />
         </Field>
       </FormSection>
       <FormSection>
-        <Field
-          labelText="Gender"
-        >
+        <Field labelText="Gender">
           <Input />
         </Field>
-        <Field
-          labelText="Ocupation"
-        >
+        <Field labelText="Ocupation">
           <Input />
         </Field>
       </FormSection>
