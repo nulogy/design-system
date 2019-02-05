@@ -47,7 +47,7 @@ const RadioInput = styled.input`
 
 const Radio = props => {
   const {
-    value,
+    labelText,
     disabled,
     checked,
   } = props;
@@ -56,7 +56,7 @@ const Radio = props => {
       <RadioWrapper disabled={ disabled }>
         <RadioInput type="radio" { ...props } />
         <VisualRadio disabled={ disabled } checked={ checked } />
-        {value}
+        {labelText}
       </RadioWrapper>
     </Box>
   );
