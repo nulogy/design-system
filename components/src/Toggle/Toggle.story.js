@@ -11,7 +11,10 @@ storiesOf("Toggle", module)
     <Toggle defaultToggled />
   ))
   .add("Toggle set to disabled", () => (
-    <Toggle disabled />
+    <React.Fragment>
+      <Toggle disabled />
+      <Toggle defaultToggled disabled />
+    </React.Fragment>
   ))
   .add("With text", () => (
     <ToggleWithText

@@ -51,7 +51,7 @@ const ToggleInput = styled.input`
     background-color: ${theme.colors.white};
   }
   &:checked + ${Slider} {
-    background-color: ${theme.colors.darkBlue};
+    background-color: ${props => getFill(props.disabled)};
   }
   &:focus + ${Slider} {
     box-shadow: 0 0 6px ${theme.colors.blue};
