@@ -6,7 +6,7 @@ storiesOf("Radio", module)
   .add("Radio", () => (
     <>
       <Radio labelText="I am a radio button" />
-      <input type="radio"/>
+      <input type="radio" value="abc" name="abc" id="abc"/>  
     </>
   ))
   .add("Set to defaultChecked", () => (
@@ -33,8 +33,8 @@ storiesOf("Radio", module)
   ))
   .add("In Radio Group (TEMP EXAMPLE)", () => (
     <div role ="radiogroup">
-      <Radio defaultChecked type="radio" id="Option 1" name="example" value="Option 1"/>
-      <Radio type="radio" id="Option 2" name="example" value="Option 2" />
-      <Radio type="radio" id="Option 3" name="example" value="Option 3" />
+      <Radio defaultChecked type="radio" id="Option 1" name="example" labelText="Option 1"/>
+      <Radio type="radio" id="Option 2" name="example" labelText="Option 2" />
+      <Radio type="radio" id="Option 3" name="example" labelText="Option 3" />
     </div>
   ));
