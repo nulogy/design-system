@@ -35,13 +35,14 @@ const Form = styled(BaseForm)`
   }
 `;
 
-Form.propTypes = {
+BaseForm.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
 };
 
-Form.defaultProps = {
+BaseForm.defaultProps = {
   children: [],
+  title: null,
 };
 
 export default Form;

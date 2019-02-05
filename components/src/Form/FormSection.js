@@ -38,13 +38,14 @@ const FormSection = styled(BaseFormSection)`
   }
 `;
 
-FormSection.propTypes = {
+BaseFormSection.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
 };
 
-FormSection.defaultProps = {
+BaseFormSection.defaultProps = {
   children: [],
+  title: null,
 };
 
 export default FormSection;

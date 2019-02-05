@@ -11,11 +11,14 @@ storiesOf("Form", module)
       <Field labelText="Name">
         <Input />
       </Field>
-      <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)">
+      <Field
+        labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        formatText="(DD-MM-YYYY)"
+      >
         <Input />
       </Field>
-      <Field labelText="Place of birth" requirementText="(Optional)"
+      <Field
+        labelText="Place of birth" requirementText="(Optional)"
       >
         <Input />
       </Field>
@@ -26,7 +29,10 @@ storiesOf("Form", module)
       <Field labelText="Name">
         <Input />
       </Field>
-      <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" formatText="(DD-MM-YYYY)">
+      <Field
+        labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        formatText="(DD-MM-YYYY)"
+      >
         <Input />
       </Field>
       <Field labelText="Place of birth" requirementText="(Optional)">
@@ -37,11 +43,15 @@ storiesOf("Form", module)
   .add("With form sections", () => (
     <Form title="New Profile">
       <FormSection title="Personal Information">
-        <Field labelText="Name">
+        <Field
+          labelText="Name"
+        >
           <Input />
         </Field>
-        <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)">
+        <Field
+          labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+          formatText="(DD-MM-YYYY)"
+        >
           <Input />
         </Field>
         <Field labelText="Place of birth" requirementText="(Optional)">
@@ -64,8 +74,10 @@ storiesOf("Form", module)
         <Field labelText="Name">
           <Input />
         </Field>
-        <Field labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)">
+        <Field
+          labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+          formatText="(DD-MM-YYYY)"
+        >
           <Input />
         </Field>
         <Field labelText="Place of birth" requirementText="(Optional)">

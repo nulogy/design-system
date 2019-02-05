@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../theme";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import Box from "../Box/Box";
+import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
@@ -31,7 +30,8 @@ const BaseField = ({
   m, mt, mr, mb, ml, mx, my,
   ...fieldProps
 }) => (
-  <FieldWrapper { ...fieldProps }
+  <FieldWrapper
+    { ...fieldProps }
     m={ m } mt={ mt } mr={ mr }
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
