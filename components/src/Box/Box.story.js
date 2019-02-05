@@ -30,7 +30,7 @@ storiesOf("Box", module)
   .add("With a responsive width", () => (
     <Box
       p={ 4 }
-      width={ [1, 1 / 2, 1 / 4] }
+      width={ { small: 1, medium: 1 / 2, large: 1 / 4 } }
       bg="whiteGrey"
     >
       Full width on small screens, 1/2 width on medium and 1/4 width on large
