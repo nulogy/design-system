@@ -70,13 +70,13 @@ exports[`Storyshots Box With a responsive width 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH bQDuVN"
+        className="sc-bwzfXH cJcXsN"
         width={
-          Array [
-            1,
-            0.5,
-            0.25,
-          ]
+          Object {
+            "large": 0.25,
+            "medium": 0.5,
+            "small": 1,
+          }
         }
       >
         Full width on small screens, 1/2 width on medium and 1/4 width on large
@@ -310,11 +310,11 @@ exports[`Storyshots Buttons Button 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -405,11 +405,11 @@ exports[`Storyshots Buttons DangerButton 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -500,11 +500,11 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -595,11 +595,11 @@ exports[`Storyshots Buttons QuietButton 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -691,11 +691,11 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -787,11 +787,11 @@ exports[`Storyshots Buttons Set to full width 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -882,11 +882,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -982,11 +982,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -1104,11 +1104,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -1179,11 +1179,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
@@ -1254,11 +1254,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
             "boxShadows": Array [
               "0 1px 1px rgba(27,31,35,0.1)",
             ],
-            "breakpoints": Array [
-              "540px",
-              "768px",
-              "1024px",
-            ],
+            "breakpoints": Object {
+              "large": "1024px",
+              "medium": "768px",
+              "small": "540px",
+            },
             "colors": Object {
               "black": "#011e38",
               "blackBlue": "#122b47",
