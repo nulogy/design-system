@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
 import Text from "../Type/Text";
