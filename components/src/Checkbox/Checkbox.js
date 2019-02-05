@@ -36,6 +36,7 @@ user-select: none;
 `;
 
 const CheckboxInput = styled.input`
+  cursor: ${props => (props.disabled ? null : "pointer")};
   position: absolute;
   opacity: 0;
   height: 1;
