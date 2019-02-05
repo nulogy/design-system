@@ -13,8 +13,8 @@ const InlineValidation = ({
   children,
   ...boxProps
 }) => (
-  <Flex color={ color } mb={ 2 } { ...boxProps }>
-    <Icon { ...icon } />
+  <Flex color={ theme.colors.red } mb={ 2 } { ...boxProps }>
+    <Icon icon="error" />
     <Box>
       <Text mb={ 0 }>{message}</Text>
       {children}
