@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import Box from "../Box/Box";
-import Label from "./Label";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
