@@ -11,13 +11,13 @@ const InlineValidation = ({
   children,
   ...boxProps
 }) => (
-  <Box color={ theme.colors.red } mb={ 2 } { ...boxProps }>
-    <Flex>
-      <Icon icon="error" />
-      <Text mb={ 0 } ml={ 1 }>{message}</Text>
-    </Flex>
-    {children}
-  </Box>
+  <Flex color={ theme.colors.red } mb={ 2 } { ...boxProps }>
+    <Icon icon="error" mr={2} />
+    <Box>
+      <Text mb={ 0 }>{message}</Text>
+      {children}
+    </Box>
+  </Flex>
 );
 
 InlineValidation.propTypes = {
