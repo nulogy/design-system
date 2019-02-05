@@ -34,9 +34,9 @@ storiesOf("Field", module)
   .add("With all additional components", () => (
     <Field
       labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)"
+      formatText="(DD-MM-YYYY)" for="thisInput1"
     >
-      <Input />
+      <Input id="thisInput1" />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>

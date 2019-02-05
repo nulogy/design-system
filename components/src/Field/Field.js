@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import Box from "../Box/Box";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
 
 const Label = styled.label`
   font-size: ${theme.fontSizes[1]};
+  display: inline-block;
+  ${space}
 `;
 
 const FieldWrapper = styled.span`
@@ -40,12 +41,12 @@ const Field = ({
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Box mb={ 2 }>
-      <Label { ...labelProps }>{labelText}</Label>
+    <Label mb={ 2 } { ...labelProps }>
+      {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
       {formatText && (<FormatText>{formatText}</FormatText>)}
-    </Box>
+    </Label>
     {children}
   </FieldWrapper>
 );
