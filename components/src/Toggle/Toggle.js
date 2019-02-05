@@ -90,7 +90,6 @@ class ToggleWithText extends React.Component {
     super(props);
     this.state = {
       toggled: !!(props.toggled || props.defaultToggled),
-      focused: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
