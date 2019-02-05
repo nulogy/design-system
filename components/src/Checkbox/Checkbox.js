@@ -39,8 +39,8 @@ const CheckboxInput = styled.input`
   cursor: ${props => (props.disabled ? null : "pointer")};
   position: absolute;
   opacity: 0;
-  height: 1;
-  width: 1;
+  height: 1px;
+  width: 1px;
   &:focus + ${VisualCheckbox} {
     box-shadow: 0 0 6px ${theme.colors.blue};
   }
