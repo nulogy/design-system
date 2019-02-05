@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
-import Text from "../Type/Text";
-import Flex from "../Flex/Flex";
+import Box from "../Box/Box";
 import Label from "../Field/Label";
 import Input from "../Input/Input";
 
@@ -22,7 +21,7 @@ const VisualRadio = styled.div`
 const RadioWrapper = styled.label`
   color: ${props => (props.disabled ? theme.colors.grey : "currentColor")};
   cursor: ${props => (props.disabled ? null : "pointer")};
-  display: inline-flex;
+  display: flex;
   width: auto;
   align-items: center;
   user-select: none;
@@ -48,16 +47,18 @@ const RadioInput = styled.input`
 
 const Radio = props => {
   const {
-    labelText,
+    value,
     disabled,
     checked,
   } = props;
   return (
-    <RadioWrapper disabled={ disabled }>
-      <RadioInput type="radio" { ...props } />
-      <VisualRadio disabled={ disabled } checked={ checked } />
-      {labelText}
-    </RadioWrapper>
+    <Box>
+      <RadioWrapper disabled={ disabled }>
+        <RadioInput type="radio" { ...props } />
+        <VisualRadio disabled={ disabled } checked={ checked } />
+        {value}
+      </RadioWrapper>
+    </Box>
   );
 };
 

@@ -19,7 +19,6 @@ storiesOf("Radio", module)
     <>
       <Radio disabled labelText="I am disabled" />
       <input disabled type="radio"/>
-      <br />
       <Radio checked disabled labelText="I am disabled" />
       <input checked disabled type="radio"/>
     </>
@@ -28,8 +27,14 @@ storiesOf("Radio", module)
     <>
       <Radio checked labelText="I am controlled and checked" />
       <input checked type="radio"/>
-      <br />
       <Radio checked={ false } labelText="I am controlled and unchecked" />
       <input checked={ false } type="radio"/>
     </>
+  ))
+  .add("In Radio Group (TEMP EXAMPLE)", () => (
+    <div role ="radiogroup">
+      <Radio defaultChecked type="radio" id="Option 1" name="example" value="Option 1"/>
+      <Radio type="radio" id="Option 2" name="example" value="Option 2" />
+      <Radio type="radio" id="Option 3" name="example" value="Option 3" />
+    </div>
   ));
