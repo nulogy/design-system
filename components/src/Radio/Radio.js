@@ -47,7 +47,7 @@ const RadioInput = styled.input`
 
 const Radio = props => {
   const {
-    value,
+    labelText,
     disabled,
     checked,
   } = props;
