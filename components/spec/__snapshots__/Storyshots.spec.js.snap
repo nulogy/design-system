@@ -1331,33 +1331,15 @@ exports[`Storyshots Field Field 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Default label
-          <p
-            className="sc-dnqmqq dLGzPX"
-            color="darkGrey"
-            display="inline"
-            fontSize="12px"
-          />
-          <p
-            className="sc-dnqmqq elFerp"
-            color="currentColor"
-            display="block"
-            fontSize="14px"
-          />
-          <p
-            className="sc-dnqmqq jIXsIq"
-            color="darkGrey"
-            display="block"
-            fontSize="12px"
-          />
-        </div>
-      </label>
+        </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1379,34 +1361,16 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Default label
-          <p
-            className="sc-dnqmqq dLGzPX"
-            color="darkGrey"
-            display="inline"
-            fontSize="12px"
-          />
-          <p
-            className="sc-dnqmqq elFerp"
-            color="currentColor"
-            display="block"
-            fontSize="14px"
-          />
-          <p
-            className="sc-dnqmqq jIXsIq"
-            color="darkGrey"
-            display="block"
-            fontSize="12px"
-          />
-        </div>
+        </label>
         <input
-          className="sc-gqjmRU esUmtU"
+          className="sc-VigVT MCPsV"
           disabled={false}
         />
         <div
@@ -1414,7 +1378,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           color="#cc1439"
         >
           <div
-            className="sc-bwzfXH sc-VigVT bQkokP"
+            className="sc-bwzfXH sc-jTzLTM dwdHGo"
           >
             <svg
               aria-hidden={true}
@@ -1446,7 +1410,80 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
             </p>
           </div>
         </div>
-      </label>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Field With Label for Input 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <span
+        className="sc-gqjmRU jnYEPJ"
+      >
+        <label
+          className="sc-gZMcBi ccYeyQ"
+          for="thisInput"
+        >
+          Default label
+        </label>
+        <input
+          className="sc-VigVT MCPsV"
+          disabled={false}
+          id="thisInput"
+        />
+        <div
+          className="sc-bwzfXH ctAaoN"
+          color="#cc1439"
+        >
+          <div
+            className="sc-bwzfXH sc-jTzLTM dwdHGo"
+          >
+            <svg
+              aria-hidden={true}
+              className="sc-htpNat fLMzTO"
+              color="currentColor"
+              fill="currentColor"
+              height="24px"
+              icon="error"
+              size="24px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d={
+                  Array [
+                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                  ]
+                }
+              />
+            </svg>
+            <p
+              className="sc-dnqmqq gnKacf"
+              color="currentColor"
+              display="block"
+              fontSize={1}
+            >
+              There has been an error
+            </p>
+          </div>
+        </div>
+      </span>
     </div>
   </div>
 </div>
@@ -1468,11 +1505,11 @@ exports[`Storyshots Field With a long text 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Long long long long long long long long long long long long long long label
           <p
@@ -1499,8 +1536,8 @@ exports[`Storyshots Field With a long text 1`] = `
           >
             (DD-MM-YYYY)
           </p>
-        </div>
-      </label>
+        </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1522,11 +1559,12 @@ exports[`Storyshots Field With all additional components 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
+          for="thisInput1"
         >
           Default label
           <p
@@ -1553,17 +1591,18 @@ exports[`Storyshots Field With all additional components 1`] = `
           >
             (DD-MM-YYYY)
           </p>
-        </div>
+        </label>
         <input
-          className="sc-gqjmRU esUmtU"
+          className="sc-VigVT MCPsV"
           disabled={false}
+          id="thisInput1"
         />
         <div
           className="sc-bwzfXH ctAaoN"
           color="#cc1439"
         >
           <div
-            className="sc-bwzfXH sc-VigVT bQkokP"
+            className="sc-bwzfXH sc-jTzLTM dwdHGo"
           >
             <svg
               aria-hidden={true}
@@ -1595,23 +1634,23 @@ exports[`Storyshots Field With all additional components 1`] = `
             </p>
           </div>
           <ul
-            className="sc-fjdhpX jHOcwl"
+            className="sc-jzJRlG eHqmjb"
             color="currentColor"
           >
             <li
-              className="sc-jTzLTM daoydl"
+              className="sc-fjdhpX fIuAAQ"
               color="currentColor"
             >
               Something has gone wrong.
             </li>
             <li
-              className="sc-jTzLTM daoydl"
+              className="sc-fjdhpX fIuAAQ"
               color="currentColor"
             >
               Entry must be atleast 3 characters long
             </li>
             <li
-              className="sc-jTzLTM daoydl"
+              className="sc-fjdhpX fIuAAQ"
               color="currentColor"
             >
               <a
@@ -1622,7 +1661,7 @@ exports[`Storyshots Field With all additional components 1`] = `
             </li>
           </ul>
         </div>
-      </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1644,25 +1683,13 @@ exports[`Storyshots Field With format text 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Default label
-          <p
-            className="sc-dnqmqq dLGzPX"
-            color="darkGrey"
-            display="inline"
-            fontSize="12px"
-          />
-          <p
-            className="sc-dnqmqq elFerp"
-            color="currentColor"
-            display="block"
-            fontSize="14px"
-          />
           <p
             className="sc-dnqmqq jIXsIq"
             color="darkGrey"
@@ -1671,8 +1698,8 @@ exports[`Storyshots Field With format text 1`] = `
           >
             (DD-MM-YYYY)
           </p>
-        </div>
-      </label>
+        </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1694,19 +1721,13 @@ exports[`Storyshots Field With help text 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Default label
-          <p
-            className="sc-dnqmqq dLGzPX"
-            color="darkGrey"
-            display="inline"
-            fontSize="12px"
-          />
           <p
             className="sc-dnqmqq elFerp"
             color="currentColor"
@@ -1715,14 +1736,8 @@ exports[`Storyshots Field With help text 1`] = `
           >
             Enter a date below
           </p>
-          <p
-            className="sc-dnqmqq jIXsIq"
-            color="darkGrey"
-            display="block"
-            fontSize="12px"
-          />
-        </div>
-      </label>
+        </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1744,11 +1759,11 @@ exports[`Storyshots Field With requirement text 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Default label
           <p
@@ -1759,20 +1774,8 @@ exports[`Storyshots Field With requirement text 1`] = `
           >
             (Optional)
           </p>
-          <p
-            className="sc-dnqmqq elFerp"
-            color="currentColor"
-            display="block"
-            fontSize="14px"
-          />
-          <p
-            className="sc-dnqmqq jIXsIq"
-            color="darkGrey"
-            display="block"
-            fontSize="12px"
-          />
-        </div>
-      </label>
+        </label>
+      </span>
     </div>
   </div>
 </div>
@@ -1798,7 +1801,7 @@ exports[`Storyshots Flex Flex 1`] = `
         className="sc-bwzfXH QLQWs"
       >
         <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+          className="sc-bwzfXH sc-jTzLTM dwdHGo"
         >
           <div
             className="sc-bwzfXH kIQjGB"
@@ -1838,7 +1841,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-kGXeez fXMTqo"
+        className="sc-kpOJdX bxYcao"
         fontSize={3}
         fontWeight={2}
       >
@@ -1866,7 +1869,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
@@ -1894,7 +1897,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-kgoBCf cWUmCg"
+        className="sc-kGXeez gPfPHY"
         fontSize={4}
         fontWeight={0}
       >
@@ -1922,7 +1925,7 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-kgoBCf cWUmCg"
+        className="sc-kGXeez gPfPHY"
         fontSize={4}
         fontWeight={0}
       >
@@ -1958,7 +1961,7 @@ exports[`Storyshots Icon Icon 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -1990,7 +1993,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2022,7 +2025,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2054,7 +2057,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2086,7 +2089,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2118,7 +2121,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2150,7 +2153,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2182,7 +2185,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2214,7 +2217,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2246,7 +2249,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2278,7 +2281,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2310,7 +2313,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2342,7 +2345,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2374,7 +2377,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2406,7 +2409,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -2438,7 +2441,7 @@ exports[`Storyshots Icon Icon 1`] = `
         </code>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT kIYPNZ"
+        className="sc-bwzfXH sc-jTzLTM bFdnMc"
       >
         <svg
           aria-hidden={true}
@@ -7050,7 +7053,7 @@ exports[`Storyshots Icon With applied className 1`] = `
       <br />
       <br />
       <div
-        className="sc-bwzfXH storybookTestClass sc-VigVT bQkokP"
+        className="sc-bwzfXH storybookTestClass sc-jTzLTM dwdHGo"
       >
         Applied Class
       </div>
@@ -7283,7 +7286,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
         color="#cc1439"
       >
         <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+          className="sc-bwzfXH sc-jTzLTM dwdHGo"
         >
           <svg
             aria-hidden={true}
@@ -7341,7 +7344,7 @@ exports[`Storyshots Inline Validation With list items 1`] = `
         color="#cc1439"
       >
         <div
-          className="sc-bwzfXH sc-VigVT bQkokP"
+          className="sc-bwzfXH sc-jTzLTM dwdHGo"
         >
           <svg
             aria-hidden={true}
@@ -7373,27 +7376,27 @@ exports[`Storyshots Inline Validation With list items 1`] = `
           </p>
         </div>
         <ul
-          className="sc-fjdhpX jHOcwl"
+          className="sc-jzJRlG eHqmjb"
           color="currentColor"
         >
           <li
-            className="sc-jTzLTM daoydl"
+            className="sc-fjdhpX fIuAAQ"
             color="currentColor"
           >
             Something has gone wrong.
           </li>
           <li
-            className="sc-jTzLTM daoydl"
+            className="sc-fjdhpX fIuAAQ"
             color="currentColor"
           >
             Entry must be atleast 3 characters long
           </li>
           <li
-            className="sc-jTzLTM daoydl"
+            className="sc-fjdhpX fIuAAQ"
             color="currentColor"
           >
             <a
-              className="sc-jzJRlG bjlrap"
+              className="sc-cSHVUG dikELw"
               color="blue"
               href="https://nulogy.design/"
             >
@@ -7424,7 +7427,7 @@ exports[`Storyshots Input Input 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU esUmtU"
+        className="sc-VigVT MCPsV"
         disabled={false}
       />
     </div>
@@ -7449,7 +7452,7 @@ exports[`Storyshots Input Set to disabled 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU ecBrpJ"
+        className="sc-VigVT hElCvw"
         disabled={true}
       />
     </div>
@@ -7474,7 +7477,7 @@ exports[`Storyshots Input Set to error 1`] = `
       }
     >
       <input
-        className="sc-gqjmRU fpflkD"
+        className="sc-VigVT fGThtV"
         disabled={false}
       />
     </div>
@@ -7499,7 +7502,7 @@ exports[`Storyshots Link Link 1`] = `
       }
     >
       <a
-        className="sc-jzJRlG bjlrap"
+        className="sc-cSHVUG dikELw"
         color="blue"
         href="http://nulogy.design"
       >
@@ -7527,7 +7530,7 @@ exports[`Storyshots Link With a different color 1`] = `
       }
     >
       <a
-        className="sc-jzJRlG flQlCc"
+        className="sc-cSHVUG NpMqV"
         color="black"
         href="http://nulogy.design"
       >
@@ -7555,7 +7558,7 @@ exports[`Storyshots Link Without underline 1`] = `
       }
     >
       <a
-        className="sc-jzJRlG cqlYMA"
+        className="sc-cSHVUG iEXylg"
         color="blue"
         href="http://nulogy.design"
       >
@@ -7583,23 +7586,23 @@ exports[`Storyshots List List 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX jmwcER"
+        className="sc-jzJRlG bPmUGc"
         color="currentColor"
       >
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 3
@@ -7627,23 +7630,23 @@ exports[`Storyshots List With compact spacing 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX jHOcwl"
+        className="sc-jzJRlG eHqmjb"
         color="currentColor"
       >
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 3
@@ -7671,23 +7674,23 @@ exports[`Storyshots List With custom colour 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX iIUbCT"
+        className="sc-jzJRlG gogIHZ"
         color="red"
       >
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 3
@@ -7715,24 +7718,24 @@ exports[`Storyshots List With custom font size and line height 1`] = `
       }
     >
       <ul
-        className="sc-fjdhpX dpLZY"
+        className="sc-jzJRlG jIjGcc"
         color="currentColor"
         fontSize={0}
       >
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 3
@@ -7921,14 +7924,14 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-VigVT jnoQOp"
+        className="sc-bwzfXH sc-jTzLTM kcYcVZ"
       >
         <label
-          className="sc-kAzzGY cQnWvY"
+          className="sc-chPdSV fqmRoe"
         >
           <input
             checked={true}
-            className="sc-chPdSV gxbyKe"
+            className="sc-kgoBCf cZEXGV"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -7937,7 +7940,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-cSHVUG bPUPQn"
+            className="sc-kAzzGY eNklMu"
             disabled={false}
           />
         </label>
@@ -7951,14 +7954,14 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
         </p>
       </div>
       <div
-        className="sc-bwzfXH sc-VigVT jnoQOp"
+        className="sc-bwzfXH sc-jTzLTM kcYcVZ"
       >
         <label
-          className="sc-kAzzGY cQnWvY"
+          className="sc-chPdSV fqmRoe"
         >
           <input
             checked={false}
-            className="sc-chPdSV gxbyKe"
+            className="sc-kgoBCf cZEXGV"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -7967,7 +7970,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-cSHVUG bPUPQn"
+            className="sc-kAzzGY eNklMu"
             disabled={false}
           />
         </label>
@@ -8002,15 +8005,15 @@ exports[`Storyshots Toggle Toggle 1`] = `
       }
     >
       <label
-        className="sc-kAzzGY cQnWvY"
+        className="sc-chPdSV fqmRoe"
       >
         <input
-          className="sc-chPdSV gxbyKe"
+          className="sc-kgoBCf cZEXGV"
           disabled={false}
           type="checkbox"
         />
         <span
-          className="sc-cSHVUG bPUPQn"
+          className="sc-kAzzGY eNklMu"
           disabled={false}
         />
       </label>
@@ -8035,19 +8038,13 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
         }
       }
     >
-      <label
-        className="sc-gZMcBi cKwrJy"
+      <span
+        className="sc-gqjmRU jnYEPJ"
       >
-        <div
-          className="sc-bwzfXH jrEgFn"
+        <label
+          className="sc-gZMcBi ccYeyQ"
         >
           Setting
-          <p
-            className="sc-dnqmqq dLGzPX"
-            color="darkGrey"
-            display="inline"
-            fontSize="12px"
-          />
           <p
             className="sc-dnqmqq elFerp"
             color="currentColor"
@@ -8056,22 +8053,16 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
           >
             Turns setting on/off
           </p>
-          <p
-            className="sc-dnqmqq jIXsIq"
-            color="darkGrey"
-            display="block"
-            fontSize="12px"
-          />
-        </div>
+        </label>
         <div
-          className="sc-bwzfXH sc-VigVT jnoQOp"
+          className="sc-bwzfXH sc-jTzLTM kcYcVZ"
         >
           <label
-            className="sc-kAzzGY cQnWvY"
+            className="sc-chPdSV fqmRoe"
           >
             <input
               checked={false}
-              className="sc-chPdSV gxbyKe"
+              className="sc-kgoBCf cZEXGV"
               disabled={false}
               id={null}
               onChange={[Function]}
@@ -8080,7 +8071,7 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
               value="on"
             />
             <span
-              className="sc-cSHVUG bPUPQn"
+              className="sc-kAzzGY eNklMu"
               disabled={false}
             />
           </label>
@@ -8093,7 +8084,7 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
             off
           </p>
         </div>
-      </label>
+      </span>
     </div>
   </div>
 </div>
@@ -8116,16 +8107,16 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
       }
     >
       <label
-        className="sc-kAzzGY cQnWvY"
+        className="sc-chPdSV fqmRoe"
       >
         <input
-          className="sc-chPdSV gxbyKe"
+          className="sc-kgoBCf cZEXGV"
           defaultChecked={true}
           disabled={false}
           type="checkbox"
         />
         <span
-          className="sc-cSHVUG bPUPQn"
+          className="sc-kAzzGY eNklMu"
           disabled={false}
         />
       </label>
@@ -8151,29 +8142,29 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       }
     >
       <label
-        className="sc-kAzzGY cQnWvY"
+        className="sc-chPdSV fqmRoe"
       >
         <input
-          className="sc-chPdSV jKGOgk"
+          className="sc-kgoBCf gnGxrK"
           disabled={true}
           type="checkbox"
         />
         <span
-          className="sc-cSHVUG eulZXr"
+          className="sc-kAzzGY glLEjF"
           disabled={true}
         />
       </label>
       <label
-        className="sc-kAzzGY cQnWvY"
+        className="sc-chPdSV fqmRoe"
       >
         <input
-          className="sc-chPdSV jKGOgk"
+          className="sc-kgoBCf gnGxrK"
           defaultChecked={true}
           disabled={true}
           type="checkbox"
         />
         <span
-          className="sc-cSHVUG eulZXr"
+          className="sc-kAzzGY glLEjF"
           disabled={true}
         />
       </label>
@@ -8199,14 +8190,14 @@ exports[`Storyshots Toggle With text 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-VigVT jnoQOp"
+        className="sc-bwzfXH sc-jTzLTM kcYcVZ"
       >
         <label
-          className="sc-kAzzGY cQnWvY"
+          className="sc-chPdSV fqmRoe"
         >
           <input
             checked={false}
-            className="sc-chPdSV gxbyKe"
+            className="sc-kgoBCf cZEXGV"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -8215,7 +8206,7 @@ exports[`Storyshots Toggle With text 1`] = `
             value="on"
           />
           <span
-            className="sc-cSHVUG bPUPQn"
+            className="sc-kAzzGY eNklMu"
             disabled={false}
           />
         </label>
@@ -8250,14 +8241,14 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-kgoBCf cWUmCg"
+        className="sc-kGXeez gPfPHY"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-kGXeez fXMTqo"
+        className="sc-kpOJdX bxYcao"
         fontSize={3}
         fontWeight={2}
       >
@@ -8272,7 +8263,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
@@ -8287,14 +8278,14 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-kGXeez fXMTqo"
+        className="sc-kpOJdX bxYcao"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
@@ -8309,7 +8300,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
@@ -8324,23 +8315,23 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <ul
-        className="sc-fjdhpX jmwcER"
+        className="sc-jzJRlG bPmUGc"
         color="currentColor"
       >
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 1
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 2 that is really really really really really really really really really long
         </li>
         <li
-          className="sc-jTzLTM daoydl"
+          className="sc-fjdhpX fIuAAQ"
           color="currentColor"
         >
           List Item 3
@@ -8363,7 +8354,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
@@ -8378,7 +8369,7 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-kpOJdX bvkSoU"
+        className="sc-dxgOiQ hAiaVG"
         fontSize={2}
         fontWeight={2}
       >
