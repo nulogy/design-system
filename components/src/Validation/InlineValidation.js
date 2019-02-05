@@ -22,11 +22,14 @@ const InlineValidation = ({
 
 InlineValidation.propTypes = {
   message: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 InlineValidation.defaultProps = {
-  children: [],
+  children: null,
 };
 
 export default InlineValidation;

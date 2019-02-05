@@ -21,8 +21,9 @@ const HeaderValidation = ({
   title,
   message,
   children,
+  ...boxProps,
 }) => (
-  <Flex color="red">
+  <Flex color="red" {...boxProps}>
     <Icon icon="error" size={ theme.space[6] } mr={ theme.space[3] } />
     <Wrapper>
       <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
@@ -32,10 +33,6 @@ const HeaderValidation = ({
   </Flex>
 );
 
-HeaderValidation.defaultProps = {
-  children: null,
-};
-
 HeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
@@ -43,6 +40,10 @@ HeaderValidation.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+};
+
+HeaderValidation.defaultProps = {
+  children: null,
 };
 
 export default HeaderValidation;
