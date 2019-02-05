@@ -16,14 +16,12 @@ storiesOf("Checkbox", module)
   .add("Set to disabled", () => (
     <>
       <Checkbox disabled labelText="I am disabled" />
-      <br />
       <Checkbox checked disabled labelText="I am disabled" />
     </>
   ))
   .add("Controlled", () => (
     <>
       <Checkbox checked labelText="I am controlled and checked" />
-      <br />
       <Checkbox checked={ false } labelText="I am controlled and unchecked" />
     </>
   ));
