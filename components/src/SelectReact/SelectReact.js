@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Downshift from "downshift";
+import ReactSelect from "react-select";
 import theme from "../theme";
 import { subPx } from "../utils";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
 
 const getBorderColor = (errored, focused, disabled) => {
   if (errored) { return theme.colors.red; }
@@ -82,30 +80,14 @@ const getCustomStyles = error => (
   }
 );
 
-const items = [1, 2, 3];
-const Select = () => (
-  <Downshift>
-    {
-      ({
-        getMenuProps,
-        getItemProps,
-        getInputProps,
-        getToggleButtonProps,
-        isOpen,
-        selectedItem,
-      }) => (
-        <div>
-          <span { ...getInputProps() } { ...getToggleButtonProps() }>{ selectedItem || "hello" }</span>
-          <ul { ...getMenuProps() }>
-            { isOpen
-              ? items.map((item, index) => <li { ...getItemProps({ key: item, index, item }) }>{item}</li>)
-              : null
-            }
-          </ul>
-        </div>
-      )
-    }
-  </Downshift>
+const Select = ({
+  error,
+  ...props
+}) => (
+  <ReactSelect
+    styles={ getCustomStyles(error) }
+    { ...props }
+  />
 );
 
 Select.propTypes = {
