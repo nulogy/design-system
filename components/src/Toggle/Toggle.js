@@ -91,7 +91,6 @@ class ToggleWithText extends React.Component {
     this.state = {
       toggled: !!(props.toggled || props.defaultToggled),
       focused: false,
-        refactor of styling and how toggle is displayed
     };
     this.handleClick = this.handleClick.bind(this);
   }

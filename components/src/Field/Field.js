@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "../theme";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import Box from "../Box/Box";
@@ -13,18 +14,12 @@ const Label = styled.label`
   ${space}
 `;
 
-const FieldWrapper = styled.span`
-  width: 100%;
-  display: inline-block;
+const FieldWrapper = styled.div`
   ${space}
 `;
 
 FieldWrapper.propTypes = {
   ...space.propTypes,
-};
-
-FieldWrapper.defaultProps = {
-  mb: 5,
 };
 
 const BaseField = ({
@@ -34,14 +29,14 @@ const BaseField = ({
   formatText,
   children,
   m, mt, mr, mb, ml, mx, my,
-  ...labelProps
+  ...fieldProps
 }) => (
-  <FieldWrapper
+  <FieldWrapper { ...fieldProps }
     m={ m } mt={ mt } mr={ mr }
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Label mb={ 2 } { ...labelProps }>
+    <Label mb={ 2 }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
@@ -51,9 +46,7 @@ const BaseField = ({
   </FieldWrapper>
 );
 
-const Field = styled(BaseField)``;
-
-Field.propTypes = {
+BaseField.propTypes = {
   labelText: PropTypes.string.isRequired,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
@@ -62,11 +55,13 @@ Field.propTypes = {
   ...space.PropTypes,
 };
 
-Field.defaultProps = {
+BaseField.defaultProps = {
   children: [],
   requirementText: null,
   helpText: null,
   formatText: null,
 };
+
+const Field = styled(BaseField)``;
 
 export default Field;
