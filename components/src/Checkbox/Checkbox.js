@@ -56,14 +56,15 @@ const CheckboxInput = styled.input`
   }
 `;
 
-const Checkbox = props => {
+const BaseCheckbox = props => {
   const {
+    className,
     labelText,
     disabled,
     checked,
   } = props;
   return (
-    <Box>
+    <Box className={className}>
       <CheckboxWrapper disabled={ disabled }>
         <CheckboxInput type="checkbox" { ...props } />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
@@ -73,18 +74,22 @@ const Checkbox = props => {
   );
 };
 
-Checkbox.propTypes = {
+BaseCheckbox.propTypes = {
   labelText: PropTypes.string,
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
-Checkbox.defaultProps = {
+BaseCheckbox.defaultProps = {
   labelText: null,
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
 };
+
+const Checkbox = styled(BaseCheckbox)`
+  padding: 8px 0;
+`;
 
 export default Checkbox;
