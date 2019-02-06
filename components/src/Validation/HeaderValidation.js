@@ -21,9 +21,9 @@ const HeaderValidation = ({
   title,
   message,
   children,
-  ...boxProps,
+  ...boxProps
 }) => (
-  <Flex color="red" {...boxProps}>
+  <Flex color="red" { ...boxProps }>
     <Icon icon="error" size={ theme.space[6] } mr={ theme.space[3] } />
     <Wrapper>
       <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
