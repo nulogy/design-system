@@ -7,7 +7,7 @@ import Field from "../Field/Field";
 storiesOf("RadioGroup", module)
   .add("Radio Group", () => (
     <RadioGroup name="settingSelection" defaultValue="a">
-      <Radio value="a" labelText="Option AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption AOption A" />
+      <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />
     </RadioGroup>
