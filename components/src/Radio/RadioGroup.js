@@ -68,12 +68,6 @@ BaseRadioGroup.defaultProps = {
 };
 
 const RadioGroup = styled(BaseRadioGroup)`
-  ${Radio} {
-    margin-bottom: ${theme.space[2]};
-  }
-  ${Radio}:last-child{
-    margin-bottom: 0;
-  }
 `;
 
 export default RadioGroup;

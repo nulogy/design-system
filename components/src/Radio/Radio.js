@@ -77,6 +77,10 @@ BaseRadio.defaultProps = {
   className: null,
 };
 
-const Radio = styled(BaseRadio)``;
+const Radio = styled(BaseRadio)`
+  display: flex;
+  height: 40px;
+  align-items: center;
+`;
 
 export default Radio;
