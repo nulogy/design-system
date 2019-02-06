@@ -29,7 +29,7 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("Controlled", () => (
-    <RadioGroup name="settingSelection" checkedValue="a" onChange={ e => { console.log(e.target.value); } }>
+    <RadioGroup name="settingSelection" checkedValue="a" onChange={ () => {} }>
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />

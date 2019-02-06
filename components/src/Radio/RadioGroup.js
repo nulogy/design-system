@@ -13,12 +13,11 @@ const getCheckedValue = (value, checkedValue) => {
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
     const {
-      children,
+
       value,
       disabled,
       ...radioProps
     } = radio.props;
-    console.log(`${value} | ${props.checkedValue}`);
     return (
       <Radio
         { ...radioProps }
@@ -58,12 +57,14 @@ BaseRadioGroup.propTypes = {
   defaultValue: PropTypes.string,
   checkedValue: PropTypes.string,
   onChange: PropTypes.func,
+  className: PropTypes.string,
 };
 
 BaseRadioGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
+  className: null,
 };
 
 const RadioGroup = styled(BaseRadioGroup)`
