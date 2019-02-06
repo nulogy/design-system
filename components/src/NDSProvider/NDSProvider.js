@@ -2,10 +2,15 @@ import React from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../theme";
 
-const Reset = createGlobalStyle`body {
-  margin: 0;
-  color: ${theme.colors.black};
-}`;
+const Reset = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600');
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+  body {
+    margin: 0;
+    color: ${theme.colors.black};
+  }
+  `;
 
 export const GlobalStyles = styled.div`
     font-family: 'IBM Plex Sans';
