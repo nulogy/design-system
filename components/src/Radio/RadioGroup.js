@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Radio from "./Radio";
-import theme from "../theme";
 
 const getCheckedValue = (value, checkedValue) => {
   if (checkedValue === undefined) { return undefined; }

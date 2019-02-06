@@ -64,7 +64,7 @@ const BaseCheckbox = props => {
     checked,
   } = props;
   return (
-    <Box className={className}>
+    <Box className={ className }>
       <CheckboxWrapper disabled={ disabled }>
         <CheckboxInput type="checkbox" { ...props } />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
@@ -79,6 +79,7 @@ BaseCheckbox.propTypes = {
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 BaseCheckbox.defaultProps = {
@@ -86,6 +87,7 @@ BaseCheckbox.defaultProps = {
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
+  className: null,
 };
 
 const Checkbox = styled(BaseCheckbox)`
