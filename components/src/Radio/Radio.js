@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
-import Label from "../Field/Label";
-import Input from "../Input/Input";
 
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
@@ -77,11 +75,6 @@ Radio.defaultProps = {
 };
 
 export default Radio;
-
-
-
-
-
 
 
 // const checkboxStyle = {
