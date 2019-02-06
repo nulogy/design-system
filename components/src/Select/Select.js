@@ -169,10 +169,11 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
   },
 }));
 
-const Select = ({ disabled, options, optionToString, value }) => (
+const Select = ({ onChange, disabled, options, optionToString, value }) => (
   <Downshift
-    itemToString={optionToString}
+    itemToString={ optionToString }
     selectedItem={ value }
+    onChange={ onChange }
   >
     {
       ({
