@@ -89,7 +89,7 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
   },
 }));
 
-const Select = ({ onChange, disabled, options, optionToString, value }) => (
+const Select = ({ error, onChange, disabled, options, optionToString, value, required }) => (
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
@@ -105,29 +105,35 @@ const Select = ({ onChange, disabled, options, optionToString, value }) => (
         selectedItem,
       }) => (
         <div>
-          <SelectBox { ...getToggleButtonProps({ disabled }) }>
-            <Input { ...getInputProps({ disabled }) } readOnly value={ selectedItem && selectedItem.label } />
+          <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
+            <Input { ...getInputProps({ disabled, error }) } required={ required } readOnly value={ selectedItem && selectedItem.label } />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
-          <Menu { ...getMenuProps() }>
-            {
-              isOpen
-                ? options.map((option, index) => (
-                  <MenuItem
-                    { ...getItemProps({
-                      key: option.value,
-                      item: option,
-                      isSelected: selectedItem === option,
-                      index,
-                      disabled,
-                    }) }
-                  >
-                    {option.label}
-                  </MenuItem>
-                ))
-                : null
-            }
-          </Menu>
+          {
+            isOpen
+              ? (
+                <Menu { ...getMenuProps({ error }) }>
+                  {
+                    isOpen
+                      ? options.map((option, index) => (
+                        <MenuItem
+                          { ...getItemProps({
+                            key: option.value,
+                            item: option,
+                            isSelected: selectedItem === option,
+                            index,
+                            disabled,
+                          }) }
+                        >
+                          {option.label}
+                        </MenuItem>
+                      ))
+                      : null
+                  }
+                </Menu>
+              )
+              : null
+          }
         </div>
       )
     }
