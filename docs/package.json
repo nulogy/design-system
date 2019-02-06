@@ -4,8 +4,8 @@
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "dependencies": {
-    "@nulogy/components": "file:../components",
-    "@nulogy/tokens": "file:../tokens",
+    "@nulogy/components": "^0.2.5",
+    "@nulogy/tokens": "^0.2.2",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.75",
     "gatsby-image": "^2.0.20",
