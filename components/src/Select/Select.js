@@ -84,25 +84,26 @@ const getCustomStyles = error => (
   }
 );
 
-const SelectBox = styled.div([], ({ error, isFocused, isDisabled }) => ({
+const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
   display: "flex",
   padding: 0,
   border: "1px solid",
   // borderLeft: "solid",
   // borderRight: "solid",
   // borderTop: "solid",
-  borderTopLeftRadius: theme.radii[1],
-  borderTopRightRadius: theme.radii[1],
+  borderRadius: theme.radii[1],
+  // borderTopLeftRadius: theme.radii[1],
+  // borderTopRightRadius: theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
-  borderColor: getBorderColor(error, isFocused, isDisabled),
-  background: isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+  borderColor: getBorderColor(error, isFocused, disabled),
+  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
     borderColor: error ? theme.colors.red : theme.colors.blue,
   },
 }));
 
-const Input = styled.input([], ({ error, isFocused, isDisabled }) => ({
+const Input = styled.input([], ({ error, isFocused, disabled }) => ({
   width: "100%",
   paddingLeft: subPx(theme.space[2]),
   paddingRight: subPx(theme.space[2]),
@@ -111,8 +112,8 @@ const Input = styled.input([], ({ error, isFocused, isDisabled }) => ({
   borderTopRightRadius: theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
-  borderColor: getBorderColor(error, isFocused, isDisabled),
-  background: isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+  borderColor: getBorderColor(error, isFocused, disabled),
+  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
     borderColor: theme.colors.blue,
   },
@@ -134,9 +135,9 @@ const ToggleButton = ({ isOpen }) => (
   </IndicatorButton>
 );
 
-const Menu = styled.div([], ({ error, isFocused, isDisabled }) => ({
+const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
   // from menu
-  borderColor: getBorderColor(error, isFocused, isDisabled),
+  borderColor: getBorderColor(error, isFocused, disabled),
   borderWidth: "1px",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
@@ -155,7 +156,7 @@ const Menu = styled.div([], ({ error, isFocused, isDisabled }) => ({
   // borderTopRightRadius: 0,
   borderBottomLeftRadius: theme.radii[1],
   borderBottomRightRadius: theme.radii[1],
-  background: isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
 }));
 
 const MenuItem = styled.div([], ({ isSelected }) => ({
@@ -169,7 +170,7 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
 }));
 
 const items = [1, 2, 3];
-const Select = () => (
+const Select = ({ disabled }) => (
   <Downshift>
     {
       ({
@@ -181,14 +182,14 @@ const Select = () => (
         selectedItem,
       }) => (
         <div>
-          <SelectBox { ...getToggleButtonProps() }>
-            <Input { ...getInputProps() } readOnly value={ selectedItem } />
+          <SelectBox { ...getToggleButtonProps({ disabled }) }>
+            <Input { ...getInputProps({ disabled }) } readOnly value={ selectedItem } />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
           <Menu { ...getMenuProps() }>
             {
               isOpen
-                ? items.map((item, index) => <MenuItem { ...getItemProps({ key: item, index, item }) }>{item}</MenuItem>)
+                ? items.map((item, index) => <MenuItem { ...getItemProps({ key: item, index, item, disabled }) }>{item}</MenuItem>)
                 : null
             }
           </Menu>
