@@ -43,14 +43,15 @@ const RadioInput = styled.input`
   }
 `;
 
-const Radio = props => {
+const BaseRadio = props => {
   const {
+    className,
     labelText,
     disabled,
     checked,
   } = props;
   return (
-    <Box>
+    <Box className={className}>
       <RadioWrapper disabled={ disabled }>
         <RadioInput type="radio" { ...props } />
         <VisualRadio disabled={ disabled } checked={ checked } />
@@ -60,19 +61,21 @@ const Radio = props => {
   );
 };
 
-Radio.propTypes = {
+BaseRadio.propTypes = {
   labelText: PropTypes.string,
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
-Radio.defaultProps = {
+BaseRadio.defaultProps = {
   labelText: null,
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
 };
+
+const Radio = styled(BaseRadio)``;
 
 export default Radio;
 

@@ -1,6 +1,8 @@
 import React from "react";
 import Radio from "./Radio";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import theme from "../theme";
 
 const getCheckedValue = (value, checkedValue) => {
   if (checkedValue === undefined){ return undefined };
@@ -32,15 +34,18 @@ const getRadioButtons = props => {
   return (radioButtons)
 }
 
-const RadioGroup = props =>{
+const BaseRadioGroup = ({
+  className,
+  ...props
+}) =>{
   return(
-    <div>
+    <div className={ className }>
       { getRadioButtons(props) }
     </div>
   )
 }
 
-RadioGroup.propTypes = {
+BaseRadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.shape({
@@ -57,10 +62,19 @@ RadioGroup.propTypes = {
   onChange: PropTypes.func,
 };
 
-RadioGroup.defaultProps = {
+BaseRadioGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
 };
+
+const RadioGroup = styled(BaseRadioGroup)`
+  ${Radio} {
+    margin-bottom: ${theme.space[2]};
+  }
+  ${Radio}:last-child{
+    margin-bottom: 0;
+  }
+`;
 
 export default RadioGroup;
