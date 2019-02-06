@@ -169,9 +169,11 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
   },
 }));
 
-const items = [1, 2, 3];
-const Select = ({ disabled }) => (
-  <Downshift>
+const Select = ({ disabled, options, optionToString, value }) => (
+  <Downshift
+    itemToString={optionToString}
+    selectedItem={ value }
+  >
     {
       ({
         getMenuProps,
@@ -183,13 +185,25 @@ const Select = ({ disabled }) => (
       }) => (
         <div>
           <SelectBox { ...getToggleButtonProps({ disabled }) }>
-            <Input { ...getInputProps({ disabled }) } readOnly value={ selectedItem } />
+            <Input { ...getInputProps({ disabled }) } readOnly value={ selectedItem && selectedItem.label } />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
           <Menu { ...getMenuProps() }>
             {
               isOpen
-                ? items.map((item, index) => <MenuItem { ...getItemProps({ key: item, index, item, disabled }) }>{item}</MenuItem>)
+                ? options.map((option, index) => (
+                  <MenuItem
+                    { ...getItemProps({
+                      key: option.value,
+                      item: option,
+                      isSelected: selectedItem === option,
+                      index,
+                      disabled,
+                    }) }
+                  >
+                    {option.label}
+                  </MenuItem>
+                ))
                 : null
             }
           </Menu>

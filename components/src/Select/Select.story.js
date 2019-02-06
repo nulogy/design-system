@@ -13,33 +13,32 @@ const options = [
   { value: "quarantine", label: "In quarantine" },
 ];
 
+const optionToString = option => option.value;
+
 class SelectWithState extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = {
-      selectedOption: null,
-    }
-    this.handleChange = this.handleChange.bind(this)
+    this.state = { selectedOption: null };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(selectedOption) {
-    this.setState({
-      selectedOption
-    })
+    this.setState({ selectedOption });
   }
 
   render() {
-    return <Select onChange={this.handleChange} value={this.state.value} options={options} />
+    const { selectedOption } = this.state;
+    return <Select onChange={ this.handleChange } value={ selectedOption } options={ options } optionToString={ optionToString } />
   }
 }
 
 storiesOf("Select", module)
-.add("Select", () => (
-  <Select placeholder="Please select inventory status" options={ options } />
-))
+  .add("Select", () => (
+    <Select placeholder="Please select inventory status" options={ options } />
+  ))
   .add("Select with an option selected", () => (
-    <Select value={options[0]} placeholder="Please select inventory status" options={ options } />
+    <Select value={options[0]} placeholder="Please select inventory status" options={ options } optionToString={ optionToString } />
   ))
   .add("Select as a controlled component", () => (
     <SelectWithState placeholder="Please select inventory status" options={options} />
