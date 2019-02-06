@@ -6,7 +6,6 @@ import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
-import Input from "../Input/Input"
 
 const Label = styled.label`
   font-size: ${theme.fontSizes[1]};
