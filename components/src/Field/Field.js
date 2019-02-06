@@ -6,6 +6,7 @@ import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
+import Input from "../Input/Input"
 
 const Label = styled.label`
   font-size: ${theme.fontSizes[1]};
@@ -15,6 +16,12 @@ const Label = styled.label`
 
 const FieldWrapper = styled.div`
   ${space}
+  > * {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
+  margin-bottom: 0;
+  }
 `;
 
 FieldWrapper.propTypes = {
@@ -62,6 +69,7 @@ BaseField.defaultProps = {
   formatText: null,
 };
 
-const Field = styled(BaseField)``;
+const Field = styled(BaseField)`
+`;
 
 export default Field;

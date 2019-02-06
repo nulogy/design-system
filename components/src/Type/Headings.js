@@ -27,13 +27,13 @@ SectionTitle.defaultProps = {
 const SubsectionTitleBase = Text.withComponent("h3");
 
 const SubsectionTitle = styled(SubsectionTitleBase)`
-  margin: 0;
-  font-size: ${theme.fontSizes[2]};
-  font-weight: ${theme.fontWeights[2]};
-  line-height: ${theme.lineHeights.subsectionTitle};
 `;
 
 SubsectionTitle.defaultProps = {
+  m: 0,
+  fontSize: 2,
+  fontWeight: 2,
+  lineHeight: theme.lineHeights.sectionTitle,
   mb: 2,
   theme,
 };
