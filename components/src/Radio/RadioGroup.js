@@ -1,14 +1,14 @@
 import React from "react";
-import Radio from "./Radio";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Radio from "./Radio";
 import theme from "../theme";
 
 const getCheckedValue = (value, checkedValue) => {
-  if (checkedValue === undefined){ return undefined };
-  if (value === checkedValue){ return true };
+  if (checkedValue === undefined) { return undefined; }
+  if (value === checkedValue) { return true; }
   return false;
-}
+};
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
@@ -17,33 +17,31 @@ const getRadioButtons = props => {
       value,
       disabled,
       ...radioProps
-    } = radio.props
-    console.log(value + " | " + props.checkedValue)
-    return(
+    } = radio.props;
+    console.log(`${value} | ${props.checkedValue}`);
+    return (
       <Radio
-        {...radioProps}
-        disabled = {props.disabled || disabled}
-        name = {props.name}
-        value = {value}
-        defaultChecked={ value === props.defaultValue ? true : undefined}
-        checked={ getCheckedValue(value, props.checkedValue)}
+        { ...radioProps }
+        disabled={ props.disabled || disabled }
+        name={ props.name }
+        value={ value }
+        defaultChecked={ value === props.defaultValue ? true : undefined }
+        checked={ getCheckedValue(value, props.checkedValue) }
         onChange={ props.onChange }
       />
-    )
+    );
   });
-  return (radioButtons)
-}
+  return (radioButtons);
+};
 
 const BaseRadioGroup = ({
   className,
   ...props
-}) =>{
-  return(
-    <div className={ className }>
-      { getRadioButtons(props) }
-    </div>
-  )
-}
+}) => (
+  <div className={ className }>
+    { getRadioButtons(props) }
+  </div>
+);
 
 BaseRadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
