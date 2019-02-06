@@ -1561,27 +1561,13 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
-"@nulogy/components@file:components":
-  version "0.2.3"
-  dependencies:
-    "@nulogy/tokens" "0.2.1"
-    "@sambego/storybook-styles" "^1.0.0"
-    "@storybook/addon-info" "^4.1.4"
-    "@storybook/addon-storysource" "^4.0.12"
-    "@storybook/react" "^4.1.4"
-    polished "^2.3.1"
-    react "^16.3.2"
-    react-dom "^16.3.2"
-    story2sketch "^1.4.0"
-    styled-components "^4.1.3"
-    styled-system "^3.2.1"
-    svg-sprite-loader "^3.8.0"
-    svgi "^1.1.0"
-    webpack "^4.8.3"
-    webpack-cli "^3.1.0"
+"@nulogy/tokens@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-0.2.1.tgz#fc11e15637f05069636bb01823794e7bce401192"
+  integrity sha512-pIb7334SkhvSKxN+cbRjvYQh+LUJckKdqBTKjSWTP8/BmG8D1qGT6vzpt8Lms+KjW2UmhudnfxmD/i25Ex6wcw==
 
 "@nulogy/tokens@file:tokens":
-  version "0.2.1"
+  version "0.2.2"
 
 "@reach/router@^1.1.1":
   version "1.2.1"
