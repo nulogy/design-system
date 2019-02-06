@@ -21,7 +21,7 @@ storiesOf("Checkbox", module)
   ))
   .add("Controlled", () => (
     <>
-      <Checkbox checked onChange={()=>{}} labelText="I am controlled and checked" />
-      <Checkbox checked={ false } onChange={()=>{}} labelText="I am controlled and unchecked" />
+      <Checkbox checked onChange={ () => {} } labelText="I am controlled and checked" />
+      <Checkbox checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
     </>
   ));
