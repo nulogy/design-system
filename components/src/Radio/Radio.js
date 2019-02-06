@@ -7,13 +7,15 @@ import Box from "../Box/Box";
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
 const VisualRadio = styled.div`
-  width: ${theme.space[3]};
+  min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 50%;
   box-sizing: border-box;
   border: solid 1px ${props => getFill(props.disabled)};
   background-color: ${theme.colors.white};
+  position: relative;
+  top: 4px;
 `;
 
 const RadioWrapper = styled.label`
@@ -23,6 +25,7 @@ const RadioWrapper = styled.label`
   width: auto;
   align-items: center;
   user-select: none;
+  align-items: flex-start;
 `;
 
 const RadioInput = styled.input`
@@ -78,9 +81,7 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)`
-  display: flex;
-  height: 40px;
-  align-items: center;
+  padding: 8px 0;
 `;
 
 export default Radio;
