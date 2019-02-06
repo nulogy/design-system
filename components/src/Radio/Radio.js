@@ -66,6 +66,7 @@ BaseRadio.propTypes = {
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 BaseRadio.defaultProps = {
@@ -73,6 +74,7 @@ BaseRadio.defaultProps = {
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
+  className: null,
 };
 
 const Radio = styled(BaseRadio)``;
