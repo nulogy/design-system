@@ -4,9 +4,6 @@ import Downshift from "downshift";
 import styled from "styled-components";
 import theme from "../theme";
 import { subPx } from "../utils";
-import Icon from "../Icon/Icon";
-import Button from "../Button/Button";
-import Box from "../Box/Box";
 
 const getBorderColor = (errored, focused, disabled) => {
   if (errored) { return theme.colors.red; }
@@ -16,84 +13,11 @@ const getBorderColor = (errored, focused, disabled) => {
   return theme.colors.grey;
 };
 
-const getCustomStyles = error => (
-  {
-    control: (base, { isDisabled, isFocused }) => ({
-      ...base,
-      paddingLeft: subPx(theme.space[2]),
-      paddingRight: subPx(theme.space[2]),
-      borderTopLeftRadius: theme.radii[1],
-      borderTopRightRadius: theme.radii[1],
-      boxShadow: isFocused ? theme.boxShadows[0] : "none",
-      outline: "none",
-      borderColor: getBorderColor(error, isFocused, isDisabled),
-      background: isDisabled ? theme.colors.whiteGrey : theme.colors.white,
-      "&:hover": {
-        borderColor: error ? theme.colors.red : theme.colors.blue,
-      },
-    }),
-    menu: base => ({
-      ...base,
-      borderColor: error ? theme.colors.red : theme.colors.blue,
-      borderWidth: "1px",
-      borderLeftStyle: "solid",
-      borderRightStyle: "solid",
-      marginTop: 0,
-      borderTopLeftRadius: 0,
-      borderTopRightRadius: 0,
-      boxShadow: theme.boxShadows[0],
-    }),
-    placeholder: base => ({
-      ...base,
-      marginLeft: 0,
-      marginRight: 0
-    }),
-    singleValue: base => ({
-      ...base,
-      marginLeft: 0,
-      marginRight: 0,
-      color: theme.colors.black
-    }),
-    menuList: base => ({
-      ...base,
-      padding: "0px",
-      borderColor: error ? theme.colors.red : theme.colors.blue,
-      borderWidth: "1px",
-      borderBottomStyle: "solid",
-      borderTopLeftRadius: 0,
-      borderTopRightRadius: 0,
-      borderBottomLeftRadius: theme.radii[1],
-      borderBottomRightRadius: theme.radii[1],
-    }),
-    valueContainer: () => ({
-      padding: 0,
-    }),
-    option: (base, state) => ({
-      ...base,
-      color: theme.colors.black,
-      padding: subPx(theme.space[2]),
-      fontWeight: state.isSelected ? "bold" : "normal",
-      background: state.isSelected ? "none" : "default",
-      "&:hover": {
-        background: theme.colors.lightBlue,
-      },
-    }),
-    indicatorSeparator: () => ({
-      display: "none",
-    }),
-  }
-);
-
 const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
   display: "flex",
   padding: 0,
   border: "1px solid",
-  // borderLeft: "solid",
-  // borderRight: "solid",
-  // borderTop: "solid",
   borderRadius: theme.radii[1],
-  // borderTopLeftRadius: theme.radii[1],
-  // borderTopRightRadius: theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
   borderColor: getBorderColor(error, isFocused, disabled),
@@ -149,11 +73,7 @@ const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
 
   // from menuList
   padding: "0px",
-  // borderColor: error ? theme.colors.red : theme.colors.blue,
-  // borderWidth: "1px",
   borderBottomStyle: "solid",
-  // borderTopLeftRadius: 0,
-  // borderTopRightRadius: 0,
   borderBottomLeftRadius: theme.radii[1],
   borderBottomRightRadius: theme.radii[1],
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
