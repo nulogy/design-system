@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Radio from "./Radio";
+import RadioGroup from "./RadioGroup";
 
 storiesOf("Radio", module)
   .add("Radio", () => (
@@ -24,20 +25,4 @@ storiesOf("Radio", module)
       <Radio checked onChange={ () => {} } labelText="I am controlled and checked" />
       <Radio checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
     </>
-  ))
-  .add("In Radio Group (TEMP EXAMPLE)", () => (
-    <div role="radiogroup">
-      <Radio
-        defaultChecked type="radio" id="Option 1"
-        name="example" labelText="Option 1"
-      />
-      <Radio
-        type="radio" id="Option 2" name="example"
-        labelText="Option 2"
-      />
-      <Radio
-        type="radio" id="Option 3" name="example"
-        labelText="Option 3"
-      />
-    </div>
   ));
