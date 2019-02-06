@@ -1581,34 +1581,35 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           disabled={false}
         />
         <div
-          className="sc-bwzfXH ctAaoN"
+          className="sc-bwzfXH sc-kAzzGY kQEZnu"
           color="#cc1439"
         >
-          <div
-            className="sc-bwzfXH sc-kAzzGY jwtTmd"
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat bIQpCs"
+            color="currentColor"
+            fill="currentColor"
+            height="24px"
+            icon="error"
+            mr={2}
+            size="24px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="24px"
           >
-            <svg
-              aria-hidden={true}
-              className="sc-htpNat fLMzTO"
-              color="currentColor"
-              fill="currentColor"
-              height="24px"
-              icon="error"
-              size="24px"
-              title={null}
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d={
-                  Array [
-                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                  ]
-                }
-              />
-            </svg>
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-bwzfXH crzhMj"
+          >
             <p
-              className="sc-dnqmqq gnKacf"
+              className="sc-dnqmqq iUIAHX"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -1654,34 +1655,35 @@ exports[`Storyshots Field With Label for Input 1`] = `
           id="thisInput"
         />
         <div
-          className="sc-bwzfXH ctAaoN"
+          className="sc-bwzfXH sc-kAzzGY kQEZnu"
           color="#cc1439"
         >
-          <div
-            className="sc-bwzfXH sc-kAzzGY jwtTmd"
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat bIQpCs"
+            color="currentColor"
+            fill="currentColor"
+            height="24px"
+            icon="error"
+            mr={2}
+            size="24px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="24px"
           >
-            <svg
-              aria-hidden={true}
-              className="sc-htpNat fLMzTO"
-              color="currentColor"
-              fill="currentColor"
-              height="24px"
-              icon="error"
-              size="24px"
-              title={null}
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d={
-                  Array [
-                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                  ]
-                }
-              />
-            </svg>
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-bwzfXH crzhMj"
+          >
             <p
-              className="sc-dnqmqq gnKacf"
+              className="sc-dnqmqq iUIAHX"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -1805,68 +1807,69 @@ exports[`Storyshots Field With all additional components 1`] = `
           id="thisInput1"
         />
         <div
-          className="sc-bwzfXH ctAaoN"
+          className="sc-bwzfXH sc-kAzzGY kQEZnu"
           color="#cc1439"
         >
-          <div
-            className="sc-bwzfXH sc-kAzzGY jwtTmd"
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat bIQpCs"
+            color="currentColor"
+            fill="currentColor"
+            height="24px"
+            icon="error"
+            mr={2}
+            size="24px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="24px"
           >
-            <svg
-              aria-hidden={true}
-              className="sc-htpNat fLMzTO"
-              color="currentColor"
-              fill="currentColor"
-              height="24px"
-              icon="error"
-              size="24px"
-              title={null}
-              viewBox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d={
-                  Array [
-                    "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                  ]
-                }
-              />
-            </svg>
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-bwzfXH crzhMj"
+          >
             <p
-              className="sc-dnqmqq gnKacf"
+              className="sc-dnqmqq iUIAHX"
               color="currentColor"
               display="block"
               fontSize={1}
             >
               There has been an error
             </p>
-          </div>
-          <ul
-            className="sc-kgoBCf hLVXKt"
-            color="currentColor"
-          >
-            <li
-              className="sc-chPdSV eAnHWx"
+            <ul
+              className="sc-kgoBCf gPXdFb"
               color="currentColor"
             >
-              Something has gone wrong.
-            </li>
-            <li
-              className="sc-chPdSV eAnHWx"
-              color="currentColor"
-            >
-              Entry must be atleast 3 characters long
-            </li>
-            <li
-              className="sc-chPdSV eAnHWx"
-              color="currentColor"
-            >
-              <a
-                href="https://nulogy.design/"
+              <li
+                className="sc-chPdSV eAnHWx"
+                color="currentColor"
               >
-                See here
-              </a>
-            </li>
-          </ul>
+                Something has gone wrong.
+              </li>
+              <li
+                className="sc-chPdSV eAnHWx"
+                color="currentColor"
+              >
+                Entry must be atleast 3 characters long
+              </li>
+              <li
+                className="sc-chPdSV eAnHWx"
+                color="currentColor"
+              >
+                <a
+                  href="https://nulogy.design/"
+                >
+                  See here
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -2514,6 +2517,161 @@ exports[`Storyshots Form Without title 1`] = `
           />
         </div>
       </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Header Validation Header Validation 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-kAzzGY kIsRRJ"
+        color="red"
+      >
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat bFNauO"
+          color="currentColor"
+          fill="currentColor"
+          height="48px"
+          icon="error"
+          mr="16px"
+          size="48px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="48px"
+        >
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-eHgmQL exvbao"
+        >
+          <h3
+            className="sc-dxgOiQ sc-ckVGcZ likuOu"
+          >
+            Error has occured ...
+          </h3>
+          <p
+            className="sc-dnqmqq iUIAHX"
+            color="currentColor"
+            display="block"
+            fontSize={1}
+          >
+            Instructions and description of an error
+          </p>
+          <ul
+            className="sc-kgoBCf gPXdFb"
+            color="currentColor"
+          >
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
+            >
+              Affected field
+            </li>
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
+            >
+              Unmet criteria
+            </li>
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
+            >
+              <a
+                href="https://nulogy.design/"
+              >
+                Affected field
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Header Validation With message only 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH sc-kAzzGY kIsRRJ"
+        color="red"
+      >
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat bFNauO"
+          color="currentColor"
+          fill="currentColor"
+          height="48px"
+          icon="error"
+          mr="16px"
+          size="48px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="48px"
+        >
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-eHgmQL exvbao"
+        >
+          <h3
+            className="sc-dxgOiQ sc-ckVGcZ likuOu"
+          >
+            Error has occured ...
+          </h3>
+          <p
+            className="sc-dnqmqq iUIAHX"
+            color="currentColor"
+            display="block"
+            fontSize={1}
+          >
+            Instructions and description of an error
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -7975,34 +8133,35 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ctAaoN"
+        className="sc-bwzfXH sc-kAzzGY kQEZnu"
         color="#cc1439"
       >
-        <div
-          className="sc-bwzfXH sc-kAzzGY jwtTmd"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat bIQpCs"
+          color="currentColor"
+          fill="currentColor"
+          height="24px"
+          icon="error"
+          mr={2}
+          size="24px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat fLMzTO"
-            color="currentColor"
-            fill="currentColor"
-            height="24px"
-            icon="error"
-            size="24px"
-            title={null}
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d={
-                Array [
-                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                ]
-              }
-            />
-          </svg>
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-bwzfXH crzhMj"
+        >
           <p
-            className="sc-dnqmqq gnKacf"
+            className="sc-dnqmqq iUIAHX"
             color="currentColor"
             display="block"
             fontSize={1}
@@ -8033,70 +8192,71 @@ exports[`Storyshots Inline Validation With list items 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH ctAaoN"
+        className="sc-bwzfXH sc-kAzzGY kQEZnu"
         color="#cc1439"
       >
-        <div
-          className="sc-bwzfXH sc-kAzzGY jwtTmd"
+        <svg
+          aria-hidden={true}
+          className="sc-htpNat bIQpCs"
+          color="currentColor"
+          fill="currentColor"
+          height="24px"
+          icon="error"
+          mr={2}
+          size="24px"
+          title={null}
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <svg
-            aria-hidden={true}
-            className="sc-htpNat fLMzTO"
-            color="currentColor"
-            fill="currentColor"
-            height="24px"
-            icon="error"
-            size="24px"
-            title={null}
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d={
-                Array [
-                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
-                ]
-              }
-            />
-          </svg>
+          <path
+            d={
+              Array [
+                "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+              ]
+            }
+          />
+        </svg>
+        <div
+          className="sc-bwzfXH crzhMj"
+        >
           <p
-            className="sc-dnqmqq gnKacf"
+            className="sc-dnqmqq iUIAHX"
             color="currentColor"
             display="block"
             fontSize={1}
           >
             Something has gone wrong
           </p>
-        </div>
-        <ul
-          className="sc-kgoBCf hLVXKt"
-          color="currentColor"
-        >
-          <li
-            className="sc-chPdSV eAnHWx"
+          <ul
+            className="sc-kgoBCf gPXdFb"
             color="currentColor"
           >
-            Something has gone wrong.
-          </li>
-          <li
-            className="sc-chPdSV eAnHWx"
-            color="currentColor"
-          >
-            Entry must be atleast 3 characters long
-          </li>
-          <li
-            className="sc-chPdSV eAnHWx"
-            color="currentColor"
-          >
-            <a
-              className="sc-kEYyzF jKAqEe"
-              color="blue"
-              href="https://nulogy.design/"
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
             >
-              See here
-            </a>
-          </li>
-        </ul>
+              Something has gone wrong.
+            </li>
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
+            >
+              Entry must be atleast 3 characters long
+            </li>
+            <li
+              className="sc-chPdSV eAnHWx"
+              color="currentColor"
+            >
+              <a
+                className="sc-kEYyzF jKAqEe"
+                color="blue"
+                href="https://nulogy.design/"
+              >
+                See here
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -8279,7 +8439,7 @@ exports[`Storyshots List List 1`] = `
       }
     >
       <ul
-        className="sc-kgoBCf jUskJK"
+        className="sc-kgoBCf gmELcj"
         color="currentColor"
       >
         <li
@@ -8323,7 +8483,7 @@ exports[`Storyshots List With compact spacing 1`] = `
       }
     >
       <ul
-        className="sc-kgoBCf hLVXKt"
+        className="sc-kgoBCf gPXdFb"
         color="currentColor"
       >
         <li
@@ -8367,7 +8527,7 @@ exports[`Storyshots List With custom colour 1`] = `
       }
     >
       <ul
-        className="sc-kgoBCf iBczpn"
+        className="sc-kgoBCf jlROlE"
         color="red"
       >
         <li
@@ -8411,7 +8571,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
       }
     >
       <ul
-        className="sc-kgoBCf iLfVJZ"
+        className="sc-kgoBCf krukuP"
         color="currentColor"
         fontSize={0}
       >
@@ -9002,7 +9162,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <ul
-        className="sc-kgoBCf jUskJK"
+        className="sc-kgoBCf gmELcj"
         color="currentColor"
       >
         <li

@@ -11,22 +11,25 @@ const InlineValidation = ({
   children,
   ...boxProps
 }) => (
-  <Box color={ theme.colors.red } mb={ 2 } { ...boxProps }>
-    <Flex>
-      <Icon icon="error" />
-      <Text mb={ 0 } ml={ 1 }>{message}</Text>
-    </Flex>
-    {children}
-  </Box>
+  <Flex color={ theme.colors.red } mb={ 2 } { ...boxProps }>
+    <Icon icon="error" mr={ 2 } />
+    <Box>
+      <Text mb={ 0 }>{message}</Text>
+      {children}
+    </Box>
+  </Flex>
 );
 
 InlineValidation.propTypes = {
   message: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 InlineValidation.defaultProps = {
-  children: [],
+  children: null,
 };
 
 export default InlineValidation;
