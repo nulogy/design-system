@@ -13,6 +13,7 @@ export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export { default as Field } from "./Field/Field";
 export { default as Input } from "./Input/Input";
 export { default as Checkbox } from "./Checkbox/Checkbox";
+export { default as Radio } from "./Radio/Radio";
 export * from "./Toggle/Toggle";
 export * from "./Type/Headings";
 export { default as NDSProvider } from "./NDSProvider/NDSProvider";
