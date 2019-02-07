@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
+import Icon from "../Icon/Icon";
 import styled from "styled-components";
 import theme from "../theme";
 import { subPx } from "../utils";
@@ -15,6 +16,7 @@ const getBorderColor = (errored, focused, disabled) => {
 
 const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
   display: "flex",
+  position: "relative",
   padding: 0,
   border: "1px solid",
   borderRadius: theme.radii[1],
@@ -44,17 +46,19 @@ const Input = styled.input([], ({ error, isFocused, disabled }) => ({
 }));
 
 const IndicatorButton = styled.div([], () => ({
-  border: "none",
-  background: "none",
-  padding: `${subPx(theme.space[2], 1)} ${theme.space[3]}`,
+  position: "absolute",
+  top: theme.space[2],
+  right: theme.space[1],
+  bottom: "0",
+
 }));
 
 const ToggleButton = ({ isOpen }) => (
   <IndicatorButton>
     {
       isOpen
-        ? "^"
-        : "v"
+        ? <Icon name="upArrow" />
+        : <Icon name="downArrow" />
     }
   </IndicatorButton>
 );
