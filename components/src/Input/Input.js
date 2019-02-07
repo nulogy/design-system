@@ -35,6 +35,7 @@ const Input = styled.input`
     border: 1px solid;
     border-color: ${getBorderColor}; 
     border-radius: ${theme.radii[1]};
+    border-radius: ${theme.radii.medium};
     padding: ${subPx(theme.space[2])};
     font-size: ${theme.fontSizes[1]};
     font-family: ${theme.fonts.base};
