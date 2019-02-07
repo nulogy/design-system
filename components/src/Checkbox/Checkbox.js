@@ -34,6 +34,7 @@ const CheckboxWrapper = styled.label`
   cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
   width: auto;
+  vertical-align: top;
   align-items: flex-start;
   user-select: none;
 `;
