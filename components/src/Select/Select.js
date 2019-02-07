@@ -18,7 +18,6 @@ const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
   display: "flex",
   position: "relative",
   padding: 0,
-  border: "1px solid",
   borderRadius: theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
@@ -30,17 +29,20 @@ const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
 }));
 
 const Input = styled.input([], ({ error, isFocused, disabled }) => ({
+  fontFamily: theme.fonts.base,
   width: "100%",
-  paddingLeft: subPx(theme.space[2]),
-  paddingRight: subPx(theme.space[2]),
-  border: "none",
-  borderTopLeftRadius: theme.radii[1],
-  borderTopRightRadius: theme.radii[1],
+  color: theme.colors.black,
+  fontSize: theme.fontSizes[1],
+  padding: subPx(theme.space[2]),
+  lineHeight: theme.lineHeights.base,
+  border: "1px solid",
+  borderColor: getBorderColor(error, isFocused, disabled),
+  borderRadius: theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
-  borderColor: getBorderColor(error, isFocused, disabled),
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
+    cursor: "default",
     borderColor: theme.colors.blue,
   },
 }));
@@ -50,7 +52,7 @@ const IndicatorButton = styled.div([], () => ({
   top: theme.space[2],
   right: theme.space[1],
   bottom: "0",
-
+  pointerEvents: "none",
 }));
 
 const ToggleButton = ({ isOpen }) => (
@@ -64,24 +66,16 @@ const ToggleButton = ({ isOpen }) => (
 );
 
 const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
-  // from menu
-  borderColor: getBorderColor(error, isFocused, disabled),
   position: "absolute",
   width: "100%",
   borderWidth: "1px",
+  borderColor: getBorderColor(error, true, disabled),
+  borderBottomStyle: "solid",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
+  borderRadius: `0 ${theme.radii[1]}`,
   marginTop: 0,
-  borderTopLeftRadius: 0,
-  borderTopRightRadius: 0,
   boxShadow: theme.boxShadows[0],
-
-
-  // from menuList
-  padding: "0px",
-  borderBottomStyle: "solid",
-  borderBottomLeftRadius: theme.radii[1],
-  borderBottomRightRadius: theme.radii[1],
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
 }));
 
@@ -89,9 +83,11 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
   color: theme.colors.black,
   padding: subPx(theme.space[2]),
   fontWeight: isSelected ? "bold" : "normal",
-  background: isSelected ? "none" : "default",
   "&:hover": {
     background: theme.colors.lightBlue,
+  },
+  "&:last-child": {
+    borderRadius: `0 ${theme.radii[1]}`,
   },
 }));
 
