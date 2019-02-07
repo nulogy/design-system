@@ -19,8 +19,8 @@
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
-    "storyshots:visual:initial": "yarn build-storybook && rm -rf scripts/visual-storyshots/__image_snapshots__ && jest scripts/visual-storyshots/Storyshots.visual.spec.js",
-    "storyshots:visual": "yarn build-storybook && jest scripts/visual-storyshots/Storyshots.visual.spec.js",
+    "storyshots:visual:initial": "yarn build-storybook && rm -rf scripts/visual-storyshots/__image_snapshots__ && jest scripts/visual-storyshots/Storyshots.visual.js",
+    "storyshots:visual": "yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
     "storyshots:visual:against-master": "git checkout master && yarn run storyshots:visual:initial && git checkout - && yarn run storyshots:visual",
     "test": "jest && yarn run lint"
   },
