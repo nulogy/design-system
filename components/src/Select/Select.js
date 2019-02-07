@@ -66,6 +66,8 @@ const ToggleButton = ({ isOpen }) => (
 const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
   // from menu
   borderColor: getBorderColor(error, isFocused, disabled),
+  position: "absolute",
+  width: "100%",
   borderWidth: "1px",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
@@ -108,7 +110,7 @@ const Select = ({ error, onChange, disabled, options, optionToString, value, req
         isOpen,
         selectedItem,
       }) => (
-        <div>
+        <div style={{position: "relative"}}>
           <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
             <Input { ...getInputProps({ disabled, error }) } required={ required } readOnly value={ selectedItem && selectedItem.label } placeholder={ placeholder } />
             <ToggleButton isOpen={ isOpen } />
