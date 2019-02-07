@@ -1730,6 +1730,17 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
+"@storybook/addon-storyshots-puppeteer@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots-puppeteer/-/addon-storyshots-puppeteer-4.1.11.tgz#0f3796fe1f927826f05d8bc2dcc209ee56ca4015"
+  integrity sha512-58CNMav/saWaUC3ram45WSDz4VtCBKhb258PEVQD8efBDbaCk3dY3ZsdG57fJJTTxLbJ56SlE+RYgqhi+jZ0Dw==
+  dependencies:
+    "@storybook/node-logger" "4.1.11"
+    core-js "^2.5.7"
+    jest-image-snapshot "^2.6.0"
+    puppeteer "^1.11.0"
+    regenerator-runtime "^0.12.1"
+
 "@storybook/addon-storyshots@4.1.11":
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-4.1.11.tgz#f93ff1a306af1e3b41a4364fddf09ac398d6eb30"
@@ -7740,6 +7751,11 @@ get-stdin@^4.0.1:
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
   integrity sha1-uWjGsKBDhDJJAui/Gl3zJXmkUP4=
 
+get-stdin@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
+  integrity sha1-Ei4WFZHiH/TFJTAwVpPyDmOTo5g=
+
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
@@ -9762,6 +9778,19 @@ jest-haste-map@^24.0.0:
     jest-worker "^24.0.0"
     micromatch "^3.1.10"
     sane "^3.0.0"
+
+jest-image-snapshot@^2.6.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/jest-image-snapshot/-/jest-image-snapshot-2.8.0.tgz#9ccccaf532e9e14f2edf1c4fa5a819b4028a3f91"
+  integrity sha512-z1pXPRfCsjg3RqssTgdRJjsEo3W4VNu+0q5d/W8UmmvXTpbjQnTQ3helDn1tX76EZjL5kU79uVhqPhGmeA/m6A==
+  dependencies:
+    chalk "^1.1.3"
+    get-stdin "^5.0.1"
+    lodash "^4.17.4"
+    mkdirp "^0.5.1"
+    pixelmatch "^4.0.2"
+    pngjs "^3.3.3"
+    rimraf "^2.6.2"
 
 jest-jasmine2@^24.1.0:
   version "24.1.0"
@@ -12622,7 +12651,7 @@ pirates@^4.0.0:
   dependencies:
     node-modules-regexp "^1.0.0"
 
-pixelmatch@^4.0.0:
+pixelmatch@^4.0.0, pixelmatch@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/pixelmatch/-/pixelmatch-4.0.2.tgz#8f47dcec5011b477b67db03c243bc1f3085e8854"
   integrity sha1-j0fc7FARtHe2fbA8JDvB8wheiFQ=
@@ -12662,7 +12691,7 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-pngjs@^3.0.0:
+pngjs@^3.0.0, pngjs@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.3.tgz#85173703bde3edac8998757b96e5821d0966a21b"
   integrity sha512-1n3Z4p3IOxArEs1VRXnZ/RXdfEniAUS9jb68g58FIXMNkPJeZd+Qh4Uq7/e0LVxAQGos1eIUrqrt4FpjdnEd+Q==
@@ -13415,7 +13444,7 @@ punycode@^1.2.4, punycode@^1.4.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
   integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
-puppeteer@^1.0.0:
+puppeteer@^1.0.0, puppeteer@^1.11.0:
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.12.2.tgz#dbc36afc3ba2d7182b1a37523c0081a0e8507c9a"
   integrity sha512-xWSyCeD6EazGlfnQweMpM+Hs6X6PhUYhNTHKFj/axNZDq4OmrVERf70isBf7HsnFgB3zOC1+23/8+wCAZYg+Pg==
