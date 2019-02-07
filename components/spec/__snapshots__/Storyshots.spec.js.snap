@@ -1335,7 +1335,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iivQNU"
+          className="sc-gqjmRU btPifZ"
           disabled={false}
         >
           <input
@@ -1375,7 +1375,7 @@ exports[`Storyshots Checkbox Controlled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iivQNU"
+          className="sc-gqjmRU btPifZ"
           disabled={false}
         >
           <input
@@ -1397,7 +1397,7 @@ exports[`Storyshots Checkbox Controlled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iivQNU"
+          className="sc-gqjmRU btPifZ"
           disabled={false}
         >
           <input
@@ -1440,7 +1440,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iivQNU"
+          className="sc-gqjmRU btPifZ"
           disabled={false}
         >
           <input
@@ -1481,7 +1481,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU cSqGOL"
+          className="sc-gqjmRU iwNhDT"
           disabled={true}
         >
           <input
@@ -1500,7 +1500,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU cSqGOL"
+          className="sc-gqjmRU iwNhDT"
           disabled={true}
         >
           <input
@@ -8659,7 +8659,7 @@ exports[`Storyshots Radio Controlled 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL MYfsu"
+          className="sc-eHgmQL cuMCtv"
           disabled={false}
         >
           <input
@@ -8681,7 +8681,7 @@ exports[`Storyshots Radio Controlled 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL MYfsu"
+          className="sc-eHgmQL cuMCtv"
           disabled={false}
         >
           <input
@@ -8724,7 +8724,7 @@ exports[`Storyshots Radio Radio 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL MYfsu"
+          className="sc-eHgmQL cuMCtv"
           disabled={false}
         >
           <input
@@ -8764,7 +8764,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL MYfsu"
+          className="sc-eHgmQL cuMCtv"
           disabled={false}
         >
           <input
@@ -8805,7 +8805,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL iQMhnz"
+          className="sc-eHgmQL hoEElt"
           disabled={true}
         >
           <input
@@ -8824,7 +8824,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
         className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL iQMhnz"
+          className="sc-eHgmQL hoEElt"
           disabled={true}
         >
           <input
@@ -8869,7 +8869,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -8893,7 +8893,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -8917,7 +8917,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -8966,7 +8966,7 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -8988,7 +8988,7 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -9009,7 +9009,7 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL MYfsu"
+            className="sc-eHgmQL cuMCtv"
             disabled={false}
           >
             <input
@@ -9071,7 +9071,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
             className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL MYfsu"
+              className="sc-eHgmQL cuMCtv"
               disabled={false}
             >
               <input
@@ -9093,7 +9093,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
             className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL MYfsu"
+              className="sc-eHgmQL cuMCtv"
               disabled={false}
             >
               <input
@@ -9114,7 +9114,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
             className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL MYfsu"
+              className="sc-eHgmQL cuMCtv"
               disabled={false}
             >
               <input
@@ -9161,7 +9161,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL iQMhnz"
+            className="sc-eHgmQL hoEElt"
             disabled={true}
           >
             <input
@@ -9183,7 +9183,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL iQMhnz"
+            className="sc-eHgmQL hoEElt"
             disabled={true}
           >
             <input
@@ -9204,7 +9204,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
           className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL iQMhnz"
+            className="sc-eHgmQL hoEElt"
             disabled={true}
           >
             <input
