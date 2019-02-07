@@ -58,7 +58,7 @@ const ToggleInput = styled.input`
   }
 `;
 
-export const Toggle = props => {
+export const ToggleButton = props => {
   const {
     disabled,
     defaultToggled,
@@ -75,17 +75,17 @@ export const Toggle = props => {
   );
 };
 
-Toggle.propTypes = {
+ToggleButton.propTypes = {
   defaultToggled: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
-Toggle.defaultProps = {
+ToggleButton.defaultProps = {
   defaultToggled: undefined,
   disabled: false,
 };
 
-class ToggleWithText extends React.Component {
+class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -116,7 +116,7 @@ class ToggleWithText extends React.Component {
     } = this.state;
     return (
       <Flex flexDirection="row" alignItems="center">
-        <Toggle
+        <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
           onClick={ e => { this.handleClick(e); } }
           { ...props }
@@ -129,7 +129,7 @@ class ToggleWithText extends React.Component {
   }
 }
 
-ToggleWithText.propTypes = {
+Toggle.propTypes = {
   onChange: PropTypes.func,
   toggled: PropTypes.bool,
   defaultToggled: PropTypes.bool,
@@ -140,7 +140,7 @@ ToggleWithText.propTypes = {
   value: PropTypes.string,
 };
 
-ToggleWithText.defaultProps = {
+Toggle.defaultProps = {
   onChange: () => {},
   toggled: undefined,
   defaultToggled: undefined,
@@ -151,4 +151,4 @@ ToggleWithText.defaultProps = {
   id: null,
 };
 
-export default ToggleWithText;
+export default Toggle;
