@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
+import { subPx } from "../utils"
 
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
 const VisualRadio = styled.div`
   min-width: ${theme.space[3]};
-  height: ${theme.space[3]};
+  min-height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 50%;
   box-sizing: border-box;
@@ -16,16 +17,28 @@ const VisualRadio = styled.div`
   background-color: ${theme.colors.white};
   position: relative;
   top: 4px;
+  &:before{
+    cursor: ${props => (props.disabled ? null : "pointer")};
+    content: "";
+    display: none;
+    position: relative;
+    left: 4px;
+    top: 4px
+    width: 2px;
+    height: 2px;
+    background-color: white
+    border: 2px solid white;
+    border-radius: 50%;
+  }
 `;
 
 const RadioWrapper = styled.label`
   color: ${props => (props.disabled ? theme.colors.grey : "currentColor")};
   cursor: ${props => (props.disabled ? null : "pointer")};
-  display: flex;
+  display: inline-flex;
   width: auto;
-  align-items: center;
-  user-select: none;
   align-items: flex-start;
+  user-select: none;
 `;
 
 const RadioInput = styled.input`
@@ -39,10 +52,14 @@ const RadioInput = styled.input`
   }
   &:checked + ${VisualRadio} {
     border-color: ${props => getFill(props.disabled)};
-    border-width: 5px;
+    background-color: ${props => getFill(props.disabled)};
+    border-width: 1px;
   }
   &:not(:checked) + ${VisualRadio}{
     border-color: ${theme.colors.grey};
+  }
+  &:checked + ${VisualRadio}:before {
+    display: block;
   }
 `;
 

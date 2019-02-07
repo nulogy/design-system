@@ -13,6 +13,8 @@ const VisualCheckbox = styled.div`
   border-radius: 2px;
   border: solid 1px ${props => getFill(props.disabled)};
   background-color: ${theme.colors.white};
+  position: relative;
+  top: 4px;
   &:before{
     content: "";
     display: none;
@@ -32,7 +34,7 @@ const CheckboxWrapper = styled.label`
   cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
   width: auto;
-  align-items: center;
+  align-items: flex-start;
   user-select: none;
 `;
 
