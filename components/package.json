@@ -19,6 +19,8 @@
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
+    "storyshots:visual:initial": "yarn build-storybook; rm -rf scripts/visual-storyshots/__image_snapshots__; jest scripts/visual-storyshots/Storyshots.visual.spec.js",
+    "storyshots:visual": "yarn build-storybook; jest scripts/visual-storyshots/Storyshots.visual.spec.js",
     "test": "jest && yarn run lint"
   },
   "license": "MIT",
@@ -49,6 +51,7 @@
     "@babel/preset-env": "7.3.1",
     "@nulogy/tokens": "file:../tokens",
     "@storybook/addon-storyshots": "4.1.11",
+    "@storybook/addon-storyshots-puppeteer": "4.1.11",
     "babel-jest": "24.0.0",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-preset-react": "6.24.1",
