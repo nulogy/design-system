@@ -3,16 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
-import { subPx } from "../utils"
 
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
 const VisualRadio = styled.div`
   min-width: ${theme.space[3]};
-  min-height: ${theme.space[3]};
+  height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 50%;
-  box-sizing: border-box;
   border: solid 1px ${props => getFill(props.disabled)};
   background-color: ${theme.colors.white};
   position: relative;

@@ -3,12 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Radio from "./Radio";
 
-const getCheckedValue = (value, checkedValue) => {
-  if (checkedValue === undefined) { return undefined; }
-  if (value === checkedValue) { return true; }
-  return false;
-};
-
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
     const {
@@ -24,7 +18,7 @@ const getRadioButtons = props => {
         name={ props.name }
         value={ value }
         defaultChecked={ value === props.defaultValue ? true : undefined }
-        checked={ getCheckedValue(value, props.checkedValue) }
+        checked={ props.checkedValue && (value === props.checkedValue) }
         onChange={ props.onChange }
       />
     );
