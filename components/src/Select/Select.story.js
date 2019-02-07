@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Select from "./Select";
+import Input from "../Input/Input";
 import PrimaryButton from "../Button/PrimaryButton";
 
 const options = [
@@ -29,7 +30,12 @@ class SelectWithState extends React.Component {
 
   render() {
     const { selectedOption } = this.state;
-    return <Select onChange={ this.handleChange } value={ selectedOption } options={ options } optionToString={ optionToString } />
+    return (
+      <Select
+        onChange={ this.handleChange } value={ selectedOption } options={ options }
+        optionToString={ optionToString }
+      />
+    );
   }
 }
 
@@ -38,10 +44,13 @@ storiesOf("Select", module)
     <Select placeholder="Please select inventory status" options={ options } />
   ))
   .add("Select with an option selected", () => (
-    <Select value={options[0]} placeholder="Please select inventory status" options={ options } optionToString={ optionToString } />
+    <Select
+      value={ options[0] } placeholder="Please select inventory status" options={ options }
+      optionToString={ optionToString }
+    />
   ))
   .add("Select as a controlled component", () => (
-    <SelectWithState placeholder="Please select inventory status" options={options} />
+    <SelectWithState placeholder="Please select inventory status" options={ options } />
   ))
   .add("Set to disabled", () => (
     <Select
@@ -55,8 +64,11 @@ storiesOf("Select", module)
   ))
   .add("Set to required", () => (
     <form>
-      <Select placeholder="Please select inventory status" options={ options } required />
+      <Input placeholder="Please select inventory status" />
+      <Select
+        placeholder="Please select inventory status" options={ options } required
+        style={ { marginTop: "5px" } }
+      />
       <PrimaryButton mt={ 2 } type="submit">Submit</PrimaryButton>
     </form>
   ));
-

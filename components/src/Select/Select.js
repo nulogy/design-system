@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
-import Icon from "../Icon/Icon";
 import styled from "styled-components";
+import Icon from "../Icon/Icon";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -91,7 +91,9 @@ const MenuItem = styled.div([], ({ isSelected }) => ({
   },
 }));
 
-const Select = ({ error, onChange, disabled, options, optionToString, value, required, placeholder }) => (
+const Select = ({
+  error, onChange, disabled, options, optionToString, value, required, placeholder,
+}) => (
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
@@ -106,9 +108,12 @@ const Select = ({ error, onChange, disabled, options, optionToString, value, req
         isOpen,
         selectedItem,
       }) => (
-        <div style={{position: "relative"}}>
+        <div style={ { position: "relative" } }>
           <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
-            <Input { ...getInputProps({ disabled, error }) } required={ required } readOnly value={ selectedItem && selectedItem.label } placeholder={ placeholder } />
+            <Input
+              { ...getInputProps({ disabled, error }) } required={ required } readOnly
+              value={ selectedItem && selectedItem.label } placeholder={ placeholder }
+            />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
           {
@@ -151,14 +156,14 @@ Select.propTypes = {
   // }])).isRequired,
   required: PropTypes.bool,
   onChange: PropTypes.func,
-  error: PropTypes.bool
+  error: PropTypes.bool,
 };
 
 Select.defaultProps = {
   value: undefined,
   required: false,
   onChange: undefined,
-  error: false
+  error: false,
 };
 
 export default Select;
