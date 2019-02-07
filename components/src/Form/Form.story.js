@@ -4,7 +4,6 @@ import Field from "../Field/Field";
 import Input from "../Input/Input";
 import Form from "./Form";
 import FormSection from "./FormSection";
-//import Select from "../Select/Select";
 import Checkbox from "../Checkbox/Checkbox";
 import Radio from "../Radio/Radio";
 import RadioGroup from "../Radio/RadioGroup";
@@ -105,14 +104,14 @@ storiesOf("Form", module)
   ))
   .add("Demo form", () => (
     <>
-    <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
-      <List compact>
-        <ListItem>Affected field</ListItem>
-        <ListItem>Unmet criteria</ListItem>
-        <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
-      </List>
-    </HeaderValidation>
     <Form title="Job 324400">
+      <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+        <List compact>
+          <ListItem>Affected field</ListItem>
+          <ListItem>Unmet criteria</ListItem>
+          <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+        </List>
+      </HeaderValidation>
       <FormSection title="Job Information">
         <Field labelText="Project">
           <Input placeholder="Project 128703" />
@@ -136,9 +135,7 @@ storiesOf("Form", module)
         <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)" >
           <Input disabled value="June 29, 2019" />
         </Field>
-        <Field labelText="Line">
-          //<Select placeholder="Please select line" options={ lineOptions } />
-        </Field>
+
         <Field labelText="Line Lead" requirementText="(Optional)">
           <Checkbox labelText="Christiaan Oostenbrug" />
           <Checkbox labelText="Matt Dunn" />
@@ -172,9 +169,7 @@ storiesOf("Form", module)
         <Field labelText="Quantity">
           <Input />
         </Field>
-        <Field labelText="Pallets">
-          //<Select placeholder="P-400032" isDisabled="true" />
-        </Field>
+
         <Field labelText="Reject visibility">
           <ToggleWithText
             onText="Visible" offText="Hidden" disabled
