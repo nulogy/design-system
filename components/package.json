@@ -19,8 +19,8 @@
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
-    "storyshots:visual:initial": "yarn build-storybook; rm -rf scripts/visual-storyshots/__image_snapshots__; jest scripts/visual-storyshots/Storyshots.visual.spec.js",
-    "storyshots:visual": "yarn build-storybook; jest scripts/visual-storyshots/Storyshots.visual.spec.js",
+    "storyshots:visual:initial": "yarn build-storybook && rm -rf scripts/visual-storyshots/__image_snapshots__ && jest scripts/visual-storyshots/Storyshots.visual.spec.js",
+    "storyshots:visual": "yarn build-storybook && jest scripts/visual-storyshots/Storyshots.visual.spec.js",
     "test": "jest && yarn run lint"
   },
   "license": "MIT",
