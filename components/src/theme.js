@@ -58,6 +58,7 @@ export default {
   radii: {
     small: tokens.radius_border_small,
     medium: tokens.radius_border_medium,
+    circle: tokens.radius_border_circle,
   },
   breakpoints: {
     small: tokens.size_breakpoint_small,
