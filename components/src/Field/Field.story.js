@@ -10,6 +10,11 @@ storiesOf("Field", module)
   .add("Field", () => (
     <Field labelText="Default label" />
   ))
+  .add("With Input", () => (
+    <Field labelText="Default label">
+      <Input />
+    </Field>
+  ))
   .add("With Input and InlineValidation", () => (
     <Field labelText="Default label">
       <Input />

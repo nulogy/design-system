@@ -15,6 +15,12 @@ const Label = styled.label`
 
 const FieldWrapper = styled.div`
   ${space}
+  > * {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
+  margin-bottom: 0;
+  }
 `;
 
 FieldWrapper.propTypes = {
@@ -62,6 +68,7 @@ BaseField.defaultProps = {
   formatText: null,
 };
 
-const Field = styled(BaseField)``;
+const Field = styled(BaseField)`
+`;
 
 export default Field;

@@ -1,22 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import theme from "../theme";
 import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
-import Box from "../Box/Box";
+
+const Wrapper = styled.div`
+  ${Text} {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
+   margin-bottom: 0;
+ }
+`;
 
 const InlineValidation = ({
   message,
   children,
   ...boxProps
 }) => (
-  <Flex color={ theme.colors.red } mb={ 2 } { ...boxProps }>
+  <Flex color={ theme.colors.red } { ...boxProps }>
     <Icon icon="error" mr={ 2 } />
-    <Box>
+    <Wrapper>
       <Text mb={ 0 }>{message}</Text>
       {children}
-    </Box>
+    </Wrapper>
   </Flex>
 );
 
