@@ -303,7 +303,7 @@ exports[`Storyshots Buttons As a link 1`] = `
       }
     >
       <a
-        className="sc-EHOje sc-bZQynM kAIjfD"
+        className="sc-EHOje sc-bZQynM chlmYJ"
         href="/"
       >
         Create project
