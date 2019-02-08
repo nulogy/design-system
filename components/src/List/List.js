@@ -9,7 +9,7 @@ import ListItem from "./ListItem";
 const List = styled.ul`
   list-style: none;
   margin: 0;
-  padding-left: ${theme.space[4]};
+  padding-left: 0;
   ${space}
   ${color}
   ${fontSize}
@@ -22,12 +22,13 @@ const List = styled.ul`
 `;
 
 List.propTypes = {
+  compact: PropTypes.bool,
   ...space.propTypes,
   ...color.propTypes,
-  spacing: PropTypes.bool,
 };
 
 List.defaultProps = {
+  compact: false,
   color: "currentColor",
 };
 

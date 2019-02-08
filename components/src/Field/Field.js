@@ -1,43 +1,74 @@
 import React from "react";
+import styled from "styled-components";
+import { space } from "styled-system";
 import PropTypes from "prop-types";
-import Box from "../Box/Box";
-import Label from "./Label";
+import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import FormatText from "./FormatText";
 
-const Field = ({
+const Label = styled.label`
+  font-size: ${theme.fontSizes[1]};
+  display: inline-block;
+  ${space}
+`;
+
+const FieldWrapper = styled.div`
+  ${space}
+  > * {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
+  margin-bottom: 0;
+  }
+`;
+
+FieldWrapper.propTypes = {
+  ...space.propTypes,
+};
+
+const BaseField = ({
   labelText,
   requirementText,
   helpText,
   formatText,
   children,
-  ...labelProps
+  m, mt, mr, mb, ml, mx, my,
+  ...fieldProps
 }) => (
-  <Label { ...labelProps }>
-    <Box mb={ 2 }>
+  <FieldWrapper
+    { ...fieldProps }
+    m={ m } mt={ mt } mr={ mr }
+    mb={ mb } ml={ ml } mx={ mx }
+    my={ my }
+  >
+    <Label mb={ 2 }>
       {labelText}
-      <RequirementText>{requirementText}</RequirementText>
-      <HelpText>{helpText}</HelpText>
-      <FormatText>{formatText}</FormatText>
-    </Box>
+      {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
+      {helpText && (<HelpText>{helpText}</HelpText>)}
+      {formatText && (<FormatText>{formatText}</FormatText>)}
+    </Label>
     {children}
-  </Label>
+  </FieldWrapper>
 );
 
-Field.propTypes = {
+BaseField.propTypes = {
   labelText: PropTypes.string.isRequired,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
   formatText: PropTypes.string,
   children: PropTypes.node,
+  ...space.PropTypes,
 };
 
-Field.defaultProps = {
+BaseField.defaultProps = {
   children: [],
   requirementText: null,
   helpText: null,
   formatText: null,
 };
+
+const Field = styled(BaseField)`
+`;
 
 export default Field;

@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -19,6 +19,9 @@
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
+    "storyshots:visual:initial": "rm -rf scripts/visual-storyshots/__image_snapshots__ && yarn run storyshots:visual",
+    "storyshots:visual": "yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
+    "storyshots:visual:against-master": "git checkout master && yarn run storyshots:visual:initial && git checkout - && yarn run storyshots:visual",
     "test": "jest && yarn run lint"
   },
   "license": "MIT",
@@ -49,6 +52,7 @@
     "@babel/preset-env": "7.3.1",
     "@nulogy/tokens": "file:../tokens",
     "@storybook/addon-storyshots": "4.1.11",
+    "@storybook/addon-storyshots-puppeteer": "4.1.11",
     "babel-jest": "24.0.0",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-preset-react": "6.24.1",
@@ -69,7 +73,7 @@
     "react-dom": "^16.3.2",
     "story2sketch": "^1.4.0",
     "styled-components": "^4.1.3",
-    "styled-system": "^3.2.0",
+    "styled-system": "^3.2.1",
     "svg-sprite-loader": "^3.8.0",
     "svgi": "^1.1.0",
     "webpack": "^4.8.3",

@@ -8,44 +8,40 @@ import ListItem from "../List/ListItem";
 
 storiesOf("Field", module)
   .add("Field", () => (
-    <Field
-      labelText="Default label"
-    />
+    <Field labelText="Default label" />
+  ))
+  .add("With Input", () => (
+    <Field labelText="Default label">
+      <Input />
+    </Field>
   ))
   .add("With Input and InlineValidation", () => (
-    <Field
-      labelText="Default label"
-    >
+    <Field labelText="Default label">
       <Input />
       <InlineValidation message="There has been an error" />
     </Field>
   ))
+  .add("With Label for Input", () => (
+    <Field labelText="Default label" for="thisInput">
+      <Input id="thisInput" />
+      <InlineValidation message="There has been an error" />
+    </Field>
+  ))
   .add("With requirement text", () => (
-    <Field
-      labelText="Default label"
-      requirementText="(Optional)"
-    />
+    <Field labelText="Default label" requirementText="(Optional)" />
   ))
   .add("With help text", () => (
-    <Field
-      labelText="Default label"
-      helpText="Enter a date below"
-    />
+    <Field labelText="Default label" helpText="Enter a date below" />
   ))
   .add("With format text", () => (
-    <Field
-      labelText="Default label"
-      formatText="(DD-MM-YYYY)"
-    />
+    <Field labelText="Default label" formatText="(DD-MM-YYYY)" />
   ))
   .add("With all additional components", () => (
     <Field
-      labelText="Default label"
-      requirementText="(Optional)"
-      helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)"
+      labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
+      formatText="(DD-MM-YYYY)" for="thisInput1"
     >
-      <Input />
+      <Input id="thisInput1" />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>

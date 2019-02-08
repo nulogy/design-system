@@ -1,43 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import theme from "../theme";
 import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
-import Box from "../Box/Box";
+
+const Wrapper = styled.div`
+  ${Text} {
+    margin-bottom: ${theme.space[2]};
+  }
+  > *:last-child {
+   margin-bottom: 0;
+ }
+`;
 
 const InlineValidation = ({
-  color,
-  icon,
   message,
   children,
   ...boxProps
 }) => (
-  <Box color={ color } mb={ 2 } { ...boxProps }>
-    <Flex>
-      <Icon { ...icon } />
+  <Flex color={ theme.colors.red } { ...boxProps }>
+    <Icon icon="error" mr={ 2 } />
+    <Wrapper>
       <Text mb={ 0 }>{message}</Text>
-    </Flex>
-    {children}
-  </Box>
+      {children}
+    </Wrapper>
+  </Flex>
 );
-
 
 InlineValidation.propTypes = {
   message: PropTypes.string.isRequired,
-  icon: PropTypes.shape({}),
-  color: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 InlineValidation.defaultProps = {
-  color: "red",
-  icon: {
-    name: "error",
-    size: theme.space[4],
-    mr: 1,
-  },
-  children: [],
+  children: null,
 };
 
 export default InlineValidation;

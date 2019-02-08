@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { color, space } from "styled-system";
+import { space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -40,7 +40,6 @@ const Input = styled.input`
     font-family: ${theme.fonts.base};
     line-height: ${theme.lineHeights.base};
     ${space}
-    ${color}
 
     &:focus {
         outline: none;
@@ -53,14 +52,12 @@ const Input = styled.input`
 Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
-  ...color.PropTypes,
   ...space.PropTypes,
 };
 
 Input.defaultProps = {
   disabled: false,
   error: false,
-  mb: 2,
 };
 
 export default Input;

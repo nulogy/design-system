@@ -13,10 +13,10 @@ const Text = styled.p`
   ${color}
   ${fontFamily}
   ${textAlign}
-  -webkit-font-smoothing: antialiased;
   display: ${props => props.display}
 `;
 Text.propTypes = {
+  display: PropTypes.string,
   ...space.propTypes,
   ...fontSize.propTypes,
   ...fontWeight.propTypes,
@@ -24,7 +24,6 @@ Text.propTypes = {
   ...color.propTypes,
   ...fontFamily.propTypes,
   ...textAlign.propTypes,
-  display: PropTypes.string,
 };
 
 Text.defaultProps = {
