@@ -5,7 +5,9 @@ import theme from "../theme";
 import { SubsectionTitle } from "../Type/Headings";
 import Field from "../Field/Field";
 
-const FormSectionTitle = SubsectionTitle.withComponent("legend");
+const FormSectionTitle = styled(SubsectionTitle).attrs({
+  as: "legend",
+})``;
 
 const BaseFormSection = ({
   title,
