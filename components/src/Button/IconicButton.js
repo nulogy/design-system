@@ -27,12 +27,12 @@ const Wrapper = styled.button`
     fontWeight: props.theme.fontWeights[2],
     textAlign: "left",
   }
-  &:hover{
+  &:hover, &:focus {
+    outline: none;
     ${Icon} {
-        background ${theme.colors.lightBlue};
+      background ${theme.colors.lightBlue};
     }
   }
-  &:focus {outline: none;}
   &:active {
     ${Icon} {
       transform: scale(0.875); transition: .2s ease-in;}
