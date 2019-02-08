@@ -65,7 +65,7 @@ const ToggleButton = ({ isOpen }) => (
   </IndicatorButton>
 );
 
-const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
+const Menu = styled.div([], ({ error, disabled }) => ({
   position: "absolute",
   width: "100%",
   borderWidth: "1px",
@@ -79,10 +79,11 @@ const Menu = styled.div([], ({ error, isFocused, disabled }) => ({
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
 }));
 
-const MenuItem = styled.div([], ({ isSelected }) => ({
+const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
   color: theme.colors.black,
   padding: subPx(theme.space[2]),
   fontWeight: isSelected ? "bold" : "normal",
+  background: isActive ? theme.colors.lightBlue : null,
   "&:hover": {
     background: theme.colors.lightBlue,
   },
@@ -107,6 +108,7 @@ const Select = ({
         getToggleButtonProps,
         isOpen,
         selectedItem,
+        highlightedIndex,
       }) => (
         <div style={ { position: "relative" } }>
           <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
@@ -128,6 +130,7 @@ const Select = ({
                             key: option.value,
                             item: option,
                             isSelected: selectedItem === option,
+                            isActive: highlightedIndex === index,
                             index,
                             disabled,
                           }) }
