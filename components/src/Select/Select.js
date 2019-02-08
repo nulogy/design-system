@@ -99,6 +99,7 @@ const Select = ({
     itemToString={ optionToString }
     selectedItem={ value }
     onChange={ onChange }
+    defaultHighlightedIndex={ 0 }
   >
     {
       ({
