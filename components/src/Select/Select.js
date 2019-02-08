@@ -14,21 +14,21 @@ const getBorderColor = (errored, focused, disabled) => {
   return theme.colors.grey;
 };
 
-const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
+const SelectBox = styled.div([], ({ error, isOpen, disabled }) => ({
   display: "flex",
   position: "relative",
   padding: 0,
   borderRadius: theme.radii[1],
-  boxShadow: isFocused ? theme.boxShadows[0] : "none",
+  boxShadow: isOpen ? theme.boxShadows[0] : "none",
   outline: "none",
-  borderColor: getBorderColor(error, isFocused, disabled),
+  borderColor: getBorderColor(error, isOpen, disabled),
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
     borderColor: error ? theme.colors.red : theme.colors.blue,
   },
 }));
 
-const Input = styled.input([], ({ error, isFocused, isOpen, disabled }) => ({
+const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
   color: theme.colors.black,
@@ -115,7 +115,7 @@ const Select = ({
         highlightedIndex,
       }) => (
         <div style={ { position: "relative" } }>
-          <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
+          <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
             <Input
               { ...getInputProps({ disabled, error, isOpen }) } required={ required }
               value={ selectedItem && selectedItem.label } placeholder={ placeholder }
