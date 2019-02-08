@@ -14,6 +14,7 @@ const Text = styled.p`
   ${fontFamily}
   ${textAlign}
   display: ${props => props.display}
+  opacity: ${props => props.disabled ? "0.5" : null}
 `;
 Text.propTypes = {
   display: PropTypes.string,
