@@ -76,9 +76,7 @@ const Button = styled(BaseButton)`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    -webkit-font-smoothing: antialiased;
     font-weight: ${props => props.theme.fontWeights[2]};
-    border: 0;
     text-decoration: none;
     vertical-align: middle;
     line-height: ${props => props.theme.lineHeights.base};
@@ -95,9 +93,17 @@ const Button = styled(BaseButton)`
     &:hover {
       background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};
     }
-    &:focus {outline: none;}
-    &:active {transform: scale(0.98); transition: .2s ease-in;}
-    &:disabled {opacity: .5;}
+    &:focus {
+      outline: none;
+      background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};
+    }
+    &:active {
+      transform: scale(0.98); 
+      transition: .2s ease-in;
+    }
+    &:disabled {
+      opacity: .5;
+    }
 `;
 Button.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),

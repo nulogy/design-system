@@ -32,7 +32,12 @@ const Wrapper = styled.button`
         background ${theme.colors.lightBlue};
     }
   }
-  &:focus {outline: none;}
+  &:focus {
+    outline: none;
+    ${Icon} {
+      background ${theme.colors.lightBlue};
+    }
+  }
   &:active {
     ${Icon} {
       transform: scale(0.875); transition: .2s ease-in;}
