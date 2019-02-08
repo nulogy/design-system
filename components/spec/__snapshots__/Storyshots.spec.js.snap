@@ -2068,6 +2068,665 @@ exports[`Storyshots Flex Flex 1`] = `
 </div>
 `;
 
+exports[`Storyshots Form Demo form 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <form
+        className="sc-hSdWYo igivMA"
+      >
+        <h2
+          className="sc-ckVGcZ lildcs"
+          fontSize={3}
+          fontWeight={2}
+        >
+          Job 324400
+        </h2>
+        <div
+          className="sc-bwzfXH sc-iAyFgw gPlgsX sc-chPdSV OPDIN"
+          color="red"
+        >
+          <svg
+            aria-hidden={true}
+            className="sc-htpNat bFNauO"
+            color="currentColor"
+            fill="currentColor"
+            height="48px"
+            icon="error"
+            mr="16px"
+            size="48px"
+            title={null}
+            viewBox="0 0 24 24"
+            width="48px"
+          >
+            <path
+              d={
+                Array [
+                  "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                ]
+              }
+            />
+          </svg>
+          <div
+            className="sc-kkGfuU hIgjkz"
+          >
+            <h3
+              className="sc-jKJlTe sc-eNQAEJ ftVvoK"
+              fontSize={2}
+              fontWeight={2}
+            >
+              Error has occured ...
+            </h3>
+            <p
+              className="sc-dnqmqq iUIAHX"
+              color="currentColor"
+              display="block"
+              fontSize={1}
+            >
+              Instructions and description of an error
+            </p>
+            <ul
+              className="sc-kpOJdX hZppCQ"
+              color="currentColor"
+            >
+              <li
+                className="sc-kGXeez fyDmEz"
+                color="currentColor"
+              >
+                Affected field
+              </li>
+              <li
+                className="sc-kGXeez fyDmEz"
+                color="currentColor"
+              >
+                Unmet criteria
+              </li>
+              <li
+                className="sc-kGXeez fyDmEz"
+                color="currentColor"
+              >
+                <a
+                  href="https://nulogy.design/"
+                >
+                  Affected field
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <fieldset
+          className="sc-kEYyzF jpRcfR"
+        >
+          <legend
+            className="sc-hMqMXs bYqtyw"
+          >
+            Job Information
+          </legend>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Project
+            </label>
+            <input
+              className="sc-kAzzGY czbVBA"
+              disabled={false}
+              placeholder="Project 128703"
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Project description
+              <p
+                className="sc-dnqmqq dLGzPX"
+                color="darkGrey"
+                display="inline"
+                fontSize="12px"
+              >
+                (Optional)
+              </p>
+              <p
+                className="sc-dnqmqq elFerp"
+                color="currentColor"
+                display="block"
+                fontSize="14px"
+              >
+                Project description helps identify the project.
+              </p>
+            </label>
+            <input
+              className="sc-kAzzGY czbVBA"
+              disabled={false}
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Item code
+            </label>
+            <input
+              className="sc-kAzzGY cyxhvs"
+              disabled={false}
+              value="WS2SB6"
+            />
+            <div
+              className="sc-bwzfXH sc-chPdSV OPDIN"
+              color="#cc1439"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-htpNat bIQpCs"
+                color="currentColor"
+                fill="currentColor"
+                height="24px"
+                icon="error"
+                mr={2}
+                size="24px"
+                title={null}
+                viewBox="0 0 24 24"
+                width="24px"
+              >
+                <path
+                  d={
+                    Array [
+                      "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                    ]
+                  }
+                />
+              </svg>
+              <div
+                className="sc-kgoBCf jnnrjv"
+              >
+                <p
+                  className="sc-dnqmqq iUIAHX"
+                  color="currentColor"
+                  display="block"
+                  fontSize={1}
+                >
+                  Item WS2SB6 does not exist.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Eaches expected on Job
+            </label>
+            <input
+              className="sc-kAzzGY czbVBA"
+              disabled={false}
+              placeholder="2 000"
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Eaches remaining on Project
+            </label>
+            <input
+              className="sc-kAzzGY hNnQgG"
+              disabled={true}
+              value="18 000"
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Scheduled start
+              <p
+                className="sc-dnqmqq jIXsIq"
+                color="darkGrey"
+                display="block"
+                fontSize="12px"
+              >
+                (Expected format: MMM DD, YYYY)
+              </p>
+            </label>
+            <input
+              className="sc-kAzzGY czbVBA"
+              disabled={false}
+              placeholder="May 26, 2019"
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Scheduled end
+              <p
+                className="sc-dnqmqq jIXsIq"
+                color="darkGrey"
+                display="block"
+                fontSize="12px"
+              >
+                (Expected format: MMM DD, YYYY)
+              </p>
+            </label>
+            <input
+              className="sc-kAzzGY hNnQgG"
+              disabled={true}
+              value="June 29, 2019"
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Line Lead
+              <p
+                className="sc-dnqmqq dLGzPX"
+                color="darkGrey"
+                display="inline"
+                fontSize="12px"
+              >
+                (Optional)
+              </p>
+            </label>
+            <div
+              className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
+            >
+              <label
+                className="sc-gqjmRU btPifZ"
+                disabled={false}
+              >
+                <input
+                  className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+                  disabled={false}
+                  type="checkbox"
+                />
+                <div
+                  className="sc-gZMcBi dAdmZV"
+                  disabled={false}
+                />
+                Christiaan Oostenbrug
+              </label>
+            </div>
+            <div
+              className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
+            >
+              <label
+                className="sc-gqjmRU btPifZ"
+                disabled={false}
+              >
+                <input
+                  className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+                  disabled={false}
+                  type="checkbox"
+                />
+                <div
+                  className="sc-gZMcBi dAdmZV"
+                  disabled={false}
+                />
+                Matt Dunn
+              </label>
+            </div>
+            <div
+              className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
+            >
+              <label
+                className="sc-gqjmRU iwNhDT"
+                disabled={true}
+              >
+                <input
+                  checked={true}
+                  className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+                  disabled={true}
+                  type="checkbox"
+                />
+                <div
+                  checked={true}
+                  className="sc-gZMcBi eIwUxe"
+                  disabled={true}
+                />
+                Clemens Park
+              </label>
+            </div>
+            <div
+              className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
+            >
+              <label
+                className="sc-gqjmRU iwNhDT"
+                disabled={true}
+              >
+                <input
+                  className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+                  disabled={true}
+                  type="checkbox"
+                />
+                <div
+                  className="sc-gZMcBi eIwUxe"
+                  disabled={true}
+                />
+                Nikola Pejcic
+              </label>
+            </div>
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Reconcile
+            </label>
+            <div
+              className="sc-cMljjf bIKLMh"
+            >
+              <div
+                className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
+              >
+                <label
+                  className="sc-cvbbAY kpjBoK"
+                  disabled={false}
+                >
+                  <input
+                    className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                    defaultChecked={true}
+                    disabled={false}
+                    name="settingSelection"
+                    type="radio"
+                    value="yes"
+                  />
+                  <div
+                    className="sc-eHgmQL bXiJlv"
+                    disabled={false}
+                  />
+                  Yes
+                </label>
+              </div>
+              <div
+                className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
+              >
+                <label
+                  className="sc-cvbbAY kpjBoK"
+                  disabled={false}
+                >
+                  <input
+                    className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                    disabled={false}
+                    name="settingSelection"
+                    type="radio"
+                    value="no"
+                  />
+                  <div
+                    className="sc-eHgmQL bXiJlv"
+                    disabled={false}
+                  />
+                  No
+                </label>
+              </div>
+              <div
+                className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
+              >
+                <label
+                  className="sc-cvbbAY drHByb"
+                  disabled={true}
+                >
+                  <input
+                    className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+                    disabled={true}
+                    name="settingSelection"
+                    type="radio"
+                    value="maybe"
+                  />
+                  <div
+                    className="sc-eHgmQL cOzIpb"
+                    disabled={true}
+                  />
+                  Maybe
+                </label>
+              </div>
+            </div>
+            <div
+              className="sc-bwzfXH sc-chPdSV OPDIN"
+              color="#cc1439"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-htpNat bIQpCs"
+                color="currentColor"
+                fill="currentColor"
+                height="24px"
+                icon="error"
+                mr={2}
+                size="24px"
+                title={null}
+                viewBox="0 0 24 24"
+                width="24px"
+              >
+                <path
+                  d={
+                    Array [
+                      "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                    ]
+                  }
+                />
+              </svg>
+              <div
+                className="sc-kgoBCf jnnrjv"
+              >
+                <p
+                  className="sc-dnqmqq iUIAHX"
+                  color="currentColor"
+                  display="block"
+                  fontSize={1}
+                >
+                  Yes can be only selected ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Job visibility
+            </label>
+            <div
+              className="sc-bwzfXH sc-chPdSV gylzpL"
+            >
+              <label
+                className="sc-jDwBTQ fMdgrM"
+              >
+                <input
+                  checked={false}
+                  className="sc-gPEVay iaWcxQ"
+                  disabled={false}
+                  id={null}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  type="checkbox"
+                  value="on"
+                />
+                <span
+                  className="sc-jAaTju MCfke"
+                  disabled={false}
+                />
+              </label>
+              <p
+                className="sc-dnqmqq bPGUUg"
+                color="currentColor"
+                display="block"
+                fontSize={1}
+              >
+                Hidden
+              </p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset
+          className="sc-kEYyzF jpRcfR"
+        >
+          <legend
+            className="sc-hMqMXs bYqtyw"
+          >
+            Rejects
+          </legend>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Item
+            </label>
+            <input
+              className="sc-kAzzGY cyxhvs"
+              disabled={false}
+              value="235432"
+            />
+            <div
+              className="sc-bwzfXH sc-chPdSV OPDIN"
+              color="#cc1439"
+            >
+              <svg
+                aria-hidden={true}
+                className="sc-htpNat bIQpCs"
+                color="currentColor"
+                fill="currentColor"
+                height="24px"
+                icon="error"
+                mr={2}
+                size="24px"
+                title={null}
+                viewBox="0 0 24 24"
+                width="24px"
+              >
+                <path
+                  d={
+                    Array [
+                      "M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z",
+                    ]
+                  }
+                />
+              </svg>
+              <div
+                className="sc-kgoBCf jnnrjv"
+              >
+                <p
+                  className="sc-dnqmqq iUIAHX"
+                  color="currentColor"
+                  display="block"
+                  fontSize={1}
+                >
+                  Item 235432 is not a valid entry.
+                </p>
+                <ul
+                  className="sc-kpOJdX hZppCQ"
+                  color="currentColor"
+                >
+                  <li
+                    className="sc-kGXeez fyDmEz"
+                    color="currentColor"
+                  >
+                    Item is at least 8 characters long.
+                  </li>
+                  <li
+                    className="sc-kGXeez fyDmEz"
+                    color="currentColor"
+                  >
+                    Item contains at least 1 letter.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Quantity
+            </label>
+            <input
+              className="sc-kAzzGY czbVBA"
+              disabled={false}
+            />
+          </div>
+          <div
+            className="sc-cSHVUG bubdaT sc-jzJRlG iplBh"
+          >
+            <label
+              className="sc-fjdhpX iOYorM"
+            >
+              Reject visibility
+            </label>
+            <div
+              className="sc-bwzfXH sc-chPdSV gylzpL"
+            >
+              <label
+                className="sc-jDwBTQ fMdgrM"
+              >
+                <input
+                  checked={false}
+                  className="sc-gPEVay btQmYf"
+                  disabled={true}
+                  id={null}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  type="checkbox"
+                  value="on"
+                />
+                <span
+                  className="sc-jAaTju giXmoh"
+                  disabled={true}
+                />
+              </label>
+              <p
+                className="sc-dnqmqq bPGUUg"
+                color="currentColor"
+                display="block"
+                fontSize={1}
+              >
+                Hidden
+              </p>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Form Form 1`] = `
 <div
   className="sc-bdVaJa iITmcr"
@@ -2085,7 +2744,7 @@ exports[`Storyshots Form Form 1`] = `
       }
     >
       <form
-        className="sc-kkGfuU iVKxlT"
+        className="sc-hSdWYo igivMA"
       >
         <h2
           className="sc-ckVGcZ lildcs"
@@ -2188,7 +2847,7 @@ exports[`Storyshots Form With form sections 1`] = `
       }
     >
       <form
-        className="sc-kkGfuU iVKxlT"
+        className="sc-hSdWYo igivMA"
       >
         <h2
           className="sc-ckVGcZ lildcs"
@@ -2335,7 +2994,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
       }
     >
       <form
-        className="sc-kkGfuU iVKxlT"
+        className="sc-hSdWYo igivMA"
       >
         <h2
           className="sc-ckVGcZ lildcs"
@@ -2472,7 +3131,7 @@ exports[`Storyshots Form Without title 1`] = `
       }
     >
       <form
-        className="sc-kkGfuU SofoD"
+        className="sc-hSdWYo khLKvT"
       >
         <h2
           className="sc-ckVGcZ lildcs"
@@ -2573,7 +3232,7 @@ exports[`Storyshots Header Validation Header Validation 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV OPDIN"
+        className="sc-bwzfXH sc-iAyFgw gPlgsX sc-chPdSV OPDIN"
         color="red"
       >
         <svg
@@ -2598,7 +3257,7 @@ exports[`Storyshots Header Validation Header Validation 1`] = `
           />
         </svg>
         <div
-          className="sc-gPEVay fDmLkl"
+          className="sc-kkGfuU hIgjkz"
         >
           <h3
             className="sc-jKJlTe sc-eNQAEJ ftVvoK"
@@ -2666,7 +3325,7 @@ exports[`Storyshots Header Validation With message only 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV OPDIN"
+        className="sc-bwzfXH sc-iAyFgw gPlgsX sc-chPdSV OPDIN"
         color="red"
       >
         <svg
@@ -2691,7 +3350,7 @@ exports[`Storyshots Header Validation With message only 1`] = `
           />
         </svg>
         <div
-          className="sc-gPEVay fDmLkl"
+          className="sc-kkGfuU hIgjkz"
         >
           <h3
             className="sc-jKJlTe sc-eNQAEJ ftVvoK"
@@ -8288,7 +8947,7 @@ exports[`Storyshots Inline Validation With list items 1`] = `
               color="currentColor"
             >
               <a
-                className="sc-iAyFgw guCxJm"
+                className="sc-iRbamj fBeeec"
                 color="blue"
                 href="https://nulogy.design/"
               >
@@ -8395,7 +9054,7 @@ exports[`Storyshots Link Link 1`] = `
       }
     >
       <a
-        className="sc-iAyFgw guCxJm"
+        className="sc-iRbamj fBeeec"
         color="blue"
         href="http://nulogy.design"
       >
@@ -8423,7 +9082,7 @@ exports[`Storyshots Link With a different color 1`] = `
       }
     >
       <a
-        className="sc-iAyFgw hesweU"
+        className="sc-iRbamj dbLhpA"
         color="black"
         href="http://nulogy.design"
       >
@@ -8451,7 +9110,7 @@ exports[`Storyshots Link Without underline 1`] = `
       }
     >
       <a
-        className="sc-iAyFgw bwdJrY"
+        className="sc-iRbamj ikDyoy"
         color="blue"
         href="http://nulogy.design"
       >
@@ -8656,44 +9315,44 @@ exports[`Storyshots Radio Controlled 1`] = `
       }
     >
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL cuMCtv"
+          className="sc-cvbbAY kpjBoK"
           disabled={false}
         >
           <input
             checked={true}
-            className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
             disabled={false}
             onChange={[Function]}
             type="radio"
           />
           <div
             checked={true}
-            className="sc-hSdWYo cVfzpU"
+            className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
           I am controlled and checked
         </label>
       </div>
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL cuMCtv"
+          className="sc-cvbbAY kpjBoK"
           disabled={false}
         >
           <input
             checked={false}
-            className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
             disabled={false}
             onChange={[Function]}
             type="radio"
           />
           <div
             checked={false}
-            className="sc-hSdWYo cVfzpU"
+            className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
           I am controlled and unchecked
@@ -8721,19 +9380,19 @@ exports[`Storyshots Radio Radio 1`] = `
       }
     >
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL cuMCtv"
+          className="sc-cvbbAY kpjBoK"
           disabled={false}
         >
           <input
-            className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
             disabled={false}
             type="radio"
           />
           <div
-            className="sc-hSdWYo cVfzpU"
+            className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
           I am a radio button
@@ -8761,20 +9420,20 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
       }
     >
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL cuMCtv"
+          className="sc-cvbbAY kpjBoK"
           disabled={false}
         >
           <input
-            className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
             defaultChecked={true}
             disabled={false}
             type="radio"
           />
           <div
-            className="sc-hSdWYo cVfzpU"
+            className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
           I am checked by default
@@ -8802,40 +9461,40 @@ exports[`Storyshots Radio Set to disabled 1`] = `
       }
     >
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL hoEElt"
+          className="sc-cvbbAY drHByb"
           disabled={true}
         >
           <input
-            className="sc-jWBwVP jtkSCv sc-cvbbAY koHdYk"
+            className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
             disabled={true}
             type="radio"
           />
           <div
-            className="sc-hSdWYo ezonno"
+            className="sc-eHgmQL cOzIpb"
             disabled={true}
           />
           I am disabled
         </label>
       </div>
       <div
-        className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+        className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-eHgmQL hoEElt"
+          className="sc-cvbbAY drHByb"
           disabled={true}
         >
           <input
             checked={true}
-            className="sc-jWBwVP jtkSCv sc-cvbbAY koHdYk"
+            className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
             disabled={true}
             type="radio"
           />
           <div
             checked={true}
-            className="sc-hSdWYo ezonno"
+            className="sc-eHgmQL cOzIpb"
             disabled={true}
           />
           I am disabled
@@ -8863,18 +9522,18 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
       }
     >
       <div
-        className="sc-brqgnP ygVYg"
+        className="sc-cMljjf bIKLMh"
       >
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
               checked={true}
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -8883,22 +9542,22 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={true}
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option A
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
               checked={false}
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -8907,22 +9566,22 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={false}
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option B
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
               checked={false}
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -8931,7 +9590,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={false}
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option C
@@ -8960,17 +9619,17 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
       }
     >
       <div
-        className="sc-brqgnP ygVYg"
+        className="sc-cMljjf bIKLMh"
       >
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               defaultChecked={true}
               disabled={false}
               name="settingSelection"
@@ -8978,49 +9637,49 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               value="a"
             />
             <div
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option A
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               disabled={false}
               name="settingSelection"
               type="radio"
               value="b"
             />
             <div
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option B
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL cuMCtv"
+            className="sc-cvbbAY kpjBoK"
             disabled={false}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
               disabled={false}
               name="settingSelection"
               type="radio"
               value="c"
             />
             <div
-              className="sc-hSdWYo cVfzpU"
+              className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
             Option C
@@ -9065,17 +9724,17 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
           </p>
         </label>
         <div
-          className="sc-brqgnP ygVYg"
+          className="sc-cMljjf bIKLMh"
         >
           <div
-            className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+            className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL cuMCtv"
+              className="sc-cvbbAY kpjBoK"
               disabled={false}
             >
               <input
-                className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
                 defaultChecked={true}
                 disabled={false}
                 name="settingSelection"
@@ -9083,49 +9742,49 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 value="a"
               />
               <div
-                className="sc-hSdWYo cVfzpU"
+                className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
               Option A
             </label>
           </div>
           <div
-            className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+            className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL cuMCtv"
+              className="sc-cvbbAY kpjBoK"
               disabled={false}
             >
               <input
-                className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
                 value="b"
               />
               <div
-                className="sc-hSdWYo cVfzpU"
+                className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
               Option B
             </label>
           </div>
           <div
-            className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+            className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-eHgmQL cuMCtv"
+              className="sc-cvbbAY kpjBoK"
               disabled={false}
             >
               <input
-                className="sc-jWBwVP jtkSCv sc-cvbbAY fWgmSr"
+                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
                 value="c"
               />
               <div
-                className="sc-hSdWYo cVfzpU"
+                className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
               Option C
@@ -9155,17 +9814,17 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
       }
     >
       <div
-        className="sc-brqgnP ygVYg"
+        className="sc-cMljjf bIKLMh"
       >
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL hoEElt"
+            className="sc-cvbbAY drHByb"
             disabled={true}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY koHdYk"
+              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
               defaultChecked={true}
               disabled={true}
               name="settingSelection"
@@ -9173,49 +9832,49 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               value="a"
             />
             <div
-              className="sc-hSdWYo ezonno"
+              className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
             Option A
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL hoEElt"
+            className="sc-cvbbAY drHByb"
             disabled={true}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY koHdYk"
+              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
               disabled={true}
               name="settingSelection"
               type="radio"
               value="b"
             />
             <div
-              className="sc-hSdWYo ezonno"
+              className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
             Option B
           </label>
         </div>
         <div
-          className="sc-jWBwVP jtkSCv sc-bwzfXH crzhMj"
+          className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-eHgmQL hoEElt"
+            className="sc-cvbbAY drHByb"
             disabled={true}
           >
             <input
-              className="sc-jWBwVP jtkSCv sc-cvbbAY koHdYk"
+              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
               disabled={true}
               name="settingSelection"
               type="radio"
               value="c"
             />
             <div
-              className="sc-hSdWYo ezonno"
+              className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
             Option C
@@ -9408,11 +10067,11 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
         className="sc-bwzfXH sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jAaTju iXytCD"
+          className="sc-jDwBTQ fMdgrM"
         >
           <input
             checked={true}
-            className="sc-jDwBTQ lpdiWL"
+            className="sc-gPEVay iaWcxQ"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -9421,7 +10080,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-cMljjf iSJmXJ"
+            className="sc-jAaTju MCfke"
             disabled={false}
           />
         </label>
@@ -9438,11 +10097,11 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
         className="sc-bwzfXH sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jAaTju iXytCD"
+          className="sc-jDwBTQ fMdgrM"
         >
           <input
             checked={false}
-            className="sc-jDwBTQ lpdiWL"
+            className="sc-gPEVay iaWcxQ"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -9451,7 +10110,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-cMljjf iSJmXJ"
+            className="sc-jAaTju MCfke"
             disabled={false}
           />
         </label>
@@ -9486,15 +10145,15 @@ exports[`Storyshots Toggle Toggle 1`] = `
       }
     >
       <label
-        className="sc-jAaTju iXytCD"
+        className="sc-jDwBTQ fMdgrM"
       >
         <input
-          className="sc-jDwBTQ lpdiWL"
+          className="sc-gPEVay iaWcxQ"
           disabled={false}
           type="checkbox"
         />
         <span
-          className="sc-cMljjf iSJmXJ"
+          className="sc-jAaTju MCfke"
           disabled={false}
         />
       </label>
@@ -9539,11 +10198,11 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
           className="sc-bwzfXH sc-chPdSV gylzpL"
         >
           <label
-            className="sc-jAaTju iXytCD"
+            className="sc-jDwBTQ fMdgrM"
           >
             <input
               checked={false}
-              className="sc-jDwBTQ lpdiWL"
+              className="sc-gPEVay iaWcxQ"
               disabled={false}
               id={null}
               onChange={[Function]}
@@ -9552,7 +10211,7 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
               value="on"
             />
             <span
-              className="sc-cMljjf iSJmXJ"
+              className="sc-jAaTju MCfke"
               disabled={false}
             />
           </label>
@@ -9588,16 +10247,16 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
       }
     >
       <label
-        className="sc-jAaTju iXytCD"
+        className="sc-jDwBTQ fMdgrM"
       >
         <input
-          className="sc-jDwBTQ lpdiWL"
+          className="sc-gPEVay iaWcxQ"
           defaultChecked={true}
           disabled={false}
           type="checkbox"
         />
         <span
-          className="sc-cMljjf iSJmXJ"
+          className="sc-jAaTju MCfke"
           disabled={false}
         />
       </label>
@@ -9623,29 +10282,29 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       }
     >
       <label
-        className="sc-jAaTju iXytCD"
+        className="sc-jDwBTQ fMdgrM"
       >
         <input
-          className="sc-jDwBTQ coQDkl"
+          className="sc-gPEVay btQmYf"
           disabled={true}
           type="checkbox"
         />
         <span
-          className="sc-cMljjf jQFZvP"
+          className="sc-jAaTju giXmoh"
           disabled={true}
         />
       </label>
       <label
-        className="sc-jAaTju iXytCD"
+        className="sc-jDwBTQ fMdgrM"
       >
         <input
-          className="sc-jDwBTQ coQDkl"
+          className="sc-gPEVay btQmYf"
           defaultChecked={true}
           disabled={true}
           type="checkbox"
         />
         <span
-          className="sc-cMljjf jQFZvP"
+          className="sc-jAaTju giXmoh"
           disabled={true}
         />
       </label>
@@ -9674,11 +10333,11 @@ exports[`Storyshots Toggle With text 1`] = `
         className="sc-bwzfXH sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jAaTju iXytCD"
+          className="sc-jDwBTQ fMdgrM"
         >
           <input
             checked={false}
-            className="sc-jDwBTQ lpdiWL"
+            className="sc-gPEVay iaWcxQ"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -9687,7 +10346,7 @@ exports[`Storyshots Toggle With text 1`] = `
             value="on"
           />
           <span
-            className="sc-cMljjf iSJmXJ"
+            className="sc-jAaTju MCfke"
             disabled={false}
           />
         </label>

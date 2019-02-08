@@ -5,6 +5,7 @@ import theme from "../theme";
 import { SectionTitle } from "../Type/Headings";
 import FormSection from "./FormSection";
 import Field from "../Field/Field";
+import HeaderValidation from "../Validation/HeaderValidation";
 
 const BaseForm = ({
   title,
@@ -20,6 +21,9 @@ const BaseForm = ({
 const Form = styled(BaseForm)`
   ${SectionTitle} {
     margin-bottom: ${props => (props.title ? theme.space[6] : "0")};
+  }
+  ${HeaderValidation} {
+    margin-bottom: ${theme.space[6]};
   }
   ${Field} {
     margin-bottom: ${theme.space[4]};

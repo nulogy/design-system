@@ -17,7 +17,7 @@ const Wrapper = styled.div`
  }
 `;
 
-const HeaderValidation = ({
+const BaseHeaderValidation = ({
   title,
   message,
   children,
@@ -33,7 +33,9 @@ const HeaderValidation = ({
   </Flex>
 );
 
-HeaderValidation.propTypes = {
+const HeaderValidation = styled(BaseHeaderValidation)``;
+
+BaseHeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -42,7 +44,7 @@ HeaderValidation.propTypes = {
   ]),
 };
 
-HeaderValidation.defaultProps = {
+BaseHeaderValidation.defaultProps = {
   children: null,
 };
 
