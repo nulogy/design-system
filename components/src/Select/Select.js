@@ -62,8 +62,8 @@ const ToggleButton = ({ isOpen }) => (
   <IndicatorButton>
     {
       isOpen
-        ? <Icon name="upArrow" />
-        : <Icon name="downArrow" />
+        ? <Icon icon="upArrow" />
+        : <Icon icon="downArrow" />
     }
   </IndicatorButton>
 );
