@@ -123,9 +123,10 @@ class Toggle extends React.Component {
           { ...props }
         />
         {(onText || offText) && (
-        <Text disabled={disabled} mb={ 0 } ml={ 2 }>
+        <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
             {toggled ? onText : offText}
-        </Text>)}
+        </Text>
+        )}
       </Flex>
     );
   }
