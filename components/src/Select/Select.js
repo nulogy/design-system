@@ -96,13 +96,14 @@ const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
 }));
 
 const Select = ({
-  error, onChange, disabled, options, optionToString, value, required, placeholder,
+  error, onChange, disabled, options, optionToString, value, required, placeholder, defaultIsOpen
 }) => (
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
+    defaultIsOpen={ defaultIsOpen }
   >
     {
       ({
@@ -164,6 +165,7 @@ Select.propTypes = {
   required: PropTypes.bool,
   onChange: PropTypes.func,
   error: PropTypes.bool,
+  defaultIsOpen: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -171,6 +173,7 @@ Select.defaultProps = {
   required: false,
   onChange: undefined,
   error: false,
+  defaultIsOpen: false,
 };
 
 export default Select;

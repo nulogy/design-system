@@ -44,10 +44,17 @@ storiesOf("Select", module)
     <Select placeholder="Please select inventory status" options={ options } />
   ))
   .add("Select with an option selected", () => (
-    <Select
-      value={ options[0] } placeholder="Please select inventory status" options={ options }
-      optionToString={ optionToString }
-    />
+    <>
+      <Select
+        value={ options[0] } placeholder="Please select inventory status" options={ options }
+        optionToString={ optionToString }
+      />
+      <br />
+      <Select
+        value={ options[0] } placeholder="Please select inventory status" options={ options }
+        optionToString={ optionToString } defaultIsOpen
+      />
+    </>
   ))
   .add("Select as a controlled component", () => (
     <SelectWithState placeholder="Please select inventory status" options={ options } />
