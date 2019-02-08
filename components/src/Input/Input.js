@@ -31,10 +31,9 @@ const getBorderColor = props => getInputStyle(props).borderColor;
 
 const Input = styled.input`
     width: 100%
-    color: ${getColor}; 
+    color: ${getColor};
     border: 1px solid;
-    border-color: ${getBorderColor}; 
-    border-radius: ${theme.radii[1]};
+    border-color: ${getBorderColor};
     border-radius: ${theme.radii.medium};
     padding: ${subPx(theme.space[2])};
     font-size: ${theme.fontSizes[1]};
@@ -45,7 +44,7 @@ const Input = styled.input`
     &:focus {
         outline: none;
         color: ${theme.colors.black}
-        border-color: ${theme.colors.blue}; 
+        border-color: ${theme.colors.blue};
         box-shadow: 0 0 3px ${theme.colors.blue};
     }
 `;
