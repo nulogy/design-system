@@ -303,7 +303,7 @@ exports[`Storyshots Buttons Button 1`] = `
       }
     >
       <button
-        className="sc-EHOje gjVgLK"
+        className="sc-EHOje eoyXkx"
         theme={
           Object {
             "borders": Array [],
@@ -398,7 +398,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-gzVnrw bcbnxu"
+        className="sc-EHOje sc-gzVnrw htXgkC"
         theme={
           Object {
             "borders": Array [],
@@ -493,7 +493,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM kAIjfD"
+        className="sc-EHOje sc-bZQynM chlmYJ"
         theme={
           Object {
             "borders": Array [],
@@ -588,7 +588,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-htoDjs frsftw"
+        className="sc-EHOje sc-htoDjs dhIkJJ"
         theme={
           Object {
             "borders": Array [],
@@ -683,7 +683,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM gSApCy"
+        className="sc-EHOje sc-bZQynM cGIeBD"
         disabled={true}
         theme={
           Object {
@@ -779,7 +779,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM gviJDf"
+        className="sc-EHOje sc-bZQynM epDHnL"
         fullWidth={true}
         theme={
           Object {
@@ -875,7 +875,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       }
     >
       <button
-        className="sc-EHOje gjVgLK"
+        className="sc-EHOje eoyXkx"
         theme={
           Object {
             "borders": Array [],
@@ -970,7 +970,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje gjVgLK"
+        className="sc-EHOje eoyXkx"
         theme={
           Object {
             "borders": Array [],
@@ -1086,7 +1086,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
       }
     >
       <button
-        className="sc-EHOje bFkiiR"
+        className="sc-EHOje ekJmCy"
         size="small"
         theme={
           Object {
@@ -1161,7 +1161,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje gjVgLK"
+        className="sc-EHOje eoyXkx"
         size="medium"
         theme={
           Object {
@@ -1236,7 +1236,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje iFcZkf"
+        className="sc-EHOje aqYDZ"
         size="large"
         theme={
           Object {
@@ -8629,7 +8629,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI gmeZXv"
+        className="sc-iwsKbI dpRAek"
         disabled={true}
         label="Cancel"
       >
@@ -8664,7 +8664,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
         </p>
       </button>
       <button
-        className="sc-iwsKbI gmeZXv"
+        className="sc-iwsKbI dpRAek"
         disabled={true}
         label="Lock"
       >
@@ -8720,7 +8720,7 @@ exports[`Storyshots IconicButton With a long label 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI fBcxSJ"
+        className="sc-iwsKbI defWWS"
         disabled={false}
         label="I am an Iconic Button with a really really really long label"
       >
@@ -8776,7 +8776,7 @@ exports[`Storyshots IconicButton With label 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI fBcxSJ"
+        className="sc-iwsKbI defWWS"
         disabled={false}
         label="Delete"
       >
