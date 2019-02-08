@@ -28,7 +28,7 @@ const SelectBox = styled.div([], ({ error, isFocused, disabled }) => ({
   },
 }));
 
-const Input = styled.input([], ({ error, isFocused, disabled }) => ({
+const Input = styled.input([], ({ error, isFocused, isOpen, disabled }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
   color: theme.colors.black,
@@ -37,7 +37,7 @@ const Input = styled.input([], ({ error, isFocused, disabled }) => ({
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
   borderColor: getBorderColor(error, isFocused, disabled),
-  borderRadius: theme.radii[1],
+  borderRadius: isOpen ? 0 : theme.radii[1],
   boxShadow: isFocused ? theme.boxShadows[0] : "none",
   outline: "none",
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
@@ -113,7 +113,7 @@ const Select = ({
         <div style={ { position: "relative" } }>
           <SelectBox { ...getToggleButtonProps({ disabled, error }) }>
             <Input
-              { ...getInputProps({ disabled, error }) } required={ required } readOnly
+              { ...getInputProps({ disabled, error, isOpen }) } required={ required }
               value={ selectedItem && selectedItem.label } placeholder={ placeholder }
             />
             <ToggleButton isOpen={ isOpen } />
