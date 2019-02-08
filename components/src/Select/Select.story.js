@@ -60,14 +60,14 @@ storiesOf("Select", module)
     <SelectWithState placeholder="Please select inventory status" options={ options } />
   ))
   .add("Set to disabled", () => (
-    <Select
-      placeholder="Please select inventory status"
-      options={ options }
-      disabled
-    />
+    <Select placeholder="Please select inventory status" options={ options } disabled />
   ))
   .add("Set to error", () => (
-    <Select placeholder="Please select inventory status" options={ options } error />
+    <>
+      <Select placeholder="Please select inventory status" options={ options } error />
+      <br />
+      <Select placeholder="Please select inventory status" options={ options } error defaultIsOpen />
+    </>
   ))
   .add("Set to required", () => (
     <form>
