@@ -8,12 +8,7 @@ const DangerButton = styled(Button)`
   border-color: ${theme.colors.red};
   background-color: ${theme.colors.red};
 
-  &:hover {
-    background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};
-    border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};
-  }
-
-  &:focus {
+  &:hover, &:focus {
     outline: none;
     background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};
     border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.red))};

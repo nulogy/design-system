@@ -90,10 +90,7 @@ const Button = styled(BaseButton)`
     ${size}
     ${space}
 
-    &:hover {
-      background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};
-    }
-    &:focus {
+    &:hover, &:focus {
       outline: none;
       background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};
     }

@@ -27,12 +27,7 @@ const Wrapper = styled.button`
     fontWeight: props.theme.fontWeights[2],
     textAlign: "left",
   }
-  &:hover{
-    ${Icon} {
-        background ${theme.colors.lightBlue};
-    }
-  }
-  &:focus {
+  &:hover, &:focus {
     outline: none;
     ${Icon} {
       background ${theme.colors.lightBlue};

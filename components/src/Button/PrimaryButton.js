@@ -8,12 +8,7 @@ const PrimaryButton = styled(Button)`
   border-color: ${theme.colors.blue};
   background-color: ${theme.colors.blue};
 
-  &:hover {
-    background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
-    border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
-  }
-
-  &:focus {
+  &:hover, &:focus {
     outline: none;
     background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
     border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
