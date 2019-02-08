@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
 import Flex from "../Flex/Flex";
+import { omit } from "../utils";
 
 const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlue);
 
@@ -110,7 +111,7 @@ class Toggle extends React.Component {
       onText,
       offText,
       ...props
-    } = this.props;
+    } = omit(this.props, "defaultToggled");
     const {
       toggled,
     } = this.state;
