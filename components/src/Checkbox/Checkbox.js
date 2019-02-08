@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
+import Text from "../Type/Text";
 
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
@@ -30,7 +31,6 @@ const VisualCheckbox = styled.div`
 `;
 
 const CheckboxWrapper = styled.label`
-  color: ${props => (props.disabled ? theme.colors.grey : "currentColor")};
   cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
   width: auto;
@@ -40,7 +40,6 @@ const CheckboxWrapper = styled.label`
 `;
 
 const CheckboxInput = styled.input`
-  cursor: ${props => (props.disabled ? null : "pointer")};
   position: absolute;
   opacity: 0;
   height: 1px;
@@ -71,7 +70,7 @@ const BaseCheckbox = props => {
       <CheckboxWrapper disabled={ disabled }>
         <CheckboxInput type="checkbox" { ...props } />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
-        {labelText}
+        <Text disabled={ disabled }mb={ 0 }> {labelText} </Text>
       </CheckboxWrapper>
     </Box>
   );
