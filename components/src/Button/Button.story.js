@@ -36,4 +36,7 @@ storiesOf("Buttons", module)
   ))
   .add("Set to disabled", () => (
     <PrimaryButton disabled>Create project</PrimaryButton>
+  ))
+  .add("As a link", () => (
+    <PrimaryButton as="a" href="/">Create project</PrimaryButton>
   ));
