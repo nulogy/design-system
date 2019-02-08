@@ -6,10 +6,10 @@ import Icon from "../Icon/Icon";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const getBorderColor = (errored, focused, disabled) => {
+const getBorderColor = (errored, isOpen, disabled, isFocused) => {
   if (errored) { return theme.colors.red; }
   if (disabled) { return theme.colors.lightGrey; }
-  if (focused) { return theme.colors.blue; }
+  if (isOpen || isFocused) { return theme.colors.blue; }
 
   return theme.colors.grey;
 };
@@ -21,10 +21,10 @@ const SelectBox = styled.div([], ({ error, isOpen, disabled }) => ({
   borderRadius: theme.radii[1],
   boxShadow: isOpen ? theme.boxShadows[0] : "none",
   outline: "none",
-  borderColor: getBorderColor(error, isOpen, disabled),
+  borderColor: getBorderColor(error, isOpen, disabled, false),
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
-    borderColor: error ? theme.colors.red : theme.colors.blue,
+    borderColor: getBorderColor(error, isOpen, disabled, true)
   },
 }));
 
@@ -36,17 +36,17 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   padding: subPx(theme.space[2]),
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
-  borderColor: getBorderColor(error, isFocused, disabled),
+  borderColor: getBorderColor(error, isOpen, disabled, false),
   borderTopLeftRadius: theme.radii[1],
   borderTopRightRadius: theme.radii[1],
-  borderBottomLeftRadius: isOpen? 0 : theme.radii[1],
+  borderBottomLeftRadius: isOpen ? 0 : theme.radii[1],
   borderBottomRightRadius: isOpen ? 0 : theme.radii[1],
-  boxShadow: isFocused ? theme.boxShadows[0] : "none",
+  boxShadow: isOpen ? theme.boxShadows[0] : "none",
   outline: "none",
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover": {
     cursor: "default",
-    borderColor: theme.colors.blue,
+    borderColor: getBorderColor(error, isOpen, disabled, true),
   },
 }));
 
@@ -72,7 +72,7 @@ const Menu = styled.div([], ({ error, disabled }) => ({
   position: "absolute",
   width: "100%",
   borderWidth: "1px",
-  borderColor: getBorderColor(error, true, disabled),
+  borderColor: getBorderColor(error, true, disabled, false),
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
