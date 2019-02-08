@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ToggleWithText, { Toggle } from "./Toggle";
+import Toggle from "./Toggle";
 import Field from "../Field/Field";
 
 storiesOf("Toggle", module)
@@ -11,13 +11,13 @@ storiesOf("Toggle", module)
     <Toggle defaultToggled />
   ))
   .add("Toggle set to disabled", () => (
-    <React.Fragment>
+    <>
       <Toggle disabled />
       <Toggle defaultToggled disabled />
-    </React.Fragment>
+    </>
   ))
   .add("With text", () => (
-    <ToggleWithText
+    <Toggle
       onText="on"
       offText="off"
     />
@@ -27,23 +27,23 @@ storiesOf("Toggle", module)
       labelText="Setting"
       helpText="Turns setting on/off"
     >
-      <ToggleWithText
+      <Toggle
         onText="on"
         offText="off"
       />
     </Field>
   ))
   .add("Controlled Toggle", () => (
-    <React.Fragment>
-      <ToggleWithText
+    <>
+      <Toggle
         toggled
         onText="on"
         offText="off"
       />
-      <ToggleWithText
+      <Toggle
         toggled={ false }
         onText="on"
         offText="off"
       />
-    </React.Fragment>
+    </>
   ));

@@ -10144,19 +10144,34 @@ exports[`Storyshots Toggle Toggle 1`] = `
         }
       }
     >
-      <label
-        className="sc-jDwBTQ fMdgrM"
+      <div
+        className="sc-bwzfXH sc-chPdSV gylzpL"
       >
-        <input
-          className="sc-gPEVay iaWcxQ"
-          disabled={false}
-          type="checkbox"
+        <label
+          className="sc-jDwBTQ fMdgrM"
+        >
+          <input
+            checked={false}
+            className="sc-gPEVay iaWcxQ"
+            disabled={false}
+            id={null}
+            onChange={[Function]}
+            onClick={[Function]}
+            type="checkbox"
+            value="on"
+          />
+          <span
+            className="sc-jAaTju MCfke"
+            disabled={false}
+          />
+        </label>
+        <p
+          className="sc-dnqmqq bPGUUg"
+          color="currentColor"
+          display="block"
+          fontSize={1}
         />
-        <span
-          className="sc-jAaTju MCfke"
-          disabled={false}
-        />
-      </label>
+      </div>
     </div>
   </div>
 </div>
@@ -10246,20 +10261,34 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
         }
       }
     >
-      <label
-        className="sc-jDwBTQ fMdgrM"
+      <div
+        className="sc-bwzfXH sc-chPdSV gylzpL"
       >
-        <input
-          className="sc-gPEVay iaWcxQ"
-          defaultChecked={true}
-          disabled={false}
-          type="checkbox"
+        <label
+          className="sc-jDwBTQ fMdgrM"
+        >
+          <input
+            checked={true}
+            className="sc-gPEVay iaWcxQ"
+            disabled={false}
+            id={null}
+            onChange={[Function]}
+            onClick={[Function]}
+            type="checkbox"
+            value="on"
+          />
+          <span
+            className="sc-jAaTju MCfke"
+            disabled={false}
+          />
+        </label>
+        <p
+          className="sc-dnqmqq bPGUUg"
+          color="currentColor"
+          display="block"
+          fontSize={1}
         />
-        <span
-          className="sc-jAaTju MCfke"
-          disabled={false}
-        />
-      </label>
+      </div>
     </div>
   </div>
 </div>
@@ -10281,33 +10310,62 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
         }
       }
     >
-      <label
-        className="sc-jDwBTQ fMdgrM"
+      <div
+        className="sc-bwzfXH sc-chPdSV gylzpL"
       >
-        <input
-          className="sc-gPEVay btQmYf"
-          disabled={true}
-          type="checkbox"
+        <label
+          className="sc-jDwBTQ fMdgrM"
+        >
+          <input
+            checked={false}
+            className="sc-gPEVay btQmYf"
+            disabled={true}
+            id={null}
+            onChange={[Function]}
+            onClick={[Function]}
+            type="checkbox"
+            value="on"
+          />
+          <span
+            className="sc-jAaTju giXmoh"
+            disabled={true}
+          />
+        </label>
+        <p
+          className="sc-dnqmqq bPGUUg"
+          color="currentColor"
+          display="block"
+          fontSize={1}
         />
-        <span
-          className="sc-jAaTju giXmoh"
-          disabled={true}
-        />
-      </label>
-      <label
-        className="sc-jDwBTQ fMdgrM"
+      </div>
+      <div
+        className="sc-bwzfXH sc-chPdSV gylzpL"
       >
-        <input
-          className="sc-gPEVay btQmYf"
-          defaultChecked={true}
-          disabled={true}
-          type="checkbox"
+        <label
+          className="sc-jDwBTQ fMdgrM"
+        >
+          <input
+            checked={true}
+            className="sc-gPEVay btQmYf"
+            disabled={true}
+            id={null}
+            onChange={[Function]}
+            onClick={[Function]}
+            type="checkbox"
+            value="on"
+          />
+          <span
+            className="sc-jAaTju giXmoh"
+            disabled={true}
+          />
+        </label>
+        <p
+          className="sc-dnqmqq bPGUUg"
+          color="currentColor"
+          display="block"
+          fontSize={1}
         />
-        <span
-          className="sc-jAaTju giXmoh"
-          disabled={true}
-        />
-      </label>
+      </div>
     </div>
   </div>
 </div>
