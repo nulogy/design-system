@@ -14,7 +14,7 @@ const getBorderColor = (errored, isOpen, disabled, isFocused) => {
   return theme.colors.grey;
 };
 
-const SelectBox = styled.div([], ({ error, isOpen, disabled }) => ({
+const SelectBox = styled.div([], () => ({
   display: "flex",
   position: "relative",
 }));
@@ -49,7 +49,7 @@ const IndicatorButton = styled.div([], () => ({
   pointerEvents: "none",
 }));
 
-const ToggleButton = isOpen => (
+const ToggleButton = ({ isOpen }) => (
   <IndicatorButton>
     {
       isOpen
@@ -92,7 +92,7 @@ const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
 }));
 
 const Select = ({
-  error, onChange, disabled, options, optionToString, value, required, placeholder, initialIsOpen
+  error, onChange, disabled, options, optionToString, value, required, placeholder, initialIsOpen,
 }) => (
   <Downshift
     itemToString={ optionToString }
@@ -152,22 +152,25 @@ const Select = ({
 Select.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string,
-  // options: PropTypes.arrayOf(PropTypes.shape([{
-  //   label: PropTypes.string,
-  //   value: PropTypes.string,
-  // }])).isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  optionToString: PropTypes.func,
   required: PropTypes.bool,
   onChange: PropTypes.func,
   error: PropTypes.bool,
+  disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
 };
+
+const extractValueFromOption = option => option.value;
 
 Select.defaultProps = {
   value: undefined,
   required: false,
   onChange: undefined,
   error: false,
+  disabled: false,
   initialIsOpen: undefined,
+  optionToString: extractValueFromOption,
 };
 
 export default Select;

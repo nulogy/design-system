@@ -66,7 +66,10 @@ storiesOf("Select", module)
     <>
       <Select placeholder="Please select inventory status" options={ options } error />
       <br />
-      <Select placeholder="Please select inventory status" options={ options } error initialIsOpen />
+      <Select
+        placeholder="Please select inventory status" options={ options } error
+        initialIsOpen
+      />
     </>
   ))
   .add("Set to required", () => (
