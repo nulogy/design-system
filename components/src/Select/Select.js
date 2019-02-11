@@ -117,7 +117,7 @@ const Select = ({
           </SelectBox>
           {
             isOpen
-              ? (
+              && (
                 <Menu { ...getMenuProps({ error }) }>
                   {
                     isOpen
@@ -139,7 +139,6 @@ const Select = ({
                   }
                 </Menu>
               )
-              : null
           }
         </div>
       )

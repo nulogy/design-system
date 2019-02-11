@@ -58,9 +58,7 @@ storiesOf("Form", module)
   .add("With form sections", () => (
     <Form title="New Profile">
       <FormSection title="Personal Information">
-        <Field
-          labelText="Name"
-        >
+        <Field labelText="Name">
           <Input />
         </Field>
         <Field
@@ -129,9 +127,7 @@ storiesOf("Form", module)
           >
             <Input />
           </Field>
-          <Field
-            labelText="Project status"
-          >
+          <Field labelText="Project status">
             <Select options={ options } />
           </Field>
           <Field labelText="Item code">
