@@ -1362,11 +1362,11 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU btPifZ"
+          className="sc-gqjmRU bpOPqb"
           disabled={false}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
             disabled={false}
             type="checkbox"
           />
@@ -1374,7 +1374,17 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
             className="sc-gZMcBi dAdmZV"
             disabled={false}
           />
-          I am a checkbox
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am a checkbox
+             
+          </p>
         </label>
       </div>
     </div>
@@ -1402,12 +1412,12 @@ exports[`Storyshots Checkbox Controlled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU btPifZ"
+          className="sc-gqjmRU bpOPqb"
           disabled={false}
         >
           <input
             checked={true}
-            className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
@@ -1417,19 +1427,29 @@ exports[`Storyshots Checkbox Controlled 1`] = `
             className="sc-gZMcBi dAdmZV"
             disabled={false}
           />
-          I am controlled and checked
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am controlled and checked
+             
+          </p>
         </label>
       </div>
       <div
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU btPifZ"
+          className="sc-gqjmRU bpOPqb"
           disabled={false}
         >
           <input
             checked={false}
-            className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
@@ -1439,7 +1459,17 @@ exports[`Storyshots Checkbox Controlled 1`] = `
             className="sc-gZMcBi dAdmZV"
             disabled={false}
           />
-          I am controlled and unchecked
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am controlled and unchecked
+             
+          </p>
         </label>
       </div>
     </div>
@@ -1467,11 +1497,11 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU btPifZ"
+          className="sc-gqjmRU bpOPqb"
           disabled={false}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
             defaultChecked={true}
             disabled={false}
             type="checkbox"
@@ -1480,7 +1510,17 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
             className="sc-gZMcBi dAdmZV"
             disabled={false}
           />
-          I am checked by default
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am checked by default
+             
+          </p>
         </label>
       </div>
     </div>
@@ -1508,11 +1548,11 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iwNhDT"
+          className="sc-gqjmRU hCnRYp"
           disabled={true}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+            className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
             disabled={true}
             type="checkbox"
           />
@@ -1520,19 +1560,29 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
             className="sc-gZMcBi eIwUxe"
             disabled={true}
           />
-          I am disabled
+          <p
+            className="sc-dnqmqq fvIXnX"
+            color="currentColor"
+            disabled={true}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am disabled
+             
+          </p>
         </label>
       </div>
       <div
         className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-gqjmRU iwNhDT"
+          className="sc-gqjmRU hCnRYp"
           disabled={true}
         >
           <input
             checked={true}
-            className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+            className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
             disabled={true}
             type="checkbox"
           />
@@ -1541,7 +1591,17 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
             className="sc-gZMcBi eIwUxe"
             disabled={true}
           />
-          I am disabled
+          <p
+            className="sc-dnqmqq fvIXnX"
+            color="currentColor"
+            disabled={true}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am disabled
+             
+          </p>
         </label>
       </div>
     </div>
@@ -1670,7 +1730,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq iUIAHX"
+              className="sc-dnqmqq jYVaFz"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -1744,7 +1804,7 @@ exports[`Storyshots Field With Label for Input 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq iUIAHX"
+              className="sc-dnqmqq jYVaFz"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -1783,7 +1843,7 @@ exports[`Storyshots Field With a long text 1`] = `
         >
           Long long long long long long long long long long long long long long label
           <p
-            className="sc-dnqmqq dLGzPX"
+            className="sc-dnqmqq iMKzwY"
             color="darkGrey"
             display="inline"
             fontSize="12px"
@@ -1791,7 +1851,7 @@ exports[`Storyshots Field With a long text 1`] = `
             (Optional)
           </p>
           <p
-            className="sc-dnqmqq elFerp"
+            className="sc-dnqmqq hGizuT"
             color="currentColor"
             display="block"
             fontSize="14px"
@@ -1799,7 +1859,7 @@ exports[`Storyshots Field With a long text 1`] = `
             Help text help text help text help text help text help text help text help text
           </p>
           <p
-            className="sc-dnqmqq jIXsIq"
+            className="sc-dnqmqq fddgBS"
             color="darkGrey"
             display="block"
             fontSize="12px"
@@ -1838,7 +1898,7 @@ exports[`Storyshots Field With all additional components 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq dLGzPX"
+            className="sc-dnqmqq iMKzwY"
             color="darkGrey"
             display="inline"
             fontSize="12px"
@@ -1846,7 +1906,7 @@ exports[`Storyshots Field With all additional components 1`] = `
             (Optional)
           </p>
           <p
-            className="sc-dnqmqq elFerp"
+            className="sc-dnqmqq hGizuT"
             color="currentColor"
             display="block"
             fontSize="14px"
@@ -1854,7 +1914,7 @@ exports[`Storyshots Field With all additional components 1`] = `
             Enter a date below
           </p>
           <p
-            className="sc-dnqmqq jIXsIq"
+            className="sc-dnqmqq fddgBS"
             color="darkGrey"
             display="block"
             fontSize="12px"
@@ -1896,7 +1956,7 @@ exports[`Storyshots Field With all additional components 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq iUIAHX"
+              className="sc-dnqmqq jYVaFz"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -1962,7 +2022,7 @@ exports[`Storyshots Field With format text 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq jIXsIq"
+            className="sc-dnqmqq fddgBS"
             color="darkGrey"
             display="block"
             fontSize="12px"
@@ -2000,7 +2060,7 @@ exports[`Storyshots Field With help text 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq elFerp"
+            className="sc-dnqmqq hGizuT"
             color="currentColor"
             display="block"
             fontSize="14px"
@@ -2038,7 +2098,7 @@ exports[`Storyshots Field With requirement text 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq dLGzPX"
+            className="sc-dnqmqq iMKzwY"
             color="darkGrey"
             display="inline"
             fontSize="12px"
@@ -2115,7 +2175,7 @@ exports[`Storyshots Form Demo form 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ lildcs"
+          className="sc-ckVGcZ uUEex"
           fontSize={3}
           fontWeight={2}
         >
@@ -2150,14 +2210,14 @@ exports[`Storyshots Form Demo form 1`] = `
             className="sc-kkGfuU hIgjkz"
           >
             <h3
-              className="sc-jKJlTe sc-eNQAEJ jZjNmB"
+              className="sc-jKJlTe sc-eNQAEJ jSbqWG"
               fontSize={2}
               fontWeight={2}
             >
               Error has occured ...
             </h3>
             <p
-              className="sc-dnqmqq hqVlOD"
+              className="sc-dnqmqq fAVVQb"
               color="currentColor"
               display="block"
               fontSize={1}
@@ -2197,7 +2257,7 @@ exports[`Storyshots Form Demo form 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs ccwCTZ"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
             fontSize={2}
             fontWeight={2}
           >
@@ -2225,7 +2285,7 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Project description
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -2233,7 +2293,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 (Optional)
               </p>
               <p
-                className="sc-dnqmqq elFerp"
+                className="sc-dnqmqq hGizuT"
                 color="currentColor"
                 display="block"
                 fontSize="14px"
@@ -2288,7 +2348,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq iUIAHX"
+                  className="sc-dnqmqq jYVaFz"
                   color="currentColor"
                   display="block"
                   fontSize={1}
@@ -2334,7 +2394,7 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Scheduled start
               <p
-                className="sc-dnqmqq jIXsIq"
+                className="sc-dnqmqq fddgBS"
                 color="darkGrey"
                 display="block"
                 fontSize="12px"
@@ -2356,7 +2416,7 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Scheduled end
               <p
-                className="sc-dnqmqq jIXsIq"
+                className="sc-dnqmqq fddgBS"
                 color="darkGrey"
                 display="block"
                 fontSize="12px"
@@ -2378,7 +2438,7 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Line Lead
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -2390,11 +2450,11 @@ exports[`Storyshots Form Demo form 1`] = `
               className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
             >
               <label
-                className="sc-gqjmRU btPifZ"
+                className="sc-gqjmRU bpOPqb"
                 disabled={false}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+                  className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
                   disabled={false}
                   type="checkbox"
                 />
@@ -2402,18 +2462,28 @@ exports[`Storyshots Form Demo form 1`] = `
                   className="sc-gZMcBi dAdmZV"
                   disabled={false}
                 />
-                Christiaan Oostenbrug
+                <p
+                  className="sc-dnqmqq jYVaFz"
+                  color="currentColor"
+                  disabled={false}
+                  display="block"
+                  fontSize={1}
+                >
+                   
+                  Christiaan Oostenbrug
+                   
+                </p>
               </label>
             </div>
             <div
               className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
             >
               <label
-                className="sc-gqjmRU btPifZ"
+                className="sc-gqjmRU bpOPqb"
                 disabled={false}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT fHHoxo"
+                  className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
                   disabled={false}
                   type="checkbox"
                 />
@@ -2421,19 +2491,29 @@ exports[`Storyshots Form Demo form 1`] = `
                   className="sc-gZMcBi dAdmZV"
                   disabled={false}
                 />
-                Matt Dunn
+                <p
+                  className="sc-dnqmqq jYVaFz"
+                  color="currentColor"
+                  disabled={false}
+                  display="block"
+                  fontSize={1}
+                >
+                   
+                  Matt Dunn
+                   
+                </p>
               </label>
             </div>
             <div
               className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
             >
               <label
-                className="sc-gqjmRU iwNhDT"
+                className="sc-gqjmRU hCnRYp"
                 disabled={true}
               >
                 <input
                   checked={true}
-                  className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+                  className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
                   disabled={true}
                   type="checkbox"
                 />
@@ -2442,18 +2522,28 @@ exports[`Storyshots Form Demo form 1`] = `
                   className="sc-gZMcBi eIwUxe"
                   disabled={true}
                 />
-                Clemens Park
+                <p
+                  className="sc-dnqmqq fvIXnX"
+                  color="currentColor"
+                  disabled={true}
+                  display="block"
+                  fontSize={1}
+                >
+                   
+                  Clemens Park
+                   
+                </p>
               </label>
             </div>
             <div
               className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
             >
               <label
-                className="sc-gqjmRU iwNhDT"
+                className="sc-gqjmRU hCnRYp"
                 disabled={true}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT fmZXRb"
+                  className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
                   disabled={true}
                   type="checkbox"
                 />
@@ -2461,7 +2551,17 @@ exports[`Storyshots Form Demo form 1`] = `
                   className="sc-gZMcBi eIwUxe"
                   disabled={true}
                 />
-                Nikola Pejcic
+                <p
+                  className="sc-dnqmqq fvIXnX"
+                  color="currentColor"
+                  disabled={true}
+                  display="block"
+                  fontSize={1}
+                >
+                   
+                  Nikola Pejcic
+                   
+                </p>
               </label>
             </div>
           </div>
@@ -2480,11 +2580,11 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
               >
                 <label
-                  className="sc-cvbbAY kpjBoK"
+                  className="sc-cvbbAY jdfake"
                   disabled={false}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                    className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
                     defaultChecked={true}
                     disabled={false}
                     name="settingSelection"
@@ -2495,18 +2595,28 @@ exports[`Storyshots Form Demo form 1`] = `
                     className="sc-eHgmQL bXiJlv"
                     disabled={false}
                   />
-                  Yes
+                  <p
+                    className="sc-dnqmqq jYVaFz"
+                    color="currentColor"
+                    disabled={false}
+                    display="block"
+                    fontSize={1}
+                  >
+                     
+                    Yes
+                     
+                  </p>
                 </label>
               </div>
               <div
                 className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
               >
                 <label
-                  className="sc-cvbbAY kpjBoK"
+                  className="sc-cvbbAY jdfake"
                   disabled={false}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                    className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
                     disabled={false}
                     name="settingSelection"
                     type="radio"
@@ -2516,18 +2626,28 @@ exports[`Storyshots Form Demo form 1`] = `
                     className="sc-eHgmQL bXiJlv"
                     disabled={false}
                   />
-                  No
+                  <p
+                    className="sc-dnqmqq jYVaFz"
+                    color="currentColor"
+                    disabled={false}
+                    display="block"
+                    fontSize={1}
+                  >
+                     
+                    No
+                     
+                  </p>
                 </label>
               </div>
               <div
                 className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
               >
                 <label
-                  className="sc-cvbbAY drHByb"
+                  className="sc-cvbbAY kkuzbf"
                   disabled={true}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+                    className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
                     disabled={true}
                     name="settingSelection"
                     type="radio"
@@ -2537,7 +2657,17 @@ exports[`Storyshots Form Demo form 1`] = `
                     className="sc-eHgmQL cOzIpb"
                     disabled={true}
                   />
-                  Maybe
+                  <p
+                    className="sc-dnqmqq fvIXnX"
+                    color="currentColor"
+                    disabled={true}
+                    display="block"
+                    fontSize={1}
+                  >
+                     
+                    Maybe
+                     
+                  </p>
                 </label>
               </div>
             </div>
@@ -2570,7 +2700,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq iUIAHX"
+                  className="sc-dnqmqq jYVaFz"
                   color="currentColor"
                   display="block"
                   fontSize={1}
@@ -2610,8 +2740,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </label>
               <p
-                className="sc-dnqmqq bPGUUg"
+                className="sc-dnqmqq kmKZl"
                 color="currentColor"
+                disabled={false}
                 display="block"
                 fontSize={1}
               >
@@ -2624,7 +2755,7 @@ exports[`Storyshots Form Demo form 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs ccwCTZ"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
             fontSize={2}
             fontWeight={2}
           >
@@ -2672,7 +2803,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq iUIAHX"
+                  className="sc-dnqmqq jYVaFz"
                   color="currentColor"
                   display="block"
                   fontSize={1}
@@ -2742,8 +2873,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </label>
               <p
-                className="sc-dnqmqq bPGUUg"
+                className="sc-dnqmqq kYegXv"
                 color="currentColor"
+                disabled={true}
                 display="block"
                 fontSize={1}
               >
@@ -2778,7 +2910,7 @@ exports[`Storyshots Form Form 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ lildcs"
+          className="sc-ckVGcZ uUEex"
           fontSize={3}
           fontWeight={2}
         >
@@ -2805,7 +2937,7 @@ exports[`Storyshots Form Form 1`] = `
           >
             Date of birth
             <p
-              className="sc-dnqmqq dLGzPX"
+              className="sc-dnqmqq iMKzwY"
               color="darkGrey"
               display="inline"
               fontSize="12px"
@@ -2813,7 +2945,7 @@ exports[`Storyshots Form Form 1`] = `
               (Optional)
             </p>
             <p
-              className="sc-dnqmqq elFerp"
+              className="sc-dnqmqq hGizuT"
               color="currentColor"
               display="block"
               fontSize="14px"
@@ -2821,7 +2953,7 @@ exports[`Storyshots Form Form 1`] = `
               Enter a date below
             </p>
             <p
-              className="sc-dnqmqq jIXsIq"
+              className="sc-dnqmqq fddgBS"
               color="darkGrey"
               display="block"
               fontSize="12px"
@@ -2842,7 +2974,7 @@ exports[`Storyshots Form Form 1`] = `
           >
             Place of birth
             <p
-              className="sc-dnqmqq dLGzPX"
+              className="sc-dnqmqq iMKzwY"
               color="darkGrey"
               display="inline"
               fontSize="12px"
@@ -2881,7 +3013,7 @@ exports[`Storyshots Form With form sections 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ lildcs"
+          className="sc-ckVGcZ uUEex"
           fontSize={3}
           fontWeight={2}
         >
@@ -2891,7 +3023,7 @@ exports[`Storyshots Form With form sections 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs ccwCTZ"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
             fontSize={2}
             fontWeight={2}
           >
@@ -2918,7 +3050,7 @@ exports[`Storyshots Form With form sections 1`] = `
             >
               Date of birth
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -2926,7 +3058,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 (Optional)
               </p>
               <p
-                className="sc-dnqmqq elFerp"
+                className="sc-dnqmqq hGizuT"
                 color="currentColor"
                 display="block"
                 fontSize="14px"
@@ -2934,7 +3066,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 Enter a date below
               </p>
               <p
-                className="sc-dnqmqq jIXsIq"
+                className="sc-dnqmqq fddgBS"
                 color="darkGrey"
                 display="block"
                 fontSize="12px"
@@ -2955,7 +3087,7 @@ exports[`Storyshots Form With form sections 1`] = `
             >
               Place of birth
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -2973,7 +3105,7 @@ exports[`Storyshots Form With form sections 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs ccwCTZ"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
             fontSize={2}
             fontWeight={2}
           >
@@ -3032,7 +3164,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ lildcs"
+          className="sc-ckVGcZ uUEex"
           fontSize={3}
           fontWeight={2}
         >
@@ -3062,7 +3194,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             >
               Date of birth
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -3070,7 +3202,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 (Optional)
               </p>
               <p
-                className="sc-dnqmqq elFerp"
+                className="sc-dnqmqq hGizuT"
                 color="currentColor"
                 display="block"
                 fontSize="14px"
@@ -3078,7 +3210,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 Enter a date below
               </p>
               <p
-                className="sc-dnqmqq jIXsIq"
+                className="sc-dnqmqq fddgBS"
                 color="darkGrey"
                 display="block"
                 fontSize="12px"
@@ -3099,7 +3231,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             >
               Place of birth
               <p
-                className="sc-dnqmqq dLGzPX"
+                className="sc-dnqmqq iMKzwY"
                 color="darkGrey"
                 display="inline"
                 fontSize="12px"
@@ -3169,7 +3301,7 @@ exports[`Storyshots Form Without title 1`] = `
         className="sc-hSdWYo khLKvT"
       >
         <h2
-          className="sc-ckVGcZ lildcs"
+          className="sc-ckVGcZ uUEex"
           fontSize={3}
           fontWeight={2}
         />
@@ -3194,7 +3326,7 @@ exports[`Storyshots Form Without title 1`] = `
           >
             Date of birth
             <p
-              className="sc-dnqmqq dLGzPX"
+              className="sc-dnqmqq iMKzwY"
               color="darkGrey"
               display="inline"
               fontSize="12px"
@@ -3202,7 +3334,7 @@ exports[`Storyshots Form Without title 1`] = `
               (Optional)
             </p>
             <p
-              className="sc-dnqmqq elFerp"
+              className="sc-dnqmqq hGizuT"
               color="currentColor"
               display="block"
               fontSize="14px"
@@ -3210,7 +3342,7 @@ exports[`Storyshots Form Without title 1`] = `
               Enter a date below
             </p>
             <p
-              className="sc-dnqmqq jIXsIq"
+              className="sc-dnqmqq fddgBS"
               color="darkGrey"
               display="block"
               fontSize="12px"
@@ -3231,7 +3363,7 @@ exports[`Storyshots Form Without title 1`] = `
           >
             Place of birth
             <p
-              className="sc-dnqmqq dLGzPX"
+              className="sc-dnqmqq iMKzwY"
               color="darkGrey"
               display="inline"
               fontSize="12px"
@@ -3295,14 +3427,14 @@ exports[`Storyshots Header Validation Header Validation 1`] = `
           className="sc-kkGfuU hIgjkz"
         >
           <h3
-            className="sc-jKJlTe sc-eNQAEJ jZjNmB"
+            className="sc-jKJlTe sc-eNQAEJ jSbqWG"
             fontSize={2}
             fontWeight={2}
           >
             Error has occured ...
           </h3>
           <p
-            className="sc-dnqmqq hqVlOD"
+            className="sc-dnqmqq fAVVQb"
             color="currentColor"
             display="block"
             fontSize={1}
@@ -3388,14 +3520,14 @@ exports[`Storyshots Header Validation With message only 1`] = `
           className="sc-kkGfuU hIgjkz"
         >
           <h3
-            className="sc-jKJlTe sc-eNQAEJ jZjNmB"
+            className="sc-jKJlTe sc-eNQAEJ jSbqWG"
             fontSize={2}
             fontWeight={2}
           >
             Error has occured ...
           </h3>
           <p
-            className="sc-dnqmqq hqVlOD"
+            className="sc-dnqmqq fAVVQb"
             color="currentColor"
             display="block"
             fontSize={1}
@@ -3426,7 +3558,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-ckVGcZ lildcs"
+        className="sc-ckVGcZ uUEex"
         fontSize={3}
         fontWeight={2}
       >
@@ -3454,7 +3586,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
@@ -3482,7 +3614,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ bFhixT"
+        className="sc-dxgOiQ cTtNpk"
         fontSize={4}
         fontWeight={0}
       >
@@ -3510,14 +3642,14 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ bFhixT"
+        className="sc-dxgOiQ cTtNpk"
         fontSize={4}
         fontWeight={0}
       >
         Title
       </h1>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -8690,7 +8822,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq ZcSJr"
+          className="sc-dnqmqq dsfzCR"
           color="currentColor"
           display="block"
           fontSize={1}
@@ -8725,7 +8857,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq ZcSJr"
+          className="sc-dnqmqq dsfzCR"
           color="currentColor"
           display="block"
           fontSize={1}
@@ -8781,7 +8913,7 @@ exports[`Storyshots IconicButton With a long label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq ZcSJr"
+          className="sc-dnqmqq dsfzCR"
           color="currentColor"
           display="block"
           fontSize={1}
@@ -8837,7 +8969,7 @@ exports[`Storyshots IconicButton With label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq ZcSJr"
+          className="sc-dnqmqq dsfzCR"
           color="currentColor"
           display="block"
           fontSize={1}
@@ -8895,7 +9027,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
           className="sc-kgoBCf jnnrjv"
         >
           <p
-            className="sc-dnqmqq iUIAHX"
+            className="sc-dnqmqq jYVaFz"
             color="currentColor"
             display="block"
             fontSize={1}
@@ -8954,7 +9086,7 @@ exports[`Storyshots Inline Validation With list items 1`] = `
           className="sc-kgoBCf jnnrjv"
         >
           <p
-            className="sc-dnqmqq iUIAHX"
+            className="sc-dnqmqq jYVaFz"
             color="currentColor"
             display="block"
             fontSize={1}
@@ -9353,12 +9485,12 @@ exports[`Storyshots Radio Controlled 1`] = `
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY kpjBoK"
+          className="sc-cvbbAY jdfake"
           disabled={false}
         >
           <input
             checked={true}
-            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -9368,19 +9500,29 @@ exports[`Storyshots Radio Controlled 1`] = `
             className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
-          I am controlled and checked
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am controlled and checked
+             
+          </p>
         </label>
       </div>
       <div
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY kpjBoK"
+          className="sc-cvbbAY jdfake"
           disabled={false}
         >
           <input
             checked={false}
-            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -9390,7 +9532,17 @@ exports[`Storyshots Radio Controlled 1`] = `
             className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
-          I am controlled and unchecked
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am controlled and unchecked
+             
+          </p>
         </label>
       </div>
     </div>
@@ -9418,11 +9570,11 @@ exports[`Storyshots Radio Radio 1`] = `
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY kpjBoK"
+          className="sc-cvbbAY jdfake"
           disabled={false}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
             disabled={false}
             type="radio"
           />
@@ -9430,7 +9582,17 @@ exports[`Storyshots Radio Radio 1`] = `
             className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
-          I am a radio button
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am a radio button
+             
+          </p>
         </label>
       </div>
     </div>
@@ -9458,11 +9620,11 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY kpjBoK"
+          className="sc-cvbbAY jdfake"
           disabled={false}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
             defaultChecked={true}
             disabled={false}
             type="radio"
@@ -9471,7 +9633,17 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
             className="sc-eHgmQL bXiJlv"
             disabled={false}
           />
-          I am checked by default
+          <p
+            className="sc-dnqmqq jYVaFz"
+            color="currentColor"
+            disabled={false}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am checked by default
+             
+          </p>
         </label>
       </div>
     </div>
@@ -9499,11 +9671,11 @@ exports[`Storyshots Radio Set to disabled 1`] = `
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY drHByb"
+          className="sc-cvbbAY kkuzbf"
           disabled={true}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+            className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
             disabled={true}
             type="radio"
           />
@@ -9511,19 +9683,29 @@ exports[`Storyshots Radio Set to disabled 1`] = `
             className="sc-eHgmQL cOzIpb"
             disabled={true}
           />
-          I am disabled
+          <p
+            className="sc-dnqmqq fvIXnX"
+            color="currentColor"
+            disabled={true}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am disabled
+             
+          </p>
         </label>
       </div>
       <div
         className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
       >
         <label
-          className="sc-cvbbAY drHByb"
+          className="sc-cvbbAY kkuzbf"
           disabled={true}
         >
           <input
             checked={true}
-            className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+            className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
             disabled={true}
             type="radio"
           />
@@ -9532,7 +9714,17 @@ exports[`Storyshots Radio Set to disabled 1`] = `
             className="sc-eHgmQL cOzIpb"
             disabled={true}
           />
-          I am disabled
+          <p
+            className="sc-dnqmqq fvIXnX"
+            color="currentColor"
+            disabled={true}
+            display="block"
+            fontSize={1}
+          >
+             
+            I am disabled
+             
+          </p>
         </label>
       </div>
     </div>
@@ -9563,12 +9755,12 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
               checked={true}
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -9580,19 +9772,29 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option A
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option A
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
               checked={false}
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -9604,19 +9806,29 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option B
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option B
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
               checked={false}
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -9628,7 +9840,17 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option C
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option C
+               
+            </p>
           </label>
         </div>
       </div>
@@ -9660,11 +9882,11 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               defaultChecked={true}
               disabled={false}
               name="settingSelection"
@@ -9675,18 +9897,28 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option A
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option A
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               disabled={false}
               name="settingSelection"
               type="radio"
@@ -9696,18 +9928,28 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option B
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option B
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY kpjBoK"
+            className="sc-cvbbAY jdfake"
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
               disabled={false}
               name="settingSelection"
               type="radio"
@@ -9717,7 +9959,17 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               className="sc-eHgmQL bXiJlv"
               disabled={false}
             />
-            Option C
+            <p
+              className="sc-dnqmqq jYVaFz"
+              color="currentColor"
+              disabled={false}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option C
+               
+            </p>
           </label>
         </div>
       </div>
@@ -9750,7 +10002,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
         >
           Setting Selection
           <p
-            className="sc-dnqmqq elFerp"
+            className="sc-dnqmqq hGizuT"
             color="currentColor"
             display="block"
             fontSize="14px"
@@ -9765,11 +10017,11 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
             className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-cvbbAY kpjBoK"
+              className="sc-cvbbAY jdfake"
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
                 defaultChecked={true}
                 disabled={false}
                 name="settingSelection"
@@ -9780,18 +10032,28 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
-              Option A
+              <p
+                className="sc-dnqmqq jYVaFz"
+                color="currentColor"
+                disabled={false}
+                display="block"
+                fontSize={1}
+              >
+                 
+                Option A
+                 
+              </p>
             </label>
           </div>
           <div
             className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-cvbbAY kpjBoK"
+              className="sc-cvbbAY jdfake"
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
@@ -9801,18 +10063,28 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
-              Option B
+              <p
+                className="sc-dnqmqq jYVaFz"
+                color="currentColor"
+                disabled={false}
+                display="block"
+                fontSize={1}
+              >
+                 
+                Option B
+                 
+              </p>
             </label>
           </div>
           <div
             className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
           >
             <label
-              className="sc-cvbbAY kpjBoK"
+              className="sc-cvbbAY jdfake"
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP jCTKzo"
+                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
@@ -9822,7 +10094,17 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 className="sc-eHgmQL bXiJlv"
                 disabled={false}
               />
-              Option C
+              <p
+                className="sc-dnqmqq jYVaFz"
+                color="currentColor"
+                disabled={false}
+                display="block"
+                fontSize={1}
+              >
+                 
+                Option C
+                 
+              </p>
             </label>
           </div>
         </div>
@@ -9855,11 +10137,11 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY drHByb"
+            className="sc-cvbbAY kkuzbf"
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
               defaultChecked={true}
               disabled={true}
               name="settingSelection"
@@ -9870,18 +10152,28 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
-            Option A
+            <p
+              className="sc-dnqmqq fvIXnX"
+              color="currentColor"
+              disabled={true}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option A
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY drHByb"
+            className="sc-cvbbAY kkuzbf"
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
               disabled={true}
               name="settingSelection"
               type="radio"
@@ -9891,18 +10183,28 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
-            Option B
+            <p
+              className="sc-dnqmqq fvIXnX"
+              color="currentColor"
+              disabled={true}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option B
+               
+            </p>
           </label>
         </div>
         <div
           className="sc-brqgnP efqfUv sc-bwzfXH crzhMj"
         >
           <label
-            className="sc-cvbbAY drHByb"
+            className="sc-cvbbAY kkuzbf"
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP kkBZSk"
+              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
               disabled={true}
               name="settingSelection"
               type="radio"
@@ -9912,9 +10214,79 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               className="sc-eHgmQL cOzIpb"
               disabled={true}
             />
-            Option C
+            <p
+              className="sc-dnqmqq fvIXnX"
+              color="currentColor"
+              disabled={true}
+              display="block"
+              fontSize={1}
+            >
+               
+              Option C
+               
+            </p>
           </label>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text Set to disabled 1`] = `
+<div
+  className="sc-bdVaJa iITmcr"
+>
+  <div
+    className="sc-bwzfXH ehOaqE"
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(to right, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 14px, #F0F2F5 15px, transparent 16px, transparent 23px, #C0C8D1 24px), linear-gradient(to bottom, transparent 7px, #F0F2F5 8px, transparent 9px, transparent 15px, #F0F2F5 16px, transparent 16px, transparent 23px, #C0C8D1 24px)",
+          "backgroundSize": "24px 24px",
+          "minHeight": "calc(100vh - 32px)",
+        }
+      }
+    >
+      <div
+        className="sc-bwzfXH fjtguq"
+      >
+        <p
+          className="sc-dnqmqq fvIXnX"
+          color="currentColor"
+          disabled={true}
+          display="block"
+          fontSize={1}
+        >
+          Default text
+        </p>
+      </div>
+      <div
+        className="sc-bwzfXH hCEeop"
+      >
+        <p
+          className="sc-dnqmqq bWNDRG"
+          color="white"
+          disabled={true}
+          display="block"
+          fontSize={1}
+        >
+          Default text
+        </p>
+      </div>
+      <div
+        className="sc-bwzfXH ehCRYJ"
+      >
+        <p
+          className="sc-dnqmqq bWNDRG"
+          color="white"
+          disabled={true}
+          display="block"
+          fontSize={1}
+        >
+          Default text
+        </p>
       </div>
     </div>
   </div>
@@ -9938,7 +10310,7 @@ exports[`Storyshots Text Set to inline 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq dGWxoX"
+        className="sc-dnqmqq eiaehm"
         color="currentColor"
         display="inline-block"
         fontSize={1}
@@ -9946,7 +10318,7 @@ exports[`Storyshots Text Set to inline 1`] = `
         Default text
       </p>
       <p
-        className="sc-dnqmqq dMCsgi"
+        className="sc-dnqmqq bLfJXS"
         color="currentColor"
         display="inline-block"
         fontSize={1}
@@ -9975,7 +10347,7 @@ exports[`Storyshots Text Text 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10004,7 +10376,7 @@ exports[`Storyshots Text With a color 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq iSRIsg"
+        className="sc-dnqmqq jGVwbo"
         color="blue"
         display="block"
         fontSize={1}
@@ -10033,7 +10405,7 @@ exports[`Storyshots Text With a custom margin 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10041,7 +10413,7 @@ exports[`Storyshots Text With a custom margin 1`] = `
         Default text
       </p>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10070,7 +10442,7 @@ exports[`Storyshots Text With a size 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq dOkNcc"
+        className="sc-dnqmqq kbIxUC"
         color="currentColor"
         display="block"
         fontSize={0}
@@ -10120,8 +10492,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq bPGUUg"
+          className="sc-dnqmqq kmKZl"
           color="currentColor"
+          disabled={false}
           display="block"
           fontSize={1}
         >
@@ -10150,8 +10523,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq bPGUUg"
+          className="sc-dnqmqq kmKZl"
           color="currentColor"
+          disabled={false}
           display="block"
           fontSize={1}
         >
@@ -10200,12 +10574,6 @@ exports[`Storyshots Toggle Toggle 1`] = `
             disabled={false}
           />
         </label>
-        <p
-          className="sc-dnqmqq bPGUUg"
-          color="currentColor"
-          display="block"
-          fontSize={1}
-        />
       </div>
     </div>
   </div>
@@ -10236,7 +10604,7 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
         >
           Setting
           <p
-            className="sc-dnqmqq elFerp"
+            className="sc-dnqmqq hGizuT"
             color="currentColor"
             display="block"
             fontSize="14px"
@@ -10266,8 +10634,9 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
             />
           </label>
           <p
-            className="sc-dnqmqq bPGUUg"
+            className="sc-dnqmqq kmKZl"
             color="currentColor"
+            disabled={false}
             display="block"
             fontSize={1}
           >
@@ -10317,12 +10686,6 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
             disabled={false}
           />
         </label>
-        <p
-          className="sc-dnqmqq bPGUUg"
-          color="currentColor"
-          display="block"
-          fontSize={1}
-        />
       </div>
     </div>
   </div>
@@ -10367,11 +10730,14 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq bPGUUg"
+          className="sc-dnqmqq kYegXv"
           color="currentColor"
+          disabled={true}
           display="block"
           fontSize={1}
-        />
+        >
+          off
+        </p>
       </div>
       <div
         className="sc-bwzfXH sc-chPdSV gylzpL"
@@ -10395,11 +10761,14 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq bPGUUg"
+          className="sc-dnqmqq kYegXv"
           color="currentColor"
+          disabled={true}
           display="block"
           fontSize={1}
-        />
+        >
+          on
+        </p>
       </div>
     </div>
   </div>
@@ -10444,8 +10813,9 @@ exports[`Storyshots Toggle With text 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq bPGUUg"
+          className="sc-dnqmqq kmKZl"
           color="currentColor"
+          disabled={false}
           display="block"
           fontSize={1}
         >
@@ -10474,21 +10844,21 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ bFhixT"
+        className="sc-dxgOiQ cTtNpk"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-ckVGcZ lildcs"
+        className="sc-ckVGcZ uUEex"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h2>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10496,14 +10866,14 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
         Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
       </h3>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10511,21 +10881,21 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-ckVGcZ lildcs"
+        className="sc-ckVGcZ uUEex"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs and moderatly long title
       </h3>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10533,14 +10903,14 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs with List
       </h3>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10571,7 +10941,7 @@ exports[`Storyshots Typography Article 1`] = `
         </li>
       </ul>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10579,7 +10949,7 @@ exports[`Storyshots Typography Article 1`] = `
         Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <p
-        className="sc-dnqmqq hqVlOD"
+        className="sc-dnqmqq fAVVQb"
         color="currentColor"
         display="block"
         fontSize={1}
@@ -10587,14 +10957,14 @@ exports[`Storyshots Typography Article 1`] = `
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with medium(default) line height (24px).
       </h3>
       <p
-        className="sc-dnqmqq haXIwh"
+        className="sc-dnqmqq fHdhiF"
         color="currentColor"
         display="block"
         fontSize={0}
@@ -10602,14 +10972,14 @@ exports[`Storyshots Typography Article 1`] = `
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ dHsSeM"
+        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
       </h3>
       <p
-        className="sc-dnqmqq ljLZTC"
+        className="sc-dnqmqq ksUXGW"
         color="currentColor"
         display="block"
         fontSize={0}

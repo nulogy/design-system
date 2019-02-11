@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Text from "./Text";
+import Box from "../Box/Box";
 
 storiesOf("Text", module)
   .add("Text", () => (
@@ -22,5 +23,18 @@ storiesOf("Text", module)
     <React.Fragment>
       <Text display="inline-block" mr={ 2 }>Default text</Text>
       <Text display="inline-block">Default text</Text>
+    </React.Fragment>
+  ))
+  .add("Set to disabled", () => (
+    <React.Fragment>
+      <Box bg="white" p={ 3 } m={ 3 }>
+        <Text mb={ 0 } disabled>Default text</Text>
+      </Box>
+      <Box bg="darkBlue" p={ 3 } m={ 3 }>
+        <Text color="white" mb={ 0 } disabled>Default text</Text>
+      </Box>
+      <Box bg="black" p={ 3 } m={ 3 }>
+        <Text color="white" mb={ 0 } disabled>Default text</Text>
+      </Box>
     </React.Fragment>
   ));

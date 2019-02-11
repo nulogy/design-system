@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
+import Text from "../Type/Text";
 
 const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
@@ -31,7 +32,6 @@ const VisualRadio = styled.div`
 `;
 
 const RadioWrapper = styled.label`
-  color: ${props => (props.disabled ? theme.colors.grey : "currentColor")};
   cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
   width: auto;
@@ -41,7 +41,6 @@ const RadioWrapper = styled.label`
 `;
 
 const RadioInput = styled.input`
-  cursor: ${props => (props.disabled ? null : "pointer")};
   position: absolute;
   opacity: 0;
   height: 1px;
@@ -74,7 +73,7 @@ const BaseRadio = props => {
       <RadioWrapper disabled={ disabled }>
         <RadioInput type="radio" { ...props } />
         <VisualRadio disabled={ disabled } checked={ checked } />
-        {labelText}
+        <Text mb={ 0 } disabled={ disabled }> {labelText} </Text>
       </RadioWrapper>
     </Box>
   );
