@@ -49,7 +49,7 @@ const IndicatorButton = styled.div([], () => ({
   pointerEvents: "none",
 }));
 
-const ToggleButton = ({ isOpen }) => (
+const ToggleButton = isOpen => (
   <IndicatorButton>
     {
       isOpen
@@ -58,6 +58,10 @@ const ToggleButton = ({ isOpen }) => (
     }
   </IndicatorButton>
 );
+
+ToggleButton.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};
 
 const Menu = styled.div([], ({ error, disabled }) => ({
   position: "absolute",
@@ -88,14 +92,14 @@ const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
 }));
 
 const Select = ({
-  error, onChange, disabled, options, optionToString, value, required, placeholder, defaultIsOpen
+  error, onChange, disabled, options, optionToString, value, required, placeholder, initialIsOpen
 }) => (
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
-    defaultIsOpen={ defaultIsOpen }
+    initialIsOpen={ initialIsOpen }
   >
     {
       ({
@@ -157,7 +161,7 @@ Select.propTypes = {
   required: PropTypes.bool,
   onChange: PropTypes.func,
   error: PropTypes.bool,
-  defaultIsOpen: PropTypes.bool,
+  initialIsOpen: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -165,7 +169,7 @@ Select.defaultProps = {
   required: false,
   onChange: undefined,
   error: false,
-  defaultIsOpen: false,
+  initialIsOpen: undefined,
 };
 
 export default Select;
