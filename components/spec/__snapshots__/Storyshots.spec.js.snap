@@ -2719,14 +2719,14 @@ exports[`Storyshots Form Demo form 1`] = `
               Job visibility
             </label>
             <div
-              className="sc-bwzfXH sc-chPdSV gylzpL"
+              className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
             >
               <label
-                className="sc-jDwBTQ fMdgrM"
+                className="sc-jDwBTQ hzeSLW"
               >
                 <input
                   checked={false}
-                  className="sc-gPEVay iaWcxQ"
+                  className="sc-gPEVay gslVQz"
                   disabled={false}
                   id={null}
                   onChange={[Function]}
@@ -2735,7 +2735,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   value="on"
                 />
                 <span
-                  className="sc-jAaTju MCfke"
+                  className="sc-jAaTju bmhdTW"
                   disabled={false}
                 />
               </label>
@@ -2852,14 +2852,14 @@ exports[`Storyshots Form Demo form 1`] = `
               Reject visibility
             </label>
             <div
-              className="sc-bwzfXH sc-chPdSV gylzpL"
+              className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
             >
               <label
-                className="sc-jDwBTQ fMdgrM"
+                className="sc-jDwBTQ hzeSLW"
               >
                 <input
                   checked={false}
-                  className="sc-gPEVay btQmYf"
+                  className="sc-gPEVay itgjfG"
                   disabled={true}
                   id={null}
                   onChange={[Function]}
@@ -2868,7 +2868,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   value="on"
                 />
                 <span
-                  className="sc-jAaTju giXmoh"
+                  className="sc-jAaTju kHOABg"
                   disabled={true}
                 />
               </label>
@@ -9114,7 +9114,7 @@ exports[`Storyshots Inline Validation With list items 1`] = `
               color="currentColor"
             >
               <a
-                className="sc-iRbamj fBeeec"
+                className="sc-jlyJG fNUGFu"
                 color="blue"
                 href="https://nulogy.design/"
               >
@@ -9221,7 +9221,7 @@ exports[`Storyshots Link Link 1`] = `
       }
     >
       <a
-        className="sc-iRbamj fBeeec"
+        className="sc-jlyJG fNUGFu"
         color="blue"
         href="http://nulogy.design"
       >
@@ -9249,7 +9249,7 @@ exports[`Storyshots Link With a different color 1`] = `
       }
     >
       <a
-        className="sc-iRbamj dbLhpA"
+        className="sc-jlyJG gNvuZY"
         color="black"
         href="http://nulogy.design"
       >
@@ -9277,7 +9277,7 @@ exports[`Storyshots Link Without underline 1`] = `
       }
     >
       <a
-        className="sc-iRbamj ikDyoy"
+        className="sc-jlyJG bjHdWX"
         color="blue"
         href="http://nulogy.design"
       >
@@ -10471,14 +10471,14 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={true}
-            className="sc-gPEVay iaWcxQ"
+            className="sc-gPEVay gslVQz"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -10487,7 +10487,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju MCfke"
+            className="sc-jAaTju bmhdTW"
             disabled={false}
           />
         </label>
@@ -10502,14 +10502,14 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
         </p>
       </div>
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={false}
-            className="sc-gPEVay iaWcxQ"
+            className="sc-gPEVay gslVQz"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -10518,7 +10518,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju MCfke"
+            className="sc-jAaTju bmhdTW"
             disabled={false}
           />
         </label>
@@ -10554,14 +10554,14 @@ exports[`Storyshots Toggle Toggle 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={false}
-            className="sc-gPEVay iaWcxQ"
+            className="sc-gPEVay gslVQz"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -10570,7 +10570,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju MCfke"
+            className="sc-jAaTju bmhdTW"
             disabled={false}
           />
         </label>
@@ -10613,14 +10613,14 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
           </p>
         </label>
         <div
-          className="sc-bwzfXH sc-chPdSV gylzpL"
+          className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
         >
           <label
-            className="sc-jDwBTQ fMdgrM"
+            className="sc-jDwBTQ hzeSLW"
           >
             <input
               checked={false}
-              className="sc-gPEVay iaWcxQ"
+              className="sc-gPEVay gslVQz"
               disabled={false}
               id={null}
               onChange={[Function]}
@@ -10629,7 +10629,7 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
               value="on"
             />
             <span
-              className="sc-jAaTju MCfke"
+              className="sc-jAaTju bmhdTW"
               disabled={false}
             />
           </label>
@@ -10666,14 +10666,14 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={true}
-            className="sc-gPEVay iaWcxQ"
+            className="sc-gPEVay gslVQz"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -10682,7 +10682,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju MCfke"
+            className="sc-jAaTju bmhdTW"
             disabled={false}
           />
         </label>
@@ -10709,14 +10709,14 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={false}
-            className="sc-gPEVay btQmYf"
+            className="sc-gPEVay itgjfG"
             disabled={true}
             id={null}
             onChange={[Function]}
@@ -10725,7 +10725,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju giXmoh"
+            className="sc-jAaTju kHOABg"
             disabled={true}
           />
         </label>
@@ -10740,14 +10740,14 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
         </p>
       </div>
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={true}
-            className="sc-gPEVay btQmYf"
+            className="sc-gPEVay itgjfG"
             disabled={true}
             id={null}
             onChange={[Function]}
@@ -10756,7 +10756,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju giXmoh"
+            className="sc-jAaTju kHOABg"
             disabled={true}
           />
         </label>
@@ -10792,14 +10792,14 @@ exports[`Storyshots Toggle With text 1`] = `
       }
     >
       <div
-        className="sc-bwzfXH sc-chPdSV gylzpL"
+        className="sc-bwzfXH sc-iRbamj blSEcj sc-chPdSV gylzpL"
       >
         <label
-          className="sc-jDwBTQ fMdgrM"
+          className="sc-jDwBTQ hzeSLW"
         >
           <input
             checked={false}
-            className="sc-gPEVay iaWcxQ"
+            className="sc-gPEVay gslVQz"
             disabled={false}
             id={null}
             onChange={[Function]}
@@ -10808,7 +10808,7 @@ exports[`Storyshots Toggle With text 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju MCfke"
+            className="sc-jAaTju bmhdTW"
             disabled={false}
           />
         </label>
