@@ -17,15 +17,6 @@ const getBorderColor = (errored, isOpen, disabled, isFocused) => {
 const SelectBox = styled.div([], ({ error, isOpen, disabled }) => ({
   display: "flex",
   position: "relative",
-  padding: 0,
-  borderRadius: theme.radii[1],
-  boxShadow: isOpen ? theme.boxShadows[0] : "none",
-  outline: "none",
-  borderColor: getBorderColor(error, isOpen, disabled, false),
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  "&:hover": {
-    borderColor: getBorderColor(error, isOpen, disabled, true)
-  },
 }));
 
 const Input = styled.input([], ({ error, isOpen, disabled }) => ({
@@ -44,7 +35,7 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   boxShadow: isOpen ? theme.boxShadows[0] : "none",
   outline: "none",
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  "&:hover": {
+  "&:hover, &:focus": {
     cursor: "default",
     borderColor: getBorderColor(error, isOpen, disabled, true),
   },
