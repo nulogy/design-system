@@ -14,7 +14,7 @@ const options = [
   { value: "quarantine", label: "In quarantine" },
 ];
 
-const optionToString = option => option.value;
+const optionToString = option => option.label;
 
 class SelectWithState extends React.Component {
   constructor(props) {

@@ -115,7 +115,7 @@ const Select = ({
           <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
             <Input
               { ...getInputProps({ disabled, error, isOpen }) } aria-required={ required }
-              value={ selectedItem && selectedItem.label } placeholder={ placeholder }
+              placeholder={ placeholder }
               readOnly
             />
             <ToggleButton isOpen={ isOpen } />
@@ -161,7 +161,7 @@ Select.propTypes = {
   initialIsOpen: PropTypes.bool,
 };
 
-const extractValueFromOption = option => option.value;
+const extractLabelFromOption = option => option.label;
 
 Select.defaultProps = {
   value: undefined,
@@ -171,7 +171,7 @@ Select.defaultProps = {
   disabled: false,
   initialIsOpen: undefined,
   placeholder: undefined,
-  optionToString: extractValueFromOption,
+  optionToString: extractLabelFromOption,
 };
 
 export default Select;
