@@ -8,56 +8,56 @@ import { omit } from "../utils";
 
 const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlue);
 
-const Slider = styled.span`
-  position: absolute;
-  cursor: ${props => (props.disabled ? null : "pointer")};
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 4px solid ${props => getFill(props.disabled)};
-  background-color: ${props => (props.toggled ? getFill(props.disabled) : theme.colors.white)};
-  border-radius: 20px;
-  transition: .2s ease;
-  &:before {
-    box-sizing: border-box;
-    position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 4px;
-    bottom: 4px;
-    border-radius: 20px;
-    box-sizing: content;
-    background-color: ${props => getFill(props.disabled)};
-    transition: .2s ease;
+const Slider = styled.span([], ({toggled, disabled}) => ({
+  position: "absolute",
+  cursor: (disabled ? null : "pointer"),
+  top: "0",
+  left: "0",
+  right: "0",
+  bottom: "0",
+  border: "4px solid",
+  borderColor: getFill(disabled),
+  backgroundColor: (toggled ? getFill(disabled) : theme.colors.white),
+  borderRadius: "20px",
+  transition: ".2s ease",
+  "&:before":{
+    position: "absolute",
+    content: "''",
+    height: "24px",
+    width: "24px",
+    left: "4px",
+    bottom: "4px",
+    borderRadius: "20px",
+    boxSizing: "content",
+    backgroundColor: getFill(disabled),
+    transition: ".2s ease",
   }
-`;
+}));
 
-const Switch = styled.label`
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 40px;
-  input {
-    opacity: 0;
-    width: 1;
-    height: 1;
+const Switch = styled.label([], {
+  position: "relative",
+  display: "inline-block",
+  width: "64px",
+  height: "40px",
+  "input": {
+    opacity: "0",
+    width: "1px",
+    height: "1px",
   }
-`;
+});
 
-const ToggleInput = styled.input`
-  &:checked + ${Slider}:before{
-    transform: translateX(24px);
-    background-color: ${theme.colors.white};
-  }
-  &:checked + ${Slider} {
-    background-color: ${props => getFill(props.disabled)};
-  }
-  &:focus + ${Slider} {
-    box-shadow: 0 0 6px ${theme.colors.blue};
-  }
-`;
+const ToggleInput = styled.input([], ({ disabled }) => ({
+  [`&:checked + ${Slider}:before`]: {
+    transform: "translateX(24px)",
+    backgroundColor: theme.colors.white,
+  },
+  [`&:checked + ${Slider}`]: {
+    backgroundColor: getFill(disabled),
+  },
+  [`&:focus + ${Slider}`]: {
+    boxShadow: `0 0 6px ${theme.colors.blue}`,
+  },
+}));
 
 export const ToggleButton = props => {
   const {
@@ -86,7 +86,7 @@ ToggleButton.defaultProps = {
   disabled: false,
 };
 
-class Toggle extends React.Component {
+class BaseToggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -110,13 +110,14 @@ class Toggle extends React.Component {
       onChange,
       onText,
       offText,
+      className,
       ...props
     } = omit(this.props, "defaultToggled");
     const {
       toggled,
     } = this.state;
     return (
-      <Flex flexDirection="row" alignItems="center">
+      <Flex flexDirection="row" alignItems="center" className={className}>
         <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
           onClick={ e => { this.handleClick(e); } }
@@ -132,7 +133,7 @@ class Toggle extends React.Component {
   }
 }
 
-Toggle.propTypes = {
+BaseToggle.propTypes = {
   onChange: PropTypes.func,
   toggled: PropTypes.bool,
   defaultToggled: PropTypes.bool,
@@ -141,17 +142,21 @@ Toggle.propTypes = {
   offText: PropTypes.string,
   id: PropTypes.string,
   value: PropTypes.string,
+  className: PropTypes.string,
 };
 
-Toggle.defaultProps = {
+BaseToggle.defaultProps = {
   onChange: () => {},
   toggled: undefined,
   defaultToggled: undefined,
-  value: "on",
   disabled: false,
   onText: null,
   offText: null,
   id: null,
+  value: "on",
+  className: null,
 };
+
+const Toggle = styled(BaseToggle)([]);
 
 export default Toggle;
