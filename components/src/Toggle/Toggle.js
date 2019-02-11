@@ -8,7 +8,7 @@ import { omit } from "../utils";
 
 const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlue);
 
-const Slider = styled.span([], ({toggled, disabled}) => ({
+const Slider = styled.span([], ({ toggled, disabled }) => ({
   position: "absolute",
   cursor: (disabled ? null : "pointer"),
   top: "0",
@@ -20,7 +20,7 @@ const Slider = styled.span([], ({toggled, disabled}) => ({
   backgroundColor: (toggled ? getFill(disabled) : theme.colors.white),
   borderRadius: "20px",
   transition: ".2s ease",
-  "&:before":{
+  "&:before": {
     position: "absolute",
     content: "''",
     height: "24px",
@@ -31,7 +31,7 @@ const Slider = styled.span([], ({toggled, disabled}) => ({
     boxSizing: "content",
     backgroundColor: getFill(disabled),
     transition: ".2s ease",
-  }
+  },
 }));
 
 const Switch = styled.label([], {
@@ -43,7 +43,7 @@ const Switch = styled.label([], {
     opacity: "0",
     width: "1px",
     height: "1px",
-  }
+  },
 });
 
 const ToggleInput = styled.input([], ({ disabled }) => ({
@@ -117,7 +117,7 @@ class BaseToggle extends React.Component {
       toggled,
     } = this.state;
     return (
-      <Flex flexDirection="row" alignItems="center" className={className}>
+      <Flex flexDirection="row" alignItems="center" className={ className }>
         <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
           onClick={ e => { this.handleClick(e); } }
