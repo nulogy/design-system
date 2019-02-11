@@ -27,7 +27,7 @@ const BaseHeaderValidation = ({
     <Icon icon="error" size={ theme.space[6] } mr={ theme.space[3] } />
     <Wrapper>
       <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
-      <Text mb={ theme.space[0] }>{ message }</Text>
+      <Text>{ message }</Text>
       { children }
     </Wrapper>
   </Flex>

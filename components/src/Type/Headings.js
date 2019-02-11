@@ -26,8 +26,7 @@ SectionTitle.defaultProps = {
 
 const SubsectionTitleBase = Text.withComponent("h3");
 
-const SubsectionTitle = styled(SubsectionTitleBase)`
-`;
+const SubsectionTitle = styled(SubsectionTitleBase)``;
 
 SubsectionTitle.defaultProps = {
   m: 0,
