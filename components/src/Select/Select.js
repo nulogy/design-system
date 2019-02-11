@@ -71,6 +71,7 @@ const Menu = styled.div([], ({ error, disabled }) => ({
   marginTop: 0,
   boxShadow: theme.boxShadows[0],
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
+  zIndex: 100,
 }));
 
 const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
