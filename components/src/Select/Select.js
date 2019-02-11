@@ -150,8 +150,8 @@ const Select = ({
 );
 
 Select.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.shape({}),
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
@@ -170,6 +170,7 @@ Select.defaultProps = {
   error: false,
   disabled: false,
   initialIsOpen: undefined,
+  placeholder: undefined,
   optionToString: extractValueFromOption,
 };
 
