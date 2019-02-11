@@ -125,22 +125,20 @@ const Select = ({
               && (
                 <Menu { ...getMenuProps({ error }) }>
                   {
-                    isOpen
-                      ? options.map((option, index) => (
-                        <MenuItem
-                          { ...getItemProps({
-                            key: option.value,
-                            item: option,
-                            isSelected: selectedItem === option,
-                            isActive: highlightedIndex === index,
-                            index,
-                            disabled,
-                          }) }
-                        >
-                          {option.label}
-                        </MenuItem>
-                      ))
-                      : null
+                    options.map((option, index) => (
+                      <MenuItem
+                        { ...getItemProps({
+                          key: option.value,
+                          item: option,
+                          isSelected: selectedItem === option,
+                          isActive: highlightedIndex === index,
+                          index,
+                          disabled,
+                        }) }
+                      >
+                        {option.label}
+                      </MenuItem>
+                    ))
                   }
                 </Menu>
               )
