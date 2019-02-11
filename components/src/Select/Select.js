@@ -63,10 +63,10 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 };
 
-const Menu = styled.div([], ({ error, disabled }) => ({
+const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   position: "absolute",
   width: "100%",
-  borderWidth: "1px",
+  borderWidth: isOpen ? "1px" : "0",
   borderColor: getBorderColor(error, true, disabled, false),
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
@@ -121,27 +121,25 @@ const Select = ({
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
           {
-            isOpen
-              && (
-                <Menu { ...getMenuProps({ error }) }>
-                  {
-                    options.map((option, index) => (
-                      <MenuItem
-                        { ...getItemProps({
-                          key: option.value,
-                          item: option,
-                          isSelected: selectedItem === option,
-                          isActive: highlightedIndex === index,
-                          index,
-                          disabled,
-                        }) }
-                      >
-                        {option.label}
-                      </MenuItem>
-                    ))
-                  }
-                </Menu>
-              )
+            <Menu { ...getMenuProps({ error }) } isOpen={ isOpen }>
+              {
+                isOpen
+                && options.map((option, index) => (
+                  <MenuItem
+                    { ...getItemProps({
+                      key: option.value,
+                      item: option,
+                      isSelected: selectedItem === option,
+                      isActive: highlightedIndex === index,
+                      index,
+                      disabled,
+                    }) }
+                  >
+                    {option.label}
+                  </MenuItem>
+                ))
+              }
+            </Menu>
           }
         </div>
       )
