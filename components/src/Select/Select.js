@@ -118,8 +118,9 @@ const Select = ({
         <div style={ { position: "relative" } }>
           <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
             <Input
-              { ...getInputProps({ disabled, error, isOpen }) } required={ required }
+              { ...getInputProps({ disabled, error, isOpen }) } aria-required={ required }
               value={ selectedItem && selectedItem.label } placeholder={ placeholder }
+              readOnly
             />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
