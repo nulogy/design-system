@@ -149,7 +149,7 @@ const Select = ({
           {
             isOpen
               && (
-                <Menu { ...getMenuProps({ error }) } isOpen={ isOpen }>
+                <Menu { ...getMenuProps({ error, isOpen }) }>
                   {
                     options.map((option, index) => (
                       <MenuItem
