@@ -5,7 +5,9 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Text = styled.p([],( props )=>({
+const Text = styled.p.attrs(props => ({
+  as: `${props.inline ? "span" : "p"}`,
+}))([], props => ({
   ...space(props),
   ...fontSize(props),
   ...fontWeight(props),
@@ -13,16 +15,24 @@ const Text = styled.p([],( props )=>({
   ...color(props),
   ...fontFamily(props),
   ...textAlign(props),
-  display: props.display,
   opacity: (props.disabled ? "0.5" : null),
-  }));
+}));
+
+Text.propTypes = {
+  ...space.propTypes,
+  ...fontSize.propTypes,
+  ...fontWeight.propTypes,
+  ...lineHeight.propTypes,
+  ...color.propTypes,
+  ...fontFamily.propTypes,
+  ...textAlign.propTypes,
+};
 
 Text.defaultProps = {
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
   color: "currentColor",
-  display: "block",
 };
 
 export default Text;
