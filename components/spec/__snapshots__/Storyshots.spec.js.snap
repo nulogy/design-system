@@ -11041,7 +11041,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
             onChange={[Function]}
             onKeyDown={[Function]}
             readOnly={true}
-            value={null}
+            value=""
           />
           <div
             className="sc-csuQGl iSGjeu"
