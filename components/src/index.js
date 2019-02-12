@@ -19,3 +19,4 @@ export * from "./Toggle/Toggle";
 export { default as Select } from "./Select/Select";
 export * from "./Type/Headings";
 export { default as NDSProvider } from "./NDSProvider/NDSProvider";
+export { default as DemoPage } from "./DemoPage/DemoPage";
