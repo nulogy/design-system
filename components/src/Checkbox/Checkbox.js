@@ -5,10 +5,47 @@ import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
 
-const getUncheckedBackgroundColour = disabled => (disabled ? theme.colors.whiteGrey : theme.colors.white);
-const getCheckedBackgroundColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
-const getUncheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.grey);
-const getCheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
+const uncheckedStyles = {
+  disabled: {
+    borderColor: theme.colors.lightGrey,
+    backgroundColor: theme.colors.whiteGrey,
+  },
+  default: {
+    borderColor: theme.colors.grey,
+    backgroundColor: theme.colors.whitey,
+  },
+};
+
+const checkedStyles = {
+  disabled: {
+    borderColor: theme.colors.lightGrey,
+    backgroundColor: theme.colors.lightGrey,
+  },
+  default: {
+    borderColor: theme.colors.darkBlue,
+    backgroundColor: theme.colors.darkBlue,
+  },
+};
+
+const getUncheckedStyle = props => {
+  if (props.disabled) { return inputStyles.disabled; }
+  if (props.error) { return inputStyles.error; }
+
+  return inputStyles.default;
+};
+
+const getCheckedStyle = props => {
+  if (props.disabled) { return inputStyles.disabled; }
+  if (props.error) { return inputStyles.error; }
+
+  return inputStyles.default;
+};
+
+const getCheckedBorderColor = props => getCheckedStyle(props).borderColor;
+const getCheckedBackgroundColor = props => getCheckedStyle(props).backgroundColor;
+
+const getUncheckedBorderColor = props => getUncheckedStyle(props).borderColor;
+const getUncheckedBackgroundColor = props => getUncheckedStyle(props).backgroundColor;
 
 const VisualCheckbox = styled.div`
   min-width: ${theme.space[3]};
