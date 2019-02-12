@@ -5,17 +5,23 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Text = styled.p`
-  ${space}
-  ${fontSize}
-  ${fontWeight}
-  ${lineHeight}
-  ${color}
-  ${fontFamily}
-  ${textAlign}
-  display: ${props => props.display}
-  opacity: ${props => (props.disabled ? "0.3333" : null)}
-`;
+const getAttrs = inline => (
+  inline
+    ? ({ as: "span" })
+    : null
+);
+
+const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
+  ...space(props),
+  ...fontSize(props),
+  ...fontWeight(props),
+  ...lineHeight(props),
+  ...color(props),
+  ...fontFamily(props),
+  ...textAlign(props),
+  opacity: (props.disabled ? "0.3333" : null),
+}));
+
 Text.propTypes = {
   display: PropTypes.string,
   ...space.propTypes,
