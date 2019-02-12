@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { space } from "styled-system";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import { SectionTitle } from "../Type/Headings";
@@ -19,6 +20,7 @@ const BaseForm = ({
 );
 
 const Form = styled(BaseForm)`
+  ${space}
   ${SectionTitle} {
     margin-bottom: ${props => (props.title ? theme.space[6] : "0")};
   }
@@ -42,6 +44,7 @@ const Form = styled(BaseForm)`
 BaseForm.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
+  ...space.PropTypes,
 };
 
 BaseForm.defaultProps = {
