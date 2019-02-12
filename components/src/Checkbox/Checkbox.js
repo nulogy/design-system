@@ -75,10 +75,6 @@ const CheckboxInput = styled.input`
   &:focus + ${VisualCheckbox} {
     box-shadow: 0 0 6px ${theme.colors.blue};
   }
-  &:checked + ${VisualCheckbox} {
-    background-color: ${props => getBackgroundColor(props)};
-    border-color: ${props => getBorderColor(props)};
-  }
   &:checked + ${VisualCheckbox}:before {
     display: block;
   }
