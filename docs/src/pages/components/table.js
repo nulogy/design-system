@@ -1,7 +1,7 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import {Box, Text, SectionTitle, Title} from '@nulogy/components'
-import {Layout, Intro, DocSection, Image} from '../../components'
+import {Box, SectionTitle, Title} from '@nulogy/components'
+import {DocText as Text, Layout, Intro, DocSection, Image} from '../../components'
 import basic from '../../images/tables/basic.png'
 import actions from '../../images/tables/actions.png'
 import customization_bar from '../../images/tables/actions.png'
@@ -28,7 +28,7 @@ export default () => (
         <DocSection>
             <SectionTitle>Actions</SectionTitle>
             <Text>There are 2 types of actions:</Text>
-            <Text><strong>Row</strong> actions allow data manipulation within a single row</Text>
+            <Text mb={0}><strong>Row</strong> actions allow data manipulation within a single row</Text>
             <Text><strong>Table</strong> actions allow actions to be performed on multiple rows or the entire table, e.g Create, Print and Import/Export.</Text>
             <Image src={actions} alt="Spacing example" style={{width: '100%'}} />
         </DocSection>

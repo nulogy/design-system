@@ -1,7 +1,7 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import {Box, Text, SectionTitle, SubsectionTitle, Link, Title} from '@nulogy/components'
-import {Layout, Intro, DocSection, CheckList, Image} from '../../components'
+import {Box, SectionTitle, SubsectionTitle, Link, Title} from '@nulogy/components'
+import {DocText as Text, Layout, Intro, DocSection, CheckList, Image} from '../../components'
 import anatomy from '../../images/form/anatomy.png'
 import basic from '../../images/form/basic.png'
 import header_error from '../../images/form/header-error.png'
