@@ -92,12 +92,13 @@ const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
 }));
 
 const Select = ({
-  error, onChange, disabled, options, optionToString, value, required, placeholder, initialIsOpen,
+  error, onChange, disabled,
+  options, optionToString, value,
+  required, placeholder, initialIsOpen,
 }) => (
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
-    inputValue={ value && optionToString(value) }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
@@ -118,6 +119,7 @@ const Select = ({
               { ...getInputProps({ disabled, error, isOpen }) } aria-required={ required }
               placeholder={ placeholder }
               readOnly
+              value={ optionToString(selectedItem) || "" }
             />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
@@ -160,7 +162,7 @@ Select.propTypes = {
   initialIsOpen: PropTypes.bool,
 };
 
-const extractLabelFromOption = option => option.label;
+const extractLabelFromOption = option => option && option.label;
 
 Select.defaultProps = {
   value: undefined,
