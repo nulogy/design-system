@@ -68,6 +68,7 @@
     "@storybook/addon-info": "^4.1.4",
     "@storybook/addon-storysource": "^4.0.12",
     "@storybook/react": "^4.1.4",
+    "downshift": "3.2.2",
     "polished": "^2.3.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

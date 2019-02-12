@@ -12,6 +12,13 @@ import InlineValidation from "../Validation/InlineValidation";
 import HeaderValidation from "../Validation/HeaderValidation";
 import List from "../List/List";
 import ListItem from "../List/ListItem";
+import Select from "../Select/Select";
+
+
+const options = [
+  { value: "planned", label: "Planned" },
+  { value: "booked", label: "Booked" },
+];
 
 storiesOf("Form", module)
   .add("Form", () => (
@@ -51,9 +58,7 @@ storiesOf("Form", module)
   .add("With form sections", () => (
     <Form title="New Profile">
       <FormSection title="Personal Information">
-        <Field
-          labelText="Name"
-        >
+        <Field labelText="Name">
           <Input />
         </Field>
         <Field
@@ -121,6 +126,9 @@ storiesOf("Form", module)
             helpText="Project description helps identify the project."
           >
             <Input />
+          </Field>
+          <Field labelText="Project status">
+            <Select options={ options } />
           </Field>
           <Field labelText="Item code">
             <Input error value="WS2SB6" />
