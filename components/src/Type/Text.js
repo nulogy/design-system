@@ -28,6 +28,8 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
+  inline: false,
+  disabled: false,
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
