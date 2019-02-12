@@ -5,43 +5,18 @@ import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
 
-const styles = {
-  checked: {
-    disabled: {
-      borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.lightGrey,
-    },
-    default: {
-      borderColor: theme.colors.darkBlue,
-      backgroundColor: theme.colors.darkBlue,
-    },
-  },
-  unchecked: {
-    disabled: {
-      borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.whiteGrey,
-    },
-    default: {
-      borderColor: theme.colors.grey,
-      backgroundColor: theme.colors.white,
-    },
-  },
-};
-
-const getStyles = ({ disabled, checked }) => (
-  styles[checked ? "checked" : "unchecked"][disabled ? "disabled" : "default"]
-);
-
-const getBorderColor = props => getStyles(props).borderColor;
-const getBackgroundColor = props => getStyles(props).backgroundColor;
+const getUncheckedBackgroundColour = disabled => (disabled ? theme.colors.whiteGrey : theme.colors.white);
+const getCheckedBackgroundColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
+const getUncheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.grey);
+const getCheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
 const VisualCheckbox = styled.div`
   min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 2px;
-  border: solid 1px ${props => getBorderColor(props)};
-  background-color: ${props => getBackgroundColor(props)};
+  border: solid 1px ${props => getUncheckedBorderColour(props.disabled)};
+  background-color: ${props => getUncheckedBackgroundColour(props.disabled)};
   position: relative;
   top: 4px;
   &:before{
@@ -74,6 +49,10 @@ const CheckboxInput = styled.input`
   width: 1px;
   &:focus + ${VisualCheckbox} {
     box-shadow: 0 0 6px ${theme.colors.blue};
+  }
+  &:checked + ${VisualCheckbox} {
+    background-color: ${props => getCheckedBackgroundColour(props.disabled)};
+    border-color: ${props => getCheckedBorderColour(props.disabled)};
   }
   &:checked + ${VisualCheckbox}:before {
     display: block;
