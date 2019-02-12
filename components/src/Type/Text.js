@@ -5,35 +5,42 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Text = styled.p`
-  ${space}
-  ${fontSize}
-  ${fontWeight}
-  ${lineHeight}
-  ${color}
-  ${fontFamily}
-  ${textAlign}
-  display: ${props => props.display}
-  opacity: ${props => (props.disabled ? "0.5" : null)}
-`;
+const getAttrs = inline => (
+  inline
+    ? ({ as: "span" })
+    : null
+);
+
+const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
+  ...space(props),
+  ...fontSize(props),
+  ...fontWeight(props),
+  ...lineHeight(props),
+  ...color(props),
+  ...fontFamily(props),
+  ...textAlign(props),
+  opacity: (props.disabled ? "0.5" : null),
+}));
+
 Text.propTypes = {
-  display: PropTypes.string,
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...fontWeight.propTypes,
-  ...lineHeight.propTypes,
-  ...color.propTypes,
-  ...fontFamily.propTypes,
-  ...textAlign.propTypes,
+  inline: PropTypes.bool,
+  disabled: PropTypes.bool,
+  ...space.PropTypes,
+  ...fontSize.PropTypes,
+  ...fontWeight.PropTypes,
+  ...lineHeight.PropTypes,
+  ...color.PropTypes,
+  ...fontFamily.PropTypes,
+  ...textAlign.PropTypes,
 };
 
 Text.defaultProps = {
+  inline: false,
+  disabled: false,
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
-  mb: 4,
   color: "currentColor",
-  display: "block",
 };
 
 export default Text;

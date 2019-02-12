@@ -23,7 +23,7 @@ const InlineValidation = ({
   <Flex color={ theme.colors.red } { ...boxProps }>
     <Icon icon="error" mr={ 2 } />
     <Wrapper>
-      <Text mb={ 0 }>{message}</Text>
+      <Text>{message}</Text>
       {children}
     </Wrapper>
   </Flex>

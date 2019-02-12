@@ -1386,10 +1386,9 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -1439,10 +1438,9 @@ exports[`Storyshots Checkbox Controlled 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -1471,10 +1469,9 @@ exports[`Storyshots Checkbox Controlled 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -1522,10 +1519,9 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -1572,10 +1568,9 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq kKmctM"
             color="currentColor"
             disabled={true}
-            display="block"
             fontSize={1}
           >
              
@@ -1603,10 +1598,9 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq kKmctM"
             color="currentColor"
             disabled={true}
-            display="block"
             fontSize={1}
           >
              
@@ -1741,9 +1735,9 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize={1}
             >
               There has been an error
@@ -1815,9 +1809,9 @@ exports[`Storyshots Field With Label for Input 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize={1}
             >
               There has been an error
@@ -1853,26 +1847,26 @@ exports[`Storyshots Field With a long text 1`] = `
           className="sc-fjdhpX iOYorM"
         >
           Long long long long long long long long long long long long long long label
-          <p
-            className="sc-dnqmqq iMKzwY"
+          <span
+            className="sc-dnqmqq bFYcaM"
             color="darkGrey"
-            display="inline"
+            disabled={false}
             fontSize="12px"
           >
             (Optional)
-          </p>
+          </span>
           <p
-            className="sc-dnqmqq hGizuT"
+            className="sc-dnqmqq ftTYsN"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize="14px"
           >
             Help text help text help text help text help text help text help text help text
           </p>
           <p
-            className="sc-dnqmqq fddgBS"
+            className="sc-dnqmqq dNqTGp"
             color="darkGrey"
-            display="block"
+            disabled={false}
             fontSize="12px"
           >
             (DD-MM-YYYY)
@@ -1908,26 +1902,26 @@ exports[`Storyshots Field With all additional components 1`] = `
           className="sc-fjdhpX iOYorM"
         >
           Default label
-          <p
-            className="sc-dnqmqq iMKzwY"
+          <span
+            className="sc-dnqmqq bFYcaM"
             color="darkGrey"
-            display="inline"
+            disabled={false}
             fontSize="12px"
           >
             (Optional)
-          </p>
+          </span>
           <p
-            className="sc-dnqmqq hGizuT"
+            className="sc-dnqmqq ftTYsN"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize="14px"
           >
             Enter a date below
           </p>
           <p
-            className="sc-dnqmqq fddgBS"
+            className="sc-dnqmqq dNqTGp"
             color="darkGrey"
-            display="block"
+            disabled={false}
             fontSize="12px"
           >
             (DD-MM-YYYY)
@@ -1967,9 +1961,9 @@ exports[`Storyshots Field With all additional components 1`] = `
             className="sc-kgoBCf jnnrjv"
           >
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize={1}
             >
               There has been an error
@@ -2033,9 +2027,9 @@ exports[`Storyshots Field With format text 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq fddgBS"
+            className="sc-dnqmqq dNqTGp"
             color="darkGrey"
-            display="block"
+            disabled={false}
             fontSize="12px"
           >
             (DD-MM-YYYY)
@@ -2071,9 +2065,9 @@ exports[`Storyshots Field With help text 1`] = `
         >
           Default label
           <p
-            className="sc-dnqmqq hGizuT"
+            className="sc-dnqmqq ftTYsN"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize="14px"
           >
             Enter a date below
@@ -2108,14 +2102,14 @@ exports[`Storyshots Field With requirement text 1`] = `
           className="sc-fjdhpX iOYorM"
         >
           Default label
-          <p
-            className="sc-dnqmqq iMKzwY"
+          <span
+            className="sc-dnqmqq bFYcaM"
             color="darkGrey"
-            display="inline"
+            disabled={false}
             fontSize="12px"
           >
             (Optional)
-          </p>
+          </span>
         </label>
       </div>
     </div>
@@ -2186,7 +2180,7 @@ exports[`Storyshots Form Demo form 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ uUEex"
+          className="sc-ckVGcZ eOsYVc"
           fontSize={3}
           fontWeight={2}
         >
@@ -2221,16 +2215,16 @@ exports[`Storyshots Form Demo form 1`] = `
             className="sc-kkGfuU hIgjkz"
           >
             <h3
-              className="sc-jKJlTe sc-eNQAEJ jSbqWG"
+              className="sc-jKJlTe sc-eNQAEJ jWIaVu"
               fontSize={2}
               fontWeight={2}
             >
               Error has occured ...
             </h3>
             <p
-              className="sc-dnqmqq fAVVQb"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize={1}
             >
               Instructions and description of an error
@@ -2268,7 +2262,7 @@ exports[`Storyshots Form Demo form 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs cTTRXp"
             fontSize={2}
             fontWeight={2}
           >
@@ -2295,18 +2289,18 @@ exports[`Storyshots Form Demo form 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Project description
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
               <p
-                className="sc-dnqmqq hGizuT"
+                className="sc-dnqmqq ftTYsN"
                 color="currentColor"
-                display="block"
+                disabled={false}
                 fontSize="14px"
               >
                 Project description helps identify the project.
@@ -2441,9 +2435,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq jYVaFz"
+                  className="sc-dnqmqq cZdhw"
                   color="currentColor"
-                  display="block"
+                  disabled={false}
                   fontSize={1}
                 >
                   Item WS2SB6 does not exist.
@@ -2487,9 +2481,9 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Scheduled start
               <p
-                className="sc-dnqmqq fddgBS"
+                className="sc-dnqmqq dNqTGp"
                 color="darkGrey"
-                display="block"
+                disabled={false}
                 fontSize="12px"
               >
                 (Expected format: MMM DD, YYYY)
@@ -2509,9 +2503,9 @@ exports[`Storyshots Form Demo form 1`] = `
             >
               Scheduled end
               <p
-                className="sc-dnqmqq fddgBS"
+                className="sc-dnqmqq dNqTGp"
                 color="darkGrey"
-                display="block"
+                disabled={false}
                 fontSize="12px"
               >
                 (Expected format: MMM DD, YYYY)
@@ -2530,14 +2524,14 @@ exports[`Storyshots Form Demo form 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Line Lead
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
             </label>
             <div
               className="sc-jTzLTM ihKWmM sc-bwzfXH crzhMj"
@@ -2556,10 +2550,9 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={false}
                 />
                 <p
-                  className="sc-dnqmqq jYVaFz"
+                  className="sc-dnqmqq cZdhw"
                   color="currentColor"
                   disabled={false}
-                  display="block"
                   fontSize={1}
                 >
                    
@@ -2585,10 +2578,9 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={false}
                 />
                 <p
-                  className="sc-dnqmqq jYVaFz"
+                  className="sc-dnqmqq cZdhw"
                   color="currentColor"
                   disabled={false}
-                  display="block"
                   fontSize={1}
                 >
                    
@@ -2616,10 +2608,9 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={true}
                 />
                 <p
-                  className="sc-dnqmqq fvIXnX"
+                  className="sc-dnqmqq kKmctM"
                   color="currentColor"
                   disabled={true}
-                  display="block"
                   fontSize={1}
                 >
                    
@@ -2645,10 +2636,9 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={true}
                 />
                 <p
-                  className="sc-dnqmqq fvIXnX"
+                  className="sc-dnqmqq kKmctM"
                   color="currentColor"
                   disabled={true}
-                  display="block"
                   fontSize={1}
                 >
                    
@@ -2689,10 +2679,9 @@ exports[`Storyshots Form Demo form 1`] = `
                     disabled={false}
                   />
                   <p
-                    className="sc-dnqmqq jYVaFz"
+                    className="sc-dnqmqq cZdhw"
                     color="currentColor"
                     disabled={false}
-                    display="block"
                     fontSize={1}
                   >
                      
@@ -2720,10 +2709,9 @@ exports[`Storyshots Form Demo form 1`] = `
                     disabled={false}
                   />
                   <p
-                    className="sc-dnqmqq jYVaFz"
+                    className="sc-dnqmqq cZdhw"
                     color="currentColor"
                     disabled={false}
-                    display="block"
                     fontSize={1}
                   >
                      
@@ -2751,10 +2739,9 @@ exports[`Storyshots Form Demo form 1`] = `
                     disabled={true}
                   />
                   <p
-                    className="sc-dnqmqq fvIXnX"
+                    className="sc-dnqmqq kKmctM"
                     color="currentColor"
                     disabled={true}
-                    display="block"
                     fontSize={1}
                   >
                      
@@ -2793,9 +2780,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq jYVaFz"
+                  className="sc-dnqmqq cZdhw"
                   color="currentColor"
-                  display="block"
+                  disabled={false}
                   fontSize={1}
                 >
                   Yes can be only selected ...
@@ -2833,10 +2820,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </label>
               <p
-                className="sc-dnqmqq kmKZl"
+                className="sc-dnqmqq gjNJiQ"
                 color="currentColor"
                 disabled={false}
-                display="block"
                 fontSize={1}
               >
                 Hidden
@@ -2848,7 +2834,7 @@ exports[`Storyshots Form Demo form 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs cTTRXp"
             fontSize={2}
             fontWeight={2}
           >
@@ -2896,9 +2882,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 className="sc-kgoBCf jnnrjv"
               >
                 <p
-                  className="sc-dnqmqq jYVaFz"
+                  className="sc-dnqmqq cZdhw"
                   color="currentColor"
-                  display="block"
+                  disabled={false}
                   fontSize={1}
                 >
                   Item 235432 is not a valid entry.
@@ -2966,10 +2952,9 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </label>
               <p
-                className="sc-dnqmqq kYegXv"
+                className="sc-dnqmqq cKBgSh"
                 color="currentColor"
                 disabled={true}
-                display="block"
                 fontSize={1}
               >
                 Hidden
@@ -3003,7 +2988,7 @@ exports[`Storyshots Form Form 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ uUEex"
+          className="sc-ckVGcZ eOsYVc"
           fontSize={3}
           fontWeight={2}
         >
@@ -3029,26 +3014,26 @@ exports[`Storyshots Form Form 1`] = `
             className="sc-fjdhpX iOYorM"
           >
             Date of birth
-            <p
-              className="sc-dnqmqq iMKzwY"
+            <span
+              className="sc-dnqmqq bFYcaM"
               color="darkGrey"
-              display="inline"
+              disabled={false}
               fontSize="12px"
             >
               (Optional)
-            </p>
+            </span>
             <p
-              className="sc-dnqmqq hGizuT"
+              className="sc-dnqmqq ftTYsN"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize="14px"
             >
               Enter a date below
             </p>
             <p
-              className="sc-dnqmqq fddgBS"
+              className="sc-dnqmqq dNqTGp"
               color="darkGrey"
-              display="block"
+              disabled={false}
               fontSize="12px"
             >
               (DD-MM-YYYY)
@@ -3066,14 +3051,14 @@ exports[`Storyshots Form Form 1`] = `
             className="sc-fjdhpX iOYorM"
           >
             Place of birth
-            <p
-              className="sc-dnqmqq iMKzwY"
+            <span
+              className="sc-dnqmqq bFYcaM"
               color="darkGrey"
-              display="inline"
+              disabled={false}
               fontSize="12px"
             >
               (Optional)
-            </p>
+            </span>
           </label>
           <input
             className="sc-kAzzGY jfonHo"
@@ -3106,7 +3091,7 @@ exports[`Storyshots Form With form sections 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ uUEex"
+          className="sc-ckVGcZ eOsYVc"
           fontSize={3}
           fontWeight={2}
         >
@@ -3116,7 +3101,7 @@ exports[`Storyshots Form With form sections 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs cTTRXp"
             fontSize={2}
             fontWeight={2}
           >
@@ -3142,26 +3127,26 @@ exports[`Storyshots Form With form sections 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Date of birth
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
               <p
-                className="sc-dnqmqq hGizuT"
+                className="sc-dnqmqq ftTYsN"
                 color="currentColor"
-                display="block"
+                disabled={false}
                 fontSize="14px"
               >
                 Enter a date below
               </p>
               <p
-                className="sc-dnqmqq fddgBS"
+                className="sc-dnqmqq dNqTGp"
                 color="darkGrey"
-                display="block"
+                disabled={false}
                 fontSize="12px"
               >
                 (DD-MM-YYYY)
@@ -3179,14 +3164,14 @@ exports[`Storyshots Form With form sections 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Place of birth
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
             </label>
             <input
               className="sc-kAzzGY jfonHo"
@@ -3198,7 +3183,7 @@ exports[`Storyshots Form With form sections 1`] = `
           className="sc-kEYyzF jpRcfR"
         >
           <legend
-            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs dPtnNj"
+            className="sc-jKJlTe sc-eNQAEJ sc-hMqMXs cTTRXp"
             fontSize={2}
             fontWeight={2}
           >
@@ -3257,7 +3242,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         className="sc-hSdWYo igivMA"
       >
         <h2
-          className="sc-ckVGcZ uUEex"
+          className="sc-ckVGcZ eOsYVc"
           fontSize={3}
           fontWeight={2}
         >
@@ -3286,26 +3271,26 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Date of birth
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
               <p
-                className="sc-dnqmqq hGizuT"
+                className="sc-dnqmqq ftTYsN"
                 color="currentColor"
-                display="block"
+                disabled={false}
                 fontSize="14px"
               >
                 Enter a date below
               </p>
               <p
-                className="sc-dnqmqq fddgBS"
+                className="sc-dnqmqq dNqTGp"
                 color="darkGrey"
-                display="block"
+                disabled={false}
                 fontSize="12px"
               >
                 (DD-MM-YYYY)
@@ -3323,14 +3308,14 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               className="sc-fjdhpX iOYorM"
             >
               Place of birth
-              <p
-                className="sc-dnqmqq iMKzwY"
+              <span
+                className="sc-dnqmqq bFYcaM"
                 color="darkGrey"
-                display="inline"
+                disabled={false}
                 fontSize="12px"
               >
                 (Optional)
-              </p>
+              </span>
             </label>
             <input
               className="sc-kAzzGY jfonHo"
@@ -3394,7 +3379,7 @@ exports[`Storyshots Form Without title 1`] = `
         className="sc-hSdWYo khLKvT"
       >
         <h2
-          className="sc-ckVGcZ uUEex"
+          className="sc-ckVGcZ eOsYVc"
           fontSize={3}
           fontWeight={2}
         />
@@ -3418,26 +3403,26 @@ exports[`Storyshots Form Without title 1`] = `
             className="sc-fjdhpX iOYorM"
           >
             Date of birth
-            <p
-              className="sc-dnqmqq iMKzwY"
+            <span
+              className="sc-dnqmqq bFYcaM"
               color="darkGrey"
-              display="inline"
+              disabled={false}
               fontSize="12px"
             >
               (Optional)
-            </p>
+            </span>
             <p
-              className="sc-dnqmqq hGizuT"
+              className="sc-dnqmqq ftTYsN"
               color="currentColor"
-              display="block"
+              disabled={false}
               fontSize="14px"
             >
               Enter a date below
             </p>
             <p
-              className="sc-dnqmqq fddgBS"
+              className="sc-dnqmqq dNqTGp"
               color="darkGrey"
-              display="block"
+              disabled={false}
               fontSize="12px"
             >
               (DD-MM-YYYY)
@@ -3455,14 +3440,14 @@ exports[`Storyshots Form Without title 1`] = `
             className="sc-fjdhpX iOYorM"
           >
             Place of birth
-            <p
-              className="sc-dnqmqq iMKzwY"
+            <span
+              className="sc-dnqmqq bFYcaM"
               color="darkGrey"
-              display="inline"
+              disabled={false}
               fontSize="12px"
             >
               (Optional)
-            </p>
+            </span>
           </label>
           <input
             className="sc-kAzzGY jfonHo"
@@ -3520,16 +3505,16 @@ exports[`Storyshots Header Validation Header Validation 1`] = `
           className="sc-kkGfuU hIgjkz"
         >
           <h3
-            className="sc-jKJlTe sc-eNQAEJ jSbqWG"
+            className="sc-jKJlTe sc-eNQAEJ jWIaVu"
             fontSize={2}
             fontWeight={2}
           >
             Error has occured ...
           </h3>
           <p
-            className="sc-dnqmqq fAVVQb"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize={1}
           >
             Instructions and description of an error
@@ -3613,16 +3598,16 @@ exports[`Storyshots Header Validation With message only 1`] = `
           className="sc-kkGfuU hIgjkz"
         >
           <h3
-            className="sc-jKJlTe sc-eNQAEJ jSbqWG"
+            className="sc-jKJlTe sc-eNQAEJ jWIaVu"
             fontSize={2}
             fontWeight={2}
           >
             Error has occured ...
           </h3>
           <p
-            className="sc-dnqmqq fAVVQb"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize={1}
           >
             Instructions and description of an error
@@ -3651,7 +3636,7 @@ exports[`Storyshots Headings Section Title 1`] = `
       }
     >
       <h2
-        className="sc-ckVGcZ uUEex"
+        className="sc-ckVGcZ eOsYVc"
         fontSize={3}
         fontWeight={2}
       >
@@ -3679,7 +3664,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
       }
     >
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
@@ -3707,7 +3692,7 @@ exports[`Storyshots Headings Title 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ cTtNpk"
+        className="sc-dxgOiQ eWvwAa"
         fontSize={4}
         fontWeight={0}
       >
@@ -3735,16 +3720,16 @@ exports[`Storyshots Headings With a custom margin 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ cTtNpk"
+        className="sc-dxgOiQ eWvwAa"
         fontSize={4}
         fontWeight={0}
       >
         Title
       </h1>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq cZdhw"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Lorem ipsum
@@ -9491,9 +9476,9 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq dsfzCR"
+          className="sc-dnqmqq dlxZJj"
           color="currentColor"
-          display="block"
+          disabled={false}
           fontSize={1}
         >
           Cancel
@@ -9526,9 +9511,9 @@ exports[`Storyshots IconicButton Disabled 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq dsfzCR"
+          className="sc-dnqmqq dlxZJj"
           color="currentColor"
-          display="block"
+          disabled={false}
           fontSize={1}
         >
           Lock
@@ -9582,9 +9567,9 @@ exports[`Storyshots IconicButton With a long label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq dsfzCR"
+          className="sc-dnqmqq dlxZJj"
           color="currentColor"
-          display="block"
+          disabled={false}
           fontSize={1}
         >
           I am an Iconic Button with a really really really long label
@@ -9638,9 +9623,9 @@ exports[`Storyshots IconicButton With label 1`] = `
           />
         </svg>
         <p
-          className="sc-dnqmqq dsfzCR"
+          className="sc-dnqmqq dlxZJj"
           color="currentColor"
-          display="block"
+          disabled={false}
           fontSize={1}
         >
           Delete
@@ -9696,9 +9681,9 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
           className="sc-kgoBCf jnnrjv"
         >
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize={1}
           >
             Something has gone wrong
@@ -9755,9 +9740,9 @@ exports[`Storyshots Inline Validation With list items 1`] = `
           className="sc-kgoBCf jnnrjv"
         >
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize={1}
           >
             Something has gone wrong
@@ -10170,10 +10155,9 @@ exports[`Storyshots Radio Controlled 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -10202,10 +10186,9 @@ exports[`Storyshots Radio Controlled 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -10252,10 +10235,9 @@ exports[`Storyshots Radio Radio 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -10303,10 +10285,9 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
             disabled={false}
           />
           <p
-            className="sc-dnqmqq jYVaFz"
+            className="sc-dnqmqq cZdhw"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
              
@@ -10353,10 +10334,9 @@ exports[`Storyshots Radio Set to disabled 1`] = `
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq kKmctM"
             color="currentColor"
             disabled={true}
-            display="block"
             fontSize={1}
           >
              
@@ -10384,10 +10364,9 @@ exports[`Storyshots Radio Set to disabled 1`] = `
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq kKmctM"
             color="currentColor"
             disabled={true}
-            display="block"
             fontSize={1}
           >
              
@@ -10442,10 +10421,9 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10476,10 +10454,9 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10510,10 +10487,9 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10567,10 +10543,9 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10598,10 +10573,9 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10629,10 +10603,9 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               disabled={false}
             />
             <p
-              className="sc-dnqmqq jYVaFz"
+              className="sc-dnqmqq cZdhw"
               color="currentColor"
               disabled={false}
-              display="block"
               fontSize={1}
             >
                
@@ -10671,9 +10644,9 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
         >
           Setting Selection
           <p
-            className="sc-dnqmqq hGizuT"
+            className="sc-dnqmqq ftTYsN"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize="14px"
           >
             Select a setting from the menu below:
@@ -10702,10 +10675,9 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 disabled={false}
               />
               <p
-                className="sc-dnqmqq jYVaFz"
+                className="sc-dnqmqq cZdhw"
                 color="currentColor"
                 disabled={false}
-                display="block"
                 fontSize={1}
               >
                  
@@ -10733,10 +10705,9 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 disabled={false}
               />
               <p
-                className="sc-dnqmqq jYVaFz"
+                className="sc-dnqmqq cZdhw"
                 color="currentColor"
                 disabled={false}
-                display="block"
                 fontSize={1}
               >
                  
@@ -10764,10 +10735,9 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 disabled={false}
               />
               <p
-                className="sc-dnqmqq jYVaFz"
+                className="sc-dnqmqq cZdhw"
                 color="currentColor"
                 disabled={false}
-                display="block"
                 fontSize={1}
               >
                  
@@ -10822,10 +10792,9 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq kKmctM"
               color="currentColor"
               disabled={true}
-              display="block"
               fontSize={1}
             >
                
@@ -10853,10 +10822,9 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq kKmctM"
               color="currentColor"
               disabled={true}
-              display="block"
               fontSize={1}
             >
                
@@ -10884,10 +10852,9 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq kKmctM"
               color="currentColor"
               disabled={true}
-              display="block"
               fontSize={1}
             >
                
@@ -11888,10 +11855,9 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH fjtguq"
       >
         <p
-          className="sc-dnqmqq fvIXnX"
+          className="sc-dnqmqq kKmctM"
           color="currentColor"
           disabled={true}
-          display="block"
           fontSize={1}
         >
           Default text
@@ -11901,10 +11867,9 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH hCEeop"
       >
         <p
-          className="sc-dnqmqq bWNDRG"
+          className="sc-dnqmqq csPuN"
           color="white"
           disabled={true}
-          display="block"
           fontSize={1}
         >
           Default text
@@ -11914,10 +11879,9 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH ehCRYJ"
       >
         <p
-          className="sc-dnqmqq bWNDRG"
+          className="sc-dnqmqq csPuN"
           color="white"
           disabled={true}
-          display="block"
           fontSize={1}
         >
           Default text
@@ -11944,22 +11908,22 @@ exports[`Storyshots Text Set to inline 1`] = `
         }
       }
     >
-      <p
-        className="sc-dnqmqq eiaehm"
+      <span
+        className="sc-dnqmqq gmDFEs"
         color="currentColor"
-        display="inline-block"
+        disabled={false}
         fontSize={1}
       >
         Default text
-      </p>
-      <p
-        className="sc-dnqmqq bLfJXS"
+      </span>
+      <span
+        className="sc-dnqmqq cZdhw"
         color="currentColor"
-        display="inline-block"
+        disabled={false}
         fontSize={1}
       >
         Default text
-      </p>
+      </span>
     </div>
   </div>
 </div>
@@ -11982,9 +11946,9 @@ exports[`Storyshots Text Text 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq cZdhw"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Default text
@@ -12011,9 +11975,9 @@ exports[`Storyshots Text With a color 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq jGVwbo"
+        className="sc-dnqmqq bIvjRK"
         color="blue"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Small text
@@ -12040,17 +12004,17 @@ exports[`Storyshots Text With a custom margin 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Default text
       </p>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq cZdhw"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Default text
@@ -12077,9 +12041,9 @@ exports[`Storyshots Text With a size 1`] = `
       }
     >
       <p
-        className="sc-dnqmqq kbIxUC"
+        className="sc-dnqmqq kiJvNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={0}
       >
         Small text
@@ -12127,10 +12091,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq kmKZl"
+          className="sc-dnqmqq gjNJiQ"
           color="currentColor"
           disabled={false}
-          display="block"
           fontSize={1}
         >
           on
@@ -12158,10 +12121,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq kmKZl"
+          className="sc-dnqmqq gjNJiQ"
           color="currentColor"
           disabled={false}
-          display="block"
           fontSize={1}
         >
           off
@@ -12239,9 +12201,9 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
         >
           Setting
           <p
-            className="sc-dnqmqq hGizuT"
+            className="sc-dnqmqq ftTYsN"
             color="currentColor"
-            display="block"
+            disabled={false}
             fontSize="14px"
           >
             Turns setting on/off
@@ -12269,10 +12231,9 @@ exports[`Storyshots Toggle Toggle Field 1`] = `
             />
           </label>
           <p
-            className="sc-dnqmqq kmKZl"
+            className="sc-dnqmqq gjNJiQ"
             color="currentColor"
             disabled={false}
-            display="block"
             fontSize={1}
           >
             off
@@ -12365,10 +12326,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq kYegXv"
+          className="sc-dnqmqq cKBgSh"
           color="currentColor"
           disabled={true}
-          display="block"
           fontSize={1}
         >
           off
@@ -12396,10 +12356,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq kYegXv"
+          className="sc-dnqmqq cKBgSh"
           color="currentColor"
           disabled={true}
-          display="block"
           fontSize={1}
         >
           on
@@ -12448,10 +12407,9 @@ exports[`Storyshots Toggle With text 1`] = `
           />
         </label>
         <p
-          className="sc-dnqmqq kmKZl"
+          className="sc-dnqmqq gjNJiQ"
           color="currentColor"
           disabled={false}
-          display="block"
           fontSize={1}
         >
           off
@@ -12479,75 +12437,75 @@ exports[`Storyshots Typography Article 1`] = `
       }
     >
       <h1
-        className="sc-dxgOiQ cTtNpk"
+        className="sc-dxgOiQ eWvwAa"
         fontSize={4}
         fontWeight={0}
       >
         Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h1>
       <h2
-        className="sc-ckVGcZ uUEex"
+        className="sc-ckVGcZ eOsYVc"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
       </h2>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
         Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
       </h3>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
       </p>
       <h2
-        className="sc-ckVGcZ uUEex"
+        className="sc-ckVGcZ eOsYVc"
         fontSize={3}
         fontWeight={2}
       >
         Donec leo felis
       </h2>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs and moderatly long title
       </h3>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
         Two pargraphs with List
       </h3>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
@@ -12576,47 +12534,47 @@ exports[`Storyshots Typography Article 1`] = `
         </li>
       </ul>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
       </p>
       <p
-        className="sc-dnqmqq fAVVQb"
+        className="sc-dnqmqq lfMTNP"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={1}
       >
         Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with medium(default) line height (24px).
       </h3>
       <p
-        className="sc-dnqmqq fHdhiF"
+        className="sc-dnqmqq cchC"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={0}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
       </p>
       <h3
-        className="sc-jKJlTe sc-eNQAEJ hLVFNq"
+        className="sc-jKJlTe sc-eNQAEJ fiWoFY"
         fontSize={2}
         fontWeight={2}
       >
         This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
       </h3>
       <p
-        className="sc-dnqmqq ksUXGW"
+        className="sc-dnqmqq khpLSY"
         color="currentColor"
-        display="block"
+        disabled={false}
         fontSize={0}
       >
         Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
