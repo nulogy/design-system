@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import Text from "../Type/Text";
 
 const RequirementText = props => (
-  <Text inline ml={ 2 } fontSize="12px"
+  <Text
+    inline ml={ 2 } fontSize="12px"
     color="darkGrey" { ...props }
   />
 );

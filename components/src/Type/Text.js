@@ -19,16 +19,20 @@ const Text = styled.p.attrs(props => ({
 }));
 
 Text.propTypes = {
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...fontWeight.propTypes,
-  ...lineHeight.propTypes,
-  ...color.propTypes,
-  ...fontFamily.propTypes,
-  ...textAlign.propTypes,
+  inline: PropTypes.bool,
+  disabled: PropTypes.bool,
+  ...space.PropTypes,
+  ...fontSize.PropTypes,
+  ...fontWeight.PropTypes,
+  ...lineHeight.PropTypes,
+  ...color.PropTypes,
+  ...fontFamily.PropTypes,
+  ...textAlign.PropTypes,
 };
 
 Text.defaultProps = {
+  inline: false,
+  disabled: false,
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
