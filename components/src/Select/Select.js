@@ -6,7 +6,10 @@ import Icon from "../Icon/Icon";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const getBorderColor = (errored, isOpen, disabled, isFocused) => {
+const getBorderColor = ({
+  errored, disabled, isOpen,
+  isFocused,
+}) => {
   const {
     red, lightGrey, blue,
     grey,
@@ -32,7 +35,12 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   padding: subPx(theme.space[2]),
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
-  borderColor: getBorderColor(error, isOpen, disabled, false),
+  borderColor: getBorderColor({
+    isOpen,
+    disabled,
+    errored: error,
+    isFocused: false,
+  }),
   borderTopLeftRadius: theme.radii[1],
   borderTopRightRadius: theme.radii[1],
   borderBottomLeftRadius: isOpen ? 0 : theme.radii[1],
@@ -42,7 +50,12 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover, &:focus": {
     cursor: "default",
-    borderColor: getBorderColor(error, isOpen, disabled, true),
+    borderColor: getBorderColor({
+      errored: error,
+      isOpen,
+      disabled,
+      isFocused: true,
+    }),
   },
 }));
 
@@ -72,7 +85,12 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   position: "absolute",
   width: "100%",
   borderWidth: isOpen ? "1px" : "0",
-  borderColor: getBorderColor(error, true, disabled, false),
+  borderColor: getBorderColor({
+    errored: error,
+    isOpen: true,
+    disabled,
+    isHovered: false,
+  }),
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
