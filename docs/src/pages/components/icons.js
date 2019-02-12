@@ -1,7 +1,7 @@
 import React from "react"
 import {Helmet} from 'react-helmet'
-import { Icon, Box, Flex, Text, SectionTitle, Title, Link} from '@nulogy/components'
-import {Layout, Intro, DocSection, CheckList, ComponentUsage} from '../../components'
+import { Icon, Box, Flex, SectionTitle, Title, Link} from '@nulogy/components'
+import {DocText as Text, Layout, Intro, DocSection, CheckList, ComponentUsage} from '../../components'
 import icons from '@nulogy/components/icons/icons.json'
 
 const iconNames = Object.keys(icons);
@@ -12,7 +12,7 @@ const IconDisplay = (props) => {
         {iconNames.map(icon => {
             return(
             <Flex key={icon} width={1/5}>
-                <Icon name ={icon}/>
+                <Icon icon ={icon}/>
                 <Text align='center' ml={2} >{icon}</Text>
             </Flex>    
             )
