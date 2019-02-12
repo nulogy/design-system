@@ -5,33 +5,22 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Text = styled.p`
-  ${space}
-  ${fontSize}
-  ${fontWeight}
-  ${lineHeight}
-  ${color}
-  ${fontFamily}
-  ${textAlign}
-  display: ${props => props.display}
-  opacity: ${props => (props.disabled ? "0.5" : null)}
-`;
-Text.propTypes = {
-  display: PropTypes.string,
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...fontWeight.propTypes,
-  ...lineHeight.propTypes,
-  ...color.propTypes,
-  ...fontFamily.propTypes,
-  ...textAlign.propTypes,
-};
+const Text = styled.p([],( props )=>({
+  ...space(props),
+  ...fontSize(props),
+  ...fontWeight(props),
+  ...lineHeight(props),
+  ...color(props),
+  ...fontFamily(props),
+  ...textAlign(props),
+  display: props.display,
+  opacity: (props.disabled ? "0.5" : null),
+  }));
 
 Text.defaultProps = {
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
-  mb: 4,
   color: "currentColor",
   display: "block",
 };
