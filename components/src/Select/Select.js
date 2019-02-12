@@ -97,6 +97,7 @@ const Select = ({
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
+    inputValue={ value && optionToString(value) }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
