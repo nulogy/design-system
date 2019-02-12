@@ -7,11 +7,16 @@ import theme from "../theme";
 import { subPx } from "../utils";
 
 const getBorderColor = (errored, isOpen, disabled, isFocused) => {
-  if (errored) { return theme.colors.red; }
-  if (disabled) { return theme.colors.lightGrey; }
-  if (isOpen || isFocused) { return theme.colors.blue; }
+  const {
+    red, lightGrey, blue,
+    grey,
+  } = theme.colors;
 
-  return theme.colors.grey;
+  if (errored) { return red; }
+  if (disabled) { return lightGrey; }
+  if (isOpen || isFocused) { return blue; }
+
+  return grey;
 };
 
 const SelectBox = styled.div([], () => ({
