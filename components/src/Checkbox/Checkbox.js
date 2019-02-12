@@ -104,7 +104,7 @@ const BaseCheckbox = props => {
       <CheckboxWrapper disabled={ disabled }>
         <CheckboxInput type="checkbox" { ...props } />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
-        <Text disabled={ disabled } mb={ 0 }> {labelText} </Text>
+        <Text disabled={ disabled }> {labelText} </Text>
       </CheckboxWrapper>
     </Box>
   );

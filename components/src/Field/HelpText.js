@@ -4,10 +4,7 @@ import theme from "../theme";
 import Text from "../Type/Text";
 
 const HelpText = props => (
-  <Text
-    mb={ 0 }
-    fontSize={ theme.fontSizes[0] }
-    lineHeight={ theme.lineHeights.smallTextBase }
+  <Text fontSize={ theme.fontSizes[0] } lineHeight={ theme.lineHeights.smallTextBase }
     { ...props }
   />
 );

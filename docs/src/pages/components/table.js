@@ -28,7 +28,7 @@ export default () => (
         <DocSection>
             <SectionTitle>Actions</SectionTitle>
             <Text>There are 2 types of actions:</Text>
-            <Text mb={0}><strong>Row</strong> actions allow data manipulation within a single row</Text>
+            <Text><strong>Row</strong> actions allow data manipulation within a single row</Text>
             <Text><strong>Table</strong> actions allow actions to be performed on multiple rows or the entire table, e.g Create, Print and Import/Export.</Text>
             <Image src={actions} alt="Spacing example" style={{width: '100%'}} />
         </DocSection>

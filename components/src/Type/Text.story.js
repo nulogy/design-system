@@ -28,13 +28,13 @@ storiesOf("Text", module)
   .add("Set to disabled", () => (
     <React.Fragment>
       <Box bg="white" p={ 3 } m={ 3 }>
-        <Text mb={ 0 } disabled>Default text</Text>
+        <Text disabled>Default text</Text>
       </Box>
       <Box bg="darkBlue" p={ 3 } m={ 3 }>
-        <Text color="white" mb={ 0 } disabled>Default text</Text>
+        <Text color="white" disabled>Default text</Text>
       </Box>
       <Box bg="black" p={ 3 } m={ 3 }>
-        <Text color="white" mb={ 0 } disabled>Default text</Text>
+        <Text color="white" disabled>Default text</Text>
       </Box>
     </React.Fragment>
   ));
