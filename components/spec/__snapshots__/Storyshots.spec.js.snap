@@ -2382,7 +2382,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </div>
               <div
                 aria-labelledby="downshift-0-label"
-                className="sc-Rmtcm bjmwoA"
+                className="sc-Rmtcm kBXrmu"
                 id="downshift-0-menu"
                 role="listbox"
               />
@@ -10976,7 +10976,7 @@ exports[`Storyshots Select Select 1`] = `
         </div>
         <div
           aria-labelledby="downshift-1-label"
-          className="sc-Rmtcm bjmwoA"
+          className="sc-Rmtcm kBXrmu"
           id="downshift-1-menu"
           role="listbox"
         />
@@ -11070,7 +11070,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
         </div>
         <div
           aria-labelledby="downshift-4-label"
-          className="sc-Rmtcm bjmwoA"
+          className="sc-Rmtcm kBXrmu"
           id="downshift-4-menu"
           role="listbox"
         />
@@ -11165,7 +11165,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
         </div>
         <div
           aria-labelledby="downshift-2-label"
-          className="sc-Rmtcm bjmwoA"
+          className="sc-Rmtcm kBXrmu"
           id="downshift-2-menu"
           role="listbox"
         />
@@ -11413,7 +11413,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
         </div>
         <div
           aria-labelledby="downshift-5-label"
-          className="sc-Rmtcm bjmwoA"
+          className="sc-Rmtcm kBXrmu"
           id="downshift-5-menu"
           role="listbox"
         />
@@ -11769,7 +11769,7 @@ exports[`Storyshots Select Set to required 1`] = `
           </div>
           <div
             aria-labelledby="downshift-8-label"
-            className="sc-Rmtcm bjmwoA"
+            className="sc-Rmtcm kBXrmu"
             id="downshift-8-menu"
             role="listbox"
           />
