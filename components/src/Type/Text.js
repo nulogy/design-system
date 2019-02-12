@@ -7,9 +7,9 @@ import theme from "../theme";
 
 const getAttrs = inline => (
   inline
-  ? ({as: "span"})
-  : null
-)
+    ? ({ as: "span" })
+    : null
+);
 
 const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
   ...space(props),
