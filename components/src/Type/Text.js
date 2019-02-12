@@ -32,7 +32,6 @@ Text.defaultProps = {
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
   color: "currentColor",
-  display: "block",
 };
 
 export default Text;
