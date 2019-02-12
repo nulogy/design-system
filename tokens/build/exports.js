@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 18 Jan 2019 16:36:32 GMT
+ * Generated on Tue, 12 Feb 2019 16:24:56 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -26,9 +26,10 @@ export const line_height_section_title = "1.23076923";
 export const line_height_subsection_title = "1.2";
 export const line_height_small_text_base = "1.71428571";
 export const line_height_small_text_compressed = "1.14285714";
-export const radius_background_small = "2px";
-export const radius_background_medium = "4px";
-export const shadow_box_small = "0 1px 1px rgba(27,31,35,0.1)";
+export const radius_border_small = "2px";
+export const radius_border_medium = "4px";
+export const radius_border_circle = "50%";
+export const shadow_box_small = "0px 1px 2px rgba(0,0,0,.25)";
 export const size_base_none = "0px";
 export const size_base_half = "4px";
 export const size_base_x_1 = "8px";

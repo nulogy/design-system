@@ -19,7 +19,7 @@ const Wrapper = styled.button`
   cursor: ${props => (props.disabled ? "arrow" : "pointer")};
 
   ${Icon} {
-    border-radius: 50%;
+    border-radius: ${props => props.theme.radii.circle};
     transition: .2s;
   }
   ${Text} {

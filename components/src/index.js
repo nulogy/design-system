@@ -16,5 +16,6 @@ export { default as Checkbox } from "./Checkbox/Checkbox";
 export { default as Radio } from "./Radio/Radio";
 export { default as RadioGroup } from "./Radio/RadioGroup";
 export * from "./Toggle/Toggle";
+export { default as Select } from "./Select/Select";
 export * from "./Type/Headings";
 export { default as NDSProvider } from "./NDSProvider/NDSProvider";
