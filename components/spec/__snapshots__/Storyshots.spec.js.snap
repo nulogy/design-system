@@ -1377,12 +1377,12 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
           disabled={false}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+            className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
             disabled={false}
             type="checkbox"
           />
           <div
-            className="sc-gZMcBi dAdmZV"
+            className="sc-gZMcBi jBoBig"
             disabled={false}
           />
           <p
@@ -1428,14 +1428,14 @@ exports[`Storyshots Checkbox Controlled 1`] = `
         >
           <input
             checked={true}
-            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+            className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
             checked={true}
-            className="sc-gZMcBi dAdmZV"
+            className="sc-gZMcBi jBoBig"
             disabled={false}
           />
           <p
@@ -1460,14 +1460,14 @@ exports[`Storyshots Checkbox Controlled 1`] = `
         >
           <input
             checked={false}
-            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+            className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
             checked={false}
-            className="sc-gZMcBi dAdmZV"
+            className="sc-gZMcBi jBoBig"
             disabled={false}
           />
           <p
@@ -1512,13 +1512,13 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
           disabled={false}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+            className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
             defaultChecked={true}
             disabled={false}
             type="checkbox"
           />
           <div
-            className="sc-gZMcBi dAdmZV"
+            className="sc-gZMcBi jBoBig"
             disabled={false}
           />
           <p
@@ -1563,16 +1563,16 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
           disabled={true}
         >
           <input
-            className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
+            className="sc-jTzLTM ihKWmM sc-VigVT gMvvRH"
             disabled={true}
             type="checkbox"
           />
           <div
-            className="sc-gZMcBi eIwUxe"
+            className="sc-gZMcBi ingmIL"
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq cQIgmo"
             color="currentColor"
             disabled={true}
             display="block"
@@ -1593,17 +1593,17 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         >
           <input
             checked={true}
-            className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
+            className="sc-jTzLTM ihKWmM sc-VigVT gMvvRH"
             disabled={true}
             type="checkbox"
           />
           <div
             checked={true}
-            className="sc-gZMcBi eIwUxe"
+            className="sc-gZMcBi ingmIL"
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq cQIgmo"
             color="currentColor"
             disabled={true}
             display="block"
@@ -1675,7 +1675,7 @@ exports[`Storyshots Field With Input 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY fRKfAx"
+          className="sc-kAzzGY hsnMJt"
           disabled={false}
         />
       </div>
@@ -1709,7 +1709,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY fRKfAx"
+          className="sc-kAzzGY hsnMJt"
           disabled={false}
         />
         <div
@@ -1782,7 +1782,7 @@ exports[`Storyshots Field With Label for Input 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY fRKfAx"
+          className="sc-kAzzGY hsnMJt"
           disabled={false}
           id="thisInput"
         />
@@ -1934,7 +1934,7 @@ exports[`Storyshots Field With all additional components 1`] = `
           </p>
         </label>
         <input
-          className="sc-kAzzGY fRKfAx"
+          className="sc-kAzzGY hsnMJt"
           disabled={false}
           id="thisInput1"
         />
@@ -2283,7 +2283,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Project
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
               placeholder="Project 128703"
             />
@@ -2313,7 +2313,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -2408,7 +2408,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Item code
             </label>
             <input
-              className="sc-kAzzGY dDoyJw"
+              className="sc-kAzzGY csWKy"
               disabled={false}
               value="WS2SB6"
             />
@@ -2460,7 +2460,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Eaches expected on Job
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
               placeholder="2 000"
             />
@@ -2474,7 +2474,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Eaches remaining on Project
             </label>
             <input
-              className="sc-kAzzGY gOPHcf"
+              className="sc-kAzzGY ilQRtm"
               disabled={true}
               value="18 000"
             />
@@ -2496,7 +2496,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
               placeholder="May 26, 2019"
             />
@@ -2518,7 +2518,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY gOPHcf"
+              className="sc-kAzzGY ilQRtm"
               disabled={true}
               value="June 29, 2019"
             />
@@ -2547,12 +2547,12 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled={false}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+                  className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
                   disabled={false}
                   type="checkbox"
                 />
                 <div
-                  className="sc-gZMcBi dAdmZV"
+                  className="sc-gZMcBi jBoBig"
                   disabled={false}
                 />
                 <p
@@ -2576,12 +2576,12 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled={false}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT dubStC"
+                  className="sc-jTzLTM ihKWmM sc-VigVT eVUFfo"
                   disabled={false}
                   type="checkbox"
                 />
                 <div
-                  className="sc-gZMcBi dAdmZV"
+                  className="sc-gZMcBi jBoBig"
                   disabled={false}
                 />
                 <p
@@ -2606,17 +2606,17 @@ exports[`Storyshots Form Demo form 1`] = `
               >
                 <input
                   checked={true}
-                  className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
+                  className="sc-jTzLTM ihKWmM sc-VigVT gMvvRH"
                   disabled={true}
                   type="checkbox"
                 />
                 <div
                   checked={true}
-                  className="sc-gZMcBi eIwUxe"
+                  className="sc-gZMcBi ingmIL"
                   disabled={true}
                 />
                 <p
-                  className="sc-dnqmqq fvIXnX"
+                  className="sc-dnqmqq cQIgmo"
                   color="currentColor"
                   disabled={true}
                   display="block"
@@ -2636,16 +2636,16 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled={true}
               >
                 <input
-                  className="sc-jTzLTM ihKWmM sc-VigVT fQhMVK"
+                  className="sc-jTzLTM ihKWmM sc-VigVT gMvvRH"
                   disabled={true}
                   type="checkbox"
                 />
                 <div
-                  className="sc-gZMcBi eIwUxe"
+                  className="sc-gZMcBi ingmIL"
                   disabled={true}
                 />
                 <p
-                  className="sc-dnqmqq fvIXnX"
+                  className="sc-dnqmqq cQIgmo"
                   color="currentColor"
                   disabled={true}
                   display="block"
@@ -2677,7 +2677,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={false}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+                    className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
                     defaultChecked={true}
                     disabled={false}
                     name="settingSelection"
@@ -2685,7 +2685,7 @@ exports[`Storyshots Form Demo form 1`] = `
                     value="yes"
                   />
                   <div
-                    className="sc-eHgmQL bXiJlv"
+                    className="sc-eHgmQL dPSvRC"
                     disabled={false}
                   />
                   <p
@@ -2709,14 +2709,14 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={false}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+                    className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
                     disabled={false}
                     name="settingSelection"
                     type="radio"
                     value="no"
                   />
                   <div
-                    className="sc-eHgmQL bXiJlv"
+                    className="sc-eHgmQL dPSvRC"
                     disabled={false}
                   />
                   <p
@@ -2740,18 +2740,18 @@ exports[`Storyshots Form Demo form 1`] = `
                   disabled={true}
                 >
                   <input
-                    className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+                    className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
                     disabled={true}
                     name="settingSelection"
                     type="radio"
                     value="maybe"
                   />
                   <div
-                    className="sc-eHgmQL cOzIpb"
+                    className="sc-eHgmQL dvPcUd"
                     disabled={true}
                   />
                   <p
-                    className="sc-dnqmqq fvIXnX"
+                    className="sc-dnqmqq cQIgmo"
                     color="currentColor"
                     disabled={true}
                     display="block"
@@ -2863,7 +2863,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Item
             </label>
             <input
-              className="sc-kAzzGY dDoyJw"
+              className="sc-kAzzGY csWKy"
               disabled={false}
               value="235432"
             />
@@ -2932,7 +2932,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Quantity
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -2952,7 +2952,7 @@ exports[`Storyshots Form Demo form 1`] = `
               >
                 <input
                   checked={false}
-                  className="sc-gPEVay itgjfG"
+                  className="sc-gPEVay dnTVgJ"
                   disabled={true}
                   id={null}
                   onChange={[Function]}
@@ -2961,12 +2961,12 @@ exports[`Storyshots Form Demo form 1`] = `
                   value="on"
                 />
                 <span
-                  className="sc-jAaTju kHOABg"
+                  className="sc-jAaTju csaZRr"
                   disabled={true}
                 />
               </label>
               <p
-                className="sc-dnqmqq kYegXv"
+                className="sc-dnqmqq deRbBI"
                 color="currentColor"
                 disabled={true}
                 display="block"
@@ -3018,7 +3018,7 @@ exports[`Storyshots Form Form 1`] = `
             Name
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -3055,7 +3055,7 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -3076,7 +3076,7 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -3131,7 +3131,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Name
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3168,7 +3168,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3189,7 +3189,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3213,7 +3213,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Gender
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3226,7 +3226,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Ocupation
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3275,7 +3275,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Name
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3312,7 +3312,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3333,7 +3333,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3350,7 +3350,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Gender
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3363,7 +3363,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Ocupation
             </label>
             <input
-              className="sc-kAzzGY fRKfAx"
+              className="sc-kAzzGY hsnMJt"
               disabled={false}
             />
           </div>
@@ -3407,7 +3407,7 @@ exports[`Storyshots Form Without title 1`] = `
             Name
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -3444,7 +3444,7 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -3465,7 +3465,7 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY fRKfAx"
+            className="sc-kAzzGY hsnMJt"
             disabled={false}
           />
         </div>
@@ -9815,7 +9815,7 @@ exports[`Storyshots Input Input 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY fRKfAx"
+        className="sc-kAzzGY hsnMJt"
         disabled={false}
       />
     </div>
@@ -9840,7 +9840,7 @@ exports[`Storyshots Input Set to disabled 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY gOPHcf"
+        className="sc-kAzzGY ilQRtm"
         disabled={true}
       />
     </div>
@@ -9865,7 +9865,7 @@ exports[`Storyshots Input Set to error 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY dDoyJw"
+        className="sc-kAzzGY csWKy"
         disabled={false}
       />
     </div>
@@ -10159,14 +10159,14 @@ exports[`Storyshots Radio Controlled 1`] = `
         >
           <input
             checked={true}
-            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+            className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
             disabled={false}
             onChange={[Function]}
             type="radio"
           />
           <div
             checked={true}
-            className="sc-eHgmQL bXiJlv"
+            className="sc-eHgmQL dPSvRC"
             disabled={false}
           />
           <p
@@ -10191,14 +10191,14 @@ exports[`Storyshots Radio Controlled 1`] = `
         >
           <input
             checked={false}
-            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+            className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
             disabled={false}
             onChange={[Function]}
             type="radio"
           />
           <div
             checked={false}
-            className="sc-eHgmQL bXiJlv"
+            className="sc-eHgmQL dPSvRC"
             disabled={false}
           />
           <p
@@ -10243,12 +10243,12 @@ exports[`Storyshots Radio Radio 1`] = `
           disabled={false}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+            className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
             disabled={false}
             type="radio"
           />
           <div
-            className="sc-eHgmQL bXiJlv"
+            className="sc-eHgmQL dPSvRC"
             disabled={false}
           />
           <p
@@ -10293,13 +10293,13 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
           disabled={false}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+            className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
             defaultChecked={true}
             disabled={false}
             type="radio"
           />
           <div
-            className="sc-eHgmQL bXiJlv"
+            className="sc-eHgmQL dPSvRC"
             disabled={false}
           />
           <p
@@ -10344,16 +10344,16 @@ exports[`Storyshots Radio Set to disabled 1`] = `
           disabled={true}
         >
           <input
-            className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+            className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
             disabled={true}
             type="radio"
           />
           <div
-            className="sc-eHgmQL cOzIpb"
+            className="sc-eHgmQL dvPcUd"
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq cQIgmo"
             color="currentColor"
             disabled={true}
             display="block"
@@ -10374,17 +10374,17 @@ exports[`Storyshots Radio Set to disabled 1`] = `
         >
           <input
             checked={true}
-            className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+            className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
             disabled={true}
             type="radio"
           />
           <div
             checked={true}
-            className="sc-eHgmQL cOzIpb"
+            className="sc-eHgmQL dvPcUd"
             disabled={true}
           />
           <p
-            className="sc-dnqmqq fvIXnX"
+            className="sc-dnqmqq cQIgmo"
             color="currentColor"
             disabled={true}
             display="block"
@@ -10429,7 +10429,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           >
             <input
               checked={true}
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -10438,7 +10438,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={true}
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10463,7 +10463,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           >
             <input
               checked={false}
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -10472,7 +10472,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={false}
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10497,7 +10497,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           >
             <input
               checked={false}
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               disabled={false}
               name="settingSelection"
               onChange={[Function]}
@@ -10506,7 +10506,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
             />
             <div
               checked={false}
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10555,7 +10555,7 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               defaultChecked={true}
               disabled={false}
               name="settingSelection"
@@ -10563,7 +10563,7 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
               value="a"
             />
             <div
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10587,14 +10587,14 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               disabled={false}
               name="settingSelection"
               type="radio"
               value="b"
             />
             <div
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10618,14 +10618,14 @@ exports[`Storyshots RadioGroup Radio Group 1`] = `
             disabled={false}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+              className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
               disabled={false}
               name="settingSelection"
               type="radio"
               value="c"
             />
             <div
-              className="sc-eHgmQL bXiJlv"
+              className="sc-eHgmQL dPSvRC"
               disabled={false}
             />
             <p
@@ -10690,7 +10690,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+                className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
                 defaultChecked={true}
                 disabled={false}
                 name="settingSelection"
@@ -10698,7 +10698,7 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
                 value="a"
               />
               <div
-                className="sc-eHgmQL bXiJlv"
+                className="sc-eHgmQL dPSvRC"
                 disabled={false}
               />
               <p
@@ -10722,14 +10722,14 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+                className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
                 value="b"
               />
               <div
-                className="sc-eHgmQL bXiJlv"
+                className="sc-eHgmQL dPSvRC"
                 disabled={false}
               />
               <p
@@ -10753,14 +10753,14 @@ exports[`Storyshots RadioGroup Radio Group Field 1`] = `
               disabled={false}
             >
               <input
-                className="sc-brqgnP efqfUv sc-jWBwVP eADyNO"
+                className="sc-brqgnP efqfUv sc-jWBwVP cHHhJV"
                 disabled={false}
                 name="settingSelection"
                 type="radio"
                 value="c"
               />
               <div
-                className="sc-eHgmQL bXiJlv"
+                className="sc-eHgmQL dPSvRC"
                 disabled={false}
               />
               <p
@@ -10810,7 +10810,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+              className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
               defaultChecked={true}
               disabled={true}
               name="settingSelection"
@@ -10818,11 +10818,11 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
               value="a"
             />
             <div
-              className="sc-eHgmQL cOzIpb"
+              className="sc-eHgmQL dvPcUd"
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq cQIgmo"
               color="currentColor"
               disabled={true}
               display="block"
@@ -10842,18 +10842,18 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+              className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
               disabled={true}
               name="settingSelection"
               type="radio"
               value="b"
             />
             <div
-              className="sc-eHgmQL cOzIpb"
+              className="sc-eHgmQL dvPcUd"
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq cQIgmo"
               color="currentColor"
               disabled={true}
               display="block"
@@ -10873,18 +10873,18 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             disabled={true}
           >
             <input
-              className="sc-brqgnP efqfUv sc-jWBwVP gFbHtQ"
+              className="sc-brqgnP efqfUv sc-jWBwVP gCfvhD"
               disabled={true}
               name="settingSelection"
               type="radio"
               value="c"
             />
             <div
-              className="sc-eHgmQL cOzIpb"
+              className="sc-eHgmQL dvPcUd"
               disabled={true}
             />
             <p
-              className="sc-dnqmqq fvIXnX"
+              className="sc-dnqmqq cQIgmo"
               color="currentColor"
               disabled={true}
               display="block"
@@ -11707,7 +11707,7 @@ exports[`Storyshots Select Set to required 1`] = `
     >
       <form>
         <input
-          className="sc-kAzzGY fRKfAx"
+          className="sc-kAzzGY hsnMJt"
           disabled={false}
           placeholder="Please select inventory status"
         />
@@ -11888,7 +11888,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH fjtguq"
       >
         <p
-          className="sc-dnqmqq fvIXnX"
+          className="sc-dnqmqq cQIgmo"
           color="currentColor"
           disabled={true}
           display="block"
@@ -11901,7 +11901,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH hCEeop"
       >
         <p
-          className="sc-dnqmqq bWNDRG"
+          className="sc-dnqmqq gKsyNu"
           color="white"
           disabled={true}
           display="block"
@@ -11914,7 +11914,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         className="sc-bwzfXH ehCRYJ"
       >
         <p
-          className="sc-dnqmqq bWNDRG"
+          className="sc-dnqmqq gKsyNu"
           color="white"
           disabled={true}
           display="block"
@@ -12351,7 +12351,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
         >
           <input
             checked={false}
-            className="sc-gPEVay itgjfG"
+            className="sc-gPEVay dnTVgJ"
             disabled={true}
             id={null}
             onChange={[Function]}
@@ -12360,12 +12360,12 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju kHOABg"
+            className="sc-jAaTju csaZRr"
             disabled={true}
           />
         </label>
         <p
-          className="sc-dnqmqq kYegXv"
+          className="sc-dnqmqq deRbBI"
           color="currentColor"
           disabled={true}
           display="block"
@@ -12382,7 +12382,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
         >
           <input
             checked={true}
-            className="sc-gPEVay itgjfG"
+            className="sc-gPEVay dnTVgJ"
             disabled={true}
             id={null}
             onChange={[Function]}
@@ -12391,12 +12391,12 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             value="on"
           />
           <span
-            className="sc-jAaTju kHOABg"
+            className="sc-jAaTju csaZRr"
             disabled={true}
           />
         </label>
         <p
-          className="sc-dnqmqq kYegXv"
+          className="sc-dnqmqq deRbBI"
           color="currentColor"
           disabled={true}
           display="block"
