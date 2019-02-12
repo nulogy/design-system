@@ -41,10 +41,10 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
     error,
     isFocused: false,
   }),
-  borderTopLeftRadius: theme.radii[1],
-  borderTopRightRadius: theme.radii[1],
-  borderBottomLeftRadius: isOpen ? 0 : theme.radii[1],
-  borderBottomRightRadius: isOpen ? 0 : theme.radii[1],
+  borderTopLeftRadius: theme.radii.medium,
+  borderTopRightRadius: theme.radii.medium,
+  borderBottomLeftRadius: isOpen ? 0 : theme.radii.medium,
+  borderBottomRightRadius: isOpen ? 0 : theme.radii.medium,
   boxShadow: isOpen ? theme.boxShadows[0] : "none",
   outline: "none",
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
@@ -94,7 +94,7 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
-  borderRadius: `0 ${theme.radii[1]}`,
+  borderRadius: `0 ${theme.radii.medium}`,
   marginTop: 0,
   boxShadow: theme.boxShadows[0],
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
@@ -110,7 +110,7 @@ const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
     background: theme.colors.lightBlue,
   },
   "&:last-child": {
-    borderRadius: `0 ${theme.radii[1]}`,
+    borderRadius: `0 ${theme.radii.medium}`,
   },
 }));
 
