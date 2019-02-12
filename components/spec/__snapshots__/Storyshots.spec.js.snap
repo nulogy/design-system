@@ -2357,7 +2357,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   aria-labelledby="downshift-0-label"
                   aria-required={false}
                   autoComplete="off"
-                  className="sc-gipzik hKWtDF"
+                  className="sc-gipzik gabRqU"
                   disabled={false}
                   id="downshift-0-input"
                   onBlur={[Function]}
@@ -2393,7 +2393,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </div>
               <div
                 aria-labelledby="downshift-0-label"
-                className="sc-Rmtcm bcNpsk"
+                className="sc-Rmtcm igDInd"
                 id="downshift-0-menu"
                 role="listbox"
               />
@@ -10950,7 +10950,7 @@ exports[`Storyshots Select Select 1`] = `
             aria-labelledby="downshift-1-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik hKWtDF"
+            className="sc-gipzik gabRqU"
             disabled={false}
             id="downshift-1-input"
             onBlur={[Function]}
@@ -10987,7 +10987,7 @@ exports[`Storyshots Select Select 1`] = `
         </div>
         <div
           aria-labelledby="downshift-1-label"
-          className="sc-Rmtcm bcNpsk"
+          className="sc-Rmtcm igDInd"
           id="downshift-1-menu"
           role="listbox"
         />
@@ -11045,7 +11045,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
             aria-labelledby="downshift-4-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik hKWtDF"
+            className="sc-gipzik gabRqU"
             disabled={false}
             id="downshift-4-input"
             onBlur={[Function]}
@@ -11081,7 +11081,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
         </div>
         <div
           aria-labelledby="downshift-4-label"
-          className="sc-Rmtcm bcNpsk"
+          className="sc-Rmtcm igDInd"
           id="downshift-4-menu"
           role="listbox"
         />
@@ -11139,7 +11139,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-labelledby="downshift-2-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik hKWtDF"
+            className="sc-gipzik gabRqU"
             disabled={false}
             id="downshift-2-input"
             onBlur={[Function]}
@@ -11176,7 +11176,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
         </div>
         <div
           aria-labelledby="downshift-2-label"
-          className="sc-Rmtcm bcNpsk"
+          className="sc-Rmtcm igDInd"
           id="downshift-2-menu"
           role="listbox"
         />
@@ -11214,7 +11214,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-labelledby="downshift-3-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik dCevnM"
+            className="sc-gipzik cOLIuq"
             disabled={false}
             id="downshift-3-input"
             onBlur={[Function]}
@@ -11251,13 +11251,13 @@ exports[`Storyshots Select Select with an option selected 1`] = `
         </div>
         <div
           aria-labelledby="downshift-3-label"
-          className="sc-Rmtcm cvwIcb"
+          className="sc-Rmtcm emCWIy"
           id="downshift-3-menu"
           role="listbox"
         >
           <div
             aria-selected={true}
-            className="sc-bRBYWo HpVAO"
+            className="sc-bRBYWo rHpzo"
             disabled={false}
             id="downshift-3-item-0"
             onClick={[Function]}
@@ -11269,7 +11269,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-1"
             onClick={[Function]}
@@ -11281,7 +11281,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-2"
             onClick={[Function]}
@@ -11293,7 +11293,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-3"
             onClick={[Function]}
@@ -11305,7 +11305,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-4"
             onClick={[Function]}
@@ -11317,7 +11317,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-5"
             onClick={[Function]}
@@ -11329,7 +11329,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-3-item-6"
             onClick={[Function]}
@@ -11390,7 +11390,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
             aria-labelledby="downshift-5-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik edEisu"
+            className="sc-gipzik giKeJU"
             disabled={true}
             id="downshift-5-input"
             placeholder="Please select inventory status"
@@ -11424,7 +11424,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
         </div>
         <div
           aria-labelledby="downshift-5-label"
-          className="sc-Rmtcm bcNpsk"
+          className="sc-Rmtcm igDInd"
           id="downshift-5-menu"
           role="listbox"
         />
@@ -11482,7 +11482,7 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-labelledby="downshift-6-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik cpguzD"
+            className="sc-gipzik bNePLj"
             disabled={false}
             id="downshift-6-input"
             onBlur={[Function]}
@@ -11519,7 +11519,7 @@ exports[`Storyshots Select Set to error 1`] = `
         </div>
         <div
           aria-labelledby="downshift-6-label"
-          className="sc-Rmtcm hvjdNm"
+          className="sc-Rmtcm cwFLvf"
           id="downshift-6-menu"
           role="listbox"
         />
@@ -11557,7 +11557,7 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-labelledby="downshift-7-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik ksJqSl"
+            className="sc-gipzik elIuoR"
             disabled={false}
             id="downshift-7-input"
             onBlur={[Function]}
@@ -11594,13 +11594,13 @@ exports[`Storyshots Select Set to error 1`] = `
         </div>
         <div
           aria-labelledby="downshift-7-label"
-          className="sc-Rmtcm bMoxoF"
+          className="sc-Rmtcm TNPOl"
           id="downshift-7-menu"
           role="listbox"
         >
           <div
             aria-selected={true}
-            className="sc-bRBYWo derKlA"
+            className="sc-bRBYWo jKMRML"
             disabled={false}
             id="downshift-7-item-0"
             onClick={[Function]}
@@ -11612,7 +11612,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-1"
             onClick={[Function]}
@@ -11624,7 +11624,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-2"
             onClick={[Function]}
@@ -11636,7 +11636,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-3"
             onClick={[Function]}
@@ -11648,7 +11648,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-4"
             onClick={[Function]}
@@ -11660,7 +11660,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-5"
             onClick={[Function]}
@@ -11672,7 +11672,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo ikiVKF"
+            className="sc-bRBYWo bjvCtw"
             disabled={false}
             id="downshift-7-item-6"
             onClick={[Function]}
@@ -11743,7 +11743,7 @@ exports[`Storyshots Select Set to required 1`] = `
               aria-labelledby="downshift-8-label"
               aria-required={true}
               autoComplete="off"
-              className="sc-gipzik hKWtDF"
+              className="sc-gipzik gabRqU"
               disabled={false}
               id="downshift-8-input"
               onBlur={[Function]}
@@ -11780,7 +11780,7 @@ exports[`Storyshots Select Set to required 1`] = `
           </div>
           <div
             aria-labelledby="downshift-8-label"
-            className="sc-Rmtcm bcNpsk"
+            className="sc-Rmtcm igDInd"
             id="downshift-8-menu"
             role="listbox"
           />
