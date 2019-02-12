@@ -87,7 +87,7 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   borderWidth: isOpen ? "1px" : "0",
   borderColor: getBorderColor({
     errored: error,
-    isOpen: true,
+    isOpen,
     disabled,
     isHovered: false,
   }),
