@@ -84,7 +84,7 @@ const Button = styled(BaseButton)`
     cursor: ${props => (props.disabled ? "arrow" : "pointer")};
     color: ${props => props.theme.colors.blue};
     border: 1px solid ${props => props.theme.colors.darkBlue};
-    border-radius: ${props => props.theme.radii[1]};
+    border-radius: ${props => props.theme.radii.medium};
 
     ${props => (props.fullWidth ? { width: "100%;" } : null)}
     ${size}

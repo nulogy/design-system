@@ -303,7 +303,7 @@ exports[`Storyshots Buttons As a link 1`] = `
       }
     >
       <a
-        className="sc-EHOje sc-bZQynM chlmYJ"
+        className="sc-EHOje sc-bZQynM dwppwg"
         href="/"
       >
         Create project
@@ -330,7 +330,7 @@ exports[`Storyshots Buttons Button 1`] = `
       }
     >
       <button
-        className="sc-EHOje eoyXkx"
+        className="sc-EHOje RwPMC"
         theme={
           Object {
             "borders": Array [],
@@ -384,10 +384,11 @@ exports[`Storyshots Buttons Button 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -425,7 +426,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-gzVnrw htXgkC"
+        className="sc-EHOje sc-gzVnrw iXYdHU"
         theme={
           Object {
             "borders": Array [],
@@ -479,10 +480,11 @@ exports[`Storyshots Buttons DangerButton 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -520,7 +522,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM chlmYJ"
+        className="sc-EHOje sc-bZQynM dwppwg"
         theme={
           Object {
             "borders": Array [],
@@ -574,10 +576,11 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -615,7 +618,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-htoDjs dhIkJJ"
+        className="sc-EHOje sc-htoDjs kMwJnL"
         theme={
           Object {
             "borders": Array [],
@@ -669,10 +672,11 @@ exports[`Storyshots Buttons QuietButton 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -710,7 +714,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM cGIeBD"
+        className="sc-EHOje sc-bZQynM kZhdQd"
         disabled={true}
         theme={
           Object {
@@ -765,10 +769,11 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -806,7 +811,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
       }
     >
       <button
-        className="sc-EHOje sc-bZQynM epDHnL"
+        className="sc-EHOje sc-bZQynM iLljvA"
         fullWidth={true}
         theme={
           Object {
@@ -861,10 +866,11 @@ exports[`Storyshots Buttons Set to full width 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -902,7 +908,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       }
     >
       <button
-        className="sc-EHOje eoyXkx"
+        className="sc-EHOje RwPMC"
         theme={
           Object {
             "borders": Array [],
@@ -956,10 +962,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -997,7 +1004,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje eoyXkx"
+        className="sc-EHOje RwPMC"
         theme={
           Object {
             "borders": Array [],
@@ -1051,10 +1058,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -1113,7 +1121,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
       }
     >
       <button
-        className="sc-EHOje ekJmCy"
+        className="sc-EHOje dPnJUJ"
         size="small"
         theme={
           Object {
@@ -1168,10 +1176,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -1188,7 +1197,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje eoyXkx"
+        className="sc-EHOje RwPMC"
         size="medium"
         theme={
           Object {
@@ -1243,10 +1252,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -1263,7 +1273,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
         Create project
       </button>
       <button
-        className="sc-EHOje aqYDZ"
+        className="sc-EHOje mBCtn"
         size="large"
         theme={
           Object {
@@ -1318,10 +1328,11 @@ exports[`Storyshots Buttons With a selected size 1`] = `
               "subsectionTitle": "1.2",
               "title": "1.04347826",
             },
-            "radii": Array [
-              "2px",
-              "4px",
-            ],
+            "radii": Object {
+              "circle": undefined,
+              "medium": undefined,
+              "small": undefined,
+            },
             "space": Array [
               "0px",
               "4px",
@@ -1664,7 +1675,7 @@ exports[`Storyshots Field With Input 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY czbVBA"
+          className="sc-kAzzGY fRKfAx"
           disabled={false}
         />
       </div>
@@ -1698,7 +1709,7 @@ exports[`Storyshots Field With Input and InlineValidation 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY czbVBA"
+          className="sc-kAzzGY fRKfAx"
           disabled={false}
         />
         <div
@@ -1771,7 +1782,7 @@ exports[`Storyshots Field With Label for Input 1`] = `
           Default label
         </label>
         <input
-          className="sc-kAzzGY czbVBA"
+          className="sc-kAzzGY fRKfAx"
           disabled={false}
           id="thisInput"
         />
@@ -1923,7 +1934,7 @@ exports[`Storyshots Field With all additional components 1`] = `
           </p>
         </label>
         <input
-          className="sc-kAzzGY czbVBA"
+          className="sc-kAzzGY fRKfAx"
           disabled={false}
           id="thisInput1"
         />
@@ -2272,7 +2283,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Project
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
               placeholder="Project 128703"
             />
@@ -2302,7 +2313,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -2346,7 +2357,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   aria-labelledby="downshift-0-label"
                   aria-required={false}
                   autoComplete="off"
-                  className="sc-gipzik gabRqU"
+                  className="sc-gipzik hKWtDF"
                   disabled={false}
                   id="downshift-0-input"
                   onBlur={[Function]}
@@ -2382,7 +2393,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </div>
               <div
                 aria-labelledby="downshift-0-label"
-                className="sc-Rmtcm kBXrmu"
+                className="sc-Rmtcm eieblG"
                 id="downshift-0-menu"
                 role="listbox"
               />
@@ -2397,7 +2408,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Item code
             </label>
             <input
-              className="sc-kAzzGY cyxhvs"
+              className="sc-kAzzGY dDoyJw"
               disabled={false}
               value="WS2SB6"
             />
@@ -2449,7 +2460,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Eaches expected on Job
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
               placeholder="2 000"
             />
@@ -2463,7 +2474,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Eaches remaining on Project
             </label>
             <input
-              className="sc-kAzzGY hNnQgG"
+              className="sc-kAzzGY gOPHcf"
               disabled={true}
               value="18 000"
             />
@@ -2485,7 +2496,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
               placeholder="May 26, 2019"
             />
@@ -2507,7 +2518,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY hNnQgG"
+              className="sc-kAzzGY gOPHcf"
               disabled={true}
               value="June 29, 2019"
             />
@@ -2852,7 +2863,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Item
             </label>
             <input
-              className="sc-kAzzGY cyxhvs"
+              className="sc-kAzzGY dDoyJw"
               disabled={false}
               value="235432"
             />
@@ -2921,7 +2932,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Quantity
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3007,7 +3018,7 @@ exports[`Storyshots Form Form 1`] = `
             Name
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -3044,7 +3055,7 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -3065,7 +3076,7 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -3120,7 +3131,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Name
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3157,7 +3168,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3178,7 +3189,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3202,7 +3213,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Gender
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3215,7 +3226,7 @@ exports[`Storyshots Form With form sections 1`] = `
               Ocupation
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3264,7 +3275,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Name
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3301,7 +3312,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3322,7 +3333,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3339,7 +3350,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Gender
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3352,7 +3363,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               Ocupation
             </label>
             <input
-              className="sc-kAzzGY czbVBA"
+              className="sc-kAzzGY fRKfAx"
               disabled={false}
             />
           </div>
@@ -3396,7 +3407,7 @@ exports[`Storyshots Form Without title 1`] = `
             Name
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -3433,7 +3444,7 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -3454,7 +3465,7 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </label>
           <input
-            className="sc-kAzzGY czbVBA"
+            className="sc-kAzzGY fRKfAx"
             disabled={false}
           />
         </div>
@@ -9454,7 +9465,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI dpRAek"
+        className="sc-iwsKbI cFQWft"
         disabled={true}
         label="Cancel"
       >
@@ -9489,7 +9500,7 @@ exports[`Storyshots IconicButton Disabled 1`] = `
         </p>
       </button>
       <button
-        className="sc-iwsKbI dpRAek"
+        className="sc-iwsKbI cFQWft"
         disabled={true}
         label="Lock"
       >
@@ -9545,7 +9556,7 @@ exports[`Storyshots IconicButton With a long label 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI defWWS"
+        className="sc-iwsKbI hlNESL"
         disabled={false}
         label="I am an Iconic Button with a really really really long label"
       >
@@ -9601,7 +9612,7 @@ exports[`Storyshots IconicButton With label 1`] = `
       }
     >
       <button
-        className="sc-iwsKbI defWWS"
+        className="sc-iwsKbI hlNESL"
         disabled={false}
         label="Delete"
       >
@@ -9804,7 +9815,7 @@ exports[`Storyshots Input Input 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY czbVBA"
+        className="sc-kAzzGY fRKfAx"
         disabled={false}
       />
     </div>
@@ -9829,7 +9840,7 @@ exports[`Storyshots Input Set to disabled 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY hNnQgG"
+        className="sc-kAzzGY gOPHcf"
         disabled={true}
       />
     </div>
@@ -9854,7 +9865,7 @@ exports[`Storyshots Input Set to error 1`] = `
       }
     >
       <input
-        className="sc-kAzzGY cyxhvs"
+        className="sc-kAzzGY dDoyJw"
         disabled={false}
       />
     </div>
@@ -10939,7 +10950,7 @@ exports[`Storyshots Select Select 1`] = `
             aria-labelledby="downshift-1-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik gabRqU"
+            className="sc-gipzik hKWtDF"
             disabled={false}
             id="downshift-1-input"
             onBlur={[Function]}
@@ -10976,7 +10987,7 @@ exports[`Storyshots Select Select 1`] = `
         </div>
         <div
           aria-labelledby="downshift-1-label"
-          className="sc-Rmtcm kBXrmu"
+          className="sc-Rmtcm eieblG"
           id="downshift-1-menu"
           role="listbox"
         />
@@ -11034,7 +11045,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
             aria-labelledby="downshift-4-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik gabRqU"
+            className="sc-gipzik hKWtDF"
             disabled={false}
             id="downshift-4-input"
             onBlur={[Function]}
@@ -11070,7 +11081,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
         </div>
         <div
           aria-labelledby="downshift-4-label"
-          className="sc-Rmtcm kBXrmu"
+          className="sc-Rmtcm eieblG"
           id="downshift-4-menu"
           role="listbox"
         />
@@ -11128,7 +11139,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-labelledby="downshift-2-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik gabRqU"
+            className="sc-gipzik hKWtDF"
             disabled={false}
             id="downshift-2-input"
             onBlur={[Function]}
@@ -11165,7 +11176,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
         </div>
         <div
           aria-labelledby="downshift-2-label"
-          className="sc-Rmtcm kBXrmu"
+          className="sc-Rmtcm eieblG"
           id="downshift-2-menu"
           role="listbox"
         />
@@ -11203,7 +11214,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-labelledby="downshift-3-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik eaNgRH"
+            className="sc-gipzik PiYSf"
             disabled={false}
             id="downshift-3-input"
             onBlur={[Function]}
@@ -11240,13 +11251,13 @@ exports[`Storyshots Select Select with an option selected 1`] = `
         </div>
         <div
           aria-labelledby="downshift-3-label"
-          className="sc-Rmtcm kcXzTL"
+          className="sc-Rmtcm Vgxqk"
           id="downshift-3-menu"
           role="listbox"
         >
           <div
             aria-selected={true}
-            className="sc-bRBYWo rHpzo"
+            className="sc-bRBYWo HpVAO"
             disabled={false}
             id="downshift-3-item-0"
             onClick={[Function]}
@@ -11258,7 +11269,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-1"
             onClick={[Function]}
@@ -11270,7 +11281,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-2"
             onClick={[Function]}
@@ -11282,7 +11293,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-3"
             onClick={[Function]}
@@ -11294,7 +11305,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-4"
             onClick={[Function]}
@@ -11306,7 +11317,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-5"
             onClick={[Function]}
@@ -11318,7 +11329,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-3-item-6"
             onClick={[Function]}
@@ -11379,7 +11390,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
             aria-labelledby="downshift-5-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik giKeJU"
+            className="sc-gipzik edEisu"
             disabled={true}
             id="downshift-5-input"
             placeholder="Please select inventory status"
@@ -11413,7 +11424,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
         </div>
         <div
           aria-labelledby="downshift-5-label"
-          className="sc-Rmtcm kBXrmu"
+          className="sc-Rmtcm eieblG"
           id="downshift-5-menu"
           role="listbox"
         />
@@ -11471,7 +11482,7 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-labelledby="downshift-6-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik bNePLj"
+            className="sc-gipzik cpguzD"
             disabled={false}
             id="downshift-6-input"
             onBlur={[Function]}
@@ -11508,7 +11519,7 @@ exports[`Storyshots Select Set to error 1`] = `
         </div>
         <div
           aria-labelledby="downshift-6-label"
-          className="sc-Rmtcm kEcgha"
+          className="sc-Rmtcm eCcfNj"
           id="downshift-6-menu"
           role="listbox"
         />
@@ -11546,7 +11557,7 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-labelledby="downshift-7-label"
             aria-required={false}
             autoComplete="off"
-            className="sc-gipzik hJMfDA"
+            className="sc-gipzik fprtOE"
             disabled={false}
             id="downshift-7-input"
             onBlur={[Function]}
@@ -11583,13 +11594,13 @@ exports[`Storyshots Select Set to error 1`] = `
         </div>
         <div
           aria-labelledby="downshift-7-label"
-          className="sc-Rmtcm hFfPWb"
+          className="sc-Rmtcm fqdRYm"
           id="downshift-7-menu"
           role="listbox"
         >
           <div
             aria-selected={true}
-            className="sc-bRBYWo jKMRML"
+            className="sc-bRBYWo derKlA"
             disabled={false}
             id="downshift-7-item-0"
             onClick={[Function]}
@@ -11601,7 +11612,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-1"
             onClick={[Function]}
@@ -11613,7 +11624,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-2"
             onClick={[Function]}
@@ -11625,7 +11636,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-3"
             onClick={[Function]}
@@ -11637,7 +11648,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-4"
             onClick={[Function]}
@@ -11649,7 +11660,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-5"
             onClick={[Function]}
@@ -11661,7 +11672,7 @@ exports[`Storyshots Select Set to error 1`] = `
           </div>
           <div
             aria-selected={false}
-            className="sc-bRBYWo bjvCtw"
+            className="sc-bRBYWo ikiVKF"
             disabled={false}
             id="downshift-7-item-6"
             onClick={[Function]}
@@ -11696,7 +11707,7 @@ exports[`Storyshots Select Set to required 1`] = `
     >
       <form>
         <input
-          className="sc-kAzzGY czbVBA"
+          className="sc-kAzzGY fRKfAx"
           disabled={false}
           placeholder="Please select inventory status"
         />
@@ -11732,7 +11743,7 @@ exports[`Storyshots Select Set to required 1`] = `
               aria-labelledby="downshift-8-label"
               aria-required={true}
               autoComplete="off"
-              className="sc-gipzik gabRqU"
+              className="sc-gipzik hKWtDF"
               disabled={false}
               id="downshift-8-input"
               onBlur={[Function]}
@@ -11769,13 +11780,13 @@ exports[`Storyshots Select Set to required 1`] = `
           </div>
           <div
             aria-labelledby="downshift-8-label"
-            className="sc-Rmtcm kBXrmu"
+            className="sc-Rmtcm eieblG"
             id="downshift-8-menu"
             role="listbox"
           />
         </div>
         <button
-          className="sc-EHOje sc-bZQynM bCYZGf"
+          className="sc-EHOje sc-bZQynM ffRexP"
           mt={2}
           theme={
             Object {
@@ -11830,10 +11841,11 @@ exports[`Storyshots Select Set to required 1`] = `
                 "subsectionTitle": "1.2",
                 "title": "1.04347826",
               },
-              "radii": Array [
-                "2px",
-                "4px",
-              ],
+              "radii": Object {
+                "circle": undefined,
+                "medium": undefined,
+                "small": undefined,
+              },
               "space": Array [
                 "0px",
                 "4px",
