@@ -7,7 +7,7 @@ import theme from "../theme";
 import { subPx } from "../utils";
 
 const getBorderColor = ({
-  errored, disabled, isOpen,
+  error, disabled, isOpen,
   isFocused,
 }) => {
   const {
@@ -15,7 +15,7 @@ const getBorderColor = ({
     grey,
   } = theme.colors;
 
-  if (errored) { return red; }
+  if (error) { return red; }
   if (disabled) { return lightGrey; }
   if (isOpen || isFocused) { return blue; }
 
@@ -38,7 +38,7 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   borderColor: getBorderColor({
     isOpen,
     disabled,
-    errored: error,
+    error,
     isFocused: false,
   }),
   borderTopLeftRadius: theme.radii[1],
@@ -51,7 +51,7 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   "&:hover, &:focus": {
     cursor: "default",
     borderColor: getBorderColor({
-      errored: error,
+      error,
       isOpen,
       disabled,
       isFocused: true,
@@ -86,7 +86,7 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   width: "100%",
   borderWidth: isOpen ? "1px" : "0",
   borderColor: getBorderColor({
-    errored: error,
+    error,
     isOpen,
     disabled,
     isHovered: false,
