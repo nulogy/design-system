@@ -5,9 +5,13 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Text = styled.p.attrs(props => ({
-  as: `${props.inline ? "span" : "p"}`,
-}))([], props => ({
+const getAttrs = inline => (
+  inline
+  ? ({as: "span"})
+  : null
+)
+
+const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
   ...space(props),
   ...fontSize(props),
   ...fontWeight(props),
