@@ -2331,6 +2331,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 aria-label="open menu"
                 className="sc-jlyJG gxORVP"
                 data-toggle={true}
+                disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
@@ -2346,12 +2347,13 @@ exports[`Storyshots Form Demo form 1`] = `
                   aria-required={false}
                   autoComplete="off"
                   className="sc-gipzik gabRqU"
+                  disabled={false}
                   id="downshift-0-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onKeyDown={[Function]}
                   readOnly={true}
-                  value={null}
+                  value=""
                 />
                 <div
                   className="sc-csuQGl iSGjeu"
@@ -2362,7 +2364,7 @@ exports[`Storyshots Form Demo form 1`] = `
                     color="currentColor"
                     fill="currentColor"
                     height="24px"
-                    icon="upArrow"
+                    icon="downArrow"
                     size="24px"
                     title={null}
                     viewBox="0 0 24 24"
@@ -2371,13 +2373,19 @@ exports[`Storyshots Form Demo form 1`] = `
                     <path
                       d={
                         Array [
-                          "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                          "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                         ]
                       }
                     />
                   </svg>
                 </div>
               </div>
+              <div
+                aria-labelledby="downshift-0-label"
+                className="sc-Rmtcm bjmwoA"
+                id="downshift-0-menu"
+                role="listbox"
+              />
             </div>
           </div>
           <div
@@ -10916,6 +10924,7 @@ exports[`Storyshots Select Select 1`] = `
           aria-label="open menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -10931,13 +10940,14 @@ exports[`Storyshots Select Select 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik gabRqU"
+            disabled={false}
             id="downshift-1-input"
             onBlur={[Function]}
             onChange={[Function]}
             onKeyDown={[Function]}
             placeholder="Please select inventory status"
             readOnly={true}
-            value={null}
+            value=""
           />
           <div
             className="sc-csuQGl iSGjeu"
@@ -10948,7 +10958,7 @@ exports[`Storyshots Select Select 1`] = `
               color="currentColor"
               fill="currentColor"
               height="24px"
-              icon="upArrow"
+              icon="downArrow"
               size="24px"
               title={null}
               viewBox="0 0 24 24"
@@ -10957,13 +10967,19 @@ exports[`Storyshots Select Select 1`] = `
               <path
                 d={
                   Array [
-                    "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                    "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                   ]
                 }
               />
             </svg>
           </div>
         </div>
+        <div
+          aria-labelledby="downshift-1-label"
+          className="sc-Rmtcm bjmwoA"
+          id="downshift-1-menu"
+          role="listbox"
+        />
       </div>
     </div>
   </div>
@@ -11003,6 +11019,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
           aria-label="open menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -11018,6 +11035,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik gabRqU"
+            disabled={false}
             id="downshift-4-input"
             onBlur={[Function]}
             onChange={[Function]}
@@ -11034,7 +11052,7 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
               color="currentColor"
               fill="currentColor"
               height="24px"
-              icon="upArrow"
+              icon="downArrow"
               size="24px"
               title={null}
               viewBox="0 0 24 24"
@@ -11043,13 +11061,19 @@ exports[`Storyshots Select Select as a controlled component 1`] = `
               <path
                 d={
                   Array [
-                    "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                    "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                   ]
                 }
               />
             </svg>
           </div>
         </div>
+        <div
+          aria-labelledby="downshift-4-label"
+          className="sc-Rmtcm bjmwoA"
+          id="downshift-4-menu"
+          role="listbox"
+        />
       </div>
     </div>
   </div>
@@ -11089,6 +11113,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           aria-label="open menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -11104,6 +11129,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik gabRqU"
+            disabled={false}
             id="downshift-2-input"
             onBlur={[Function]}
             onChange={[Function]}
@@ -11121,7 +11147,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
               color="currentColor"
               fill="currentColor"
               height="24px"
-              icon="upArrow"
+              icon="downArrow"
               size="24px"
               title={null}
               viewBox="0 0 24 24"
@@ -11130,13 +11156,19 @@ exports[`Storyshots Select Select with an option selected 1`] = `
               <path
                 d={
                   Array [
-                    "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                    "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                   ]
                 }
               />
             </svg>
           </div>
         </div>
+        <div
+          aria-labelledby="downshift-2-label"
+          className="sc-Rmtcm bjmwoA"
+          id="downshift-2-menu"
+          role="listbox"
+        />
       </div>
       <br />
       <div
@@ -11156,6 +11188,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           aria-label="close menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -11171,6 +11204,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik eaNgRH"
+            disabled={false}
             id="downshift-3-input"
             onBlur={[Function]}
             onChange={[Function]}
@@ -11213,6 +11247,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={true}
             className="sc-bRBYWo rHpzo"
+            disabled={false}
             id="downshift-3-item-0"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11224,6 +11259,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-1"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11235,6 +11271,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-2"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11246,6 +11283,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-3"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11257,6 +11295,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-4"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11268,6 +11307,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-5"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11279,6 +11319,7 @@ exports[`Storyshots Select Select with an option selected 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-3-item-6"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11343,7 +11384,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
             id="downshift-5-input"
             placeholder="Please select inventory status"
             readOnly={true}
-            value={null}
+            value=""
           />
           <div
             className="sc-csuQGl iSGjeu"
@@ -11354,7 +11395,7 @@ exports[`Storyshots Select Set to disabled 1`] = `
               color="currentColor"
               fill="currentColor"
               height="24px"
-              icon="upArrow"
+              icon="downArrow"
               size="24px"
               title={null}
               viewBox="0 0 24 24"
@@ -11363,13 +11404,19 @@ exports[`Storyshots Select Set to disabled 1`] = `
               <path
                 d={
                   Array [
-                    "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                    "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                   ]
                 }
               />
             </svg>
           </div>
         </div>
+        <div
+          aria-labelledby="downshift-5-label"
+          className="sc-Rmtcm bjmwoA"
+          id="downshift-5-menu"
+          role="listbox"
+        />
       </div>
     </div>
   </div>
@@ -11409,6 +11456,7 @@ exports[`Storyshots Select Set to error 1`] = `
           aria-label="open menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -11424,13 +11472,14 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik bNePLj"
+            disabled={false}
             id="downshift-6-input"
             onBlur={[Function]}
             onChange={[Function]}
             onKeyDown={[Function]}
             placeholder="Please select inventory status"
             readOnly={true}
-            value={null}
+            value=""
           />
           <div
             className="sc-csuQGl iSGjeu"
@@ -11441,7 +11490,7 @@ exports[`Storyshots Select Set to error 1`] = `
               color="currentColor"
               fill="currentColor"
               height="24px"
-              icon="upArrow"
+              icon="downArrow"
               size="24px"
               title={null}
               viewBox="0 0 24 24"
@@ -11450,13 +11499,19 @@ exports[`Storyshots Select Set to error 1`] = `
               <path
                 d={
                   Array [
-                    "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                    "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                   ]
                 }
               />
             </svg>
           </div>
         </div>
+        <div
+          aria-labelledby="downshift-6-label"
+          className="sc-Rmtcm kEcgha"
+          id="downshift-6-menu"
+          role="listbox"
+        />
       </div>
       <br />
       <div
@@ -11476,6 +11531,7 @@ exports[`Storyshots Select Set to error 1`] = `
           aria-label="close menu"
           className="sc-jlyJG gxORVP"
           data-toggle={true}
+          disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
@@ -11491,13 +11547,14 @@ exports[`Storyshots Select Set to error 1`] = `
             aria-required={false}
             autoComplete="off"
             className="sc-gipzik hJMfDA"
+            disabled={false}
             id="downshift-7-input"
             onBlur={[Function]}
             onChange={[Function]}
             onKeyDown={[Function]}
             placeholder="Please select inventory status"
             readOnly={true}
-            value={null}
+            value=""
           />
           <div
             className="sc-csuQGl iSGjeu"
@@ -11533,6 +11590,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={true}
             className="sc-bRBYWo jKMRML"
+            disabled={false}
             id="downshift-7-item-0"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11544,6 +11602,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-1"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11555,6 +11614,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-2"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11566,6 +11626,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-3"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11577,6 +11638,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-4"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11588,6 +11650,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-5"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11599,6 +11662,7 @@ exports[`Storyshots Select Set to error 1`] = `
           <div
             aria-selected={false}
             className="sc-bRBYWo bjvCtw"
+            disabled={false}
             id="downshift-7-item-6"
             onClick={[Function]}
             onMouseDown={[Function]}
@@ -11653,6 +11717,7 @@ exports[`Storyshots Select Set to required 1`] = `
             aria-label="open menu"
             className="sc-jlyJG gxORVP"
             data-toggle={true}
+            disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -11668,13 +11733,14 @@ exports[`Storyshots Select Set to required 1`] = `
               aria-required={true}
               autoComplete="off"
               className="sc-gipzik gabRqU"
+              disabled={false}
               id="downshift-8-input"
               onBlur={[Function]}
               onChange={[Function]}
               onKeyDown={[Function]}
               placeholder="Please select inventory status"
               readOnly={true}
-              value={null}
+              value=""
             />
             <div
               className="sc-csuQGl iSGjeu"
@@ -11685,7 +11751,7 @@ exports[`Storyshots Select Set to required 1`] = `
                 color="currentColor"
                 fill="currentColor"
                 height="24px"
-                icon="upArrow"
+                icon="downArrow"
                 size="24px"
                 title={null}
                 viewBox="0 0 24 24"
@@ -11694,13 +11760,19 @@ exports[`Storyshots Select Set to required 1`] = `
                 <path
                   d={
                     Array [
-                      "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z",
+                      "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z",
                     ]
                   }
                 />
               </svg>
             </div>
           </div>
+          <div
+            aria-labelledby="downshift-8-label"
+            className="sc-Rmtcm bjmwoA"
+            id="downshift-8-menu"
+            role="listbox"
+          />
         </div>
         <button
           className="sc-EHOje sc-bZQynM bCYZGf"
