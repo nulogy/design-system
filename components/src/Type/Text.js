@@ -31,7 +31,6 @@ Text.defaultProps = {
   m: 0,
   fontSize: 1,
   lineHeight: theme.lineHeights.base,
-  mb: 4,
   color: "currentColor",
   display: "block",
 };
