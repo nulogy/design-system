@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 import Text from "../Type/Text";
 
 const FormatText = props => (
-  <Text
-    mb={ 0 }
-    fontSize="12px"
-    lineHeight="16px"
-    color="darkGrey"
+  <Text fontSize="12px" lineHeight="16px" color="darkGrey"
     { ...props }
   />
 );

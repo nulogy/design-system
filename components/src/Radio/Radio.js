@@ -73,7 +73,7 @@ const BaseRadio = props => {
       <RadioWrapper disabled={ disabled }>
         <RadioInput type="radio" { ...props } />
         <VisualRadio disabled={ disabled } checked={ checked } />
-        <Text mb={ 0 } disabled={ disabled }> {labelText} </Text>
+        <Text disabled={ disabled }> {labelText} </Text>
       </RadioWrapper>
     </Box>
   );

@@ -58,7 +58,7 @@ const IconicButton = props => {
   return (
     <Wrapper label={ children } { ...props }>
       <Icon size={ theme.space[5] } icon={ icon } p={ 1 } />
-      <Text mr={ 1 } mb={ 0 } ml={ 1 }>{ children }</Text>
+      <Text mr={ 1 } ml={ 1 }>{ children }</Text>
     </Wrapper>
   );
 };

@@ -19,7 +19,7 @@ export default () => (
                     <Button>Create project</Button>
                 </Flex>
                 <Box width={4/6}>
-                    <Text mb={0}><Text display='inline-block' fontWeight={2} mb={0}>Buttons</Text> are used for actions that do not require any special emphasis and cover most cases.</Text>
+                    <Text><Text display='inline-block' fontWeight={2} >Buttons</Text> are used for actions that do not require any special emphasis and cover most cases.</Text>
                 </Box>
             </Flex>
             <Flex mb={4}>
@@ -27,7 +27,7 @@ export default () => (
                     <PrimaryButton>Edit project</PrimaryButton>
                 </Flex>
                 <Box width={4/6}>
-                    <Text mb={0}><Text display='inline-block' fontWeight={2} mb={0}>Primary Buttons</Text> are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
+                    <Text><Text display='inline-block' fontWeight={2}>Primary Buttons</Text> are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
                 </Box>
             </Flex>
             <Flex mb={4}>
@@ -35,7 +35,7 @@ export default () => (
                     <DangerButton>Delete project</DangerButton>
                 </Flex>
                 <Box width={4/6}>
-                    <Text mb={0}><Text display='inline-block' fontWeight={2} mb={0}>Danger Buttons</Text> are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
+                    <Text><Text display='inline-block' fontWeight={2}>Danger Buttons</Text> are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
                 </Box>
             </Flex>
             <Flex mb={4}>
@@ -43,7 +43,7 @@ export default () => (
                     <QuietButton>Learn more</QuietButton>
                 </Flex>
                 <Box width={4/6}>
-                    <Text mb={0}><Text display='inline-block' fontWeight={2} mb={0}>Quiet Buttons</Text> are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
+                    <Text><Text display='inline-block' fontWeight={2} >Quiet Buttons</Text> are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
                 </Box>
             </Flex>
             <Flex mb={4}>
@@ -51,7 +51,7 @@ export default () => (
                 <IconicButton mb={5} icon='add' labelVisibility='hover'>Add project</IconicButton>
               </Flex>
               <Box width={4/6}>
-                <Text mb={0}><Text display='inline-block' fontWeight={2} mb={0}>Iconic Buttons</Text> are used for universally understood actions that can effectively be represented using icon.</Text>
+                <Text><Text display='inline-block' fontWeight={2} >Iconic Buttons</Text> are used for universally understood actions that can effectively be represented using icon.</Text>
               </Box>
             </Flex>
         </DocSection>
