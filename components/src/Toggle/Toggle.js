@@ -6,57 +6,59 @@ import theme from "../theme";
 import Flex from "../Flex/Flex";
 import { omit } from "../utils";
 
-const getOutlineColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
-const getFillColour = disabled => (disabled ? theme.colors.whiteGrey : theme.colors.white);
-
 const Slider = styled.span([], ({ toggled, disabled }) => ({
   position: "absolute",
-  cursor: (disabled ? null : "pointer"),
-  top: "0",
-  left: "0",
+  height: theme.space[4],
+  width: theme.space[6],
+  top: theme.space[2],
   right: "0",
   bottom: "0",
-  border: "4px solid",
-  borderColor: getOutlineColour(disabled),
-  backgroundColor: (toggled ? getOutlineColour(disabled) : getFillColour(disabled)),
-  borderRadius: "20px",
+  left: "0",
+  backgroundColor: (disabled ? theme.colors.lightGrey : theme.colors.lightGrey),
+  borderRadius: "12px",
   transition: ".2s ease",
+  cursor: (disabled ? null : "pointer"),
   "&:before": {
-    position: "absolute",
     content: "''",
-    height: "24px",
-    width: "24px",
-    left: "4px",
-    bottom: "4px",
-    borderRadius: "20px",
-    boxSizing: "content",
-    backgroundColor: getOutlineColour(disabled),
+    position: "absolute",
+    height: theme.space[4],
+    width: theme.space[4],
+    left: "0px",
+    top: "0px",
+    borderRadius: "50%",
+    boxSizing: "border-box",
+    border: "solid 1px",
+    borderColor: (disabled ? theme.colors.lightGrey : theme.colors.grey),
+    backgroundColor: (disabled ? theme.colors.whiteGrey : theme.colors.white),
     transition: ".2s ease",
   },
 }));
 
-const Switch = styled.label([], {
+const Switch = styled.label([], ({ disabled }) => ({
   position: "relative",
-  display: "inline-block",
-  width: "64px",
+  display: "inline-flex",
+  width: theme.space[6],
   height: "40px",
+  //cursor: (disabled ? null : "pointer"),
   "input": {
     opacity: "0",
     width: "1px",
     height: "1px",
   },
-});
+}));
 
 const ToggleInput = styled.input([], ({ disabled }) => ({
   [`&:checked + ${Slider}:before`]: {
     transform: "translateX(24px)",
-    backgroundColor: theme.colors.white,
+    backgroundColor: (disabled ? theme.colors.lightGrey : theme.colors.darkBlue),
+    borderColor: (disabled ? theme.colors.whiteGrey : theme.colors.darkBlue),
+    boxShadow: (disabled ? null : `0 0 6px ${theme.colors.blue}`),
   },
   [`&:checked + ${Slider}`]: {
-    backgroundColor: getOutlineColour(disabled),
+    backgroundColor: (disabled ? theme.colors.whiteGrey : theme.colors.lightBlue),
   },
   [`&:focus + ${Slider}`]: {
-    boxShadow: `0 0 6px ${theme.colors.blue}`,
+
   },
 }));
 
@@ -125,7 +127,7 @@ class BaseToggle extends React.Component {
           { ...props }
         />
         {(onText || offText) && (
-        <Text disabled={ disabled } ml={ 2 }>
+        <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
             {toggled ? onText : offText}
         </Text>
         )}
