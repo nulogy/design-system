@@ -15912,7 +15912,7 @@ styled-icons@^6.2.0:
     "@babel/runtime" "^7.3.0"
     "@emotion/is-prop-valid" "^0.7.3"
 
-styled-system@^3.2.1:
+styled-system@3.2.1, styled-system@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
   integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
