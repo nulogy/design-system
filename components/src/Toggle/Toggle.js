@@ -10,7 +10,7 @@ const Slider = styled.span([], ({ toggled, disabled }) => ({
   position: "absolute",
   height: theme.space[4],
   width: theme.space[6],
-  top: theme.space[2],
+  top: "0",
   right: "0",
   bottom: "0",
   left: "0",
@@ -34,12 +34,11 @@ const Slider = styled.span([], ({ toggled, disabled }) => ({
   },
 }));
 
-const Switch = styled.label([], ({ disabled }) => ({
+const Switch = styled.label([], () => ({
   position: "relative",
   display: "inline-flex",
   width: theme.space[6],
-  height: "40px",
-  //cursor: (disabled ? null : "pointer"),
+  height: "24px",
   "input": {
     opacity: "0",
     width: "1px",
@@ -160,6 +159,10 @@ BaseToggle.defaultProps = {
   className: null,
 };
 
-const Toggle = styled(BaseToggle)([]);
+const Toggle = styled(BaseToggle)([], () => (
+  {
+    padding: "8px 0",
+  }
+));
 
 export default Toggle;
