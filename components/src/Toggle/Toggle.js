@@ -6,7 +6,8 @@ import theme from "../theme";
 import Flex from "../Flex/Flex";
 import { omit } from "../utils";
 
-const getFill = disabled => (disabled ? theme.colors.grey : theme.colors.darkBlue);
+const getOutlineColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
+const getFillColour = disabled => (disabled ? theme.colors.whiteGrey : theme.colors.white);
 
 const Slider = styled.span([], ({ toggled, disabled }) => ({
   position: "absolute",
@@ -16,8 +17,8 @@ const Slider = styled.span([], ({ toggled, disabled }) => ({
   right: "0",
   bottom: "0",
   border: "4px solid",
-  borderColor: getFill(disabled),
-  backgroundColor: (toggled ? getFill(disabled) : theme.colors.white),
+  borderColor: getOutlineColour(disabled),
+  backgroundColor: (toggled ? getOutlineColour(disabled) : getFillColour(disabled)),
   borderRadius: "20px",
   transition: ".2s ease",
   "&:before": {
@@ -29,7 +30,7 @@ const Slider = styled.span([], ({ toggled, disabled }) => ({
     bottom: "4px",
     borderRadius: "20px",
     boxSizing: "content",
-    backgroundColor: getFill(disabled),
+    backgroundColor: getOutlineColour(disabled),
     transition: ".2s ease",
   },
 }));
@@ -52,7 +53,7 @@ const ToggleInput = styled.input([], ({ disabled }) => ({
     backgroundColor: theme.colors.white,
   },
   [`&:checked + ${Slider}`]: {
-    backgroundColor: getFill(disabled),
+    backgroundColor: getOutlineColour(disabled),
   },
   [`&:focus + ${Slider}`]: {
     boxShadow: `0 0 6px ${theme.colors.blue}`,

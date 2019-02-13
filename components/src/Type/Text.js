@@ -19,7 +19,7 @@ const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
   ...color(props),
   ...fontFamily(props),
   ...textAlign(props),
-  opacity: (props.disabled ? "0.5" : null),
+  opacity: (props.disabled ? "0.3333" : null),
 }));
 
 Text.propTypes = {
