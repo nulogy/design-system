@@ -31,6 +31,7 @@ const BaseField = ({
   labelText,
   requirementText,
   helpText,
+  htmlFor,
   formatText,
   children,
   m, mt, mr, mb, ml, mx, my,
@@ -42,7 +43,7 @@ const BaseField = ({
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Label style={ { display: "block" } } mb={ 2 }>
+    <Label style={ { display: "block" } } mb={ 2 } htmlFor={htmlFor}>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
@@ -56,6 +57,7 @@ BaseField.propTypes = {
   labelText: PropTypes.string.isRequired,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
+  htmlFor: PropTypes.string,
   formatText: PropTypes.string,
   children: PropTypes.node,
   ...space.PropTypes,
