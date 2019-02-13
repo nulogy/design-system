@@ -19,7 +19,6 @@ import List from "../List/List";
 import ListItem from "../List/ListItem";
 import Select from "../Select/Select";
 import Text from "../Type/Text";
-import Grid from "../Grid/Grid";
 import Link from "../Link/Link";
 
 const Header = () => (
