@@ -37,8 +37,8 @@ const Slider = styled.span([], ({ disabled }) => ({
 const Switch = styled.label([], () => ({
   position: "relative",
   display: "inline-flex",
-  width: theme.space[6],
-  height: theme.space[5],
+  minWidth: theme.space[6],
+  minHeight: theme.space[4],
   "input": {
     opacity: "0",
     width: "1px",
@@ -160,6 +160,7 @@ BaseToggle.defaultProps = {
 
 const Toggle = styled(BaseToggle)([], () => ({
   padding: "8px 0",
+  alignItems: "flex-start",
 }));
 
 export default Toggle;
