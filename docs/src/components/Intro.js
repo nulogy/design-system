@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Intro = styled.p`
     font-size: 21.333px;
@@ -7,7 +7,6 @@ const Intro = styled.p`
     color: #434d59;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 0;
-`
-  
-export default Intro
+`;
 
+export default Intro;

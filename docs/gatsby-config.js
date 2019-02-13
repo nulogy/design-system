@@ -1,33 +1,33 @@
 module.exports = {
   siteMetadata: {
-    title: `Nulogy Design System`,
-    description: `Documentation for the Nulogy Design System`,
-    author: `Nulogy`,
+    title: "Nulogy Design System",
+    description: "Documentation for the Nulogy Design System",
+    author: "Nulogy",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
+        name: "images",
         path: `${__dirname}/src/images/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/markdown/`,
         name: "markdown-pages",
       },
-    },    
-    `gatsby-transformer-sharp`,
-    'gatsby-plugin-sharp',
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 990,
             },
@@ -35,19 +35,19 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/nulogy.svg`, // This path is relative to the root of the site.
+        name: "gatsby-starter-default",
+        short_name: "starter",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: "src/images/nulogy.svg", // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
   ],
-}
+};
