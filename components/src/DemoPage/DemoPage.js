@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../Type/Headings";
 import PrimaryButton from "../Button/PrimaryButton";
 import QuietButton from "../Button/QuietButton";
-import IconicButton from "../Button/IconicButton"
+import IconicButton from "../Button/IconicButton";
 import Box from "../Box/Box";
 import Flex from "../Flex/Flex";
 import Field from "../Field/Field";
@@ -29,19 +29,23 @@ const Header = () => (
   </Flex>
 );
 
-const MenuItem = (props) => (
-  <Box px={4} py={2}>
-    <Link>{props.children}</Link>
-  </Box>
-);
-
-const Sidebar = (props) => (
+const Sidebar = props => (
   <Box width="256px" bg="whiteGrey" { ...props }>
-    <MenuItem>Jobs</MenuItem>
-    <MenuItem>Projects</MenuItem>
-    <MenuItem>Items</MenuItem>
-    <MenuItem>Scheduling</MenuItem>
-    <MenuItem>Materials Planning</MenuItem>
+    <Box px={ 4 } py={ 2 }>
+      <Link href="http://nulogy.design">Jobs</Link>
+    </Box>
+    <Box px={ 4 } py={ 2 }>
+      <Link href="http://nulogy.design">Projects</Link>
+    </Box>
+    <Box px={ 4 } py={ 2 }>
+      <Link href="http://nulogy.design">Items</Link>
+    </Box>
+    <Box px={ 4 } py={ 2 }>
+      <Link href="http://nulogy.design">Scheduling</Link>
+    </Box>
+    <Box px={ 4 } py={ 2 }>
+      <Link href="http://nulogy.design">Materials Planning</Link>
+    </Box>
   </Box>
 );
 
@@ -54,10 +58,10 @@ const DemoPage = () => {
     <React.Fragment>
       <Header />
       <Flex>
-        <Sidebar py={ 4 }/>
+        <Sidebar py={ 4 } />
         <Box width="100%" bg="white" p={ 4 }>
           <Title>Job Page</Title>
-          <Form style={{width:"450px"}} mb={ 6 } title="Job 324400">
+          <Form style={ { width: "450px" } } mb={ 6 } title="Job 324400">
             <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
               <List compact>
                 <ListItem>Affected field</ListItem>
@@ -83,10 +87,10 @@ const DemoPage = () => {
                 <InlineValidation message="Item WS2SB6 does not exist." />
               </Field>
               <Field labelText="Eaches expected on Job">
-                <Input placeholder="2 000" style={{width: "50%"}}/>
+                <Input placeholder="2 000" style={ { width: "50%" } } />
               </Field>
               <Field labelText="Eaches remaining on Project">
-                <Input value="18 000" disabled />
+                <Input value="18 000" style={ { width: "50%" } } disabled />
               </Field>
               <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)">
                 <Input placeholder="May 26, 2019" />
@@ -134,13 +138,16 @@ const DemoPage = () => {
               </Field>
             </FormSection>
           </Form>
-          <Flex mb={6}>
+          <Flex mb={ 6 }>
             <PrimaryButton mr={ 2 }>Save Changes</PrimaryButton>
             <QuietButton>cancel</QuietButton>
           </Flex>
         </Box>
       </Flex>
-      <Flex px={4} py={2} bg="lightGrey" justifyContent="space-between" alignItems="center">
+      <Flex
+        px={ 4 } py={ 2 } bg="lightGrey"
+        justifyContent="space-between" alignItems="center"
+      >
         <Text>Nulogy 2019</Text>
         <IconicButton icon="user">Call support</IconicButton>
       </Flex>
