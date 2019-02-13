@@ -11,19 +11,19 @@ storiesOf("Field", module)
     <Field labelText="Default label" />
   ))
   .add("With Input", () => (
-    <Field labelText="Default label">
-      <Input />
+    <Field labelText="Default label" htmlFor="with-input">
+      <Input id="with-input" />
     </Field>
   ))
   .add("With Input and InlineValidation", () => (
-    <Field labelText="Default label">
-      <Input />
+    <Field labelText="Default label" htmlFor="with-input-and-inline-validation">
+      <Input id="with-input-and-inline-validation" />
       <InlineValidation message="There has been an error" />
     </Field>
   ))
   .add("With Label for Input", () => (
-    <Field labelText="Default label" htmlFor="thisInput">
-      <Input id="thisInput" />
+    <Field labelText="Default label" htmlFor="with-label-for-input">
+      <Input id="with-label-for-input" />
       <InlineValidation message="There has been an error" />
     </Field>
   ))
@@ -39,9 +39,9 @@ storiesOf("Field", module)
   .add("With all additional components", () => (
     <Field
       labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)" htmlFor="thisInput1"
+      formatText="(DD-MM-YYYY)" htmlFor="with-all-additional-components"
     >
-      <Input id="thisInput1" />
+      <Input id="with-all-additional-components" />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>
