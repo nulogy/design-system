@@ -68,6 +68,7 @@ typings/
 # production
 **/dist/
 **/storybook-static
+**/public/
 
 # misc
 .DS_Store
