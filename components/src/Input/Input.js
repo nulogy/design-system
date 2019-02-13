@@ -1,20 +1,22 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { transparentize } from "polished";
 import { space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
 const inputStyles = {
   disabled: {
-    color: theme.colors.lightGrey,
+    textColor: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
+    backgroundColor: theme.colors.whiteGrey,
   },
   error: {
-    color: theme.colors.red,
+    textColor: theme.colors.red,
     borderColor: theme.colors.red,
   },
   default: {
-    color: theme.colors.black,
+    textColor: theme.colors.black,
     borderColor: theme.colors.grey,
   },
 };
@@ -26,12 +28,14 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const getColor = props => getInputStyle(props).color;
+const getTextColor = props => getInputStyle(props).textColor;
 const getBorderColor = props => getInputStyle(props).borderColor;
+const getBackgroundColor = props => getInputStyle(props).backgroundColor;
 
 const Input = styled.input`
     width: 100%
-    color: ${getColor};
+    color: ${getTextColor};
+    background-color: ${getBackgroundColor};
     border: 1px solid;
     border-color: ${getBorderColor};
     border-radius: ${theme.radii.medium};

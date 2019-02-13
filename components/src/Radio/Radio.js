@@ -5,15 +5,18 @@ import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
 
-const getFill = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
+const getUncheckedBackgroundColour = disabled => (disabled ? theme.colors.whiteGrey : theme.colors.white);
+const getCheckedBackgroundColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
+const getUncheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.grey);
+const getCheckedBorderColour = disabled => (disabled ? theme.colors.lightGrey : theme.colors.darkBlue);
 
 const VisualRadio = styled.div`
   min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 50%;
-  border: solid 1px ${props => getFill(props.disabled)};
-  background-color: ${theme.colors.white};
+  border: solid 1px ${props => getUncheckedBorderColour(props.disabled)};
+  background-color: ${props => getUncheckedBackgroundColour(props.disabled)};
   position: relative;
   top: 4px;
   &:before{
@@ -25,8 +28,8 @@ const VisualRadio = styled.div`
     top: 4px
     width: 2px;
     height: 2px;
-    background-color: white
-    border: 2px solid white;
+    background: ${theme.colors.white};
+    border: 2px solid ${theme.colors.white};
     border-radius: 50%;
   }
 `;
@@ -49,13 +52,11 @@ const RadioInput = styled.input`
     box-shadow: 0 0 6px ${theme.colors.blue};
   }
   &:checked + ${VisualRadio} {
-    border-color: ${props => getFill(props.disabled)};
-    background-color: ${props => getFill(props.disabled)};
+    border-color: ${props => getCheckedBorderColour(props.disabled)};
+    background-color: ${props => getCheckedBackgroundColour(props.disabled)};
     border-width: 1px;
   }
-  &:not(:checked) + ${VisualRadio}{
-    border-color: ${theme.colors.grey};
-  }
+
   &:checked + ${VisualRadio}:before {
     display: block;
   }
