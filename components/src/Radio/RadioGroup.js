@@ -30,7 +30,7 @@ const BaseRadioGroup = ({
   className,
   ...props
 }) => (
-  <div className={ className }>
+  <div role="radiogroup" className={ className }>
     { getRadioButtons(props) }
   </div>
 );
@@ -57,7 +57,7 @@ BaseRadioGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
-  className: null,
+  className: null
 };
 
 const RadioGroup = styled(BaseRadioGroup)`
