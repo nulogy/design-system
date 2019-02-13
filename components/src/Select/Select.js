@@ -123,6 +123,7 @@ const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
   required, placeholder, initialIsOpen,
+  id,
 }) => (
   <Downshift
     itemToString={ optionToString }
@@ -130,6 +131,7 @@ const Select = ({
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
+    id={ id }
   >
     {
       ({
@@ -190,6 +192,7 @@ Select.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -203,6 +206,7 @@ Select.defaultProps = {
   initialIsOpen: undefined,
   placeholder: undefined,
   optionToString: extractLabelFromOption,
+  id: undefined
 };
 
 export default Select;
