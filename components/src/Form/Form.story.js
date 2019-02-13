@@ -23,19 +23,19 @@ const options = [
 storiesOf("Form", module)
   .add("Form", () => (
     <Form title="New Profile">
-      <Field labelText="Name">
-        <Input />
+      <Field labelText="Name" htmlFor="name">
+        <Input id="name"/>
       </Field>
       <Field
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)"
+        htmlFor="dateofbirth" formatText="(DD-MM-YYYY)"
       >
-        <Input />
+        <Input id="dateofbirth" />
       </Field>
       <Field
-        labelText="Place of birth" requirementText="(Optional)"
+        labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth"
       >
-        <Input />
+        <Input id="placeofbirth"/>
       </Field>
     </Form>
   ))
