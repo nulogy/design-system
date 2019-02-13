@@ -8,7 +8,7 @@ const flexWrapperStyles = {
   boxSizing: "content-box",
   minHeight: "400px",
   padding: theme.space[4],
-  background: theme.colors.whiteGrey
+  background: theme.colors.whiteGrey,
 };
 
 const boxStyles = {
@@ -53,7 +53,7 @@ storiesOf("Flex", module)
     </Flex>
   ))
   .add("flexWrap set to no-wrap (default)", () => (
-    <Box width={500}>
+    <Box width={ 500 }>
       <Flex flexWrap="nowrap" style={ flexWrapperStyles }>
         <Box style={ boxStyles }>1</Box>
         <Box style={ boxStyles }>2</Box>
@@ -66,7 +66,7 @@ storiesOf("Flex", module)
     </Box>
   ))
   .add("flexWrap set to wrap", () => (
-    <Box width={500}>
+    <Box width={ 500 }>
       <Flex flexWrap="wrap" style={ flexWrapperStyles }>
         <Box style={ boxStyles }>1</Box>
         <Box style={ boxStyles }>2</Box>
@@ -79,7 +79,7 @@ storiesOf("Flex", module)
     </Box>
   ))
   .add("flexWrap set to wrap-reverse", () => (
-    <Box width={500}>
+    <Box width={ 500 }>
       <Flex flexWrap="wrap-reverse" style={ flexWrapperStyles }>
         <Box style={ boxStyles }>1</Box>
         <Box style={ boxStyles }>2</Box>

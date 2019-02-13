@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  color, space, width, maxWidth, boxShadow, borderRadius, textAlign, order
+  color, space, width, maxWidth, boxShadow, borderRadius, textAlign, order,
 } from "styled-system";
 import theme from "../theme";
 
