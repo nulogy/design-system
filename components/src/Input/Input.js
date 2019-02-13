@@ -28,7 +28,13 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const Input = styled.input`
+const getTextColor = props => getInputStyle(props).textColor;
+const getBorderColor = props => getInputStyle(props).borderColor;
+const getBackgroundColor = props => getInputStyle(props).backgroundColor;
+
+const Input = styled.input.attrs(({ error }) => ({
+  "aria-invalid": error,
+}))`
     width: 100%
     border: 1px solid;
     border-radius: ${theme.radii.medium};
