@@ -83,7 +83,7 @@ const DemoPage = () => {
                 <Select options={ options } />
               </Field>
               <Field labelText="Item code">
-                <Input error value="WS2SB6" />
+                <Input error defaultValue="WS2SB6" />
                 <InlineValidation message="Item WS2SB6 does not exist." />
               </Field>
               <Field labelText="Eaches expected on Job">
@@ -120,7 +120,7 @@ const DemoPage = () => {
             </FormSection>
             <FormSection title="Rejects">
               <Field labelText="Item">
-                <Input error value="235432" />
+                <Input error defaultValue="235432" />
                 <InlineValidation message="Item 235432 is not a valid entry.">
                   <List compact>
                     <ListItem>Item is at least 8 characters long.</ListItem>
