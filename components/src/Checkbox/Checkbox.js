@@ -5,60 +5,49 @@ import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
 
-const uncheckedStyles = {
-  disabled: {
-    borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey,
+const checkboxStyle = {
+  checked: {
+    disabled: {
+      borderColor: theme.colors.lightGrey,
+      backgroundColor: theme.colors.whiteGrey,
+    },
+    error: {
+      borderColor: theme.colors.red,
+      backgroundColor: theme.colors.red,
+    },
+    default: {
+      borderColor: theme.colors.darkBlue ,
+      backgroundColor: theme.colors.darkBlue,
+    },
   },
-  error: {
-    borderColor: theme.colors.red,
-    backgroundColor: theme.colors.white,
-  },
-  default: {
-    borderColor: theme.colors.grey,
-    backgroundColor: theme.colors.white,
+  unchecked: {
+    disabled: {
+      borderColor: theme.colors.lightGrey,
+      backgroundColor: theme.colors.whiteGrey,
+    },
+    error: {
+      borderColor: theme.colors.red,
+      backgroundColor: theme.colors.white,
+    },
+    default: {
+      borderColor: theme.colors.grey,
+      backgroundColor: theme.colors.white,
+    },
   },
 };
 
-const checkedStyles = {
-  disabled: {
-    borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.lightGrey,
-  },
-  error: {
-    borderColor: theme.colors.red,
-    backgroundColor: theme.colors.red,
-  },
-  default: {
-    borderColor: theme.colors.darkBlue,
-    backgroundColor: theme.colors.darkBlue,
-  },
+const getCheckboxStyle = (props, checked) => {
+  if (props.disabled) { return checkboxStyle[checked].disabled; }
+  if (props.error) { return checkboxStyle[checked].error; }
+  return checkboxStyle[checked].default;
 };
-
-const getUncheckedStyle = props => {
-  if (props.disabled) { return uncheckedStyles.disabled; }
-  if (props.error) { return uncheckedStyles.error; }
-  return uncheckedStyles.default;
-};
-
-const getCheckedStyle = props => {
-  if (props.disabled) { return checkedStyles.disabled; }
-  if (props.error) { return checkedStyles.error; }
-  return checkedStyles.default;
-};
-
-const getCheckedBorderColour = props => getCheckedStyle(props).borderColor;
-const getCheckedBackgroundColour = props => getCheckedStyle(props).backgroundColor;
-const getUncheckedBorderColour = props => getUncheckedStyle(props).borderColor;
-const getUncheckedBackgroundColour = props => getUncheckedStyle(props).backgroundColor;
 
 const VisualCheckbox = styled.div`
   min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
   border-radius: 2px;
-  border: solid 1px ${getUncheckedBorderColour};
-  background-color: ${getUncheckedBackgroundColour};
+  border: solid 1px; 
   position: relative;
   top: 4px;
   &:before{
@@ -93,15 +82,13 @@ const CheckboxInput = styled.input`
     box-shadow: 0 0 6px ${theme.colors.blue};
   }
   &:checked + ${VisualCheckbox} {
-    background-color: ${getCheckedBackgroundColour};
-    border-color: ${getCheckedBorderColour};
+    ${props => getCheckboxStyle(props, "checked")}
     &:before {
       display: block;
     }
   }
   &:not(:checked) + ${VisualCheckbox} {
-    background-color: ${getUncheckedBackgroundColour};
-    border-color: ${getUncheckedBorderColour};
+    ${props => getCheckboxStyle(props, "unchecked")}
   }
 `;
 

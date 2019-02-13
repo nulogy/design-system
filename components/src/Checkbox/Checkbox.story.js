@@ -30,4 +30,16 @@ storiesOf("Checkbox", module)
       <Checkbox checked onChange={ () => {} } labelText="I am controlled and checked" />
       <Checkbox checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
     </>
+  ))
+  .add("ALL STATES TEMP", () => (
+    <>
+      <Checkbox />
+      <Checkbox checked />
+      <Checkbox disabled />
+      <Checkbox disabled checked />
+      <Checkbox error />
+      <Checkbox error checked />
+      <Checkbox error disabled />
+      <Checkbox error disabled checked />
+    </>
   ));
