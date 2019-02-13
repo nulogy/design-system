@@ -23,14 +23,15 @@ const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
 }));
 
 Text.propTypes = {
-  display: PropTypes.string,
-  ...space.propTypes,
-  ...fontSize.propTypes,
-  ...fontWeight.propTypes,
-  ...lineHeight.propTypes,
-  ...color.propTypes,
-  ...fontFamily.propTypes,
-  ...textAlign.propTypes,
+  inline: PropTypes.bool,
+  disabled: PropTypes.bool,
+  ...space.PropTypes,
+  ...fontSize.PropTypes,
+  ...fontWeight.PropTypes,
+  ...lineHeight.PropTypes,
+  ...color.PropTypes,
+  ...fontFamily.PropTypes,
+  ...textAlign.PropTypes,
 };
 
 Text.defaultProps = {
