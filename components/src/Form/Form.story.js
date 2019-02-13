@@ -118,33 +118,33 @@ storiesOf("Form", module)
           </List>
         </HeaderValidation>
         <FormSection title="Job Information">
-          <Field labelText="Project">
-            <Input placeholder="Project 128703" />
+          <Field labelText="Project" htmlFor="project">
+            <Input placeholder="Project 128703" id="project" />
           </Field>
           <Field
             labelText="Project description" requirementText="(Optional)"
-            helpText="Project description helps identify the project."
+            helpText="Project description helps identify the project." htmlFor="project-description"
           >
-            <Input />
+            <Input id="project-description" />
           </Field>
-          <Field labelText="Project status">
-            <Select options={ options } />
+          <Field labelText="Project status" htmlFor="project-status-input">
+            <Select options={ options } id="project-status" />
           </Field>
-          <Field labelText="Item code">
-            <Input error defaultValue="WS2SB6" />
+          <Field labelText="Item code" htmlFor="item-code">
+            <Input error defaultValue="WS2SB6" id="item-code" />
             <InlineValidation message="Item WS2SB6 does not exist." />
           </Field>
-          <Field labelText="Eaches expected on Job">
-            <Input placeholder="2 000" />
+          <Field labelText="Eaches expected on Job" htmlFor="eaches-expected">
+            <Input placeholder="2 000" id="eaches-expected" />
           </Field>
-          <Field labelText="Eaches remaining on Project">
-            <Input defaultValue="18 000" disabled />
+          <Field labelText="Eaches remaining on Project" htmlFor="eaches-remaining">
+            <Input defaultValue="18 000" disabled id="eaches-remaining"/>
           </Field>
-          <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)">
-            <Input placeholder="May 26, 2019" />
+          <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)" htmlFor="scheduled-start">
+            <Input placeholder="May 26, 2019" id="scheduled-start"/>
           </Field>
-          <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)">
-            <Input disabled defaultValue="June 29, 2019" />
+          <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)" htmlFor="scheduled-end">
+            <Input disabled defaultValue="June 29, 2019" id="scheduled-end" />
           </Field>
 
           <Field labelText="Line Lead" requirementText="(Optional)">
@@ -153,8 +153,9 @@ storiesOf("Form", module)
             <Checkbox disabled checked labelText="Clemens Park" />
             <Checkbox disabled labelText="Nikola Pejcic" />
           </Field>
+
           <Field labelText="Reconcile">
-            <RadioGroup name="settingSelection" defaultValue="yes">
+            <RadioGroup name="settingSelection" defaultValue="yes" id="reconcile">
               <Radio value="yes" labelText="Yes" />
               <Radio value="no" labelText="No" />
               <Radio value="maybe" labelText="Maybe" disabled />
@@ -168,8 +169,8 @@ storiesOf("Form", module)
           </Field>
         </FormSection>
         <FormSection title="Rejects">
-          <Field labelText="Item">
-            <Input error defaultValue="235432" />
+          <Field labelText="Item" htmlFor="rejects">
+            <Input error defaultValue="235432" id="rejects" />
             <InlineValidation message="Item 235432 is not a valid entry.">
               <List compact>
                 <ListItem>Item is at least 8 characters long.</ListItem>
@@ -177,8 +178,8 @@ storiesOf("Form", module)
               </List>
             </InlineValidation>
           </Field>
-          <Field labelText="Quantity">
-            <Input />
+          <Field labelText="Quantity" htmlFor="quantity">
+            <Input id="quantity"/>
           </Field>
 
           <Field labelText="Reject visibility">
