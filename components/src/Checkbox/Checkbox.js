@@ -12,6 +12,7 @@ const uncheckedStyles = {
   },
   error: {
     borderColor: theme.colors.red,
+    backgroundColor: theme.colors.white,
   },
   default: {
     borderColor: theme.colors.grey,
@@ -110,7 +111,6 @@ const BaseCheckbox = props => {
     labelText,
     disabled,
     checked,
-    error,
   } = props;
   return (
     <Box className={ className }>
