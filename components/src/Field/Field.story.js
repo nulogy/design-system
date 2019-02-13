@@ -22,7 +22,7 @@ storiesOf("Field", module)
     </Field>
   ))
   .add("With Label for Input", () => (
-    <Field labelText="Default label" for="thisInput">
+    <Field labelText="Default label" htmlFor="thisInput">
       <Input id="thisInput" />
       <InlineValidation message="There has been an error" />
     </Field>
@@ -39,7 +39,7 @@ storiesOf("Field", module)
   .add("With all additional components", () => (
     <Field
       labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)" for="thisInput1"
+      formatText="(DD-MM-YYYY)" htmlFor="thisInput1"
     >
       <Input id="thisInput1" />
       <InlineValidation message="There has been an error">
