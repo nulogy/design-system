@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import Icon, { iconNames } from "../Icon/Icon";
-import { subPx } from "../utils";
+import { subPx, omit } from "../utils";
 
 const size = props => {
   switch (props.size) {
@@ -43,7 +43,7 @@ const BaseButton = ({
   const { theme: { lineHeights: { smallTextCompressed } } } = props;
 
   return (
-    <button { ...props }>
+    <button { ...omit(props, "fullWidth") }>
       {(icon && iconSide === "left")
           && (
           <Icon size={ `${smallTextCompressed}em` } mr={ 1 } icon={ icon } />
