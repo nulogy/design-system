@@ -147,25 +147,27 @@ const Select = ({
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
           {
-            <Menu { ...getMenuProps({ error }) } isOpen={ isOpen }>
-              {
-                isOpen
-                && options.map((option, index) => (
-                  <MenuItem
-                    { ...getItemProps({
-                      key: option.value,
-                      item: option,
-                      isSelected: selectedItem === option,
-                      isActive: highlightedIndex === index,
-                      index,
-                      disabled,
-                    }) }
-                  >
-                    {option.label}
-                  </MenuItem>
-                ))
-              }
-            </Menu>
+            isOpen
+              && (
+                <Menu { ...getMenuProps({ error, isOpen }) }>
+                  {
+                    options.map((option, index) => (
+                      <MenuItem
+                        { ...getItemProps({
+                          key: option.value,
+                          item: option,
+                          isSelected: selectedItem === option,
+                          isActive: highlightedIndex === index,
+                          index,
+                          disabled,
+                        }) }
+                      >
+                        {option.label}
+                      </MenuItem>
+                    ))
+                  }
+                </Menu>
+              )
           }
         </div>
       )

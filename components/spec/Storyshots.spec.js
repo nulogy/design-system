@@ -1,3 +1,6 @@
 import initStoryshots from "@storybook/addon-storyshots";
+import { mount } from "enzyme";
 
-initStoryshots({ /* configuration options */ });
+initStoryshots({
+  renderer: mount,
+});

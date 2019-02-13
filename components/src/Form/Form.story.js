@@ -131,20 +131,20 @@ storiesOf("Form", module)
             <Select options={ options } />
           </Field>
           <Field labelText="Item code">
-            <Input error value="WS2SB6" />
+            <Input error defaultValue="WS2SB6" />
             <InlineValidation message="Item WS2SB6 does not exist." />
           </Field>
           <Field labelText="Eaches expected on Job">
             <Input placeholder="2 000" />
           </Field>
           <Field labelText="Eaches remaining on Project">
-            <Input value="18 000" disabled />
+            <Input defaultValue="18 000" disabled />
           </Field>
           <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)">
             <Input placeholder="May 26, 2019" />
           </Field>
           <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)">
-            <Input disabled value="June 29, 2019" />
+            <Input disabled defaultValue="June 29, 2019" />
           </Field>
 
           <Field labelText="Line Lead" requirementText="(Optional)">
@@ -169,7 +169,7 @@ storiesOf("Form", module)
         </FormSection>
         <FormSection title="Rejects">
           <Field labelText="Item">
-            <Input error value="235432" />
+            <Input error defaultValue="235432" />
             <InlineValidation message="Item 235432 is not a valid entry.">
               <List compact>
                 <ListItem>Item is at least 8 characters long.</ListItem>
