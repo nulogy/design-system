@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  alignItems, justifyContent, flexWrap, flexDirection,
+  alignItems, justifyContent, flexWrap, flexDirection
 } from "styled-system";
 import Box from "../Box/Box";
 
