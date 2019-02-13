@@ -60,6 +60,7 @@ BaseField.propTypes = {
   htmlFor: PropTypes.string,
   formatText: PropTypes.string,
   children: PropTypes.node,
+  id: PropTypes.string,
   ...space.PropTypes,
 };
 
@@ -67,7 +68,9 @@ BaseField.defaultProps = {
   children: [],
   requirementText: null,
   helpText: null,
+  htmlFor: undefined,
   formatText: null,
+  id: undefined,
 };
 
 const Field = styled(BaseField)`
