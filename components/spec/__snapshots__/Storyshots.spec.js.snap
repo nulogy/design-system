@@ -62,6 +62,40 @@ exports[`Storyshots Field With requirement text 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Flex Flex 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Flex With custom order 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex alignItems set to center 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex alignItems set to flex-end 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex alignItems set to flex-start 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexDirection set to column 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexWrap set to wrap 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to center 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to flex-end 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to space-around 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to space-between 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Form Demo form 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Form Form 1`] = `ReactWrapper {}`;
