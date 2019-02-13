@@ -19,6 +19,9 @@ storiesOf("Toggle", module)
       />
     </>
   ))
+  .add("Toggle set to required", () => (
+    <Toggle defaultToggled required aria-required />
+  ))
   .add("With text", () => (
     <Toggle onText="on" offText="off" />
   ))
