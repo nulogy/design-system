@@ -1,15 +1,14 @@
-import {Box} from '@nulogy/components';
-import styled from 'styled-components'
-import {color, space} from 'styled-system';
+import { Box } from "@nulogy/components";
+import styled from "styled-components";
+import { color, space } from "styled-system";
 
 const DocSection = styled(Box)({
 },
-  color,
-  space
-)
+color,
+space);
 
 DocSection.defaultProps = {
-  mb: 7
-}
+  mb: 7,
+};
 
-export default DocSection
+export default DocSection;

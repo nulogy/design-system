@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CheckList = styled.li`
     list-style: none;
@@ -13,8 +13,6 @@ const CheckList = styled.li`
         position: relative; 
         top: -0px;
     }
-` 
+`;
 
 export default CheckList;
-
-    
