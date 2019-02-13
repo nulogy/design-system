@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -24,15 +23,6 @@ const Grid = styled.div([], props => ({
 }));
 
 Grid.propTypes = {
-  width: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]).isRequired,
-  gap: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]).isRequired,
-  align: PropTypes.string,
 };
 
 export default Grid;
