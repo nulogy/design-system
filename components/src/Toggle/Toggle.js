@@ -51,13 +51,12 @@ const ToggleInput = styled.input([], ({ disabled }) => ({
     transform: "translateX(24px)",
     backgroundColor: (disabled ? theme.colors.lightGrey : theme.colors.darkBlue),
     borderColor: (disabled ? theme.colors.whiteGrey : theme.colors.darkBlue),
-    boxShadow: (disabled ? null : `0 0 6px ${theme.colors.blue}`),
   },
   [`&:checked + ${Slider}`]: {
     backgroundColor: (disabled ? theme.colors.whiteGrey : theme.colors.lightBlue),
   },
-  [`&:focus + ${Slider}`]: {
-
+  [`&:focus + ${Slider}:before`]: {
+    boxShadow: (disabled ? null : `0 0 6px ${theme.colors.blue}`),
   },
 }));
 
@@ -159,10 +158,8 @@ BaseToggle.defaultProps = {
   className: null,
 };
 
-const Toggle = styled(BaseToggle)([], () => (
-  {
-    padding: "8px 0",
-  }
-));
+const Toggle = styled(BaseToggle)([], () => ({
+  padding: "8px 0",
+}));
 
 export default Toggle;
