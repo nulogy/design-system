@@ -6,7 +6,7 @@ import theme from "../theme";
 import Flex from "../Flex/Flex";
 import { omit } from "../utils";
 
-const Slider = styled.span([], ({ toggled, disabled }) => ({
+const Slider = styled.span([], ({ disabled }) => ({
   position: "absolute",
   height: theme.space[4],
   width: theme.space[6],
