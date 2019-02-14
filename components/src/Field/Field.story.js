@@ -8,7 +8,7 @@ import ListItem from "../List/ListItem";
 
 storiesOf("Field", module)
   .add("Field", () => (
-    <Field labelText="Default label" />
+    <Field labelText="Default label" /> // eslint-disable-line jsx-a11y/label-has-associated-control
   ))
   .add("With Input", () => (
     <Field labelText="Default label" htmlFor="with-input">
@@ -28,9 +28,9 @@ storiesOf("Field", module)
     </Field>
   ))
   .add("With requirement text", () => (
-    <Field labelText="Default label" requirementText="(Optional)" />
+    <Field labelText="Default label" requirementText="(Optional)" /> // eslint-disable-line jsx-a11y/label-has-associated-control
   ))
-  .add("With help text", () => (
+  .add("With help text", () => ( // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <Field labelText="Default label" helpText="Enter a date below" />
   ))
   .add("With all additional components", () => (
@@ -48,7 +48,7 @@ storiesOf("Field", module)
       </InlineValidation>
     </Field>
   ))
-  .add("With a long text", () => (
+  .add("With a long text", () => ( // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <Field
       labelText="Long long long long long long long long long long long long long long label"
       requirementText="(Optional)"

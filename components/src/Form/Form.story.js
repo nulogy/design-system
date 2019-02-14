@@ -24,7 +24,7 @@ storiesOf("Form", module)
   .add("Form", () => (
     <Form title="New Profile">
       <Field labelText="Name" htmlFor="name">
-        <Input id="name"/>
+        <Input id="name" />
       </Field>
       <Field
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
@@ -35,46 +35,48 @@ storiesOf("Form", module)
       <Field
         labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth"
       >
-        <Input id="placeofbirth"/>
+        <Input id="placeofbirth" />
       </Field>
     </Form>
   ))
   .add("Without title", () => (
     <Form>
-      <Field labelText="Name">
-        <Input />
+      <Field labelText="Name" htmlFor="without-title">
+        <Input id="without-title" />
       </Field>
       <Field
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+        htmlFor="dob"
       >
-        <Input placeholder="DD-MM-YYYY" />
+        <Input placeholder="DD-MM-YYYY" id="dob" />
       </Field>
-      <Field labelText="Place of birth" requirementText="(Optional)">
-        <Input />
+      <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="place-of-birth">
+        <Input id="place-of-birth" />
       </Field>
     </Form>
   ))
   .add("With form sections", () => (
     <Form title="New Profile">
       <FormSection title="Personal Information">
-        <Field labelText="Name">
-          <Input />
+        <Field labelText="Name" htmlFor="name">
+          <Input id="name" />
         </Field>
         <Field
           labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+          htmlFor="dateofbirth"
         >
-          <Input placeholder="DD-MM-YYYY" />
+          <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
         </Field>
-        <Field labelText="Place of birth" requirementText="(Optional)">
-          <Input />
+        <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth">
+          <Input id="placeofbirth" />
         </Field>
       </FormSection>
       <FormSection title="General Information">
-        <Field labelText="Gender">
-          <Input />
+        <Field labelText="Gender" htmlFor="gender">
+          <Input id="gender" />
         </Field>
-        <Field labelText="Ocupation">
-          <Input />
+        <Field labelText="Ocupation" htmlFor="occupation">
+          <Input id="occupation" />
         </Field>
       </FormSection>
     </Form>
@@ -82,24 +84,25 @@ storiesOf("Form", module)
   .add("With form sections without titles", () => (
     <Form title="New Profile">
       <FormSection>
-        <Field labelText="Name">
-          <Input />
+        <Field labelText="Name" htmlFor="name">
+          <Input id="name" />
         </Field>
         <Field
           labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
+          htmlFor="dateofbirth"
         >
-          <Input placeholder="DD-MM-YYYY" />
+          <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
         </Field>
-        <Field labelText="Place of birth" requirementText="(Optional)">
-          <Input />
+        <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth">
+          <Input id="placeofbirth" />
         </Field>
       </FormSection>
       <FormSection>
-        <Field labelText="Gender">
-          <Input />
+        <Field labelText="Gender" htmlFor="gender">
+          <Input id="gender" />
         </Field>
-        <Field labelText="Ocupation">
-          <Input />
+        <Field labelText="Ocupation" htmlFor="occupation">
+          <Input id="gender" />
         </Field>
       </FormSection>
     </Form>
@@ -124,7 +127,7 @@ storiesOf("Form", module)
           >
             <Input id="project-description" />
           </Field>
-          <Field labelText="Project status" htmlFor="project-status-input">
+          <Field labelText="Project status" htmlFor="project-status">
             <Select options={ options } id="project-status" />
           </Field>
           <Field labelText="Item code" htmlFor="item-code">
@@ -135,10 +138,10 @@ storiesOf("Form", module)
             <Input placeholder="2 000" id="eaches-expected" />
           </Field>
           <Field labelText="Eaches remaining on Project" htmlFor="eaches-remaining">
-            <Input defaultValue="18 000" disabled id="eaches-remaining"/>
+            <Input defaultValue="18 000" disabled id="eaches-remaining" />
           </Field>
           <Field labelText="Scheduled start" htmlFor="scheduled-start">
-            <Input placeholder="MMM DD, YYYY" id="scheduled-start"/>
+            <Input placeholder="MMM DD, YYYY" id="scheduled-start" />
           </Field>
           <Field labelText="Scheduled end" htmlFor="scheduled-end">
             <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
@@ -151,7 +154,7 @@ storiesOf("Form", module)
             <Checkbox disabled labelText="Nikola Pejcic" />
           </Field>
 
-          <Field labelText="Reconcile">
+          <Field labelText="Reconcile" htmlFor="reconcile">
             <RadioGroup name="settingSelection" defaultValue="yes" id="reconcile">
               <Radio value="yes" labelText="Yes" />
               <Radio value="no" labelText="No" />
@@ -176,7 +179,7 @@ storiesOf("Form", module)
             </InlineValidation>
           </Field>
           <Field labelText="Quantity" htmlFor="quantity">
-            <Input id="quantity"/>
+            <Input id="quantity" />
           </Field>
 
           <Field labelText="Reject visibility">
