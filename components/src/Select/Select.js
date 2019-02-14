@@ -99,7 +99,7 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
   borderRightStyle: "solid",
-  borderRadius: `0 ${theme.radii.medium}`,
+  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   marginTop: 0,
   boxShadow: theme.boxShadows[0],
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
