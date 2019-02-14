@@ -57,7 +57,7 @@ BaseRadioGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
-  className: null
+  className: null,
 };
 
 const RadioGroup = styled(BaseRadioGroup)`

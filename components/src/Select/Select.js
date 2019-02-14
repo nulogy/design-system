@@ -206,7 +206,7 @@ Select.defaultProps = {
   initialIsOpen: undefined,
   placeholder: undefined,
   optionToString: extractLabelFromOption,
-  id: undefined
+  id: undefined,
 };
 
 export default Select;
