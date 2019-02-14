@@ -28,9 +28,9 @@ storiesOf("Form", module)
       </Field>
       <Field
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        htmlFor="dateofbirth" formatText="(DD-MM-YYYY)"
+        htmlFor="dateofbirth"
       >
-        <Input id="dateofbirth" />
+        <Input placeholder="(DD-MM-YYYY)" id="dateofbirth" />
       </Field>
       <Field
         labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth"
@@ -46,9 +46,8 @@ storiesOf("Form", module)
       </Field>
       <Field
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        formatText="(DD-MM-YYYY)"
       >
-        <Input />
+        <Input placeholder="DD-MM-YYYY" />
       </Field>
       <Field labelText="Place of birth" requirementText="(Optional)">
         <Input />
@@ -63,9 +62,8 @@ storiesOf("Form", module)
         </Field>
         <Field
           labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-          formatText="(DD-MM-YYYY)"
         >
-          <Input />
+          <Input placeholder="DD-MM-YYYY" />
         </Field>
         <Field labelText="Place of birth" requirementText="(Optional)">
           <Input />
@@ -89,9 +87,8 @@ storiesOf("Form", module)
         </Field>
         <Field
           labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-          formatText="(DD-MM-YYYY)"
         >
-          <Input />
+          <Input placeholder="DD-MM-YYYY" />
         </Field>
         <Field labelText="Place of birth" requirementText="(Optional)">
           <Input />
@@ -140,11 +137,11 @@ storiesOf("Form", module)
           <Field labelText="Eaches remaining on Project" htmlFor="eaches-remaining">
             <Input defaultValue="18 000" disabled id="eaches-remaining"/>
           </Field>
-          <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)" htmlFor="scheduled-start">
-            <Input placeholder="May 26, 2019" id="scheduled-start"/>
+          <Field labelText="Scheduled start" htmlFor="scheduled-start">
+            <Input placeholder="MMM DD, YYYY" id="scheduled-start"/>
           </Field>
-          <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)" htmlFor="scheduled-end">
-            <Input disabled defaultValue="June 29, 2019" id="scheduled-end" />
+          <Field labelText="Scheduled end" htmlFor="scheduled-end">
+            <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
           </Field>
 
           <Field labelText="Line Lead" requirementText="(Optional)">

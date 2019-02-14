@@ -33,15 +33,12 @@ storiesOf("Field", module)
   .add("With help text", () => (
     <Field labelText="Default label" helpText="Enter a date below" />
   ))
-  .add("With format text", () => (
-    <Field labelText="Default label" formatText="(DD-MM-YYYY)" />
-  ))
   .add("With all additional components", () => (
     <Field
       labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)" htmlFor="with-all-additional-components"
+      htmlFor="with-all-additional-components"
     >
-      <Input id="with-all-additional-components" />
+      <Input placeholder="DD-MM-YYYY" id="with-all-additional-components" />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>
@@ -56,6 +53,5 @@ storiesOf("Field", module)
       labelText="Long long long long long long long long long long long long long long label"
       requirementText="(Optional)"
       helpText="Help text help text help text help text help text help text help text help text"
-      formatText="(DD-MM-YYYY)"
     />
   ));
