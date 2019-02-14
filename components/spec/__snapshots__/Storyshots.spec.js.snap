@@ -38,6 +38,8 @@ exports[`Storyshots Checkbox Checkbox 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Controlled 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Checkbox Error state 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Checkbox Set to defaultChecked 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Set to disabled 1`] = `ReactWrapper {}`;
@@ -163,6 +165,8 @@ exports[`Storyshots List With custom colour 1`] = `ReactWrapper {}`;
 exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Controlled 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Radio Error state 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Radio 1`] = `ReactWrapper {}`;
 

@@ -28,22 +28,16 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const getTextColor = props => getInputStyle(props).textColor;
-const getBorderColor = props => getInputStyle(props).borderColor;
-const getBackgroundColor = props => getInputStyle(props).backgroundColor;
-
 const Input = styled.input`
     width: 100%
-    color: ${getTextColor};
-    background-color: ${getBackgroundColor};
     border: 1px solid;
-    border-color: ${getBorderColor};
     border-radius: ${theme.radii.medium};
     padding: ${subPx(theme.space[2])};
     font-size: ${theme.fontSizes[1]};
     font-family: ${theme.fonts.base};
     line-height: ${theme.lineHeights.base};
     ${space}
+    ${props => getInputStyle(props)}
 
     &:focus {
         outline: none;
