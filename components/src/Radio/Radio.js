@@ -16,7 +16,7 @@ const radioStyle = {
       backgroundColor: theme.colors.red,
     },
     default: {
-      borderColor: theme.colors.darkBlue ,
+      borderColor: theme.colors.darkBlue,
       backgroundColor: theme.colors.darkBlue,
     },
   },
