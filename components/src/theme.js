@@ -62,7 +62,7 @@ export default {
   },
   breakpoints: {
     small: "0px",
-    medium: "540px",
-    large: "768px",
+    medium: "768px",
+    large: "1024px",
   },
 };
