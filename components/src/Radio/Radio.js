@@ -113,7 +113,7 @@ const BaseRadio = props => {
 };
 
 BaseRadio.propTypes = {
-  labelText: PropTypes.string,
+  labelText: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -122,7 +122,6 @@ BaseRadio.propTypes = {
 };
 
 BaseRadio.defaultProps = {
-  labelText: null,
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
