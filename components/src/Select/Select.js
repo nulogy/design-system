@@ -23,10 +23,10 @@ const getBorderColor = ({
   return grey;
 };
 
-const SelectBox = styled.div([], ({disabled}) => ({
+const SelectBox = styled.div([], ({ disabled }) => ({
   display: "flex",
   position: "relative",
-  color: disabled ? transparentize(0.6667, theme.colors.black)  : null,
+  color: disabled ? transparentize(0.6667, theme.colors.black) : null,
 }));
 
 const Input = styled.input([], ({ error, isOpen, disabled }) => ({
@@ -60,8 +60,8 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
     }),
   },
   "&::placeholder": {
-    color: disabled ? transparentize(0.6667, theme.colors.black)  : null,
-  }
+    color: disabled ? transparentize(0.6667, theme.colors.black) : null,
+  },
 }));
 
 const IndicatorButton = styled.div([], () => ({
