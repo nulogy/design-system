@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
+import { transparentize } from "polished";
 import Icon from "../Icon/Icon";
 import theme from "../theme";
 import { subPx } from "../utils";
@@ -22,9 +23,10 @@ const getBorderColor = ({
   return grey;
 };
 
-const SelectBox = styled.div([], () => ({
+const SelectBox = styled.div([], ({disabled}) => ({
   display: "flex",
   position: "relative",
+  color: disabled ? transparentize(0.6667, theme.colors.black)  : null,
 }));
 
 const Input = styled.input([], ({ error, isOpen, disabled }) => ({
@@ -57,6 +59,9 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
       isFocused: true,
     }),
   },
+  "&::placeholder": {
+    color: disabled ? transparentize(0.6667, theme.colors.black)  : null,
+  }
 }));
 
 const IndicatorButton = styled.div([], () => ({
