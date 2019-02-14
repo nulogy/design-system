@@ -30,7 +30,7 @@ storiesOf("Form", module)
         labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
         htmlFor="dateofbirth"
       >
-        <Input placeholder="(DD-MM-YYYY)" id="dateofbirth" />
+        <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
       </Field>
       <Field
         labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth"
