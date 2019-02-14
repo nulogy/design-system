@@ -5,7 +5,9 @@ import Field from "../Field/Field";
 
 storiesOf("Toggle", module)
   .add("Toggle", () => (
-    <Toggle />
+    <Field labelText="Ok" htmlFor="ok">
+      <Toggle id="ok" />
+    </Field>
   ))
   .add("Toggle set to defaultToggled", () => (
     <Toggle defaultToggled />
@@ -26,8 +28,8 @@ storiesOf("Toggle", module)
     <Toggle onText="on" offText="off" />
   ))
   .add("Toggle Field", () => (
-    <Field labelText="Setting" helpText="Turns setting on/off">
-      <Toggle onText="on" offText="off" />
+    <Field labelText="Setting" helpText="Turns setting on/off" htmlFor="toggle-field">
+      <Toggle onText="on" offText="off" id="toggle-field" />
     </Field>
   ))
   .add("Controlled Toggle", () => (

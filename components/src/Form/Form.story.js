@@ -7,7 +7,7 @@ import FormSection from "./FormSection";
 import Checkbox from "../Checkbox/Checkbox";
 import Radio from "../Radio/Radio";
 import RadioGroup from "../Radio/RadioGroup";
-import ToggleWithText from "../Toggle/Toggle";
+import Toggle from "../Toggle/Toggle";
 import InlineValidation from "../Validation/InlineValidation";
 import HeaderValidation from "../Validation/HeaderValidation";
 import List from "../List/List";
@@ -162,9 +162,9 @@ storiesOf("Form", module)
             </RadioGroup>
             <InlineValidation message="Yes can be only selected ..." />
           </Field>
-          <Field labelText="Job visibility">
-            <ToggleWithText
-              onText="Visible" offText="Hidden"
+          <Field labelText="Job visibility" htmlFor="testThis">
+            <Toggle
+              onText="Visible" offText="Hidden" id="testThis"
             />
           </Field>
         </FormSection>
@@ -181,10 +181,10 @@ storiesOf("Form", module)
           <Field labelText="Quantity" htmlFor="quantity">
             <Input id="quantity" />
           </Field>
-
-          <Field labelText="Reject visibility">
-            <ToggleWithText
-              onText="Visible" offText="Hidden" disabled
+          <Field labelText="Reject visibility" htmlFor="reject-visibility">
+            <Toggle
+              id="reject-visibility" onText="Visible" offText="Hidden"
+              disabled
             />
           </Field>
         </FormSection>
