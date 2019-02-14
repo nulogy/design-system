@@ -36,7 +36,7 @@
     "jsx-a11y/label-has-associated-control": [ 2, {
       "labelComponents": ["Field"],
       "labelAttributes": ["Label", "Switch"],
-      "controlComponents": ["Input", "Select", "RadioGroup", "Toggle", "Checkbox"],
+      "controlComponents": ["Input", "RadioGroup", "Toggle", "Checkbox"],
       "assert": "either"
     }]
   },

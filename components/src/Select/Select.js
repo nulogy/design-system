@@ -123,15 +123,15 @@ const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
   required, placeholder, initialIsOpen,
-  id,
+  id
 }) => (
+
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
-    id={ id }
   >
     {
       ({
