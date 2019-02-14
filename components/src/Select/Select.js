@@ -123,7 +123,7 @@ const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
   required, placeholder, initialIsOpen,
-  id
+  id,
 }) => (
 
   <Downshift
@@ -132,6 +132,7 @@ const Select = ({
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
+    inputId={ id }
   >
     {
       ({
