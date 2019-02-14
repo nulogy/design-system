@@ -112,6 +112,7 @@ class BaseToggle extends React.Component {
       onText,
       offText,
       className,
+      required,
       ...props
     } = omit(this.props, "defaultToggled");
     const {
@@ -121,6 +122,7 @@ class BaseToggle extends React.Component {
       <Flex flexDirection="row" alignItems="center" className={ className }>
         <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
+          required={required} aria-required={required}
           onClick={ e => { this.handleClick(e); } }
           { ...props }
         />
@@ -144,6 +146,7 @@ BaseToggle.propTypes = {
   id: PropTypes.string,
   value: PropTypes.string,
   className: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 BaseToggle.defaultProps = {
@@ -156,6 +159,7 @@ BaseToggle.defaultProps = {
   id: null,
   value: "on",
   className: null,
+  required: false,
 };
 
 const Toggle = styled(BaseToggle)([], () => ({

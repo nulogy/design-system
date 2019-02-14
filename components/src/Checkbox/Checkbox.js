@@ -98,11 +98,15 @@ const BaseCheckbox = props => {
     labelText,
     disabled,
     checked,
+    required
   } = props;
   return (
     <Box className={ className }>
       <CheckboxWrapper disabled={ disabled }>
-        <CheckboxInput type="checkbox" { ...props } />
+        <CheckboxInput
+          type="checkbox" required={ required } aria-required={ required }
+          { ...props }
+        />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
         <Text disabled={ disabled }> {labelText} </Text>
       </CheckboxWrapper>
@@ -117,6 +121,7 @@ BaseCheckbox.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   className: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 BaseCheckbox.defaultProps = {
@@ -125,6 +130,7 @@ BaseCheckbox.defaultProps = {
   disabled: false,
   error: false,
   className: null,
+  required: false
 };
 
 const Checkbox = styled(BaseCheckbox)`

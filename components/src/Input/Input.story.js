@@ -13,5 +13,5 @@ storiesOf("Input", module)
     <Input error />
   ))
   .add("Set to required", () => (
-    <Input required aria-required />
+    <Input required />
   ));

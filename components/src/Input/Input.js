@@ -32,8 +32,10 @@ const getTextColor = props => getInputStyle(props).textColor;
 const getBorderColor = props => getInputStyle(props).borderColor;
 const getBackgroundColor = props => getInputStyle(props).backgroundColor;
 
-const Input = styled.input.attrs(({ error }) => ({
+const Input = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
+  "aria-required": required,
+  "required": required
 }))`
     width: 100%
     border: 1px solid;
@@ -56,12 +58,14 @@ const Input = styled.input.attrs(({ error }) => ({
 Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
+  required: PropTypes.bool,
   ...space.PropTypes,
 };
 
 Input.defaultProps = {
   disabled: false,
   error: false,
+  required: false
 };
 
 export default Input;

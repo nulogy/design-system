@@ -25,7 +25,7 @@ storiesOf("Radio", module)
       <Radio defaultChecked error labelText="I am error" />
   .add("Set to required", () => (
     <>
-      <Radio labelText="I am a radio button" required aria-required />
+      <Radio labelText="I am a radio button" required />
     </>
   ))
   .add("Controlled", () => (

@@ -25,7 +25,7 @@ storiesOf("Checkbox", module)
       <Checkbox defaultChecked error labelText="I am error" />
   .add("Set to required", () => (
     <>
-      <Checkbox labelText="I am a checkbox" required aria-required="true" />
+      <Checkbox labelText="I am a checkbox" required />
     </>
   ))
   .add("Controlled", () => (
