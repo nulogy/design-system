@@ -9,7 +9,7 @@ const checkboxStyle = {
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.whiteGrey,
+      backgroundColor: theme.colors.lightGrey,
     },
     error: {
       borderColor: theme.colors.red,
@@ -46,10 +46,10 @@ const VisualCheckbox = styled.div`
   min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
-  border-radius: 2px;
-  border: solid 1px; 
+  border-radius: ${theme.radii.small};
+  border: solid 1px;
   position: relative;
-  top: 4px;
+  top: ${theme.space[1]};
   &:before{
     content: "";
     display: none;
@@ -65,11 +65,11 @@ const VisualCheckbox = styled.div`
 `;
 
 const CheckboxWrapper = styled.label`
-  cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
-  width: auto;
-  vertical-align: top;
   align-items: flex-start;
+  vertical-align: top;
+  width: auto;
+  cursor: ${props => (props.disabled ? null : "pointer")};
   user-select: none;
 `;
 
@@ -129,7 +129,7 @@ BaseCheckbox.defaultProps = {
 };
 
 const Checkbox = styled(BaseCheckbox)`
-  padding: 8px 0;
+  padding: ${theme.space[2]} 0;
   color: ${props => (props.error ? theme.colors.red : null)};
 `;
 

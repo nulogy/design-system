@@ -46,10 +46,10 @@ const VisualRadio = styled.div`
   min-width: ${theme.space[3]};
   height: ${theme.space[3]};
   margin-right: ${theme.space[2]};
+  border-radius: ${theme.radii.circle};
   border: solid 1px;
-  border-radius: 50%;
   position: relative;
-  top: 4px;
+  top: ${theme.space[1]};
   &:before{
     cursor: ${props => (props.disabled ? null : "pointer")};
     content: "";
@@ -61,7 +61,7 @@ const VisualRadio = styled.div`
     height: 2px;
     background: ${theme.colors.white};
     border: 2px solid ${theme.colors.white};
-    border-radius: 50%;
+    border-radius: ${theme.radii.circle};
   }
 `;
 
@@ -131,7 +131,7 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)`
-  padding: 8px 0;
+  padding: ${theme.space[2]} 0;
   color: ${props => (props.error ? theme.colors.red : null)};
 `;
 
