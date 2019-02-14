@@ -122,7 +122,7 @@ class BaseToggle extends React.Component {
       <Flex flexDirection="row" alignItems="center" className={ className }>
         <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
-          required={required} aria-required={required}
+          required={ required } aria-required={ required }
           onClick={ e => { this.handleClick(e); } }
           { ...props }
         />

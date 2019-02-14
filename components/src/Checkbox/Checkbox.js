@@ -98,7 +98,7 @@ const BaseCheckbox = props => {
     labelText,
     disabled,
     checked,
-    required
+    required,
   } = props;
   return (
     <Box className={ className }>
@@ -130,7 +130,7 @@ BaseCheckbox.defaultProps = {
   disabled: false,
   error: false,
   className: null,
-  required: false
+  required: false,
 };
 
 const Checkbox = styled(BaseCheckbox)`

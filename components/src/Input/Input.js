@@ -35,7 +35,7 @@ const getBackgroundColor = props => getInputStyle(props).backgroundColor;
 const Input = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
   "aria-required": required,
-  "required": required
+  "required": required,
 }))`
     width: 100%
     border: 1px solid;
@@ -65,7 +65,7 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   error: false,
-  required: false
+  required: false,
 };
 
 export default Input;

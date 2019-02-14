@@ -37,6 +37,7 @@ const BaseRadioGroup = ({
   ...props
 }) => (
   <Fieldset role="radiogroup" className={ className }>
+    <legend>Title</legend>
     { getRadioButtons(props) }
   </Fieldset>
 );
