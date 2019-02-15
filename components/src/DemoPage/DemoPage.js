@@ -60,7 +60,8 @@ const MenuItem = styled(BaseMenuItem)`
 
 const BaseHeader = ({ className, ...props }) => (
   <Flex
-    className={ className } px={ 4 } py={ 3 }
+    className={ className } px={ 4 } 
+    py={ {small: 3, medium: 3, large: 4 }}
     bg="black" { ...props }
     height={ { small: "72px", medium: "72px", large: "100%" } }
     flexDirection={ { small: "row", medium: "row", large: "column" } }
@@ -150,7 +151,6 @@ const BaseHeader = ({ className, ...props }) => (
     <Menu
       display={ { small: "none", medium: "flex", large: "flex" } }
       flexDirection={ { small: "row", medium: "row", large: "column" } }
-      alignItems={ { large: "center" } }
       my={ { large: 4 } }
     >
       <MenuItem> Menu Item 1 </MenuItem>
@@ -179,7 +179,7 @@ const BaseSidebarItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
     <Link
       px={ 4 } py={ 2 } style={ { display: "block" } }
-      color={ theme.colors.black } underline={ false } href="http://nulogy.design"
+      color={ theme.colors.blueß } underline={ false } href="http://nulogy.design"
     >
       {children}
     </Link>
@@ -279,92 +279,107 @@ const DemoPage = () => {
           large: "row",
         } }
       >
-        <Sidebar py={ 4 } flexDirection={ { small: "256px", medium: "256px" } }>
-          <SidebarItem>Contextual Tab 1</SidebarItem>
-          <SidebarItem>Contextual Tab 2</SidebarItem>
-          <SidebarItem>Contextual Tab 3</SidebarItem>
-          <SidebarItem>Contextual Tab 4</SidebarItem>
-          <SidebarItem>Contextual Tab 5</SidebarItem>
+        <Sidebar py={ 4 } 
+          flexDirection={ { small: "256px", medium: "256px" } }
+          order={{ small: "2", medium: "-1", large: "-1"}}  
+        >
+          <Text fontWeight={ theme.fontWeights[2] } mx={ 4 } mb= { 2 }
+
+          >
+            Contextual Menu
+          </Text>
+          <Flex
+            flexDirection={{small: "row", medium: "column", large: "column"}}
+            justifyContent="flex-start"
+          >
+            <SidebarItem>Contextual Tab 1</SidebarItem>
+            <SidebarItem>Contextual Tab 2</SidebarItem>
+            <SidebarItem>Contextual Tab 3</SidebarItem>
+            <SidebarItem>Contextual Tab 4</SidebarItem>
+            <SidebarItem>Contextual Tab 5</SidebarItem>
+          </Flex>
         </Sidebar>
         <Box width="100%" bg="white" p={ 4 }>
           <Title>Job Page</Title>
-          <Form style={ { width: "450px" } } mb={ 6 } title="Job 324400">
-            <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
-              <List compact>
-                <ListItem>Affected field</ListItem>
-                <ListItem>Unmet criteria</ListItem>
-                <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
-              </List>
-            </HeaderValidation>
-            <FormSection title="Job Information">
-              <Field labelText="Project">
-                <Input placeholder="Project 128703" />
-              </Field>
-              <Field
-                labelText="Project description" requirementText="(Optional)"
-                helpText="Project description helps identify the project."
-              >
-                <Input />
-              </Field>
-              <Field labelText="Project status">
-                <Select options={ options } />
-              </Field>
-              <Field labelText="Item code">
-                <Input error defaultValue="WS2SB6" />
-                <InlineValidation message="Item WS2SB6 does not exist." />
-              </Field>
-              <Field labelText="Eaches expected on Job">
-                <Input placeholder="2 000" style={ { width: "50%" } } />
-              </Field>
-              <Field labelText="Eaches remaining on Project">
-                <Input value="18 000" style={ { width: "50%" } } disabled />
-              </Field>
-              <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)">
-                <Input placeholder="May 26, 2019" />
-              </Field>
-              <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)">
-                <Input disabled value="June 29, 2019" />
-              </Field>
-              <Field labelText="Line Lead" requirementText="(Optional)">
-                <Checkbox labelText="Christiaan Oostenbrug" />
-                <Checkbox labelText="Matt Dunn" />
-                <Checkbox disabled checked labelText="Clemens Park" />
-                <Checkbox disabled labelText="Nikola Pejcic" />
-              </Field>
-              <Field labelText="Reconcile">
-                <RadioGroup name="settingSelection" defaultValue="yes">
-                  <Radio value="yes" labelText="Yes" />
-                  <Radio value="no" labelText="No" />
-                  <Radio value="maybe" labelText="Maybe" disabled />
-                </RadioGroup>
-                <InlineValidation message="Yes can be only selected ..." />
-              </Field>
-              <Field labelText="Job visibility">
-                <ToggleWithText
-                  onText="Visible" offText="Hidden"
-                />
-              </Field>
-            </FormSection>
-            <FormSection title="Rejects">
-              <Field labelText="Item">
-                <Input error defaultValue="235432" />
-                <InlineValidation message="Item 235432 is not a valid entry.">
-                  <List compact>
-                    <ListItem>Item is at least 8 characters long.</ListItem>
-                    <ListItem>Item contains at least 1 letter.</ListItem>
-                  </List>
-                </InlineValidation>
-              </Field>
-              <Field labelText="Quantity">
-                <Input />
-              </Field>
-              <Field labelText="Reject visibility">
-                <ToggleWithText
-                  onText="Visible" offText="Hidden" disabled
-                />
-              </Field>
-            </FormSection>
-          </Form>
+          <Box width={{small: "100%", medium: "80%", large: "80%"}}>
+            <Form mb={ 6 } title="Job 324400">
+              <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+                <List compact>
+                  <ListItem>Affected field</ListItem>
+                  <ListItem>Unmet criteria</ListItem>
+                  <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+                </List>
+              </HeaderValidation>
+              <FormSection title="Job Information">
+                <Field labelText="Project">
+                  <Input placeholder="Project 128703" />
+                </Field>
+                <Field
+                  labelText="Project description" requirementText="(Optional)"
+                  helpText="Project description helps identify the project."
+                >
+                  <Input />
+                </Field>
+                <Field labelText="Project status">
+                  <Select options={ options } />
+                </Field>
+                <Field labelText="Item code">
+                  <Input error defaultValue="WS2SB6" />
+                  <InlineValidation message="Item WS2SB6 does not exist." />
+                </Field>
+                <Field labelText="Eaches expected on Job">
+                  <Input placeholder="2 000" style={ { width: "50%" } } />
+                </Field>
+                <Field labelText="Eaches remaining on Project">
+                  <Input value="18 000" style={ { width: "50%" } } disabled />
+                </Field>
+                <Field labelText="Scheduled start" formatText="(Expected format: MMM DD, YYYY)">
+                  <Input placeholder="May 26, 2019" />
+                </Field>
+                <Field labelText="Scheduled end" formatText="(Expected format: MMM DD, YYYY)">
+                  <Input disabled value="June 29, 2019" />
+                </Field>
+                <Field labelText="Line Lead" requirementText="(Optional)">
+                  <Checkbox labelText="Christiaan Oostenbrug" />
+                  <Checkbox labelText="Matt Dunn" />
+                  <Checkbox disabled checked labelText="Clemens Park" />
+                  <Checkbox disabled labelText="Nikola Pejcic" />
+                </Field>
+                <Field labelText="Reconcile">
+                  <RadioGroup name="settingSelection" defaultValue="yes">
+                    <Radio value="yes" labelText="Yes" />
+                    <Radio value="no" labelText="No" />
+                    <Radio value="maybe" labelText="Maybe" disabled />
+                  </RadioGroup>
+                  <InlineValidation message="Yes can be only selected ..." />
+                </Field>
+                <Field labelText="Job visibility">
+                  <ToggleWithText
+                    onText="Visible" offText="Hidden"
+                  />
+                </Field>
+              </FormSection>
+              <FormSection title="Rejects">
+                <Field labelText="Item">
+                  <Input error defaultValue="235432" />
+                  <InlineValidation message="Item 235432 is not a valid entry.">
+                    <List compact>
+                      <ListItem>Item is at least 8 characters long.</ListItem>
+                      <ListItem>Item contains at least 1 letter.</ListItem>
+                    </List>
+                  </InlineValidation>
+                </Field>
+                <Field labelText="Quantity">
+                  <Input />
+                </Field>
+                <Field labelText="Reject visibility">
+                  <ToggleWithText
+                    onText="Visible" offText="Hidden" disabled
+                  />
+                </Field>
+              </FormSection>
+            </Form>
+          </Box>
           <Flex mb={ 6 }>
             <PrimaryButton mr={ 2 }>Save changes</PrimaryButton>
             <QuietButton>Cancel</QuietButton>
