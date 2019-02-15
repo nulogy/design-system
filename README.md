@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/29a91f95-431b-4c72-ac07-f01f2f2d8b1b/deploy-status)](https://app.netlify.com/sites/nulogy-design-system/deploys)
+[![Build Status](https://travis-ci.org/nulogy/design-system.svg?branch=master)](https://travis-ci.org/nulogy/design-system)
+
 # Nulogy Design System 
 The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.
 

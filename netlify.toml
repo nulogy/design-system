@@ -1,0 +1,6 @@
+[build]
+  command = "yarn workspace @nulogy/components build && yarn workspace @nulogy/docs build"
+  publish = "docs/public"
+
+[build.environment]
+  YARN_VERSION = "1.13.0"
