@@ -60,8 +60,8 @@ const MenuItem = styled(BaseMenuItem)`
 
 const BaseHeader = ({ className, ...props }) => (
   <Flex
-    className={ className } px={ 4 } 
-    py={ {small: 3, medium: 3, large: 4 }}
+    className={ className } px={ 4 }
+    py={ { small: 3, medium: 3, large: 4 } }
     bg="black" { ...props }
     height={ { small: "72px", medium: "72px", large: "100%" } }
     flexDirection={ { small: "row", medium: "row", large: "column" } }
@@ -279,17 +279,18 @@ const DemoPage = () => {
           large: "row",
         } }
       >
-        <Sidebar py={ 4 } 
+        <Sidebar
+          py={ 4 }
           flexDirection={ { small: "256px", medium: "256px" } }
-          order={{ small: "2", medium: "-1", large: "-1"}}  
+          order={ { small: "2", medium: "-1", large: "-1" } }
         >
-          <Text fontWeight={ theme.fontWeights[2] } mx={ 4 } mb= { 2 }
-
+          <Text
+            fontWeight={ theme.fontWeights[2] } mx={ 4 } mb={ 2 }
           >
             Contextual Menu
           </Text>
           <Flex
-            flexDirection={{small: "row", medium: "column", large: "column"}}
+            flexDirection={ { small: "row", medium: "column", large: "column" } }
             justifyContent="flex-start"
           >
             <SidebarItem>Contextual Tab 1</SidebarItem>
@@ -301,7 +302,7 @@ const DemoPage = () => {
         </Sidebar>
         <Box width="100%" bg="white" p={ 4 }>
           <Title>Job Page</Title>
-          <Box width={{small: "100%", medium: "80%", large: "80%"}}>
+          <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
             <Form mb={ 6 } title="Job 324400">
               <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
                 <List compact>
