@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
+import Box from "../Box/Box";
 import Flex from "../Flex/Flex";
 import { omit } from "../utils";
 
@@ -87,6 +88,17 @@ ToggleButton.defaultProps = {
   disabled: false,
 };
 
+const ToggleClickable = styled.label(({ disabled }) => ({
+  cursor: disabled ? null : "pointer",
+  display: "inline-flex",
+  width: "auto",
+  minHeight: theme.space[4],
+  verticalAlign: "top",
+  alignItems: "flex-start",
+  userSelect: "none",
+  padding: `${theme.space[1]} 0`,
+}));
+
 class BaseToggle extends React.Component {
   constructor(props) {
     super(props);
@@ -120,19 +132,21 @@ class BaseToggle extends React.Component {
       toggled,
     } = this.state;
     return (
-      <Flex flexDirection="row" alignItems="center" className={ className }>
-        <ToggleButton
-          checked={ toggled } onChange={ onChange } disabled={ disabled }
-          required={ required } aria-required={ required }
-          aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
-          { ...props }
-        />
-        {(onText || offText) && (
-        <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
-            {toggled ? onText : offText}
-        </Text>
-        )}
-      </Flex>
+      <Box className={ className }>
+        <ToggleClickable>
+          <ToggleButton
+            checked={ toggled } onChange={ onChange } disabled={ disabled }
+            required={ required } aria-required={ required }
+            aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
+            { ...props }
+          />
+          {(onText || offText) && (
+          <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
+              {toggled ? onText : offText}
+          </Text>
+          )}
+        </ToggleClickable>
+      </Box>
     );
   }
 }
@@ -164,7 +178,7 @@ BaseToggle.defaultProps = {
 };
 
 const Toggle = styled(BaseToggle)([], () => ({
-  padding: "8px 0",
+  padding: `${theme.space[1]} 0`,
   alignItems: "flex-start",
 }));
 
