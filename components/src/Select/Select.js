@@ -123,13 +123,16 @@ const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
   required, placeholder, initialIsOpen,
+  id,
 }) => (
+
   <Downshift
     itemToString={ optionToString }
     selectedItem={ value }
     onChange={ onChange }
     defaultHighlightedIndex={ 0 }
     initialIsOpen={ initialIsOpen }
+    inputId={ id }
   >
     {
       ({
@@ -144,10 +147,11 @@ const Select = ({
         <div style={ { position: "relative" } }>
           <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
             <Input
-              { ...getInputProps({ disabled, error, isOpen }) } aria-required={ required }
-              placeholder={ placeholder }
-              readOnly
-              value={ optionToString(selectedItem) || "" }
+              { ...getInputProps({
+                disabled, error, isOpen, autoComplete: "off",
+              }) }
+              aria-required={ required } aria-invalid={ error } placeholder={ placeholder }
+              readOnly value={ optionToString(selectedItem) || "" }
             />
             <ToggleButton isOpen={ isOpen } />
           </SelectBox>
@@ -190,6 +194,7 @@ Select.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -203,6 +208,7 @@ Select.defaultProps = {
   initialIsOpen: undefined,
   placeholder: undefined,
   optionToString: extractLabelFromOption,
+  id: undefined,
 };
 
 export default Select;

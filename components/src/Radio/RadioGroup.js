@@ -26,13 +26,20 @@ const getRadioButtons = props => {
   return (radioButtons);
 };
 
+const Fieldset = styled.fieldset`
+  padding: 0;
+  border: 0;
+  margin: 0;
+`;
+
 const BaseRadioGroup = ({
   className,
   ...props
 }) => (
-  <div className={ className }>
+  <Fieldset role="radiogroup" className={ className }>
+    <legend>Title</legend>
     { getRadioButtons(props) }
-  </div>
+  </Fieldset>
 );
 
 BaseRadioGroup.propTypes = {

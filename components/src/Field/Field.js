@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
-import FormatText from "./FormatText";
 
 const Label = styled.label`
   font-size: ${theme.fontSizes[1]};
@@ -31,7 +30,7 @@ const BaseField = ({
   labelText,
   requirementText,
   helpText,
-  formatText,
+  htmlFor,
   children,
   m, mt, mr, mb, ml, mx, my,
   ...fieldProps
@@ -42,11 +41,10 @@ const BaseField = ({
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Label style={ { display: "block" } } mb={ 2 }>
+    <Label style={ { display: "block" } } mb={ 2 } htmlFor={ htmlFor }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
-      {formatText && (<FormatText>{formatText}</FormatText>)}
     </Label>
     {children}
   </FieldWrapper>
@@ -56,8 +54,9 @@ BaseField.propTypes = {
   labelText: PropTypes.string.isRequired,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
-  formatText: PropTypes.string,
+  htmlFor: PropTypes.string,
   children: PropTypes.node,
+  id: PropTypes.string,
   ...space.PropTypes,
 };
 
@@ -65,7 +64,8 @@ BaseField.defaultProps = {
   children: [],
   requirementText: null,
   helpText: null,
-  formatText: null,
+  htmlFor: undefined,
+  id: undefined,
 };
 
 const Field = styled(BaseField)`

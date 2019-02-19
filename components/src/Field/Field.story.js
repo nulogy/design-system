@@ -8,40 +8,37 @@ import ListItem from "../List/ListItem";
 
 storiesOf("Field", module)
   .add("Field", () => (
-    <Field labelText="Default label" />
+    <Field labelText="Default label" /> // eslint-disable-line jsx-a11y/label-has-associated-control
   ))
   .add("With Input", () => (
-    <Field labelText="Default label">
-      <Input />
+    <Field labelText="Default label" htmlFor="with-input">
+      <Input id="with-input" />
     </Field>
   ))
   .add("With Input and InlineValidation", () => (
-    <Field labelText="Default label">
-      <Input />
+    <Field labelText="Default label" htmlFor="with-input-and-inline-validation">
+      <Input id="with-input-and-inline-validation" />
       <InlineValidation message="There has been an error" />
     </Field>
   ))
   .add("With Label for Input", () => (
-    <Field labelText="Default label" htmlFor="thisInput">
-      <Input id="thisInput" />
+    <Field labelText="Default label" htmlFor="with-label-for-input">
+      <Input id="with-label-for-input" />
       <InlineValidation message="There has been an error" />
     </Field>
   ))
   .add("With requirement text", () => (
-    <Field labelText="Default label" requirementText="(Optional)" />
+    <Field labelText="Default label" requirementText="(Optional)" /> // eslint-disable-line jsx-a11y/label-has-associated-control
   ))
-  .add("With help text", () => (
+  .add("With help text", () => ( // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <Field labelText="Default label" helpText="Enter a date below" />
-  ))
-  .add("With format text", () => (
-    <Field labelText="Default label" formatText="(DD-MM-YYYY)" />
   ))
   .add("With all additional components", () => (
     <Field
       labelText="Default label" requirementText="(Optional)" helpText="Enter a date below"
-      formatText="(DD-MM-YYYY)" htmlFor="thisInput1"
+      htmlFor="with-all-additional-components"
     >
-      <Input id="thisInput1" />
+      <Input placeholder="DD-MM-YYYY" id="with-all-additional-components" />
       <InlineValidation message="There has been an error">
         <List compact>
           <ListItem>Something has gone wrong.</ListItem>
@@ -51,11 +48,10 @@ storiesOf("Field", module)
       </InlineValidation>
     </Field>
   ))
-  .add("With a long text", () => (
+  .add("With a long text", () => ( // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <Field
       labelText="Long long long long long long long long long long long long long long label"
       requirementText="(Optional)"
       helpText="Help text help text help text help text help text help text help text help text"
-      formatText="(DD-MM-YYYY)"
     />
   ));

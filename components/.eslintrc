@@ -32,7 +32,13 @@
     "react/jsx-max-props-per-line": ["error", { "maximum": 3 }],
     "react/prefer-stateless-function": ["off"],
     "react/require-extension": ["off"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["Field"],
+      "labelAttributes": ["Label", "Switch"],
+      "controlComponents": ["Input", "RadioGroup", "Select", "Toggle", "Checkbox"],
+      "assert": "both"
+    }]
   },
   "env": {
     "browser": true,

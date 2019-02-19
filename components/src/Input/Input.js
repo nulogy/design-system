@@ -28,7 +28,11 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const Input = styled.input`
+const Input = styled.input.attrs(({ error, required }) => ({
+  "aria-invalid": error,
+  "aria-required": required,
+  "required": required,
+}))`
     width: 100%
     border: 1px solid;
     border-radius: ${theme.radii.medium};
@@ -50,12 +54,14 @@ const Input = styled.input`
 Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
+  required: PropTypes.bool,
   ...space.PropTypes,
 };
 
 Input.defaultProps = {
   disabled: false,
   error: false,
+  required: false,
 };
 
 export default Input;

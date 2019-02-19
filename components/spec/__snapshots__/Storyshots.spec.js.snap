@@ -38,11 +38,13 @@ exports[`Storyshots Checkbox Checkbox 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Controlled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Checkbox Error state 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Checkbox Set to defaultChecked 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Set to disabled 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Checkbox Set to error 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Checkbox Set to required 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots DemoPage Demo Page 1`] = `ReactWrapper {}`;
 
@@ -57,8 +59,6 @@ exports[`Storyshots Field With Label for Input 1`] = `ReactWrapper {}`;
 exports[`Storyshots Field With a long text 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Field With all additional components 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With format text 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Field With help text 1`] = `ReactWrapper {}`;
 
@@ -152,6 +152,8 @@ exports[`Storyshots Input Set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Input Set to error 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Input Set to required 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Link Link 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Link With a different color 1`] = `ReactWrapper {}`;
@@ -168,13 +170,15 @@ exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapp
 
 exports[`Storyshots Radio Controlled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Radio Error state 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Radio Radio 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Set to defaultChecked 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Set to disabled 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Radio Set to error 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Radio Set to required 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots RadioGroup Controlled 1`] = `ReactWrapper {}`;
 
@@ -217,6 +221,8 @@ exports[`Storyshots Toggle Toggle Field 1`] = `ReactWrapper {}`;
 exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle set to disabled 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Toggle Toggle set to required 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle With text 1`] = `ReactWrapper {}`;
 
