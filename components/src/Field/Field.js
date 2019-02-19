@@ -41,7 +41,7 @@ const BaseField = ({
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Label style={ { display: "block" } } mb={ 2 } htmlFor={htmlFor}>
+    <Label style={ { display: "block" } } mb={ 2 } htmlFor={ htmlFor }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
