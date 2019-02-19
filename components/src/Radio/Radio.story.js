@@ -19,10 +19,12 @@ storiesOf("Radio", module)
       <Radio checked disabled labelText="I am disabled" />
     </>
   ))
-  .add("Error state", () => (
+  .add("Set to error", () => (
     <>
       <Radio error labelText="I am error" />
       <Radio defaultChecked error labelText="I am error" />
+    </>
+  ))
   .add("Set to required", () => (
     <>
       <Radio labelText="I am a radio button" required />
