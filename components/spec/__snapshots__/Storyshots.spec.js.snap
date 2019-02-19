@@ -44,6 +44,8 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Set to disabled 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots DemoPage Demo Page 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Field Field 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Field With Input 1`] = `ReactWrapper {}`;

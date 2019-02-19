@@ -2,7 +2,6 @@ import React from 'react';
 import NDSProvider from '../src/NDSProvider/NDSProvider';
 import { configure, addDecorator } from '@storybook/react';
 import theme from '../src/theme';
-import Box from '../src/Box/Box';
 import '../../css/src/nds-dev.css';
 import withStyles from "@sambego/storybook-styles";
 
@@ -20,9 +19,7 @@ addDecorator(withStyles({
 
 addDecorator((story) => (
   <NDSProvider theme={theme}>
-    <Box p={3}>
-      {story()}
-    </Box>
+    {story()}
   </NDSProvider>
 ))
 
