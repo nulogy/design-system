@@ -1,7 +1,7 @@
 {
     "size": {
       "breakpoint": {
-        "small" : { "value": "540" },        
+        "small" : { "value": "0" },        
         "medium" : { "value": "768" },
         "large": { "value": "1024" }
       }
