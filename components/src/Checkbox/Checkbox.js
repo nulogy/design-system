@@ -64,13 +64,15 @@ const VisualCheckbox = styled.div`
   }
 `;
 
-const CheckboxWrapper = styled.label`
-  display: inline-flex;
-  align-items: flex-start;
-  vertical-align: top;
-  width: auto;
+const CheckboxClickable = styled.label`
   cursor: ${props => (props.disabled ? null : "pointer")};
+  display: inline-flex;
+  width: auto;
+  min-height: ${theme.space[4]};
+  vertical-align: top;
+  align-items: flex-start;
   user-select: none;
+  padding: ${theme.space[1]} 0;
 `;
 
 const CheckboxInput = styled.input`
@@ -103,7 +105,7 @@ const BaseCheckbox = props => {
   } = props;
   return (
     <Box className={ className }>
-      <CheckboxWrapper disabled={ disabled }>
+      <CheckboxClickable disabled={ disabled }>
         <CheckboxInput
           type="checkbox" required={ required } aria-required={ required }
           aria-invalid={ error }
@@ -111,7 +113,7 @@ const BaseCheckbox = props => {
         />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
         <Text disabled={ disabled }> {labelText} </Text>
-      </CheckboxWrapper>
+      </CheckboxClickable>
     </Box>
   );
 };
@@ -136,7 +138,7 @@ BaseCheckbox.defaultProps = {
 };
 
 const Checkbox = styled(BaseCheckbox)`
-  padding: ${theme.space[2]} 0;
+  padding: ${theme.space[1]} 0;
   color: ${props => (props.error ? theme.colors.red : null)};
 `;
 
