@@ -65,13 +65,15 @@ const VisualRadio = styled.div`
   }
 `;
 
-const RadioWrapper = styled.label`
+const RadioClickable = styled.label`
   cursor: ${props => (props.disabled ? null : "pointer")};
   display: inline-flex;
   width: auto;
+  min-height: ${theme.space[4]};
   vertical-align: top;
   align-items: flex-start;
   user-select: none;
+  padding: ${theme.space[1]} 0;
 `;
 
 const RadioInput = styled.input`
@@ -105,15 +107,15 @@ const BaseRadio = props => {
   } = props;
   return (
     <Box className={ className }>
-      <RadioWrapper disabled={ disabled }>
+      <RadioClickable disabled={ disabled }>
         <RadioInput
           type="radio" aria-checked={ checked } { ...props }
           required={ required } aria-required={ required }
           aria-invalid={ error }
         />
         <VisualRadio disabled={ disabled } checked={ checked } />
-        <Text disabled={ disabled }> {labelText} </Text>
-      </RadioWrapper>
+        <Text inline disabled={ disabled }> {labelText} </Text>
+      </RadioClickable>
     </Box>
   );
 };
@@ -138,7 +140,7 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)`
-  padding: ${theme.space[2]} 0;
+  padding: ${theme.space[1]} 0;
   color: ${props => (props.error ? theme.colors.red : null)};
 `;
 
