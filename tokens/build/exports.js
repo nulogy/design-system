@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 12 Feb 2019 21:02:47 GMT
+ * Generated on Tue, 19 Feb 2019 15:57:50 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -49,7 +49,7 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "20px";
-export const size_breakpoint_small = "540px";
+export const size_breakpoint_small = "0px";
 export const size_breakpoint_medium = "768px";
 export const size_breakpoint_large = "1024px";
 export const weight_font_light = "100";
