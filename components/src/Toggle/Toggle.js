@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
 import Box from "../Box/Box";
-import Flex from "../Flex/Flex";
 import { omit } from "../utils";
 
 const Slider = styled.span([], ({ disabled }) => ({
