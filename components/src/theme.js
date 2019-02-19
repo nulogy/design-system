@@ -61,7 +61,7 @@ export default {
     circle: tokens.radius_border_circle,
   },
   breakpoints: {
-    small: "0px",
+    small: "100px",
     medium: "768px",
     large: "1024px",
   },

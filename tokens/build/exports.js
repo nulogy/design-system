@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 19 Feb 2019 15:57:50 GMT
+ * Generated on Tue, 19 Feb 2019 16:07:46 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -39,6 +39,9 @@ export const size_base_x_4 = "32px";
 export const size_base_x_6 = "48px";
 export const size_base_x_8 = "64px";
 export const size_base_base = "16px";
+export const size_breakpoint_small = "0px";
+export const size_breakpoint_medium = "768px";
+export const size_breakpoint_large = "1024px";
 export const size_font_smaller = "12px";
 export const size_font_small = "14px";
 export const size_font_medium = "16px";
@@ -49,9 +52,6 @@ export const size_font_base = "16px";
 export const size_font_page_title = "46px";
 export const size_font_section_title = "26px";
 export const size_font_subsection_title = "20px";
-export const size_breakpoint_small = "0px";
-export const size_breakpoint_medium = "768px";
-export const size_breakpoint_large = "1024px";
 export const weight_font_light = "100";
 export const weight_font_normal = "400";
 export const weight_font_medium = "500";
