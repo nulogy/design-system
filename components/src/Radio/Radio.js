@@ -101,6 +101,7 @@ const BaseRadio = props => {
     disabled,
     checked,
     required,
+    error,
   } = props;
   return (
     <Box className={ className }>
@@ -108,6 +109,7 @@ const BaseRadio = props => {
         <RadioInput
           type="radio" aria-checked={ checked } { ...props }
           required={ required } aria-required={ required }
+          aria-invalid={ error }
         />
         <VisualRadio disabled={ disabled } checked={ checked } />
         <Text disabled={ disabled }> {labelText} </Text>

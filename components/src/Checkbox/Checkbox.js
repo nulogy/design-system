@@ -99,12 +99,14 @@ const BaseCheckbox = props => {
     disabled,
     checked,
     required,
+    error,
   } = props;
   return (
     <Box className={ className }>
       <CheckboxWrapper disabled={ disabled }>
         <CheckboxInput
           type="checkbox" required={ required } aria-required={ required }
+          aria-invalid={ error }
           { ...props }
         />
         <VisualCheckbox disabled={ disabled } checked={ checked } />

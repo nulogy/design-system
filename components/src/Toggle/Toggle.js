@@ -113,6 +113,7 @@ class BaseToggle extends React.Component {
       offText,
       className,
       required,
+      error,
       ...props
     } = omit(this.props, "defaultToggled");
     const {
@@ -123,7 +124,7 @@ class BaseToggle extends React.Component {
         <ToggleButton
           checked={ toggled } onChange={ onChange } disabled={ disabled }
           required={ required } aria-required={ required }
-          onClick={ e => { this.handleClick(e); } }
+          aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
           { ...props }
         />
         {(onText || offText) && (
