@@ -28,10 +28,6 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const getTextColor = props => getInputStyle(props).textColor;
-const getBorderColor = props => getInputStyle(props).borderColor;
-const getBackgroundColor = props => getInputStyle(props).backgroundColor;
-
 const Input = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
   "aria-required": required,
