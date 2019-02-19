@@ -64,7 +64,7 @@
     "react-test-renderer": "16.7.0"
   },
   "dependencies": {
-    "@nulogy/tokens": "0.2.4",
+    "@nulogy/tokens": "0.2.3",
     "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-info": "^4.1.4",
     "@storybook/addon-storysource": "^4.0.12",
