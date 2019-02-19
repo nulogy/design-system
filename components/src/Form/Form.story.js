@@ -147,7 +147,7 @@ storiesOf("Form", module)
             <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
           </Field>
 
-          <Field labelText="Line Lead" requirementText="(Optional)">
+          <Field labelText="Line Lead" requirementText="(Optional)"> {/* eslint-disable-line */}
             <Checkbox labelText="Christiaan Oostenbrug" />
             <Checkbox labelText="Matt Dunn" />
             <Checkbox disabled checked labelText="Clemens Park" />

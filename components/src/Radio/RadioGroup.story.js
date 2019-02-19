@@ -13,7 +13,7 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("Radio Group Field", () => (
-    <Field labelText="Setting Selection" helpText="Select a setting from the menu below:">
+    <Field labelText="Setting Selection" helpText="Select a setting from the menu below:"> {/* eslint-disable-line */}
       <RadioGroup name="settingSelection" defaultValue="a">
         <Radio value="a" labelText="Option A" />
         <Radio value="b" labelText="Option B" />
