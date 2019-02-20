@@ -6,9 +6,6 @@ storiesOf("MultilineInput", module)
   .add("MultilineInput", () => (
     <MultilineInput />
   ))
-  .add("With custom number of rows", () => (
-    <MultilineInput rows="7" />
-  ))
   .add("Set to disabled", () => (
     <MultilineInput disabled />
   ))
@@ -17,4 +14,10 @@ storiesOf("MultilineInput", module)
   ))
   .add("Set to required", () => (
     <MultilineInput required />
+  ))
+  .add("With custom number of rows", () => (
+    <MultilineInput rows="7" />
+  ))
+  .add("With placeholder text", () => (
+    <MultilineInput placeholder="Month/Day/Year" />
   ));
