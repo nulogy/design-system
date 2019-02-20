@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
-import InputClickableArea from "../UtilityComponents/InputClickableArea";
+import { InputClickableArea } from "../Utils";
 
 const radioStyle = {
   checked: {

@@ -4,8 +4,7 @@ import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
 import Box from "../Box/Box";
-import InputClickableArea from "../UtilityComponents/InputClickableArea";
-import { omit } from "../utils";
+import { InputClickableArea, omit } from "../Utils";
 
 const Slider = styled.span([], ({ disabled }) => ({
   position: "absolute",
