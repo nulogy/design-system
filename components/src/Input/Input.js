@@ -7,16 +7,16 @@ import { subPx } from "../Utils";
 
 const inputStyles = {
   disabled: {
-    textColor: transparentize(0.6667, theme.colors.black),
+    color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.whiteGrey,
   },
   error: {
-    textColor: theme.colors.red,
+    color: theme.colors.red,
     borderColor: theme.colors.red,
   },
   default: {
-    textColor: theme.colors.black,
+    color: theme.colors.black,
     borderColor: theme.colors.grey,
   },
 };
@@ -32,24 +32,25 @@ const Input = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
-}))`
-    width: 100%
-    border: 1px solid;
-    border-radius: ${theme.radii.medium};
-    padding: ${subPx(theme.space[2])};
-    font-size: ${theme.fontSizes[1]};
-    font-family: ${theme.fonts.base};
-    line-height: ${theme.lineHeights.base};
-    ${space}
-    ${props => getInputStyle(props)}
-
-    &:focus {
-        outline: none;
-        color: ${theme.colors.black}
-        border-color: ${theme.colors.blue};
-        box-shadow: 0 0 3px ${theme.colors.blue};
-    }
-`;
+}))(
+  space,
+  {
+    width: "100%",
+    border: "1px solid",
+    borderRadius: theme.radii.medium,
+    padding: subPx(theme.space[2]),
+    fontSize: theme.fontSizes[1],
+    fontFamily: theme.fonts.base,
+    lineHeight: theme.lineHeights.base,
+    "&:focus": {
+      outline: "none",
+      color: theme.colors.black,
+      borderColor: theme.colors.blue,
+      boxShadow: `0 0 3px ${theme.colors.blue}`,
+    },
+  },
+  props => (getInputStyle(props))
+);
 
 Input.propTypes = {
   disabled: PropTypes.bool,
