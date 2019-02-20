@@ -24,7 +24,7 @@ addDecorator(withStyles({
   `,
   backgroundPosition: '-1px -1px',
   padding: `${grid.major.size}`,
-  minHeight: `calc(100vh - ${grid.major.size * 2})`,
+  minHeight: `100vh`,
 }));
 
 addDecorator(withBackgrounds([
