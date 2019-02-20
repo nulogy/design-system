@@ -5,9 +5,7 @@ import Field from "../Field/Field";
 
 storiesOf("Toggle", module)
   .add("Toggle", () => (
-    <Field labelText="Ok" htmlFor="ok">
-      <Toggle id="ok" />
-    </Field>
+    <Toggle />
   ))
   .add("Toggle set to defaultToggled", () => (
     <Toggle defaultToggled />
@@ -26,6 +24,9 @@ storiesOf("Toggle", module)
   ))
   .add("With text", () => (
     <Toggle onText="on" offText="off" />
+  ))
+  .add("With long text", () => (
+    <Toggle defaultToggled onText="this state has a very long text label to explain it's state" offText="not this one" />
   ))
   .add("Toggle Field", () => (
     <Field labelText="Setting" helpText="Turns setting on/off" htmlFor="toggle-field">

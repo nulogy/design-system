@@ -224,6 +224,8 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle set to required 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Toggle With long text 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Toggle With text 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Typography Article 1`] = `ReactWrapper {}`;

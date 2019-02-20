@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { transparentize } from "polished";
 import Icon from "../Icon/Icon";
 import theme from "../theme";
-import { subPx } from "../utils";
+import { subPx } from "../Utils";
 
 const getBorderColor = ({
   error, disabled, isOpen,

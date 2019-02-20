@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
+import { InputClickableArea } from "../Utils";
 
 const radioStyle = {
   checked: {
@@ -65,15 +66,6 @@ const VisualRadio = styled.div`
   }
 `;
 
-const RadioWrapper = styled.label`
-  cursor: ${props => (props.disabled ? null : "pointer")};
-  display: inline-flex;
-  width: auto;
-  vertical-align: top;
-  align-items: flex-start;
-  user-select: none;
-`;
-
 const RadioInput = styled.input`
   position: absolute;
   opacity: 0;
@@ -105,15 +97,15 @@ const BaseRadio = props => {
   } = props;
   return (
     <Box className={ className }>
-      <RadioWrapper disabled={ disabled }>
+      <InputClickableArea disabled={ disabled }>
         <RadioInput
           type="radio" aria-checked={ checked } { ...props }
           required={ required } aria-required={ required }
           aria-invalid={ error }
         />
         <VisualRadio disabled={ disabled } checked={ checked } />
-        <Text disabled={ disabled }> {labelText} </Text>
-      </RadioWrapper>
+        <Text inline disabled={ disabled }> {labelText} </Text>
+      </InputClickableArea>
     </Box>
   );
 };
@@ -138,7 +130,7 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)`
-  padding: ${theme.space[2]} 0;
+  padding: ${theme.space[1]} 0;
   color: ${props => (props.error ? theme.colors.red : null)};
 `;
 

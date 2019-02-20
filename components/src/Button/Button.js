@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import Icon, { iconNames } from "../Icon/Icon";
-import { subPx, omit } from "../utils";
+import { subPx, omit } from "../Utils";
 
 const size = props => {
   switch (props.size) {
