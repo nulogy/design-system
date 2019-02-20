@@ -6,21 +6,25 @@ import theme from "../theme";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 
-const Label = styled.label`
-  font-size: ${theme.fontSizes[1]};
-  display: inline-block;
-  ${space}
-`;
+const Label = styled.label(
+  space,
+  {
+    display: "inline-block",
+    fontSize: theme.fontSizes[1],
+  }
+);
 
-const FieldWrapper = styled.div`
-  ${space}
-  > * {
-    margin-bottom: ${theme.space[2]};
+const FieldWrapper = styled.div(
+  space,
+  {
+    "> *": {
+      marginBottom: theme.space[2],
+    },
+    "> *:last-child": {
+      marginBottom: "0",
+    },
   }
-  > *:last-child {
-  margin-bottom: 0;
-  }
-`;
+);
 
 FieldWrapper.propTypes = {
   ...space.propTypes,
@@ -68,7 +72,6 @@ BaseField.defaultProps = {
   id: undefined,
 };
 
-const Field = styled(BaseField)`
-`;
+const Field = styled(BaseField)({});
 
 export default Field;
