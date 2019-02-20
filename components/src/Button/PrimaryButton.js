@@ -3,20 +3,15 @@ import { darken } from "polished";
 import Button from "./Button";
 import theme from "../theme";
 
-const PrimaryButton = styled(Button)`
-  color: ${theme.colors.white};
-  border-color: ${theme.colors.blue};
-  background-color: ${theme.colors.blue};
-
-  &:hover, &:focus {
-    outline: none;
-    background-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
-    border-color: ${props => (props.disabled ? null : darken(0.1, theme.colors.blue))};
-  }
-`;
-
-PrimaryButton.defaultProps = {
-  theme,
-};
+const PrimaryButton = styled(Button)(({ disabled }) => ({
+  color: theme.colors.white,
+  borderColor: theme.colors.blue,
+  backgroundColor: theme.colors.blue,
+  "&:hover, &:focus": {
+    outline: "none",
+    backgroundColor: disabled ? null : darken(0.1, theme.colors.blue),
+    borderColor: disabled ? null : darken(0.1, theme.colors.blue),
+  },
+}));
 
 export default PrimaryButton;
