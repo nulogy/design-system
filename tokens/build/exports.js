@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 19 Feb 2019 16:07:46 GMT
+ * Generated on Wed, 20 Feb 2019 19:41:02 GMT
  */
 
 export const color_base_black = "#011e38";
@@ -18,7 +18,7 @@ export const color_base_light_green = "#e6faf0";
 export const color_base_red = "#cc1439";
 export const color_base_light_red = "#faebec";
 export const color_base_yellow = "#ffbb00";
-export const font_family_base = "'IBM Plex Sans', sans";
+export const font_family_base = "'IBM Plex Sans', sans-serif";
 export const font_family_mono = "'IBM Plex Mono', monospace";
 export const line_height_base = "1.5";
 export const line_height_title = "1.04347826";
