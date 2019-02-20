@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
 import theme from "../theme";
-import { subPx } from "../utils";
+import { subPx } from "../Utils";
 
 const MultilineInputStyles = {
   disabled: {
