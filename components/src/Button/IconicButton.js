@@ -7,48 +7,50 @@ import Icon from "../Icon/Icon";
 import Text from "../Type/Text";
 import icons from "../../icons/icons.json";
 
-const Wrapper = styled.button(({ disabled, ...props }) => ({
-  background: "transparent",
-  border: "none",
-  position: "relative",
-  display: "inline-flex",
-  alignItems: "center",
-  padding: `${theme.space[1]} ${theme.space[0]}`,
-  color: theme.colors.darkBlue,
-  cursor: disabled ? "arrow" : "pointer",
-  ...space(props),
+const Wrapper = styled.button(
+  space,
+  ({ disabled }) => ({
+    background: "transparent",
+    border: "none",
+    position: "relative",
+    display: "inline-flex",
+    alignItems: "center",
+    padding: `${theme.space[1]} ${theme.space[0]}`,
+    color: theme.colors.darkBlue,
+    cursor: disabled ? "arrow" : "pointer",
 
-  [`${Icon}`]: {
-    borderRadius: theme.radii.circle,
-    transition: ".2s",
-  },
-  [`${Text}`]: {
-    display: "block",
-    fontWeight: props.theme.fontWeights[2],
-    textAlign: "left",
-  },
-  "&:hover, &:focus": {
-    outline: "none",
     [`${Icon}`]: {
-      backgroundColor: theme.colors.lightBlue,
+      borderRadius: theme.radii.circle,
+      transition: ".2s",
     },
-  },
-  "&:active": {
-    [`${Icon}`]: {
-      transform: "scale(0.875)",
-      transition: ".2s ease-in",
+    [`${Text}`]: {
+      display: "block",
+      fontWeight: theme.fontWeights[2],
+      textAlign: "left",
     },
-  },
-  "&:disabled": {
-    opacity: ".5",
-    "&:hover, &:active": {
+    "&:hover, &:focus": {
+      outline: "none",
       [`${Icon}`]: {
-        background: "none",
-        transform: "none",
+        backgroundColor: theme.colors.lightBlue,
       },
     },
-  },
-}));
+    "&:active": {
+      [`${Icon}`]: {
+        transform: "scale(0.875)",
+        transition: ".2s ease-in",
+      },
+    },
+    "&:disabled": {
+      opacity: ".5",
+      "&:hover, &:active": {
+        [`${Icon}`]: {
+          background: "none",
+          transform: "none",
+        },
+      },
+    },
+  })
+);
 
 const IconicButton = props => {
   const {

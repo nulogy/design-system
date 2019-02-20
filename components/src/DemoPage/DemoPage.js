@@ -24,9 +24,9 @@ import Text from "../Type/Text";
 import Link from "../Link/Link";
 import theme from "../theme";
 
-const Menu = styled(Flex)`
-flex-grow: 2;
-`;
+const Menu = styled(Flex)({
+  flexGrow: "2",
+});
 
 const BaseMenuItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
@@ -52,11 +52,11 @@ BaseMenuItem.defaultProps = {
   children: null,
 };
 
-const MenuItem = styled(BaseMenuItem)`
-&:hover {
-  background-color: ${theme.colors.darkBlue}
-}
-`;
+const MenuItem = styled(BaseMenuItem)({
+  "&:hover": {
+    backgroundColor: theme.colors.darkBlue,
+  },
+});
 
 const BaseHeader = ({ className, ...props }) => (
   <Flex
@@ -172,8 +172,7 @@ BaseHeader.defaultProps = {
   className: null,
 };
 
-const Header = styled(BaseHeader)`
-`;
+const Header = styled(BaseHeader)({});
 
 const BaseSidebarItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
@@ -199,11 +198,12 @@ BaseSidebarItem.defaultProps = {
   children: null,
 };
 
-const SidebarItem = styled(BaseSidebarItem)`
-&:hover {
-  background-color: ${theme.colors.grey}
-}
-`;
+const SidebarItem = styled(BaseSidebarItem)({
+  "&:hover": {
+    backgroundColor: theme.colors.grey,
+  },
+});
+
 const BaseSidebar = ({ className, children, ...props }) => (
   <Box
     className={ className } bg="whiteGrey" style={ { minWidth: "256px" } }
@@ -226,12 +226,11 @@ BaseSidebar.defaultProps = {
   children: null,
 };
 
-const Sidebar = styled(BaseSidebar)`
-`;
+const Sidebar = styled(BaseSidebar)({});
 
-const ChromeWrapper = styled(Flex)`
-min-height: 100%;
-`;
+const ChromeWrapper = styled(Flex)({
+  minHeight: "100%",
+});
 
 const Chrome = ({ children, ...props }) => (
   <ChromeWrapper flexDirection={ { small: "column", medium: "column", large: "row" } } { ...props }>
@@ -259,8 +258,7 @@ Chrome.defaultProps = {
   children: null,
 };
 
-const Main = styled(Flex)`
-`;
+const Main = styled(Flex)({});
 
 const DemoPage = () => {
   const options = [
