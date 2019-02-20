@@ -7,16 +7,16 @@ import { subPx } from "../Utils";
 
 const inputStyles = {
   disabled: {
-    textColor: transparentize(0.6667, theme.colors.black),
+    color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.whiteGrey,
   },
   error: {
-    textColor: theme.colors.red,
+    color: theme.colors.red,
     borderColor: theme.colors.red,
   },
   default: {
-    textColor: theme.colors.black,
+    color: theme.colors.black,
     borderColor: theme.colors.grey,
   },
 };
