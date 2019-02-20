@@ -14,8 +14,4 @@ const DangerButton = styled(Button)(({ disabled }) => ({
   },
 }));
 
-DangerButton.defaultProps = {
-  theme,
-};
-
 export default DangerButton;
