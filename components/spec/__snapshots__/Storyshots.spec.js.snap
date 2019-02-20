@@ -212,6 +212,18 @@ exports[`Storyshots Text With a custom margin 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Text With a size 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Textarea Set to disabled 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Textarea Set to error 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Textarea Set to required 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Textarea Textarea 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Textarea With custom number of rows 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Textarea With placeholder text 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Toggle Controlled Toggle 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle 1`] = `ReactWrapper {}`;
