@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import Box from "../Box/Box";
 import Text from "../Type/Text";
+import InputClickableArea from "../UtilityComponents/InputClickableArea";
 
 const checkboxStyle = {
   checked: {
@@ -64,17 +65,6 @@ const VisualCheckbox = styled.div`
   }
 `;
 
-const CheckboxClickable = styled.label`
-  cursor: ${props => (props.disabled ? null : "pointer")};
-  display: inline-flex;
-  width: auto;
-  min-height: ${theme.space[4]};
-  vertical-align: top;
-  align-items: flex-start;
-  user-select: none;
-  padding: ${theme.space[1]} 0;
-`;
-
 const CheckboxInput = styled.input`
   position: absolute;
   opacity: 0;
@@ -105,7 +95,7 @@ const BaseCheckbox = props => {
   } = props;
   return (
     <Box className={ className }>
-      <CheckboxClickable disabled={ disabled }>
+      <InputClickableArea disabled={ disabled }>
         <CheckboxInput
           type="checkbox" required={ required } aria-required={ required }
           aria-invalid={ error }
@@ -113,7 +103,7 @@ const BaseCheckbox = props => {
         />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
         <Text disabled={ disabled }> {labelText} </Text>
-      </CheckboxClickable>
+      </InputClickableArea>
     </Box>
   );
 };

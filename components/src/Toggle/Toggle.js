@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
 import Box from "../Box/Box";
+import InputClickableArea from "../UtilityComponents/InputClickableArea";
 import { omit } from "../utils";
 
 const Slider = styled.span([], ({ disabled }) => ({
@@ -87,17 +88,6 @@ ToggleButton.defaultProps = {
   disabled: false,
 };
 
-const ToggleClickable = styled.label(({ disabled }) => ({
-  cursor: disabled ? null : "pointer",
-  display: "inline-flex",
-  width: "auto",
-  minHeight: theme.space[4],
-  verticalAlign: "top",
-  alignItems: "flex-start",
-  userSelect: "none",
-  padding: `${theme.space[1]} 0`,
-}));
-
 class BaseToggle extends React.Component {
   constructor(props) {
     super(props);
@@ -132,7 +122,7 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Box className={ className }>
-        <ToggleClickable>
+        <InputClickableArea disabled={ disabled }>
           <ToggleButton
             checked={ toggled } onChange={ onChange } disabled={ disabled }
             required={ required } aria-required={ required }
@@ -144,7 +134,7 @@ class BaseToggle extends React.Component {
               {toggled ? onText : offText}
           </Text>
           )}
-        </ToggleClickable>
+        </InputClickableArea>
       </Box>
     );
   }
