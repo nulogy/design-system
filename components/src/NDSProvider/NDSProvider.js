@@ -13,7 +13,7 @@ const Reset = createGlobalStyle`
   `;
 
 export const GlobalStyles = styled.div`
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
