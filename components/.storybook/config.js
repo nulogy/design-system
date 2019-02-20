@@ -23,8 +23,6 @@ addDecorator(withStyles({
     ${grid.base.size} ${grid.base.size}
   `,
   backgroundPosition: '-1px -1px',
-  borderTop: '1px solid red',
-  marginTop: '-1px',
   padding: `${grid.major.size}`,
   minHeight: `calc(100vh - ${grid.major.size * 2})`,
 }));
