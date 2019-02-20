@@ -71,34 +71,36 @@ BaseButton.defaultProps = {
 };
 
 
-const Button = styled(BaseButton)(({ disabled, fullWidth, ...props }) => ({
-  display: "inline-flex",
-  justifyContent: "center",
-  alignItems: "center",
-  fontWeight: theme.fontWeights[2],
-  textDecoration: "none",
-  verticalAlign: "middle",
-  lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  cursor: disabled ? "arrow" : "pointer",
-  color: theme.colors.blue,
-  border: `1px solid ${theme.colors.darkBlue}`,
-  borderRadius: theme.radii.medium,
-  width: fullWidth ? "100%" : "auto",
-  ...size(props),
-  ...space(props),
-  "&:hover, &:focus": {
-    outline: "none",
-    backgroundColor: disabled ? null : theme.colors.lightBlue,
-  },
-  "&:active": {
-    transform: "scale(0.98)",
-    transition: ".2s ease-in",
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
-}));
+const Button = styled(BaseButton)(
+  space,
+  size,
+  ({ disabled, fullWidth }) => ({
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontWeight: theme.fontWeights[2],
+    textDecoration: "none",
+    verticalAlign: "middle",
+    lineHeight: theme.lineHeights.base,
+    transition: ".2s",
+    cursor: disabled ? "arrow" : "pointer",
+    color: theme.colors.blue,
+    border: `1px solid ${theme.colors.darkBlue}`,
+    borderRadius: theme.radii.medium,
+    width: fullWidth ? "100%" : "auto",
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: disabled ? null : theme.colors.lightBlue,
+    },
+    "&:active": {
+      transform: "scale(0.98)",
+      transition: ".2s ease-in",
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  })
+);
 
 Button.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
