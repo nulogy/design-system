@@ -5,7 +5,7 @@ import { space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const inputStyles = {
+const MultilineInputStyles = {
   disabled: {
     textColor: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
@@ -21,18 +21,17 @@ const inputStyles = {
   },
 };
 
-const getInputStyle = props => {
-  if (props.disabled) { return inputStyles.disabled; }
-  if (props.error) { return inputStyles.error; }
-
-  return inputStyles.default;
+const getMultilineInputStyle = props => {
+  if (props.disabled) { return MultilineInputStyles.disabled; }
+  if (props.error) { return MultilineInputStyles.error; }
+  return MultilineInputStyles.default;
 };
 
-const Input = styled.textarea.attrs(({ error, required, rows }) => ({
+const MultilineInput = styled.textarea.attrs(({ error, required, placeholder }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
-  "rows": rows,
+  "placeholder": placeholder,
 }))`
     width: 100%
     border: 1px solid;
@@ -44,28 +43,33 @@ const Input = styled.textarea.attrs(({ error, required, rows }) => ({
     min-height: 40px;
     min-width: 20em;
     ${space}
-    ${props => getInputStyle(props)}
+    ${props => getMultilineInputStyle(props)}
     &:focus {
         outline: none;
         color: ${theme.colors.black}
         border-color: ${theme.colors.blue};
         box-shadow: 0 0 3px ${theme.colors.blue};
     }
+    ::placeholder{
+      color: ${transparentize(0.4, theme.colors.black)};
+    }
 `;
 
-Input.propTypes = {
+MultilineInput.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   required: PropTypes.bool,
   rows: PropTypes.number,
+  placeholder: PropTypes.string,
   ...space.PropTypes,
 };
 
-Input.defaultProps = {
+MultilineInput.defaultProps = {
   disabled: false,
   error: false,
   required: false,
   rows: "3",
+  placeholder: false,
 };
 
-export default Input;
+export default MultilineInput;
