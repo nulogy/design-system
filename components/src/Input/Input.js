@@ -49,6 +49,9 @@ const Input = styled.input.attrs(({ error, required }) => ({
         border-color: ${theme.colors.blue};
         box-shadow: 0 0 3px ${theme.colors.blue};
     }
+    ::placeholder{
+      color: ${transparentize(0.4, theme.colors.black)};
+    }
 `;
 
 Input.propTypes = {
