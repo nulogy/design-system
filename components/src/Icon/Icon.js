@@ -42,11 +42,13 @@ Svg.defaultProps = {
   size: "24px",
 };
 
-const Icon = styled(Svg)`
-  min-width: ${props => props.size};
-  ${space}
-  ${color}  
-`;
+const Icon = styled(Svg)(
+  space,
+  color,
+  ({ size }) => ({
+    minWidth: size,
+  })
+);
 
 Icon.propTypes = {
   icon: PropTypes.oneOf(iconNames).isRequired,
@@ -63,20 +65,24 @@ Icon.defaultProps = {
 
 const iconSizeRatio = 1.25;
 
-const CenteredIcon = styled(Svg)`
-  top: 0;
-  position: absolute;
-  ${color}
-`;
+const CenteredIcon = styled(Svg)(
+  color,
+  {
+    position: "absolute",
+    top: 0,
+  }
+);
 
-const IconContainer = styled.span`
-  display: inline-flex;
-  align-self: center;
-  position: relative;
-  height: 1em;
-  width: ${iconSizeRatio}em;
-  ${space}
-`;
+const IconContainer = styled.span(
+  space,
+  {
+    display: "inline-flex",
+    alignSelf: "center",
+    position: "relative",
+    height: "1em",
+    width: `${iconSizeRatio}em`,
+  }
+);
 
 export const InlineIcon = (props => (
   <IconContainer { ...props }>
