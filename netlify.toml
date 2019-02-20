@@ -1,5 +1,5 @@
 [build]
-  command = "yarn workspace @nulogy/components build && yarn workspace @nulogy/docs build"
+  command = "echo $URL && yarn workspace @nulogy/components build && yarn workspace @nulogy/docs build"
   publish = "docs/public"
 
 [build.environment]
