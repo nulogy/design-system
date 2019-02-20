@@ -7,47 +7,48 @@ import Icon from "../Icon/Icon";
 import Text from "../Type/Text";
 import icons from "../../icons/icons.json";
 
-const Wrapper = styled.button`
-  ${space}
-  background: transparent;
-  border: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  padding: ${theme.space[1]} ${theme.space[0]};
-  color: ${theme.colors.darkBlue};
-  cursor: ${props => (props.disabled ? "arrow" : "pointer")};
+const Wrapper = styled.button(({ disabled, ...props }) => ({
+  background: "transparent",
+  border: "none",
+  position: "relative",
+  display: "inline-flex",
+  alignItems: "center",
+  padding: `${theme.space[1]} ${theme.space[0]}`,
+  color: theme.colors.darkBlue,
+  cursor: disabled ? "arrow" : "pointer",
+  ...space(props),
 
-  ${Icon} {
-    border-radius: ${props => props.theme.radii.circle};
-    transition: .2s;
-  }
-  ${Text} {
+  [`${Icon}`]: {
+    borderRadius: theme.radii.circle,
+    transition: ".2s",
+  },
+  [`${Text}`]: {
     display: "block",
     fontWeight: props.theme.fontWeights[2],
     textAlign: "left",
-  }
-  &:hover, &:focus {
-    outline: none;
-    ${Icon} {
-      background ${theme.colors.lightBlue};
-    }
-  }
-  &:active {
-    ${Icon} {
-      transform: scale(0.875); transition: .2s ease-in;}
-    }
-  }
-  &:disabled {
-    opacity: .5;
-    &:hover, &:active {
-      ${Icon} {
-        background: none;
-        transform: none;
-      }
-    }
-  }
-`;
+  },
+  "&:hover, &:focus": {
+    outline: "none",
+    [`${Icon}`]: {
+      backgroundColor: theme.colors.lightBlue,
+    },
+  },
+  "&:active": {
+    [`${Icon}`]: {
+      transform: "scale(0.875)",
+      transition: ".2s ease-in",
+    },
+  },
+  "&:disabled": {
+    opacity: ".5",
+    "&:hover, &:active": {
+      [`${Icon}`]: {
+        background: "none",
+        transform: "none",
+      },
+    },
+  },
+}));
 
 const IconicButton = props => {
   const {
