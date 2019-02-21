@@ -29,7 +29,7 @@
     "react/jsx-one-expression-per-line": ["off"],
     "react/jsx-uses-react": ["warn"],
     "react/jsx-curly-spacing": ["error", "always"],
-    "react/jsx-max-props-per-line": ["error", { "maximum": 3 }],
+    "react/jsx-max-props-per-line": ["off"],
     "react/prefer-stateless-function": ["off"],
     "react/require-extension": ["off"],
     "semi": ["error", "always"],
