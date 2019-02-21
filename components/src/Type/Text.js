@@ -11,16 +11,18 @@ const getAttrs = inline => (
     : null
 );
 
-const Text = styled.p.attrs(props => (getAttrs(props.inline)))([], props => ({
-  ...space(props),
-  ...fontSize(props),
-  ...fontWeight(props),
-  ...lineHeight(props),
-  ...color(props),
-  ...fontFamily(props),
-  ...textAlign(props),
-  opacity: (props.disabled ? "0.3333" : null),
-}));
+const Text = styled.p.attrs(props => (getAttrs(props.inline)))(
+  space,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  color,
+  fontFamily,
+  textAlign,
+  ({ disabled }) => ({
+    opacity: disabled ? "0.3333" : null,
+  })
+);
 
 Text.propTypes = {
   inline: PropTypes.bool,
