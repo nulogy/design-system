@@ -8,14 +8,14 @@ import { SubsectionTitle } from "../Type/Headings";
 import Icon from "../Icon/Icon";
 
 
-const Wrapper = styled.div`
-  ${Text} {
-    margin-bottom: ${theme.space[2]};
-  }
-  > *:last-child {
-   margin-bottom: 0;
- }
-`;
+const Wrapper = styled.div({
+  [`${Text}`]: {
+    marginBottom: theme.space[2],
+  },
+  "> *:last-child": {
+    marginBottom: 0,
+  },
+});
 
 const BaseHeaderValidation = ({
   title,

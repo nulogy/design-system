@@ -6,14 +6,14 @@ import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import Flex from "../Flex/Flex";
 
-const Wrapper = styled.div`
-  ${Text} {
-    margin-bottom: ${theme.space[2]};
-  }
-  > *:last-child {
-   margin-bottom: 0;
- }
-`;
+const Wrapper = styled.div({
+  [`${Text}`]: {
+    marginBottom: theme.space[2],
+  },
+  "> *:last-child": {
+    marginBottom: 0,
+  },
+});
 
 const InlineValidation = ({
   message,
