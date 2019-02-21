@@ -68,8 +68,8 @@ Textarea.defaultProps = {
   disabled: false,
   error: false,
   required: false,
-  rows: "3",
-  placeholder: false,
+  rows: 3,
+  placeholder: undefined,
 };
 
 export default Textarea;
