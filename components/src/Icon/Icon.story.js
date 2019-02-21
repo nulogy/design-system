@@ -7,6 +7,8 @@ import "./Icon.example.css";
 import Box from "../Box/Box";
 import Flex from "../Flex/Flex";
 
+const iconSubset = iconNames.slice(0,5);
+
 const IconCode = ({ icon }) => (
   <code>
     &lt;Icon icon=&quot;
@@ -35,7 +37,7 @@ storiesOf("Icon", module)
       {[1, 2, 3, 4].map(size => (
         <p style={ { fontSize: `${size}em` } } key={ size }>
           @{size}em: &nbsp;
-          {iconNames.map(iconName => <InlineIcon icon={ iconName } key={ iconName } />)}
+          {iconSubset.map(iconName => <InlineIcon icon={ iconName } key={ iconName } />)}
         </p>
       ))}
     </React.Fragment>
@@ -44,7 +46,7 @@ storiesOf("Icon", module)
     <React.Fragment>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(color => (
         <Box key={ color }>
-          {iconNames.map(iconName => <Icon icon={ iconName } color={ color } key={ iconName } />)}
+          {iconSubset.map(iconName => <Icon icon={ iconName } color={ color } key={ iconName } />)}
         </Box>
       ))}
     </React.Fragment>
@@ -53,7 +55,7 @@ storiesOf("Icon", module)
     <React.Fragment>
       {[theme.space[2], theme.space[3], theme.space[4]].map(size => (
         <Box key={ size }>
-          {iconNames.map(iconName => <Icon icon={ iconName } size={ size } key={ iconName } />)}
+          {iconSubset.map(iconName => <Icon icon={ iconName } size={ size } key={ iconName } />)}
         </Box>
       ))}
     </React.Fragment>
@@ -79,13 +81,13 @@ storiesOf("Icon", module)
   ))
   .add("With accessibility title", () => (
     <React.Fragment>
-      <p>
+      <Flex p={ 3 }>
         <Icon icon="user" title="User account" />
         {" This has a title attribute so it will be read by assistive devices."}
-      </p>
-      <p>
+      </Flex>
+      <Flex p={ 3 }>
         <Icon icon="user" />
         {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
-      </p>
+      </Flex>
     </React.Fragment>
   ));
