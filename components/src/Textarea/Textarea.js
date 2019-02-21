@@ -54,7 +54,7 @@ const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
       color: transparentize(0.4, theme.colors.black),
     },
   },
-  props => (getTextAreaStyle(props))
+  props => getTextareaStyle(props)
 );
 
 Textarea.propTypes = {
