@@ -3,8 +3,8 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../theme";
 
 const Reset = createGlobalStyle(
-  "@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600')",
-  "@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono')",
+  ["@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600');"],
+  ["@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');"],
   {
     "body": {
       margin: 0,
