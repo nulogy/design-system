@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList, ComponentUsage,
+  DocText as Text, Layout, Intro, DocSection, CheckList,
 } from "../../components";
 
 const iconNames = Object.keys(icons);
@@ -49,6 +49,5 @@ export default () => (
       <SectionTitle>Related</SectionTitle>
       <Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href="https://www.nngroup.com/articles/icon-usability/">Icon Usability.</Link></Text>
     </DocSection>
-    <ComponentUsage storybookLink="http://localhost:8080/?selectedKind=Icon" source="/components/src/icon/icon.js" />
   </Layout>
 );
