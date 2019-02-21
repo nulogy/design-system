@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import { Title, Box } from "@nulogy/components";
@@ -40,6 +41,10 @@ export default function Template({
     </Layout>
   );
 }
+
+Template.propTypes = {
+  data: PropTypes.node.isRequired,
+};
 
 export const pageQuery = graphql`
   query($path: String!) {

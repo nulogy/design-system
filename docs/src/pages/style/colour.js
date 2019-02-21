@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import {
   Box, Flex, Text, Title, SectionTitle,
@@ -21,6 +22,11 @@ const Palette = props => {
       <Text fontSize={ 0 }>{colour}</Text>
     </Box>
   );
+};
+
+Palette.propTypes = {
+  colour: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default () => (
