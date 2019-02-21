@@ -6,16 +6,22 @@ import {
 import * as tokens from "@nulogy/tokens";
 import { Layout, Intro, DocSection } from "../../components";
 
-const Palette = props => (
-  <Box width={ 1 / 3 } mb={ 4 }>
-    <Box
-      mr={ 3 } pt={ 7 } pb={ 7 }
-      mb={ 2 } bg={ props.colour } borderRadius={ 1 }
-    />
-    <Text mb={ 1 }>{props.name}</Text>
-    <Text fontSize={ 0 }>{props.colour}</Text>
-  </Box>
-);
+const Palette = props => {
+  const {
+    colour,
+    name,
+  } = props;
+  return (
+    <Box width={ 1 / 3 } mb={ 4 }>
+      <Box
+        mr={ 3 } pt={ 7 } pb={ 7 }
+        mb={ 2 } bg={ colour } borderRadius={ 1 }
+      />
+      <Text mb={ 1 }>{name}</Text>
+      <Text fontSize={ 0 }>{colour}</Text>
+    </Box>
+  );
+};
 
 export default () => (
   <Layout>
