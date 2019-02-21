@@ -7,7 +7,7 @@ import "./Icon.example.css";
 import Box from "../Box/Box";
 import Flex from "../Flex/Flex";
 
-const iconSubset = iconNames.slice(0,5);
+const iconSubset = iconNames.slice(0, 5);
 
 const IconCode = ({ icon }) => (
   <code>
