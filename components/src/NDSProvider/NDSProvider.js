@@ -14,8 +14,13 @@ const Reset = createGlobalStyle(
 );
 
 export const GlobalStyles = styled.div({
+<<<<<<< HEAD
   fontFamily: theme.fonts.base,
   lineHeight: theme.lineHeights.base,
+=======
+  fontFamily: "IBM Plex Sans",
+  lineHeight: "1.5",
+>>>>>>> ddfd629c407fb673f46a416421cd98312a2a5415
   "-webkit-font-smoothing": "antialiased",
   "-moz-osx-font-smoothing": "grayscale",
   "*": {

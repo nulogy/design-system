@@ -48,9 +48,12 @@ const Input = styled.input.attrs(({ error, required }) => ({
       borderColor: theme.colors.blue,
       boxShadow: `0 0 3px ${theme.colors.blue}`,
     },
+<<<<<<< HEAD
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black),
     },
+=======
+>>>>>>> ddfd629c407fb673f46a416421cd98312a2a5415
   },
   props => (getInputStyle(props))
 );
