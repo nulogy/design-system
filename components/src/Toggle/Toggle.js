@@ -6,7 +6,7 @@ import theme from "../theme";
 import Box from "../Box/Box";
 import { InputClickableArea, omit } from "../Utils";
 
-const Slider = styled.span([], ({ disabled }) => ({
+const Slider = styled.span(({ disabled }) => ({
   position: "absolute",
   height: theme.space[4],
   width: theme.space[6],
@@ -34,7 +34,7 @@ const Slider = styled.span([], ({ disabled }) => ({
   },
 }));
 
-const Switch = styled.label([], () => ({
+const Switch = styled.label({
   position: "relative",
   display: "inline-flex",
   minWidth: theme.space[6],
@@ -44,9 +44,9 @@ const Switch = styled.label([], () => ({
     width: "1px",
     height: "1px",
   },
-}));
+});
 
-const ToggleInput = styled.input([], ({ disabled }) => ({
+const ToggleInput = styled.input(({ disabled }) => ({
   [`&:checked + ${Slider}:before`]: {
     transform: "translateX(24px)",
     backgroundColor: (disabled ? theme.colors.lightGrey : theme.colors.darkBlue),
@@ -165,9 +165,9 @@ BaseToggle.defaultProps = {
   required: false,
 };
 
-const Toggle = styled(BaseToggle)([], () => ({
+const Toggle = styled(BaseToggle)({
   padding: `${theme.space[1]} 0`,
   alignItems: "flex-start",
-}));
+});
 
 export default Toggle;
