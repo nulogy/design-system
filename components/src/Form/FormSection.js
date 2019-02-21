@@ -7,7 +7,7 @@ import Field from "../Field/Field";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
   as: "legend",
-})``;
+})({});
 
 const BaseFormSection = ({
   title,
@@ -24,21 +24,21 @@ const BaseFormSection = ({
   </fieldset>
 );
 
-const FormSection = styled(BaseFormSection)`
-  padding: 0;
-  margin: 0;
-  border: none;
-  ${FormSectionTitle} {
-    padding:0;
-    margin-bottom: ${props => (props.title ? theme.space[4] : "0")};
-  }
-  ${Field} {
-    margin-bottom: ${theme.space[4]};
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-`;
+const FormSection = styled(BaseFormSection)(({ title }) => ({
+  padding: 0,
+  margin: 0,
+  border: "none",
+  [`${FormSectionTitle}`]: {
+    padding: 0,
+    marginBottom: title ? theme.space[4] : 0,
+  },
+  [`${Field}`]: {
+    marginBottom: theme.space[4],
+    "&:last-child": {
+      marginBottom: 0,
+    },
+  },
+}));
 
 BaseFormSection.propTypes = {
   title: PropTypes.string,

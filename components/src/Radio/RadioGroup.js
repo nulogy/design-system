@@ -26,11 +26,11 @@ const getRadioButtons = props => {
   return (radioButtons);
 };
 
-const Fieldset = styled.fieldset`
-  padding: 0;
-  border: 0;
-  margin: 0;
-`;
+const Fieldset = styled.fieldset({
+  padding: 0,
+  border: 0,
+  margin: 0,
+});
 
 const BaseRadioGroup = ({
   className,
@@ -67,7 +67,6 @@ BaseRadioGroup.defaultProps = {
   className: null,
 };
 
-const RadioGroup = styled(BaseRadioGroup)`
-`;
+const RadioGroup = styled(BaseRadioGroup)({});
 
 export default RadioGroup;

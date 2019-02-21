@@ -16,7 +16,7 @@ storiesOf("Textarea", module)
     <Textarea required />
   ))
   .add("With custom number of rows", () => (
-    <Textarea rows="7" />
+    <Textarea rows={ 7 } />
   ))
   .add("With placeholder text", () => (
     <Textarea placeholder="Month/Day/Year" />

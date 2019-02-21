@@ -43,46 +43,46 @@ const getCheckboxStyle = (props, checked) => {
   return checkboxStyle[checked].default;
 };
 
-const VisualCheckbox = styled.div`
-  min-width: ${theme.space[3]};
-  height: ${theme.space[3]};
-  margin-right: ${theme.space[2]};
-  border-radius: ${theme.radii.small};
-  border: solid 1px;
-  position: relative;
-  top: ${theme.space[1]};
-  &:before{
-    content: "";
-    display: none;
-    position: relative;
-    left: 4px;
-    width: 3px;
-    height: 9px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    border-radius: 1px;
-    transform: rotate(45deg);
-  }
-`;
+const VisualCheckbox = styled.div({
+  minWidth: theme.space[3],
+  height: theme.space[3],
+  marginRight: theme.space[2],
+  borderRadius: theme.radii.small,
+  border: "solid 1px",
+  position: "relative",
+  top: theme.space[1],
+  "&:before": {
+    content: "''",
+    display: "none",
+    position: "relative",
+    left: "4px",
+    width: "3px",
+    height: "9px",
+    border: `solid ${theme.colors.white}`,
+    borderWidth: "0 3px 3px 0",
+    borderRadius: "1px",
+    transform: "rotate(45deg)",
+  },
+});
 
-const CheckboxInput = styled.input`
-  position: absolute;
-  opacity: 0;
-  height: 1px;
-  width: 1px;
-  &:focus + ${VisualCheckbox} {
-    box-shadow: 0 0 6px ${theme.colors.blue};
-  }
-  &:checked + ${VisualCheckbox} {
-    ${props => getCheckboxStyle(props, "checked")}
-    &:before {
-      display: block;
-    }
-  }
-  &:not(:checked) + ${VisualCheckbox} {
-    ${props => getCheckboxStyle(props, "unchecked")}
-  }
-`;
+const CheckboxInput = styled.input(props => ({
+  position: "absolute",
+  opacity: "0",
+  height: "1px",
+  width: "1px",
+  [`&:focus + ${VisualCheckbox}`]: {
+    boxShadow: `0 0 6px ${theme.colors.blue}`,
+  },
+  [`&:checked + ${VisualCheckbox}`]: {
+    ...getCheckboxStyle(props, "checked"),
+    "&:before": {
+      display: "block",
+    },
+  },
+  [`&:not(:checked) + ${VisualCheckbox}`]: {
+    ...getCheckboxStyle(props, "unchecked"),
+  },
+}));
 
 const BaseCheckbox = props => {
   const {
@@ -127,9 +127,9 @@ BaseCheckbox.defaultProps = {
   required: false,
 };
 
-const Checkbox = styled(BaseCheckbox)`
-  padding: ${theme.space[1]} 0;
-  color: ${props => (props.error ? theme.colors.red : null)};
-`;
+const Checkbox = styled(BaseCheckbox)(({ error }) => ({
+  padding: `${theme.space[1]} 0`,
+  color: error ? theme.colors.red : null,
+}));
 
 export default Checkbox;

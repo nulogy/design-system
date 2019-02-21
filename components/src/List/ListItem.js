@@ -2,18 +2,20 @@ import styled from "styled-components";
 import { space, color } from "styled-system";
 import theme from "../theme";
 
-const ListItem = styled.li`
-display: flex;
-&:before{
-  content: "•";
-  margin-right: ${theme.space[3]};
-}
-&:last-child{
-  margin-bottom: 0;
-}
-${space}
-${color}
-`;
+const ListItem = styled.li(
+  space,
+  color,
+  {
+    display: "flex",
+    "&:before": {
+      content: "'•'",
+      marginRight: theme.space[3],
+    },
+    "&:last-child": {
+      marginBottom: 0,
+    },
+  }
+);
 
 ListItem.propTypes = {
   ...space.propTypes,

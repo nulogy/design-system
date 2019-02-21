@@ -19,27 +19,29 @@ const BaseForm = ({
   </form>
 );
 
-const Form = styled(BaseForm)`
-  ${space}
-  ${SectionTitle} {
-    margin-bottom: ${props => (props.title ? theme.space[6] : "0")};
-  }
-  ${HeaderValidation} {
-    margin-bottom: ${theme.space[6]};
-  }
-  ${Field} {
-    margin-bottom: ${theme.space[4]};
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  ${FormSection} {
-    margin-bottom: ${theme.space[6]};
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-`;
+const Form = styled(BaseForm)(
+  space,
+  ({ title }) => ({
+    [`${SectionTitle}`]: {
+      marginBottom: title ? theme.space[6] : 0,
+    },
+    [`${HeaderValidation}`]: {
+      marginBottom: theme.space[6],
+    },
+    [`${Field}`]: {
+      marginBottom: theme.space[4],
+      "&:last-child": {
+        marginBottom: 0,
+      },
+    },
+    [`${FormSection}`]: {
+      marginBottom: theme.space[6],
+      "&:last-child": {
+        marginBottom: 0,
+      },
+    },
+  })
+);
 
 BaseForm.propTypes = {
   title: PropTypes.string,

@@ -23,13 +23,13 @@ const getBorderColor = ({
   return grey;
 };
 
-const SelectBox = styled.div([], ({ disabled }) => ({
+const SelectBox = styled.div(({ disabled }) => ({
   display: "flex",
   position: "relative",
   color: disabled ? transparentize(0.6667, theme.colors.black) : null,
 }));
 
-const Input = styled.input([], ({ error, isOpen, disabled }) => ({
+const Input = styled.input(({ error, isOpen, disabled }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
   color: theme.colors.black,
@@ -64,7 +64,7 @@ const Input = styled.input([], ({ error, isOpen, disabled }) => ({
   },
 }));
 
-const IndicatorButton = styled.div([], () => ({
+const IndicatorButton = styled.div(() => ({
   position: "absolute",
   top: theme.space[2],
   right: theme.space[1],
@@ -86,7 +86,7 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 };
 
-const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
+const Menu = styled.div(({ error, disabled, isOpen }) => ({
   position: "absolute",
   width: "100%",
   borderWidth: isOpen ? "1px" : "0",
@@ -106,7 +106,7 @@ const Menu = styled.div([], ({ error, disabled, isOpen }) => ({
   zIndex: 100,
 }));
 
-const MenuItem = styled.div([], ({ isSelected, isActive }) => ({
+const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
   padding: subPx(theme.space[2]),
   fontWeight: isSelected ? "bold" : "normal",

@@ -17,23 +17,23 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const Box = styled.div`
- ${color}
- ${space}
- ${width}
- ${minWidth}
- ${maxWidth}
- ${maxWidth}
- ${borderRadius}
- ${boxShadow}
- ${textAlign}
- ${order}
- ${height}
- ${minHeight}
- ${maxHeight}
- ${position}
- ${display}
-`;
+const Box = styled.div(
+  color,
+  space,
+  width,
+  minWidth,
+  maxWidth,
+  maxWidth,
+  borderRadius,
+  boxShadow,
+  textAlign,
+  order,
+  height,
+  minHeight,
+  maxHeight,
+  position,
+  display
+);
 
 Box.propTypes = {
   ...color.propTypes,

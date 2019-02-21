@@ -40,7 +40,7 @@ const BaseButton = ({
   icon,
   ...props
 }) => {
-  const { theme: { lineHeights: { smallTextCompressed } } } = props;
+  const { lineHeights: { smallTextCompressed } } = theme;
 
   return (
     <button { ...omit(props, "fullWidth") }>
@@ -60,7 +60,6 @@ const BaseButton = ({
 };
 
 BaseButton.propTypes = {
-  theme: PropTypes.shape({}).isRequired,
   children: PropTypes.node.isRequired,
   icon: PropTypes.oneOf(iconNames),
   iconSide: PropTypes.oneOf(["left", "right"]),
@@ -72,45 +71,42 @@ BaseButton.defaultProps = {
 };
 
 
-const Button = styled(BaseButton)`
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: ${props => props.theme.fontWeights[2]};
-    text-decoration: none;
-    vertical-align: middle;
-    line-height: ${props => props.theme.lineHeights.base};
-    transition: .2s;
-    cursor: ${props => (props.disabled ? "arrow" : "pointer")};
-    color: ${props => props.theme.colors.blue};
-    border: 1px solid ${props => props.theme.colors.darkBlue};
-    border-radius: ${props => props.theme.radii.medium};
+const Button = styled(BaseButton)(
+  space,
+  size,
+  ({ disabled, fullWidth }) => ({
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontWeight: theme.fontWeights[2],
+    textDecoration: "none",
+    verticalAlign: "middle",
+    lineHeight: theme.lineHeights.base,
+    transition: ".2s",
+    cursor: disabled ? "arrow" : "pointer",
+    color: theme.colors.blue,
+    border: `1px solid ${theme.colors.darkBlue}`,
+    borderRadius: theme.radii.medium,
+    width: fullWidth ? "100%" : "auto",
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: disabled ? null : theme.colors.lightBlue,
+    },
+    "&:active": {
+      transform: "scale(0.98)",
+      transition: ".2s ease-in",
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  })
+);
 
-    ${props => (props.fullWidth ? { width: "100%;" } : null)}
-    ${size}
-    ${space}
-
-    &:hover, &:focus {
-      outline: none;
-      background-color: ${props => (props.disabled ? null : props.theme.colors.lightBlue)};
-    }
-    &:active {
-      transform: scale(0.98); 
-      transition: .2s ease-in;
-    }
-    &:disabled {
-      opacity: .5;
-    }
-`;
 Button.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   ...space.propTypes,
-};
-
-Button.defaultProps = {
-  theme,
 };
 
 export default Button;
