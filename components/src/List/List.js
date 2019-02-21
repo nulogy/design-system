@@ -6,20 +6,21 @@ import {
 import theme from "../theme";
 import ListItem from "./ListItem";
 
-const List = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  ${space}
-  ${color}
-  ${fontSize}
-  ${fontWeight}
-  ${lineHeight}
-
-  ${ListItem} {
-    margin-bottom: ${props => (props.compact ? "0" : theme.space[2])};
-  }
-`;
+const List = styled.ul(
+  ({ compact }) => ({
+    listStyle: "none",
+    paddingLeft: 0,
+    margin: 0,
+    [`${ListItem}`]: {
+      marginBottom: compact ? 0 : theme.space[2],
+    },
+  }),
+  space,
+  color,
+  fontSize,
+  fontWeight,
+  lineHeight
+);
 
 List.propTypes = {
   compact: PropTypes.bool,
