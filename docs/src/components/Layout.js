@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Box, Flex, Link, Text,
 } from "@nulogy/components";
@@ -9,7 +10,7 @@ import theme from "../../../components/src/theme";
 
 import logo from "../images/nulogy.svg";
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
     <Box pb={ 3 }>
       <Helmet titleTemplate="%s | Nulogy Design System">
@@ -72,3 +73,9 @@ export default ({ children }) => (
     </Box>
   </NDSProvider>
 );
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;

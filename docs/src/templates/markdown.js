@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import { Title, Box } from "@nulogy/components";
@@ -33,13 +34,17 @@ export default function Template({
         <Box maxWidth={ 800 } mb={ 5 }>
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={ { __html: html } }
+            dangerouslySetInnerHTML={ { __html: html } } // eslint-disable-line
           />
         </Box>
       </MarkdownStyles>
     </Layout>
   );
 }
+
+Template.propTypes = {
+  data: PropTypes.node.isRequired,
+};
 
 export const pageQuery = graphql`
   query($path: String!) {

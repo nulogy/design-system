@@ -22,11 +22,15 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors);
-    }
+  `)
+    .then(rejectErrors)
+    .then(createPagesFromData);
 
+  function rejectErrors(result) {
+    return result.errors ? Promise.reject(result.errors) : result;
+  }
+
+  function createPagesFromData(result) {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
@@ -34,5 +38,5 @@ exports.createPages = ({ actions, graphql }) => {
         context: {}, // additional data can be passed via context
       });
     });
-  });
+  }
 };

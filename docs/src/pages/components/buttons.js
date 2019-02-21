@@ -4,7 +4,7 @@ import {
   Button, DangerButton, PrimaryButton, QuietButton, IconicButton, Box, Flex, SectionTitle, Title,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList, ComponentUsage,
+  DocText as Text, Layout, Intro, DocSection, CheckList,
 } from "../../components";
 
 export default () => (
@@ -112,7 +112,5 @@ export default () => (
       <CheckList>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></CheckList>
       <CheckList>Always use sentence case</CheckList>
     </DocSection>
-
-    <ComponentUsage storybookLink="http://localhost:8080/?selectedKind=Button" source="/components/buttons/buttons.js" />
   </Layout>
 );

@@ -8,7 +8,7 @@ import {
 } from "../../components";
 import anatomy from "../../images/select/select-anatomy.png";
 import basic from "../../images/select/select-basic.png";
-import default_state from "../../images/select/select-state-default.png";
+import defaultState from "../../images/select/select-state-default.png";
 import selected from "../../images/select/select-state-selected.png";
 import disabled from "../../images/select/select-disabled.png";
 
@@ -37,7 +37,7 @@ export default () => (
     <DocSection>
       <SectionTitle>States</SectionTitle>
       <SubsectionTitle>Default</SubsectionTitle>
-      <Image src={ default_state } width="50%" alt="Text input screenshot" />
+      <Image src={ defaultState } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>With input</SubsectionTitle>
       <Image src={ selected } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Disabled</SubsectionTitle>
