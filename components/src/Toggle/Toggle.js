@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Text from "../Type/Text";
 import theme from "../theme";
-import Flex from "../Flex/Flex";
-import { omit } from "../utils";
+import Box from "../Box/Box";
+import { InputClickableArea, omit } from "../Utils";
 
 const Slider = styled.span([], ({ disabled }) => ({
   position: "absolute",
@@ -120,19 +120,21 @@ class BaseToggle extends React.Component {
       toggled,
     } = this.state;
     return (
-      <Flex flexDirection="row" alignItems="center" className={ className }>
-        <ToggleButton
-          checked={ toggled } onChange={ onChange } disabled={ disabled }
-          required={ required } aria-required={ required }
-          aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
-          { ...props }
-        />
-        {(onText || offText) && (
-        <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
-            {toggled ? onText : offText}
-        </Text>
-        )}
-      </Flex>
+      <Box className={ className }>
+        <InputClickableArea disabled={ disabled }>
+          <ToggleButton
+            checked={ toggled } onChange={ onChange } disabled={ disabled }
+            required={ required } aria-required={ required }
+            aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
+            { ...props }
+          />
+          {(onText || offText) && (
+          <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
+              {toggled ? onText : offText}
+          </Text>
+          )}
+        </InputClickableArea>
+      </Box>
     );
   }
 }
@@ -164,7 +166,7 @@ BaseToggle.defaultProps = {
 };
 
 const Toggle = styled(BaseToggle)([], () => ({
-  padding: "8px 0",
+  padding: `${theme.space[1]} 0`,
   alignItems: "flex-start",
 }));
 
