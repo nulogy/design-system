@@ -33,7 +33,7 @@ const BaseHeaderValidation = ({
   </Flex>
 );
 
-const HeaderValidation = styled(BaseHeaderValidation)``;
+const HeaderValidation = styled(BaseHeaderValidation)({});
 
 BaseHeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
