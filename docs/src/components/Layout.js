@@ -40,13 +40,13 @@ const Layout = ({ children }) => (
       <Flex width={ 960 } m="auto">
         <Box width="30%">
           <Nav>
-            <Text color="darkGrey" fontWeight={ 2 }>Visual Style</Text>
+            <Text color="darkGrey" fontWeight={ 'medium' }>Visual Style</Text>
             <NavItem><Link href="/style/colour" underline={ false }>Colour</Link></NavItem>
             <NavItem><Link href="/style/typography" underline={ false }>Typography</Link></NavItem>
             <NavItem><Link href="/style/spacing" underline={ false }>Spacing</Link></NavItem>
           </Nav>
           <Nav>
-            <Text color="darkGrey" fontWeight={ 2 }>Components</Text>
+            <Text color="darkGrey" fontWeight={ 'medium' }>Components</Text>
             <NavItem><Link href="/components/buttons" underline={ false }>Buttons</Link></NavItem>
             <NavItem><Link href="/components/checkbox" underline={ false }>Checkbox</Link></NavItem>
             <NavItem><Link href="/components/form" underline={ false }>Form</Link></NavItem>
@@ -58,7 +58,7 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/components/toggle" underline={ false }>Toggle</Link></NavItem>
           </Nav>
           <Nav>
-            <Text color="darkGrey" fontWeight={ 2 }>Resources</Text>
+            <Text color="darkGrey" fontWeight={ 'medium' }>Resources</Text>
             <NavItem><Link href="/guides/designers" underline={ false }>For Designers</Link></NavItem>
             <NavItem><Link href="/guides/developers" underline={ false }>For Developers</Link></NavItem>
             <NavItem><Link href="https://github.com/nulogy/design-system" underline={ false }>Github</Link></NavItem>

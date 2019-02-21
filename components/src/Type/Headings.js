@@ -8,7 +8,7 @@ Title.defaultProps = {
   m: 0,
   fontSize: 4,
   lineHeight: theme.lineHeights.title,
-  fontWeight: 0,
+  fontWeight: theme.fontWeights.light,
   mb: 6,
   theme,
 };
@@ -18,7 +18,7 @@ const SectionTitle = Text.withComponent("h2");
 SectionTitle.defaultProps = {
   m: 0,
   fontSize: 3,
-  fontWeight: 2,
+  fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.sectionTitle,
   mb: 3,
   theme,
@@ -31,7 +31,7 @@ const SubsectionTitle = styled(SubsectionTitleBase)({});
 SubsectionTitle.defaultProps = {
   m: 0,
   fontSize: 2,
-  fontWeight: 2,
+  fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.sectionTitle,
   mb: 2,
   theme,
