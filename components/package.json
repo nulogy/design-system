@@ -66,6 +66,7 @@
   "dependencies": {
     "@nulogy/tokens": "0.2.3",
     "@sambego/storybook-styles": "^1.0.0",
+    "@storybook/addon-backgrounds": "^4.1.12",
     "@storybook/addon-info": "^4.1.4",
     "@storybook/addon-storysource": "^4.0.12",
     "@storybook/react": "^4.1.4",
