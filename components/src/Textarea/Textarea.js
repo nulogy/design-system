@@ -5,7 +5,7 @@ import { space } from "styled-system";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const inputStyles = {
+const TextareaStyles = {
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
@@ -21,17 +21,17 @@ const inputStyles = {
   },
 };
 
-const getInputStyle = props => {
-  if (props.disabled) { return inputStyles.disabled; }
-  if (props.error) { return inputStyles.error; }
-
-  return inputStyles.default;
+const getTextareaStyle = props => {
+  if (props.disabled) { return TextareaStyles.disabled; }
+  if (props.error) { return TextareaStyles.error; }
+  return TextareaStyles.default;
 };
 
-const Input = styled.input.attrs(({ error, required }) => ({
+const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
+  "placeholder": placeholder,
 }))`
     width: 100%
     border: 1px solid;
@@ -40,9 +40,10 @@ const Input = styled.input.attrs(({ error, required }) => ({
     font-size: ${theme.fontSizes[1]};
     font-family: ${theme.fonts.base};
     line-height: ${theme.lineHeights.base};
+    min-height: 40px;
+    min-width: 20em;
     ${space}
-    ${props => getInputStyle(props)}
-
+    ${props => getTextareaStyle(props)}
     &:focus {
         outline: none;
         color: ${theme.colors.black}
@@ -54,17 +55,21 @@ const Input = styled.input.attrs(({ error, required }) => ({
     }
 `;
 
-Input.propTypes = {
+Textarea.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   required: PropTypes.bool,
+  rows: PropTypes.number,
+  placeholder: PropTypes.string,
   ...space.PropTypes,
 };
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   disabled: false,
   error: false,
   required: false,
+  rows: "3",
+  placeholder: false,
 };
 
-export default Input;
+export default Textarea;
