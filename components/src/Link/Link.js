@@ -7,17 +7,20 @@ import theme from "../theme";
 
 const getHoverColor = props => (
   props.hover
-    ? themeGet(`colors.${props.hover}`, props.hover)
+    ? themeGet(`colors.${props.hover}`, props.hover)(props)
     : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props))
 );
 
-const Link = styled.a`
-  ${color} ${space}
-  text-decoration: ${props => (props.underline ? "underline" : "none")}}
-  &:hover {
-    color: ${props => getHoverColor(props)} 
-  }
-`;
+const Link = styled.a(
+  color,
+  space,
+  ({ underline, ...props }) => ({
+    textDecoration: underline ? "underline" : "none",
+    "&:hover": {
+      color: getHoverColor(props),
+    },
+  })
+);
 
 Link.propTypes = {
   underline: PropTypes.bool,
