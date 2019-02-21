@@ -34,7 +34,7 @@ export default function Template({
         <Box maxWidth={ 800 } mb={ 5 }>
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={ { __html: html } }
+            dangerouslySetInnerHTML={ { __html: html } } // eslint-disable-line
           />
         </Box>
       </MarkdownStyles>
