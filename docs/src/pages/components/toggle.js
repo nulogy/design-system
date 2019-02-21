@@ -9,8 +9,8 @@ import {
 import anatomy from "../../images/toggle/anatomy.png";
 import on from "../../images/toggle/on.png";
 import off from "../../images/toggle/off.png";
-import on_disabled from "../../images/toggle/on-disabled.png";
-import off_disabled from "../../images/toggle/off-disabled.png";
+import onDisabled from "../../images/toggle/on-disabled.png";
+import offDisabled from "../../images/toggle/off-disabled.png";
 
 export default () => (
   <Layout>
@@ -44,8 +44,8 @@ export default () => (
       </Flex>
       <SubsectionTitle>Disabled</SubsectionTitle>
       <Flex>
-        <Box><Image src={ on_disabled } alt="Toggle screenshot" /></Box>
-        <Box><Image src={ off_disabled } alt="Toggle screenshot" /></Box>
+        <Box><Image src={ onDisabled } alt="Toggle screenshot" /></Box>
+        <Box><Image src={ offDisabled } alt="Toggle screenshot" /></Box>
       </Flex>
     </DocSection>
   </Layout>

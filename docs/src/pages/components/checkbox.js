@@ -8,7 +8,7 @@ import {
 } from "../../components";
 import anatomy from "../../images/checkbox/checkbox-anatomy.png";
 import basic from "../../images/checkbox/checkbox-basic.png";
-import default_state from "../../images/checkbox/checkbox-default.png";
+import defaultState from "../../images/checkbox/checkbox-default.png";
 import checked from "../../images/checkbox/checkbox-checked.png";
 import disabled from "../../images/checkbox/checkbox-disabled.png";
 
@@ -39,7 +39,7 @@ export default () => (
     <DocSection>
       <SectionTitle>States</SectionTitle>
       <SubsectionTitle>Default</SubsectionTitle>
-      <Image src={ default_state } width="50%" alt="Text input screenshot" />
+      <Image src={ defaultState } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Checked</SubsectionTitle>
       <Image src={ checked } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Disabled</SubsectionTitle>

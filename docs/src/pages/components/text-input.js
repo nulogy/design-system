@@ -9,11 +9,11 @@ import {
 import anatomy from "../../images/text-input/text-input-anatomy.png";
 import basic from "../../images/text-input/text-input-basic.png";
 import active from "../../images/text-input/text-input-state-active.png";
-import default_placeholder from "../../images/text-input/text-input-state-default-placeholder.png";
-import default_state from "../../images/text-input/text-input-state-default.png";
+import defaultPlaceholder from "../../images/text-input/text-input-state-default-placeholder.png";
+import defaultState from "../../images/text-input/text-input-state-default.png";
 import disabled from "../../images/text-input/text-input-state-disabled.png";
 import invalid from "../../images/text-input/text-input-state-invalid.png";
-import invalid_active from "../../images/text-input/text-input-state-invalid-active.png";
+import invalidActive from "../../images/text-input/text-input-state-invalid-active.png";
 
 export default () => (
   <Layout>
@@ -50,11 +50,11 @@ export default () => (
       <Flex>
         <Box>
           <SubsectionTitle>Before input</SubsectionTitle>
-          <Image src={ default_placeholder } alt="Text input screenshot" />
+          <Image src={ defaultPlaceholder } alt="Text input screenshot" />
         </Box>
         <Box>
           <SubsectionTitle>After input</SubsectionTitle>
-          <Image src={ default_state } alt="Text input screenshot" />
+          <Image src={ defaultState } alt="Text input screenshot" />
         </Box>
       </Flex>
       <SubsectionTitle>Active</SubsectionTitle>
@@ -62,7 +62,7 @@ export default () => (
       <SubsectionTitle>Invalid</SubsectionTitle>
       <Image src={ invalid } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Invalid and active</SubsectionTitle>
-      <Image src={ invalid_active } width="50%" alt="Text input screenshot" />
+      <Image src={ invalidActive } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Disabled</SubsectionTitle>
       <Image src={ disabled } width="50%" alt="Text input screenshot" />
       <SubsectionTitle>Size</SubsectionTitle>

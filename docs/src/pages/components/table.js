@@ -6,14 +6,13 @@ import {
 } from "../../components";
 import basic from "../../images/tables/basic.png";
 import actions from "../../images/tables/actions.png";
-import customization_bar from "../../images/tables/actions.png";
-import drag_and_drop from "../../images/tables/drag-and-drop.png";
+import dragAndDrop from "../../images/tables/drag-and-drop.png";
 import edit from "../../images/tables/edit.png";
 import multiselect from "../../images/tables/multi-select.png";
 import pagination from "../../images/tables/pagination.png";
 import sorting from "../../images/tables/sorting.png";
-import expandable_row_expanded from "../../images/tables/expandable-row-expanded.png";
-import expandable_row_collapsed from "../../images/tables/expandable-row-collapsed.png";
+import expandableRowExpanded from "../../images/tables/expandable-row-expanded.png";
+import expandableRowCollapsed from "../../images/tables/expandable-row-collapsed.png";
 
 export default () => (
   <Layout>
@@ -50,19 +49,19 @@ export default () => (
     <DocSection>
       <SectionTitle>Table customization bar</SectionTitle>
       <Text>The content of the table can be customized by applying search criteria, applying filters, hiding and showing specific columns, and changing the number of rows displayed per page.</Text>
-      <Image src={ customization_bar } alt="Customization bar example" style={ { width: "100%" } } />
+      <Image src={ actions } alt="Customization bar example" style={ { width: "100%" } } />
     </DocSection>
     <DocSection>
       <SectionTitle>Drag and Drop</SectionTitle>
       <Text>Drag and drop functionality allows users to change a row’s order.</Text>
-      <Image src={ drag_and_drop } alt="Drag and drop example" style={ { width: "100%" } } />
+      <Image src={ dragAndDrop } alt="Drag and drop example" style={ { width: "100%" } } />
     </DocSection>
     <DocSection>
       <SectionTitle>Expandable rows</SectionTitle>
       <Text>Rows of the table can expand and collapse allowing non-essential information to reside in the collapsible portion of the row.</Text>
-      <Image src={ expandable_row_collapsed } alt="Expandable example - collapsed row" style={ { width: "100%", marginBottom: "8px" } } />
+      <Image src={ expandableRowCollapsed } alt="Expandable example - collapsed row" style={ { width: "100%", marginBottom: "8px" } } />
       <Text fontSize="small">Collapsed rows</Text>
-      <Image src={ expandable_row_expanded } alt="Expandable example - expanded row" style={ { width: "100%", marginBottom: "8px" } } />
+      <Image src={ expandableRowExpanded } alt="Expandable example - expanded row" style={ { width: "100%", marginBottom: "8px" } } />
       <Text fontSize="small">Expanded row</Text>
     </DocSection>
     <DocSection>

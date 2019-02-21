@@ -8,9 +8,9 @@ import {
 } from "../../components";
 import anatomy from "../../images/form/anatomy.png";
 import basic from "../../images/form/basic.png";
-import header_error from "../../images/form/header-error.png";
-import help_text_anatomy from "../../images/form/help-text-anatomy.png";
-import optional_required_anatomy from "../../images/form/optional-required-anatomy.png";
+import headerError from "../../images/form/header-error.png";
+import helpTextAnatomy from "../../images/form/help-text-anatomy.png";
+import optionalRequiredAnatomy from "../../images/form/optional-required-anatomy.png";
 
 export default () => (
   <Layout>
@@ -44,7 +44,7 @@ export default () => (
       <Text>Labels inform users what the corresponding input field means. A label is always left-aligned and placed above the input field.</Text>
       <SubsectionTitle>(G) Help Text (optional)</SubsectionTitle>
       <Text>Help text is placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.</Text>
-      <Image src={ help_text_anatomy } alt="Visual anatomy of help text" />
+      <Image src={ helpTextAnatomy } alt="Visual anatomy of help text" />
       <SubsectionTitle>(H) Input fields</SubsectionTitle>
       <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
       <Box ml={ 2 }>
@@ -56,7 +56,7 @@ export default () => (
       </Box>
       <SubsectionTitle>(I) Optional vs required label</SubsectionTitle>
       <Text>If a field is optional or required, it should be visually apparent before submission. Use only one of these labels at a time. When making a form, decide which is more common and apply the label to the smaller of the two groups.</Text>
-      <Image src={ optional_required_anatomy } alt="Visual anatomy of optional vs required labels" />
+      <Image src={ optionalRequiredAnatomy } alt="Visual anatomy of optional vs required labels" />
       <SubsectionTitle>(J) Placeholder text (optional)</SubsectionTitle>
       <Text>Placeholder text can be used to describe a field’s expected format.</Text>
       <SubsectionTitle>(K) Inline validation</SubsectionTitle>
@@ -80,7 +80,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Header validation</SectionTitle>
-      <Image src={ header_error } alt="Header validation screenshot" />
+      <Image src={ headerError } alt="Header validation screenshot" />
       <Text>Header validation is triggered after submitting a form with validation errors. The message displays at the top of the form and is present until the validation is passed.</Text>
     </DocSection>
     <DocSection>
