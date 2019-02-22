@@ -1,8 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Radio from "./Radio";
-import RadioGroup from "./RadioGroup";
-import Field from "../Field/Field";
+import {
+  Radio,
+  RadioGroup,
+  Field,
+} from "../index";
 
 storiesOf("RadioGroup", module)
   .add("Radio Group", () => (

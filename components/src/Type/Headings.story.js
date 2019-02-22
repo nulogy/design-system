@@ -1,7 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Text from "./Text";
-import { Title, SectionTitle, SubsectionTitle } from "./Headings";
+import {
+  Text,
+  Title,
+  SectionTitle,
+  SubsectionTitle,
+} from "../index";
 
 storiesOf("Headings", module)
   .add("Title", () => (
