@@ -33,12 +33,12 @@ export default {
     smallTextBase: tokens.line_height_small_text_base,
     smallTextCompressed: tokens.line_height_small_text_compressed,
   },
-  fontWeights: [
-    tokens.weight_font_light,
-    tokens.weight_font_normal,
-    tokens.weight_font_medium,
-    tokens.weight_font_bold,
-  ],
+  fontWeights: {
+    light: tokens.weight_font_light,
+    normal: tokens.weight_font_normal,
+    medium: tokens.weight_font_medium,
+    bold: tokens.weight_font_bold,
+  },
   space: [
     tokens.size_base_none,
     tokens.size_base_half,

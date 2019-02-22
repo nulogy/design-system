@@ -109,7 +109,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
   padding: subPx(theme.space[2]),
-  fontWeight: isSelected ? "bold" : "normal",
+  fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isActive ? theme.colors.lightBlue : null,
   "&:hover": {
     background: theme.colors.lightBlue,

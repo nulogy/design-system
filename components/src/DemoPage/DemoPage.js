@@ -285,7 +285,7 @@ const DemoPage = () => {
           order={ { small: "2", medium: "-1", large: "-1" } }
         >
           <Text
-            fontWeight={ theme.fontWeights[2] } mx={ 4 } mb={ 2 }
+            fontWeight="medium" mx={ 4 } mb={ 2 }
           >
             Contextual Menu
           </Text>

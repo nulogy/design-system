@@ -24,7 +24,7 @@ const Wrapper = styled.button(
     },
     [`${Text}`]: {
       display: "block",
-      fontWeight: theme.fontWeights[2],
+      fontWeight: theme.fontWeights.medium,
       textAlign: "left",
     },
     "&:hover, &:focus": {
