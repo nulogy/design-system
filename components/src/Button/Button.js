@@ -78,7 +78,7 @@ const Button = styled(BaseButton)(
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
-    fontWeight: theme.fontWeights[2],
+    fontWeight: theme.fontWeights.medium,
     textDecoration: "none",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
