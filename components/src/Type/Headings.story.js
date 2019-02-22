@@ -5,7 +5,7 @@ import {
   Title,
   SectionTitle,
   SubsectionTitle,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("Headings", module)
   .add("Title", () => (

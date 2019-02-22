@@ -5,7 +5,7 @@ import {
   flexWrap,
   flexDirection,
 } from "styled-system";
-import { Box } from "../index";
+import { Box } from "ComponentsRoot";
 
 const Flex = styled(Box)(
   {

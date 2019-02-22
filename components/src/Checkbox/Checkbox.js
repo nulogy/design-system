@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
-import { Box, Text } from "../index";
+import { Box, Text } from "ComponentsRoot";
 import { InputClickableArea } from "../Utils";
 
 const checkboxStyle = {

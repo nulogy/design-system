@@ -8,7 +8,7 @@ import {
   SubsectionTitle,
   List,
   ListItem,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("Typography", module)
   .add("Article", () => (

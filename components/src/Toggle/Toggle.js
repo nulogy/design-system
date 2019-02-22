@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
-import { Text, Box } from "../index";
+import { Text, Box } from "ComponentsRoot";
 import { InputClickableArea, omit } from "../Utils";
 
 const Slider = styled.span(({ disabled }) => ({

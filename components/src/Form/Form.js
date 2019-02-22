@@ -8,7 +8,7 @@ import {
   FormSection,
   Field,
   HeaderValidation,
-} from "../index";
+} from "ComponentsRoot";
 
 const BaseForm = ({
   title,

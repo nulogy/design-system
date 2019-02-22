@@ -7,7 +7,7 @@ import {
   InlineIcon,
   Box,
   Flex,
-} from "../index";
+} from "ComponentsRoot";
 import icons from "../../icons/icons.json";
 
 const iconNames = Object.keys(icons);

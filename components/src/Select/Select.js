@@ -4,7 +4,7 @@ import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
 import theme from "../theme";
-import { Icon } from "../index";
+import { Icon } from "ComponentsRoot";
 import { subPx } from "../Utils";
 
 const getBorderColor = ({

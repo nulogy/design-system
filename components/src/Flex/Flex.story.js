@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box, Flex } from "../index";
+import { Box, Flex } from "ComponentsRoot";
 import theme from "../theme";
 
 const flexWrapperStyles = {

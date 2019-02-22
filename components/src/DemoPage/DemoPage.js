@@ -24,7 +24,7 @@ import {
   Select,
   Text,
   Link,
-} from "../index";
+} from "ComponentsRoot";
 
 const Menu = styled(Flex)({
   flexGrow: "2",

@@ -7,7 +7,7 @@ import {
   Text,
   SubsectionTitle,
   Icon,
-} from "../index";
+} from "ComponentsRoot";
 
 const Wrapper = styled.div({
   [`${Text}`]: {
