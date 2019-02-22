@@ -8,12 +8,13 @@ module.exports = {
   },
   output: {
     libraryTarget: "umd",
-    globalObject: `(typeof self !== 'undefined' ? self : this)` // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
+    globalObject: "(typeof self !== 'undefined' ? self : this)",
+    // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
   },
   externals: [
     "react",
     "react-dom",
-    "styled-components"
+    "styled-components",
   ],
   module: {
     rules: [
@@ -23,19 +24,19 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/react']
-          }
-        }
+            presets: ["@babel/react"],
+          },
+        },
       },
       {
         test: /\.stories\.jsx?$/,
-        loaders: [require.resolve('@storybook/addon-storysource/loader')],
-        enforce: 'pre',
+        loaders: [require.resolve("@storybook/addon-storysource/loader")],
+        enforce: "pre",
       },
       {
         test: /\.svg$/,
-        loader: 'svg-sprite-loader'
-      }
-    ]
-  }
-}
+        loader: "svg-sprite-loader",
+      },
+    ],
+  },
+};
