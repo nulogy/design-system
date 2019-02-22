@@ -1,19 +1,20 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Field from "../Field/Field";
-import Input from "../Input/Input";
-import Form from "./Form";
-import FormSection from "./FormSection";
-import Checkbox from "../Checkbox/Checkbox";
-import Radio from "../Radio/Radio";
-import RadioGroup from "../Radio/RadioGroup";
-import Toggle from "../Toggle/Toggle";
-import InlineValidation from "../Validation/InlineValidation";
-import HeaderValidation from "../Validation/HeaderValidation";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
-import Select from "../Select/Select";
-
+import {
+  Field,
+  Input,
+  Form,
+  FormSection,
+  Checkbox,
+  Radio,
+  RadioGroup,
+  Toggle,
+  InlineValidation,
+  HeaderValidation,
+  List,
+  ListItem,
+  Select,
+} from "../index";
 
 const options = [
   { value: "planned", label: "Planned" },

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Text from "./Text";
 import theme from "../theme";
+import { Text } from "../index";
 
 const Title = Text.withComponent("h1");
 

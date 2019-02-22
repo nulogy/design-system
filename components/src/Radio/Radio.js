@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
-import Box from "../Box/Box";
-import Text from "../Type/Text";
+import { Box, Text } from "../index";
 import { InputClickableArea } from "../Utils";
 
 const radioStyle = {

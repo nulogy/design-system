@@ -3,7 +3,7 @@
   "extends": ["airbnb", "plugin:jsx-a11y/recommended", "../.eslintrc"],
   "rules": {
     "react/no-unescaped-entities": ["off"],
-    "max-len": ["off"],
+    "max-len": ["off"]
   },
   "env": {
     "browser": true,

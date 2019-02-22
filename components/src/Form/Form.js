@@ -3,10 +3,12 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import { SectionTitle } from "../Type/Headings";
-import FormSection from "./FormSection";
-import Field from "../Field/Field";
-import HeaderValidation from "../Validation/HeaderValidation";
+import {
+  SectionTitle,
+  FormSection,
+  Field,
+  HeaderValidation,
+} from "../index";
 
 const BaseForm = ({
   title,

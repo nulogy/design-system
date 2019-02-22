@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import Text from "../Type/Text";
+import { Text } from "../index";
 
 const HelpText = props => (
   <Text

@@ -3,8 +3,11 @@ import { space } from "styled-system";
 import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import Icon, { iconNames } from "../Icon/Icon";
+import icons from "../../icons/icons.json";
 import { subPx, omit } from "../Utils";
+import { Icon } from "../index";
+
+const iconNames = Object.keys(icons);
 
 const size = props => {
   switch (props.size) {

@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
 import theme from "../theme";
-import Icon from "../Icon/Icon";
-import Text from "../Type/Text";
+import { Icon, Text } from "../index";
 import icons from "../../icons/icons.json";
 
 const Wrapper = styled.button(
