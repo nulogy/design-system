@@ -27,3 +27,4 @@ export { default as Form } from "./Form/Form";
 export { default as FormSection } from "./Form/FormSection";
 export { default as List } from "./List/List";
 export { default as ListItem } from "./List/ListItem";
+export { default as Textarea } from "./Textarea/Textarea";
