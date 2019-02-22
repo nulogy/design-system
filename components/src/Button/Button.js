@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import React from "react";
 import PropTypes from "prop-types";
+import { Icon } from "ComponentsRoot";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 import { subPx, omit } from "../Utils";
-import { Icon } from "../index";
 
 const iconNames = Object.keys(icons);
 

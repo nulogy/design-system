@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text } from "../index";
+import { Text } from "ComponentsRoot";
 
 const RequirementText = props => (
   <Text

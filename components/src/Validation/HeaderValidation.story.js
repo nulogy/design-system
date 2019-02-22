@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { HeaderValidation, List, ListItem } from "../index";
+import { HeaderValidation, List, ListItem } from "ComponentsRoot";
 
 storiesOf("Header Validation", module)
   .add("Header Validation", () => (

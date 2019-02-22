@@ -3,8 +3,8 @@ import styled from "styled-components";
 import {
   space, color, fontSize, fontWeight, lineHeight,
 } from "styled-system";
+import { ListItem } from "ComponentsRoot";
 import theme from "../theme";
-import { ListItem } from "../index";
 
 const List = styled.ul(
   ({ compact }) => ({

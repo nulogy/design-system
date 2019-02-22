@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Link } from "../index";
+import { Link } from "ComponentsRoot";
 
 storiesOf("Link", module)
   .add("Link", () => (

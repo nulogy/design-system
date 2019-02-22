@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { SubsectionTitle, Field } from "ComponentsRoot";
 import theme from "../theme";
-import { SubsectionTitle, Field } from "../index";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
   as: "legend",

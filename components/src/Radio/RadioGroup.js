@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Radio } from "../index";
+import { Radio } from "ComponentsRoot";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {

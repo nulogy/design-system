@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { darken } from "polished";
+import { Button } from "ComponentsRoot";
 import theme from "../theme";
-import { Button } from "../index";
 
 const DangerButton = styled(Button)(({ disabled }) => ({
   color: theme.colors.white,
