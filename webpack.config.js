@@ -1,4 +1,11 @@
+const path = require("path");
+
 module.exports = {
+  resolve: {
+    alias: {
+      ComponentsRoot: path.resolve(__dirname, "./components/src/"),
+    },
+  },
   output: {
     libraryTarget: "umd",
     globalObject: `(typeof self !== 'undefined' ? self : this)` // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
