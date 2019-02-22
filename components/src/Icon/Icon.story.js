@@ -29,7 +29,7 @@ storiesOf("Icon", module)
   .add("Icon", () => (
     <React.Fragment>
       {iconNames.map(iconName => (
-        <Flex my={ 3 } key={ iconName }>
+        <Flex my="x2" key={ iconName }>
           <Icon mr="20px" icon={ iconName } />
           <IconCode icon={ iconName } />
         </Flex>

@@ -33,7 +33,7 @@ const Menu = styled(Flex)({
 const BaseMenuItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
     <Link
-      px={ 4 } py={ 2 } style={ { display: "block" } }
+      px="x3" py="x1" style={ { display: "block" } }
       color={ theme.colors.white } underline={ false } href="http://nulogy.design"
     >
       {children}
@@ -62,8 +62,8 @@ const MenuItem = styled(BaseMenuItem)({
 
 const BaseHeader = ({ className, ...props }) => (
   <Flex
-    className={ className } px={ 4 }
-    py={ { small: 3, medium: 3, large: 4 } }
+    className={ className } px="x3"
+    py={ { small: "x2", medium: "x2", large: "x3" } }
     bg="black" { ...props }
     height={ { small: "72px", medium: "72px", large: "100%" } }
     flexDirection={ { small: "row", medium: "row", large: "column" } }
@@ -153,7 +153,7 @@ const BaseHeader = ({ className, ...props }) => (
     <Menu
       display={ { small: "none", medium: "flex", large: "flex" } }
       flexDirection={ { small: "row", medium: "row", large: "column" } }
-      my={ { large: 4 } }
+      my={ { large: "x3" } }
     >
       <MenuItem> Menu Item 1 </MenuItem>
       <MenuItem> Menu Item 2 </MenuItem>
@@ -280,12 +280,12 @@ const DemoPage = () => {
         } }
       >
         <Sidebar
-          py={ 4 }
+          py="x3"
           flexDirection={ { small: "256px", medium: "256px" } }
           order={ { small: "2", medium: "-1", large: "-1" } }
         >
           <Text
-            fontWeight="medium" mx={ 4 } mb="x1"
+            fontWeight="medium" mx="x3" mb="x1"
           >
             Contextual Menu
           </Text>
