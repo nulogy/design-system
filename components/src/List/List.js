@@ -4,7 +4,7 @@ import {
   space, color, fontSize, fontWeight, lineHeight,
 } from "styled-system";
 import theme from "../theme";
-import ListItem from "./ListItem";
+import { ListItem } from "../index";
 
 const List = styled.ul(
   ({ compact }) => ({
