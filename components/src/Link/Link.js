@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { color, space, themeGet } from "styled-system";
