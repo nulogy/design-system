@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
-import Flex from "../Flex/Flex";
-import Text from "../Type/Text";
-import { SubsectionTitle } from "../Type/Headings";
-import Icon from "../Icon/Icon";
-
+import {
+  Flex,
+  Text,
+  SubsectionTitle,
+  Icon,
+} from "../index";
 
 const Wrapper = styled.div({
   [`${Text}`]: {
