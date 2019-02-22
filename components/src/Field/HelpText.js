@@ -5,7 +5,7 @@ import theme from "../theme";
 
 const HelpText = props => (
   <Text
-    fontSize={ theme.fontSizes[0] } lineHeight={ theme.lineHeights.smallTextBase }
+    fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }
     { ...props }
   />
 );

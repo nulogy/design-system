@@ -39,7 +39,7 @@ const Input = styled.input.attrs(({ error, required }) => ({
     border: "1px solid",
     borderRadius: theme.radii.medium,
     padding: subPx(theme.space.x1),
-    fontSize: theme.fontSizes[1],
+    fontSize: theme.fontSizes.medium,
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
     "&:focus": {

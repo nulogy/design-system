@@ -33,7 +33,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
   color: theme.colors.black,
-  fontSize: theme.fontSizes[1],
+  fontSize: theme.fontSizes.medium,
   padding: subPx(theme.space.x1),
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
