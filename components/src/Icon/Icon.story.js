@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
+import theme from "../theme";
 import {
   Icon,
   InlineIcon,
-  iconNames,
   Box,
   Flex,
 } from "../index";
-import theme from "../theme";
+import icons from "../../icons/icons.json";
 
+const iconNames = Object.keys(icons);
 const iconSubset = iconNames.slice(0, 5);
 
 const IconCode = ({ icon }) => (
