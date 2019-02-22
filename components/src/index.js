@@ -11,6 +11,8 @@ export { default as Icon } from "./Icon/Icon";
 export { default as InlineValidation } from "./Validation/InlineValidation";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export { default as Field } from "./Field/Field";
+export { default as HelpText } from "./Field/HelpText";
+export { default as RequirementText } from "./Field/RequirementText";
 export { default as Input } from "./Input/Input";
 export { default as Checkbox } from "./Checkbox/Checkbox";
 export { default as Radio } from "./Radio/Radio";

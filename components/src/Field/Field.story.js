@@ -1,10 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Field from "./Field";
-import Input from "../Input/Input";
-import InlineValidation from "../Validation/InlineValidation";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
+import {
+  Field,
+  Input,
+  InlineValidation,
+  List,
+  ListItem,
+} from "../index";
 
 storiesOf("Field", module)
   .add("Field", () => (

@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import RequirementText from "./RequirementText";
-import HelpText from "./HelpText";
+import { RequirementText, HelpText } from "../index";
 
 const Label = styled.label(
   space,
