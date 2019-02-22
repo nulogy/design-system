@@ -18,13 +18,13 @@ export default {
     red: tokens.color_base_red,
     lightRed: tokens.color_base_light_red,
   },
-  fontSizes: [
-    tokens.size_font_small,
-    tokens.size_font_medium,
-    tokens.size_font_large,
-    tokens.size_font_larger,
-    tokens.size_font_largest,
-  ],
+  fontSizes: {
+    small: tokens.size_font_small,
+    medium: tokens.size_font_medium,
+    large: tokens.size_font_large,
+    larger: tokens.size_font_larger,
+    largest: tokens.size_font_largest,
+  },
   lineHeights: {
     base: tokens.line_height_base,
     title: tokens.line_height_title,
