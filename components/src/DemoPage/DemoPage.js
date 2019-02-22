@@ -1,28 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Title } from "../Type/Headings";
-import PrimaryButton from "../Button/PrimaryButton";
-import QuietButton from "../Button/QuietButton";
-import IconicButton from "../Button/IconicButton";
-import Box from "../Box/Box";
-import Flex from "../Flex/Flex";
-import Field from "../Field/Field";
-import Input from "../Input/Input";
-import Form from "../Form/Form";
-import FormSection from "../Form/FormSection";
-import Checkbox from "../Checkbox/Checkbox";
-import Radio from "../Radio/Radio";
-import RadioGroup from "../Radio/RadioGroup";
-import Toggle from "../Toggle/Toggle";
-import InlineValidation from "../Validation/InlineValidation";
-import HeaderValidation from "../Validation/HeaderValidation";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
-import Select from "../Select/Select";
-import Text from "../Type/Text";
-import Link from "../Link/Link";
 import theme from "../theme";
+import {
+  Title,
+  PrimaryButton,
+  QuietButton,
+  IconicButton,
+  Box,
+  Flex,
+  Field,
+  Input,
+  Form,
+  FormSection,
+  Checkbox,
+  Radio,
+  RadioGroup,
+  Toggle,
+  InlineValidation,
+  HeaderValidation,
+  List,
+  ListItem,
+  Select,
+  Text,
+  Link,
+} from "../index";
 
 const Menu = styled(Flex)({
   flexGrow: "2",
