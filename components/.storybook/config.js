@@ -6,8 +6,8 @@ import NDSProvider from '../src/NDSProvider/NDSProvider';
 import theme from '../src/theme';
 
 const grid = {
-  base: { colour: 'hsla(120, 100%, 100%, 0.4)', size: `${theme.space[2]}` },
-  major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${theme.space[4]}`},
+  base: { colour: 'hsla(120, 100%, 100%, 0.4)', size: `${theme.space.x1}` },
+  major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${theme.space.x3}`},
 }
 
 addDecorator(withStyles({

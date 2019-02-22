@@ -6,7 +6,7 @@ import { Text, Icon, Flex } from "../index";
 
 const Wrapper = styled.div({
   [`${Text}`]: {
-    marginBottom: theme.space[2],
+    marginBottom: theme.space.x1,
   },
   "> *:last-child": {
     marginBottom: 0,
@@ -19,7 +19,7 @@ const InlineValidation = ({
   ...boxProps
 }) => (
   <Flex color={ theme.colors.red } { ...boxProps }>
-    <Icon icon="error" mr={ 2 } />
+    <Icon icon="error" mr="x1" />
     <Wrapper>
       <Text>{message}</Text>
       {children}

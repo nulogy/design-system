@@ -9,10 +9,10 @@ export default () => (
       <title>Tokens</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 6 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x6" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Tokens</Title>
+      <Title mb="none">Tokens</Title>
       <Intro>Here you'll find all of the design options for creating interfaces in Nulogy's style.</Intro>
     </Box>
 

@@ -70,7 +70,7 @@ const BaseHeader = ({ className, ...props }) => (
     justifyContent="space-between"
     alignItems="center"
   >
-    <Box mr={ 2 } style={ { minWidth: "100px" } }>
+    <Box mr="x1" style={ { minWidth: "100px" } }>
       <img
         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTMzcHgiIGhlaWdodD0iMz
         JweCIgdmlld0JveD0iMCAwIDEzMyAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHR
@@ -160,7 +160,7 @@ const BaseHeader = ({ className, ...props }) => (
       <MenuItem> Menu Item 3 </MenuItem>
     </Menu>
     <Flex justifyContent="flex-end">
-      <Text mr={ 4 } style={ { float: "right" } } color="white">User Name</Text>
+      <Text mr="x3" style={ { float: "right" } } color="white">User Name</Text>
       <Link color="white" href="http://nulogy.design">Logout</Link>
     </Flex>
   </Flex>
@@ -179,8 +179,8 @@ const Header = styled(BaseHeader)({});
 const BaseSidebarItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
     <Link
-      px={ 4 } py={ 2 } style={ { display: "block" } }
-      color={ theme.colors.blueß } underline={ false } href="http://nulogy.design"
+      px="x3" py="x1" style={ { display: "block" } }
+      color="blue" underline={ false } href="http://nulogy.design"
     >
       {children}
     </Link>
@@ -285,7 +285,7 @@ const DemoPage = () => {
           order={ { small: "2", medium: "-1", large: "-1" } }
         >
           <Text
-            fontWeight="medium" mx={ 4 } mb={ 2 }
+            fontWeight="medium" mx={ 4 } mb="x1"
           >
             Contextual Menu
           </Text>
@@ -300,10 +300,10 @@ const DemoPage = () => {
             <SidebarItem>Contextual Tab 5</SidebarItem>
           </Flex>
         </Sidebar>
-        <Box width="100%" bg="white" p={ 4 }>
+        <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
           <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
-            <Form mb={ 6 } title="Job 324400">
+            <Form mb="x6" title="Job 324400">
               <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
                 <List compact>
                   <ListItem>Affected field</ListItem>
@@ -384,8 +384,8 @@ const DemoPage = () => {
               </FormSection>
             </Form>
           </Box>
-          <Flex mb={ 6 }>
-            <PrimaryButton mr={ 2 }>Save changes</PrimaryButton>
+          <Flex mb="x6">
+            <PrimaryButton mr="x1">Save changes</PrimaryButton>
             <QuietButton>Cancel</QuietButton>
           </Flex>
         </Box>
@@ -396,7 +396,7 @@ const DemoPage = () => {
           medium: 0,
           large: "256px",
         } }
-        px={ 4 } py={ 2 } bg="lightGrey"
+        px="x3" py="x1" bg="lightGrey"
         justifyContent="space-between" alignItems="center"
       >
         <Text>Nulogy 2019</Text>

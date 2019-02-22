@@ -81,6 +81,6 @@ storiesOf("Select", module)
         placeholder="Please select inventory status" options={ options } required
         style={ { marginTop: "5px" } }
       />
-      <PrimaryButton mt={ 2 } type="submit">Submit</PrimaryButton>
+      <PrimaryButton mt="x1" type="submit">Submit</PrimaryButton>
     </form>
   ));

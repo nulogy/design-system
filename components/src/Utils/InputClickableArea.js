@@ -5,7 +5,7 @@ const InputClickableArea = styled.label(({ disabled }) => ({
   cursor: disabled ? null : "pointer",
   display: "inline-flex",
   width: "auto",
-  minHeight: theme.space[4],
+  minHeight: theme.space.x3,
   verticalAlign: "top",
   alignItems: "flex-start",
   userSelect: "none",

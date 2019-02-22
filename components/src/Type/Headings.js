@@ -9,7 +9,7 @@ Title.defaultProps = {
   fontSize: 4,
   lineHeight: theme.lineHeights.title,
   fontWeight: theme.fontWeights.light,
-  mb: 6,
+  mb: theme.space.x6,
   theme,
 };
 
@@ -20,7 +20,7 @@ SectionTitle.defaultProps = {
   fontSize: 3,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.sectionTitle,
-  mb: 3,
+  mb: theme.space.x2,
   theme,
 };
 
@@ -33,7 +33,7 @@ SubsectionTitle.defaultProps = {
   fontSize: 2,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.sectionTitle,
-  mb: 2,
+  mb: theme.space.x1,
   theme,
 };
 

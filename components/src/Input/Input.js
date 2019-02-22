@@ -38,7 +38,7 @@ const Input = styled.input.attrs(({ error, required }) => ({
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    padding: subPx(theme.space[2]),
+    padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes[1],
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,

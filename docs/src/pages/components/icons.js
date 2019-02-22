@@ -15,7 +15,7 @@ const IconDisplay = props => (
     {iconNames.map(icon => (
       <Flex key={ icon } width={ 1 / 5 }>
         <Icon icon={ icon } />
-        <Text align="center" ml={ 2 }>{icon}</Text>
+        <Text align="center" ml="x1">{icon}</Text>
       </Flex>
     ))}
   </Flex>
@@ -27,17 +27,17 @@ export default () => (
       <title>Icons</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title m={ 0 }>Icons</Title>
+      <Title m="none">Icons</Title>
       <Intro>Icons can be used alongside text to help assist users in finding certain actions on a page. </Intro>
     </Box>
 
     <DocSection>
       <SectionTitle>Avaliable Icons</SectionTitle>
-      <Text mb={ 5 }>Nulogy uses a selection of solid style <Link href="https://material.io/tools/icons/?style=baseline"> Material Design</Link> icons. </Text>
-      <IconDisplay mb={ 3 } />
+      <Text mb="x4">Nulogy uses a selection of solid style <Link href="https://material.io/tools/icons/?style=baseline"> Material Design</Link> icons. </Text>
+      <IconDisplay mb="x2" />
       <Text>If your interface requires an icon not listed here, please post a message in the <Link href="slack://channel?id=CBAFQ4X7X/">#design-system</Link> slack channel.</Text>
     </DocSection>
 

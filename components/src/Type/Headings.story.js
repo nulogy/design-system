@@ -19,7 +19,7 @@ storiesOf("Headings", module)
   ))
   .add("With a custom margin", () => (
     <React.Fragment>
-      <Title mb={ 6 }>Title</Title>
+      <Title mb="x6">Title</Title>
       <Text>Lorem ipsum</Text>
     </React.Fragment>
   ));

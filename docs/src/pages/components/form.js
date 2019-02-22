@@ -18,10 +18,10 @@ export default () => (
       <title>Form</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Form</Title>
+      <Title mb="none">Form</Title>
       <Intro>Forms are a collection of inputs that allow users to submit data.</Intro>
     </Box>
     <DocSection>
@@ -47,7 +47,7 @@ export default () => (
       <Image src={ helpTextAnatomy } alt="Visual anatomy of help text" />
       <SubsectionTitle>(H) Input fields</SubsectionTitle>
       <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
-      <Box ml={ 2 }>
+      <Box ml="x1">
         <Text><Link href="/components/text-input">Text</Link> input for single or multi-line text data</Text>
         <Text><Link href="/components/radio-button">Radio</Link> button to select one option out of a small list (~ 5-7 max)</Text>
         <Text><Link href="/components/select">Select</Link> to select one option out of a large list</Text>
@@ -76,7 +76,7 @@ export default () => (
       <CheckList>An error has occurred</CheckList>
       <CheckList>Where the error occurred</CheckList>
       <CheckList>How to recover from an error</CheckList>
-      <Text mt={ 2 }>There are two types of validation: Header level validation and Inline validation</Text>
+      <Text mt="x1">There are two types of validation: Header level validation and Inline validation</Text>
     </DocSection>
     <DocSection>
       <SectionTitle>Header validation</SectionTitle>

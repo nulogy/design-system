@@ -43,9 +43,9 @@ const getCheckboxStyle = (props, checked) => {
 };
 
 const VisualCheckbox = styled.div({
-  minWidth: theme.space[3],
-  height: theme.space[3],
-  marginRight: theme.space[2],
+  minWidth: theme.space.x2,
+  height: theme.space.x2,
+  marginRight: theme.space.x1,
   borderRadius: theme.radii.small,
   border: "solid 1px",
   position: "relative",

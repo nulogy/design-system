@@ -7,8 +7,8 @@ import { InputClickableArea, omit } from "../Utils";
 
 const Slider = styled.span(({ disabled }) => ({
   position: "absolute",
-  height: theme.space[4],
-  width: theme.space[6],
+  height: theme.space.x3,
+  width: theme.space.x6,
   top: "0",
   right: "0",
   bottom: "0",
@@ -20,8 +20,8 @@ const Slider = styled.span(({ disabled }) => ({
   "&:before": {
     content: "''",
     position: "absolute",
-    height: theme.space[4],
-    width: theme.space[4],
+    height: theme.space.x3,
+    width: theme.space.x3,
     left: "0px",
     top: "0px",
     borderRadius: theme.radii.circle,
@@ -36,8 +36,8 @@ const Slider = styled.span(({ disabled }) => ({
 const Switch = styled.label({
   position: "relative",
   display: "inline-flex",
-  minWidth: theme.space[6],
-  minHeight: theme.space[4],
+  minWidth: theme.space.x6,
+  minHeight: theme.space.x3,
   "input": {
     opacity: "0",
     width: "1px",
@@ -128,7 +128,7 @@ class BaseToggle extends React.Component {
             { ...props }
           />
           {(onText || offText) && (
-          <Text disabled={ disabled } mb={ 0 } ml={ 2 }>
+          <Text disabled={ disabled } mb="none" ml="x1">
               {toggled ? onText : offText}
           </Text>
           )}

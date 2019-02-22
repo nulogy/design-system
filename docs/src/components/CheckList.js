@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CheckList = styled.li`
     list-style: none;
-    margin-left: ${props => props.theme.space[3]};
+    margin-left: ${props => props.theme.space.x2};
     vertical-align: middle;
     &:not(:last-child) {margin-bottom: ${props => props.theme.space[0]};}
     &:before {
@@ -10,7 +10,7 @@ const CheckList = styled.li`
         margin-right: ${props => props.theme.space[1]};
         float: left;
         clear: both;
-        position: relative; 
+        position: relative;
         top: -0px;
     }
 `;

@@ -25,19 +25,19 @@ const Form = styled(BaseForm)(
   space,
   ({ title }) => ({
     [`${SectionTitle}`]: {
-      marginBottom: title ? theme.space[6] : 0,
+      marginBottom: title ? theme.space.x6 : 0,
     },
     [`${HeaderValidation}`]: {
-      marginBottom: theme.space[6],
+      marginBottom: theme.space.x6,
     },
     [`${Field}`]: {
-      marginBottom: theme.space[4],
+      marginBottom: theme.space.x3,
       "&:last-child": {
         marginBottom: 0,
       },
     },
     [`${FormSection}`]: {
-      marginBottom: theme.space[6],
+      marginBottom: theme.space.x6,
       "&:last-child": {
         marginBottom: 0,
       },

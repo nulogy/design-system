@@ -9,7 +9,7 @@ const ListItem = styled.li(
     display: "flex",
     "&:before": {
       content: "'•'",
-      marginRight: theme.space[3],
+      marginRight: theme.space.x2,
     },
     "&:last-child": {
       marginBottom: 0,
@@ -24,7 +24,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   color: "currentColor",
-  mb: 2,
+  mb: theme.space.x1,
 };
 
 export default ListItem;

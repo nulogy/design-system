@@ -14,7 +14,7 @@ DocSection.PropTypes = {
 };
 
 DocSection.defaultProps = {
-  mb: 7,
+  mb: theme.space.x8,
 };
 
 export default DocSection;
