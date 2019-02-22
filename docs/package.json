@@ -33,9 +33,9 @@
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "build": "yarn workspace @nulogy/components build && gatsby build",
+    "develop": "yarn workspace @nulogy/components build && gatsby develop",
+    "start": "yarn develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
