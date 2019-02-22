@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { space, color } from "styled-system";
 import icons from "../../icons/icons.json";
 
-export const iconNames = Object.keys(icons);
+const iconNames = Object.keys(icons);
 
 const Svg = props => {
   const {

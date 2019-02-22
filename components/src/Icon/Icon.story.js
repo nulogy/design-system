@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
-import Icon, { InlineIcon, iconNames } from "./Icon";
+import {
+  Icon,
+  InlineIcon,
+  iconNames,
+  Box,
+  Flex,
+} from "../index";
 import theme from "../theme";
-import "./Icon.example.css";
-import Box from "../Box/Box";
-import Flex from "../Flex/Flex";
 
 const iconSubset = iconNames.slice(0, 5);
 
@@ -70,14 +73,6 @@ storiesOf("Icon", module)
       <Box style={ { display: "inline-block" } } m={ 4 } bg="lightGrey"><Icon mx={ 3 } icon="delete" /></Box>
       <Box style={ { display: "inline-block" } } m={ 4 } bg="lightGrey"><Icon my={ 3 } icon="delete" /></Box>
     </Box>
-  ))
-  .add("With applied className", () => (
-    <React.Fragment>
-      <Icon icon="check" className="storybookTestClass" />
-      <br />
-      <br />
-      <Flex className="storybookTestClass">Applied Class</Flex>
-    </React.Fragment>
   ))
   .add("With accessibility title", () => (
     <React.Fragment>
