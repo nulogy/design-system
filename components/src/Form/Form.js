@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import theme from "../theme";
 import {
   SectionTitle,
   FormSection,
   Field,
   HeaderValidation,
 } from "ComponentsRoot";
+import theme from "../theme";
 
 const BaseForm = ({
   title,

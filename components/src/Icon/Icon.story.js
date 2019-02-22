@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
-import theme from "../theme";
 import {
   Icon,
   InlineIcon,
   Box,
   Flex,
 } from "ComponentsRoot";
+import theme from "../theme";
 import icons from "../../icons/icons.json";
 
 const iconNames = Object.keys(icons);
