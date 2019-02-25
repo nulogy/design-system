@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/css",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "CSS for Nulogy Design System",
   "private": false,
   "publishConfig": {
@@ -16,9 +16,9 @@
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.2.0",
     "@nulogy/tokens": "file:../tokens",
     "@storybook/html": "^4.0.11",
-    "@babel/core": "^7.2.0",
     "babel-loader": "^8.0.4",
     "babel-runtime": "^6.26.0",
     "node-sass": "^4.10.0"
