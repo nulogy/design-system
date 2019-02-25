@@ -4,7 +4,7 @@ import {
   Radio,
   RadioGroup,
   Field,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("RadioGroup", module)
   .add("Radio Group", () => (

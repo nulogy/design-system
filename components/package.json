@@ -58,6 +58,7 @@
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.9.1",
     "eslint-config-airbnb": "17.1.0",
+    "eslint-import-resolver-webpack": "^0.11.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.0.0",
     "prop-types": "15.6.2",
@@ -87,6 +88,7 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "moduleNameMapper": {
+      "^ComponentsRoot(.*)$": "<rootDir>/src$1",
       "\\.(css|sass)$": "identity-obj-proxy"
     },
     "transformIgnorePatterns": [

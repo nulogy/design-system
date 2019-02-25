@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
+import { Icon } from "ComponentsRoot";
 import theme from "../theme";
-import { Icon } from "../index";
 import { subPx } from "../Utils";
 
 const getBorderColor = ({

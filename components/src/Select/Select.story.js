@@ -4,7 +4,7 @@ import {
   Select,
   Input,
   PrimaryButton,
-} from "../index";
+} from "ComponentsRoot";
 
 const options = [
   { value: "accepted", label: "Accepted" },

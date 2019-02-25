@@ -5,7 +5,7 @@ import {
   List,
   ListItem,
   Link,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("Inline Validation", module)
   .add("Inline Validation", () => (

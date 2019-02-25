@@ -5,7 +5,7 @@ import {
   PrimaryButton,
   DangerButton,
   QuietButton,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("Buttons", module)
   .add("Button", () => (

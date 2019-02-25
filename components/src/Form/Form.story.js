@@ -14,7 +14,7 @@ import {
   List,
   ListItem,
   Select,
-} from "../index";
+} from "ComponentsRoot";
 
 const options = [
   { value: "planned", label: "Planned" },

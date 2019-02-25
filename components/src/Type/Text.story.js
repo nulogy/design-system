@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Text, Box } from "../index";
+import { Text, Box } from "ComponentsRoot";
 
 storiesOf("Text", module)
   .add("Text", () => (

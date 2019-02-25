@@ -6,7 +6,7 @@ import {
   InlineValidation,
   List,
   ListItem,
-} from "../index";
+} from "ComponentsRoot";
 
 storiesOf("Field", module)
   .add("Field", () => (

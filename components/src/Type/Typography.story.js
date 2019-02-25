@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import theme from "../theme";
 import {
   Text,
   Title,
@@ -8,7 +7,8 @@ import {
   SubsectionTitle,
   List,
   ListItem,
-} from "../index";
+} from "ComponentsRoot";
+import theme from "../theme";
 
 storiesOf("Typography", module)
   .add("Article", () => (

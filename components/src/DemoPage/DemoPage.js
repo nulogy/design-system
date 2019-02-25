@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 import {
   Title,
   PrimaryButton,
@@ -24,7 +23,8 @@ import {
   Select,
   Text,
   Link,
-} from "../index";
+} from "ComponentsRoot";
+import theme from "../theme";
 
 const Menu = styled(Flex)({
   flexGrow: "2",
