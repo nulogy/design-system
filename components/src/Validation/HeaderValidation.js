@@ -11,7 +11,7 @@ import theme from "../theme";
 
 const Wrapper = styled.div({
   [`${Text}`]: {
-    marginBottom: theme.space[2],
+    marginBottom: theme.space.x1,
   },
   "> *:last-child": {
     marginBottom: 0,
@@ -25,9 +25,9 @@ const BaseHeaderValidation = ({
   ...boxProps
 }) => (
   <Flex color="red" { ...boxProps }>
-    <Icon icon="error" size={ theme.space[6] } mr={ theme.space[3] } />
+    <Icon icon="error" size={ theme.space.x6 } mr={ theme.space.x2 } />
     <Wrapper>
-      <SubsectionTitle mb={ theme.space[0] }>{ title }</SubsectionTitle>
+      <SubsectionTitle mb="none">{ title }</SubsectionTitle>
       <Text>{ message }</Text>
       { children }
     </Wrapper>

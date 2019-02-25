@@ -12,18 +12,18 @@ import logo from "../images/nulogy.svg";
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
-    <Box pb={ 3 }>
+    <Box pb="x2">
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Welcome</title>
       </Helmet>
       <Box
-        bg="blackBlue" align="center" mb={ 6 }
-        p={ 3 }
+        bg="blackBlue" align="center" mb="x6"
+        p="x2"
       >
         <Box
-          pl={ 4 } pr={ 4 } maxWidth={ 960 }
+          pl="x3" pr="x3" maxWidth={ 960 }
           m="auto"
         >
           <Flex>
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
               <Link href="/"><img src={ logo } alt="Logo" width="56px" /></Link>
             </Box>
             <Box width={ 3 / 4 } textAlign="right" style={ { position: "relative", top: "14px" } }>
-              <Link href="/style/colour" mr={ 3 } color="white">Visual Style</Link>
+              <Link href="/style/colour" mr="x2" color="white">Visual Style</Link>
               <Link href="/components/buttons" color="white">Components</Link>
             </Box>
           </Flex>

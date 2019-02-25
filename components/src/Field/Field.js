@@ -17,7 +17,7 @@ const FieldWrapper = styled.div(
   space,
   {
     "> *": {
-      marginBottom: theme.space[2],
+      marginBottom: theme.space.x1,
     },
     "> *:last-child": {
       marginBottom: "0",
@@ -44,7 +44,7 @@ const BaseField = ({
     mb={ mb } ml={ ml } mx={ mx }
     my={ my }
   >
-    <Label style={ { display: "block" } } mb={ 2 } htmlFor={ htmlFor }>
+    <Label style={ { display: "block" } } mb="x1" htmlFor={ htmlFor }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}

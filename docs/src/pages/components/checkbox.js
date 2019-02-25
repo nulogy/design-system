@@ -18,10 +18,10 @@ export default () => (
       <title>Checkbox</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Checkbox</Title>
+      <Title mb="none">Checkbox</Title>
       <Intro>Checkboxes allow users to select any number of options from a list.</Intro>
     </Box>
     <DocSection>

@@ -18,10 +18,10 @@ export default () => (
       <title>Select</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Select</Title>
+      <Title mb="none">Select</Title>
       <Intro>For making one selection from a large list of options.</Intro>
     </Box>
     <DocSection>

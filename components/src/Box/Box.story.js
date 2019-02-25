@@ -4,23 +4,23 @@ import { Box } from "ComponentsRoot";
 
 storiesOf("Box", module)
   .add("Box", () => (
-    <Box p={ 4 }>
+    <Box p="x3">
       Hello World
     </Box>
   ))
   .add("With a text colour", () => (
-    <Box p={ 4 } color="blue">
+    <Box p="x3" color="blue">
       Hello World
     </Box>
   ))
   .add("With a background colour", () => (
-    <Box p={ 4 } color="white" bg="blue">
+    <Box p="x3" color="white" bg="blue">
      Hello World
     </Box>
   ))
   .add("With a set width", () => (
     <Box
-      p={ 4 }
+      p="x3"
       width={ 1 / 2 }
       bg="whiteGrey"
     >
@@ -29,7 +29,7 @@ storiesOf("Box", module)
   ))
   .add("With a responsive width", () => (
     <Box
-      p={ 4 }
+      p="x3"
       width={ { small: 1, medium: 1 / 2, large: 1 / 4 } }
       bg="whiteGrey"
     >
@@ -37,25 +37,25 @@ storiesOf("Box", module)
     </Box>
   ))
   .add("With padding", () => (
-    <Box p={ 3 }>
-      <Box m={ 2 } p={ 4 } bg="whiteGrey">Padding</Box>
-      <Box m={ 2 } pt={ 4 } bg="whiteGrey">Padding top</Box>
-      <Box m={ 2 } pr={ 4 } bg="whiteGrey">Padding right</Box>
-      <Box m={ 2 } pb={ 4 } bg="whiteGrey">Padding bottom</Box>
-      <Box m={ 2 } pl={ 4 } bg="whiteGrey">Padding left</Box>
-      <Box m={ 2 } px={ 4 } bg="whiteGrey">Padding x</Box>
-      <Box m={ 2 } py={ 4 } bg="whiteGrey">Padding y</Box>
+    <Box p="x2">
+      <Box m="x1" p="x3" bg="whiteGrey">Padding</Box>
+      <Box m="x1" p="x3" bg="whiteGrey">Padding top</Box>
+      <Box m="x1" pr="x3" bg="whiteGrey">Padding right</Box>
+      <Box m="x1" pb="x3" bg="whiteGrey">Padding bottom</Box>
+      <Box m="x1" pl="x3" bg="whiteGrey">Padding left</Box>
+      <Box m="x1" px="x3" bg="whiteGrey">Padding x</Box>
+      <Box m="x1" py="x3" bg="whiteGrey">Padding y</Box>
     </Box>
   ))
   .add("With margin", () => (
-    <Box p={ 4 }>
-      <Box m={ 4 } bg="whiteGrey">Margin</Box>
-      <Box mt={ 4 } bg="whiteGrey">Margin top</Box>
-      <Box mr={ 4 } bg="whiteGrey">Margin right</Box>
-      <Box mb={ 4 } bg="whiteGrey">Margin bottom</Box>
-      <Box ml={ 4 } bg="whiteGrey">Margin left</Box>
-      <Box mx={ 4 } bg="whiteGrey">Margin x</Box>
-      <Box my={ 4 } bg="whiteGrey">Margin y</Box>
+    <Box p="x3">
+      <Box m="x3" bg="whiteGrey">Margin</Box>
+      <Box mt="x3" bg="whiteGrey">Margin top</Box>
+      <Box mr="x3" bg="whiteGrey">Margin right</Box>
+      <Box mb="x3" bg="whiteGrey">Margin bottom</Box>
+      <Box ml="x3" bg="whiteGrey">Margin left</Box>
+      <Box mx="x3" bg="whiteGrey">Margin x</Box>
+      <Box my="x3" bg="whiteGrey">Margin y</Box>
     </Box>
   ))
   .add("With a shadow", () => (

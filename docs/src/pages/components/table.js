@@ -20,10 +20,10 @@ export default () => (
       <title>Table</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Table</Title>
+      <Title mb="none">Table</Title>
       <Intro>Tables structure data into a grid making it easier to understand and compare.</Intro>
     </Box>
     <DocSection>
@@ -32,7 +32,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Actions</SectionTitle>
       <Text>There are 2 types of actions:</Text>
-      <Text mb={ 0 }><strong>Row</strong> actions allow data manipulation within a single row</Text>
+      <Text mb="none"><strong>Row</strong> actions allow data manipulation within a single row</Text>
       <Text><strong>Table</strong> actions allow actions to be performed on multiple rows or the entire table, e.g Create, Print and Import/Export.</Text>
       <Image src={ actions } alt="Spacing example" style={ { width: "100%" } } />
     </DocSection>

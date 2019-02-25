@@ -34,7 +34,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   width: "100%",
   color: theme.colors.black,
   fontSize: theme.fontSizes[1],
-  padding: subPx(theme.space[2]),
+  padding: subPx(theme.space.x1),
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
   borderColor: getBorderColor({
@@ -66,7 +66,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
 
 const IndicatorButton = styled.div(() => ({
   position: "absolute",
-  top: theme.space[2],
+  top: theme.space.x1,
   right: theme.space[1],
   bottom: "0",
   pointerEvents: "none",
@@ -108,7 +108,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
-  padding: subPx(theme.space[2]),
+  padding: subPx(theme.space.x1),
   fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isActive ? theme.colors.lightBlue : null,
   "&:hover": {

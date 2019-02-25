@@ -29,10 +29,10 @@ const FormSection = styled(BaseFormSection)(({ title }) => ({
   border: "none",
   [`${FormSectionTitle}`]: {
     padding: 0,
-    marginBottom: title ? theme.space[4] : 0,
+    marginBottom: title ? theme.space.x3 : 0,
   },
   [`${Field}`]: {
-    marginBottom: theme.space[4],
+    marginBottom: theme.space.x3,
     "&:last-child": {
       marginBottom: 0,
     },

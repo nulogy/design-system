@@ -6,12 +6,12 @@ import theme from "../theme";
 const flexWrapperStyles = {
   boxSizing: "content-box",
   minHeight: "400px",
-  padding: theme.space[4],
+  padding: theme.space.x3,
   background: theme.colors.whiteGrey,
 };
 
 const boxStyles = {
-  padding: theme.space[6],
+  padding: theme.space.x6,
   background: theme.colors.grey,
   outline: `2px dotted ${theme.colors.darkGrey}`,
 };

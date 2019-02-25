@@ -14,7 +14,7 @@ const Wrapper = styled.button(
     position: "relative",
     display: "inline-flex",
     alignItems: "center",
-    padding: `${theme.space[1]} ${theme.space[0]}`,
+    padding: `${theme.space.half} ${theme.space.none}`,
     color: theme.colors.darkBlue,
     cursor: disabled ? "arrow" : "pointer",
 
@@ -59,8 +59,8 @@ const IconicButton = props => {
 
   return (
     <Wrapper label={ children } { ...props }>
-      <Icon size={ theme.space[5] } icon={ icon } p={ 1 } />
-      <Text mr={ 1 } ml={ 1 }>{ children }</Text>
+      <Icon size={ theme.space.x4 } icon={ icon } p="x1" />
+      <Text mr="half" ml="half">{ children }</Text>
     </Wrapper>
   );
 };

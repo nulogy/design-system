@@ -18,10 +18,10 @@ export default () => (
       <title>Toggle</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p={ 5 } borderRadius={ 1 }
-      mb={ 6 }
+      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      mb="x6"
     >
-      <Title mb={ 0 }>Toggle</Title>
+      <Title mb="none">Toggle</Title>
       <Intro>For quickly switching between two possible states.</Intro>
     </Box>
     <DocSection>
@@ -38,7 +38,7 @@ export default () => (
     <DocSection>
       <SectionTitle>States</SectionTitle>
       <SubsectionTitle>Default</SubsectionTitle>
-      <Flex mb={ 2 }>
+      <Flex mb="x1">
         <Box><Image src={ on } alt="Toggle screenshot" /></Box>
         <Box><Image src={ off } alt="Toggle screenshot" /></Box>
       </Flex>

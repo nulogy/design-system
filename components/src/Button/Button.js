@@ -15,24 +15,24 @@ const size = props => {
       return {
         fontSize: `${props.theme.fontSizes[0]}`,
         lineHeight: `${props.theme.lineHeights.smallTextCompressed}`,
-        padding: `${subPx(props.theme.space[1])} ${props.theme.space[2]}`,
+        padding: `${subPx(props.theme.space.half)} ${props.theme.space.x1}`,
       };
     case "medium":
       return {
         fontSize: `${props.theme.fontSizes[1]}`,
-        padding: `${subPx(props.theme.space[2], 1)} ${props.theme.space[3]}`,
+        padding: `${subPx(props.theme.space.x1, 1)} ${props.theme.space.x2}`,
       };
     case "large":
       return {
         fontSize: `${props.theme.fontSizes[2]}`,
         lineHeight: `${props.theme.lineHeights.subsectionTitle}`,
-        padding: `${subPx(props.theme.space[3])} ${props.theme.space[4]}`,
+        padding: `${subPx(props.theme.space.x2)} ${props.theme.space.x3}`,
 
       };
     default:
       return {
         fontSize: `${props.theme.fontSizes[1]}`,
-        padding: `${subPx(props.theme.space[2])} ${props.theme.space[3]}`,
+        padding: `${subPx(props.theme.space.x1)} ${props.theme.space.x2}`,
       };
   }
 };
@@ -49,13 +49,13 @@ const BaseButton = ({
     <button { ...omit(props, "fullWidth") }>
       {(icon && iconSide === "left")
           && (
-          <Icon size={ `${smallTextCompressed}em` } mr={ 1 } icon={ icon } />
+          <Icon size={ `${smallTextCompressed}em` } mr="half" icon={ icon } />
           )
         }
       {children}
       {(icon && iconSide === "right")
           && (
-          <Icon size={ `${smallTextCompressed}em` } ml={ 1 } icon={ icon } />
+          <Icon size={ `${smallTextCompressed}em` } ml="half" icon={ icon } />
           )
         }
     </button>

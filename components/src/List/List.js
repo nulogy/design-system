@@ -12,7 +12,7 @@ const List = styled.ul(
     paddingLeft: 0,
     margin: 0,
     [`${ListItem}`]: {
-      marginBottom: compact ? 0 : theme.space[2],
+      marginBottom: compact ? 0 : theme.space.x1,
     },
   }),
   space,

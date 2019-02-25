@@ -4,7 +4,7 @@ import { Text } from "ComponentsRoot";
 
 const RequirementText = props => (
   <Text
-    inline ml={ 2 } fontSize="12px"
+    inline ml="x1" fontSize="12px"
     color="darkGrey" { ...props }
   />
 );

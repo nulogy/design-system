@@ -14,7 +14,7 @@ DocSection.PropTypes = {
 };
 
 DocSection.defaultProps = {
-  mb: 7,
+  mb: "x8",
 };
 
 export default DocSection;
