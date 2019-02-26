@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -65,7 +65,7 @@
     "react-test-renderer": "16.7.0"
   },
   "dependencies": {
-    "@nulogy/tokens": "^0.4.0",
+    "@nulogy/tokens": "^0.4.1",
     "@sambego/storybook-styles": "^1.0.0",
     "@storybook/addon-backgrounds": "^4.1.12",
     "@storybook/addon-info": "^4.1.4",
