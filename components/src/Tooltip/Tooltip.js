@@ -191,7 +191,7 @@ class Tooltip extends React.Component {
 
 Tooltip.defaultProps = {
   showDelay: "100",
-  hideDelay: "500000",
+  hideDelay: "500",
 };
 
 export default Tooltip;
