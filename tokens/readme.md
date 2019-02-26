@@ -16,6 +16,6 @@ This is where Nulogy's design tokens are stored and converted using [Style Dicti
 `Blue is: {tokens.color_base_blue}`
 
 ### In Sass
-`@import '/node_modules/@nulogy/tokens/build/variables.scss';`
+`@import '/node_modules/@nulogy/tokens/dist/variables.scss';`
 
 `.blue-thing {color: $color_base_blue}`

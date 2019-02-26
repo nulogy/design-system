@@ -3,7 +3,7 @@
     "platforms": {
       "css": {   
         "transforms": ["attribute/cti", "name/cti/kebab", "size/px", "color/css"],
-        "buildPath": "build/",
+        "buildPath": "dist/",
         "files": [{
           "destination": "variables.css",
           "format": "css/variables"
@@ -11,7 +11,7 @@
       },      
       "scss": {   
         "transforms": ["attribute/cti", "name/cti/kebab", "size/px", "color/css"],
-        "buildPath": "build/",
+        "buildPath": "dist/",
         "files": [{
           "destination": "_variables.scss",
           "format": "scss/variables"
@@ -19,7 +19,7 @@
       },
       "react": {
         "transforms": ["attribute/cti", "name/cti/snake", "size/px", "color/hex"],
-        "buildPath": "build/",
+        "buildPath": "dist/",
         "files": [{
           "destination": "exports.js",
           "format": "javascript/es6"
