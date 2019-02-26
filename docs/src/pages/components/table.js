@@ -10,6 +10,7 @@ import dragAndDrop from "../../images/tables/drag-and-drop.png";
 import edit from "../../images/tables/edit.png";
 import multiselect from "../../images/tables/multi-select.png";
 import pagination from "../../images/tables/pagination.png";
+import customization from "../../images/tables/customization-bar.png";
 import sorting from "../../images/tables/sorting.png";
 import expandableRowExpanded from "../../images/tables/expandable-row-expanded.png";
 import expandableRowCollapsed from "../../images/tables/expandable-row-collapsed.png";
@@ -49,7 +50,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Table customization bar</SectionTitle>
       <Text>The content of the table can be customized by applying search criteria, applying filters, hiding and showing specific columns, and changing the number of rows displayed per page.</Text>
-      <Image src={ actions } alt="Customization bar example" style={ { width: "100%" } } />
+      <Image src={ customization } alt="Customization bar example" style={ { width: "100%" } } />
     </DocSection>
     <DocSection>
       <SectionTitle>Drag and Drop</SectionTitle>
