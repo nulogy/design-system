@@ -12,7 +12,7 @@
   "scripts": {
     "build": "style-dictionary build"
   },
-  "main": "build/exports.js",
+  "main": "dist/exports.js",
   "devDependencies": {
     "style-dictionary": "^2.6.2"
   }
