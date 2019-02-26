@@ -10,7 +10,9 @@
     "tokens"
   ],
   "scripts": {
-    "test": "cd components && yarn test"
+    "build": "lerna run build",
+    "test": "cd components && yarn test",
+    "publish-packages": "yarn install && yarn build && yarn lerna publish"
   },
   "main": "index.js",
   "license": "MIT",
