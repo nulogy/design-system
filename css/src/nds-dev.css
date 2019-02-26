@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 /**
  * Do not edit directly
- * Generated on Tue, 12 Feb 2019 16:24:56 GMT
+ * Generated on Wed, 20 Feb 2019 20:10:58 GMT
  */
 html, body {
   margin: 0; }
@@ -11,7 +11,7 @@ html, body {
 
 body {
   color: #011e38;
-  font-family: "IBM Plex Sans", sans;
+  font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5; }
 
 code {
@@ -437,7 +437,7 @@ img {
   font-size: 46px !important; }
 
 .nds-font-family--base {
-  font-family: "IBM Plex Sans", sans !important; }
+  font-family: "IBM Plex Sans", sans-serif !important; }
 
 .nds-font-family--monospace {
   font-family: "IBM Plex Mono", monospace !important; }
