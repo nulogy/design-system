@@ -226,6 +226,25 @@ class Tooltip extends React.Component {
     this.showTimeout = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
   }
 
+  clearScheduled = () => {
+    clearTimeout(this.hideTimeout);
+    clearTimeout(this.showTimeout);
+  };
+
+  getTooltipProps = () => ({
+    onFocus: () => (this.showTooltip()),
+    onBlur: () => (this.hideTooltip()),
+    onMouseEnter: () => (this.showTooltip()),
+    onMouseLeave: () => (this.hideTooltip()),
+  })
+
+  getElementProps = () => ({
+    onFocus: () => (this.showTooltip()),
+    onBlur: () => (this.hideTooltip()),
+    onMouseEnter: () => (this.showTooltip()),
+    onMouseLeave: () => (this.hideTooltip()),
+  })
+
   render() {
     return (
       <Manager>
@@ -242,6 +261,7 @@ class Tooltip extends React.Component {
             </div>
           )}
         </Reference>
+        { this.state.open && (
         <Popper placement={ this.props.placement }>
           {({
             ref, style, placement, arrowProps,
@@ -257,6 +277,7 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
+        )}
       </Manager>
     );
   }
