@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Button, PrimaryButton, Input, Link,
+  Button, PrimaryButton, Link, Text,
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
@@ -11,12 +11,12 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip={ (
-          <Button>
-          I am also a button!
-          </Button>
+         
+          "I am also a button!"
+        
 ) }
       >
-        <Link> Link </Link>
+        <Link href="/"> Link </Link>
       </Tooltip>
       <Tooltip
         placement="bottom"
@@ -26,7 +26,64 @@ storiesOf("Tooltip", module)
           </Button>
 ) }
       >
-        <Button ml="400px"> Button </Button>
+        <PrimaryButton ml="400px"> Button </PrimaryButton>
       </Tooltip>
     </>
+  ))
+  .add("Tooltip2", () => (
+    <Tooltip
+      placement="bottom"
+      tooltip={ (
+        <Tooltip
+          placement="right"
+          tooltip={ (
+            <Tooltip
+              placement="bottom"
+              tooltip={ (
+                <Tooltip
+                  placement="bottom"
+                  tooltip={ (
+                    <Tooltip
+                      placement="left"
+                      tooltip={ (
+                        <Tooltip
+                          placement="bottom"
+                          tooltip={ (
+                            <Tooltip
+                              placement="right"
+                              tooltip={ (
+                                <Tooltip
+                                  placement="right"
+                                  tooltip={ (<Text inline>Hello</Text>) }
+                                >
+                                  <Text inline>Hello </Text>
+                                </Tooltip>
+) }
+                            >
+                              <Text inline>Hello </Text>
+                            </Tooltip>
+) }
+                        >
+                          <Text inline>Hello </Text>
+                        </Tooltip>
+) }
+                    >
+                      <Text inline>Hello </Text>
+                    </Tooltip>
+) }
+                >
+                  <Text inline>Hello </Text>
+                </Tooltip>
+) }
+            >
+              <Text inline>Hello </Text>
+            </Tooltip>
+) }
+        >
+          <Text inline>Hello </Text>
+        </Tooltip>
+        ) }
+    >
+      <Text inline>Hello </Text>
+    </Tooltip>
   ));
