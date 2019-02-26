@@ -23,6 +23,6 @@
     "node-sass": "^4.10.0"
   },
   "dependencies": {
-    "@nulogy/tokens": "0.2.3"
+    "@nulogy/tokens": "0.4.1"
   }
 }
