@@ -63,11 +63,11 @@ const getArrowPosition = placement => {
         marginLeft: `-${theme.space.x1}`,
         width: theme.space.x1,
         "&::before": {
-          borderColor: `transparent ${theme.color.grey} transparent transparent`,
+          borderColor: `transparent ${theme.colors.grey} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
         },
         "&::after": {
-          borderColor: `transparent ${theme.color.white} transparent transparent`,
+          borderColor: `transparent ${theme.colors.white} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
           left: "6px",
           top: 0,
@@ -80,11 +80,11 @@ const getArrowPosition = placement => {
         right: 0,
         width: theme.space.x1,
         "&::before": {
-          borderColor: `transparent transparent transparent ${theme.color.grey}`,
+          borderColor: `transparent transparent transparent ${theme.colors.grey}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
         },
         "&::after": {
-          borderColor: `transparent transparent transparent ${theme.color.grey}`,
+          borderColor: `transparent transparent transparent ${theme.colors.white}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
           left: "3px",
           top: 0,
@@ -191,7 +191,7 @@ class Tooltip extends React.Component {
 
 Tooltip.defaultProps = {
   showDelay: "100",
-  hideDelay: "500",
+  hideDelay: "50000",
 };
 
 export default Tooltip;
