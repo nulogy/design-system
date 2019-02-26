@@ -1,28 +1,7 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:jsx-a11y/recommended", "../.eslintrc"],
+  "extends": ["../.eslintrc"],
   "rules": {
     "react/no-unescaped-entities": ["off"],
-    "max-len": ["off"]
-  },
-  "env": {
-    "browser": true,
-    "es6": true,
-    "jest": true,
-    "node": true
-  },
-  "plugins": ["react", "jsx-a11y", "import"],
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "../webpack.config.js"
-      }
-    }
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
   }
 }
