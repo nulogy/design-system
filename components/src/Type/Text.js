@@ -40,7 +40,7 @@ Text.defaultProps = {
   inline: false,
   disabled: false,
   m: 0,
-  fontSize: 1,
+  fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
   color: "currentColor",
 };

@@ -37,7 +37,7 @@ export default () => (
         <CheckList>Use less spacing inside smaller elements or between functionally related elements.</CheckList>
         <CheckList>Use more spacing inside larger elements or between less functionally related elements</CheckList>
       </Box>
-      <Text fontSize={ 0 }><em>Note: half should mostly be used for spacing related items within an element, e.g a button’s text and it’s icon.</em></Text>
+      <Text fontSize="small"><em>Note: half should mostly be used for spacing related items within an element, e.g a button’s text and it’s icon.</em></Text>
     </DocSection>
   </Layout>
 );

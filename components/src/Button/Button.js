@@ -13,25 +13,25 @@ const size = props => {
   switch (props.size) {
     case "small":
       return {
-        fontSize: `${props.theme.fontSizes[0]}`,
+        fontSize: `${props.theme.fontSizes.small}`,
         lineHeight: `${props.theme.lineHeights.smallTextCompressed}`,
         padding: `${subPx(props.theme.space.half)} ${props.theme.space.x1}`,
       };
     case "medium":
       return {
-        fontSize: `${props.theme.fontSizes[1]}`,
+        fontSize: `${props.theme.fontSizes.medium}`,
         padding: `${subPx(props.theme.space.x1, 1)} ${props.theme.space.x2}`,
       };
     case "large":
       return {
-        fontSize: `${props.theme.fontSizes[2]}`,
+        fontSize: `${props.theme.fontSizes.large}`,
         lineHeight: `${props.theme.lineHeights.subsectionTitle}`,
         padding: `${subPx(props.theme.space.x2)} ${props.theme.space.x3}`,
 
       };
     default:
       return {
-        fontSize: `${props.theme.fontSizes[1]}`,
+        fontSize: `${props.theme.fontSizes.medium}`,
         padding: `${subPx(props.theme.space.x1)} ${props.theme.space.x2}`,
       };
   }

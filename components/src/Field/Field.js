@@ -9,7 +9,7 @@ const Label = styled.label(
   space,
   {
     display: "inline-block",
-    fontSize: theme.fontSizes[1],
+    fontSize: theme.fontSizes.medium,
   }
 );
 

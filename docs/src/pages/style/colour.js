@@ -19,7 +19,7 @@ const Palette = props => {
         mb="x1" bg={ colour } borderRadius={ 1 }
       />
       <Text mb="half">{name}</Text>
-      <Text fontSize={ 0 }>{colour}</Text>
+      <Text fontSize="small">{colour}</Text>
     </Box>
   );
 };

@@ -10,7 +10,7 @@ storiesOf("Text", module)
     <Text color="blue">Small text</Text>
   ))
   .add("With a size", () => (
-    <Text fontSize={ 0 }>Small text</Text>
+    <Text fontSize="small">Small text</Text>
   ))
   .add("With a custom margin", () => (
     <React.Fragment>
