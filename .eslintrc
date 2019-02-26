@@ -16,7 +16,7 @@
     ],
     "import/prefer-default-export": "off",
     "linebreak-style": ["error", "unix"],
-    "max-len": ["error", 130],
+    "max-len": ["off"],
     "no-else-return": ["off"],
     "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
     "no-underscore-dangle": ["off"],
@@ -33,12 +33,6 @@
     "react/prefer-stateless-function": ["off"],
     "react/require-extension": ["off"],
     "semi": ["error", "always"],
-    "jsx-a11y/label-has-associated-control": [ 2, {
-      "labelComponents": ["Field"],
-      "labelAttributes": ["Label", "Switch"],
-      "controlComponents": ["Input", "RadioGroup", "Select", "Toggle", "Checkbox"],
-      "assert": "both"
-    }]
   },
   "env": {
     "browser": true,
