@@ -21,5 +21,8 @@
     "babel-loader": "^8.0.4",
     "babel-runtime": "^6.26.0",
     "node-sass": "^4.10.0"
+  },
+  "dependencies": {
+    "@nulogy/tokens": "0.2.3"
   }
 }
