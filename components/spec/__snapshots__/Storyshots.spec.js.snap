@@ -114,6 +114,10 @@ exports[`Storyshots Header Validation Header Validation 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Header Validation With message only 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots HeaderSearch HeaderSearch 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots HeaderSearch With custom name 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Headings Section Title 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Headings Subsection Title 1`] = `ReactWrapper {}`;
