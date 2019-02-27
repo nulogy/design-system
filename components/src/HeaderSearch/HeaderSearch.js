@@ -4,17 +4,17 @@ import PropTypes from "prop-types";
 import { space } from "styled-system";
 import { darken, transparentize } from "polished";
 import { Flex, Input, Button, Icon } from "ComponentsRoot";
-//import Label from "../Field/Field";
 import theme from "../theme";
 
 const BaseHeaderSearch = ({
+  name,
+  title,
   ...props
 }) => (
     <form { ...props }>
       <Flex role="search">
-        <label for="search" tabindex="-1">Search Nulogy</label>
-        <Input placeholder="Search Nulogy ..." id="search" type="search" />
-        <button><Icon icon="search" /></button>
+        <Input type="search" aria-labeledby={name} required placeholder="Search Nulogy ..." />
+        <button id={name} aria-label={name}><Icon icon="search" title="Apply search" /></button>
       </Flex>
     </form>
 );
@@ -23,32 +23,25 @@ const HeaderSearch = styled(BaseHeaderSearch)(
   {
     background: theme.colors.lightBlue,
     borderRadius: theme.radii.medium,
-    "label": {
-      position: "absolute !important",
-      height: "1px",
-      width: "1px",
-      overflow: "hidden",
-      clip: "rect(1px, 1px, 1px, 1px)",
-    },
     "button": {
-      color: theme.colors.blackBlue,
-      border: "solid 1px transparent",
-      background: "transparent",
-      borderRadius: theme.radii.medium,
       display: "flex",
+      color: theme.colors.blackBlue,
+      background: "transparent",
+      border: "solid 1px transparent",
+      borderRadius: theme.radii.medium,
       ":focus": {
-        boxShadow: "none",
+        color: theme.colors.white,
+        background: darken(0.1, theme.colors.blue),
         border: `solid 1px ${theme.colors.lightBlue}`,
         outline: "none",
-        background: darken(0.1, theme.colors.blue),
-        color: theme.colors.white,
+        boxShadow: "none",
       }
     },
     "Input": {
+      color: theme.colors.blackBlue,
+      background: "transparent",
       border: "solid 1px transparent",
       borderRadius: theme.radii.medium,
-      background: "transparent",
-      color: theme.colors.blackBlue,
       ":focus": {
         background: theme.colors.white,
         border: "solid 1px transparent",
@@ -62,11 +55,11 @@ const HeaderSearch = styled(BaseHeaderSearch)(
 );
 
 BaseHeaderSearch.propTypes = {
-  required: PropTypes.bool,
+  name: PropTypes.string,
 }
 
 BaseHeaderSearch.defaultProps = {
-  required: false,
+  name: "global-search",
 };
 
 export default HeaderSearch;
