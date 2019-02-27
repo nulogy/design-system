@@ -29,7 +29,7 @@ storiesOf("Tooltip", module)
   ))
   .add("with placement", () => (
     <>
-      <Flex m="x6">
+      <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
           id="tooltip1"
           placement="top-start"
@@ -51,7 +51,7 @@ storiesOf("Tooltip", module)
           <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex m="x6">
+      <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
           id="tooltip3"
           placement="left-start"
@@ -74,7 +74,7 @@ storiesOf("Tooltip", module)
           <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex m="x6">
+      <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
           id="tooltip6"
           placement="right-start"
@@ -97,7 +97,7 @@ storiesOf("Tooltip", module)
           <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex m="x6">
+      <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
           id="tooltip9"
           placement="bottom-start"
