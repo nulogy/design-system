@@ -40,7 +40,7 @@ storiesOf("Tooltip", module)
         <Tooltip
           id="tooltip2"
           placement="top"
-          tooltip="a"
+          tooltip="top"
         >
           <Button> Hover me </Button>
         </Tooltip>
@@ -216,61 +216,4 @@ storiesOf("Tooltip", module)
         <Box width="100px" bg="blue">Text</Box>
       </Tooltip>
     </>
-  ))
-  .add("Tooltip2", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip={ (
-        <Tooltip
-          placement="right"
-          tooltip={ (
-            <Tooltip
-              placement="bottom"
-              tooltip={ (
-                <Tooltip
-                  placement="bottom"
-                  tooltip={ (
-                    <Tooltip
-                      placement="left"
-                      tooltip={ (
-                        <Tooltip
-                          placement="bottom"
-                          tooltip={ (
-                            <Tooltip
-                              placement="right"
-                              tooltip={ (
-                                <Tooltip
-                                  placement="right"
-                                  tooltip={ (<Text inline>Hello</Text>) }
-                                >
-                                  <Text inline>Hello </Text>
-                                </Tooltip>
-) }
-                            >
-                              <Text inline>Hello </Text>
-                            </Tooltip>
-) }
-                        >
-                          <Text inline>Hello </Text>
-                        </Tooltip>
-) }
-                    >
-                      <Text inline>Hello </Text>
-                    </Tooltip>
-) }
-                >
-                  <Text inline>Hello </Text>
-                </Tooltip>
-) }
-            >
-              <Text inline>Hello </Text>
-            </Tooltip>
-) }
-        >
-          <Text inline>Hello </Text>
-        </Tooltip>
-        ) }
-    >
-      <Text inline>Hello </Text>
-    </Tooltip>
   ));
