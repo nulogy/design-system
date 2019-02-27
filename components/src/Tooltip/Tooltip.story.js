@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Button, PrimaryButton, Link, Text, Flex,
+  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
@@ -11,6 +11,7 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip!"
+        id="tooltip1"
       >
         <Button> Button </Button>
       </Tooltip>
@@ -20,14 +21,16 @@ storiesOf("Tooltip", module)
     <>
       <Flex ml="x4">
         <Tooltip
+          id="tooltip1"
           placement="top-start"
           tooltip="top-start"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip2"
           placement="top"
-          tooltip="a"
+          tooltip="top"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
@@ -40,18 +43,21 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex ml="x4">
         <Tooltip
+          id="tooltip3"
           placement="left-start"
           tooltip="left-start"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip4"
           placement="left"
           tooltip="left"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip5"
           placement="left-end"
           tooltip="left-end"
         >
@@ -60,18 +66,21 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex ml="x4">
         <Tooltip
+          id="tooltip6"
           placement="right-start"
           tooltip="right-start"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip7"
           placement="right"
           tooltip="right"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip8"
           placement="right-end"
           tooltip="right-end"
         >
@@ -80,18 +89,21 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex ml="x4">
         <Tooltip
+          id="tooltip9"
           placement="bottom-start"
           tooltip="bottom-start"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip10"
           placement="bottom"
           tooltip="bottom"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip11"
           placement="bottom-end"
           tooltip="bottom-end"
         >
@@ -105,6 +117,7 @@ storiesOf("Tooltip", module)
     <Tooltip
       placement="bottom"
       tooltip={ (<Link href="/"> Link </Link>) }
+      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -113,6 +126,7 @@ storiesOf("Tooltip", module)
     <Tooltip
       placement="bottom"
       tooltip={ (<Button href="/"> Button </Button>) }
+      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -122,6 +136,7 @@ storiesOf("Tooltip", module)
       placement="bottom"
       tooltip="Tooltip"
       showDelay="1000"
+      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -131,84 +146,68 @@ storiesOf("Tooltip", module)
       placement="bottom"
       tooltip="Tooltip"
       hideDelay="1000"
+      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
   ))
-  .add("TESTING", () => (
+  .add("with other focusable elements", () => (
     <>
       <Tooltip
         placement="bottom"
-        tooltip="I am also a button!"
+        tooltip="Tooltip"
+        id="buttonTooltip"
+      >
+        <Button> Button </Button>
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="linkTooltip"
       >
         <Link href="/"> Link </Link>
       </Tooltip>
       <Tooltip
         placement="bottom"
-        tooltip={ (
-          <Button>
-          I am also a button!
-          </Button>
-) }
+        tooltip="Tooltip"
+        id="checkboxTooltip"
       >
-        <PrimaryButton ml="400px"> Button </PrimaryButton>
+        <Checkbox labelText="Checkbox" />
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="radioTooltip"
+      >
+        <Radio labelText="Checkbox" />
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="toggleTooltip"
+      >
+        <Toggle onText="Toggle" offText="Toggle" />
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="inputTooltip"
+      >
+        <Input/>
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="selectTooltip"
+      >
+        <Select/>
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="textareaTooltip"
+      >
+        <Textarea/>
       </Tooltip>
     </>
-  ))
-  .add("Tooltip2", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip={ (
-        <Tooltip
-          placement="right"
-          tooltip={ (
-            <Tooltip
-              placement="bottom"
-              tooltip={ (
-                <Tooltip
-                  placement="bottom"
-                  tooltip={ (
-                    <Tooltip
-                      placement="left"
-                      tooltip={ (
-                        <Tooltip
-                          placement="bottom"
-                          tooltip={ (
-                            <Tooltip
-                              placement="right"
-                              tooltip={ (
-                                <Tooltip
-                                  placement="right"
-                                  tooltip={ (<Text inline>Hello</Text>) }
-                                >
-                                  <Text inline>Hello </Text>
-                                </Tooltip>
-) }
-                            >
-                              <Text inline>Hello </Text>
-                            </Tooltip>
-) }
-                        >
-                          <Text inline>Hello </Text>
-                        </Tooltip>
-) }
-                    >
-                      <Text inline>Hello </Text>
-                    </Tooltip>
-) }
-                >
-                  <Text inline>Hello </Text>
-                </Tooltip>
-) }
-            >
-              <Text inline>Hello </Text>
-            </Tooltip>
-) }
-        >
-          <Text inline>Hello </Text>
-        </Tooltip>
-        ) }
-    >
-      <Text inline>Hello </Text>
-    </Tooltip>
   ));

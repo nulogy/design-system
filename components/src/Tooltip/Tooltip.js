@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
 
@@ -53,13 +54,13 @@ const getArrowPosition = placement => {
       return ({
         height: theme.space.x1,
         left: 0,
-        marginTop: `-7px`,
+        marginTop: "-7px",
         top: 0,
         width: theme.space.x1,
         "&:before": {
           borderColor: `transparent transparent ${theme.colors.grey} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
-          top: "-2px",   
+          top: "-2px",
           left: `-${theme.space.half}`,
         },
         "&:after": {
@@ -73,7 +74,7 @@ const getArrowPosition = placement => {
         bottom: 0,
         height: theme.space.x1,
         left: 0,
-        marginBottom: `-7px`,
+        marginBottom: "-7px",
         width: theme.space.x1,
         "&:before": {
           borderColor: `${theme.colors.grey} transparent transparent transparent`,
@@ -176,6 +177,7 @@ class Tooltip extends React.Component {
     onBlur: () => (this.hideTooltip()),
     onMouseEnter: () => (this.showTooltip()),
     onMouseLeave: () => (this.hideTooltip()),
+    onClick: () => (this.showTooltip()),
   })
 
   getElementProps = () => ({
@@ -203,6 +205,7 @@ class Tooltip extends React.Component {
             <React.Fragment>
               {React.cloneElement(this.props.children, {
                 ref,
+                "aria-describedby": this.props.id,
                 ...this.getElementProps(),
               })}
             </React.Fragment>
@@ -213,7 +216,7 @@ class Tooltip extends React.Component {
           {({
             ref, style, placement, arrowProps,
           }) => (
-            <TooltipContainer
+            <TooltipContainer role="tooltip" id={this.props.id}
               ref={ ref } style={ style } dataPlacement={ placement }
               { ...this.getTooltipProps() }
             >
@@ -228,8 +231,14 @@ class Tooltip extends React.Component {
   }
 }
 
+Tooltip.propTypes = {
+  id: PropTypes.string.isRequired,
+  showDelay: PropTypes.number,
+  hideDelay: PropTypes.number,
+};
+
 Tooltip.defaultProps = {
-  showDelay: "100",
+  showDelay: "0",
   hideDelay: "350",
 };
 
