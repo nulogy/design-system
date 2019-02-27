@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
+/* eslint react/destructuring-assignment: 0 */
 
 const getTooltipMargin = placement => {
   const direction = String(placement).split("-")[0];
@@ -10,7 +11,6 @@ const getTooltipMargin = placement => {
     case "bottom":
       return ({
         marginTop: theme.space.x1,
-
       });
     case "top":
       return ({
@@ -19,12 +19,10 @@ const getTooltipMargin = placement => {
     case "right":
       return ({
         marginLeft: theme.space.x1,
-
       });
     case "left":
       return ({
         marginRight: theme.space.x1,
-
       });
     default:
       return ({});
@@ -216,7 +214,8 @@ class Tooltip extends React.Component {
           {({
             ref, style, placement, arrowProps,
           }) => (
-            <TooltipContainer role="tooltip" id={this.props.id}
+            <TooltipContainer
+              role="tooltip" id={ this.props.id }
               ref={ ref } style={ style } dataPlacement={ placement }
               { ...this.getTooltipProps() }
             >
@@ -232,12 +231,16 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
+  children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
+  tooltip: PropTypes.node.isRequired,
+  placement: PropTypes.oneOf(["top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end", "left", "left-start", "left-end", "right", "right-start", "right-end"]),
   showDelay: PropTypes.number,
   hideDelay: PropTypes.number,
 };
 
 Tooltip.defaultProps = {
+  placement: "bottom",
   showDelay: "0",
   hideDelay: "350",
 };

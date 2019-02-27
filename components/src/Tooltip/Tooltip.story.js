@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio
+  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio,
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
@@ -193,21 +193,21 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="inputTooltip"
       >
-        <Input/>
+        <Input />
       </Tooltip>
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
         id="selectTooltip"
       >
-        <Select/>
+        <Select />
       </Tooltip>
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
         id="textareaTooltip"
       >
-        <Textarea/>
+        <Textarea />
       </Tooltip>
     </>
   ));
