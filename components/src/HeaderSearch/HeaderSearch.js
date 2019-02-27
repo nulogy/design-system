@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { space } from "styled-system";
 import { darken, transparentize } from "polished";
-import { Flex, Input, Button, Icon } from "ComponentsRoot";
+import {
+  Flex,
+  Input,
+  Icon,
+} from "ComponentsRoot";
 import theme from "../theme";
 
 const BaseHeaderSearch = ({
@@ -11,12 +14,12 @@ const BaseHeaderSearch = ({
   onSubmit,
   ...props
 }) => (
-    <form { ...props } onSubmit={onSubmit}>
-      <Flex role="search">
-        <Input type="search" aria-labelledby={name} required placeholder="Search Nulogy ..." />
-        <button id={name} aria-label={name}><Icon icon="search" /></button>
-      </Flex>
-    </form>
+  <form { ...props } onSubmit={ onSubmit }>
+    <Flex role="search">
+      <Input type="search" aria-labelledby={ name } required placeholder="Search Nulogy ..." />
+      <button id={ name } aria-label={ name }><Icon icon="search" /></button>
+    </Flex>
+  </form>
 );
 
 const HeaderSearch = styled(BaseHeaderSearch)(
@@ -35,7 +38,7 @@ const HeaderSearch = styled(BaseHeaderSearch)(
         border: `solid 1px ${theme.colors.lightBlue}`,
         outline: "none",
         boxShadow: "none",
-      }
+      },
     },
     "Input": {
       color: theme.colors.blackBlue,
@@ -57,7 +60,7 @@ const HeaderSearch = styled(BaseHeaderSearch)(
 BaseHeaderSearch.propTypes = {
   name: PropTypes.string,
   onSubmit: PropTypes.func,
-}
+};
 
 BaseHeaderSearch.defaultProps = {
   name: "global-search",
