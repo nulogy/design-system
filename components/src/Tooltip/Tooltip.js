@@ -286,7 +286,7 @@ class Tooltip extends React.Component {
           )}
         </Reference>
         { this.state.open && (
-        <Popper placement={ this.props.placement }>
+        <Popper placement={ this.props.placement }> 
           {({
             ref, style, placement, arrowProps,
           }) => (

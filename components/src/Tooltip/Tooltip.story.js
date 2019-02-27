@@ -202,6 +202,22 @@ storiesOf("Tooltip", module)
         <Textarea />
       </Tooltip>
       <Tooltip
+        fullWidth
+        placement="bottom"
+        tooltip="Tooltip"
+        id="textTooltip"
+      >
+        <Text inline>Text</Text>
+      </Tooltip>
+      <Tooltip
+        fullWidth
+        placement="bottom"
+        tooltip="Tooltip"
+        id="boxTooltip"
+      >
+        <Box width="100px" bg="blue">Text</Box>
+      </Tooltip>
+      <Tooltip
         placement="bottom"
         tooltip="Tooltip"
         id="textTooltip"
