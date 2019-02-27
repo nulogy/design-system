@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio,
+  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio, Text, Box,
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
@@ -29,95 +29,95 @@ storiesOf("Tooltip", module)
   ))
   .add("with placement", () => (
     <>
-      <Flex ml="x4">
+      <Flex m="x6">
         <Tooltip
           id="tooltip1"
           placement="top-start"
           tooltip="top-start"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip2"
           placement="top"
           tooltip="top"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           placement="top-end"
           tooltip="top-end"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex ml="x4">
+      <Flex m="x6">
         <Tooltip
           id="tooltip3"
           placement="left-start"
           tooltip="left-start"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip4"
           placement="left"
           tooltip="left"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip5"
           placement="left-end"
           tooltip="left-end"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex ml="x4">
+      <Flex m="x6">
         <Tooltip
           id="tooltip6"
           placement="right-start"
           tooltip="right-start"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip7"
           placement="right"
           tooltip="right"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip8"
           placement="right-end"
           tooltip="right-end"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <Flex ml="x4">
+      <Flex m="x6">
         <Tooltip
           id="tooltip9"
           placement="bottom-start"
           tooltip="bottom-start"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip10"
           placement="bottom"
           tooltip="bottom"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
           id="tooltip11"
           placement="bottom-end"
           tooltip="bottom-end"
         >
-          <Button m="x6"> Hover me </Button>
+          <Button> Hover me </Button>
         </Tooltip>
       </Flex>
 
@@ -178,6 +178,7 @@ storiesOf("Tooltip", module)
         <Link href="/"> Link </Link>
       </Tooltip>
       <Tooltip
+        fullWidth
         placement="bottom"
         tooltip="Tooltip"
         id="checkboxTooltip"
@@ -189,9 +190,10 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="radioTooltip"
       >
-        <Radio labelText="Checkbox" />
+        <Radio labelText="Radio" />
       </Tooltip>
       <Tooltip
+        fullWidth
         placement="bottom"
         tooltip="Tooltip"
         id="toggleTooltip"
@@ -199,6 +201,7 @@ storiesOf("Tooltip", module)
         <Toggle onText="Toggle" offText="Toggle" />
       </Tooltip>
       <Tooltip
+        fullWidth
         placement="bottom"
         tooltip="Tooltip"
         id="inputTooltip"
@@ -206,6 +209,7 @@ storiesOf("Tooltip", module)
         <Input />
       </Tooltip>
       <Tooltip
+        fullWidth
         placement="bottom"
         tooltip="Tooltip"
         id="selectTooltip"
@@ -213,11 +217,26 @@ storiesOf("Tooltip", module)
         <Select options={ selectOptions } />
       </Tooltip>
       <Tooltip
+        fullWidth
         placement="bottom"
         tooltip="Tooltip"
         id="textareaTooltip"
       >
         <Textarea />
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="textTooltip"
+      >
+        <Text inline>Text</Text>
+      </Tooltip>
+      <Tooltip
+        placement="bottom"
+        tooltip="Tooltip"
+        id="boxTooltip"
+      >
+        <Box width="100px" bg="blue">Text</Box>
       </Tooltip>
     </>
   ));

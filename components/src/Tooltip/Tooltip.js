@@ -39,7 +39,7 @@ const TooltipContainer = styled.div({
   flexDirection: "column",
   padding: theme.space.x1,
   transition: "opacity 0.3s",
-  Zindex: "999999",
+  zIndex: "999999",
 },
 ({ dataPlacement }) => ({
   ...getTooltipMargin(dataPlacement),
@@ -200,9 +200,7 @@ class Tooltip extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <div ref = {ref} 
-            style={{display: "inline"}} 
-            { ...this.getElementProps() }>
+            <div { ...this.getElementProps() } ref={ ref } style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } } >
               {React.cloneElement(this.props.children, {
                 "aria-describedby": this.props.id,
               })}
@@ -210,7 +208,7 @@ class Tooltip extends React.Component {
           )}
         </Reference>
         { this.state.open && (
-        <Popper placement={ this.props.placement }>
+        <Popper placement={ this.props.placement }> 
           {({
             ref, style, placement, arrowProps,
           }) => (
@@ -237,12 +235,14 @@ Tooltip.propTypes = {
   placement: PropTypes.oneOf(["top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end", "left", "left-start", "left-end", "right", "right-start", "right-end"]),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  fullWidth: PropTypes.bool,
 };
 
 Tooltip.defaultProps = {
   placement: "bottom",
   showDelay: "0",
   hideDelay: "350",
+  fullWidth: false,
 };
 
 export default Tooltip;
