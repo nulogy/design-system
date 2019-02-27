@@ -9,6 +9,17 @@ import NDSProvider from "../../../components/src/NDSProvider/NDSProvider";
 import theme from "../../../components/src/theme";
 
 import logo from "../images/nulogy.svg";
+import { createGlobalStyle } from "styled-components";
+import HighlightStyles from "../components/HighlightStyles";
+
+const TableStyles = createGlobalStyle`
+  table {border: 1px solid #ccc;}
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  thead {font-weight: bold;}
+`
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
@@ -18,6 +29,8 @@ const Layout = ({ children }) => (
         <meta charSet="utf-8" />
         <title>Welcome</title>
       </Helmet>
+      <HighlightStyles />
+      <TableStyles />
       <Box
         bg="blackBlue" align="center" mb="x6"
         p="x2"
