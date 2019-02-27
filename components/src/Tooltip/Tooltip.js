@@ -3,6 +3,33 @@ import styled from "styled-components";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
 
+const getTooltipMargin = placement => {
+  const direction = String(placement).split("-")[0];
+  switch (direction) {
+    case "bottom":
+      return ({
+        marginTop: theme.space.x1,
+
+      });
+    case "top":
+      return ({
+        marginBottom: theme.space.x1,
+      });
+    case "right":
+      return ({
+        marginLeft: theme.space.x1,
+
+      });
+    case "left":
+      return ({
+        marginRight: theme.space.x1,
+
+      });
+    default:
+      return ({});
+  }
+};
+
 const TooltipContainer = styled.div({
   fontSize: "14px",
   backgroundColor: theme.colors.white,
@@ -11,11 +38,13 @@ const TooltipContainer = styled.div({
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
   display: "flex",
   flexDirection: "column",
-  margin: theme.space.x1,
   padding: theme.space.x1,
   transition: "opacity 0.3s",
   Zindex: "999999",
-});
+},
+({ dataPlacement }) => ({
+  ...getTooltipMargin(dataPlacement),
+}));
 
 const getArrowPosition = placement => {
   const direction = String(placement).split("-")[0];
@@ -42,7 +71,7 @@ const getArrowPosition = placement => {
       return ({
         bottom: 0,
         height: theme.space.x1,
-        left: "10px",
+        left: 0,
         marginBottom: `-${theme.space.x1}`,
         width: theme.space.x1,
         "&:before": {
@@ -97,26 +126,26 @@ const getArrowPosition = placement => {
 
 const Arrow = styled.div(
   {
-  height: theme.space.x1,
-  position: "absolute",
-  width: theme.space.x1,
-  "&:before": {
-    borderStyle: "solid",
-    content: "''",
-    display: "block",
-    height: 0,
-    margin: "auto",
-    width: 0,
-  },
-  "&:after": {
-    borderStyle: "solid",
-    content: "''",
-    display: "block",
-    height: 0,
-    margin: "auto",
+    height: theme.space.x1,
     position: "absolute",
-    width: 0,
-  },
+    width: theme.space.x1,
+    "&:before": {
+      borderStyle: "solid",
+      content: "''",
+      display: "block",
+      height: 0,
+      margin: "auto",
+      width: 0,
+    },
+    "&:after": {
+      borderStyle: "solid",
+      content: "''",
+      display: "block",
+      height: 0,
+      margin: "auto",
+      position: "absolute",
+      width: 0,
+    },
   },
   ({ dataPlacement }) => ({
     ...getArrowPosition(dataPlacement),
@@ -175,12 +204,12 @@ class Tooltip extends React.Component {
           )}
         </Reference>
         { this.state.open && (
-        <Popper placement={ this.props.placement } modifiers={{offset: {offset:"0px"}}}>
+        <Popper placement={ this.props.placement }>
           {({
             ref, style, placement, arrowProps,
           }) => (
             <TooltipContainer
-              ref={ ref } style={ style } data-placement={ placement }
+              ref={ ref } style={ style } dataPlacement={ placement }
               { ...this.getTooltipProps() }
             >
               {this.props.tooltip}
