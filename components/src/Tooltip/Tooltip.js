@@ -35,6 +35,33 @@ const getTooltipMargin = placement => {
   }
 };
 
+const getTooltipMargin = placement => {
+  const direction = String(placement).split("-")[0];
+  switch (direction) {
+    case "bottom":
+      return ({
+        marginTop: theme.space.x1,
+
+      });
+    case "top":
+      return ({
+        marginBottom: theme.space.x1,
+      });
+    case "right":
+      return ({
+        marginLeft: theme.space.x1,
+
+      });
+    case "left":
+      return ({
+        marginRight: theme.space.x1,
+
+      });
+    default:
+      return ({});
+  }
+};
+
 const TooltipContainer = styled.div({
   color: tooltipStyles.textColor,
   display: "flex",
@@ -262,7 +289,7 @@ class Tooltip extends React.Component {
           )}
         </Reference>
         { this.state.open && (
-        <Popper placement={ this.props.placement } modifiers={{offset: {offset:"0px"}}}>
+        <Popper placement={ this.props.placement }>
           {({
             ref, style, placement, arrowProps,
           }) => (
