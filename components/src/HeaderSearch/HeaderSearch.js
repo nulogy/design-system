@@ -8,9 +8,10 @@ import theme from "../theme";
 
 const BaseHeaderSearch = ({
   name,
+  onSubmit,
   ...props
 }) => (
-    <form { ...props }>
+    <form { ...props } onSubmit={onSubmit}>
       <Flex role="search">
         <Input type="search" aria-labeledby={name} required placeholder="Search Nulogy ..." />
         <button id={name} aria-label={name}><Icon icon="search" /></button>
@@ -55,10 +56,12 @@ const HeaderSearch = styled(BaseHeaderSearch)(
 
 BaseHeaderSearch.propTypes = {
   name: PropTypes.string,
+  onSubmit: PropTypes.func,
 }
 
 BaseHeaderSearch.defaultProps = {
   name: "global-search",
+  onSubmit: () => {},
 };
 
 export default HeaderSearch;
