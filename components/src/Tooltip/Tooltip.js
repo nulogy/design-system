@@ -300,7 +300,6 @@ class Tooltip extends React.Component {
               { ...this.getTooltipProps() }
             >
               {this.props.tooltip}
-              {console.log(style)}
               <Arrow dataPlacement={ placement } ref={ arrowProps.ref } style={ arrowProps.style } />
             </TooltipContainer>
           )}

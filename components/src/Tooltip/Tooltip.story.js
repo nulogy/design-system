@@ -40,7 +40,7 @@ storiesOf("Tooltip", module)
         <Tooltip
           id="tooltip2"
           placement="top"
-          tooltip="top"
+          tooltip="a"
         >
           <Button> Hover me </Button>
         </Tooltip>
