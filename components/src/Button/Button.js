@@ -37,15 +37,15 @@ const size = props => {
   }
 };
 
-const BaseButton = React.forwardRef(({
+const BaseButton = ({
   children,
   iconSide,
   icon,
   ...props
-}, ref) => {
+}) => {
   const { lineHeights: { smallTextCompressed } } = theme;
   return (
-    <button ref={ ref } { ...omit(props, "fullWidth") }>
+    <button { ...omit(props, "fullWidth") }>
       {(icon && iconSide === "left")
           && (
           <Icon size={ `${smallTextCompressed}em` } mr="half" icon={ icon } />
@@ -59,7 +59,7 @@ const BaseButton = React.forwardRef(({
         }
     </button>
   );
-});
+};
 
 BaseButton.propTypes = {
   children: PropTypes.node.isRequired,
