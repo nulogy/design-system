@@ -8,13 +8,12 @@ import theme from "../theme";
 
 const BaseHeaderSearch = ({
   name,
-  title,
   ...props
 }) => (
     <form { ...props }>
       <Flex role="search">
         <Input type="search" aria-labeledby={name} required placeholder="Search Nulogy ..." />
-        <button id={name} aria-label={name}><Icon icon="search" title="Apply search" /></button>
+        <button id={name} aria-label={name}><Icon icon="search" /></button>
       </Flex>
     </form>
 );
