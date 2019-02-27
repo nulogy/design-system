@@ -32,7 +32,7 @@
     "react/jsx-max-props-per-line": ["off"],
     "react/prefer-stateless-function": ["off"],
     "react/require-extension": ["off"],
-    "semi": ["error", "always"],
+    "semi": ["error", "always"]
   },
   "env": {
     "browser": true,
