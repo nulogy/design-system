@@ -45,6 +45,7 @@ storiesOf("Tooltip", module)
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
+          id="tooltip3"
           placement="top-end"
           tooltip="top-end"
         >
@@ -53,21 +54,21 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip3"
+          id="tooltip4"
           placement="left-start"
           tooltip="left-start"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip4"
+          id="tooltip5"
           placement="left"
           tooltip="left"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip5"
+          id="tooltip6"
           placement="left-end"
           tooltip="left-end"
         >
@@ -76,21 +77,21 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip6"
+          id="tooltip7"
           placement="right-start"
           tooltip="right-start"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip7"
+          id="tooltip8"
           placement="right"
           tooltip="right"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip8"
+          id="tooltip9"
           placement="right-end"
           tooltip="right-end"
         >

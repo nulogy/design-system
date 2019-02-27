@@ -200,7 +200,7 @@ class Tooltip extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <div { ...this.getElementProps() } ref={ ref } style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } } >
+            <div { ...this.getElementProps() } ref={ ref } style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }>
               {React.cloneElement(this.props.children, {
                 "aria-describedby": this.props.id,
               })}
