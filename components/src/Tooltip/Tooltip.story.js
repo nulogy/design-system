@@ -27,7 +27,7 @@ storiesOf("Tooltip", module)
         </Tooltip>
         <Tooltip
           placement="top"
-          tooltip="top"
+          tooltip="a"
         >
           <Button m="x6"> Hover me </Button>
         </Tooltip>

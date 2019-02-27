@@ -53,18 +53,19 @@ const getArrowPosition = placement => {
       return ({
         height: theme.space.x1,
         left: 0,
-        marginTop: `-${theme.space.x1}`,
+        marginTop: `-7px`,
         top: 0,
         width: theme.space.x1,
         "&:before": {
           borderColor: `transparent transparent ${theme.colors.grey} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
-          position: "absolute",
-          top: "-1px",
+          top: "-2px",   
+          left: `-${theme.space.half}`,
         },
         "&:after": {
           borderColor: `transparent transparent ${theme.colors.white} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
+          left: `-${theme.space.half}`,
         },
       });
     case "top":
@@ -72,17 +73,18 @@ const getArrowPosition = placement => {
         bottom: 0,
         height: theme.space.x1,
         left: 0,
-        marginBottom: `-${theme.space.x1}`,
+        marginBottom: `-7px`,
         width: theme.space.x1,
         "&:before": {
           borderColor: `${theme.colors.grey} transparent transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
-          position: "absolute",
-          top: "1px",
+          top: "2px",
+          left: `-${theme.space.half}`,
         },
         "&:after": {
           borderColor: `${theme.colors.white} transparent transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
+          left: `-${theme.space.half}`,
         },
       });
     case "right":
@@ -94,12 +96,13 @@ const getArrowPosition = placement => {
         "&:before": {
           borderColor: `transparent ${theme.colors.grey} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
+          top: `-${theme.space.half}`,
         },
         "&:after": {
           borderColor: `transparent ${theme.colors.white} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
-          left: "6px",
-          top: 0,
+          left: "2px",
+          top: `-${theme.space.half}`,
         },
       });
     case "left":
@@ -111,12 +114,13 @@ const getArrowPosition = placement => {
         "&:before": {
           borderColor: `transparent transparent transparent ${theme.colors.grey}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
+          top: `-${theme.space.half}`,
         },
         "&:after": {
           borderColor: `transparent transparent transparent ${theme.colors.white}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
-          left: "3px",
-          top: 0,
+          left: "-2px",
+          top: `-${theme.space.half}`,
         },
       });
     default:
@@ -129,12 +133,14 @@ const Arrow = styled.div(
     height: theme.space.x1,
     position: "absolute",
     width: theme.space.x1,
+    margin: "5%",
     "&:before": {
       borderStyle: "solid",
       content: "''",
       display: "block",
       height: 0,
       margin: "auto",
+      position: "absolute",
       width: 0,
     },
     "&:after": {
@@ -150,7 +156,6 @@ const Arrow = styled.div(
   ({ dataPlacement }) => ({
     ...getArrowPosition(dataPlacement),
   })
-
 );
 
 class Tooltip extends React.Component {
@@ -213,7 +218,6 @@ class Tooltip extends React.Component {
               { ...this.getTooltipProps() }
             >
               {this.props.tooltip}
-              {console.log(style)}
               <Arrow dataPlacement={ placement } ref={ arrowProps.ref } style={ arrowProps.style } />
             </TooltipContainer>
           )}
@@ -226,7 +230,7 @@ class Tooltip extends React.Component {
 
 Tooltip.defaultProps = {
   showDelay: "100",
-  hideDelay: "1000500",
+  hideDelay: "350",
 };
 
 export default Tooltip;
