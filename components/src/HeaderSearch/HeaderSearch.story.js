@@ -8,7 +8,7 @@ storiesOf("HeaderSearch", module)
       <HeaderSearch />
     </Box>
   ))
-  .add("With custom id", () => (
+  .add("With custom name", () => (
     <Box p="x3" bg="blackBlue">
       <HeaderSearch name="global-search-2" />
     </Box>
