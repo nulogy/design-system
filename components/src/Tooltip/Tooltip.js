@@ -132,7 +132,7 @@ const Arrow = styled.div(
     height: theme.space.x1,
     position: "absolute",
     width: theme.space.x1,
-    margin: "5%",
+    margin: "12px",
     "&:before": {
       borderStyle: "solid",
       content: "''",
@@ -200,13 +200,13 @@ class Tooltip extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <React.Fragment>
+            <div ref = {ref} 
+            style={{display: "inline"}} 
+            { ...this.getElementProps() }>
               {React.cloneElement(this.props.children, {
-                ref,
                 "aria-describedby": this.props.id,
-                ...this.getElementProps(),
               })}
-            </React.Fragment>
+            </div>
           )}
         </Reference>
         { this.state.open && (
@@ -235,8 +235,8 @@ Tooltip.propTypes = {
   id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
   placement: PropTypes.oneOf(["top", "top-start", "top-end", "bottom", "bottom-start", "bottom-end", "left", "left-start", "left-end", "right", "right-start", "right-end"]),
-  showDelay: PropTypes.number,
-  hideDelay: PropTypes.number,
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Tooltip.defaultProps = {

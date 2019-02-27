@@ -5,6 +5,16 @@ import {
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
+const selectOptions = [
+  { value: "accepted", label: "Accepted" },
+  { value: "assigned", label: "Assigned to a line" },
+  { value: "hold", label: "On hold" },
+  { value: "rejected", label: "Rejected" },
+  { value: "open", label: "Open" },
+  { value: "progress", label: "In progress" },
+  { value: "quarantine", label: "In quarantine" },
+];
+
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <Flex justifyContent="center" alignItems="center" height="200px">
@@ -200,7 +210,7 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="selectTooltip"
       >
-        <Select />
+        <Select options={ selectOptions } />
       </Tooltip>
       <Tooltip
         placement="bottom"
