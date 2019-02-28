@@ -49,15 +49,15 @@ module.exports = {
       },
     },
     {
-        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        resolve: "gatsby-plugin-prefetch-google-fonts",
         options: {
           fonts: [
             {
-              family: `IBM Plex Sans`,
-              variants: [`300`, `400`, `500`, `600`],
+              family: "IBM Plex Sans",
+              variants: ["300", "400", "500", "600"],
             },
             {
-              family: `IBM Plex Mono`,
+              family: "IBM Plex Mono",
             },
           ],
         },
