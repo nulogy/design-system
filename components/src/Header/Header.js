@@ -3,125 +3,49 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
   Flex,
+  Box,
   HeaderSearch,
   Icon,
 } from "ComponentsRoot";
+import Branding from "./Branding.js";
+import Nav, { MenuTrigger } from "./Nav.js";
 import theme from "../theme";
-
-const BrandingBase = ({
-  ...props,
-}) => (
-  <a href="#" { ...props }>
-    <img src="NulogyLogoLarge.svg" alt="Nulogy logo" />
-  </a>
-);
-
-const Branding = styled(BrandingBase)(
-  {
-    color: theme.colors.white,
-    outline: "solid 1px lime",
-    height: "40px",
-    display: "flex",
-    alignItems: "center",
-  }
-);
-
-const NavBase = ({
-  ...props,
-}) => (
-  <ul { ...props }>
-    <li><a href="">Menu item 1</a>
-      <ul>
-        <li><a href="">Menu item 1-1</a></li>
-        <li><a href="">Menu item 1-2</a></li>
-      </ul>
-    </li>
-    <li><a href="">Menu item 2</a>
-      <ul>
-        <li><a href="">Menu item 2-1</a></li>
-        <li><a href="">Menu item 2-2</a></li>
-      </ul>
-    </li>
-  </ul>
-);
-
-const Nav = styled(NavBase)(
-  {
-    listStyle: "none",
-    paddingLeft: "0",
-    margin: "0",
-    display: "flex",
-    padding: "0 8px",
-    "li": {
-      padding: "0 8px",
-    },
-    "ul": {
-      display: "block",
-      display: "none",
-    },
-    "a": {
-      color: "white",
-      padding: "8px 0",
-      display: "block",
-    },
-  }
-);
-
-const MenuTriggerBase = ({
-  className,
-  ...props,
-}) => (
-  <button { ...props } className={className}>
-    <Icon icon="menu" title="Menu" display={ { small: "block", medium: "none", large: "block" } } />
-  </button>
-);
-
-const MenuTrigger = styled(MenuTriggerBase)(
-  {
-    background: "none",
-    //border: "none",
-    color: theme.colors.white,
-    marginLeft: "16px",
-  }
-);
 
 const BaseHeader = ({
   className,
-  display,
   ...props,
 }) => (
-  <header { ...props } className={ className } >
-    <Branding />
-    <nav>
-      <MenuTrigger display={ { small: "block", medium: "none", large: "block" } } />
-      <Nav className="primary" />
-      <HeaderSearch />
-      <Nav className="secondary" />
-    </nav>
-  </header>
+  <Box className={className} py="x2" px="x3" pl="x4">
+    <header { ...props }>
+      <Branding />
+      <nav>
+        <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
+          <Flex alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
+            <HeaderSearch />
+          </Flex>
+          <MenuTrigger display={ { small: "block", medium: "block", large: "none" } } />
+          <Flex alignItems="center" order={ { small: "0", medium: "0", large: "-1" } }>
+            <Nav className="primary" />
+          </Flex>
+          <Nav className="secondary" />
+        </Flex>
+      </nav>
+    </header>
+  </Box>
 );
 
 const Header = styled(BaseHeader)(
   {
-    display: "flex",
-    padding: theme.space.x2,
     background: theme.colors.blackBlue,
-    justifyContent: "space-between",
-    "nav": {
+    "header": {
       display: "flex",
-      width: "100%",
-      justifyContent: "space-between",
-      flexGrow: "2",
-      ".primary": {
-        marginRight: "16px",
-      },
-      ".secondary": {
+      alignItems: "center",
+      "nav": {
         flexGrow: "1",
-        justifyContent: "flex-end",
+        margin: `0 0 0 ${theme.space.x3}`
       },
     },
-
-  }
+  },
 );
 
 BaseHeader.propTypes = {
