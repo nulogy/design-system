@@ -100,28 +100,31 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip9"
+          id="tooltip10"
           placement="bottom-start"
           tooltip="bottom-start"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip10"
+          id="tooltip11"
           placement="bottom"
           tooltip="bottom"
         >
           <Button> Hover me </Button>
         </Tooltip>
         <Tooltip
-          id="tooltip11"
+          id="tooltip12"
           placement="bottom-end"
           tooltip="bottom-end"
         >
           <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-
+      <div>
+        <Button aria-describedby="abcd"> Hey </Button>
+      </div>
+      <span id="abcd"> I am helping </span>
     </>
   ))
   .add("with Link passed in", () => (

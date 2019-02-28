@@ -163,6 +163,22 @@ class Tooltip extends React.Component {
     this.state = {
       open: false,
     };
+    this.escFunction = this.escFunction.bind(this);
+    this.hideTooltip = this.hideTooltip.bind(this);
+    this.showTooltip = this.showTooltip.bind(this);
+  }
+
+  escFunction(event){
+    if(event.keyCode === 27) {
+      console.log("escape")
+      this.hideTooltip(true)
+    }
+  }
+  componentDidMount(){
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.escFunction, false);
   }
 
   clearScheduled = () => {
@@ -185,9 +201,14 @@ class Tooltip extends React.Component {
     onMouseLeave: () => (this.hideTooltip()),
   })
 
-  hideTooltip() {
+  hideTooltip(skipTimer) {
     this.clearScheduled();
-    this.hideTimeout = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
+    if (!skipTimer)
+    {
+      this.hideTimeout = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
+    } else {
+      this.setState({ open: false });
+    }
   }
 
   showTooltip() {
