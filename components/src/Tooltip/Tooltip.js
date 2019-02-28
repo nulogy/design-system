@@ -41,9 +41,10 @@ const TooltipContainer = styled.div({
   transition: "opacity 0.3s",
   zIndex: "999999",
 },
-({ dataPlacement, open }) => ({
+({ dataPlacement, open, position }) => ({
   ...getTooltipMargin(dataPlacement),
-  visibility: open ? null : "hidden",
+  ...position,
+  top: open ? 0 : "-9999px",
   "aria-hidden": !open,
 }));
 
@@ -241,7 +242,7 @@ class Tooltip extends React.Component {
             <TooltipContainer
               open={ this.state.open }
               role="tooltip" id={ this.props.id }
-              ref={ ref } style={ style } dataPlacement={ placement }
+              ref={ ref } position={ style } dataPlacement={ placement }
               { ...this.getTooltipProps() }
             >
               {this.props.tooltip}
