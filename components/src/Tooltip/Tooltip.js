@@ -30,19 +30,21 @@ const getTooltipMargin = placement => {
 };
 
 const TooltipContainer = styled.div({
+  display: "flex",
+  flexDirection: "column",
   fontSize: "14px",
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
   border: `1px solid ${theme.colors.grey}`,
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
-  display: "flex",
-  flexDirection: "column",
   padding: theme.space.x1,
   transition: "opacity 0.3s",
   zIndex: "999999",
 },
-({ dataPlacement }) => ({
+({ dataPlacement, open }) => ({
   ...getTooltipMargin(dataPlacement),
+  visibility: open ? null : "hidden",
+  "aria-hidden": !open,
 }));
 
 const getArrowPosition = placement => {
@@ -168,16 +170,11 @@ class Tooltip extends React.Component {
     this.showTooltip = this.showTooltip.bind(this);
   }
 
-  escFunction(event){
-    if(event.keyCode === 27) {
-      console.log("escape")
-      this.hideTooltip(true)
-    }
-  }
-  componentDidMount(){
+  componentWillMount() {
     document.addEventListener("keydown", this.escFunction, false);
   }
-  componentWillUnmount(){
+
+  componentWillUnmount() {
     document.removeEventListener("keydown", this.escFunction, false);
   }
 
@@ -201,10 +198,15 @@ class Tooltip extends React.Component {
     onMouseLeave: () => (this.hideTooltip()),
   })
 
+  escFunction(event) {
+    if (event.keyCode === 27) {
+      this.hideTooltip(true);
+    }
+  }
+
   hideTooltip(skipTimer) {
     this.clearScheduled();
-    if (!skipTimer)
-    {
+    if (!skipTimer) {
       this.hideTimeout = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
     } else {
       this.setState({ open: false });
@@ -221,19 +223,23 @@ class Tooltip extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <div { ...this.getElementProps() } ref={ ref } style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }>
+            <div
+              style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }
+              ref={ ref } { ...this.getElementProps() }
+              aria-describedby={ this.props.id }
+            >
               {React.cloneElement(this.props.children, {
                 "aria-describedby": this.props.id,
               })}
             </div>
           )}
         </Reference>
-        { this.state.open && (
-        <Popper placement={ this.props.placement }> 
+        <Popper placement={ this.props.placement }>
           {({
             ref, style, placement, arrowProps,
           }) => (
             <TooltipContainer
+              open={ this.state.open }
               role="tooltip" id={ this.props.id }
               ref={ ref } style={ style } dataPlacement={ placement }
               { ...this.getTooltipProps() }
@@ -243,7 +249,6 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
-        )}
       </Manager>
     );
   }
@@ -261,7 +266,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   placement: "bottom",
-  showDelay: "0",
+  showDelay: "100",
   hideDelay: "350",
   fullWidth: false,
 };

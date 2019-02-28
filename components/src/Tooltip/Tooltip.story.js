@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Button, Link, Flex, Checkbox, Input, Select, Textarea, Toggle, Radio, Text, Box,
+  Button, Link, Flex, Input, Select, Textarea, Text, Box,
 } from "ComponentsRoot";
 import Tooltip from "./Tooltip";
 
@@ -121,10 +121,6 @@ storiesOf("Tooltip", module)
           <Button> Hover me </Button>
         </Tooltip>
       </Flex>
-      <div>
-        <Button aria-describedby="abcd"> Hey </Button>
-      </div>
-      <span id="abcd"> I am helping </span>
     </>
   ))
   .add("with Link passed in", () => (
@@ -180,29 +176,6 @@ storiesOf("Tooltip", module)
         id="linkTooltip"
       >
         <Link href="/"> Link </Link>
-      </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-        id="checkboxTooltip"
-      >
-        <Checkbox labelText="Checkbox" />
-      </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-        id="radioTooltip"
-      >
-        <Radio labelText="Radio" />
-      </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-        id="toggleTooltip"
-      >
-        <Toggle onText="Toggle" offText="Toggle" />
       </Tooltip>
       <Tooltip
         fullWidth
