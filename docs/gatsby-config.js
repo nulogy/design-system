@@ -48,6 +48,19 @@ module.exports = {
         icon: "src/images/nulogy.svg", // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-offline",
+    {
+        resolve: "gatsby-plugin-prefetch-google-fonts",
+        options: {
+          fonts: [
+            {
+              family: "IBM Plex Sans",
+              variants: ["300", "400", "500", "600"],
+            },
+            {
+              family: "IBM Plex Mono",
+            },
+          ],
+        },
+    }
   ],
 };
