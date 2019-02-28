@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { Link } from "ComponentsRoot";
-import SubMenuItem from "./SubMenuItem";
 import theme from "../theme";
 /* eslint react/destructuring-assignment: 0 */
 
@@ -138,15 +136,15 @@ class MenuItem extends React.Component {
   hideSubMenu(skipTimer) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.hideTimeout = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
+      this.hideTimeout = setTimeout(() => this.setState({ subMenuOpen: false }), this.props.hideDelay);
     } else {
-      this.setState({ open: false });
+      this.setState({ subMenuOpen: false });
     }
   }
 
   showSubMenu() {
     this.clearScheduled();
-    this.showTimeout = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
+    this.showTimeout = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
   }
 
   render() {
@@ -154,10 +152,10 @@ class MenuItem extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuItemButton { ...this.props } { ...this.getMenuItemProps() } ref={ ref } value={ this.props.value }>{ this.props.labelText }</MenuItemButton>
+            <MenuItemButton { ...this.props } { ...this.getMenuItemProps() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
           )}
         </Reference>
-        {this.state.open && (
+        {this.state.subMenuOpen && (
         <Popper placement="bottom-start">
           {({
             ref, style, placement, arrowProps,

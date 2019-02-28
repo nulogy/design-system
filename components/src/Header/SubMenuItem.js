@@ -11,11 +11,11 @@ const BaseSubMenuItem = ({
   ...props
 }) => (
   <Box { ...props }>
-    <Link color="darkBlue" underline={false} href={ href }>
+    <Link color="darkBlue" underline={ false } href={ href }>
       {children}
     </Link>
     {subText && (
-    <Text fontSize={theme.fontSizes.small}>
+    <Text fontSize={ theme.fontSizes.small }>
       {subText}
     </Text>
     )}

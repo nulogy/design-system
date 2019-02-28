@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Flex, Button } from "ComponentsRoot";
+import { Flex } from "ComponentsRoot";
 import MenuItem from "./MenuItem";
 import SubMenuItem from "./SubMenuItem";
 
