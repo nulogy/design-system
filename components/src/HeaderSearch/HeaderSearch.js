@@ -26,6 +26,10 @@ const HeaderSearch = styled(BaseHeaderSearch)(
   {
     background: theme.colors.lightBlue,
     borderRadius: theme.radii.medium,
+    height: "40px",
+    minWidth: "7em",
+    width: "100%",
+    maxWidth: "18em",
     "button": {
       display: "flex",
       color: theme.colors.blackBlue,
