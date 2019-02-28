@@ -10,6 +10,7 @@ export { default as Link } from "./Link/Link";
 export { default as Icon } from "./Icon/Icon";
 export * from "./Icon/Icon";
 export { default as InlineValidation } from "./Validation/InlineValidation";
+export { default as Header } from "./Header/Header";
 export { default as HeaderSearch } from "./HeaderSearch/HeaderSearch";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export { default as Field } from "./Field/Field";
