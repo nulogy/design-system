@@ -49,7 +49,7 @@ const VisualCheckbox = styled.div({
   borderRadius: theme.radii.small,
   border: "solid 1px",
   position: "relative",
-  top: theme.space[1],
+  top: theme.space.half,
   "&:before": {
     content: "''",
     display: "none",
@@ -127,7 +127,7 @@ BaseCheckbox.defaultProps = {
 };
 
 const Checkbox = styled(BaseCheckbox)(({ error }) => ({
-  padding: `${theme.space[1]} 0`,
+  padding: `${theme.space.half} 0`,
   color: error ? theme.colors.red : null,
 }));
 

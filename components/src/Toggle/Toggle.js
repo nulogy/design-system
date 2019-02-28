@@ -165,7 +165,7 @@ BaseToggle.defaultProps = {
 };
 
 const Toggle = styled(BaseToggle)({
-  padding: `${theme.space[1]} 0`,
+  padding: `${theme.space.half} 0`,
   alignItems: "flex-start",
 });
 

@@ -49,7 +49,7 @@ const VisualRadio = styled.div(({ disabled }) => ({
   borderRadius: theme.radii.circle,
   border: "solid 1px",
   position: "relative",
-  top: theme.space[1],
+  top: theme.space.half,
   "&:before": {
     cursor: disabled ? null : "pointer",
     content: "''",
@@ -128,7 +128,7 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)(({ error }) => ({
-  padding: `${theme.space[1]} 0`,
+  padding: `${theme.space.half} 0`,
   color: error ? theme.colors.red : null,
 }));
 
