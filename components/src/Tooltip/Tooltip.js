@@ -40,19 +40,19 @@ const getTooltipMargin = placement => {
   switch (direction) {
     case "bottom":
       return ({
-        marginTop: theme.space.x1,
+        marginTop: "4px",
       });
     case "top":
       return ({
-        marginBottom: theme.space.x1,
+        marginBottom: "4px",
       });
     case "right":
       return ({
-        marginLeft: theme.space.x1,
+        marginLeft: "4px",
       });
     case "left":
       return ({
-        marginRight: theme.space.x1,
+        marginRight: "4px",
       });
     default:
       return ({});
