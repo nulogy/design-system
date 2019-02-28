@@ -67,7 +67,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
 const IndicatorButton = styled.div(() => ({
   position: "absolute",
   top: theme.space.x1,
-  right: theme.space[1],
+  right: theme.space.half,
   bottom: "0",
   pointerEvents: "none",
 }));
