@@ -8,8 +8,8 @@ import theme from "../theme";
 /* eslint react/destructuring-assignment: 0 */
 
 const subMenuStyles = {
-  backgroundColor: theme.colors.lightGrey,
-  borderColor: theme.colors.lightGrey,
+  backgroundColor: theme.colors.whiteGrey,
+  borderColor: theme.colors.whiteGrey,
   textColor: theme.colors.black,
 };
 
@@ -22,7 +22,7 @@ const SubMenu = styled.div({
   borderRadius: theme.radii.medium,
   border: `1px solid ${subMenuStyles.borderColor}`,
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
-  padding: `${theme.space.x2} ${theme.space.x1}`,
+  padding: theme.space.x1,
   transition: "opacity 0.3s",
   zIndex: "999999",
   marginTop: theme.space.half,
@@ -154,7 +154,7 @@ class MenuItem extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuItemButton { ...this.props } { ...this.getMenuItemProps() } ref={ ref } value={ this.props.value }>{ this.props.children }</MenuItemButton>
+            <MenuItemButton { ...this.props } { ...this.getMenuItemProps() } ref={ ref } value={ this.props.value }>{ this.props.labelText }</MenuItemButton>
           )}
         </Reference>
         {this.state.open && (
@@ -166,9 +166,7 @@ class MenuItem extends React.Component {
               ref={ ref } position={ style } placement={ placement }
               { ...this.getSubMenuProps() }
             >
-              <SubMenuItem href="/" subText="details"> Submenu Item 1 </SubMenuItem>
-              <SubMenuItem href="/"> Submenu Item 2 </SubMenuItem>
-              <SubMenuItem href="/" subText="details"> Submenu Item 3 </SubMenuItem>
+              {this.props.children}
               <Arrow ref={ arrowProps.ref } style={ arrowProps.style } />
             </SubMenu>
           )}
@@ -180,14 +178,16 @@ class MenuItem extends React.Component {
 }
 
 MenuItem.propTypes = {
-  children: PropTypes.node.isRequired,
+  labelText: PropTypes.string.isRequired,
+  children: PropTypes.node,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MenuItem.defaultProps = {
+  children: null,
   showDelay: "100",
-  hideDelay: "350000",
+  hideDelay: "350",
 };
 
 export default MenuItem;
