@@ -5,24 +5,30 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
 /* eslint react/destructuring-assignment: 0 */
 
+const tooltipStyles = {
+  backgroundColor: theme.colors.white,
+  borderColor: theme.colors.grey,
+  textColor: theme.colors.black,
+};
+
 const getTooltipMargin = placement => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
     case "bottom":
       return ({
-        marginTop: theme.space.x1,
+        marginTop: "4px",
       });
     case "top":
       return ({
-        marginBottom: theme.space.x1,
+        marginBottom: "4px",
       });
     case "right":
       return ({
-        marginLeft: theme.space.x1,
+        marginLeft: "4px",
       });
     case "left":
       return ({
-        marginRight: theme.space.x1,
+        marginRight: "4px",
       });
     default:
       return ({});
@@ -30,12 +36,13 @@ const getTooltipMargin = placement => {
 };
 
 const TooltipContainer = styled.div({
+  color: tooltipStyles.textColor,
   display: "flex",
   flexDirection: "column",
   fontSize: "14px",
-  backgroundColor: theme.colors.white,
+  backgroundColor: tooltipStyles.backgroundColor,
   borderRadius: theme.radii.medium,
-  border: `1px solid ${theme.colors.grey}`,
+  border: `1px solid ${tooltipStyles.borderColor}`,
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
   padding: theme.space.x1,
   transition: "opacity 0.3s",
@@ -59,13 +66,13 @@ const getArrowPosition = placement => {
         top: 0,
         width: theme.space.x1,
         "&:before": {
-          borderColor: `transparent transparent ${theme.colors.grey} transparent`,
+          borderColor: `transparent transparent ${tooltipStyles.borderColor} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
           top: "-2px",
           left: `-${theme.space.half}`,
         },
         "&:after": {
-          borderColor: `transparent transparent ${theme.colors.white} transparent`,
+          borderColor: `transparent transparent ${tooltipStyles.backgroundColor} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
           left: `-${theme.space.half}`,
         },
@@ -78,13 +85,13 @@ const getArrowPosition = placement => {
         marginBottom: "-7px",
         width: theme.space.x1,
         "&:before": {
-          borderColor: `${theme.colors.grey} transparent transparent transparent`,
+          borderColor: `${tooltipStyles.borderColor} transparent transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
           top: "2px",
           left: `-${theme.space.half}`,
         },
         "&:after": {
-          borderColor: `${theme.colors.white} transparent transparent transparent`,
+          borderColor: `${tooltipStyles.backgroundColor} transparent transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
           left: `-${theme.space.half}`,
         },
@@ -96,12 +103,12 @@ const getArrowPosition = placement => {
         marginLeft: `-${theme.space.x1}`,
         width: theme.space.x1,
         "&:before": {
-          borderColor: `transparent ${theme.colors.grey} transparent transparent`,
+          borderColor: `transparent ${tooltipStyles.borderColor} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
           top: `-${theme.space.half}`,
         },
         "&:after": {
-          borderColor: `transparent ${theme.colors.white} transparent transparent`,
+          borderColor: `transparent ${tooltipStyles.backgroundColor} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
           left: "2px",
           top: `-${theme.space.half}`,
@@ -114,12 +121,12 @@ const getArrowPosition = placement => {
         right: 0,
         width: theme.space.x1,
         "&:before": {
-          borderColor: `transparent transparent transparent ${theme.colors.grey}`,
+          borderColor: `transparent transparent transparent ${tooltipStyles.borderColor}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
           top: `-${theme.space.half}`,
         },
         "&:after": {
-          borderColor: `transparent transparent transparent ${theme.colors.white}`,
+          borderColor: `transparent transparent transparent ${tooltipStyles.backgroundColor}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
           left: "-2px",
           top: `-${theme.space.half}`,
