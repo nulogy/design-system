@@ -285,8 +285,7 @@ class Tooltip extends React.Component {
             </div>
           )}
         </Reference>
-        { this.state.open && (
-        <Popper placement={ this.props.placement }> 
+        <Popper placement={ this.props.placement }>
           {({
             ref, style, placement, arrowProps,
           }) => (
@@ -301,7 +300,6 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
-        )}
       </Manager>
     );
   }
