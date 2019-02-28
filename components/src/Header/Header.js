@@ -20,7 +20,7 @@ const BaseHeader = ({
       <Branding />
       <nav>
         <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
-          <Flex alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
+          <Flex alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } mx={ { small: "0", medium: "0", large: "x2" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
             <HeaderSearch />
           </Flex>
           <MenuTrigger display={ { small: "block", medium: "block", large: "none" } } />
