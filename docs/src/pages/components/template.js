@@ -17,9 +17,9 @@ export default () => (
     <Box pt="x4" mb="x6">
       <Title m="none">Component name</Title>
       <Intro>A short description of the component.</Intro>
-      </Box>
+    </Box>
 
-      <DocSection>
+    <DocSection>
       <Button>Create project</Button>
       <Highlight className="jsx">
         {`import {Button} from @nulogy-components;
@@ -27,7 +27,7 @@ export default () => (
 <Button>Create project</Button>
 `}
       </Highlight>
-      </DocSection>
+    </DocSection>
 
 
     <DocSection>

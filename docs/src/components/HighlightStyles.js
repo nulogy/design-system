@@ -1,5 +1,5 @@
-import theme from "../../../components/src/theme";
 import { createGlobalStyle } from "styled-components";
+import theme from "../../../components/src/theme";
 
 const HighlightStyles = createGlobalStyle`
 
@@ -73,6 +73,6 @@ const HighlightStyles = createGlobalStyle`
 .hljs-selector-id {
   font-weight: 500;
 }
-`
+`;
 
 export default HighlightStyles;

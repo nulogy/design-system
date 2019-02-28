@@ -4,13 +4,13 @@ import {
   Box, Flex, Link, Text,
 } from "@nulogy/components";
 import { Helmet } from "react-helmet";
+import { createGlobalStyle } from "styled-components";
 import { NavItem, Nav } from "./Nav";
 import NDSProvider from "../../../components/src/NDSProvider/NDSProvider";
 import theme from "../../../components/src/theme";
 
 import logo from "../images/nulogy.svg";
-import { createGlobalStyle } from "styled-components";
-import HighlightStyles from "../components/HighlightStyles";
+import HighlightStyles from "./HighlightStyles";
 
 const TableStyles = createGlobalStyle`
   table {border: 1px solid #ccc;}
@@ -19,7 +19,7 @@ const TableStyles = createGlobalStyle`
     padding: 8px;
   }
   thead {font-weight: bold;}
-`
+`;
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
