@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars, quotes, react/self-closing-comp */
+
 import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
@@ -7,7 +9,6 @@ import {
 import {
   DocText as Text, Layout, Intro, DocSection, CheckList,
 } from "../../components";
-
 
 export default () => (
   <Layout>
@@ -39,8 +40,8 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Variation 1</SubsectionTitle>
         <Highlight className="jsx">
-        {``}
-      </Highlight>
+          {``}
+        </Highlight>
       </Box>
     </DocSection>
 
