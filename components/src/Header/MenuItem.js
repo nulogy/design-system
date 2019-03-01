@@ -18,9 +18,9 @@ const SubMenu = styled.div({
   fontSize: "14px",
   backgroundColor: subMenuStyles.backgroundColor,
   borderRadius: theme.radii.medium,
-  border: `1px solid ${subMenuStyles.borderColor}`,
-  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
-  padding: theme.space.x1,
+  borderTop: `1px solid ${subMenuStyles.borderColor}`,
+  boxShadow: theme.boxShadows,
+  padding: `${theme.space.x1} 0`,
   transition: "opacity 0.3s",
   zIndex: "999999",
   marginTop: theme.space.half,
@@ -80,10 +80,6 @@ const MenuItemButton = styled.button({
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: theme.colors.darkBlue,
-  },
-  "&:active": {
-    transform: "scale(0.98)",
-    transition: ".2s ease-in",
   },
   "&:disabled": {
     opacity: ".5",
@@ -189,7 +185,7 @@ MenuItem.propTypes = {
 MenuItem.defaultProps = {
   children: null,
   showDelay: "100",
-  hideDelay: "35000",
+  hideDelay: "350",
 };
 
 export default MenuItem;
