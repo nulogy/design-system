@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Link, Text, Box } from "ComponentsRoot";
+import { Link, Text } from "ComponentsRoot";
 import theme from "../theme";
 
 const BaseSubMenuItem = ({
@@ -10,8 +10,8 @@ const BaseSubMenuItem = ({
   subText,
   ...props
 }) => (
-  <Box { ...props }>
-    <Link color="darkBlue" underline={ false } href={ href }>
+  <li { ...props }>
+    <Link tabindex="-1"	color="darkBlue" underline={ false } href={ href }>
       {children}
     </Link>
     {subText && (
@@ -19,7 +19,7 @@ const BaseSubMenuItem = ({
       {subText}
     </Text>
     )}
-  </Box>
+  </li>
 );
 
 BaseSubMenuItem.propTypes = {

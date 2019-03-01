@@ -7,8 +7,9 @@ import {
   HeaderSearch,
   Icon,
 } from "ComponentsRoot";
-import Branding from "./Branding.js";
-import Nav, { MenuTrigger } from "./Nav.js";
+import Branding from "./Branding";
+import Nav, { MenuTrigger } from "./Nav";
+import MenuItem from "./MenuItem";
 import theme from "../theme";
 
 const BaseHeader = ({

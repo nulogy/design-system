@@ -7,6 +7,7 @@ import {
   Flex,
   Icon,
 } from "ComponentsRoot";
+import MenuItem from "./MenuItem";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
