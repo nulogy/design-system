@@ -5,6 +5,7 @@ module.exports = {
     author: "Nulogy",
   },
   plugins: [
+    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
