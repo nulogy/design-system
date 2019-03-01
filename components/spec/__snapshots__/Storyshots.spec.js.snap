@@ -170,6 +170,8 @@ exports[`Storyshots List With custom colour 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots MenuItem MenuItem 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Radio Controlled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Radio 1`] = `ReactWrapper {}`;

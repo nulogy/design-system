@@ -109,23 +109,27 @@ class MenuItem extends React.Component {
     document.removeEventListener("keydown", this.escFunction, false);
   }
 
-  clearScheduled = () => {
+  getSubMenuProps() {
+    return ({
+      onFocus: () => (this.showSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
+      onMouseEnter: () => (this.showSubMenu()),
+      onMouseLeave: () => (this.hideSubMenu()),
+      onClick: () => (this.showSubMenu()),
+    });
+  }
+
+  getMenuItemProps() {
+    return ({
+      onClick: () => (this.showSubMenu()),
+      onMouseLeave: () => (this.hideSubMenu()),
+    });
+  }
+
+  clearScheduled() {
     clearTimeout(this.hideTimeout);
     clearTimeout(this.showTimeout);
-  };
-
-  getSubMenuProps = () => ({
-    onFocus: () => (this.showSubMenu()),
-    onBlur: () => (this.hideSubMenu()),
-    onMouseEnter: () => (this.showSubMenu()),
-    onMouseLeave: () => (this.hideSubMenu()),
-    onClick: () => (this.showSubMenu()),
-  })
-
-  getMenuItemProps = () => ({
-    onClick: () => (this.showSubMenu()),
-    onMouseLeave: () => (this.hideSubMenu()),
-  })
+  }
 
   escFunction(event) {
     if (event.keyCode === 27) {
