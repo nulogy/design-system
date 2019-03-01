@@ -6,10 +6,18 @@ Built with React, compononents make it easy to create interfaces that conform to
 
 ## Usage
 
-### 1. Wrap your appliction in our theme provider 
+### 1. Add fonts
+Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application
+
+```html
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+```
+
+### 2. Wrap your appliction in our theme provider 
 Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults. 
 
-```
+```js
 import React from 'react'
 import { NDSProvider } from '@nulogy/components'
 
@@ -24,8 +32,8 @@ class App extends React.Component {
 }
 ```
 
-### 2. Import desired components
-```
+### 3. Import desired components
+```js
 import { Button } from '@nulogy/components'
 
 const SomeView = () => (
