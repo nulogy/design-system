@@ -4,6 +4,18 @@ import PropTypes from "prop-types";
 import { Link, Text } from "ComponentsRoot";
 import theme from "../theme";
 
+const SubMenuItemLink = styled(Link)({
+  display: "block",
+  padding: `${theme.space.half} ${theme.space.x2}`,
+  "&:hover, &:focus": {
+    outline: "none",
+    backgroundColor: theme.colors.lightGrey,
+  },
+  "&:disabled": {
+    opacity: ".5",
+  },
+});
+
 const BaseSubMenuItem = ({
   href,
   children,
@@ -11,14 +23,14 @@ const BaseSubMenuItem = ({
   ...props
 }) => (
   <li { ...props }>
-    <Link tabindex="-1" color="darkBlue" underline={ false } href={ href }>
+    <SubMenuItemLink tabindex="-1" color="darkBlue" underline={ false } href={ href }>
       {children}
       {subText && (
-      <Text color="black" style={{userSelect:"none"}} fontSize={ theme.fontSizes.small }>
+      <Text color="darkGrey" style={{userSelect:"none"}} fontSize={ theme.fontSizes.small }>
         {subText}
       </Text>
       )}
-    </Link>
+    </SubMenuItemLink>
   </li>
 );
 
@@ -44,18 +56,6 @@ const SubMenuItem = styled(BaseSubMenuItem)({
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.x1}`,
-  "&:hover, &:focus": {
-    outline: "none",
-    backgroundColor: theme.colors.lightGrey,
-  },
-  "&:active": {
-    transform: "scale(0.98)",
-    transition: ".2s ease-in",
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
 });
 
 export default SubMenuItem;

@@ -15,41 +15,38 @@ import theme from "../theme";
 
 const BaseHeader = ({
   menuData,
-  className,
   ...props
 }) => (
-  <Box className={ className } py="x2" px="x3" pl="x4">
-    <header { ...props }>
-      <Branding />
-      <nav>
-        <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
-          <Flex alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } mx={ { small: "0", medium: "0", large: "x2" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
-            <HeaderSearch />
-          </Flex>
-          <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
-          <Flex alignItems="center" order={ { small: "0", medium: "0", large: "-1" } }>
-            <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
-          </Flex>
-          <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
+  <header { ...props }>
+    <Branding />
+    <nav>
+      <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
+        <Flex alignItems="center">
+          <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
         </Flex>
-      </nav>
-    </header>
-  </Box>
+        <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } mx={ { small: "0", medium: "0", large: "x2" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
+          <HeaderSearch />
+        </Flex>
+        <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
+        <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
+      </Flex>
+    </nav>
+  </header>
 );
 
-const Header = styled(BaseHeader)(
-  {
-    background: theme.colors.blackBlue,
-    "header": {
-      display: "flex",
-      alignItems: "center",
-      "nav": {
-        flexGrow: "1",
-        margin: `0 0 0 ${theme.space.x3}`,
-      },
-    },
+const Header = styled(BaseHeader)({
+  background: theme.colors.blackBlue,
+  paddingTop: theme.space.x2,
+  paddingRight: theme.space.x3,
+  paddingBottom: theme.space.x2,
+  paddingLeft: theme.space.x4,
+  display: "flex",
+  alignItems: "center",
+  "nav": {
+    flexGrow: "1",
+    margin: `0 0 0 ${theme.space.x3}`,
   },
-);
+});
 
 BaseHeader.propTypes = {
   className: PropTypes.string,
