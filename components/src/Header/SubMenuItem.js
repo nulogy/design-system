@@ -11,14 +11,14 @@ const BaseSubMenuItem = ({
   ...props
 }) => (
   <li { ...props }>
-    <Link tabindex="-1"	color="darkBlue" underline={ false } href={ href }>
+    <Link tabindex="-1" color="darkBlue" underline={ false } href={ href }>
       {children}
+      {subText && (
+      <Text color="black" style={{userSelect:"none"}} fontSize={ theme.fontSizes.small }>
+        {subText}
+      </Text>
+      )}
     </Link>
-    {subText && (
-    <Text fontSize={ theme.fontSizes.small }>
-      {subText}
-    </Text>
-    )}
   </li>
 );
 
@@ -34,7 +34,6 @@ BaseSubMenuItem.defaultProps = {
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)({
-  display: "inline",
   color: theme.colors.black,
   borderColor: "transparent",
   backgroundColor: "transparent",
@@ -48,7 +47,7 @@ const SubMenuItem = styled(BaseSubMenuItem)({
   padding: `${theme.space.x1} ${theme.space.x1}`,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: theme.colors.grey,
+    backgroundColor: theme.colors.lightGrey,
   },
   "&:active": {
     transform: "scale(0.98)",

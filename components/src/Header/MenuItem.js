@@ -156,7 +156,7 @@ class MenuItem extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuItemButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen }	{ ...this.props } { ...this.getMenuItemProps() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
+            <MenuItemButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.getMenuItemProps() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
@@ -168,9 +168,7 @@ class MenuItem extends React.Component {
               ref={ ref } position={ style } placement={ placement }
               { ...this.getSubMenuProps() }
             >
-              <ul>
-                {this.props.children}
-              </ul>
+              {this.props.children}
               <Arrow ref={ arrowProps.ref } style={ arrowProps.style } />
             </SubMenu>
           )}
@@ -191,7 +189,7 @@ MenuItem.propTypes = {
 MenuItem.defaultProps = {
   children: null,
   showDelay: "100",
-  hideDelay: "3599990",
+  hideDelay: "35000",
 };
 
 export default MenuItem;

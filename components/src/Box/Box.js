@@ -18,7 +18,7 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
-const flexGrow = style({ prop: 'flexGrow' })
+const flexGrow = style({ prop: "flexGrow" });
 
 const Box = styled.div(
   color,

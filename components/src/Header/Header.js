@@ -8,15 +8,17 @@ import {
   Icon,
 } from "ComponentsRoot";
 import Branding from "./Branding";
-import Nav, { MenuTrigger } from "./Nav";
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 import MenuItem from "./MenuItem";
 import theme from "../theme";
 
 const BaseHeader = ({
+  menuData,
   className,
-  ...props,
+  ...props
 }) => (
-  <Box className={className} py="x2" px="x3" pl="x4">
+  <Box className={ className } py="x2" px="x3" pl="x4">
     <header { ...props }>
       <Branding />
       <nav>
@@ -24,11 +26,11 @@ const BaseHeader = ({
           <Flex alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } mx={ { small: "0", medium: "0", large: "x2" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
             <HeaderSearch />
           </Flex>
-          <MenuTrigger display={ { small: "block", medium: "block", large: "none" } } />
+          <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
           <Flex alignItems="center" order={ { small: "0", medium: "0", large: "-1" } }>
-            <Nav className="primary" />
+            <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
           </Flex>
-          <Nav className="secondary" />
+          <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
         </Flex>
       </nav>
     </header>
@@ -43,7 +45,7 @@ const Header = styled(BaseHeader)(
       alignItems: "center",
       "nav": {
         flexGrow: "1",
-        margin: `0 0 0 ${theme.space.x3}`
+        margin: `0 0 0 ${theme.space.x3}`,
       },
     },
   },
