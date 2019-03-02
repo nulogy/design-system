@@ -15,7 +15,7 @@ const Link = styled.a(
   space,
   ({ underline, ...props }) => ({
     textDecoration: underline ? "underline" : "none",
-    "&:hover": {
+    "&:hover, &:focus": {
       color: getHoverColor(props),
     },
   })
