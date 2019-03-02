@@ -25,7 +25,7 @@ const BaseHeader = ({
           <Flex alignItems="center">
             <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
           </Flex>
-          <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } mx={ { small: "0", medium: "0", large: "x2" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
+          <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
             <HeaderSearch />
           </Flex>
         </Flex>
