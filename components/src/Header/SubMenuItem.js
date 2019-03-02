@@ -6,7 +6,7 @@ import theme from "../theme";
 
 const SubMenuItemLink = styled(Link)({
   display: "block",
-  padding: `${theme.space.half} ${theme.space.x2}`,
+  padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: theme.colors.lightGrey,
@@ -24,9 +24,9 @@ const BaseSubMenuItem = ({
 }) => (
   <li { ...props }>
     <SubMenuItemLink tabindex="-1" color="darkBlue" underline={ false } href={ href }>
-      {children}
+      <Text>{children}</Text>
       {subText && (
-      <Text color="darkGrey" style={{userSelect:"none"}} fontSize={ theme.fontSizes.small }>
+      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase } >
         {subText}
       </Text>
       )}
@@ -56,6 +56,7 @@ const SubMenuItem = styled(BaseSubMenuItem)({
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
+  maxWidth: "20em",
 });
 
 export default SubMenuItem;
