@@ -32,14 +32,13 @@ const Branding = styled(BrandingBase)(
     padding: "2px",
     borderRadius: theme.radii.medium,
     ":focus": {
-      background: theme.colors.darkBlue,
+      background: theme.colors.black,
       boxShadow: "none",
       outline: "none",
     },
     "img": {
       height: "36px",
       display: "block",
-      marginRight: theme.space.x1,
     },
 
   }

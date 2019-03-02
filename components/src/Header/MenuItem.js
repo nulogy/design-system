@@ -67,7 +67,7 @@ const Arrow = styled.div({
 const MenuItemButton = styled.button({
   display: "inline-flex",
   color: theme.colors.white,
-  borderColor: "transparent",
+  border: "none",
   backgroundColor: "transparent",
   justifyContent: "center",
   alignItems: "center",
@@ -77,9 +77,12 @@ const MenuItemButton = styled.button({
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} ${theme.space.x2}`,
+  borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: theme.colors.darkBlue,
+    color: theme.colors.lightBlue,
+    backgroundColor: theme.colors.black,
+    cursor: "pointer",
   },
   "&:disabled": {
     opacity: ".5",
