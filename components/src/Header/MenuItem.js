@@ -15,7 +15,7 @@ const SubMenu = styled.div({
   color: subMenuStyles.textColor,
   display: "flex",
   flexDirection: "column",
-  fontSize: "14px",
+  fontSize: theme.fontSizes.small,
   backgroundColor: subMenuStyles.backgroundColor,
   borderRadius: theme.radii.medium,
   borderTop: `1px solid ${subMenuStyles.borderColor}`,
@@ -100,7 +100,7 @@ class MenuItem extends React.Component {
     this.showSubMenu = this.showSubMenu.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     document.addEventListener("keydown", this.escFunction, false);
   }
 
@@ -108,7 +108,7 @@ class MenuItem extends React.Component {
     document.removeEventListener("keydown", this.escFunction, false);
   }
 
-  getSubMenuProps() {
+  subMenuEventHandlers() {
     return ({
       onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
@@ -118,7 +118,7 @@ class MenuItem extends React.Component {
     });
   }
 
-  getMenuItemProps() {
+  menuItemEventHandlers() {
     return ({
       onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
@@ -126,8 +126,8 @@ class MenuItem extends React.Component {
   }
 
   clearScheduled() {
-    clearTimeout(this.hideTimeout);
-    clearTimeout(this.showTimeout);
+    clearTimeout(this.hideTimeoutID);
+    clearTimeout(this.showTimeoutID);
   }
 
   escFunction(event) {
@@ -139,7 +139,7 @@ class MenuItem extends React.Component {
   hideSubMenu(skipTimer) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.hideTimeout = setTimeout(() => this.setState({ subMenuOpen: false }), this.props.hideDelay);
+      this.hideTimeoutID = setTimeout(() => this.setState({ subMenuOpen: false }), this.props.hideDelay);
     } else {
       this.setState({ subMenuOpen: false });
     }
@@ -147,7 +147,7 @@ class MenuItem extends React.Component {
 
   showSubMenu() {
     this.clearScheduled();
-    this.showTimeout = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
+    this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
   }
 
   render() {
@@ -155,7 +155,7 @@ class MenuItem extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuItemButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.getMenuItemProps() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
+            <MenuItemButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuItemEventHandlers() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
@@ -165,7 +165,7 @@ class MenuItem extends React.Component {
           }) => (
             <SubMenu
               ref={ ref } position={ style } placement={ placement }
-              { ...this.getSubMenuProps() }
+              { ...this.subMenuEventHandlers() }
             >
               {this.props.children}
               <Arrow ref={ arrowProps.ref } style={ arrowProps.style } />
