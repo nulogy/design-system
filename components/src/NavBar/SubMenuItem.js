@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Link, Text } from "ComponentsRoot";
+import Link from "../Link/Link";
+import Text from "../Type/Text";
 import theme from "../theme";
 
 const SubMenuItemLink = styled(Link)({
