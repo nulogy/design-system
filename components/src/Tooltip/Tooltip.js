@@ -35,30 +35,6 @@ const getTooltipMargin = placement => {
   }
 };
 
-const getTooltipMargin = placement => {
-  const direction = String(placement).split("-")[0];
-  switch (direction) {
-    case "bottom":
-      return ({
-        marginTop: "4px",
-      });
-    case "top":
-      return ({
-        marginBottom: "4px",
-      });
-    case "right":
-      return ({
-        marginLeft: "4px",
-      });
-    case "left":
-      return ({
-        marginRight: "4px",
-      });
-    default:
-      return ({});
-  }
-};
-
 const TooltipContainer = styled.div({
   color: tooltipStyles.textColor,
   display: "flex",

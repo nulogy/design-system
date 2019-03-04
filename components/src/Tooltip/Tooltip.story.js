@@ -14,6 +14,13 @@ const selectOptions = [
   { value: "quarantine", label: "In quarantine" },
 ];
 
+const Trigger = () => (
+  <Flex width="128px" height="128px" justifyContent="center" alignItems="center" bg="lightBlue" style={{border: "2px dashed darkBlue"}}>
+    Hover me
+  </Flex>
+);
+
+
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <Flex justifyContent="center" alignItems="center" height="200px">
@@ -34,21 +41,21 @@ storiesOf("Tooltip", module)
           placement="top-start"
           tooltip="top-start"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip2"
           placement="top"
           tooltip="top"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip3"
           placement="top-end"
           tooltip="top-end"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
@@ -57,21 +64,21 @@ storiesOf("Tooltip", module)
           placement="left-start"
           tooltip="left-start"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip5"
           placement="left"
           tooltip="left"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip6"
           placement="left-end"
           tooltip="left-end"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
@@ -80,21 +87,21 @@ storiesOf("Tooltip", module)
           placement="right-start"
           tooltip="right-start"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip8"
           placement="right"
           tooltip="right"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip9"
           placement="right-end"
           tooltip="right-end"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
@@ -103,21 +110,21 @@ storiesOf("Tooltip", module)
           placement="bottom-start"
           tooltip="bottom-start"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip11"
           placement="bottom"
           tooltip="bottom"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
         <Tooltip
           id="tooltip12"
           placement="bottom-end"
           tooltip="bottom-end"
         >
-          <Button> Hover me </Button>
+          <Trigger />
         </Tooltip>
       </Flex>
     </>
