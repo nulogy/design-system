@@ -37,7 +37,10 @@ const BaseHeader = ({
 );
 
 BaseHeader.propTypes = {
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.shape({
+    "primary": PropTypes.shape({}),
+    "secondary": PropTypes.shape({}),
+  }),
   desktopSrc: PropTypes.string,
   mobileSrc: PropTypes.string,
   alt: PropTypes.string,
