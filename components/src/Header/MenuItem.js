@@ -118,7 +118,7 @@ class MenuItem extends React.Component {
   getMenuItemProps() {
     return ({
       onClick: () => (this.showSubMenu()),
-      onMouseLeave: () => (this.hideSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
     });
   }
 
