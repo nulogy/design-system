@@ -12,7 +12,7 @@ import SubMenuItem from "./SubMenuItem";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const DesktopMenuBase = ({
+const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
@@ -31,7 +31,15 @@ const DesktopMenuBase = ({
   </Box>
 );
 
-const DesktopMenu = styled(DesktopMenuBase)(
+BaseDesktopMenu.propTypes = {
+  menuData: PropTypes.shape({}),
+};
+
+BaseDesktopMenu.defaultProps = {
+  menuData: null,
+};
+
+const DesktopMenu = styled(BaseDesktopMenu)(
   {
     "button": {
       marginRight: theme.space.x1,

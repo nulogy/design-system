@@ -21,7 +21,7 @@ const BaseHeader = ({
   ...props
 }) => (
   <header { ...props }>
-    <Branding desktopSrc={ desktopSrc } mobileSrc={ mobileSrc } alt={ alt }/>
+    <Branding desktopSrc={ desktopSrc } mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
         <Flex alignItems="center">
@@ -39,6 +39,22 @@ const BaseHeader = ({
   </header>
 );
 
+BaseHeader.propTypes = {
+  menuData: PropTypes.shape({}),
+  desktopSrc: PropTypes.string,
+  mobileSrc: PropTypes.string,
+  alt: PropTypes.string,
+  className: PropTypes.string,
+};
+
+BaseHeader.defaultProps = {
+  menuData: null,
+  desktopSrc: undefined,
+  mobileSrc: undefined,
+  alt: undefined,
+  className: null,
+};
+
 const Header = styled(BaseHeader)({
   background: theme.colors.blackBlue,
   paddingTop: theme.space.x2,
@@ -52,13 +68,5 @@ const Header = styled(BaseHeader)({
     margin: `0 0 0 ${theme.space.x3}`,
   },
 });
-
-BaseHeader.propTypes = {
-  className: PropTypes.string,
-};
-
-BaseHeader.defaultProps = {
-  className: null,
-};
 
 export default Header;

@@ -12,7 +12,7 @@ const BaseBranding = ({
   alt,
   ...props
 }) => (
-  <a href="#" { ...props }>
+  <a href="/" { ...props }>
     <Box display={ { small: "none", medium: "block", large: "block" } } minWidth="90px;">
       <img
         src={ desktopSrc }
@@ -30,7 +30,7 @@ const BaseBranding = ({
 
 BaseBranding.propTypes = {
   desktopSrc: PropTypes.string,
-  modileSrc: PropTypes.string,
+  mobileSrc: PropTypes.string,
   alt: PropTypes.string,
 };
 
