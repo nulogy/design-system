@@ -23,7 +23,7 @@ const BaseSubMenuItem = ({
   ...props
 }) => (
   <li { ...props }>
-    <SubMenuItemLink tabindex="-1" color="darkBlue" underline={ false } href={ href }>
+    <SubMenuItemLink tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
       <Text>{children}</Text>
       {subText && (
       <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase } >
