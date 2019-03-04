@@ -39,7 +39,7 @@ const TooltipContainer = styled.div({
   color: tooltipStyles.textColor,
   display: "flex",
   flexDirection: "column",
-  fontSize: "14px",
+  fontSize: theme.fontSizes.small,
   backgroundColor: tooltipStyles.backgroundColor,
   borderRadius: theme.radii.medium,
   border: `1px solid ${tooltipStyles.borderColor}`,
@@ -56,8 +56,8 @@ const TooltipContainer = styled.div({
 }));
 
 const getArrowPosition = placement => {
-  const direction = String(placement).split("-")[0];
-  switch (direction) {
+  const location = String(placement).split("-")[0];
+  switch (location) {
     case "bottom":
       return ({
         height: theme.space.x1,
@@ -178,18 +178,13 @@ class Tooltip extends React.Component {
     this.showTooltip = this.showTooltip.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     document.addEventListener("keydown", this.escFunction, false);
   }
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.escFunction, false);
   }
-
-  clearScheduled = () => {
-    clearTimeout(this.hideTimeout);
-    clearTimeout(this.showTimeout);
-  };
 
   getTooltipProps = () => ({
     onFocus: () => (this.showTooltip()),
@@ -206,16 +201,29 @@ class Tooltip extends React.Component {
     onMouseLeave: () => (this.hideTooltip()),
   })
 
-  escFunction(event) {
-    if (event.keyCode === 27) {
-      this.hideTooltip(true);
-    }
-  }
+  clearScheduled = () => {
+    clearTimeout(this.hideTimeoutID);
+    clearTimeout(this.showTimeoutID);
+  };
+
+  tooltipEventHandlers = () => ({
+    onFocus: () => (this.showTooltip()),
+    onBlur: () => (this.hideTooltip()),
+    onMouseEnter: () => (this.showTooltip()),
+    onMouseLeave: () => (this.hideTooltip()),
+  })
+
+  triggerEventHandlers = () => ({
+    onFocus: () => (this.showTooltip()),
+    onBlur: () => (this.hideTooltip()),
+    onMouseEnter: () => (this.showTooltip()),
+    onMouseLeave: () => (this.hideTooltip()),
+  })
 
   hideTooltip(skipTimer) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.hideTimeout = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
+      this.hideTimeoutID = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
     } else {
       this.setState({ open: false });
     }
@@ -223,27 +231,14 @@ class Tooltip extends React.Component {
 
   showTooltip() {
     this.clearScheduled();
-    this.showTimeout = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
+    this.showTimeoutID = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
   }
 
-  clearScheduled = () => {
-    clearTimeout(this.hideTimeout);
-    clearTimeout(this.showTimeout);
-  };
-
-  getTooltipProps = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-  })
-
-  getElementProps = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-  })
+  escFunction(event) {
+    if (event.keyCode === 27) {
+      this.hideTooltip(true);
+    }
+  }
 
   render() {
     return (
@@ -252,7 +247,7 @@ class Tooltip extends React.Component {
           {({ ref }) => (
             <div
               style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }
-              ref={ ref } { ...this.getElementProps() }
+              ref={ ref } { ...this.triggerEventHandlers() }
               aria-describedby={ this.props.id }
             >
               {React.cloneElement(this.props.children, {
@@ -269,7 +264,7 @@ class Tooltip extends React.Component {
               open={ this.state.open }
               role="tooltip" id={ this.props.id }
               ref={ ref } position={ style } dataPlacement={ placement }
-              { ...this.getTooltipProps() }
+              { ...this.tooltipEventHandlers() }
             >
               {this.props.tooltip}
               <Arrow dataPlacement={ placement } ref={ arrowProps.ref } style={ arrowProps.style } />
