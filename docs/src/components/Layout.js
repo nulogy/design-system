@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
         p="x2"
       >
         <Box
-          pl="x3" pr="x3" maxWidth={ 960 }
+          pl="x3" pr="x3" width={ 960 }
           m="auto"
         >
           <Flex>
