@@ -110,15 +110,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `ReactWrapper {
 
 exports[`Storyshots Form Without title 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Header Header 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Header Validation Header Validation 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Header Validation With message only 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots HeaderSearch HeaderSearch 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots HeaderSearch With custom name 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Headings Section Title 1`] = `ReactWrapper {}`;
 
@@ -173,6 +167,12 @@ exports[`Storyshots List With custom colour 1`] = `ReactWrapper {}`;
 exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots MenuItem MenuItem 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBar NavBar 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBarSearch NavBarSearch 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBarSearch With custom name 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Radio Controlled 1`] = `ReactWrapper {}`;
 
