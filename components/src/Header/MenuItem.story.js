@@ -6,7 +6,7 @@ import SubMenuItem from "./SubMenuItem";
 
 storiesOf("MenuItem", module)
   .add("MenuItem", () => (
-    <Flex bg="blackBlue" justifyContent="center" alignItems="center" height="50px">
+    <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
       <MenuItem
         id="menuItem1"
         labelText="Menu Item"

@@ -4,44 +4,76 @@ import { Header } from "ComponentsRoot";
 
 const menuData = {
   "primary": {
-    "Menu Item 1": {
-      "SubMenu Item 1.1": {
+    "Dashboard": {
+      "Customers": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 1.2": {
+      "Invoices": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 1.3": {
+      "Projects": {
+        href: "/",
+        subText: "subText",
+      },
+      "Items": {
+        href: "/",
+        subText: "subText",
+      },
+      "Vendors": {
+        href: "/",
+        subText: "subText",
+      },
+      "Cariers": {
         href: "/",
         subText: "subText",
       },
     },
-    "Menu Item 2": {
-      "SubMenu Item 2.1": {
+    "Inspector": {
+      "Integration": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 2.2": {
+      "Site cofiguration": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 2.3": {
+      "Company configuration": {
         href: "/",
         subText: "subText",
       },
     },
-    "Menu Item 3": {
-      "SubMenu Item 3.1": {
+    "Reports": {
+      "Production": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 3.2": {
+      "Item cart": {
         href: "/",
         subText: "subText",
       },
-      "SubMenu Item 3.3": {
+      "Inventory": {
+        href: "/",
+        subText: "subText",
+      },
+    },
+    "Sheets": {
+      "Item locator": {
+        href: "/",
+        subText: "subText",
+      },
+      "Ship orders": {
+        href: "/",
+        subText: "subText",
+      },
+    },
+    "Forms": {
+      "Projects": {
+        href: "/",
+        subText: "subText",
+      },
+      "Jobs": {
         href: "/",
         subText: "subText",
       },

@@ -33,6 +33,9 @@ const DesktopMenuBase = ({
 
 const DesktopMenu = styled(DesktopMenuBase)(
   {
+    "button": {
+      marginRight: theme.space.x1,  
+    },
     "ul": {
       listStyle: "none",
       paddingLeft: "0",
