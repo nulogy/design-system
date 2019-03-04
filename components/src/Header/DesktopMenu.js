@@ -17,16 +17,16 @@ const DesktopMenuBase = ({
   ...props
 }) => (
   <Box { ...props }>
-    {Object.entries(menuData).map( menuItem => (
-    <MenuItem labelText={ menuItem[0] }>
-      <ul>
-        {Object.entries(menuItem[1]).map( subMenuItem => (
-          <SubMenuItem key={ subMenuItem[0] } href={ subMenuItem[1].href } subText={ subMenuItem[1].subText }>
-            { subMenuItem[0] }
-          </SubMenuItem>
-        ))}
-      </ul>
-    </MenuItem>
+    {Object.entries(menuData).map(menuItem => (
+      <MenuItem labelText={ menuItem[0] }>
+        <ul>
+          {Object.entries(menuItem[1]).map(subMenuItem => (
+            <SubMenuItem key={ subMenuItem[0] } href={ subMenuItem[1].href } subText={ subMenuItem[1].subText }>
+              { subMenuItem[0] }
+            </SubMenuItem>
+          ))}
+        </ul>
+      </MenuItem>
     ))}
   </Box>
 );
@@ -34,7 +34,7 @@ const DesktopMenuBase = ({
 const DesktopMenu = styled(DesktopMenuBase)(
   {
     "button": {
-      marginRight: theme.space.x1,  
+      marginRight: theme.space.x1,
     },
     "ul": {
       listStyle: "none",

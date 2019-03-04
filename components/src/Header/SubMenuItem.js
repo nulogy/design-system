@@ -26,7 +26,7 @@ const BaseSubMenuItem = ({
     <SubMenuItemLink tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
       <Text>{children}</Text>
       {subText && (
-      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase } >
+      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {subText}
       </Text>
       )}
