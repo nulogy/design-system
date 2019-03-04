@@ -3,14 +3,11 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
   Flex,
-  Box,
   HeaderSearch,
-  Icon,
 } from "ComponentsRoot";
 import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
-import MobileMenu from "./MobileMenu";
-import MenuItem from "./MenuItem";
+import { MobileMenu } from "./MobileMenu";
 import theme from "../theme";
 
 const BaseHeader = ({

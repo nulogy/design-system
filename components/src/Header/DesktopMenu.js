@@ -1,16 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { darken } from "polished";
-import {
-  Box,
-  Flex,
-  Icon,
-} from "ComponentsRoot";
+import { Box } from "ComponentsRoot";
 import MenuItem from "./MenuItem";
 import SubMenuItem from "./SubMenuItem";
 import theme from "../theme";
-import { subPx } from "../Utils";
 
 const BaseDesktopMenu = ({
   menuData,
