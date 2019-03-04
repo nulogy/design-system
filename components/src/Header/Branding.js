@@ -7,7 +7,7 @@ import {
 import theme from "../theme";
 
 const BaseBranding = ({
-  src,
+  desktopSrc,
   mobileSrc,
   alt,
   ...props

@@ -15,10 +15,13 @@ import theme from "../theme";
 
 const BaseHeader = ({
   menuData,
+  desktopSrc,
+  mobileSrc,
+  alt,
   ...props
 }) => (
   <header { ...props }>
-    <Branding />
+    <Branding desktopSrc={ desktopSrc } mobileSrc={ mobileSrc } alt={ alt }/>
     <nav>
       <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
         <Flex alignItems="center">
