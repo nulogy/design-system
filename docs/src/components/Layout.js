@@ -4,11 +4,22 @@ import {
   Box, Flex, Link, Text,
 } from "@nulogy/components";
 import { Helmet } from "react-helmet";
+import { createGlobalStyle } from "styled-components";
 import { NavItem, Nav } from "./Nav";
 import NDSProvider from "../../../components/src/NDSProvider/NDSProvider";
 import theme from "../../../components/src/theme";
 
 import logo from "../images/nulogy.svg";
+import HighlightStyles from "./HighlightStyles";
+
+const TableStyles = createGlobalStyle`
+  table {border: 1px solid #ccc;}
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  thead {font-weight: bold;}
+`;
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
@@ -17,7 +28,11 @@ const Layout = ({ children }) => (
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Welcome</title>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
       </Helmet>
+      <HighlightStyles />
+      <TableStyles />
       <Box
         bg="blackBlue" align="center" mb="x6"
         p="x2"
