@@ -15,7 +15,7 @@ const selectOptions = [
 ];
 
 const Trigger = () => (
-  <Flex width="128px" height="128px" justifyContent="center" alignItems="center" bg="lightBlue" style={{border: "2px dashed darkBlue"}}>
+  <Flex width="128px" height="128px" justifyContent="center" alignItems="center" bg="lightBlue" style={ { border: "2px dashed darkBlue" } }>
     Hover me
   </Flex>
 );

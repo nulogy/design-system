@@ -14,10 +14,6 @@ const tooltipStyles = {
 const getTooltipMargin = placement => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
-    case "bottom":
-      return ({
-        marginTop: "4px",
-      });
     case "top":
       return ({
         marginBottom: "4px",
@@ -30,8 +26,11 @@ const getTooltipMargin = placement => {
       return ({
         marginRight: "4px",
       });
+    case "bottom":
     default:
-      return ({});
+      return ({
+        marginTop: "4px",
+      });
   }
 };
 
@@ -55,75 +54,110 @@ const TooltipContainer = styled.div({
   "aria-hidden": !open,
 }));
 
-const getArrowPosition = placement => {
+const positionArrow = placement => {
   const location = String(placement).split("-")[0];
   switch (location) {
-    case "bottom":
-      return ({
-        marginTop: "-7px",
-        top: 0,
-        "&:before": {
-          borderColor: `transparent transparent ${tooltipStyles.borderColor} transparent`,
-          borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
-          top: "-2px",
-          left: `-${theme.space.half}`,
-        },
-        "&:after": {
-          borderColor: `transparent transparent ${tooltipStyles.backgroundColor} transparent`,
-          borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
-          left: `-${theme.space.half}`,
-        },
-      });
     case "top":
       return ({
         bottom: 0,
         marginBottom: "-7px",
         "&:before": {
-          borderColor: `${tooltipStyles.borderColor} transparent transparent transparent`,
-          borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
           top: "2px",
-          left: `-${theme.space.half}`,
+          left: "-4px",
         },
         "&:after": {
-          borderColor: `${tooltipStyles.backgroundColor} transparent transparent transparent`,
-          borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
-          left: `-${theme.space.half}`,
+          left: "-4px",
         },
       });
     case "right":
       return ({
         left: 0,
-        marginLeft: `-${theme.space.x1}`,
+        marginLeft: "-8px",
         "&:before": {
-          borderColor: `transparent ${tooltipStyles.borderColor} transparent transparent`,
-          borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
-          top: `-${theme.space.half}`,
+          top: "-4px",
         },
         "&:after": {
-          borderColor: `transparent ${tooltipStyles.backgroundColor} transparent transparent`,
-          borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
           left: "2px",
-          top: `-${theme.space.half}`,
+          top: "-4px",
         },
       });
     case "left":
       return ({
-        marginRight: `-${theme.space.x1}`,
+        marginRight: "-8px",
         right: 0,
         "&:before": {
+          top: "-4px",
+        },
+        "&:after": {
+          left: "-2px",
+          top: "-4px",
+        },
+      });
+    case "bottom":
+    default:
+      return ({
+        marginTop: "-7px",
+        top: 0,
+        "&:before": {
+          top: "-2px",
+          left: "-4px",
+        },
+        "&:after": {
+          left: "-4px",
+        },
+      });
+  }
+};
+
+const drawArrow = placement => {
+  const location = String(placement).split("-")[0];
+  switch (location) {
+    case "top":
+      return ({
+        "&:before": {
+          borderColor: `${tooltipStyles.borderColor} transparent transparent transparent`,
+          borderWidth: "8px 8px 0 8px",
+        },
+        "&:after": {
+          borderColor: `${tooltipStyles.backgroundColor} transparent transparent transparent`,
+          borderWidth: "8px 8px 0 8px",
+        },
+      });
+    case "right":
+      return ({
+        "&:before": {
+          borderColor: `transparent ${tooltipStyles.borderColor} transparent transparent`,
+          borderWidth: "8px 8px 8px 0",
+        },
+        "&:after": {
+          borderColor: `transparent ${tooltipStyles.backgroundColor} transparent transparent`,
+          borderWidth: "8px 8px 8px 0",
+        },
+      });
+    case "left":
+      return ({
+        "&:before": {
           borderColor: `transparent transparent transparent ${tooltipStyles.borderColor}`,
-          borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
-          top: `-${theme.space.half}`,
+          borderWidth: "8px 0 8px 8px",
         },
         "&:after": {
           borderColor: `transparent transparent transparent ${tooltipStyles.backgroundColor}`,
-          borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
-          left: "-2px",
-          top: `-${theme.space.half}`,
+          borderWidth: "8px 0 8px 8px",
         },
       });
+    case "bottom":
     default:
-      return ({});
+      return ({
+        "&:before": {
+          borderColor: `transparent transparent ${tooltipStyles.borderColor} transparent`,
+          borderWidth: "0 8px 8px 8px",
+        },
+        "&:after": {
+          borderColor: `transparent transparent ${tooltipStyles.backgroundColor} transparent`,
+          borderWidth: "0 8px 8px 8px",
+          left: "-4px",
+        },
+      });
   }
 };
 
@@ -153,8 +187,11 @@ const Arrow = styled.div(
     },
   },
   ({ dataPlacement }) => ({
-    ...getArrowPosition(dataPlacement),
-  })
+    ...drawArrow(dataPlacement),
+  }),
+  ({ dataPlacement }) => ({
+    ...positionArrow(dataPlacement),
+  }),
 );
 
 class Tooltip extends React.Component {
