@@ -9,7 +9,7 @@ import {
 } from "ComponentsRoot";
 import theme from "../theme";
 
-const BaseHeaderSearch = ({
+const BaseNavBarSearch = ({
   name,
   onSubmit,
   ...props
@@ -22,7 +22,7 @@ const BaseHeaderSearch = ({
   </form>
 );
 
-const HeaderSearch = styled(BaseHeaderSearch)(
+const NavBarSearch = styled(BaseNavBarSearch)(
   {
     background: theme.colors.lightBlue,
     borderRadius: theme.radii.medium,
@@ -60,14 +60,14 @@ const HeaderSearch = styled(BaseHeaderSearch)(
   }
 );
 
-BaseHeaderSearch.propTypes = {
+BaseNavBarSearch.propTypes = {
   name: PropTypes.string,
   onSubmit: PropTypes.func,
 };
 
-BaseHeaderSearch.defaultProps = {
+BaseNavBarSearch.defaultProps = {
   name: "global-search",
   onSubmit: () => {},
 };
 
-export default HeaderSearch;
+export default NavBarSearch;

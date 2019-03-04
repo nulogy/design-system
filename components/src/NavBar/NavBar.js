@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
   Flex,
-  HeaderSearch,
+  NavBarSearch,
 } from "ComponentsRoot";
 import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import theme from "../theme";
 
-const BaseHeader = ({
+const BaseNavBar = ({
   menuData,
   desktopSrc,
   mobileSrc,
@@ -26,7 +26,7 @@ const BaseHeader = ({
         </Flex>
         <Flex>
           <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } }>
-            <HeaderSearch />
+            <NavBarSearch />
           </Flex>
           <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
           <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
@@ -36,7 +36,7 @@ const BaseHeader = ({
   </header>
 );
 
-BaseHeader.propTypes = {
+BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
     "primary": PropTypes.shape({}),
     "secondary": PropTypes.shape({}),
@@ -47,7 +47,7 @@ BaseHeader.propTypes = {
   className: PropTypes.string,
 };
 
-BaseHeader.defaultProps = {
+BaseNavBar.defaultProps = {
   menuData: null,
   desktopSrc: undefined,
   mobileSrc: undefined,
@@ -55,7 +55,7 @@ BaseHeader.defaultProps = {
   className: null,
 };
 
-const Header = styled(BaseHeader)({
+const NavBar = styled(BaseNavBar)({
   background: theme.colors.blackBlue,
   paddingTop: theme.space.x2,
   paddingRight: theme.space.x3,
@@ -69,4 +69,4 @@ const Header = styled(BaseHeader)({
   },
 });
 
-export default Header;
+export default NavBar;

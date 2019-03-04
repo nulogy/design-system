@@ -1,15 +1,15 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box, HeaderSearch } from "ComponentsRoot";
+import { Box, NavBarSearch } from "ComponentsRoot";
 
-storiesOf("HeaderSearch", module)
-  .add("HeaderSearch", () => (
+storiesOf("NavBarSearch", module)
+  .add("NavBarSearch", () => (
     <Box p="x3" bg="blackBlue">
-      <HeaderSearch />
+      <NavBarSearch />
     </Box>
   ))
   .add("With custom name", () => (
     <Box p="x3" bg="blackBlue">
-      <HeaderSearch name="global-search-2" />
+      <NavBarSearch name="global-search-2" />
     </Box>
   ));

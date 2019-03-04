@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Header } from "ComponentsRoot";
+import { NavBar } from "ComponentsRoot";
 
 const menuData = {
   "primary": {
@@ -102,7 +102,7 @@ const menuData = {
   },
 };
 
-storiesOf("Header", module)
-  .add("Header", () => (
-    <Header menuData={ menuData } />
+storiesOf("NavBar", module)
+  .add("NavBar", () => (
+    <NavBar menuData={ menuData } />
   ));
