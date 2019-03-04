@@ -60,11 +60,8 @@ const getArrowPosition = placement => {
   switch (location) {
     case "bottom":
       return ({
-        height: theme.space.x1,
-        left: 0,
         marginTop: "-7px",
         top: 0,
-        width: theme.space.x1,
         "&:before": {
           borderColor: `transparent transparent ${tooltipStyles.borderColor} transparent`,
           borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
@@ -80,10 +77,7 @@ const getArrowPosition = placement => {
     case "top":
       return ({
         bottom: 0,
-        height: theme.space.x1,
-        left: 0,
         marginBottom: "-7px",
-        width: theme.space.x1,
         "&:before": {
           borderColor: `${tooltipStyles.borderColor} transparent transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} 0 ${theme.space.x1}`,
@@ -98,10 +92,8 @@ const getArrowPosition = placement => {
       });
     case "right":
       return ({
-        height: theme.space.x1,
         left: 0,
         marginLeft: `-${theme.space.x1}`,
-        width: theme.space.x1,
         "&:before": {
           borderColor: `transparent ${tooltipStyles.borderColor} transparent transparent`,
           borderWidth: `${theme.space.x1} ${theme.space.x1} ${theme.space.x1} 0`,
@@ -116,10 +108,8 @@ const getArrowPosition = placement => {
       });
     case "left":
       return ({
-        height: theme.space.x1,
         marginRight: `-${theme.space.x1}`,
         right: 0,
-        width: theme.space.x1,
         "&:before": {
           borderColor: `transparent transparent transparent ${tooltipStyles.borderColor}`,
           borderWidth: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x1}`,
@@ -139,8 +129,8 @@ const getArrowPosition = placement => {
 
 const Arrow = styled.div(
   {
-    height: theme.space.x1,
     position: "absolute",
+    height: theme.space.x1,
     width: theme.space.x1,
     margin: "12px",
     "&:before": {
