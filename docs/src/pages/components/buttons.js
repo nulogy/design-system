@@ -1,11 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Button, DangerButton, PrimaryButton, QuietButton, IconicButton, Box, Flex, SectionTitle, Title,
+  Button, DangerButton, PrimaryButton, QuietButton, IconicButton, Box, Flex, SectionTitle, SubsectionTitle, Title, Link,
 } from "@nulogy/components";
+import Highlight from "react-highlight";
 import {
   DocText as Text, Layout, Intro, DocSection, CheckList,
 } from "../../components";
+
 
 export default () => (
   <Layout>
@@ -13,97 +15,102 @@ export default () => (
       <title>Buttons</title>
     </Helmet>
     <Box
-      bg="whiteGrey" p="x4" borderRadius={ 1 }
+      pt="x4"
       mb="x6"
     >
       <Title m="none">Buttons</Title>
       <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
     </Box>
-
     <DocSection>
-      <Flex mb="x3">
-        <Flex width={ 2 / 6 } justifyContent="center" alignItems="center">
-          <Button>Create project</Button>
-        </Flex>
-        <Box width={ 4 / 6 }>
-          <Text mb="none"><Text inline fontWeight="medium">Buttons</Text> are used for actions that do not require any special emphasis and cover most cases.</Text>
-        </Box>
-      </Flex>
-      <Flex mb="x3">
-        <Flex width={ 2 / 6 } justifyContent="center" alignItems="center">
-          <PrimaryButton>Edit project</PrimaryButton>
-        </Flex>
-        <Box width={ 4 / 6 }>
-          <Text mb="none"><Text inline fontWeight="medium">Primary Buttons</Text> are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
-        </Box>
-      </Flex>
-      <Flex mb="x3">
-        <Flex width={ 2 / 6 } justifyContent="center" alignItems="center">
-          <DangerButton>Delete project</DangerButton>
-        </Flex>
-        <Box width={ 4 / 6 }>
-          <Text mb="none"><Text inline fontWeight="medium">Danger Buttons</Text> are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
-        </Box>
-      </Flex>
-      <Flex mb="x3">
-        <Flex width={ 2 / 6 } justifyContent="center" alignItems="center">
-          <QuietButton>Learn more</QuietButton>
-        </Flex>
-        <Box width={ 4 / 6 }>
-          <Text mb="none"><Text inline fontWeight="medium">Quiet Buttons</Text> are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
-        </Box>
-      </Flex>
-      <Flex mb="x3">
-        <Flex
-          width={ 2 / 6 } justifyContent="center" alignItems="center"
-          flexDirection="column"
-        >
-          <IconicButton mb="x4" icon="add" labelVisibility="hover">Add project</IconicButton>
-        </Flex>
-        <Box width={ 4 / 6 }>
-          <Text mb="none"><Text inline fontWeight="medium">Iconic Buttons</Text> are used for universally understood actions that can effectively be represented using icon.</Text>
-        </Box>
-      </Flex>
+      <Button>Create project</Button>
+      <Highlight className="jsx">
+        {`import {Button} from @nulogy-components;
+
+<Button>Create project</Button>
+`}
+      </Highlight>
     </DocSection>
-
     <DocSection>
-      <SectionTitle>Sizes</SectionTitle>
-      <Text mb="4">Button, Primary Button, Danger Button and Quiet Button are available in three sizes and a full-width option.</Text>
-      <Button size="small" mb="x1">Read more</Button>
-      <Text fontSize="small">Small</Text>
-      <Button size="medium" mb="x1">Add project</Button>
-      <Text fontSize="small">Medium</Text>
-      <Button size="large" mb="x1">Create project</Button>
-      <Text fontSize="small">Large</Text>
-      <Button fullWidth mb="x1">I agree</Button>
-      <Text fontSize="small">Full-width</Text>
+      <SectionTitle>Types of buttons</SectionTitle>
+      <Text>There are multiple types of buttons that all accept the same options.</Text>
+
+      <Box mb="x6">
+        <SubsectionTitle>PrimaryButton</SubsectionTitle>
+        <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
+        <PrimaryButton>Create project</PrimaryButton>
+        <Highlight className="js">
+          {"<PrimaryButton>Create project</PrimaryButton>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>DangerButton</SubsectionTitle>
+        <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
+        <DangerButton>Create project</DangerButton>
+        <Highlight className="js">
+          {"<DangerButton>Create project</DangerButton>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>QuietButton</SubsectionTitle>
+        <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
+        <QuietButton>Learn more</QuietButton>
+        <Highlight className="js">
+          {"<QuietButton>Create project</QuietButton>"}
+        </Highlight>
+      </Box>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Text>Iconic Buttons come in two variations.</Text>
-      <Flex justifyContent="space-around" alignItems="center">
-        <Flex justifyContent="center" alignItems="center" flexDirection="column">
-          <IconicButton icon="delete" labelVisibility="hover">Delete</IconicButton>
-          <Text fontSize="small" mt="x1">Label exposed on hover</Text>
-        </Flex>
-        <Flex justifyContent="center" alignItems="center" flexDirection="column">
-          <IconicButton icon="delete" labelVisibility="always">Delete</IconicButton>
-          <Text fontSize="small" mt="x1">Permanently exposed label</Text>
-        </Flex>
-      </Flex>
-    </DocSection>
+      <Text>The following variations are available to all button components.</Text>
 
-    <DocSection>
-      <SectionTitle>States</SectionTitle>
-      <Text>All buttons can be disabled. When a button is disabled, it's greyed out and unable to be clicked.</Text>
-      <Flex justifyContent="space-between" alignItems="center">
-        <Button disabled>Create project</Button>
-        <PrimaryButton disabled>Create project</PrimaryButton>
-        <DangerButton disabled>Delete project</DangerButton>
-        <QuietButton disabled>Edit project</QuietButton>
-        <IconicButton icon="delete" labelVisibility="hover" disabled>Delete</IconicButton>
-      </Flex>
+      <Box mb="x6">
+        <SubsectionTitle>Small</SubsectionTitle>
+        <Button size="small">Read more</Button>
+        <Highlight className="js">
+          {"<Button size=\"small\">Read more</Button>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Medium</SubsectionTitle>
+        <Button size="medium">Read more</Button>
+        <Highlight className="js">
+          {"<Button size=\"medium\">Read more</Button>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Large</SubsectionTitle>
+        <Button size="large">Read more</Button>
+        <Highlight className="js">
+          {"<Button size=\"large\">Read more</Button>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Full Width</SubsectionTitle>
+        <Button fullWidth>Read more</Button>
+        <Highlight className="js">
+          {"<Button fullWidth>Full Width</Button>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Disabled</SubsectionTitle>
+        <Flex justifyContent="space-between" alignItems="center">
+          <Button disabled>Create project</Button>
+          <PrimaryButton disabled>Create project</PrimaryButton>
+          <DangerButton disabled>Delete project</DangerButton>
+          <QuietButton disabled>Edit project</QuietButton>
+        </Flex>
+        <Highlight className="js">
+          {"<Button disabled>Create project</Button>"}
+        </Highlight>
+      </Box>
+
     </DocSection>
 
     <DocSection>
@@ -112,5 +119,42 @@ export default () => (
       <CheckList>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></CheckList>
       <CheckList>Always use sentence case</CheckList>
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>Props</SectionTitle>
+      <table>
+        <thead>
+          <tr>
+            <td>Prop</td>
+            <td>Type</td>
+            <td>Default value</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>size</td>
+            <td>String</td>
+            <td>medium</td>
+            <td>Accepts small, medium, large or fullWidth</td>
+          </tr>
+          <tr>
+            <td>disabled</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Marks the button as disabled and unable to be activated</td>
+          </tr>
+        </tbody>
+      </table>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <Link href="https://storybook.nulogy.design/">Storybook</Link>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <Link>Iconic button</Link>
+    </DocSection>
+
   </Layout>
 );
