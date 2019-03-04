@@ -21,16 +21,16 @@ const BaseHeader = ({
     <Branding />
     <nav>
       <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
+        <Flex alignItems="center">
+          <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
+        </Flex>
         <Flex>
-          <Flex alignItems="center">
-            <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
-          </Flex>
           <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } } flexGrow={ { small: "0", medium: "0", large: "1" } }>
             <HeaderSearch />
           </Flex>
+          <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
+          <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
         </Flex>
-        <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
-        <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
       </Flex>
     </nav>
   </header>
