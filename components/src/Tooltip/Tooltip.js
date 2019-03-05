@@ -213,39 +213,48 @@ class Tooltip extends React.Component {
     document.removeEventListener("keydown", this.escFunction, false);
   }
 
-  getTooltipProps = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-    onClick: () => (this.showTooltip()),
-  })
+  getTooltipProps() {
+    return ({
+      onFocus: () => (this.showTooltip()),
+      onBlur: () => (this.hideTooltip()),
+      onMouseEnter: () => (this.showTooltip()),
+      onMouseLeave: () => (this.hideTooltip()),
+      onClick: () => (this.showTooltip()),
+    });
+  }
 
-  getElementProps = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-  })
 
-  clearScheduled = () => {
+  getElementProps() {
+    return ({
+      onFocus: () => (this.showTooltip()),
+      onBlur: () => (this.hideTooltip()),
+      onMouseEnter: () => (this.showTooltip()),
+      onMouseLeave: () => (this.hideTooltip()),
+    });
+  }
+
+  tooltipEventHandlers() {
+    return ({
+      onFocus: () => (this.showTooltip()),
+      onBlur: () => (this.hideTooltip()),
+      onMouseEnter: () => (this.showTooltip()),
+      onMouseLeave: () => (this.hideTooltip()),
+    });
+  }
+
+  triggerEventHandlers() {
+    return ({
+      onFocus: () => (this.showTooltip()),
+      onBlur: () => (this.hideTooltip()),
+      onMouseEnter: () => (this.showTooltip()),
+      onMouseLeave: () => (this.hideTooltip()),
+    });
+  }
+
+  clearScheduled() {
     clearTimeout(this.hideTimeoutID);
     clearTimeout(this.showTimeoutID);
-  };
-
-  tooltipEventHandlers = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-  })
-
-  triggerEventHandlers = () => ({
-    onFocus: () => (this.showTooltip()),
-    onBlur: () => (this.hideTooltip()),
-    onMouseEnter: () => (this.showTooltip()),
-    onMouseLeave: () => (this.hideTooltip()),
-  })
+  }
 
   hideTooltip(skipTimer) {
     this.clearScheduled();
