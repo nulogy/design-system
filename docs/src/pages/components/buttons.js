@@ -14,17 +14,14 @@ export default () => (
     <Helmet>
       <title>Buttons</title>
     </Helmet>
-    <Box
-      pt="x4"
-      mb="x6"
-    >
-      <Title m="none">Buttons</Title>
+    <Box pt="x4" mb="x6">
+      <Title mb="none">Buttons</Title>
       <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
     </Box>
     <DocSection>
       <Button>Create project</Button>
       <Highlight className="jsx">
-        {`import {Button} from @nulogy-components;
+        {`import { Button } from @nulogy-components;
 
 <Button>Create project</Button>
 `}
@@ -39,7 +36,9 @@ export default () => (
         <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
         <PrimaryButton>Create project</PrimaryButton>
         <Highlight className="js">
-          {"<PrimaryButton>Create project</PrimaryButton>"}
+          {`import { PrimaryButton } from @nulogy-components;
+
+<PrimaryButton>Create project</PrimaryButton>`}
         </Highlight>
       </Box>
 
@@ -48,7 +47,9 @@ export default () => (
         <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
         <DangerButton>Create project</DangerButton>
         <Highlight className="js">
-          {"<DangerButton>Create project</DangerButton>"}
+          {`import { DangerButton } from @nulogy-components;
+
+<DangerButton>Create project</DangerButton>`}
         </Highlight>
       </Box>
 
@@ -57,7 +58,9 @@ export default () => (
         <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
         <QuietButton>Learn more</QuietButton>
         <Highlight className="js">
-          {"<QuietButton>Create project</QuietButton>"}
+          {`import { QuietButton } from @nulogy-components;
+
+<QuietButton>Create project</QuietButton>`}
         </Highlight>
       </Box>
     </DocSection>
@@ -149,12 +152,11 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/">Storybook</Link>
+      <Link href="https://storybook.nulogy.design/?selectedKind=Buttons">View in Storybook</Link>
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <Link>Iconic button</Link>
     </DocSection>
-
   </Layout>
 );
