@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Icon, Box, Flex, SectionTitle, Title, Link,
+  Icon, Box, Flex, SectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
@@ -95,8 +95,10 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/?selectedKind=Icon">View in Storybook</Link>
-      <Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href="https://www.nngroup.com/articles/icon-usability/">Icon Usability.</Link></Text>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Icon">View in Storybook</Link></ListItem>
+        <ListItem><Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href="https://www.nngroup.com/articles/icon-usability/">Icon Usability.</Link></Text></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );
