@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
-/* eslint react/destructuring-assignment: 0 */
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -194,6 +193,7 @@ const Arrow = styled.div(
   }),
 );
 
+/* eslint-disable react/destructuring-assignment */
 class Tooltip extends React.Component {
   constructor(props) {
     super(props);
@@ -302,6 +302,8 @@ class Tooltip extends React.Component {
     );
   }
 }
+/* eslint-enable react/destructuring-assignment */
+
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
