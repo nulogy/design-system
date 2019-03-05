@@ -110,8 +110,6 @@ exports[`Storyshots Form With form sections without titles 1`] = `ReactWrapper {
 
 exports[`Storyshots Form Without title 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Header Header 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Header Validation Header Validation 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Header Validation With message only 1`] = `ReactWrapper {}`;
