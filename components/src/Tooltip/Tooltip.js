@@ -200,17 +200,9 @@ class Tooltip extends React.Component {
     this.state = {
       open: false,
     };
-    this.escFunction = this.escFunction.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
     this.showTooltip = this.showTooltip.bind(this);
-  }
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.escFunction, false);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.escFunction, false);
   }
 
   tooltipEventHandlers() {
@@ -219,6 +211,7 @@ class Tooltip extends React.Component {
       onBlur: () => (this.hideTooltip()),
       onMouseEnter: () => (this.showTooltip()),
       onMouseLeave: () => (this.hideTooltip()),
+      onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
@@ -228,6 +221,7 @@ class Tooltip extends React.Component {
       onBlur: () => (this.hideTooltip()),
       onMouseEnter: () => (this.showTooltip()),
       onMouseLeave: () => (this.hideTooltip()),
+      onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
@@ -250,7 +244,8 @@ class Tooltip extends React.Component {
     this.showTimeoutID = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
   }
 
-  escFunction(event) {
+  handleKeyDown(event) {
+    console.log("yo")
     if (event.keyCode === 27) {
       this.hideTooltip(true);
     }
