@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  style,
   color,
   space,
   width,
@@ -17,6 +18,8 @@ import {
 } from "styled-system";
 import theme from "../theme";
 
+const flexGrow = style({ prop: "flexGrow" });
+
 const Box = styled.div(
   color,
   space,
@@ -28,6 +31,7 @@ const Box = styled.div(
   boxShadow,
   textAlign,
   order,
+  flexGrow,
   height,
   minHeight,
   maxHeight,
@@ -45,6 +49,7 @@ Box.propTypes = {
   ...boxShadow.propTypes,
   ...textAlign.propTypes,
   ...order.propTypes,
+  ...flexGrow.propTypes,
   ...height.propTypes,
   ...minHeight.propTypes,
   ...maxHeight.propTypes,
