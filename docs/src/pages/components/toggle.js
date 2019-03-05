@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Toggle, Link,
 } from "@nulogy/components";
 import {
-  DocText as Text, CheckList, Layout, Intro, DocSection,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -20,7 +20,7 @@ export default () => (
     <DocSection>
       <Toggle onText="On" offText="Off" />
       <Highlight className="jsx">
-          {`import { Toggle } from @nulogy/components;
+        {`import { Toggle } from @nulogy/components;
 
 <Toggle onText="On" offText="Off" />`}
       </Highlight>
@@ -31,14 +31,14 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Toggle onText="On" offText="Off" disabled />
         <Highlight className="jsx">
-          {`<Toggle onText="On" offText="Off" disabled />`}
+          {"<Toggle onText=\"On\" offText=\"Off\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Toggled by default</SubsectionTitle>
         <Toggle onText="On" offText="Off" defaultToggled="true" />
         <Highlight className="jsx">
-          {`<Toggle onText="On" offText="Off" defaultToggled="true" />`}
+          {"<Toggle onText=\"On\" offText=\"Off\" defaultToggled=\"true\" />"}
         </Highlight>
       </Box>
     </DocSection>
@@ -54,7 +54,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>defaultToggled</td>
             <td>Boolean</td>
             <td>false</td>

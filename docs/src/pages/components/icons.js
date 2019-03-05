@@ -33,9 +33,9 @@ export default () => (
     </Box>
 
     <DocSection>
-    <Icon icon="user" />
-    <Highlight className="jsx">
-          {`import { Icon } from @nulogy-components;
+      <Icon icon="user" />
+      <Highlight className="jsx">
+        {`import { Icon } from @nulogy-components;
 
 <Icon icon="user" />`}
       </Highlight>
@@ -65,7 +65,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>color</td>
             <td>String</td>
             <td>currentcolor</td>

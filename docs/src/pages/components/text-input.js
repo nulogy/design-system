@@ -2,12 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, Flex, SectionTitle, SubsectionTitle, Title, Input, Link,
+  Box, SectionTitle, SubsectionTitle, Title, Input, Link,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Layout, Intro, DocSection, CheckList,
 } from "../../components";
-import basic from "../../images/text-input/text-input-basic.png";
 
 export default () => (
   <Layout>
@@ -19,7 +18,7 @@ export default () => (
       <Intro>An input field that users can type into.</Intro>
     </Box>
     <DocSection>
-    <Input placeholder="I'm an input" />
+      <Input placeholder="I'm an input" />
       <Highlight className="jsx">
         {`import { Input } from @nulogy/components;
 
@@ -37,14 +36,14 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Input placeholder="I'm an input" disabled />
         <Highlight className="jsx">
-        {`<Input placeholder="I'm an input" disabled />`}
+          {"<Input placeholder=\"I'm an input\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Input placeholder="I'm an input" error />
         <Highlight className="jsx">
-          {`<Input error />`}
+          {"<Input error />"}
         </Highlight>
       </Box>
     </DocSection>

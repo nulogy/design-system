@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, Link, SectionTitle, SubsectionTitle, Title, Radio
+  Box, Link, SectionTitle, SubsectionTitle, Title, Radio,
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -20,12 +20,12 @@ export default () => (
     <DocSection>
       <Radio labelText="Radio button" />
       <Highlight className="jsx">
-          {`import { Radio } from @nulogy-components;
+        {`import { Radio } from @nulogy-components;
 
 <Radio labelText="Radio button" />`}
       </Highlight>
     </DocSection>
-      <DocSection>
+    <DocSection>
       <SectionTitle>Use when</SectionTitle>
       <CheckList>Users need to make a single choice from a set of mutually exclusive options</CheckList>
       <CheckList>In place of a dropdown when it would be beneficial to see all items up front</CheckList>
@@ -36,21 +36,21 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Radio labelText="Radio button" disabled />
         <Highlight className="jsx">
-          {`<Radio labelText="Radio button" disabled />`}
+          {"<Radio labelText=\"Radio button\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Radio labelText="Radio button" error />
         <Highlight className="jsx">
-          {`<Radio labelText="Radio button" error />`}
+          {"<Radio labelText=\"Radio button\" error />"}
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>Checked</SubsectionTitle>
-        <Radio labelText="Radio button" defaultChecked="true"/>
+        <Radio labelText="Radio button" defaultChecked="true" />
         <Highlight className="jsx">
-          {`<Radio labelText="Radio button" defaultChecked="true" />`}
+          {"<Radio labelText=\"Radio button\" defaultChecked=\"true\" />"}
         </Highlight>
       </Box>
     </DocSection>

@@ -71,7 +71,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>defaultChecked</td>
             <td>Boolean</td>
             <td>false</td>
