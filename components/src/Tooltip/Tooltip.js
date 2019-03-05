@@ -245,7 +245,6 @@ class Tooltip extends React.Component {
   }
 
   handleKeyDown(event) {
-    console.log("yo")
     if (event.keyCode === 27) {
       this.hideTooltip(true);
     }
