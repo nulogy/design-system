@@ -85,6 +85,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
+      <Link href="https://storybook.nulogy.design/">View in Storybook</Link>
     </DocSection>
 
   </Layout>

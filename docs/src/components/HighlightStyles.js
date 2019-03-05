@@ -3,7 +3,7 @@ import theme from "../../../components/src/theme";
 
 const HighlightStyles = createGlobalStyle`
 
-.hljs {
+.hljs, code {
   display: block;
   overflow-x: auto;
   font-family: ${theme.fonts.mono};

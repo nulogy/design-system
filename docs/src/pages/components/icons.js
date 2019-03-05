@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Highlight from "react-highlight";
 import {
-  Icon, Box, Flex, SectionTitle, Title, Link,
+  Icon, Box, Flex, SectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
@@ -26,13 +27,19 @@ export default () => (
     <Helmet>
       <title>Icons</title>
     </Helmet>
-    <Box
-      bg="whiteGrey" p="x4" borderRadius={ 1 }
-      mb="x6"
-    >
-      <Title m="none">Icons</Title>
+    <Box mt="x2" mb="x6">
+      <Title mb="none">Icons</Title>
       <Intro>Icons can be used alongside text to help assist users in finding certain actions on a page. </Intro>
     </Box>
+
+    <DocSection>
+      <Icon icon="user" />
+      <Highlight className="jsx">
+        {`import { Icon } from @nulogy-components;
+
+<Icon icon="user" />`}
+      </Highlight>
+    </DocSection>
 
     <DocSection>
       <SectionTitle>Avaliable Icons</SectionTitle>
@@ -45,9 +52,53 @@ export default () => (
       <SectionTitle>Guidelines</SectionTitle>
       <CheckList>Avoid using icons without labels unless the meaning is ubiquitous, like print</CheckList>
     </DocSection>
+
     <DocSection>
-      <SectionTitle>Related</SectionTitle>
-      <Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href="https://www.nngroup.com/articles/icon-usability/">Icon Usability.</Link></Text>
+      <SectionTitle>Props</SectionTitle>
+      <table>
+        <thead>
+          <tr>
+            <td>Prop</td>
+            <td>Type</td>
+            <td>Default</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>color</td>
+            <td>String</td>
+            <td>currentcolor</td>
+            <td>The icon's colour, if different than parent's text colour.</td>
+          </tr>
+          <tr>
+            <td>icon</td>
+            <td>String</td>
+            <td><em>Required</em></td>
+            <td>The icon you'd like to display. Accepts icons listed in <em>Available Icons</em> above.</td>
+          </tr>
+          <tr>
+            <td>size</td>
+            <td>Number</td>
+            <td>24px</td>
+            <td>Size of the icon.</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>String</td>
+            <td>null</td>
+            <td>Alternative text to be read by assistive devices. Leave blank if icon is purely decorative.</td>
+          </tr>
+        </tbody>
+      </table>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Icon">View in Storybook</Link></ListItem>
+        <ListItem><Text>For more information on icon usability and recognition, see this study from Nielsen Norman Group: <Link href="https://www.nngroup.com/articles/icon-usability/">Icon Usability.</Link></Text></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

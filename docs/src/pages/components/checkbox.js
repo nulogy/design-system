@@ -13,17 +13,14 @@ export default () => (
     <Helmet>
       <title>Checkbox</title>
     </Helmet>
-    <Box
-      mt="x2"
-      mb="x6"
-    >
+    <Box mt="x2" mb="x6">
       <Title mb="none">Checkbox</Title>
       <Intro>Checkboxes allow users to select any number of options from a list.</Intro>
     </Box>
     <DocSection>
       <Checkbox labelText="I am a checkbox" />
       <Highlight className="jsx">
-        {`import {Checkbox} from @nulogy-components;
+        {`import { Checkbox } from @nulogy-components;
 
 <Checkbox labelText="I am a checkbox" />
 `}
@@ -75,10 +72,10 @@ export default () => (
         </thead>
         <tbody>
           <tr>
-            <td>labelText</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>A label for your option</td>
+            <td>defaultChecked</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Makes the field checked by default</td>
           </tr>
           <tr>
             <td>disabled</td>
@@ -93,16 +90,10 @@ export default () => (
             <td>Marks the field as invalid and adds a red border</td>
           </tr>
           <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require input before the form will submit</td>
-          </tr>
-          <tr>
-            <td>defaultChecked</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field checked by default</td>
+            <td>labelText</td>
+            <td>String</td>
+            <td><em>Required</em></td>
+            <td>A label for your option</td>
           </tr>
           <tr>
             <td>onChange</td>
@@ -110,13 +101,18 @@ export default () => (
             <td />
             <td />
           </tr>
+          <tr>
+            <td>required</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Makes the field require input before the form will submit</td>
+          </tr>
         </tbody>
       </table>
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/">Storybook</Link>
+      <Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link>
     </DocSection>
-
   </Layout>
 );
