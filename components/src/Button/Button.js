@@ -44,7 +44,6 @@ const BaseButton = ({
   ...props
 }) => {
   const { lineHeights: { smallTextCompressed } } = theme;
-
   return (
     <button { ...omit(props, "fullWidth") }>
       {(icon && iconSide === "left")
