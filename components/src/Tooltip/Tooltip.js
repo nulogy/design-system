@@ -213,26 +213,6 @@ class Tooltip extends React.Component {
     document.removeEventListener("keydown", this.escFunction, false);
   }
 
-  getTooltipProps() {
-    return ({
-      onFocus: () => (this.showTooltip()),
-      onBlur: () => (this.hideTooltip()),
-      onMouseEnter: () => (this.showTooltip()),
-      onMouseLeave: () => (this.hideTooltip()),
-      onClick: () => (this.showTooltip()),
-    });
-  }
-
-
-  getElementProps() {
-    return ({
-      onFocus: () => (this.showTooltip()),
-      onBlur: () => (this.hideTooltip()),
-      onMouseEnter: () => (this.showTooltip()),
-      onMouseLeave: () => (this.hideTooltip()),
-    });
-  }
-
   tooltipEventHandlers() {
     return ({
       onFocus: () => (this.showTooltip()),
