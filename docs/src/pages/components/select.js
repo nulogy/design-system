@@ -29,7 +29,7 @@ export default () => (
 
       <Select placeholder="Please select inventory status" options={ options } />
       <Highlight className="js">
-        {`import {Select} from @nulogy-components;
+        {`import { Select } from @nulogy-components;
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -48,7 +48,6 @@ const options = [
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <SubsectionTitle>Disabled</SubsectionTitle>
-
       <Box mb="x3">
         <Select placeholder="Please select inventory status" options={ options } disabled />
         <Highlight className="jsx">
