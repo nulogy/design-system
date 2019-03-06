@@ -43,7 +43,7 @@ export default () => (
 
 
     <DocSection>
-      <SectionTitle>When to use</SectionTitle>
+      <SectionTitle>Use when</SectionTitle>
       <CheckList>Use Header Validation whenever a form has returned with errors so that users don't need to scroll around the form to see what needs to be fixed.</CheckList>
     </DocSection>
 

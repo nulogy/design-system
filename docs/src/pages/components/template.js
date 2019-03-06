@@ -32,7 +32,7 @@ export default () => (
 
 
     <DocSection>
-      <SectionTitle>When to use</SectionTitle>
+      <SectionTitle>Use when</SectionTitle>
     </DocSection>
 
     <DocSection>

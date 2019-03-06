@@ -30,7 +30,7 @@ export default () => (
 
 
     <DocSection>
-      <SectionTitle>When to use</SectionTitle>
+      <SectionTitle>Use when</SectionTitle>
       <CheckList>When a possible action would best be communicated via iconography</CheckList>
     </DocSection>
 
