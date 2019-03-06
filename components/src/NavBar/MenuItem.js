@@ -118,6 +118,23 @@ class MenuItem extends React.Component {
     this.menuItemRefs = [];
   }
 
+  setSubMenuState(newState, skipTimer = false) {
+    this.clearScheduled();
+    if (!skipTimer) {
+      this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: newState }), this.props.showDelay);
+    } else {
+      this.setState({ subMenuOpen: newState });
+    }
+  }
+
+  hideSubMenu(skipTimer) {
+    this.setSubMenuState(false, skipTimer);
+  }
+
+  showSubMenu(skipTimer) {
+    this.setSubMenuState(true, skipTimer);
+  }
+
   focusFirstItem() {
     this.setState({ focusIndex: 0 });
   }
@@ -207,24 +224,6 @@ class MenuItem extends React.Component {
         break;
       default:
         break;
-    }
-  }
-
-  hideSubMenu(skipTimer) {
-    this.clearScheduled();
-    if (!skipTimer) {
-      this.hideTimeoutID = setTimeout(() => this.setState({ subMenuOpen: false }), this.props.hideDelay);
-    } else {
-      this.setState({ subMenuOpen: false });
-    }
-  }
-
-  showSubMenu(skipTimer) {
-    this.clearScheduled();
-    if (!skipTimer) {
-      this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
-    } else {
-      this.setState({ subMenuOpen: true });
     }
   }
 
