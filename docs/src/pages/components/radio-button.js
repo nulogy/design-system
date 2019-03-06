@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, Link, SectionTitle, SubsectionTitle, Title, Radio,
+  Box, Link, SectionTitle, SubsectionTitle, Title, Radio, ListItem,
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -107,7 +107,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/?selectedKind=Radio">View in storybook</Link>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Radio">View in storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );

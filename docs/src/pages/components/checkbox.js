@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Checkbox, Link,
+  Box, SectionTitle, SubsectionTitle, Title, Checkbox, Link, ListItem,
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -66,7 +66,7 @@ export default () => (
           <tr>
             <td>Prop</td>
             <td>Type</td>
-            <td>Default value</td>
+            <td>Default</td>
             <td>Description</td>
           </tr>
         </thead>
@@ -112,7 +112,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );
