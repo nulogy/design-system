@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
+  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection, CheckList,
 } from "../../components";
 
 export default () => (

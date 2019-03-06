@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
