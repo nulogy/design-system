@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, SectionTitle, SubsectionTitle, Title, Link,
+  Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -130,7 +130,7 @@ export default () => (
           <tr>
             <td>Prop</td>
             <td>Type</td>
-            <td>Default value</td>
+            <td>Default</td>
             <td>Description</td>
           </tr>
         </thead>
@@ -152,7 +152,12 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/?selectedKind=Buttons">View in Storybook</Link>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Buttons">View in Storybook</Link></ListItem>
     </DocSection>
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem><Link href="/components/iconic-button">Iconic button</Link></ListItem>
+    </DocSection>
+
   </Layout>
 );
