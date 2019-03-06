@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
 } from "@nulogy/components";
 import {
   DocText as Text, Layout, Intro, DocSection, CheckList,
