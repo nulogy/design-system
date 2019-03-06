@@ -105,7 +105,7 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/">Storybook</Link></ListItem>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Select">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );
