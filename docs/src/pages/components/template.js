@@ -4,7 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link,
+  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
   DocText as Text, Layout, Intro, DocSection, CheckList,
@@ -64,7 +64,7 @@ export default () => (
           <tr>
             <td>Prop</td>
             <td>Type</td>
-            <td>Default value</td>
+            <td>Default</td>
             <td>Description</td>
           </tr>
         </thead>
