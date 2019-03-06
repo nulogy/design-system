@@ -38,23 +38,23 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Custom size</SubsectionTitle>
-        <Textarea rows={2} />
+        <Textarea rows={ 2 } />
         <Highlight className="jsx">
-          {`<Textarea rows={2} />`}
+          {"<Textarea rows={2} />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Textarea disabled />
         <Highlight className="jsx">
-          {`<Textarea disabled />`}
+          {"<Textarea disabled />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Error</SubsectionTitle>
         <Textarea error />
         <Highlight className="jsx">
-          {`<Textarea error />`}
+          {"<Textarea error />"}
         </Highlight>
       </Box>
     </DocSection>
@@ -71,7 +71,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>disabled</td>
             <td>Boolean</td>
             <td>false</td>
