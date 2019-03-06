@@ -77,25 +77,25 @@ const options = [
         </thead>
         <tbody>
           <tr>
-            <td>Placeholder</td>
+            <td>placeholder</td>
             <td>String</td>
             <td>""</td>
             <td>A description of what the Select box contains</td>
           </tr>
           <tr>
-            <td>Disabled</td>
+            <td>disabled</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Marks the field as disabled and disallows user input</td>
           </tr>
           <tr>
-            <td>Error</td>
+            <td>error</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Marks the field as invalid and adds a red border</td>
           </tr>
           <tr>
-            <td>Required</td>
+            <td>required</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Makes the field require input before the form will submit</td>
