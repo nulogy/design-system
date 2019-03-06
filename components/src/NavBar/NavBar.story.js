@@ -25,7 +25,7 @@ const menuData = {
         href: "/",
         subText: "subText",
       },
-      "Cariers": {
+      "Carriers": {
         href: "/",
         subText: "subText",
       },
@@ -35,7 +35,7 @@ const menuData = {
         href: "/",
         subText: "subText",
       },
-      "Site cofiguration": {
+      "Site configuration": {
         href: "/",
         subText: "subText",
       },
