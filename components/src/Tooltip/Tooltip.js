@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
+import { Box } from "ComponentsRoot";
 import theme from "../theme";
 
 const tooltipStyles = {
@@ -33,7 +34,7 @@ const getTooltipMargin = placement => {
   }
 };
 
-const TooltipContainer = styled.div({
+const TooltipContainer = styled(Box)({
   color: tooltipStyles.textColor,
   display: "flex",
   flexDirection: "column",
@@ -271,6 +272,7 @@ class Tooltip extends React.Component {
             ref, style, placement, arrowProps,
           }) => (
             <TooltipContainer
+              maxWidth={ this.props.maxWidth }
               open={ this.state.open }
               role="tooltip" id={ this.props.id }
               ref={ ref } position={ style } dataPlacement={ placement }
@@ -296,6 +298,7 @@ Tooltip.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fullWidth: PropTypes.bool,
+  maxWidth: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
@@ -303,6 +306,7 @@ Tooltip.defaultProps = {
   showDelay: "100",
   hideDelay: "350",
   fullWidth: false,
+  maxWidth: "256px",
 };
 
 export default Tooltip;

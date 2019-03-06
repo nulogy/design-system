@@ -33,6 +33,18 @@ storiesOf("Tooltip", module)
       </Tooltip>
     </Flex>
   ))
+  .add("with custom maxWidth", () => (
+    <Flex justifyContent="center" alignItems="center" height="200px">
+      <Tooltip
+        placement="bottom"
+        tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
+        id="tooltip1"
+        maxWidth="128px"
+      >
+        <Button> Button </Button>
+      </Tooltip>
+    </Flex>
+  ))
   .add("with placement", () => (
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
