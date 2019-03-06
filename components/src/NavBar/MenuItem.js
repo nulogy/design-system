@@ -119,31 +119,31 @@ class MenuItem extends React.Component {
   }
 
   focusFirstItem() {
-    this.setState({focusIndex: 0})
+    this.setState({ focusIndex: 0 });
   }
 
   focusLastItem() {
-    this.setState({focusIndex: this.props.children.length - 1})
+    this.setState({ focusIndex: this.props.children.length - 1 });
   }
 
   focusNextItem() {
-    var nextIndex = undefined;
-    if (this.state.focusIndex == this.props.children.length - 1) {
+    let nextIndex;
+    if (this.state.focusIndex === this.props.children.length - 1) {
       nextIndex = 0;
     } else {
       nextIndex = this.state.focusIndex + 1;
     }
-    this.setState({focusIndex: nextIndex})
+    this.setState({ focusIndex: nextIndex });
   }
 
   focusPrevItem() {
-    var prevIndex = undefined;
-    if (this.state.focusIndex == 0) {
+    let prevIndex;
+    if (this.state.focusIndex === 0) {
       prevIndex = this.props.children.length - 1;
     } else {
       prevIndex = this.state.focusIndex - 1;
     }
-    this.setState({focusIndex: prevIndex})
+    this.setState({ focusIndex: prevIndex });
   }
 
   subMenuEventHandlers() {

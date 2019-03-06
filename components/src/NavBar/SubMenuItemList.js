@@ -10,26 +10,35 @@ class BaseSubMenuItemList extends React.Component {
   }
 
   componentDidUpdate() {
-    if(this.props.focusIndex < this.props.children.length)
-    this.menuItemRefs[this.props.focusIndex].focus();
+    if (this.props.focusIndex < this.props.children.length) this.menuItemRefs[this.props.focusIndex].focus();
   }
 
   render() {
     return (
-      <ul className={this.props.className}>
-        {Object.entries(this.props.children).map((subMenuItem, index) => {
-        return (
+      <ul className={ this.props.className }>
+        {Object.entries(this.props.children).map((subMenuItem, index) => (
           React.cloneElement(subMenuItem[1], {
             ref: input => { this.menuItemRefs[index] = input; },
             key: subMenuItem[1].props.children,
             ...subMenuItem.props,
           })
-        );
-      })}
-    </ul>
-  )
+        ))}
+      </ul>
+    );
   }
 }
+
+BaseSubMenuItemList.propTypes = {
+  className: PropTypes.string,
+  focusIndex: PropTypes.number,
+  children: PropTypes.node,
+};
+
+BaseSubMenuItemList.defaultProps = {
+  className: null,
+  focusIndex: undefined,
+  children: null,
+};
 
 const SubMenuItemList = styled(BaseSubMenuItemList)({
   listStyle: "none",
