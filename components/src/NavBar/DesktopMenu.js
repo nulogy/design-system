@@ -13,13 +13,11 @@ const BaseDesktopMenu = ({
   <Box { ...props }>
     {Object.entries(menuData).map(menuItem => (
       <MenuItem key={ menuItem[0] } labelText={ menuItem[0] }>
-        <ul>
-          {Object.entries(menuItem[1]).map(subMenuItem => (
-            <SubMenuItem key={ subMenuItem[0] } href={ subMenuItem[1].href } subText={ subMenuItem[1].subText }>
-              { subMenuItem[0] }
-            </SubMenuItem>
-          ))}
-        </ul>
+        {Object.entries(menuItem[1]).map(subMenuItem => (
+          <SubMenuItem key={ subMenuItem[0] } href={ subMenuItem[1].href } subText={ subMenuItem[1].subText }>
+            { subMenuItem[0] }
+          </SubMenuItem>
+        ))}
       </MenuItem>
     ))}
   </Box>
@@ -37,11 +35,6 @@ const DesktopMenu = styled(BaseDesktopMenu)(
   {
     "button": {
       marginRight: theme.space.x1,
-    },
-    "ul": {
-      listStyle: "none",
-      paddingLeft: "0",
-      margin: "0",
     },
   }
 );

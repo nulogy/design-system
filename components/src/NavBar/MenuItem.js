@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
+import SubMenuItemList from "./SubMenuItemList";
 /* eslint react/destructuring-assignment: 0 */
 
 const subMenuStyles = {
@@ -89,32 +90,68 @@ const MenuItemButton = styled.button({
   },
 });
 
+const keyCode = Object.freeze({
+  "TAB": 9,
+  "RETURN": 13,
+  "ESC": 27,
+  "SPACE": 32,
+  "PAGEUP": 33,
+  "PAGEDOWN": 34,
+  "END": 35,
+  "HOME": 36,
+  "LEFT": 37,
+  "UP": 38,
+  "RIGHT": 39,
+  "DOWN": 40,
+});
+
 class MenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       subMenuOpen: false,
+      focusIndex: 0,
     };
-    this.escFunction = this.escFunction.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+    this.menuItemRefs = [];
   }
 
-  componentDidMount() {
-    document.addEventListener("keydown", this.escFunction, false);
+  focusFirstItem() {
+    this.setState({focusIndex: 0})
   }
 
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.escFunction, false);
+  focusLastItem() {
+    this.setState({focusIndex: this.props.children.length - 1})
+  }
+
+  focusNextItem() {
+    var nextIndex = undefined;
+    if (this.state.focusIndex == this.props.children.length - 1) {
+      nextIndex = 0;
+    } else {
+      nextIndex = this.state.focusIndex + 1;
+    }
+    this.setState({focusIndex: nextIndex})
+  }
+
+  focusPrevItem() {
+    var prevIndex = undefined;
+    if (this.state.focusIndex == 0) {
+      prevIndex = this.props.children.length - 1;
+    } else {
+      prevIndex = this.state.focusIndex - 1;
+    }
+    this.setState({focusIndex: prevIndex})
   }
 
   subMenuEventHandlers() {
     return ({
       onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
-      onMouseEnter: () => (this.showSubMenu()),
-      onMouseLeave: () => (this.hideSubMenu()),
       onClick: () => (this.showSubMenu()),
+      onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
@@ -122,6 +159,7 @@ class MenuItem extends React.Component {
     return ({
       onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
+      onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
@@ -130,9 +168,32 @@ class MenuItem extends React.Component {
     clearTimeout(this.showTimeoutID);
   }
 
-  escFunction(event) {
-    if (event.keyCode === 27) {
-      this.hideSubMenu(true);
+  handleKeyDown(event) {
+    console.log(event.keyCode)
+    switch (event.keyCode) {
+      case keyCode.ESC:
+        this.hideSubMenu(true);
+        break;
+      case keyCode.UP:
+        if(this.state.subMenuOpen)
+        {
+          this.focusPrevItem();
+        } else {
+          this.showSubMenu(true);
+          this.focusLastItem();
+        }
+        break;
+        case keyCode.DOWN:
+        if(this.state.subMenuOpen)
+        {
+          this.focusNextItem();
+        } else {
+          this.showSubMenu(true);
+          this.focusFirstItem();
+        }
+          break;
+      default:
+        break;
     }
   }
 
@@ -145,9 +206,13 @@ class MenuItem extends React.Component {
     }
   }
 
-  showSubMenu() {
+  showSubMenu(skipTimer) {
     this.clearScheduled();
-    this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
+    if (!skipTimer) {
+      this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
+    } else {
+      this.setState({ subMenuOpen: true });
+    } 
   }
 
   render() {
@@ -167,7 +232,9 @@ class MenuItem extends React.Component {
               ref={ ref } position={ style } placement={ placement }
               { ...this.subMenuEventHandlers() }
             >
-              {this.props.children}
+              <SubMenuItemList focusIndex={ this.state.focusIndex }>
+                {this.props.children}
+              </SubMenuItemList>
               <Arrow ref={ arrowProps.ref } style={ arrowProps.style } />
             </SubMenu>
           )}
