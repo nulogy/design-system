@@ -169,29 +169,42 @@ class MenuItem extends React.Component {
   }
 
   handleKeyDown(event) {
-    console.log(event.keyCode)
     switch (event.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
       case keyCode.UP:
-        if(this.state.subMenuOpen)
-        {
+        if (this.state.subMenuOpen) {
           this.focusPrevItem();
         } else {
           this.showSubMenu(true);
           this.focusLastItem();
         }
         break;
-        case keyCode.DOWN:
-        if(this.state.subMenuOpen)
-        {
+      case keyCode.DOWN:
+        if (this.state.subMenuOpen) {
           this.focusNextItem();
         } else {
           this.showSubMenu(true);
           this.focusFirstItem();
         }
-          break;
+        break;
+      case keyCode.ENTER:
+        if (!this.state.subMenuOpen) {
+          this.showSubMenu(true);
+          this.focusFirstItem();
+        }
+        break;
+      case keyCode.HOME:
+        if (this.state.subMenuOpen) {
+          this.focusFirstItem();
+        }
+        break;
+      case keyCode.END:
+        if (this.state.subMenuOpen) {
+          this.focusLastItem();
+        }
+        break;
       default:
         break;
     }
@@ -212,7 +225,7 @@ class MenuItem extends React.Component {
       this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: true }), this.props.showDelay);
     } else {
       this.setState({ subMenuOpen: true });
-    } 
+    }
   }
 
   render() {
