@@ -70,7 +70,7 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/components/headings" underline={ false }>Headings</Link></NavItem>
             <NavItem><Link href="/components/header-validation" underline={ false }>Header Validation</Link></NavItem>
             <NavItem><Link href="/components/iconic-button" underline={ false }>Iconic Button</Link></NavItem>
-            <NavItem><Link href="/components/icons" underline={ false }>Icons</Link></NavItem>
+            <NavItem><Link href="/components/icon" underline={ false }>Icon</Link></NavItem>
             <NavItem><Link href="/components/link" underline={ false }>Link</Link></NavItem>
             <NavItem><Link href="/components/list" underline={ false }>List</Link></NavItem>
             <NavItem><Link href="/components/radio-button" underline={ false }>Radio</Link></NavItem>
