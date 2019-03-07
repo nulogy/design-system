@@ -110,7 +110,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=HeaderValidation">View in Storybook</Link></ListItem>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Header%20Validation">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );
