@@ -157,6 +157,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem><Link href="/components/iconic-button">Iconic button</Link></ListItem>
+      <ListItem><Link href="/components/link">Link</Link></ListItem>
     </DocSection>
 
   </Layout>
