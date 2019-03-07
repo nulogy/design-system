@@ -15,7 +15,7 @@ export default () => (
     </Helmet>
     <Box pt="x4" mb="x6">
       <Title m="none">Flex</Title>
-      <Intro>A wrapper component for building layouts using Flexbox.</Intro>
+      <Intro>A wrapper component that extends <Link href="/components/Box">Box</Link> to create layouts using Flexbox.</Intro>
     </Box>
 
     <DocSection>
