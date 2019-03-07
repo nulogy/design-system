@@ -34,41 +34,41 @@ export default () => (
         <SubsectionTitle>Alignment</SubsectionTitle>
         <Text textAlign="right">Right-aligned text</Text>
         <Highlight className="js">
-          {`<Text textAlign="right">Right-aligned text</Text>`}
+          {"<Text textAlign=\"right\">Right-aligned text</Text>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Colour</SubsectionTitle>
         <Text color="blue">Blue text</Text>
         <Highlight className="js">
-          {`<Text color="blue">Blue text</Text>`}
+          {"<Text color=\"blue\">Blue text</Text>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Monospace</SubsectionTitle>
         <Text fontFamily="mono">Monospace text</Text>
         <Highlight className="js">
-          {`<Text fontFamily="mono">Monospace text</Text>`}
+          {"<Text fontFamily=\"mono\">Monospace text</Text>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Size</SubsectionTitle>
         <Text fontSize="largest">Text with a custom size</Text>
         <Highlight className="js">
-          {`<Text fontSize="large">Large text</Text>`}
+          {"<Text fontSize=\"large\">Large text</Text>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Weight</SubsectionTitle>
         <Text fontWeight="bold">Bold text</Text>
         <Highlight className="js">
-          {`<Text fontWeight="bold">Bold text</Text>`}
+          {"<Text fontWeight=\"bold\">Bold text</Text>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Line-height</SubsectionTitle>
-        <Text lineHeight={2}>Double-spaced text</Text>
-        <Text lineHeight={2}>Double-spaced text</Text>
+        <Text lineHeight={ 2 }>Double-spaced text</Text>
+        <Text lineHeight={ 2 }>Double-spaced text</Text>
         <Highlight className="js">
           {`<Text lineHeight={2}>Double-spaced text</Text>
 <Text>Double-spaced text</Text>`}
@@ -81,11 +81,11 @@ export default () => (
       <Text>All Text props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
       <Text>This example displays columns on small screens and rows on large ones.</Text>
       <Text color={ { small: "red", medium: "blue", large: "green" } }>Green text on large screens, blue on medium and red on small.</Text>
-        <Highlight className="js">
-          {`<Text color={{ small: "red", medium: "blue", large: "green"}}>
+      <Highlight className="js">
+        {`<Text color={{ small: "red", medium: "blue", large: "green"}}>
   Green text on large screens, blue on medium and red on small.
 </Text>`}
-        </Highlight>
+      </Highlight>
     </DocSection>
 
     <DocSection>
