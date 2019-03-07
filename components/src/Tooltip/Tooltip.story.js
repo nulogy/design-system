@@ -23,11 +23,23 @@ const Trigger = () => (
 
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
-    <Flex justifyContent="center" alignItems="center" height="200px">
+    <Flex p="x8">
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip!"
         id="tooltip1"
+      >
+        <Button> Button </Button>
+      </Tooltip>
+    </Flex>
+  ))
+  .add("with custom maxWidth", () => (
+    <Flex p="x8">
+      <Tooltip
+        placement="bottom"
+        tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
+        id="tooltip1"
+        maxWidth="128px"
       >
         <Button> Button </Button>
       </Tooltip>
