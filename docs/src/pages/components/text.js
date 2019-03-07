@@ -45,6 +45,22 @@ export default () => (
         </Highlight>
       </Box>
       <Box mb="x4">
+        <SubsectionTitle>Disabled</SubsectionTitle>
+        <Text disabled>Disabled text</Text>
+        <Highlight className="js">
+          {"<Text disabled>Disabled text</Text>"}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>Inline</SubsectionTitle>
+        <Text inline>Inline text </Text>
+        <Text inline>Doesn't cause a line break text</Text>
+        <Highlight className="js">
+          {`<Text inline>Inline text </Text>
+<Text inline>Doesn't cause a line break text</Text>`}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
         <SubsectionTitle>Monospace</SubsectionTitle>
         <Text fontFamily="mono">Monospace text</Text>
         <Highlight className="js">
@@ -101,62 +117,72 @@ export default () => (
         <tbody>
           <tr>
             <td>color</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
           </tr>
           <tr>
+            <td>disabled</td>
+            <td>String</td>
+            <td>Lightens text to imply that it's disabled</td>
+          </tr>
+          <tr>
             <td>fontSize</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets font size based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.fontSize</Link> object</td>
           </tr>
           <tr>
             <td>fontFamily</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets font family based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.fontFamily</Link> object</td>
           </tr>
           <tr>
+            <td>inline</td>
+            <td>Boolean</td>
+            <td>Displays text inline instead of as a block</td>
+          </tr>
+          <tr>
             <td>lineHeight</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets line height based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.lineHeight</Link> object</td>
           </tr>
           <tr>
             <td>textAlign</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets text-align to either left, center or right</td>
           </tr>
           <tr>
             <td>m</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
           </tr>
           <tr>
             <td>mt</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-top</td>
           </tr>
           <tr>
             <td>mr</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-right</td>
           </tr>
           <tr>
             <td>mb</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-bottom</td>
           </tr>
           <tr>
             <td>ml</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-left</td>
           </tr>
           <tr>
             <td>mx</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-left and margin-right</td>
           </tr>
           <tr>
             <td>my</td>
-            <td>string</td>
+            <td>String</td>
             <td>Sets margin-top and margin-bottom</td>
           </tr>
         </tbody>
