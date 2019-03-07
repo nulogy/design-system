@@ -55,6 +55,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
+      <Text>Because Flex is an extension of <Link href="/components/box">Box</Link> it accepts all the same props but adds the following:</Text>
       <table>
         <thead>
           <tr>
