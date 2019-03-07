@@ -15,7 +15,7 @@ export default () => (
     </Helmet>
     <Box pt="x4" mb="x6">
       <Title m="none">Headings</Title>
-      <Intro>There are three level of headings available.</Intro>
+      <Intro>There are three level of headings available to provide hierarchy in an application.</Intro>
     </Box>
 
     <DocSection>
