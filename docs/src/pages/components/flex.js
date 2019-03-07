@@ -67,6 +67,12 @@ export default () => (
         </thead>
         <tbody>
           <tr>
+            <td>alignItems</td>
+            <td>String</td>
+            <td>stretch</td>
+            <td>Sets align-items. Accepts flex-start, flex-end, center, or stretch.</td>
+          </tr>
+          <tr>
             <td>flexDirection</td>
             <td>String</td>
             <td>row</td>
@@ -83,12 +89,6 @@ export default () => (
             <td>String</td>
             <td>flex-start</td>
             <td>Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly</td>
-          </tr>
-          <tr>
-            <td>alignItems</td>
-            <td>String</td>
-            <td>stretch</td>
-            <td>Sets align-items. Accepts flex-start, flex-end, center, or stretch.</td>
           </tr>
         </tbody>
       </table>
