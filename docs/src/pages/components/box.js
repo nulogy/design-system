@@ -106,6 +106,26 @@ export default () => (
             <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
           </tr>
           <tr>
+            <td>display</td>
+            <td>string</td>
+            <td>Sets css display property.</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>string</td>
+            <td>Sets a height on the box.</td>
+          </tr>
+          <tr>
+            <td>minHeight</td>
+            <td>string</td>
+            <td>Sets a height on the box.</td>
+          </tr>
+          <tr>
+            <td>maxHeight</td>
+            <td>string</td>
+            <td>Sets a maxHeight on the box.</td>
+          </tr>
+          <tr>
             <td>m</td>
             <td>string</td>
             <td>Sets margin based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
@@ -139,6 +159,16 @@ export default () => (
             <td>my</td>
             <td>string</td>
             <td>Sets margin-top and margin-bottom</td>
+          </tr>
+          <tr>
+            <td>order</td>
+            <td>number</td>
+            <td>Sets the order to be used with <Link href="/components/flex">Flex</Link> component</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>string</td>
+            <td>Sets css position property.</td>
           </tr>
           <tr>
             <td>p</td>
@@ -177,8 +207,18 @@ export default () => (
           </tr>
           <tr>
             <td>width</td>
-            <td>string, number</td>
+            <td>string</td>
             <td>Sets the width of the element</td>
+          </tr>
+          <tr>
+            <td>minWidth</td>
+            <td>string</td>
+            <td>Sets the minWidth of the element</td>
+          </tr>
+          <tr>
+            <td>maxWidth</td>
+            <td>string</td>
+            <td>Sets the maxWidth of the element</td>
           </tr>
         </tbody>
       </table>
