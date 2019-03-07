@@ -90,5 +90,10 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Link">View in Storybook</Link></ListItem>
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
+    </DocSection>    
   </Layout>
 );
