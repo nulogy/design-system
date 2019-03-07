@@ -19,7 +19,7 @@ export default () => (
     </Box>
 
     <DocSection>
-      <List>
+      <List mb="x3">
         <ListItem>List item</ListItem>
         <ListItem>List item</ListItem>
         <ListItem>List item</ListItem>
@@ -40,7 +40,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Compact</SubsectionTitle>
-        <List compact>
+        <List mb="x3" compact>
           <ListItem>List item</ListItem>
           <ListItem>List item</ListItem>
           <ListItem>List item</ListItem>
@@ -79,7 +79,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/selectedKind=">View in Storybook</Link></ListItem>
+      <ListItem><Link href="https://storybook.nulogy.design/selectedKind=List">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );

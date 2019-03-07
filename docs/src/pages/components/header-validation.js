@@ -19,7 +19,7 @@ export default () => (
     </Box>
 
     <DocSection>
-      <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+      <HeaderValidation message="Instructions and description of an error" title="Error has occured ..." mb="x3">
         <List compact>
           <ListItem>Affected field</ListItem>
           <ListItem>Unmet criteria</ListItem>
