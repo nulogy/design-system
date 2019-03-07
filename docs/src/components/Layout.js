@@ -67,6 +67,7 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/components/checkbox" underline={ false }>Checkbox</Link></NavItem>
             <NavItem><Link href="/components/flex" underline={ false }>Flex</Link></NavItem>
             <NavItem><Link href="/components/form" underline={ false }>Form</Link></NavItem>
+            <NavItem><Link href="/components/headings" underline={ false }>Headings</Link></NavItem>
             <NavItem><Link href="/components/header-validation" underline={ false }>Header Validation</Link></NavItem>
             <NavItem><Link href="/components/iconic-button" underline={ false }>Iconic Button</Link></NavItem>
             <NavItem><Link href="/components/icons" underline={ false }>Icons</Link></NavItem>
@@ -75,6 +76,7 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/components/radio-button" underline={ false }>Radio</Link></NavItem>
             <NavItem><Link href="/components/select" underline={ false }>Select</Link></NavItem>
             <NavItem><Link href="/components/table" underline={ false }>Table</Link></NavItem>
+            <NavItem><Link href="/components/text" underline={ false }>Text</Link></NavItem>
             <NavItem><Link href="/components/textarea" underline={ false }>Textarea</Link></NavItem>
             <NavItem><Link href="/components/text-input" underline={ false }>Text input</Link></NavItem>
             <NavItem><Link href="/components/toggle" underline={ false }>Toggle</Link></NavItem>
