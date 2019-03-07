@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, HeaderValidation, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -46,7 +46,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Use Header Validation whenever a form has returned with errors so that users don't need to scroll around the form to see what needs to be fixed.</CheckList>
+      <ListItem>Use Header Validation whenever a form has returned with errors so that users don't need to scroll around the form to see what needs to be fixed.</ListItem>
     </DocSection>
 
     <DocSection>

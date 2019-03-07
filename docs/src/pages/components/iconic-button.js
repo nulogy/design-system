@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -31,7 +31,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>When a possible action would best be communicated via iconography</CheckList>
+      <ListItem>When a possible action would best be communicated via iconography</ListItem>
     </DocSection>
 
     <DocSection>

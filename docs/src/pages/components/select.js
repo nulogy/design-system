@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 const options = [
@@ -42,8 +42,8 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to choose a single option from a list of mutually exclusive options.</CheckList>
-      <CheckList>There is a large data set that would be impractical for radio buttons or a toggle.</CheckList>
+      <ListItem>Users need to choose a single option from a list of mutually exclusive options.</ListItem>
+      <ListItem>There is a large data set that would be impractical for radio buttons or a toggle.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>

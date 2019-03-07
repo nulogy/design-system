@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 
@@ -118,9 +118,9 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
-      <CheckList>Always lead with an actionable verb</CheckList>
-      <CheckList>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></CheckList>
-      <CheckList>Always use sentence case</CheckList>
+      <ListItem>Always lead with an actionable verb</ListItem>
+      <ListItem>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></ListItem>
+      <ListItem>Always use sentence case</ListItem>
     </DocSection>
 
     <DocSection>

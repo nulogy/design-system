@@ -6,7 +6,7 @@ import {
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 const iconNames = Object.keys(icons);
@@ -50,7 +50,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <CheckList>Avoid using icons without labels unless the meaning is ubiquitous, like print</CheckList>
+      <ListItem>Avoid using icons without labels unless the meaning is ubiquitous, like print</ListItem>
     </DocSection>
 
     <DocSection>

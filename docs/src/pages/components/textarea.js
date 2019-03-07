@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -31,7 +31,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to enter multiple lines of text.</CheckList>
+      <ListItem>Users need to enter multiple lines of text.</ListItem>
     </DocSection>
 
     <DocSection>

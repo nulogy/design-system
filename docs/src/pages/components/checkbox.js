@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -56,7 +56,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <CheckList>If there are many items in a list, consider using a "Show all" button</CheckList>
+      <ListItem>If there are many items in a list, consider using a "Show all" button</ListItem>
     </DocSection>
 
     <DocSection>
