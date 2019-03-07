@@ -19,7 +19,7 @@ export default () => (
     </Box>
     <DocSection>
       <Checkbox labelText="I am a checkbox" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Checkbox } from @nulogy-components;
 
 <Checkbox labelText="I am a checkbox" />
@@ -32,7 +32,7 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Checkbox labelText=\"I am a checkbox\" disabled />"}
         </Highlight>
       </Box>
@@ -40,7 +40,7 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Checkbox labelText=\"I am a checkbox\" error />"}
         </Highlight>
       </Box>
@@ -48,7 +48,7 @@ export default () => (
       <Box>
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Checkbox labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
         </Highlight>
       </Box>

@@ -19,7 +19,7 @@ export default () => (
     </Box>
     <DocSection>
       <Radio labelText="Radio button" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Radio } from @nulogy-components;
 
 <Radio labelText="Radio button" />`}
@@ -35,21 +35,21 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Radio labelText="Radio button" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Radio labelText="Radio button" error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" error />"}
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>Checked</SubsectionTitle>
         <Radio labelText="Radio button" defaultChecked="true" />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" defaultChecked=\"true\" />"}
         </Highlight>
       </Box>

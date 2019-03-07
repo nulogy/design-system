@@ -24,7 +24,7 @@ export default () => (
         <ListItem>List item</ListItem>
         <ListItem>List item</ListItem>
       </List>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import {List, ListItem} from @nulogy-components;
 
 <List>

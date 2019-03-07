@@ -22,7 +22,7 @@ export default () => (
 
     <DocSection>
       <Button>Create project</Button>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import {Button} from @nulogy-components;
 
 <Button>Create project</Button>
@@ -39,7 +39,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Variation 1</SubsectionTitle>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {``}
         </Highlight>
       </Box>

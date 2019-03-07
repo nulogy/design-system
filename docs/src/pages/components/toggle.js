@@ -19,7 +19,7 @@ export default () => (
     </Box>
     <DocSection>
       <Toggle onText="On" offText="Off" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Toggle } from @nulogy/components;
 
 <Toggle onText="On" offText="Off" />`}
@@ -30,14 +30,14 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Toggle onText="On" offText="Off" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Toggle onText=\"On\" offText=\"Off\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Toggled by default</SubsectionTitle>
         <Toggle onText="On" offText="Off" defaultToggled="true" />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Toggle onText=\"On\" offText=\"Off\" defaultToggled=\"true\" />"}
         </Highlight>
       </Box>

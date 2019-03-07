@@ -20,7 +20,7 @@ export default () => (
 
     <DocSection>
       <Link href="http://nulogy.design">nulogy.design</Link>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Link } from @nulogy-components;
 
 <Link href="http://nulogy.design">nulogy.design</Link>
@@ -33,14 +33,14 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Without an underline</SubsectionTitle>
         <Link href="http://nulogy.design" underline={ false }>nulogy.design</Link>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Link href=\"http://nulogy.design\" underline=\"false\">nulogy.design</Link>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>With a custom colour</SubsectionTitle>
         <Link color="black" hover="red" href="http://nulogy.design">nulogy.design</Link>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Link color=\"black\" hover=\"red\" href=\"http://nulogy.design\">nulogy.design</Link>"}
         </Highlight>
       </Box>

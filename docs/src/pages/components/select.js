@@ -50,7 +50,7 @@ const options = [
       <SubsectionTitle>Disabled</SubsectionTitle>
       <Box mb="x3">
         <Select placeholder="Please select inventory status" options={ options } disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Select placeholder=\"Please select inventory status\" options={ options } disabled />"}
         </Highlight>
       </Box>
@@ -58,7 +58,7 @@ const options = [
       <SubsectionTitle>Error</SubsectionTitle>
 
       <Select placeholder="Please select inventory status" options={ options } error />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {"<Select placeholder=\"Please select inventory status\" options={ options } error />"}
       </Highlight>
 

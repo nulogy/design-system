@@ -24,7 +24,7 @@ export default () => (
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import {Box, Flex} from @nulogy-components;
 
 <Flex>
@@ -44,7 +44,7 @@ export default () => (
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`<Flex flexDirection={{small: "column", medium: "row"}}>
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>

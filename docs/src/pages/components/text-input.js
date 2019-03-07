@@ -19,7 +19,7 @@ export default () => (
     </Box>
     <DocSection>
       <Input placeholder="I'm an input" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Input } from @nulogy/components;
 
 <Input placeholder="I'm an input" />`}
@@ -35,14 +35,14 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Input placeholder="I'm an input" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Input placeholder=\"I'm an input\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Input placeholder="I'm an input" error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Input error />"}
         </Highlight>
       </Box>

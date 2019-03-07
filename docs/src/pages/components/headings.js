@@ -22,7 +22,7 @@ export default () => (
       <Title>Title</Title>
       <SectionTitle>SectionTitle</SectionTitle>
       <SubsectionTitle>SubsectionTitle</SubsectionTitle>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Title, SectionTitle, SubsectionTitle } from @nulogy-components;
 
 <Title>Title</Title>

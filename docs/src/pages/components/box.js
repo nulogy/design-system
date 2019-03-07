@@ -20,7 +20,7 @@ export default () => (
 
     <DocSection>
       <Box bg="darkBlue" color="white" p="x3">Box</Box>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Box } from @nulogy-components;
 
 <Box bg="darkBlue" color="white" p="x3">Box</Box>
@@ -35,7 +35,7 @@ export default () => (
         <Text>Width can be set using a fraction or string.</Text>
         <Box bg="lightBlue" p="x3" width={ 1 / 2 }>Half</Box>
         <Box bg="lightBlue" p="x3" width="400px">400px</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {`<Box width={1/2}>Half</Box>
 <Box width="400px">400px</Box>`}
         </Highlight>
@@ -44,7 +44,7 @@ export default () => (
         <SubsectionTitle>Text Color</SubsectionTitle>
         <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
         <Box color="blue">blue</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box color=\"blue\">blue</Box>"}
         </Highlight>
       </Box>
@@ -52,7 +52,7 @@ export default () => (
         <SubsectionTitle>Background Color</SubsectionTitle>
         <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
         <Box bg="lightBlue">lightBlue</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box bg=\"lightBlue\">lightBlue</Box>"}
         </Highlight>
       </Box>
@@ -60,7 +60,7 @@ export default () => (
         <SubsectionTitle>Margins</SubsectionTitle>
         <Text>Margins can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
         <Box bg="lightBlue" m="x3">x3 (24px)</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box m=\"x3\">x3</Box"}
         </Highlight>
       </Box>
@@ -68,7 +68,7 @@ export default () => (
         <SubsectionTitle>Padding</SubsectionTitle>
         <Text>Padding can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
         <Box bg="lightBlue" p="x3">x3 (24px)</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box p=\"x3\">x3</Box"}
         </Highlight>
       </Box>
@@ -76,7 +76,7 @@ export default () => (
         <SubsectionTitle>Responsive</SubsectionTitle>
         <Text>All Box props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
         <Box color={ { small: "red", medium: "blue", large: "green" } }>Green text on large screens, blue on medium and red on small.</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {`<Box color={{ small: "red", medium: "blue", large: "green"}}>
   Green text on large screens, blue on medium and red on small.
 </Box>`}

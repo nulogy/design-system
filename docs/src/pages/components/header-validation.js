@@ -28,7 +28,7 @@ export default () => (
           </ListItem>
         </List>
       </HeaderValidation>
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
@@ -55,7 +55,7 @@ export default () => (
         <SubsectionTitle>With only a message</SubsectionTitle>
 
         <HeaderValidation title="Error has occured ..." message="Instructions and description of an error" />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {`import { HeaderValidation } from @nulogy-components;
 
 <HeaderValidation

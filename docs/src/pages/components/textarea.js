@@ -20,7 +20,7 @@ export default () => (
 
     <DocSection>
       <Textarea />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Textarea } from @nulogy-components;
 
 <Textarea />
@@ -39,21 +39,21 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Custom size</SubsectionTitle>
         <Textarea rows={ 2 } />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Textarea rows={2} />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Textarea disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Textarea disabled />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Error</SubsectionTitle>
         <Textarea error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Textarea error />"}
         </Highlight>
       </Box>

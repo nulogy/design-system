@@ -20,7 +20,7 @@ export default () => (
 
     <DocSection>
       <IconicButton icon="delete" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { IconicButton } from @nulogy-components;
 
 <IconicButton icon="delete" />
@@ -39,14 +39,14 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>With a label</SubsectionTitle>
         <IconicButton icon="delete">Delete</IconicButton>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<IconicButton icon=\"delete\">Delete</IconicButton>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <IconicButton icon="delete" disabled>Delete</IconicButton>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<IconicButton icon=\"delete\" disabled>Delete</IconicButton>"}
         </Highlight>
       </Box>
