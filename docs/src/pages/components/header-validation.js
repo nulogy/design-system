@@ -29,7 +29,9 @@ export default () => (
         </List>
       </HeaderValidation>
       <Highlight className="jsx">
-        {`<HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+        {`import { HeaderValidation } from @nulogy/components;
+
+<HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
   <List compact>
     <ListItem>Affected field</ListItem>
     <ListItem>Unmet criteria</ListItem>
