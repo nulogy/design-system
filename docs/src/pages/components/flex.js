@@ -19,7 +19,7 @@ export default () => (
     </Box>
 
     <DocSection>
-      <Flex>
+      <Flex bg="lightBlue">
         <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
@@ -27,7 +27,7 @@ export default () => (
       <Highlight className="js">
         {`import {Box, Flex} from @nulogy-components;
 
-<Flex>
+<Flex bg="lightBlue">
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>
 </Flex>
@@ -39,13 +39,13 @@ export default () => (
       <SectionTitle>Responsive</SectionTitle>
       <Text>Like Box, all props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
       <Text>This example displays columns on small screens and rows on large ones.</Text>
-      <Flex flexDirection={ { small: "column", large: "row" } }>
+      <Flex bg="lightBlue" flexDirection={ { small: "column", large: "row" } }>
         <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
       <Highlight className="js">
-        {`<Flex flexDirection={{small: "column", medium: "row"}}>
+        {`<Flex bg="lightBlue" flexDirection={{small: "column", medium: "row"}}>
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>
 </Flex>
