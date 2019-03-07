@@ -73,8 +73,8 @@ export default () => (
           <tr>
             <td>hover</td>
             <td>String</td>
-            <td>darkBlue</td>
-            <td>A custom hover colour.</td>
+            <td>Color value darkened by 10%</td>
+            <td>A custom hover color</td>
           </tr>
           <tr>
             <td>underline</td>
@@ -94,6 +94,6 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
-    </DocSection>    
+    </DocSection>
   </Layout>
 );
