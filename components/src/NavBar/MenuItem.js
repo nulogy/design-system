@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
 import SubMenuItemList from "./SubMenuItemList";
-/* eslint react/destructuring-assignment: 0 */
 
 const subMenuStyles = {
   backgroundColor: theme.colors.whiteGrey,
@@ -12,7 +11,33 @@ const subMenuStyles = {
   textColor: theme.colors.black,
 };
 
-const SubMenu = styled.div({
+const BaseSubMenu = ({
+  popperProps: {
+    ref,
+    style,
+    placement,
+    arrowProps,
+  },
+  children,
+  ...props
+}) => (
+  <div ref={ ref } style={ style } placement={ placement } { ...props }>
+    <Arrow { ...arrowProps } />
+    {children}
+  </div>
+);
+
+BaseSubMenu.propTypes = {
+  children: PropTypes.node,
+  popperProps: PropTypes.shape({}),
+};
+
+BaseSubMenu.defaultProps = {
+  children: null,
+  popperProps: null,
+};
+
+const SubMenu = styled(BaseSubMenu)({
   color: subMenuStyles.textColor,
   display: "flex",
   flexDirection: "column",
@@ -26,8 +51,8 @@ const SubMenu = styled.div({
   zIndex: "999999",
   marginTop: theme.space.half,
 },
-({ position }) => ({
-  ...position,
+({ style }) => ({
+  ...style,
 }));
 
 const Arrow = styled.div({
@@ -105,6 +130,7 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
+/* eslint-disable react/destructuring-assignment */
 class MenuItem extends React.Component {
   constructor(props) {
     super(props);
@@ -237,17 +263,13 @@ class MenuItem extends React.Component {
         </Reference>
         {this.state.subMenuOpen && (
         <Popper placement="bottom-start">
-          {({
-            ref, style, placement, arrowProps,
-          }) => (
+          {subMenuProps => (
             <SubMenu
-              ref={ ref } position={ style } placement={ placement }
-              { ...this.subMenuEventHandlers() }
+              popperProps={ subMenuProps } { ...this.subMenuEventHandlers() }
             >
               <SubMenuItemList focusIndex={ this.state.focusIndex }>
                 {this.props.children}
               </SubMenuItemList>
-              <Arrow ref={ arrowProps.ref } style={ arrowProps.style } />
             </SubMenu>
           )}
         </Popper>
@@ -256,6 +278,8 @@ class MenuItem extends React.Component {
     );
   }
 }
+/* eslint-enable react/destructuring-assignment */
+
 
 MenuItem.propTypes = {
   labelText: PropTypes.string.isRequired,
