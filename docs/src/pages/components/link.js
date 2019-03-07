@@ -15,7 +15,7 @@ export default () => (
     </Helmet>
     <Box pt="x4" mb="x6">
       <Title m="none">Link</Title>
-      <Intro>A styled <em>a</em> tag that can be used like any normal link.</Intro>
+      <Intro>A styled <em>a</em> tag that can be used to send users to a URL.</Intro>
     </Box>
 
     <DocSection>
