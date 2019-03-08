@@ -17,14 +17,14 @@ const SubMenuItemLink = styled(Link)({
   },
 });
 
-const BaseSubMenuItem = ({
+const BaseSubMenuItem = React.forwardRef(({
   href,
   children,
   subText,
   ...props
-}) => (
+}, ref) => (
   <li { ...props }>
-    <SubMenuItemLink tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
+    <SubMenuItemLink ref={ ref } tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
       <Text>{children}</Text>
       {subText && (
       <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
@@ -33,7 +33,7 @@ const BaseSubMenuItem = ({
       )}
     </SubMenuItemLink>
   </li>
-);
+));
 
 BaseSubMenuItem.propTypes = {
   children: PropTypes.node.isRequired,

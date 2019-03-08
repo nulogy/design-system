@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "ComponentsRoot";
-import MenuItem from "./MenuItem";
+import { MenuItem } from "./MenuItem";
 import SubMenuItem from "./SubMenuItem";
 import theme from "../theme";
 
@@ -11,15 +11,13 @@ const BaseDesktopMenu = ({
   ...props
 }) => (
   <Box { ...props }>
-    {Object.entries(menuData).map(menuItem => (
-      <MenuItem key={ menuItem[0] } labelText={ menuItem[0] }>
-        <ul>
-          {Object.entries(menuItem[1]).map(subMenuItem => (
-            <SubMenuItem key={ subMenuItem[0] } href={ subMenuItem[1].href } subText={ subMenuItem[1].subText }>
-              { subMenuItem[0] }
-            </SubMenuItem>
-          ))}
-        </ul>
+    {Object.entries(menuData).map(([menuItemKey, menuItem]) => (
+      <MenuItem key={ menuItemKey } labelText={ menuItemKey }>
+        {Object.entries(menuItem).map(([subMenuItemKey, subMenuItem]) => (
+          <SubMenuItem key={ subMenuItemKey } href={ subMenuItem.href } subText={ subMenuItem.subText }>
+            { subMenuItemKey }
+          </SubMenuItem>
+        ))}
       </MenuItem>
     ))}
   </Box>
@@ -37,12 +35,11 @@ const DesktopMenu = styled(BaseDesktopMenu)(
   {
     "button": {
       marginRight: theme.space.x1,
+      ":last-child": {
+        marginRight: theme.space.none,
+      },
     },
-    "ul": {
-      listStyle: "none",
-      paddingLeft: "0",
-      margin: "0",
-    },
+
   }
 );
 
