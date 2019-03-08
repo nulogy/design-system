@@ -21,7 +21,7 @@ export default () => (
     <DocSection>
       <IconicButton icon="delete" />
       <Highlight className="js">
-        {`import { IconicButton } from @nulogy-components;
+        {`import { IconicButton } from @nulogy/components;
 
 <IconicButton icon="delete" />
 `}

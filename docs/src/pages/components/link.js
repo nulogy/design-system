@@ -21,7 +21,7 @@ export default () => (
     <DocSection>
       <Link href="http://nulogy.design">nulogy.design</Link>
       <Highlight className="js">
-        {`import { Link } from @nulogy-components;
+        {`import { Link } from @nulogy/components;
 
 <Link href="http://nulogy.design">nulogy.design</Link>
 `}

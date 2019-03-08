@@ -35,7 +35,7 @@ export default () => (
     <DocSection>
       <Icon icon="user" />
       <Highlight className="js">
-        {`import { Icon } from @nulogy-components;
+        {`import { Icon } from @nulogy/components;
 
 <Icon icon="user" />`}
       </Highlight>

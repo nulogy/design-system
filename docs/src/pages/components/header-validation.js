@@ -56,7 +56,7 @@ export default () => (
 
         <HeaderValidation title="Error has occured ..." message="Instructions and description of an error" />
         <Highlight className="js">
-          {`import { HeaderValidation } from @nulogy-components;
+          {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation
   title="Error has occured ..."

@@ -20,7 +20,7 @@ export default () => (
     <DocSection>
       <Checkbox labelText="I am a checkbox" />
       <Highlight className="js">
-        {`import { Checkbox } from @nulogy-components;
+        {`import { Checkbox } from @nulogy/components;
 
 <Checkbox labelText="I am a checkbox" />
 `}

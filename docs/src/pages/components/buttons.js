@@ -21,7 +21,7 @@ export default () => (
     <DocSection>
       <Button>Create project</Button>
       <Highlight className="js">
-        {`import { Button } from @nulogy-components;
+        {`import { Button } from @nulogy/components;
 
 <Button>Create project</Button>
 `}
@@ -36,7 +36,7 @@ export default () => (
         <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
         <PrimaryButton>Create project</PrimaryButton>
         <Highlight className="js">
-          {`import { PrimaryButton } from @nulogy-components;
+          {`import { PrimaryButton } from @nulogy/components;
 
 <PrimaryButton>Create project</PrimaryButton>`}
         </Highlight>
@@ -47,7 +47,7 @@ export default () => (
         <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
         <DangerButton>Create project</DangerButton>
         <Highlight className="js">
-          {`import { DangerButton } from @nulogy-components;
+          {`import { DangerButton } from @nulogy/components;
 
 <DangerButton>Create project</DangerButton>`}
         </Highlight>
@@ -58,7 +58,7 @@ export default () => (
         <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
         <QuietButton>Learn more</QuietButton>
         <Highlight className="js">
-          {`import { QuietButton } from @nulogy-components;
+          {`import { QuietButton } from @nulogy/components;
 
 <QuietButton>Create project</QuietButton>`}
         </Highlight>
