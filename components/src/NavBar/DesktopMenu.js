@@ -11,20 +11,20 @@ const BaseDesktopMenu = ({
   ...props
 }) => (
   <Box { ...props }>
-    {Object.entries(menuData).map(([menuDropdownKey, menuDropdown]) => (
-      <MenuDropdown key={ menuDropdownKey } labelText={ menuDropdownKey }>
-        {Object.entries(menuDropdown).map(([subMenuItemKey, subMenuItem]) => (
-          <SubMenuItem key={ subMenuItemKey } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-            { subMenuItemKey }
-          </SubMenuItem>
-        ))}
+    {menuData.map(menuDropDown => (
+      <MenuDropdown key={ menuDropDown.text } labelText={ menuDropDown.text }>
+      {menuDropDown.subMenuItems.map(subMenuItem => (
+        <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
+          {subMenuItem.text}
+        </SubMenuItem>
+      ))}
       </MenuDropdown>
     ))}
   </Box>
 );
 
 BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.array,
 };
 
 BaseDesktopMenu.defaultProps = {
