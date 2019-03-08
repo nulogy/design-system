@@ -358,11 +358,6 @@ const DemoPage = () => {
         </Box>
       </Main>
       <Flex
-        ml={ {
-          small: 0,
-          medium: 0,
-          large: "256px",
-        } }
         px="x3" py="x1" bg="lightGrey"
         justifyContent="space-between" alignItems="center"
       >
