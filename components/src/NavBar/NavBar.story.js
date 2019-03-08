@@ -95,19 +95,8 @@ const menuData = {
       ]
     },
     {
-      text: "Forms",
-      subMenuItems: [
-        {
-          text: "Projects",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Jobs",
-          subText: "subText",
-          href: "/",
-        },
-      ]
+      text: "Link",
+      href: "/",
     },
   ],
   "secondaryMenu": [
