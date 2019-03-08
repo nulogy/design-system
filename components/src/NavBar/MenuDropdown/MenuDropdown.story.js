@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Flex } from "ComponentsRoot";
-import { MenuDropdown } from "./MenuDropdown";
+import MenuDropdown from "./MenuDropdown";
 import SubMenuItem from "../SubMenuItem";
 
 storiesOf("MenuDropdown", module)
