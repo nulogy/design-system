@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -20,8 +20,8 @@ export default () => (
 
     <DocSection>
       <Box bg="darkBlue" color="white" p="x3">Box</Box>
-      <Highlight className="jsx">
-        {`import { Box } from @nulogy-components;
+      <Highlight className="js">
+        {`import { Box } from @nulogy/components;
 
 <Box bg="darkBlue" color="white" p="x3">Box</Box>
 `}
@@ -35,7 +35,7 @@ export default () => (
         <Text>Width can be set using a fraction or string.</Text>
         <Box bg="lightBlue" p="x3" width={ 1 / 2 }>Half</Box>
         <Box bg="lightBlue" p="x3" width="400px">400px</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {`<Box width={1/2}>Half</Box>
 <Box width="400px">400px</Box>`}
         </Highlight>
@@ -44,7 +44,7 @@ export default () => (
         <SubsectionTitle>Text Color</SubsectionTitle>
         <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
         <Box color="blue">blue</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box color=\"blue\">blue</Box>"}
         </Highlight>
       </Box>
@@ -52,7 +52,7 @@ export default () => (
         <SubsectionTitle>Background Color</SubsectionTitle>
         <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
         <Box bg="lightBlue">lightBlue</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box bg=\"lightBlue\">lightBlue</Box>"}
         </Highlight>
       </Box>
@@ -60,7 +60,7 @@ export default () => (
         <SubsectionTitle>Margins</SubsectionTitle>
         <Text>Margins can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
         <Box bg="lightBlue" m="x3">x3 (24px)</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box m=\"x3\">x3</Box"}
         </Highlight>
       </Box>
@@ -68,7 +68,7 @@ export default () => (
         <SubsectionTitle>Padding</SubsectionTitle>
         <Text>Padding can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
         <Box bg="lightBlue" p="x3">x3 (24px)</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Box p=\"x3\">x3</Box"}
         </Highlight>
       </Box>
@@ -76,7 +76,7 @@ export default () => (
         <SubsectionTitle>Responsive</SubsectionTitle>
         <Text>All Box props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
         <Box color={ { small: "red", medium: "blue", large: "green" } }>Green text on large screens, blue on medium and red on small.</Box>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {`<Box color={{ small: "red", medium: "blue", large: "green"}}>
   Green text on large screens, blue on medium and red on small.
 </Box>`}
@@ -104,6 +104,26 @@ export default () => (
             <td>color</td>
             <td>string</td>
             <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
+          </tr>
+          <tr>
+            <td>display</td>
+            <td>string</td>
+            <td>Sets css display property.</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>string</td>
+            <td>Sets a height on the box.</td>
+          </tr>
+          <tr>
+            <td>minHeight</td>
+            <td>string</td>
+            <td>Sets a height on the box.</td>
+          </tr>
+          <tr>
+            <td>maxHeight</td>
+            <td>string</td>
+            <td>Sets a maxHeight on the box.</td>
           </tr>
           <tr>
             <td>m</td>
@@ -139,6 +159,16 @@ export default () => (
             <td>my</td>
             <td>string</td>
             <td>Sets margin-top and margin-bottom</td>
+          </tr>
+          <tr>
+            <td>order</td>
+            <td>number</td>
+            <td>Sets the order to be used with <Link href="/components/flex">Flex</Link> component</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>string</td>
+            <td>Sets css position property.</td>
           </tr>
           <tr>
             <td>p</td>
@@ -177,8 +207,18 @@ export default () => (
           </tr>
           <tr>
             <td>width</td>
-            <td>string, number</td>
+            <td>string</td>
             <td>Sets the width of the element</td>
+          </tr>
+          <tr>
+            <td>minWidth</td>
+            <td>string</td>
+            <td>Sets the minWidth of the element</td>
+          </tr>
+          <tr>
+            <td>maxWidth</td>
+            <td>string</td>
+            <td>Sets the maxWidth of the element</td>
           </tr>
         </tbody>
       </table>

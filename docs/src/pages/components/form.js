@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Link, Title,
+  Box, SectionTitle, SubsectionTitle, Link, Title, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList, Image,
+  DocText as Text, Layout, Intro, DocSection, Image,
 } from "../../components";
 import anatomy from "../../images/form/anatomy.png";
 import basic from "../../images/form/basic.png";
@@ -63,19 +63,19 @@ export default () => (
       <Text>See <em>Handling Errors</em> below</Text>
     </DocSection>
     <DocSection>
-      <CheckList>Always order items in a logical order that doesn’t require scrolling around</CheckList>
-      <CheckList>Whenever possible group items together into fieldsets</CheckList>
-      <CheckList>Lay out the form in a single column</CheckList>
-      <CheckList>Place actions on the bottom of the form</CheckList>
-      <CheckList>Use a label with every input</CheckList>
-      <CheckList>Placeholders are not replacements for labels, as they are not treated as labels by assistive technology and they disappear when a user tries interacting with a field.</CheckList>
+      <ListItem>Always order items in a logical order that doesn’t require scrolling around</ListItem>
+      <ListItem>Whenever possible group items together into fieldsets</ListItem>
+      <ListItem>Lay out the form in a single column</ListItem>
+      <ListItem>Place actions on the bottom of the form</ListItem>
+      <ListItem>Use a label with every input</ListItem>
+      <ListItem>Placeholders are not replacements for labels, as they are not treated as labels by assistive technology and they disappear when a user tries interacting with a field.</ListItem>
     </DocSection>
     <DocSection>
       <Title>Handling Errors</Title>
       <Text>There are three important messages that a good form error message should convey to the user:</Text>
-      <CheckList>An error has occurred</CheckList>
-      <CheckList>Where the error occurred</CheckList>
-      <CheckList>How to recover from an error</CheckList>
+      <ListItem>An error has occurred</ListItem>
+      <ListItem>Where the error occurred</ListItem>
+      <ListItem>How to recover from an error</ListItem>
       <Text mt="x1">There are two types of validation: Header level validation and Inline validation</Text>
     </DocSection>
     <DocSection>

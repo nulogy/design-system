@@ -7,7 +7,7 @@ import {
   Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -22,8 +22,8 @@ export default () => (
 
     <DocSection>
       <Button>Create project</Button>
-      <Highlight className="jsx">
-        {`import {Button} from @nulogy-components;
+      <Highlight className="js">
+        {`import {Button} from @nulogy/components;
 
 <Button>Create project</Button>
 `}
@@ -39,7 +39,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Variation 1</SubsectionTitle>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {``}
         </Highlight>
       </Box>

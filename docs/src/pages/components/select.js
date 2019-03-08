@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 const options = [
@@ -29,7 +29,7 @@ export default () => (
 
       <Select placeholder="Please select inventory status" options={ options } />
       <Highlight className="js">
-        {`import { Select } from @nulogy-components;
+        {`import { Select } from @nulogy/components;
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -42,15 +42,15 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to choose a single option from a list of mutually exclusive options.</CheckList>
-      <CheckList>There is a large data set that would be impractical for radio buttons or a toggle.</CheckList>
+      <ListItem>Users need to choose a single option from a list of mutually exclusive options.</ListItem>
+      <ListItem>There is a large data set that would be impractical for radio buttons or a toggle.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <SubsectionTitle>Disabled</SubsectionTitle>
       <Box mb="x3">
         <Select placeholder="Please select inventory status" options={ options } disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Select placeholder=\"Please select inventory status\" options={ options } disabled />"}
         </Highlight>
       </Box>
@@ -58,7 +58,7 @@ const options = [
       <SubsectionTitle>Error</SubsectionTitle>
 
       <Select placeholder="Please select inventory status" options={ options } error />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {"<Select placeholder=\"Please select inventory status\" options={ options } error />"}
       </Highlight>
 
@@ -77,25 +77,25 @@ const options = [
         </thead>
         <tbody>
           <tr>
-            <td>Placeholder</td>
+            <td>placeholder</td>
             <td>String</td>
             <td>""</td>
             <td>A description of what the Select box contains</td>
           </tr>
           <tr>
-            <td>Disabled</td>
+            <td>disabled</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Marks the field as disabled and disallows user input</td>
           </tr>
           <tr>
-            <td>Error</td>
+            <td>error</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Marks the field as invalid and adds a red border</td>
           </tr>
           <tr>
-            <td>Required</td>
+            <td>required</td>
             <td>Boolean</td>
             <td>false</td>
             <td>Makes the field require input before the form will submit</td>

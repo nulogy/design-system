@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
+  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -20,8 +20,8 @@ export default () => (
 
     <DocSection>
       <Textarea />
-      <Highlight className="jsx">
-        {`import { Textarea } from @nulogy-components;
+      <Highlight className="js">
+        {`import { Textarea } from @nulogy/components;
 
 <Textarea />
 `}
@@ -31,30 +31,30 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to enter multiple lines of text.</CheckList>
+      <ListItem>Users need to enter multiple lines of text.</ListItem>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Custom size</SubsectionTitle>
-        <Textarea rows={2} />
-        <Highlight className="jsx">
-          {`<Textarea rows={2} />`}
+        <Textarea rows={ 2 } />
+        <Highlight className="js">
+          {"<Textarea rows={2} />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Textarea disabled />
-        <Highlight className="jsx">
-          {`<Textarea disabled />`}
+        <Highlight className="js">
+          {"<Textarea disabled />"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Error</SubsectionTitle>
         <Textarea error />
-        <Highlight className="jsx">
-          {`<Textarea error />`}
+        <Highlight className="js">
+          {"<Textarea error />"}
         </Highlight>
       </Box>
     </DocSection>
@@ -71,7 +71,7 @@ export default () => (
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>disabled</td>
             <td>Boolean</td>
             <td>false</td>

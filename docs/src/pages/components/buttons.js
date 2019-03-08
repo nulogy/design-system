@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  DocText as Text, Layout, Intro, DocSection,
 } from "../../components";
 
 
@@ -20,8 +20,8 @@ export default () => (
     </Box>
     <DocSection>
       <Button>Create project</Button>
-      <Highlight className="jsx">
-        {`import { Button } from @nulogy-components;
+      <Highlight className="js">
+        {`import { Button } from @nulogy/components;
 
 <Button>Create project</Button>
 `}
@@ -36,7 +36,7 @@ export default () => (
         <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
         <PrimaryButton>Create project</PrimaryButton>
         <Highlight className="js">
-          {`import { PrimaryButton } from @nulogy-components;
+          {`import { PrimaryButton } from @nulogy/components;
 
 <PrimaryButton>Create project</PrimaryButton>`}
         </Highlight>
@@ -47,7 +47,7 @@ export default () => (
         <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
         <DangerButton>Create project</DangerButton>
         <Highlight className="js">
-          {`import { DangerButton } from @nulogy-components;
+          {`import { DangerButton } from @nulogy/components;
 
 <DangerButton>Create project</DangerButton>`}
         </Highlight>
@@ -58,7 +58,7 @@ export default () => (
         <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
         <QuietButton>Learn more</QuietButton>
         <Highlight className="js">
-          {`import { QuietButton } from @nulogy-components;
+          {`import { QuietButton } from @nulogy/components;
 
 <QuietButton>Create project</QuietButton>`}
         </Highlight>
@@ -118,9 +118,9 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
-      <CheckList>Always lead with an actionable verb</CheckList>
-      <CheckList>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></CheckList>
-      <CheckList>Always use sentence case</CheckList>
+      <ListItem>Always lead with an actionable verb</ListItem>
+      <ListItem>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></ListItem>
+      <ListItem>Always use sentence case</ListItem>
     </DocSection>
 
     <DocSection>
@@ -157,6 +157,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem><Link href="/components/iconic-button">Iconic button</Link></ListItem>
+      <ListItem><Link href="/components/link">Link</Link></ListItem>
     </DocSection>
 
   </Layout>

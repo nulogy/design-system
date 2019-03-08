@@ -15,19 +15,19 @@ export default () => (
     </Helmet>
     <Box pt="x4" mb="x6">
       <Title m="none">Flex</Title>
-      <Intro>A wrapper component for building layouts using Flexbox.</Intro>
+      <Intro>A wrapper component that extends <Link href="/components/Box">Box</Link> to create layouts using Flexbox.</Intro>
     </Box>
 
     <DocSection>
-      <Flex>
+      <Flex bg="lightBlue">
         <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
-      <Highlight className="jsx">
-        {`import {Box, Flex} from @nulogy-components;
+      <Highlight className="js">
+        {`import {Box, Flex} from @nulogy/components;
 
-<Flex>
+<Flex bg="lightBlue">
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>
 </Flex>
@@ -39,13 +39,13 @@ export default () => (
       <SectionTitle>Responsive</SectionTitle>
       <Text>Like Box, all props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
       <Text>This example displays columns on small screens and rows on large ones.</Text>
-      <Flex flexDirection={ { small: "column", large: "row" } }>
+      <Flex bg="lightBlue" flexDirection={ { small: "column", large: "row" } }>
         <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
         <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
-      <Highlight className="jsx">
-        {`<Flex flexDirection={{small: "column", medium: "row"}}>
+      <Highlight className="js">
+        {`<Flex bg="lightBlue" flexDirection={{small: "column", medium: "row"}}>
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>
 </Flex>
@@ -55,6 +55,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
+      <Text>Because Flex is an extension of <Link href="/components/box">Box</Link> it accepts all the same props but adds the following:</Text>
       <table>
         <thead>
           <tr>
@@ -65,6 +66,12 @@ export default () => (
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>alignItems</td>
+            <td>String</td>
+            <td>stretch</td>
+            <td>Sets align-items. Accepts flex-start, flex-end, center, or stretch.</td>
+          </tr>
           <tr>
             <td>flexDirection</td>
             <td>String</td>
@@ -82,12 +89,6 @@ export default () => (
             <td>String</td>
             <td>flex-start</td>
             <td>Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly</td>
-          </tr>
-          <tr>
-            <td>alignItems</td>
-            <td>String</td>
-            <td>stretch</td>
-            <td>Sets align-items. Accepts flex-start, flex-end, center, or stretch.</td>
           </tr>
         </tbody>
       </table>

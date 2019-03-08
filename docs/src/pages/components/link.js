@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -15,13 +15,13 @@ export default () => (
     </Helmet>
     <Box pt="x4" mb="x6">
       <Title m="none">Link</Title>
-      <Intro>A styled <em>a</em> tag that can be used like any normal link.</Intro>
+      <Intro>A styled <em>a</em> tag that can be used to send users to a URL.</Intro>
     </Box>
 
     <DocSection>
       <Link href="http://nulogy.design">nulogy.design</Link>
-      <Highlight className="jsx">
-        {`import { Link } from @nulogy-components;
+      <Highlight className="js">
+        {`import { Link } from @nulogy/components;
 
 <Link href="http://nulogy.design">nulogy.design</Link>
 `}
@@ -33,14 +33,14 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Without an underline</SubsectionTitle>
         <Link href="http://nulogy.design" underline={ false }>nulogy.design</Link>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Link href=\"http://nulogy.design\" underline=\"false\">nulogy.design</Link>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>With a custom colour</SubsectionTitle>
         <Link color="black" hover="red" href="http://nulogy.design">nulogy.design</Link>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Link color=\"black\" hover=\"red\" href=\"http://nulogy.design\">nulogy.design</Link>"}
         </Highlight>
       </Box>
@@ -73,8 +73,8 @@ export default () => (
           <tr>
             <td>hover</td>
             <td>String</td>
-            <td>darkBlue</td>
-            <td>A custom hover colour.</td>
+            <td>Color value darkened by 10%</td>
+            <td>A custom hover color</td>
           </tr>
           <tr>
             <td>underline</td>
@@ -89,6 +89,11 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Link">View in Storybook</Link></ListItem>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
     </DocSection>
   </Layout>
 );

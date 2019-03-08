@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -19,46 +19,46 @@ export default () => (
     </Box>
     <DocSection>
       <Radio labelText="Radio button" />
-      <Highlight className="jsx">
-        {`import { Radio } from @nulogy-components;
+      <Highlight className="js">
+        {`import { Radio } from @nulogy/components;
 
 <Radio labelText="Radio button" />`}
       </Highlight>
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to make a single choice from a set of mutually exclusive options</CheckList>
-      <CheckList>In place of a dropdown when it would be beneficial to see all items up front</CheckList>
+      <ListItem>Users need to make a single choice from a set of mutually exclusive options</ListItem>
+      <ListItem>In place of a dropdown when it would be beneficial to see all items up front</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Radio labelText="Radio button" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Radio labelText="Radio button" error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" error />"}
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>Checked</SubsectionTitle>
         <Radio labelText="Radio button" defaultChecked="true" />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Radio labelText=\"Radio button\" defaultChecked=\"true\" />"}
         </Highlight>
       </Box>
     </DocSection>
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <CheckList>Whenever possible use radio buttons for short lists (~ 5-7)</CheckList>
-      <CheckList>Consider using a <Link href="/components/select">Select</Link> for long lists</CheckList>
-      <CheckList>Users should be able to select the radio button by clicking on the box directly or by clicking on its label.</CheckList>
+      <ListItem>Whenever possible use radio buttons for short lists (~ 5-7)</ListItem>
+      <ListItem>Consider using a <Link href="/components/select">Select</Link> for long lists</ListItem>
+      <ListItem>Users should be able to select the radio button by clicking on the box directly or by clicking on its label.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>

@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Input, Link,
+  Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -19,7 +19,7 @@ export default () => (
     </Box>
     <DocSection>
       <Input placeholder="I'm an input" />
-      <Highlight className="jsx">
+      <Highlight className="js">
         {`import { Input } from @nulogy/components;
 
 <Input placeholder="I'm an input" />`}
@@ -27,29 +27,29 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>Users need to enter information that is best communicated in text form.</CheckList>
-      <CheckList>You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.</CheckList>
+      <ListItem>Users need to enter information that is best communicated in text form.</ListItem>
+      <ListItem>You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Input placeholder="I'm an input" disabled />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Input placeholder=\"I'm an input\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Input placeholder="I'm an input" error />
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<Input error />"}
         </Highlight>
       </Box>
     </DocSection>
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <CheckList>Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.</CheckList>
+      <ListItem>Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
@@ -92,7 +92,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>
 );

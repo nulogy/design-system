@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 
 export default () => (
@@ -20,8 +20,8 @@ export default () => (
 
     <DocSection>
       <IconicButton icon="delete" />
-      <Highlight className="jsx">
-        {`import { IconicButton } from @nulogy-components;
+      <Highlight className="js">
+        {`import { IconicButton } from @nulogy/components;
 
 <IconicButton icon="delete" />
 `}
@@ -31,7 +31,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <CheckList>When a possible action would best be communicated via iconography</CheckList>
+      <ListItem>When a possible action would best be communicated via iconography</ListItem>
     </DocSection>
 
     <DocSection>
@@ -39,14 +39,14 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>With a label</SubsectionTitle>
         <IconicButton icon="delete">Delete</IconicButton>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<IconicButton icon=\"delete\">Delete</IconicButton>"}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <IconicButton icon="delete" disabled>Delete</IconicButton>
-        <Highlight className="jsx">
+        <Highlight className="js">
           {"<IconicButton icon=\"delete\" disabled>Delete</IconicButton>"}
         </Highlight>
       </Box>

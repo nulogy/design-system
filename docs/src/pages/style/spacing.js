@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, Text, Title, SectionTitle,
+  Box, Text, Title, SectionTitle, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, CheckList,
+  Layout, Intro, DocSection,
 } from "../../components";
 import anatomy from "../../images/spacing-anatomy.png";
 import scale from "../../images/spacing-scale.svg";
@@ -34,8 +34,8 @@ export default () => (
       <SectionTitle>How to choose spacing</SectionTitle>
       <Text>There are two important factors to consider when choosing spacing: <em>size</em> and <em>relatedness</em></Text>
       <Box mb="x2">
-        <CheckList>Use less spacing inside smaller elements or between functionally related elements.</CheckList>
-        <CheckList>Use more spacing inside larger elements or between less functionally related elements</CheckList>
+        <ListItem>Use less spacing inside smaller elements or between functionally related elements.</ListItem>
+        <ListItem>Use more spacing inside larger elements or between less functionally related elements</ListItem>
       </Box>
       <Text fontSize="small"><em>Note: half should mostly be used for spacing related items within an element, e.g a button’s text and it’s icon.</em></Text>
     </DocSection>
