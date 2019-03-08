@@ -151,12 +151,6 @@ BaseMenuItem.defaultProps = {
   children: null,
 };
 
-const MenuItem = styled(BaseMenuItem)({
-  "&:hover": {
-    backgroundColor: theme.colors.darkBlue,
-  },
-});
-
 const BaseSidebarItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
     <Link
