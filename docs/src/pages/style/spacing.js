@@ -1,13 +1,52 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import {
-  Box, Text, Title, SectionTitle, ListItem,
+  Box, Flex, Text, Title, SectionTitle, ListItem,
 } from "@nulogy/components";
 import {
   Layout, Intro, DocSection,
 } from "../../components";
+import theme from "../../../../components/src/theme";
 import anatomy from "../../images/spacing-anatomy.png";
-import scale from "../../images/spacing-scale.svg";
+
+const SpacingExample = props => {
+  const {
+    size,
+    scale,
+  } = props;
+  return (
+    <Box>
+      <Flex height="64px" verticalAlign="bottom" alignItems="flex-end">
+        <Box bg="lightBlue" mx="auto" mb="x2" height={ size } width={ size } />
+      </Flex>
+      <Text textAlign="center" mb="half">{ size }</Text>
+      <Text textAlign="center" fontSize="small">{ scale }</Text>
+    </Box>
+  );
+};
+
+SpacingExample.propTypes = {
+  size: PropTypes.string.isRequired,
+  scale: PropTypes.string.isRequired,
+};
+
+const SpacingExamples = props => {
+  const {
+    values,
+  } = props;
+
+  return (
+    Object.keys(values).map(key => {
+      if (key === "none") { return null; }
+      return <SpacingExample size={ values[key] } scale={ key } />;
+    })
+  );
+};
+
+SpacingExamples.propTypes = {
+  values: PropTypes.objectOf(PropTypes.object).isRequired,
+};
 
 export default () => (
   <Layout>
@@ -21,8 +60,11 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Scale</SectionTitle>
-      <Text>Nulogy uses a scale based on 8px with modifiers from half (4px) to 8x (64px).</Text>
-      <img src={ scale } alt="Spacing scale" />
+      <Text mb="x3">Nulogy uses a scale based on 8px with modifiers from half (4px) to 8x (64px).</Text>
+
+      <Flex justifyContent="space-between">
+        <SpacingExamples values={ theme.space } />
+      </Flex>
     </DocSection>
 
     <DocSection>
