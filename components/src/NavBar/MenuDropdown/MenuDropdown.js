@@ -6,7 +6,7 @@ import theme from "ComponentsRoot/theme";
 import SubMenuItemList from "./SubMenuItemList";
 import SubMenu from "./SubMenu";
 
-const MenuItemButton = styled.button({
+const MenuDropdownButton = styled.button({
   display: "inline-flex",
   color: theme.colors.white,
   border: "none",
@@ -47,7 +47,7 @@ const keyCode = Object.freeze({
 });
 
 /* eslint-disable react/destructuring-assignment */
-class MenuItem extends React.Component {
+class MenuDropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,6 @@ class MenuItem extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
-    this.menuItemRefs = [];
   }
 
   setSubMenuState(newState, skipTimer = false) {
@@ -114,7 +113,7 @@ class MenuItem extends React.Component {
     });
   }
 
-  menuItemEventHandlers() {
+  menuDropdownEventHandlers() {
     return ({
       onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
@@ -174,7 +173,7 @@ class MenuItem extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuItemButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuItemEventHandlers() } ref={ ref }>{ this.props.labelText }</MenuItemButton>
+            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }</MenuDropdownButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
@@ -195,17 +194,17 @@ class MenuItem extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 
-MenuItem.propTypes = {
+MenuDropdown.propTypes = {
   labelText: PropTypes.string.isRequired,
   children: PropTypes.node,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MenuItem.defaultProps = {
+MenuDropdown.defaultProps = {
   children: null,
   showDelay: "100",
   hideDelay: "350",
 };
 
-export default MenuItem;
+export default MenuDropdown;
