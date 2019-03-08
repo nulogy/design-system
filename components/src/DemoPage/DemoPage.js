@@ -205,17 +205,13 @@ BaseSidebar.defaultProps = {
 
 const Sidebar = styled(BaseSidebar)({});
 
-const ChromeWrapper = styled(Flex)({
-  // minHeight: "100%",
-});
-
 const Chrome = ({ children, ...props }) => (
-  <ChromeWrapper flexDirection="column" { ...props }>
+  <Flex flexDirection="column" { ...props }>
     <NavBar menuData={ menuData } />
     <Box style={ { width: "100%" } }>
       { children }
     </Box>
-  </ChromeWrapper>
+  </Flex>
 );
 
 Chrome.propTypes = {
