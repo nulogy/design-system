@@ -32,7 +32,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
-      <Text><Link href="box">Box</Link> and <Link href="flex">Flexbox</Link> components are basic building blocks of any layout composition. To be effective at using Flex component you should familiarize yourself with <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox layout</Link>. If you want to have fun while doing that make sure you visit <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Froggy</Link>.</Text>
+      <Text><Link href="box">Box</Link> and <Link href="flex">Flexbox</Link> components are basic building blocks of any layout composition. To be effective at using Flex component you should familiarize yourself with <Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link> and <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link>. If you want to have fun while doing that make sure you visit <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Froggy</Link>.</Text>
     </DocSection>
 
     <DocSection>
@@ -230,7 +230,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>2-Column Layout Example</SectionTitle>
-      <Text mb="x2" color="darkGrey">Typical 2-column layout structure</Text>
+      <Text mb="x2" color="darkGrey">Typical 2-column layout structure with a sidebar or a pannel.</Text>
       <Flex height="400px" flexDirection={ { small: "column", medium: "row", large: "row" } }>
         <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 2 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
           <Text mb={ 0 }>Main content</Text>
