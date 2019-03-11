@@ -12,6 +12,7 @@ const HighlightStyles = createGlobalStyle`
   background: ${theme.colors.whiteGrey};
   color: ${theme.colors.darkBlue};
   border-radius: 4px;
+  margin-bottom: ${theme.space.x3};
 }
 
 .hljs-tag,

@@ -18,7 +18,7 @@ DocSubsection.PropTypes = {
 };
 
 DocSubsection.defaultProps = {
-  mt: "x3",
+  mb: "x2",
 };
 
 export default DocSubsection;
