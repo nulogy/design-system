@@ -22,13 +22,13 @@ const BaseNavBar = ({
     <nav>
       <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
         <Flex alignItems="center">
-          <DesktopMenu menuData={ menuData.primary } display={ { small: "none", medium: "none", large: "flex" } } />
+          <DesktopMenu menuData={ menuData.primaryMenu } display={ { small: "none", medium: "none", large: "flex" } } />
         </Flex>
         <Flex>
           <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } }>
             <NavBarSearch />
           </Flex>
-          <DesktopMenu menuData={ menuData.secondary } display={ { small: "none", medium: "none", large: "flex" } } />
+          <DesktopMenu menuData={ menuData.secondaryMenu } display={ { small: "none", medium: "none", large: "flex" } } />
           <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
         </Flex>
       </Flex>

@@ -2,29 +2,42 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "ComponentsRoot";
-import { MenuItem } from "./MenuItem";
+import { MenuDropdown } from "./MenuDropdown";
 import SubMenuItem from "./SubMenuItem";
+import MenuItem from "./MenuItem";
 import theme from "../theme";
+
+const isDropdown = menuItem => (menuItem.subMenuItems);
 
 const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
   <Box { ...props }>
-    {Object.entries(menuData).map(([menuItemKey, menuItem]) => (
-      <MenuItem key={ menuItemKey } labelText={ menuItemKey }>
-        {Object.entries(menuItem).map(([subMenuItemKey, subMenuItem]) => (
-          <SubMenuItem key={ subMenuItemKey } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-            { subMenuItemKey }
-          </SubMenuItem>
-        ))}
-      </MenuItem>
-    ))}
+    {menuData.map(menuItem => {
+      if (isDropdown(menuItem)) {
+        return (
+          <MenuDropdown key={ menuItem.text } labelText={ menuItem.text }>
+            {menuItem.subMenuItems.map(subMenuItem => (
+              <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
+                {subMenuItem.text}
+              </SubMenuItem>
+            ))}
+          </MenuDropdown>
+        );
+      } else {
+        return (
+          <MenuItem key={ menuItem.text } href={ menuItem.href }>
+            {menuItem.text}
+          </MenuItem>
+        );
+      }
+    })}
   </Box>
 );
 
 BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 BaseDesktopMenu.defaultProps = {
