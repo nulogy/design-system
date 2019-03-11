@@ -36,8 +36,8 @@ const menuData = {
           text: "Carriers",
           subText: "subText",
           href: "/",
-        }
-      ]
+        },
+      ],
     },
     {
       text: "Inspector",
@@ -57,7 +57,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Reports",
@@ -77,7 +77,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Sheets",
@@ -92,7 +92,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Link",
@@ -118,7 +118,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Settings",
@@ -133,10 +133,10 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
   ],
-}
+};
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (

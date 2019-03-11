@@ -61,8 +61,8 @@ const menuData = {
           text: "Carriers",
           subText: "subText",
           href: "/",
-        }
-      ]
+        },
+      ],
     },
     {
       text: "Inspector",
@@ -82,7 +82,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Reports",
@@ -102,7 +102,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Sheets",
@@ -117,7 +117,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Forms",
@@ -132,7 +132,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
   ],
   "secondaryMenu": [
@@ -154,7 +154,7 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
     {
       text: "Settings",
@@ -169,10 +169,10 @@ const menuData = {
           subText: "subText",
           href: "/",
         },
-      ]
+      ],
     },
   ],
-}
+};
 
 const BaseMenuItem = ({ className, children, ...props }) => (
   <Box className={ className } { ...props }>
