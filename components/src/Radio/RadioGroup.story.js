@@ -35,14 +35,14 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("Set to disabled", () => (
-    <RadioGroup disabled name="settingSelection" defaultValue="a">
+    <RadioGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue="a">
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />
     </RadioGroup>
   ))
   .add("Controlled", () => (
-    <RadioGroup name="settingSelection" checkedValue="a" onChange={ () => {} }>
+    <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={ () => {} }>
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />
