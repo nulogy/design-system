@@ -29,21 +29,21 @@ const getRadioButtons = props => {
   return (radioButtons);
 };
 
-const internalSpacingStyles = (hasHelpText) => {
-  if (hasHelpText){
+const internalSpacingStyles = hasHelpText => {
+  if (hasHelpText) {
     return ({
-      "p":{
+      "p": {
         marginBottom: theme.space.x1,
       },
-    })
+    });
   } else {
     return ({
       "legend": {
         marginBottom: theme.space.x1,
       },
-    })
-  } 
-}
+    });
+  }
+};
 
 const Fieldset = styled.fieldset({
   padding: 0,
@@ -53,11 +53,9 @@ const Fieldset = styled.fieldset({
     padding: 0,
   },
 },
-({hasHelpText}) => (
+({ hasHelpText }) => (
   internalSpacingStyles(hasHelpText)
-),
-
-);
+),);
 
 const BaseRadioGroup = ({
   className,
@@ -66,7 +64,7 @@ const BaseRadioGroup = ({
   requirementText,
   ...props
 }) => (
-  <Fieldset role="radiogroup" className={ className } hasHelpText={!!helpText}>
+  <Fieldset role="radiogroup" className={ className } hasHelpText={ !!helpText }>
     <legend>
       { labelText }
       { requirementText && (<RequirementText>{requirementText}</RequirementText>) }

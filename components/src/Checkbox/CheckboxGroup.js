@@ -29,21 +29,21 @@ const getCheckboxButtons = props => {
   return (checkboxButtons);
 };
 
-const internalSpacingStyles = (hasHelpText) => {
-  if (hasHelpText){
+const internalSpacingStyles = hasHelpText => {
+  if (hasHelpText) {
     return ({
-      "p":{
+      "p": {
         marginBottom: theme.space.x1,
       },
-    })
+    });
   } else {
     return ({
       "legend": {
         marginBottom: theme.space.x1,
       },
-    })
-  } 
-}
+    });
+  }
+};
 
 const Fieldset = styled.fieldset({
   padding: 0,
@@ -53,11 +53,9 @@ const Fieldset = styled.fieldset({
     padding: 0,
   },
 },
-({hasHelpText}) => (
+({ hasHelpText }) => (
   internalSpacingStyles(hasHelpText)
-),
-
-);
+),);
 
 const BaseCheckboxGroup = ({
   className,
@@ -66,9 +64,9 @@ const BaseCheckboxGroup = ({
   requirementText,
   ...props
 }) => (
-  <Fieldset className={ className } hasHelpText={!!helpText}>
+  <Fieldset className={ className } hasHelpText={ !!helpText }>
     <legend>
-      { labelText } 
+      { labelText }
       { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
     </legend>
     { helpText && (<HelpText>{helpText}</HelpText>) }
