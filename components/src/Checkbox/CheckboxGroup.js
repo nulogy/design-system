@@ -1,32 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Radio } from "ComponentsRoot";
+import { Checkbox } from "ComponentsRoot";
 import theme from "../theme";
 import HelpText from "../Field/HelpText";
 import RequirementText from "../Field/RequirementText";
 
 
-const getRadioButtons = props => {
-  const radioButtons = React.Children.map(props.children, radio => {
+const getCheckboxButtons = props => {
+  const checkboxButtons = React.Children.map(props.children, checkbox => {
     const {
       value,
       disabled,
-      ...radioProps
-    } = radio.props;
+      ...checkboxProps
+    } = checkbox.props;
     return (
-      <Radio
-        { ...radioProps }
+      <Checkbox
+        { ...checkboxProps }
         disabled={ props.disabled || disabled }
         name={ props.name }
         value={ value }
-        defaultChecked={ value === props.defaultValue ? true : undefined }
-        checked={ props.checkedValue && (value === props.checkedValue) }
+        defaultChecked={ props.defaultValue ? props.defaultValue.includes(value) : undefined }
+        checked={ props.checkedValue ? props.checkedValue.includes(value) : undefined }
         onChange={ props.onChange }
       />
     );
   });
-  return (radioButtons);
+  return (checkboxButtons);
 };
 
 const internalSpacingStyles = (hasHelpText) => {
@@ -59,45 +59,45 @@ const Fieldset = styled.fieldset({
 
 );
 
-const BaseRadioGroup = ({
+const BaseCheckboxGroup = ({
   className,
   labelText,
   helpText,
   requirementText,
   ...props
 }) => (
-  <Fieldset role="radiogroup" className={ className } hasHelpText={!!helpText}>
+  <Fieldset className={ className } hasHelpText={!!helpText}>
     <legend>
-      { labelText }
+      { labelText } 
       { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
     </legend>
     { helpText && (<HelpText>{helpText}</HelpText>) }
-    { getRadioButtons(props) }
+    { getCheckboxButtons(props) }
   </Fieldset>
 );
 
-BaseRadioGroup.propTypes = {
+BaseCheckboxGroup.propTypes = {
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.shape({
-      type: PropTypes.oneOf([Radio]),
+      type: PropTypes.oneOf([Checkbox]),
     }),
     PropTypes.arrayOf(
       PropTypes.shape({
-        type: PropTypes.oneOf([Radio]),
+        type: PropTypes.oneOf([Checkbox]),
       })
     ),
   ]).isRequired,
-  defaultValue: PropTypes.string,
-  checkedValue: PropTypes.string,
+  defaultValue: PropTypes.arrayOf(PropTypes.string),
+  checkedValue: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
   className: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
 };
 
-BaseRadioGroup.defaultProps = {
+BaseCheckboxGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
@@ -106,6 +106,6 @@ BaseRadioGroup.defaultProps = {
   requirementText: null,
 };
 
-const RadioGroup = styled(BaseRadioGroup)({});
+const CheckboxGroup = styled(BaseCheckboxGroup)({});
 
-export default RadioGroup;
+export default CheckboxGroup;
