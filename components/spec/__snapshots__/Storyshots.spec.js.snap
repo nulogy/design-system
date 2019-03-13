@@ -64,6 +64,16 @@ exports[`Storyshots Field With help text 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Field With requirement text 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots FieldLabel FieldLabel 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots FieldLabel with HelpText 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots FieldLabel with RequirementText 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots FieldLabel with all additional text 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots FieldLabel with associated custom input component 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Flex Flex 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Flex With custom order 1`] = `ReactWrapper {}`;
