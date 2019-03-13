@@ -32,7 +32,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
-      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition and are based of CSS box model and CSS flexbox layout model. Listed below are the links that will help you familiarize yourself with these concepts and help you be effective at using Box and Flex components.</Text>
+      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition and are based on CSS box model and CSS flexbox layout model. Listed below are the links that will help you familiarize yourself with these concepts and help you be effective at using Box and Flex components.</Text>
       <List mb="x3">
         <ListItem><Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link></ListItem>
         <ListItem><Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link></ListItem>
