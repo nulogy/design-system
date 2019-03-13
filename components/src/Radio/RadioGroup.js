@@ -12,6 +12,7 @@ const getRadioButtons = props => {
     const {
       value,
       disabled,
+      required,
       ...radioProps
     } = radio.props;
     return (
@@ -23,6 +24,7 @@ const getRadioButtons = props => {
         defaultChecked={ value === props.defaultValue ? true : undefined }
         checked={ props.checkedValue && (value === props.checkedValue) }
         onChange={ props.onChange }
+        required={ props.required}
       />
     );
   });

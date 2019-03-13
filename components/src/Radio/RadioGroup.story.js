@@ -21,14 +21,14 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("with requirementText", () => (
-    <RadioGroup labelText="Setting Selection" requirementText="(Required)" name="settingSelection" defaultValue="a">
+    <RadioGroup labelText="Setting Selection" required requirementText="(Required)" name="settingSelection" defaultValue="a">
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />
     </RadioGroup>
   ))
   .add("with additional text", () => (
-    <RadioGroup labelText="Setting Selection" helpText="Select a setting from the menu below:" requirementText="(Required)" name="settingSelection" defaultValue="a">
+    <RadioGroup labelText="Setting Selection" helpText="Select a setting from the menu below:" required requirementText="(Required)" name="settingSelection" defaultValue="a">
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />

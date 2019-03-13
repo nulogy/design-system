@@ -12,6 +12,7 @@ const getCheckboxButtons = props => {
     const {
       value,
       disabled,
+      required,
       ...checkboxProps
     } = checkbox.props;
     return (
@@ -23,6 +24,7 @@ const getCheckboxButtons = props => {
         defaultChecked={ props.defaultValue ? props.defaultValue.includes(value) : undefined }
         checked={ props.checkedValue ? props.checkedValue.includes(value) : undefined }
         onChange={ props.onChange }
+        required={ props.required}
       />
     );
   });
