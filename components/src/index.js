@@ -18,6 +18,7 @@ export { default as HelpText } from "./FieldLabel/HelpText";
 export { default as RequirementText } from "./FieldLabel/RequirementText";
 export { default as Input } from "./Input/Input";
 export { default as Checkbox } from "./Checkbox/Checkbox";
+export { default as CheckboxGroup } from "./Checkbox/CheckboxGroup";
 export { default as Radio } from "./Radio/Radio";
 export { default as RadioGroup } from "./Radio/RadioGroup";
 export { default as Toggle } from "./Toggle/Toggle";

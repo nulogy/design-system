@@ -156,7 +156,7 @@ storiesOf("Form", module)
           </Field>
 
           <Field labelText="Reconcile" htmlFor="reconcile">
-            <RadioGroup name="settingSelection" defaultValue="yes" id="reconcile">
+            <RadioGroup labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
               <Radio value="yes" labelText="Yes" />
               <Radio value="no" labelText="No" />
               <Radio value="maybe" labelText="Maybe" disabled />
