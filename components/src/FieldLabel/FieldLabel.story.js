@@ -10,17 +10,17 @@ storiesOf("FieldLabel", module)
     <FieldLabel labelText="Default label" />
   ))
   .add("with HelpText", () => (
-    <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!"/>
+    <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" />
   ))
   .add("with RequirementText", () => (
-    <FieldLabel labelText="Default label" requirementText="(Required)"/>
+    <FieldLabel labelText="Default label" requirementText="(Required)" />
   ))
   .add("with all additional text", () => (
-    <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)"/>
+    <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
   ))
   .add("with associated input", () => (
     <>
-      <FieldLabel mb="x1" htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)"/>
-      <Input id="input1"/>
+      <FieldLabel mb="x1" htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
+      <Input id="input1" />
     </>
   ));
