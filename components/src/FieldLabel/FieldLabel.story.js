@@ -5,6 +5,8 @@ import {
   Input,
 } from "ComponentsRoot";
 
+const CustomInput = props => (<Input { ...props }/>)
+
 storiesOf("FieldLabel", module)
   .add("FieldLabel", () => (
     <FieldLabel labelText="Default label" />
@@ -18,9 +20,9 @@ storiesOf("FieldLabel", module)
   .add("with all additional text", () => (
     <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
   ))
-  .add("with associated input", () => (
+  .add("with associated custom input component", () => (
     <>
       <FieldLabel mb="x1" htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
-      <Input id="input1" />
+      <CustomInput id="input1" />
     </>
   ));
