@@ -5,7 +5,7 @@ import {
   Input,
 } from "ComponentsRoot";
 
-const CustomInput = props => (<Input { ...props }/>)
+const CustomInput = props => (<Input { ...props } />);
 
 storiesOf("FieldLabel", module)
   .add("FieldLabel", () => (
