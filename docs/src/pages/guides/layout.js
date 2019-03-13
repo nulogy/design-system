@@ -44,15 +44,15 @@ export default () => (
       <SectionTitle>Spacing</SectionTitle>
       <SubsectionTitle>Padding and Margins</SubsectionTitle>
       <Text>Padding is used for adding spacing inside of the component and margin is used for adding space around the component.</Text>
-      <Flex bg="lightGrey" style={ {display: "inline-flex"} }>
+      <Flex bg="lightGrey" style={ { display: "inline-flex" } }>
         <Box><Flex color="white" bg="blackBlue" m="x3" p="x3">Box</Flex></Box>
         <Box><Flex color="white" bg="blackBlue" p="x6">Box</Flex></Box>
         <Box><Flex color="white" bg="blackBlue" m="x6">Box</Flex></Box>
       </Flex>
       <Highlight>
-        {`<Box bg="blackBlue" p=\"x3\" m=\"x3\">Box</Box>
-<Box bg="blackBlue" p=\"x6\">Box</Box>
-<Box bg="blackBlue" m=\"x6\">Box</Box>
+        {`<Box bg="blackBlue" p="x3" m="x3">Box</Box>
+<Box bg="blackBlue" p="x6">Box</Box>
+<Box bg="blackBlue" m="x6">Box</Box>
 `}
       </Highlight>
       <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
@@ -204,7 +204,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Width</SectionTitle>
       <Text>The width of the Box and Flex component is set through the width prop. Width accepts any number from 0–1 and is converted to a percentage. Numbers greater than 1 are interpreted as pixel values. Relative units (em/rem/vw/vh/%) are passed through string values.</Text>
-      <Text mb="x2" color="darkGrey" color="darkGrey">Varoius ways to set a width</Text>
+      <Text mb="x2" color="darkGrey">Varoius ways to set a width</Text>
       <Flex color="white">
         <Box width={ 1 / 4 } bg="blue" m="x1" p="x3">1/4</Box>
         <Box width={ 0.25 } bg="darkBlue" m="x1" p="x3">0.25</Box>
