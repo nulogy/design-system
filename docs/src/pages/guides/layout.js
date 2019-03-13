@@ -14,7 +14,7 @@ export default () => (
       <title>Layout</title>
     </Helmet>
     <Box pt="x4" mb="x6">
-      <Title m="none">Layout Model</Title>
+      <Title m="none">Layout</Title>
       <Intro>This article provides a breakdown of basic concepts and directions on how to compose the layout of any complexity.</Intro>
     </Box>
     <Flex mb="x8" flexDirection={ { small: "column", medium: "row", large: "row" } }>

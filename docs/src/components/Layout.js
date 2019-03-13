@@ -83,7 +83,7 @@ const Layout = ({ children }) => (
           </Nav>
           <Nav>
             <Text color="darkGrey" fontWeight="medium">Guides</Text>
-            <NavItem><Link href="/guides/layout-model" underline={ false }>Layout Model</Link></NavItem>
+            <NavItem><Link href="/guides/layout" underline={ false }>Layout</Link></NavItem>
           </Nav>
           <Nav>
             <Text color="darkGrey" fontWeight="medium">Resources</Text>
