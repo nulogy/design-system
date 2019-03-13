@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Box, Flex, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import {
   DocText as Text, Layout, Intro, DocSection, DocSubsection,
@@ -32,25 +32,35 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
-      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition. To be effective at using Flex component you should familiarize yourself with <Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link> and <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link>. If you want to have fun while doing that make sure you visit <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Froggy</Link>.</Text>
+      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition and are based of CSS box model and CSS flexbox layout model. Listed below are the links that will help you familiarize yourself with these concepts and help you be effective at using Box and Flex components.</Text>
+      <List mb="x3">
+        <ListItem><Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link></ListItem>
+        <ListItem><Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link></ListItem>
+        <ListItem><Link href="https://flexboxfroggy.com/">Flexbox Froggy</Link></ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Spacing</SectionTitle>
       <SubsectionTitle>Padding and Margins</SubsectionTitle>
       <Text>Padding is used for adding spacing inside of the component and margin is used for adding space around the component.</Text>
-      <Flex>
-        <Box bg="lightGrey"><Flex bg="grey" m="x3" p="x3"><Box bg="blackBlue" color="white" p="x3">Box</Box></Flex></Box>
+      <Flex bg="lightGrey" style={ {display: "inline-flex"} }>
+        <Box><Flex color="white" bg="blackBlue" m="x3" p="x3">Box</Flex></Box>
+        <Box><Flex color="white" bg="blackBlue" p="x6">Box</Flex></Box>
+        <Box><Flex color="white" bg="blackBlue" m="x6">Box</Flex></Box>
       </Flex>
       <Highlight>
-        {"<Box p=\"x3\" m=\"x3\">Box</Box>"}
+        {`<Box bg="blackBlue" p=\"x3\" m=\"x3\">Box</Box>
+<Box bg="blackBlue" p=\"x6\">Box</Box>
+<Box bg="blackBlue" m=\"x6\">Box</Box>
+`}
       </Highlight>
       <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Layout Composition</SectionTitle>
-      <Text>Flexbox is used for composing layouts. Establishing direction, alignment, wrapping, and order is achieved through the use of Flexbox props.</Text>
+      <Text>Flexbox is used for composing layouts. Establishing direction, alignment, wrapping, and order is achieved through the use of Flexbox props. Do not use floats to compose layout.</Text>
       <DocSubsection>
         <SubsectionTitle mt="x3">Direction (flexDirection prop)</SubsectionTitle>
         <DocSubsection>
@@ -62,10 +72,10 @@ export default () => (
           </Flex>
           <Highlight>
             {`<Flex flexDirection="row" color="white">
-      <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-      <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-      <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-    </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+</Flex>`}
           </Highlight>
         </DocSubsection>
         <DocSubsection>
@@ -79,11 +89,11 @@ export default () => (
           </Flex>
           <Highlight>
             {`<Flex flexDirection="column" color="white">
-        <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-        <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-        <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-      </Flex>
-    </Flex>`}
+    <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+    <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+    <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+  </Flex>
+</Flex>`}
           </Highlight>
         </DocSubsection>
       </DocSubsection>
@@ -99,11 +109,11 @@ export default () => (
         </Flex>
         <Highlight>
           {`<Flex flexWrap="wrap" color="white">
-    <Box bg="blue" m="x1" p="x3" width={ 1 / 3 }>1</Box>
-    <Box bg="darkBlue" m="x1" p="x3" width={ 1 / 4 }>2</Box>
-    <Box bg="blackBlue" m="x1" p="x3" width={ 1 / 3 }>3</Box>
-    <Box bg="black" m="x1" p="x3" width={ 1 / 4 }>4</Box>
-  </Flex>`}
+  <Box bg="blue" m="x1" p="x3" width={ 1 / 3 }>1</Box>
+  <Box bg="darkBlue" m="x1" p="x3" width={ 1 / 4 }>2</Box>
+  <Box bg="blackBlue" m="x1" p="x3" width={ 1 / 3 }>3</Box>
+  <Box bg="black" m="x1" p="x3" width={ 1 / 4 }>4</Box>
+</Flex>`}
         </Highlight>
       </DocSubsection>
       <DocSubsection>
@@ -118,10 +128,10 @@ export default () => (
           </Flex>
           <Highlight>
             {`<Flex justifyContent="flex-start" color="white">
-      <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-      <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-      <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-    </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+</Flex>`}
           </Highlight>
         </DocSubsection>
         <DocSubsection>
@@ -133,10 +143,10 @@ export default () => (
           </Flex>
           <Highlight>
             {`<Flex justifyContent="center" color="white">
-      <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-      <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-      <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-    </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+</Flex>`}
           </Highlight>
         </DocSubsection>
         <DocSubsection>
@@ -148,10 +158,10 @@ export default () => (
           </Flex>
           <Highlight>
             {`<Flex justifyContent="space-between" color="white">
-      <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-      <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-      <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-    </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+</Flex>`}
           </Highlight>
         </DocSubsection>
         <Text>Alignment of items on a cross-axis is controlled through alignItems prop.</Text>
@@ -163,10 +173,10 @@ export default () => (
         </Flex>
         <Highlight>
           {`<Flex alignItems="center" color="white" bg="lightGrey" p="x1" height="200px">
-    <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-    <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-    <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
-  </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+</Flex>`}
         </Highlight>
       </DocSubsection>
       <DocSubsection>
@@ -181,11 +191,11 @@ export default () => (
         </Flex>
         <Highlight>
           {`<Flex color="white">
-    <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-    <Box bg="darkBlue" m="x1" py="x3" px="x4" order="99">2</Box>
-    <Box bg="blackBlue" m="x1" py="x3" px="x4" order="-1" >3</Box>
-    <Box bg="black" m="x1" py="x3" px="x4" order="1">4</Box>
-  </Flex>`}
+  <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
+  <Box bg="darkBlue" m="x1" py="x3" px="x4" order="99">2</Box>
+  <Box bg="blackBlue" m="x1" py="x3" px="x4" order="-1" >3</Box>
+  <Box bg="black" m="x1" py="x3" px="x4" order="1">4</Box>
+</Flex>`}
         </Highlight>
       </DocSubsection>
       <Text>A full breakdown of capabilities and list of available props and their values is available on the <Link href="/components/flex">Flex</Link> component page.</Text>
