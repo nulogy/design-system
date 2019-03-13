@@ -18,7 +18,6 @@ const BaseFieldLabel = ({
   requirementText,
   helpText,
   htmlFor,
-  children,
   ...props
 }) => (
   <Label style={ { display: "block" } } htmlFor={ htmlFor } { ...props }>
@@ -33,13 +32,11 @@ BaseFieldLabel.propTypes = {
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
   htmlFor: PropTypes.string,
-  children: PropTypes.node,
   id: PropTypes.string,
   ...space.PropTypes,
 };
 
 BaseFieldLabel.defaultProps = {
-  children: [],
   requirementText: null,
   helpText: null,
   htmlFor: undefined,
