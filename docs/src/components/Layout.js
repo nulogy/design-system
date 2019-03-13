@@ -82,6 +82,10 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/components/toggle" underline={ false }>Toggle</Link></NavItem>
           </Nav>
           <Nav>
+            <Text color="darkGrey" fontWeight="medium">Guides</Text>
+            <NavItem><Link href="/guides/layout" underline={ false }>Layout</Link></NavItem>
+          </Nav>
+          <Nav>
             <Text color="darkGrey" fontWeight="medium">Resources</Text>
             <NavItem><Link href="/guides/designers" underline={ false }>For Designers</Link></NavItem>
             <NavItem><Link href="/guides/developers" underline={ false }>For Developers</Link></NavItem>
