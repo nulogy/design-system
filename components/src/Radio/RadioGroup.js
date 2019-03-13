@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Radio } from "ComponentsRoot";
+import {
+  Radio,
+  HelpText,
+  RequirementText,
+} from "ComponentsRoot";
 import theme from "../theme";
-import HelpText from "../Field/HelpText";
-import RequirementText from "../Field/RequirementText";
-
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
@@ -18,13 +19,13 @@ const getRadioButtons = props => {
     return (
       <Radio
         { ...radioProps }
-        disabled={ props.disabled || disabled }
-        name={ props.name }
         value={ value }
+        disabled={ props.disabled || disabled }
+        required={ props.required || required }
+        name={ props.name }
         defaultChecked={ value === props.defaultValue ? true : undefined }
         checked={ props.checkedValue && (value === props.checkedValue) }
         onChange={ props.onChange }
-        required={ props.required}
       />
     );
   });

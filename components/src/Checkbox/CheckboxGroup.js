@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Checkbox } from "ComponentsRoot";
+import {
+  Checkbox,
+  HelpText,
+  RequirementText,
+} from "ComponentsRoot";
 import theme from "../theme";
-import HelpText from "../Field/HelpText";
-import RequirementText from "../Field/RequirementText";
-
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
@@ -18,13 +19,13 @@ const getCheckboxButtons = props => {
     return (
       <Checkbox
         { ...checkboxProps }
-        disabled={ props.disabled || disabled }
-        name={ props.name }
         value={ value }
+        disabled={ props.disabled || disabled }
+        required={ props.required || required }
+        name={ props.name }
         defaultChecked={ props.defaultValue ? props.defaultValue.includes(value) : undefined }
         checked={ props.checkedValue ? props.checkedValue.includes(value) : undefined }
         onChange={ props.onChange }
-        required={ props.required}
       />
     );
   });
