@@ -10,7 +10,6 @@ const Label = styled.label(
   {
     display: "inline-block",
     fontSize: theme.fontSizes.medium,
-    marginBottom: theme.space.x1,
   }
 );
 

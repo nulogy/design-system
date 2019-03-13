@@ -20,7 +20,7 @@ storiesOf("FieldLabel", module)
   ))
   .add("with associated input", () => (
     <>
-      <FieldLabel htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)"/>
+      <FieldLabel mb="x1" htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)"/>
       <Input id="input1"/>
     </>
   ));
