@@ -32,7 +32,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
-      <Text><Link href="box">Box</Link> and <Link href="flex">Flexbox</Link> components are basic building blocks of any layout composition. To be effective at using Flex component you should familiarize yourself with <Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link> and <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link>. If you want to have fun while doing that make sure you visit <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Froggy</Link>.</Text>
+      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition. To be effective at using Flex component you should familiarize yourself with <Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link> and <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link>. If you want to have fun while doing that make sure you visit <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Froggy</Link>.</Text>
     </DocSection>
 
     <DocSection>
@@ -45,7 +45,7 @@ export default () => (
       <Highlight>
         {"<Box p=\"x3\" m=\"x3\">Box</Box>"}
       </Highlight>
-      <Text><Link href="box">Box</Link> and <Link href="flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
+      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
     </DocSection>
 
     <DocSection>
@@ -188,12 +188,12 @@ export default () => (
   </Flex>`}
         </Highlight>
       </DocSubsection>
-      <Text>A full breakdown of capabilities and list of available props and their values is available on <Link href="flex">Flexbox</Link> component page.</Text>
+      <Text>A full breakdown of capabilities and list of available props and their values is available on the <Link href="/components/flex">Flex</Link> component page.</Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Width</SectionTitle>
-      <Text>The width of the Box and Flex component is set through width prop. Width prop accepts any number from 0–1 and it is being converted to a percentage. Numbers greater than 1 are interpreted as pixel values. Relative units (em/rem/vw/vh/%) are passed through string values.</Text>
+      <Text>The width of the Box and Flex component is set through the width prop. Width accepts any number from 0–1 and is converted to a percentage. Numbers greater than 1 are interpreted as pixel values. Relative units (em/rem/vw/vh/%) are passed through string values.</Text>
       <Text mb="x2" color="darkGrey" color="darkGrey">Varoius ways to set a width</Text>
       <Flex color="white">
         <Box width={ 1 / 4 } bg="blue" m="x1" p="x3">1/4</Box>
