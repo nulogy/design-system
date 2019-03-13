@@ -31,3 +31,4 @@ export { default as List } from "./List/List";
 export { default as ListItem } from "./List/ListItem";
 export { default as Textarea } from "./Textarea/Textarea";
 export { default as Tooltip } from "./Tooltip/Tooltip";
+export { default as FieldLabel } from "./FieldLabel/FieldLabel";
