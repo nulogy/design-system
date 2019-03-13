@@ -45,14 +45,14 @@ export default () => (
       <SubsectionTitle>Padding and Margins</SubsectionTitle>
       <Text>Padding is used for adding spacing inside of the component and margin is used for adding space around the component.</Text>
       <Flex bg="lightGrey" style={ { display: "inline-flex" } }>
-        <Box><Flex color="white" bg="blackBlue" m="x3" p="x3">Box</Flex></Box>
-        <Box><Flex color="white" bg="blackBlue" p="x6">Box</Flex></Box>
-        <Box><Flex color="white" bg="blackBlue" m="x6">Box</Flex></Box>
+        <Box><Flex color="white" bg="blackBlue" p="x3" m="x3">Padding + Margin</Flex></Box>
+        <Box><Flex color="white" bg="blackBlue" p="x6">Padding</Flex></Box>
+        <Box><Flex color="white" bg="blackBlue" m="x6">Margin</Flex></Box>
       </Flex>
       <Highlight>
-        {`<Box bg="blackBlue" p="x3" m="x3">Box</Box>
-<Box bg="blackBlue" p="x6">Box</Box>
-<Box bg="blackBlue" m="x6">Box</Box>
+        {`<Box bg="blackBlue" p="x3" m="x3">Padding + Margin</Box>
+<Box bg="blackBlue" p="x6">Padding</Box>
+<Box bg="blackBlue" m="x6">Margin</Box>
 `}
       </Highlight>
       <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
