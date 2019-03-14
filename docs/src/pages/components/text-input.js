@@ -5,8 +5,29 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the field as disabled and disallows user input",
+  },
+  {
+    name: "error", type: "String", defaultValue: "", description: "Sets the error state and displays message",
+  },
+  {
+    name: "helpText", type: "String", defaultValue: "", description: "Additional instruction to show up below label",
+  },
+  {
+    name: "labelText", type: "String", defaultValue: "", description: "Label for the input",
+  },
+  {
+    name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",
+  },
+  {
+    name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
+  },
+];
 
 export default () => (
   <Layout>
@@ -18,11 +39,11 @@ export default () => (
       <Intro>An input field that users can type into.</Intro>
     </Box>
     <DocSection>
-      <Input placeholder="I'm an input" />
+      <Input id="input" labelText="Input label" placeholder="I'm an input" />
       <Highlight className="js">
         {`import { Input } from @nulogy/components;
 
-<Input placeholder="I'm an input" />`}
+<Input id="input" labelText="Input label" placeholder="I'm an input" />`}
       </Highlight>
     </DocSection>
     <DocSection>
@@ -36,14 +57,14 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Input placeholder="I'm an input" disabled />
         <Highlight className="js">
-          {"<Input placeholder=\"I'm an input\" disabled />"}
+          {"<Input id=\"disabled-input\" placeholder=\"I'm an input\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Input placeholder="I'm an input" error />
+        <Input labelText="Label" placeholder="I'm an input" error="Error message" />
         <Highlight className="js">
-          {"<Input error />"}
+          {"<Input labelText=\"Label\" id=\"error-input\" error=\"Error message\" />"}
         </Highlight>
       </Box>
     </DocSection>
@@ -53,42 +74,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and turns red</td>
-          </tr>
-          <tr>
-            <td>placeholder</td>
-            <td>String</td>
-            <td>null</td>
-            <td>A hint to the expected format for the field. Not a replacement for a label.</td>
-          </tr>
-          <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require selection before the form will submit</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
