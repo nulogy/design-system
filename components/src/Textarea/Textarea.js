@@ -1,7 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
+import { FieldLabel } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -27,7 +29,7 @@ const getTextareaStyle = props => {
   return TextareaStyles.default;
 };
 
-const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
+const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
@@ -55,6 +57,16 @@ const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
     },
   },
   props => getTextareaStyle(props)
+);
+
+const Textarea = ({
+  labelText, requirementText, helpText,
+  ...props
+}) => (
+  <>
+    <FieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+    <StyledTextarea { ...props } />
+  </>
 );
 
 Textarea.propTypes = {
