@@ -5,12 +5,36 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
 
 const options = [
   { value: "accepted", label: "Accepted" },
   { value: "assigned", label: "Assigned to a line" },
+];
+
+const propsRows = [
+  {
+    name: "options", type: "Array", defaultValue: "Required", description: "The options available to be selected, containing a value and a label",
+  },
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the field as disabled and disallows user input",
+  },
+  {
+    name: "error", type: "String", defaultValue: "", description: "Sets the error state and displays message",
+  },
+  {
+    name: "helpText", type: "String", defaultValue: "", description: "Additional instruction to show up below label",
+  },
+  {
+    name: "labelText", type: "String", defaultValue: "", description: "Label for the input",
+  },
+  {
+    name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",
+  },
+  {
+    name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
+  },
 ];
 
 export default () => (
@@ -80,60 +104,7 @@ const options = [
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>placeholder</td>
-            <td>String</td>
-            <td>""</td>
-            <td>A description of what the Select box contains</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>helpText</td>
-            <td>String</td>
-            <td>""</td>
-            <td>Additional information to display beneath the label.</td>
-          </tr>
-          <tr>
-            <td>name</td>
-            <td>String</td>
-            <td>Required</td>
-            <td>A unique ID for this input</td>
-          </tr>
-          <tr>
-            <td>options</td>
-            <td>Array of objects</td>
-            <td>Required</td>
-            <td>The options available to be selected, containing a value and a label</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>String</td>
-            <td>null</td>
-            <td>Text to display inside validation. If used, field will be marked as invalid and have a red border.</td>
-          </tr>
-          <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require input before the form will submit</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
