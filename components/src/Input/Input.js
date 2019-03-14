@@ -79,11 +79,13 @@ const Input = ({
 }) => (
   <>
     <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
-    <StyledInput id={ id } />
+    <StyledInput id={ id } error={ error } />
+    {error && <InlineValidation mt="x1" message={ error } />}
   </>
 );
 
 Input.propTypes = {
+  error: PropTypes.string,
   helpText: PropTypes.string,
   labelText: PropTypes.string,
   id: PropTypes.string.isRequired,
@@ -91,6 +93,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  error: null,
   helpText: null,
   labelText: null,
   requirementText: null,
