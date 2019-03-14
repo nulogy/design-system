@@ -7,6 +7,7 @@ import Highlight from "react-highlight";
 import {
   Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+import inputProps from "../../shared/inputProps";
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -17,24 +18,7 @@ const propsRows = [
   {
     name: "options", type: "Array", defaultValue: "Required", description: "The options available to be selected, containing a value and a label",
   },
-  {
-    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the field as disabled and disallows user input",
-  },
-  {
-    name: "error", type: "String", defaultValue: "", description: "Sets the error state and displays message",
-  },
-  {
-    name: "helpText", type: "String", defaultValue: "", description: "Additional instruction to show up below label",
-  },
-  {
-    name: "labelText", type: "String", defaultValue: "", description: "Label for the input",
-  },
-  {
-    name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",
-  },
-  {
-    name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
-  },
+  ...inputProps,
 ];
 
 export default () => (

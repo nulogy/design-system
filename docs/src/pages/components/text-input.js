@@ -7,27 +7,7 @@ import {
 import {
   Layout, Intro, DocSection, PropsTable,
 } from "../../components";
-
-const propsRows = [
-  {
-    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the field as disabled and disallows user input",
-  },
-  {
-    name: "error", type: "String", defaultValue: "", description: "Sets the error state and displays message",
-  },
-  {
-    name: "helpText", type: "String", defaultValue: "", description: "Additional instruction to show up below label",
-  },
-  {
-    name: "labelText", type: "String", defaultValue: "", description: "Label for the input",
-  },
-  {
-    name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",
-  },
-  {
-    name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
-  },
-];
+import inputProps from "../../shared/inputProps";
 
 export default () => (
   <Layout>
@@ -74,7 +54,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={ inputProps } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
