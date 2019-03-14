@@ -35,7 +35,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
-        <Input placeholder="I'm an input" disabled />
+        <Input labelText="Label" placeholder="I'm an input" disabled />
         <Highlight className="js">
           {"<Input id=\"disabled-input\" placeholder=\"I'm an input\" disabled />"}
         </Highlight>
