@@ -13,5 +13,5 @@ storiesOf("Input", module)
     <Input name="error" error />
   ))
   .add("Set to required", () => (
-    <Input name="required" required />
+    <Input name="required" labelText="Set to required" requirementText="(Required)" required />
   ));
