@@ -68,11 +68,12 @@ const options = [
       <Select labelText="Error" placeholder="Please select inventory status" options={ options } name="error" error="Please select an inventory status" />
       <Highlight className="js">
         {`<Select
-labelText="Error"
-placeholder="Please select inventory status"
-options={ options }
-name="error"
-error="Please select an inventory status" />`}
+  labelText="Error"
+  placeholder="Please select inventory status"
+  options={ options }
+  name="error"
+  error="Please select an inventory status"
+/>`}
       </Highlight>
 
     </DocSection>
