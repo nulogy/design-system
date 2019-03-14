@@ -76,10 +76,11 @@ const Input = ({
   helpText,
   id,
   error,
+  ...props,
 }) => (
   <>
     <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
-    <StyledInput id={ id } error={ error } />
+    <StyledInput id={ id } error={ error } {...props} />
     {error && <InlineValidation mt="x1" message={ error } />}
   </>
 );
