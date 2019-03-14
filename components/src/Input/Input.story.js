@@ -14,4 +14,7 @@ storiesOf("Input", module)
   ))
   .add("Set to required", () => (
     <Input name="required" labelText="Set to required" requirementText="(Required)" required />
+  ))
+  .add("With help text", () => (
+    <Input name="required" labelText="With help text" helpText="Additional help text"  />
   ));

@@ -72,20 +72,23 @@ StyledInput.defaultProps = {
 
 const Input = ({
   labelText,
-  requirementText
+  requirementText,
+  helpText
 }) => (
   <>
-    <FieldLabel labelText={ labelText } requirementText={ requirementText } mb="x1" />
+    <FieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
     <StyledInput />
   </>
 )
 
 Input.propTypes = {
+  helpText: PropTypes.string,
   labelText: PropTypes.string,
   requirementText: PropTypes.string,
 }
 
 Input.defaultProps = {
+  helpText: PropTypes.string,
   labelText: null,
   requirementText: null,
 }
