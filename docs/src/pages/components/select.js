@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Select, Link, ListItem,
+  Box, SectionTitle, Title, Select, Link, ListItem,
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -27,7 +27,7 @@ export default () => (
     </Box>
     <DocSection>
 
-      <Select placeholder="Please select inventory status" options={ options } />
+      <Select placeholder="Please select inventory status" options={ options } labelText="Inventory status" name="inventory-status" />
       <Highlight className="js">
         {`import { Select } from @nulogy/components;
 
@@ -36,7 +36,12 @@ const options = [
   { value: "assigned", label: "Assigned to a line" },
 ];
 
-<Select placeholder="Please select inventory status" options={ options } />`
+<Select
+  placeholder="Please select inventory status"
+  options={ options }
+  name="inventory-status"
+  labelText="Inventory status"
+/>`
 }
       </Highlight>
     </DocSection>
@@ -47,19 +52,27 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <SubsectionTitle>Disabled</SubsectionTitle>
       <Box mb="x3">
-        <Select placeholder="Please select inventory status" options={ options } disabled />
+        <Select labelText="Disabled" placeholder="Please select inventory status" options={ options } name="disabled" disabled />
         <Highlight className="js">
-          {"<Select placeholder=\"Please select inventory status\" options={ options } disabled />"}
+          {`<Select
+  labelText="Disabled"
+  placeholder="Please select inventory status"
+  options={ options }
+  name="disabled"
+  disabled
+/>`}
         </Highlight>
       </Box>
 
-      <SubsectionTitle>Error</SubsectionTitle>
-
-      <Select placeholder="Please select inventory status" options={ options } error />
+      <Select labelText="Error" placeholder="Please select inventory status" options={ options } name="error" error="Please select an inventory status" />
       <Highlight className="js">
-        {"<Select placeholder=\"Please select inventory status\" options={ options } error />"}
+        {`<Select
+labelText="Error"
+placeholder="Please select inventory status"
+options={ options }
+name="error"
+error="Please select an inventory status" />`}
       </Highlight>
 
     </DocSection>
@@ -89,10 +102,28 @@ const options = [
             <td>Marks the field as disabled and disallows user input</td>
           </tr>
           <tr>
+            <td>helpText</td>
+            <td>String</td>
+            <td>""</td>
+            <td>Additional information to display beneath the label.</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>A unique ID for this input</td>
+          </tr>
+          <tr>
+            <td>options</td>
+            <td>Array of objects</td>
+            <td>Required</td>
+            <td>The options available to be selected, containing a value and a label</td>
+          </tr>
+          <tr>
             <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and adds a red border</td>
+            <td>String</td>
+            <td>null</td>
+            <td>Text to display inside validation. If used, field will be marked as invalid and have a red border.</td>
           </tr>
           <tr>
             <td>required</td>

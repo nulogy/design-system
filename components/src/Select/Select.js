@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
-import { Icon } from "ComponentsRoot";
+import { Icon, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -123,75 +123,80 @@ const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
   required, placeholder, initialIsOpen,
-  id,
+  id, labelText, helpText, requirementText,
+  name
 }) => (
-
-  <Downshift
-    itemToString={ optionToString }
-    selectedItem={ value }
-    onChange={ onChange }
-    defaultHighlightedIndex={ 0 }
-    initialIsOpen={ initialIsOpen }
-    inputId={ id }
-  >
-    {
-      ({
-        getMenuProps,
-        getItemProps,
-        getInputProps,
-        getToggleButtonProps,
-        isOpen,
-        selectedItem,
-        highlightedIndex,
-      }) => (
-        <div style={ { position: "relative" } }>
-          <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
-            <Input
-              { ...getInputProps({
-                disabled, error, isOpen, autoComplete: "off",
-              }) }
-              aria-required={ required } aria-invalid={ error } placeholder={ placeholder }
-              readOnly value={ optionToString(selectedItem) || "" }
-            />
-            <ToggleButton isOpen={ isOpen } />
-          </SelectBox>
-          {
-            isOpen
-              && (
-                <Menu { ...getMenuProps({ error, isOpen }) }>
-                  {
-                    options.map((option, index) => (
-                      <MenuItem
-                        { ...getItemProps({
-                          key: option.value,
-                          item: option,
-                          isSelected: selectedItem === option,
-                          isActive: highlightedIndex === index,
-                          index,
-                          disabled,
-                        }) }
-                      >
-                        {option.label}
-                      </MenuItem>
-                    ))
-                  }
-                </Menu>
-              )
-          }
-        </div>
-      )
-    }
-  </Downshift>
+  <>
+    <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ name } requirementText={ requirementText } />
+    <Downshift
+      itemToString={ optionToString }
+      selectedItem={ value }
+      onChange={ onChange }
+      defaultHighlightedIndex={ 0 }
+      initialIsOpen={ initialIsOpen }
+      inputId={ name }
+    >
+      {
+        ({
+          getMenuProps,
+          getItemProps,
+          getInputProps,
+          getToggleButtonProps,
+          isOpen,
+          selectedItem,
+          highlightedIndex,
+        }) => (
+          <div style={ { position: "relative" } }>
+            <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
+              <Input
+                { ...getInputProps({
+                  disabled, error, isOpen, autoComplete: "off",
+                }) }
+                aria-required={ required } aria-invalid={ error } placeholder={ placeholder }
+                readOnly value={ optionToString(selectedItem) || "" }
+              />
+              <ToggleButton isOpen={ isOpen } />
+            </SelectBox>
+            {
+              isOpen
+                && (
+                  <Menu { ...getMenuProps({ error, isOpen }) }>
+                    {
+                      options.map((option, index) => (
+                        <MenuItem
+                          { ...getItemProps({
+                            key: option.value,
+                            item: option,
+                            isSelected: selectedItem === option,
+                            isActive: highlightedIndex === index,
+                            index,
+                            disabled,
+                          }) }
+                        >
+                          {option.label}
+                        </MenuItem>
+                      ))
+                    }
+                  </Menu>
+                )
+            }
+          </div>
+        )
+      }
+    </Downshift>
+    {error && <InlineValidation mt="x1" message={ error } />}
+  </>
 );
 
 Select.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.shape({}),
+  name: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
   onChange: PropTypes.func,
-  error: PropTypes.bool,
+  error: PropTypes.string,
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   id: PropTypes.string,
@@ -203,7 +208,7 @@ Select.defaultProps = {
   value: undefined,
   required: false,
   onChange: undefined,
-  error: false,
+  error: null,
   disabled: false,
   initialIsOpen: undefined,
   placeholder: undefined,
