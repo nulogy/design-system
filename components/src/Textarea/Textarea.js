@@ -60,12 +60,12 @@ const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) 
 );
 
 const Textarea = ({
-  labelText, requirementText, helpText,
+  labelText, requirementText, helpText, id,
   ...props
 }) => (
   <>
-    <FieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
-    <StyledTextarea { ...props } />
+    <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+    <StyledTextarea id={ id } { ...props } />
   </>
 );
 
