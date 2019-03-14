@@ -4,14 +4,14 @@ import { Input } from "ComponentsRoot";
 
 storiesOf("Input", module)
   .add("Input", () => (
-    <Input />
+    <Input labelText="Input" />
   ))
   .add("Set to disabled", () => (
-    <Input disabled />
+    <Input name="disabled" disabled />
   ))
   .add("Set to error", () => (
-    <Input error />
+    <Input name="error" error />
   ))
   .add("Set to required", () => (
-    <Input required />
+    <Input name="required" required />
   ));

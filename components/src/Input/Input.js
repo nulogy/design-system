@@ -1,7 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
+import { FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -28,7 +30,7 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const Input = styled.input.attrs(({ error, required }) => ({
+const StyledInput = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
@@ -55,17 +57,26 @@ const Input = styled.input.attrs(({ error, required }) => ({
   props => (getInputStyle(props))
 );
 
-Input.propTypes = {
+StyledInput.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   required: PropTypes.bool,
   ...space.PropTypes,
 };
 
-Input.defaultProps = {
+StyledInput.defaultProps = {
   disabled: false,
   error: false,
   required: false,
 };
+
+const Input = ({
+  labelText
+}) => (
+  <>
+    <FieldLabel labelText={ labelText } mb="x1" />
+    <StyledInput />
+  </>
+)
 
 export default Input;
