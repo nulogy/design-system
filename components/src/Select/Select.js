@@ -199,6 +199,9 @@ Select.propTypes = {
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   id: PropTypes.string,
+  labelText: PropTypes.string,
+  helpText: PropTypes.string,
+  requirementText: PropTypes.string,
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -213,6 +216,9 @@ Select.defaultProps = {
   placeholder: undefined,
   optionToString: extractLabelFromOption,
   id: undefined,
+  labelText: null,
+  helpText: null,
+  requirementText: null,
 };
 
 export default Select;
