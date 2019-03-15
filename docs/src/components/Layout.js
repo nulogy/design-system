@@ -83,12 +83,12 @@ const Layout = ({ children }) => (
           </Nav>
           <Nav>
             <Text color="darkGrey" fontWeight="medium">Guides</Text>
+            <NavItem><Link href="/guides/designers" underline={ false }>For Designers</Link></NavItem>
+            <NavItem><Link href="/guides/developers" underline={ false }>For Developers</Link></NavItem>
             <NavItem><Link href="/guides/layout" underline={ false }>Layout</Link></NavItem>
           </Nav>
           <Nav>
             <Text color="darkGrey" fontWeight="medium">Resources</Text>
-            <NavItem><Link href="/guides/designers" underline={ false }>For Designers</Link></NavItem>
-            <NavItem><Link href="/guides/developers" underline={ false }>For Developers</Link></NavItem>
             <NavItem><Link href="https://github.com/nulogy/design-system" underline={ false }>Github</Link></NavItem>
             <NavItem><Link href="/tokens" underline={ false }>Tokens</Link></NavItem>
             <NavItem><Link href="/guides/reading-list" underline={ false }>Reading list</Link></NavItem>
