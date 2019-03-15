@@ -58,7 +58,7 @@ BaseNavBar.defaultProps = {
 const NavBar = styled(BaseNavBar)({
   background: theme.colors.blackBlue,
   paddingTop: theme.space.x2,
-  paddingRight: theme.space.x3,
+  paddingRight: theme.space.x4,
   paddingBottom: theme.space.x2,
   paddingLeft: theme.space.x4,
   display: "flex",

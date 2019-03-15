@@ -47,9 +47,8 @@ BaseDesktopMenu.defaultProps = {
 const DesktopMenu = styled(BaseDesktopMenu)(
   {
     "button": {
-      marginRight: theme.space.x1,
-      ":last-child": {
-        marginRight: theme.space.none,
+      ":not(:last-of-type)": {
+        marginRight: theme.space.x1,
       },
     },
 
