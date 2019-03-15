@@ -17,19 +17,23 @@ const BaseDesktopMenu = ({
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
-          <MenuDropdown key={ menuItem.text } labelText={ menuItem.text }>
-            {menuItem.subMenuItems.map(subMenuItem => (
-              <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-                {subMenuItem.text}
-              </SubMenuItem>
-            ))}
-          </MenuDropdown>
+          <div>
+            <MenuDropdown key={ menuItem.text } labelText={ menuItem.text }>
+              {menuItem.subMenuItems.map(subMenuItem => (
+                <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
+                  {subMenuItem.text}
+                </SubMenuItem>
+              ))}
+            </MenuDropdown>
+          </div>
         );
       } else {
         return (
-          <MenuItem key={ menuItem.text } href={ menuItem.href }>
-            {menuItem.text}
-          </MenuItem>
+          <div>
+            <MenuItem key={ menuItem.text } href={ menuItem.href }>
+              {menuItem.text}
+            </MenuItem>
+          </div>
         );
       }
     })}
@@ -46,13 +50,12 @@ BaseDesktopMenu.defaultProps = {
 
 const DesktopMenu = styled(BaseDesktopMenu)(
   {
-    "button": {
+    "div": {
       ":not(:last-of-type)": {
         marginRight: theme.space.x1,
       },
     },
-
-  }
+  },
 );
 
 export default DesktopMenu;
