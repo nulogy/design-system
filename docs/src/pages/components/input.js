@@ -12,7 +12,7 @@ import inputProps from "../../shared/inputProps";
 export default () => (
   <Layout>
     <Helmet>
-      <title>Text input</title>
+      <title>Input</title>
     </Helmet>
     <Box mt="x2" mb="x6">
       <Title mb="none">Text input</Title>
