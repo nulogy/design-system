@@ -124,17 +124,16 @@ const Select = ({
   options, optionToString, value,
   required, placeholder, initialIsOpen,
   id, labelText, helpText, requirementText,
-  name
 }) => (
   <>
-    <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ name } requirementText={ requirementText } />
+    <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ id } requirementText={ requirementText } />
     <Downshift
       itemToString={ optionToString }
       selectedItem={ value }
       onChange={ onChange }
       defaultHighlightedIndex={ 0 }
       initialIsOpen={ initialIsOpen }
-      inputId={ name }
+      inputId={ id }
     >
       {
         ({

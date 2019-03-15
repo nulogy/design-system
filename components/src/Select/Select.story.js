@@ -43,43 +43,43 @@ class SelectWithState extends React.Component {
 
 storiesOf("Select", module)
   .add("Select", () => (
-    <Select name="inventory-status" placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
+    <Select id="inventory-status" placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
   ))
   .add("Select with an option selected", () => (
     <>
       <Select
-        value={ options[0] } name="with-option-selected" placeholder="Please select inventory status" options={ options } labelText="Inventory status"
+        value={ options[0] } id="with-option-selected" placeholder="Please select inventory status" options={ options } labelText="Inventory status"
         optionToString={ optionToString }
       />
       <br />
       <Select
-        value={ options[0] } name="with-option-selected-open "placeholder="Please select inventory status" options={ options } labelText="Inventory status"
+        value={ options[0] } id="with-option-selected-open" placeholder="Please select inventory status" options={ options } labelText="Inventory status"
         optionToString={ optionToString } initialIsOpen
       />
     </>
   ))
   .add("Select as a controlled component", () => (
-    <SelectWithState name="controlled" placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
+    <SelectWithState id="controlled" placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
   ))
   .add("Set to disabled", () => (
-    <Select name="disabled" placeholder="Please select inventory status" options={ options } disabled labelText="Inventory status" />
+    <Select id="disabled" placeholder="Please select inventory status" options={ options } disabled labelText="Inventory status" />
   ))
   .add("Set to error", () => (
     <>
-      <Select name="error-1" placeholder="Please select inventory status" options={ options } error="Please select an inventory status" labelText="Inventory status" />
+      <Select id="error-1" placeholder="Please select inventory status" options={ options } error="Please select an inventory status" labelText="Inventory status" />
       <br />
       <Select
-        name="error-2" placeholder="Please select inventory status" options={ options } error="Please select an inventory status"
+        id="error-2" placeholder="Please select inventory status" options={ options } error="Please select an inventory status"
         initialIsOpen
       />
     </>
   ))
   .add("Set to required", () => (
     <form>
-      <Input placeholder="Please select inventory status"/>
+      <Input placeholder="Please select inventory status" />
       <Select
         placeholder="Please select inventory status" options={ options } required
-        requirementText="(Required)" name="required"
+        requirementText="(Required)" id="required"
         style={ { marginTop: "5px" } } labelText="Inventory status"
 
       />
@@ -87,5 +87,5 @@ storiesOf("Select", module)
     </form>
   ))
   .add("With helpText", () => (
-    <Select name="withHelpText" placeholder="Please select inventory status" options={ options } labelText="Inventory status" helpText="Additional information about input" />
+    <Select id="withHelpText" placeholder="Please select inventory status" options={ options } labelText="Inventory status" helpText="Additional information about input" />
   ));
