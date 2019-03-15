@@ -84,7 +84,7 @@ export default () => (
       <SectionTitle>Related components</SectionTitle>
       <List>
         <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
-        <ListItem><Link href="/components/icons">Icons</Link></ListItem>
+        <ListItem><Link href="/components/icon">Icons</Link></ListItem>
       </List>
     </DocSection>
 
