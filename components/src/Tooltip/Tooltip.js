@@ -306,7 +306,7 @@ Tooltip.defaultProps = {
   showDelay: "100",
   hideDelay: "350",
   fullWidth: false,
-  maxWidth: "18em",
+  maxWidth: "24em",
 };
 
 export default Tooltip;

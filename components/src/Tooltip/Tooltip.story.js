@@ -37,7 +37,7 @@ storiesOf("Tooltip", module)
     <Flex p="x8">
       <Tooltip
         placement="bottom"
-        tooltip="I am a Tooltip! I have very long text, and my default max-width is 18em, which is equal to 288px, or approximately 40 characters."
+        tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
         id="tooltip1"
       >
         <Button> Button </Button>
