@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box, Text } from "ComponentsRoot";
+import { Box, Text, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { InputClickableArea } from "../Utils";
 
@@ -126,9 +126,26 @@ BaseCheckbox.defaultProps = {
   required: false,
 };
 
-const Checkbox = styled(BaseCheckbox)(({ error }) => ({
+const StyledCheckbox = styled(BaseCheckbox)(({ error }) => ({
   padding: `${theme.space.half} 0`,
   color: error ? theme.colors.red : null,
 }));
+
+const Checkbox = ({
+  error, ...props
+}) => (
+  <>
+    <StyledCheckbox error={ error } { ...props } />
+    {error && <InlineValidation message={ error } />}
+  </>
+);
+
+Checkbox.propTypes = {
+  error: PropTypes.string,
+};
+
+Checkbox.defaultProps = {
+  error: null,
+};
 
 export default Checkbox;
