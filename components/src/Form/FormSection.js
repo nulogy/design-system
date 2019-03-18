@@ -19,7 +19,11 @@ const BaseFormSection = ({
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
-    { children }
+      { children.map( child => (
+      <Field style={{border: "solid 2px blue"}}>
+        {React.cloneElement(child)}
+      </Field>
+    )) }
   </fieldset>
 );
 
