@@ -21,7 +21,8 @@ storiesOf("Checkbox", module)
   ))
   .add("Set to error", () => (
     <>
-      <Checkbox error="I'm an error" labelText="Checkbox" />
+      <Checkbox error labelText="I am error" />
+      <Checkbox defaultChecked error labelText="I am error" />
     </>
   ))
   .add("Set to required", () => (
