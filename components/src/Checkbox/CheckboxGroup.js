@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {
   Checkbox,
   HelpText,
+  InlineValidation,
   RequirementText,
 } from "ComponentsRoot";
 import theme from "../theme";
@@ -62,6 +63,7 @@ const Fieldset = styled.fieldset({
 
 const BaseCheckboxGroup = ({
   className,
+  error,
   labelText,
   helpText,
   requirementText,
@@ -74,10 +76,12 @@ const BaseCheckboxGroup = ({
     </legend>
     { helpText && (<HelpText>{helpText}</HelpText>) }
     { getCheckboxButtons(props) }
+    {error && <InlineValidation mt="x1" message={ error } />}
   </Fieldset>
 );
 
 BaseCheckboxGroup.propTypes = {
+  error: PropTypes.string,
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -99,6 +103,7 @@ BaseCheckboxGroup.propTypes = {
 };
 
 BaseCheckboxGroup.defaultProps = {
+  error: null,
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,

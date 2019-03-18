@@ -20,6 +20,13 @@ storiesOf("CheckboxGroup", module)
       <Checkbox value="c" labelText="Option C" />
     </CheckboxGroup>
   ))
+  .add("with error", () => (
+    <CheckboxGroup error="Please select an option" labelText="Setting Selection" name="settingSelection" defaultValue={ ["a"] }>
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ))
   .add("with helpText", () => (
     <CheckboxGroup labelText="Setting Selection" helpText="Select a setting from the menu below:" name="settingSelection" defaultValue={ ["a"] }>
       <Checkbox value="a" labelText="Option A" />
