@@ -65,6 +65,19 @@ export default () => (
           {"<Textarea id=\"error\" labelText=\"Label\" error=\"Please fill this out\" />"}
         </Highlight>
       </Box>
+      <Box>
+        <SubsectionTitle>With all labels</SubsectionTitle>
+        <Textarea id="error" labelText="Label" helpText="Additional help text" requirementText="(Optional)" placeholder="Placeholder" />
+        <Highlight className="js">
+          {`<Textarea
+  id="error"
+  labelText="Label"
+  helpText="Additional help text"
+  requirementText="(Optional)"
+  placeholder="Placeholder"
+/>`}
+        </Highlight>
+      </Box>
     </DocSection>
 
     <DocSection>

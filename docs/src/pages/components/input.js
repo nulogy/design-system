@@ -15,11 +15,11 @@ export default () => (
       <title>Input</title>
     </Helmet>
     <Box mt="x2" mb="x6">
-      <Title mb="none">Text input</Title>
+      <Title mb="none">Input</Title>
       <Intro>An input field that users can type into.</Intro>
     </Box>
     <DocSection>
-      <Input id="input" labelText="Input label" placeholder="I'm an input" />
+      <Input id="input" labelText="Label" />
       <Highlight className="js">
         {`import { Input } from @nulogy/components;
 
@@ -45,6 +45,19 @@ export default () => (
         <Input labelText="Label" placeholder="I'm an input" error="Error message" />
         <Highlight className="js">
           {"<Input labelText=\"Label\" id=\"error-input\" error=\"Error message\" />"}
+        </Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>With all labels</SubsectionTitle>
+        <Input id="all-labels" labelText="Label" helpText="Additional help text" requirementText="(Optional)" placeholder="I'm an input" />
+        <Highlight className="js">
+          {`<Input
+  id="all-labels"
+  labelText="Label"
+  helpText="Additional help text"
+  requirementText="(Optional)"
+  placeholder="I'm an input"
+/>`}
         </Highlight>
       </Box>
     </DocSection>
