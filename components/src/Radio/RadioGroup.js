@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {
   Radio,
   HelpText,
+  InlineValidation,
   RequirementText,
 } from "ComponentsRoot";
 import theme from "../theme";
@@ -62,6 +63,7 @@ const Fieldset = styled.fieldset({
 
 const BaseRadioGroup = ({
   className,
+  error,
   labelText,
   helpText,
   requirementText,
@@ -74,10 +76,12 @@ const BaseRadioGroup = ({
     </legend>
     { helpText && (<HelpText>{helpText}</HelpText>) }
     { getRadioButtons(props) }
+    {error && <InlineValidation mt="x1" message={ error } />}
   </Fieldset>
 );
 
 BaseRadioGroup.propTypes = {
+  error: PropTypes.string,
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -99,6 +103,7 @@ BaseRadioGroup.propTypes = {
 };
 
 BaseRadioGroup.defaultProps = {
+  error: null,
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,

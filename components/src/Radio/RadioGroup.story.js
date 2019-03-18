@@ -13,6 +13,13 @@ storiesOf("RadioGroup", module)
       <Radio value="c" labelText="Option C" />
     </RadioGroup>
   ))
+  .add("With error", () => (
+    <RadioGroup error="Please select an option" labelText="Setting Selection" name="settingSelection" defaultValue="a">
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ))
   .add("with helpText", () => (
     <RadioGroup labelText="Setting Selection" helpText="Select a setting from the menu below:" name="settingSelection" defaultValue="a">
       <Radio value="a" labelText="Option A" />
