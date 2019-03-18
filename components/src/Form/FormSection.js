@@ -20,7 +20,7 @@ const BaseFormSection = ({
         )
       }
       { children.map( (child, index) => (
-      <Field key={ index } style={{border: "solid 2px blue"}}>
+      <Field key={ index }>
         {React.cloneElement(child)}
       </Field>
     )) }
