@@ -10,7 +10,6 @@ import {
   Radio,
   RadioGroup,
   Toggle,
-  InlineValidation,
   HeaderValidation,
   List,
   ListItem,
@@ -45,8 +44,8 @@ storiesOf("Form", module)
         <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection title="General Information">
-      <Input id="gender" labelText="Gender" />
-      <Input id="occupation" labelText="Occupation" />
+        <Input id="gender" labelText="Gender" />
+        <Input id="occupation" labelText="Occupation" />
       </FormSection>
     </Form>
   ))
@@ -58,8 +57,8 @@ storiesOf("Form", module)
         <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection>
-      <Input id="gender" labelText="Gender" />
-      <Input id="occupation" labelText="Occupation" />
+        <Input id="gender" labelText="Gender" />
+        <Input id="occupation" labelText="Occupation" />
       </FormSection>
     </Form>
   ))
@@ -76,10 +75,10 @@ storiesOf("Form", module)
         <FormSection title="Job Information">
           <Input id="project" labelText="Project" placeholder="Project 128703" />
           <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
-          <Select id="project-status" labelText="Project status" options={options} />
+          <Select id="project-status" labelText="Project status" options={ options } />
           <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
           <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
-          <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled/>
+          <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
           <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
           <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
           <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
@@ -100,15 +99,11 @@ storiesOf("Form", module)
           </Field>
         </FormSection>
         <FormSection title="Rejects">
-          <Field labelText="Item" htmlFor="rejects">
-            <Input error defaultValue="235432" id="rejects" />
-            <InlineValidation message="Item 235432 is not a valid entry.">
-              <List compact>
-                <ListItem>Item is at least 8 characters long.</ListItem>
-                <ListItem>Item contains at least 1 letter.</ListItem>
-              </List>
-            </InlineValidation>
-          </Field>
+          <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
+          <List compact color="red">
+            <ListItem>Item is at least 8 characters long.</ListItem>
+            <ListItem>Item contains at least 1 letter.</ListItem>
+          </List>
           <Input id="quantity" labelText="Quantity" />
           <Field labelText="Reject visibility" htmlFor="reject-visibility">
             <Toggle
