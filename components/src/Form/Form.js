@@ -31,11 +31,19 @@ const BaseForm = ({
 }) => (
   <form { ...props }>
     <SectionTitle>{ title }</SectionTitle>
-    { children.map( child => (
-      <Field style={{border: "solid 2px red"}}>
-        {React.cloneElement(child)}
-      </Field>
-    )) }
+    { children.map( child => {
+      if (childIsWrappedByField(child.type)) {
+        return(
+          <Field style={{border: "solid 2px red"}}>
+            {React.cloneElement(child)}
+          </Field>
+          )
+      } else {
+        return(
+          React.cloneElement(child)
+        )
+      }
+    })}
   </form>
 );
 
