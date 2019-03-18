@@ -33,6 +33,17 @@ storiesOf("Tooltip", module)
       </Tooltip>
     </Flex>
   ))
+  .add("with wrapped text", () => (
+    <Flex p="x8">
+      <Tooltip
+        placement="bottom"
+        tooltip="I am a Tooltip! I have very long text, and my default max-width is 18em, which is equal to 288px, or approximately 40 characters."
+        id="tooltip1"
+      >
+        <Button> Button </Button>
+      </Tooltip>
+    </Flex>
+  ))
   .add("with custom maxWidth", () => (
     <Flex p="x8">
       <Tooltip
