@@ -62,7 +62,7 @@ export default () => (
         <SubsectionTitle>Error</SubsectionTitle>
         <Textarea id="error" labelText="Label" error="Please fill this out" />
         <Highlight className="js">
-          {`<Textarea id="error" labelText="Label" error="Please fill this out" />`}
+          {"<Textarea id=\"error\" labelText=\"Label\" error=\"Please fill this out\" />"}
         </Highlight>
       </Box>
     </DocSection>
