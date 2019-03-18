@@ -28,6 +28,56 @@ storiesOf("Form", module)
       <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
     </Form>
   ))
+  .add("NEW COMPOSITION", () => (
+    <>
+      <Form title="Job 324400">
+        <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+          <List compact>
+            <ListItem>Affected field</ListItem>
+            <ListItem>Unmet criteria</ListItem>
+            <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+          </List>
+        </HeaderValidation>
+        <Input placeholder="Project 128703" id="project" />
+          <Input id="project-description" />
+          <Select options={ options } id="project-status" />
+          <Input error defaultValue="WS2SB6" id="item-code" />
+          <Input placeholder="2 000" id="eaches-expected" />
+        <FormSection title="Job Information">
+            <Input placeholder="Project 128703" id="project" />
+            <Input id="project-description" />
+            <Select options={ options } id="project-status" />
+            <Input error defaultValue="WS2SB6" id="item-code" />
+            <Input placeholder="2 000" id="eaches-expected" />
+            <Input defaultValue="18 000" disabled id="eaches-remaining" />
+            <Input placeholder="MMM DD, YYYY" id="scheduled-start" />
+            <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
+            <CheckboxGroup labelText="Setting Selection" name="settingSelection" defaultValue={ ["christiaanoostenbrug"] }>
+            <Checkbox value="christiaanoostenbrug" labelText="Christiaan Oostenbrug" />
+            <Checkbox value="mattdunn" labelText="Matt Dunn" />
+            <Checkbox value="clemenspark" disabled checked labelText="Clemens Park" />
+            <Checkbox value="nikolapejcic" disabled labelText="Nikola Pejcic" />
+    </CheckboxGroup>
+            <RadioGroup labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+              <Radio value="yes" labelText="Yes" />
+              <Radio value="no" labelText="No" />
+              <Radio value="maybe" labelText="Maybe" disabled />
+            </RadioGroup>
+            <Toggle
+              onText="Visible" offText="Hidden" id="testThis"
+            />
+        </FormSection>
+        <FormSection title="Rejects">
+            <Input error defaultValue="235432" id="rejects" />
+            <Input id="quantity" />
+            <Toggle
+              id="reject-visibility" onText="Visible" offText="Hidden"
+              disabled
+            />
+        </FormSection>
+      </Form>
+    </>
+  ))
   .add("Without title", () => (
     <Form>
       <Input id="name" labelText="Name" />
