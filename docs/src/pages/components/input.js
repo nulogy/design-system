@@ -23,7 +23,7 @@ export default () => (
       <Highlight className="js">
         {`import { Input } from @nulogy/components;
 
-<Input id="input" labelText="Input label" placeholder="I'm an input" />`}
+<Input id="input" labelText="Input label" />`}
       </Highlight>
     </DocSection>
     <DocSection>
@@ -42,7 +42,7 @@ export default () => (
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Input labelText="Label" placeholder="I'm an input" error="Error message" />
+        <Input labelText="Label" error="Error message" />
         <Highlight className="js">
           {"<Input labelText=\"Label\" id=\"error-input\" error=\"Error message\" />"}
         </Highlight>
