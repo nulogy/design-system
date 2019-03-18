@@ -22,7 +22,6 @@ const SubMenuItem = styled(Link).attrs({
     outline: "none",
     color: theme.colors.lightBlue,
     backgroundColor: theme.colors.black,
-    cursor: "pointer",
   },
   "&:disabled": {
     opacity: ".5",

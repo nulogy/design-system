@@ -85,7 +85,7 @@ const Button = styled(BaseButton)(
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
     transition: ".2s",
-    cursor: disabled ? "arrow" : "pointer",
+
     color: theme.colors.blue,
     border: `1px solid ${theme.colors.darkBlue}`,
     borderRadius: theme.radii.medium,
