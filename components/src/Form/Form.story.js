@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
-  Field,
   Input,
   Form,
   FormSection,
@@ -92,11 +91,7 @@ storiesOf("Form", module)
             <Radio value="no" labelText="No" />
             <Radio value="maybe" labelText="Maybe" disabled />
           </RadioGroup>
-          <Field labelText="Job visibility" htmlFor="testThis">
-            <Toggle
-              onText="Visible" offText="Hidden" id="testThis"
-            />
-          </Field>
+          <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
         </FormSection>
         <FormSection title="Rejects">
           <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
@@ -105,12 +100,7 @@ storiesOf("Form", module)
             <ListItem>Item contains at least 1 letter.</ListItem>
           </List>
           <Input id="quantity" labelText="Quantity" />
-          <Field labelText="Reject visibility" htmlFor="reject-visibility">
-            <Toggle
-              id="reject-visibility" onText="Visible" offText="Hidden"
-              disabled
-            />
-          </Field>
+          <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
         </FormSection>
       </Form>
     </>
