@@ -292,4 +292,6 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `ReactWrapper {}
 
 exports[`Storyshots Tooltip with placement 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Tooltip with wrapped text 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Typography Article 1`] = `ReactWrapper {}`;
