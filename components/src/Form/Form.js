@@ -7,6 +7,8 @@ import {
   FormSection,
   Field,
   HeaderValidation,
+  Box,
+  Flex,
 } from "ComponentsRoot";
 import theme from "../theme";
 
@@ -14,6 +16,8 @@ const childIsWrappedByField = childType => {
   switch (childType) {
     case FormSection:
     case HeaderValidation:
+    case Box:
+    case Flex:
       return false;
     default:
       return true;
@@ -30,7 +34,7 @@ const BaseForm = ({
     { children.map( (child, index) => {
       if (childIsWrappedByField(child.type)) {
         return(
-          <Field key={ index }>
+          <Field key={ index } style={{border: "solid 2px blue"}}>
             {React.cloneElement(child)}
           </Field>
           )
