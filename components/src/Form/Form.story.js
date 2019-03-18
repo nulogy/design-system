@@ -6,6 +6,7 @@ import {
   Form,
   FormSection,
   Checkbox,
+  CheckboxGroup,
   Radio,
   RadioGroup,
   Toggle,
@@ -24,87 +25,41 @@ const options = [
 storiesOf("Form", module)
   .add("Form", () => (
     <Form title="New Profile">
-      <Field labelText="Name" htmlFor="name">
-        <Input id="name" />
-      </Field>
-      <Field
-        labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        htmlFor="dateofbirth"
-      >
-        <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
-      </Field>
-      <Field
-        labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth"
-      >
-        <Input id="placeofbirth" />
-      </Field>
+      <Input id="name" labelText="Name" />
+      <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+      <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
     </Form>
   ))
   .add("Without title", () => (
     <Form>
-      <Field labelText="Name" htmlFor="without-title">
-        <Input id="without-title" />
-      </Field>
-      <Field
-        labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-        htmlFor="dob"
-      >
-        <Input placeholder="DD-MM-YYYY" id="dob" />
-      </Field>
-      <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="place-of-birth">
-        <Input id="place-of-birth" />
-      </Field>
+      <Input id="name" labelText="Name" />
+      <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+      <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
     </Form>
   ))
   .add("With form sections", () => (
     <Form title="New Profile">
       <FormSection title="Personal Information">
-        <Field labelText="Name" htmlFor="name">
-          <Input id="name" />
-        </Field>
-        <Field
-          labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-          htmlFor="dateofbirth"
-        >
-          <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
-        </Field>
-        <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth">
-          <Input id="placeofbirth" />
-        </Field>
+        <Input id="name" labelText="Name" />
+        <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+        <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection title="General Information">
-        <Field labelText="Gender" htmlFor="gender">
-          <Input id="gender" />
-        </Field>
-        <Field labelText="Ocupation" htmlFor="occupation">
-          <Input id="occupation" />
-        </Field>
+      <Input id="gender" labelText="Gender" />
+      <Input id="occupation" labelText="Occupation" />
       </FormSection>
     </Form>
   ))
   .add("With form sections without titles", () => (
     <Form title="New Profile">
       <FormSection>
-        <Field labelText="Name" htmlFor="name">
-          <Input id="name" />
-        </Field>
-        <Field
-          labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below"
-          htmlFor="dateofbirth"
-        >
-          <Input placeholder="DD-MM-YYYY" id="dateofbirth" />
-        </Field>
-        <Field labelText="Place of birth" requirementText="(Optional)" htmlFor="placeofbirth">
-          <Input id="placeofbirth" />
-        </Field>
+        <Input id="name" labelText="Name" />
+        <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+        <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection>
-        <Field labelText="Gender" htmlFor="gender">
-          <Input id="gender" />
-        </Field>
-        <Field labelText="Ocupation" htmlFor="occupation">
-          <Input id="gender" />
-        </Field>
+      <Input id="gender" labelText="Gender" />
+      <Input id="occupation" labelText="Occupation" />
       </FormSection>
     </Form>
   ))
@@ -119,50 +74,25 @@ storiesOf("Form", module)
           </List>
         </HeaderValidation>
         <FormSection title="Job Information">
-          <Field labelText="Project" htmlFor="project">
-            <Input placeholder="Project 128703" id="project" />
-          </Field>
-          <Field
-            labelText="Project description" requirementText="(Optional)"
-            helpText="Project description helps identify the project." htmlFor="project-description"
-          >
-            <Input id="project-description" />
-          </Field>
-          <Field labelText="Project status" htmlFor="project-status">
-            <Select options={ options } id="project-status" />
-          </Field>
-          <Field labelText="Item code" htmlFor="item-code">
-            <Input error defaultValue="WS2SB6" id="item-code" />
-            <InlineValidation message="Item WS2SB6 does not exist." />
-          </Field>
-          <Field labelText="Eaches expected on Job" htmlFor="eaches-expected">
-            <Input placeholder="2 000" id="eaches-expected" />
-          </Field>
-          <Field labelText="Eaches remaining on Project" htmlFor="eaches-remaining">
-            <Input defaultValue="18 000" disabled id="eaches-remaining" />
-          </Field>
-          <Field labelText="Scheduled start" htmlFor="scheduled-start">
-            <Input placeholder="MMM DD, YYYY" id="scheduled-start" />
-          </Field>
-          <Field labelText="Scheduled end" htmlFor="scheduled-end">
-            <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
-          </Field>
-
-          <Field labelText="Line Lead" requirementText="(Optional)"> {/* eslint-disable-line */}
-            <Checkbox labelText="Christiaan Oostenbrug" />
-            <Checkbox labelText="Matt Dunn" />
-            <Checkbox disabled checked labelText="Clemens Park" />
-            <Checkbox disabled labelText="Nikola Pejcic" />
-          </Field>
-
-          <Field labelText="Reconcile" htmlFor="reconcile">
-            <RadioGroup labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
-              <Radio value="yes" labelText="Yes" />
-              <Radio value="no" labelText="No" />
-              <Radio value="maybe" labelText="Maybe" disabled />
-            </RadioGroup>
-            <InlineValidation message="Yes can be only selected ..." />
-          </Field>
+          <Input id="project" labelText="Project" placeholder="Project 128703" />
+          <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
+          <Select id="project-status" labelText="Project status" options={options} />
+          <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
+          <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
+          <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled/>
+          <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
+          <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
+          <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
+            <Checkbox value="christiaan" labelText="Christiaan Oostenbrug" />
+            <Checkbox value="matt" labelText="Matt Dunn" />
+            <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
+            <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
+          </CheckboxGroup>
+          <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+            <Radio value="yes" labelText="Yes" />
+            <Radio value="no" labelText="No" />
+            <Radio value="maybe" labelText="Maybe" disabled />
+          </RadioGroup>
           <Field labelText="Job visibility" htmlFor="testThis">
             <Toggle
               onText="Visible" offText="Hidden" id="testThis"
@@ -179,9 +109,7 @@ storiesOf("Form", module)
               </List>
             </InlineValidation>
           </Field>
-          <Field labelText="Quantity" htmlFor="quantity">
-            <Input id="quantity" />
-          </Field>
+          <Input id="quantity" labelText="Quantity" />
           <Field labelText="Reject visibility" htmlFor="reject-visibility">
             <Toggle
               id="reject-visibility" onText="Visible" offText="Hidden"
