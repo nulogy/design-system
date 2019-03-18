@@ -44,21 +44,21 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Custom size</SubsectionTitle>
         <Textarea id="custom-size" labelText="Label" rows={ 2 } />
         <Highlight className="js">
           {"<Textarea id=\"custom-size\" labelText=\"Label\" rows={2} />"}
         </Highlight>
       </Box>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Textarea id="disabled" labelText="Label" disabled />
         <Highlight className="js">
           {"<Textarea id=\"disabled\" labelText=\"Label\" disabled />"}
         </Highlight>
       </Box>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Textarea id="error" labelText="Label" error="Please fill this out" />
         <Highlight className="js">

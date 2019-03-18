@@ -59,7 +59,7 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x3">
+      <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Select labelText="Label" placeholder="Please select inventory status" options={ options } id="disabled" disabled />
         <Highlight className="js">
@@ -72,7 +72,7 @@ const options = [
 />`}
         </Highlight>
       </Box>
-      <Box mb="x3">
+      <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Select options={ options } id="error" error="Please select an inventory status" />
         <Highlight className="js">
@@ -83,7 +83,7 @@ const options = [
   />`}
         </Highlight>
       </Box>
-      <Box mb="x3">
+      <Box mb="x6">
         <SubsectionTitle>With all labels</SubsectionTitle>
         <Select labelText="Label" requirementText="(Optional)" helpText="Additional help text" placeholder="Please select inventory status" options={ options } id="all-label" />
         <Highlight className="js">
