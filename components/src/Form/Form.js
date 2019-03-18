@@ -17,7 +17,11 @@ const BaseForm = ({
 }) => (
   <form { ...props }>
     <SectionTitle>{ title }</SectionTitle>
-    { children }
+    { children.map( child => (
+      <Field style={{border: "solid 2px red"}}>
+        {React.cloneElement(child)}
+      </Field>
+    )) }
   </form>
 );
 
