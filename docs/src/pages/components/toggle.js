@@ -5,8 +5,26 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Toggle, Link,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+
+const togglePropsRows = [
+  {
+    name: "defaultToggled", type: "Boolean", defaultValue: "false", description: "Display the toggle as checked by default.",
+  },
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the toggle as disabled and disallows user input.",
+  },
+  {
+    name: "labelText", type: "String", defaultValue: "null", description: "Label for the input",
+  },
+  {
+    name: "offText", type: "String", defaultValue: "false", description: "A label for the toggle's off state.",
+  },
+  {
+    name: "onText", type: "String", defaultValue: "false", description: "A label for the toggle's on state.",
+  },
+];
 
 export default () => (
   <Layout>
@@ -18,11 +36,11 @@ export default () => (
       <Intro>For quickly switching between two possible states.</Intro>
     </Box>
     <DocSection>
-      <Toggle onText="On" offText="Off" />
+      <Toggle id="toggle" labelText="Label" onText="On" offText="Off" />
       <Highlight className="js">
         {`import { Toggle } from @nulogy/components;
 
-<Toggle onText="On" offText="Off" />`}
+<Toggle id="toggle" labelText="Label" onText="On" offText="Off" />`}
       </Highlight>
     </DocSection>
     <DocSection>
@@ -41,45 +59,23 @@ export default () => (
           {"<Toggle onText=\"On\" offText=\"Off\" defaultToggled=\"true\" />"}
         </Highlight>
       </Box>
+      <Box>
+        <SubsectionTitle>With all labels</SubsectionTitle>
+        <Toggle id="toggle" labelText="Toggle" helpText="Turns setting on/off" onText="on" offText="off" defaultToggled required requirementText="(Required)" />
+        <Highlight className="js">
+          {`<Toggle id="toggle"
+  labelText="Toggle"
+  helpText="Turns setting on/off"
+  onText="On"
+  offText="Off"
+  requirementText="(Optional)"
+/>`}
+        </Highlight>
+      </Box>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>defaultToggled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Display the toggle as checked by default.</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the toggle as disabled and disallows user input.</td>
-          </tr>
-          <tr>
-            <td>offText</td>
-            <td>String</td>
-            <td>null</td>
-            <td>A label for the toggle's off state.</td>
-          </tr>
-          <tr>
-            <td>onText</td>
-            <td>String</td>
-            <td>null</td>
-            <td>A label for the toggle's on state.</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ togglePropsRows } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
