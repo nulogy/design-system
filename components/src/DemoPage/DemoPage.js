@@ -8,15 +8,14 @@ import {
   IconicButton,
   Box,
   Flex,
-  Field,
   Input,
   Form,
   FormSection,
   Checkbox,
+  CheckboxGroup,
   Radio,
   RadioGroup,
   Toggle,
-  InlineValidation,
   HeaderValidation,
   List,
   ListItem,
@@ -313,85 +312,45 @@ const DemoPage = () => {
         <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
           <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
-            <Form mb="x6" title="Job 324400">
-              <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
-                <List compact>
-                  <ListItem>Affected field</ListItem>
-                  <ListItem>Unmet criteria</ListItem>
-                  <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
-                </List>
-              </HeaderValidation>
-              <FormSection title="Job Information">
-                <Field labelText="Project" htmlFor="project">
-                  <Input placeholder="Project 128703" id="project" />
-                </Field>
-                <Field
-                  labelText="Project description" requirementText="(Optional)"
-                  helpText="Project description helps identify the project." htmlFor="project-description"
-                >
-                  <Input id="project-description" />
-                </Field>
-                <Field labelText="Project status" htmlFor="project-status">
-                  <Select options={ options } id="project-status" />
-                </Field>
-                <Field labelText="Item code" htmlFor="item-code">
-                  <Input error defaultValue="WS2SB6" id="item-code" />
-                  <InlineValidation message="Item WS2SB6 does not exist." />
-                </Field>
-                <Field labelText="Eaches expected on Job" htmlFor="eaches-expected">
-                  <Input placeholder="2 000" id="eaches-expected" />
-                </Field>
-                <Field labelText="Eaches remaining on Project" htmlFor="eaches-remaining">
-                  <Input defaultValue="18 000" disabled id="eaches-remaining" />
-                </Field>
-                <Field labelText="Scheduled start" htmlFor="scheduled-start">
-                  <Input placeholder="MMM DD, YYYY" id="scheduled-start" />
-                </Field>
-                <Field labelText="Scheduled end" htmlFor="scheduled-end">
-                  <Input disabled defaultValue="MMM DD, YYYY" id="scheduled-end" />
-                </Field>
-
-                <Field labelText="Line Lead" requirementText="(Optional)"> {/* eslint-disable-line */}
-                  <Checkbox labelText="Christiaan Oostenbrug" />
-                  <Checkbox labelText="Matt Dunn" />
-                  <Checkbox disabled checked labelText="Clemens Park" />
-                  <Checkbox disabled labelText="Nikola Pejcic" />
-                </Field>
-
-                <Field labelText="Reconcile" htmlFor="reconcile">
-                  <RadioGroup labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+            <Form title="Job 324400">
+                <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+                    <List compact>
+                    <ListItem>Affected field</ListItem>
+                    <ListItem>Unmet criteria</ListItem>
+                    <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+                    </List>
+                </HeaderValidation>
+                <FormSection title="Job Information">
+                    <Input id="project" labelText="Project" placeholder="Project 128703" />
+                    <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
+                    <Select id="project-status" labelText="Project status" options={ options } />
+                    <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
+                    <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
+                    <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
+                    <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
+                    <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
+                    <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
+                    <Checkbox value="christiaan" labelText="Christiaan Oostenbrug" />
+                    <Checkbox value="matt" labelText="Matt Dunn" />
+                    <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
+                    <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
+                    </CheckboxGroup>
+                    <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
                     <Radio value="yes" labelText="Yes" />
                     <Radio value="no" labelText="No" />
                     <Radio value="maybe" labelText="Maybe" disabled />
-                  </RadioGroup>
-                  <InlineValidation message="Yes can be only selected ..." />
-                </Field>
-                <Field labelText="Job visibility" htmlFor="testThis">
-                  <Toggle
-                    onText="Visible" offText="Hidden" id="testThis"
-                  />
-                </Field>
-              </FormSection>
-              <FormSection title="Rejects">
-                <Field labelText="Item" htmlFor="rejects">
-                  <Input error defaultValue="235432" id="rejects" />
-                  <InlineValidation message="Item 235432 is not a valid entry.">
-                    <List compact>
-                      <ListItem>Item is at least 8 characters long.</ListItem>
-                      <ListItem>Item contains at least 1 letter.</ListItem>
+                    </RadioGroup>
+                    <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
+                </FormSection>
+                <FormSection title="Rejects">
+                    <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
+                    <List compact color="red">
+                    <ListItem>Item is at least 8 characters long.</ListItem>
+                    <ListItem>Item contains at least 1 letter.</ListItem>
                     </List>
-                  </InlineValidation>
-                </Field>
-                <Field labelText="Quantity" htmlFor="quantity">
-                  <Input id="quantity" />
-                </Field>
-                <Field labelText="Reject visibility" htmlFor="reject-visibility">
-                  <Toggle
-                    id="reject-visibility" onText="Visible" offText="Hidden"
-                    disabled
-                  />
-                </Field>
-              </FormSection>
+                    <Input id="quantity" labelText="Quantity" />
+                    <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
+                </FormSection>
             </Form>
           </Box>
           <Flex mb="x6">
