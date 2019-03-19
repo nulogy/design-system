@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Text, Box } from "ComponentsRoot";
+import { Text, Box, FieldLabel } from "ComponentsRoot";
 import theme from "../theme";
 import { InputClickableArea, omit } from "../Utils";
 
@@ -113,6 +113,10 @@ class BaseToggle extends React.Component {
       className,
       required,
       error,
+      id,
+      labelText,
+      requirementText,
+      helpText,
       ...props
     } = omit(this.props, "defaultToggled");
     const {
@@ -120,8 +124,10 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Box className={ className }>
+        <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
         <InputClickableArea disabled={ disabled }>
           <ToggleButton
+            id={ id }
             checked={ toggled } onChange={ onChange } disabled={ disabled }
             required={ required } aria-required={ required }
             aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
@@ -145,10 +151,13 @@ BaseToggle.propTypes = {
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   value: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool,
+  helpText: PropTypes.string,
+  labelText: PropTypes.string,
+  requirementText: PropTypes.string,
 };
 
 BaseToggle.defaultProps = {
@@ -158,10 +167,12 @@ BaseToggle.defaultProps = {
   disabled: false,
   onText: null,
   offText: null,
-  id: null,
   value: "on",
   className: null,
   required: false,
+  helpText: null,
+  labelText: null,
+  requirementText: null,
 };
 
 const Toggle = styled(BaseToggle)({

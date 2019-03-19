@@ -46,19 +46,15 @@ exports[`Storyshots Checkbox Set to error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Checkbox Set to required 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots CheckboxGroup Checkbox Group 1`] = `ReactWrapper {}`;
+exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots CheckboxGroup Controlled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots CheckboxGroup Set to disabled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots CheckboxGroup with additional text 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots CheckboxGroup with defaultValue 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots CheckboxGroup with helpText 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots CheckboxGroup with requirementText 1`] = `ReactWrapper {}`;
+exports[`Storyshots CheckboxGroup with error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots DemoPage Demo Page 1`] = `ReactWrapper {}`;
 
@@ -170,11 +166,11 @@ exports[`Storyshots Inline Validation With list items 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Input Input 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Input Input with all props 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Input Set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Input Set to error 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Input Set to required 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Link Link 1`] = `ReactWrapper {}`;
 
@@ -214,15 +210,13 @@ exports[`Storyshots Radio Set to required 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots RadioGroup Controlled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots RadioGroup Radio Group 1`] = `ReactWrapper {}`;
+exports[`Storyshots RadioGroup RadioGroup 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots RadioGroup Set to disabled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots RadioGroup with additional text 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots RadioGroup with helpText 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots RadioGroup with requirementText 1`] = `ReactWrapper {}`;
+exports[`Storyshots RadioGroup With error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Select Select 1`] = `ReactWrapper {}`;
 
@@ -235,6 +229,8 @@ exports[`Storyshots Select Set to disabled 1`] = `ReactWrapper {}`;
 exports[`Storyshots Select Set to error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Select Set to required 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Select With helpText 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Text Set to disabled 1`] = `ReactWrapper {}`;
 
@@ -252,25 +248,21 @@ exports[`Storyshots Textarea Set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Textarea Set to error 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Textarea Set to required 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Textarea Textarea 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Textarea With custom number of rows 1`] = `ReactWrapper {}`;
+exports[`Storyshots Textarea Textarea with all props 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Textarea With placeholder text 1`] = `ReactWrapper {}`;
+exports[`Storyshots Textarea With custom number of rows 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Controlled Toggle 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Toggle Toggle Field 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle set to disabled 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Toggle Toggle set to required 1`] = `ReactWrapper {}`;
+exports[`Storyshots Toggle Toggle with all props 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle With long text 1`] = `ReactWrapper {}`;
 

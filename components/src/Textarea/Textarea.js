@@ -1,7 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
+import { FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -27,7 +29,7 @@ const getTextareaStyle = props => {
   return TextareaStyles.default;
 };
 
-const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
+const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
@@ -57,21 +59,39 @@ const Textarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
   props => getTextareaStyle(props)
 );
 
+const Textarea = ({
+  error, labelText, requirementText, helpText, id,
+  ...props
+}) => (
+  <>
+    <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+    <StyledTextarea id={ id } error={ error } { ...props } />
+    {error && <InlineValidation mt="x1" message={ error } />}
+  </>
+);
+
 Textarea.propTypes = {
   disabled: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.string,
   required: PropTypes.bool,
   rows: PropTypes.number,
   placeholder: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  labelText: PropTypes.string,
+  helpText: PropTypes.string,
+  requirementText: PropTypes.string,
   ...space.PropTypes,
 };
 
 Textarea.defaultProps = {
   disabled: false,
-  error: false,
+  error: null,
   required: false,
   rows: 3,
   placeholder: undefined,
+  labelText: null,
+  helpText: null,
+  requirementText: null,
 };
 
 export default Textarea;

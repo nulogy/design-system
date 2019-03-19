@@ -5,8 +5,16 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+import inputProps from "../../shared/inputProps";
+
+const propsRows = [
+  {
+    name: "rows", type: "Number", defaultValue: "3", description: "A custom number of rows to show by default",
+  },
+  ...inputProps,
+];
 
 export default () => (
   <Layout>
@@ -19,11 +27,11 @@ export default () => (
     </Box>
 
     <DocSection>
-      <Textarea />
+      <Textarea labelText="Label" id="textarea" />
       <Highlight className="js">
         {`import { Textarea } from @nulogy/components;
 
-<Textarea />
+<Textarea labelText="Label" id="textarea" />
 `}
       </Highlight>
     </DocSection>
@@ -36,67 +44,45 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Custom size</SubsectionTitle>
-        <Textarea rows={ 2 } />
+        <Textarea id="custom-size" labelText="Label" rows={ 2 } />
         <Highlight className="js">
-          {"<Textarea rows={2} />"}
+          {"<Textarea id=\"custom-size\" labelText=\"Label\" rows={2} />"}
         </Highlight>
       </Box>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
-        <Textarea disabled />
+        <Textarea id="disabled" labelText="Label" disabled />
         <Highlight className="js">
-          {"<Textarea disabled />"}
+          {"<Textarea id=\"disabled\" labelText=\"Label\" disabled />"}
         </Highlight>
       </Box>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Textarea error />
+        <Textarea id="error" labelText="Label" error="Please fill this out" />
         <Highlight className="js">
-          {"<Textarea error />"}
+          {"<Textarea id=\"error\" labelText=\"Label\" error=\"Please fill this out\" />"}
+        </Highlight>
+      </Box>
+      <Box>
+        <SubsectionTitle>With all labels</SubsectionTitle>
+        <Textarea id="error" labelText="Label" helpText="Additional help text" requirementText="(Optional)" placeholder="Placeholder" />
+        <Highlight className="js">
+          {`<Textarea
+  id="error"
+  labelText="Label"
+  helpText="Additional help text"
+  requirementText="(Optional)"
+  placeholder="Placeholder"
+/>`}
         </Highlight>
       </Box>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and turns red</td>
-          </tr>
-          <tr>
-            <td>placeholder</td>
-            <td>String</td>
-            <td>null</td>
-            <td>A hint to the expected format for the field. Not a replacement for a label.</td>
-          </tr>
-          <tr>
-            <td>rows</td>
-            <td>Number</td>
-            <td>3</td>
-            <td>Marks the field as invalid and turns red</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

@@ -1,7 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
+import { FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -28,7 +30,7 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const Input = styled.input.attrs(({ error, required }) => ({
+const StyledInput = styled.input.attrs(({ error, required }) => ({
   "aria-invalid": error,
   "aria-required": required,
   "required": required,
@@ -55,17 +57,47 @@ const Input = styled.input.attrs(({ error, required }) => ({
   props => (getInputStyle(props))
 );
 
-Input.propTypes = {
+StyledInput.propTypes = {
   disabled: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.string,
   required: PropTypes.bool,
   ...space.PropTypes,
 };
 
-Input.defaultProps = {
+StyledInput.defaultProps = {
   disabled: false,
-  error: false,
+  error: null,
   required: false,
+};
+
+const Input = ({
+  labelText,
+  requirementText,
+  helpText,
+  id,
+  error,
+  ...props
+}) => (
+  <>
+    <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+    <StyledInput id={ id } error={ error } { ...props } />
+    {error && <InlineValidation mt="x1" message={ error } />}
+  </>
+);
+
+Input.propTypes = {
+  error: PropTypes.string,
+  helpText: PropTypes.string,
+  labelText: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  requirementText: PropTypes.string,
+};
+
+Input.defaultProps = {
+  error: null,
+  helpText: null,
+  labelText: null,
+  requirementText: null,
 };
 
 export default Input;

@@ -48,7 +48,7 @@ export default () => (
       <SubsectionTitle>(H) Input fields</SubsectionTitle>
       <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
       <Box ml="x1">
-        <Text><Link href="/components/text-input">Text</Link> input for single or multi-line text data</Text>
+        <Text><Link href="/components/input">Text</Link> input for single or multi-line text data</Text>
         <Text><Link href="/components/radio-button">Radio</Link> button to select one option out of a small list (~ 5-7 max)</Text>
         <Text><Link href="/components/select">Select</Link> to select one option out of a large list</Text>
         <Text><Link href="/components/checkbox">Checkbox</Link> to select one or multiple options from a list</Text>

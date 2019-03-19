@@ -5,8 +5,9 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+import radioProps from "../../shared/radioProps";
 
 export default () => (
   <Layout>
@@ -18,11 +19,11 @@ export default () => (
       <Intro>Checkboxes allow users to select any number of options from a list.</Intro>
     </Box>
     <DocSection>
-      <Checkbox labelText="I am a checkbox" />
+      <Checkbox id="checkbox" labelText="I am a checkbox" />
       <Highlight className="js">
         {`import { Checkbox } from @nulogy/components;
 
-<Checkbox labelText="I am a checkbox" />
+<Checkbox id="checkbox" labelText="I am a checkbox" />
 `}
       </Highlight>
     </DocSection>
@@ -33,7 +34,7 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" disabled />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" disabled />"}
+          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" disabled />"}
         </Highlight>
       </Box>
 
@@ -41,7 +42,7 @@ export default () => (
         <SubsectionTitle>Error</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" error />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" error />"}
+          {"<Checkbox id=\"error-checkbox\" labelText=\"I am a checkbox\" error />"}
         </Highlight>
       </Box>
 
@@ -49,7 +50,7 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
+          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
         </Highlight>
       </Box>
     </DocSection>
@@ -61,54 +62,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>defaultChecked</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field checked by default</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and adds a red border</td>
-          </tr>
-          <tr>
-            <td>labelText</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>A label for your option</td>
-          </tr>
-          <tr>
-            <td>onChange</td>
-            <td>Function</td>
-            <td />
-            <td />
-          </tr>
-          <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require input before the form will submit</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ radioProps } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>

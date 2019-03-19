@@ -5,12 +5,20 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+import inputProps from "../../shared/inputProps";
 
 const options = [
   { value: "accepted", label: "Accepted" },
   { value: "assigned", label: "Assigned to a line" },
+];
+
+const propsRows = [
+  {
+    name: "options", type: "Array", defaultValue: "Required", description: "The options available to be selected, containing a value and a label",
+  },
+  ...inputProps,
 ];
 
 export default () => (
@@ -27,7 +35,7 @@ export default () => (
     </Box>
     <DocSection>
 
-      <Select placeholder="Please select inventory status" options={ options } />
+      <Select options={ options } labelText="Inventory status" id="inventory-status" />
       <Highlight className="js">
         {`import { Select } from @nulogy/components;
 
@@ -36,7 +44,11 @@ const options = [
   { value: "assigned", label: "Assigned to a line" },
 ];
 
-<Select placeholder="Please select inventory status" options={ options } />`
+<Select
+  options={ options }
+  id="inventory-status"
+  labelText="Inventory status"
+/>`
 }
       </Highlight>
     </DocSection>
@@ -47,61 +59,50 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <SubsectionTitle>Disabled</SubsectionTitle>
-      <Box mb="x3">
-        <Select placeholder="Please select inventory status" options={ options } disabled />
+      <Box mb="x6">
+        <SubsectionTitle>Disabled</SubsectionTitle>
+        <Select labelText="Label" placeholder="Please select inventory status" options={ options } id="disabled" disabled />
         <Highlight className="js">
-          {"<Select placeholder=\"Please select inventory status\" options={ options } disabled />"}
+          {`<Select
+  labelText="Label"
+  placeholder="Please select inventory status"
+  options={ options }
+  id="disabled"
+  disabled
+/>`}
         </Highlight>
       </Box>
-
-      <SubsectionTitle>Error</SubsectionTitle>
-
-      <Select placeholder="Please select inventory status" options={ options } error />
-      <Highlight className="js">
-        {"<Select placeholder=\"Please select inventory status\" options={ options } error />"}
-      </Highlight>
+      <Box mb="x6">
+        <SubsectionTitle>Error</SubsectionTitle>
+        <Select options={ options } id="error" error="Please select an inventory status" />
+        <Highlight className="js">
+          {`<Select
+    options={ options }
+    id="error"
+    error="Please select an inventory status"
+  />`}
+        </Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>With all labels</SubsectionTitle>
+        <Select labelText="Label" requirementText="(Optional)" helpText="Additional help text" placeholder="Please select inventory status" options={ options } id="all-label" />
+        <Highlight className="js">
+          {`<Select
+    labelText="Label"
+    requirementText="(Optional)"
+    helpText="Additional help text"
+    placeholder="Please select inventory status"
+    options={ options }
+    id="all-label"
+  />`}
+        </Highlight>
+      </Box>
 
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>placeholder</td>
-            <td>String</td>
-            <td>""</td>
-            <td>A description of what the Select box contains</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and adds a red border</td>
-          </tr>
-          <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require input before the form will submit</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
