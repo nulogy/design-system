@@ -34,7 +34,7 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" disabled />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" disabled />"}
+          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" disabled />"}
         </Highlight>
       </Box>
 
@@ -42,7 +42,7 @@ export default () => (
         <SubsectionTitle>Error</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" error />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" error />"}
+          {"<Checkbox id=\"error-checkbox\" labelText=\"I am a checkbox\" error />"}
         </Highlight>
       </Box>
 
@@ -50,7 +50,7 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
         <Highlight className="js">
-          {"<Checkbox labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
+          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
         </Highlight>
       </Box>
     </DocSection>

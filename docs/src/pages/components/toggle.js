@@ -16,6 +16,9 @@ const togglePropsRows = [
     name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the toggle as disabled and disallows user input.",
   },
   {
+    name: "id", type: "String", defaultValue: "Required", description: "A unique ID for this input",
+  },
+  {
     name: "labelText", type: "String", defaultValue: "null", description: "Label for the input",
   },
   {
@@ -24,6 +27,12 @@ const togglePropsRows = [
   {
     name: "onText", type: "String", defaultValue: "false", description: "A label for the toggle's on state.",
   },
+  {
+    name: "onChange", type: "Function", defaultValue: "null", description: ""
+  },
+  {
+    name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require input before the form will submit",
+  }
 ];
 
 export default () => (
@@ -47,23 +56,23 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
-        <Toggle onText="On" offText="Off" disabled />
+        <Toggle id="disabled-toggle" onText="On" offText="Off" disabled />
         <Highlight className="js">
-          {"<Toggle onText=\"On\" offText=\"Off\" disabled />"}
+          {"<Toggle id=\"disabled-toggle\" onText=\"On\" offText=\"Off\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Toggled by default</SubsectionTitle>
-        <Toggle onText="On" offText="Off" defaultToggled="true" />
+        <Toggle id="toggled-toggle" onText="On" offText="Off" defaultToggled="true" />
         <Highlight className="js">
-          {"<Toggle onText=\"On\" offText=\"Off\" defaultToggled=\"true\" />"}
+          {"<Toggle id=\"toggled-toggle\" onText=\"On\" offText=\"Off\" defaultToggled=\"true\" />"}
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>With all labels</SubsectionTitle>
-        <Toggle id="toggle" labelText="Toggle" helpText="Turns setting on/off" onText="on" offText="off" defaultToggled required requirementText="(Required)" />
+        <Toggle id="toggle-with-labels" labelText="Toggle" helpText="Turns setting on/off" onText="On" offText="Off" defaultToggled required requirementText="(Required)" />
         <Highlight className="js">
-          {`<Toggle id="toggle"
+          {`<Toggle id="toggle-with-labels"
   labelText="Toggle"
   helpText="Turns setting on/off"
   onText="On"

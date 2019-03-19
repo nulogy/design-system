@@ -35,23 +35,23 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
-        <Radio labelText="Radio button" disabled />
+        <Radio id="disabled-radio" labelText="Radio button" disabled />
         <Highlight className="js">
-          {"<Radio labelText=\"Radio button\" disabled />"}
+          {"<Radio id=\"disabled-radio\" labelText=\"Radio button\" disabled />"}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Radio labelText="Radio button" error />
+        <Radio id="error-radio" labelText="Radio button" error />
         <Highlight className="js">
-          {"<Radio labelText=\"Radio button\" error />"}
+          {"<Radio id=\"error-radio\" labelText=\"Radio button\" error />"}
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>Checked</SubsectionTitle>
-        <Radio labelText="Radio button" defaultChecked="true" />
+        <Radio id="checked-radio" labelText="Radio button" defaultChecked="true" />
         <Highlight className="js">
-          {"<Radio labelText=\"Radio button\" defaultChecked=\"true\" />"}
+          {"<Radio id=\"checked-radio\" labelText=\"Radio button\" defaultChecked=\"true\" />"}
         </Highlight>
       </Box>
     </DocSection>
