@@ -190,7 +190,6 @@ const Select = ({
 Select.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.shape({}),
-  name: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
