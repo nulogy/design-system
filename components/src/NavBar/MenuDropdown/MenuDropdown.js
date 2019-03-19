@@ -5,6 +5,7 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenuItemList from "./SubMenuItemList";
 import SubMenu from "./SubMenu";
+import Icon from "../../Icon/Icon";
 
 const MenuDropdownButton = styled.button({
   display: "inline-flex",
@@ -18,8 +19,11 @@ const MenuDropdownButton = styled.button({
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,
+  [`${Icon}`]: {
+    color: theme.colors.lightGrey,
+  },
   "&:hover, &:focus": {
     outline: "none",
     color: theme.colors.lightBlue,
@@ -172,7 +176,7 @@ class MenuDropdown extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }</MenuDropdownButton>
+            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={2}/></MenuDropdownButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
