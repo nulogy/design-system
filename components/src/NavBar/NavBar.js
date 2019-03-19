@@ -17,7 +17,7 @@ const MediumNavBar = ({
   alt,
   ...props
 }) => (
-  <Box width="100%" { ...props }>
+  <Box { ...props }>
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="space-between">
@@ -40,7 +40,7 @@ const SmallNavBar = ({
   alt,
   ...props
 }) => (
-  <Box width="100%" { ...props }>
+  <Box { ...props }>
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
@@ -93,8 +93,6 @@ const NavBar = styled(BaseNavBar)({
   paddingRight: theme.space.x3,
   paddingBottom: theme.space.x2,
   paddingLeft: theme.space.x4,
-  display: "flex",
-  alignItems: "center",
   "nav": {
     flexGrow: "1",
     margin: `0 0 0 ${theme.space.x3}`,
