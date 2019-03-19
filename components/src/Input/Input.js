@@ -59,14 +59,14 @@ const StyledInput = styled.input.attrs(({ error, required }) => ({
 
 StyledInput.propTypes = {
   disabled: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.string,
   required: PropTypes.bool,
   ...space.PropTypes,
 };
 
 StyledInput.defaultProps = {
   disabled: false,
-  error: false,
+  error: null,
   required: false,
 };
 
