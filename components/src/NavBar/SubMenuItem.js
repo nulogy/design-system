@@ -12,6 +12,11 @@ const SubMenuItemLink = styled(Link)({
     outline: "none",
     backgroundColor: theme.colors.lightGrey,
   },
+  "&:hover": {
+    "p:first-child": {
+      textDecoration: "underline",
+    },
+  },
   "&:disabled": {
     opacity: ".5",
   },
