@@ -5,34 +5,34 @@ import { Checkbox } from "ComponentsRoot";
 storiesOf("Checkbox", module)
   .add("Checkbox", () => (
     <>
-      <Checkbox labelText="I am a checkbox" />
+      <Checkbox id="checkbox" labelText="I am a checkbox" />
     </>
   ))
   .add("Set to defaultChecked", () => (
     <>
-      <Checkbox defaultChecked labelText="I am checked by default" />
+      <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />
     </>
   ))
   .add("Set to disabled", () => (
     <>
-      <Checkbox disabled labelText="I am disabled" />
-      <Checkbox checked disabled labelText="I am disabled" />
+      <Checkbox id="checkbox-1" disabled labelText="I am disabled" />
+      <Checkbox id="checkbox-2" checked disabled labelText="I am disabled" />
     </>
   ))
   .add("Set to error", () => (
     <>
-      <Checkbox error labelText="I am error" />
-      <Checkbox defaultChecked error labelText="I am error" />
+      <Checkbox id="checkbox" error labelText="I am error" />
+      <Checkbox id="checkbox" defaultChecked error labelText="I am error" />
     </>
   ))
   .add("Set to required", () => (
     <>
-      <Checkbox labelText="I am a checkbox" required />
+      <Checkbox id="checkbox" labelText="I am a checkbox" required />
     </>
   ))
   .add("Controlled", () => (
     <>
-      <Checkbox checked onChange={ () => {} } labelText="I am controlled and checked" />
-      <Checkbox checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
+      <Checkbox id="checkbox-1" checked onChange={ () => {} } labelText="I am controlled and checked" />
+      <Checkbox id="checkbox-2" checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
     </>
   ));

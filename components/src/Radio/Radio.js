@@ -114,6 +114,7 @@ BaseRadio.propTypes = {
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
+  id: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool,
 };
@@ -123,6 +124,7 @@ BaseRadio.defaultProps = {
   defaultChecked: undefined,
   disabled: false,
   error: false,
+  id: null,
   className: null,
   required: false,
 };
