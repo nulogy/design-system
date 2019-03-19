@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box } from "ComponentsRoot";
+import { Flex } from "ComponentsRoot";
 import { MenuDropdown } from "./MenuDropdown";
 import SubMenuItem from "./SubMenuItem";
 import MenuItem from "./MenuItem";
@@ -13,7 +13,7 @@ const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
-  <Box { ...props }>
+  <Flex { ...props }>
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
@@ -37,7 +37,7 @@ const BaseDesktopMenu = ({
         );
       }
     })}
-  </Box>
+  </Flex>
 );
 
 BaseDesktopMenu.propTypes = {

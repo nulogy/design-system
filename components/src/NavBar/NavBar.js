@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
+  Box,
   Flex,
   NavBarSearch,
 } from "ComponentsRoot";
@@ -9,6 +10,50 @@ import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import theme from "../theme";
+
+const MediumNavBar = ({
+  menuData,
+  desktopSrc,
+  alt,
+  ...props
+}) => (
+  <Box width="100%" { ...props }>
+    <Branding desktopSrc={ desktopSrc } alt={ alt } />
+    <nav>
+      <Flex justifyContent="space-between">
+        <Flex alignItems="center">
+          <DesktopMenu menuData={ menuData.primaryMenu } />
+        </Flex>
+        <Flex>
+          <Flex maxWidth="18em" alignItems="center" px="x3">
+            <NavBarSearch />
+          </Flex>
+          <DesktopMenu menuData={ menuData.secondaryMenu } />
+        </Flex>
+      </Flex>
+    </nav>
+  </Box>
+);
+
+const SmallNavBar = ({
+  mobileSrc,
+  alt,
+  ...props
+}) => (
+  <Box width="100%" { ...props }>
+    <Branding mobileSrc={ mobileSrc } alt={ alt } />
+    <nav>
+      <Flex justifyContent="flex-end">
+        <Flex>
+          <Flex maxWidth="18em" alignItems="center" px="0">
+            <NavBarSearch />
+          </Flex>
+          <MobileMenu display="block" />
+        </Flex>
+      </Flex>
+    </nav>
+  </Box>
+);
 
 const BaseNavBar = ({
   menuData,
@@ -18,21 +63,8 @@ const BaseNavBar = ({
   ...props
 }) => (
   <header { ...props }>
-    <Branding desktopSrc={ desktopSrc } mobileSrc={ mobileSrc } alt={ alt } />
-    <nav>
-      <Flex justifyContent={ { small: "flex-end", medium: "flex-end", large: "space-between" } }>
-        <Flex alignItems="center">
-          <DesktopMenu menuData={ menuData.primaryMenu } display={ { small: "none", medium: "none", large: "flex" } } />
-        </Flex>
-        <Flex>
-          <Flex maxWidth="18em" alignItems="center" px={ { small: "0", medium: "0", large: "x3" } }>
-            <NavBarSearch />
-          </Flex>
-          <DesktopMenu menuData={ menuData.secondaryMenu } display={ { small: "none", medium: "none", large: "flex" } } />
-          <MobileMenu display={ { small: "block", medium: "block", large: "none" } } />
-        </Flex>
-      </Flex>
-    </nav>
+    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } />
+    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } />
   </header>
 );
 
