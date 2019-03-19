@@ -9,6 +9,9 @@ const inputProps = [
     name: "helpText", type: "String", defaultValue: "null", description: "Additional instruction to show up below label",
   },
   {
+    name: "id", type: "String", defaultValue: "null", description: "A unique ID for this input",
+  },
+  {
     name: "labelText", type: "String", defaultValue: "null", description: "Label for the input",
   },
   {
