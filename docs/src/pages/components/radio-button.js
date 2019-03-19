@@ -5,8 +5,9 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, DocSection, PropsTable,
 } from "../../components";
+import radioProps from "../../shared/radioProps";
 
 export default () => (
   <Layout>
@@ -18,11 +19,11 @@ export default () => (
       <Intro>Radio buttons allow one selection from a group of options</Intro>
     </Box>
     <DocSection>
-      <Radio labelText="Radio button" />
+      <Radio id="radio" labelText="Radio button" />
       <Highlight className="js">
         {`import { Radio } from @nulogy/components;
 
-<Radio labelText="Radio button" />`}
+<Radio id="radio" labelText="Radio button" />`}
       </Highlight>
     </DocSection>
     <DocSection>
@@ -62,48 +63,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>defaultChecked</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field checked by default</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as disabled and disallows user input</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the field as invalid and turns red</td>
-          </tr>
-          <tr>
-            <td>labelText</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>A label for your option</td>
-          </tr>
-          <tr>
-            <td>required</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Makes the field require selection before the form will submit</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ radioProps } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
