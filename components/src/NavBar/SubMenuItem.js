@@ -11,8 +11,6 @@ const SubMenuItemLink = styled(Link)({
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: theme.colors.lightGrey,
-  },
-  "&:hover": {
     "p:first-child": {
       textDecoration: "underline",
     },
