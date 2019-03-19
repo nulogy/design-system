@@ -217,7 +217,7 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="textareaTooltip"
       >
-        <Textarea />
+        <Textarea id="tooltip-textarea" />
       </Tooltip>
       <Tooltip
         fullWidth
