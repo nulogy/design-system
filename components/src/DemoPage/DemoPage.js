@@ -313,44 +313,44 @@ const DemoPage = () => {
           <Title>Job Page</Title>
           <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
             <Form title="Job 324400">
-                <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
-                    <List compact>
-                    <ListItem>Affected field</ListItem>
-                    <ListItem>Unmet criteria</ListItem>
-                    <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
-                    </List>
-                </HeaderValidation>
-                <FormSection title="Job Information">
-                    <Input id="project" labelText="Project" placeholder="Project 128703" />
-                    <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
-                    <Select id="project-status" labelText="Project status" options={ options } />
-                    <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
-                    <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
-                    <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
-                    <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
-                    <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
-                    <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
-                    <Checkbox value="christiaan" labelText="Christiaan Oostenbrug" />
-                    <Checkbox value="matt" labelText="Matt Dunn" />
-                    <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
-                    <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
-                    </CheckboxGroup>
-                    <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
-                    <Radio value="yes" labelText="Yes" />
-                    <Radio value="no" labelText="No" />
-                    <Radio value="maybe" labelText="Maybe" disabled />
-                    </RadioGroup>
-                    <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
-                </FormSection>
-                <FormSection title="Rejects">
-                    <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
-                    <List compact color="red">
-                    <ListItem>Item is at least 8 characters long.</ListItem>
-                    <ListItem>Item contains at least 1 letter.</ListItem>
-                    </List>
-                    <Input id="quantity" labelText="Quantity" />
-                    <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
-                </FormSection>
+              <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+                <List compact>
+                  <ListItem>Affected field</ListItem>
+                  <ListItem>Unmet criteria</ListItem>
+                  <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+                </List>
+              </HeaderValidation>
+              <FormSection title="Job Information">
+                <Input id="project" labelText="Project" placeholder="Project 128703" />
+                <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
+                <Select id="project-status" labelText="Project status" options={ options } />
+                <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
+                <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
+                <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
+                <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
+                <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
+                <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
+                  <Checkbox value="christiaan" labelText="Christiaan Oostenbrug" />
+                  <Checkbox value="matt" labelText="Matt Dunn" />
+                  <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
+                  <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
+                </CheckboxGroup>
+                <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+                  <Radio value="yes" labelText="Yes" />
+                  <Radio value="no" labelText="No" />
+                  <Radio value="maybe" labelText="Maybe" disabled />
+                </RadioGroup>
+                <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
+              </FormSection>
+              <FormSection title="Rejects">
+                <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
+                <List compact color="red">
+                  <ListItem>Item is at least 8 characters long.</ListItem>
+                  <ListItem>Item contains at least 1 letter.</ListItem>
+                </List>
+                <Input id="quantity" labelText="Quantity" />
+                <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
+              </FormSection>
             </Form>
           </Box>
           <Flex mb="x6">
