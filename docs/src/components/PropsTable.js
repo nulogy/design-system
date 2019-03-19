@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const PropsTable = ({ propsRows }) => (
   <table>
@@ -26,5 +27,14 @@ const PropsTable = ({ propsRows }) => (
     </tbody>
   </table>
 );
+
+PropsTable.propTypes = {
+  propsRows: PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.string,
+    defaultValue: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
+};
 
 export default PropsTable;
