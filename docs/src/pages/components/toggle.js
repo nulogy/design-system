@@ -28,11 +28,11 @@ const togglePropsRows = [
     name: "onText", type: "String", defaultValue: "false", description: "A label for the toggle's on state.",
   },
   {
-    name: "onChange", type: "Function", defaultValue: "null", description: ""
+    name: "onChange", type: "Function", defaultValue: "null", description: "",
   },
   {
     name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require input before the form will submit",
-  }
+  },
 ];
 
 export default () => (

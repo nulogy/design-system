@@ -15,11 +15,11 @@ const radioProps = [
     name: "labelText", type: "String", defaultValue: "Required", description: "Label for the input",
   },
   {
-    name: "onChange", type: "Function", defaultValue: "null", description: ""
+    name: "onChange", type: "Function", defaultValue: "null", description: "",
   },
   {
     name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require input before the form will submit",
-  }
+  },
 ];
 
 export default radioProps;
