@@ -44,12 +44,10 @@ const SmallNavBar = ({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        <Flex>
-          <Flex maxWidth="18em" alignItems="center" px="0">
-            <NavBarSearch />
-          </Flex>
-          <MobileMenu display="block" />
+        <Flex maxWidth="18em" alignItems="center" px="0">
+          <NavBarSearch />
         </Flex>
+        <MobileMenu display="block" />
       </Flex>
     </nav>
   </Box>
