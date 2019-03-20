@@ -1,12 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { SubsectionTitle, Field } from "ComponentsRoot";
+import {
+  SubsectionTitle,
+  Field,
+  Box,
+  Flex,
+} from "ComponentsRoot";
 import theme from "../theme";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
   as: "legend",
 })({});
+
+const doNotWrapElements = [
+  Box,
+  Flex,
+];
+
+const childIsWrappedByField = childType => !doNotWrapElements.includes(childType);
 
 const BaseFormSection = ({
   title,
@@ -19,11 +31,21 @@ const BaseFormSection = ({
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
-    { children.map((child, index) => (
-      <Field key={ index }>
-        {React.cloneElement(child)}
-      </Field>
-    )) }
+    { children.map((child, index) => {
+      if (childIsWrappedByField(child.type)) {
+        return (
+          <Field key={ index }>
+            {React.cloneElement(child)}
+          </Field>
+        );
+      } else {
+        return (
+          React.cloneElement(child, {
+            key: index,
+          })
+        );
+      }
+    })}
   </fieldset>
 );
 
