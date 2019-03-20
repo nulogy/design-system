@@ -5,9 +5,26 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+  DocText as Text, Layout, Intro, DocSection, PropsTable,
 } from "../../components";
 
+const propsRows = [
+  {
+    name: "size", type: "String", defaultValue: "medium", description: "Accepts small, medium, or large",
+  },
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the button as disabled and unable to be activated",
+  },
+  {
+    name: "icon", type: "String", defaultValue: "null", description: "The icon to display. See Icons for all possible options.",
+  },
+  {
+    name: "iconSide", type: "String", defaultValue: "right", description: "The side to display the icon"
+  },
+  {
+    name: "fullWidth", type: "Boolean", defaultValue: "false", description: "Makes the button fill the width of its container",
+  },
+];
 
 export default () => (
   <Layout>
@@ -68,7 +85,6 @@ export default () => (
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Text>The following variations are available to all button components.</Text>
-
       <Box mb="x6">
         <SubsectionTitle>Small</SubsectionTitle>
         <Button size="small">Read more</Button>
@@ -102,6 +118,14 @@ export default () => (
       </Box>
 
       <Box mb="x6">
+        <SubsectionTitle>With an icon</SubsectionTitle>
+        <Button icon="add" iconSide="left">Create project</Button>
+        <Highlight className="js">
+          {"<Button icon=\"add\" iconSide=\"left\">Create project</Button>"}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Flex justifyContent="space-between" alignItems="center">
           <Button disabled>Create project</Button>
@@ -125,30 +149,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>size</td>
-            <td>String</td>
-            <td>medium</td>
-            <td>Accepts small, medium, large or fullWidth</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Marks the button as disabled and unable to be activated</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
