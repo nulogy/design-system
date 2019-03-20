@@ -25,6 +25,9 @@ export const MobileMenu = styled(MobileMenuBase)(
       border: "none",
       padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
       marginLeft: theme.space.x1,
+      "&:hover": {
+        cursor: "pointer",
+      },
     },
   },
 );
