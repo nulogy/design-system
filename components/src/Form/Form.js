@@ -31,7 +31,7 @@ const BaseForm = ({
     { children.map((child, index) => {
       if (childIsWrappedByField(child.type)) {
         return (
-          <Field key={ index } style={ { border: "solid 2px blue" } }>
+          <Field key={ index }>
             {React.cloneElement(child)}
           </Field>
         );

@@ -13,14 +13,14 @@ const BaseFormSection = ({
   children,
   ...props
 }) => (
-  <fieldset { ...props } style={ { border: "solid 2px red" } }>
+  <fieldset { ...props }>
     { (title != null)
         && (
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
     { children.map((child, index) => (
-      <Field key={ index } style={ { border: "solid 2px blue" } }>
+      <Field key={ index }>
         {React.cloneElement(child)}
       </Field>
     )) }
