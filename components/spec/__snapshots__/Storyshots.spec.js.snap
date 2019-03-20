@@ -58,22 +58,6 @@ exports[`Storyshots CheckboxGroup with error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots DemoPage Demo Page 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots Field Field 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With Input 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With Input and InlineValidation 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With Label for Input 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With a long text 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With all additional components 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With help text 1`] = `ReactWrapper {}`;
-
-exports[`Storyshots Field With requirement text 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots FieldLabel FieldLabel 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots FieldLabel with HelpText 1`] = `ReactWrapper {}`;
