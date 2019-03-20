@@ -20,6 +20,9 @@ const inputProps = [
   {
     name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
   },
+  {
+    name: "requirementText", type: "String", defaultValue: "null", description: "(Optional) or (Required)",
+  }
 ];
 
 export default inputProps;
