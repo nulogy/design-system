@@ -17,14 +17,9 @@ const doNotWrapElements = [
   HeaderValidation,
   Box,
   Flex,
-]
+];
 
-console.log(doNotWrapElements)
-console.log(FormSection)
-
-const childIsWrappedByField = childType => {
-  return !doNotWrapElements.includes(childType)
-}
+const childIsWrappedByField = childType => !doNotWrapElements.includes(childType);
 
 const BaseForm = ({
   title,
@@ -33,19 +28,19 @@ const BaseForm = ({
 }) => (
   <form { ...props }>
     <SectionTitle>{ title }</SectionTitle>
-    { children.map( (child, index) => {
+    { children.map((child, index) => {
       if (childIsWrappedByField(child.type)) {
-        return(
-          <Field key={ index } style={{border: "solid 2px blue"}}>
+        return (
+          <Field key={ index } style={ { border: "solid 2px blue" } }>
             {React.cloneElement(child)}
           </Field>
-          )
+        );
       } else {
-        return(
-          React.cloneElement(child,{
+        return (
+          React.cloneElement(child, {
             key: index,
-          })        
-        )
+          })
+        );
       }
     })}
   </form>
