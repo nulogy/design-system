@@ -4,24 +4,26 @@ import { space } from "styled-system";
 import PropTypes from "prop-types";
 import {
   SectionTitle,
-  FormSection,
   Field,
   HeaderValidation,
   Box,
   Flex,
 } from "ComponentsRoot";
+import FormSection from "./FormSection";
 import theme from "../theme";
 
+const doNotWrapElements = [
+  FormSection,
+  HeaderValidation,
+  Box,
+  Flex,
+]
+
+console.log(doNotWrapElements)
+console.log(FormSection)
+
 const childIsWrappedByField = childType => {
-  switch (childType) {
-    case FormSection:
-    case HeaderValidation:
-    case Box:
-    case Flex:
-      return false;
-    default:
-      return true;
-  }
+  return !doNotWrapElements.includes(childType)
 }
 
 const BaseForm = ({
