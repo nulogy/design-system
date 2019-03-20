@@ -21,6 +21,8 @@ const doNotWrapElements = [
 
 const childIsWrappedByField = childType => !doNotWrapElements.includes(childType);
 
+/* eslint-disable react/no-array-index-key */
+
 const BaseForm = ({
   title,
   children,
