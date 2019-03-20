@@ -58,8 +58,8 @@ export default () => (
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
       <ListItem>Whenever possible use radio buttons for short lists (~ 5-7)</ListItem>
+      <ListItem>Add labels, errors and default selections with <Link href="/components/radio-group">Radio Group</Link></ListItem>
       <ListItem>Consider using a <Link href="/components/select">Select</Link> for long lists</ListItem>
-      <ListItem>Users should be able to select the radio button by clicking on the box directly or by clicking on its label.</ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
