@@ -22,7 +22,7 @@ const inputProps = [
   },
   {
     name: "requirementText", type: "String", defaultValue: "null", description: "(Optional) or (Required)",
-  }
+  },
 ];
 
 export default inputProps;

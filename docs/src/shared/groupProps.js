@@ -1,6 +1,6 @@
 const groupProps = [
   {
-    name: "defaultValue", type: "String", defaultValue: "null", description: "A Checkbox value to autoselect on pageload"
+    name: "defaultValue", type: "String", defaultValue: "null", description: "A Checkbox value to autoselect on pageload",
   },
   {
     name: "error", type: "String", defaultValue: "null", description: "Sets the error state and displays message",
@@ -20,4 +20,6 @@ const groupProps = [
   {
     name: "requirementText", type: "String", defaultValue: "null", description: "(Optional) or (Required)",
   },
-]
+];
+
+export default groupProps;
