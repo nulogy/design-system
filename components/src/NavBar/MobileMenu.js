@@ -37,36 +37,6 @@ const MenuLink = ({ menuItem }) => (
   </div>
 );
 
-class MenuState extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isOpen: false,
-    };
-
-    this.handleOnClick = this.handleOnClick.bind(this);
-  }
-
-  handleOnClick() {
-    const { isOpen } = this.state;
-
-    this.setState({
-      isOpen: !isOpen,
-    });
-  }
-
-  render() {
-    const { isOpen } = this.state;
-    const { children: renderMenu } = this.props;
-
-    return renderMenu({
-      isOpen,
-      handleMenuToggle: this.handleOnClick,
-    });
-  }
-}
-
 const MobileMenuBase = ({
   menuData,
   menuState: { isOpen, handleMenuToggle },
@@ -136,15 +106,44 @@ MobileMenuBase.defaultProps = {
   menuData: null,
 };
 
-const MobileMenuWithState = ({
+class MenuState extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false,
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    const { isOpen } = this.state;
+
+    this.setState({
+      isOpen: !isOpen,
+    });
+  }
+
+  render() {
+    const { isOpen } = this.state;
+    const { children: renderMenu } = this.props;
+
+    return renderMenu({
+      isOpen,
+      handleMenuToggle: this.handleOnClick,
+    });
+  }
+}
+
+const withMenuState = MenuComponentWithoutState => ({
   ...props
 }) => (
   <MenuState>
     {
-      menuState => <MobileMenu menuState={ menuState } { ...props } />
+      menuState => <MenuComponentWithoutState menuState={ menuState } { ...props } />
     }
   </MenuState>
 );
 
-// export default MobileMenu;
-export default MobileMenuWithState;
+export default withMenuState(MobileMenu);
