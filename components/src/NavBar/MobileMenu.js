@@ -23,9 +23,7 @@ const SubMenu = ({ menuItem }) => (
     <SubMenuItemList>
       {
         menuItem.subMenuItems.map(subMenuItem => (
-          <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-            {subMenuItem.text}
-          </SubMenuItem>
+          <SubMenuItem key={ subMenuItem.text } { ...subMenuItem } />
         ))
       }
     </SubMenuItemList>

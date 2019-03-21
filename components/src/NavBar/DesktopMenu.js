@@ -20,9 +20,7 @@ const BaseDesktopMenu = ({
           <div key={ menuItem.text }>
             <MenuDropdown labelText={ menuItem.text }>
               {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-                  {subMenuItem.text}
-                </SubMenuItem>
+                <SubMenuItem key={ subMenuItem.text } { ...subMenuItem } />
               ))}
             </MenuDropdown>
           </div>

@@ -39,14 +39,13 @@ const SubMenuItemLink = styled(Link)({
 
 const BaseSubMenuItem = React.forwardRef(({
   href,
-  children,
+  text,
   subText,
-  screenSize,
   ...props
 }, ref) => (
   <li { ...props }>
     <SubMenuItemLink ref={ ref } tabIndex="-1" underline={ false } href={ href }>
-      <Text>{children}</Text>
+      <Text>{ text }</Text>
       {subText && (
       <Text fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {subText}
@@ -72,18 +71,18 @@ BaseSubMenuItem.defaultProps = {
 const SubMenuItem = styled(BaseSubMenuItem)(
   screenSize,
   ({ disabled, fullWidth }) => ({
-  //color: theme.colors.black,
-  borderColor: "transparent",
-  backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
-  textDecoration: "none",
-  verticalAlign: "middle",
-  lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  fontSize: `${theme.fontSizes.medium}`,
-  maxWidth: "20em",
-})
+  // color: theme.colors.black,
+    borderColor: "transparent",
+    backgroundColor: "transparent",
+    justifyContent: "center",
+    alignItems: "center",
+    textDecoration: "none",
+    verticalAlign: "middle",
+    lineHeight: theme.lineHeights.base,
+    transition: ".2s",
+    fontSize: `${theme.fontSizes.medium}`,
+    maxWidth: "20em",
+  })
 );
 
 export default SubMenuItem;
