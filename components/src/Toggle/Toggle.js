@@ -124,7 +124,7 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Box className={ className }>
-        <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+        {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
         <InputClickableArea disabled={ disabled }>
           <ToggleButton
             id={ id }
