@@ -212,7 +212,7 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="inputTooltip"
       >
-        <Input />
+        <Input id="tooltip-input" />
       </Tooltip>
       <Tooltip
         fullWidth
@@ -220,7 +220,7 @@ storiesOf("Tooltip", module)
         tooltip="Tooltip"
         id="selectTooltip"
       >
-        <Select options={ selectOptions } />
+        <Select id="tooltip-select" options={ selectOptions } />
       </Tooltip>
       <Tooltip
         fullWidth

@@ -76,7 +76,7 @@ storiesOf("Select", module)
   ))
   .add("Set to required", () => (
     <form>
-      <Input placeholder="Please select inventory status" />
+      <Input id="input" placeholder="Please select inventory status" />
       <Select
         placeholder="Please select inventory status" options={ options } required
         requirementText="(Required)" id="required"

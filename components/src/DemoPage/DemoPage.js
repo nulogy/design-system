@@ -343,7 +343,7 @@ const DemoPage = () => {
                 <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
               </FormSection>
               <FormSection title="Rejects">
-                <Input value="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
+                <Input defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
                 <List compact color="red">
                   <ListItem>Item is at least 8 characters long.</ListItem>
                   <ListItem>Item contains at least 1 letter.</ListItem>
