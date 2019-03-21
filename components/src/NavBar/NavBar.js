@@ -8,7 +8,7 @@ import {
 } from "ComponentsRoot";
 import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
-import { MobileMenu } from "./MobileMenu";
+import MobileMenu from "./MobileMenu";
 import theme from "../theme";
 
 const MediumNavBar = ({
@@ -24,8 +24,8 @@ const MediumNavBar = ({
         <Flex alignItems="center">
           <DesktopMenu menuData={ menuData.primaryMenu } />
         </Flex>
-        <Flex>
-          <Flex maxWidth="18em" alignItems="center" px="x3">
+        <Flex alignItems="center">
+          <Flex maxWidth="18em" px="x3">
             <NavBarSearch />
           </Flex>
           <DesktopMenu menuData={ menuData.secondaryMenu } />
@@ -36,6 +36,7 @@ const MediumNavBar = ({
 );
 
 const SmallNavBar = ({
+  menuData,
   mobileSrc,
   alt,
   ...props
@@ -44,10 +45,10 @@ const SmallNavBar = ({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        <Flex maxWidth="18em" alignItems="center" px="0">
+        <Flex maxWidth="18em" alignItems="center" px="0" mr="x6">
           <NavBarSearch />
         </Flex>
-        <MobileMenu display="block" />
+        <MobileMenu menuData={ menuData.primaryMenu } display="block" />
       </Flex>
     </nav>
   </Box>
