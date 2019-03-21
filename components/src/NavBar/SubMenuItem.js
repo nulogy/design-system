@@ -5,23 +5,6 @@ import Link from "../Link/Link";
 import Text from "../Type/Text";
 import theme from "../theme";
 
-const screenSize = props => {
-  switch (screenSize.size) {
-    case "small":
-      return {
-        color: `${props.theme.colors.red}`,
-      };
-    case "medium":
-      return {
-        color: `${props.theme.colors.green}`,
-      };
-    default:
-      return {
-        color: `${props.theme.colors.white}`,
-      };
-  }
-};
-
 const SubMenuItemLink = styled(Link)({
   display: "block",
   padding: `${theme.space.x1} ${theme.space.x2}`,
@@ -44,10 +27,10 @@ const BaseSubMenuItem = React.forwardRef(({
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex="-1" underline={ false } href={ href }>
+    <SubMenuItemLink ref={ ref } tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
       <Text>{ text }</Text>
       {subText && (
-      <Text fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {subText}
       </Text>
       )}
@@ -59,19 +42,16 @@ BaseSubMenuItem.propTypes = {
   children: PropTypes.node.isRequired,
   subText: PropTypes.string,
   href: PropTypes.string,
-  screenSize: PropTypes.oneOf(["small", "medium", "large"]),
 };
 
 BaseSubMenuItem.defaultProps = {
   subText: undefined,
   href: "/",
-  screenSize: "medium",
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)(
-  screenSize,
   ({ disabled, fullWidth }) => ({
-  // color: theme.colors.black,
+    color: theme.colors.black,
     borderColor: "transparent",
     backgroundColor: "transparent",
     justifyContent: "center",
