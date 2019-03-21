@@ -32,7 +32,7 @@ SubsectionTitle.defaultProps = {
   m: 0,
   fontWeight: theme.fontWeights.medium,
   fontSize: theme.fontSizes.large,
-  lineHeight: theme.lineHeights.sectionTitle,
+  lineHeight: theme.lineHeights.subsectionTitle,
   mb: theme.space.x1,
   theme,
 };
