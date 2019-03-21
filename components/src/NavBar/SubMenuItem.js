@@ -24,13 +24,15 @@ const BaseSubMenuItem = React.forwardRef(({
   href,
   text,
   subText,
+  textColor,
+  subTextColor,
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
-      <Text>{ text }</Text>
+    <SubMenuItemLink ref={ ref } tabIndex="-1" underline={ false } href={ href }>
+      <Text color={ textColor }>{ text }</Text>
       {subText && (
-      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+      <Text color={ subTextColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {subText}
       </Text>
       )}
@@ -42,11 +44,15 @@ BaseSubMenuItem.propTypes = {
   children: PropTypes.node.isRequired,
   subText: PropTypes.string,
   href: PropTypes.string,
+  textColor: PropTypes.string,
+  subTextColor: PropTypes.string,
 };
 
 BaseSubMenuItem.defaultProps = {
   subText: undefined,
   href: "/",
+  textColor: "darkBlue",
+  subTextColor: "darkGrey"
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)(

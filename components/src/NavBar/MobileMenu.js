@@ -23,16 +23,10 @@ const SubMenu = ({ menuItem }) => (
     <SubMenuItemList>
       {
         menuItem.subMenuItems.map(subMenuItem => (
-          <SubMenuItem key={ subMenuItem.text } { ...subMenuItem } />
+          <SubMenuItem textColor="lightGrey" subTextColor="grey" key={ subMenuItem.text } { ...subMenuItem } />
         ))
       }
     </SubMenuItemList>
-    <ul>{menuItem.subMenuItems.map(subMenuItem => (
-      <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-        {subMenuItem.text}
-      </SubMenuItem>
-    ))}
-    </ul>
   </div>
 );
 
@@ -71,43 +65,12 @@ const Menu = styled.div(() => (
   {
     position: "absolute",
     left: "0",
-    top: "80px",
+    top: "72px",
     padding: `${theme.space.x4} 0`,
     zIndex: "10",
+    width: "100%",
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
-    listStyle: "none",
-
-
-    width: "calc(100% - 48px)",
-    marginLeft: "24px",
-    [`${SubsectionTitle}`]: {
-      marginBottom: theme.space.x1,
-      padding: `${theme.space.x1} ${theme.space.none} ${theme.space.x1} ${theme.space.x4}`,
-    },
-    [`${MenuItem}`]: {
-      display: "block",
-      color: "red",
-      marginBottom: theme.space.x1,
-      padding: `${theme.space.x1} ${theme.space.none} ${theme.space.x1} ${theme.space.x4}`,
-    },
-    [`${SubMenuItem}`]: {
-      display: "block",
-      border: "solid 1px lime",
-      color: "red",
-      maxWidth: "100%",
-      padding: `${theme.space.x1} ${theme.space.none}`,
-      marginBottom: theme.space.x1,
-    },
-
-
-    [`${Description}`]: {
-      fontSize: theme.fontSizes.small,
-      lineHeight: theme.lineHeights.smallTextBase,
-      color: theme.colors.red,
-    },
-
-
   }));
 
 export const MobileMenu = styled(MobileMenuBase)(
