@@ -17,8 +17,8 @@ const BaseDesktopMenu = ({
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
-          <div>
-            <MenuDropdown key={ menuItem.text } labelText={ menuItem.text }>
+          <div key={ menuItem.text }>
+            <MenuDropdown labelText={ menuItem.text }>
               {menuItem.subMenuItems.map(subMenuItem => (
                 <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
                   {subMenuItem.text}
@@ -29,8 +29,8 @@ const BaseDesktopMenu = ({
         );
       } else {
         return (
-          <div>
-            <MenuItem key={ menuItem.text } href={ menuItem.href }>
+          <div key={ menuItem.text }>
+            <MenuItem href={ menuItem.href }>
               {menuItem.text}
             </MenuItem>
           </div>

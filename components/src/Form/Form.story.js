@@ -95,15 +95,7 @@ storiesOf("Form", module)
         </FormSection>
         <FormSection title="Rejects">
           <Input
-            value="235432" id="items" labelText="Item" error={ (
-              <>
-            Item 235432 is not a valid entry.
-                <List compact color="red">
-                  <ListItem>Items is at least 8 characters long.</ListItem>
-                  <ListItem>Items contains at least 1 letter.</ListItem>
-                </List>
-              </>
-) }
+            defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry."
           />
           <Input id="quantity" labelText="Quantity" />
           <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />

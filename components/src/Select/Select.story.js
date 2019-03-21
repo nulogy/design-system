@@ -35,7 +35,7 @@ class SelectWithState extends React.Component {
     return (
       <Select
         onChange={ this.handleChange } value={ selectedOption } options={ options }
-        optionToString={ optionToString }
+        optionToString={ optionToString } { ...this.props }
       />
     );
   }
@@ -76,7 +76,7 @@ storiesOf("Select", module)
   ))
   .add("Set to required", () => (
     <form>
-      <Input placeholder="Please select inventory status" />
+      <Input id="input" placeholder="Please select inventory status" />
       <Select
         placeholder="Please select inventory status" options={ options } required
         requirementText="(Required)" id="required"
