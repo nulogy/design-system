@@ -5,52 +5,57 @@ import {
   Box,
   Flex,
   Icon,
-  SubsectionTitle
+  SubsectionTitle,
 } from "ComponentsRoot";
+import { transparentize } from "polished";
 import SubMenuItem, { Description } from "./SubMenuItem";
 import MenuItem from "./MenuItem";
 import SubMenuItemList from "./MenuDropdown/SubMenuItemList";
 import { MobileMenuDropdown } from "./MenuDropdown/MobileMenuDropdown";
-import { transparentize } from "polished";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const isText = menuItem => (menuItem.subMenuItems);
+const isSubMenu = menuItem => (menuItem.subMenuItems);
+
+const SubMenu = ({ menuItem }) => (
+  <div>
+    <SubsectionTitle key={ menuItem.text }>{menuItem.text}</SubsectionTitle>
+    <ul>{menuItem.subMenuItems.map(subMenuItem => (
+      <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
+        {subMenuItem.text}
+      </SubMenuItem>
+    ))}
+    </ul>
+  </div>
+);
+
+const MenuLink = ({ menuItem }) => (
+  <div>
+    <MenuItem key={ menuItem.text } href={ menuItem.href }>
+      {menuItem.text}
+    </MenuItem>
+  </div>
+);
 
 const MobileMenuBase = ({
   menuData,
   ...props
 }) => (
-    <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-      <button>
-        <Icon icon="menu" title="Menu" />
-      </button>
-      <Menu>
-      {menuData.map(menuItem => {
-        if (isText(menuItem)) {
-          return (
-            <div>
-              <SubsectionTitle key={ menuItem.text }>{ menuItem.text }</SubsectionTitle>
-              <ul>{menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-                  {subMenuItem.text}
-                </SubMenuItem>
-              ))}
-              </ul>
-            </div>
-          );
-        } else {
-          return (
-            <div>
-              <MenuItem key={ menuItem.text } href={ menuItem.href }>
-                {menuItem.text}
-              </MenuItem>
-            </div>
-          );
-        }
-      })}
-      </Menu>
-    </Box>
+  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
+    <button><Icon icon="menu" title="Menu" /></button>
+
+    <Menu>
+      {
+        menuData.map(menuItem => {
+          if (isSubMenu(menuItem)) {
+            return <SubMenu menuItem={ menuItem } />;
+          } else {
+            return <MenuLink menuItem={ menuItem } />;
+          }
+        })
+      }
+    </Menu>
+  </Box>
 
 
 );
@@ -96,8 +101,7 @@ const Menu = styled.div(() => (
     },
 
 
-  })
-);
+  }));
 
 export const MobileMenu = styled(MobileMenuBase)(
   {
