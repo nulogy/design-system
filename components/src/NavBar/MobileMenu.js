@@ -8,10 +8,9 @@ import {
   SubsectionTitle,
 } from "ComponentsRoot";
 import { transparentize } from "polished";
-import SubMenuItem, { Description } from "./SubMenuItem";
+import SubMenuItem from "./SubMenuItem";
 import MenuItem from "./MenuItem";
 import SubMenuItemList from "./MenuDropdown/SubMenuItemList";
-import { MobileMenuDropdown } from "./MenuDropdown/MobileMenuDropdown";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
