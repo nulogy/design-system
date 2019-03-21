@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "../Link/Link";
 import theme from "../theme";
 
-const SubMenuItem = styled(Link).attrs({
+const MenuItem = styled(Link).attrs({
   underline: false,
   color: "white",
 })({
@@ -30,4 +30,4 @@ const SubMenuItem = styled(Link).attrs({
   },
 });
 
-export default SubMenuItem;
+export default MenuItem;
