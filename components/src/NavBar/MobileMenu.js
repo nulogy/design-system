@@ -37,7 +37,7 @@ const MenuLink = ({ menuItem }) => (
   </div>
 );
 
-class MobileMenuBase extends React.Component {
+class MenuState extends React.Component {
   constructor() {
     super();
 
@@ -57,40 +57,49 @@ class MobileMenuBase extends React.Component {
   }
 
   render() {
-    const { menuData, ...props } = this.props;
     const { isOpen } = this.state;
+    const { children: renderMenu } = this.props;
 
-    return (
-      <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-        <button onClick={ this.handleOnClick }>
-          {
-          isOpen
-            ? <Icon icon="close" title="Close Menu" />
-            : <Icon icon="menu" title="Open Menu" />
-        }
-
-        </button>
-
-        {
-          isOpen
-            && (
-              <Menu>
-                {
-                  menuData.map(menuItem => {
-                    if (isSubMenu(menuItem)) {
-                      return <SubMenu menuItem={ menuItem } />;
-                    } else {
-                      return <MenuLink menuItem={ menuItem } />;
-                    }
-                  })
-                }
-              </Menu>
-            )
-        }
-      </Box>
-    );
+    return renderMenu({
+      isOpen,
+      handleMenuToggle: this.handleOnClick,
+    });
   }
 }
+
+const MobileMenuBase = ({
+  menuData,
+  menuState: { isOpen, handleMenuToggle },
+  ...props
+}) => (
+  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
+    <button onClick={ handleMenuToggle }>
+      {
+      isOpen
+        ? <Icon icon="close" title="Close Menu" />
+        : <Icon icon="menu" title="Open Menu" />
+    }
+
+    </button>
+
+    {
+      isOpen
+        && (
+          <Menu>
+            {
+              menuData.map(menuItem => {
+                if (isSubMenu(menuItem)) {
+                  return <SubMenu menuItem={ menuItem } />;
+                } else {
+                  return <MenuLink menuItem={ menuItem } />;
+                }
+              })
+            }
+          </Menu>
+        )
+    }
+  </Box>
+);
 
 const Menu = styled.div(() => (
   {
@@ -104,7 +113,7 @@ const Menu = styled.div(() => (
     color: theme.colors.white,
   }));
 
-export const MobileMenu = styled(MobileMenuBase)(
+const MobileMenu = styled(MobileMenuBase)(
   {
     "button": {
       color: theme.colors.white,
@@ -127,4 +136,15 @@ MobileMenuBase.defaultProps = {
   menuData: null,
 };
 
-export default MobileMenu;
+const MobileMenuWithState = ({
+  ...props
+}) => (
+  <MenuState>
+    {
+      menuState => <MobileMenu menuState={ menuState } { ...props } />
+    }
+  </MenuState>
+);
+
+// export default MobileMenu;
+export default MobileMenuWithState;
