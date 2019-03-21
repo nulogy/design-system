@@ -22,6 +22,7 @@ const SubMenuItem = styled(Link).attrs({
     outline: "none",
     color: theme.colors.lightBlue,
     backgroundColor: theme.colors.black,
+    textDecoration: "underline",
     cursor: "pointer",
   },
   "&:disabled": {
