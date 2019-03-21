@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { NavBar } from "ComponentsRoot";
+import { Box, NavBar } from "ComponentsRoot";
 
 const menuData = {
   "primaryMenu": [
@@ -140,5 +140,7 @@ const menuData = {
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (
-    <NavBar menuData={ menuData } />
+    <Box style={ { position: "relative" } }>
+      <NavBar menuData={ menuData } />
+    </Box>
   ));
