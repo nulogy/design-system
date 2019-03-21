@@ -38,26 +38,50 @@ const MenuLink = ({ menuItem }) => (
 );
 
 class MobileMenuBase extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false,
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    const { isOpen } = this.state;
+
+    this.setState({
+      isOpen: !isOpen,
+    });
+  }
+
   render() {
     const { menuData, ...props } = this.props;
+    const { isOpen } = this.state;
 
     return (
       <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-        <button>
+        <button onClick={ this.handleOnClick }>
           <Icon icon="menu" title="Menu" />
         </button>
 
-        <Menu>
-          {
-            menuData.map(menuItem => {
-              if (isSubMenu(menuItem)) {
-                return <SubMenu menuItem={ menuItem } />;
-              } else {
-                return <MenuLink menuItem={ menuItem } />;
-              }
-            })
-          }
-        </Menu>
+        {
+          isOpen
+            && (
+              <Menu>
+                {
+                  menuData.map(menuItem => {
+                    if (isSubMenu(menuItem)) {
+                      return <SubMenu menuItem={ menuItem } />;
+                    } else {
+                      return <MenuLink menuItem={ menuItem } />;
+                    }
+                  })
+                }
+              </Menu>
+            )
+        }
       </Box>
     );
   }
