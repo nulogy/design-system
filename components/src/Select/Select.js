@@ -126,7 +126,7 @@ const Select = ({
   id, labelText, helpText, requirementText,
 }) => (
   <>
-    <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ id } requirementText={ requirementText } />
+    {labelText && <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ id } requirementText={ requirementText } />}
     <Downshift
       itemToString={ optionToString }
       selectedItem={ value }

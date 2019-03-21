@@ -64,7 +64,7 @@ const Textarea = ({
   ...props
 }) => (
   <>
-    <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
+    {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
     <StyledTextarea id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
   </>
