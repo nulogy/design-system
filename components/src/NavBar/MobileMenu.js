@@ -37,28 +37,31 @@ const MenuLink = ({ menuItem }) => (
   </div>
 );
 
-const MobileMenuBase = ({
-  menuData,
-  ...props
-}) => (
-  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button><Icon icon="menu" title="Menu" /></button>
+class MobileMenuBase extends React.Component {
+  render() {
+    const { menuData, ...props } = this.props;
 
-    <Menu>
-      {
-        menuData.map(menuItem => {
-          if (isSubMenu(menuItem)) {
-            return <SubMenu menuItem={ menuItem } />;
-          } else {
-            return <MenuLink menuItem={ menuItem } />;
+    return (
+      <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
+        <button>
+          <Icon icon="menu" title="Menu" />
+        </button>
+
+        <Menu>
+          {
+            menuData.map(menuItem => {
+              if (isSubMenu(menuItem)) {
+                return <SubMenu menuItem={ menuItem } />;
+              } else {
+                return <MenuLink menuItem={ menuItem } />;
+              }
+            })
           }
-        })
-      }
-    </Menu>
-  </Box>
-
-
-);
+        </Menu>
+      </Box>
+    );
+  }
+}
 
 const Menu = styled.div(() => (
   {
