@@ -35,7 +35,7 @@ class SelectWithState extends React.Component {
     return (
       <Select
         onChange={ this.handleChange } value={ selectedOption } options={ options }
-        optionToString={ optionToString }
+        optionToString={ optionToString } { ...this.props }
       />
     );
   }
