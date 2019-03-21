@@ -41,7 +41,7 @@ const BaseSubMenuItem = React.forwardRef(({
 ));
 
 BaseSubMenuItem.propTypes = {
-  children: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
   subText: PropTypes.string,
   href: PropTypes.string,
   textColor: PropTypes.string,
@@ -52,7 +52,7 @@ BaseSubMenuItem.defaultProps = {
   subText: undefined,
   href: "/",
   textColor: "darkBlue",
-  subTextColor: "darkGrey"
+  subTextColor: "darkGrey",
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)(
