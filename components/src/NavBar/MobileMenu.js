@@ -63,7 +63,12 @@ class MobileMenuBase extends React.Component {
     return (
       <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
         <button onClick={ this.handleOnClick }>
-          <Icon icon="menu" title="Menu" />
+          {
+          isOpen
+            ? <Icon icon="close" title="Close Menu" />
+            : <Icon icon="menu" title="Open Menu" />
+        }
+
         </button>
 
         {
