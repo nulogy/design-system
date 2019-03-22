@@ -6,11 +6,6 @@ const ListItem = styled.li(
   space,
   color,
   {
-    display: "flex",
-    "&:before": {
-      content: "'•'",
-      marginRight: theme.space.x2,
-    },
     "&:last-child": {
       marginBottom: 0,
     },
