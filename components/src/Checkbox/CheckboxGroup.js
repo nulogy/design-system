@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
+  Box,
   Checkbox,
   HelpText,
   InlineValidation,
@@ -42,11 +43,13 @@ const BaseCheckboxGroup = ({
   ...props
 }) => (
   <Fieldset className={ className } hasHelpText={ !!helpText }>
-    <legend>
-      { labelText }
-      { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
-    </legend>
-    { helpText && (<HelpText>{helpText}</HelpText>) }
+    <Box mb="x1">
+      <legend>
+        { labelText }
+        { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
+      </legend>
+      { helpText && (<HelpText>{helpText}</HelpText>) }
+    </Box>
     { getCheckboxButtons(props) }
     {error && <InlineValidation mt="x1" message={ error } />}
   </Fieldset>
