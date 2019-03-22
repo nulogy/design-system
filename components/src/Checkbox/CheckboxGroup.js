@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
+  Box,
   Checkbox,
   HelpText,
   InlineValidation,
   RequirementText,
 } from "ComponentsRoot";
-import theme from "../theme";
+import Fieldset from "../Form/Fieldset";
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
@@ -33,34 +34,6 @@ const getCheckboxButtons = props => {
   return (checkboxButtons);
 };
 
-const internalSpacingStyles = hasHelpText => {
-  if (hasHelpText) {
-    return ({
-      "p": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  } else {
-    return ({
-      "legend": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  }
-};
-
-const Fieldset = styled.fieldset({
-  padding: 0,
-  border: 0,
-  margin: 0,
-  "legend": {
-    padding: 0,
-  },
-},
-({ hasHelpText }) => (
-  internalSpacingStyles(hasHelpText)
-),);
-
 const BaseCheckboxGroup = ({
   className,
   error,
@@ -69,12 +42,14 @@ const BaseCheckboxGroup = ({
   requirementText,
   ...props
 }) => (
-  <Fieldset className={ className } hasHelpText={ !!helpText }>
-    <legend>
-      { labelText }
-      { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
-    </legend>
-    { helpText && (<HelpText>{helpText}</HelpText>) }
+  <Fieldset role="group" className={ className } hasHelpText={ !!helpText }>
+    <Box mb="x1">
+      <legend>
+        { labelText }
+        { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
+      </legend>
+      { helpText && (<HelpText>{helpText}</HelpText>) }
+    </Box>
     { getCheckboxButtons(props) }
     {error && <InlineValidation mt="x1" message={ error } />}
   </Fieldset>

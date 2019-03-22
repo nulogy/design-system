@@ -3,10 +3,10 @@
   "extends": ["../.eslintrc"],
   "rules": {
     "jsx-a11y/label-has-associated-control": [ 2, {
-      "labelComponents": ["Field"],
-      "labelAttributes": ["Label", "Switch"],
-      "controlComponents": ["Input", "RadioGroup", "Select", "Toggle", "Checkbox"],
-      "assert": "both"
+      "labelComponents": [],
+      "labelAttributes": ["labelText"],
+      "controlComponents": ["FieldLabel"],
+      "assert": "either"
     }]
   }
 }

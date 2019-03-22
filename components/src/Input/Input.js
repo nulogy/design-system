@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
-import { FieldLabel, InlineValidation } from "ComponentsRoot";
+import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -26,17 +26,13 @@ const inputStyles = {
 const getInputStyle = props => {
   if (props.disabled) { return inputStyles.disabled; }
   if (props.error) { return inputStyles.error; }
-
   return inputStyles.default;
 };
 
-const StyledInput = styled.input.attrs(({ error, required }) => ({
-  "aria-invalid": error,
-  "aria-required": required,
-  "required": required,
-}))(
+const StyledInput = styled.input(
   space,
   {
+    display: "block",
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
@@ -57,46 +53,39 @@ const StyledInput = styled.input.attrs(({ error, required }) => ({
   props => (getInputStyle(props))
 );
 
-StyledInput.propTypes = {
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  required: PropTypes.bool,
-  ...space.PropTypes,
-};
-
-StyledInput.defaultProps = {
-  disabled: false,
-  error: null,
-  required: false,
-};
-
 const Input = ({
+  error,
+  required,
   labelText,
   requirementText,
   helpText,
   id,
-  error,
   ...props
 }) => (
-  <>
+  <Field>
     {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledInput id={ id } error={ error } { ...props } />
+    <StyledInput aria-invalid={ !!error } aria-required={ required } id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
-  </>
+  </Field>
 );
 
 Input.propTypes = {
-  error: PropTypes.string,
-  helpText: PropTypes.string,
-  labelText: PropTypes.string,
   id: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  error: PropTypes.string,
+  required: PropTypes.bool,
+  labelText: PropTypes.string,
+  helpText: PropTypes.string,
   requirementText: PropTypes.string,
+  ...space.PropTypes,
 };
 
 Input.defaultProps = {
+  disabled: false,
   error: null,
-  helpText: null,
+  required: false,
   labelText: null,
+  helpText: null,
   requirementText: null,
 };
 

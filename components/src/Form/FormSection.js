@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { SubsectionTitle, Field } from "ComponentsRoot";
+import {
+  SubsectionTitle,
+  Field,
+} from "ComponentsRoot";
+import Fieldset from "./Fieldset";
 import theme from "../theme";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
@@ -19,7 +23,7 @@ const BaseFormSection = ({
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
-    { children }
+    {children}
   </fieldset>
 );
 
@@ -31,7 +35,7 @@ const FormSection = styled(BaseFormSection)(({ title }) => ({
     padding: 0,
     marginBottom: title ? theme.space.x3 : 0,
   },
-  [`${Field}`]: {
+  [`${Field},${Fieldset}`]: {
     marginBottom: theme.space.x3,
     "&:last-child": {
       marginBottom: 0,

@@ -312,7 +312,7 @@ const DemoPage = () => {
         <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
           <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
-            <Form title="Job 324400">
+            <Form title="Job 324400" mb="x4">
               <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
                 <List compact>
                   <ListItem>Affected field</ListItem>

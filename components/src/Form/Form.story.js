@@ -94,9 +94,7 @@ storiesOf("Form", module)
           <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
         </FormSection>
         <FormSection title="Rejects">
-          <Input
-            defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry."
-          />
+          <Input defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry" />
           <Input id="quantity" labelText="Quantity" />
           <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
         </FormSection>

@@ -4,10 +4,11 @@ import { space } from "styled-system";
 import PropTypes from "prop-types";
 import {
   SectionTitle,
-  FormSection,
   Field,
   HeaderValidation,
 } from "ComponentsRoot";
+import Fieldset from "./Fieldset";
+import FormSection from "./FormSection";
 import theme from "../theme";
 
 const BaseForm = ({
@@ -17,7 +18,7 @@ const BaseForm = ({
 }) => (
   <form { ...props }>
     <SectionTitle>{ title }</SectionTitle>
-    { children }
+    {children}
   </form>
 );
 
@@ -30,7 +31,7 @@ const Form = styled(BaseForm)(
     [`${HeaderValidation}`]: {
       marginBottom: theme.space.x6,
     },
-    [`${Field}`]: {
+    [`${Field},${Fieldset}`]: {
       marginBottom: theme.space.x3,
       "&:last-child": {
         marginBottom: 0,

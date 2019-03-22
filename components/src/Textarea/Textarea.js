@@ -3,11 +3,11 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
-import { FieldLabel, InlineValidation } from "ComponentsRoot";
+import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const TextareaStyles = {
+const textareaStyles = {
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
@@ -24,19 +24,15 @@ const TextareaStyles = {
 };
 
 const getTextareaStyle = props => {
-  if (props.disabled) { return TextareaStyles.disabled; }
-  if (props.error) { return TextareaStyles.error; }
-  return TextareaStyles.default;
+  if (props.disabled) { return textareaStyles.disabled; }
+  if (props.error) { return textareaStyles.error; }
+  return textareaStyles.default;
 };
 
-const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
-  "aria-invalid": error,
-  "aria-required": required,
-  "required": required,
-  "placeholder": placeholder,
-}))(
+const StyledTextarea = styled.textarea(
   space,
   {
+    display: "block",
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
@@ -60,26 +56,30 @@ const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) 
 );
 
 const Textarea = ({
-  error, labelText, requirementText, helpText, id,
+  error,
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  id,
   ...props
 }) => (
-  <>
+  <Field>
     {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledTextarea id={ id } error={ error } { ...props } />
+    <StyledTextarea aria-invalid={ !!error } aria-required={ required } id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
-  </>
+  </Field>
 );
 
 Textarea.propTypes = {
+  id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   error: PropTypes.string,
   required: PropTypes.bool,
-  rows: PropTypes.number,
-  placeholder: PropTypes.string,
-  id: PropTypes.string.isRequired,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
+  rows: PropTypes.number,
   ...space.PropTypes,
 };
 
@@ -87,11 +87,10 @@ Textarea.defaultProps = {
   disabled: false,
   error: null,
   required: false,
-  rows: 3,
-  placeholder: undefined,
   labelText: null,
   helpText: null,
   requirementText: null,
+  rows: 3,
 };
 
 export default Textarea;
