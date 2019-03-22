@@ -33,6 +33,7 @@ const getInputStyle = props => {
 const StyledInput = styled.input(
   space,
   {
+    display: "block",
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,

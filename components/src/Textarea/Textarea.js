@@ -32,6 +32,7 @@ const getTextareaStyle = props => {
 const StyledTextarea = styled.textarea(
   space,
   {
+    display: "block",
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
