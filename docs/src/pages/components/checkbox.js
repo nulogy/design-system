@@ -57,6 +57,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
+      <ListItem>Add labels, errors and default selections with <Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
       <ListItem>If there are many items in a list, consider using a "Show all" button</ListItem>
     </DocSection>
 
@@ -67,6 +68,10 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem><Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
     </DocSection>
   </Layout>
 );

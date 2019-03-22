@@ -1,6 +1,6 @@
-const inputProps = [
+const groupProps = [
   {
-    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the field as disabled and disallows user input",
+    name: "defaultValue", type: "String", defaultValue: "null", description: "A value to autoselect on pageload",
   },
   {
     name: "error", type: "String", defaultValue: "null", description: "Sets the error state and displays message",
@@ -9,13 +9,10 @@ const inputProps = [
     name: "helpText", type: "String", defaultValue: "null", description: "Additional instruction to show up below label",
   },
   {
-    name: "id", type: "String", defaultValue: "Required", description: "A unique ID for this input",
+    name: "labelText", type: "String", defaultValue: "Required", description: "Label for the input",
   },
   {
-    name: "labelText", type: "String", defaultValue: "null", description: "Label for the input",
-  },
-  {
-    name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",
+    name: "name", type: "String", defaultValue: "Required", description: "A unique name for this input",
   },
   {
     name: "required", type: "Boolean", defaultValue: "false", description: "Makes the field require selection before the form will submit",
@@ -25,4 +22,4 @@ const inputProps = [
   },
 ];
 
-export default inputProps;
+export default groupProps;
