@@ -27,14 +27,6 @@ const SubMenu = ({ menuItem }) => (
   </div>
 );
 
-const MenuLink = ({ menuItem }) => (
-  <div>
-    <MenuItem key={ menuItem.text } href={ menuItem.href }>
-      {menuItem.text}
-    </MenuItem>
-  </div>
-);
-
 const MobileMenuBase = ({
   menuData,
   menuState: { isOpen, handleMenuToggle },
@@ -58,7 +50,11 @@ const MobileMenuBase = ({
                 if (isSubMenu(menuItem)) {
                   return <SubMenu menuItem={ menuItem } />;
                 } else {
-                  return <MenuLink menuItem={ menuItem } />;
+                  return (
+                    <MenuItem key={menuItem.text} href={menuItem.href}>
+                      {menuItem.text}
+                    </MenuItem>
+                  )
                 }
               })
             }
