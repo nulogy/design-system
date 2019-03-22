@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
   Box,
-  Flex,
   Icon,
   SubsectionTitle,
 } from "ComponentsRoot";
-import { transparentize } from "polished";
 import SubMenuItem from "./SubMenuItem";
 import MenuItem from "./MenuItem";
 import SubMenuItemList from "./MenuDropdown/SubMenuItemList";

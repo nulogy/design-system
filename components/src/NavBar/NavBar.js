@@ -52,7 +52,7 @@ const SmallNavBar = withMenuState(({
   style,
   ...props
 }) => (
-  <Box { ...props } style={ Object.assign({}, { height: menuState.isOpen ? "100vh" : null, position: "relative", overflow: "auto" }, style ) }>
+  <Box { ...props } style={ Object.assign({}, { height: menuState.isOpen ? "100vh" : null, position: "relative", overflow: "auto" }, style) }>
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
@@ -83,16 +83,12 @@ BaseNavBar.propTypes = {
     "primary": PropTypes.shape({}),
     "secondary": PropTypes.shape({}),
   }),
-  desktopSrc: PropTypes.string,
-  mobileSrc: PropTypes.string,
   alt: PropTypes.string,
   className: PropTypes.string,
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
-  desktopSrc: undefined,
-  mobileSrc: undefined,
   alt: undefined,
   className: null,
 };
