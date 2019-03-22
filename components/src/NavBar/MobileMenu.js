@@ -51,10 +51,10 @@ const MobileMenuBase = ({
                   return <SubMenu menuItem={ menuItem } />;
                 } else {
                   return (
-                    <MenuLink key={menuItem.text} href={menuItem.href}>
+                    <MenuLink key={ menuItem.text } href={ menuItem.href }>
                       {menuItem.text}
                     </MenuLink>
-                  )
+                  );
                 }
               })
             }
