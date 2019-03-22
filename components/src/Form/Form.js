@@ -6,9 +6,8 @@ import {
   SectionTitle,
   Field,
   HeaderValidation,
-  Box,
-  Flex,
 } from "ComponentsRoot";
+import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 import theme from "../theme";
 
@@ -32,7 +31,7 @@ const Form = styled(BaseForm)(
     [`${HeaderValidation}`]: {
       marginBottom: theme.space.x6,
     },
-    [`${Field}`]: {
+    [`${Field},${Fieldset}`]: {
       marginBottom: theme.space.x3,
       "&:last-child": {
         marginBottom: 0,
