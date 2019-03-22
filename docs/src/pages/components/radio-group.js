@@ -76,7 +76,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
+      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=RadioGroup">View in Storybook</Link></ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
