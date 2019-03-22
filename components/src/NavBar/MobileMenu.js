@@ -27,6 +27,12 @@ const SubMenu = ({ menuItem }) => (
   </div>
 );
 
+SubMenu.propTypes = {
+  menuItem: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 const MobileMenuBase = ({
   menuData,
   menuState: { isOpen, handleMenuToggle },
@@ -63,6 +69,18 @@ const MobileMenuBase = ({
     }
   </Box>
 );
+
+MobileMenuBase.propTypes = {
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool.isRequired,
+    handleMenuToggle: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+MobileMenuBase.defaultProps = {
+  menuData: null,
+};
 
 const Menu = styled(Box)(() => (
   {
@@ -122,13 +140,5 @@ const MobileMenu = styled(MobileMenuBase)(
     },
   },
 );
-
-MobileMenuBase.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
-};
-
-MobileMenuBase.defaultProps = {
-  menuData: null,
-};
 
 export default MobileMenu;
