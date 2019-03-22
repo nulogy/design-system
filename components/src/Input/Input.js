@@ -30,11 +30,7 @@ const getInputStyle = props => {
   return inputStyles.default;
 };
 
-const StyledInput = styled.input.attrs(({ error, required }) => ({
-  "aria-invalid": error,
-  "aria-required": required,
-  "required": required,
-}))(
+const StyledInput = styled.input(
   space,
   {
     width: "100%",
@@ -71,16 +67,17 @@ StyledInput.defaultProps = {
 };
 
 const Input = ({
+  error,
+  required,
   labelText,
   requirementText,
   helpText,
   id,
-  error,
   ...props
 }) => (
   <Field>
     {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledInput id={ id } error={ error } { ...props } />
+    <StyledInput aria-invalid={!!error} aria-required={required} id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );

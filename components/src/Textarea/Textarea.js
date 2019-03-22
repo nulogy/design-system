@@ -7,7 +7,7 @@ import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const TextareaStyles = {
+const textareaStyles = {
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
@@ -24,17 +24,12 @@ const TextareaStyles = {
 };
 
 const getTextareaStyle = props => {
-  if (props.disabled) { return TextareaStyles.disabled; }
-  if (props.error) { return TextareaStyles.error; }
-  return TextareaStyles.default;
+  if (props.disabled) { return textareaStyles.disabled; }
+  if (props.error) { return textareaStyles.error; }
+  return textareaStyles.default;
 };
 
-const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) => ({
-  "aria-invalid": error,
-  "aria-required": required,
-  "required": required,
-  "placeholder": placeholder,
-}))(
+const StyledTextarea = styled.textarea(
   space,
   {
     width: "100%",
@@ -60,12 +55,17 @@ const StyledTextarea = styled.textarea.attrs(({ error, required, placeholder }) 
 );
 
 const Textarea = ({
-  error, labelText, requirementText, helpText, id,
+  error,
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  id, 
   ...props
 }) => (
   <Field>
     {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledTextarea id={ id } error={ error } { ...props } />
+    <StyledTextarea aria-invalid={!!error} aria-required={required} id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );
