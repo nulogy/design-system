@@ -8,7 +8,7 @@ import {
 } from "ComponentsRoot";
 import SubMenuItem from "./SubMenuItem";
 import MenuItem from "./MenuItem";
-import SubMenuItemList from "./MenuDropdown/SubMenuItemList";
+import SubMenuItems from "./MenuDropdown/SubMenuItems";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -17,13 +17,13 @@ const isSubMenu = menuItem => (menuItem.subMenuItems);
 const SubMenu = ({ menuItem }) => (
   <div>
     <SubsectionTitle key={ menuItem.text }>{menuItem.text}</SubsectionTitle>
-    <SubMenuItemList>
+    <SubMenuItems>
       {
         menuItem.subMenuItems.map(subMenuItem => (
           <SubMenuItem textColor="white" subTextColor="grey" key={ subMenuItem.text } { ...subMenuItem } />
         ))
       }
-    </SubMenuItemList>
+    </SubMenuItems>
   </div>
 );
 
@@ -82,7 +82,7 @@ const Menu = styled(Box)(() => (
       padding: `0 ${theme.space.x4}`,
       marginBottom: theme.space.x2,
     },
-    [`${SubMenuItemList}`]: {
+    [`${SubMenuItems}`]: {
       marginBottom: theme.space.x4,
     },
     [`${SubMenuItem}`]: {

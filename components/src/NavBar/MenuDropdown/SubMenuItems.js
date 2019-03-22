@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 /* eslint react/destructuring-assignment: 0 */
 
-class BaseSubMenuItemList extends React.Component {
+class BaseSubMenuItems extends React.Component {
   constructor(props) {
     super(props);
     this.menuItemRefs = [];
@@ -28,22 +28,22 @@ class BaseSubMenuItemList extends React.Component {
   }
 }
 
-BaseSubMenuItemList.propTypes = {
+BaseSubMenuItems.propTypes = {
   className: PropTypes.string,
   focusIndex: PropTypes.number,
   children: PropTypes.node,
 };
 
-BaseSubMenuItemList.defaultProps = {
+BaseSubMenuItems.defaultProps = {
   className: null,
   focusIndex: undefined,
   children: null,
 };
 
-const SubMenuItemList = styled(BaseSubMenuItemList)({
+const SubMenuItems = styled(BaseSubMenuItems)({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
 });
 
-export default SubMenuItemList;
+export default SubMenuItems;

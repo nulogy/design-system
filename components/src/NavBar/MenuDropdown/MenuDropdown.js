@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
-import SubMenuItemList from "./SubMenuItemList";
+import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
 import Icon from "../../Icon/Icon";
 
@@ -184,9 +184,9 @@ class MenuDropdown extends React.Component {
         <Popper placement="bottom-start">
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItemList focusIndex={ this.state.focusIndex }>
+              <SubMenuItems focusIndex={ this.state.focusIndex }>
                 {this.props.children}
-              </SubMenuItemList>
+              </SubMenuItems>
             </SubMenu>
           )}
         </Popper>
