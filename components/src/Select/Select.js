@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
-import { Icon, FieldLabel, InlineValidation } from "ComponentsRoot";
+import { Field, Icon, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -125,8 +125,8 @@ const Select = ({
   required, placeholder, initialIsOpen,
   id, labelText, helpText, requirementText,
 }) => (
-  <>
-    {labelText && <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ id } requirementText={ requirementText } />}
+  <Field>
+    <FieldLabel mb="x1" labelText={ labelText } helpText={ helpText } htmlFor={ id } requirementText={ requirementText } />
     <Downshift
       itemToString={ optionToString }
       selectedItem={ value }
@@ -184,7 +184,7 @@ const Select = ({
       }
     </Downshift>
     {error && <InlineValidation mt="x1" message={ error } />}
-  </>
+  </Field>
 );
 
 Select.propTypes = {

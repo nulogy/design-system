@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
-import { FieldLabel, InlineValidation } from "ComponentsRoot";
+import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
@@ -78,11 +78,11 @@ const Input = ({
   error,
   ...props
 }) => (
-  <>
-    {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
+  <Field>
+    <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
     <StyledInput id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
-  </>
+  </Field>
 );
 
 Input.propTypes = {

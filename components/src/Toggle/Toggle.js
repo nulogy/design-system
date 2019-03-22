@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Text, Box, FieldLabel } from "ComponentsRoot";
+import { Field, Text, FieldLabel } from "ComponentsRoot";
 import theme from "../theme";
 import { InputClickableArea, omit } from "../Utils";
 
@@ -123,8 +123,8 @@ class BaseToggle extends React.Component {
       toggled,
     } = this.state;
     return (
-      <Box className={ className }>
-        {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
+      <Field className={ className }>
+        <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />
         <InputClickableArea disabled={ disabled }>
           <ToggleButton
             id={ id }
@@ -139,7 +139,7 @@ class BaseToggle extends React.Component {
           </Text>
           )}
         </InputClickableArea>
-      </Box>
+      </Field>
     );
   }
 }
