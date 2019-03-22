@@ -18,8 +18,6 @@ const navBarStyles = {
   paddingRight: theme.space.x3,
   paddingBottom: theme.space.x2,
   paddingLeft: theme.space.x4,
-  position: "relative",
-  overflow: "auto",
 };
 
 const MediumNavBar = ({
@@ -54,7 +52,7 @@ const SmallNavBar = withMenuState(({
   style,
   ...props
 }) => (
-  <Box { ...props } style={ Object.assign({}, { height: menuState.isOpen ? "100vh" : null }, style ) }>
+  <Box { ...props } style={ Object.assign({}, { height: menuState.isOpen ? "100vh" : null, position: "relative", overflow: "auto" }, style ) }>
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
@@ -104,7 +102,6 @@ const NavBar = styled(BaseNavBar)({
     flexGrow: "1",
     margin: `0 0 0 ${theme.space.x3}`,
   },
-  // ...navBarStyles
 });
 
 export default NavBar;
