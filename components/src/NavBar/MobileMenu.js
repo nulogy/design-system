@@ -13,7 +13,6 @@ import MenuItem from "./MenuItem";
 import SubMenuItemList from "./MenuDropdown/SubMenuItemList";
 import theme from "../theme";
 import { subPx } from "../Utils";
-import { withMenuState } from "./withMenuState";
 
 const isSubMenu = menuItem => (menuItem.subMenuItems);
 
@@ -44,7 +43,7 @@ const MobileMenuBase = ({
   ...props
 }) => (
   <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null}>
+    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
       {
       isOpen
         ? <Icon icon="close" title="Close Menu" />
@@ -138,4 +137,4 @@ MobileMenuBase.defaultProps = {
   menuData: null,
 };
 
-export default withMenuState(MobileMenu);
+export default MobileMenu;

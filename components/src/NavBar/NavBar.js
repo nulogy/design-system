@@ -9,6 +9,7 @@ import {
 import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import { withMenuState } from "./withMenuState";
 import theme from "../theme";
 
 const navBarStyles = {
@@ -45,8 +46,9 @@ const MediumNavBar = ({
   </Box>
 );
 
-const SmallNavBar = ({
+const SmallNavBar = withMenuState(({
   menuData,
+  menuState,
   mobileSrc,
   alt,
   ...props
@@ -58,11 +60,11 @@ const SmallNavBar = ({
         <Flex maxWidth="18em" alignItems="center" px="0">
           <NavBarSearch />
         </Flex>
-        <MobileMenu menuData={ menuData.primaryMenu } display="block" />
+        <MobileMenu menuData={ menuData.primaryMenu } menuState={ menuState } display="block" />
       </Flex>
     </nav>
   </Box>
-);
+));
 
 const BaseNavBar = ({
   menuData,
