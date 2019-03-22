@@ -11,6 +11,16 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import theme from "../theme";
 
+const navBarStyles = {
+  background: theme.colors.blackBlue,
+  paddingTop: theme.space.x2,
+  paddingRight: theme.space.x3,
+  paddingBottom: theme.space.x2,
+  paddingLeft: theme.space.x4,
+  position: "relative",
+  overflow: "auto",
+};
+
 const MediumNavBar = ({
   menuData,
   desktopSrc,
@@ -62,8 +72,8 @@ const BaseNavBar = ({
   ...props
 }) => (
   <header { ...props }>
-    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } />
-    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } />
+    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
+    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ { height: "100vh", ...navBarStyles } } />
   </header>
 );
 
@@ -87,15 +97,11 @@ BaseNavBar.defaultProps = {
 };
 
 const NavBar = styled(BaseNavBar)({
-  background: theme.colors.blackBlue,
-  paddingTop: theme.space.x2,
-  paddingRight: theme.space.x3,
-  paddingBottom: theme.space.x2,
-  paddingLeft: theme.space.x4,
   "nav": {
     flexGrow: "1",
     margin: `0 0 0 ${theme.space.x3}`,
   },
+  // ...navBarStyles
 });
 
 export default NavBar;
