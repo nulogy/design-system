@@ -8,8 +8,6 @@ import theme from "../theme";
 
 const List = styled.ul(
   ({ compact }) => ({
-    listStyle: "none",
-    paddingLeft: 0,
     margin: 0,
     [`${ListItem}`]: {
       marginBottom: compact ? 0 : theme.space.x1,
