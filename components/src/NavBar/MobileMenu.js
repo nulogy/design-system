@@ -44,7 +44,7 @@ const MobileMenuBase = ({
   ...props
 }) => (
   <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button onClick={ handleMenuToggle }>
+    <button onClick={ handleMenuToggle } >
       {
       isOpen
         ? <Icon icon="close" title="Close Menu" />
@@ -94,7 +94,7 @@ const Menu = styled(Box)(() => (
         padding: `${theme.space.x1} ${theme.space.x6}`,
         marginBottom: theme.space.x1,
         transition: ".2s",
-        "&:hover": {
+        "&:hover, &:focus": {
           backgroundColor: theme.colors.black,
         },
       },
