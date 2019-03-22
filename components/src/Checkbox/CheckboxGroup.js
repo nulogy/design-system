@@ -42,7 +42,7 @@ const BaseCheckboxGroup = ({
   requirementText,
   ...props
 }) => (
-  <Fieldset className={ className } hasHelpText={ !!helpText }>
+  <Fieldset role="group" className={ className } hasHelpText={ !!helpText }>
     <Box mb="x1">
       <legend>
         { labelText }
