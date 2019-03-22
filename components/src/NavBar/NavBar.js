@@ -51,9 +51,10 @@ const SmallNavBar = withMenuState(({
   menuState,
   mobileSrc,
   alt,
+  style,
   ...props
 }) => (
-  <Box { ...props }>
+  <Box { ...props } style={ Object.assign({}, { height: menuState.isOpen ? "100vh" : null }, style ) }>
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
@@ -75,7 +76,7 @@ const BaseNavBar = ({
 }) => (
   <header { ...props }>
     <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
-    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ { height: "100vh", ...navBarStyles } } />
+    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ navBarStyles } />
   </header>
 );
 
