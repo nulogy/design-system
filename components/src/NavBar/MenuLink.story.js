@@ -1,11 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Flex } from "ComponentsRoot";
-import MenuItem from "./MenuItem";
+import MenuLink from "./MenuLink";
 
-storiesOf("MenuItem", module)
-  .add("MenuItem", () => (
+storiesOf("MenuLink", module)
+  .add("MenuLink", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuItem href="/">Menu Item 1</MenuItem>
+      <MenuLink href="/">Menu Item 1</MenuLink>
     </Flex>
   ));

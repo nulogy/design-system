@@ -172,7 +172,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapp
 
 exports[`Storyshots MenuDropdown MenuDropdown 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots MenuItem MenuItem 1`] = `ReactWrapper {}`;
+exports[`Storyshots MenuLink MenuLink 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots NavBar NavBar 1`] = `ReactWrapper {}`;
 

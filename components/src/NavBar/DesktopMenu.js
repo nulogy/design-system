@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
 import { MenuDropdown } from "./MenuDropdown";
 import SubMenuItem from "./SubMenuItem";
-import MenuItem from "./MenuItem";
+import MenuLink from "./MenuLink";
 import theme from "../theme";
 
 const isDropdown = menuItem => (menuItem.subMenuItems);
@@ -28,9 +28,9 @@ const BaseDesktopMenu = ({
       } else {
         return (
           <div key={ menuItem.text }>
-            <MenuItem href={ menuItem.href }>
+            <MenuLink href={ menuItem.href }>
               {menuItem.text}
-            </MenuItem>
+            </MenuLink>
           </div>
         );
       }

@@ -7,7 +7,7 @@ import {
   SubsectionTitle,
 } from "ComponentsRoot";
 import SubMenuItem from "./SubMenuItem";
-import MenuItem from "./MenuItem";
+import MenuLink from "./MenuLink";
 import SubMenuItems from "./MenuDropdown/SubMenuItems";
 import theme from "../theme";
 import { subPx } from "../Utils";
@@ -51,9 +51,9 @@ const MobileMenuBase = ({
                   return <SubMenu menuItem={ menuItem } />;
                 } else {
                   return (
-                    <MenuItem key={menuItem.text} href={menuItem.href}>
+                    <MenuLink key={menuItem.text} href={menuItem.href}>
                       {menuItem.text}
-                    </MenuItem>
+                    </MenuLink>
                   )
                 }
               })
@@ -92,7 +92,7 @@ const Menu = styled(Box)(() => (
         },
       },
     },
-    [`${MenuItem}`]: {
+    [`${MenuLink}`]: {
       fontSize: theme.fontSizes.large,
       lineHeight: theme.lineHeights.sectionTitle,
       width: "100%",
