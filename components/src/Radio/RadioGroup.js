@@ -7,7 +7,7 @@ import {
   InlineValidation,
   RequirementText,
 } from "ComponentsRoot";
-import theme from "../theme";
+import Fieldset from "../Form/Fieldset";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
@@ -32,34 +32,6 @@ const getRadioButtons = props => {
   });
   return (radioButtons);
 };
-
-const internalSpacingStyles = hasHelpText => {
-  if (hasHelpText) {
-    return ({
-      "p": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  } else {
-    return ({
-      "legend": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  }
-};
-
-const Fieldset = styled.fieldset({
-  padding: 0,
-  border: 0,
-  margin: 0,
-  "legend": {
-    padding: 0,
-  },
-},
-({ hasHelpText }) => (
-  internalSpacingStyles(hasHelpText)
-),);
 
 const BaseRadioGroup = ({
   className,

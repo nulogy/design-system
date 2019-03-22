@@ -33,21 +33,7 @@ const BaseFormSection = ({
           <FormSectionTitle>{ title }</FormSectionTitle>
         )
       }
-    { children.map((child, index) => {
-      if (childIsWrappedByField(child.type)) {
-        return (
-          <Field key={ index }>
-            {React.cloneElement(child)}
-          </Field>
-        );
-      } else {
-        return (
-          React.cloneElement(child, {
-            key: index,
-          })
-        );
-      }
-    })}
+    {children}
   </fieldset>
 );
 

@@ -7,7 +7,7 @@ import {
   InlineValidation,
   RequirementText,
 } from "ComponentsRoot";
-import theme from "../theme";
+import Fieldset from "../Form/Fieldset";
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
@@ -32,34 +32,6 @@ const getCheckboxButtons = props => {
   });
   return (checkboxButtons);
 };
-
-const internalSpacingStyles = hasHelpText => {
-  if (hasHelpText) {
-    return ({
-      "p": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  } else {
-    return ({
-      "legend": {
-        marginBottom: theme.space.x1,
-      },
-    });
-  }
-};
-
-const Fieldset = styled.fieldset({
-  padding: 0,
-  border: 0,
-  margin: 0,
-  "legend": {
-    padding: 0,
-  },
-},
-({ hasHelpText }) => (
-  internalSpacingStyles(hasHelpText)
-),);
 
 const BaseCheckboxGroup = ({
   className,
