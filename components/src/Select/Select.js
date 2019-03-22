@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
-import { Field, Icon, FieldLabel, InlineValidation } from "ComponentsRoot";
+import {
+  Field, Icon, FieldLabel, InlineValidation,
+} from "ComponentsRoot";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
