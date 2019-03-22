@@ -44,7 +44,7 @@ const MobileMenuBase = ({
   ...props
 }) => (
   <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button onClick={ handleMenuToggle } >
+    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null}>
       {
       isOpen
         ? <Icon icon="close" title="Close Menu" />
