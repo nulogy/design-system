@@ -45,7 +45,7 @@ const SmallNavBar = ({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        <Flex maxWidth="18em" alignItems="center" px="0" mr="x6">
+        <Flex maxWidth="18em" alignItems="center" px="0">
           <NavBarSearch />
         </Flex>
         <MobileMenu menuData={ menuData.primaryMenu } display="block" />

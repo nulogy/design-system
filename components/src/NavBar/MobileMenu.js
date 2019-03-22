@@ -23,7 +23,7 @@ const SubMenu = ({ menuItem }) => (
     <SubMenuItemList>
       {
         menuItem.subMenuItems.map(subMenuItem => (
-          <SubMenuItem textColor="lightGrey" subTextColor="grey" key={ subMenuItem.text } { ...subMenuItem } />
+          <SubMenuItem textColor="white" subTextColor="grey" key={ subMenuItem.text } { ...subMenuItem } />
         ))
       }
     </SubMenuItemList>
@@ -50,7 +50,6 @@ const MobileMenuBase = ({
         ? <Icon icon="close" title="Close Menu" />
         : <Icon icon="menu" title="Open Menu" />
     }
-
     </button>
 
     {
@@ -72,7 +71,7 @@ const MobileMenuBase = ({
   </Box>
 );
 
-const Menu = styled.div(() => (
+const Menu = styled(Box)(() => (
   {
     position: "absolute",
     left: "0",
@@ -82,6 +81,33 @@ const Menu = styled.div(() => (
     width: "100%",
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
+    [`${SubsectionTitle}`]: {
+      padding: `0 ${theme.space.x4}`,
+      marginBottom: theme.space.x2,
+    },
+    [`${SubMenuItemList}`]: {
+      marginBottom: theme.space.x4,
+    },
+    [`${SubMenuItem}`]: {
+      maxWidth: "100%",
+      "a": {
+        padding: `${theme.space.x1} ${theme.space.x6}`,
+        marginBottom: theme.space.x1,
+        transition: ".2s",
+        "&:hover": {
+          backgroundColor: theme.colors.black,
+        },
+      },
+    },
+    [`${MenuItem}`]: {
+      fontSize: theme.fontSizes.large,
+      lineHeight: theme.lineHeights.sectionTitle,
+      width: "100%",
+      justifyContent: "flex-start",
+      padding: `0${theme.space.x2} ${theme.space.x4}`,
+      marginBottom: theme.space.x1,
+      borderRadius: "0",
+    },
   }));
 
 const MobileMenu = styled(MobileMenuBase)(
@@ -92,7 +118,12 @@ const MobileMenu = styled(MobileMenuBase)(
       border: "none",
       padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
       marginLeft: theme.space.x1,
-      "&:hover": {
+      borderRadius: theme.radii.medium,
+      transition: ".2s",
+      "&:hover, &:focus": {
+        outline: "none",
+        color: theme.colors.lightBlue,
+        backgroundColor: theme.colors.black,
         cursor: "pointer",
       },
     },
