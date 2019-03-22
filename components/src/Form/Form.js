@@ -12,17 +12,6 @@ import {
 import FormSection from "./FormSection";
 import theme from "../theme";
 
-const doNotWrapElements = [
-  FormSection,
-  HeaderValidation,
-  Box,
-  Flex,
-];
-
-const childIsWrappedByField = childType => !doNotWrapElements.includes(childType);
-
-/* eslint-disable react/no-array-index-key */
-
 const BaseForm = ({
   title,
   children,

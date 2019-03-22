@@ -13,15 +13,6 @@ const FormSectionTitle = styled(SubsectionTitle).attrs({
   as: "legend",
 })({});
 
-const doNotWrapElements = [
-  Box,
-  Flex,
-];
-
-const childIsWrappedByField = childType => !doNotWrapElements.includes(childType);
-
-/* eslint-disable react/no-array-index-key */
-
 const BaseFormSection = ({
   title,
   children,
