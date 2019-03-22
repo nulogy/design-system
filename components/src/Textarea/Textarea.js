@@ -61,26 +61,25 @@ const Textarea = ({
   labelText,
   requirementText,
   helpText,
-  id, 
+  id,
   ...props
 }) => (
   <Field>
     {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledTextarea aria-invalid={!!error} aria-required={required} id={ id } error={ error } { ...props } />
+    <StyledTextarea aria-invalid={ !!error } aria-required={ required } id={ id } error={ error } { ...props } />
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );
 
 Textarea.propTypes = {
+  id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   error: PropTypes.string,
   required: PropTypes.bool,
-  rows: PropTypes.number,
-  placeholder: PropTypes.string,
-  id: PropTypes.string.isRequired,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
+  rows: PropTypes.number,
   ...space.PropTypes,
 };
 
@@ -88,11 +87,10 @@ Textarea.defaultProps = {
   disabled: false,
   error: null,
   required: false,
-  rows: 3,
-  placeholder: undefined,
   labelText: null,
   helpText: null,
   requirementText: null,
+  rows: 3,
 };
 
 export default Textarea;
