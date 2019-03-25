@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class MenuState extends React.Component {
   constructor() {
@@ -29,6 +30,10 @@ class MenuState extends React.Component {
     });
   }
 }
+
+MenuState.propTypes = {
+  children: PropTypes.func.isRequired,
+};
 
 const withMenuState = MenuComponentWithoutState => ({
   ...props
