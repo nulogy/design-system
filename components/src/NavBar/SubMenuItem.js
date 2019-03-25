@@ -44,6 +44,7 @@ BaseSubMenuItem.propTypes = {
   href: PropTypes.string,
   textColor: PropTypes.string,
   subTextColor: PropTypes.string,
+  tabIndex: PropTypes.string,
 };
 
 BaseSubMenuItem.defaultProps = {
@@ -51,6 +52,7 @@ BaseSubMenuItem.defaultProps = {
   href: "/",
   textColor: "darkBlue",
   subTextColor: "darkGrey",
+  tabIndex: null,
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)(
