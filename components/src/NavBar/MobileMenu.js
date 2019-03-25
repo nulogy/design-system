@@ -33,6 +33,18 @@ SubMenu.propTypes = {
   }).isRequired,
 };
 
+const renderMenuItems = menuItems => menuItems.map(menuItem => {
+  if (isSubMenu(menuItem)) {
+    return <SubMenu menuItem={ menuItem } />;
+  } else {
+    return (
+      <MenuLink key={ menuItem.text } href={ menuItem.href }>
+        {menuItem.text}
+      </MenuLink>
+    );
+  }
+});
+
 const MobileMenuBase = ({
   menuData,
   menuState: { isOpen, handleMenuToggle },
@@ -51,32 +63,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            {
-              menuData.primaryMenu.map(menuItem => {
-                if (isSubMenu(menuItem)) {
-                  return <SubMenu menuItem={ menuItem } />;
-                } else {
-                  return (
-                    <MenuLink key={ menuItem.text } href={ menuItem.href }>
-                      {menuItem.text}
-                    </MenuLink>
-                  );
-                }
-              })
-            }
-            {
-              menuData.secondaryMenu.map(menuItem => {
-                if (isSubMenu(menuItem)) {
-                  return <SubMenu menuItem={ menuItem } />;
-                } else {
-                  return (
-                    <MenuLink key={ menuItem.text } href={ menuItem.href }>
-                      {menuItem.text}
-                    </MenuLink>
-                  );
-                }
-              })
-            }
+            { renderMenuItems(menuData.primaryMenu) }
+            { renderMenuItems(menuData.secondaryMenu) }
           </Menu>
         )
     }
