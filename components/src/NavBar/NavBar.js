@@ -55,7 +55,7 @@ MediumNavBar.propTypes = {
 
 MediumNavBar.defaultProps = {
   alt: null,
-  desktopSrc: null,
+  desktopSrc: undefined,
   menuData: null,
 };
 
