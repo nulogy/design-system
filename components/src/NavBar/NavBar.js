@@ -44,6 +44,21 @@ const MediumNavBar = ({
   </Box>
 );
 
+MediumNavBar.propTypes = {
+  alt: PropTypes.string,
+  desktopSrc: PropTypes.string,
+  menuData: PropTypes.shape({
+    "primary": PropTypes.shape({}),
+    "secondary": PropTypes.shape({}),
+  }),
+};
+
+MediumNavBar.defaultProps = {
+  alt: null,
+  desktopSrc: null,
+  menuData: null,
+};
+
 const SmallNavBar = withMenuState(({
   menuData,
   menuState,
@@ -67,9 +82,6 @@ const SmallNavBar = withMenuState(({
 
 const BaseNavBar = ({
   menuData,
-  desktopSrc,
-  mobileSrc,
-  alt,
   ...props
 }) => (
   <header { ...props }>
@@ -83,13 +95,11 @@ BaseNavBar.propTypes = {
     "primary": PropTypes.shape({}),
     "secondary": PropTypes.shape({}),
   }),
-  alt: PropTypes.string,
   className: PropTypes.string,
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
-  alt: undefined,
   className: null,
 };
 
