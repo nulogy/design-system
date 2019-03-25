@@ -56,7 +56,7 @@ class MenuDropdown extends React.Component {
     super(props);
     this.state = {
       subMenuOpen: false,
-      focusIndex: 0,
+      focusIndex: undefined,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
