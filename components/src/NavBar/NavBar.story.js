@@ -140,7 +140,5 @@ const menuData = {
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (
-    <Box style={ { height: "calc(100vh - 48px)" } }>
-      <NavBar menuData={ menuData } />
-    </Box>
+    <NavBar menuData={ menuData } />
   ));
