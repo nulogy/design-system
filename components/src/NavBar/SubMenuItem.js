@@ -55,20 +55,18 @@ BaseSubMenuItem.defaultProps = {
   tabIndex: null,
 };
 
-const SubMenuItem = styled(BaseSubMenuItem)(
-  ({ disabled, fullWidth }) => ({
-    color: theme.colors.black,
-    borderColor: "transparent",
-    backgroundColor: "transparent",
-    justifyContent: "center",
-    alignItems: "center",
-    textDecoration: "none",
-    verticalAlign: "middle",
-    lineHeight: theme.lineHeights.base,
-    transition: ".2s",
-    fontSize: `${theme.fontSizes.medium}`,
-    maxWidth: "20em",
-  })
-);
+const SubMenuItem = styled(BaseSubMenuItem)({
+  color: theme.colors.black,
+  borderColor: "transparent",
+  backgroundColor: "transparent",
+  justifyContent: "center",
+  alignItems: "center",
+  textDecoration: "none",
+  verticalAlign: "middle",
+  lineHeight: theme.lineHeights.base,
+  transition: ".2s",
+  fontSize: `${theme.fontSizes.medium}`,
+  maxWidth: "20em",
+});
 
 export default SubMenuItem;
