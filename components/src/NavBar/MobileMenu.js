@@ -35,7 +35,7 @@ SubMenu.propTypes = {
 
 const renderMenuItems = menuItems => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
-    return <SubMenu menuItem={ menuItem } />;
+    return <SubMenu key={ menuItem.text } menuItem={ menuItem } />;
   } else {
     return (
       <MenuLink key={ menuItem.text } href={ menuItem.href }>
