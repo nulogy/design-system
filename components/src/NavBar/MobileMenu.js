@@ -72,7 +72,7 @@ const MobileMenuBase = ({
 );
 
 MobileMenuBase.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  menuData: PropTypes.shape({}),
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool.isRequired,
     handleMenuToggle: PropTypes.func.isRequired,
