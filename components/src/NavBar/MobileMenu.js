@@ -116,7 +116,7 @@ const Menu = styled(Box)(() => (
       width: "100%",
       justifyContent: "flex-start",
       padding: `0${theme.space.x2} ${theme.space.x4}`,
-      marginBottom: theme.space.x1,
+      marginBottom: theme.space.x4,
       borderRadius: "0",
     },
   }));
