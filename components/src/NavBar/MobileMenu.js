@@ -52,7 +52,20 @@ const MobileMenuBase = ({
         && (
           <Menu>
             {
-              menuData.map(menuItem => {
+              menuData.primaryMenu.map(menuItem => {
+                if (isSubMenu(menuItem)) {
+                  return <SubMenu menuItem={ menuItem } />;
+                } else {
+                  return (
+                    <MenuLink key={ menuItem.text } href={ menuItem.href }>
+                      {menuItem.text}
+                    </MenuLink>
+                  );
+                }
+              })
+            }
+            {
+              menuData.secondaryMenu.map(menuItem => {
                 if (isSubMenu(menuItem)) {
                   return <SubMenu menuItem={ menuItem } />;
                 } else {

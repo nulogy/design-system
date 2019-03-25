@@ -59,7 +59,7 @@ const SmallNavBar = withMenuState(({
         <Flex maxWidth="18em" alignItems="center" px="0">
           <NavBarSearch />
         </Flex>
-        <MobileMenu menuData={ menuData.primaryMenu } menuState={ menuState } display="block" />
+        <MobileMenu menuData={ menuData } menuState={ menuState } display="block" />
       </Flex>
     </nav>
   </Box>
