@@ -23,10 +23,11 @@ const BaseSubMenuItem = React.forwardRef(({
   subText,
   textColor,
   subTextColor,
+  tabIndex,
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex="-1" underline={ false } href={ href }>
+    <SubMenuItemLink ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
       <Text color={ textColor }>{ text }</Text>
       {subText && (
       <Text color={ subTextColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
