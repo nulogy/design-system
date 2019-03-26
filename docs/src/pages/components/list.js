@@ -5,8 +5,14 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "compact", type: "Boolean", defaultValue: "false", description: "Removes margin between list items",
+  },
+];
 
 export default () => (
   <Layout>
@@ -57,24 +63,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>compact</td>
-            <td>Boolean</td>
-            <td>False</td>
-            <td>Removes margin between list items</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

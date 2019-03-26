@@ -5,8 +5,23 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "href", type: "String", defaultValue: "Required", description: "The destination.",
+  },
+  {
+    name: "color", type: "String", defaultValue: "blue", description: "A custom colour to display the link in.",
+  },
+  {
+    name: "hover", type: "String", defaultValue: "Color darkened by 10%", description: "A custom hover colour",
+  },
+  {
+    name: "underline", type: "String", defaultValue: "true", description: "Whether to show an underline or not.",
+  },
+];
 
 export default () => (
   <Layout>
@@ -48,42 +63,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>href</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>The location you'd like to send someone after clicking.</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>String</td>
-            <td>blue</td>
-            <td>A custom colour to display the link in.</td>
-          </tr>
-          <tr>
-            <td>hover</td>
-            <td>String</td>
-            <td>Color value darkened by 10%</td>
-            <td>A custom hover color</td>
-          </tr>
-          <tr>
-            <td>underline</td>
-            <td>Boolean</td>
-            <td>true</td>
-            <td>Whether to show an underline or not.</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>
