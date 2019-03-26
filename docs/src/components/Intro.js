@@ -3,21 +3,19 @@ import { Box } from "@nulogy/components";
 import styled from "styled-components";
 import { color, space, borders } from "styled-system";
 
-const DocIntro = styled(Box)({
-
+const Intro = styled(Box)({
 },
 color,
 space,);
 
-DocIntro.PropTypes = {
+Intro.PropTypes = {
   color: PropTypes.string,
   space: PropTypes.number,
 };
 
-DocIntro.defaultProps = {
-  // mb: "x6",
+Intro.defaultProps = {
   pb: "x6",
   pt: "x8",
 };
 
-export default DocIntro;
+export default Intro;
