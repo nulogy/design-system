@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
@@ -21,10 +21,10 @@ export default () => (
     <Helmet>
       <title>Textarea</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Textarea</Title>
-      <Intro>A multiline text input field.</Intro>
-    </Box>
+    <Intro>
+      <Title>Textarea</Title>
+      <IntroText>A multiline text input field.</IntroText>
+    </Intro>
 
     <DocSection>
       <Textarea labelText="Label" id="textarea" />

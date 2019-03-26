@@ -5,7 +5,9 @@ import {
   Box, Flex, Text, Title, SectionTitle,
 } from "@nulogy/components";
 import * as tokens from "@nulogy/tokens";
-import { Layout, Intro, DocSection } from "../../components";
+import {
+  Layout, DocSection, Intro, IntroText,
+} from "../../components";
 
 const Palette = props => {
   const {
@@ -34,10 +36,10 @@ export default () => (
     <Helmet>
       <title>Colour</title>
     </Helmet>
-    <DocSection bg="whiteGrey" p="x4" borderRadius={ 1 }>
-      <Title mb="none">Colour</Title>
-      <Intro>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</Intro>
-    </DocSection>
+    <Intro>
+      <Title>Colour</Title>
+      <IntroText>Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with <a href="https://webaim.org/resources/contrastchecker/">WCAG AA</a> contrast ratios.</IntroText>
+    </Intro>
 
     <DocSection mb="x3">
       <SectionTitle>Text & Interactive Colours</SectionTitle>

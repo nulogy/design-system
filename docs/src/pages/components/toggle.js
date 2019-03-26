@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Toggle, Link,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 
 const togglePropsRows = [
@@ -40,10 +40,10 @@ export default () => (
     <Helmet>
       <title>Toggle</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Toggle</Title>
-      <Intro>For quickly switching between two possible states.</Intro>
-    </Box>
+    <Intro>
+      <Title>Toggle</Title>
+      <IntroText>For quickly switching between two possible states.</IntroText>
+    </Intro>
     <DocSection>
       <Toggle id="toggle" labelText="Label" onText="On" offText="Off" />
       <Highlight className="js">

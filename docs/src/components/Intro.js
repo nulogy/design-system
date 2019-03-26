@@ -1,12 +1,23 @@
+import PropTypes from "prop-types";
+import { Box } from "@nulogy/components";
 import styled from "styled-components";
+import { color, space, borders } from "styled-system";
 
-const Intro = styled.p`
-    font-size: 21.333px;
-    line-height: 32px;
-    max-width: 720px;
-    color: #434d59;
-    -webkit-font-smoothing: antialiased;
-    margin-bottom: 0;
-`;
+const DocIntro = styled(Box)({
 
-export default Intro;
+},
+color,
+space,);
+
+DocIntro.PropTypes = {
+  color: PropTypes.string,
+  space: PropTypes.number,
+};
+
+DocIntro.defaultProps = {
+  // mb: "x6",
+  pb: "x6",
+  pt: "x8",
+};
+
+export default DocIntro;

@@ -4,10 +4,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Button, Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+   Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -15,10 +15,10 @@ export default () => (
     <Helmet>
       <title>Component name</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Component name</Title>
-      <Intro>A short description of the component.</Intro>
-    </Box>
+    <Intro>
+      <Title>Component name</Title>
+      <IntroText>A short description of the component.</IntroText>
+    </Intro>
 
     <DocSection>
       <Button>Create project</Button>

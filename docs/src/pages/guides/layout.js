@@ -5,7 +5,7 @@ import {
   Box, Flex, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, DocSubsection,
+  DocText as Text, Layout, Intro, IntroText, DocSection, DocSubsection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>Layout</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Layout</Title>
-      <Intro>This article provides a breakdown of basic concepts and directions on how to compose the layout of any complexity.</Intro>
-    </Box>
+    <Intro>
+      <Title>Layout</Title>
+      <IntroText>This article provides a breakdown of basic concepts and directions on how to compose the layout of any complexity.</IntroText>
+    </Intro>
     <Flex mb="x8" flexDirection={ { small: "column", medium: "row", large: "row" } }>
       <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 2 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
         <Box bg="darkBlue" height="80px" width="80px" mr="x3" />

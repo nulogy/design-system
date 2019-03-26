@@ -5,7 +5,7 @@ import {
   Box, Flex, SectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+  DocText as Text, Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>Flex</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Flex</Title>
-      <Intro>A wrapper component that extends <Link href="/components/Box">Box</Link> to create layouts using Flexbox.</Intro>
-    </Box>
+    <Intro>
+      <Title>Flex</Title>
+      <IntroText>A wrapper component that extends <Link href="/components/Box">Box</Link> to create layouts using Flexbox.</IntroText>
+    </Intro>
 
     <DocSection>
       <Flex bg="lightBlue">

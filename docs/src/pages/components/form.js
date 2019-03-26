@@ -4,7 +4,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Link, Title, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, Image,
+  DocText as Text, Layout, Intro, IntroText, DocSection, Image,
 } from "../../components";
 import anatomy from "../../images/form/anatomy.png";
 import basic from "../../images/form/basic.png";
@@ -17,13 +17,10 @@ export default () => (
     <Helmet>
       <title>Form</title>
     </Helmet>
-    <Box
-      bg="whiteGrey" p="x4" borderRadius={ 1 }
-      mb="x6"
-    >
-      <Title mb="none">Form</Title>
-      <Intro>Forms are a collection of inputs that allow users to submit data.</Intro>
-    </Box>
+    <Intro>
+      <Title>Form</Title>
+      <IntroText>Forms are a collection of inputs that allow users to submit data.</IntroText>
+    </Intro>
     <DocSection>
       <Image src={ basic } width="75%" alt="Example of a form" />
     </DocSection>

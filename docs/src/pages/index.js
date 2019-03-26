@@ -1,18 +1,15 @@
 import React from "react";
 import {
-  Box, Flex, Link, Text, Title, SectionTitle,
+  Box, PrimaryButton, Flex, Link, Text, Title, SectionTitle,
 } from "@nulogy/components";
-import { Intro, Layout } from "../components";
+import { Intro, IntroText, Layout } from "../components";
 
 const IndexPage = () => (
   <Layout>
-    <Box
-      bg="whiteGrey" p="x6" borderRadius={ 1 }
-      mb="x8"
-    >
-      <Title mb="x2">Nulogy Design System</Title>
-      <Intro>The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.</Intro>
-    </Box>
+    <Intro>
+      <Title>Nulogy Design System</Title>
+      <IntroText>The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.</IntroText>
+    </Intro>
 
     <Flex>
       <Box

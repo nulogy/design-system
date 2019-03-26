@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>Link</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Link</Title>
-      <Intro>A styled <em>a</em> tag that can be used to send users to a URL.</Intro>
-    </Box>
+    <Intro>
+      <Title>Link</Title>
+      <IntroText>A styled <em>a</em> tag that can be used to send users to a URL.</IntroText>
+    </Intro>
 
     <DocSection>
       <Link href="http://nulogy.design">nulogy.design</Link>

@@ -2,11 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Icon, Box, Flex, SectionTitle, Title, Link, List, ListItem,
+  Icon, Flex, SectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+  DocText as Text, Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 const iconNames = Object.keys(icons);
@@ -27,10 +27,10 @@ export default () => (
     <Helmet>
       <title>Icons</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Icons</Title>
-      <Intro>Icons can be used alongside text to help assist users in finding certain actions on a page. </Intro>
-    </Box>
+    <Intro>
+      <Title>Icons</Title>
+      <IntroText>Icons can be used alongside text to help assist users in finding certain actions on a page. </IntroText>
+    </Intro>
 
     <DocSection>
       <Icon icon="user" />

@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import groupProps from "../../shared/groupProps";
 
@@ -14,10 +14,10 @@ export default () => (
     <Helmet>
       <title>Checkbox</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Checkbox Group</Title>
-      <Intro>For wrapping checkboxes with a label and help text</Intro>
-    </Box>
+    <Intro>
+      <Title>Checkbox Group</Title>
+      <IntroText>For wrapping checkboxes with a label and help text</IntroText>
+    </Intro>
     <DocSection>
 
       <CheckboxGroup labelText="Setting Selection" name="settingSelection" helpText="Select a setting from the menu below:">

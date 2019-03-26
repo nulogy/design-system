@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import { Title, Box } from "@nulogy/components";
 import styled from "styled-components";
-import { Intro, Layout, DocSection } from "../components";
+import { Intro, IntroText, Layout } from "../components";
 
 const MarkdownStyles = styled.div`
   h1 {font-weight: 100 !important;}
@@ -24,13 +24,10 @@ export default function Template({
         <Helmet>
           <title>{frontmatter.title} Nulogy Design System </title>
         </Helmet>
-        <DocSection
-          bg="whiteGrey" mb="x4" p="x4"
-          borderRadius={ 1 }
-        >
-          <Title mb="none">{frontmatter.title}</Title>
-          <Intro>{frontmatter.intro} test</Intro>
-        </DocSection>
+        <Intro>
+          <Title>{frontmatter.title}</Title>
+          <IntroText>{frontmatter.intro}</IntroText>
+        </Intro>
         <Box maxWidth={ 800 } mb="x4">
           <div
             className="blog-post-content"

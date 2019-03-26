@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>List</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">List</Title>
-      <Intro>A standard list, available in two sizes.</Intro>
-    </Box>
+    <Intro>
+      <Title>List</Title>
+      <IntroText>A standard list, available in two sizes.</IntroText>
+    </Intro>
 
     <DocSection>
       <List mb="x3">

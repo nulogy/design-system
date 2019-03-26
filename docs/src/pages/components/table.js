@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Box, SectionTitle, Title } from "@nulogy/components";
+import { SectionTitle, Title } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection, Image,
+  DocText as Text, Layout, Intro, IntroText, DocSection, Image,
 } from "../../components";
 import basic from "../../images/tables/basic.png";
 import actions from "../../images/tables/actions.png";
@@ -20,13 +20,10 @@ export default () => (
     <Helmet>
       <title>Table</title>
     </Helmet>
-    <Box
-      bg="whiteGrey" p="x4" borderRadius={ 1 }
-      mb="x6"
-    >
-      <Title mb="none">Table</Title>
-      <Intro>Tables structure data into a grid making it easier to understand and compare.</Intro>
-    </Box>
+    <Intro>
+      <Title>Table</Title>
+      <IntroText>Tables structure data into a grid making it easier to understand and compare.</IntroText>
+    </Intro>
     <DocSection>
       <Image src={ basic } alt="Table" />
     </DocSection>

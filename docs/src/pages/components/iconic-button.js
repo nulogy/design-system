@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>Iconic Button</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Iconic Button</Title>
-      <Intro>A button that's an icon, with or without a label.</Intro>
-    </Box>
+    <Intro>
+      <Title>Iconic Button</Title>
+      <IntroText>A button that's an icon, with or without a label.</IntroText>
+    </Intro>
 
     <DocSection>
       <IconicButton icon="delete" />

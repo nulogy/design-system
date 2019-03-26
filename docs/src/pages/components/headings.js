@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection,
 } from "../../components";
 
 export default () => (
@@ -13,10 +13,10 @@ export default () => (
     <Helmet>
       <title>Headings</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Headings</Title>
-      <Intro>There are three level of headings available to provide hierarchy in an application.</Intro>
-    </Box>
+    <Intro>
+      <Title>Headings</Title>
+      <IntroText>There are three level of headings available to provide hierarchy in an application.</IntroText>
+    </Intro>
 
     <DocSection>
       <Title>Title</Title>
