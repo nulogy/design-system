@@ -7,7 +7,7 @@ import {
   Button, Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-   Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 
 const propsRows = [

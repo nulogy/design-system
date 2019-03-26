@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet";
 import {
   Box, Flex, Text, Title, SectionTitle, SubsectionTitle,
 } from "@nulogy/components";
-import { Layout, Intro, IntroText, DocSection } from "../../components";
+import {
+  Layout, Intro, IntroText, DocSection,
+} from "../../components";
 
 export default () => (
   <Layout>
