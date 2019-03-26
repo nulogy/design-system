@@ -7,7 +7,7 @@ const PropsTable = ({ propsRows }) => (
       <tr>
         <td>Prop</td>
         <td>Type</td>
-        <td width="120px">Default value</td>
+        <td width="150px">Default value</td>
         <td>Description</td>
       </tr>
     </thead>

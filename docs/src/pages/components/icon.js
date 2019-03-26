@@ -6,8 +6,23 @@ import {
 } from "@nulogy/components";
 import icons from "@nulogy/components/icons/icons.json";
 import {
-  DocText as Text, Layout, Intro, IntroText, DocSection,
+  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "color", type: "String", defaultValue: "currentcolor", description: "The icon's colour, if different than parent's text colour.",
+  },
+  {
+    name: "icon", type: "String", defaultValue: "Required", description: "The icon to display. Accepts icons listed in Available Icons above.",
+  },
+  {
+    name: "size", type: "String", defaultValue: "24px", description: "The size of the icon",
+  },
+  {
+    name: "title", type: "String", defaultValue: "null", description: "Alternative text to be read by assistive devices. Leave blank if icon is purely decorative."
+  }
+];
 
 const iconNames = Object.keys(icons);
 
@@ -55,42 +70,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>color</td>
-            <td>String</td>
-            <td>currentcolor</td>
-            <td>The icon's colour, if different than parent's text colour.</td>
-          </tr>
-          <tr>
-            <td>icon</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>The icon you'd like to display. Accepts icons listed in <em>Available Icons</em> above.</td>
-          </tr>
-          <tr>
-            <td>size</td>
-            <td>Number</td>
-            <td>24px</td>
-            <td>Size of the icon.</td>
-          </tr>
-          <tr>
-            <td>title</td>
-            <td>String</td>
-            <td>null</td>
-            <td>Alternative text to be read by assistive devices. Leave blank if icon is purely decorative.</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

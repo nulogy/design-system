@@ -5,8 +5,26 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, IntroText, DocSection,
+  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+import { color, margins, paddings, height, width } from "../../shared/systemProps";
+
+const propsRows = [
+  ...color,
+  {
+    name: "display", type: "string", defaultValue: "block", description: "Sets CSS display property",
+  },
+  ...height,
+  ...margins,
+  {
+    name: "order", type: "number", defaultValue: "", description: "Sets the order to be used with Flex component"
+  },
+  {
+    name: "position", type: "string", defaultValue: "", description: "Sets the CSS position property",
+  },
+  ...paddings,
+  ...width,
+];
 
 export default () => (
   <Layout>
@@ -86,168 +104,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td width="100px">Prop</td>
-            <td>Type</td>
-            <td width="150px">Default value</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>bg</td>
-            <td>string</td>
-            <td />
-            <td>Sets background-color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>string</td>
-            <td />
-            <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
-          </tr>
-          <tr>
-            <td>display</td>
-            <td>string</td>
-            <td />
-            <td>Sets css display property.</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>string</td>
-            <td />
-            <td>Sets a height on the box.</td>
-          </tr>
-          <tr>
-            <td>minHeight</td>
-            <td>string</td>
-            <td />
-            <td>Sets a height on the box.</td>
-          </tr>
-          <tr>
-            <td>maxHeight</td>
-            <td>string</td>
-            <td />
-            <td>Sets a maxHeight on the box.</td>
-          </tr>
-          <tr>
-            <td>m</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
-          </tr>
-          <tr>
-            <td>mt</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-top</td>
-          </tr>
-          <tr>
-            <td>mr</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-right</td>
-          </tr>
-          <tr>
-            <td>mb</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-bottom</td>
-          </tr>
-          <tr>
-            <td>ml</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-left</td>
-          </tr>
-          <tr>
-            <td>mx</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-left and margin-right</td>
-          </tr>
-          <tr>
-            <td>my</td>
-            <td>string</td>
-            <td />
-            <td>Sets margin-top and margin-bottom</td>
-          </tr>
-          <tr>
-            <td>order</td>
-            <td>number</td>
-            <td />
-            <td>Sets the order to be used with <Link href="/components/flex">Flex</Link> component</td>
-          </tr>
-          <tr>
-            <td>position</td>
-            <td>string</td>
-            <td />
-            <td>Sets css position property.</td>
-          </tr>
-          <tr>
-            <td>p</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
-          </tr>
-          <tr>
-            <td>pt</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-top</td>
-          </tr>
-          <tr>
-            <td>pr</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-right</td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-bottom</td>
-          </tr>
-          <tr>
-            <td>pl</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-left</td>
-          </tr>
-          <tr>
-            <td>px</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-left and padding-right</td>
-          </tr>
-          <tr>
-            <td>py</td>
-            <td>string</td>
-            <td />
-            <td>Sets padding-top and padding-bottom</td>
-          </tr>
-          <tr>
-            <td>width</td>
-            <td>string</td>
-            <td />
-            <td>Sets the width of the element</td>
-          </tr>
-          <tr>
-            <td>minWidth</td>
-            <td>string</td>
-            <td />
-            <td>Sets the minWidth of the element</td>
-          </tr>
-          <tr>
-            <td>maxWidth</td>
-            <td>string</td>
-            <td />
-            <td>Sets the maxWidth of the element</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>
