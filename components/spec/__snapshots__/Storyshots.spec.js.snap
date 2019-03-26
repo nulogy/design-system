@@ -176,6 +176,16 @@ exports[`Storyshots MenuLink MenuLink 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots NavBar NavBar 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots NavBar With branding only 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBar Without search 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBar Without search and primary menu 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBar Without search and secondary menu 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots NavBar Without secondary menu 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots NavBarSearch NavBarSearch 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots NavBarSearch With custom name 1`] = `ReactWrapper {}`;

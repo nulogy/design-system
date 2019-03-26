@@ -28,8 +28,8 @@ const MediumNavBar = ({
     <nav>
       <Flex justifyContent="space-between" alignContent="flex-end">
         {menuData.primaryMenu && <Flex alignItems="center"><DesktopMenu menuData={ menuData.primaryMenu } /></Flex>}
-        <Box width={1}>
-          <Flex style={{"float": "right"}}>
+        <Box width={ 1 }>
+          <Flex style={ { "float": "right" } }>
             { menuData.search && <Flex maxWidth="18em" px="x3"><NavBarSearch { ...menuData.search } /></Flex>}
             {menuData.secondaryMenu && <DesktopMenu menuData={ menuData.secondaryMenu } />}
           </Flex>

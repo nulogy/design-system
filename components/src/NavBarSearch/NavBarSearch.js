@@ -17,12 +17,14 @@ class BaseNavBarSearch extends React.Component {
   }
 
   handleOnSubmit(e) {
+    const { onSubmit } = this.props;
+
     e.preventDefault();
-    this.props.onSubmit(e);
+    onSubmit(e);
   }
 
   render() {
-    const { name, onSubmit, ...props } = this.props;
+    const { name, ...props } = this.props;
 
     return (
       <form { ...props } onSubmit={ this.handleOnSubmit }>
@@ -33,7 +35,7 @@ class BaseNavBarSearch extends React.Component {
       </form>
     );
   }
-};
+}
 
 const NavBarSearch = styled(BaseNavBarSearch)(
   {
