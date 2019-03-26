@@ -22,6 +22,7 @@ const navBarStyles = {
 
 const MediumNavBar = ({
   menuData,
+  search,
   desktopSrc,
   alt,
   ...props
@@ -29,16 +30,16 @@ const MediumNavBar = ({
   <Box { ...props }>
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <nav>
-      <Flex justifyContent="space-between">
+      <Flex justifyContent="space-between" alignContent="flex-end">
         <Flex alignItems="center">
           <DesktopMenu menuData={ menuData.primaryMenu } />
         </Flex>
-        <Flex alignItems="center">
-          <Flex maxWidth="18em" px="x3">
-            <NavBarSearch />
+        <Box width={1}>
+          <Flex style={{"float": "right"}}>
+            {search && <Flex maxWidth="18em" px="x3"><NavBarSearch /></Flex>}
+            <DesktopMenu menuData={ menuData.secondaryMenu } />
           </Flex>
-          <DesktopMenu menuData={ menuData.secondaryMenu } />
-        </Flex>
+        </Box>
       </Flex>
     </nav>
   </Box>
@@ -47,6 +48,7 @@ const MediumNavBar = ({
 MediumNavBar.propTypes = {
   alt: PropTypes.string,
   desktopSrc: PropTypes.string,
+  search: PropTypes.bool,
   menuData: PropTypes.shape({
     "primary": PropTypes.shape({}),
     "secondary": PropTypes.shape({}),
@@ -57,10 +59,12 @@ MediumNavBar.defaultProps = {
   alt: null,
   desktopSrc: undefined,
   menuData: null,
+  search: false,
 };
 
 const SmallNavBar = withMenuState(({
   menuData,
+  search,
   menuState,
   mobileSrc,
   alt,
@@ -71,9 +75,7 @@ const SmallNavBar = withMenuState(({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        <Flex maxWidth="18em" alignItems="center" px="0">
-          <NavBarSearch />
-        </Flex>
+        {search && <Flex maxWidth="18em" alignItems="center" px="0"><NavBarSearch /></Flex>}
         <MobileMenu menuData={ menuData } menuState={ menuState } display="block" />
       </Flex>
     </nav>
@@ -82,11 +84,12 @@ const SmallNavBar = withMenuState(({
 
 const BaseNavBar = ({
   menuData,
+  search,
   ...props
 }) => (
   <header { ...props }>
-    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
-    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ navBarStyles } />
+    <MediumNavBar search = {search} menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
+    <SmallNavBar search = {search} menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ navBarStyles } />
   </header>
 );
 
@@ -96,11 +99,13 @@ BaseNavBar.propTypes = {
     "secondary": PropTypes.shape({}),
   }),
   className: PropTypes.string,
+  search: PropTypes.bool,
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
+  search: false,
 };
 
 const NavBar = styled(BaseNavBar)({
