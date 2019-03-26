@@ -30,7 +30,7 @@ const MediumNavBar = ({
         {menuData.primaryMenu && <Flex alignItems="center"><DesktopMenu menuData={ menuData.primaryMenu } /></Flex>}
         <Box width={1}>
           <Flex style={{"float": "right"}}>
-            { menuData.search && <Flex maxWidth="18em" px="x3"><NavBarSearch /></Flex>}
+            { menuData.search && <Flex maxWidth="18em" px="x3"><NavBarSearch { ...menuData.search } /></Flex>}
             {menuData.secondaryMenu && <DesktopMenu menuData={ menuData.secondaryMenu } />}
           </Flex>
         </Box>
@@ -66,7 +66,7 @@ const SmallNavBar = withMenuState(({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        {menuData.search && <Flex maxWidth="18em" alignItems="center" px="0"><NavBarSearch /></Flex>}
+        {menuData.search && <Flex maxWidth="18em" alignItems="center" px="0"><NavBarSearch { ...menuData.search } /></Flex>}
         {
           (menuData.primaryMenu || menuData.secondaryMenu)
             && <MobileMenu menuData={ menuData } menuState={ menuState } display="block" />

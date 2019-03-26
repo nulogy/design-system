@@ -59,7 +59,7 @@ const secondaryMenu = [
 ];
 
 const search = {
-  onSearch: () => {},
+  onSubmit: () => {},
 };
 
 storiesOf("NavBar", module)
@@ -74,6 +74,9 @@ storiesOf("NavBar", module)
   ))
   .add("Without search and secondary menu", () => (
     <NavBar menuData={ { primaryMenu } } />
+  ))
+  .add("Without search and primary menu", () => (
+    <NavBar menuData={ { secondaryMenu } } />
   ))
   .add("With branding only", () => (
     <NavBar menuData={ {} } />
