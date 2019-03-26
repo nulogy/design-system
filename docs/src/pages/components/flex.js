@@ -61,7 +61,7 @@ export default () => (
           <tr>
             <td>Prop</td>
             <td>Type</td>
-            <td width="100px">Default</td>
+            <td width="150px">Default value</td>
             <td>Description</td>
           </tr>
         </thead>

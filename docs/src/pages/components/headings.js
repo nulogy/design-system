@@ -40,6 +40,7 @@ export default () => (
           <tr>
             <td width="100px">Prop</td>
             <td>Type</td>
+            <td width="150px">Default value</td>
             <td>Description</td>
           </tr>
         </thead>
@@ -47,46 +48,55 @@ export default () => (
           <tr>
             <td>color</td>
             <td>string</td>
+            <td>darkBlue</td>
             <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
           </tr>
           <tr>
             <td>m</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
           </tr>
           <tr>
             <td>mt</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-top</td>
           </tr>
           <tr>
             <td>mr</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-right</td>
           </tr>
           <tr>
             <td>mb</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-bottom</td>
           </tr>
           <tr>
             <td>ml</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-left</td>
           </tr>
           <tr>
             <td>mx</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-left and margin-right</td>
           </tr>
           <tr>
             <td>my</td>
             <td>string</td>
+            <td></td>
             <td>Sets margin-top and margin-bottom</td>
           </tr>
           <tr>
             <td>textAlign</td>
             <td>string</td>
+            <td>left</td>
             <td>Sets text-align to either left, center or right</td>
           </tr>
         </tbody>
