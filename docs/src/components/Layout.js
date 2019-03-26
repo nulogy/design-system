@@ -52,8 +52,8 @@ const Layout = ({ children }) => (
           </Flex>
         </Box>
       </Box>
-      <Flex width={ 960 } m="auto">
-        <Box width="30%">
+      <Flex maxWidth={ 960 } pl="x3" pr="x3" flexDirection={ { small: "column", large: "row" } } m="auto">
+        <Box order={ { small: 2, large: 1 } } width={ { small: 1, large: 1 / 4 } }>
           <Nav>
             <Text color="darkGrey" fontWeight="medium">Visual Style</Text>
             <NavItem><Link href="/style/colour" underline={ false }>Colour</Link></NavItem>
@@ -96,7 +96,7 @@ const Layout = ({ children }) => (
             <NavItem><Link href="/guides/reading-list" underline={ false }>Reading list</Link></NavItem>
           </Nav>
         </Box>
-        <Box width="70%">
+        <Box width={ { small: 1, large: 3 / 4 } } order={ { small: 1, large: 2 } }>
           {children}
         </Box>
       </Flex>
