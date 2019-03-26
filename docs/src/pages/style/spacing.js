@@ -69,7 +69,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Example</SectionTitle>
-      <img src={ anatomy } alt="Spacing example" style={ { width: "50%" } } />
+      <img src={ anatomy } alt="Spacing example" />
     </DocSection>
 
     <DocSection>
