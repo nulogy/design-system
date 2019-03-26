@@ -14,12 +14,12 @@ export default () => (
       <Title mb="none">Typography</Title>
       <Intro>Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.</Intro>
       <SectionTitle mt="x4">Typeface</SectionTitle>
-      <Flex>
-        <Box pr="x2">
+      <Flex flexDirection={ { small: "column", medium: "row" } }>
+        <Box width={ { small: 1, large: 1 / 2 } } mb={ { small: "x3", medium: 0 } }>
           <SubsectionTitle>IBM Plex Sans</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
-        <Box pl="x2">
+        <Box width={ { small: 1, large: 1 / 2 } }>
           <SubsectionTitle fontFamily="mono">IBM Plex Mono</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
