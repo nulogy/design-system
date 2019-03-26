@@ -13,9 +13,9 @@ const Palette = props => {
     name,
   } = props;
   return (
-    <Box width={ 1 / 3 } mb="x3">
+    <Box width={ { small: 1, medium: 1 / 3 } } mb="x3">
       <Box
-        mr="x2" pt="x8" pb="x8"
+        mr="x2" pt={ { small: "x4", medium: "x8" } } pb={ { small: "x4", medium: "x8" } }
         mb="x1" bg={ colour } borderRadius={ 1 }
       />
       <Text mb="half">{name}</Text>
@@ -41,7 +41,7 @@ export default () => (
 
     <DocSection mb="x3">
       <SectionTitle>Text & Interactive Colours</SectionTitle>
-      <Flex>
+      <Flex flexDirection={ { small: "column", medium: "row" } }>
         <Palette name="Black" colour={ tokens.color_base_black } />
         <Palette name="Black Blue" colour={ tokens.color_base_black_blue } />
         <Palette name="Dark Blue" colour={ tokens.color_base_dark_blue } />
@@ -52,7 +52,7 @@ export default () => (
 
     <DocSection mb="x3">
       <SectionTitle>UI & Background Colours</SectionTitle>
-      <Flex>
+      <Flex flexDirection={ { small: "column", medium: "row" } }>
         <Palette name="Dark Grey" colour={ tokens.color_base_dark_grey } />
         <Palette name="Grey" colour={ tokens.color_base_grey } />
         <Palette name="Light Grey" colour={ tokens.color_base_light_grey } />
@@ -63,7 +63,7 @@ export default () => (
 
     <DocSection mb="x3">
       <SectionTitle>Contextual Colours</SectionTitle>
-      <Flex>
+      <Flex flexDirection={ { small: "column", medium: "row" } }>
         <Palette name="Green" colour={ tokens.color_base_green } />
         <Palette name="Red" colour={ tokens.color_base_red } />
         <Palette name="Yellow" colour={ tokens.color_base_yellow } />
