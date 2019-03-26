@@ -11,9 +11,6 @@ const SubMenuItemLink = styled(Link)({
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: theme.colors.lightGrey,
-    "p:first-child": {
-      textDecoration: "underline",
-    },
   },
   "&:disabled": {
     opacity: ".5",
@@ -22,15 +19,18 @@ const SubMenuItemLink = styled(Link)({
 
 const BaseSubMenuItem = React.forwardRef(({
   href,
-  children,
+  text,
   subText,
+  textColor,
+  subTextColor,
+  tabIndex,
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex="-1" color="darkBlue" underline={ false } href={ href }>
-      <Text>{children}</Text>
+    <SubMenuItemLink ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
+      <Text color={ textColor }>{ text }</Text>
       {subText && (
-      <Text color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+      <Text color={ subTextColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {subText}
       </Text>
       )}
@@ -39,14 +39,20 @@ const BaseSubMenuItem = React.forwardRef(({
 ));
 
 BaseSubMenuItem.propTypes = {
-  children: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
   subText: PropTypes.string,
   href: PropTypes.string,
+  textColor: PropTypes.string,
+  subTextColor: PropTypes.string,
+  tabIndex: PropTypes.string,
 };
 
 BaseSubMenuItem.defaultProps = {
   subText: undefined,
   href: "/",
+  textColor: "darkBlue",
+  subTextColor: "darkGrey",
+  tabIndex: null,
 };
 
 const SubMenuItem = styled(BaseSubMenuItem)({

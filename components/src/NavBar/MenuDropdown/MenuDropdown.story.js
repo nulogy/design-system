@@ -8,9 +8,9 @@ storiesOf("MenuDropdown", module)
   .add("MenuDropdown", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
       <MenuDropdown id="menuDropdown1" labelText="Menu Dropdown">
-        <SubMenuItem href="/" subText="details">Submenu Item 1</SubMenuItem>
-        <SubMenuItem href="/" subText="details">Submenu Item 2</SubMenuItem>
-        <SubMenuItem href="/" subText="details">Submenu Item 3</SubMenuItem>
+        <SubMenuItem href="/" text="Submenu Item 1" subText="details" />
+        <SubMenuItem href="/" text="Submenu Item 2" subText="details" />
+        <SubMenuItem href="/" text="Submenu Item 3" subText="details" />
       </MenuDropdown>
     </Flex>
   ));

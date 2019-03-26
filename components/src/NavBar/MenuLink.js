@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "../Link/Link";
 import theme from "../theme";
 
-const SubMenuItem = styled(Link).attrs({
+const MenuLink = styled(Link).attrs({
   underline: false,
   color: "white",
 })({
@@ -22,7 +22,6 @@ const SubMenuItem = styled(Link).attrs({
     outline: "none",
     color: theme.colors.lightBlue,
     backgroundColor: theme.colors.black,
-    textDecoration: "underline",
     cursor: "pointer",
   },
   "&:disabled": {
@@ -30,4 +29,4 @@ const SubMenuItem = styled(Link).attrs({
   },
 });
 
-export default SubMenuItem;
+export default MenuLink;

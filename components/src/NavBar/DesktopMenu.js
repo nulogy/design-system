@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box } from "ComponentsRoot";
+import { Flex } from "ComponentsRoot";
 import { MenuDropdown } from "./MenuDropdown";
 import SubMenuItem from "./SubMenuItem";
-import MenuItem from "./MenuItem";
+import MenuLink from "./MenuLink";
 import theme from "../theme";
 
 const isDropdown = menuItem => (menuItem.subMenuItems);
@@ -13,16 +13,14 @@ const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
-  <Box { ...props }>
+  <Flex { ...props }>
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
           <div key={ menuItem.text }>
             <MenuDropdown labelText={ menuItem.text }>
               {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.text } href={ subMenuItem.href } subText={ subMenuItem.subText }>
-                  {subMenuItem.text}
-                </SubMenuItem>
+                <SubMenuItem key={ subMenuItem.text } { ...subMenuItem } tabIndex="-1" />
               ))}
             </MenuDropdown>
           </div>
@@ -30,14 +28,14 @@ const BaseDesktopMenu = ({
       } else {
         return (
           <div key={ menuItem.text }>
-            <MenuItem href={ menuItem.href }>
+            <MenuLink href={ menuItem.href }>
               {menuItem.text}
-            </MenuItem>
+            </MenuLink>
           </div>
         );
       }
     })}
-  </Box>
+  </Flex>
 );
 
 BaseDesktopMenu.propTypes = {
