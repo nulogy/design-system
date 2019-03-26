@@ -140,5 +140,17 @@ const menuData = {
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (
+    <NavBar menuData={ menuData } search />
+  ))
+  .add("Without search", () => (
     <NavBar menuData={ menuData } />
-  ));
+  ))
+  .add("Without secondary menu", () => (
+    <NavBar search menuData={ menuData } />
+  ))
+  .add("Without search and secondary menu", () => (
+    <NavBar menuData={ menuData } />
+  ))
+  .add("Withbrending only", () => (
+    <NavBar menuData={ menuData } />
+  ));;
