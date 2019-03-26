@@ -2,155 +2,79 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavBar } from "ComponentsRoot";
 
-const menuData = {
-  "primaryMenu": [
-    {
-      text: "Dashboard",
-      subMenuItems: [
-        {
-          text: "Customers",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Invoices",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Projects",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Items",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Vendors",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Carriers",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-    {
-      text: "Inspector",
-      subMenuItems: [
-        {
-          text: "Integration",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Site configuration",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Company configuration",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-    {
-      text: "Reports",
-      subMenuItems: [
-        {
-          text: "Production",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Item cart",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Inventory",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-    {
-      text: "Sheets",
-      subMenuItems: [
-        {
-          text: "Item locator",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Ship orders",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-    {
-      text: "Link",
-      href: "/",
-    },
-  ],
-  "secondaryMenu": [
-    {
-      text: "User",
-      subMenuItems: [
-        {
-          text: "Profile",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Preferences",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Logout",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-    {
-      text: "Settings",
-      subMenuItems: [
-        {
-          text: "Permissions",
-          subText: "subText",
-          href: "/",
-        },
-        {
-          text: "Manage account",
-          subText: "subText",
-          href: "/",
-        },
-      ],
-    },
-  ],
+const primaryMenu = [
+  {
+    text: "Dashboard",
+    subMenuItems: [
+      { text: "Customers", subText: "subText", href: "/", },
+      { text: "Invoices", subText: "subText", href: "/", },
+      { text: "Projects", subText: "subText", href: "/", },
+      { text: "Items", subText: "subText", href: "/", },
+      { text: "Vendors", subText: "subText", href: "/", },
+      { text: "Carriers", subText: "subText", href: "/", },
+    ],
+  },
+  {
+    text: "Inspector",
+    subMenuItems: [
+      { text: "Integration", subText: "subText", href: "/", },
+      { text: "Site configuration", subText: "subText", href: "/", },
+      { text: "Company configuration", subText: "subText", href: "/", },
+    ],
+  },
+  {
+    text: "Reports",
+    subMenuItems: [
+      { text: "Production", subText: "subText", href: "/", },
+      { text: "Item cart", subText: "subText", href: "/", },
+      { text: "Inventory", subText: "subText", href: "/", },
+    ],
+  },
+  {
+    text: "Sheets",
+    subMenuItems: [
+      { text: "Item locator", subText: "subText", href: "/", },
+      { text: "Ship orders", subText: "subText", href: "/", },
+    ],
+  },
+  { text: "Link", href: "/", },
+];
+
+const secondaryMenu = [
+  {
+    text: "User",
+    subMenuItems: [
+      { text: "Profile", subText: "subText", href: "/", },
+      { text: "Preferences", subText: "subText", href: "/", },
+      { text: "Logout", subText: "subText", href: "/", },
+    ],
+  },
+  {
+    text: "Settings",
+    subMenuItems: [
+      { text: "Permissions", subText: "subText", href: "/", },
+      { text: "Manage account", subText: "subText", href: "/", },
+    ],
+  },
+];
+
+const search = {
+  onSearch: () => {},
 };
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (
-    <NavBar menuData={ menuData } search />
+    <NavBar menuData={ { primaryMenu, secondaryMenu, search } } />
   ))
   .add("Without search", () => (
-    <NavBar menuData={ menuData } />
+    <NavBar menuData={ { primaryMenu, secondaryMenu } } />
   ))
   .add("Without secondary menu", () => (
-    <NavBar search menuData={ menuData } />
+    <NavBar menuData={ { primaryMenu, search } } />
   ))
   .add("Without search and secondary menu", () => (
-    <NavBar menuData={ menuData } />
+    <NavBar menuData={ { primaryMenu } } />
   ))
-  .add("Withbrending only", () => (
-    <NavBar menuData={ menuData } />
+  .add("With branding only", () => (
+    <NavBar menuData={ {} } />
   ));;
