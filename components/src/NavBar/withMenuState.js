@@ -31,10 +31,14 @@ class MenuState extends React.Component {
   }
 
   handleKeyDown(event) {
-    if (event.keyCode === 27) {
-      this.setState({
-        isOpen: false,
-      })
+    switch( event.keyCode ) {
+      case 27:
+        this.setState({
+          isOpen: false,
+        })
+          break;
+      default: 
+          break;
     }
   }
 
