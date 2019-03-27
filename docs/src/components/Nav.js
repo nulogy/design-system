@@ -44,7 +44,7 @@ const OpenButton = styled(IconicButton).attrs({
   position: "absolute",
   top: 0,
   left: 0,
-  margin: "16px",
+  margin: theme.space.x2,
 });
 
 const CloseButton = styled(IconicButton).attrs({
