@@ -13,7 +13,7 @@ class MenuState extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown);
   }
 
@@ -31,14 +31,14 @@ class MenuState extends React.Component {
   }
 
   handleKeyDown(event) {
-    switch( event.keyCode ) {
+    switch (event.keyCode) {
       case 27:
         this.setState({
           isOpen: false,
-        })
-          break;
-      default: 
-          break;
+        });
+        break;
+      default:
+        break;
     }
   }
 
