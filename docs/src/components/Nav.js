@@ -24,6 +24,14 @@ const NavContainer = styled(Box)(
   })
 );
 
+NavContainer.propTypes = {
+  isOpen: PropTypes.bool,
+};
+
+NavContainer.defaultProps = {
+  isOpen: null,
+};
+
 const NavItem = styled.li`
     margin: ${theme.space.x2};
     margin-left: 0;
@@ -51,6 +59,14 @@ const CloseButton = styled(IconicButton).attrs({
     },
   })
 );
+
+CloseButton.propTypes = {
+  isOpen: PropTypes.bool,
+};
+
+CloseButton.defaultProps = {
+  isOpen: null,
+};
 
 class Navigation extends React.Component {
   constructor() {
