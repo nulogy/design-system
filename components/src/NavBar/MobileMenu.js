@@ -94,7 +94,7 @@ const Menu = styled(Box)(() => (
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
     [`${SubsectionTitle}`]: {
-      padding: `0 ${theme.space.x3} 0 ${theme.space.x3}`,
+      padding: `0 ${theme.space.x3}`,
       marginBottom: theme.space.x2,
     },
     [`${SubMenuItems}`]: {
