@@ -15,13 +15,13 @@ const IndexPage = () => (
       <Box width={ { small: 1, medium: 1 / 2 } } mb="x3">
         <SectionTitle mb="x3">Visual Style</SectionTitle>
         <Text mb="x3">Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</Text>
-        <Link href="/style/colour">Learn how to design for Nulogy</Link>
+        <PrimaryButton as="a" href="/style/colour">Learn how to design for Nulogy</PrimaryButton>
       </Box>
 
       <Box width={ { small: 1, medium: 1 / 2 } }>
         <SectionTitle mb="x3">Components</SectionTitle>
         <Text mb="x3">Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</Text>
-        <Link href="components/buttons">Use our components</Link>
+        <PrimaryButton as="a" href="components/Box">Use our components</PrimaryButton>
       </Box>
     </Flex>
   </Layout>
