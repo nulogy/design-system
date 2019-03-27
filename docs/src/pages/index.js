@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Box, PrimaryButton, Flex, Link, Text, Title, SectionTitle,
+  Box, PrimaryButton, Flex, Text, Title, SectionTitle,
 } from "@nulogy/components";
 import { Intro, IntroText, Layout } from "../components";
 

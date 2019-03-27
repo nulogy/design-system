@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import {
-  Box, Link, SubsectionTitle, IconicButton, List, ListItem,
+  Box, Link, SubsectionTitle, IconicButton, List,
 } from "@nulogy/components";
 import logo from "../images/nulogy.svg";
 import theme from "../../../components/src/theme";

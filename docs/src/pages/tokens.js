@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Box, Title, Link } from "@nulogy/components";
+import { Title, Link } from "@nulogy/components";
 import {
   Layout, Intro, IntroText, DocSection,
 } from "../components";

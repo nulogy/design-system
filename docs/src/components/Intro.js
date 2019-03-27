@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Box } from "@nulogy/components";
 import styled from "styled-components";
-import { color, space, borders } from "styled-system";
+import { color, space } from "styled-system";
 
 const Intro = styled(Box)({
 },
