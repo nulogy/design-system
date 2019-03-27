@@ -7,7 +7,9 @@ import {
 import {
   DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
-import { color, margins, paddings, height, width } from "../../shared/systemProps";
+import {
+  color, margins, paddings, height, width,
+} from "../../shared/systemProps";
 
 const propsRows = [
   ...color,
@@ -17,7 +19,7 @@ const propsRows = [
   ...height,
   ...margins,
   {
-    name: "order", type: "number", defaultValue: "", description: "Sets the order to be used with Flex component"
+    name: "order", type: "number", defaultValue: "", description: "Sets the order to be used with Flex component",
   },
   {
     name: "position", type: "string", defaultValue: "", description: "Sets the CSS position property",

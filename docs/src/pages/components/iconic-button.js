@@ -13,9 +13,9 @@ const propsRows = [
     name: "disabled", type: "Boolean", defaultValue: "false", description: "Lightens the opacity and makes the button unable to be clicked.",
   },
   {
-    name: "icon", type: "String", defaultValue: "Required", description: "The icon to display. See the Icons component for all possible options."
-  }
-]
+    name: "icon", type: "String", defaultValue: "Required", description: "The icon to display. See the Icons component for all possible options.",
+  },
+];
 
 export default () => (
   <Layout>

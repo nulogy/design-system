@@ -63,8 +63,8 @@ export const color = [
     name: "bg", type: "String", defaultValue: "", description: "Sets background-color based on the theme.color object",
   },
   {
-    name: "color", type: "String", defaultValue: "darkBlue", description: "Sets color based on the theme.color object"
-  }
+    name: "color", type: "String", defaultValue: "darkBlue", description: "Sets color based on the theme.color object",
+  },
 ];
 
 export const width = [
@@ -76,5 +76,5 @@ export const width = [
   },
   {
     name: "maxWidth", type: "String", defaultValue: "", description: "Sets a maximum width",
-  }
+  },
 ];

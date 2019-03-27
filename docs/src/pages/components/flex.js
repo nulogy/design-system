@@ -20,8 +20,8 @@ const propsRows = [
   },
   {
     name: "justifyContent", type: "String", defaultValue: "flex-start", description: "Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly",
-  }
-]
+  },
+];
 
 export default () => (
   <Layout>

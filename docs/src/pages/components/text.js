@@ -31,7 +31,7 @@ const propsRows = [
   {
     name: "textAlign", type: "String", defaultValue: "left", description: "Sets text-align to either left, center or right",
   },
-  ...margins
+  ...margins,
 ];
 
 export default () => (
