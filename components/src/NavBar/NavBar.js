@@ -27,11 +27,11 @@ const MediumNavBar = ({
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="space-between" alignContent="flex-end">
-        {menuData.primaryMenu && <Flex alignItems="center"><DesktopMenu menuData={ menuData.primaryMenu } /></Flex>}
+        {menuData.primaryMenu && <Flex alignItems="center" pr="x3"><DesktopMenu menuData={ menuData.primaryMenu } /></Flex>}
         <Box width={ 1 }>
           <Flex style={ { "float": "right" } }>
-            { menuData.search && <Flex maxWidth="18em" px="x3"><NavBarSearch { ...menuData.search } /></Flex>}
-            {menuData.secondaryMenu && <DesktopMenu menuData={ menuData.secondaryMenu } />}
+            { menuData.search && <Flex maxWidth="18em"><NavBarSearch { ...menuData.search } /></Flex>}
+            {menuData.secondaryMenu && <DesktopMenu pl="x2" menuData={ menuData.secondaryMenu } />}
           </Flex>
         </Box>
       </Flex>
