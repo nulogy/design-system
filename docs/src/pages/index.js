@@ -15,7 +15,7 @@ const IndexPage = () => (
       <Box width={ { small: 1, medium: 1 / 2 } } mb="x3">
         <SectionTitle mb="x3">Visual Style</SectionTitle>
         <Text mb="x3">Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</Text>
-        <PrimaryButton as="a" href="/style/colour">Learn how to design for Nulogy</PrimaryButton>
+        <PrimaryButton as="a" href="/style/colour">Use our visual style</PrimaryButton>
       </Box>
 
       <Box width={ { small: 1, medium: 1 / 2 } }>
