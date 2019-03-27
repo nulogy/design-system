@@ -32,11 +32,11 @@ NavContainer.defaultProps = {
   isOpen: null,
 };
 
-const NavItem = styled.li`
-    margin: ${theme.space.x2};
-    margin-left: 0;
-    list-style: none;
-`;
+const NavItem = styled.li({
+  margin: theme.space.x2,
+  marginLeft: 0,
+  listStyle: "none",
+});
 
 const OpenButton = styled(IconicButton).attrs({
   icon: "menu",
