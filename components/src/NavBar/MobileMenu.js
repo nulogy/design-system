@@ -103,7 +103,7 @@ const Menu = styled(Box)(() => (
     [`${SubMenuItem}`]: {
       maxWidth: "100%",
       "a": {
-        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x5}`,
+        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x4}`,
         marginBottom: theme.space.x1,
         transition: ".2s",
         "&:hover, &:focus": {

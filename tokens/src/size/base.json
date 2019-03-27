@@ -7,7 +7,6 @@
         "x2"   : { "value": "16" },
         "x3"    : { "value": "24" },
         "x4"       : { "value": "32" },
-        "x5"       : { "value": "40" },
         "x6"      : { "value": "48" },
         "x8"      : { "value": "64" },
         "base"     : { "value": "{size.base.x2.value}" }
