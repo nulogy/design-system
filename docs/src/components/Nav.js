@@ -85,8 +85,8 @@ class Navigation extends React.Component {
             {menuData.map(menuItem => (
               <List mb="x4" p="0">
                 <SubsectionTitle>{menuItem.name}</SubsectionTitle>
-                {menuItem.links.map( menuLink => (
-                    <NavItem><Link href={menuLink.href} underline={ false }>{menuLink.name}</Link></NavItem>
+                {menuItem.links.map(menuLink => (
+                  <NavItem><Link href={ menuLink.href } underline={ false }>{menuLink.name}</Link></NavItem>
                 ))}
               </List>
             ))}

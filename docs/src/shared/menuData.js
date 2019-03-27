@@ -13,7 +13,7 @@ export const menuData = [
       {
         name: "Spacing",
         href: "/style/spacing",
-      }
+      },
     ],
   },
   {
@@ -98,7 +98,7 @@ export const menuData = [
       {
         name: "Toggle",
         href: "/components/toggle",
-      }
+      },
     ],
   },
   {
@@ -115,7 +115,7 @@ export const menuData = [
       {
         name: "Layout",
         href: "/guides/layout",
-      }
+      },
     ],
   },
   {
@@ -132,7 +132,7 @@ export const menuData = [
       {
         name: "Reading list",
         href: "/guides/reading-list",
-      }
+      },
     ],
   },
 ];
