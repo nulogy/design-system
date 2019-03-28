@@ -21,7 +21,7 @@ const WithGeneratedId = ({ children }) => {
 };
 
 WithGeneratedId.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func.isRequired,
 };
 
 const withGeneratedId = ComponentToRender => props => (
