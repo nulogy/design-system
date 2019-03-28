@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "ComponentsRoot";
 import theme from "../theme";
+import { withGeneratedId } from "../Utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -309,4 +310,4 @@ Tooltip.defaultProps = {
   maxWidth: "24em",
 };
 
-export default Tooltip;
+export default withGeneratedId(Tooltip);

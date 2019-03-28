@@ -7,7 +7,7 @@ import {
   Field, Icon, FieldLabel, InlineValidation,
 } from "ComponentsRoot";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx, withGeneratedId } from "../Utils";
 
 const getBorderColor = ({
   error, disabled, isOpen,
@@ -221,4 +221,4 @@ Select.defaultProps = {
   requirementText: null,
 };
 
-export default Select;
+export default withGeneratedId(Select);
