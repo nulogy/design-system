@@ -27,7 +27,6 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip!"
-        id="tooltip1"
       >
         <Button> Button </Button>
       </Tooltip>
@@ -38,7 +37,6 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
-        id="tooltip1"
       >
         <Button> Button </Button>
       </Tooltip>
@@ -49,7 +47,6 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
-        id="tooltip1"
         maxWidth="128px"
       >
         <Button> Button </Button>
@@ -60,21 +57,18 @@ storiesOf("Tooltip", module)
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip1"
           placement="top-start"
           tooltip="top-start"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip2"
           placement="top"
           tooltip="top"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip3"
           placement="top-end"
           tooltip="top-end"
         >
@@ -83,21 +77,18 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip4"
           placement="left-start"
           tooltip="left-start"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip5"
           placement="left"
           tooltip="left"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip6"
           placement="left-end"
           tooltip="left-end"
         >
@@ -106,21 +97,18 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip7"
           placement="right-start"
           tooltip="right-start"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip8"
           placement="right"
           tooltip="right"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip9"
           placement="right-end"
           tooltip="right-end"
         >
@@ -129,21 +117,18 @@ storiesOf("Tooltip", module)
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip
-          id="tooltip10"
           placement="bottom-start"
           tooltip="bottom-start"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip11"
           placement="bottom"
           tooltip="bottom"
         >
           <Trigger />
         </Tooltip>
         <Tooltip
-          id="tooltip12"
           placement="bottom-end"
           tooltip="bottom-end"
         >
@@ -156,7 +141,6 @@ storiesOf("Tooltip", module)
     <Tooltip
       placement="bottom"
       tooltip={ (<Link href="/"> Link </Link>) }
-      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -165,7 +149,6 @@ storiesOf("Tooltip", module)
     <Tooltip
       placement="bottom"
       tooltip={ (<Button href="/"> Button </Button>) }
-      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -175,7 +158,6 @@ storiesOf("Tooltip", module)
       placement="bottom"
       tooltip="Tooltip"
       showDelay="1000"
-      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -185,7 +167,6 @@ storiesOf("Tooltip", module)
       placement="bottom"
       tooltip="Tooltip"
       hideDelay="1000"
-      id="tooltip1"
     >
       <Button> Button </Button>
     </Tooltip>
@@ -195,14 +176,12 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
-        id="buttonTooltip"
       >
         <Button> Button </Button>
       </Tooltip>
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
-        id="linkTooltip"
       >
         <Link href="/"> Link </Link>
       </Tooltip>
@@ -210,7 +189,6 @@ storiesOf("Tooltip", module)
         fullWidth
         placement="bottom"
         tooltip="Tooltip"
-        id="inputTooltip"
       >
         <Input id="tooltip-input" />
       </Tooltip>
@@ -218,7 +196,6 @@ storiesOf("Tooltip", module)
         fullWidth
         placement="bottom"
         tooltip="Tooltip"
-        id="selectTooltip"
       >
         <Select id="tooltip-select" options={ selectOptions } />
       </Tooltip>
@@ -226,7 +203,6 @@ storiesOf("Tooltip", module)
         fullWidth
         placement="bottom"
         tooltip="Tooltip"
-        id="textareaTooltip"
       >
         <Textarea id="tooltip-textarea" />
       </Tooltip>
@@ -234,7 +210,6 @@ storiesOf("Tooltip", module)
         fullWidth
         placement="bottom"
         tooltip="Tooltip"
-        id="textTooltip"
       >
         <Text inline>Text</Text>
       </Tooltip>
@@ -242,21 +217,18 @@ storiesOf("Tooltip", module)
         fullWidth
         placement="bottom"
         tooltip="Tooltip"
-        id="boxTooltip"
       >
         <Box width="100px" bg="blue">Text</Box>
       </Tooltip>
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
-        id="textTooltip"
       >
         <Text inline>Text</Text>
       </Tooltip>
       <Tooltip
         placement="bottom"
         tooltip="Tooltip"
-        id="boxTooltip"
       >
         <Box width="100px" bg="blue">Text</Box>
       </Tooltip>
