@@ -187,24 +187,18 @@ class MenuDropdown extends React.Component {
             <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuDropdownButton>
           )}
         </Reference>
-        {this.state.subMenuOpen && (
+        {true && (
         <Popper placement="bottom-start">
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItems focusIndex={ this.state.focusIndex }>
+              <SubMenuItems focusIndex={ undefined }>
               {this.props.menuData.map(subMenuItem => {
-                console.log(subMenuItem)
                 if (isDropdown(subMenuItem)) {
-                  console.log("WHY AM I HERE")
-
                   return (
-                    
-                    <SubMenuDropdown key={ subMenuItem.text } labelText={ subMenuItem.text } menuData={ subMenuItem.subMenuItems }/>
-                    
+                    <SubMenuDropdown key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
                   );
                 } else {
                   return (
-          
                     <SubMenuLink key={ subMenuItem.text } text={subMenuItem.text} subText={subMenuItem.subText} href={ subMenuItem.href }/>
                   );
                 }
