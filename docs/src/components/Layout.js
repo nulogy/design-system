@@ -13,7 +13,9 @@ import HighlightStyles from "./HighlightStyles";
 const ScrollContainer = styled.div({
     height: "100vh",
     width: "100%",
-    overflow: "auto"
+    "@media screen and (min-width: 1024px)": {
+      overflow: "auto"
+    },
 });
 
 const Layout = ({ children }) => (
