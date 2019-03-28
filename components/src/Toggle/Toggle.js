@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field, Text, FieldLabel } from "ComponentsRoot";
 import theme from "../theme";
-import { InputClickableArea, omit } from "../Utils";
+import { InputClickableArea, omit, withGeneratedId } from "../Utils";
 
 const Slider = styled.span(({ disabled }) => ({
   position: "absolute",
@@ -180,4 +180,4 @@ const Toggle = styled(BaseToggle)({
   alignItems: "flex-start",
 });
 
-export default Toggle;
+export default withGeneratedId(Toggle);
