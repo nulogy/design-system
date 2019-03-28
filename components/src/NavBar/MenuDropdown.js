@@ -187,7 +187,7 @@ class MenuDropdown extends React.Component {
             <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuDropdownButton>
           )}
         </Reference>
-        {true && (
+        {this.state.subMenuOpen && (
         <Popper placement="bottom-start">
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
