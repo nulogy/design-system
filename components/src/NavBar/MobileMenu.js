@@ -6,7 +6,7 @@ import {
   Icon,
   SubsectionTitle,
 } from "ComponentsRoot";
-import SubMenuItem from "./SubMenuItem";
+import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import SubMenuItems from "./SubMenuItems";
 import theme from "../theme";

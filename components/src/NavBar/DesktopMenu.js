@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
 import MenuDropdown from "./MenuDropdown";
-import SubMenuItem from "./SubMenuItem";
+import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
@@ -20,7 +20,7 @@ const BaseDesktopMenu = ({
           <div key={ menuItem.name }>
             <MenuDropdown labelText={ menuItem.name }>
               {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.name } { ...subMenuItem } tabIndex="-1" />
+                <SubMenuLink key={ subMenuItem.text } { ...subMenuItem } tabIndex="-1" />
               ))}
             </MenuDropdown>
           </div>
