@@ -51,8 +51,8 @@ const BaseSubMenu = ({
     style,
     placement,
     arrowProps,
-    renderArrow,
   },
+  renderArrow,
   children,
   ...props
 }) => (
@@ -64,11 +64,13 @@ const BaseSubMenu = ({
 
 BaseSubMenu.propTypes = {
   children: PropTypes.node,
+  renderArrow: PropTypes.bool,
   popperProps: PropTypes.shape({}),
 };
 
 BaseSubMenu.defaultProps = {
   children: null,
+  renderArrow: true,
   popperProps: null,
 };
 
