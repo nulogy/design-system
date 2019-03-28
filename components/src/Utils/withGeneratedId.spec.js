@@ -21,7 +21,7 @@ it("sets a generated id when id isn't specified", () => {
   expect(nodeWithId.length).toEqual(1);
 });
 
-it("sets different a different id for each component", () => {
+it("sets a different id for each component", () => {
   const SomeElement = props => (<div { ...props } />);
   const SomeElementWithId = withGeneratedId(SomeElement);
 
@@ -29,6 +29,23 @@ it("sets different a different id for each component", () => {
     <>
       <SomeElementWithId />
       <SomeElementWithId />
+    </>
+  );
+
+  const ids = wrapper.find("SomeElement").map(n => n.prop("id"));
+
+  expect(ids[0]).not.toEqual(ids[1]);
+});
+
+it("sets a different id for each individually wrapped components", () => {
+  const SomeElement = props => (<div { ...props } />);
+  const SomeElementWithId1 = withGeneratedId(SomeElement);
+  const SomeElementWithId2 = withGeneratedId(SomeElement);
+
+  const wrapper = mount(
+    <>
+      <SomeElementWithId1 />
+      <SomeElementWithId2 />
     </>
   );
 
