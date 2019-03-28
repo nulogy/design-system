@@ -5,11 +5,10 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
-import SubMenuDropdown from "./SubMenuDropdown";
 import SubMenuLink from "./SubMenuLink";
 import Icon from "../Icon/Icon";
 
-const MenuDropdownButton = styled.button({
+const SubMenuDropdownButton = styled.button({
   display: "inline-flex",
   color: theme.colors.white,
   border: "none",
@@ -52,10 +51,8 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isDropdown = menuItem => (menuItem.subMenuItems);
-
 /* eslint-disable react/destructuring-assignment */
-class MenuDropdown extends React.Component {
+class SubMenuDropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -121,7 +118,7 @@ class MenuDropdown extends React.Component {
     });
   }
 
-  menuDropdownEventHandlers() {
+  SubMenuDropdownEventHandlers() {
     return ({
       onClick: () => {
         this.showSubMenu();
@@ -184,7 +181,7 @@ class MenuDropdown extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuDropdownButton>
+            <SubMenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></SubMenuDropdownButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
@@ -195,16 +192,11 @@ class MenuDropdown extends React.Component {
               {this.props.menuData.map(subMenuItem => {
                 console.log(subMenuItem)
                 if (isDropdown(subMenuItem)) {
-                  console.log("WHY AM I HERE")
-
                   return (
-                    
-                    <SubMenuDropdown key={ subMenuItem.text } labelText={ subMenuItem.text } menuData={ subMenuItem.subMenuItems }/>
-                    
+                    <SubMenuDropdown key={ subMenuItem.text } labelText={ subMenuItem.text } menuData={ subMenuItem.subMenuItems }/>      
                   );
                 } else {
                   return (
-          
                     <SubMenuLink key={ subMenuItem.text } text={subMenuItem.text} subText={subMenuItem.subText} href={ subMenuItem.href }/>
                   );
                 }
@@ -220,18 +212,18 @@ class MenuDropdown extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-MenuDropdown.propTypes = {
+
+SubMenuDropdown.propTypes = {
   labelText: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MenuDropdown.defaultProps = {
-  children: null,
+SubMenuDropdown.defaultProps = {
   menuData: null,
   showDelay: "100",
   hideDelay: "350",
 };
 
-export default MenuDropdown;
+export default SubMenuDropdown;
