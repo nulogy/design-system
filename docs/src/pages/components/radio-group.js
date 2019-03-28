@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import groupProps from "../../shared/groupProps";
 
@@ -14,10 +14,10 @@ export default () => (
     <Helmet>
       <title>Radio Group</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Radio Group</Title>
-      <Intro>For wrapping radio buttons with a label and help text</Intro>
-    </Box>
+    <Intro>
+      <Title>Radio Group</Title>
+      <IntroText>For wrapping radio buttons with a label and help text</IntroText>
+    </Intro>
     <DocSection>
 
       <RadioGroup labelText="Setting Selection" name="settingSelection" helpText="Select a setting from the menu below:">

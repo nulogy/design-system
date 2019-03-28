@@ -5,18 +5,44 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+import { margins } from "../../shared/systemProps";
+
+const propsRows = [
+  {
+    name: "color", type: "String", "defaultValue": "darkBlue", description: "Sets color based on the theme.color object",
+  },
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Lightens text to imply that it's disabled",
+  },
+  {
+    name: "fontSize", type: "String", defaultValue: "16px", description: "Sets font size based on the theme.fontSize object",
+  },
+  {
+    name: "fontFamily", type: "String", defaultValue: "IBM Plex Sans", description: "Sets font family based on the theme.fontFamily object",
+  },
+  {
+    name: "inline", type: "Boolean", defaultValue: "false", description: "Displays text inline instead of as a block",
+  },
+  {
+    name: "lineHeight", type: "String", defaultValue: "1.5", description: "Sets line height based on the theme.lineHeight object",
+  },
+  {
+    name: "textAlign", type: "String", defaultValue: "left", description: "Sets text-align to either left, center or right",
+  },
+  ...margins,
+];
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Text</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Text</Title>
-      <Intro>Text allows you to control the font family, size colour, weight, line-height and alignment.</Intro>
-    </Box>
+    <Intro>
+      <Title>Text</Title>
+      <IntroText>Text allows you to control the font family, size colour, weight, line-height and alignment.</IntroText>
+    </Intro>
 
     <DocSection>
       <Text>Sample text</Text>
@@ -106,87 +132,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td width="100px">Prop</td>
-            <td>Type</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>color</td>
-            <td>String</td>
-            <td>Sets color based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.color</Link> object</td>
-          </tr>
-          <tr>
-            <td>disabled</td>
-            <td>String</td>
-            <td>Lightens text to imply that it's disabled</td>
-          </tr>
-          <tr>
-            <td>fontSize</td>
-            <td>String</td>
-            <td>Sets font size based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.fontSize</Link> object</td>
-          </tr>
-          <tr>
-            <td>fontFamily</td>
-            <td>String</td>
-            <td>Sets font family based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.fontFamily</Link> object</td>
-          </tr>
-          <tr>
-            <td>inline</td>
-            <td>Boolean</td>
-            <td>Displays text inline instead of as a block</td>
-          </tr>
-          <tr>
-            <td>lineHeight</td>
-            <td>String</td>
-            <td>Sets line height based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.lineHeight</Link> object</td>
-          </tr>
-          <tr>
-            <td>textAlign</td>
-            <td>String</td>
-            <td>Sets text-align to either left, center or right</td>
-          </tr>
-          <tr>
-            <td>m</td>
-            <td>String</td>
-            <td>Sets margin based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object</td>
-          </tr>
-          <tr>
-            <td>mt</td>
-            <td>String</td>
-            <td>Sets margin-top</td>
-          </tr>
-          <tr>
-            <td>mr</td>
-            <td>String</td>
-            <td>Sets margin-right</td>
-          </tr>
-          <tr>
-            <td>mb</td>
-            <td>String</td>
-            <td>Sets margin-bottom</td>
-          </tr>
-          <tr>
-            <td>ml</td>
-            <td>String</td>
-            <td>Sets margin-left</td>
-          </tr>
-          <tr>
-            <td>mx</td>
-            <td>String</td>
-            <td>Sets margin-left and margin-right</td>
-          </tr>
-          <tr>
-            <td>my</td>
-            <td>String</td>
-            <td>Sets margin-top and margin-bottom</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

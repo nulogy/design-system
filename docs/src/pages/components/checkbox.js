@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import radioProps from "../../shared/radioProps";
 
@@ -14,10 +14,10 @@ export default () => (
     <Helmet>
       <title>Checkbox</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Checkbox</Title>
-      <Intro>Checkboxes allow users to select any number of options from a list.</Intro>
-    </Box>
+    <Intro>
+      <Title>Checkbox</Title>
+      <IntroText>Checkboxes allow users to select any number of options from a list.</IntroText>
+    </Intro>
     <DocSection>
       <Checkbox id="checkbox" labelText="I am a checkbox" />
       <Highlight className="js">

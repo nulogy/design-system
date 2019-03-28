@@ -3,28 +3,30 @@ import { Helmet } from "react-helmet";
 import {
   Box, Flex, Text, Title, SectionTitle, SubsectionTitle,
 } from "@nulogy/components";
-import { Layout, Intro, DocSection } from "../../components";
+import {
+  Layout, Intro, IntroText, DocSection,
+} from "../../components";
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Typography</title>
     </Helmet>
-    <DocSection bg="whiteGrey" p="x4" borderRadius={ 1 }>
-      <Title mb="none">Typography</Title>
-      <Intro>Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.</Intro>
+    <Intro>
+      <Title>Typography</Title>
+      <IntroText>Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.</IntroText>
       <SectionTitle mt="x4">Typeface</SectionTitle>
-      <Flex>
-        <Box pr="x2">
+      <Flex flexDirection={ { small: "column", medium: "row" } }>
+        <Box width={ { small: 1, large: 1 / 2 } } mb={ { small: "x3", medium: 0 } }>
           <SubsectionTitle>IBM Plex Sans</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
-        <Box pl="x2">
+        <Box width={ { small: 1, large: 1 / 2 } }>
           <SubsectionTitle fontFamily="mono">IBM Plex Mono</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
       </Flex>
-    </DocSection>
+    </Intro>
 
     <DocSection>
       <SectionTitle>Headings</SectionTitle>

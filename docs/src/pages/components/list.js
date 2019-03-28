@@ -5,18 +5,24 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "compact", type: "Boolean", defaultValue: "false", description: "Removes margin between list items",
+  },
+];
 
 export default () => (
   <Layout>
     <Helmet>
       <title>List</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">List</Title>
-      <Intro>A standard list, available in two sizes.</Intro>
-    </Box>
+    <Intro>
+      <Title>List</Title>
+      <IntroText>A standard list, available in two sizes.</IntroText>
+    </Intro>
 
     <DocSection>
       <List mb="x3">
@@ -57,24 +63,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>compact</td>
-            <td>Boolean</td>
-            <td>False</td>
-            <td>Removes margin between list items</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

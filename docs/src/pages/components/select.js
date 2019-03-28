@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
@@ -26,13 +26,10 @@ export default () => (
     <Helmet>
       <title>Select</title>
     </Helmet>
-    <Box
-      bg="" mt="x2"
-      mb="x6"
-    >
-      <Title mb="none">Select</Title>
-      <Intro>For making one selection from a large list of options.</Intro>
-    </Box>
+    <Intro>
+      <Title>Select</Title>
+      <IntroText>For making one selection from a large list of options.</IntroText>
+    </Intro>
     <DocSection>
 
       <Select options={ options } labelText="Inventory status" id="inventory-status" />

@@ -1,12 +1,20 @@
+import PropTypes from "prop-types";
+import { Box } from "@nulogy/components";
 import styled from "styled-components";
+import { color, space } from "styled-system";
 
-const Intro = styled.p`
-    font-size: 21.333px;
-    line-height: 32px;
-    max-width: 720px;
-    color: #434d59;
-    -webkit-font-smoothing: antialiased;
-    margin-bottom: 0;
-`;
+const Intro = styled(Box)({
+},
+color,
+space,);
+
+Intro.PropTypes = {
+  color: PropTypes.string,
+  space: PropTypes.number,
+};
+
+Intro.defaultProps = {
+  pb: "x6",
+};
 
 export default Intro;

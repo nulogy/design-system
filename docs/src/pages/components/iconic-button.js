@@ -5,18 +5,27 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "disabled", type: "Boolean", defaultValue: "false", description: "Lightens the opacity and makes the button unable to be clicked.",
+  },
+  {
+    name: "icon", type: "String", defaultValue: "Required", description: "The icon to display. See the Icons component for all possible options.",
+  },
+];
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Iconic Button</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Iconic Button</Title>
-      <Intro>A button that's an icon, with or without a label.</Intro>
-    </Box>
+    <Intro>
+      <Title>Iconic Button</Title>
+      <IntroText>A button that's an icon, with or without a label.</IntroText>
+    </Intro>
 
     <DocSection>
       <IconicButton icon="delete" />
@@ -54,30 +63,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>disabled</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>Lightens the opacity and makes the button unable to be clicked.</td>
-          </tr>
-          <tr>
-            <td>icon</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>The icon to display. See <Link href="/components/icons">Icons</Link> for all possible options.</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

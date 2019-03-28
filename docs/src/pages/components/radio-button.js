@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import radioProps from "../../shared/radioProps";
 
@@ -14,10 +14,10 @@ export default () => (
     <Helmet>
       <title>Radio button</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Radio button</Title>
-      <Intro>Radio buttons allow one selection from a group of options</Intro>
-    </Box>
+    <Intro>
+      <Title>Radio button</Title>
+      <IntroText>Radio buttons allow one selection from a group of options</IntroText>
+    </Intro>
     <DocSection>
       <Radio id="radio" labelText="Radio button" />
       <Highlight className="js">

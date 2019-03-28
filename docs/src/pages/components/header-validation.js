@@ -5,18 +5,27 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, HeaderValidation, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "title", type: "String", defaultValue: "Required", description: "A heading for the error text.",
+  },
+  {
+    name: "message", type: "String", defaultValue: "Required", description: "A description of the error and how to fix it.",
+  },
+];
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Header Validation</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Header Validation</Title>
-      <Intro>Header validation informs users of errors in the form they just tried to submit.</Intro>
-    </Box>
+    <Intro>
+      <Title>Header Validation</Title>
+      <IntroText>Header validation informs users of errors in the form they just tried to submit.</IntroText>
+    </Intro>
 
     <DocSection>
       <HeaderValidation message="Instructions and description of an error" title="Error has occured ..." mb="x3">
@@ -82,30 +91,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>title</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>A heading for the error text.</td>
-          </tr>
-          <tr>
-            <td>message</td>
-            <td>String</td>
-            <td><em>Required</em></td>
-            <td>A description of the error and how to fix it.</td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>

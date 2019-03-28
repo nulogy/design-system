@@ -5,7 +5,7 @@ import {
   Box, Flex, Text, Title, SectionTitle, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection,
 } from "../../components";
 import theme from "../../../../components/src/theme";
 import anatomy from "../../images/spacing-anatomy.png";
@@ -53,10 +53,10 @@ export default () => (
     <Helmet>
       <title>Spacing</title>
     </Helmet>
-    <DocSection bg="whiteGrey" p="x4" borderRadius={ 1 }>
-      <Title mb="none">Spacing</Title>
-      <Intro>A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.</Intro>
-    </DocSection>
+    <Intro>
+      <Title>Spacing</Title>
+      <IntroText>A spacing scale is used to maintain consistent paddings between and within elements throughout our products. Sticking to a scale allows us to be more consistent and predictable, and makes our designs more harmonious.</IntroText>
+    </Intro>
 
     <DocSection>
       <SectionTitle>Scale</SectionTitle>
@@ -69,7 +69,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Example</SectionTitle>
-      <img src={ anatomy } alt="Spacing example" style={ { width: "50%" } } />
+      <img src={ anatomy } alt="Spacing example" />
     </DocSection>
 
     <DocSection>

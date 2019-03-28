@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
@@ -14,10 +14,10 @@ export default () => (
     <Helmet>
       <title>Input</title>
     </Helmet>
-    <Box mt="x2" mb="x6">
-      <Title mb="none">Input</Title>
-      <Intro>An input field that users can type into.</Intro>
-    </Box>
+    <Intro>
+      <Title>Input</Title>
+      <IntroText>An input field that users can type into.</IntroText>
+    </Intro>
     <DocSection>
       <Input id="input" labelText="Label" />
       <Highlight className="js">

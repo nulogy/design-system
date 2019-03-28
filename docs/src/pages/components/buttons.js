@@ -5,7 +5,7 @@ import {
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  DocText as Text, Layout, Intro, DocSection, PropsTable,
+  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
 
 const propsRows = [
@@ -19,7 +19,7 @@ const propsRows = [
     name: "icon", type: "String", defaultValue: "null", description: "The icon to display. See Icons for all possible options.",
   },
   {
-    name: "iconSide", type: "String", defaultValue: "right", description: "The side to display the icon"
+    name: "iconSide", type: "String", defaultValue: "right", description: "The side to display the icon",
   },
   {
     name: "fullWidth", type: "Boolean", defaultValue: "false", description: "Makes the button fill the width of its container",
@@ -31,10 +31,10 @@ export default () => (
     <Helmet>
       <title>Buttons</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title mb="none">Buttons</Title>
-      <Intro>Buttons make common actions immediately detectable and easy to perform.</Intro>
-    </Box>
+    <Intro>
+      <Title>Buttons</Title>
+      <IntroText>Buttons make common actions immediately detectable and easy to perform.</IntroText>
+    </Intro>
     <DocSection>
       <Button>Create project</Button>
       <Highlight className="js">

@@ -4,21 +4,27 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Button, Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, DocSection,
+  Layout, Intro, IntroText, DocSection, PropsTable,
 } from "../../components";
+
+const propsRows = [
+  {
+    name: "", type: "", defaultValue: "", description: "",
+  },
+];
 
 export default () => (
   <Layout>
     <Helmet>
       <title>Component name</title>
     </Helmet>
-    <Box pt="x4" mb="x6">
-      <Title m="none">Component name</Title>
-      <Intro>A short description of the component.</Intro>
-    </Box>
+    <Intro>
+      <Title>Component name</Title>
+      <IntroText>A short description of the component.</IntroText>
+    </Intro>
 
     <DocSection>
       <Button>Create project</Button>
@@ -59,24 +65,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <table>
-        <thead>
-          <tr>
-            <td>Prop</td>
-            <td>Type</td>
-            <td>Default</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <PropsTable propsRows={ propsRows } />
     </DocSection>
 
     <DocSection>
