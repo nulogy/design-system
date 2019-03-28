@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
-import { MenuDropdown } from "./MenuDropdown";
+import MenuDropdown from "./MenuDropdown";
 import SubMenuItem from "./SubMenuItem";
 import MenuLink from "./MenuLink";
 import theme from "../theme";

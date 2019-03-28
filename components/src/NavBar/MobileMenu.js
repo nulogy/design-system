@@ -8,7 +8,7 @@ import {
 } from "ComponentsRoot";
 import SubMenuItem from "./SubMenuItem";
 import MenuLink from "./MenuLink";
-import SubMenuItems from "./MenuDropdown/SubMenuItems";
+import SubMenuItems from "./SubMenuItems";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
