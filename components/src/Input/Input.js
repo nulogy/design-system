@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx, withGeneratedId } from "../Utils";
 
 const inputStyles = {
   disabled: {
@@ -89,4 +89,4 @@ Input.defaultProps = {
   requirementText: null,
 };
 
-export default Input;
+export default withGeneratedId(Input);
