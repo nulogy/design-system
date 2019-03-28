@@ -6,34 +6,23 @@ import theme from "ComponentsRoot/theme";
 import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
-import Icon from "../Icon/Icon";
+import { Text } from "ComponentsRoot";
 
 const SubMenuDropdownButton = styled.button({
-  display: "inline-flex",
-  color: theme.colors.white,
-  border: "none",
-  backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
-  textDecoration: "none",
-  verticalAlign: "middle",
-  lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
-  borderRadius: theme.radii.medium,
-  [`${Icon}`]: {
-    color: theme.colors.lightGrey,
-  },
+  display: "block",
+  padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
-    cursor: "pointer",
+    backgroundColor: theme.colors.lightGrey,
   },
   "&:disabled": {
     opacity: ".5",
   },
+  border: "none",
+  backgroundColor: "transparent",
+  textDecoration: "none",
+  textAlign: "left",
+  cursor: "pointer",
 });
 
 const keyCode = Object.freeze({
@@ -50,6 +39,8 @@ const keyCode = Object.freeze({
   "RIGHT": 39,
   "DOWN": 40,
 });
+
+const isDropdown = subMenuItem => (subMenuItem.subMenuItems);
 
 /* eslint-disable react/destructuring-assignment */
 class SubMenuDropdown extends React.Component {
@@ -181,19 +172,27 @@ class SubMenuDropdown extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <SubMenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></SubMenuDropdownButton>
+            <li>
+              <SubMenuDropdownButton tabIndex="-1" aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuDropdownEventHandlers() } ref={ ref }>
+                  <Text color={ "darkBlue" }>{ this.props.text }</Text>
+                    {this.props.subText && (
+                      <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                    {this.props.subText}
+                  </Text>
+                  )}      
+              </SubMenuDropdownButton>
+            </li>
           )}
         </Reference>
-        {this.state.subMenuOpen && (
-        <Popper placement="bottom-start">
+        {true && (
+        <Popper placement="right-start">
           {popperProps => (
-            <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItems focusIndex={ this.state.focusIndex }>
+            <SubMenu renderArrow={false} popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+              <SubMenuItems focusIndex={ undefined }>
               {this.props.menuData.map(subMenuItem => {
-                console.log(subMenuItem)
                 if (isDropdown(subMenuItem)) {
                   return (
-                    <SubMenuDropdown key={ subMenuItem.text } labelText={ subMenuItem.text } menuData={ subMenuItem.subMenuItems }/>      
+                    <SubMenuDropdown key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
                   );
                 } else {
                   return (
@@ -214,7 +213,7 @@ class SubMenuDropdown extends React.Component {
 
 
 SubMenuDropdown.propTypes = {
-  labelText: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

@@ -51,12 +51,13 @@ const BaseSubMenu = ({
     style,
     placement,
     arrowProps,
+    renderArrow,
   },
   children,
   ...props
 }) => (
   <div ref={ ref } style={ style } placement={ placement } { ...props }>
-    <Arrow { ...arrowProps } />
+    {renderArrow && <Arrow { ...arrowProps } /> }
     {children}
   </div>
 );
@@ -71,7 +72,8 @@ BaseSubMenu.defaultProps = {
   popperProps: null,
 };
 
-const SubMenu = styled(BaseSubMenu)({
+const SubMenu = styled(BaseSubMenu)(
+  ({renderArrow}) => ({
   color: subMenuStyles.nameColor,
   display: "flex",
   flexDirection: "column",
@@ -83,10 +85,18 @@ const SubMenu = styled(BaseSubMenu)({
   padding: `${theme.space.x1} 0`,
   transition: "opacity 0.3s",
   zIndex: "999999",
-  marginTop: theme.space.half,
-},
+  marginTop: renderArrow ? theme.space.half : "-9px",
+}),
 ({ style }) => ({
   ...style,
 }));
+
+SubMenu.propTypes = {
+  renderArrow: PropTypes.bool,
+};
+
+SubMenu.defaultProps = {
+  renderArrow: true,
+};
 
 export default SubMenu;
