@@ -14,10 +14,7 @@ import theme from "../theme";
 
 const navBarStyles = {
   background: theme.colors.blackBlue,
-  paddingTop: theme.space.x2,
-  paddingRight: theme.space.x3,
-  paddingBottom: theme.space.x2,
-  paddingLeft: theme.space.x4,
+  padding: `${theme.space.x2} ${theme.space.x3}`,
 };
 
 const MediumNavBar = ({
@@ -29,16 +26,14 @@ const MediumNavBar = ({
   <Box { ...props }>
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <nav>
-      <Flex justifyContent="space-between">
-        <Flex alignItems="center">
-          <DesktopMenu menuData={ menuData.primaryMenu } />
-        </Flex>
-        <Flex alignItems="center">
-          <Flex maxWidth="18em" px="x3">
-            <NavBarSearch />
+      <Flex justifyContent="space-between" alignContent="flex-end">
+        {menuData.primaryMenu && <Flex alignItems="center" pr="x3"><DesktopMenu menuData={ menuData.primaryMenu } /></Flex>}
+        <Box width={ 1 }>
+          <Flex style={ { "float": "right" } }>
+            { menuData.search && <Flex maxWidth="18em"><NavBarSearch { ...menuData.search } /></Flex>}
+            {menuData.secondaryMenu && <DesktopMenu pl="x2" menuData={ menuData.secondaryMenu } />}
           </Flex>
-          <DesktopMenu menuData={ menuData.secondaryMenu } />
-        </Flex>
+        </Box>
       </Flex>
     </nav>
   </Box>
@@ -71,10 +66,11 @@ const SmallNavBar = withMenuState(({
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <nav>
       <Flex justifyContent="flex-end">
-        <Flex maxWidth="18em" alignItems="center" px="0">
-          <NavBarSearch />
-        </Flex>
-        <MobileMenu menuData={ menuData } menuState={ menuState } display="block" />
+        {menuData.search && <Flex maxWidth="18em" alignItems="center" px="0"><NavBarSearch { ...menuData.search } /></Flex>}
+        {
+          (menuData.primaryMenu || menuData.secondaryMenu)
+            && <MobileMenu menuData={ menuData } menuState={ menuState } display="block" />
+        }
       </Flex>
     </nav>
   </Box>

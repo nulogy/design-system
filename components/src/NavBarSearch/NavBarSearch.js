@@ -9,18 +9,33 @@ import {
 } from "ComponentsRoot";
 import theme from "../theme";
 
-const BaseNavBarSearch = ({
-  name,
-  onSubmit,
-  ...props
-}) => (
-  <form { ...props } onSubmit={ onSubmit }>
-    <Flex role="search">
-      <Input id="navbar-search" type="search" aria-labelledby={ name } required placeholder="Search Nulogy ..." />
-      <button id={ name } aria-label={ name }><Icon icon="search" /></button>
-    </Flex>
-  </form>
-);
+class BaseNavBarSearch extends React.Component {
+  constructor() {
+    super();
+
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+  }
+
+  handleOnSubmit(e) {
+    const { onSubmit } = this.props;
+
+    e.preventDefault();
+    onSubmit(e);
+  }
+
+  render() {
+    const { name, ...props } = this.props;
+
+    return (
+      <form { ...props } onSubmit={ this.handleOnSubmit }>
+        <Flex role="search">
+          <Input id="navbar-search" type="search" aria-labelledby={ name } required placeholder="Search Nulogy ..." />
+          <button id={ name } aria-label={ name }><Icon icon="search" /></button>
+        </Flex>
+      </form>
+    );
+  }
+}
 
 const NavBarSearch = styled(BaseNavBarSearch)(
   {

@@ -63,8 +63,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { renderMenuItems(menuData.primaryMenu) }
-            { renderMenuItems(menuData.secondaryMenu) }
+            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu) }
+            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu) }
           </Menu>
         )
     }
@@ -94,7 +94,7 @@ const Menu = styled(Box)(() => (
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
     [`${SubsectionTitle}`]: {
-      padding: `0 ${theme.space.x4}`,
+      padding: `0 ${theme.space.x3}`,
       marginBottom: theme.space.x2,
     },
     [`${SubMenuItems}`]: {
@@ -103,7 +103,7 @@ const Menu = styled(Box)(() => (
     [`${SubMenuItem}`]: {
       maxWidth: "100%",
       "a": {
-        padding: `${theme.space.x1} ${theme.space.x6}`,
+        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x4}`,
         marginBottom: theme.space.x1,
         transition: ".2s",
         "&:hover, &:focus": {
@@ -116,7 +116,7 @@ const Menu = styled(Box)(() => (
       lineHeight: theme.lineHeights.sectionTitle,
       width: "100%",
       justifyContent: "flex-start",
-      padding: `${theme.space.x2} ${theme.space.x4}`,
+      padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
       marginBottom: theme.space.x4,
       borderRadius: "0",
     },
