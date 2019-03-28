@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
 import MenuDropdown from "./MenuDropdown";
-import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
@@ -17,12 +16,8 @@ const BaseDesktopMenu = ({
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
-          <div key={ menuItem.name }>
-            <MenuDropdown labelText={ menuItem.name }>
-              {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuLink key={ subMenuItem.text } { ...subMenuItem } tabIndex="-1" />
-              ))}
-            </MenuDropdown>
+          <div key={ menuItem.text }>
+            <MenuDropdown labelText={ menuItem.text } menuData={ menuItem.subMenuItems }/>
           </div>
         );
       } else {
