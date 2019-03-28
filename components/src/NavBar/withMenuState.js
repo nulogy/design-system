@@ -58,9 +58,7 @@ MenuState.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
-const withMenuState = MenuComponentWithoutState => ({
-  ...props
-}) => (
+const withMenuState = MenuComponentWithoutState => props => (
   <MenuState>
     {
       menuState => <MenuComponentWithoutState menuState={ menuState } { ...props } />
