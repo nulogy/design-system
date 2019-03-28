@@ -11,11 +11,9 @@ import { menuData } from "../shared/menuData";
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
-    top: 0,
-    left: 0,
-    position: "fixed",
-    overflow: "scroll",
-    height: "100%",
+    overflow: "auto",
+    height: "100vh",
+    position: isOpen ? "absolute" : null,
     width: isOpen ? "100%" : "auto",
     paddingTop: theme.space.x3,
     "@media screen and (max-width: 1024px)": {
@@ -45,6 +43,9 @@ const OpenButton = styled(IconicButton).attrs({
   top: 0,
   left: 0,
   margin: theme.space.x2,
+  "@media screen and (min-width: 1024px)": {
+    display: "none"
+  },
 });
 
 const CloseButton = styled(IconicButton).attrs({

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {
-  Box, NDSProvider,
+  Box, Flex, NDSProvider,
 } from "@nulogy/components";
 import { Helmet } from "react-helmet";
 import { Navigation } from "./Nav";
@@ -11,7 +11,7 @@ import HighlightStyles from "./HighlightStyles";
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
-    <Box pb="x2">
+    <Flex pb="x2">
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
         <meta charSet="utf-8" />
@@ -20,11 +20,11 @@ const Layout = ({ children }) => (
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
       </Helmet>
       <HighlightStyles />
+      <Navigation />
       <Box px="x3" maxWidth="620px" m="0 auto">
         {children}
       </Box>
-      <Navigation />
-    </Box>
+    </Flex>
   </NDSProvider>
 );
 
