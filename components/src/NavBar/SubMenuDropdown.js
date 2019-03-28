@@ -184,7 +184,7 @@ class SubMenuDropdown extends React.Component {
             </li>
           )}
         </Reference>
-        {true && (
+        {this.state.subMenuOpen && (
         <Popper placement="right-start">
           {popperProps => (
             <SubMenu renderArrow={false} popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
