@@ -5,7 +5,7 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
-import Icon from "../../Icon/Icon";
+import Icon from "../Icon/Icon";
 
 const MenuDropdownButton = styled.button({
   display: "inline-flex",
@@ -56,7 +56,7 @@ class MenuDropdown extends React.Component {
     super(props);
     this.state = {
       subMenuOpen: false,
-      focusIndex: 1,
+      focusIndex: 0,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
