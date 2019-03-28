@@ -27,14 +27,35 @@ const menuDataDeeper = [
   },
 ];
 
+const menuDataDeeperNoSubText = [
+  {text: "Submenu Link", href: "/"},
+  {
+    text: "Submenu Dropdown", 
+    subMenuItems: [
+      {text: "Submenu Link", href: "/"},
+      {
+        text: "Submenu Dropdown", 
+        subMenuItems: [
+          {text: "Submenu Link", href: "/"},
+        ]
+      },
+    ],
+  },
+];
+
 storiesOf("MenuDropdown", module)
   .add("MenuDropdown", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
       <MenuDropdown menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown"/>
     </Flex>
   ))
-  .add("MenuDropdown with additional levels of data", () => (
+  .add("MenuDropdown with deeper submenus", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
       <MenuDropdown menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown"/>
+    </Flex>
+  ))  
+  .add("MenuDropdown with deeper submenus and no subText", () => (
+    <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
+      <MenuDropdown menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown"/>
     </Flex>
   ));
