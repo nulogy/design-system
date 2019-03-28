@@ -4,17 +4,20 @@ import { Textarea } from "ComponentsRoot";
 
 storiesOf("Textarea", module)
   .add("Textarea", () => (
-    <Textarea id="textarea" labelText="Label" />
+    <Textarea labelText="Label" />
   ))
   .add("Textarea with all props", () => (
-    <Textarea id="textarea" labelText="Label" placeholder="Placeholder" helpText="here's some help..." requirementText="(Required)" required />
+    <Textarea labelText="Label" placeholder="Placeholder" helpText="here's some help..." requirementText="(Required)" required />
   ))
   .add("Set to disabled", () => (
-    <Textarea id="textarea" labelText="Label" disabled />
+    <Textarea labelText="Label" disabled />
   ))
   .add("Set to error", () => (
-    <Textarea id="textarea" labelText="Label" error="Please fill this out" />
+    <Textarea labelText="Label" error="Please fill this out" />
   ))
   .add("With custom number of rows", () => (
-    <Textarea id="textarea" labelText="Label" rows={ 7 } />
+    <Textarea labelText="Label" rows={ 7 } />
+  ))
+  .add("With custom id", () => (
+    <Textarea id="my-custom-id" labelText="Label" />
   ));
