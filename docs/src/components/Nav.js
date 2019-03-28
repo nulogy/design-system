@@ -12,8 +12,9 @@ const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
     overflow: "auto",
-    height: "100vh",
     position: isOpen ? "absolute" : null,
+    zIndex: 1,
+    height: "100vh",
     width: isOpen ? "100%" : "auto",
     paddingTop: theme.space.x3,
     "@media screen and (max-width: 1024px)": {
@@ -39,9 +40,6 @@ const NavItem = styled.li({
 const OpenButton = styled(IconicButton).attrs({
   icon: "menu",
 })({
-  position: "absolute",
-  top: 0,
-  left: 0,
   margin: theme.space.x2,
   "@media screen and (min-width: 1024px)": {
     display: "none"

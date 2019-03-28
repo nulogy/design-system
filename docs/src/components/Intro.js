@@ -15,7 +15,6 @@ Intro.PropTypes = {
 
 Intro.defaultProps = {
   pb: "x6",
-  pt: "x8",
 };
 
 export default Intro;

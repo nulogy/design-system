@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import {
   Box, Flex, NDSProvider,
 } from "@nulogy/components";
@@ -9,9 +10,15 @@ import theme from "../../../components/src/theme";
 
 import HighlightStyles from "./HighlightStyles";
 
+const ScrollContainer = styled.div({
+    height: "100vh",
+    width: "100%",
+    overflow: "auto"
+});
+
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
-    <Flex pb="x2">
+    <Flex flexDirection={{small: "column", large: "row"}}>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
         <meta charSet="utf-8" />
@@ -21,9 +28,12 @@ const Layout = ({ children }) => (
       </Helmet>
       <HighlightStyles />
       <Navigation />
-      <Box px="x3" maxWidth="620px" m="0 auto">
-        {children}
-      </Box>
+      <ScrollContainer>
+        <Box pt={{small: 0, large: "x8"}} px="x3" maxWidth="620px" m="0 auto">
+          {children}
+        </Box>
+      </ScrollContainer>
+
     </Flex>
   </NDSProvider>
 );
@@ -33,3 +43,8 @@ Layout.propTypes = {
 };
 
 export default Layout;
+
+
+
+// take off height/width/overflow
+// remove intro padding on small screen
