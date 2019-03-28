@@ -11,16 +11,16 @@ import theme from "../../../components/src/theme";
 import HighlightStyles from "./HighlightStyles";
 
 const ScrollContainer = styled.div({
-    height: "100vh",
-    width: "100%",
-    "@media screen and (min-width: 1024px)": {
-      overflow: "auto"
-    },
+  height: "100vh",
+  width: "100%",
+  "@media screen and (min-width: 1024px)": {
+    overflow: "auto",
+  },
 });
 
 const Layout = ({ children }) => (
   <NDSProvider theme={ theme }>
-    <Flex flexDirection={{small: "column", large: "row"}}>
+    <Flex flexDirection={ { small: "column", large: "row" } }>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />
         <meta charSet="utf-8" />
@@ -31,11 +31,10 @@ const Layout = ({ children }) => (
       <HighlightStyles />
       <Navigation />
       <ScrollContainer>
-        <Box pt={{small: 0, large: "x8"}} px="x3" maxWidth="620px" m="0 auto">
+        <Box pt={ { small: 0, large: "x8" } } px="x3" maxWidth="620px" m="0 auto">
           {children}
         </Box>
       </ScrollContainer>
-
     </Flex>
   </NDSProvider>
 );
@@ -45,7 +44,6 @@ Layout.propTypes = {
 };
 
 export default Layout;
-
 
 
 // take off height/width/overflow

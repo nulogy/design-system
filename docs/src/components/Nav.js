@@ -42,7 +42,7 @@ const OpenButton = styled(IconicButton).attrs({
 })({
   margin: theme.space.x2,
   "@media screen and (min-width: 1024px)": {
-    display: "none"
+    display: "none",
   },
 });
 
