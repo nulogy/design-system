@@ -156,6 +156,8 @@ exports[`Storyshots Input Set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Input Set to error 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Input with custom ID 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Link Link 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Link With a different color 1`] = `ReactWrapper {}`;
@@ -224,6 +226,8 @@ exports[`Storyshots Select Set to error 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Select Set to required 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Select With custom id 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Select With helpText 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Text Set to disabled 1`] = `ReactWrapper {}`;
@@ -246,6 +250,8 @@ exports[`Storyshots Textarea Textarea 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Textarea Textarea with all props 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots Textarea With custom id 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots Textarea With custom number of rows 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Controlled Toggle 1`] = `ReactWrapper {}`;
@@ -257,6 +263,8 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `ReactWrapper {}`;
 exports[`Storyshots Toggle Toggle set to disabled 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle Toggle with all props 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots Toggle With custom id 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots Toggle With long text 1`] = `ReactWrapper {}`;
 
