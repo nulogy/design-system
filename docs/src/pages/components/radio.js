@@ -12,10 +12,10 @@ import radioProps from "../../shared/radioProps";
 export default () => (
   <Layout>
     <Helmet>
-      <title>Radio button</title>
+      <title>Radio</title>
     </Helmet>
     <Intro>
-      <Title>Radio button</Title>
+      <Title>Radio</Title>
       <IntroText>Radio buttons allow one selection from a group of options</IntroText>
     </Intro>
     <DocSection>
