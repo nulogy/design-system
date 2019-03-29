@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
-import { Field, FieldLabel, InlineValidation } from "ComponentsRoot";
+import { Field, MaybeFieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
 import { subPx, withGeneratedId } from "../Utils";
 
@@ -62,13 +62,9 @@ const Input = ({
   ...props
 }) => (
   <Field>
-    {labelText ?
-      <FieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-        <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
-      </FieldLabel>  
-      :
+    <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
       <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
-    }
+    </MaybeFieldLabel>  
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );
