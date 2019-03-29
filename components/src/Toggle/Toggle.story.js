@@ -4,7 +4,7 @@ import { Toggle } from "ComponentsRoot";
 
 storiesOf("Toggle", module)
   .add("Toggle", () => (
-    <Toggle labelText="Toggle" />
+    <Toggle/>
   ))
   .add("Toggle with all props", () => (
     <Toggle labelText="Toggle" helpText="Turns setting on/off" onText="on" offText="off" defaultToggled required requirementText="(Required)" />

@@ -33,7 +33,7 @@ const Slider = styled.span(({ disabled }) => ({
   },
 }));
 
-const Switch = styled.label({
+const Switch = styled.div({
   position: "relative",
   display: "inline-flex",
   minWidth: theme.space.x6,
@@ -59,7 +59,7 @@ const ToggleInput = styled.input(({ disabled }) => ({
   },
 }));
 
-export const ToggleButton = props => {
+const ToggleButton = React.forwardRef((props, ref) => {
   const {
     disabled,
     defaultToggled,
@@ -67,6 +67,7 @@ export const ToggleButton = props => {
   return (
     <Switch>
       <ToggleInput
+        ref={ ref }
         type="checkbox"
         defaultChecked={ defaultToggled }
         { ...props }
@@ -74,7 +75,7 @@ export const ToggleButton = props => {
       <Slider disabled={ disabled } />
     </Switch>
   );
-};
+});
 
 ToggleButton.propTypes = {
   defaultToggled: PropTypes.bool,
