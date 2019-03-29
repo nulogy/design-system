@@ -127,7 +127,7 @@ class BaseToggle extends React.Component {
     return (
       <Field className={ className }>
         <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-          <ClickInputLabel inputRef={ this.inputRef } disabled={ disabled }>
+          <ClickInputLabel disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
