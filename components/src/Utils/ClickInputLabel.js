@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../theme";
 
-const InputClickableArea = styled.label(({ disabled }) => ({
+const ClickInputLabel = styled.label(({ disabled }) => ({
   cursor: disabled ? null : "pointer",
   display: "inline-flex",
   width: "auto",
@@ -12,4 +12,4 @@ const InputClickableArea = styled.label(({ disabled }) => ({
   padding: `${theme.space.half} 0`,
 }));
 
-export default InputClickableArea;
+export default ClickInputLabel;

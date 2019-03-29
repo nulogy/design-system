@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field, Text, MaybeFieldLabel } from "ComponentsRoot";
 import theme from "../theme";
-import { InputClickableArea, omit, withGeneratedId } from "../Utils";
+import { ClickInputLabel, omit, withGeneratedId } from "../Utils";
 
 const Slider = styled.span(({ disabled }) => ({
   position: "absolute",
@@ -127,7 +127,7 @@ class BaseToggle extends React.Component {
     return (
       <Field className={ className }>
         <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-          <InputClickableArea inputRef={ this.inputRef } disabled={ disabled }>
+          <ClickInputLabel inputRef={ this.inputRef } disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
@@ -140,7 +140,7 @@ class BaseToggle extends React.Component {
                 {toggled ? onText : offText}
             </Text>
             )}
-          </InputClickableArea>
+          </ClickInputLabel>
         </MaybeFieldLabel>
       </Field>
     );
