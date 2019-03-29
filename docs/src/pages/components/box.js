@@ -54,10 +54,10 @@ export default () => (
         <SubsectionTitle>Width</SubsectionTitle>
         <Text>Width can be set using a fraction or string.</Text>
         <Box bg="lightBlue" p="x3" width={ 1 / 2 }>Half</Box>
-        <Box bg="lightBlue" p="x3" width="400px">400px</Box>
+        <Box bg="lightBlue" p="x3" width="200px">200px</Box>
         <Highlight className="js">
           {`<Box width={1/2}>Half</Box>
-<Box width="400px">400px</Box>`}
+<Box width="200px">200px</Box>`}
         </Highlight>
       </Box>
       <Box mb="x4">

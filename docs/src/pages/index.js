@@ -25,7 +25,7 @@ const IndexPage = () => (
       <Box width={ { small: 1, medium: 1 / 2 } }>
         <SectionTitle mb="x3">Components</SectionTitle>
         <Text mb="x3">Built using React, components are tested interface design patterns designed to ensure a consistent experience for our users.</Text>
-        <PrimaryButton as="a" href="components/Box">Use our components</PrimaryButton>
+        <PrimaryButton as="a" href="components/box">Use our components</PrimaryButton>
       </Box>
     </Flex>
   </Layout>
