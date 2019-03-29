@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   Box, PrimaryButton, Flex, Text, Title, SectionTitle,
 } from "@nulogy/components";
@@ -6,6 +7,9 @@ import { Intro, IntroText, Layout } from "../components";
 
 const IndexPage = () => (
   <Layout>
+    <Helmet>
+      <meta name="description" content="The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices." />
+    </Helmet>
     <Intro>
       <Title>Nulogy Design System</Title>
       <IntroText>The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.</IntroText>
