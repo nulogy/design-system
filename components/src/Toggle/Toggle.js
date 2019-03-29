@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Field, Text, MaybeFieldLabel } from "ComponentsRoot";
+import { Field, Text, RequirementText, HelpText, Box } from "ComponentsRoot";
 import theme from "../theme";
 import { ClickInputLabel, omit, withGeneratedId } from "../Utils";
 
@@ -87,6 +87,32 @@ ToggleButton.defaultProps = {
   disabled: false,
 };
 
+const MaybeToggleTitle = ({
+  labelText,
+  requirementText,
+  helpText,
+  children,
+  ...props
+}) => (
+  labelText
+  ? (
+    <Text { ...props }>
+      <Box mb={ children && "x1" }>
+        {labelText}
+        {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
+        {helpText && (<HelpText>{helpText}</HelpText>)}
+      </Box>
+      {children}
+    </Text>
+  )
+  : (
+    <>
+      {children}
+    </>
+  )
+
+);
+
 class BaseToggle extends React.Component {
   constructor(props) {
     super();
@@ -126,22 +152,22 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Field className={ className }>
-        <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-          <ClickInputLabel disabled={ disabled }>
+        <MaybeToggleTitle aria-labelledby={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+          <ClickInputLabel as={"div"} onClick={ ()=>{this.inputRef.current.click()} } disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
               required={ required } aria-required={ required }
               aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
-              { ...props } ref={ this.inputRef}
+              { ...props } ref={ this.inputRef }
             />
             {(onText || offText) && (
-            <Text disabled={ disabled } mb="none" ml="x1">
+            <Text disabled={ disabled } mb="none" ml="x1" >
                 {toggled ? onText : offText}
             </Text>
             )}
           </ClickInputLabel>
-        </MaybeFieldLabel>
+        </MaybeToggleTitle>
       </Field>
     );
   }
