@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
       </Helmet>
       <HighlightStyles />
       <Navigation />
-      <Box ml={ { small: 0, large: "260px" } }>
+      <Box ml={ { small: 0, large: "220px" } }>
         <Box pt={ { small: 0, large: "x8" } } px="x3" maxWidth="740px" m="0 auto">
           {children}
         </Box>
