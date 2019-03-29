@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import { RequirementText, HelpText } from "ComponentsRoot";
+import { Box, RequirementText, HelpText } from "ComponentsRoot";
 import theme from "../theme";
 
 const Label = styled.label(
@@ -18,17 +18,22 @@ const BaseFieldLabel = ({
   requirementText,
   helpText,
   htmlFor,
+  children,
   ...props
 }) => (
   <Label style={ { display: "block" } } htmlFor={ htmlFor } { ...props }>
-    {labelText}
-    {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
-    {helpText && (<HelpText>{helpText}</HelpText>)}
+    <Box mb={children && "x1"}> 
+      {labelText}
+      {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
+      {helpText && (<HelpText>{helpText}</HelpText>)}
+    </Box>
+    {children}
   </Label>
 );
 
 BaseFieldLabel.propTypes = {
   labelText: PropTypes.string.isRequired,
+  children: PropTypes.node,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
   htmlFor: PropTypes.string,
@@ -37,6 +42,7 @@ BaseFieldLabel.propTypes = {
 };
 
 BaseFieldLabel.defaultProps = {
+  children: null,
   requirementText: null,
   helpText: null,
   htmlFor: undefined,
