@@ -1,12 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import {
   Box, Link, SubsectionTitle, IconicButton, List,
 } from "@nulogy/components";
 import logo from "../images/nulogy.svg";
 import theme from "../../../components/src/theme";
 import { menuData } from "../shared/menuData";
+
+const LockBody = createGlobalStyle(
+  ({ isOpen }) => ({
+    body: {
+      height: isOpen ? "100%" : null,
+      overflow: isOpen ? "hidden" : null,
+    }
+  })
+);
 
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
@@ -96,6 +105,7 @@ class Navigation extends React.Component {
     return (
       <>
         <OpenButton onClick={ this.openMenu } />
+        <LockBody isOpen={ this.state.menuOpen } />
         <NavContainer isOpen={ this.state.menuOpen }>
           <CloseButton isOpen={ this.state.menuOpen } onClick={ this.closeMenu } />
           <Box pt="x4" pb="0" px="x4">
