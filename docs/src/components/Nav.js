@@ -21,6 +21,7 @@ const NavContainer = styled(Box)(
     height: "100%",
     width: isOpen ? "100%" : "260px",
     paddingTop: theme.space.x3,
+    "-webkit-overflow-scrolling": "touch",
     "@media screen and (max-width: 1024px)": {
       display: isOpen ? "block" : "none",
     },
