@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import {
-  Box, Flex, NDSProvider,
+  Box, NDSProvider,
 } from "@nulogy/components";
 import { Helmet } from "react-helmet";
 import { Navigation } from "./Nav";
