@@ -1,42 +1,45 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 
+/* eslint-disable react/destructuring-assignment */
 class BaseInputClickableArea extends React.Component {
   constructor(props) {
     super(props);
     this.childRef = [];
   }
 
-  clickChild() {
+  clickChild(inputRef) {
     if (!this.props.disabled) {
-      for (let index = 0; index < this.childRef.length; index++) {
-        this.childRef[index].click();
-      }
+      inputRef.current.click();
     }
   }
 
   render() {
     const {
       children,
+      inputRef,
       ...props
     } = this.props;
     return (
-      <div { ...props } onClick={ () => (this.clickChild()) }>
-        { React.Children.map(this.props.children, ((child, index) => {
-          if (child !== null) {
-            return(
-              React.cloneElement(child, {
-                ref: input => { this.childRef[index] = input; },
-              })
-            );
-          }
-        } ))
-      }
+      <div { ...props } onClick={ () => (this.clickChild(inputRef)) }>
+        { children }
       </div>
     );
   }
 }
+/* eslint-enable react/destructuring-assignment */
+
+BaseInputClickableArea.propTypes = {
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
+};
+
+BaseInputClickableArea.defaultProps = {
+  disabled: false,
+  children: null,
+};
 
 const InputClickableArea = styled(BaseInputClickableArea)(({ disabled }) => ({
   cursor: disabled ? null : "pointer",
