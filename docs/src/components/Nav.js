@@ -11,7 +11,7 @@ import { menuData } from "../shared/menuData";
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
-    position: "fixed",
+    position: isOpen ? "absolute" : "fixed",
     top: 0,
     right: 0,
     bottom: 0,
