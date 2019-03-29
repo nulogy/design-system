@@ -12,7 +12,7 @@ const IndexPage = () => (
     </Intro>
 
     <Flex flexDirection={ { small: "column", medium: "row" } }>
-      <Box width={ { small: 1, medium: 1 / 2 } } mb="x3">
+      <Box width={ { small: 1, medium: 1 / 2 } } mb="x6">
         <SectionTitle mb="x3">Visual Style</SectionTitle>
         <Text mb="x3">Learn about the style that makes up Nulogy applications; including logo usage, typography, our colour system, iconography and spacing.</Text>
         <PrimaryButton as="a" href="/style/colour">Use our visual style</PrimaryButton>
