@@ -11,12 +11,14 @@ import { menuData } from "../shared/menuData";
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
-    position: isOpen ? "absolute" : "fixed",
+    position: "fixed",
     top: 0,
+    right: 0,
+    bottom: 0,
     left: 0,
     overflow: "scroll",
     zIndex: 1,
-    height: "100vh",
+    height: "100%",
     width: isOpen ? "100%" : "260px",
     paddingTop: theme.space.x3,
     "@media screen and (max-width: 1024px)": {
@@ -100,10 +102,10 @@ class Navigation extends React.Component {
           </Box>
           <Box p="x4">
             {menuData.map(menuItem => (
-              <List key={menuItem.name} mb="x4" p="0">
+              <List key={ menuItem.name } mb="x4" p="0">
                 <SubsectionTitle>{menuItem.name}</SubsectionTitle>
                 {menuItem.links.map(menuLink => (
-                  <NavItem key={menuLink.href}><Link href={ menuLink.href } underline={ false }>{menuLink.name}</Link></NavItem>
+                  <NavItem key={ menuLink.href }><Link href={ menuLink.href } underline={ false }>{menuLink.name}</Link></NavItem>
                 ))}
               </List>
             ))}
