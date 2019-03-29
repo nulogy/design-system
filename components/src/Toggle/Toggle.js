@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Field, Text, FieldLabel } from "ComponentsRoot";
+import { Field, Text, MaybeFieldLabel } from "ComponentsRoot";
 import theme from "../theme";
 import { InputClickableArea, omit, withGeneratedId } from "../Utils";
 
@@ -124,21 +124,22 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Field className={ className }>
-        {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-        <InputClickableArea disabled={ disabled }>
-          <ToggleButton
-            id={ id }
-            checked={ toggled } onChange={ onChange } disabled={ disabled }
-            required={ required } aria-required={ required }
-            aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
-            { ...props }
-          />
-          {(onText || offText) && (
-          <Text disabled={ disabled } mb="none" ml="x1">
-              {toggled ? onText : offText}
-          </Text>
-          )}
-        </InputClickableArea>
+        <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+          <InputClickableArea disabled={ disabled }>
+            <ToggleButton
+              id={ id }
+              checked={ toggled } onChange={ onChange } disabled={ disabled }
+              required={ required } aria-required={ required }
+              aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
+              { ...props }
+            />
+            {(onText || offText) && (
+            <Text disabled={ disabled } mb="none" ml="x1">
+                {toggled ? onText : offText}
+            </Text>
+            )}
+          </InputClickableArea>        
+        </MaybeFieldLabel>
       </Field>
     );
   }
