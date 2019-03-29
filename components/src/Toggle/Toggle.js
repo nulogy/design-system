@@ -152,13 +152,13 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Field className={ className }>
-        <MaybeToggleTitle aria-labelledby={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+        <MaybeToggleTitle id={ id+"-label" } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
           <ClickInputLabel as={"div"} onClick={ ()=>{this.inputRef.current.click()} } disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
               required={ required } aria-required={ required }
-              aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
+              aria-invalid={ error } aria-labelledby={ id+"-label" } onClick={ e => { this.handleClick(e); } }
               { ...props } ref={ this.inputRef }
             />
             {(onText || offText) && (
