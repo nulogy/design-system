@@ -34,14 +34,14 @@ export default () => (
         <ListItem><Link href="https://www.sketch.com/">Sketch</Link> as our design tool for creating high-fidelity mockups</ListItem>
         <ListItem><Link href="https://www.abstract.com/">Abstract</Link> for collaboration and version control of Sketch assets</ListItem>
         <ListItem><Link href="https://www.ibm.com/plex/">IBM Plex</Link> as a Nulogy's sole typeface</ListItem>
-        <ListItem><Link href="https://share.goabstract.com/2b13ee68-fe6e-4b6e-a5da-8965050f4908">NDS UI kit</Link> as a library of styles, symbols and templates</ListItem>
-        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Box&selectedStory=Box&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">Stroybook</Link> as a component reference guide</ListItem>
+        <ListItem><Link href="https://share.goabstract.com/2b13ee68-fe6e-4b6e-a5da-8965050f4908">NDS UI kit</Link> as a library of styles, symbols, and templates</ListItem>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Box&selectedStory=Box&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">Storybook</Link> as a component reference guide</ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Understanding NDS visual language</SectionTitle>
-      <Text>To be effective at using NDS design system designers should familiarize themselves with basics of NDS visual language. Following articles provide good starting point:</Text>
+      <Text>To be effective at using NDS design system designers should familiarize themselves with the basics of NDS visual language. Following articles provide a good starting point:</Text>
       <List>
         <ListItem><Link href="/style/colour/">Colour</Link></ListItem>
         <ListItem><Link href="/style/spacing/">Spacing</Link></ListItem>
@@ -52,7 +52,7 @@ export default () => (
       <SectionTitle>Designing with NDS</SectionTitle>
       <DocSubsection mb="x6">
         <SubsectionTitle>Starting a project</SubsectionTitle>
-        <Text mb="x3">Creating a project in Abstract creates initial Sketch file and makes an initial commit. By default all projects are visible to all memebers of Nulogy organization.</Text>
+        <Text mb="x3">Creating a project in Abstract creates initial Sketch file and makes an initial commit. By default, all projects are visible to all members of Nulogy organization.</Text>
         <img src={ newProject } alt="Creating a new project in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
@@ -85,21 +85,20 @@ export default () => (
         </Box>
         <Box mb="x3">
           <Text mb="x2" color="darkGrey">Templates</Text>
-          <Text>Comming soon ...</Text>
+          <Text>Coming soon ...</Text>
         </Box>
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Commiting changes</SubsectionTitle>
-        <Text mb="x3">To keep design updates tracable changes should be commited after each meaningful change.</Text>
+        <SubsectionTitle>Committing changes</SubsectionTitle>
+        <Text mb="x3">To keep design updates traceable changes should be committed after each meaningful change.</Text>
         <img src={ commiting } alt="Commiting in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Merging</SubsectionTitle>
-        <Text mb="x3">When design was approved (Proccess TBD) it should be merged into parent branch or master.</Text>
+        <Text mb="x3">When the design was approved (Process TBD) it should be merged into the parent branch or master.</Text>
         <img src={ merging} alt="Merging in Abstract animation" />
       </DocSubsection>
     </DocSection>
-
     <DocSection>
       <SectionTitle>Related articles</SectionTitle>
       <ListItem><Link href="/guides/developers">Developer's guide</Link></ListItem>
