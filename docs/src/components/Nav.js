@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import {
   Box, Link, SubsectionTitle, IconicButton, List,
 } from "@nulogy/components";
@@ -8,15 +8,29 @@ import logo from "../images/nulogy.svg";
 import theme from "../../../components/src/theme";
 import { menuData } from "../shared/menuData";
 
+const LockBody = createGlobalStyle(
+  ({ isOpen }) => ({
+    body: {
+      height: isOpen ? "100%" : null,
+      overflow: isOpen ? "hidden" : null,
+    },
+  })
+);
+
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
-    overflow: "auto",
-    position: isOpen ? "absolute" : null,
+    position: isOpen ? "absolute" : "fixed",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    overflow: "scroll",
     zIndex: 1,
-    height: "100vh",
-    width: isOpen ? "100%" : "auto",
+    height: "100%",
+    width: isOpen ? "100%" : "220px",
     paddingTop: theme.space.x3,
+    "-webkit-overflow-scrolling": "touch",
     "@media screen and (max-width: 1024px)": {
       display: isOpen ? "block" : "none",
     },
@@ -91,6 +105,7 @@ class Navigation extends React.Component {
     return (
       <>
         <OpenButton onClick={ this.openMenu } />
+        <LockBody isOpen={ this.state.menuOpen } />
         <NavContainer isOpen={ this.state.menuOpen }>
           <CloseButton isOpen={ this.state.menuOpen } onClick={ this.closeMenu } />
           <Box pt="x4" pb="0" px="x4">
@@ -98,10 +113,10 @@ class Navigation extends React.Component {
           </Box>
           <Box p="x4">
             {menuData.map(menuItem => (
-              <List mb="x4" p="0">
+              <List key={ menuItem.name } mb="x4" p="0">
                 <SubsectionTitle>{menuItem.name}</SubsectionTitle>
                 {menuItem.links.map(menuLink => (
-                  <NavItem><Link href={ menuLink.href } underline={ false }>{menuLink.name}</Link></NavItem>
+                  <NavItem key={ menuLink.href }><Link href={ menuLink.href } underline={ false }>{menuLink.name}</Link></NavItem>
                 ))}
               </List>
             ))}
