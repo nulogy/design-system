@@ -138,7 +138,7 @@ class BaseToggle extends React.Component {
                 {toggled ? onText : offText}
             </Text>
             )}
-          </InputClickableArea>        
+          </InputClickableArea>
         </MaybeFieldLabel>
       </Field>
     );

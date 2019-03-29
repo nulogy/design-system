@@ -64,7 +64,7 @@ const Input = ({
   <Field>
     <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
       <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
-    </MaybeFieldLabel>  
+    </MaybeFieldLabel>
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );

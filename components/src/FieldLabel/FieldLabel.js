@@ -22,7 +22,7 @@ const BaseFieldLabel = ({
   ...props
 }) => (
   <Label style={ { display: "block" } } htmlFor={ htmlFor } { ...props }>
-    <Box mb={children && "x1"}> 
+    <Box mb={ children && "x1" }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
       {helpText && (<HelpText>{helpText}</HelpText>)}
