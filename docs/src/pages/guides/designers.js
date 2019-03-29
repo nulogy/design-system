@@ -48,49 +48,51 @@ export default () => (
         <ListItem><Link href="/style/typography/">Typography</Link></ListItem>
       </List>
     </DocSection>
-
-    {/* <DocSection>
-      <SectionTitle>Abstract</SectionTitle>
-      <Text>Abstract provides you with an easy way to create a project, link NDS UI kit and make the project sharable within Nulogy organization.</Text>
-    </DocSection> */}
-
     <DocSection>
       <SectionTitle>Designing with NDS</SectionTitle>
       <DocSubsection mb="x6">
         <SubsectionTitle>Starting a project</SubsectionTitle>
-        <Text>Creating a project in Abstract creates initial Sketch file and makes an initial commit. By default all projects are visible to all memebers of Nulogy organization.</Text>
+        <Text mb="x3">Creating a project in Abstract creates initial Sketch file and makes an initial commit. By default all projects are visible to all memebers of Nulogy organization.</Text>
         <img src={ newProject } alt="Creating a new project in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Linking NDS UI kit</SubsectionTitle>
-        <Text>To get access to NDS component symbols and colour and layer styles you need to link NDS-ui-kit.sketch library from NDS project to your project.</Text>
+        <Text mb="x3">To get access to NDS component symbols and colour and layer styles you need to link NDS-ui-kit.sketch library from NDS project to your project.</Text>
         <img src={ linkingNDS } alt="Linking NDS UI kit in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Branching</SubsectionTitle>
-        <Text>Edits to Sketch file are done in the new branch that needs to be created in Abstract.</Text>
+        <Text mb="x3">Edits to Sketch files are done in the new branch that is created in Abstract.</Text>
         <img src={ branching } alt="Branching in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Adjusting Sketch settings</SubsectionTitle>
-        <Text>It’s helpful to have Nudging settings and Grid settings adjusted to NDS’s <Link href="/style/spacing/">spacing scale</Link>.</Text>
+        <Text mb="x3">It’s helpful to have Nudging settings and Grid settings adjusted to NDS’s <Link href="/style/spacing/">spacing scale</Link>.</Text>
         <img src={ settings } alt="Adjusting Sketch settings animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle mb="x3">Working with NDS</SubsectionTitle>
+        <SubsectionTitle>Working with NDS</SubsectionTitle>
         <Box mb="x3">
-          <Text>Text styles</Text>
+          <Text mb="x2" color="darkGrey">Text styles</Text>
           <img src={ textStyle } alt="NDS text style animation" /></Box>
-        <Box mb="x3"><Text>Symbols</Text><img src={ symbol } alt="NDS symbol animation" /></Box>
-        <Box mb="x3"><Text>Layer styles</Text><img src={ colourStyle } alt="NDS layer style animation" /></Box>
+        <Box mb="x3">
+          <Text mb="x2" color="darkGrey">Symbols</Text>
+          <img src={ symbol } alt="NDS symbol animation" />
+        </Box>
+        <Box mb="x3">
+          <Text mb="x2" color="darkGrey">Layer styles</Text>
+          <img src={ colourStyle } alt="NDS layer style animation" />
+        </Box>
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Commiting changes and merging</SubsectionTitle>
+        <SubsectionTitle>Commiting changes</SubsectionTitle>
+        <Text mb="x3">To keep design updates tracable changes should be commited after each meaningful change.</Text>
         <img src={ commiting } alt="Commiting in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Merging</SubsectionTitle>
-        <img src={ merging} alt="CMerging in Abstract animation" />
+        <Text mb="x3">When design was approved (Proccess TBD) it should be merged into parent branch or master.</Text>
+        <img src={ merging} alt="Merging in Abstract animation" />
       </DocSubsection>
     </DocSection>
 
