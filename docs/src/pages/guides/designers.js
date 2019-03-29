@@ -83,6 +83,10 @@ export default () => (
           <Text mb="x2" color="darkGrey">Layer styles</Text>
           <img src={ colourStyle } alt="NDS layer style animation" />
         </Box>
+        <Box mb="x3">
+          <Text mb="x2" color="darkGrey">Templates</Text>
+          <Text>Comming soon ...</Text>
+        </Box>
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Commiting changes</SubsectionTitle>
