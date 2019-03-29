@@ -11,11 +11,13 @@ import { menuData } from "../shared/menuData";
 const NavContainer = styled(Box)(
   ({ isOpen }) => ({
     background: theme.colors.whiteGrey,
-    overflow: "auto",
-    position: isOpen ? "absolute" : null,
+    position: isOpen ? "absolute" : "fixed",
+    top: 0,
+    left: 0,
+    overflow: "scroll",
     zIndex: 1,
     height: "100vh",
-    width: isOpen ? "100%" : "auto",
+    width: isOpen ? "100%" : "260px",
     paddingTop: theme.space.x3,
     "@media screen and (max-width: 1024px)": {
       display: isOpen ? "block" : "none",
