@@ -106,7 +106,7 @@ const BaseRadio = props => {
       </ClickInputLabel>
     </Box>
   );
-  };
+};
 
 BaseRadio.propTypes = {
   labelText: PropTypes.string.isRequired,

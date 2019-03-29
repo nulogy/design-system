@@ -1,91 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Field, Text, RequirementText, HelpText, Box } from "ComponentsRoot";
+import {
+  Field, Text, RequirementText, HelpText, Box,
+} from "ComponentsRoot";
 import theme from "../theme";
 import { ClickInputLabel, omit, withGeneratedId } from "../Utils";
-
-const Slider = styled.span(({ disabled }) => ({
-  position: "absolute",
-  height: theme.space.x3,
-  width: theme.space.x6,
-  top: "0",
-  right: "0",
-  bottom: "0",
-  left: "0",
-  backgroundColor: theme.colors.lightGrey,
-  borderRadius: "12px",
-  transition: ".2s ease",
-  cursor: (disabled ? null : "pointer"),
-  "&:before": {
-    content: "''",
-    position: "absolute",
-    height: theme.space.x3,
-    width: theme.space.x3,
-    left: "0px",
-    top: "0px",
-    borderRadius: theme.radii.circle,
-    boxSizing: "border-box",
-    border: "solid 1px",
-    borderColor: (disabled ? theme.colors.lightGrey : theme.colors.grey),
-    backgroundColor: (disabled ? theme.colors.whiteGrey : theme.colors.white),
-    transition: ".2s ease",
-  },
-}));
-
-const Switch = styled.div({
-  position: "relative",
-  display: "inline-flex",
-  minWidth: theme.space.x6,
-  minHeight: theme.space.x3,
-  "input": {
-    opacity: "0",
-    width: "1px",
-    height: "1px",
-  },
-});
-
-const ToggleInput = styled.input(({ disabled }) => ({
-  [`&:checked + ${Slider}:before`]: {
-    transform: "translateX(24px)",
-    backgroundColor: (disabled ? theme.colors.lightGrey : theme.colors.darkBlue),
-    borderColor: (disabled ? theme.colors.whiteGrey : theme.colors.darkBlue),
-  },
-  [`&:checked + ${Slider}`]: {
-    backgroundColor: (disabled ? theme.colors.whiteGrey : theme.colors.lightBlue),
-  },
-  [`&:focus + ${Slider}:before`]: {
-    boxShadow: (disabled ? null : `0 0 6px ${theme.colors.blue}`),
-  },
-}));
-
-const ToggleButton = React.forwardRef((props, ref) => {
-  const {
-    disabled,
-    defaultToggled,
-  } = props;
-  return (
-    <Switch>
-      <ToggleInput
-        ref={ ref }
-        type="checkbox"
-        defaultChecked={ defaultToggled }
-        { ...props }
-      />
-      <Slider disabled={ disabled } />
-    </Switch>
-  );
-});
-
-ToggleButton.propTypes = {
-  defaultToggled: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
-
-ToggleButton.defaultProps = {
-  defaultToggled: undefined,
-  disabled: false,
-};
+import ToggleButton from "./ToggleButton";
 
 const MaybeToggleTitle = ({
   labelText,
@@ -95,23 +16,36 @@ const MaybeToggleTitle = ({
   ...props
 }) => (
   labelText
-  ? (
-    <Text { ...props }>
-      <Box mb={ children && "x1" }>
-        {labelText}
-        {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
-        {helpText && (<HelpText>{helpText}</HelpText>)}
-      </Box>
-      {children}
-    </Text>
-  )
-  : (
-    <>
-      {children}
-    </>
-  )
-
+    ? (
+      <Text { ...props }>
+        <Box mb={ children && "x1" }>
+          {labelText}
+          {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
+          {helpText && (<HelpText>{helpText}</HelpText>)}
+        </Box>
+        {children}
+      </Text>
+    )
+    : (
+      <>
+        {children}
+      </>
+    )
 );
+
+MaybeToggleTitle.propTypes = {
+  labelText: PropTypes.string,
+  children: PropTypes.node,
+  requirementText: PropTypes.string,
+  helpText: PropTypes.string,
+};
+
+MaybeToggleTitle.defaultProps = {
+  labelText: null,
+  children: null,
+  requirementText: null,
+  helpText: null,
+};
 
 class BaseToggle extends React.Component {
   constructor(props) {
@@ -152,17 +86,17 @@ class BaseToggle extends React.Component {
     } = this.state;
     return (
       <Field className={ className }>
-        <MaybeToggleTitle id={ labelText+"-label" } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-          <ClickInputLabel as={"div"} onClick={ ()=>{this.inputRef.current.click()} } disabled={ disabled }>
+        <MaybeToggleTitle id={ `${labelText}-label` } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+          <ClickInputLabel as="div" onClick={ () => { this.inputRef.current.click(); } } disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
               required={ required } aria-required={ required }
-              aria-invalid={ error } aria-labelledby={ labelText+"-label" } onClick={ e => { this.handleClick(e); } }
+              aria-invalid={ error } aria-labelledby={ `${labelText}-label` } onClick={ e => { this.handleClick(e); } }
               { ...props } ref={ this.inputRef }
             />
             {(onText || offText) && (
-            <Text disabled={ disabled } mb="none" ml="x1" >
+            <Text disabled={ disabled } mb="none" ml="x1">
                 {toggled ? onText : offText}
             </Text>
             )}
