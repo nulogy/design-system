@@ -59,18 +59,21 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
-  id,
   ...props
 }) => (
   <Field>
-    {labelText && <FieldLabel htmlFor={ id } labelText={ labelText } requirementText={ requirementText } helpText={ helpText } mb="x1" />}
-    <StyledInput aria-invalid={ !!error } aria-required={ required } id={ id } error={ error } { ...props } />
+    {labelText ?
+      <FieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+        <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
+      </FieldLabel>  
+      :
+      <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
+    }
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );
 
 Input.propTypes = {
-  id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   error: PropTypes.string,
   required: PropTypes.bool,
