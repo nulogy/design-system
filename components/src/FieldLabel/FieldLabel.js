@@ -17,11 +17,10 @@ const BaseFieldLabel = ({
   labelText,
   requirementText,
   helpText,
-  htmlFor,
   children,
   ...props
 }) => (
-  <Label style={ { display: "block" } } htmlFor={ htmlFor } { ...props }>
+  <Label style={ { display: "block" } } { ...props }>
     <Box mb={ children && "x1" }>
       {labelText}
       {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
@@ -36,7 +35,6 @@ BaseFieldLabel.propTypes = {
   children: PropTypes.node,
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
-  htmlFor: PropTypes.string,
   id: PropTypes.string,
   ...space.PropTypes,
 };
@@ -45,7 +43,6 @@ BaseFieldLabel.defaultProps = {
   children: null,
   requirementText: null,
   helpText: null,
-  htmlFor: undefined,
   id: undefined,
 };
 
