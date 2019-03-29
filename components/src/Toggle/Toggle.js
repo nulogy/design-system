@@ -89,11 +89,12 @@ ToggleButton.defaultProps = {
 
 class BaseToggle extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       toggled: !!(props.toggled || props.defaultToggled),
     };
     this.handleClick = this.handleClick.bind(this);
+    this.inputRef = React.createRef();
   }
 
   handleClick(e) {
@@ -126,13 +127,13 @@ class BaseToggle extends React.Component {
     return (
       <Field className={ className }>
         <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-          <InputClickableArea disabled={ disabled }>
+          <InputClickableArea inputRef={ this.inputRef } disabled={ disabled }>
             <ToggleButton
               id={ id }
               checked={ toggled } onChange={ onChange } disabled={ disabled }
               required={ required } aria-required={ required }
               aria-invalid={ error } onClick={ e => { this.handleClick(e); } }
-              { ...props }
+              { ...props } ref={ this.inputRef}
             />
             {(onText || offText) && (
             <Text disabled={ disabled } mb="none" ml="x1">

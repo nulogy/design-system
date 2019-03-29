@@ -84,36 +84,29 @@ const RadioInput = styled.input(props => ({
   },
 }));
 
-class BaseRadio extends React.Component {
-  constructor() {
-    super();
-    this.inputRef = React.createRef();
-  }
-
-  render() {
-    const {
-      className,
-      labelText,
-      disabled,
-      checked,
-      required,
-      error,
-    } = this.props;
-    return (
-      <Box className={ className }>
-        <InputClickableArea inputRef={ this.inputRef } disabled={ disabled }>
-          <RadioInput
-            type="radio" aria-checked={ checked } { ...this.props }
-            required={ required } aria-required={ required }
-            aria-invalid={ error } ref={ this.inputRef }
-          />
-          <VisualRadio disabled={ disabled } checked={ checked } />
-          <Text inline disabled={ disabled }> {labelText} </Text>
-        </InputClickableArea>
-      </Box>
-    );
+const BaseRadio = props => {
+  const {
+    className,
+    labelText,
+    disabled,
+    checked,
+    required,
+    error,
+  } = props;
+  return (
+    <Box className={ className }>
+      <InputClickableArea disabled={ disabled }>
+        <RadioInput
+          type="radio" aria-checked={ checked } { ...props }
+          required={ required } aria-required={ required }
+          aria-invalid={ error }
+        />
+        <VisualRadio disabled={ disabled } checked={ checked } />
+        <Text inline disabled={ disabled }> {labelText} </Text>
+      </InputClickableArea>
+    </Box>
+  );
   };
-}
 
 BaseRadio.propTypes = {
   labelText: PropTypes.string.isRequired,
