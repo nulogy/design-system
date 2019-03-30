@@ -52,17 +52,17 @@ export default () => (
       <SectionTitle>Designing with NDS</SectionTitle>
       <DocSubsection mb="x6">
         <SubsectionTitle>Starting a project</SubsectionTitle>
-        <Text mb="x3">Creating a project in Abstract creates initial Sketch file and makes an initial commit. By default, all projects are visible to all members of Nulogy organization.</Text>
+        <Text mb="x3">Creating a project in Abstract creates Sketch file and makes an initial commit to the master branch. By default, all projects are visible to all members of Nulogy organization. More about projects can be found <Link href="https://www.abstract.com/help/projects/">here</Link>.</Text>
         <img src={ newProject } alt="Creating a new project in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Linking NDS UI kit</SubsectionTitle>
-        <Text mb="x3">To get access to NDS component symbols and colour and layer styles you need to link NDS-ui-kit.sketch library from NDS project to your project.</Text>
+        <Text mb="x3">To get access to NDS component symbols, and colour and layer styles you need to link NDS-ui-kit.sketch library from NDS project to your project. More about libraries can be found <Link href="https://www.abstract.com/help/libraries/">here</Link>.</Text>
         <img src={ linkingNDS } alt="Linking NDS UI kit in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Branching</SubsectionTitle>
-        <Text mb="x3">Edits to Sketch files are done in the new branch that is created in Abstract.</Text>
+        <Text mb="x3">Edits to Sketch files are done in the new branch that is created in Abstract. More about branching can be found <Link href="https://www.abstract.com/help/branches/">here</Link>.</Text>
         <img src={ branching } alt="Branching in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
@@ -90,18 +90,20 @@ export default () => (
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Committing changes</SubsectionTitle>
-        <Text mb="x3">To keep design updates traceable changes should be committed after each meaningful change.</Text>
+        <Text mb="x3">To keep design updates traceable changes should be committed after each meaningful change. More about committing can be found <Link href="https://www.abstract.com/help/commits/">here</Link>.</Text>
         <img src={ commiting } alt="Commiting in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Merging</SubsectionTitle>
-        <Text mb="x3">When the design was approved (Process TBD) it should be merged into the parent branch or master.</Text>
+        <Text mb="x3">When the design was approved (Process TBD) it should be merged into the parent branch or master. More about merging csn be found <Link href="https://www.abstract.com/help/merge-master/">here</Link>.</Text>
         <img src={ merging} alt="Merging in Abstract animation" />
       </DocSubsection>
     </DocSection>
     <DocSection>
       <SectionTitle>Related articles</SectionTitle>
       <ListItem><Link href="/guides/developers">Developer's guide</Link></ListItem>
+      <ListItem><Link href="https://www.sketch.com/docs/">Sketch documentation</Link></ListItem>
+      <ListItem><Link href="/https://www.abstract.com/help/">Abstract help center</Link></ListItem>
     </DocSection>
 
   </Layout>
