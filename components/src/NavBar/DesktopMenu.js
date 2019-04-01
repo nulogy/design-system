@@ -17,19 +17,19 @@ const BaseDesktopMenu = ({
     {menuData.map(menuItem => {
       if (isDropdown(menuItem)) {
         return (
-          <div key={ menuItem.text }>
-            <MenuDropdown labelText={ menuItem.text }>
+          <div key={ menuItem.name }>
+            <MenuDropdown labelText={ menuItem.name }>
               {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.text } { ...subMenuItem } tabIndex="-1" />
+                <SubMenuItem key={ subMenuItem.name } { ...subMenuItem } tabIndex="-1" />
               ))}
             </MenuDropdown>
           </div>
         );
       } else {
         return (
-          <div key={ menuItem.text }>
+          <div key={ menuItem.name }>
             <MenuLink href={ menuItem.href }>
-              {menuItem.text}
+              {menuItem.name}
             </MenuLink>
           </div>
         );

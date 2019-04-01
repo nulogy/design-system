@@ -16,11 +16,11 @@ const isSubMenu = menuItem => (menuItem.subMenuItems);
 
 const SubMenu = ({ menuItem }) => (
   <div>
-    <SubsectionTitle key={ menuItem.text }>{menuItem.text}</SubsectionTitle>
+    <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
     <SubMenuItems>
       {
         menuItem.subMenuItems.map(subMenuItem => (
-          <SubMenuItem textColor="white" subTextColor="grey" key={ subMenuItem.text } { ...subMenuItem } />
+          <SubMenuItem nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
         ))
       }
     </SubMenuItems>
@@ -29,17 +29,17 @@ const SubMenu = ({ menuItem }) => (
 
 SubMenu.propTypes = {
   menuItem: PropTypes.shape({
-    text: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
   }).isRequired,
 };
 
 const renderMenuItems = menuItems => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
-    return <SubMenu key={ menuItem.text } menuItem={ menuItem } />;
+    return <SubMenu key={ menuItem.name } menuItem={ menuItem } />;
   } else {
     return (
-      <MenuLink key={ menuItem.text } href={ menuItem.href }>
-        {menuItem.text}
+      <MenuLink key={ menuItem.name } href={ menuItem.href }>
+        {menuItem.name}
       </MenuLink>
     );
   }
