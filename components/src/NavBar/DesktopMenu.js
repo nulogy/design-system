@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
-import MenuDropdown from "./MenuDropdown";
+import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
@@ -17,7 +17,7 @@ const BaseDesktopMenu = ({
       if (isDropdown(menuItem)) {
         return (
           <div key={ menuItem.text }>
-            <MenuDropdown labelText={ menuItem.text } menuData={ menuItem.subMenuItems }/>
+            <MenuTrigger labelText={ menuItem.text } menuData={ menuItem.subMenuItems }/>
           </div>
         );
       } else {

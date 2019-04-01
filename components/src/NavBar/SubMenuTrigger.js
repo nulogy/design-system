@@ -4,9 +4,8 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenu from "./SubMenu";
-import SubMenuDropdown from "./SubMenuDropdown";
 import SubMenuLink from "./SubMenuLink";
-import Icon from "../Icon/Icon";
+import { Text } from "ComponentsRoot";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -14,32 +13,21 @@ const SubMenuItemsList = styled.ul({
   margin: "0",
 });
 
-const MenuDropdownButton = styled.button({
-  display: "inline-flex",
-  color: theme.colors.white,
-  border: "none",
-  backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
-  textDecoration: "none",
-  verticalAlign: "middle",
-  lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
-  borderRadius: theme.radii.medium,
-  [`${Icon}`]: {
-    color: theme.colors.lightGrey,
-  },
+const SubMenuTriggerButton = styled.button({
+  display: "block",
+  padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
-    cursor: "pointer",
+    backgroundColor: theme.colors.lightGrey,
   },
   "&:disabled": {
     opacity: ".5",
   },
+  border: "none",
+  backgroundColor: "transparent",
+  textDecoration: "none",
+  textAlign: "left",
+  cursor: "pointer",
 });
 
 const keyCode = Object.freeze({
@@ -57,10 +45,10 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isDropdown = menuItem => (menuItem.subMenuItems);
+const isDropdown = subMenuItem => (subMenuItem.subMenuItems);
 
 /* eslint-disable react/destructuring-assignment */
-class MenuDropdown extends React.Component {
+class SubMenuTrigger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -97,7 +85,7 @@ class MenuDropdown extends React.Component {
     });
   }
 
-  menuDropdownEventHandlers() {
+  SubMenuTriggerEventHandlers() {
     return ({
       onClick: () => {
         this.showSubMenu();
@@ -127,18 +115,27 @@ class MenuDropdown extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuDropdownButton>
+            <li>
+              <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+                  <Text color={ "darkBlue" }>{ this.props.text }</Text>
+                    {this.props.subText && (
+                      <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                    {this.props.subText}
+                  </Text>
+                  )}      
+              </SubMenuTriggerButton>
+            </li>
           )}
         </Reference>
         {this.state.subMenuOpen && (
-        <Popper placement="bottom-start">
+        <Popper placement="right-start">
           {popperProps => (
-            <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+            <SubMenu renderArrow={false} popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
               {this.props.menuData.map(subMenuItem => {
                 if (isDropdown(subMenuItem)) {
                   return (
-                    <SubMenuDropdown key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
+                    <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
                   );
                 } else {
                   return (
@@ -157,18 +154,18 @@ class MenuDropdown extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-MenuDropdown.propTypes = {
-  labelText: PropTypes.string.isRequired,
+
+SubMenuTrigger.propTypes = {
+  text: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MenuDropdown.defaultProps = {
-  children: null,
+SubMenuTrigger.defaultProps = {
   menuData: null,
   showDelay: "100",
   hideDelay: "350",
 };
 
-export default MenuDropdown;
+export default SubMenuTrigger;
