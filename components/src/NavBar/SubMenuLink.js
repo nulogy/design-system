@@ -22,7 +22,7 @@ const BaseSubMenuLink = React.forwardRef(({
         {description}
       </Text>
       )}
-    </Link>
+    </SubMenuItemLink>
   </li>
 ));
 
