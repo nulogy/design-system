@@ -65,7 +65,6 @@ class MenuDropdown extends React.Component {
     super(props);
     this.state = {
       subMenuOpen: false,
-      focusIndex: 0,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
@@ -89,34 +88,6 @@ class MenuDropdown extends React.Component {
     this.setSubMenuState(true, skipTimer);
   }
 
-  focusFirstItem() {
-    this.setState({ focusIndex: 0 });
-  }
-
-  focusLastItem() {
-    this.setState({ focusIndex: this.props.children.length - 1 });
-  }
-
-  focusNextItem() {
-    let nextIndex;
-    if (this.state.focusIndex === this.props.children.length - 1) {
-      nextIndex = 0;
-    } else {
-      nextIndex = this.state.focusIndex + 1;
-    }
-    this.setState({ focusIndex: nextIndex });
-  }
-
-  focusPrevItem() {
-    let prevIndex;
-    if (this.state.focusIndex === 0) {
-      prevIndex = this.props.children.length - 1;
-    } else {
-      prevIndex = this.state.focusIndex - 1;
-    }
-    this.setState({ focusIndex: prevIndex });
-  }
-
   subMenuEventHandlers() {
     return ({
       onFocus: () => (this.showSubMenu()),
@@ -130,7 +101,6 @@ class MenuDropdown extends React.Component {
     return ({
       onClick: () => {
         this.showSubMenu();
-        this.focusFirstItem();
       },
       onBlur: () => (this.hideSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
@@ -146,38 +116,6 @@ class MenuDropdown extends React.Component {
     switch (event.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
-        break;
-      case keyCode.UP:
-        if (this.state.subMenuOpen) {
-          this.focusPrevItem();
-        } else {
-          this.showSubMenu(true);
-          this.focusLastItem();
-        }
-        break;
-      case keyCode.DOWN:
-        if (this.state.subMenuOpen) {
-          this.focusNextItem();
-        } else {
-          this.showSubMenu(true);
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.ENTER:
-        if (!this.state.subMenuOpen) {
-          this.showSubMenu(true);
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.HOME:
-        if (this.state.subMenuOpen) {
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.END:
-        if (this.state.subMenuOpen) {
-          this.focusLastItem();
-        }
         break;
       default:
         break;
