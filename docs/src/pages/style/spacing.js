@@ -20,7 +20,7 @@ const SpacingExample = props => {
       <Flex height="64px" verticalAlign="bottom" alignItems="flex-end">
         <Box bg="lightBlue" mx="auto" mb="x2" height={ size } width={ size } />
       </Flex>
-      <Text textAlign="center" mb="half">{ size }</Text>
+      <Text textAlign="center" fontSize={ { small: "small", large: "medium" } } mb="half">{ size }</Text>
       <Text textAlign="center" fontSize="small">{ scale }</Text>
     </Box>
   );
