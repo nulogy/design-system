@@ -35,7 +35,3 @@ Layout.propTypes = {
 };
 
 export default Layout;
-
-
-// take off height/width/overflow
-// remove intro padding on small screen
