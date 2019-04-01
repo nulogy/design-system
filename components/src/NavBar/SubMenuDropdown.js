@@ -173,7 +173,7 @@ class SubMenuDropdown extends React.Component {
         <Reference>
           {({ ref }) => (
             <li>
-              <SubMenuDropdownButton tabIndex="-1" aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuDropdownEventHandlers() } ref={ ref }>
+              <SubMenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuDropdownEventHandlers() } ref={ ref }>
                   <Text color={ "darkBlue" }>{ this.props.text }</Text>
                     {this.props.subText && (
                       <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
