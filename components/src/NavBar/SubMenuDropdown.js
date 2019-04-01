@@ -3,10 +3,15 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
-import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
 import { Text } from "ComponentsRoot";
+
+const SubMenuItemsList = styled.ul({
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
+});
 
 const SubMenuDropdownButton = styled.button({
   display: "block",
@@ -188,7 +193,7 @@ class SubMenuDropdown extends React.Component {
         <Popper placement="right-start">
           {popperProps => (
             <SubMenu renderArrow={false} popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItems focusIndex={ undefined }>
+              <SubMenuItemsList>
               {this.props.menuData.map(subMenuItem => {
                 if (isDropdown(subMenuItem)) {
                   return (
@@ -200,7 +205,7 @@ class SubMenuDropdown extends React.Component {
                   );
                 }
               })}
-              </SubMenuItems>
+              </SubMenuItemsList>
             </SubMenu>
           )}
         </Popper>
