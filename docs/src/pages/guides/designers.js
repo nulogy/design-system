@@ -41,7 +41,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Understanding NDS visual language</SectionTitle>
-      <Text>To be effective at using NDS design system designers should familiarize themselves with the basics of NDS visual language. Following articles provide a good starting point:</Text>
+      <Text>To be effective at using the Nulogy Design System designers should familiarize themselves with the basics of NDS visual language. The following articles provide a good starting point:</Text>
       <List>
         <ListItem><Link href="/style/colour/">Colour</Link></ListItem>
         <ListItem><Link href="/style/spacing/">Spacing</Link></ListItem>
@@ -57,7 +57,7 @@ export default () => (
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Linking NDS UI kit</SubsectionTitle>
-        <Text mb="x3">To get access to NDS component symbols, and colour and layer styles you need to link NDS-ui-kit.sketch library from NDS project to your project. More about libraries can be found <Link href="https://www.abstract.com/help/libraries/">here</Link>.</Text>
+        <Text mb="x3">To get access to NDS component symbols, and colour and layer styles you need to link the NDS-ui-kit.sketch library from the NDS project to your project. More about libraries can be found <Link href="https://www.abstract.com/help/libraries/">here</Link>.</Text>
         <img src={ linkingNDS } alt="Linking NDS UI kit in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
@@ -74,7 +74,8 @@ export default () => (
         <SubsectionTitle>Working with NDS</SubsectionTitle>
         <Box mb="x3">
           <Text mb="x2" color="darkGrey">Text styles</Text>
-          <img src={ textStyle } alt="NDS text style animation" /></Box>
+          <img src={ textStyle } alt="NDS text style animation" />
+        </Box>
         <Box mb="x3">
           <Text mb="x2" color="darkGrey">Symbols</Text>
           <img src={ symbol } alt="NDS symbol animation" />
@@ -95,12 +96,12 @@ export default () => (
       </DocSubsection>
       <DocSubsection mb="x6">
         <SubsectionTitle>Merging</SubsectionTitle>
-        <Text mb="x3">When the design was approved (Process TBD) it should be merged into the parent branch or master. More about merging csn be found <Link href="https://www.abstract.com/help/merge-master/">here</Link>.</Text>
-        <img src={ merging} alt="Merging in Abstract animation" />
+        <Text mb="x3">When the design is approved (Process TBD) it should be merged into the parent branch or master. More about merging can be found <Link href="https://www.abstract.com/help/merge-master/">here</Link>.</Text>
+        <img src={ merging } alt="Merging in Abstract animation" />
       </DocSubsection>
     </DocSection>
     <DocSection>
-      <SectionTitle>Related articles</SectionTitle>
+      <SectionTitle>Related resources</SectionTitle>
       <ListItem><Link href="/guides/developers">Developer's guide</Link></ListItem>
       <ListItem><Link href="https://www.sketch.com/docs/">Sketch documentation</Link></ListItem>
       <ListItem><Link href="/https://www.abstract.com/help/">Abstract help center</Link></ListItem>
