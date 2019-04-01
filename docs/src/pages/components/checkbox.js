@@ -47,7 +47,7 @@ export default () => (
       </Box>
 
       <Box>
-        <SubsectionTitle>Disabled</SubsectionTitle>
+        <SubsectionTitle>Default Checked</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
         <Highlight className="js">
           {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
