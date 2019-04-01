@@ -8,22 +8,27 @@ import {
 } from "ComponentsRoot";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
-import SubMenuItems from "./SubMenuItems";
 import theme from "../theme";
 import { subPx } from "../Utils";
+
+const SubMenuItemsList = styled.ul({
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
+});
 
 const isSubMenu = menuItem => (menuItem.subMenuItems);
 
 const SubMenu = ({ menuItem }) => (
   <div>
-    <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
-    <SubMenuItems>
+    <SubsectionTitle key={ menuItem.text }>{menuItem.text}</SubsectionTitle>
+    <SubMenuItemsList>
       {
         menuItem.subMenuItems.map(subMenuItem => (
           <SubMenuItem nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
         ))
       }
-    </SubMenuItems>
+    </SubMenuItemsList>
   </div>
 );
 
