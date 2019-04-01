@@ -41,7 +41,7 @@ const NavBarSearch = styled(BaseNavBarSearch)(
   {
     background: theme.colors.lightBlue,
     borderRadius: theme.radii.medium,
-    height: "40px",
+    height: theme.space.x5,
     minWidth: "7em",
     width: "100%",
     "button": {

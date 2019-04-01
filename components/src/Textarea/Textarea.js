@@ -40,7 +40,7 @@ const StyledTextarea = styled.textarea(
     fontSize: theme.fontSizes.medium,
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
-    minHeight: "40px",
+    minHeight: theme.space.x5,
     minWidth: "20em",
     "&:focus": {
       outline: "none",
