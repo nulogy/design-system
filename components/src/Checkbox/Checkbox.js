@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box, Text } from "ComponentsRoot";
 import theme from "../theme";
-import { InputClickableArea } from "../Utils";
+import { ClickInputLabel } from "../Utils";
 
 const checkboxStyle = {
   checked: {
@@ -94,7 +94,7 @@ const BaseCheckbox = props => {
   } = props;
   return (
     <Box className={ className }>
-      <InputClickableArea disabled={ disabled }>
+      <ClickInputLabel disabled={ disabled }>
         <CheckboxInput
           type="checkbox" required={ required } aria-required={ required }
           aria-invalid={ error }
@@ -102,7 +102,7 @@ const BaseCheckbox = props => {
         />
         <VisualCheckbox disabled={ disabled } checked={ checked } />
         <Text disabled={ disabled }> {labelText} </Text>
-      </InputClickableArea>
+      </ClickInputLabel>
     </Box>
   );
 };

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box, Text } from "ComponentsRoot";
 import theme from "../theme";
-import { InputClickableArea } from "../Utils";
+import { ClickInputLabel } from "../Utils";
 
 const radioStyle = {
   checked: {
@@ -95,7 +95,7 @@ const BaseRadio = props => {
   } = props;
   return (
     <Box className={ className }>
-      <InputClickableArea disabled={ disabled }>
+      <ClickInputLabel disabled={ disabled }>
         <RadioInput
           type="radio" aria-checked={ checked } { ...props }
           required={ required } aria-required={ required }
@@ -103,7 +103,7 @@ const BaseRadio = props => {
         />
         <VisualRadio disabled={ disabled } checked={ checked } />
         <Text inline disabled={ disabled }> {labelText} </Text>
-      </InputClickableArea>
+      </ClickInputLabel>
     </Box>
   );
 };

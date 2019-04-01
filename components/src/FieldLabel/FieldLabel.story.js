@@ -21,8 +21,7 @@ storiesOf("FieldLabel", module)
     <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
   ))
   .add("with associated custom input component", () => (
-    <>
-      <FieldLabel mb="x1" htmlFor="input1" labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)" />
+    <FieldLabel labelText="Default label" helpText="I am help text. I can give more details on the input below!" requirementText="(Required)">
       <CustomInput id="input1" />
-    </>
+    </FieldLabel>
   ));
