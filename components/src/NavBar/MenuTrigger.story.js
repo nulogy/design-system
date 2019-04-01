@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Flex } from "ComponentsRoot";
-import MenuDropdown from "./MenuDropdown";
+import MenuTrigger from "./MenuTrigger";
 
 const menuData = [
   { text: "Submenu Item 1", subText: "details", href: "/" },
@@ -43,19 +43,19 @@ const menuDataDeeperNoSubText = [
   },
 ];
 
-storiesOf("MenuDropdown", module)
-  .add("MenuDropdown", () => (
+storiesOf("MenuTrigger", module)
+  .add("MenuTrigger", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuDropdown menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown"/>
     </Flex>
   ))
-  .add("MenuDropdown with deeper submenus", () => (
+  .add("MenuTrigger with deeper submenus", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuDropdown menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown"/>
     </Flex>
   ))  
-  .add("MenuDropdown with deeper submenus and no subText", () => (
+  .add("MenuTrigger with deeper submenus and no subText", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuDropdown menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown"/>
     </Flex>
   ));
