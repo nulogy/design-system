@@ -17,14 +17,14 @@ const MaybeToggleTitle = ({
 }) => (
   labelText
     ? (
-      <Text { ...props }>
+      <div { ...props }>
         <Box mb={ children && "x1" }>
           {labelText}
           {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
           {helpText && (<HelpText>{helpText}</HelpText>)}
         </Box>
         {children}
-      </Text>
+      </div>
     )
     : (
       <>
