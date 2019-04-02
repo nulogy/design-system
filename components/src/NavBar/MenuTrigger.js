@@ -166,7 +166,6 @@ MenuTrigger.propTypes = {
 };
 
 MenuTrigger.defaultProps = {
-  children: null,
   menuData: null,
   showDelay: "100",
   hideDelay: "350",
