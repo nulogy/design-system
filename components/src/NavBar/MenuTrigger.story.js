@@ -74,16 +74,16 @@ const menuDataDeeperNoDescription = [
 storiesOf("MenuTrigger", module)
   .add("MenuTrigger", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuData } id="menuTrigger1" labelText="Menu Trigger" />
+      <MenuTrigger menuData={ menuData } id="menuTrigger1" name="Menu Trigger" />
     </Flex>
   ))
   .add("MenuTrigger with deeper submenus", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeper } id="menuTrigger1" labelText="Menu Trigger" />
+      <MenuTrigger menuData={ menuDataDeeper } id="menuTrigger1" name="Menu Trigger" />
     </Flex>
   ))
   .add("MenuTrigger with deeper submenus and no description", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeperNoDescription } id="menuTrigger1" labelText="Menu Trigger" />
+      <MenuTrigger menuData={ menuDataDeeperNoDescription } id="menuTrigger1" name="Menu Trigger" />
     </Flex>
   ));

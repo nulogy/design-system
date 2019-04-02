@@ -17,7 +17,7 @@ const BaseDesktopMenu = ({
       if (isTrigger(menuItem)) {
         return (
           <div key={ menuItem.name }>
-            <MenuTrigger labelText={ menuItem.name } menuData={ menuItem.items } />
+            <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
           </div>
         );
       } else {

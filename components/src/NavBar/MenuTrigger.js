@@ -125,7 +125,7 @@ class MenuTrigger extends React.Component {
         <Reference>
           {({ ref }) => (
             <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
-              { this.props.labelText }
+              { this.props.name }
               <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
             </MenuTriggerButton>
           )}
@@ -159,7 +159,7 @@ class MenuTrigger extends React.Component {
 
 
 MenuTrigger.propTypes = {
-  labelText: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
