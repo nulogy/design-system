@@ -28,9 +28,6 @@ const MenuTriggerButton = styled.button({
   fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,
-  [`${Icon}`]: {
-    color: theme.colors.lightGrey,
-  },
   "&:hover, &:focus": {
     outline: "none",
     color: theme.colors.lightBlue,
@@ -127,10 +124,13 @@ class MenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuTriggerButton>
+            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>
+              { this.props.labelText }
+              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px"/>
+            </MenuTriggerButton>
           )}
         </Reference>
-        {this.state.subMenuOpen && (
+        {true && (
         <Popper placement="bottom-start">
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
