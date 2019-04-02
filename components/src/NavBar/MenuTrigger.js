@@ -131,7 +131,7 @@ class MenuTrigger extends React.Component {
           )}
         </Reference>
         {true && (
-        <Popper placement="bottom-start" modifiers={{flip: {behavior: ["bottom"]}}}>
+        <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
