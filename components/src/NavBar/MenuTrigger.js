@@ -54,7 +54,7 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isDropdown = menuItem => (menuItem.subMenuItems);
+const isTrigger = menuItem => (menuItem.subMenuItems);
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
@@ -94,7 +94,7 @@ class MenuTrigger extends React.Component {
     });
   }
 
-  menuDropdownEventHandlers() {
+  menuTriggerEventHandlers() {
     return ({
       onClick: () => {
         this.showSubMenu();
@@ -124,7 +124,7 @@ class MenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>
+            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
               { this.props.labelText }
               <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
             </MenuTriggerButton>
@@ -136,13 +136,13 @@ class MenuTrigger extends React.Component {
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
                 {this.props.menuData.map(subMenuItem => {
-                  if (isDropdown(subMenuItem)) {
+                  if (isTrigger(subMenuItem)) {
                     return (
-                      <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } menuData={ subMenuItem.subMenuItems } />
+                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.subMenuItems } />
                     );
                   } else {
                     return (
-                      <SubMenuLink key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } href={ subMenuItem.href } />
+                      <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
                     );
                   }
                 })}

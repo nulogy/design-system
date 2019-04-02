@@ -49,7 +49,7 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isDropdown = subMenuItem => (subMenuItem.subMenuItems);
+const isTrigger = subMenuItem => (subMenuItem.subMenuItems);
 
 /* eslint-disable react/destructuring-assignment */
 class SubMenuTrigger extends React.Component {
@@ -121,13 +121,13 @@ class SubMenuTrigger extends React.Component {
           {({ ref }) => (
             <li>
               <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-                { this.props.text }
+                { this.props.name }
                 <span>
                   <Icon style={ { verticalAlign: "sub", position: "absolute" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
                 </span>
-                {this.props.subText && (
+                {this.props.description && (
                 <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
-                  {this.props.subText}
+                  {this.props.description}
                 </Text>
                 )}
               </SubMenuTriggerButton>
@@ -140,13 +140,13 @@ class SubMenuTrigger extends React.Component {
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
                 {this.props.menuData.map(subMenuItem => {
-                  if (isDropdown(subMenuItem)) {
+                  if (isTrigger(subMenuItem)) {
                     return (
-                      <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } menuData={ subMenuItem.subMenuItems } />
+                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.subMenuItems } />
                     );
                   } else {
                     return (
-                      <SubMenuLink key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } href={ subMenuItem.href } />
+                      <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
                     );
                   }
                 })}
@@ -163,8 +163,8 @@ class SubMenuTrigger extends React.Component {
 
 
 SubMenuTrigger.propTypes = {
-  text: PropTypes.string.isRequired,
-  subText: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -172,7 +172,7 @@ SubMenuTrigger.propTypes = {
 
 SubMenuTrigger.defaultProps = {
   menuData: null,
-  subText: null,
+  description: null,
   showDelay: "100",
   hideDelay: "350",
 };

@@ -22,7 +22,7 @@ const isSubMenu = menuItem => (menuItem.subMenuItems);
 
 const SubMenu = ({ menuItem }) => (
   <div>
-    <SubsectionTitle key={ menuItem.text }>{menuItem.text}</SubsectionTitle>
+    <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
     <SubMenuItemsList>
       {
         menuItem.subMenuItems.map(subMenuItem => (
