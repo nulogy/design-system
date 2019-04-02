@@ -4,9 +4,9 @@ import { Flex } from "ComponentsRoot";
 import MenuTrigger from "./MenuTrigger";
 
 const menuData = [
-  { name: "Submenu Item 1", description: "details", href: "/" },
-  { name: "Submenu Item 2", description: "details", href: "/" },
-  { name: "Submenu Item 3", description: "details", href: "/" },
+  { name: "Submenu Link 1", description: "description", href: "/" },
+  { name: "Submenu Link 2", description: "description", href: "/" },
+  { name: "Submenu Link 3", description: "description", href: "/" },
 ];
 
 const menuDataLayered = [
@@ -26,45 +26,45 @@ const menuDataLayered = [
 ];
 
 const menuDataEdgeCases = [
-  { name: "Submenu Link", description: "details", href: "/" },
+  { name: "Submenu Link", description: "description", href: "/" },
   {
     name: "Submenu Trigger",
-    description: "details",
+    description: "description",
     items: [
-      { name: "Submenu Link", description: "details", href: "/" },
+      { name: "Submenu Link", description: "description", href: "/" },
       {
         name: "Submenu Trigger",
-        description: "details",
+        description: "description",
         items: [
-          { name: "Submenu Link", description: "details", href: "/" },
+          { name: "Submenu Link", description: "description", href: "/" },
         ],
       },
     ],
   },
   {
-    name: "Dropdown with a long name1",
-    description: "details",
+    name: "Trigger with a very long name",
+    description: "description",
     items: [
-      { name: "Submenu Link", description: "details", href: "/" },
+      { name: "Submenu Link", description: "description", href: "/" },
       {
         name: "Submenu Trigger",
-        description: "details",
+        description: "description",
         items: [
-          { name: "Submenu Link", description: "details", href: "/" },
+          { name: "Submenu Link", description: "description", href: "/" },
         ],
       },
     ],
   },
   {
-    name: "Submenu Dropdown",
-    description: "details details details details details details details ",
+    name: "Submenu Trigger",
+    description: "description description description description",
     items: [
-      { name: "Submenu Link", description: "details", href: "/" },
+      { name: "Submenu Link", description: "description", href: "/" },
       {
         name: "Submenu Trigger",
-        description: "details",
+        description: "description",
         items: [
-          { name: "Submenu Link", description: "details", href: "/" },
+          { name: "Submenu Link", description: "description", href: "/" },
         ],
       },
     ],
