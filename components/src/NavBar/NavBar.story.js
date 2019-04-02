@@ -4,56 +4,56 @@ import { NavBar } from "ComponentsRoot";
 
 const primaryMenu = [
   {
-    text: "Dashboard",
+    name: "Dashboard",
     subMenuItems: [
-      { text: "Customers", subText: "subText", href: "/" },
-      { text: "Invoices", subText: "subText", href: "/" },
-      { text: "Projects", subText: "subText", href: "/" },
-      { text: "Items", subText: "subText", href: "/" },
-      { text: "Vendors", subText: "subText", href: "/" },
-      { text: "Carriers", subText: "subText", href: "/" },
+      { name: "Customers", description: "description", href: "/" },
+      { name: "Invoices", description: "description", href: "/" },
+      { name: "Projects", description: "description", href: "/" },
+      { name: "Items", description: "description", href: "/" },
+      { name: "Vendors", description: "description", href: "/" },
+      { name: "Carriers", description: "description", href: "/" },
     ],
   },
   {
-    text: "Inspector",
+    name: "Inspector",
     subMenuItems: [
-      { text: "Integration", subText: "subText", href: "/" },
-      { text: "Site configuration", subText: "subText", href: "/" },
-      { text: "Company configuration", subText: "subText", href: "/" },
+      { name: "Integration", description: "description", href: "/" },
+      { name: "Site configuration", description: "description", href: "/" },
+      { name: "Company configuration", description: "description", href: "/" },
     ],
   },
   {
-    text: "Reports",
+    name: "Reports",
     subMenuItems: [
-      { text: "Production", subText: "subText", href: "/" },
-      { text: "Item cart", subText: "subText", href: "/" },
-      { text: "Inventory", subText: "subText", href: "/" },
+      { name: "Production", description: "description", href: "/" },
+      { name: "Item cart", description: "description", href: "/" },
+      { name: "Inventory", description: "description", href: "/" },
     ],
   },
   {
-    text: "Sheets",
+    name: "Sheets",
     subMenuItems: [
-      { text: "Item locator", subText: "subText", href: "/" },
-      { text: "Ship orders", subText: "subText", href: "/" },
+      { name: "Item locator", description: "description", href: "/" },
+      { name: "Ship orders", description: "description", href: "/" },
     ],
   },
-  { text: "Link", href: "/" },
+  { name: "Link", href: "/" },
 ];
 
 const secondaryMenu = [
   {
-    text: "User",
+    name: "User",
     subMenuItems: [
-      { text: "Profile", subText: "subText", href: "/" },
-      { text: "Preferences", subText: "subText", href: "/" },
-      { text: "Logout", subText: "subText", href: "/" },
+      { name: "Profile", description: "description", href: "/" },
+      { name: "Preferences", description: "description", href: "/" },
+      { name: "Logout", description: "description", href: "/" },
     ],
   },
   {
-    text: "Settings",
+    name: "Settings",
     subMenuItems: [
-      { text: "Permissions", subText: "subText", href: "/" },
-      { text: "Manage account", subText: "subText", href: "/" },
+      { name: "Permissions", description: "description", href: "/" },
+      { name: "Manage account", description: "description", href: "/" },
     ],
   },
 ];

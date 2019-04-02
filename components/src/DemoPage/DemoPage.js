@@ -29,106 +29,106 @@ import theme from "../theme";
 const menuData = {
   "primaryMenu": [
     {
-      text: "Dashboard",
+      name: "Dashboard",
       subMenuItems: [
         {
-          text: "Customers",
-          subText: "subText",
+          name: "Customers",
+          description: "description",
           href: "/",
         },
         {
-          text: "Invoices",
-          subText: "subText",
+          name: "Invoices",
+          description: "description",
           href: "/",
         },
         {
-          text: "Projects",
-          subText: "subText",
+          name: "Projects",
+          description: "description",
           href: "/",
         },
         {
-          text: "Items",
-          subText: "subText",
+          name: "Items",
+          description: "description",
           href: "/",
         },
         {
-          text: "Vendors",
-          subText: "subText",
+          name: "Vendors",
+          description: "description",
           href: "/",
         },
         {
-          text: "Carriers",
-          subText: "subText",
+          name: "Carriers",
+          description: "description",
           href: "/",
         },
       ],
     },
     {
-      text: "Inspector",
+      name: "Inspector",
       subMenuItems: [
         {
-          text: "Integration",
-          subText: "subText",
+          name: "Integration",
+          description: "description",
           href: "/",
         },
         {
-          text: "Site configuration",
-          subText: "subText",
+          name: "Site configuration",
+          description: "description",
           href: "/",
         },
         {
-          text: "Company configuration",
-          subText: "subText",
+          name: "Company configuration",
+          description: "description",
           href: "/",
         },
       ],
     },
     {
-      text: "Reports",
+      name: "Reports",
       subMenuItems: [
         {
-          text: "Production",
-          subText: "subText",
+          name: "Production",
+          description: "description",
           href: "/",
         },
         {
-          text: "Item cart",
-          subText: "subText",
+          name: "Item cart",
+          description: "description",
           href: "/",
         },
         {
-          text: "Inventory",
-          subText: "subText",
+          name: "Inventory",
+          description: "description",
           href: "/",
         },
       ],
     },
     {
-      text: "Sheets",
+      name: "Sheets",
       subMenuItems: [
         {
-          text: "Item locator",
-          subText: "subText",
+          name: "Item locator",
+          description: "description",
           href: "/",
         },
         {
-          text: "Ship orders",
-          subText: "subText",
+          name: "Ship orders",
+          description: "description",
           href: "/",
         },
       ],
     },
     {
-      text: "Forms",
+      name: "Forms",
       subMenuItems: [
         {
-          text: "Projects",
-          subText: "subText",
+          name: "Projects",
+          description: "description",
           href: "/",
         },
         {
-          text: "Jobs",
-          subText: "subText",
+          name: "Jobs",
+          description: "description",
           href: "/",
         },
       ],
@@ -136,36 +136,36 @@ const menuData = {
   ],
   "secondaryMenu": [
     {
-      text: "User",
+      name: "User",
       subMenuItems: [
         {
-          text: "Profile",
-          subText: "subText",
+          name: "Profile",
+          description: "description",
           href: "/",
         },
         {
-          text: "Preferences",
-          subText: "subText",
+          name: "Preferences",
+          description: "description",
           href: "/",
         },
         {
-          text: "Logout",
-          subText: "subText",
+          name: "Logout",
+          description: "description",
           href: "/",
         },
       ],
     },
     {
-      text: "Settings",
+      name: "Settings",
       subMenuItems: [
         {
-          text: "Permissions",
-          subText: "subText",
+          name: "Permissions",
+          description: "description",
           href: "/",
         },
         {
-          text: "Manage account",
-          subText: "subText",
+          name: "Manage account",
+          description: "description",
           href: "/",
         },
       ],

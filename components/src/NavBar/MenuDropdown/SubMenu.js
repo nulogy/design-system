@@ -6,7 +6,7 @@ import theme from "ComponentsRoot/theme";
 const subMenuStyles = {
   backgroundColor: theme.colors.whiteGrey,
   borderColor: theme.colors.whiteGrey,
-  textColor: theme.colors.black,
+  nameColor: theme.colors.black,
 };
 
 const Arrow = styled.div({
@@ -72,7 +72,7 @@ BaseSubMenu.defaultProps = {
 };
 
 const SubMenu = styled(BaseSubMenu)({
-  color: subMenuStyles.textColor,
+  color: subMenuStyles.nameColor,
   display: "flex",
   flexDirection: "column",
   fontSize: theme.fontSizes.small,

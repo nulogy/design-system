@@ -200,7 +200,6 @@ class MenuDropdown extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-
 MenuDropdown.propTypes = {
   labelText: PropTypes.string.isRequired,
   children: PropTypes.node,
