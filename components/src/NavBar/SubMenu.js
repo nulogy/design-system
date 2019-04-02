@@ -75,24 +75,25 @@ BaseSubMenu.defaultProps = {
 };
 
 const SubMenu = styled(BaseSubMenu)(
-  ({renderArrow}) => ({
-  color: subMenuStyles.nameColor,
-  display: "flex",
-  maxWidth: "20em",
-  flexDirection: "column",
-  fontSize: theme.fontSizes.small,
-  backgroundColor: subMenuStyles.backgroundColor,
-  borderRadius: theme.radii.medium,
-  borderTop: `1px solid ${subMenuStyles.borderColor}`,
-  boxShadow: theme.boxShadows,
-  padding: `${theme.space.x1} 0`,
-  transition: "opacity 0.3s",
-  zIndex: "999999",
-  marginTop: renderArrow ? theme.space.half : "-9px",
-}),
-({ style }) => ({
-  ...style,
-}));
+  ({ renderArrow }) => ({
+    color: subMenuStyles.nameColor,
+    display: "flex",
+    maxWidth: "20em",
+    flexDirection: "column",
+    fontSize: theme.fontSizes.small,
+    backgroundColor: subMenuStyles.backgroundColor,
+    borderRadius: theme.radii.medium,
+    borderTop: `1px solid ${subMenuStyles.borderColor}`,
+    boxShadow: theme.boxShadows,
+    padding: `${theme.space.x1} 0`,
+    transition: "opacity 0.3s",
+    zIndex: "999999",
+    marginTop: renderArrow ? theme.space.half : "-9px",
+  }),
+  ({ style }) => ({
+    ...style,
+  })
+);
 
 SubMenu.propTypes = {
   renderArrow: PropTypes.bool,

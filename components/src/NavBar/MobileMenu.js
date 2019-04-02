@@ -26,7 +26,7 @@ const SubMenu = ({ menuItem }) => (
     <SubMenuItemsList>
       {
         menuItem.items.map(subMenuItem => (
-          <SubMenuItem nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
+          <SubMenuLink nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
         ))
       }
     </SubMenuItemsList>
