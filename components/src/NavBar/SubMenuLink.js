@@ -15,18 +15,18 @@ const BaseSubMenuLink = React.forwardRef(({
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
+    <Link ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
       <Text color={ nameColor }>{ name }</Text>
       {description && (
       <Text color={ descriptionColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {description}
       </Text>
       )}
-    </SubMenuItemLink>
+    </Link>
   </li>
 ));
 
-BaseSubMenuItem.propTypes = {
+BaseSubMenuLink.propTypes = {
   name: PropTypes.node.isRequired,
   description: PropTypes.string,
   href: PropTypes.string,
@@ -35,7 +35,7 @@ BaseSubMenuItem.propTypes = {
   tabIndex: PropTypes.string,
 };
 
-BaseSubMenuItem.defaultProps = {
+BaseSubMenuLink.defaultProps = {
   description: undefined,
   href: "/",
   nameColor: "darkBlue",

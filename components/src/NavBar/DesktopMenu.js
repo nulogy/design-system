@@ -6,7 +6,7 @@ import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const isDropdown = menuItem => (menuItem.subMenuItems);
+const isTrigger = menuItem => (menuItem.subMenuItems);
 
 const BaseDesktopMenu = ({
   menuData,
@@ -14,10 +14,10 @@ const BaseDesktopMenu = ({
 }) => (
   <Flex { ...props }>
     {menuData.map(menuItem => {
-      if (isDropdown(menuItem)) {
+      if (isTrigger(menuItem)) {
         return (
-          <div key={ menuItem.text }>
-            <MenuTrigger labelText={ menuItem.text } menuData={ menuItem.subMenuItems } />
+          <div key={ menuItem.name }>
+            <MenuTrigger labelText={ menuItem.name } menuData={ menuItem.subMenuItems } />
           </div>
         );
       } else {

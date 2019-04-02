@@ -4,81 +4,67 @@ import { Flex } from "ComponentsRoot";
 import MenuTrigger from "./MenuTrigger";
 
 const menuData = [
-  { text: "Submenu Item 1", subText: "details", href: "/" },
-  { text: "Submenu Item 2", subText: "details", href: "/" },
-  { text: "Submenu Item 3", subText: "details", href: "/" },
+  { name: "Submenu Item 1", description: "details", href: "/" },
+  { name: "Submenu Item 2", description: "details", href: "/" },
+  { name: "Submenu Item 3", description: "details", href: "/" },
 ];
 
 const menuDataDeeper = [
-  { text: "Submenu Link", subText: "details", href: "/" },
+  { name: "Submenu Link", description: "details", href: "/" },
   {
-    text: "Submenu Dropdown",
-    subText: "details",
+    name: "Submenu Trigger",
+    description: "details",
     subMenuItems: [
-      { text: "Submenu Link", subText: "details", href: "/" },
+      { name: "Submenu Link", description: "details", href: "/" },
       {
-        text: "Submenu Dropdown",
-        subText: "details",
+        name: "Submenu Trigger",
+        description: "details",
         subMenuItems: [
-          { text: "Submenu Link", subText: "details", href: "/" },
+          { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
     ],
   },
   {
-    text: "Submenu Dropdown",
-    subText: "details",
+    name: "Dropdown with a long name1",
+    description: "details",
     subMenuItems: [
-      { text: "Submenu Link", subText: "details", href: "/" },
+      { name: "Submenu Link", description: "details", href: "/" },
       {
-        text: "Submenu Dropdown",
-        subText: "details",
+        name: "Submenu Trigger",
+        description: "details",
         subMenuItems: [
-          { text: "Submenu Link", subText: "details", href: "/" },
+          { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
     ],
   },
   {
-    text: "Downdowndowndown Downdownn",
-    subText: "details",
+    name: "Submenu Down",
+    description: "details details details details details details details ",
     subMenuItems: [
-      { text: "Submenu Link", subText: "details", href: "/" },
+      { name: "Submenu Link", description: "details", href: "/" },
       {
-        text: "Submenu Dropdown",
-        subText: "details",
+        name: "Submenu Trigger",
+        description: "details",
         subMenuItems: [
-          { text: "Submenu Link", subText: "details", href: "/" },
-        ],
-      },
-    ],
-  },
-  {
-    text: "Submenu Down",
-    subText: "details details details details details details details ",
-    subMenuItems: [
-      { text: "Submenu Link", subText: "details", href: "/" },
-      {
-        text: "Submenu Dropdown",
-        subText: "details",
-        subMenuItems: [
-          { text: "Submenu Link", subText: "details", href: "/" },
+          { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
     ],
   },
 ];
 
-const menuDataDeeperNoSubText = [
-  { text: "Submenu Link", href: "/" },
+const menuDataDeeperNoDescription = [
+  { name: "Submenu Link", href: "/" },
   {
-    text: "Submenu Dropdown",
+    name: "Submenu Trigger",
     subMenuItems: [
-      { text: "Submenu Link", href: "/" },
+      { name: "Submenu Link", href: "/" },
       {
-        text: "Submenu Dropdown",
+        name: "Submenu Trigger",
         subMenuItems: [
-          { text: "Submenu Link", href: "/" },
+          { name: "Submenu Link", href: "/" },
         ],
       },
     ],
@@ -88,16 +74,16 @@ const menuDataDeeperNoSubText = [
 storiesOf("MenuTrigger", module)
   .add("MenuTrigger", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown" />
+      <MenuTrigger menuData={ menuData } id="menuTrigger1" labelText="Menu Trigger" />
     </Flex>
   ))
   .add("MenuTrigger with deeper submenus", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown" />
+      <MenuTrigger menuData={ menuDataDeeper } id="menuTrigger1" labelText="Menu Trigger" />
     </Flex>
   ))
-  .add("MenuTrigger with deeper submenus and no subText", () => (
+  .add("MenuTrigger with deeper submenus and no description", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown" />
+      <MenuTrigger menuData={ menuDataDeeperNoDescription } id="menuTrigger1" labelText="Menu Trigger" />
     </Flex>
   ));
