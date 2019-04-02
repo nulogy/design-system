@@ -78,6 +78,7 @@ const SubMenu = styled(BaseSubMenu)(
   ({renderArrow}) => ({
   color: subMenuStyles.nameColor,
   display: "flex",
+  maxWidth: "20em",
   flexDirection: "column",
   fontSize: theme.fontSizes.small,
   backgroundColor: subMenuStyles.backgroundColor,

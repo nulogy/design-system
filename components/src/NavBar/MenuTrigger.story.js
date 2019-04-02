@@ -25,6 +25,48 @@ const menuDataDeeper = [
       },
     ],
   },
+  {
+    text: "Submenu Dropdown", 
+    subText: "details", 
+    subMenuItems: [
+      {text: "Submenu Link", subText: "details", href: "/"},
+      {
+        text: "Submenu Dropdown", 
+        subText: "details", 
+        subMenuItems: [
+          {text: "Submenu Link", subText: "details", href: "/"},
+        ]
+      },
+    ],
+  },
+  {
+    text: "Downdownoooown Downdownoooown", 
+    subText: "details", 
+    subMenuItems: [
+      {text: "Submenu Link", subText: "details", href: "/"},
+      {
+        text: "Submenu Dropdown", 
+        subText: "details", 
+        subMenuItems: [
+          {text: "Submenu Link", subText: "details", href: "/"},
+        ]
+      },
+    ],
+  },
+  {
+    text: "Submenu Down", 
+    subText: "details details details details details details details ", 
+    subMenuItems: [
+      {text: "Submenu Link", subText: "details", href: "/"},
+      {
+        text: "Submenu Dropdown", 
+        subText: "details", 
+        subMenuItems: [
+          {text: "Submenu Link", subText: "details", href: "/"},
+        ]
+      },
+    ],
+  },
 ];
 
 const menuDataDeeperNoSubText = [

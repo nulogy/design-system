@@ -5,7 +5,7 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
-import { Text } from "ComponentsRoot";
+import { Text, Icon, Flex } from "ComponentsRoot";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -15,6 +15,7 @@ const SubMenuItemsList = styled.ul({
 
 const SubMenuTriggerButton = styled.button({
   display: "block",
+  width: "100%",
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
@@ -44,6 +45,17 @@ const keyCode = Object.freeze({
   "RIGHT": 39,
   "DOWN": 40,
 });
+
+const IconContainer = styled.span(
+  {
+    display: "inline-flex",
+    alignSelf: "center",
+    position: "relative",
+    height: "1em",
+    width: "20px",
+    minwidth: ""
+  }
+);
 
 const isDropdown = subMenuItem => (subMenuItem.subMenuItems);
 
@@ -117,12 +129,17 @@ class SubMenuTrigger extends React.Component {
           {({ ref }) => (
             <li>
               <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-                  <Text color={ "darkBlue" }>{ this.props.text }</Text>
-                    {this.props.subText && (
-                      <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
-                    {this.props.subText}
+                <Flex alignItems="center" >
+                  <Text color={ "darkBlue" }>
+                    { this.props.text }
                   </Text>
-                  )}      
+                  <Icon icon="rightArrow" color="darkBlue" size="20px" p="2px"/>
+                </Flex>
+                {this.props.subText && (
+                <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                  {this.props.subText}
+                </Text>
+                )}      
               </SubMenuTriggerButton>
             </li>
           )}
