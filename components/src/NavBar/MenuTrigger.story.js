@@ -40,7 +40,7 @@ const menuDataDeeper = [
     ],
   },
   {
-    text: "Downdownoooown Downdownoooown", 
+    text: "Downdowndowndown Downdownn", 
     subText: "details", 
     subMenuItems: [
       {text: "Submenu Link", subText: "details", href: "/"},
