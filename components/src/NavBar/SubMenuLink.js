@@ -65,7 +65,7 @@ const SubMenuLink = styled(BaseSubMenuLink)({
     "&:disabled": {
       opacity: ".5",
     },
-  }
+  },
 });
 
 export default SubMenuLink;

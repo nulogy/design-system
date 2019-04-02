@@ -3,9 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
+import { Text, Icon } from "ComponentsRoot";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
-import { Text, Icon } from "ComponentsRoot";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -17,7 +17,7 @@ const SubMenuTriggerButton = styled.button({
   display: "block",
   color: theme.colors.darkBlue,
   fontSize: theme.fontSizes.medium,
-  
+
   width: "100%",
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
@@ -123,13 +123,13 @@ class SubMenuTrigger extends React.Component {
               <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
                 { this.props.text }
                 <span>
-                  <Icon style={{verticalAlign: "sub", position: "absolute"}} icon="rightArrow" color="darkBlue" size="20px" p="2px"/>
+                  <Icon style={ { verticalAlign: "sub", position: "absolute" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
                 </span>
                 {this.props.subText && (
-                <Text inline style={{display: "block"}} color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
                   {this.props.subText}
                 </Text>
-                )}      
+                )}
               </SubMenuTriggerButton>
             </li>
           )}
@@ -137,19 +137,19 @@ class SubMenuTrigger extends React.Component {
         {this.state.subMenuOpen && (
         <Popper placement="right-start">
           {popperProps => (
-            <SubMenu renderArrow={false} popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+            <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-              {this.props.menuData.map(subMenuItem => {
-                if (isDropdown(subMenuItem)) {
-                  return (
-                    <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
-                  );
-                } else {
-                  return (
-                    <SubMenuLink key={ subMenuItem.text } text={subMenuItem.text} subText={subMenuItem.subText} href={ subMenuItem.href }/>
-                  );
-                }
-              })}
+                {this.props.menuData.map(subMenuItem => {
+                  if (isDropdown(subMenuItem)) {
+                    return (
+                      <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } menuData={ subMenuItem.subMenuItems } />
+                    );
+                  } else {
+                    return (
+                      <SubMenuLink key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } href={ subMenuItem.href } />
+                    );
+                  }
+                })}
               </SubMenuItemsList>
             </SubMenu>
           )}
