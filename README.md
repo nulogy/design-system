@@ -18,7 +18,7 @@ Designers can use the Nulogy Design System in Sketch by downloading the [Sketch 
 
 ## Resources
 * [Documentation](http://nulogy.design)
-* [Component Storybook](http://nulogy.github.io/design-system)
+* [Component Storybook](http://storybook.nulogy.design)
 * [@nulogy/components on npm](https://www.npmjs.com/package/@nulogy/components)
 * [@nulogy/css on npm](https://www.npmjs.com/package/@nulogy/css)
 * [@nulogy/tokens on npm](https://www.npmjs.com/package/@nulogy/tokens)
