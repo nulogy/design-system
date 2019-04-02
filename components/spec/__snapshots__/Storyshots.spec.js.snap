@@ -176,6 +176,12 @@ exports[`Storyshots MenuDropdown MenuDropdown 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots MenuLink MenuLink 1`] = `ReactWrapper {}`;
 
+exports[`Storyshots MenuTrigger MenuTrigger 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots MenuTrigger MenuTrigger with more layers 1`] = `ReactWrapper {}`;
+
+exports[`Storyshots MenuTrigger MenuTrigger with text edge cases 1`] = `ReactWrapper {}`;
+
 exports[`Storyshots NavBar NavBar 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots NavBar With branding only 1`] = `ReactWrapper {}`;
