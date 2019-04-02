@@ -172,8 +172,6 @@ exports[`Storyshots List With custom colour 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots List With custom font size and line height 1`] = `ReactWrapper {}`;
 
-exports[`Storyshots MenuDropdown MenuDropdown 1`] = `ReactWrapper {}`;
-
 exports[`Storyshots MenuLink MenuLink 1`] = `ReactWrapper {}`;
 
 exports[`Storyshots MenuTrigger MenuTrigger 1`] = `ReactWrapper {}`;
