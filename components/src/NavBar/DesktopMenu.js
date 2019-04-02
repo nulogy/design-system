@@ -6,7 +6,7 @@ import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const isTrigger = menuItem => (menuItem.subMenuItems);
+const isTrigger = menuItem => (menuItem.items);
 
 const BaseDesktopMenu = ({
   menuData,
@@ -17,7 +17,7 @@ const BaseDesktopMenu = ({
       if (isTrigger(menuItem)) {
         return (
           <div key={ menuItem.name }>
-            <MenuTrigger labelText={ menuItem.name } menuData={ menuItem.subMenuItems } />
+            <MenuTrigger labelText={ menuItem.name } menuData={ menuItem.items } />
           </div>
         );
       } else {

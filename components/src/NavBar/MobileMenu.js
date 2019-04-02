@@ -18,14 +18,14 @@ const SubMenuItemsList = styled.ul({
   marginBottom: theme.space.x4,
 });
 
-const isSubMenu = menuItem => (menuItem.subMenuItems);
+const isSubMenu = menuItem => (menuItem.items);
 
 const SubMenu = ({ menuItem }) => (
   <div>
     <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
     <SubMenuItemsList>
       {
-        menuItem.subMenuItems.map(subMenuItem => (
+        menuItem.items.map(subMenuItem => (
           <SubMenuItem nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
         ))
       }

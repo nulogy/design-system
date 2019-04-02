@@ -54,7 +54,7 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isTrigger = menuItem => (menuItem.subMenuItems);
+const isTrigger = menuItem => (menuItem.items);
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
@@ -138,7 +138,7 @@ class MenuTrigger extends React.Component {
                 {this.props.menuData.map(subMenuItem => {
                   if (isTrigger(subMenuItem)) {
                     return (
-                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.subMenuItems } />
+                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
                     );
                   } else {
                     return (
