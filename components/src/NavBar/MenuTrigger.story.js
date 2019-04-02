@@ -57,7 +57,7 @@ const menuDataEdgeCases = [
   },
   {
     name: "Submenu Trigger 2",
-    description: "description ddddd description",
+    description: "description description description description",
     items: [
       { name: "Submenu Link", description: "description", href: "/" },
       {
