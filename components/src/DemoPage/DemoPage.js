@@ -30,7 +30,7 @@ const menuData = {
   "primaryMenu": [
     {
       name: "Dashboard",
-      subMenuItems: [
+      items: [
         {
           name: "Customers",
           description: "description",
@@ -65,7 +65,7 @@ const menuData = {
     },
     {
       name: "Inspector",
-      subMenuItems: [
+      items: [
         {
           name: "Integration",
           description: "description",
@@ -85,7 +85,7 @@ const menuData = {
     },
     {
       name: "Reports",
-      subMenuItems: [
+      items: [
         {
           name: "Production",
           description: "description",
@@ -105,7 +105,7 @@ const menuData = {
     },
     {
       name: "Sheets",
-      subMenuItems: [
+      items: [
         {
           name: "Item locator",
           description: "description",
@@ -120,7 +120,7 @@ const menuData = {
     },
     {
       name: "Forms",
-      subMenuItems: [
+      items: [
         {
           name: "Projects",
           description: "description",
@@ -137,7 +137,7 @@ const menuData = {
   "secondaryMenu": [
     {
       name: "User",
-      subMenuItems: [
+      items: [
         {
           name: "Profile",
           description: "description",
@@ -157,7 +157,7 @@ const menuData = {
     },
     {
       name: "Settings",
-      subMenuItems: [
+      items: [
         {
           name: "Permissions",
           description: "description",

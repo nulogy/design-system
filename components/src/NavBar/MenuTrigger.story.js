@@ -14,12 +14,12 @@ const menuDataDeeper = [
   {
     name: "Submenu Trigger",
     description: "details",
-    subMenuItems: [
+    items: [
       { name: "Submenu Link", description: "details", href: "/" },
       {
         name: "Submenu Trigger",
         description: "details",
-        subMenuItems: [
+        items: [
           { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
@@ -28,26 +28,26 @@ const menuDataDeeper = [
   {
     name: "Dropdown with a long name1",
     description: "details",
-    subMenuItems: [
+    items: [
       { name: "Submenu Link", description: "details", href: "/" },
       {
         name: "Submenu Trigger",
         description: "details",
-        subMenuItems: [
+        items: [
           { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
     ],
   },
   {
-    name: "Submenu Down",
+    name: "Submenu Dropdown",
     description: "details details details details details details details ",
-    subMenuItems: [
+    items: [
       { name: "Submenu Link", description: "details", href: "/" },
       {
         name: "Submenu Trigger",
         description: "details",
-        subMenuItems: [
+        items: [
           { name: "Submenu Link", description: "details", href: "/" },
         ],
       },
@@ -59,11 +59,11 @@ const menuDataDeeperNoDescription = [
   { name: "Submenu Link", href: "/" },
   {
     name: "Submenu Trigger",
-    subMenuItems: [
+    items: [
       { name: "Submenu Link", href: "/" },
       {
         name: "Submenu Trigger",
-        subMenuItems: [
+        items: [
           { name: "Submenu Link", href: "/" },
         ],
       },

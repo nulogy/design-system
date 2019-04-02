@@ -5,7 +5,7 @@ import { NavBar } from "ComponentsRoot";
 const primaryMenu = [
   {
     name: "Dashboard",
-    subMenuItems: [
+    items: [
       { name: "Customers", description: "description", href: "/" },
       { name: "Invoices", description: "description", href: "/" },
       { name: "Projects", description: "description", href: "/" },
@@ -16,7 +16,7 @@ const primaryMenu = [
   },
   {
     name: "Inspector",
-    subMenuItems: [
+    items: [
       { name: "Integration", description: "description", href: "/" },
       { name: "Site configuration", description: "description", href: "/" },
       { name: "Company configuration", description: "description", href: "/" },
@@ -24,7 +24,7 @@ const primaryMenu = [
   },
   {
     name: "Reports",
-    subMenuItems: [
+    items: [
       { name: "Production", description: "description", href: "/" },
       { name: "Item cart", description: "description", href: "/" },
       { name: "Inventory", description: "description", href: "/" },
@@ -32,7 +32,7 @@ const primaryMenu = [
   },
   {
     name: "Sheets",
-    subMenuItems: [
+    items: [
       { name: "Item locator", description: "description", href: "/" },
       { name: "Ship orders", description: "description", href: "/" },
     ],
@@ -43,7 +43,7 @@ const primaryMenu = [
 const secondaryMenu = [
   {
     name: "User",
-    subMenuItems: [
+    items: [
       { name: "Profile", description: "description", href: "/" },
       { name: "Preferences", description: "description", href: "/" },
       { name: "Logout", description: "description", href: "/" },
@@ -51,7 +51,7 @@ const secondaryMenu = [
   },
   {
     name: "Settings",
-    subMenuItems: [
+    items: [
       { name: "Permissions", description: "description", href: "/" },
       { name: "Manage account", description: "description", href: "/" },
     ],
