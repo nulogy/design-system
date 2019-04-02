@@ -5,7 +5,7 @@ import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
-import { Text, Icon, Flex } from "ComponentsRoot";
+import { Text, Icon } from "ComponentsRoot";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -15,6 +15,9 @@ const SubMenuItemsList = styled.ul({
 
 const SubMenuTriggerButton = styled.button({
   display: "block",
+  color: theme.colors.darkBlue,
+  fontSize: theme.fontSizes.medium,
+  
   width: "100%",
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
@@ -45,17 +48,6 @@ const keyCode = Object.freeze({
   "RIGHT": 39,
   "DOWN": 40,
 });
-
-const IconContainer = styled.span(
-  {
-    display: "inline-flex",
-    alignSelf: "center",
-    position: "relative",
-    height: "1em",
-    width: "20px",
-    minwidth: ""
-  }
-);
 
 const isDropdown = subMenuItem => (subMenuItem.subMenuItems);
 
@@ -129,14 +121,12 @@ class SubMenuTrigger extends React.Component {
           {({ ref }) => (
             <li>
               <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-                <Flex alignItems="center" >
-                  <Text color={ "darkBlue" }>
-                    { this.props.text }
-                  </Text>
-                  <Icon icon="rightArrow" color="darkBlue" size="20px" p="2px"/>
-                </Flex>
+                { this.props.text }
+                <span>
+                  <Icon style={{verticalAlign: "sub", position: "absolute"}} icon="rightArrow" color="darkBlue" size="20px" p="2px"/>
+                </span>
                 {this.props.subText && (
-                <Text color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                <Text inline style={{display: "block"}} color={ "darkGrey" } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
                   {this.props.subText}
                 </Text>
                 )}      
