@@ -19,7 +19,7 @@ const SubMenuTriggerButton = styled.button({
   fontSize: theme.fontSizes.medium,
 
   width: "100%",
-  padding: `${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: theme.colors.lightGrey,
@@ -164,6 +164,7 @@ class SubMenuTrigger extends React.Component {
 
 SubMenuTrigger.propTypes = {
   text: PropTypes.string.isRequired,
+  subText: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -171,6 +172,7 @@ SubMenuTrigger.propTypes = {
 
 SubMenuTrigger.defaultProps = {
   menuData: null,
+  subText: null,
   showDelay: "100",
   hideDelay: "350",
 };
