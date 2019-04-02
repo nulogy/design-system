@@ -126,7 +126,7 @@ class MenuTrigger extends React.Component {
           {({ ref }) => (
             <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>
               { this.props.labelText }
-              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px"/>
+              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
             </MenuTriggerButton>
           )}
         </Reference>
@@ -135,17 +135,17 @@ class MenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-              {this.props.menuData.map(subMenuItem => {
-                if (isDropdown(subMenuItem)) {
-                  return (
-                    <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={subMenuItem.subText} menuData={ subMenuItem.subMenuItems }/>      
-                  );
-                } else {
-                  return (
-                    <SubMenuLink key={ subMenuItem.text } text={subMenuItem.text} subText={subMenuItem.subText} href={ subMenuItem.href }/>
-                  );
-                }
-              })}
+                {this.props.menuData.map(subMenuItem => {
+                  if (isDropdown(subMenuItem)) {
+                    return (
+                      <SubMenuTrigger key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } menuData={ subMenuItem.subMenuItems } />
+                    );
+                  } else {
+                    return (
+                      <SubMenuLink key={ subMenuItem.text } text={ subMenuItem.text } subText={ subMenuItem.subText } href={ subMenuItem.href } />
+                    );
+                  }
+                })}
               </SubMenuItemsList>
             </SubMenu>
           )}

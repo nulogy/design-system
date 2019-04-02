@@ -10,76 +10,76 @@ const menuData = [
 ];
 
 const menuDataDeeper = [
-  {text: "Submenu Link", subText: "details", href: "/"},
+  { text: "Submenu Link", subText: "details", href: "/" },
   {
-    text: "Submenu Dropdown", 
-    subText: "details", 
+    text: "Submenu Dropdown",
+    subText: "details",
     subMenuItems: [
-      {text: "Submenu Link", subText: "details", href: "/"},
+      { text: "Submenu Link", subText: "details", href: "/" },
       {
-        text: "Submenu Dropdown", 
-        subText: "details", 
+        text: "Submenu Dropdown",
+        subText: "details",
         subMenuItems: [
-          {text: "Submenu Link", subText: "details", href: "/"},
-        ]
+          { text: "Submenu Link", subText: "details", href: "/" },
+        ],
       },
     ],
   },
   {
-    text: "Submenu Dropdown", 
-    subText: "details", 
+    text: "Submenu Dropdown",
+    subText: "details",
     subMenuItems: [
-      {text: "Submenu Link", subText: "details", href: "/"},
+      { text: "Submenu Link", subText: "details", href: "/" },
       {
-        text: "Submenu Dropdown", 
-        subText: "details", 
+        text: "Submenu Dropdown",
+        subText: "details",
         subMenuItems: [
-          {text: "Submenu Link", subText: "details", href: "/"},
-        ]
+          { text: "Submenu Link", subText: "details", href: "/" },
+        ],
       },
     ],
   },
   {
-    text: "Downdowndowndown Downdownn", 
-    subText: "details", 
+    text: "Downdowndowndown Downdownn",
+    subText: "details",
     subMenuItems: [
-      {text: "Submenu Link", subText: "details", href: "/"},
+      { text: "Submenu Link", subText: "details", href: "/" },
       {
-        text: "Submenu Dropdown", 
-        subText: "details", 
+        text: "Submenu Dropdown",
+        subText: "details",
         subMenuItems: [
-          {text: "Submenu Link", subText: "details", href: "/"},
-        ]
+          { text: "Submenu Link", subText: "details", href: "/" },
+        ],
       },
     ],
   },
   {
-    text: "Submenu Down", 
-    subText: "details details details details details details details ", 
+    text: "Submenu Down",
+    subText: "details details details details details details details ",
     subMenuItems: [
-      {text: "Submenu Link", subText: "details", href: "/"},
+      { text: "Submenu Link", subText: "details", href: "/" },
       {
-        text: "Submenu Dropdown", 
-        subText: "details", 
+        text: "Submenu Dropdown",
+        subText: "details",
         subMenuItems: [
-          {text: "Submenu Link", subText: "details", href: "/"},
-        ]
+          { text: "Submenu Link", subText: "details", href: "/" },
+        ],
       },
     ],
   },
 ];
 
 const menuDataDeeperNoSubText = [
-  {text: "Submenu Link", href: "/"},
+  { text: "Submenu Link", href: "/" },
   {
-    text: "Submenu Dropdown", 
+    text: "Submenu Dropdown",
     subMenuItems: [
-      {text: "Submenu Link", href: "/"},
+      { text: "Submenu Link", href: "/" },
       {
-        text: "Submenu Dropdown", 
+        text: "Submenu Dropdown",
         subMenuItems: [
-          {text: "Submenu Link", href: "/"},
-        ]
+          { text: "Submenu Link", href: "/" },
+        ],
       },
     ],
   },
@@ -88,16 +88,16 @@ const menuDataDeeperNoSubText = [
 storiesOf("MenuTrigger", module)
   .add("MenuTrigger", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuData } id="menuDropdown1" labelText="Menu Dropdown" />
     </Flex>
   ))
   .add("MenuTrigger with deeper submenus", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuDataDeeper } id="menuDropdown1" labelText="Menu Dropdown" />
     </Flex>
-  ))  
+  ))
   .add("MenuTrigger with deeper submenus and no subText", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown"/>
+      <MenuTrigger menuData={ menuDataDeeperNoSubText } id="menuDropdown1" labelText="Menu Dropdown" />
     </Flex>
   ));

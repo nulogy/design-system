@@ -17,7 +17,7 @@ const BaseDesktopMenu = ({
       if (isDropdown(menuItem)) {
         return (
           <div key={ menuItem.text }>
-            <MenuTrigger labelText={ menuItem.text } menuData={ menuItem.subMenuItems }/>
+            <MenuTrigger labelText={ menuItem.text } menuData={ menuItem.subMenuItems } />
           </div>
         );
       } else {
