@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Welcome</title>
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
       </Helmet>
       <HighlightStyles />
