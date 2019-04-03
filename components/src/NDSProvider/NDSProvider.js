@@ -8,6 +8,9 @@ const Reset = createGlobalStyle(
       margin: 0,
       color: theme.colors.black,
     },
+    "button": {
+      fontFamily: theme.fonts.base,
+    },
   }
 );
 
