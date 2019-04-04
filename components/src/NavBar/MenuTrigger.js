@@ -54,7 +54,41 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isTrigger = menuItem => (menuItem.items);
+const itemType = menuItem => {
+  if ( menuItem.items ){
+    return "MenuTrigger";
+  } else if ( menuItem.link ) {
+    return "CustomLink";
+  } else if ( menuItem.href && menuItem.name) {
+    return "MenuLink";
+  } else {
+    return null;
+  }
+};
+
+const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
+  switch (itemType(subMenuItem)) {
+  case "MenuTrigger":
+    return (
+      <li key={ subMenuItem.name }>
+        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+      </li>
+    );  case "MenuLink":
+    return (
+      <li key={ subMenuItem.name }>
+        <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+      </li>
+    );
+  case "CustomLink":
+    return (
+      <li key={subMenuItem.name}>
+        {subMenuItem.link}
+      </li>
+      )
+  default:
+    return(<div style={{color: "red"}}>Data Missing</div>)  
+}}
+)
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
@@ -135,21 +169,7 @@ class MenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {this.props.menuData.map(subMenuItem => {
-                  if (isTrigger(subMenuItem)) {
-                    return (
-                      <li key={ subMenuItem.name }>
-                        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={ subMenuItem.name }>
-                        <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
-                      </li>
-                    );
-                  }
-                })}
+                {renderSubMenuItems(this.props.menuData)}
               </SubMenuItemsList>
             </SubMenu>
           )}
