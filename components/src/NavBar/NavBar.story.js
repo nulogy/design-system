@@ -55,6 +55,17 @@ const primaryMenu = [
   { name: "Link", href: "/" },
 ];
 
+const primaryMenuCustomLinks = [
+  {
+    name: "Dashboard",
+    items: [
+      { link: <a href="/">CustomLink</a> },
+    ],
+  },
+  { link: <a href="/">CustomLink</a> },
+];
+
+
 const secondaryMenu = [
   {
     name: "User",
@@ -95,4 +106,7 @@ storiesOf("NavBar", module)
   ))
   .add("With branding only", () => (
     <NavBar menuData={ {} } />
+  ))
+  .add("With custom link components", () => (
+    <NavBar menuData={ { primaryMenu: primaryMenuCustomLinks } } />
   ));
