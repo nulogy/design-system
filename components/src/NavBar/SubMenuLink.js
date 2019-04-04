@@ -5,19 +5,7 @@ import Link from "../Link/Link";
 import Text from "../Type/Text";
 import theme from "../theme";
 
-const SubMenuItemLink = styled(Link)({
-  display: "block",
-  padding: `${theme.space.x1} ${theme.space.x2}`,
-  "&:hover, &:focus": {
-    outline: "none",
-    backgroundColor: theme.colors.lightGrey,
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
-});
-
-const BaseSubMenuItem = React.forwardRef(({
+const BaseSubMenuLink = React.forwardRef(({
   href,
   name,
   description,
@@ -27,18 +15,18 @@ const BaseSubMenuItem = React.forwardRef(({
   ...props
 }, ref) => (
   <li { ...props }>
-    <SubMenuItemLink ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
+    <Link ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
       <Text color={ nameColor }>{ name }</Text>
       {description && (
       <Text color={ descriptionColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
         {description}
       </Text>
       )}
-    </SubMenuItemLink>
+    </Link>
   </li>
 ));
 
-BaseSubMenuItem.propTypes = {
+BaseSubMenuLink.propTypes = {
   name: PropTypes.node.isRequired,
   description: PropTypes.string,
   href: PropTypes.string,
@@ -47,7 +35,7 @@ BaseSubMenuItem.propTypes = {
   tabIndex: PropTypes.string,
 };
 
-BaseSubMenuItem.defaultProps = {
+BaseSubMenuLink.defaultProps = {
   description: undefined,
   href: "/",
   nameColor: "darkBlue",
@@ -55,7 +43,7 @@ BaseSubMenuItem.defaultProps = {
   tabIndex: null,
 };
 
-const SubMenuItem = styled(BaseSubMenuItem)({
+const SubMenuLink = styled(BaseSubMenuLink)({
   color: theme.colors.black,
   borderColor: "transparent",
   backgroundColor: "transparent",
@@ -67,6 +55,17 @@ const SubMenuItem = styled(BaseSubMenuItem)({
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
   maxWidth: "20em",
+  [`${Link}`]: {
+    display: "block",
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: theme.colors.lightGrey,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
 });
 
-export default SubMenuItem;
+export default SubMenuLink;

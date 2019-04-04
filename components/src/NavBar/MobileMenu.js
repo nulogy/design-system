@@ -6,24 +6,30 @@ import {
   Icon,
   SubsectionTitle,
 } from "ComponentsRoot";
-import SubMenuItem from "./SubMenuItem";
+import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
-import SubMenuItems from "./MenuDropdown/SubMenuItems";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const isSubMenu = menuItem => (menuItem.subMenuItems);
+const SubMenuItemsList = styled.ul({
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
+  marginBottom: theme.space.x4,
+});
+
+const isSubMenu = menuItem => (menuItem.items);
 
 const SubMenu = ({ menuItem }) => (
   <div>
     <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
-    <SubMenuItems>
+    <SubMenuItemsList>
       {
-        menuItem.subMenuItems.map(subMenuItem => (
-          <SubMenuItem nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
+        menuItem.items.map(subMenuItem => (
+          <SubMenuLink nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
         ))
       }
-    </SubMenuItems>
+    </SubMenuItemsList>
   </div>
 );
 
@@ -97,10 +103,7 @@ const Menu = styled(Box)(() => (
       padding: `0 ${theme.space.x3}`,
       marginBottom: theme.space.x2,
     },
-    [`${SubMenuItems}`]: {
-      marginBottom: theme.space.x4,
-    },
-    [`${SubMenuItem}`]: {
+    [`${SubMenuLink}`]: {
       maxWidth: "100%",
       "a": {
         padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x5}`,

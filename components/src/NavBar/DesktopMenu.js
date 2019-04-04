@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "ComponentsRoot";
-import { MenuDropdown } from "./MenuDropdown";
-import SubMenuItem from "./SubMenuItem";
+import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const isDropdown = menuItem => (menuItem.subMenuItems);
+const isTrigger = menuItem => (menuItem.items);
 
 const BaseDesktopMenu = ({
   menuData,
@@ -15,14 +14,10 @@ const BaseDesktopMenu = ({
 }) => (
   <Flex { ...props }>
     {menuData.map(menuItem => {
-      if (isDropdown(menuItem)) {
+      if (isTrigger(menuItem)) {
         return (
           <div key={ menuItem.name }>
-            <MenuDropdown labelText={ menuItem.name }>
-              {menuItem.subMenuItems.map(subMenuItem => (
-                <SubMenuItem key={ subMenuItem.name } { ...subMenuItem } tabIndex="-1" />
-              ))}
-            </MenuDropdown>
+            <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
           </div>
         );
       } else {

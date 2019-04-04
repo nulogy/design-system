@@ -52,41 +52,56 @@ const BaseSubMenu = ({
     placement,
     arrowProps,
   },
+  renderArrow,
   children,
   ...props
 }) => (
   <div ref={ ref } style={ style } placement={ placement } { ...props }>
-    <Arrow { ...arrowProps } />
+    {renderArrow && <Arrow { ...arrowProps } /> }
     {children}
   </div>
 );
 
 BaseSubMenu.propTypes = {
   children: PropTypes.node,
+  renderArrow: PropTypes.bool,
   popperProps: PropTypes.shape({}),
 };
 
 BaseSubMenu.defaultProps = {
   children: null,
+  renderArrow: true,
   popperProps: null,
 };
 
-const SubMenu = styled(BaseSubMenu)({
-  color: subMenuStyles.nameColor,
-  display: "flex",
-  flexDirection: "column",
-  fontSize: theme.fontSizes.small,
-  backgroundColor: subMenuStyles.backgroundColor,
-  borderRadius: theme.radii.medium,
-  borderTop: `1px solid ${subMenuStyles.borderColor}`,
-  boxShadow: theme.boxShadows,
-  padding: `${theme.space.x1} 0`,
-  transition: "opacity 0.3s",
-  zIndex: "999999",
-  marginTop: theme.space.half,
-},
-({ style }) => ({
-  ...style,
-}));
+const SubMenu = styled(BaseSubMenu)(
+  ({ renderArrow }) => ({
+    color: subMenuStyles.nameColor,
+    display: "flex",
+    maxWidth: "20em",
+    flexDirection: "column",
+    fontSize: theme.fontSizes.small,
+    backgroundColor: subMenuStyles.backgroundColor,
+    borderRadius: theme.radii.medium,
+    borderTop: `1px solid ${subMenuStyles.borderColor}`,
+    borderBottom: `1px solid ${subMenuStyles.borderColor}`,
+    boxShadow: theme.boxShadows,
+    padding: "7px 0",
+    transition: "opacity 0.3s",
+    zIndex: "999999",
+    marginTop: renderArrow ? theme.space.half : "-9px",
+  }),
+  ({ style }) => ({
+    ...style,
+  })
+);
+
+SubMenu.propTypes = {
+  renderArrow: PropTypes.bool,
+};
+
+SubMenu.defaultProps = {
+  renderArrow: true,
+};
 
 export default SubMenu;

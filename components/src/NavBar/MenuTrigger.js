@@ -3,11 +3,18 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
-import SubMenuItems from "./SubMenuItems";
 import SubMenu from "./SubMenu";
-import Icon from "../../Icon/Icon";
+import SubMenuTrigger from "./SubMenuTrigger";
+import SubMenuLink from "./SubMenuLink";
+import Icon from "../Icon/Icon";
 
-const MenuDropdownButton = styled.button({
+const SubMenuItemsList = styled.ul({
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
+});
+
+const MenuTriggerButton = styled.button({
   display: "inline-flex",
   color: theme.colors.white,
   border: "none",
@@ -21,9 +28,6 @@ const MenuDropdownButton = styled.button({
   fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,
-  [`${Icon}`]: {
-    color: theme.colors.lightGrey,
-  },
   "&:hover, &:focus": {
     outline: "none",
     color: theme.colors.lightBlue,
@@ -50,13 +54,14 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
+const isTrigger = menuItem => (menuItem.items);
+
 /* eslint-disable react/destructuring-assignment */
-class MenuDropdown extends React.Component {
+class MenuTrigger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       subMenuOpen: false,
-      focusIndex: 1,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
@@ -80,34 +85,6 @@ class MenuDropdown extends React.Component {
     this.setSubMenuState(true, skipTimer);
   }
 
-  focusFirstItem() {
-    this.setState({ focusIndex: 0 });
-  }
-
-  focusLastItem() {
-    this.setState({ focusIndex: this.props.children.length - 1 });
-  }
-
-  focusNextItem() {
-    let nextIndex;
-    if (this.state.focusIndex === this.props.children.length - 1) {
-      nextIndex = 0;
-    } else {
-      nextIndex = this.state.focusIndex + 1;
-    }
-    this.setState({ focusIndex: nextIndex });
-  }
-
-  focusPrevItem() {
-    let prevIndex;
-    if (this.state.focusIndex === 0) {
-      prevIndex = this.props.children.length - 1;
-    } else {
-      prevIndex = this.state.focusIndex - 1;
-    }
-    this.setState({ focusIndex: prevIndex });
-  }
-
   subMenuEventHandlers() {
     return ({
       onFocus: () => (this.showSubMenu()),
@@ -117,11 +94,10 @@ class MenuDropdown extends React.Component {
     });
   }
 
-  menuDropdownEventHandlers() {
+  menuTriggerEventHandlers() {
     return ({
       onClick: () => {
         this.showSubMenu();
-        this.focusFirstItem();
       },
       onBlur: () => (this.hideSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
@@ -138,38 +114,6 @@ class MenuDropdown extends React.Component {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
-      case keyCode.UP:
-        if (this.state.subMenuOpen) {
-          this.focusPrevItem();
-        } else {
-          this.showSubMenu(true);
-          this.focusLastItem();
-        }
-        break;
-      case keyCode.DOWN:
-        if (this.state.subMenuOpen) {
-          this.focusNextItem();
-        } else {
-          this.showSubMenu(true);
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.ENTER:
-        if (!this.state.subMenuOpen) {
-          this.showSubMenu(true);
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.HOME:
-        if (this.state.subMenuOpen) {
-          this.focusFirstItem();
-        }
-        break;
-      case keyCode.END:
-        if (this.state.subMenuOpen) {
-          this.focusLastItem();
-        }
-        break;
       default:
         break;
     }
@@ -180,16 +124,29 @@ class MenuDropdown extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuDropdownButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuDropdownEventHandlers() } ref={ ref }>{ this.props.labelText }<Icon icon="downArrow" size="20px" p={ 2 } /></MenuDropdownButton>
+            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
+              { this.props.name }
+              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
+            </MenuTriggerButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
-        <Popper placement="bottom-start">
+        <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItems focusIndex={ this.state.focusIndex }>
-                {this.props.children}
-              </SubMenuItems>
+              <SubMenuItemsList>
+                {this.props.menuData.map(subMenuItem => {
+                  if (isTrigger(subMenuItem)) {
+                    return (
+                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+                    );
+                  } else {
+                    return (
+                      <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+                    );
+                  }
+                })}
+              </SubMenuItemsList>
             </SubMenu>
           )}
         </Popper>
@@ -200,17 +157,18 @@ class MenuDropdown extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-MenuDropdown.propTypes = {
-  labelText: PropTypes.string.isRequired,
-  children: PropTypes.node,
+
+MenuTrigger.propTypes = {
+  name: PropTypes.string.isRequired,
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MenuDropdown.defaultProps = {
-  children: null,
+MenuTrigger.defaultProps = {
+  menuData: null,
   showDelay: "100",
   hideDelay: "350",
 };
 
-export default MenuDropdown;
+export default MenuTrigger;
