@@ -1,0 +1,8 @@
+{
+  "name": "components-e2e",
+  "version": "0.0.0",
+  "description": "browser tests for components",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true
+}
