@@ -59,10 +59,15 @@ const primaryMenuCustomLinks = [
   {
     name: "Dashboard",
     items: [
-      { link: <a href="/">CustomLink</a> },
+      { name: "Custom Link",
+        link: <a href="/">CustomLink</a>,
+      },
     ],
   },
-  { link: <a href="/">CustomLink</a> },
+  { 
+    name: "Custom Link",
+    link: <a href="/">CustomLink</a>,
+  },
 ];
 
 

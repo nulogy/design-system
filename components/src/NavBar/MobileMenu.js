@@ -43,7 +43,28 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
       </li>
     );
   }
-});
+};
+
+const renderMenuItems = menuItems => menuItems.map(menuItem => {
+      switch (itemType(menuItem)) {
+      case "MenuTrigger":
+        return <SubMenu key={ menuItem.name } menuItem={ menuItem } />;
+      case "MenuLink":
+        return (
+          <MenuLink key={ menuItem.name } href={ menuItem.href }>
+            {menuItem.name}
+          </MenuLink>
+        );
+      case "CustomLink":
+        return (
+          <div key={menuItem.name}>
+            {menuItem.link}
+          </div>
+          )
+      default:
+        return(<div style={{color: "red"}}>Data Missing</div>)  
+    }}
+    )
 
 const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
 

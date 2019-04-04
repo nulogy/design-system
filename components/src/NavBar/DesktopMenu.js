@@ -6,7 +6,17 @@ import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const isTrigger = menuItem => (menuItem.items);
+const itemType = menuItem => {
+  if ( menuItem.items ){
+    return "MenuTrigger";
+  } else if ( menuItem.link ) {
+    return "CustomLink";
+  } else if ( menuItem.href && menuItem.name) {
+    return "MenuLink";
+  } else {
+    return null;
+  }
+};
 
 const BaseDesktopMenu = ({
   menuData,
@@ -14,13 +24,14 @@ const BaseDesktopMenu = ({
 }) => (
   <Flex { ...props }>
     {menuData.map(menuItem => {
-      if (isTrigger(menuItem)) {
+      switch (itemType(menuItem)) {
+      case "MenuTrigger":
         return (
           <div key={ menuItem.name }>
             <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
           </div>
         );
-      } else {
+      case "MenuLink":
         return (
           <div key={ menuItem.name }>
             <MenuLink href={ menuItem.href }>
@@ -28,8 +39,16 @@ const BaseDesktopMenu = ({
             </MenuLink>
           </div>
         );
-      }
-    })}
+      case "CustomLink":
+        return (
+          <div key={menuItem.name}>
+            {menuItem.link}
+          </div>
+        )
+      default:
+        return(<div style={{color: "red"}}>Data Missing</div>)  
+    }}
+    )}
   </Flex>
 );
 
