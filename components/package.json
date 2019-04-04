@@ -54,13 +54,16 @@
     "@storybook/addon-storyshots-puppeteer": "4.1.11",
     "babel-jest": "24.1.0",
     "babel-plugin-require-context-hook": "1.0.0",
+    "babel-plugin-styled-components": "1.10.0",
     "babel-preset-react": "6.24.1",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.10.0",
+    "enzyme-to-json": "3.3.5",
     "eslint-config-airbnb": "17.1.0",
     "eslint-import-resolver-webpack": "^0.11.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.1.0",
+    "jest-styled-components": "6.3.1",
     "prop-types": "15.6.2",
     "react-test-renderer": "~16.3"
   },
@@ -102,6 +105,9 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/spec/support/specHelper.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }
