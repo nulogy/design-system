@@ -120,10 +120,10 @@ class SubMenuTrigger extends React.Component {
         <Reference>
           {({ ref }) => (
             <li>
-              <SubMenuTriggerButton style={{position: "relative"}} aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+              <SubMenuTriggerButton style={ { position: "relative" } } aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
                 { this.props.name }
                 <span>
-                  <Icon style={{ position: "absolute", top: "11px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+                  <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
                 </span>
                 {this.props.description && (
                 <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
