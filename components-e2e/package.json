@@ -6,11 +6,20 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@babel/preset-react": "7.0.0",
+    "@cypress/webpack-preprocessor": "4.0.3",
+    "babel-loader": "8.0.5",
+    "babel-plugin-macros": "2.5.1",
     "cypress": "3.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
   "dependencies": {
     "@nulogy/components": "0.5.1"
+  },
+  "babelMacros": {
+    "styledComponents": {
+      "ssr": true
+    }
   }
 }
