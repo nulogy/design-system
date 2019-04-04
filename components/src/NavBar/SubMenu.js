@@ -89,7 +89,7 @@ const SubMenu = styled(BaseSubMenu)(
     padding: "7px 0",
     transition: "opacity 0.3s",
     zIndex: "999999",
-    marginTop: renderArrow ? theme.space.half : "-9px",
+    marginTop: renderArrow ? theme.space.half : "-8px",
   }),
   ({ style }) => ({
     ...style,
