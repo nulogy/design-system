@@ -5,6 +5,7 @@
   "private": true,
   "workspaces": [
     "components",
+    "components-e2e",
     "css",
     "docs",
     "tokens"
