@@ -82,3 +82,5 @@ yarn-debug.log*
 yarn-error.log*
 
 **/__image_snapshots__
+
+**/cypress/screenshots
