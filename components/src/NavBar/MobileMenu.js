@@ -12,11 +12,11 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const SubMenuItemsList = styled.ul(({ largeMarginBottom }) => ({
+const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
-  marginBottom: largeMarginBottom ? theme.space.x4 : theme.space.x2,
+  marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
 }));
 
 const isSubMenu = menuItem => (menuItem.items);
@@ -45,6 +45,8 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   }
 });
 
+const renderTopLayerMenuItems = menuData => renderMenuItems(menuData,0); 
+
 const SubMenu = ({ menuItem, layer }) => (
   <>
     { layer === 0
@@ -59,7 +61,7 @@ const SubMenu = ({ menuItem, layer }) => (
       {menuItem.name}
     </Text>
     )}
-    <SubMenuItemsList largeMarginBottom={ layer === 0 }>
+    <SubMenuItemsList isTopLayer={ layer === 0 }>
       {renderMenuItems(menuItem.items, layer + 1)}
     </SubMenuItemsList>
   </>
@@ -70,44 +72,6 @@ SubMenu.propTypes = {
   menuItem: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
-};
-
-const MobileMenuBase = ({
-  menuData,
-  menuState: { isOpen, handleMenuToggle },
-  ...props
-}) => (
-  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
-      {
-      isOpen
-        ? <Icon icon="close" title="Close Menu" />
-        : <Icon icon="menu" title="Open Menu" />
-    }
-    </button>
-
-    {
-      isOpen
-        && (
-          <Menu>
-            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu, 0) }
-            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu, 0) }
-          </Menu>
-        )
-    }
-  </Box>
-);
-
-MobileMenuBase.propTypes = {
-  menuData: PropTypes.shape({}),
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool.isRequired,
-    handleMenuToggle: PropTypes.func.isRequired,
-  }).isRequired,
-};
-
-MobileMenuBase.defaultProps = {
-  menuData: null,
 };
 
 const Menu = styled.ul(() => (
@@ -146,6 +110,44 @@ const Menu = styled.ul(() => (
     },
   })
 );
+
+const MobileMenuBase = ({
+  menuData,
+  menuState: { isOpen, handleMenuToggle },
+  ...props
+}) => (
+  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
+    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
+      {
+      isOpen
+        ? <Icon icon="close" title="Close Menu" />
+        : <Icon icon="menu" title="Open Menu" />
+    }
+    </button>
+
+    {
+      isOpen
+        && (
+          <Menu>
+            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu) }
+            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu) }
+          </Menu>
+        )
+    }
+  </Box>
+);
+
+MobileMenuBase.propTypes = {
+  menuData: PropTypes.shape({}),
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool.isRequired,
+    handleMenuToggle: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+MobileMenuBase.defaultProps = {
+  menuData: null,
+};
 
 const MobileMenu = styled(MobileMenuBase)(
   {

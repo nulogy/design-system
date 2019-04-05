@@ -56,7 +56,6 @@ const SubMenuLink = styled(BaseSubMenuLink)(props => ({
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
   maxWidth: "20em",
-
   display: "block",
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
