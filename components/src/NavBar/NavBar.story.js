@@ -60,22 +60,34 @@ const primaryMenuCustomLinks = [
     name: "MenuTrigger",
     items: [
       { 
-        name: "Menu Trigger",
+        name: "MenuTrigger",
         items: [
           { 
-            name: "Custom Link",
+            name: "NormalLink",
+            href: "/",
+          },
+          { 
+            name: "CustomLink",
             link: <a href="/">CustomLink</a>,
           },
         ],
       },
       { 
-        name: "Custom Link",
+        name: "NormalLink",
+        href: "/",
+      },
+      { 
+        name: "CustomLink",
         link: <a href="/">CustomLink</a>,
       },
     ],
   },
   { 
-    name: "Custom Link",
+    name: "NormalLink",
+    href: "/",
+  },
+  { 
+    name: "CustomLink",
     link: <a href="/">CustomLink</a>,
   },
 ];

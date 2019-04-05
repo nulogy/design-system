@@ -6,6 +6,34 @@ import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
+const MenuLinkStyles = styled.div({
+  "& *": {
+    display: "inline-flex",
+    color: theme.colors.white,
+    textDecoration: "none",
+    border: "none",
+    backgroundColor: "transparent",
+    justifyContent: "center",
+    alignItems: "center",
+    textDecoration: "none",
+    verticalAlign: "middle",
+    lineHeight: theme.lineHeights.base,
+    transition: ".2s",
+    fontSize: `${theme.fontSizes.medium}`,
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    borderRadius: theme.radii.medium,
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors.lightBlue,
+      backgroundColor: theme.colors.black,
+      cursor: "pointer",
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
+});
+
 const itemType = menuItem => {
   if ( menuItem.items ){
     return "MenuTrigger";
@@ -41,9 +69,9 @@ const BaseDesktopMenu = ({
         );
       case "CustomLink":
         return (
-          <div key={menuItem.name}>
+          <MenuLinkStyles key={menuItem.name}>
             {menuItem.link}
-          </div>
+          </MenuLinkStyles>
         )
       default:
         return(<div style={{color: "red"}}>Data Missing</div>)  

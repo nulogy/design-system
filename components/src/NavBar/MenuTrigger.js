@@ -39,6 +39,33 @@ const MenuTriggerButton = styled.button({
   },
 });
 
+const SubMenuLinkStyles = styled.li({
+  color: theme.colors.black,
+  borderColor: "transparent",
+  backgroundColor: "transparent",
+  justifyContent: "center",
+  alignItems: "center",
+  textDecoration: "none",
+  verticalAlign: "middle",
+  lineHeight: theme.lineHeights.base,
+  transition: ".2s",
+  fontSize: theme.fontSizes.medium,
+  maxWidth: "20em",
+  "& *": {
+    display: "block",
+    color: theme.colors.darkBlue,
+    textDecoration: "none",
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: theme.colors.lightGrey,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
+});
+
 const keyCode = Object.freeze({
   "TAB": 9,
   "RETURN": 13,
@@ -81,9 +108,9 @@ const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
     );
   case "CustomLink":
     return (
-      <li key={subMenuItem.name}>
+      <SubMenuLinkStyles key={ subMenuItem.name }>
         {subMenuItem.link}
-      </li>
+      </SubMenuLinkStyles>
       )
   default:
     return(<div style={{color: "red"}}>Data Missing</div>)  
