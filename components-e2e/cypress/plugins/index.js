@@ -44,7 +44,7 @@ const options = {
   watchOptions: {},
 };
 
-module.exports = (on, config) => {
+module.exports = on => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   on("file:preprocessor", webpack(options));
