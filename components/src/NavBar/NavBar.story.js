@@ -25,21 +25,21 @@ const primaryMenu = [
   {
     name: "Operations",
     items: [
-      { 
-        name: "Production", 
-        description: "description", 
+      {
+        name: "Production",
+        description: "description",
         items: [
           { name: "Dashboard", description: "description", href: "/" },
-          { 
+          {
             name: "Projects",
             description: "description",
             items: [
               { name: "Cycle Counts", description: "description", href: "/" },
               { name: "Blind Counts", description: "description", href: "/" },
-            ]
+            ],
           },
           { name: "Jobs", description: "description", href: "/" },
-        ]
+        ],
       },
       { name: "Item cart", description: "description", href: "/" },
       { name: "Inventory", description: "description", href: "/" },

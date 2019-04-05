@@ -12,7 +12,7 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const SubMenuItemsList = styled.ul(({ largeMarginBottom })=>({
+const SubMenuItemsList = styled.ul(({ largeMarginBottom }) => ({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
@@ -21,35 +21,13 @@ const SubMenuItemsList = styled.ul(({ largeMarginBottom })=>({
 
 const isSubMenu = menuItem => (menuItem.items);
 
-const SubMenu = ({ menuItem, layer }) => (
-  <>
-    { layer === 0 &&
-    <SubsectionTitle color="grey" style={{paddingLeft: `${ ( 24 * layer ) + 24 }px`}} key={ menuItem.name }>
-      {menuItem.name}
-    </SubsectionTitle>}
-    { layer > 0 &&
-    <Text color="grey" mt={theme.space.x2} mb={theme.space.x1} style={{paddingLeft: `${ ( 24 * layer ) + 24 }px`}} key={ menuItem.name }>
-      {menuItem.name}
-    </Text>}
-    <SubMenuItemsList largeMarginBottom={ layer === 0 }>
-      {renderMenuItems(menuItem.items,layer + 1)}
-    </SubMenuItemsList>
-  </>
-);
-
-SubMenu.propTypes = {
-  menuItem: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
 const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
     return (
       <li key={ menuItem.name }>
-        <SubMenu menuItem={ menuItem } layer={ layer }/>
+        <SubMenu menuItem={ menuItem } layer={ layer } />
       </li>
-      )
+    );
   } else if (layer === 0) {
     return (
       <li key={ menuItem.name }>
@@ -61,11 +39,38 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   } else {
     return (
       <li key={ menuItem.name }>
-        <SubMenuLink style={{paddingLeft: `${ (24 * layer) + 24 }px`}} nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+        <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
   }
 });
+
+const SubMenu = ({ menuItem, layer }) => (
+  <>
+    { layer === 0
+    && (
+    <SubsectionTitle color="grey" style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+      {menuItem.name}
+    </SubsectionTitle>
+    )}
+    { layer > 0
+    && (
+    <Text color="grey" mt={ theme.space.x2 } mb={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+      {menuItem.name}
+    </Text>
+    )}
+    <SubMenuItemsList largeMarginBottom={ layer === 0 }>
+      {renderMenuItems(menuItem.items, layer + 1)}
+    </SubMenuItemsList>
+  </>
+);
+
+SubMenu.propTypes = {
+  layer: PropTypes.number.isRequired,
+  menuItem: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 const MobileMenuBase = ({
   menuData,
@@ -85,8 +90,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu,0) }
-            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu,0) }
+            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu, 0) }
+            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu, 0) }
           </Menu>
         )
     }

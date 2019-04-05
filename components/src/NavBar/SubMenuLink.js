@@ -45,7 +45,7 @@ BaseSubMenuLink.defaultProps = {
   underline: false,
 };
 
-const SubMenuLink = styled(BaseSubMenuLink)((props) => ({
+const SubMenuLink = styled(BaseSubMenuLink)(props => ({
   color: "grey",
   borderColor: "transparent",
   backgroundColor: "transparent",
@@ -56,17 +56,17 @@ const SubMenuLink = styled(BaseSubMenuLink)((props) => ({
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
   maxWidth: "20em",
- 
-    display: "block",
-    padding: `${theme.space.x1} ${theme.space.x2}`,
-    "&:hover, &:focus": {
-      outline: "none",
-      backgroundColor: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-  
+
+  display: "block",
+  padding: `${theme.space.x1} ${theme.space.x2}`,
+  "&:hover, &:focus": {
+    outline: "none",
+    backgroundColor: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
+  },
+  "&:disabled": {
+    opacity: ".5",
+  },
+
 }));
 
 SubMenuLink.propTypes = {
