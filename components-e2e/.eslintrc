@@ -1,4 +1,8 @@
 {
   "parser": "babel-eslint",
-  "extends": ["../.eslintrc"]
+  "extends": ["../.eslintrc"],
+  "plugins": [ "cypress" ],
+  "env": {
+    "cypress/globals": true
+  }
 }
