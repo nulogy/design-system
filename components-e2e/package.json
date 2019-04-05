@@ -8,7 +8,9 @@
   "scripts": {
     "lint": "yarn run eslint",
     "eslint": "eslint --config .eslintrc './**/*.js'",
-    "eslint:fix": "yarn run eslint --fix"
+    "eslint:fix": "yarn run eslint --fix",
+    "test": "cypress run --spec '**/components/**/*spec.js'",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@babel/preset-react": "7.0.0",
