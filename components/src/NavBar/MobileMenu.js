@@ -5,26 +5,34 @@ import {
   Box,
   Icon,
   SubsectionTitle,
+  Text,
 } from "ComponentsRoot";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const SubMenuItemsList = styled.ul({
+const SubMenuItemsList = styled.ul(({ largeMarginBottom })=>({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
-  marginBottom: theme.space.x4,
-});
+  marginBottom: largeMarginBottom ? theme.space.x4 : theme.space.x2,
+}));
 
 const isSubMenu = menuItem => (menuItem.items);
 
-const SubMenu = ({ menuItem }) => (
+const SubMenu = ({ menuItem, layer }) => (
   <>
-    <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
-    <SubMenuItemsList>
-      {renderSubMenuItems(menuItem.items)}
+    { layer === 0 &&
+    <SubsectionTitle color="grey" style={{paddingLeft: `${ ( 24 * layer ) + 24 }px`}} key={ menuItem.name }>
+      {menuItem.name}
+    </SubsectionTitle>}
+    { layer > 0 &&
+    <Text color="grey" mt={theme.space.x2} mb={theme.space.x1} style={{paddingLeft: `${ ( 24 * layer ) + 24 }px`}} key={ menuItem.name }>
+      {menuItem.name}
+    </Text>}
+    <SubMenuItemsList largeMarginBottom={ layer === 0 }>
+      {renderMenuItems(menuItem.items,layer + 1)}
     </SubMenuItemsList>
   </>
 );
@@ -35,14 +43,14 @@ SubMenu.propTypes = {
   }).isRequired,
 };
 
-const renderMenuItems = menuItems => menuItems.map(menuItem => {
+const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
     return (
       <li key={ menuItem.name }>
-        <SubMenu menuItem={ menuItem } />
+        <SubMenu menuItem={ menuItem } layer={ layer }/>
       </li>
       )
-  } else {
+  } else if (layer === 0) {
     return (
       <li key={ menuItem.name }>
         <MenuLink key={ menuItem.name } href={ menuItem.href }>
@@ -50,20 +58,10 @@ const renderMenuItems = menuItems => menuItems.map(menuItem => {
         </MenuLink>
       </li>
     );
-  }
-});
-
-const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
-  if (isSubMenu(subMenuItem)) {
-    return (
-      <li key={ subMenuItem.name }>
-        <SubMenu menuItem={ subMenuItem } />
-      </li>
-      )
   } else {
     return (
-      <li key={ subMenuItem.name }>
-        <SubMenuLink nameColor="white" descriptionColor="grey" { ...subMenuItem } />
+      <li key={ menuItem.name }>
+        <SubMenuLink style={{paddingLeft: `${ (24 * layer) + 24 }px`}} nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
   }
@@ -87,8 +85,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu) }
-            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu) }
+            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu,0) }
+            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu,0) }
           </Menu>
         )
     }
@@ -124,7 +122,7 @@ const Menu = styled.ul(() => (
     [`${SubMenuLink}`]: {
       maxWidth: "100%",
       "a": {
-        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x5}`,
+        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
         marginBottom: theme.space.x1,
         transition: ".2s",
         "&:hover, &:focus": {

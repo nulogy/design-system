@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import Link from "../Link/Link";
 import theme from "../theme";
 
 const MenuLink = styled(Link).attrs({
-  underline: false,
   color: "white",
 })({
   display: "inline-flex",
@@ -11,7 +11,6 @@ const MenuLink = styled(Link).attrs({
   backgroundColor: "transparent",
   justifyContent: "center",
   alignItems: "center",
-  textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
@@ -28,5 +27,13 @@ const MenuLink = styled(Link).attrs({
     opacity: ".5",
   },
 });
+
+MenuLink.propTypes = {
+  underline: PropTypes.bool,
+};
+
+MenuLink.defaultProps = {
+  underline: false,
+};
 
 export default MenuLink;
