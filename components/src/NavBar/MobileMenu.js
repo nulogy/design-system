@@ -144,7 +144,8 @@ const Menu = styled.ul(() => (
       marginBottom: theme.space.x4,
       borderRadius: "0",
     },
-  }));
+  })
+);
 
 const MobileMenu = styled(MobileMenuBase)(
   {
