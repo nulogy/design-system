@@ -27,7 +27,7 @@ context("Spies, Stubs, and Clock", () => {
        * @param b {string}
       */
       foo(a, b) {
-        console.log("a", a, "b", b);
+        console.log("a", a, "b", b); // eslint-disable-line no-console
       },
     };
 

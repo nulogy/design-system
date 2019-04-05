@@ -15,11 +15,11 @@ context("Cypress.Commands", () => {
       // and the commands arguments are shifted
 
       // allow us to change the console method used
-      method = method || "log";
+      const consoleMethod = method || "log";
 
       // log the subject to the console
       // @ts-ignore TS7017
-      console[method]("The subject is", subject);
+      console[consoleMethod]("The subject is", subject); // eslint-disable-line no-console
 
       // whatever we return becomes the new subject
       // we don't want to change the subject so
@@ -28,7 +28,7 @@ context("Cypress.Commands", () => {
     });
 
     // @ts-ignore TS2339
-    cy.get("button").console("info").then($button => {
+    cy.get("button").console("info").then(_$button => {
       // subject is still $button
     });
   });

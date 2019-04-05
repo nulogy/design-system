@@ -30,7 +30,7 @@ context("Utilities", () => {
     cy.get(".utility-blob").then($div =>
     // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
     // get the dataUrl string for the javascript-logo
-      Cypress.Blob.imgSrcToDataURL("https://example.cypress.io/assets/img/javascript-logo.png", undefined, "anonymous")
+      Cypress.Blob.imgSrcToDataURL("https://example.cypress.io/assets/img/javascript-logo.png", undefined, "anonymous") // eslint-disable-line implicit-arrow-linebreak
         .then(dataUrl => {
         // create an <img> element and set its src to the dataUrl
           const img = Cypress.$("<img />", { src: dataUrl });
@@ -94,7 +94,7 @@ context("Utilities", () => {
     function waitOneSecond() {
       // return a promise that resolves after 1 second
       // @ts-ignore TS2351 (new Cypress.Promise)
-      return new Cypress.Promise((resolve, reject) => {
+      return new Cypress.Promise(resolve => {
         setTimeout(() => {
           // set waited to true
           waited = true;
@@ -109,7 +109,7 @@ context("Utilities", () => {
     // return a promise to cy.then() that
     // is awaited until it resolves
       // @ts-ignore TS7006
-      waitOneSecond().then(str => {
+      waitOneSecond().then(str => { // eslint-disable-line implicit-arrow-linebreak
         expect(str).to.eq("foo");
         expect(waited).to.be.true;
       }));
