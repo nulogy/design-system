@@ -120,7 +120,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Responsive</SectionTitle>
-      <Text>All Text props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
+      <Text>All Text props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> object</Text>
       <Text>This example displays columns on small screens and rows on large ones.</Text>
       <Text color={ { small: "red", medium: "blue", large: "green" } }>Green text on large screens, blue on medium and red on small.</Text>
       <Highlight className="js">
@@ -142,6 +142,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
+      <ListItem><Link href="https://nulogy.design/tokens/">NDS theme</Link></ListItem>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Text">View in Storybook</Link></ListItem>
     </DocSection>
   </Layout>

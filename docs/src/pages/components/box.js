@@ -62,7 +62,7 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Text Color</SubsectionTitle>
-        <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
+        <Text>Color can be set using a reference to the <Link href="https://nulogy.design/tokens">theme.colors</Link> object.</Text>
         <Box color="blue">blue</Box>
         <Highlight className="js">
           {"<Box color=\"blue\">blue</Box>"}
@@ -70,7 +70,7 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Background Color</SubsectionTitle>
-        <Text>Color can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.colors</Link> object.</Text>
+        <Text>Color can be set using a reference to the <Link href="https://nulogy.design/tokens">theme.colors</Link> object.</Text>
         <Box bg="lightBlue">lightBlue</Box>
         <Highlight className="js">
           {"<Box bg=\"lightBlue\">lightBlue</Box>"}
@@ -78,7 +78,7 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Margins</SubsectionTitle>
-        <Text>Margins can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
+        <Text>Margins can be set using a reference to the <Link href="https://nulogy.design/tokens">theme.space</Link> object.</Text>
         <Box bg="lightBlue" m="x3">x3 (24px)</Box>
         <Highlight className="js">
           {"<Box m=\"x3\">x3</Box"}
@@ -86,7 +86,7 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Padding</SubsectionTitle>
-        <Text>Padding can be set using a reference to the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.space</Link> object.</Text>
+        <Text>Padding can be set using a reference to the <Link href="https://nulogy.design/tokens">theme.space</Link> object.</Text>
         <Box bg="lightBlue" p="x3">x3 (24px)</Box>
         <Highlight className="js">
           {"<Box p=\"x3\">x3</Box"}
@@ -94,7 +94,7 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Responsive</SubsectionTitle>
-        <Text>All Box props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> object</Text>
+        <Text>All Box props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> object</Text>
         <Box color={ { small: "red", medium: "blue", large: "green" } }>Green text on large screens, blue on medium and red on small.</Box>
         <Highlight className="js">
           {`<Box color={{ small: "red", medium: "blue", large: "green"}}>
@@ -116,6 +116,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
+      <ListItem><Link href="https://nulogy.design/tokens/">NDS theme</Link></ListItem>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Box">View in Storybook</Link></ListItem>
     </DocSection>
 

@@ -222,7 +222,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Responsiveness</SectionTitle>
-      <Text>Providing different prop values for different breaking points that are based on the <Link href="https://github.com/nulogy/design-system/blob/master/components/src/theme.js">theme.breakpoints</Link> is possible by passing an object to a prop.</Text>
+      <Text>Providing different prop values for different breaking points that are based on the <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> is possible by passing an object to a prop.</Text>
       <Text mb="x2" color="darkGrey">Size and background colour change based on the screen size</Text>
       <Flex color="white">
         <Box width={ { small: 1 / 9, medium: 1 / 9, large: 7 / 9 } } bg={ { small: "blue", medium: "darkBlue", large: "blackBlue" } } m="x1" py="x3" px="x4">1</Box>
