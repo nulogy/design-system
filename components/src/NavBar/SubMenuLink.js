@@ -14,7 +14,7 @@ const BaseSubMenuLink = React.forwardRef(({
   tabIndex,
   ...props
 }, ref) => (
-  <li { ...props }>
+  <div { ...props }>
     <Link ref={ ref } tabIndex={ tabIndex } underline={ false } href={ href }>
       <Text color={ nameColor }>{ name }</Text>
       {description && (
@@ -23,7 +23,7 @@ const BaseSubMenuLink = React.forwardRef(({
       </Text>
       )}
     </Link>
-  </li>
+  </div>
 ));
 
 BaseSubMenuLink.propTypes = {

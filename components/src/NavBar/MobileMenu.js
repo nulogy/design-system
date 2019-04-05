@@ -21,16 +21,12 @@ const SubMenuItemsList = styled.ul({
 const isSubMenu = menuItem => (menuItem.items);
 
 const SubMenu = ({ menuItem }) => (
-  <div>
+  <>
     <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
     <SubMenuItemsList>
-      {
-        menuItem.items.map(subMenuItem => (
-          <SubMenuLink nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
-        ))
-      }
+      {renderSubMenuItems(menuItem.items)}
     </SubMenuItemsList>
-  </div>
+  </>
 );
 
 SubMenu.propTypes = {
@@ -41,12 +37,34 @@ SubMenu.propTypes = {
 
 const renderMenuItems = menuItems => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
-    return <SubMenu key={ menuItem.name } menuItem={ menuItem } />;
+    return (
+      <li key={ menuItem.name }>
+        <SubMenu menuItem={ menuItem } />
+      </li>
+      )
   } else {
     return (
-      <MenuLink key={ menuItem.name } href={ menuItem.href }>
-        {menuItem.name}
-      </MenuLink>
+      <li key={ menuItem.name }>
+        <MenuLink key={ menuItem.name } href={ menuItem.href }>
+          {menuItem.name}
+        </MenuLink>
+      </li>
+    );
+  }
+});
+
+const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
+  if (isSubMenu(subMenuItem)) {
+    return (
+      <li key={ subMenuItem.name }>
+        <SubMenu menuItem={ subMenuItem } />
+      </li>
+      )
+  } else {
+    return (
+      <li key={ subMenuItem.name }>
+        <SubMenuLink nameColor="white" descriptionColor="grey" { ...subMenuItem } />
+      </li>
     );
   }
 });
@@ -89,7 +107,7 @@ MobileMenuBase.defaultProps = {
   menuData: null,
 };
 
-const Menu = styled(Box)(() => (
+const Menu = styled.ul(() => (
   {
     position: "absolute",
     left: "0",
