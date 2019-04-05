@@ -119,19 +119,17 @@ class SubMenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <li>
-              <SubMenuTriggerButton style={ { position: "relative" } } aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-                { this.props.name }
-                <span>
-                  <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
-                </span>
-                {this.props.description && (
-                <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
-                  {this.props.description}
-                </Text>
-                )}
-              </SubMenuTriggerButton>
-            </li>
+            <SubMenuTriggerButton style={ { position: "relative" } } aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+              { this.props.name }
+              <span>
+                <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+              </span>
+              {this.props.description && (
+              <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
+                {this.props.description}
+              </Text>
+              )}
+            </SubMenuTriggerButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
@@ -142,11 +140,15 @@ class SubMenuTrigger extends React.Component {
                 {this.props.menuData.map(subMenuItem => {
                   if (isTrigger(subMenuItem)) {
                     return (
-                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+                      <li key={ subMenuItem.name } >
+                        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+                      </li>
                     );
                   } else {
                     return (
-                      <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+                      <li key={ subMenuItem.name } >
+                        <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+                      </li>
                     );
                   }
                 })}

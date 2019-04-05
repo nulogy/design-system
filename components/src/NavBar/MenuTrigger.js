@@ -138,11 +138,15 @@ class MenuTrigger extends React.Component {
                 {this.props.menuData.map(subMenuItem => {
                   if (isTrigger(subMenuItem)) {
                     return (
-                      <SubMenuTrigger key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+                      <li key={ subMenuItem.name }>
+                        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+                      </li>
                     );
                   } else {
                     return (
-                      <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+                      <li key={ subMenuItem.name }>
+                        <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+                      </li>
                     );
                   }
                 })}
