@@ -57,7 +57,7 @@ const primaryMenu = [
 
 const primaryMenuCustomLinks = [
   {
-    name: "Menu Trigger",
+    name: "MenuTrigger",
     items: [
       { 
         name: "Menu Trigger",
