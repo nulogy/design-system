@@ -5,12 +5,18 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "lint": "yarn run eslint",
+    "eslint": "eslint --config .eslintrc './**/*.js'",
+    "eslint:fix": "yarn run eslint --fix"
+  },
   "devDependencies": {
     "@babel/preset-react": "7.0.0",
     "@cypress/webpack-preprocessor": "4.0.3",
     "babel-loader": "8.0.5",
     "babel-plugin-macros": "2.5.1",
     "cypress": "3.2.0",
+    "eslint": "5.16.0",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
