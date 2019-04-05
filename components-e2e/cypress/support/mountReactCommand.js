@@ -18,10 +18,8 @@ const copyStyles = component => {
 
   let styles = document.querySelectorAll("head style");
   if (styles.length) {
-    console.log("injected %d styles", styles.length);
     stylesCache.set(hash, styles);
   } else {
-    console.log("No styles injected for this component, checking cache");
     if (stylesCache.has(hash)) {
       styles = stylesCache.get(hash);
     } else {
