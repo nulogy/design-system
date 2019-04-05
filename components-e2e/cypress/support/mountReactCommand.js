@@ -19,12 +19,10 @@ const copyStyles = component => {
   let styles = document.querySelectorAll("head style");
   if (styles.length) {
     stylesCache.set(hash, styles);
+  } else if (stylesCache.has(hash)) {
+    styles = stylesCache.get(hash);
   } else {
-    if (stylesCache.has(hash)) {
-      styles = stylesCache.get(hash);
-    } else {
-      styles = null;
-    }
+    styles = null;
   }
 
   if (!styles) {
