@@ -32,7 +32,7 @@ To test in the cypress runner (to see the tests run):
 CLI:
 - `yarn test`
 
-# Are there any quirks I should know about the `mount` command?
+# Are there any quirks I should know about the `cy.mount` command?
 
 Yes.
 
@@ -41,7 +41,7 @@ The command is introduced in: `cypress/support/mountReactCommand.js`
 Cypress has 2 iframes.
 It runs the spec from one iframe, and renders html into another iframe.
 
-What `cy.mount` does is it first renders html that contains a div named app (`div#app`) into the app iframe.
+What `cy.mount` does is it first renders html that contains a div named "app" (`div#app`) into the app iframe.
 Then it uses `ReactDOM.render` to render the component into `div#app`.
 
 ## Quirks
