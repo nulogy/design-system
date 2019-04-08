@@ -4,7 +4,7 @@ This is a separate project to hold end-to-end tests for the design system.
 
 # What should I know?
 
-What's special about this project is that it adds a new command to cypress, which allows you to mount React components directly into the test browser.
+What's special about this project is that it adds a new command (`cy.mount`) to cypress, which allows you to mount React components directly into the test browser.
 
 e.g.
 
