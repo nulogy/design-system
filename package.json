@@ -5,13 +5,14 @@
   "private": true,
   "workspaces": [
     "components",
+    "components-e2e",
     "css",
     "docs",
     "tokens"
   ],
   "scripts": {
     "build": "lerna run build",
-    "test": "cd components && yarn test",
+    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish"
   },
   "main": "index.js",
