@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="188px" height="161px" viewBox="0 0 188 161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-14.000000, -11.000000)" fill="#F0B41C">
-            <path d="M172.62594,16.8520035 L202,28.5560104 L202,133.942005 C202,156.571083 173.938803,160.545652 154.997495,163.212008 C165.831121,160.545652 172.686071,157.549746 172.62594,133.942005 L172.62594,40.2700037 L143.251879,28.5560104 L172.62594,16.8520035 Z M49.2468682,157.360005 L49.2468682,92.9779804 C49.2468682,86.4968366 54.1275121,79.1668527 60.0504291,76.6403052 L90.3765659,63.6580449 L90.3765659,104.602097 L119.750626,122.247984 C125.673543,125.24389 137.379071,125.313795 137.379071,116.385994 L137.379071,98.8199975 L125.613412,92.9580077 L125.613412,11 L36.0480836,43.8850639 C23.8715283,48.3489641 14,62.419737 14,75.4019973 L14,172 L49.2468682,157.360005 Z" id="Shape"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F0B41C;}
+	.st1{fill:none;}
+</style>
+<g id="Artboard" transform="translate(-14.000000, -11.000000)">
+	<path id="Shape" class="st0" d="M165.9,29.5L194,40.7v100.9c0,21.7-26.9,25.5-45,28c10.4-2.6,16.9-5.4,16.9-28V52l-28.1-11.2
+		L165.9,29.5z M47.7,164.1v-61.6c0-6.2,4.7-13.2,10.3-15.6l29-12.4v39.2l28.1,16.9c5.7,2.9,16.9,2.9,16.9-5.6V108l-11.3-5.6V23.9
+		L35.1,55.4C23.5,59.7,14,73.2,14,85.6v92.5L47.7,164.1z"/>
+	<rect x="14" y="11" class="st1" width="180" height="180"/>
+</g>
 </svg>
