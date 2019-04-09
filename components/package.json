@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -51,10 +51,10 @@
     "@babel/core": "7.3.4",
     "@babel/preset-env": "7.3.1",
     "@sambego/storybook-styles": "^1.0.0",
-    "@storybook/addon-storyshots": "4.1.11",
-    "@storybook/addon-storyshots-puppeteer": "4.1.11",
     "@storybook/addon-backgrounds": "^4.1.12",
     "@storybook/addon-info": "^4.1.4",
+    "@storybook/addon-storyshots": "4.1.11",
+    "@storybook/addon-storyshots-puppeteer": "4.1.11",
     "@storybook/addon-storysource": "^4.0.12",
     "@storybook/react": "^4.1.4",
     "babel-jest": "24.1.0",
@@ -76,7 +76,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "@nulogy/tokens": "^0.5.0",
+    "@nulogy/tokens": "^0.5.2",
     "downshift": "3.2.2",
     "polished": "3.0.0",
     "react": "^16.3.2",
