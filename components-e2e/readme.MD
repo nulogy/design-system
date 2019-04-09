@@ -69,4 +69,5 @@ In the future, if cypress changes the name of the iframe, this code may need to 
 # Credits
 
 Implementation: https://github.com/D1no/coinglaze/commit/677bcda02074e63d57155578e5ac466820e6d742
+
 Original inspiration: https://github.com/bahmutov/cypress-react-unit-test
