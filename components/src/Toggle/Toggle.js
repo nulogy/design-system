@@ -114,7 +114,7 @@ BaseToggle.propTypes = {
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   value: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool,
@@ -136,6 +136,7 @@ BaseToggle.defaultProps = {
   helpText: null,
   labelText: null,
   requirementText: null,
+  id: undefined,
 };
 
 const Toggle = styled(BaseToggle)({

@@ -73,7 +73,7 @@ const Textarea = ({
 );
 
 Textarea.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.string,
   required: PropTypes.bool,
@@ -85,6 +85,7 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
+  id: undefined,
   disabled: false,
   error: null,
   required: false,
