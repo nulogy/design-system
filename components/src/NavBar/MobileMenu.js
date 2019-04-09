@@ -45,7 +45,7 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   }
 });
 
-const renderTopLayerMenuItems = menuData => renderMenuItems(menuData,0); 
+const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
 
 const SubMenu = ({ menuItem, layer }) => (
   <>
@@ -108,8 +108,7 @@ const Menu = styled.ul(() => (
       marginBottom: theme.space.x4,
       borderRadius: "0",
     },
-  })
-);
+  }));
 
 const MobileMenuBase = ({
   menuData,
