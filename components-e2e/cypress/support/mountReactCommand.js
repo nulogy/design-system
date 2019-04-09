@@ -6,6 +6,8 @@
 // Source: https://github.com/bahmutov/cypress-react-unit-test
 // =============================================================================
 
+const reactVersion = "16.7.0";
+
 // having weak reference to styles prevents garbage collection
 // and "losing" styles when the next test starts
 const stylesCache = new Map();
@@ -60,8 +62,8 @@ Cypress.Commands.add("mount", jsx => {
   // https://github.com/bahmutov/cypress-react-unit-test/issues/3
   const html = `<body>
     <div id="app"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.7.0/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/${reactVersion}/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/${reactVersion}/umd/react-dom.development.js"></script>
   </body>`;
 
   const document = cy.state("document");

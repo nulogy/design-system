@@ -52,7 +52,11 @@ This supposedly fixes an issue where events don't trigger properly on subsequent
 https://github.com/bahmutov/cypress-react-unit-test/issues/3
 
 In the future, the version of React may have to be bumped up.
-Instructions can be found here: <TODO: Add instructions>
+
+To update:
+
+- Open `mountReactCommand.js`
+- Set `reactVersion` to the desired version
 
 ### Quirk #2: `cy.mount` is `styled-components`-aware.
 
