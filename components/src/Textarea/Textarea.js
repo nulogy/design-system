@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field, MaybeFieldLabel, InlineValidation } from "ComponentsRoot";
 import theme from "../theme";
-import { subPx, withGeneratedId } from "../Utils";
+import { subPx } from "../Utils";
 
 const textareaStyles = {
   disabled: {
@@ -94,4 +94,4 @@ Textarea.defaultProps = {
   rows: 3,
 };
 
-export default withGeneratedId(Textarea);
+export default Textarea;

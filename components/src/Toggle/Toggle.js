@@ -5,7 +5,7 @@ import {
   Field, Text, RequirementText, HelpText, Box,
 } from "ComponentsRoot";
 import theme from "../theme";
-import { ClickInputLabel, omit, withGeneratedId } from "../Utils";
+import { ClickInputLabel, omit } from "../Utils";
 import ToggleButton from "./ToggleButton";
 
 const MaybeToggleTitle = ({
@@ -143,4 +143,4 @@ const Toggle = styled(BaseToggle)({
   alignItems: "flex-start",
 });
 
-export default withGeneratedId(Toggle);
+export default Toggle;
