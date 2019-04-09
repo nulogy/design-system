@@ -85,7 +85,7 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
-  id: undefined,
+  id: null,
   disabled: false,
   error: null,
   required: false,

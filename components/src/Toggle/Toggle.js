@@ -130,13 +130,13 @@ BaseToggle.defaultProps = {
   disabled: false,
   onText: null,
   offText: null,
+  id: null,
   value: "on",
   className: null,
   required: false,
   helpText: null,
   labelText: null,
   requirementText: null,
-  id: undefined,
 };
 
 const Toggle = styled(BaseToggle)({

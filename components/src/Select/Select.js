@@ -217,10 +217,10 @@ Select.defaultProps = {
   initialIsOpen: undefined,
   placeholder: undefined,
   optionToString: extractLabelFromOption,
+  id: null,
   labelText: null,
   helpText: null,
   requirementText: null,
-  id: undefined,
 };
 
 export default Select;
