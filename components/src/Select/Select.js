@@ -7,7 +7,7 @@ import {
   Field, Icon, MaybeFieldLabel, InlineValidation,
 } from "ComponentsRoot";
 import theme from "../theme";
-import { subPx, withGeneratedId } from "../Utils";
+import { subPx } from "../Utils";
 
 const getBorderColor = ({
   error, disabled, isOpen,
@@ -200,7 +200,7 @@ Select.propTypes = {
   error: PropTypes.string,
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
@@ -217,9 +217,10 @@ Select.defaultProps = {
   initialIsOpen: undefined,
   placeholder: undefined,
   optionToString: extractLabelFromOption,
+  id: null,
   labelText: null,
   helpText: null,
   requirementText: null,
 };
 
-export default withGeneratedId(Select);
+export default Select;

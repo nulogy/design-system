@@ -5,7 +5,7 @@ import {
   Field, Text, RequirementText, HelpText, Box,
 } from "ComponentsRoot";
 import theme from "../theme";
-import { ClickInputLabel, omit, withGeneratedId } from "../Utils";
+import { ClickInputLabel, omit } from "../Utils";
 import ToggleButton from "./ToggleButton";
 
 const MaybeToggleTitle = ({
@@ -114,7 +114,7 @@ BaseToggle.propTypes = {
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   value: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool,
@@ -130,6 +130,7 @@ BaseToggle.defaultProps = {
   disabled: false,
   onText: null,
   offText: null,
+  id: null,
   value: "on",
   className: null,
   required: false,
@@ -143,4 +144,4 @@ const Toggle = styled(BaseToggle)({
   alignItems: "flex-start",
 });
 
-export default withGeneratedId(Toggle);
+export default Toggle;
