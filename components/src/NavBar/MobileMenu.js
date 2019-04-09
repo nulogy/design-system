@@ -5,51 +5,110 @@ import {
   Box,
   Icon,
   SubsectionTitle,
+  Text,
 } from "ComponentsRoot";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const SubMenuItemsList = styled.ul({
+const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
-  marginBottom: theme.space.x4,
-});
+  marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
+}));
 
 const isSubMenu = menuItem => (menuItem.items);
 
-const SubMenu = ({ menuItem }) => (
-  <div>
-    <SubsectionTitle key={ menuItem.name }>{menuItem.name}</SubsectionTitle>
-    <SubMenuItemsList>
-      {
-        menuItem.items.map(subMenuItem => (
-          <SubMenuLink nameColor="white" descriptionColor="grey" key={ subMenuItem.name } { ...subMenuItem } />
-        ))
-      }
+const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
+  if (isSubMenu(menuItem)) {
+    return (
+      <li key={ menuItem.name }>
+        <SubMenu menuItem={ menuItem } layer={ layer } />
+      </li>
+    );
+  } else if (layer === 0) {
+    return (
+      <li key={ menuItem.name }>
+        <MenuLink key={ menuItem.name } href={ menuItem.href }>
+          {menuItem.name}
+        </MenuLink>
+      </li>
+    );
+  } else {
+    return (
+      <li key={ menuItem.name }>
+        <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+      </li>
+    );
+  }
+});
+
+const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
+
+const SubMenu = ({ menuItem, layer }) => (
+  <>
+    { layer === 0
+    && (
+    <SubsectionTitle color="grey" style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+      {menuItem.name}
+    </SubsectionTitle>
+    )}
+    { layer > 0
+    && (
+    <Text color="grey" mt={ theme.space.x2 } mb={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+      {menuItem.name}
+    </Text>
+    )}
+    <SubMenuItemsList isTopLayer={ layer === 0 }>
+      {renderMenuItems(menuItem.items, layer + 1)}
     </SubMenuItemsList>
-  </div>
+  </>
 );
 
 SubMenu.propTypes = {
+  layer: PropTypes.number.isRequired,
   menuItem: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-const renderMenuItems = menuItems => menuItems.map(menuItem => {
-  if (isSubMenu(menuItem)) {
-    return <SubMenu key={ menuItem.name } menuItem={ menuItem } />;
-  } else {
-    return (
-      <MenuLink key={ menuItem.name } href={ menuItem.href }>
-        {menuItem.name}
-      </MenuLink>
-    );
-  }
-});
+const Menu = styled.ul(() => (
+  {
+    position: "absolute",
+    left: "0",
+    top: "72px",
+    padding: `${theme.space.x4} 0`,
+    zIndex: "10",
+    width: "100%",
+    backgroundColor: theme.colors.blackBlue,
+    color: theme.colors.white,
+    [`${SubsectionTitle}`]: {
+      padding: `0 ${theme.space.x3}`,
+      marginBottom: theme.space.x2,
+    },
+    [`${SubMenuLink}`]: {
+      maxWidth: "100%",
+      "a": {
+        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
+        marginBottom: theme.space.x1,
+        transition: ".2s",
+        "&:hover, &:focus": {
+          backgroundColor: theme.colors.black,
+        },
+      },
+    },
+    [`${MenuLink}`]: {
+      fontSize: theme.fontSizes.large,
+      lineHeight: theme.lineHeights.sectionTitle,
+      width: "100%",
+      justifyContent: "flex-start",
+      padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
+      marginBottom: theme.space.x4,
+      borderRadius: "0",
+    },
+  }));
 
 const MobileMenuBase = ({
   menuData,
@@ -69,8 +128,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { menuData.primaryMenu && renderMenuItems(menuData.primaryMenu) }
-            { menuData.secondaryMenu && renderMenuItems(menuData.secondaryMenu) }
+            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu) }
+            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu) }
           </Menu>
         )
     }
@@ -88,42 +147,6 @@ MobileMenuBase.propTypes = {
 MobileMenuBase.defaultProps = {
   menuData: null,
 };
-
-const Menu = styled(Box)(() => (
-  {
-    position: "absolute",
-    left: "0",
-    top: "72px",
-    padding: `${theme.space.x4} 0`,
-    zIndex: "10",
-    width: "100%",
-    backgroundColor: theme.colors.blackBlue,
-    color: theme.colors.white,
-    [`${SubsectionTitle}`]: {
-      padding: `0 ${theme.space.x3}`,
-      marginBottom: theme.space.x2,
-    },
-    [`${SubMenuLink}`]: {
-      maxWidth: "100%",
-      "a": {
-        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x5}`,
-        marginBottom: theme.space.x1,
-        transition: ".2s",
-        "&:hover, &:focus": {
-          backgroundColor: theme.colors.black,
-        },
-      },
-    },
-    [`${MenuLink}`]: {
-      fontSize: theme.fontSizes.large,
-      lineHeight: theme.lineHeights.sectionTitle,
-      width: "100%",
-      justifyContent: "flex-start",
-      padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
-      marginBottom: theme.space.x4,
-      borderRadius: "0",
-    },
-  }));
 
 const MobileMenu = styled(MobileMenuBase)(
   {
