@@ -45,6 +45,7 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
   }
 });
 
+/*
 const renderMenuItems = menuItems => menuItems.map(menuItem => {
   switch (itemType(menuItem)) {
   case "MenuTrigger":
@@ -64,7 +65,7 @@ const renderMenuItems = menuItems => menuItems.map(menuItem => {
   default:
     return(<div style={{color: "red"}}>Data Missing</div>)  
 }}
-)
+)*/
 
 const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
 
