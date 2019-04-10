@@ -19,6 +19,52 @@ const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
   marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
 }));
 
+const MenuLinkStyles = styled.li({
+  "& *": {
+    display: "block",
+    color: theme.colors.white,
+    fontSize: theme.fontSizes.large,
+    lineHeight: theme.lineHeights.sectionTitle,
+    width: "100%",
+    justifyContent: "flex-start",
+    padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
+    marginBottom: theme.space.x4,
+    borderRadius: "0",
+    textDecoration: "none",
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: theme.colors.black,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
+});
+
+const SubMenuLinkStyles = styled.li(({layer})=>({
+  color: theme.colors.black,
+  justifyContent: "center",
+  alignItems: "center",
+  textDecoration: "none",
+  lineHeight: theme.lineHeights.base,
+  transition: ".2s",
+  fontSize: theme.fontSizes.medium,
+  "& *": {
+    display: "block",
+    color: theme.colors.white,
+    textDecoration: "none",
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    paddingLeft: `${(24 * layer) + 24}px`,
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: theme.colors.black,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
+}));
+
 const isSubMenu = menuItem => (menuItem.items);
 
 const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
@@ -29,43 +75,51 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
       </li>
     );
   } else if (layer === 0) {
+    return (renderMenuLink(menuItem));
+  } else {
+    return (renderSubMenuLink(menuItem, layer));
+  }
+});
+
+const renderMenuLink = menuItem => {
+  if( menuItem.href ) {
     return (
-      <li key={ menuItem.name }>
-        <MenuLink key={ menuItem.name } href={ menuItem.href }>
+      <li key={ menuItem.name } >
+        <MenuLink href={ menuItem.href }>
           {menuItem.name}
         </MenuLink>
       </li>
     );
+  } else if ( menuItem.link ) {
+    return (
+      <MenuLinkStyles key={menuItem.name}>
+        {menuItem.link}
+      </MenuLinkStyles>
+    );
   } else {
+    return(<div style={{color: "red"}}>Data Missing</div>) 
+  } 
+}
+
+const renderSubMenuLink = (menuItem, layer) => {
+  if( menuItem.href ) {
     return (
       <li key={ menuItem.name }>
         <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
-  }
-});
-
-/*
-const renderMenuItems = menuItems => menuItems.map(menuItem => {
-  switch (itemType(menuItem)) {
-  case "MenuTrigger":
-    return <SubMenu key={ menuItem.name } menuItem={ menuItem } />;
-  case "MenuLink":
+  } else if ( menuItem.link ) {
+    console.log(layer);
+    console.log(`${(24 * layer) + 24}px`);
     return (
-      <MenuLink key={ menuItem.name } href={ menuItem.href }>
-        {menuItem.name}
-      </MenuLink>
-    );
-  case "CustomLink":
-    return (
-      <div key={menuItem.name}>
+      <SubMenuLinkStyles key={menuItem.name} layer={layer}>
         {menuItem.link}
-      </div>
-      )
-  default:
-    return(<div style={{color: "red"}}>Data Missing</div>)  
-}}
-)*/
+      </SubMenuLinkStyles>
+    );
+  } else {
+    return(<div style={{color: "red"}}>Data Missing</div>) 
+  } 
+}
 
 const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
 
