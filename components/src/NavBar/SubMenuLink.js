@@ -14,7 +14,7 @@ const BaseSubMenuLink = React.forwardRef(({
   descriptionColor,
   ...props
 }, ref) => (
-  <Link { ...props } color={ nameColor } ref={ ref } href={ href } underline={ false } >
+  <Link { ...props } color={ nameColor } ref={ ref } href={ href } underline={ false }>
     <Text color={ nameColor }>{ name }</Text>
     {description && (
     <Text color={ descriptionColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>

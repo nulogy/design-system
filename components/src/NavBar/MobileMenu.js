@@ -41,7 +41,7 @@ const MenuLinkStyles = styled.li({
   },
 });
 
-const SubMenuLinkStyles = styled.li(({layer})=>({
+const SubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
   justifyContent: "center",
   alignItems: "center",
@@ -65,6 +65,44 @@ const SubMenuLinkStyles = styled.li(({layer})=>({
   },
 }));
 
+const renderMenuLink = menuItem => {
+  if (menuItem.href) {
+    return (
+      <li key={ menuItem.name }>
+        <MenuLink href={ menuItem.href }>
+          {menuItem.name}
+        </MenuLink>
+      </li>
+    );
+  } else if (menuItem.link) {
+    return (
+      <MenuLinkStyles key={ menuItem.name }>
+        {menuItem.link}
+      </MenuLinkStyles>
+    );
+  } else {
+    return (<div style={ { color: "red" } }>Data Missing</div>);
+  }
+};
+
+const renderSubMenuLink = (menuItem, layer) => {
+  if (menuItem.href) {
+    return (
+      <li key={ menuItem.name }>
+        <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+      </li>
+    );
+  } else if (menuItem.link) {
+    return (
+      <SubMenuLinkStyles key={ menuItem.name } layer={ layer }>
+        {menuItem.link}
+      </SubMenuLinkStyles>
+    );
+  } else {
+    return (<div style={ { color: "red" } }>Data Missing</div>);
+  }
+};
+
 const isSubMenu = menuItem => (menuItem.items);
 
 const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
@@ -80,46 +118,6 @@ const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
     return (renderSubMenuLink(menuItem, layer));
   }
 });
-
-const renderMenuLink = menuItem => {
-  if( menuItem.href ) {
-    return (
-      <li key={ menuItem.name } >
-        <MenuLink href={ menuItem.href }>
-          {menuItem.name}
-        </MenuLink>
-      </li>
-    );
-  } else if ( menuItem.link ) {
-    return (
-      <MenuLinkStyles key={menuItem.name}>
-        {menuItem.link}
-      </MenuLinkStyles>
-    );
-  } else {
-    return(<div style={{color: "red"}}>Data Missing</div>) 
-  } 
-}
-
-const renderSubMenuLink = (menuItem, layer) => {
-  if( menuItem.href ) {
-    return (
-      <li key={ menuItem.name }>
-        <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
-      </li>
-    );
-  } else if ( menuItem.link ) {
-    console.log(layer);
-    console.log(`${(24 * layer) + 24}px`);
-    return (
-      <SubMenuLinkStyles key={menuItem.name} layer={layer}>
-        {menuItem.link}
-      </SubMenuLinkStyles>
-    );
-  } else {
-    return(<div style={{color: "red"}}>Data Missing</div>) 
-  } 
-}
 
 const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
 

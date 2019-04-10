@@ -82,11 +82,11 @@ const keyCode = Object.freeze({
 });
 
 const itemType = menuItem => {
-  if ( menuItem.items ){
+  if (menuItem.items) {
     return "MenuTrigger";
-  } else if ( menuItem.link ) {
+  } else if (menuItem.link) {
     return "CustomLink";
-  } else if ( menuItem.href && menuItem.name) {
+  } else if (menuItem.href && menuItem.name) {
     return "MenuLink";
   } else {
     return null;
@@ -95,27 +95,27 @@ const itemType = menuItem => {
 
 const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
   switch (itemType(subMenuItem)) {
-  case "MenuTrigger":
-    return (
-      <li key={ subMenuItem.name }>
-        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
-      </li>
-    );  case "MenuLink":
-    return (
-      <li key={ subMenuItem.name }>
-        <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
-      </li>
-    );
-  case "CustomLink":
-    return (
-      <SubMenuLinkStyles key={ subMenuItem.name }>
-        {subMenuItem.link}
-      </SubMenuLinkStyles>
-      )
-  default:
-    return(<div style={{color: "red"}}>Data Missing</div>)  
-}}
-)
+    case "MenuTrigger":
+      return (
+        <li key={ subMenuItem.name }>
+          <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+        </li>
+      ); case "MenuLink":
+      return (
+        <li key={ subMenuItem.name }>
+          <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+        </li>
+      );
+    case "CustomLink":
+      return (
+        <SubMenuLinkStyles key={ subMenuItem.name }>
+          {subMenuItem.link}
+        </SubMenuLinkStyles>
+      );
+    default:
+      return (<div style={ { color: "red" } }>Data Missing</div>);
+  }
+});
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
