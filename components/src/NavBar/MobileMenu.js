@@ -12,13 +12,6 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
-  listStyle: "none",
-  paddingLeft: "0",
-  margin: "0",
-  marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
-}));
-
 const MenuLinkStyles = styled.li({
   "& *": {
     display: "block",
@@ -40,6 +33,16 @@ const MenuLinkStyles = styled.li({
     },
   },
 });
+
+const MobileMenuLink = styled(MenuLink)({
+  fontSize: theme.fontSizes.large,
+  lineHeight: theme.lineHeights.sectionTitle,
+  width: "100%",
+  justifyContent: "flex-start",
+  padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
+  marginBottom: theme.space.x4,
+  borderRadius: "0",
+})
 
 const SubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
@@ -65,13 +68,31 @@ const SubMenuLinkStyles = styled.li(({ layer }) => ({
   },
 }));
 
+const MobileSubMenuLink = styled(SubMenuLink)({
+  maxWidth: "100%",
+  "a": {
+    marginBottom: theme.space.x1,
+    transition: ".2s",
+    "&:hover, &:focus": {
+      backgroundColor: theme.colors.black,
+    },
+  },
+});
+
+const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
+  listStyle: "none",
+  paddingLeft: "0",
+  margin: "0",
+  marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
+}));
+
 const renderMenuLink = menuItem => {
   if (menuItem.href) {
     return (
       <li key={ menuItem.name }>
-        <MenuLink href={ menuItem.href }>
+        <MobileMenuLink href={ menuItem.href }>
           {menuItem.name}
-        </MenuLink>
+        </MobileMenuLink>
       </li>
     );
   } else if (menuItem.link) {
@@ -89,7 +110,7 @@ const renderSubMenuLink = (menuItem, layer) => {
   if (menuItem.href) {
     return (
       <li key={ menuItem.name }>
-        <SubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+        <MobileSubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
   } else if (menuItem.link) {
@@ -162,27 +183,25 @@ const Menu = styled.ul(() => (
       padding: `0 ${theme.space.x3}`,
       marginBottom: theme.space.x2,
     },
-    [`${SubMenuLink}`]: {
-      maxWidth: "100%",
-      "a": {
-        marginBottom: theme.space.x1,
-        transition: ".2s",
-        "&:hover, &:focus": {
-          backgroundColor: theme.colors.black,
-        },
-      },
-    },
-    [`${MenuLink}`]: {
-      fontSize: theme.fontSizes.large,
-      lineHeight: theme.lineHeights.sectionTitle,
-      width: "100%",
-      justifyContent: "flex-start",
-      padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
-      marginBottom: theme.space.x4,
-      borderRadius: "0",
-    },
   })
 );
+
+const MobileMenuTrigger = styled.button(  
+{
+  color: theme.colors.white,
+  background: "none",
+  border: "none",
+  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+  marginLeft: theme.space.x1,
+  borderRadius: theme.radii.medium,
+  transition: ".2s",
+  "&:hover, &:focus": {
+    outline: "none",
+    color: theme.colors.lightBlue,
+    backgroundColor: theme.colors.black,
+    cursor: "pointer",
+  },
+});
 
 const MobileMenuBase = ({
   menuData,
@@ -190,13 +209,13 @@ const MobileMenuBase = ({
   ...props
 }) => (
   <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <button onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
+    <MobileMenuTrigger onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
       {
       isOpen
         ? <Icon icon="close" title="Close Menu" />
         : <Icon icon="menu" title="Open Menu" />
       }
-    </button>
+    </MobileMenuTrigger>
 
     {
       isOpen
@@ -222,24 +241,6 @@ MobileMenuBase.defaultProps = {
   menuData: null,
 };
 
-const MobileMenu = styled(MobileMenuBase)(
-  {
-    "button": {
-      color: theme.colors.white,
-      background: "none",
-      border: "none",
-      padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-      marginLeft: theme.space.x1,
-      borderRadius: theme.radii.medium,
-      transition: ".2s",
-      "&:hover, &:focus": {
-        outline: "none",
-        color: theme.colors.lightBlue,
-        backgroundColor: theme.colors.black,
-        cursor: "pointer",
-      },
-    },
-  },
-);
+const MobileMenu = styled(MobileMenuBase)({});
 
 export default MobileMenu;
