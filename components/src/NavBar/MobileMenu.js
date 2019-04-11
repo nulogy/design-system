@@ -165,7 +165,6 @@ const Menu = styled.ul(() => (
     [`${SubMenuLink}`]: {
       maxWidth: "100%",
       "a": {
-        padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
         marginBottom: theme.space.x1,
         transition: ".2s",
         "&:hover, &:focus": {
@@ -182,7 +181,8 @@ const Menu = styled.ul(() => (
       marginBottom: theme.space.x4,
       borderRadius: "0",
     },
-  }));
+  })
+);
 
 const MobileMenuBase = ({
   menuData,
@@ -195,7 +195,7 @@ const MobileMenuBase = ({
       isOpen
         ? <Icon icon="close" title="Close Menu" />
         : <Icon icon="menu" title="Open Menu" />
-    }
+      }
     </button>
 
     {
