@@ -34,7 +34,7 @@ const SubMenuTriggerButton = styled.button({
   cursor: "pointer",
 });
 
-const SubMenuLinkStyles = styled.li({
+const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
   borderColor: "transparent",
   backgroundColor: "transparent",
@@ -103,9 +103,9 @@ const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
       );
     case "CustomLink":
       return (
-        <SubMenuLinkStyles key={ subMenuItem.name }>
+        <ApplySubMenuLinkStyles key={ subMenuItem.name }>
           {subMenuItem.link}
-        </SubMenuLinkStyles>
+        </ApplySubMenuLinkStyles>
       );
     default:
       return (<div style={ { color: "red" } }>Data Missing</div>);

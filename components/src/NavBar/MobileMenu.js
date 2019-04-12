@@ -12,7 +12,7 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const MenuLinkStyles = styled.li({
+const ApplyMenuLinkStyles = styled.li({
   "& *": {
     display: "block",
     color: theme.colors.white,
@@ -44,7 +44,7 @@ const MobileMenuLink = styled(MenuLink)({
   borderRadius: "0",
 })
 
-const SubMenuLinkStyles = styled.li(({ layer }) => ({
+const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
   justifyContent: "center",
   alignItems: "center",
@@ -97,9 +97,9 @@ const renderMenuLink = menuItem => {
     );
   } else if (menuItem.link) {
     return (
-      <MenuLinkStyles key={ menuItem.name }>
+      <ApplyMenuLinkStyles key={ menuItem.name }>
         {menuItem.link}
-      </MenuLinkStyles>
+      </ApplyMenuLinkStyles>
     );
   } else {
     return (<div style={ { color: "red" } }>Data Missing</div>);
@@ -115,9 +115,9 @@ const renderSubMenuLink = (menuItem, layer) => {
     );
   } else if (menuItem.link) {
     return (
-      <SubMenuLinkStyles key={ menuItem.name } layer={ layer }>
+      <ApplySubMenuLinkStyles key={ menuItem.name } layer={ layer }>
         {menuItem.link}
-      </SubMenuLinkStyles>
+      </ApplySubMenuLinkStyles>
     );
   } else {
     return (<div style={ { color: "red" } }>Data Missing</div>);

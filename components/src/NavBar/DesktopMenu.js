@@ -6,7 +6,7 @@ import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const MenuLinkStyles = styled.div({
+const ApplyMenuLinkStyles = styled.div({
   "& *": {
     display: "inline-flex",
     color: theme.colors.white,
@@ -68,9 +68,9 @@ const BaseDesktopMenu = ({
           );
         case "CustomLink":
           return (
-            <MenuLinkStyles key={ menuItem.name }>
+            <ApplyMenuLinkStyles key={ menuItem.name }>
               {menuItem.link}
-            </MenuLinkStyles>
+            </ApplyMenuLinkStyles>
           );
         default:
           return (<div style={ { color: "red" } }>Data Missing</div>);
