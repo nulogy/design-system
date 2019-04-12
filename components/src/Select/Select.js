@@ -49,7 +49,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   borderTopRightRadius: theme.radii.medium,
   borderBottomLeftRadius: isOpen ? 0 : theme.radii.medium,
   borderBottomRightRadius: isOpen ? 0 : theme.radii.medium,
-  boxShadow: isOpen ? theme.boxShadows[0] : "none",
+  boxShadow: isOpen ? theme.boxShadows.small : "none",
   outline: "none",
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   "&:hover, &:focus": {
@@ -103,7 +103,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
   borderRightStyle: "solid",
   borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   marginTop: 0,
-  boxShadow: theme.boxShadows[0],
+  boxShadow: theme.boxShadows.small,
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
   zIndex: 100,
 }));
