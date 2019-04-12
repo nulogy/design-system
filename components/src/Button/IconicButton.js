@@ -51,7 +51,7 @@ const Wrapper = styled.button(
   })
 );
 
-const IconicButton = props => {
+const BaseIconicButton = props => {
   const {
     children,
     icon,
@@ -65,15 +65,17 @@ const IconicButton = props => {
   );
 };
 
+const IconicButton = styled(BaseIconicButton)({});
+
 export const iconNames = Object.keys(icons);
 
-IconicButton.propTypes = {
+BaseIconicButton.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOf(iconNames).isRequired,
 };
 
-IconicButton.defaultProps = {
+BaseIconicButton.defaultProps = {
   disabled: false,
 };
 
