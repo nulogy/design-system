@@ -55,7 +55,9 @@ export default {
     mono: tokens.font_family_mono,
   },
   borders: [],
-  boxShadows: [tokens.shadow_box_small],
+  boxShadows: {
+    small: tokens.shadow_box_small,
+  },
   radii: {
     small: tokens.radius_border_small,
     medium: tokens.radius_border_medium,
