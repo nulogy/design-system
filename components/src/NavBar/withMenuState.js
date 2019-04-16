@@ -11,6 +11,9 @@ class MenuState extends React.Component {
 
     this.handleOnClick = this.handleOnClick.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.openMenu = this.openMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +26,10 @@ class MenuState extends React.Component {
   }
 
   handleOnClick() {
+    this.toggleMenu();
+  }
+
+  toggleMenu() {
     const { isOpen } = this.state;
 
     this.setState({
@@ -30,12 +37,22 @@ class MenuState extends React.Component {
     });
   }
 
+  openMenu() {
+    this.setState({
+      isOpen: true,
+    });
+  }
+
+  closeMenu() {
+    this.setState({
+      isOpen: false,
+    });
+  }
+
   handleKeyDown(event) {
     switch (event.keyCode) {
       case 27:
-        this.setState({
-          isOpen: false,
-        });
+        this.closeMenu();
         break;
       default:
         break;
@@ -50,6 +67,8 @@ class MenuState extends React.Component {
       isOpen,
       handleMenuToggle: this.handleOnClick,
       handleMenuKeydown: this.handleKeyDown,
+      openMenu: this.openMenu,
+      closeMenu: this.closeMenu,
     });
   }
 }

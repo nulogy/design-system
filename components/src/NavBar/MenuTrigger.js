@@ -93,22 +93,22 @@ const itemType = menuItem => {
   }
 };
 
-const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
+const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => {
   switch (itemType(subMenuItem)) {
     case "MenuTrigger":
       return (
         <li key={ subMenuItem.name }>
-          <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+          <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
         </li>
       ); case "MenuLink":
       return (
-        <li key={ subMenuItem.name }>
+        <li key={ subMenuItem.name } onClick={ linkOnClick }>
           <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
         </li>
       );
     case "CustomLink":
       return (
-        <ApplySubMenuLinkStyles key={ subMenuItem.name }>
+        <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
           {subMenuItem.link}
         </ApplySubMenuLinkStyles>
       );
@@ -150,7 +150,6 @@ class MenuTrigger extends React.Component {
     return ({
       onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
-      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -196,7 +195,7 @@ class MenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData)}
+                {renderSubMenuItems(this.props.menuData,()=>{this.hideSubMenu(true)})}
               </SubMenuItemsList>
             </SubMenu>
           )}

@@ -86,10 +86,10 @@ const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
   marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
 }));
 
-const renderMenuLink = menuItem => {
+const renderMenuLink = (menuItem, linkOnClick) => {
   if (menuItem.href) {
     return (
-      <li key={ menuItem.name }>
+      <li key={ menuItem.name } onClick={ linkOnClick }>
         <MobileMenuLink href={ menuItem.href }>
           {menuItem.name}
         </MobileMenuLink>
@@ -97,7 +97,7 @@ const renderMenuLink = menuItem => {
     );
   } else if (menuItem.link) {
     return (
-      <ApplyMenuLinkStyles key={ menuItem.name }>
+      <ApplyMenuLinkStyles key={ menuItem.name } onClick={ linkOnClick }>
         {menuItem.link}
       </ApplyMenuLinkStyles>
     );
@@ -106,16 +106,16 @@ const renderMenuLink = menuItem => {
   }
 };
 
-const renderSubMenuLink = (menuItem, layer) => {
+const renderSubMenuLink = (menuItem, linkOnClick, layer) => {
   if (menuItem.href) {
     return (
-      <li key={ menuItem.name }>
+      <li key={ menuItem.name } onClick={ linkOnClick }>
         <MobileSubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
   } else if (menuItem.link) {
     return (
-      <ApplySubMenuLinkStyles key={ menuItem.name } layer={ layer }>
+      <ApplySubMenuLinkStyles key={ menuItem.name } layer={ layer } onClick={ linkOnClick }>
         {menuItem.link}
       </ApplySubMenuLinkStyles>
     );
@@ -126,23 +126,23 @@ const renderSubMenuLink = (menuItem, layer) => {
 
 const isSubMenu = menuItem => (menuItem.items);
 
-const renderMenuItems = (menuItems, layer) => menuItems.map(menuItem => {
+const renderMenuItems = (menuItems, linkOnClick, layer) => menuItems.map(menuItem => {
   if (isSubMenu(menuItem)) {
     return (
       <li key={ menuItem.name }>
-        <SubMenu menuItem={ menuItem } layer={ layer } />
+        <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick }/>
       </li>
     );
   } else if (layer === 0) {
-    return (renderMenuLink(menuItem));
+    return (renderMenuLink(menuItem,linkOnClick));
   } else {
-    return (renderSubMenuLink(menuItem, layer));
+    return (renderSubMenuLink(menuItem, linkOnClick,layer));
   }
 });
 
-const renderTopLayerMenuItems = menuData => renderMenuItems(menuData, 0);
+const renderTopLayerMenuItems = (menuData, linkOnClick) => renderMenuItems(menuData, linkOnClick, 0);
 
-const SubMenu = ({ menuItem, layer }) => (
+const SubMenu = ({ menuItem, linkOnClick, layer }) => (
   <>
     { layer === 0
     && (
@@ -157,7 +157,7 @@ const SubMenu = ({ menuItem, layer }) => (
     </Text>
     )}
     <SubMenuItemsList isTopLayer={ layer === 0 }>
-      {renderMenuItems(menuItem.items, layer + 1)}
+      {renderMenuItems(menuItem.items, linkOnClick ,layer + 1)}
     </SubMenuItemsList>
   </>
 );
@@ -205,7 +205,7 @@ const MobileMenuTrigger = styled.button(
 
 const MobileMenuBase = ({
   menuData,
-  menuState: { isOpen, handleMenuToggle },
+  menuState: { isOpen, handleMenuToggle, closeMenu },
   ...props
 }) => (
   <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
@@ -221,8 +221,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu) }
-            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu) }
+            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu,closeMenu) }
+            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu,closeMenu) }
           </Menu>
         )
     }

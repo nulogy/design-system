@@ -88,7 +88,7 @@ const itemType = menuItem => {
   }
 };
 
-const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
+const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => {
   switch (itemType(subMenuItem)) {
     case "MenuTrigger":
       return (
@@ -97,13 +97,13 @@ const renderSubMenuItems = subMenuItems => subMenuItems.map(subMenuItem => {
         </li>
       ); case "MenuLink":
       return (
-        <li key={ subMenuItem.name }>
+        <li key={ subMenuItem.name } onClick={linkOnClick} >
           <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
         </li>
       );
     case "CustomLink":
       return (
-        <ApplySubMenuLinkStyles key={ subMenuItem.name }>
+        <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={linkOnClick}>
           {subMenuItem.link}
         </ApplySubMenuLinkStyles>
       );
@@ -144,7 +144,6 @@ class SubMenuTrigger extends React.Component {
     return ({
       onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
-      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -197,7 +196,7 @@ class SubMenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData)}
+                {renderSubMenuItems(this.props.menuData,this.props.linkOnClick)}
               </SubMenuItemsList>
             </SubMenu>
           )}
