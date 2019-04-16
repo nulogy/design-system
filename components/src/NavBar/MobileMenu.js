@@ -40,7 +40,7 @@ const MobileMenuLink = styled(MenuLink)({
   justifyContent: "flex-start",
   padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
   borderRadius: "0",
-})
+});
 
 const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
@@ -127,13 +127,13 @@ const renderMenuItems = (menuItems, linkOnClick, layer) => menuItems.map(menuIte
   if (isSubMenu(menuItem)) {
     return (
       <li key={ menuItem.name }>
-        <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick }/>
+        <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick } />
       </li>
     );
   } else if (layer === 0) {
-    return (renderMenuLink(menuItem,linkOnClick));
+    return (renderMenuLink(menuItem, linkOnClick));
   } else {
-    return (renderSubMenuLink(menuItem, linkOnClick,layer));
+    return (renderSubMenuLink(menuItem, linkOnClick, layer));
   }
 });
 
@@ -154,7 +154,7 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
     </Text>
     )}
     <SubMenuItemsList>
-      {renderMenuItems(menuItem.items, linkOnClick ,layer + 1)}
+      {renderMenuItems(menuItem.items, linkOnClick, layer + 1)}
     </SubMenuItemsList>
   </>
 );
@@ -164,6 +164,11 @@ SubMenu.propTypes = {
   menuItem: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
+  linkOnClick: PropTypes.func,
+};
+
+SubMenu.defaultProps = {
+  linkOnClick: null,
 };
 
 const Menu = styled.ul(() => (
@@ -180,25 +185,25 @@ const Menu = styled.ul(() => (
       padding: `0 ${theme.space.x3}`,
       marginBottom: theme.space.x2,
     },
-  })
-);
+  }));
 
-const MobileMenuTrigger = styled.button(  
-{
-  color: theme.colors.white,
-  background: "none",
-  border: "none",
-  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-  marginLeft: theme.space.x1,
-  borderRadius: theme.radii.medium,
-  transition: ".2s",
-  "&:hover, &:focus": {
-    outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
-    cursor: "pointer",
-  },
-});
+const MobileMenuTrigger = styled.button(
+  {
+    color: theme.colors.white,
+    background: "none",
+    border: "none",
+    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+    marginLeft: theme.space.x1,
+    borderRadius: theme.radii.medium,
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors.lightBlue,
+      backgroundColor: theme.colors.black,
+      cursor: "pointer",
+    },
+  }
+);
 
 const MobileMenuBase = ({
   menuData,
@@ -218,8 +223,8 @@ const MobileMenuBase = ({
       isOpen
         && (
           <Menu>
-            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu,closeMenu) }
-            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu,closeMenu) }
+            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
+            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
           </Menu>
         )
     }

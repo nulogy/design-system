@@ -198,7 +198,7 @@ class SubMenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData,this.props.linkOnClick)}
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
               </SubMenuItemsList>
             </SubMenu>
           )}
@@ -215,6 +215,7 @@ SubMenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  linkOnClick: PropTypes.func,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
@@ -222,6 +223,7 @@ SubMenuTrigger.propTypes = {
 SubMenuTrigger.defaultProps = {
   menuData: null,
   description: null,
+  linkOnClick: null,
   showDelay: "100",
   hideDelay: "350",
 };

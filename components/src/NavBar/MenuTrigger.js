@@ -195,7 +195,7 @@ class MenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData,()=>{this.hideSubMenu(true)})}
+                {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
               </SubMenuItemsList>
             </SubMenu>
           )}

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, color, themeGet } from "styled-system";
+import { space, color } from "styled-system";
 import icons from "../../icons/icons.json";
-import theme from "../theme.js";
+import theme from "../theme";
 
 const iconNames = Object.keys(icons);
 
@@ -21,7 +21,7 @@ const Svg = props => {
       aria-hidden={ title == null }
       width={ size }
       height={ size }
-      fill={ theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
+      fill={ theme.colors[fillColor] ? theme.colors[fillColor] : fillColor }
       viewBox={ icons[icon].viewBox }
       { ...props }
     >
