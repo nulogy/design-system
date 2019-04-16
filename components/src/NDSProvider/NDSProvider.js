@@ -28,11 +28,12 @@ export const GlobalStyles = styled.div({
   },
 });
 
-const NDSProvider = ({ ...props }) => (
+const NDSProvider = ({ children }) => (
   <React.Fragment>
     <Reset />
+    <GlobalStyles />
     <ThemeProvider theme={ theme }>
-      <GlobalStyles { ...props } />
+      { children }
     </ThemeProvider>
   </React.Fragment>
 );
