@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import theme from "../theme";
+import defaultTheme from "../theme";
 
-const GlobalStyles = createGlobalStyle({
+const GlobalStyles = createGlobalStyle(({ theme }) => ({
   "body": {
     margin: 0,
     color: theme.colors.black,
@@ -22,11 +22,11 @@ const GlobalStyles = createGlobalStyle({
     maxWidth: "100%",
     height: "auto",
   },
-});
+}));
 
-const NDSProvider = ({ children }) => (
+const NDSProvider = ({ theme, children }) => (
   <React.Fragment>
-    <GlobalStyles />
+    <GlobalStyles theme={ theme } />
     <ThemeProvider theme={ theme }>
       { children }
     </ThemeProvider>
@@ -35,6 +35,11 @@ const NDSProvider = ({ children }) => (
 
 NDSProvider.propTypes = {
   children: PropTypes.node.isRequired,
+  theme: PropTypes.shape({}),
+};
+
+NDSProvider.defaultProps = {
+  theme: defaultTheme,
 };
 
 export default NDSProvider;

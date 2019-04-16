@@ -3,7 +3,6 @@ import { configure, addDecorator } from '@storybook/react';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import withStyles from "@sambego/storybook-styles";
 import NDSProvider from '../src/NDSProvider/NDSProvider';
-import theme from '../src/theme';
 
 const grid = {
   base: { colour: 'hsla(120, 100%, 100%, 0.4)', size: `${theme.space.x1}` },
@@ -39,7 +38,7 @@ function loadStories() {
 }
 
 addDecorator((story) => (
-  <NDSProvider theme={theme}>
+  <NDSProvider>
     {story()}
   </NDSProvider>
 ))
