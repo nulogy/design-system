@@ -102,8 +102,8 @@ const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMe
         </li>
       ); case "MenuLink":
       return (
-        <li key={ subMenuItem.name } onClick={ linkOnClick }>
-          <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+        <li key={ subMenuItem.name }>
+          <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
         </li>
       );
     case "CustomLink":

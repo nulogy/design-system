@@ -66,8 +66,9 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   },
 }));
 
-const MobileSubMenuLink = styled(SubMenuLink)({
+const MobileSubMenuLink = styled(SubMenuLink)(({layer})=>({
   maxWidth: "100%",
+  paddingLeft: `${(24 * layer) + 24}px`,
   "a": {
     marginBottom: theme.space.x1,
     transition: ".2s",
@@ -75,7 +76,7 @@ const MobileSubMenuLink = styled(SubMenuLink)({
       backgroundColor: theme.colors.black,
     },
   },
-});
+}));
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -106,8 +107,8 @@ const renderMenuLink = (menuItem, linkOnClick) => {
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => {
   if (menuItem.href) {
     return (
-      <li key={ menuItem.name } onClick={ linkOnClick }>
-        <MobileSubMenuLink style={ { paddingLeft: `${(24 * layer) + 24}px` } } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+      <li key={ menuItem.name }>
+        <MobileSubMenuLink onClick={ linkOnClick } layer={ layer } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
       </li>
     );
   } else if (menuItem.link) {
