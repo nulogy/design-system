@@ -21,7 +21,6 @@ const ApplyMenuLinkStyles = styled.li({
     width: "100%",
     justifyContent: "flex-start",
     padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
-    marginBottom: theme.space.x4,
     borderRadius: "0",
     textDecoration: "none",
     "&:hover, &:focus": {
@@ -40,7 +39,6 @@ const MobileMenuLink = styled(MenuLink)({
   width: "100%",
   justifyContent: "flex-start",
   padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
-  marginBottom: theme.space.x4,
   borderRadius: "0",
 })
 
@@ -79,12 +77,11 @@ const MobileSubMenuLink = styled(SubMenuLink)({
   },
 });
 
-const SubMenuItemsList = styled.ul(({ isTopLayer }) => ({
+const SubMenuItemsList = styled.ul({
   listStyle: "none",
   paddingLeft: "0",
   margin: "0",
-  marginBottom: isTopLayer ? theme.space.x4 : theme.space.x2,
-}));
+});
 
 const renderMenuLink = (menuItem, linkOnClick) => {
   if (menuItem.href) {
@@ -156,7 +153,7 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
       {menuItem.name}
     </Text>
     )}
-    <SubMenuItemsList isTopLayer={ layer === 0 }>
+    <SubMenuItemsList>
       {renderMenuItems(menuItem.items, linkOnClick ,layer + 1)}
     </SubMenuItemsList>
   </>
