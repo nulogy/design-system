@@ -70,13 +70,14 @@ const IconicButton = styled(BaseIconicButton)({});
 export const iconNames = Object.keys(icons);
 
 BaseIconicButton.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOf(iconNames).isRequired,
 };
 
 BaseIconicButton.defaultProps = {
   disabled: false,
+  children: null,
 };
 
 export default IconicButton;
