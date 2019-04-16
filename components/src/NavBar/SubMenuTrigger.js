@@ -15,6 +15,7 @@ const SubMenuItemsList = styled.ul({
 
 const SubMenuTriggerButton = styled.button({
   display: "block",
+  position: "relative",
   color: theme.colors.darkBlue,
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
@@ -46,7 +47,7 @@ const ApplySubMenuLinkStyles = styled.li({
   transition: ".2s",
   fontSize: theme.fontSizes.medium,
   maxWidth: "20em",
-  "& *": {
+  "& > *": {
     display: "block",
     color: theme.colors.darkBlue,
     textDecoration: "none",
@@ -93,17 +94,17 @@ const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMe
     case "MenuTrigger":
       return (
         <li key={ subMenuItem.name }>
-          <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+          <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
         </li>
       ); case "MenuLink":
       return (
-        <li key={ subMenuItem.name } onClick={linkOnClick} >
+        <li key={ subMenuItem.name } onClick={ linkOnClick }>
           <SubMenuLink name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
         </li>
       );
     case "CustomLink":
       return (
-        <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={linkOnClick}>
+        <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
           {subMenuItem.link}
         </ApplySubMenuLinkStyles>
       );
@@ -111,6 +112,7 @@ const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMe
       return (<div style={ { color: "red" } }>Data Missing</div>);
   }
 });
+
 /* eslint-disable react/destructuring-assignment */
 class SubMenuTrigger extends React.Component {
   constructor(props) {
@@ -178,7 +180,7 @@ class SubMenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <SubMenuTriggerButton style={ { position: "relative" } } aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+            <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
               { this.props.name }
               <span>
                 <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />

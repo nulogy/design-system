@@ -3,10 +3,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "ComponentsRoot/theme";
+import Icon from "../Icon/Icon";
 import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import SubMenuLink from "./SubMenuLink";
-import Icon from "../Icon/Icon";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -51,7 +51,7 @@ const ApplySubMenuLinkStyles = styled.li({
   transition: ".2s",
   fontSize: theme.fontSizes.medium,
   maxWidth: "20em",
-  "& *": {
+  "& > *": {
     display: "block",
     color: theme.colors.darkBlue,
     textDecoration: "none",
