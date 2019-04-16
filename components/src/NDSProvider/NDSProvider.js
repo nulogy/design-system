@@ -1,24 +1,20 @@
 import React from "react";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import PropTypes from "prop-types";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import theme from "../theme";
 
-const Reset = createGlobalStyle(
-  {
-    "body": {
-      margin: 0,
-      color: theme.colors.black,
-    },
-    "button": {
-      fontFamily: theme.fonts.base,
-    },
-  }
-);
-
-export const GlobalStyles = styled.div({
-  fontFamily: theme.fonts.base,
-  lineHeight: theme.lineHeights.base,
-  "-webkit-font-smoothing": "antialiased",
-  "-moz-osx-font-smoothing": "grayscale",
+const GlobalStyles = createGlobalStyle({
+  "body": {
+    margin: 0,
+    color: theme.colors.black,
+    fontFamily: theme.fonts.base,
+    lineHeight: theme.lineHeights.base,
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
+  },
+  "button": {
+    fontFamily: theme.fonts.base,
+  },
   "*": {
     boxSizing: "border-box",
   },
@@ -30,12 +26,15 @@ export const GlobalStyles = styled.div({
 
 const NDSProvider = ({ children }) => (
   <React.Fragment>
-    <Reset />
     <GlobalStyles />
     <ThemeProvider theme={ theme }>
       { children }
     </ThemeProvider>
   </React.Fragment>
 );
+
+NDSProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default NDSProvider;
