@@ -136,34 +136,64 @@ export default () => (
       </DocSubsection>
       <DocSubsection>
         <SubsectionTitle>Labels - <Text inline color="darkBlue">F</Text></SubsectionTitle>
-        <Text>Labels inform users what the corresponding input field means. Refer to indivudual form input field components for examples.</Text>
+        <Text mb="0">Labels inform users what the corresponding input field means. Refer to indivudual form input field components for examples.</Text>
+        <Highlight className="js">
+          {`<Input labelText="Project code" />`}
+        </Highlight>
       </DocSubsection>
-      <SubsectionTitle>Help Text (optional) - <Text inline color="darkBlue">G</Text></SubsectionTitle>
-      <Text>Help text is placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used. Examples of help text are available on individual form input components.</Text>
-      <SubsectionTitle>Input fields - <Text inline color="darkBlue">H</Text></SubsectionTitle>
-      <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
-      <List mb="x3">
-        <ListItem><Link href="/components/input">Text</Link> input for single or multi-line text data</ListItem>
-        <ListItem><Link href="/components/radio-button">Radio</Link> button to select one option out of a small list (~ 5-7 max)</ListItem>
-        <ListItem><Link href="/components/select">Select</Link> to select one option out of a large list</ListItem>
-        <ListItem><Link href="/components/checkbox">Checkbox</Link> to select one or multiple options from a list</ListItem>
-        <ListItem><Link href="/components/toggle">Toggle</Link> for boolean choices</ListItem>
-      </List>
-      <SubsectionTitle>Optional vs required label - <Text inline color="darkBlue">I</Text></SubsectionTitle>
-      <Text>If a field is optional or required, it should be visually apparent before submission. Use only one of these labels at a time. When making a form, decide which is more common and apply the label to the smaller of the two groups.</Text>
-      <SubsectionTitle>Placeholder text (optional) -  <Text inline color="darkBlue">J</Text></SubsectionTitle>
-      <Text>Placeholder text can be used to describe a field’s expected format.</Text>
-      <SubsectionTitle>Inline validation - <Text inline color="darkBlue">K</Text></SubsectionTitle>
-      <Text>Inline validation is triggered when the user focuses out of a form field with invalid data. The error message can consist of a single line of text, list, a or a combination of two. The error message stays displayed until the valid value has been entered and the user focuses out of the form field. Examples of inline validation are available on individual form input components.</Text>
+      <DocSubsection>
+        <SubsectionTitle>Help Text (optional) - <Text inline color="darkBlue">G</Text></SubsectionTitle>
+        <Text mb="0">Help text is placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used. Examples of help text are available on individual form input components.</Text>
+        <Highlight className="js">
+          {`<Input labelText="Project code" helpText="Project code is used..." />`}
+        </Highlight>
+      </DocSubsection>
+      <DocSubsection>
+        <SubsectionTitle>Input fields - <Text inline color="darkBlue">H</Text></SubsectionTitle>
+        <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
+        <List mb="x3">
+          <ListItem><Link href="/components/input">Text</Link> input for single or multi-line text data</ListItem>
+          <ListItem><Link href="/components/radio-button">Radio</Link> button to select one option out of a small list (~ 5-7 max)</ListItem>
+          <ListItem><Link href="/components/select">Select</Link> to select one option out of a large list</ListItem>
+          <ListItem><Link href="/components/checkbox">Checkbox</Link> to select one or multiple options from a list</ListItem>
+          <ListItem><Link href="/components/toggle">Toggle</Link> for boolean choices</ListItem>
+        </List>
+      </DocSubsection>
+      <DocSubsection>
+        <SubsectionTitle>Optional vs required label - <Text inline color="darkBlue">I</Text></SubsectionTitle>
+        <Text mb="0">If a field is optional or required, it should be visually apparent before submission. Use only one of these labels at a time. When making a form, decide which is more common and apply the label to the smaller of the two groups.</Text>
+        <Highlight className="js">
+            {`<Input labelText="Customer's name" requirementText="(Optional)" />`}
+        </Highlight>
+      </DocSubsection>
+      <DocSubsection>
+        <SubsectionTitle>Placeholder text (optional) -  <Text inline color="darkBlue">J</Text></SubsectionTitle>
+        <Text mb="0">Placeholder text can be used to describe a field’s expected format.</Text>
+        <Highlight className="js">
+            {`<Input labelText="Customer's name" placeholder="e.g. Staples" />`}
+        </Highlight>
+      </DocSubsection>
+      <DocSubsection>
+        <SubsectionTitle>Inline validation - <Text inline color="darkBlue">K</Text></SubsectionTitle>
+        <Text mb="0">Inline validation is triggered when the user focuses out of a form field with invalid data. The error message can consist of a single line of text, list, a or a combination of two. The error message stays displayed until the valid value has been entered and the user focuses out of the form field. Examples of inline validation are available on individual form input components.</Text>
+        <Highlight className="js">
+            {`<Textarea labelText="Project description" error="Special characters are not allowed." />`}
+        </Highlight>
+      </DocSubsection>
     </DocSection>
     <DocSection>
-    <SectionTitle>General Guidelines</SectionTitle>
+    <SectionTitle>General/UX ? Guidelines</SectionTitle>
       <List>
         <ListItem>Always order items in a logical order that doesn’t require scrolling around</ListItem>
         <ListItem>Whenever possible group items together into fieldsets</ListItem>
         <ListItem>Lay out the form in a single column</ListItem>
         <ListItem>Place actions on the bottom of the form</ListItem>
         <ListItem>Use a label with every input</ListItem>
+      </List>
+    </DocSection>
+    <DocSection>
+    <SectionTitle>Accessibility Guidelines</SectionTitle>
+      <List>
         <ListItem>Placeholders are not replacements for labels, as they are not treated as labels by assistive technology and they disappear when a user tries interacting with a field.</ListItem>
       </List>
     </DocSection>
