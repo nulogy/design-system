@@ -5,12 +5,11 @@ import {
 } from "@nulogy/components";
 import { Helmet } from "react-helmet";
 import { Navigation } from "./Nav";
-import theme from "../../../components/src/theme";
 
 import HighlightStyles from "./HighlightStyles";
 
 const Layout = ({ children }) => (
-  <NDSProvider theme={ theme }>
+  <NDSProvider>
     <Box>
       <Helmet titleTemplate="%s | Nulogy Design System">
         <html lang="en" />

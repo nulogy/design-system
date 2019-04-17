@@ -1,24 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import theme from "../theme";
+import defaultTheme from "../theme";
 
-const Reset = createGlobalStyle(
-  {
-    "body": {
-      margin: 0,
-      color: theme.colors.black,
-    },
-    "button": {
-      fontFamily: theme.fonts.base,
-    },
-  }
-);
+const Reset = createGlobalStyle({
+  "body": {
+    margin: 0,
+  },
+});
 
-export const GlobalStyles = styled.div({
+const GlobalStyles = styled.div(({ theme }) => ({
+  color: theme.colors.black,
   fontFamily: theme.fonts.base,
   lineHeight: theme.lineHeights.base,
   "-webkit-font-smoothing": "antialiased",
   "-moz-osx-font-smoothing": "grayscale",
+  "button": {
+    fontFamily: theme.fonts.base,
+  },
   "*": {
     boxSizing: "border-box",
   },
@@ -26,15 +25,26 @@ export const GlobalStyles = styled.div({
     maxWidth: "100%",
     height: "auto",
   },
-});
+}));
 
-const NDSProvider = ({ ...props }) => (
+const NDSProvider = ({ theme, children }) => (
   <React.Fragment>
     <Reset />
-    <ThemeProvider theme={ theme }>
-      <GlobalStyles { ...props } />
-    </ThemeProvider>
+    <GlobalStyles theme={ theme }>
+      <ThemeProvider theme={ theme }>
+        { children }
+      </ThemeProvider>
+    </GlobalStyles>
   </React.Fragment>
 );
+
+NDSProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+  theme: PropTypes.shape({}),
+};
+
+NDSProvider.defaultProps = {
+  theme: defaultTheme,
+};
 
 export default NDSProvider;

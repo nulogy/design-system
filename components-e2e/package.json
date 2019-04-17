@@ -6,11 +6,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start": "cypress open",
+    "test": "yarn lint && yarn cypress run --spec '**/components/**/*spec.js'",
     "lint": "yarn run eslint",
     "eslint": "eslint --config .eslintrc './**/*.js'",
-    "eslint:fix": "yarn run eslint --fix",
-    "test": "yarn lint && yarn cypress run --spec '**/components/**/*spec.js'",
-    "cypress:open": "cypress open"
+    "eslint:fix": "yarn run eslint --fix"
   },
   "devDependencies": {
     "@babel/preset-react": "7.0.0",
