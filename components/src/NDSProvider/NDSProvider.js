@@ -1,17 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import defaultTheme from "../theme";
 
-const GlobalStyles = createGlobalStyle(({ theme }) => ({
+const Reset = createGlobalStyle({
   "body": {
     margin: 0,
-    color: theme.colors.black,
-    fontFamily: theme.fonts.base,
-    lineHeight: theme.lineHeights.base,
-    "-webkit-font-smoothing": "antialiased",
-    "-moz-osx-font-smoothing": "grayscale",
   },
+});
+
+const GlobalStyles = styled.div(({ theme }) => ({
+  color: theme.colors.black,
+  fontFamily: theme.fonts.base,
+  lineHeight: theme.lineHeights.base,
+  "-webkit-font-smoothing": "antialiased",
+  "-moz-osx-font-smoothing": "grayscale",
   "button": {
     fontFamily: theme.fonts.base,
   },
@@ -26,10 +29,12 @@ const GlobalStyles = createGlobalStyle(({ theme }) => ({
 
 const NDSProvider = ({ theme, children }) => (
   <React.Fragment>
-    <GlobalStyles theme={ theme } />
-    <ThemeProvider theme={ theme }>
-      { children }
-    </ThemeProvider>
+    <Reset />
+    <GlobalStyles theme={ theme }>
+      <ThemeProvider theme={ theme }>
+        { children }
+      </ThemeProvider>
+    </GlobalStyles>
   </React.Fragment>
 );
 
