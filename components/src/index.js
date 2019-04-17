@@ -1,3 +1,4 @@
+export { default as NDSProvider } from "./NDSProvider/NDSProvider";
 export { default as theme } from "./theme";
 export { default as Box } from "./Box/Box";
 export { default as Button } from "./Button/Button";
@@ -24,7 +25,6 @@ export { default as RadioGroup } from "./Radio/RadioGroup";
 export { default as Toggle } from "./Toggle/Toggle";
 export { default as Select } from "./Select/Select";
 export * from "./Type/Headings";
-export { default as NDSProvider } from "./NDSProvider/NDSProvider";
 export { default as DemoPage } from "./DemoPage/DemoPage";
 export { default as Form } from "./Form/Form";
 export { default as FormSection } from "./Form/FormSection";
