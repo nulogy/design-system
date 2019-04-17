@@ -129,12 +129,6 @@ export default () => (
         </Highlight>
       </DocSubsection>
       <DocSubsection>
-        <SubsectionTitle>Form Section Title (Optional) - <Text inline color="darkBlue">E</Text></SubsectionTitle>
-        <Highlight className="js">
-            {`<FormSection title="General Information">`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
         <SubsectionTitle>Labels - <Text inline color="darkBlue">F</Text></SubsectionTitle>
         <Text mb="0">Labels inform users what the corresponding input field means. Refer to indivudual form input field components for examples.</Text>
         <Highlight className="js">
