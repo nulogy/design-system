@@ -66,7 +66,7 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   },
 }));
 
-const MobileSubMenuLink = styled(SubMenuLink)(({layer})=>({
+const MobileSubMenuLink = styled(SubMenuLink)(({ layer }) => ({
   maxWidth: "100%",
   paddingLeft: `${(24 * layer) + 24}px`,
   "a": {
