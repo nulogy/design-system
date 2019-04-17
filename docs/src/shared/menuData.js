@@ -44,6 +44,10 @@ export const menuData = [
         href: "/components/form",
       },
       {
+        name: "Form Section",
+        href: "/components/form-section",
+      },
+      {
         name: "Headings",
         href: "/components/headings",
       },
