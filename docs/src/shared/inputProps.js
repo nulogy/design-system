@@ -12,7 +12,7 @@ const inputProps = [
     name: "id", type: "String", defaultValue: "Required", description: "A unique ID for this input",
   },
   {
-    name: "labelText", type: "String", defaultValue: "null", description: "Label for the input",
+    name: "labelText", type: "String", defaultValue: "null", description: "Informs users what the corresponding input field means.",
   },
   {
     name: "placeholder", type: "String", defaultValue: "null", description: "A hint to the expected format for the field. Not a replacement for a label.",

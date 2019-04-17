@@ -129,13 +129,6 @@ export default () => (
         </Highlight>
       </DocSubsection>
       <DocSubsection>
-        <SubsectionTitle>Labels - <Text inline color="darkBlue">F</Text></SubsectionTitle>
-        <Text mb="0">Labels inform users what the corresponding input field means. Refer to indivudual form input field components for examples.</Text>
-        <Highlight className="js">
-          {`<Input labelText="Project code" />`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
         <SubsectionTitle>Help Text (optional) - <Text inline color="darkBlue">G</Text></SubsectionTitle>
         <Text mb="0">Help text is placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used. Examples of help text are available on individual form input components.</Text>
         <Highlight className="js">
