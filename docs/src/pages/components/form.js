@@ -62,7 +62,7 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Form</Title>
-      <IntroText>Forms are a collection of inputs that allow users to submit data.</IntroText>
+      <IntroText>Forms are a collection of inputs that allow users to submit data. Forms control layout and spacing between form elements and sections.</IntroText>
     </Intro>
     <DocSection>
       <Box maxWidth="440px">
@@ -205,9 +205,9 @@ export default () => (
         <ListItem>Where the error occurred</ListItem>
         <ListItem>How to recover from an error</ListItem>
       </List>
-      <Text mt="x1">There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation. Examples of inline validation are available on individual form input components.</Text>
-    </DocSection>
-    <DocSection>
+      <Text>There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation.</Text>
+    <SubsectionTitle>Inline validation</SubsectionTitle>
+      <Text>Inline validation is triggered when the user focuses out of a form field with invalid data. The error message can consist of a single line of text, list, a or a combination of two. The error message stays displayed until the valid value has been entered and the user focuses out of the form field. Examples of inline validation are available on individual form input components.</Text>
       <SubsectionTitle>Content guidelines</SubsectionTitle>
       <Text>The best error is one that doesn’t exist so try to prevent errors when possible by grouping related fields, writing effective help text and clearly communicating input expectations.</Text>
       <Text>When writing error text, do not blame the user. e.g “That number is incorrect” vs “You’ve entered an incorrect number”</Text>

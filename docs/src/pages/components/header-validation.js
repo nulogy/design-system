@@ -77,19 +77,6 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Content Guidelines</SectionTitle>
-      <ListItem>There are three important messages that a good form error message should convey to the user:</ListItem>
-      <List pl="x6" mb="x3" compact>
-        <ListItem>An error has occurred</ListItem>
-        <ListItem>Where the error occurred</ListItem>
-        <ListItem>How to recover from an error</ListItem>
-      </List>
-      <ListItem>The best error is one that doesn’t exist so try to prevent errors when possible by grouping related fields, writing effective help text and clearly communicating input expectations.</ListItem>
-      <ListItem>When writing error text, do not blame the user. e.g say “That number is incorrect” as opposed to “You’ve entered an incorrect number”</ListItem>
-      <ListItem>Avoid vague, generalized or cryptic error messages</ListItem>
-    </DocSection>
-
-    <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ propsRows } />
     </DocSection>
