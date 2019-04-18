@@ -35,7 +35,7 @@ export { default as List } from "./List/List";
 export { default as Textarea } from "./Textarea/Textarea";
 export { default as Tooltip } from "./Tooltip/Tooltip";
 export { default as Card } from "./Card/Card";
-export { default as CPCard } from "./Card/CPCard";
 export { default as CardSet } from "./Card/CardSet";
+export { default as CPCard } from "./Card/CPCard";
 
 export { default as DemoPage } from "./DemoPage/DemoPage";
