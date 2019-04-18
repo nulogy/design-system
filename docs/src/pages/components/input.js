@@ -28,8 +28,10 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>Users need to enter information that is best communicated in text form.</ListItem>
-      <ListItem>You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.</ListItem>
+      <List>
+        <ListItem>Users need to enter information that is best communicated in text form.</ListItem>
+        <ListItem>You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.</ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
@@ -63,7 +65,9 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <ListItem>Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.</ListItem>
+      <List>
+        <ListItem>Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.</ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
@@ -79,7 +83,9 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link></ListItem>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

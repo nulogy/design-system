@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Radio, RadioGroup,
+  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Radio, RadioGroup, List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -74,14 +74,20 @@ export default () => (
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ groupProps } />
     </DocSection>
-    <DocSection>
-      <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=RadioGroup">View in Storybook</Link></ListItem>
-    </DocSection>
+
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/radio-button">Radio button</Link></ListItem>
-      <ListItem><Link href="/components/form">Form</Link></ListItem>
+      <List>
+        <ListItem><Link href="/components/radio-button">Radio button</Link></ListItem>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=RadioGroup">View in Storybook</Link></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

@@ -73,15 +73,19 @@ export default () => (
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ groupProps } />
     </DocSection>
-    <DocSection>
-      <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=CheckboxGroup">View in Storybook</Link></ListItem>
-    </DocSection>
+
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
         <ListItem><Link href="/components/checkbox">Checkbox</Link></ListItem>
         <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+    
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=CheckboxGroup">View in Storybook</Link></ListItem>
       </List>
     </DocSection>
   </Layout>

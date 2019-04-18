@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Checkbox, Link, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Checkbox, Link, ListItem, List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -57,22 +57,30 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <ListItem>Add labels, errors and default selections with <Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
-      <ListItem>If there are many items in a list, consider using a "Show all" button</ListItem>
+      <List>
+        <ListItem>Add labels, errors and default selections with <Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
+        <ListItem>If there are many items in a list, consider using a "Show all" button</ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ radioProps } />
     </DocSection>
-    <DocSection>
-      <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
-    </DocSection>
+
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
-      <ListItem><Link href="/components/form">Form</Link></ListItem>
+      <List>
+        <ListItem><Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

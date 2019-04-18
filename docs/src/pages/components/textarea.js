@@ -36,10 +36,11 @@ export default () => (
       </Highlight>
     </DocSection>
 
-
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>Users need to enter multiple lines of text.</ListItem>
+      <List>
+        <ListItem>Users need to enter multiple lines of text.</ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
@@ -94,7 +95,9 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Textarea">View in Storybook</Link></ListItem>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Textarea">View in Storybook</Link></ListItem>
+      </List>
     </DocSection>
 
   </Layout>
