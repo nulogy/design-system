@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
- - Custom link components supported in the NavBar.
+- Custom link components supported in the NavBar.
+- Added Card and Card Set components
+
 ### Changed
 - Select API changed, given the following options:
 
