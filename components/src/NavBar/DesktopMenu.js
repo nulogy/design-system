@@ -33,15 +33,35 @@ const ApplyMenuLinkStyles = styled.div({
   },
 });
 
-const itemType = menuItem => {
+const renderMenuTrigger = (menuItem) => (            
+  <div key={ menuItem.name }>
+    <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
+</div>
+);
+
+const renderMenuLink = (menuItem) => (
+  <div key={ menuItem.name }>
+    <MenuLink href={ menuItem.href }>
+      {menuItem.name}
+    </MenuLink>
+  </div>
+);
+
+const renderCustom = (menuItem) => (
+  <ApplyMenuLinkStyles key={ menuItem.name }>
+    {menuItem.render()}
+  </ApplyMenuLinkStyles>
+);
+
+const getRenderFunction = menuItem => {
   if (menuItem.items) {
-    return "MenuTrigger";
-  } else if (menuItem.link) {
-    return "CustomLink";
-  } else if (menuItem.href && menuItem.name) {
-    return "MenuLink";
+    return renderMenuTrigger;
+  } else if (menuItem.href) {
+    return renderMenuLink;
+  } else if (menuItem.render) {
+    return renderCustom;
   } else {
-    return null;
+    return (() => (null));
   }
 };
 
@@ -51,30 +71,8 @@ const BaseDesktopMenu = ({
 }) => (
   <Flex { ...props }>
     {menuData.map(menuItem => {
-      switch (itemType(menuItem)) {
-        case "MenuTrigger":
-          return (
-            <div key={ menuItem.name }>
-              <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
-            </div>
-          );
-        case "MenuLink":
-          return (
-            <div key={ menuItem.name }>
-              <MenuLink href={ menuItem.href }>
-                {menuItem.name}
-              </MenuLink>
-            </div>
-          );
-        case "CustomLink":
-          return (
-            <ApplyMenuLinkStyles key={ menuItem.name }>
-              {menuItem.link}
-            </ApplyMenuLinkStyles>
-          );
-        default:
-          return (<div style={ { color: "red" } }>Data Missing</div>);
-      }
+      const render = getRenderFunction(menuItem);
+      return(render(menuItem));
     })}
   </Flex>
 );

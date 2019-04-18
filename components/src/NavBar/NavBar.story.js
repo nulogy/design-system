@@ -68,7 +68,7 @@ const primaryMenuCustomLinks = [
           },
           {
             name: "CustomLink",
-            link: <a href="/">CustomLink</a>,
+            render: ()=>(<a href="/">CustomLink</a>),
           },
         ],
       },
@@ -78,7 +78,7 @@ const primaryMenuCustomLinks = [
       },
       {
         name: "CustomLink",
-        link: <a href="/">CustomLink</a>,
+        render: ()=>(<a href="/">CustomLink</a>),
       },
     ],
   },
@@ -88,7 +88,7 @@ const primaryMenuCustomLinks = [
   },
   {
     name: "CustomLink",
-    link: <a href="/">CustomLink</a>,
+    render: ()=>(<a href="/">CustomLink</a>),
   },
 ];
 
@@ -137,3 +137,4 @@ storiesOf("NavBar", module)
   .add("With custom link components", () => (
     <NavBar menuData={ { primaryMenu: primaryMenuCustomLinks } } />
   ));
+

@@ -77,40 +77,39 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const itemType = menuItem => {
-  if (menuItem.items) {
-    return "MenuTrigger";
-  } else if (menuItem.link) {
-    return "CustomLink";
-  } else if (menuItem.href && menuItem.name) {
-    return "MenuLink";
+const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (            
+  <li key={ subMenuItem.name }>
+    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+  </li>
+);
+
+const renderSubMenuLink = (subMenuItem, linkOnClick) => (
+  <li key={ subMenuItem.name }>
+    <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+  </li>
+);
+
+const renderCustom = (subMenuItem, linkOnClick) => (
+  <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
+    {subMenuItem.render()}
+  </ApplySubMenuLinkStyles>
+);
+
+const getRenderFunction = subMenuItem => {
+  if (subMenuItem.items) {
+    return renderSubMenuTrigger;
+  } else if (subMenuItem.href) {
+    return renderSubMenuLink;
+  } else if (subMenuItem.render) {
+    return renderCustom;
   } else {
-    return null;
+    return (() => (null));
   }
 };
 
 const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => {
-  switch (itemType(subMenuItem)) {
-    case "MenuTrigger":
-      return (
-        <li key={ subMenuItem.name }>
-          <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
-        </li>
-      ); case "MenuLink":
-      return (
-        <li key={ subMenuItem.name }>
-          <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
-        </li>
-      );
-    case "CustomLink":
-      return (
-        <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
-          {subMenuItem.link}
-        </ApplySubMenuLinkStyles>
-      );
-    default:
-      return (<div style={ { color: "red" } }>Data Missing</div>);
-  }
+  const render = getRenderFunction(subMenuItem);
+  return(render(subMenuItem, linkOnClick));
 });
 
 /* eslint-disable react/destructuring-assignment */
@@ -123,6 +122,10 @@ class SubMenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.clearScheduled();
   }
 
   setSubMenuState(newState, skipTimer = false) {
@@ -152,9 +155,7 @@ class SubMenuTrigger extends React.Component {
 
   SubMenuTriggerEventHandlers() {
     return ({
-      onClick: () => {
-        this.showSubMenu();
-      },
+      onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
