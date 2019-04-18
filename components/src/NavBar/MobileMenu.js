@@ -43,6 +43,8 @@ const MobileMenuLink = styled(MenuLink)({
   borderRadius: "0",
 });
 
+const getPaddingLeft = layer => (`${(24 * layer) + 24}px`)
+
 const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
   justifyContent: "center",
@@ -56,7 +58,7 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
     color: theme.colors.white,
     textDecoration: "none",
     padding: `${theme.space.x1} ${theme.space.x2}`,
-    paddingLeft: `${(24 * layer) + 24}px`,
+    paddingLeft: getPaddingLeft(layer),
     "&:hover, &:focus": {
       outline: "none",
       backgroundColor: theme.colors.black,
@@ -69,7 +71,7 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
 
 const MobileSubMenuLink = styled(SubMenuLink)(({ layer }) => ({
   maxWidth: "100%",
-  paddingLeft: `${(24 * layer) + 24}px`,
+  paddingLeft: getPaddingLeft(layer),
   "a": {
     marginBottom: theme.space.x1,
     transition: ".2s",
