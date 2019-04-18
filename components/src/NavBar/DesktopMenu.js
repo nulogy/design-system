@@ -5,6 +5,7 @@ import { Flex } from "ComponentsRoot";
 import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
+import isValidMenuItem from "./isValidMenuItem";
 
 const ApplyMenuLinkStyles = styled.div({
   "*": {
@@ -77,7 +78,7 @@ const BaseDesktopMenu = ({
 );
 
 BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  menuData: PropTypes.arrayOf(isValidMenuItem),
 };
 
 BaseDesktopMenu.defaultProps = {

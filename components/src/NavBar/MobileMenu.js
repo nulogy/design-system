@@ -11,6 +11,7 @@ import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 import { subPx } from "../Utils";
+import isValidMenuItem from "./isValidMenuItem";
 
 const ApplyMenuLinkStyles = styled.li({
   "*": {
@@ -226,7 +227,10 @@ const MobileMenuBase = ({
 );
 
 MobileMenuBase.propTypes = {
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.shape({
+    "primaryMenu": PropTypes.arrayOf(isValidMenuItem),
+    "secondaryMenu": PropTypes.arrayOf(isValidMenuItem),
+  }),
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool.isRequired,
     handleMenuToggle: PropTypes.func.isRequired,
