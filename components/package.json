@@ -15,7 +15,6 @@
     "watch": "yarn build --watch",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "sketch": "story2sketch --url http://localhost:8080/iframe.html --output stories.asketch.json",
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
@@ -71,7 +70,6 @@
     "jest-styled-components": "6.3.1",
     "prop-types": "15.6.2",
     "react-test-renderer": "~16.3",
-    "story2sketch": "^1.4.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   },
