@@ -8,7 +8,7 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
   const objTest = { "obj": obj };
   PropTypes.checkPropTypes({ "obj": PropTypes.object }, objTest, propFullName, componentName);
 
-PropTypes.checkPropTypes({
+  PropTypes.checkPropTypes({
     "name": PropTypes.string.isRequired,
     "href": PropTypes.string,
     "items": PropTypes.arrayOf(isValidMenuItem),

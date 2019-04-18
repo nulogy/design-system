@@ -43,7 +43,7 @@ const MobileMenuLink = styled(MenuLink)({
   borderRadius: "0",
 });
 
-const getPaddingLeft = layer => (`${(24 * layer) + 24}px`)
+const getPaddingLeft = layer => (`${(24 * layer) + 24}px`);
 
 const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   color: theme.colors.black,
