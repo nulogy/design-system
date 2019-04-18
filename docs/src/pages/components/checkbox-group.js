@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Checkbox, CheckboxGroup, Link, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Checkbox, CheckboxGroup, Link, ListItem, List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -79,7 +79,10 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/checkbox">Checkbox</Link></ListItem>
+      <List>
+        <ListItem><Link href="/components/checkbox">Checkbox</Link></ListItem>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

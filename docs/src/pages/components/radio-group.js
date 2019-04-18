@@ -81,6 +81,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem><Link href="/components/radio-button">Radio button</Link></ListItem>
+      <ListItem><Link href="/components/form">Form</Link></ListItem>
     </DocSection>
   </Layout>
 );

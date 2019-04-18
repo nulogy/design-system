@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem, List
 } from "@nulogy/components";
 import {
   Layout, Intro, IntroText, DocSection, PropsTable,
@@ -69,6 +69,14 @@ export default () => (
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ inputProps } />
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link></ListItem>

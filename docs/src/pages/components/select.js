@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Select, Link, ListItem,
+  Box, SectionTitle, SubsectionTitle, Title, Select, Link, ListItem, List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -101,6 +101,14 @@ const options = [
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ propsRows } />
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Select">View in Storybook</Link></ListItem>

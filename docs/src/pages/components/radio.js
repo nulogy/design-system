@@ -66,6 +66,11 @@ export default () => (
       <PropsTable propsRows={ radioProps } />
     </DocSection>
     <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem><Link href="/components/radio-group">Radio group</Link></ListItem>
+      <ListItem><Link href="/components/form">Form</Link></ListItem>
+    </DocSection>
+    <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Radio">View in storybook</Link></ListItem>
     </DocSection>

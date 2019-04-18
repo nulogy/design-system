@@ -72,6 +72,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem><Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
+      <ListItem><Link href="/components/form">Form</Link></ListItem>
     </DocSection>
   </Layout>
 );
