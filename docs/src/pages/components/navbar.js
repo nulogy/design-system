@@ -36,16 +36,16 @@ const search = {
 
 const propsRows = [
   {
-    name: "menuData", type: "object", defaultValue: "null", description: "Provides data used to build link heirarchy and search functionality, see menuData Prop section below",
+    name: "menuData", type: "object", defaultValue: "null", description: "Provides data used to build link heirarchy and search functionality. See menuData Prop section below",
   },
 ];
 
 const menuDataKeyRows = [
   {
-    name: "primaryMenu", type: "array of Menu Item objects", description: "Provides data to the main navigation menu, aligned to the left of the NavBar",
+    name: "primaryMenu", type: "array of menu item objects", description: "Provides data to the main navigation menu, aligned to the left of the NavBar",
   },
   {
-    name: "secondaryMenu", type: "array of Menu Item objects", description: "Provides data to the secondary navigation menu, aligned to the right of the NavBar",
+    name: "secondaryMenu", type: "array of menu item objects", description: "Provides data to the secondary navigation menu, aligned to the right of the NavBar",
   },
   {
     name: "search", type: "object", description: "Object's onSubmit key provides onSubmit to search",
@@ -54,16 +54,16 @@ const menuDataKeyRows = [
 
 const menuItemKeyRows = [
   {
-    name: "name", type: "string", description: "Required string used as a unique identifier for the Menu Item",
+    name: "name", type: "string (required)", description: "Unique identifier for the menu item",
   },
   {
-    name: "href", type: "string", description: "Accepts a URl or link to an element similar to a standard <a> tag, this causes MenuItem to render as a link within the NavBar",
-  },
-  { 
-    name: "render", type: "function", description: "Accepts a function that returns JSX, this causes Menu Item to render as the JSX provided wapped in a component that provides styling and an onClick handler to close the menu",
+    name: "href", type: "string", description: "Accepts a URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar",
   },
   {
-    name: "items", type: "array of Menu Item objects", description: "Accepts an array of menuItem objeccts, causes Menu Item to render as a dropdown in desktop view or as a heading in mobile view",
+    name: "items", type: "array", description: "Accepts an array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view",
+  },
+  {
+    name: "render", type: "function", description: "Accepts a function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu",
   },
 ];
 
@@ -143,6 +143,7 @@ const search = {
     </DocSection>
 
     <DocSection>
+      <Box mb="x6">
       <SectionTitle>menuData Prop</SectionTitle>
       <Text>The menuData prop is used to provide links to the NavBar, assemble their heirarchy, and provide the search field's onSubmit handler. The direct children in the menuData object are show below:</Text>
       <Highlight className="js">
@@ -155,23 +156,28 @@ const search = {
 }
 `}
       </Highlight>
-      <KeyTable mb="x2" keyRows={ menuDataKeyRows } />
-      <Text>Choosing to not provide data for any of primaryMenu, secondaryMenu or search will result in those components of the NavBar not being included.</Text>
-      <Text mb="x2">Both primaryMenu and secondaryMenu expect an array of "Menu Item" objects. A Menu Item object represents a link in the NavBar or a heading to a group of links under it. The Menu Item object has the following form:</Text>
+      <KeyTable keyRows={ menuDataKeyRows } />
+      <Text mb="x2">Not providing data for primaryMenu, secondaryMenu or search will result in those components not being included.</Text>
+      </Box>
+      <Box mb="x6">
+      <SubsectionTitle>Adding menu items</SubsectionTitle>
+
+      <Text mb="x2">Both primaryMenu and secondaryMenu expect an array of objects. Each object represents a link or a heading to a group of links under it, with the following shape:</Text>
       <Highlight className="js">
 {`const primaryMenu = [
   {
     name = "string",
-    href = "/",      //(optional)
-    render = ()=>(), //(optional)
-    items = [],      //(optional)
+    href = "/",      // optional
+    render = ()=>(), // optional
+    items = [],      // optional
   },
 ]
 `}
       </Highlight>
-      <Text>Each Menu Item object requires the name key as a unique identifier as well as only one of the optional keys.</Text>
-      <Text mb="x2">Menu Items can be nested within eachother using the items key for as many levels of heirarchy that is needed for link organization.</Text>
+      <Text mb="x2">Each menu item object requires the name key as a unique identifier as well as only one of the optional keys.</Text>
+      <Text mb="x2">Menu items can be nested within eachother using the items key for as many levels of heirarchy that is needed.</Text>
       <KeyTable keyRows={ menuItemKeyRows } />
+      </Box>
     </DocSection>
 
     <DocSection>
