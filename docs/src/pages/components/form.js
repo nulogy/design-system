@@ -51,19 +51,22 @@ class SelectWithState extends React.Component {
 
 const propsRows = [
   {
-    name: "title", type: "string", defaultValue: "null", description: "Adds Form and FormSection title",
+    name: "title", type: "string", defaultValue: "null", description: "Form title",
   },
 ];
 
 export default () => (
   <Layout>
+
     <Helmet>
       <title>Form</title>
     </Helmet>
+
     <Intro>
       <Title>Form</Title>
       <IntroText>Forms are a collection of inputs that allow users to submit data. Forms control layout and spacing between form elements and sections.</IntroText>
     </Intro>
+
     <DocSection>
       <Box maxWidth="440px">
         <Form>
@@ -92,98 +95,47 @@ export default () => (
 </Form>`}
         </Highlight>
     </DocSection>
+
     <DocSection>
-      <SectionTitle>Anatomy</SectionTitle>
-      <Image src={ anatomy } alt="Visual anatomy of a form" />
-      <DocSubsection>
-        <SubsectionTitle>Form Title - <Text inline color="darkBlue">A</Text></SubsectionTitle>
-        <Highlight className="js">
-            {`<Form title="New Project">`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Header Validation - <Text inline color="darkBlue">B</Text></SubsectionTitle>
-        <Text>See <Link href="/components/header-validation">Header validation</Link>.</Text>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Form Section (Optional) - <Text inline color="darkBlue">C</Text></SubsectionTitle>
-        <Text mb="0">Form Section is a grouping of related input fields.</Text>
-        <Highlight className="js">
-          {`<Form title="New Project">
-  <FormSection title="General Information">
-    ...
-  </FormSection>
-  <FormSection title="Settings">
-    ...
-  </FormSection>
+      <SectionTitle>Variations</SectionTitle>
+      <SubsectionTitle>With title</SubsectionTitle>
+      <Box maxWidth="440px" mt="x6">
+      <Form title="New Project">
+        <Input id="project" labelText="Project code" />
+        <Input id="customer" labelText="Customer's name" />
+        <Select mb="x6" placeholder="Please select project status" options={options} labelText="Project status" />
+        <Box mb="x6" mt="x6">
+          <PrimaryButton mr="x1">Create project</PrimaryButton>
+          <Button>Cancel</Button>
+        </Box>
+      </Form>
+    </Box>
+      <Highlight className="js">
+            {`<Form title="New Project">
+  <Input id="project" labelText="Project code" />
+  <Input id="customer" labelText="Customer's name" />
+  <Select mb="x6" placeholder="Please select project status" options={options} labelText="Project status" />
+  <Box mb="x6">
+    <PrimaryButton mr="x1">Create project</PrimaryButton>
+    <Button>Cancel</Button>
+  </Box>
 </Form>`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Actions - <Text inline color="darkBlue">D</Text></SubsectionTitle>
-        <Highlight className="js">
-          {`<Box mb="x6">
-  <PrimaryButton mr="x1">Create project</PrimaryButton>
-  <Button>Cancel</Button>
-</Box>`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Help Text (optional) - <Text inline color="darkBlue">G</Text></SubsectionTitle>
-        <Text mb="0">Help text is placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used. Examples of help text are available on individual form input components.</Text>
-        <Highlight className="js">
-          {`<Input labelText="Project code" helpText="Project code is used..." />`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Input fields - <Text inline color="darkBlue">H</Text></SubsectionTitle>
-        <Text>Input fields enable users to provide information. Information can be entered through a variety of different inputs.</Text>
-        <List mb="x3">
-          <ListItem><Link href="/components/input">Text</Link> input for single or multi-line text data</ListItem>
-          <ListItem><Link href="/components/radio-button">Radio</Link> button to select one option out of a small list (~ 5-7 max)</ListItem>
-          <ListItem><Link href="/components/select">Select</Link> to select one option out of a large list</ListItem>
-          <ListItem><Link href="/components/checkbox">Checkbox</Link> to select one or multiple options from a list</ListItem>
-          <ListItem><Link href="/components/toggle">Toggle</Link> for boolean choices</ListItem>
-        </List>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Optional vs required label - <Text inline color="darkBlue">I</Text></SubsectionTitle>
-        <Text mb="0">If a field is optional or required, it should be visually apparent before submission. Use only one of these labels at a time. When making a form, decide which is more common and apply the label to the smaller of the two groups.</Text>
-        <Highlight className="js">
-            {`<Input labelText="Customer's name" requirementText="(Optional)" />`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Placeholder text (optional) -  <Text inline color="darkBlue">J</Text></SubsectionTitle>
-        <Text mb="0">Placeholder text can be used to describe a field’s expected format.</Text>
-        <Highlight className="js">
-            {`<Input labelText="Customer's name" placeholder="e.g. Staples" />`}
-        </Highlight>
-      </DocSubsection>
-      <DocSubsection>
-        <SubsectionTitle>Inline validation - <Text inline color="darkBlue">K</Text></SubsectionTitle>
-        <Text mb="0">Inline validation is triggered when the user focuses out of a form field with invalid data. The error message can consist of a single line of text, list, a or a combination of two. The error message stays displayed until the valid value has been entered and the user focuses out of the form field. Examples of inline validation are available on individual form input components.</Text>
-        <Highlight className="js">
-            {`<Textarea labelText="Project description" error="Special characters are not allowed." />`}
-        </Highlight>
-      </DocSubsection>
+      </Highlight>
     </DocSection>
+
     <DocSection>
-    <SectionTitle>General/UX ? Guidelines</SectionTitle>
+    <SectionTitle>Guidelines</SectionTitle>
       <List>
         <ListItem>Always order items in a logical order that doesn’t require scrolling around</ListItem>
-        <ListItem>Whenever possible group items together into fieldsets</ListItem>
+        <ListItem>Whenever possible group items together into form sections</ListItem>
         <ListItem>Lay out the form in a single column</ListItem>
         <ListItem>Place actions on the bottom of the form</ListItem>
         <ListItem>Use a label with every input</ListItem>
-      </List>
-    </DocSection>
-    <DocSection>
-    <SectionTitle>Accessibility Guidelines</SectionTitle>
-      <List>
         <ListItem>Placeholders are not replacements for labels, as they are not treated as labels by assistive technology and they disappear when a user tries interacting with a field.</ListItem>
+        <ListItem>Use only one of (Optional) or (Required) label in a single form. Decide which is more common and apply the label to the smaller of the two groups.</ListItem>
       </List>
     </DocSection>
+
     <DocSection>
       <SectionTitle>Handling Errors</SectionTitle>
       <Text>There are three important messages that a good form error message should convey to the user:</Text>
@@ -192,18 +144,36 @@ export default () => (
         <ListItem>Where the error occurred</ListItem>
         <ListItem>How to recover from an error</ListItem>
       </List>
-      <Text>There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation.</Text>
-    <SubsectionTitle>Inline validation</SubsectionTitle>
-      <Text>Inline validation is triggered when the user focuses out of a form field with invalid data. The error message can consist of a single line of text, list, a or a combination of two. The error message stays displayed until the valid value has been entered and the user focuses out of the form field. Examples of inline validation are available on individual form input components.</Text>
-      <SubsectionTitle>Content guidelines</SubsectionTitle>
-      <Text>The best error is one that doesn’t exist so try to prevent errors when possible by grouping related fields, writing effective help text and clearly communicating input expectations.</Text>
-      <Text>When writing error text, do not blame the user. e.g “That number is incorrect” vs “You’ve entered an incorrect number”</Text>
-      <Text>Avoid vague, generalized or cryptic error messages</Text>
+      <Text>There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation. Examples of inline validation are available on individual form input components.</Text>
+      
+      <SubsectionTitle mb="x3">Error message content guidelines</SubsectionTitle>
+      <List>
+        <ListItem>The best error is one that doesn’t exist so try to prevent errors when possible by grouping related fields, writing effective help text and clearly communicating input expectations.</ListItem>
+        <ListItem>When writing error text, do not blame the user. e.g “That number is incorrect” vs “You’ve entered an incorrect number”.</ListItem>
+        <ListItem>Avoid vague, generalized or cryptic error messages.</ListItem>
+      </List>
     </DocSection>
+
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ propsRows } />
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+          <ListItem><Link href="/components/form-section">Form section</Link></ListItem>
+          <ListItem><Link href="/components/input">Input</Link></ListItem>
+          <ListItem><Link href="/components/checkbox">Checkbox</Link></ListItem>
+          <ListItem><Link href="/components/checkbox-group">Checkbox group</Link></ListItem>
+          <ListItem><Link href="/components/radio">Radio</Link></ListItem>
+          <ListItem><Link href="/components/radio-group">Radio group</Link></ListItem>
+          <ListItem><Link href="/components/select">Select</Link></ListItem>
+          <ListItem><Link href="/components/textarea">Textarea</Link></ListItem>
+          <ListItem><Link href="/components/toggle">Toggle</Link></ListItem>
+      </List>
+    </DocSection>
+
   </Layout>
 );
 

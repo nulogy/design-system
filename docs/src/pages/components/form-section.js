@@ -21,7 +21,7 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Form Section</Title>
-      <IntroText>Form section groups related input fields and provides spacing.</IntroText>
+      <IntroText>Form sections group related input fields and provide spacing.</IntroText>
     </Intro>
 
     <DocSection>

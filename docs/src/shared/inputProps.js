@@ -6,7 +6,7 @@ const inputProps = [
     name: "error", type: "String", defaultValue: "null", description: "Sets the error state and displays message",
   },
   {
-    name: "helpText", type: "String", defaultValue: "null", description: "Additional instruction to show up below label",
+    name: "helpText", type: "String", defaultValue: "null", description: "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.",
   },
   {
     name: "id", type: "String", defaultValue: "Required", description: "A unique ID for this input",
