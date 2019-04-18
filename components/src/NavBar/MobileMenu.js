@@ -97,43 +97,39 @@ const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
   <li key={ menuItem.name }>
     <MobileSubMenuLink onClick={ linkOnClick } layer={ layer } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
   </li>
-);  
+);
 
-const isSubMenu = menuItem => (menuItem.items);
+const renderCustom = (menuItem, linkOnClick, layer) => {
+  const WrapCustom = (layer === 0) ? ApplyMenuLinkStyles : ApplySubMenuLinkStyles;
+  return (
+    <WrapCustom key={ menuItem.name } layer={ layer } onClick={ linkOnClick }>
+      {menuItem.render()}
+    </WrapCustom>
+  );
+};
 
-const renderSubMenu = (menuItem, linkOnClick, layer) => (      
+const renderSubMenu = (menuItem, linkOnClick, layer) => (
   <li key={ menuItem.name }>
     <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick } />
   </li>
 );
 
 const getRenderFunction = (menuItem, layer) => {
-  if (isSubMenu(menuItem)) {
+  if (menuItem.items) {
     return renderSubMenu;
+  } else if (menuItem.render){
+    return renderCustom;
   } else if (layer === 0) {
-   return renderMenuLink;
+    return renderMenuLink;
   } else {
-   return renderSubMenuLink;
+    return renderSubMenuLink;
   }
 };
 
 const renderMenuItems = (menuItems, linkOnClick, layer) => menuItems.map(menuItem => {
-  if(menuItem.render) {
-    return(renderCustom(menuItem,linkOnClick, layer));
-  } else {
-    const render = getRenderFunction(menuItem, layer);
-    return(render(menuItem, linkOnClick, layer));
-  }
+  const render = getRenderFunction(menuItem, layer);
+  return (render(menuItem, linkOnClick, layer));
 });
-
-const renderCustom = (menuItem, linkOnClick, layer) => {
-  const WrapCustom = (layer === 0) ? ApplyMenuLinkStyles : ApplySubMenuLinkStyles;
-  return(
-    <WrapCustom key={ menuItem.name } layer={ layer } onClick={ linkOnClick }>
-      {menuItem.render()}
-    </WrapCustom>
-  );
-}
 
 const renderTopLayerMenuItems = (menuData, linkOnClick) => renderMenuItems(menuData, linkOnClick, 0);
 

@@ -81,7 +81,7 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (            
+const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
   <li key={ subMenuItem.name }>
     <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
   </li>
@@ -113,7 +113,7 @@ const getRenderFunction = subMenuItem => {
 
 const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => {
   const render = getRenderFunction(subMenuItem);
-  return(render(subMenuItem, linkOnClick));
+  return (render(subMenuItem, linkOnClick));
 });
 
 /* eslint-disable react/destructuring-assignment */
@@ -131,7 +131,7 @@ class MenuTrigger extends React.Component {
   componentWillUnmount() {
     this.clearScheduled();
   }
-  
+
   setSubMenuState(newState, skipTimer = false) {
     this.clearScheduled();
     if (!skipTimer) {

@@ -33,13 +33,13 @@ const ApplyMenuLinkStyles = styled.div({
   },
 });
 
-const renderMenuTrigger = (menuItem) => (            
+const renderMenuTrigger = menuItem => (
   <div key={ menuItem.name }>
     <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
-</div>
+  </div>
 );
 
-const renderMenuLink = (menuItem) => (
+const renderMenuLink = menuItem => (
   <div key={ menuItem.name }>
     <MenuLink href={ menuItem.href }>
       {menuItem.name}
@@ -47,7 +47,7 @@ const renderMenuLink = (menuItem) => (
   </div>
 );
 
-const renderCustom = (menuItem) => (
+const renderCustom = menuItem => (
   <ApplyMenuLinkStyles key={ menuItem.name }>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
@@ -72,7 +72,7 @@ const BaseDesktopMenu = ({
   <Flex { ...props }>
     {menuData.map(menuItem => {
       const render = getRenderFunction(menuItem);
-      return(render(menuItem));
+      return (render(menuItem));
     })}
   </Flex>
 );
