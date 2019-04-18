@@ -21,7 +21,7 @@ const UnstyledCardSet = ({
 const CardSet = styled(UnstyledCardSet)(
   space,
   {
-    [`${Card}, ${CPCard}`]: {
+    [`${Card}`]: {
       marginBottom: theme.space.x1,
       "&:last-child": {
         marginBottom: theme.space.none,
