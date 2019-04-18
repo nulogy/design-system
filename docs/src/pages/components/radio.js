@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, Link, SectionTitle, SubsectionTitle, Title, Radio, ListItem,
+  Box, Link, SectionTitle, SubsectionTitle, Title, Radio, ListItem, List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -57,17 +57,28 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <ListItem>Whenever possible use radio buttons for short lists (~ 5-7)</ListItem>
-      <ListItem>Add labels, errors and default selections with <Link href="/components/radio-group">Radio Group</Link></ListItem>
-      <ListItem>Consider using a <Link href="/components/select">Select</Link> for long lists</ListItem>
+      <List>
+        <ListItem>Whenever possible use radio buttons for short lists (~ 5-7)</ListItem>
+        <ListItem>Add labels, errors and default selections with <Link href="/components/radio-group">Radio Group</Link></ListItem>
+        <ListItem>Consider using a <Link href="/components/select">Select</Link> for long lists</ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ radioProps } />
     </DocSection>
     <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem><Link href="/components/radio-group">Radio group</Link></ListItem>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+    <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Radio">View in storybook</Link></ListItem>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Radio">View in storybook</Link></ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

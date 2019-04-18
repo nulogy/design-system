@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea,
+  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Textarea, List
 } from "@nulogy/components";
 import {
   Layout, Intro, IntroText, DocSection, PropsTable,
@@ -36,10 +36,11 @@ export default () => (
       </Highlight>
     </DocSection>
 
-
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>Users need to enter multiple lines of text.</ListItem>
+      <List>
+        <ListItem>Users need to enter multiple lines of text.</ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
@@ -86,8 +87,17 @@ export default () => (
     </DocSection>
 
     <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Textarea">View in Storybook</Link></ListItem>
+      <List>
+        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Textarea">View in Storybook</Link></ListItem>
+      </List>
     </DocSection>
 
   </Layout>

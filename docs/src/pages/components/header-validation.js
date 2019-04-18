@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, HeaderValidation, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable, DocText as Text
 } from "../../components";
 
 const propsRows = [
@@ -28,7 +28,7 @@ export default () => (
     </Intro>
 
     <DocSection>
-      <HeaderValidation message="Instructions and description of an error" title="Error has occured ..." mb="x3">
+      <HeaderValidation message="Instructions and description of an error" title="Error has occurred ..." mb="x3">
         <List compact>
           <ListItem>Affected field</ListItem>
           <ListItem>Unmet criteria</ListItem>
@@ -40,7 +40,7 @@ export default () => (
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
-<HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+<HeaderValidation message="Instructions and description of an error" title="Error has occurred ...">
   <List compact>
     <ListItem>Affected field</ListItem>
     <ListItem>Unmet criteria</ListItem>
@@ -63,12 +63,12 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>With only a message</SubsectionTitle>
 
-        <HeaderValidation title="Error has occured ..." message="Instructions and description of an error" />
+        <HeaderValidation title="Error has occurred ..." message="Instructions and description of an error" />
         <Highlight className="js">
           {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation
-  title="Error has occured ..."
+  title="Error has occurred ..."
   message="Instructions and description of an error"
 />
 `}
@@ -77,21 +77,20 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Content Guidelines</SectionTitle>
-      <ListItem>There are three important messages that a good form error message should convey to the user:</ListItem>
-      <List pl="x6" mb="x3" compact>
-        <ListItem>An error has occurred</ListItem>
-        <ListItem>Where the error occurred</ListItem>
-        <ListItem>How to recover from an error</ListItem>
-      </List>
-      <ListItem>The best error is one that doesn’t exist so try to prevent errors when possible by grouping related fields, writing effective help text and clearly communicating input expectations.</ListItem>
-      <ListItem>When writing error text, do not blame the user. e.g say “That number is incorrect” as opposed to “You’ve entered an incorrect number”</ListItem>
-      <ListItem>Avoid vague, generalized or cryptic error messages</ListItem>
+      <SectionTitle>Guidelines</SectionTitle>
+      <Text>Guidelines for handling errors is available on the <Link href="/components/form">Form page</Link>.</Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ propsRows } />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+          <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
