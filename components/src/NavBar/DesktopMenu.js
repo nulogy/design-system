@@ -65,15 +65,14 @@ const getRenderFunction = menuItem => {
   }
 };
 
+const renderMenuItem = menuItem => (getRenderFunction(menuItem)(menuItem));
+
 const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
   <Flex { ...props }>
-    {menuData.map(menuItem => {
-      const render = getRenderFunction(menuItem);
-      return (render(menuItem));
-    })}
+    {menuData.map(renderMenuItem)}
   </Flex>
 );
 

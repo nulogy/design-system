@@ -111,10 +111,9 @@ const getRenderFunction = subMenuItem => {
   }
 };
 
-const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => {
-  const render = getRenderFunction(subMenuItem);
-  return (render(subMenuItem, linkOnClick));
-});
+const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => (
+  getRenderFunction(subMenuItem)(subMenuItem, linkOnClick)
+));
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
