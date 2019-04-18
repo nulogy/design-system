@@ -138,13 +138,13 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Handling Errors</SectionTitle>
+      <Text>There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation. Examples of inline validation are available on individual form input components.</Text>
       <Text>There are three important messages that a good form error message should convey to the user:</Text>
       <List mb="x3">
         <ListItem>An error has occurred</ListItem>
         <ListItem>Where the error occurred</ListItem>
         <ListItem>How to recover from an error</ListItem>
       </List>
-      <Text>There are two types of validation: <Link href="/components/header-validation">Header validation</Link> and Inline validation. Examples of inline validation are available on individual form input components.</Text>
 
       <SubsectionTitle mb="x3">Error message content guidelines</SubsectionTitle>
       <List>
