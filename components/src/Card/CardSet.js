@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import {
   Box,
   Card,
-  
+  CPCard,
 } from "ComponentsRoot";
 import theme from "../theme";
 
@@ -21,7 +21,7 @@ const UnstyledCardSet = ({
 const CardSet = styled(UnstyledCardSet)(
   space,
   {
-    [`${Card}`]: {
+    [`${Card}, ${CPCard}`]: {
       marginBottom: theme.space.x1,
       "&:last-child": {
         marginBottom: theme.space.none,
