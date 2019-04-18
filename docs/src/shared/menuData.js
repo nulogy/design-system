@@ -72,6 +72,10 @@ export const menuData = [
         href: "/components/list",
       },
       {
+        name: "NavBar",
+        href: "/components/navbar",
+      },
+      {
         name: "Radio",
         href: "/components/radio",
       },
