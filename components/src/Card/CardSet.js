@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import {
   Box,
   Card,
-  CPCard,
+  
 } from "ComponentsRoot";
 import theme from "../theme";
 
