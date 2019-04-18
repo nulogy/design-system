@@ -5,7 +5,7 @@ import {
   Box, SectionTitle, SubsectionTitle, Title, Link, HeaderValidation, List, ListItem,
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout, Intro, IntroText, DocSection, PropsTable, DocText as Text
 } from "../../components";
 
 const propsRows = [
@@ -28,7 +28,7 @@ export default () => (
     </Intro>
 
     <DocSection>
-      <HeaderValidation message="Instructions and description of an error" title="Error has occured ..." mb="x3">
+      <HeaderValidation message="Instructions and description of an error" title="Error has occurred ..." mb="x3">
         <List compact>
           <ListItem>Affected field</ListItem>
           <ListItem>Unmet criteria</ListItem>
@@ -40,7 +40,7 @@ export default () => (
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
-<HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+<HeaderValidation message="Instructions and description of an error" title="Error has occurred ...">
   <List compact>
     <ListItem>Affected field</ListItem>
     <ListItem>Unmet criteria</ListItem>
@@ -63,12 +63,12 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>With only a message</SubsectionTitle>
 
-        <HeaderValidation title="Error has occured ..." message="Instructions and description of an error" />
+        <HeaderValidation title="Error has occurred ..." message="Instructions and description of an error" />
         <Highlight className="js">
           {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation
-  title="Error has occured ..."
+  title="Error has occurred ..."
   message="Instructions and description of an error"
 />
 `}
@@ -77,8 +77,20 @@ export default () => (
     </DocSection>
 
     <DocSection>
+      <SectionTitle>Guidelines</SectionTitle>
+      <Text>Guidelines for handling errors is available on the <Link href="/components/form">Form page</Link>.</Text>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={ propsRows } />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+          <ListItem><Link href="/components/form">Form</Link></ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
