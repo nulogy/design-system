@@ -7,7 +7,7 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 
 const ApplyMenuLinkStyles = styled.div({
-  "& *": {
+  "*": {
     display: "inline-flex",
     color: theme.colors.white,
     textDecoration: "none",

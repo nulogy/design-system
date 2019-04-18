@@ -47,7 +47,7 @@ const ApplySubMenuLinkStyles = styled.li({
   transition: ".2s",
   fontSize: theme.fontSizes.medium,
   maxWidth: "20em",
-  "& > *": {
+  "> *": {
     display: "block",
     color: theme.colors.darkBlue,
     textDecoration: "none",

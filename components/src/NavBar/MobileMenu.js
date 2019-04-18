@@ -13,7 +13,7 @@ import theme from "../theme";
 import { subPx } from "../Utils";
 
 const ApplyMenuLinkStyles = styled.li({
-  "& *": {
+  "*": {
     display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
@@ -50,7 +50,7 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: theme.fontSizes.medium,
-  "& *": {
+  "*": {
     display: "block",
     color: theme.colors.white,
     textDecoration: "none",
