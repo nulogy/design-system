@@ -8,11 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+- Card and Card Set components
 - Custom link components supported in the NavBar.
 - Added Card and Card Set components
 
 ### Changed
-- Made label of IconicButton optional
+- Label of IconicButton is now optional
 - Select API changed, given the following options:
 
     ```js
