@@ -43,7 +43,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x4">
+      <Box mb="x6">
         <SubsectionTitle>Variation 1</SubsectionTitle>
         <Highlight className="js">
           {``}
