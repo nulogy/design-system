@@ -117,7 +117,7 @@ const renderSubMenu = (menuItem, linkOnClick, layer) => (
 const getRenderFunction = (menuItem, layer) => {
   if (menuItem.items) {
     return renderSubMenu;
-  } else if (menuItem.render){
+  } else if (menuItem.render) {
     return renderCustom;
   } else if (layer === 0) {
     return renderMenuLink;
