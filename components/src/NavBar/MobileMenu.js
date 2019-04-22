@@ -202,7 +202,7 @@ const MobileMenuTrigger = styled.button(
   }
 );
 
-const MobileMenuBase = ({
+const BaseMobileMenu = ({
   menuData,
   menuState: { isOpen, handleMenuToggle, closeMenu },
   ...props
@@ -228,7 +228,7 @@ const MobileMenuBase = ({
   </Box>
 );
 
-MobileMenuBase.propTypes = {
+BaseMobileMenu.propTypes = {
   menuData: PropTypes.shape({
     "primaryMenu": PropTypes.arrayOf(isValidMenuItem),
     "secondaryMenu": PropTypes.arrayOf(isValidMenuItem),
@@ -239,10 +239,10 @@ MobileMenuBase.propTypes = {
   }).isRequired,
 };
 
-MobileMenuBase.defaultProps = {
+BaseMobileMenu.defaultProps = {
   menuData: null,
 };
 
-const MobileMenu = styled(MobileMenuBase)({});
+const MobileMenu = styled(BaseMobileMenu)({});
 
 export default MobileMenu;

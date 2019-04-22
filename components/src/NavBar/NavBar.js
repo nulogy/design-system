@@ -48,10 +48,7 @@ const MediumNavBar = ({
 MediumNavBar.propTypes = {
   alt: PropTypes.string,
   desktopSrc: PropTypes.string,
-  menuData: PropTypes.shape({
-    "primary": PropTypes.shape({}),
-    "secondary": PropTypes.shape({}),
-  }),
+  menuData: PropTypes.shape({}),
 };
 
 MediumNavBar.defaultProps = {
@@ -93,10 +90,7 @@ const BaseNavBar = ({
 );
 
 BaseNavBar.propTypes = {
-  menuData: PropTypes.shape({
-    "primary": PropTypes.shape({}),
-    "secondary": PropTypes.shape({}),
-  }),
+  menuData: PropTypes.shape({}),
   className: PropTypes.string,
 };
 
