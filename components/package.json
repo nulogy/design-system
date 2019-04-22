@@ -57,6 +57,7 @@
     "@storybook/addon-storysource": "^4.0.12",
     "@storybook/react": "^4.1.4",
     "babel-jest": "24.1.0",
+    "babel-loader": "8.0.0",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.0",
     "babel-preset-react": "6.24.1",
@@ -73,6 +74,8 @@
     "jest": "24.1.0",
     "jest-styled-components": "6.3.1",
     "prop-types": "15.6.2",
+    "react": "*",
+    "react-dom": "*",
     "react-test-renderer": "~16.3",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
