@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const isValidMenuItem = function validArrayItem(arr, idx, componentName, location, propFullName) {
   const obj = arr[idx];
 
-  if (typeof obj != "object"){
+  if (typeof obj !== "object") {
     throw new Error(
       `Invalid ${propFullName} of type \`${typeof obj}\` supplied to \`${componentName}\`, expected \`object\``
     );
@@ -23,7 +23,7 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
     if (definingKeys.includes(keys[i])) { numberOfDefiningKeys += 1; }
   }
 
-  if (numberOfDefiningKeys != 1) {
+  if (numberOfDefiningKeys !== 1) {
     return new Error(
       `Invalid set of keys for Menu Item with name \`${obj.name}\` supplied to \`${componentName}\`. Include a name key and ONE of ${definingKeys}`
     );
