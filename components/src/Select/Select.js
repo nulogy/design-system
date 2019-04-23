@@ -148,7 +148,7 @@ const Select = ({
         }) => (
           <div style={ { position: "relative" } }>
             <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
-              <MaybeFieldLabel style={{width: "100%"}} labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
+              <MaybeFieldLabel style={ { width: "100%" } } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
                 <Input
                   { ...getInputProps({
                     disabled, error, isOpen, autoComplete: "off",
