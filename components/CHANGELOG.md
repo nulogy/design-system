@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fixed global styles. NavBar logo will now display at the correct size.
+- Fixed bug where Select would not close when an option was selected.
 
 ### Security
 
