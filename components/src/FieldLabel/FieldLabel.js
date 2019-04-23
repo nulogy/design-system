@@ -7,11 +7,20 @@ import theme from "../theme";
 
 const Label = styled.label(
   space,
-  {
+  ({ color }) => ({
+    color: theme.colors[color] || color,
     display: "inline-block",
     fontSize: theme.fontSizes.medium,
-  }
+  })
 );
+
+Label.propTypes = {
+  color: PropTypes.string,
+};
+
+Label.defaultProps = {
+  color: theme.colors.black,
+};
 
 const BaseFieldLabel = ({
   labelText,

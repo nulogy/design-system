@@ -156,8 +156,8 @@ const Select = ({
                   aria-required={ required } aria-invalid={ error } placeholder={ placeholder }
                   readOnly value={ optionToString(selectedItem) || "" }
                 />
-                <ToggleButton isOpen={ isOpen } />
               </MaybeFieldLabel>
+              <ToggleButton isOpen={ isOpen } />
             </SelectBox>
             {
               isOpen
