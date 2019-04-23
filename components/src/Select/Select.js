@@ -67,10 +67,10 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
 }));
 
 const IndicatorButton = styled.div(() => ({
+  height: theme.space.x3,
   position: "absolute",
-  top: theme.space.x1,
   right: theme.space.half,
-  bottom: "0",
+  bottom: theme.space.x1,
   pointerEvents: "none",
 }));
 
@@ -128,27 +128,27 @@ const Select = ({
   id, labelText, helpText, requirementText,
 }) => (
   <Field>
-    <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-      <Downshift
-        itemToString={ optionToString }
-        selectedItem={ value }
-        onChange={ onChange }
-        defaultHighlightedIndex={ 0 }
-        initialIsOpen={ initialIsOpen }
-        inputId={ id }
-      >
-        {
-          ({
-            getMenuProps,
-            getItemProps,
-            getInputProps,
-            getToggleButtonProps,
-            isOpen,
-            selectedItem,
-            highlightedIndex,
-          }) => (
-            <div style={ { position: "relative" } }>
-              <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
+    <Downshift
+      itemToString={ optionToString }
+      selectedItem={ value }
+      onChange={ onChange }
+      defaultHighlightedIndex={ 0 }
+      initialIsOpen={ initialIsOpen }
+      inputId={ id }
+    >
+      {
+        ({
+          getMenuProps,
+          getItemProps,
+          getInputProps,
+          getToggleButtonProps,
+          isOpen,
+          selectedItem,
+          highlightedIndex,
+        }) => (
+          <div style={ { position: "relative" } }>
+            <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
+              <MaybeFieldLabel style={{width: "100%"}} labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
                 <Input
                   { ...getInputProps({
                     disabled, error, isOpen, autoComplete: "off",
@@ -157,35 +157,35 @@ const Select = ({
                   readOnly value={ optionToString(selectedItem) || "" }
                 />
                 <ToggleButton isOpen={ isOpen } />
-              </SelectBox>
-              {
-                isOpen
-                  && (
-                    <Menu { ...getMenuProps({ error, isOpen }) }>
-                      {
-                        options.map((option, index) => (
-                          <MenuItem
-                            { ...getItemProps({
-                              key: option.value,
-                              item: option,
-                              isSelected: selectedItem === option,
-                              isActive: highlightedIndex === index,
-                              index,
-                              disabled,
-                            }) }
-                          >
-                            {option.label}
-                          </MenuItem>
-                        ))
-                      }
-                    </Menu>
-                  )
-              }
-            </div>
-          )
-        }
-      </Downshift>
-    </MaybeFieldLabel>
+              </MaybeFieldLabel>
+            </SelectBox>
+            {
+              isOpen
+                && (
+                  <Menu { ...getMenuProps({ error, isOpen }) }>
+                    {
+                      options.map((option, index) => (
+                        <MenuItem
+                          { ...getItemProps({
+                            key: option.value,
+                            item: option,
+                            isSelected: selectedItem === option,
+                            isActive: highlightedIndex === index,
+                            index,
+                            disabled,
+                          }) }
+                        >
+                          {option.label}
+                        </MenuItem>
+                      ))
+                    }
+                  </Menu>
+                )
+            }
+          </div>
+        )
+      }
+    </Downshift>
     {error && <InlineValidation mt="x1" message={ error } />}
   </Field>
 );
