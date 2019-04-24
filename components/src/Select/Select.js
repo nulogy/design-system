@@ -215,7 +215,7 @@ Select.propTypes = {
 const extractLabelFromOption = option => option && option.label;
 
 Select.defaultProps = {
-  value: undefined,
+  value: null,
   required: false,
   onChange: undefined,
   error: null,
