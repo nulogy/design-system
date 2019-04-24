@@ -121,6 +121,12 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
   },
 }));
 
+const parseValueProp = (value, options) => (
+  (typeof value === "string")
+    ? options.filter(option => option.value === value)[0]
+    : value
+);
+
 const Select = ({
   error, onChange, disabled,
   options, optionToString, value,
@@ -130,7 +136,7 @@ const Select = ({
   <Field>
     <Downshift
       itemToString={ optionToString }
-      selectedItem={ value }
+      selectedItem={ parseValueProp(value, options) }
       onChange={ onChange }
       defaultHighlightedIndex={ 0 }
       initialIsOpen={ initialIsOpen }
@@ -192,7 +198,7 @@ const Select = ({
 
 Select.propTypes = {
   placeholder: PropTypes.string,
-  value: PropTypes.shape({}),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
