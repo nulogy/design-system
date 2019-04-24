@@ -121,11 +121,7 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
   },
 }));
 
-const parseValueProp = (value, options) => (
-  (typeof value === "string")
-    ? options.filter(option => option.value === value)[0]
-    : value
-);
+const parseValueProp = (value, options) => options.find(o => o.value === value);
 
 const Select = ({
   error, onChange, disabled,
@@ -198,7 +194,7 @@ const Select = ({
 
 Select.propTypes = {
   placeholder: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+  value: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
