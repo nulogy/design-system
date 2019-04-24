@@ -12,24 +12,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Select API changed, given the following options:
 
-```js
-options = [
-  {label: "label1", value: "value1},
-  {label: "label2", value: "value2},
-]
-```
+    ```js
+    options = [
+      {label: "label1", value: "value1},
+      {label: "label2", value: "value2},
+    ]
+    ```
 
-Old API:
+    Old API:
 
-```js
-<Select options={options} value={options[1]}>
-```
+    ```js
+    <Select options={options} value={options[1]}>
+    ```
 
-New API:
+    New API:
 
-```js
-<Select options={options} value="value2">
-```
+    ```js
+    <Select options={options} value="value2">
+    ```
 
 ### Deprecated
 
