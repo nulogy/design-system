@@ -17,6 +17,7 @@ const options = [
 const propsRows = [
   {
     name: "options", type: "Array", defaultValue: "Required", description: "The options available to be selected, containing a value and a label",
+    name: "value", type: "String", defaultValue: "undefined", description: "Value of the current selected option, used when controlling the Select component"
   },
   ...inputProps,
 ];

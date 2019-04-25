@@ -48,12 +48,12 @@ storiesOf("Select", module)
   .add("Select with an option selected", () => (
     <>
       <Select
-        value={ options[0] } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
+        value={ options[0].value } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
         optionToString={ optionToString }
       />
       <br />
       <Select
-        value={ options[0] } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
+        value={ options[0].value } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
         optionToString={ optionToString } initialIsOpen
       />
     </>
