@@ -55,6 +55,44 @@ const primaryMenu = [
   { name: "Link", href: "/" },
 ];
 
+const primaryMenuCustomLinks = [
+  {
+    name: "MenuTrigger",
+    items: [
+      {
+        name: "MenuTrigger",
+        items: [
+          {
+            name: "NormalLink",
+            href: "/",
+          },
+          {
+            name: "CustomLink",
+            render: () => (<a href="/">CustomLink</a>),
+          },
+        ],
+      },
+      {
+        name: "NormalLink",
+        href: "/",
+      },
+      {
+        name: "CustomLink",
+        render: () => (<a href="/">CustomLink</a>),
+      },
+    ],
+  },
+  {
+    name: "NormalLink",
+    href: "/",
+  },
+  {
+    name: "CustomLink",
+    render: () => (<a href="/">CustomLink</a>),
+  },
+];
+
+
 const secondaryMenu = [
   {
     name: "User",
@@ -95,4 +133,7 @@ storiesOf("NavBar", module)
   ))
   .add("With branding only", () => (
     <NavBar menuData={ {} } />
+  ))
+  .add("With custom link components", () => (
+    <NavBar menuData={ { primaryMenu: primaryMenuCustomLinks } } />
   ));

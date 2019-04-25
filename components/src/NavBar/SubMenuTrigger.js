@@ -15,6 +15,7 @@ const SubMenuItemsList = styled.ul({
 
 const SubMenuTriggerButton = styled.button({
   display: "block",
+  position: "relative",
   color: theme.colors.darkBlue,
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
@@ -34,6 +35,33 @@ const SubMenuTriggerButton = styled.button({
   cursor: "pointer",
 });
 
+const ApplySubMenuLinkStyles = styled.li({
+  color: theme.colors.black,
+  borderColor: "transparent",
+  backgroundColor: "transparent",
+  justifyContent: "center",
+  alignItems: "center",
+  textDecoration: "none",
+  verticalAlign: "middle",
+  lineHeight: theme.lineHeights.base,
+  transition: ".2s",
+  fontSize: theme.fontSizes.medium,
+  maxWidth: "20em",
+  "> *": {
+    display: "block",
+    color: theme.colors.darkBlue,
+    textDecoration: "none",
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    "&:hover, &:focus": {
+      outline: "none",
+      backgroundColor: theme.colors.lightGrey,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  },
+});
+
 const keyCode = Object.freeze({
   "TAB": 9,
   "RETURN": 13,
@@ -49,7 +77,39 @@ const keyCode = Object.freeze({
   "DOWN": 40,
 });
 
-const isTrigger = subMenuItem => (subMenuItem.items);
+const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
+  <li key={ subMenuItem.name }>
+    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+  </li>
+);
+
+const renderSubMenuLink = (subMenuItem, linkOnClick) => (
+  <li key={ subMenuItem.name }>
+    <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+  </li>
+);
+
+const renderCustom = (subMenuItem, linkOnClick) => (
+  <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
+    {subMenuItem.render()}
+  </ApplySubMenuLinkStyles>
+);
+
+const getRenderFunction = subMenuItem => {
+  if (subMenuItem.items) {
+    return renderSubMenuTrigger;
+  } else if (subMenuItem.href) {
+    return renderSubMenuLink;
+  } else if (subMenuItem.render) {
+    return renderCustom;
+  } else {
+    return (() => (null));
+  }
+};
+
+const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => (
+  getRenderFunction(subMenuItem)(subMenuItem, linkOnClick)
+));
 
 /* eslint-disable react/destructuring-assignment */
 class SubMenuTrigger extends React.Component {
@@ -61,6 +121,10 @@ class SubMenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.clearScheduled();
   }
 
   setSubMenuState(newState, skipTimer = false) {
@@ -84,16 +148,13 @@ class SubMenuTrigger extends React.Component {
     return ({
       onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
-      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   SubMenuTriggerEventHandlers() {
     return ({
-      onClick: () => {
-        this.showSubMenu();
-      },
+      onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
@@ -119,7 +180,7 @@ class SubMenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <SubMenuTriggerButton style={ { position: "relative" } } aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+            <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
               { this.props.name }
               <span>
                 <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
@@ -137,21 +198,7 @@ class SubMenuTrigger extends React.Component {
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
               <SubMenuItemsList>
-                {this.props.menuData.map(subMenuItem => {
-                  if (isTrigger(subMenuItem)) {
-                    return (
-                      <li key={ subMenuItem.name }>
-                        <SubMenuTrigger name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={ subMenuItem.name }>
-                        <SubMenuLink key={ subMenuItem.name } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
-                      </li>
-                    );
-                  }
-                })}
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
               </SubMenuItemsList>
             </SubMenu>
           )}
@@ -168,6 +215,7 @@ SubMenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  linkOnClick: PropTypes.func,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
@@ -175,6 +223,7 @@ SubMenuTrigger.propTypes = {
 SubMenuTrigger.defaultProps = {
   menuData: null,
   description: null,
+  linkOnClick: null,
   showDelay: "100",
   hideDelay: "350",
 };
