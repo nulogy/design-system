@@ -5,16 +5,16 @@ import Link from "../Link/Link";
 import theme from "../theme";
 
 const SubMenuLink = styled(Link)(props => ({
+  display: "block",
+  width: "100%",
   borderColor: "transparent",
   backgroundColor: "transparent",
-  justifyContent: "center",
   alignItems: "center",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
-  maxWidth: "20em",
-  display: "block",
+  display: "inline-flex",
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
