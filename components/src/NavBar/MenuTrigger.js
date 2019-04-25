@@ -83,13 +83,15 @@ const keyCode = Object.freeze({
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
   <li key={ subMenuItem.name }>
-    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
   <li key={ subMenuItem.name }>
-    <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+    <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
+      {subMenuItem.name}
+    </SubMenuLink>
   </li>
 );
 

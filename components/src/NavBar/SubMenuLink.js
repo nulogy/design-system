@@ -1,46 +1,10 @@
-import React from "react";
 import styled from "styled-components";
-import { themeGet } from "styled-system";
 import PropTypes from "prop-types";
 import Link from "../Link/Link";
-import Text from "../Type/Text";
 import theme from "../theme";
+import { themeGet } from "styled-system";
 
-const BaseSubMenuLink = React.forwardRef(({
-  href,
-  name,
-  description,
-  nameColor,
-  descriptionColor,
-  ...props
-}, ref) => (
-  <Link { ...props } color={ nameColor } ref={ ref } href={ href } underline={ false }>
-    <Text color={ nameColor }>{ name }</Text>
-    {description && (
-    <Text color={ descriptionColor } fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
-      {description}
-    </Text>
-    )}
-  </Link>
-));
-
-BaseSubMenuLink.propTypes = {
-  name: PropTypes.node.isRequired,
-  description: PropTypes.string,
-  href: PropTypes.string,
-  nameColor: PropTypes.string,
-  descriptionColor: PropTypes.string,
-};
-
-BaseSubMenuLink.defaultProps = {
-  description: undefined,
-  href: "/",
-  nameColor: "darkBlue",
-  descriptionColor: "darkGrey",
-};
-
-const SubMenuLink = styled(BaseSubMenuLink)(props => ({
-  color: "grey",
+const SubMenuLink = styled(Link)(props => ({
   borderColor: "transparent",
   backgroundColor: "transparent",
   justifyContent: "center",
@@ -54,7 +18,7 @@ const SubMenuLink = styled(BaseSubMenuLink)(props => ({
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
+    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props),
   },
   "&:disabled": {
     opacity: ".5",
@@ -63,11 +27,17 @@ const SubMenuLink = styled(BaseSubMenuLink)(props => ({
 }));
 
 SubMenuLink.propTypes = {
-  hoverColor: PropTypes.string,
+  color: PropTypes.string,
+  hover: PropTypes.string,
+  bgHoverColor: PropTypes.string,
+  underline: PropTypes.bool,
 };
 
 SubMenuLink.defaultProps = {
-  hoverColor: "lightGrey",
+  color: theme.colors.darkBlue,
+  hover: theme.colors.darkBlue,
+  bgHoverColor: theme.colors.lightGrey,
+  underline: false,
 };
 
 export default SubMenuLink;
