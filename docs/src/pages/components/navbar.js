@@ -14,8 +14,8 @@ const primaryMenu = [
   {
     name: 'Dashboard',
     items: [
-      { name: 'Customers', description: 'description', href: '/' },
-      { name: 'Invoices', description: 'description', href: '/' },
+      { name: 'Customers', href: '/' },
+      { name: 'Invoices', href: '/' },
     ],
   },
 ];
@@ -24,8 +24,8 @@ const secondaryMenu = [
   {
     name: 'Settings',
     items: [
-      { name: 'Permissions', description: 'description', href: '/' },
-      { name: 'Manage account', description: 'description', href: '/' },
+      { name: 'Permissions', href: '/' },
+      { name: 'Manage account', href: '/' },
     ],
   },
 ];
@@ -86,8 +86,8 @@ const primaryMenu = [
   {
     name: 'Dashboard',
     items: [
-      { name: 'Customers', description: 'description', href: '/' },
-      { name: 'Invoices', description: 'description', href: '/' },
+      { name: 'Customers', href: '/' },
+      { name: 'Invoices', href: '/' },
     ],
   },
   { name: 'Link', href: '/' },
@@ -97,8 +97,8 @@ const secondaryMenu = [
   {
     name: 'Settings',
     items: [
-      { name: 'Permissions', description: 'description', href: '/' },
-      { name: 'Manage account', description: 'description', href: '/' },
+      { name: 'Permissions', href: '/' },
+      { name: 'Manage account', href: '/' },
     ],
   },
 ];
