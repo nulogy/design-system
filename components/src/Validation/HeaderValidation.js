@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Flex from "../Flex/Flex";
 import Text from "../Type/Text";
-import SubsectionTitle from "../Type/Headings";
+import { SubsectionTitle } from "../Type/Headings";
 import Icon from "../Icon/Icon";
 import theme from "../theme";
 

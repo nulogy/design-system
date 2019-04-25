@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Title from "../Type/Headings";
+import { Title } from "../Type/Headings";
 import PrimaryButton from "../Button/PrimaryButton";
 import QuietButton from "../Button/QuietButton";
 import IconicButton from "../Button/IconicButton";
