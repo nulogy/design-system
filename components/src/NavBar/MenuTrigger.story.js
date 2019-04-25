@@ -4,9 +4,9 @@ import { Flex } from "ComponentsRoot";
 import MenuTrigger from "./MenuTrigger";
 
 const menuData = [
-  { name: "Submenu Link 1", description: "description", href: "/" },
-  { name: "Submenu Link 2", description: "description", href: "/" },
-  { name: "Submenu Link 3", description: "description", href: "/" },
+  { name: "Submenu Link 1", href: "/" },
+  { name: "Submenu Link 2", href: "/" },
+  { name: "Submenu Link 3", href: "/" },
 ];
 
 const menuDataLayered = [
@@ -25,52 +25,6 @@ const menuDataLayered = [
   },
 ];
 
-const menuDataEdgeCases = [
-  { name: "Submenu Link", description: "description", href: "/" },
-  {
-    name: "Submenu Trigger",
-    description: "description",
-    items: [
-      { name: "Submenu Link", description: "description", href: "/" },
-      {
-        name: "Submenu Trigger",
-        description: "description",
-        items: [
-          { name: "Submenu Link", description: "description", href: "/" },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Trigger with a very long name",
-    description: "description",
-    items: [
-      { name: "Submenu Link", description: "description", href: "/" },
-      {
-        name: "Submenu Trigger",
-        description: "description",
-        items: [
-          { name: "Submenu Link", description: "description", href: "/" },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Submenu Trigger 2",
-    description: "description description description description",
-    items: [
-      { name: "Submenu Link", description: "description", href: "/" },
-      {
-        name: "Submenu Trigger",
-        description: "description",
-        items: [
-          { name: "Submenu Link", description: "description", href: "/" },
-        ],
-      },
-    ],
-  },
-];
-
 storiesOf("MenuTrigger", module)
   .add("MenuTrigger", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
@@ -80,10 +34,5 @@ storiesOf("MenuTrigger", module)
   .add("MenuTrigger with more layers", () => (
     <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
       <MenuTrigger menuData={ menuDataLayered } id="menuTrigger1" name="Menu Trigger" />
-    </Flex>
-  ))
-  .add("MenuTrigger with text edge cases", () => (
-    <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuTrigger menuData={ menuDataEdgeCases } id="menuTrigger1" name="Menu Trigger" />
     </Flex>
   ));

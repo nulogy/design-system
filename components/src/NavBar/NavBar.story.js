@@ -6,20 +6,20 @@ const primaryMenu = [
   {
     name: "Dashboard",
     items: [
-      { name: "Customers", description: "description", href: "/" },
-      { name: "Invoices", description: "description", href: "/" },
-      { name: "Projects", description: "description", href: "/" },
-      { name: "Items", description: "description", href: "/" },
-      { name: "Vendors", description: "description", href: "/" },
-      { name: "Carriers", description: "description", href: "/" },
+      { name: "Customers", href: "/" },
+      { name: "Invoices", href: "/" },
+      { name: "Projects", href: "/" },
+      { name: "Items", href: "/" },
+      { name: "Vendors", href: "/" },
+      { name: "Carriers", href: "/" },
     ],
   },
   {
     name: "Inspector",
     items: [
-      { name: "Integration", description: "description", href: "/" },
-      { name: "Site configuration", description: "description", href: "/" },
-      { name: "Company configuration", description: "description", href: "/" },
+      { name: "Integration", href: "/" },
+      { name: "Site configuration", href: "/" },
+      { name: "Company configuration", href: "/" },
     ],
   },
   {
@@ -27,29 +27,27 @@ const primaryMenu = [
     items: [
       {
         name: "Production",
-        description: "description",
         items: [
-          { name: "Dashboard", description: "description", href: "/" },
+          { name: "Dashboard", href: "/" },
           {
             name: "Projects",
-            description: "description",
             items: [
-              { name: "Cycle Counts", description: "description", href: "/" },
-              { name: "Blind Counts", description: "description", href: "/" },
+              { name: "Cycle Counts", href: "/" },
+              { name: "Blind Counts", href: "/" },
             ],
           },
-          { name: "Jobs", description: "description", href: "/" },
+          { name: "Jobs", href: "/" },
         ],
       },
-      { name: "Item cart", description: "description", href: "/" },
-      { name: "Inventory", description: "description", href: "/" },
+      { name: "Item cart", href: "/" },
+      { name: "Inventory", href: "/" },
     ],
   },
   {
     name: "Sheets",
     items: [
-      { name: "Item locator", description: "description", href: "/" },
-      { name: "Ship orders", description: "description", href: "/" },
+      { name: "Item locator", href: "/" },
+      { name: "Ship orders", href: "/" },
     ],
   },
   { name: "Link", href: "/" },
@@ -97,16 +95,16 @@ const secondaryMenu = [
   {
     name: "User",
     items: [
-      { name: "Profile", description: "description", href: "/" },
-      { name: "Preferences", description: "description", href: "/" },
-      { name: "Logout", description: "description", href: "/" },
+      { name: "Profile", href: "/" },
+      { name: "Preferences", href: "/" },
+      { name: "Logout", href: "/" },
     ],
   },
   {
     name: "Settings",
     items: [
-      { name: "Permissions", description: "description", href: "/" },
-      { name: "Manage account", description: "description", href: "/" },
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
     ],
   },
 ];
