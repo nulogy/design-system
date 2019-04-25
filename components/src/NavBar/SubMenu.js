@@ -85,7 +85,7 @@ const SubMenu = styled(BaseSubMenu)(
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${subMenuStyles.borderColor}`,
     borderBottom: `1px solid ${subMenuStyles.borderColor}`,
-    boxShadow: theme.boxShadows,
+    boxShadow: theme.boxShadows.small,
     padding: "7px 0",
     transition: "opacity 0.3s",
     zIndex: "999999",
