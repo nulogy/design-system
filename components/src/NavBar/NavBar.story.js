@@ -90,6 +90,22 @@ const primaryMenuCustomLinks = [
     name: "CustomLink",
     render: () => (<a href="/">CustomLink</a>),
   },
+  {
+    name:"tester",
+    items: [
+      {
+        name:"tester",
+        items: [
+          {
+            name:"tester",
+            items: [
+              "stringggg"
+            ],
+          }
+        ],
+      }
+    ],
+  }
 ];
 
 

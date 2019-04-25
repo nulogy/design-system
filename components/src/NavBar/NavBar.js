@@ -10,6 +10,7 @@ import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
+import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 
 const navBarStyles = {
@@ -90,7 +91,13 @@ const BaseNavBar = ({
 );
 
 BaseNavBar.propTypes = {
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.shape({
+    "primaryMenu": PropTypes.arrayOf(isValidMenuItem),
+    "secondaryMenu": PropTypes.arrayOf(isValidMenuItem),
+    "search": PropTypes.shape({
+      "onSubmit": PropTypes.func,
+    }),
+  }),
   className: PropTypes.string,
 };
 

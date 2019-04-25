@@ -7,7 +7,6 @@ import Icon from "../Icon/Icon";
 import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import SubMenuLink from "./SubMenuLink";
-import isValidMenuItem from "./isValidMenuItem";
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -211,7 +210,7 @@ class MenuTrigger extends React.Component {
 
 MenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
-  menuData: PropTypes.arrayOf(isValidMenuItem),
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
