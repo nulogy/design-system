@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import {
-  Box,
-} from "ComponentsRoot";
+import Box from "../Box/Box";
 import theme from "../theme";
 
 const UnstyledCard = ({
