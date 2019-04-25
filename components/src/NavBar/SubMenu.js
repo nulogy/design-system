@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "ComponentsRoot/theme";
+import theme from "../theme";
 
 const subMenuStyles = {
   backgroundColor: theme.colors.whiteGrey,

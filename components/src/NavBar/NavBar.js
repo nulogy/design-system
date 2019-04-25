@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  Box,
-  Flex,
-  NavBarSearch,
-} from "ComponentsRoot";
+import Box from "../Box/Box";
+import Flex from "../Flex/Flex";
+import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import Branding from "./Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
   space, color, fontSize, fontWeight, lineHeight,
 } from "styled-system";
-import { ListItem } from "ComponentsRoot";
+import ListItem from "./ListItem";
 import theme from "../theme";
 
 const List = styled.ul(

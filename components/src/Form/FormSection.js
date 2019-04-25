@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import {
-  SubsectionTitle,
-  Field,
-} from "ComponentsRoot";
+import { SubsectionTitle } from "../Type/Headings";
+import Field from "./Field";
 import Fieldset from "./Fieldset";
 import theme from "../theme";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FieldLabel } from "ComponentsRoot";
+import FieldLabel from "./FieldLabel";
 
 const MaybeFieldLabel = ({
   labelText,

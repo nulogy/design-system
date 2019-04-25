@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { darken, transparentize } from "polished";
-import {
-  Flex,
-  Input,
-  Icon,
-} from "ComponentsRoot";
+import Flex from "../Flex/Flex";
+import Input from "../Input/Input";
+import Icon from "../Icon/Icon";
 import theme from "../theme";
 
 class BaseNavBarSearch extends React.Component {

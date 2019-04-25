@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "ComponentsRoot";
+import Button from "./Button";
 import theme from "../theme";
 
 const QuietButton = styled(Button)({

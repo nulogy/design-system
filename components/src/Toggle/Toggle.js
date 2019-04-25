@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  Field, Text, RequirementText, HelpText, Box,
-} from "ComponentsRoot";
+import Box from "../Box/Box";
+import HelpText from "../FieldLabel/HelpText";
+import RequirementText from "../FieldLabel/RequirementText";
+import Field from "../Form/Field";
+import Text from "../Type/Text";
 import theme from "../theme";
 import { ClickInputLabel, omit } from "../Utils";
 import ToggleButton from "./ToggleButton";

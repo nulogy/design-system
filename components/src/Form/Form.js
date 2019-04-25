@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import {
-  SectionTitle,
-  Field,
-  HeaderValidation,
-} from "ComponentsRoot";
+import { SectionTitle } from "../Type/Headings";
+import Field from "./Field";
+import HeaderValidation from "../Validation/HeaderValidation";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 import theme from "../theme";
