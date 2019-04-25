@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
-import { Box, RequirementText, HelpText } from "ComponentsRoot";
+import Box from "../Box/Box";
+import RequirementText from "./RequirementText";
+import HelpText from "./HelpText";
 import theme from "../theme";
 
 const Label = styled.label(

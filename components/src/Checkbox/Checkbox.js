@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box, Text } from "ComponentsRoot";
+import Box from "../Box/Box";
+import Text from "../Type/Text";
 import theme from "../theme";
 import { ClickInputLabel } from "../Utils";
 

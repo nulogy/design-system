@@ -3,7 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
-import { Field, MaybeFieldLabel, InlineValidation } from "ComponentsRoot";
+import Field from "../Form/Field";
+import MaybeFieldLabel from "../FieldLabel/MaybeFieldLabel";
+import InlineValidation from "../Validation/InlineValidation";
 import theme from "../theme";
 import { subPx } from "../Utils";
 

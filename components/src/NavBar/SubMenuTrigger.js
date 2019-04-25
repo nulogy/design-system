@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import theme from "ComponentsRoot/theme";
-import { Text, Icon } from "ComponentsRoot";
+import theme from "../theme";
+import Text from "../Type/Text";
+import Icon from "../Icon/Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
 

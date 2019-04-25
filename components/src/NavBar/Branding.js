@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  Box,
-} from "ComponentsRoot";
+import Box from "../Box/Box";
 import theme from "../theme";
 
 const BaseBranding = ({

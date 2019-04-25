@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { Box } from "ComponentsRoot";
+import Box from "../Box/Box";
 import theme from "../theme";
 import { withGeneratedId } from "../Utils";
 
