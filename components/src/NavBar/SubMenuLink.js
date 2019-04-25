@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { themeGet } from "styled-system";
 import Link from "../Link/Link";
 import theme from "../theme";
-import { themeGet } from "styled-system";
 
 const SubMenuLink = styled(Link)(props => ({
   borderColor: "transparent",

@@ -95,9 +95,9 @@ const renderMenuLink = (menuItem, linkOnClick) => (
 
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
   <li key={ menuItem.name }>
-    <MobileSubMenuLink 
-      onClick={ linkOnClick } href={ menuItem.href } layer={ layer } 
-      color={ theme.colors.white } hover={ theme.colors.white} bgHoverColor={ theme.colors.black }
+    <MobileSubMenuLink
+      onClick={ linkOnClick } href={ menuItem.href } layer={ layer }
+      color={ theme.colors.white } hover={ theme.colors.white } bgHoverColor={ theme.colors.black }
     >
       {menuItem.name}
     </MobileSubMenuLink>
@@ -142,7 +142,7 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
   <>
     { layer === 0
     && (
-    <SubsectionTitle mb={"none"} color="grey" key={ menuItem.name }>
+    <SubsectionTitle mb="none" color="grey" key={ menuItem.name }>
       {menuItem.name}
     </SubsectionTitle>
     )}
