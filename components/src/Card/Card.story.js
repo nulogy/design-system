@@ -13,7 +13,7 @@ import CardSet from "./CardSet";
 
 storiesOf("Card", module)
   .add("Card", () => (
-    <Card> I am  a card.</Card>
+    <Card>I am  a card.</Card>
   ))
   .add("Cardset", () => (
     <CardSet>
