@@ -8,12 +8,6 @@ import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import SubMenuLink from "./SubMenuLink";
 
-const SubMenuItemsList = styled.ul({
-  listStyle: "none",
-  paddingLeft: "0",
-  margin: "0",
-});
-
 const MenuTriggerButton = styled.button({
   display: "block",
   position: "relative",
@@ -192,9 +186,7 @@ class MenuTrigger extends React.Component {
         <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
-              </SubMenuItemsList>
+              {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
             </SubMenu>
           )}
         </Popper>

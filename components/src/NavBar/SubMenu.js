@@ -56,10 +56,10 @@ const BaseSubMenu = ({
   children,
   ...props
 }) => (
-  <div ref={ ref } style={ style } placement={ placement } { ...props }>
+  <ul ref={ ref } style={ style } placement={ placement } { ...props }>
     {renderArrow && <Arrow { ...arrowProps } /> }
     {children}
-  </div>
+  </ul>
 );
 
 BaseSubMenu.propTypes = {
@@ -76,6 +76,8 @@ BaseSubMenu.defaultProps = {
 
 const SubMenu = styled(BaseSubMenu)(
   ({ renderArrow }) => ({
+    listStyle: "none",
+    margin: "0",
     color: subMenuStyles.nameColor,
     maxWidth: "20em",
     fontSize: theme.fontSizes.small,
