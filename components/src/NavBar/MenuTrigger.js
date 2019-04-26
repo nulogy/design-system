@@ -15,18 +15,17 @@ const SubMenuItemsList = styled.ul({
 });
 
 const MenuTriggerButton = styled.button({
-  display: "inline-flex",
+  display: "block",
+  position: "relative",
   color: theme.colors.white,
   border: "none",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
@@ -188,7 +187,7 @@ class MenuTrigger extends React.Component {
           {({ ref }) => (
             <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
               { this.props.name }
-              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
+              <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
             </MenuTriggerButton>
           )}
         </Reference>
