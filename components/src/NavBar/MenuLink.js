@@ -4,12 +4,9 @@ import Link from "../Link/Link";
 import theme from "../theme";
 
 const MenuLink = styled(Link)({
-  display: "inline-flex",
+  display: "block",
   border: "none",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
-  verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,

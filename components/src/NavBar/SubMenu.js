@@ -77,9 +77,7 @@ BaseSubMenu.defaultProps = {
 const SubMenu = styled(BaseSubMenu)(
   ({ renderArrow }) => ({
     color: subMenuStyles.nameColor,
-    display: "flex",
     maxWidth: "20em",
-    flexDirection: "column",
     fontSize: theme.fontSizes.small,
     backgroundColor: subMenuStyles.backgroundColor,
     borderRadius: theme.radii.medium,
@@ -88,7 +86,7 @@ const SubMenu = styled(BaseSubMenu)(
     boxShadow: theme.boxShadows.small,
     padding: "7px 0",
     transition: "opacity 0.3s",
-    zIndex: "999999",
+    zIndex: "100",
     marginTop: renderArrow ? theme.space.half : "-8px",
   }),
   ({ style }) => ({

@@ -12,12 +12,9 @@ import { subPx } from "../Utils";
 
 const ApplyMenuLinkStyles = styled.li({
   "*": {
-    display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
     lineHeight: theme.lineHeights.sectionTitle,
-    width: "100%",
-    justifyContent: "flex-start",
     padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
     borderRadius: "0",
     textDecoration: "none",
@@ -35,7 +32,6 @@ const MobileMenuLink = styled(MenuLink)({
   fontSize: theme.fontSizes.large,
   lineHeight: theme.lineHeights.sectionTitle,
   width: "100%",
-  justifyContent: "flex-start",
   padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
   borderRadius: "0",
 });
