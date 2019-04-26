@@ -40,8 +40,6 @@ const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
   borderColor: "transparent",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,

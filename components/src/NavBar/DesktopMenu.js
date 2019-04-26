@@ -8,13 +8,11 @@ import theme from "../theme";
 
 const ApplyMenuLinkStyles = styled.div({
   "*": {
-    display: "inline-flex",
+    display: "block",
     color: theme.colors.white,
     textDecoration: "none",
     border: "none",
     backgroundColor: "transparent",
-    justifyContent: "center",
-    alignItems: "center",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
     transition: ".2s",
