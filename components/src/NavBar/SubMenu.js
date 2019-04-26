@@ -79,8 +79,6 @@ const SubMenu = styled(BaseSubMenu)(
     listStyle: "none",
     margin: "0",
     color: subMenuStyles.nameColor,
-    maxWidth: "20em",
-    fontSize: theme.fontSizes.small,
     backgroundColor: subMenuStyles.backgroundColor,
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${subMenuStyles.borderColor}`,
@@ -93,7 +91,7 @@ const SubMenu = styled(BaseSubMenu)(
   }),
   ({ style }) => ({
     ...style,
-  })
+  }),
 );
 
 SubMenu.propTypes = {

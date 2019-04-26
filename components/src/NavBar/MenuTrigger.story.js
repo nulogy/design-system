@@ -10,13 +10,13 @@ const menuData = [
 ];
 
 const menuDataLayered = [
-  { name: "Submenu Link", href: "/" },
+  { name: "Submenu", href: "/" },
   {
-    name: "Submenu Trigger",
+    name: "Submenu",
     items: [
-      { name: "Submenu Link", href: "/" },
+      { name: "Submenu", href: "/" },
       {
-        name: "Submenu Trigger",
+        name: "Submenu",
         items: [
           { name: "Submenu Link", href: "/" },
         ],

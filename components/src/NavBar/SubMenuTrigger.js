@@ -32,6 +32,7 @@ const SubMenuTriggerButton = styled.button({
 
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
+  whiteSpace: "nowrap",
   borderColor: "transparent",
   backgroundColor: "transparent",
   textDecoration: "none",
@@ -71,13 +72,13 @@ const keyCode = Object.freeze({
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
+  <li style={{whiteSpace: "nowrap"}}key={ subMenuItem.name }>
     <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
+  <li style={{whiteSpace: "nowrap"}}key={ subMenuItem.name }>
     <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
       {subMenuItem.name}
     </SubMenuLink>
@@ -181,7 +182,7 @@ class SubMenuTrigger extends React.Component {
             </SubMenuTriggerButton>
           )}
         </Reference>
-        {true && (
+        {this.state.subMenuOpen && (
         <Popper placement="right-start">
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
