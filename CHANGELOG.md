@@ -8,8 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- Custom link components supported in the NavBar.
-- Added `Card` and `CardSet` components
+- [Custom link components](https://storybook.nulogy.design/?selectedKind=NavBar&selectedStory=With%20custom%20link%20components) supported in the NavBar.
+- Added [`Card`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Card) and [`Cardset`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Cardset) components
 
 ### Changed
 - Label of `IconicButton` is now optional
