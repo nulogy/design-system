@@ -196,7 +196,7 @@ class SubMenuTrigger extends React.Component {
             </SubMenuTriggerButton>
           )}
         </Reference>
-        {this.state.subMenuOpen && (
+        {true && (
         <Popper placement="right-start">
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
