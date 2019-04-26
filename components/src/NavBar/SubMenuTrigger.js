@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
-import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
@@ -72,13 +71,13 @@ const keyCode = Object.freeze({
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li style={{whiteSpace: "nowrap"}}key={ subMenuItem.name }>
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
     <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li style={{whiteSpace: "nowrap"}}key={ subMenuItem.name }>
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
     <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
       {subMenuItem.name}
     </SubMenuLink>

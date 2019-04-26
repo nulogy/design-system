@@ -73,13 +73,13 @@ const keyCode = Object.freeze({
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li style={{whiteSpace: "nowrap"}} key={ subMenuItem.name }>
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
     <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li style={{whiteSpace: "nowrap"}} key={ subMenuItem.name }>
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
     <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
       {subMenuItem.name}
     </SubMenuLink>
