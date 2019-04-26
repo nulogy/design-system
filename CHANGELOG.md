@@ -8,12 +8,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- Custom link components supported in the NavBar.
-- Added `Card` and `CardSet` components
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+## [0.6.0] - 2019-04-26
+
+### Added
+- [Custom link components](https://storybook.nulogy.design/?selectedKind=NavBar&selectedStory=With%20custom%20link%20components) supported in the NavBar.
+- Added [`Card`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Card) and [`Cardset`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Cardset) components
 
 ### Changed
 - Label of `IconicButton` is now optional
-- Select API changed, given the following options:
+- [**Breaking Change**] Select API changed, given the following options:
 
     ```js
     options = [
@@ -34,15 +43,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     <Select options={options} value="value2">
     ```
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 - Fixed global styles. NavBar logo will now display at the correct size.
 - Fixed bug where Select would not close when an option was selected.
-
-### Security
 
 ## [0.5.2] - 2019-04-09
 
