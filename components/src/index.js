@@ -15,10 +15,12 @@ export {
 } from "./Button";
 export { default as Link } from "./Link/Link";
 export { default as InlineValidation } from "./Validation/InlineValidation";
-export { default as HelpText } from "./FieldLabel/HelpText";
-export { default as RequirementText } from "./FieldLabel/RequirementText";
-export { default as FieldLabel } from "./FieldLabel/FieldLabel";
-export { default as MaybeFieldLabel } from "./FieldLabel/MaybeFieldLabel";
+export {
+  HelpText,
+  RequirementText,
+  FieldLabel,
+  MaybeFieldLabel,
+} from "./FieldLabel";
 export { default as Input } from "./Input/Input";
 export { default as NavBarSearch } from "./NavBarSearch/NavBarSearch";
 export { default as NavBar } from "./NavBar/NavBar";

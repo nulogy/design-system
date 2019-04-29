@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
 import Checkbox from "./Checkbox";
-import HelpText from "../FieldLabel/HelpText";
+import { HelpText } from "../FieldLabel";
 import InlineValidation from "../Validation/InlineValidation";
-import RequirementText from "../FieldLabel/RequirementText";
+import { RequirementText } from "../FieldLabel";
 import Fieldset from "../Form/Fieldset";
 
 const getCheckboxButtons = props => {

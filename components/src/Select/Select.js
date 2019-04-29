@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { transparentize } from "polished";
 import Field from "../Form/Field";
 import Icon from "../Icon/Icon";
-import MaybeFieldLabel from "../FieldLabel/MaybeFieldLabel";
+import { MaybeFieldLabel } from "../FieldLabel";
 import InlineValidation from "../Validation/InlineValidation";
 import theme from "../theme";
 import { subPx } from "../Utils";

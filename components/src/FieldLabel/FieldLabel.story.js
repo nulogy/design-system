@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import FieldLabel from "./FieldLabel";
+import { FieldLabel } from ".";
 import Input from "../Input/Input";
 
 const CustomInput = props => (<Input { ...props } />);
