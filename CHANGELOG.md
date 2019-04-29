@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 ### Changed
+- Card component now accepts all the same props as Box componet.
 ### Deprecated
 ### Removed
 ### Fixed

@@ -28,6 +28,14 @@ export const menuData = [
         href: "/components/buttons",
       },
       {
+        name: "Card",
+        href: "/components/card",
+      },
+      {
+        name: "Card Set",
+        href: "/components/card-set",
+      },
+      {
         name: "Checkbox",
         href: "/components/checkbox",
       },
