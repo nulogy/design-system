@@ -47,7 +47,7 @@ export {
   ListItem,
   List,
 } from "./List";
-export { default as Textarea } from "./Textarea/Textarea";
+export { Textarea } from "./Textarea";
 export { default as Tooltip } from "./Tooltip/Tooltip";
 export {
   Card,

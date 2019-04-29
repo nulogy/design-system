@@ -6,7 +6,7 @@ import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Input } from "../Input";
 import { Select } from "../Select";
-import Textarea from "../Textarea/Textarea";
+import { Textarea } from "../Textarea";
 import Text from "../Type/Text";
 import Tooltip from "./Tooltip";
 
