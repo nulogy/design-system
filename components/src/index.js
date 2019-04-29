@@ -35,7 +35,7 @@ export {
   Radio,
   RadioGroup,
 } from "./Radio";
-export { default as Toggle } from "./Toggle/Toggle";
+export { Toggle } from "./Toggle";
 export { Select } from "./Select";
 export {
   Field,
