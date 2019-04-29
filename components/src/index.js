@@ -25,7 +25,7 @@ export {
 } from "./FieldLabel";
 export { Input } from "./Input";
 export { default as NavBarSearch } from "./NavBarSearch/NavBarSearch";
-export { default as NavBar } from "./NavBar/NavBar";
+export { NavBar } from "./NavBar";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export {
   Checkbox,
