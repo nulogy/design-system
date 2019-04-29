@@ -33,9 +33,12 @@ export { default as Radio } from "./Radio/Radio";
 export { default as RadioGroup } from "./Radio/RadioGroup";
 export { default as Toggle } from "./Toggle/Toggle";
 export { default as Select } from "./Select/Select";
-export { default as Field } from "./Form/Field";
-export { default as Form } from "./Form/Form";
-export { default as FormSection } from "./Form/FormSection";
+export {
+  Field,
+  Fieldset,
+  Form,
+  FormSection,
+} from "./Form";
 export { default as ListItem } from "./List/ListItem";
 export { default as List } from "./List/List";
 export { default as Textarea } from "./Textarea/Textarea";

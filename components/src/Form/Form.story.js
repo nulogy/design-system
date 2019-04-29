@@ -1,8 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Input from "../Input/Input";
-import Form from "./Form";
-import FormSection from "./FormSection";
+import {
+  Form,
+  FormSection,
+} from ".";
 import {
   Checkbox,
   CheckboxGroup,

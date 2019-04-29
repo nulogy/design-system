@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import { HelpText } from "../FieldLabel";
 import { RequirementText } from "../FieldLabel";
-import Field from "../Form/Field";
+import { Field } from "../Form";
 import Text from "../Type/Text";
 import theme from "../theme";
 import { ClickInputLabel, omit } from "../Utils";

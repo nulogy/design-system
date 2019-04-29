@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import styled from "styled-components";
 import { transparentize } from "polished";
-import Field from "../Form/Field";
+import { Field } from "../Form";
 import Icon from "../Icon/Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import InlineValidation from "../Validation/InlineValidation";

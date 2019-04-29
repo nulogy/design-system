@@ -8,8 +8,8 @@ import { IconicButton } from "../Button";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import Input from "../Input/Input";
-import Form from "../Form/Form";
-import FormSection from "../Form/FormSection";
+import { Form } from "../Form";
+import { FormSection } from "../Form";
 import {
   Checkbox,
   CheckboxGroup,

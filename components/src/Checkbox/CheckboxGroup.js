@@ -6,7 +6,7 @@ import Checkbox from "./Checkbox";
 import { HelpText } from "../FieldLabel";
 import InlineValidation from "../Validation/InlineValidation";
 import { RequirementText } from "../FieldLabel";
-import Fieldset from "../Form/Fieldset";
+import { Fieldset } from "../Form";
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
