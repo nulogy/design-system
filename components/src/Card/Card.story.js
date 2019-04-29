@@ -1,12 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Box,
-  Flex,
-  SubsectionTitle,
-  Text,
-  IconicButton,
-} from "ComponentsRoot";
+import Box from "../Box/Box";
+import Flex from "../Flex/Flex";
+import SubsectionTitle from "../Type/Headings";
+import Text from "../Type/Text";
+import IconicButton from "../Button/IconicButton";
 import Card from "./Card";
 import CPCard from "./CPCard";
 import CardSet from "./CardSet";

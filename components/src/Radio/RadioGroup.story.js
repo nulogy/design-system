@@ -1,9 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Radio,
-  RadioGroup,
-} from "ComponentsRoot";
+import Radio from "./Radio";
+import RadioGroup from "./RadioGroup";
 
 storiesOf("RadioGroup", module)
   .add("RadioGroup", () => (

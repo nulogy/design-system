@@ -1,19 +1,17 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Input,
-  Form,
-  FormSection,
-  Checkbox,
-  CheckboxGroup,
-  Radio,
-  RadioGroup,
-  Toggle,
-  HeaderValidation,
-  List,
-  ListItem,
-  Select,
-} from "ComponentsRoot";
+import Input from "../Input/Input";
+import Form from "./Form";
+import FormSection from "./FormSection";
+import Checkbox from "../Checkbox/Checkbox";
+import CheckboxGroup from "../Checkbox/CheckboxGroup";
+import Radio from "../Radio/Radio";
+import RadioGroup from "../Radio/RadioGroup";
+import Toggle from "../Toggle/Toggle";
+import HeaderValidation from "../Validation/HeaderValidation";
+import List from "../List/List";
+import ListItem from "../List/ListItem";
+import Select from "../Select/Select";
 
 const options = [
   { value: "planned", label: "Planned" },

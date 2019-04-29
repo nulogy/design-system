@@ -1,11 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Button,
-  PrimaryButton,
-  DangerButton,
-  QuietButton,
-} from "ComponentsRoot";
+import Button from "./Button";
+import PrimaryButton from "./PrimaryButton";
+import DangerButton from "./DangerButton";
+import QuietButton from "./QuietButton";
 
 storiesOf("Buttons", module)
   .add("Button", () => (

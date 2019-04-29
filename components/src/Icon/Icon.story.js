@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
-import {
-  Icon,
-  InlineIcon,
-  Box,
-  Flex,
-} from "ComponentsRoot";
+import Icon, { InlineIcon } from "./Icon";
+import Box from "../Box/Box";
+import Flex from "../Flex/Flex";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 

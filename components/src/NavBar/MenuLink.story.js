@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Flex } from "ComponentsRoot";
+import Flex from "../Flex/Flex";
 import MenuLink from "./MenuLink";
 
 storiesOf("MenuLink", module)

@@ -1,13 +1,14 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import Text from "./Text";
 import {
-  Text,
   Title,
   SectionTitle,
   SubsectionTitle,
-  List,
-  ListItem,
-} from "ComponentsRoot";
+} from "./Headings";
+import List from "../List/List";
+import ListItem from "../List/ListItem";
+
 import theme from "../theme";
 
 storiesOf("Typography", module)
