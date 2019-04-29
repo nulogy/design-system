@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Select from "./Select";
+import { Select } from ".";
 import { Input } from "../Input";
 import { PrimaryButton } from "../Button";
 

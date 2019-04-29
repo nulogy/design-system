@@ -20,7 +20,7 @@ import Toggle from "../Toggle/Toggle";
 import HeaderValidation from "../Validation/HeaderValidation";
 import { List } from "../List";
 import { ListItem } from "../List";
-import Select from "../Select/Select";
+import { Select } from "../Select";
 import Text from "../Type/Text";
 import { Link } from "../Link";
 import NavBar from "../NavBar/NavBar";

@@ -15,7 +15,7 @@ import Toggle from "../Toggle/Toggle";
 import HeaderValidation from "../Validation/HeaderValidation";
 import { List } from "../List";
 import { ListItem } from "../List";
-import Select from "../Select/Select";
+import { Select } from "../Select";
 
 const options = [
   { value: "planned", label: "Planned" },
