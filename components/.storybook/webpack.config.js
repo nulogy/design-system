@@ -1,10 +1,5 @@
 const path = require("path");
 module.exports = {
-  resolve: {
-    alias: {
-      ComponentsRoot: path.resolve(__dirname, "../../components/src"),
-    },
-  },
   module: {
     rules: [
       {
