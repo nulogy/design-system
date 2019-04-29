@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Button from "../Button/Button";
 import Link from "../Link/Link";
 import Flex from "../Flex/Flex";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import Input from "../Input/Input";
 import Select from "../Select/Select";
 import Textarea from "../Textarea/Textarea";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import HelpText from "../FieldLabel/HelpText";
 import RequirementText from "../FieldLabel/RequirementText";
 import Field from "../Form/Field";

@@ -5,7 +5,7 @@ import { Title } from "../Type/Headings";
 import PrimaryButton from "../Button/PrimaryButton";
 import QuietButton from "../Button/QuietButton";
 import IconicButton from "../Button/IconicButton";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import Flex from "../Flex/Flex";
 import Input from "../Input/Input";
 import Form from "../Form/Form";

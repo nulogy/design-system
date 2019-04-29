@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import Checkbox from "./Checkbox";
 import HelpText from "../FieldLabel/HelpText";
 import InlineValidation from "../Validation/InlineValidation";

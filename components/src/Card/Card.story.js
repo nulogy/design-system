@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import Flex from "../Flex/Flex";
 import { SubsectionTitle } from "../Type/Headings";
 import Text from "../Type/Text";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 import Icon from "../Icon/Icon";
 import { SubsectionTitle } from "../Type/Headings";
 import Text from "../Type/Text";

@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Text from "./Text";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 
 storiesOf("Text", module)
   .add("Text", () => (
