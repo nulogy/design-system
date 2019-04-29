@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Text from "../Type/Text";
-import Icon from "../Icon/Icon";
+import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import theme from "../theme";
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Flex } from "../Flex";
 import Text from "../Type/Text";
 import { SubsectionTitle } from "../Type/Headings";
-import Icon from "../Icon/Icon";
+import { Icon } from "../Icon";
 import theme from "../theme";
 
 const Wrapper = styled.div({

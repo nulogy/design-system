@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
-import Icon from "../Icon/Icon";
+import { Icon } from "../Icon";
 import { SubsectionTitle } from "../Type/Headings";
 import Text from "../Type/Text";
 import SubMenuLink from "./SubMenuLink";
