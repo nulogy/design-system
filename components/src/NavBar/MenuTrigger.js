@@ -8,25 +8,18 @@ import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import SubMenuLink from "./SubMenuLink";
 
-const SubMenuItemsList = styled.ul({
-  listStyle: "none",
-  paddingLeft: "0",
-  margin: "0",
-});
-
 const MenuTriggerButton = styled.button({
-  display: "inline-flex",
+  display: "block",
+  position: "relative",
   color: theme.colors.white,
   border: "none",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.half} ${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
@@ -41,16 +34,14 @@ const MenuTriggerButton = styled.button({
 
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
+  whiteSpace: "nowrap",
   borderColor: "transparent",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
   fontSize: theme.fontSizes.medium,
-  maxWidth: "20em",
   "> *": {
     display: "block",
     color: theme.colors.darkBlue,
@@ -82,14 +73,16 @@ const keyCode = Object.freeze({
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
-    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
+    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
-    <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
+    <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
+      {subMenuItem.name}
+    </SubMenuLink>
   </li>
 );
 
@@ -186,7 +179,7 @@ class MenuTrigger extends React.Component {
           {({ ref }) => (
             <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
               { this.props.name }
-              <Icon icon="downArrow" color="lightGrey" size="20px" p="2px" />
+              <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
             </MenuTriggerButton>
           )}
         </Reference>
@@ -194,9 +187,7 @@ class MenuTrigger extends React.Component {
         <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
           {popperProps => (
             <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
-              </SubMenuItemsList>
+              {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
             </SubMenu>
           )}
         </Popper>

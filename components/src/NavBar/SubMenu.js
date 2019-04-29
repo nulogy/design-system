@@ -56,10 +56,10 @@ const BaseSubMenu = ({
   children,
   ...props
 }) => (
-  <div ref={ ref } style={ style } placement={ placement } { ...props }>
+  <ul ref={ ref } style={ style } placement={ placement } { ...props }>
     {renderArrow && <Arrow { ...arrowProps } /> }
     {children}
-  </div>
+  </ul>
 );
 
 BaseSubMenu.propTypes = {
@@ -76,24 +76,22 @@ BaseSubMenu.defaultProps = {
 
 const SubMenu = styled(BaseSubMenu)(
   ({ renderArrow }) => ({
+    listStyle: "none",
+    margin: "0",
     color: subMenuStyles.nameColor,
-    display: "flex",
-    maxWidth: "20em",
-    flexDirection: "column",
-    fontSize: theme.fontSizes.small,
     backgroundColor: subMenuStyles.backgroundColor,
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${subMenuStyles.borderColor}`,
     borderBottom: `1px solid ${subMenuStyles.borderColor}`,
-    boxShadow: theme.boxShadows,
+    boxShadow: theme.shadows.small,
     padding: "7px 0",
     transition: "opacity 0.3s",
-    zIndex: "999999",
+    zIndex: "100",
     marginTop: renderArrow ? theme.space.half : "-8px",
   }),
   ({ style }) => ({
     ...style,
-  })
+  }),
 );
 
 SubMenu.propTypes = {

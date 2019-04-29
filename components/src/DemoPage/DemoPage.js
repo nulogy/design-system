@@ -31,32 +31,26 @@ const menuData = {
       items: [
         {
           name: "Customers",
-          description: "description",
           href: "/",
         },
         {
           name: "Invoices",
-          description: "description",
           href: "/",
         },
         {
           name: "Projects",
-          description: "description",
           href: "/",
         },
         {
           name: "Items",
-          description: "description",
           href: "/",
         },
         {
           name: "Vendors",
-          description: "description",
           href: "/",
         },
         {
           name: "Carriers",
-          description: "description",
           href: "/",
         },
       ],
@@ -66,17 +60,14 @@ const menuData = {
       items: [
         {
           name: "Integration",
-          description: "description",
           href: "/",
         },
         {
           name: "Site configuration",
-          description: "description",
           href: "/",
         },
         {
           name: "Company configuration",
-          description: "description",
           href: "/",
         },
       ],
@@ -86,17 +77,14 @@ const menuData = {
       items: [
         {
           name: "Production",
-          description: "description",
           href: "/",
         },
         {
           name: "Item cart",
-          description: "description",
           href: "/",
         },
         {
           name: "Inventory",
-          description: "description",
           href: "/",
         },
       ],
@@ -106,12 +94,10 @@ const menuData = {
       items: [
         {
           name: "Item locator",
-          description: "description",
           href: "/",
         },
         {
           name: "Ship orders",
-          description: "description",
           href: "/",
         },
       ],
@@ -121,12 +107,10 @@ const menuData = {
       items: [
         {
           name: "Projects",
-          description: "description",
           href: "/",
         },
         {
           name: "Jobs",
-          description: "description",
           href: "/",
         },
       ],
@@ -138,17 +122,14 @@ const menuData = {
       items: [
         {
           name: "Profile",
-          description: "description",
           href: "/",
         },
         {
           name: "Preferences",
-          description: "description",
           href: "/",
         },
         {
           name: "Logout",
-          description: "description",
           href: "/",
         },
       ],
@@ -158,12 +139,10 @@ const menuData = {
       items: [
         {
           name: "Permissions",
-          description: "description",
           href: "/",
         },
         {
           name: "Manage account",
-          description: "description",
           href: "/",
         },
       ],

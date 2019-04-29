@@ -9,7 +9,7 @@ describe("NavBar", () => {
         {
           name: "Menu 1",
           items: [
-            { name: "Item 1", description: "description", href: "/" },
+            { name: "Item 1", href: "/" },
           ],
         },
       ],

@@ -12,12 +12,9 @@ import { subPx } from "../Utils";
 
 const ApplyMenuLinkStyles = styled.li({
   "*": {
-    display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
     lineHeight: theme.lineHeights.sectionTitle,
-    width: "100%",
-    justifyContent: "flex-start",
     padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
     borderRadius: "0",
     textDecoration: "none",
@@ -35,7 +32,6 @@ const MobileMenuLink = styled(MenuLink)({
   fontSize: theme.fontSizes.large,
   lineHeight: theme.lineHeights.sectionTitle,
   width: "100%",
-  justifyContent: "flex-start",
   padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
   borderRadius: "0",
 });
@@ -95,7 +91,12 @@ const renderMenuLink = (menuItem, linkOnClick) => (
 
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
   <li key={ menuItem.name }>
-    <MobileSubMenuLink onClick={ linkOnClick } layer={ layer } nameColor="white" descriptionColor="grey" hoverColor="black" { ...menuItem } />
+    <MobileSubMenuLink
+      onClick={ linkOnClick } href={ menuItem.href } layer={ layer }
+      color={ theme.colors.white } hover={ theme.colors.white } bgHoverColor={ theme.colors.black }
+    >
+      {menuItem.name}
+    </MobileSubMenuLink>
   </li>
 );
 
@@ -137,13 +138,13 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
   <>
     { layer === 0
     && (
-    <SubsectionTitle color="grey" style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+    <SubsectionTitle mb="none" color="grey" key={ menuItem.name }>
       {menuItem.name}
     </SubsectionTitle>
     )}
     { layer > 0
     && (
-    <Text color="grey" mt={ theme.space.x2 } mb={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+    <Text color="grey" py={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
       {menuItem.name}
     </Text>
     )}
@@ -170,14 +171,14 @@ const Menu = styled.ul(() => (
     position: "absolute",
     left: "0",
     top: "72px",
-    padding: `${theme.space.x4} 0`,
+    margin: "0",
+    padding: `${theme.space.x2} 0`,
     zIndex: "10",
     width: "100%",
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
     [`${SubsectionTitle}`]: {
-      padding: `0 ${theme.space.x3}`,
-      marginBottom: theme.space.x2,
+      padding: `${theme.space.x2} 0 ${theme.space.x2} ${theme.space.x3}`,
     },
   }));
 

@@ -3,16 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
-import Text from "../Type/Text";
 import Icon from "../Icon/Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
-
-const SubMenuItemsList = styled.ul({
-  listStyle: "none",
-  paddingLeft: "0",
-  margin: "0",
-});
 
 const SubMenuTriggerButton = styled.button({
   display: "block",
@@ -38,10 +31,9 @@ const SubMenuTriggerButton = styled.button({
 
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
+  whiteSpace: "nowrap",
   borderColor: "transparent",
   backgroundColor: "transparent",
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
@@ -79,14 +71,16 @@ const keyCode = Object.freeze({
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
-    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } menuData={ subMenuItem.items } />
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
+    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li key={ subMenuItem.name }>
-    <SubMenuLink onClick={ linkOnClick } name={ subMenuItem.name } description={ subMenuItem.description } href={ subMenuItem.href } />
+  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
+    <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
+      {subMenuItem.name}
+    </SubMenuLink>
   </li>
 );
 
@@ -183,14 +177,7 @@ class SubMenuTrigger extends React.Component {
           {({ ref }) => (
             <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
               { this.props.name }
-              <span>
-                <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
-              </span>
-              {this.props.description && (
-              <Text inline style={ { display: "block" } } color="darkGrey" fontSize={ theme.fontSizes.small } lineHeight={ theme.lineHeights.smallTextBase }>
-                {this.props.description}
-              </Text>
-              )}
+              <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
             </SubMenuTriggerButton>
           )}
         </Reference>
@@ -198,9 +185,7 @@ class SubMenuTrigger extends React.Component {
         <Popper placement="right-start">
           {popperProps => (
             <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              <SubMenuItemsList>
-                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
-              </SubMenuItemsList>
+              {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
             </SubMenu>
           )}
         </Popper>
