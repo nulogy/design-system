@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Link from "../Link/Link";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
-import Input from "../Input/Input";
+import { Input } from "../Input";
 import Select from "../Select/Select";
 import Textarea from "../Textarea/Textarea";
 import Text from "../Type/Text";

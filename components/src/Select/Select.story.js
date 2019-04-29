@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Select from "./Select";
-import Input from "../Input/Input";
+import { Input } from "../Input";
 import { PrimaryButton } from "../Button";
 
 const options = [

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { darken, transparentize } from "polished";
 import { Flex } from "../Flex";
-import Input from "../Input/Input";
+import { Input } from "../Input";
 import { Icon } from "../Icon";
 import theme from "../theme";
 

@@ -23,7 +23,7 @@ export {
   FieldLabel,
   MaybeFieldLabel,
 } from "./FieldLabel";
-export { default as Input } from "./Input/Input";
+export { Input } from "./Input";
 export { default as NavBarSearch } from "./NavBarSearch/NavBarSearch";
 export { default as NavBar } from "./NavBar/NavBar";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
