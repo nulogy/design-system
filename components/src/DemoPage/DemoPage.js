@@ -6,7 +6,7 @@ import { PrimaryButton } from "../Button";
 import { QuietButton } from "../Button";
 import { IconicButton } from "../Button";
 import { Box } from "../Box";
-import Flex from "../Flex/Flex";
+import { Flex } from "../Flex";
 import Input from "../Input/Input";
 import Form from "../Form/Form";
 import FormSection from "../Form/FormSection";

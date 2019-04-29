@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box } from "../Box";
-import Flex from "../Flex/Flex";
+import { Flex } from "../Flex";
 import { SubsectionTitle } from "../Type/Headings";
 import Text from "../Type/Text";
 import { IconicButton } from "../Button";

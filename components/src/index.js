@@ -1,7 +1,7 @@
 export { default as NDSProvider } from "./NDSProvider/NDSProvider";
 export { default as theme } from "./theme";
 export { Box } from "./Box";
-export { default as Flex } from "./Flex/Flex";
+export { Flex } from "./Flex";
 export { default as Icon } from "./Icon/Icon";
 export * from "./Icon/Icon";
 export { default as Text } from "./Type/Text";
