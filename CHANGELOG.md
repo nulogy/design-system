@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Deprecated
+- Description prop in the NavBar component has been deprecated
+
+## [0.5.2] - 2019-04-26
+
 ### Added
+- Custom link components supported in the NavBar.
 ### Changed
 - Card component now accepts all the same props as Box componet.
 ### Deprecated
