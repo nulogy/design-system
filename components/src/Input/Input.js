@@ -38,7 +38,7 @@ const StyledInput = styled.input(
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+    padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes.medium,
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
