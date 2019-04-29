@@ -6,8 +6,8 @@ import {
   SectionTitle,
   SubsectionTitle,
 } from "./Headings";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
+import { List } from "../List";
+import { ListItem } from "../List";
 
 import theme from "../theme";
 

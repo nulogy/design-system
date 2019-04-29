@@ -41,8 +41,10 @@ export {
   Form,
   FormSection,
 } from "./Form";
-export { default as ListItem } from "./List/ListItem";
-export { default as List } from "./List/List";
+export {
+  ListItem,
+  List,
+} from "./List";
 export { default as Textarea } from "./Textarea/Textarea";
 export { default as Tooltip } from "./Tooltip/Tooltip";
 export {

@@ -13,8 +13,8 @@ import Radio from "../Radio/Radio";
 import RadioGroup from "../Radio/RadioGroup";
 import Toggle from "../Toggle/Toggle";
 import HeaderValidation from "../Validation/HeaderValidation";
-import List from "../List/List";
-import ListItem from "../List/ListItem";
+import { List } from "../List";
+import { ListItem } from "../List";
 import Select from "../Select/Select";
 
 const options = [
