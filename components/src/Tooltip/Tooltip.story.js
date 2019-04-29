@@ -8,7 +8,7 @@ import { Input } from "../Input";
 import { Select } from "../Select";
 import { Textarea } from "../Textarea";
 import Text from "../Type/Text";
-import Tooltip from "./Tooltip";
+import { Tooltip } from ".";
 
 const selectOptions = [
   { value: "accepted", label: "Accepted" },
