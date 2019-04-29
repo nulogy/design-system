@@ -5,9 +5,11 @@ import Flex from "../Flex/Flex";
 import { SubsectionTitle } from "../Type/Headings";
 import Text from "../Type/Text";
 import { IconicButton } from "../Button";
-import Card from "./Card";
-import CPCard from "./CPCard";
-import CardSet from "./CardSet";
+import {
+  Card,
+  CardSet,
+  CPCard,
+} from ".";
 
 storiesOf("Card", module)
   .add("Card", () => (
