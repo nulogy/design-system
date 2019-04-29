@@ -21,7 +21,11 @@ export {
   IconicButton,
 } from "./Button";
 export { Link } from "./Link";
-export { default as InlineValidation } from "./Validation/InlineValidation";
+export {
+  InlineValidation,
+  HeaderValidation,
+} from "./Validation";
+
 export {
   HelpText,
   RequirementText,
@@ -31,7 +35,6 @@ export {
 export { Input } from "./Input";
 export { NavBarSearch } from "./NavBarSearch";
 export { NavBar } from "./NavBar";
-export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export {
   Checkbox,
   CheckboxGroup,

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import HeaderValidation from "./HeaderValidation";
+import { HeaderValidation } from ".";
 import { List } from "../List";
 import { ListItem } from "../List";
 

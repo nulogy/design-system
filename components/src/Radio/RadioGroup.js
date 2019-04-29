@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import Radio from "./Radio";
 import { HelpText } from "../FieldLabel";
-import InlineValidation from "../Validation/InlineValidation";
+import { InlineValidation } from "../Validation";
 import { RequirementText } from "../FieldLabel";
 import { Fieldset } from "../Form";
 

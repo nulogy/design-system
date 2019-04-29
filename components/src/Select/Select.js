@@ -6,7 +6,7 @@ import { transparentize } from "polished";
 import { Field } from "../Form";
 import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
-import InlineValidation from "../Validation/InlineValidation";
+import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../Utils";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import InlineValidation from "./InlineValidation";
+import { InlineValidation } from ".";
 import { List } from "../List";
 import { ListItem } from "../List";
 import { Link } from "../Link";

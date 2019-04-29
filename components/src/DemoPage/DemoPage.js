@@ -17,7 +17,7 @@ import {
 import { Radio } from "../Radio";
 import { RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
-import HeaderValidation from "../Validation/HeaderValidation";
+import { HeaderValidation } from "../Validation";
 import { List } from "../List";
 import { ListItem } from "../List";
 import { Select } from "../Select";

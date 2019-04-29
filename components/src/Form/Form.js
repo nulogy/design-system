@@ -4,7 +4,7 @@ import { space } from "styled-system";
 import PropTypes from "prop-types";
 import { SectionTitle } from "../Type";
 import Field from "./Field";
-import HeaderValidation from "../Validation/HeaderValidation";
+import { HeaderValidation } from "../Validation";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 import theme from "../theme";
