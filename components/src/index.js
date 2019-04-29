@@ -44,4 +44,4 @@ export {
   CPCard,
 } from "./Card";
 
-export { default as DemoPage } from "./DemoPage/DemoPage";
+export { DemoPage } from "./DemoPage";
