@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Title } from "../Type/Headings";
+import { Title } from "../Type";
 import { PrimaryButton } from "../Button";
 import { QuietButton } from "../Button";
 import { IconicButton } from "../Button";
@@ -21,7 +21,7 @@ import HeaderValidation from "../Validation/HeaderValidation";
 import { List } from "../List";
 import { ListItem } from "../List";
 import { Select } from "../Select";
-import Text from "../Type/Text";
+import { Text } from "../Type";
 import { Link } from "../Link";
 import NavBar from "../NavBar/NavBar";
 import theme from "../theme";

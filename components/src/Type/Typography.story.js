@@ -1,11 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Text from "./Text";
 import {
+  Text,
   Title,
   SectionTitle,
   SubsectionTitle,
-} from "./Headings";
+} from ".";
 import { List } from "../List";
 import { ListItem } from "../List";
 

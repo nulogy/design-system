@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
-import Text from "../Type/Text";
+import { Text } from "../Type";
 import theme from "../theme";
 import { ClickInputLabel } from "../Utils";
 

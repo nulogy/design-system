@@ -6,8 +6,13 @@ export {
   Icon,
   InlineIcon,
 } from "./Icon";
-export { default as Text } from "./Type/Text";
-export * from "./Type/Headings";
+export {
+  Text,
+  Title,
+  SectionTitle,
+  SubsectionTitle,
+} from "./Type";
+
 export {
   Button,
   PrimaryButton,

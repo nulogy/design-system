@@ -5,7 +5,7 @@ import { Box } from "../Box";
 import { HelpText } from "../FieldLabel";
 import { RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
-import Text from "../Type/Text";
+import { Text } from "../Type";
 import theme from "../theme";
 import { ClickInputLabel, omit } from "../Utils";
 import ToggleButton from "./ToggleButton";

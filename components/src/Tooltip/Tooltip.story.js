@@ -7,7 +7,7 @@ import { Box } from "../Box";
 import { Input } from "../Input";
 import { Select } from "../Select";
 import { Textarea } from "../Textarea";
-import Text from "../Type/Text";
+import { Text } from "../Type";
 import { Tooltip } from ".";
 
 const selectOptions = [
