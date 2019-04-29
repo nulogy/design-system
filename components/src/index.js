@@ -23,8 +23,10 @@ export { default as Input } from "./Input/Input";
 export { default as NavBarSearch } from "./NavBarSearch/NavBarSearch";
 export { default as NavBar } from "./NavBar/NavBar";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
-export { default as Checkbox } from "./Checkbox/Checkbox";
-export { default as CheckboxGroup } from "./Checkbox/CheckboxGroup";
+export {
+  Checkbox,
+  CheckboxGroup,
+} from "./Checkbox";
 export { default as Radio } from "./Radio/Radio";
 export { default as RadioGroup } from "./Radio/RadioGroup";
 export { default as Toggle } from "./Toggle/Toggle";

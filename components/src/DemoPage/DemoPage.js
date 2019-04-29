@@ -10,8 +10,10 @@ import Flex from "../Flex/Flex";
 import Input from "../Input/Input";
 import Form from "../Form/Form";
 import FormSection from "../Form/FormSection";
-import Checkbox from "../Checkbox/Checkbox";
-import CheckboxGroup from "../Checkbox/CheckboxGroup";
+import {
+  Checkbox,
+  CheckboxGroup,
+} from "../Checkbox";
 import Radio from "../Radio/Radio";
 import RadioGroup from "../Radio/RadioGroup";
 import Toggle from "../Toggle/Toggle";
