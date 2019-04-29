@@ -14,8 +14,8 @@ import {
   Checkbox,
   CheckboxGroup,
 } from "../Checkbox";
-import Radio from "../Radio/Radio";
-import RadioGroup from "../Radio/RadioGroup";
+import { Radio } from "../Radio";
+import { RadioGroup } from "../Radio";
 import Toggle from "../Toggle/Toggle";
 import HeaderValidation from "../Validation/HeaderValidation";
 import { List } from "../List";

@@ -31,8 +31,10 @@ export {
   Checkbox,
   CheckboxGroup,
 } from "./Checkbox";
-export { default as Radio } from "./Radio/Radio";
-export { default as RadioGroup } from "./Radio/RadioGroup";
+export {
+  Radio,
+  RadioGroup,
+} from "./Radio";
 export { default as Toggle } from "./Toggle/Toggle";
 export { default as Select } from "./Select/Select";
 export {
