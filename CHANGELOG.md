@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Card component now accepts all the same props as Box componet.
 ### Deprecated
 ### Removed
-- Description prop in the [`NavBar`](http://localhost:8080/?selectedKind=NavBar&selectedStory=NavBar) component has been deprecated
+- Description prop in the [`NavBar`](http://localhost:8080/?selectedKind=NavBar&selectedStory=NavBar) component has been removed
 
 ### Fixed
 ### Security
