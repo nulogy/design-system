@@ -24,7 +24,7 @@ export {
   MaybeFieldLabel,
 } from "./FieldLabel";
 export { Input } from "./Input";
-export { default as NavBarSearch } from "./NavBarSearch/NavBarSearch";
+export { NavBarSearch } from "./NavBarSearch";
 export { NavBar } from "./NavBar";
 export { default as HeaderValidation } from "./Validation/HeaderValidation";
 export {

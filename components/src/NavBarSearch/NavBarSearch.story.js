@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box } from "../Box";
-import NavBarSearch from "./NavBarSearch";
+import { NavBarSearch } from ".";
 
 storiesOf("NavBarSearch", module)
   .add("NavBarSearch", () => (
