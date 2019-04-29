@@ -14,9 +14,7 @@ const MenuLink = styled(Link)({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
     backgroundColor: theme.colors.black,
-    cursor: "pointer",
   },
   "&:disabled": {
     opacity: ".5",
