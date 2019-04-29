@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Description prop in the [`NavBar`](https://nulogy.design/components/navbar/) component has been removed
 
 ### Fixed
+- NavBar search is now be styled properly in Safari.
 ### Security
 
 ## [0.6.0] - 2019-04-26
