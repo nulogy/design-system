@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
-import Link from "../Link/Link";
+import { Link } from "../Link";
 import theme from "../theme";
 
 const SubMenuLink = styled(Link)(props => ({

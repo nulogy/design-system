@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import InlineValidation from "./InlineValidation";
 import List from "../List/List";
 import ListItem from "../List/ListItem";
-import Link from "../Link/Link";
+import { Link } from "../Link";
 
 storiesOf("Inline Validation", module)
   .add("Inline Validation", () => (

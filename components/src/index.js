@@ -15,7 +15,7 @@ export {
   QuietButton,
   IconicButton,
 } from "./Button";
-export { default as Link } from "./Link/Link";
+export { Link } from "./Link";
 export { default as InlineValidation } from "./Validation/InlineValidation";
 export {
   HelpText,

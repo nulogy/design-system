@@ -22,7 +22,7 @@ import List from "../List/List";
 import ListItem from "../List/ListItem";
 import Select from "../Select/Select";
 import Text from "../Type/Text";
-import Link from "../Link/Link";
+import { Link } from "../Link";
 import NavBar from "../NavBar/NavBar";
 import theme from "../theme";
 

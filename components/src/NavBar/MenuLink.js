@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Link from "../Link/Link";
+import { Link } from "../Link";
 import theme from "../theme";
 
 const MenuLink = styled(Link)({

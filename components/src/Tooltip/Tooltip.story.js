@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "../Button/Button";
-import Link from "../Link/Link";
+import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Input } from "../Input";
