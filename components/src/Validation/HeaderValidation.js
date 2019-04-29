@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Flex } from "../Flex";
-import { Text } from "../Type";
-import { SubsectionTitle } from "../Type";
+import { Text, SubsectionTitle } from "../Type";
 import { Icon } from "../Icon";
 import theme from "../theme";
 

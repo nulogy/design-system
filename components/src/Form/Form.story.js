@@ -9,12 +9,10 @@ import {
   Checkbox,
   CheckboxGroup,
 } from "../Checkbox";
-import { Radio } from "../Radio";
-import { RadioGroup } from "../Radio";
+import { Radio, RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
 import { HeaderValidation } from "../Validation";
-import { List } from "../List";
-import { ListItem } from "../List";
+import { List, ListItem } from "../List";
 import { Select } from "../Select";
 
 const options = [

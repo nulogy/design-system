@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
 import Radio from "./Radio";
-import { HelpText } from "../FieldLabel";
+import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import { RequirementText } from "../FieldLabel";
 import { Fieldset } from "../Form";
 
 const getRadioButtons = props => {

@@ -1,27 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Title } from "../Type";
-import { PrimaryButton } from "../Button";
-import { QuietButton } from "../Button";
-import { IconicButton } from "../Button";
+import { Text, Title } from "../Type";
+import {
+  PrimaryButton,
+  QuietButton,
+  IconicButton,
+} from "../Button";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Input } from "../Input";
-import { Form } from "../Form";
-import { FormSection } from "../Form";
+import { Form, FormSection } from "../Form";
 import {
   Checkbox,
   CheckboxGroup,
 } from "../Checkbox";
-import { Radio } from "../Radio";
-import { RadioGroup } from "../Radio";
+import { Radio, RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
 import { HeaderValidation } from "../Validation";
-import { List } from "../List";
-import { ListItem } from "../List";
+import { List, ListItem } from "../List";
 import { Select } from "../Select";
-import { Text } from "../Type";
 import { Link } from "../Link";
 import NavBar from "../NavBar/NavBar";
 import theme from "../theme";
