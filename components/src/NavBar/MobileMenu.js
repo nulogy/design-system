@@ -7,11 +7,12 @@ import MenuLink from "./MenuLink";
 import theme from "../theme";
 
 const ApplyMenuLinkStyles = styled.li({
+  display: "block",
   "*": {
     display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
-    lineHeight: theme.lineHeights.sectionTitle,
+    lineHeight: theme.lineHeights.subsectionTitle,
     padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
     borderRadius: "0",
     textDecoration: "none",
@@ -27,7 +28,7 @@ const ApplyMenuLinkStyles = styled.li({
 
 const MobileMenuLink = styled(MenuLink)({
   fontSize: theme.fontSizes.large,
-  lineHeight: theme.lineHeights.sectionTitle,
+  lineHeight: theme.lineHeights.subsectionTitle,
   width: "100%",
   padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
   borderRadius: "0",
@@ -78,7 +79,7 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick) => (
-  <li key={ menuItem.name }>
+  <li key={ menuItem.name } style={{display:"block"}}>
     <MobileMenuLink onClick={ linkOnClick } href={ menuItem.href }>
       {menuItem.name}
     </MobileMenuLink>
@@ -87,7 +88,7 @@ const renderMenuLink = (menuItem, linkOnClick) => (
 
 
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
-  <li key={ menuItem.name }>
+  <li key={ menuItem.name } style={{display:"block"}}>
     <MobileSubMenuLink
       onClick={ linkOnClick } href={ menuItem.href } layer={ layer }
       color={ theme.colors.white } hover={ theme.colors.white } bgHoverColor={ theme.colors.black }
@@ -107,7 +108,7 @@ const renderCustom = (menuItem, linkOnClick, layer) => {
 };
 
 const renderSubMenu = (menuItem, linkOnClick, layer) => (
-  <li key={ menuItem.name }>
+  <li key={ menuItem.name } style={{display: "block"}}>
     <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick } />
   </li>
 );
