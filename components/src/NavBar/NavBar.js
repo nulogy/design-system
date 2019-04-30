@@ -24,7 +24,7 @@ const MediumNavBar = ({
     <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
       {menuData.primaryMenu && 
       <Flex alignItems="center" pr="x3" >
-        <DesktopMenu menuData={ menuData.primaryMenu } />
+        <DesktopMenu aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
       </Flex>
       }
       <Box width={ 1 }>
@@ -35,7 +35,7 @@ const MediumNavBar = ({
           </Flex>
           }
           {menuData.secondaryMenu && 
-          <DesktopMenu pl="x2" menuData={ menuData.secondaryMenu } />
+          <DesktopMenu aria-labelledby="secondary-navigation"pl="x2" menuData={ menuData.secondaryMenu } />
           }
         </Flex>
       </Box>
