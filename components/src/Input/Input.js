@@ -32,7 +32,6 @@ const getInputStyle = props => {
 };
 
 const StyledInput = styled.input(
-  space,
   {
     display: "block",
     width: "100%",
@@ -42,6 +41,7 @@ const StyledInput = styled.input(
     fontSize: theme.fontSizes.medium,
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
+    margin: theme.space.none,
     "&:focus": {
       outline: "none",
       color: theme.colors.black,
@@ -52,6 +52,7 @@ const StyledInput = styled.input(
       color: transparentize(0.4, theme.colors.black),
     },
   },
+  space,
   props => (getInputStyle(props))
 );
 
