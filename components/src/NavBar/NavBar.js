@@ -62,6 +62,7 @@ const MobileMenuTrigger = styled.button(
     marginLeft: theme.space.x1,
     borderRadius: theme.radii.medium,
     transition: ".2s",
+    height: theme.space.x5,
     "&:hover, &:focus": {
       outline: "none",
       color: theme.colors.lightBlue,
@@ -76,11 +77,10 @@ const SmallNavBar = withMenuState(({
   menuState: { isOpen, handleMenuToggle, closeMenu },
   mobileSrc,
   alt,
-  style,
   ...props
 }) => (
   <>
-    <Box { ...props } style={ Object.assign({}, { height: "72px", position: "relative", overflow: "auto" }, style) }>
+    <Box { ...props } >
       <Branding mobileSrc={ mobileSrc } alt={ alt } />
       <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.search
@@ -105,9 +105,7 @@ const SmallNavBar = withMenuState(({
     </Box>
     {(isOpen)
         && (
-        <nav>
           <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
-        </nav>
         )
       }
   </>
