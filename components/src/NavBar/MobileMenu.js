@@ -180,10 +180,12 @@ const BaseMobileMenu = ({
   closeMenu,
   ...props
 }) => (
-  <Menu { ...props }>
-    { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
-    { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
-  </Menu>
+  <nav { ...props }>
+    <Menu>
+      { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
+      { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
+    </Menu>
+  </nav>
 );
 
 BaseMobileMenu.propTypes = {
