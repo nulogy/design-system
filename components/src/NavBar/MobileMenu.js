@@ -8,12 +8,13 @@ import theme from "../theme";
 
 const ApplyMenuLinkStyles = styled.li({
   display: "block",
+  marginBottom: theme.space.x1,
   "*": {
     display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
     lineHeight: theme.lineHeights.subsectionTitle,
-    padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
+    padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
     borderRadius: "0",
     textDecoration: "none",
     "&:hover, &:focus": {
@@ -30,16 +31,15 @@ const MobileMenuLink = styled(MenuLink)({
   fontSize: theme.fontSizes.large,
   lineHeight: theme.lineHeights.subsectionTitle,
   width: "100%",
-  padding: `${theme.space.x2} ${theme.space.x3} ${theme.space.x2} ${theme.space.x3}`,
+  padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
   borderRadius: "0",
 });
 
 const getPaddingLeft = layer => (`${(24 * layer) + 24}px`);
 
 const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
+  marginBottom: theme.space.x1,
   color: theme.colors.black,
-  justifyContent: "center",
-  alignItems: "center",
   textDecoration: "none",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
@@ -79,7 +79,7 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick) => (
-  <li key={ menuItem.name } style={{display:"block"}}>
+  <li key={ menuItem.name } style={{display:"block",  marginBottom: theme.space.x1}}>
     <MobileMenuLink onClick={ linkOnClick } href={ menuItem.href }>
       {menuItem.name}
     </MobileMenuLink>
@@ -88,7 +88,7 @@ const renderMenuLink = (menuItem, linkOnClick) => (
 
 
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
-  <li key={ menuItem.name } style={{display:"block"}}>
+  <li key={ menuItem.name } style={{display:"block",  marginBottom: theme.space.x1}}>
     <MobileSubMenuLink
       onClick={ linkOnClick } href={ menuItem.href } layer={ layer }
       color={ theme.colors.white } hover={ theme.colors.white } bgHoverColor={ theme.colors.black }
@@ -136,13 +136,13 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
   <>
     { layer === 0
     && (
-    <SubsectionTitle mb="none" color="grey" key={ menuItem.name }>
+    <SubsectionTitle mb={theme.space.x1} color="grey" key={ menuItem.name }>
       {menuItem.name}
     </SubsectionTitle>
     )}
     { layer > 0
     && (
-    <Text color="grey" py={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+    <Text mb={theme.space.x1} color="grey" py={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
       {menuItem.name}
     </Text>
     )}
@@ -167,27 +167,31 @@ SubMenu.defaultProps = {
 const Menu = styled.ul(() => (
   {
     margin: "0",
-    padding: `${theme.space.x2} 0`,
+    padding: `${theme.space.x1} 0`,
     zIndex: "10",
     width: "100%",
-    backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
     [`${SubsectionTitle}`]: {
-      padding: `${theme.space.x2} 0 ${theme.space.x2} ${theme.space.x3}`,
+      padding: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x3}`,
     },
   }));
+
+const Nav = styled.nav({
+  height: "calc(100vh - 72px)",
+  backgroundColor: theme.colors.blackBlue,
+})
 
 const BaseMobileMenu = ({
   menuData,
   closeMenu,
   ...props
 }) => (
-  <nav { ...props }>
+  <Nav { ...props }>
     <Menu>
       { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
       { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
     </Menu>
-  </nav>
+  </Nav>
 );
 
 BaseMobileMenu.propTypes = {
