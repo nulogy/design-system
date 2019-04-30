@@ -69,6 +69,12 @@ const NavBarSearch = styled(BaseNavBarSearch)(
       "::placeholder": {
         color: transparentize(0.4, theme.colors.black),
       },
+      "&[type='search']": {
+        "-webkit-appearance": "textfield",
+        "::-webkit-search-decoration": {
+          "-webkit-appearance": "none",
+        },
+      },
     },
   }
 );
