@@ -8,6 +8,7 @@ import theme from "../theme";
 
 const ApplyMenuLinkStyles = styled.li({
   "*": {
+    display: "block",
     color: theme.colors.white,
     fontSize: theme.fontSizes.large,
     lineHeight: theme.lineHeights.sectionTitle,
