@@ -32,7 +32,6 @@ const getInputStyle = props => {
 };
 
 const StyledInput = styled.input(
-  space,
   {
     display: "block",
     width: "100%",
@@ -53,6 +52,7 @@ const StyledInput = styled.input(
       color: transparentize(0.4, theme.colors.black),
     },
   },
+  space,
   props => (getInputStyle(props))
 );
 
