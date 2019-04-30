@@ -198,7 +198,7 @@ BaseMobileMenu.propTypes = {
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
-  closeMenu: ()=>{},
+  closeMenu: () => {},
 };
 
 const MobileMenu = styled(BaseMobileMenu)({});

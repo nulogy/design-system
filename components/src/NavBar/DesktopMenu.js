@@ -32,7 +32,7 @@ const ApplyMenuLinkStyles = styled.div({
 
 const Nav = styled.nav({
   display: "flex",
-})
+});
 
 const renderMenuTrigger = menuItem => (
   <div key={ menuItem.name }>

@@ -11,7 +11,7 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx } from "../Utils"
+import { subPx } from "../Utils";
 
 const MediumNavBar = ({
   menuData,
@@ -22,17 +22,19 @@ const MediumNavBar = ({
   <Box { ...props }>
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-      {menuData.primaryMenu && 
-        <DesktopMenu style={{paddingRight: theme.space.x3}} aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
+      {menuData.primaryMenu
+        && <DesktopMenu style={ { paddingRight: theme.space.x3 } } aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
       }
       <Flex style={ { float: "right" } }>
-        {menuData.search && 
-        <div style={{maxWidth:"18em"}}>
+        {menuData.search
+        && (
+        <div style={ { maxWidth: "18em" } }>
           <NavBarSearch { ...menuData.search } />
         </div>
+        )
         }
-        {menuData.secondaryMenu && 
-        <DesktopMenu aria-labelledby="secondary-navigation"pl="x2" menuData={ menuData.secondaryMenu } />
+        {menuData.secondaryMenu
+        && <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={ menuData.secondaryMenu } />
         }
       </Flex>
     </Flex>
@@ -71,22 +73,25 @@ const MobileMenuTrigger = styled.button(
 
 const SmallNavBar = withMenuState(({
   menuData,
-  menuState: { isOpen, handleMenuToggle, closeMenu },  
+  menuState: { isOpen, handleMenuToggle, closeMenu },
   mobileSrc,
   alt,
   style,
   ...props
 }) => (
   <>
-  <Box { ...props } style={ Object.assign({}, { height: "72px", position: "relative", overflow: "auto" }, style) }>
-    <Branding mobileSrc={ mobileSrc } alt={ alt } />
-    <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-      {menuData.search && 
+    <Box { ...props } style={ Object.assign({}, { height: "72px", position: "relative", overflow: "auto" }, style) }>
+      <Branding mobileSrc={ mobileSrc } alt={ alt } />
+      <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+        {menuData.search
+        && (
         <Flex maxWidth="18em" alignItems="center" px="0">
           <NavBarSearch { ...menuData.search } />
         </Flex>
+        )
       }
-      {(menuData.primaryMenu || menuData.secondaryMenu) && 
+        {(menuData.primaryMenu || menuData.secondaryMenu)
+        && (
         <MobileMenuTrigger onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
           {
           isOpen
@@ -94,15 +99,18 @@ const SmallNavBar = withMenuState(({
             : <Icon icon="menu" title="Open Menu" />
           }
         </MobileMenuTrigger>
+        )
       }
-    </Flex>
-  </Box>
-      {(isOpen) && 
+      </Flex>
+    </Box>
+    {(isOpen)
+        && (
         <nav>
-          <MobileMenu menuData={ menuData } closeMenu={ closeMenu }/>
+          <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
         </nav>
+        )
       }
-    </>
+  </>
 ));
 
 const navBarStyles = {
