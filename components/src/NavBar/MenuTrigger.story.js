@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Flex } from "ComponentsRoot";
+import { Flex } from "../Flex";
 import MenuTrigger from "./MenuTrigger";
 
 const menuData = [

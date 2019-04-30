@@ -1,15 +1,14 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { Box } from "../Box";
+import { Flex } from "../Flex";
+import { Text, SubsectionTitle } from "../Type";
+import { IconicButton } from "../Button";
 import {
-  Box,
-  Flex,
-  SubsectionTitle,
-  Text,
-  IconicButton,
-} from "ComponentsRoot";
-import Card from "./Card";
-import CPCard from "./CPCard";
-import CardSet from "./CardSet";
+  Card,
+  CardSet,
+  CPCard,
+} from ".";
 
 storiesOf("Card", module)
   .add("Card", () => (

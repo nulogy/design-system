@@ -1,11 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  InlineValidation,
-  List,
-  ListItem,
-  Link,
-} from "ComponentsRoot";
+
+import { InlineValidation } from ".";
+import { List, ListItem } from "../List";
+import { Link } from "../Link";
 
 storiesOf("Inline Validation", module)
   .add("Inline Validation", () => (

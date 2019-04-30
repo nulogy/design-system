@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import {
   Checkbox,
   CheckboxGroup,
-} from "ComponentsRoot";
+} from ".";
 
 storiesOf("CheckboxGroup", module)
   .add("CheckboxGroup", () => (

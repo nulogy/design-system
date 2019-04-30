@@ -1,8 +1,14 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Button, Link, Flex, Input, Select, Textarea, Text, Box, Tooltip,
-} from "ComponentsRoot";
+import Button from "../Button/Button";
+import { Link } from "../Link";
+import { Flex } from "../Flex";
+import { Box } from "../Box";
+import { Input } from "../Input";
+import { Select } from "../Select";
+import { Textarea } from "../Textarea";
+import { Text } from "../Type";
+import { Tooltip } from ".";
 
 const selectOptions = [
   { value: "accepted", label: "Accepted" },

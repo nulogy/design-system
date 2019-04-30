@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 
 const Card = styled(Box)({});
 

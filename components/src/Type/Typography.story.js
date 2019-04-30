@@ -5,9 +5,9 @@ import {
   Title,
   SectionTitle,
   SubsectionTitle,
-  List,
-  ListItem,
-} from "ComponentsRoot";
+} from ".";
+import { List, ListItem } from "../List";
+
 import theme from "../theme";
 
 storiesOf("Typography", module)

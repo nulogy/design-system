@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Flex from "../Flex/Flex";
+import { Flex } from "../Flex";
 import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";

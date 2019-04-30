@@ -97,7 +97,6 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "moduleNameMapper": {
-      "^ComponentsRoot(.*)$": "<rootDir>/src$1",
       "\\.(css|sass)$": "identity-obj-proxy"
     },
     "transformIgnorePatterns": [

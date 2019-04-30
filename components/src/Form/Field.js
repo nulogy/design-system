@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Box from "../Box/Box";
+import { Box } from "../Box";
 
 const Field = styled(Box)({
   width: "100%",

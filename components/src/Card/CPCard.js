@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import PropTypes from "prop-types";
 import Card from "./Card";
-import IconicButton from "../Button/IconicButton";
+import { IconicButton } from "../Button";
 import theme from "../theme";
 
 const CPCard = styled(props => <Card { ...props } />)(

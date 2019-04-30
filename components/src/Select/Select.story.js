@@ -1,10 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import {
-  Select,
-  Input,
-  PrimaryButton,
-} from "ComponentsRoot";
+import { Select } from ".";
+import { Input } from "../Input";
+import { PrimaryButton } from "../Button";
 
 const options = [
   { value: "accepted", label: "Accepted" },
