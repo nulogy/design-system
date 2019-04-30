@@ -30,6 +30,10 @@ const ApplyMenuLinkStyles = styled.div({
   },
 });
 
+const Nav = styled.nav({
+  display: "flex",
+})
+
 const renderMenuTrigger = menuItem => (
   <div key={ menuItem.name }>
     <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
@@ -68,9 +72,9 @@ const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
-  <nav style={{display: "flex"}} { ...props }>
+  <Nav { ...props }>
     {menuData.map(renderMenuItem)}
-  </nav>
+  </Nav>
 );
 
 BaseDesktopMenu.propTypes = {

@@ -23,22 +23,18 @@ const MediumNavBar = ({
     <Branding desktopSrc={ desktopSrc } alt={ alt } />
     <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
       {menuData.primaryMenu && 
-      <Flex alignItems="center" pr="x3" >
-        <DesktopMenu aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
-      </Flex>
+        <DesktopMenu style={{paddingRight: theme.space.x3}} aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
       }
-      <Box width={ 1 }>
-        <Flex style={ { "float": "right" } }>
-          {menuData.search && 
-          <Flex maxWidth="18em">
-            <NavBarSearch { ...menuData.search } />
-          </Flex>
-          }
-          {menuData.secondaryMenu && 
-          <DesktopMenu aria-labelledby="secondary-navigation"pl="x2" menuData={ menuData.secondaryMenu } />
-          }
-        </Flex>
-      </Box>
+      <Flex style={ { float: "right" } }>
+        {menuData.search && 
+        <div style={{maxWidth:"18em"}}>
+          <NavBarSearch { ...menuData.search } />
+        </div>
+        }
+        {menuData.secondaryMenu && 
+        <DesktopMenu aria-labelledby="secondary-navigation"pl="x2" menuData={ menuData.secondaryMenu } />
+        }
+      </Flex>
     </Flex>
   </Box>
 );
@@ -82,7 +78,7 @@ const SmallNavBar = withMenuState(({
   ...props
 }) => (
   <>
-  <Box { ...props } style={ Object.assign({}, { position: "relative", overflow: "auto" }, style) }>
+  <Box { ...props } style={ Object.assign({}, { height: "72px", position: "relative", overflow: "auto" }, style) }>
     <Branding mobileSrc={ mobileSrc } alt={ alt } />
     <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
       {menuData.search && 
