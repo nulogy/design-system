@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box } from "../Box";
-import { Icon } from "../Icon";
 import { Text, SubsectionTitle } from "../Type";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
-import { subPx } from "../Utils";
 
 const ApplyMenuLinkStyles = styled.li({
   "*": {
@@ -167,9 +164,6 @@ SubMenu.defaultProps = {
 
 const Menu = styled.ul(() => (
   {
-    position: "absolute",
-    left: "0",
-    top: "72px",
     margin: "0",
     padding: `${theme.space.x2} 0`,
     zIndex: "10",
@@ -181,48 +175,15 @@ const Menu = styled.ul(() => (
     },
   }));
 
-const MobileMenuTrigger = styled.button(
-  {
-    color: theme.colors.white,
-    background: "none",
-    border: "none",
-    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-    marginLeft: theme.space.x1,
-    borderRadius: theme.radii.medium,
-    transition: ".2s",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: theme.colors.lightBlue,
-      backgroundColor: theme.colors.black,
-      cursor: "pointer",
-    },
-  }
-);
-
 const BaseMobileMenu = ({
   menuData,
-  menuState: { isOpen, handleMenuToggle, closeMenu },
+  closeMenu,
   ...props
 }) => (
-  <Box { ...props } display={ { small: "block", medium: "block", large: "none" } }>
-    <MobileMenuTrigger onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
-      {
-      isOpen
-        ? <Icon icon="close" title="Close Menu" />
-        : <Icon icon="menu" title="Open Menu" />
-      }
-    </MobileMenuTrigger>
-
-    {
-      isOpen
-        && (
-          <Menu>
-            { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
-            { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
-          </Menu>
-        )
-    }
-  </Box>
+  <Menu { ...props }>
+    { menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu) }
+    { menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu) }
+  </Menu>
 );
 
 BaseMobileMenu.propTypes = {
@@ -230,14 +191,12 @@ BaseMobileMenu.propTypes = {
     "primaryMenu": PropTypes.arrayOf(PropTypes.shape({})),
     "secondaryMenu": PropTypes.arrayOf(PropTypes.shape({})),
   }),
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool.isRequired,
-    handleMenuToggle: PropTypes.func.isRequired,
-  }).isRequired,
+  closeMenu: PropTypes.func,
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
+  closeMenu: ()=>{},
 };
 
 const MobileMenu = styled(BaseMobileMenu)({});
