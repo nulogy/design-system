@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Flex } from "../Flex";
 import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
@@ -29,6 +28,10 @@ const ApplyMenuLinkStyles = styled.div({
       opacity: ".5",
     },
   },
+});
+
+const Nav = styled.nav({
+  display: "flex",
 });
 
 const renderMenuTrigger = menuItem => (
@@ -69,9 +72,9 @@ const BaseDesktopMenu = ({
   menuData,
   ...props
 }) => (
-  <Flex { ...props }>
+  <Nav { ...props }>
     {menuData.map(renderMenuItem)}
-  </Flex>
+  </Nav>
 );
 
 BaseDesktopMenu.propTypes = {
