@@ -19,26 +19,28 @@ const MediumNavBar = ({
   alt,
   ...props
 }) => (
-  <Box { ...props }>
-    <Branding desktopSrc={ desktopSrc } alt={ alt } />
-    <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-      {menuData.primaryMenu
-        && <DesktopMenu style={ { paddingRight: theme.space.x3 } } aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
-      }
-      <Flex style={ { float: "right" } }>
-        {menuData.search
-        && (
-        <div style={ { maxWidth: "18em" } }>
-          <NavBarSearch { ...menuData.search } />
-        </div>
-        )
+  <header { ...props }>
+    <Flex>
+      <Branding desktopSrc={ desktopSrc } alt={ alt } />
+      <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+        {menuData.primaryMenu
+          && <DesktopMenu style={ { paddingRight: theme.space.x3 } } aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
         }
-        {menuData.secondaryMenu
-        && <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={ menuData.secondaryMenu } />
-        }
+        <Flex style={ { float: "right" } }>
+          {menuData.search
+          && (
+          <div style={ { maxWidth: "18em" } }>
+            <NavBarSearch { ...menuData.search } />
+          </div>
+          )
+          }
+          {menuData.secondaryMenu
+          && <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={ menuData.secondaryMenu } />
+          }
+        </Flex>
       </Flex>
     </Flex>
-  </Box>
+  </header>
 );
 
 MediumNavBar.propTypes = {
@@ -80,8 +82,8 @@ const SmallNavBar = withMenuState(({
   alt,
   ...props
 }) => (
-  <>
-    <Box display={ display } { ...props }>
+  <header { ...props }>
+    <Flex>
       <Branding mobileSrc={ mobileSrc } alt={ alt } />
       <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.search
@@ -103,13 +105,12 @@ const SmallNavBar = withMenuState(({
         )
       }
       </Flex>
-    </Box>
-    {(isOpen)
-        && (
-          <MobileMenu display={ display } menuData={ menuData } closeMenu={ closeMenu } />
-        )
-      }
-  </>
+    </Flex>
+    {(isOpen) && (
+      <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
+      )
+    }
+  </header>
 ));
 
 const navBarStyles = {
@@ -117,15 +118,42 @@ const navBarStyles = {
   padding: `${theme.space.x2} ${theme.space.x3}`,
 };
 
-const BaseNavBar = ({
-  menuData,
-  ...props
-}) => (
-  <header { ...props }>
-    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
-    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ navBarStyles } />
-  </header>
-);
+class BaseNavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+  
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth });
+  }  
+
+  render () {
+    const {
+      menuData,
+      ...props
+    } = this.props;
+    if (this.state.width >= this.props.breakpoint) {
+      return(
+        <MediumNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+      );
+    } else {
+      return(
+        <SmallNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+      );
+    }
+  }
+}
 
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
@@ -136,11 +164,13 @@ BaseNavBar.propTypes = {
     }),
   }),
   className: PropTypes.string,
+  breakpoint: PropTypes.number,
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
+  breakpoint: 1024,
 };
 
 const NavBar = styled(BaseNavBar)({});
