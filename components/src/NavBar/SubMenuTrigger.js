@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
+import { OutsideAlerter } from "../Utils";
 import { Icon } from "../Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
@@ -116,6 +117,7 @@ class SubMenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentWillUnmount() {
@@ -141,16 +143,13 @@ class SubMenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
-      onFocus: () => (this.showSubMenu()),
-      onBlur: () => (this.hideSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   SubMenuTriggerEventHandlers() {
     return ({
-      onClick: () => (this.showSubMenu()),
-      onBlur: () => (this.hideSubMenu()),
+      onClick: e => { this.showSubMenu(); e.target.focus(); },
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -158,6 +157,10 @@ class SubMenuTrigger extends React.Component {
   clearScheduled() {
     clearTimeout(this.hideTimeoutID);
     clearTimeout(this.showTimeoutID);
+  }
+
+  handleClickOutside() {
+    this.hideSubMenu(true);
   }
 
   handleKeyDown(event) {
@@ -172,25 +175,27 @@ class SubMenuTrigger extends React.Component {
 
   render() {
     return (
-      <Manager>
-        <Reference>
-          {({ ref }) => (
-            <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-              { this.props.name }
-              <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
-            </SubMenuTriggerButton>
+      <OutsideAlerter handleClickOutside={this.handleClickOutside}>
+        <Manager>
+          <Reference>
+            {({ ref }) => (
+              <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+                { this.props.name }
+                <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+              </SubMenuTriggerButton>
+            )}
+          </Reference>
+          {this.state.subMenuOpen && (
+          <Popper placement="right-start">
+            {popperProps => (
+              <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
+              </SubMenu>
+            )}
+          </Popper>
           )}
-        </Reference>
-        {this.state.subMenuOpen && (
-        <Popper placement="right-start">
-          {popperProps => (
-            <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
-            </SubMenu>
-          )}
-        </Popper>
-        )}
-      </Manager>
+        </Manager>
+      </OutsideAlerter>
     );
   }
 }
