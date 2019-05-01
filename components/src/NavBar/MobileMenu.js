@@ -177,7 +177,7 @@ const Menu = styled.ul(() => (
   }));
 
 const Nav = styled.nav({
-  height: "calc(100vh - 72px)",
+  minHeight: "calc(100vh - 72px)",
   backgroundColor: theme.colors.blackBlue,
 })
 
