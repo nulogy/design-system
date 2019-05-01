@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Text, SubsectionTitle } from "../Type";
 import { display } from "styled-system";
+import { Text, SubsectionTitle } from "../Type";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
@@ -80,7 +80,7 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick) => (
-  <li key={ menuItem.name } style={{display:"block",  marginBottom: theme.space.x1}}>
+  <li key={ menuItem.name } style={ { display: "block", marginBottom: theme.space.x1 } }>
     <MobileMenuLink onClick={ linkOnClick } href={ menuItem.href }>
       {menuItem.name}
     </MobileMenuLink>
@@ -89,7 +89,7 @@ const renderMenuLink = (menuItem, linkOnClick) => (
 
 
 const renderSubMenuLink = (menuItem, linkOnClick, layer) => (
-  <li key={ menuItem.name } style={{display:"block",  marginBottom: theme.space.x1}}>
+  <li key={ menuItem.name } style={ { display: "block", marginBottom: theme.space.x1 } }>
     <MobileSubMenuLink
       onClick={ linkOnClick } href={ menuItem.href } layer={ layer }
       color={ theme.colors.white } hover={ theme.colors.white } bgHoverColor={ theme.colors.black }
@@ -109,7 +109,7 @@ const renderCustom = (menuItem, linkOnClick, layer) => {
 };
 
 const renderSubMenu = (menuItem, linkOnClick, layer) => (
-  <li key={ menuItem.name } style={{display: "block"}}>
+  <li key={ menuItem.name } style={ { display: "block" } }>
     <SubMenu menuItem={ menuItem } layer={ layer } linkOnClick={ linkOnClick } />
   </li>
 );
@@ -137,13 +137,13 @@ const SubMenu = ({ menuItem, linkOnClick, layer }) => (
   <>
     { layer === 0
     && (
-    <SubsectionTitle mb={theme.space.x1} color="grey" key={ menuItem.name }>
+    <SubsectionTitle mb={ theme.space.x1 } color="grey" key={ menuItem.name }>
       {menuItem.name}
     </SubsectionTitle>
     )}
     { layer > 0
     && (
-    <Text mb={theme.space.x1} color="grey" py={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
+    <Text mb={ theme.space.x1 } color="grey" py={ theme.space.x1 } style={ { paddingLeft: `${(24 * layer) + 24}px` } } key={ menuItem.name }>
       {menuItem.name}
     </Text>
     )}
@@ -180,7 +180,7 @@ const Menu = styled.ul(() => (
 const Nav = styled.nav({
   minHeight: "calc(100vh - 72px)",
   backgroundColor: theme.colors.blackBlue,
-})
+});
 
 const BaseMobileMenu = ({
   menuData,

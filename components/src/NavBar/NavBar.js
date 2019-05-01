@@ -81,7 +81,7 @@ const SmallNavBar = withMenuState(({
   ...props
 }) => (
   <>
-    <Box display={ display } { ...props } >
+    <Box display={ display } { ...props }>
       <Branding mobileSrc={ mobileSrc } alt={ alt } />
       <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.search
