@@ -1,3 +1,5 @@
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/tokens.svg?color=blue)
+
 # @nulogy/tokens
 This is where Nulogy's design tokens are stored and converted using [Style Dictionary](https://amzn.github.io/style-dictionary). Tokens are mostly used in our React components and CSS classes, but tokens can be imported directly into your application if needed. 
 
