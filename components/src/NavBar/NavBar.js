@@ -73,6 +73,7 @@ const MobileMenuTrigger = styled.button(
 );
 
 const SmallNavBar = withMenuState(({
+  display,
   menuData,
   menuState: { isOpen, handleMenuToggle, closeMenu },
   mobileSrc,
@@ -80,7 +81,7 @@ const SmallNavBar = withMenuState(({
   ...props
 }) => (
   <>
-    <Box { ...props } >
+    <Box display={ display } { ...props } >
       <Branding mobileSrc={ mobileSrc } alt={ alt } />
       <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.search
@@ -105,7 +106,7 @@ const SmallNavBar = withMenuState(({
     </Box>
     {(isOpen)
         && (
-          <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
+          <MobileMenu display={ display } menuData={ menuData } closeMenu={ closeMenu } />
         )
       }
   </>

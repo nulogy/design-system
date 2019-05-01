@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Text, SubsectionTitle } from "../Type";
+import { display } from "styled-system";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
@@ -207,6 +208,6 @@ BaseMobileMenu.defaultProps = {
   closeMenu: () => {},
 };
 
-const MobileMenu = styled(BaseMobileMenu)({});
+const MobileMenu = styled(BaseMobileMenu)(display);
 
 export default MobileMenu;
