@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box } from "../Box";
+import { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
@@ -13,14 +13,24 @@ import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
+const LockBody = createGlobalStyle(
+  ({ isOpen }) => ({
+    body: {
+      height: isOpen ? "100%" : null,
+      overflow: isOpen ? "hidden" : null,
+    },
+  })
+);
+
 const MediumNavBar = ({
   menuData,
   desktopSrc,
   alt,
+  style,
   ...props
 }) => (
   <header { ...props }>
-    <Flex>
+    <Flex style={ style }>
       <Branding desktopSrc={ desktopSrc } alt={ alt } />
       <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.primaryMenu
@@ -74,16 +84,35 @@ const MobileMenuTrigger = styled.button(
   }
 );
 
+const SmallHeader = styled.header(({ isOpen }) => (
+  isOpen ? {
+  position: "fixed",
+  width: "100%",
+  height: "100%",
+  zIndex: "100",
+  overflow: "auto",
+  top: "0",
+  left: "0",
+  right: "0",
+  bottom: "0",
+  } :
+  null
+  )
+);
+
 const SmallNavBar = withMenuState(({
   display,
   menuData,
   menuState: { isOpen, handleMenuToggle, closeMenu },
   mobileSrc,
+  style,
   alt,
   ...props
 }) => (
-  <header { ...props }>
-    <Flex>
+  <>
+  <LockBody isOpen={ isOpen } />
+  <SmallHeader isOpen={ isOpen } { ...props }>
+    <Flex style={ style }>
       <Branding mobileSrc={ mobileSrc } alt={ alt } />
       <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
         {menuData.search
@@ -110,7 +139,8 @@ const SmallNavBar = withMenuState(({
       <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
       )
     }
-  </header>
+  </SmallHeader>
+  </>
 ));
 
 const navBarStyles = {
