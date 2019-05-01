@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { NavBar } from ".";
+import { Text } from "../Type"
 
 const primaryMenu = [
   {
@@ -116,7 +117,143 @@ const search = {
 
 storiesOf("NavBar", module)
   .add("NavBar", () => (
+    <>
     <NavBar menuData={ { primaryMenu, secondaryMenu, search } } />
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+    <Text>ABC</Text>
+
+
+    </>
   ))
   .add("Without search", () => (
     <NavBar menuData={ { primaryMenu, secondaryMenu } } />
