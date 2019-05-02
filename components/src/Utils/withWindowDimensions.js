@@ -33,7 +33,7 @@ class WindowDimensions extends React.Component {
 }
 
 WindowDimensions.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func.isRequired,
 };
 
 const withWindowDimensions = Component => props => (
