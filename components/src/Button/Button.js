@@ -74,7 +74,6 @@ BaseButton.defaultProps = {
 
 
 const Button = styled(BaseButton)(
-  space,
   size,
   ({ disabled, fullWidth }) => ({
     display: "inline-flex",
@@ -103,7 +102,8 @@ const Button = styled(BaseButton)(
     "&:disabled": {
       opacity: ".5",
     },
-  })
+  }),
+  space,
 );
 
 Button.propTypes = {
