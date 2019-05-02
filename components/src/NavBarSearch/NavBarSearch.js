@@ -6,6 +6,7 @@ import { Flex } from "../Flex";
 import { Input } from "../Input";
 import { Icon } from "../Icon";
 import theme from "../theme";
+import { subPx } from "../Utils";
 
 class BaseNavBarSearch extends React.Component {
   constructor() {
@@ -43,11 +44,12 @@ const NavBarSearch = styled(BaseNavBarSearch)(
     minWidth: "7em",
     width: "100%",
     "button": {
-      display: "flex",
+      padding: subPx(theme.space.x1),
       color: theme.colors.blackBlue,
       background: "transparent",
       border: "solid 1px transparent",
       borderRadius: theme.radii.medium,
+      minWidth: theme.space.x5,
       ":focus": {
         color: theme.colors.white,
         background: darken(0.1, theme.colors.blue),
@@ -55,6 +57,9 @@ const NavBarSearch = styled(BaseNavBarSearch)(
         outline: "none",
         boxShadow: "none",
       },
+      "svg": {
+        display: "block",
+      }
     },
     "Input": {
       color: theme.colors.blackBlue,
