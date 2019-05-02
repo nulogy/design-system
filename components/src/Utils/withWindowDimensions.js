@@ -28,10 +28,6 @@ class WindowDimensions extends React.Component {
     return renderMenu({
       windowWidth: width,
       windowHeight: height,
-      handleMenuToggle: this.handleOnClick,
-      handleMenuKeydown: this.handleKeyDown,
-      openMenu: this.openMenu,
-      closeMenu: this.closeMenu,
     });
   }
 }
