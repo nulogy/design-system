@@ -74,7 +74,6 @@ BaseButton.defaultProps = {
 
 
 const Button = styled(BaseButton)(
-  space,
   size,
   ({ disabled, fullWidth }) => ({
     display: "inline-flex",
@@ -91,6 +90,7 @@ const Button = styled(BaseButton)(
     border: `1px solid ${theme.colors.darkBlue}`,
     borderRadius: theme.radii.medium,
     width: fullWidth ? "100%" : "auto",
+    margin: theme.space.none,
     "&:hover, &:focus": {
       outline: "none",
       backgroundColor: disabled ? null : theme.colors.lightBlue,
@@ -102,7 +102,8 @@ const Button = styled(BaseButton)(
     "&:disabled": {
       opacity: ".5",
     },
-  })
+  }),
+  space,
 );
 
 Button.propTypes = {
