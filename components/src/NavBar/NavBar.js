@@ -11,7 +11,7 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx, withWindowDimensions } from "../Utils";
 
 const LockBody = createGlobalStyle(
   ({ isOpen }) => ({
@@ -164,43 +164,23 @@ const navBarStyles = {
   padding: `${theme.space.x2} ${theme.space.x3}`,
 };
 
-class BaseNavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { width: 0 };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+const BaseNavBar = withWindowDimensions(({
+  menuData,
+  breakpoint,
+  windowDimensions: { windowWidth },
+  ...props,
+}) => {
+  if (windowWidth >= breakpoint) {
+    return(
+      <MediumNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+    );
+  } else {
+    return(
+      <SmallNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+    );
   }
+})
   
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-  
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-  
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth });
-  }  
-
-  render () {
-    const {
-      menuData,
-      ...props
-    } = this.props;
-    if (this.state.width >= this.props.breakpoint) {
-      return(
-        <MediumNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
-      );
-    } else {
-      return(
-        <SmallNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
-      );
-    }
-  }
-}
-
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
     "primaryMenu": PropTypes.arrayOf(isValidMenuItem),
