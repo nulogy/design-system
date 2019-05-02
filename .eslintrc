@@ -1,10 +1,9 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "jsx-a11y", "import"],
-  "extends": ["airbnb", "plugin:jsx-a11y/recommended", "prettier"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier"],
+  "extends": ["airbnb", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
-    "comma-dangle": ["error", "always-multiline"],
     "func-names": ["error"],
     "import/extensions": ["error"],
     "import/no-extraneous-dependencies": [
@@ -19,7 +18,6 @@
     "linebreak-style": ["error", "unix"],
     "max-len": ["off"],
     "no-else-return": ["off"],
-    "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
     "no-underscore-dangle": ["off"],
     "no-unused-vars": ["error", {"args": "after-used", "argsIgnorePattern": "^_"}],
     "no-use-before-define": ["error", { "functions": false }],
@@ -29,7 +27,6 @@
     "react/jsx-filename-extension": ["off"],
     "react/jsx-one-expression-per-line": ["off"],
     "react/jsx-uses-react": ["warn"],
-    "react/jsx-curly-spacing": ["error", "always"],
     "react/jsx-max-props-per-line": ["off"],
     "react/prefer-stateless-function": ["off"],
     "react/require-extension": ["off"],
