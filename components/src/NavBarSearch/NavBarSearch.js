@@ -59,7 +59,7 @@ const NavBarSearch = styled(BaseNavBarSearch)(
       },
       "svg": {
         display: "block",
-      }
+      },
     },
     "Input": {
       color: theme.colors.blackBlue,

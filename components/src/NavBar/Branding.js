@@ -17,7 +17,7 @@ const BaseBranding = ({
         alt={ alt }
       />
     </Box>
-    <Box display={ { small: "block", medium: "none", large: "none" } } minWidth="32px;"  height="36px">
+    <Box display={ { small: "block", medium: "none", large: "none" } } minWidth="32px;" height="36px">
       <img
         src={ mobileSrc }
         alt={ alt }
