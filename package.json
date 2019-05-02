@@ -13,7 +13,8 @@
   "scripts": {
     "build": "lerna run build",
     "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test",
-    "publish-packages": "yarn install && yarn build && yarn lerna publish"
+    "publish-packages": "yarn install && yarn build && yarn lerna publish",
+    "precommit": "pretty-quick --staged"
   },
   "main": "index.js",
   "license": "MIT",
@@ -32,7 +33,14 @@
   "devDependencies": {
     "husky": "2.2.0",
     "lerna": "3.13.0",
+    "prettier": "1.17.0",
+    "pretty-quick": "1.10.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run precommit"
+    }
   }
 }
