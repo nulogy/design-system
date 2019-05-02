@@ -146,13 +146,16 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
+      onBlur: ()=>(this.hideSubMenu()),
+      onFocus: ()=>(this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   menuTriggerEventHandlers() {
     return ({
-      onClick: e => { this.showSubMenu(); e.target.focus(); },
+      onBlur: ()=>(this.hideSubMenu()),
+      onClick: e => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
