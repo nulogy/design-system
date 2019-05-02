@@ -106,8 +106,8 @@ class SmallNavBarNoState extends React.Component {
     this.navRef = React.createRef();
   }
 
-  componentDidUpdate() {
-    if (this.props.menuState.isOpen) this.navRef.current.scrollTop = 0;
+  componentDidUpdate(prevProps) {
+    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
   }
 
   render() {
