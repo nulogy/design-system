@@ -30,6 +30,7 @@
     "yarn": "^1.13.0"
   },
   "devDependencies": {
+    "husky": "2.2.0",
     "lerna": "3.13.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
