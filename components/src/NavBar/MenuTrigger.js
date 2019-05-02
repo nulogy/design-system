@@ -146,16 +146,16 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
-      onBlur: ()=>(this.hideSubMenu()),
-      onFocus: ()=>(this.showSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
+      onFocus: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   menuTriggerEventHandlers() {
     return ({
-      onBlur: ()=>(this.hideSubMenu()),
-      onClick: e => (this.showSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
+      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -181,11 +181,11 @@ class MenuTrigger extends React.Component {
 
   render() {
     return (
-      <OutsideAlerter handleClickOutside={this.handleClickOutside}>
+      <OutsideAlerter handleClickOutside={ this.handleClickOutside }>
         <Manager>
           <Reference>
             {({ ref }) => (
-              <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ref}>
+              <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
                 { this.props.name }
                 <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
               </MenuTriggerButton>

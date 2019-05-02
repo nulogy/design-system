@@ -10,11 +10,11 @@ class OutsideAlerter extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
+    document.addEventListener("mousedown", this.handleClickOutside);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
+    document.removeEventListener("mousedown", this.handleClickOutside);
   }
 
   setWrapperRef(node) {
@@ -22,13 +22,17 @@ class OutsideAlerter extends React.Component {
   }
 
   handleClickOutside(event) {
+    const { handleClickOutside } = this.props;
+
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.props.handleClickOutside();
+      handleClickOutside();
     }
   }
 
   render() {
-    return <div ref={this.setWrapperRef}>{this.props.children}</div>;
+    const { children } = this.props;
+
+    return <div ref={ this.setWrapperRef }>{ children }</div>;
   }
 }
 

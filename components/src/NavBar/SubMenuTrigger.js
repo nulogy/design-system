@@ -143,16 +143,16 @@ class SubMenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
-      onBlur: ()=>(this.hideSubMenu()),
-      onFocus: ()=>(this.showSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
+      onFocus: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   SubMenuTriggerEventHandlers() {
     return ({
-      onBlur: ()=>(this.hideSubMenu()),
-      onClick: e => (this.showSubMenu()),
+      onBlur: () => (this.hideSubMenu()),
+      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -178,7 +178,7 @@ class SubMenuTrigger extends React.Component {
 
   render() {
     return (
-      <OutsideAlerter handleClickOutside={this.handleClickOutside}>
+      <OutsideAlerter handleClickOutside={ this.handleClickOutside }>
         <Manager>
           <Reference>
             {({ ref }) => (
