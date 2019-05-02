@@ -91,6 +91,7 @@ const Button = styled(BaseButton)(
     border: `1px solid ${theme.colors.darkBlue}`,
     borderRadius: theme.radii.medium,
     width: fullWidth ? "100%" : "auto",
+    margin: theme.space.none,
     "&:hover, &:focus": {
       outline: "none",
       backgroundColor: disabled ? null : theme.colors.lightBlue,
