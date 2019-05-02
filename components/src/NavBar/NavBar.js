@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
@@ -57,12 +56,14 @@ MediumNavBar.propTypes = {
   alt: PropTypes.string,
   desktopSrc: PropTypes.string,
   menuData: PropTypes.shape({}),
+  style: PropTypes.shape({}),
 };
 
 MediumNavBar.defaultProps = {
   alt: null,
   desktopSrc: undefined,
   menuData: null,
+  style: null,
 };
 
 const MobileMenuTrigger = styled.button(
@@ -86,21 +87,21 @@ const MobileMenuTrigger = styled.button(
 
 const SmallHeader = styled.header(({ isOpen }) => (
   isOpen ? {
-  position: "fixed",
-  width: "100%",
-  height: "100%",
-  zIndex: "100",
-  overflow: "scroll",
-  top: "0",
-  left: "0",
-  right: "0",
-  bottom: "0",
-  } :
-  null
-  )
-);
+    position: "fixed",
+    width: "100%",
+    height: "100%",
+    zIndex: "100",
+    overflow: "scroll",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+  }
+    : null
+));
 
-class SmallNavBarNoState extends React.Component { 
+/* eslint-disable react/destructuring-assignment */
+class SmallNavBarNoState extends React.Component {
   constructor() {
     super();
     this.navRef = React.createRef();
@@ -112,31 +113,30 @@ class SmallNavBarNoState extends React.Component {
 
   render() {
     const {
-      display,
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
       mobileSrc,
-      style,
       alt,
+      style,
       ...props
-    }= this.props; 
-  return(
-    <>
-      <LockBody isOpen={ isOpen } />
-      <SmallHeader ref={ this.navRef } isOpen={ isOpen } { ...props }>
-        <Flex style={ style }>
-          <Branding mobileSrc={ mobileSrc } alt={ alt } />
-          <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-            {menuData.search
+    } = this.props;
+    return (
+      <>
+        <LockBody isOpen={ isOpen } />
+        <SmallHeader ref={ this.navRef } isOpen={ isOpen } { ...props }>
+          <Flex style={ style }>
+            <Branding mobileSrc={ mobileSrc } alt={ alt } />
+            <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+              {menuData.search
             && (
             <Flex maxWidth="18em" alignItems="center" px="0">
               <NavBarSearch { ...menuData.search } />
             </Flex>
             )
           }
-            {(menuData.primaryMenu || menuData.secondaryMenu)
+              {(menuData.primaryMenu || menuData.secondaryMenu)
             && (
-            <MobileMenuTrigger onClick={()=>{handleMenuToggle()}} aria-expanded={ isOpen ? true : null }>
+            <MobileMenuTrigger onClick={ () => { handleMenuToggle(); } } aria-expanded={ isOpen ? true : null }>
               {
               isOpen
                 ? <Icon icon="close" title="Close Menu" />
@@ -145,16 +145,36 @@ class SmallNavBarNoState extends React.Component {
             </MobileMenuTrigger>
             )
           }
+            </Flex>
           </Flex>
-        </Flex>
-        {(isOpen) && (
+          {(isOpen) && (
           <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
           )
         }
-      </SmallHeader>
-    </>
-    )
+        </SmallHeader>
+      </>
+    );
   }
+}
+/* eslint-enable react/destructuring-assignment */
+
+SmallNavBarNoState.propTypes = {
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    handleMenuToggle: PropTypes.func,
+    closeMenu: PropTypes.func,
+  }).isRequired,
+  menuData: PropTypes.shape({}),
+  mobileSrc: PropTypes.string,
+  alt: PropTypes.string,
+  style: PropTypes.shape({}),
+};
+
+SmallNavBarNoState.defaultProps = {
+  menuData: null,
+  mobileSrc: undefined,
+  alt: undefined,
+  style: null,
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
@@ -168,19 +188,19 @@ const BaseNavBar = withWindowDimensions(({
   menuData,
   breakpoint,
   windowDimensions: { windowWidth },
-  ...props,
+  ...props
 }) => {
   if (windowWidth >= breakpoint) {
-    return(
+    return (
       <MediumNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
     );
   } else {
-    return(
+    return (
       <SmallNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
     );
   }
-})
-  
+});
+
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
     "primaryMenu": PropTypes.arrayOf(isValidMenuItem),

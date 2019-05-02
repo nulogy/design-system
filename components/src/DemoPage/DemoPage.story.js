@@ -9,13 +9,13 @@ const ResetStorybookView = styled.div({
   left: 0,
   width: "100vw",
   height: "100vh",
-})
+});
 
-const DemoPage = (props) => (
+const DemoPage = props => (
   <ResetStorybookView>
-    <NDSDemoPage { ...props }/>
+    <NDSDemoPage { ...props } />
   </ResetStorybookView>
-)
+);
 
 storiesOf("DemoPage", module)
   .add("Demo Page", () => (

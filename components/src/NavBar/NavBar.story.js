@@ -9,13 +9,13 @@ const ResetStorybookView = styled.div({
   left: 0,
   width: "100vw",
   height: "100vh",
-})
+});
 
-const NavBar = (props) => (
+const NavBar = props => (
   <ResetStorybookView>
-    <NDSNavBar { ...props }/>
+    <NDSNavBar { ...props } />
   </ResetStorybookView>
-)
+);
 
 const primaryMenu = [
   {
