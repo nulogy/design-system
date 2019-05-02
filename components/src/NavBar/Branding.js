@@ -11,13 +11,13 @@ const BaseBranding = ({
   ...props
 }) => (
   <a href="/" { ...props }>
-    <Box display={ { small: "none", medium: "block", large: "block" } } minWidth="90px;">
+    <Box display={ { small: "none", medium: "block", large: "block" } } minWidth="90px;" height="36px">
       <img
         src={ desktopSrc }
         alt={ alt }
       />
     </Box>
-    <Box display={ { small: "block", medium: "none", large: "none" } } minWidth="32px;">
+    <Box display={ { small: "block", medium: "none", large: "none" } } minWidth="32px;" height="36px">
       <img
         src={ mobileSrc }
         alt={ alt }
@@ -49,7 +49,9 @@ const Branding = styled(BaseBranding)(
       outline: "none",
     },
     "img": {
-      height: "36px",
+      maxHeight: "36px",
+      height: "100%",
+      width: "auto",
       display: "block",
     },
 

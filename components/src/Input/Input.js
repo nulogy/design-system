@@ -42,6 +42,7 @@ const StyledInput = styled.input(
     fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
+    minHeight: theme.space.x5,
     "&:focus": {
       outline: "none",
       color: theme.colors.black,
