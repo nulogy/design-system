@@ -90,7 +90,7 @@ const SmallHeader = styled.header(({ isOpen }) => (
   width: "100%",
   height: "100%",
   zIndex: "100",
-  overflow: "auto",
+  overflow: "scroll",
   top: "0",
   left: "0",
   right: "0",
@@ -100,48 +100,64 @@ const SmallHeader = styled.header(({ isOpen }) => (
   )
 );
 
-const SmallNavBar = withMenuState(({
-  display,
-  menuData,
-  menuState: { isOpen, handleMenuToggle, closeMenu },
-  mobileSrc,
-  style,
-  alt,
-  ...props
-}) => (
-  <>
-  <LockBody isOpen={ isOpen } />
-  <SmallHeader isOpen={ isOpen } { ...props }>
-    <Flex style={ style }>
-      <Branding mobileSrc={ mobileSrc } alt={ alt } />
-      <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-        {menuData.search
-        && (
-        <Flex maxWidth="18em" alignItems="center" px="0">
-          <NavBarSearch { ...menuData.search } />
-        </Flex>
-        )
-      }
-        {(menuData.primaryMenu || menuData.secondaryMenu)
-        && (
-        <MobileMenuTrigger onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
-          {
-          isOpen
-            ? <Icon icon="close" title="Close Menu" />
-            : <Icon icon="menu" title="Open Menu" />
+class SmallNavBarNoState extends React.Component { 
+  constructor() {
+    super();
+    this.navRef = React.createRef();
+  }
+
+  componentDidUpdate() {
+    if (this.props.menuState.isOpen) this.navRef.current.scrollTop = 0;
+  }
+
+  render() {
+    const {
+      display,
+      menuData,
+      menuState: { isOpen, handleMenuToggle, closeMenu },
+      mobileSrc,
+      style,
+      alt,
+      ...props
+    }= this.props; 
+  return(
+    <>
+      <LockBody isOpen={ isOpen } />
+      <SmallHeader ref={ this.navRef } isOpen={ isOpen } { ...props }>
+        <Flex style={ style }>
+          <Branding mobileSrc={ mobileSrc } alt={ alt } />
+          <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+            {menuData.search
+            && (
+            <Flex maxWidth="18em" alignItems="center" px="0">
+              <NavBarSearch { ...menuData.search } />
+            </Flex>
+            )
           }
-        </MobileMenuTrigger>
-        )
-      }
-      </Flex>
-    </Flex>
-    {(isOpen) && (
-      <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
-      )
-    }
-  </SmallHeader>
-  </>
-));
+            {(menuData.primaryMenu || menuData.secondaryMenu)
+            && (
+            <MobileMenuTrigger onClick={()=>{handleMenuToggle()}} aria-expanded={ isOpen ? true : null }>
+              {
+              isOpen
+                ? <Icon icon="close" title="Close Menu" />
+                : <Icon icon="menu" title="Open Menu" />
+              }
+            </MobileMenuTrigger>
+            )
+          }
+          </Flex>
+        </Flex>
+        {(isOpen) && (
+          <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
+          )
+        }
+      </SmallHeader>
+    </>
+    )
+  }
+};
+
+const SmallNavBar = withMenuState(SmallNavBarNoState);
 
 const navBarStyles = {
   background: theme.colors.blackBlue,
