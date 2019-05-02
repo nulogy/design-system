@@ -1,6 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { NavBar } from ".";
+import { NavBar as NDSNavBar } from ".";
+
+const ResetStorybookView = styled.div({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+});
+
+const NavBar = props => (
+  <ResetStorybookView>
+    <NDSNavBar { ...props } />
+  </ResetStorybookView>
+);
 
 const primaryMenu = [
   {

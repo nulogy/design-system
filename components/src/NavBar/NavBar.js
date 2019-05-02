@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Box } from "../Box";
+import styled, { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
@@ -11,46 +10,60 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx, withWindowDimensions } from "../Utils";
+
+const LockBody = createGlobalStyle(
+  ({ isOpen }) => ({
+    body: {
+      height: isOpen ? "100%" : null,
+      overflow: isOpen ? "hidden" : null,
+    },
+  })
+);
 
 const MediumNavBar = ({
   menuData,
   desktopSrc,
   alt,
+  style,
   ...props
 }) => (
-  <Box { ...props }>
-    <Branding desktopSrc={ desktopSrc } alt={ alt } />
-    <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-      {menuData.primaryMenu
-        && <DesktopMenu style={ { paddingRight: theme.space.x3 } } aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
-      }
-      <Flex style={ { float: "right" } }>
-        {menuData.search
-        && (
-        <div style={ { maxWidth: "18em" } }>
-          <NavBarSearch { ...menuData.search } />
-        </div>
-        )
+  <header { ...props }>
+    <Flex style={ style }>
+      <Branding desktopSrc={ desktopSrc } alt={ alt } />
+      <Flex justifyContent="space-between" alignContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+        {menuData.primaryMenu
+          && <DesktopMenu style={ { paddingRight: theme.space.x3 } } aria-labelledby="primary-navigation" menuData={ menuData.primaryMenu } />
         }
-        {menuData.secondaryMenu
-        && <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={ menuData.secondaryMenu } />
-        }
+        <Flex style={ { float: "right" } }>
+          {menuData.search
+          && (
+          <div style={ { maxWidth: "18em" } }>
+            <NavBarSearch { ...menuData.search } />
+          </div>
+          )
+          }
+          {menuData.secondaryMenu
+          && <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={ menuData.secondaryMenu } />
+          }
+        </Flex>
       </Flex>
     </Flex>
-  </Box>
+  </header>
 );
 
 MediumNavBar.propTypes = {
   alt: PropTypes.string,
   desktopSrc: PropTypes.string,
   menuData: PropTypes.shape({}),
+  style: PropTypes.shape({}),
 };
 
 MediumNavBar.defaultProps = {
   alt: null,
   desktopSrc: undefined,
   menuData: null,
+  style: null,
 };
 
 const MobileMenuTrigger = styled.button(
@@ -72,60 +85,121 @@ const MobileMenuTrigger = styled.button(
   }
 );
 
-const SmallNavBar = withMenuState(({
-  display,
-  menuData,
-  menuState: { isOpen, handleMenuToggle, closeMenu },
-  mobileSrc,
-  alt,
-  ...props
-}) => (
-  <>
-    <Box display={ display } { ...props }>
-      <Branding mobileSrc={ mobileSrc } alt={ alt } />
-      <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
-        {menuData.search
-        && (
-        <Flex maxWidth="18em" alignItems="center" px="0">
-          <NavBarSearch { ...menuData.search } />
-        </Flex>
-        )
-      }
-        {(menuData.primaryMenu || menuData.secondaryMenu)
-        && (
-        <MobileMenuTrigger onClick={ handleMenuToggle } aria-expanded={ isOpen ? true : null }>
-          {
-          isOpen
-            ? <Icon icon="close" title="Close Menu" />
-            : <Icon icon="menu" title="Open Menu" />
-          }
-        </MobileMenuTrigger>
-        )
-      }
-      </Flex>
-    </Box>
-    {(isOpen)
-        && (
-          <MobileMenu display={ display } menuData={ menuData } closeMenu={ closeMenu } />
-        )
-      }
-  </>
+const SmallHeader = styled.header(({ isOpen }) => (
+  isOpen ? {
+    position: "fixed",
+    width: "100%",
+    height: "100%",
+    zIndex: "100",
+    overflow: "scroll",
+    top: "0",
+    left: "0",
+    right: "0",
+    bottom: "0",
+  }
+    : null
 ));
+
+/* eslint-disable react/destructuring-assignment */
+class SmallNavBarNoState extends React.Component {
+  constructor() {
+    super();
+    this.navRef = React.createRef();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
+  }
+
+  render() {
+    const {
+      menuData,
+      menuState: { isOpen, handleMenuToggle, closeMenu },
+      mobileSrc,
+      alt,
+      style,
+      ...props
+    } = this.props;
+    return (
+      <>
+        <LockBody isOpen={ isOpen } />
+        <SmallHeader ref={ this.navRef } isOpen={ isOpen } { ...props }>
+          <Flex style={ style }>
+            <Branding mobileSrc={ mobileSrc } alt={ alt } />
+            <Flex justifyContent="flex-end" style={ { flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` } }>
+              {menuData.search
+            && (
+            <Flex maxWidth="18em" alignItems="center" px="0">
+              <NavBarSearch { ...menuData.search } />
+            </Flex>
+            )
+          }
+              {(menuData.primaryMenu || menuData.secondaryMenu)
+            && (
+            <MobileMenuTrigger onClick={ () => { handleMenuToggle(); } } aria-expanded={ isOpen ? true : null }>
+              {
+              isOpen
+                ? <Icon icon="close" title="Close Menu" />
+                : <Icon icon="menu" title="Open Menu" />
+              }
+            </MobileMenuTrigger>
+            )
+          }
+            </Flex>
+          </Flex>
+          {(isOpen) && (
+          <MobileMenu menuData={ menuData } closeMenu={ closeMenu } />
+          )
+        }
+        </SmallHeader>
+      </>
+    );
+  }
+}
+/* eslint-enable react/destructuring-assignment */
+
+SmallNavBarNoState.propTypes = {
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    handleMenuToggle: PropTypes.func,
+    closeMenu: PropTypes.func,
+  }).isRequired,
+  menuData: PropTypes.shape({}),
+  mobileSrc: PropTypes.string,
+  alt: PropTypes.string,
+  style: PropTypes.shape({}),
+};
+
+SmallNavBarNoState.defaultProps = {
+  menuData: null,
+  mobileSrc: undefined,
+  alt: undefined,
+  style: null,
+};
+
+const SmallNavBar = withMenuState(SmallNavBarNoState);
 
 const navBarStyles = {
   background: theme.colors.blackBlue,
   padding: `${theme.space.x2} ${theme.space.x3}`,
 };
 
-const BaseNavBar = ({
+const BaseNavBar = withWindowDimensions(({
   menuData,
+  breakpoint,
+  windowDimensions: { windowWidth },
   ...props
-}) => (
-  <header { ...props }>
-    <MediumNavBar menuData={ menuData } display={ { small: "none", medium: "none", large: "flex" } } style={ navBarStyles } />
-    <SmallNavBar menuData={ menuData } display={ { small: "flex", medium: "flex", large: "none" } } style={ navBarStyles } />
-  </header>
-);
+}) => {
+  if (windowWidth >= breakpoint) {
+    return (
+      <MediumNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+    );
+  } else {
+    return (
+      <SmallNavBar { ...props } menuData={ menuData } style={ navBarStyles } />
+    );
+  }
+});
 
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
@@ -136,11 +210,13 @@ BaseNavBar.propTypes = {
     }),
   }),
   className: PropTypes.string,
+  breakpoint: PropTypes.number,
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
+  breakpoint: 1024,
 };
 
 const NavBar = styled(BaseNavBar)({});

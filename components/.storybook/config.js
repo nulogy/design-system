@@ -1,7 +1,6 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
-import withStyles from "@sambego/storybook-styles";
 import NDSProvider from '../src/NDSProvider/NDSProvider';
 import theme from "../src/theme";
 
@@ -10,7 +9,7 @@ const grid = {
   major: { colour: 'hsla(120, 100%, 100%, 0.5)', size: `${theme.space.x3}`},
 }
 
-addDecorator(withStyles({
+const gridStyles = {
   backgroundImage: `
     linear-gradient(${grid.major.colour} 1px, transparent 1px),
     linear-gradient(90deg, ${grid.major.colour} 1px, transparent 1px),
@@ -25,7 +24,13 @@ addDecorator(withStyles({
   backgroundPosition: '-1px -1px',
   padding: `${grid.major.size}`,
   minHeight: `100vh`,
-}));
+}
+
+addDecorator((story) => (
+  <div style={gridStyles}>
+    {story()}
+  </div>
+))
 
 addDecorator(withBackgrounds([
   { name: 'none', value: '', default: true },
