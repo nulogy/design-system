@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:jsx-a11y/recommended"],
+  "plugins": ["react", "jsx-a11y", "import"],
+  "extends": ["airbnb", "plugin:jsx-a11y/recommended", "prettier"],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
     "comma-dangle": ["error", "always-multiline"],
@@ -40,7 +41,6 @@
     "jest": true,
     "node": true
   },
-  "plugins": ["react", "jsx-a11y", "import"],
   "settings": {
     "import/resolver": {
       "webpack": {
