@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
-import { OutsideAlerter } from "../Utils";
+import { DetectOutsideClick } from "../Utils";
 import { Icon } from "../Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
@@ -190,11 +190,11 @@ class SubMenuTrigger extends React.Component {
         {this.state.subMenuOpen && (
         <Popper placement="right-start">
           {popperProps => (
-            <OutsideAlerter handleOutsideClick={ this.handleOutsideClick }>
+            <DetectOutsideClick onClick={ this.handleOutsideClick }>
               <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
                 {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
               </SubMenu>
-            </OutsideAlerter>
+            </DetectOutsideClick>
           )}
         </Popper>
         )}

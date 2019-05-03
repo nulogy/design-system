@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
-import { OutsideAlerter } from "../Utils";
+import { DetectOutsideClick } from "../Utils";
 import { Icon } from "../Icon";
 import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
@@ -181,27 +181,27 @@ class MenuTrigger extends React.Component {
 
   render() {
     return (
-        <Manager>
-          <Reference>
-            {({ ref }) => (
-              <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
-                { this.props.name }
-                <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
-              </MenuTriggerButton>
-            )}
-          </Reference>
-          {this.state.subMenuOpen && (
+      <Manager>
+        <Reference>
+          {({ ref }) => (
+            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
+              { this.props.name }
+              <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
+            </MenuTriggerButton>
+          )}
+        </Reference>
+        {this.state.subMenuOpen && (
           <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
             {popperProps => (
-              <OutsideAlerter handleOutsideClick={ this.handleOutsideClick }>
+              <DetectOutsideClick onClick={ this.handleOutsideClick }>
                 <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
                   {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
                 </SubMenu>
-              </OutsideAlerter>
+              </DetectOutsideClick>
             )}
           </Popper>
-          )}
-        </Manager>
+        )}
+      </Manager>
     );
   }
 }

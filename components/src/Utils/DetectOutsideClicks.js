@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class OutsideAlerter extends React.Component {
+class DetectOutsideClick extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,23 +17,23 @@ class OutsideAlerter extends React.Component {
   }
 
   handleOutsideClick(e) {
-    const { handleOutsideClick } = this.props;
+    const { onClick } = this.props;
 
     if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
-      handleOutsideClick(e);
+      onClick(e);
     }
   }
 
   render() {
     const { children } = this.props;
 
-    return <div ref={ node => this.wrapperRef = node }>{ children }</div>;
+    return <div ref={ node => { this.wrapperRef = node; } }>{ children }</div>;
   }
 }
 
-OutsideAlerter.propTypes = {
-  handleOutsideClick: PropTypes.func.isRequired,
+DetectOutsideClick.propTypes = {
+  onClick: PropTypes.func.isRequired,
   children: PropTypes.element.isRequired,
 };
 
-export default OutsideAlerter;
+export default DetectOutsideClick;
