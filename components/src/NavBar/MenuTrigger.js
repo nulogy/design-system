@@ -120,7 +120,7 @@ class MenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -165,12 +165,12 @@ class MenuTrigger extends React.Component {
     clearTimeout(this.showTimeoutID);
   }
 
-  handleClickOutside() {
+  handleOutsideClick() {
     this.hideSubMenu(true);
   }
 
-  handleKeyDown(event) {
-    switch (event.keyCode) {
+  handleKeyDown(e) {
+    switch (e.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
@@ -181,7 +181,6 @@ class MenuTrigger extends React.Component {
 
   render() {
     return (
-      <OutsideAlerter handleClickOutside={ this.handleClickOutside }>
         <Manager>
           <Reference>
             {({ ref }) => (
@@ -194,14 +193,15 @@ class MenuTrigger extends React.Component {
           {this.state.subMenuOpen && (
           <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
             {popperProps => (
-              <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-                {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
-              </SubMenu>
+              <OutsideAlerter handleOutsideClick={ this.handleOutsideClick }>
+                <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+                  {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
+                </SubMenu>
+              </OutsideAlerter>
             )}
           </Popper>
           )}
         </Manager>
-      </OutsideAlerter>
     );
   }
 }

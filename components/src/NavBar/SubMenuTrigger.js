@@ -117,7 +117,7 @@ class SubMenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -162,12 +162,12 @@ class SubMenuTrigger extends React.Component {
     clearTimeout(this.showTimeoutID);
   }
 
-  handleClickOutside() {
+  handleOutsideClick() {
     this.hideSubMenu(true);
   }
 
-  handleKeyDown(event) {
-    switch (event.keyCode) {
+  handleKeyDown(e) {
+    switch (e.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
@@ -178,27 +178,27 @@ class SubMenuTrigger extends React.Component {
 
   render() {
     return (
-      <OutsideAlerter handleClickOutside={ this.handleClickOutside }>
-        <Manager>
-          <Reference>
-            {({ ref }) => (
-              <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
-                { this.props.name }
-                <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
-              </SubMenuTriggerButton>
-            )}
-          </Reference>
-          {this.state.subMenuOpen && (
-          <Popper placement="right-start">
-            {popperProps => (
+      <Manager>
+        <Reference>
+          {({ ref }) => (
+            <SubMenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.SubMenuTriggerEventHandlers() } ref={ ref }>
+              { this.props.name }
+              <Icon style={ { position: "absolute", top: "11px" } } icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+            </SubMenuTriggerButton>
+          )}
+        </Reference>
+        {this.state.subMenuOpen && (
+        <Popper placement="right-start">
+          {popperProps => (
+            <OutsideAlerter handleOutsideClick={ this.handleOutsideClick }>
               <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
                 {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
               </SubMenu>
-            )}
-          </Popper>
+            </OutsideAlerter>
           )}
-        </Manager>
-      </OutsideAlerter>
+        </Popper>
+        )}
+      </Manager>
     );
   }
 }

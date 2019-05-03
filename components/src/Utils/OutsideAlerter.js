@@ -5,39 +5,34 @@ class OutsideAlerter extends React.Component {
   constructor(props) {
     super(props);
 
-    this.setWrapperRef = this.setWrapperRef.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside);
+    document.addEventListener("click", this.handleOutsideClick);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickOutside);
+    document.removeEventListener("click", this.handleOutsideClick);
   }
 
-  setWrapperRef(node) {
-    this.wrapperRef = node;
-  }
+  handleOutsideClick(e) {
+    const { handleOutsideClick } = this.props;
 
-  handleClickOutside(event) {
-    const { handleClickOutside } = this.props;
-
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      handleClickOutside();
+    if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
+      handleOutsideClick(e);
     }
   }
 
   render() {
     const { children } = this.props;
 
-    return <div ref={ this.setWrapperRef }>{ children }</div>;
+    return <div ref={ node => this.wrapperRef = node }>{ children }</div>;
   }
 }
 
 OutsideAlerter.propTypes = {
-  handleClickOutside: PropTypes.func.isRequired,
+  handleOutsideClick: PropTypes.func.isRequired,
   children: PropTypes.element.isRequired,
 };
 
