@@ -1,17 +1,11 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily,
-} from "styled-system";
+import { color, space, fontSize, fontWeight, lineHeight, textAlign, fontFamily } from "styled-system";
 import theme from "../theme";
 
-const getAttrs = inline => (
-  inline
-    ? ({ as: "span" })
-    : null
-);
+const getAttrs = inline => (inline ? { as: "span" } : null);
 
-const Text = styled.p.attrs(props => (getAttrs(props.inline)))(
+const Text = styled.p.attrs(props => getAttrs(props.inline))(
   space,
   fontSize,
   fontWeight,
@@ -20,7 +14,7 @@ const Text = styled.p.attrs(props => (getAttrs(props.inline)))(
   fontFamily,
   textAlign,
   ({ disabled }) => ({
-    opacity: disabled ? "0.3333" : null,
+    opacity: disabled ? "0.3333" : null
   })
 );
 
@@ -33,7 +27,7 @@ Text.propTypes = {
   ...lineHeight.PropTypes,
   ...color.PropTypes,
   ...fontFamily.PropTypes,
-  ...textAlign.PropTypes,
+  ...textAlign.PropTypes
 };
 
 Text.defaultProps = {
@@ -42,7 +36,7 @@ Text.defaultProps = {
   m: 0,
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
-  color: "currentColor",
+  color: "currentColor"
 };
 
 export default Text;

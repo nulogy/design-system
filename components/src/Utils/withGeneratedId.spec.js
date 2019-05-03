@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 import withGeneratedId from "./withGeneratedId";
 
 it("sets the specified id", () => {
-  const SomeElement = props => (<div { ...props } />);
+  const SomeElement = props => <div {...props} />;
   const SomeElementWithId = withGeneratedId(SomeElement);
 
   const wrapper = mount(<SomeElementWithId id="myid" />);
@@ -12,7 +12,7 @@ it("sets the specified id", () => {
 });
 
 it("sets a generated id when id isn't specified", () => {
-  const SomeElement = props => (<div { ...props } />);
+  const SomeElement = props => <div {...props} />;
   const SomeElementWithId = withGeneratedId(SomeElement);
 
   const wrapper = mount(<SomeElementWithId />);
@@ -22,7 +22,7 @@ it("sets a generated id when id isn't specified", () => {
 });
 
 it("sets a different id for each component", () => {
-  const SomeElement = props => (<div { ...props } />);
+  const SomeElement = props => <div {...props} />;
   const SomeElementWithId = withGeneratedId(SomeElement);
 
   const wrapper = mount(
@@ -38,7 +38,7 @@ it("sets a different id for each component", () => {
 });
 
 it("sets a different id for each individually wrapped components", () => {
-  const SomeElement = props => (<div { ...props } />);
+  const SomeElement = props => <div {...props} />;
   const SomeElementWithId1 = withGeneratedId(SomeElement);
   const SomeElementWithId2 = withGeneratedId(SomeElement);
 

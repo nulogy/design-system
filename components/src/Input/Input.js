@@ -13,21 +13,25 @@ const inputStyles = {
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey,
+    backgroundColor: theme.colors.whiteGrey
   },
   error: {
     color: theme.colors.red,
-    borderColor: theme.colors.red,
+    borderColor: theme.colors.red
   },
   default: {
     color: theme.colors.black,
-    borderColor: theme.colors.grey,
-  },
+    borderColor: theme.colors.grey
+  }
 };
 
 const getInputStyle = props => {
-  if (props.disabled) { return inputStyles.disabled; }
-  if (props.error) { return inputStyles.error; }
+  if (props.disabled) {
+    return inputStyles.disabled;
+  }
+  if (props.error) {
+    return inputStyles.error;
+  }
   return inputStyles.default;
 };
 
@@ -47,29 +51,22 @@ const StyledInput = styled.input(
       outline: "none",
       color: theme.colors.black,
       borderColor: theme.colors.blue,
-      boxShadow: `0 0 3px ${theme.colors.blue}`,
+      boxShadow: `0 0 3px ${theme.colors.blue}`
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black),
-    },
+      color: transparentize(0.4, theme.colors.black)
+    }
   },
   space,
-  props => (getInputStyle(props))
+  props => getInputStyle(props)
 );
 
-const Input = ({
-  error,
-  required,
-  labelText,
-  requirementText,
-  helpText,
-  ...props
-}) => (
+const Input = ({ error, required, labelText, requirementText, helpText, ...props }) => (
   <Field>
-    <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-      <StyledInput aria-invalid={ !!error } aria-required={ required } error={ error } { ...props } />
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <StyledInput aria-invalid={!!error} aria-required={required} error={error} {...props} />
     </MaybeFieldLabel>
-    {error && <InlineValidation mt="x1" message={ error } />}
+    {error && <InlineValidation mt="x1" message={error} />}
   </Field>
 );
 
@@ -80,7 +77,7 @@ Input.propTypes = {
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
-  ...space.PropTypes,
+  ...space.PropTypes
 };
 
 Input.defaultProps = {
@@ -89,7 +86,7 @@ Input.defaultProps = {
   required: false,
   labelText: null,
   helpText: null,
-  requirementText: null,
+  requirementText: null
 };
 
 export default Input;

@@ -4,9 +4,9 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import defaultTheme from "../theme";
 
 const Reset = createGlobalStyle({
-  "body": {
-    margin: 0,
-  },
+  body: {
+    margin: 0
+  }
 });
 
 const GlobalStyles = styled.div(({ theme }) => ({
@@ -15,36 +15,34 @@ const GlobalStyles = styled.div(({ theme }) => ({
   lineHeight: theme.lineHeights.base,
   "-webkit-font-smoothing": "antialiased",
   "-moz-osx-font-smoothing": "grayscale",
-  "button": {
-    fontFamily: theme.fonts.base,
+  button: {
+    fontFamily: theme.fonts.base
   },
   "*": {
-    boxSizing: "border-box",
+    boxSizing: "border-box"
   },
-  "img": {
+  img: {
     maxWidth: "100%",
-    height: "auto",
-  },
+    height: "auto"
+  }
 }));
 
 const NDSProvider = ({ theme, children }) => (
   <React.Fragment>
     <Reset />
-    <GlobalStyles theme={ theme }>
-      <ThemeProvider theme={ theme }>
-        { children }
-      </ThemeProvider>
+    <GlobalStyles theme={theme}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </GlobalStyles>
   </React.Fragment>
 );
 
 NDSProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.shape({}),
+  theme: PropTypes.shape({})
 };
 
 NDSProvider.defaultProps = {
-  theme: defaultTheme,
+  theme: defaultTheme
 };
 
 export default NDSProvider;

@@ -7,20 +7,12 @@ import Fieldset from "./Fieldset";
 import theme from "../theme";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
-  as: "legend",
+  as: "legend"
 })({});
 
-const BaseFormSection = ({
-  title,
-  children,
-  ...props
-}) => (
-  <fieldset { ...props }>
-    { (title != null)
-        && (
-          <FormSectionTitle>{ title }</FormSectionTitle>
-        )
-      }
+const BaseFormSection = ({ title, children, ...props }) => (
+  <fieldset {...props}>
+    {title != null && <FormSectionTitle>{title}</FormSectionTitle>}
     {children}
   </fieldset>
 );
@@ -31,24 +23,24 @@ const FormSection = styled(BaseFormSection)(({ title }) => ({
   border: "none",
   [`${FormSectionTitle}`]: {
     padding: 0,
-    marginBottom: title ? theme.space.x3 : 0,
+    marginBottom: title ? theme.space.x3 : 0
   },
   [`${Field},${Fieldset}`]: {
     marginBottom: theme.space.x3,
     "&:last-child": {
-      marginBottom: 0,
-    },
-  },
+      marginBottom: 0
+    }
+  }
 }));
 
 BaseFormSection.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 BaseFormSection.defaultProps = {
   children: [],
-  title: null,
+  title: null
 };
 
 export default FormSection;

@@ -8,19 +8,15 @@ import theme from "../theme";
 
 const Wrapper = styled.div({
   [`${Text}`]: {
-    marginBottom: theme.space.x1,
+    marginBottom: theme.space.x1
   },
   "> *:last-child": {
-    marginBottom: 0,
-  },
+    marginBottom: 0
+  }
 });
 
-const InlineValidation = ({
-  message,
-  children,
-  ...boxProps
-}) => (
-  <Flex color={ theme.colors.red } { ...boxProps }>
+const InlineValidation = ({ message, children, ...boxProps }) => (
+  <Flex color={theme.colors.red} {...boxProps}>
     <Icon icon="error" mr="x1" />
     <Wrapper>
       <Text>{message}</Text>
@@ -31,14 +27,11 @@ const InlineValidation = ({
 
 InlineValidation.propTypes = {
   message: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 InlineValidation.defaultProps = {
-  children: null,
+  children: null
 };
 
 export default InlineValidation;

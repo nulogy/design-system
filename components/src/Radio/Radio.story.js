@@ -32,7 +32,7 @@ storiesOf("Radio", module)
   ))
   .add("Controlled", () => (
     <>
-      <Radio id="radio-1" checked onChange={ () => {} } labelText="I am controlled and checked" />
-      <Radio id="radio-2" checked={ false } onChange={ () => {} } labelText="I am controlled and unchecked" />
+      <Radio id="radio-1" checked onChange={() => {}} labelText="I am controlled and checked" />
+      <Radio id="radio-2" checked={false} onChange={() => {}} labelText="I am controlled and unchecked" />
     </>
   ));

@@ -13,21 +13,15 @@ const nextId = () => {
 const WithGeneratedId = ({ children }) => {
   const generatedId = nextId();
 
-  return (
-    <>
-      {children(generatedId)}
-    </>
-  );
+  return <>{children(generatedId)}</>;
 };
 
 WithGeneratedId.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.func.isRequired
 };
 
 const withGeneratedId = ComponentToRender => props => (
-  <WithGeneratedId>
-    { generatedId => <ComponentToRender id={ generatedId } { ...props } /> }
-  </WithGeneratedId>
+  <WithGeneratedId>{generatedId => <ComponentToRender id={generatedId} {...props} />}</WithGeneratedId>
 );
 
 export default withGeneratedId;

@@ -5,7 +5,7 @@ import { Box } from "../Box";
 const Card = styled(Box)({});
 
 Card.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 Card.defaultProps = {
@@ -14,7 +14,7 @@ Card.defaultProps = {
   boxShadow: "small",
   bg: "whiteGrey",
   p: "x2",
-  position: "relative",
+  position: "relative"
 };
 
 export default Card;

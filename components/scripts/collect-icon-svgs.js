@@ -7,16 +7,18 @@ const svgPath = "icons";
 const parseSvg = svg => {
   const { nodes } = new SVG(svg).report();
   const path = getPath(nodes);
-  const { properties: { viewBox } } = nodes;
+  const {
+    properties: { viewBox }
+  } = nodes;
 
   return {
     viewBox,
-    path,
+    path
   };
 
   function getPath({ children }) {
     return children
-      .filter(child => (child.type === "path" && child.properties.fill !== "none"))
+      .filter(child => child.type === "path" && child.properties.fill !== "none")
       .map(child => child.properties.d);
   }
 };
@@ -29,7 +31,7 @@ const icons = fs
     const svg = fs.readFileSync(`${svgPath}/${file}`);
     return {
       name,
-      svg,
+      svg
     };
   });
 

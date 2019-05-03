@@ -6,33 +6,30 @@ import Card from "./Card";
 import { IconicButton } from "../Button";
 import theme from "../theme";
 
-const CPCard = styled(props => <Card { ...props } />)(
-  space,
-  {
-    "&:hover": {
-      backgroundColor: theme.colors.lightBlue,
-      cursor: "grab",
-    },
-    "&:active": {
-      backgroundColor: theme.colors.whiteGrey,
-      opacity: 0.6667,
-      cursor: "grabbing",
-    },
-    [`${IconicButton}`]: {
-      position: "absolute",
-      right: theme.space.none,
-      top: theme.space.x1,
-    },
+const CPCard = styled(props => <Card {...props} />)(space, {
+  "&:hover": {
+    backgroundColor: theme.colors.lightBlue,
+    cursor: "grab"
   },
-);
+  "&:active": {
+    backgroundColor: theme.colors.whiteGrey,
+    opacity: 0.6667,
+    cursor: "grabbing"
+  },
+  [`${IconicButton}`]: {
+    position: "absolute",
+    right: theme.space.none,
+    top: theme.space.x1
+  }
+});
 
 CPCard.propTypes = {
   children: PropTypes.node,
-  ...space.PropTypes,
+  ...space.PropTypes
 };
 
 CPCard.defaultProps = {
-  children: [],
+  children: []
 };
 
 export default CPCard;

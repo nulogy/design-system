@@ -14,21 +14,21 @@ const MenuLink = styled(Link)({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: theme.colors.black,
+    backgroundColor: theme.colors.black
   },
   "&:disabled": {
-    opacity: ".5",
-  },
+    opacity: ".5"
+  }
 });
 
 MenuLink.propTypes = {
   color: PropTypes.string,
-  underline: PropTypes.bool,
+  underline: PropTypes.bool
 };
 
 MenuLink.defaultProps = {
   color: theme.colors.white,
-  underline: false,
+  underline: false
 };
 
 export default MenuLink;

@@ -10,8 +10,8 @@ const DangerButton = styled(Button)(({ disabled }) => ({
   "&:hover, &:focus": {
     outline: "none",
     backgroundColor: disabled ? null : darken(0.1, theme.colors.red),
-    borderColor: disabled ? null : darken(0.1, theme.colors.red),
-  },
+    borderColor: disabled ? null : darken(0.1, theme.colors.red)
+  }
 }));
 
 export default DangerButton;

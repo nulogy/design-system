@@ -10,36 +10,40 @@ const radioStyle = {
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.lightGrey,
+      backgroundColor: theme.colors.lightGrey
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.red,
+      backgroundColor: theme.colors.red
     },
     default: {
       borderColor: theme.colors.darkBlue,
-      backgroundColor: theme.colors.darkBlue,
-    },
+      backgroundColor: theme.colors.darkBlue
+    }
   },
   unchecked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.whiteGrey,
+      backgroundColor: theme.colors.whiteGrey
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.white,
+      backgroundColor: theme.colors.white
     },
     default: {
       borderColor: theme.colors.grey,
-      backgroundColor: theme.colors.white,
-    },
-  },
+      backgroundColor: theme.colors.white
+    }
+  }
 };
 
 const getRadioStyle = (props, checked) => {
-  if (props.disabled) { return radioStyle[checked].disabled; }
-  if (props.error) { return radioStyle[checked].error; }
+  if (props.disabled) {
+    return radioStyle[checked].disabled;
+  }
+  if (props.error) {
+    return radioStyle[checked].error;
+  }
   return radioStyle[checked].default;
 };
 
@@ -62,8 +66,8 @@ const VisualRadio = styled.div(({ disabled }) => ({
     height: "2px",
     background: theme.colors.white,
     border: `2px solid ${theme.colors.white}`,
-    borderRadius: theme.radii.circle,
-  },
+    borderRadius: theme.radii.circle
+  }
 }));
 
 const RadioInput = styled.input(props => ({
@@ -72,38 +76,37 @@ const RadioInput = styled.input(props => ({
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualRadio}`]: {
-    boxShadow: `0 0 6px ${theme.colors.blue}`,
+    boxShadow: `0 0 6px ${theme.colors.blue}`
   },
   [`&:checked + ${VisualRadio}`]: {
     ...getRadioStyle(props, "checked"),
     "&:before": {
-      display: "block",
-    },
+      display: "block"
+    }
   },
   [`&:not(:checked) + ${VisualRadio}`]: {
-    ...getRadioStyle(props, "unchecked"),
-  },
+    ...getRadioStyle(props, "unchecked")
+  }
 }));
 
 const BaseRadio = props => {
-  const {
-    className,
-    labelText,
-    disabled,
-    checked,
-    required,
-    error,
-  } = props;
+  const { className, labelText, disabled, checked, required, error } = props;
   return (
-    <Box className={ className }>
-      <ClickInputLabel disabled={ disabled }>
+    <Box className={className}>
+      <ClickInputLabel disabled={disabled}>
         <RadioInput
-          type="radio" aria-checked={ checked } { ...props }
-          required={ required } aria-required={ required }
-          aria-invalid={ error }
+          type="radio"
+          aria-checked={checked}
+          {...props}
+          required={required}
+          aria-required={required}
+          aria-invalid={error}
         />
-        <VisualRadio disabled={ disabled } checked={ checked } />
-        <Text inline disabled={ disabled }> {labelText} </Text>
+        <VisualRadio disabled={disabled} checked={checked} />
+        <Text inline disabled={disabled}>
+          {" "}
+          {labelText}{" "}
+        </Text>
       </ClickInputLabel>
     </Box>
   );
@@ -117,7 +120,7 @@ BaseRadio.propTypes = {
   error: PropTypes.bool,
   id: PropTypes.string,
   className: PropTypes.string,
-  required: PropTypes.bool,
+  required: PropTypes.bool
 };
 
 BaseRadio.defaultProps = {
@@ -127,12 +130,12 @@ BaseRadio.defaultProps = {
   error: false,
   id: null,
   className: null,
-  required: false,
+  required: false
 };
 
 const Radio = styled(BaseRadio)(({ error }) => ({
   padding: `${theme.space.half} 0`,
-  color: error ? theme.colors.red : null,
+  color: error ? theme.colors.red : null
 }));
 
 export default Radio;

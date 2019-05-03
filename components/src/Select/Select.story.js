@@ -11,7 +11,7 @@ const options = [
   { value: "rejected", label: "Rejected" },
   { value: "open", label: "Open" },
   { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" },
+  { value: "quarantine", label: "In quarantine" }
 ];
 
 const optionToString = option => option && option.label;
@@ -32,8 +32,11 @@ class SelectWithState extends React.Component {
     const { selectedOption } = this.state;
     return (
       <Select
-        onChange={ this.handleChange } value={ selectedOption } options={ options }
-        optionToString={ optionToString } { ...this.props }
+        onChange={this.handleChange}
+        value={selectedOption}
+        options={options}
+        optionToString={optionToString}
+        {...this.props}
       />
     );
   }
@@ -41,33 +44,47 @@ class SelectWithState extends React.Component {
 
 storiesOf("Select", module)
   .add("Select", () => (
-    <Select placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
+    <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
   .add("Select with an option selected", () => (
     <>
       <Select
-        value={ options[0].value } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
-        optionToString={ optionToString }
+        value={options[0].value}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        optionToString={optionToString}
       />
       <br />
       <Select
-        value={ options[0].value } placeholder="Please select inventory status" options={ options } labelText="Inventory status"
-        optionToString={ optionToString } initialIsOpen
+        value={options[0].value}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        optionToString={optionToString}
+        initialIsOpen
       />
     </>
   ))
   .add("Select as a controlled component", () => (
-    <SelectWithState placeholder="Please select inventory status" options={ options } labelText="Inventory status" />
+    <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
   .add("Set to disabled", () => (
-    <Select placeholder="Please select inventory status" options={ options } disabled labelText="Inventory status" />
+    <Select placeholder="Please select inventory status" options={options} disabled labelText="Inventory status" />
   ))
   .add("Set to error", () => (
     <>
-      <Select placeholder="Please select inventory status" options={ options } error="Please select an inventory status" labelText="Inventory status" />
+      <Select
+        placeholder="Please select inventory status"
+        options={options}
+        error="Please select an inventory status"
+        labelText="Inventory status"
+      />
       <br />
       <Select
-        placeholder="Please select inventory status" options={ options } error="Please select an inventory status"
+        placeholder="Please select inventory status"
+        options={options}
+        error="Please select an inventory status"
         initialIsOpen
       />
     </>
@@ -76,17 +93,32 @@ storiesOf("Select", module)
     <form>
       <Input placeholder="Please select inventory status" />
       <Select
-        placeholder="Please select inventory status" options={ options } required
+        placeholder="Please select inventory status"
+        options={options}
+        required
         requirementText="(Required)"
-        style={ { marginTop: "5px" } } labelText="Inventory status"
-
+        style={{ marginTop: "5px" }}
+        labelText="Inventory status"
       />
-      <PrimaryButton mt="x1" type="submit">Submit</PrimaryButton>
+      <PrimaryButton mt="x1" type="submit">
+        Submit
+      </PrimaryButton>
     </form>
   ))
   .add("With helpText", () => (
-    <Select placeholder="Please select inventory status" options={ options } labelText="Inventory status" helpText="Additional information about input" />
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+      helpText="Additional information about input"
+    />
   ))
   .add("With custom id", () => (
-    <Select id="my-custom-id" placeholder="Please select inventory status" options={ options } labelText="Inventory status" helpText="Additional information about input" />
+    <Select
+      id="my-custom-id"
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+      helpText="Additional information about input"
+    />
   ));

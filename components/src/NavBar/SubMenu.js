@@ -6,7 +6,7 @@ import theme from "../theme";
 const subMenuStyles = {
   backgroundColor: theme.colors.whiteGrey,
   borderColor: theme.colors.whiteGrey,
-  nameColor: theme.colors.black,
+  nameColor: theme.colors.black
 };
 
 const Arrow = styled.div({
@@ -28,7 +28,7 @@ const Arrow = styled.div({
     position: "absolute",
     width: 0,
     top: "-2px",
-    left: `-${theme.space.half}`,
+    left: `-${theme.space.half}`
   },
   "&:after": {
     borderStyle: "solid",
@@ -40,24 +40,13 @@ const Arrow = styled.div({
     margin: "auto",
     position: "absolute",
     width: 0,
-    left: `-${theme.space.half}`,
-  },
+    left: `-${theme.space.half}`
+  }
 });
 
-
-const BaseSubMenu = ({
-  popperProps: {
-    ref,
-    style,
-    placement,
-    arrowProps,
-  },
-  renderArrow,
-  children,
-  ...props
-}) => (
-  <ul ref={ ref } style={ style } placement={ placement } { ...props }>
-    {renderArrow && <Arrow { ...arrowProps } /> }
+const BaseSubMenu = ({ popperProps: { ref, style, placement, arrowProps }, renderArrow, children, ...props }) => (
+  <ul ref={ref} style={style} placement={placement} {...props}>
+    {renderArrow && <Arrow {...arrowProps} />}
     {children}
   </ul>
 );
@@ -65,13 +54,13 @@ const BaseSubMenu = ({
 BaseSubMenu.propTypes = {
   children: PropTypes.node,
   renderArrow: PropTypes.bool,
-  popperProps: PropTypes.shape({}),
+  popperProps: PropTypes.shape({})
 };
 
 BaseSubMenu.defaultProps = {
   children: null,
   renderArrow: true,
-  popperProps: null,
+  popperProps: null
 };
 
 const SubMenu = styled(BaseSubMenu)(
@@ -87,19 +76,19 @@ const SubMenu = styled(BaseSubMenu)(
     padding: "7px 0",
     transition: "opacity 0.3s",
     zIndex: "100",
-    marginTop: renderArrow ? theme.space.half : "-8px",
+    marginTop: renderArrow ? theme.space.half : "-8px"
   }),
   ({ style }) => ({
-    ...style,
-  }),
+    ...style
+  })
 );
 
 SubMenu.propTypes = {
-  renderArrow: PropTypes.bool,
+  renderArrow: PropTypes.bool
 };
 
 SubMenu.defaultProps = {
-  renderArrow: true,
+  renderArrow: true
 };
 
 export default SubMenu;

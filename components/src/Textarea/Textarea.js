@@ -13,21 +13,25 @@ const textareaStyles = {
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey,
+    backgroundColor: theme.colors.whiteGrey
   },
   error: {
     color: theme.colors.red,
-    borderColor: theme.colors.red,
+    borderColor: theme.colors.red
   },
   default: {
     color: theme.colors.black,
-    borderColor: theme.colors.grey,
-  },
+    borderColor: theme.colors.grey
+  }
 };
 
 const getTextareaStyle = props => {
-  if (props.disabled) { return textareaStyles.disabled; }
-  if (props.error) { return textareaStyles.error; }
+  if (props.disabled) {
+    return textareaStyles.disabled;
+  }
+  if (props.error) {
+    return textareaStyles.error;
+  }
   return textareaStyles.default;
 };
 
@@ -48,29 +52,21 @@ const StyledTextarea = styled.textarea(
       outline: "none",
       color: theme.colors.black,
       borderColor: theme.colors.blue,
-      boxShadow: `0 0 3px ${theme.colors.blue}`,
+      boxShadow: `0 0 3px ${theme.colors.blue}`
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black),
-    },
+      color: transparentize(0.4, theme.colors.black)
+    }
   },
   props => getTextareaStyle(props)
 );
 
-const Textarea = ({
-  error,
-  required,
-  labelText,
-  requirementText,
-  helpText,
-  id,
-  ...props
-}) => (
+const Textarea = ({ error, required, labelText, requirementText, helpText, id, ...props }) => (
   <Field>
-    <MaybeFieldLabel labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-      <StyledTextarea aria-invalid={ !!error } aria-required={ required } id={ id } error={ error } { ...props } />
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <StyledTextarea aria-invalid={!!error} aria-required={required} id={id} error={error} {...props} />
     </MaybeFieldLabel>
-    {error && <InlineValidation mt="x1" message={ error } />}
+    {error && <InlineValidation mt="x1" message={error} />}
   </Field>
 );
 
@@ -83,7 +79,7 @@ Textarea.propTypes = {
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
   rows: PropTypes.number,
-  ...space.PropTypes,
+  ...space.PropTypes
 };
 
 Textarea.defaultProps = {
@@ -94,7 +90,7 @@ Textarea.defaultProps = {
   labelText: null,
   helpText: null,
   requirementText: null,
-  rows: 3,
+  rows: 3
 };
 
 export default Textarea;
