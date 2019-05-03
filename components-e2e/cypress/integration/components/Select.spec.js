@@ -7,12 +7,12 @@ describe("Select", () => {
     const options = [
       { value: "v1", label: "V One" },
       { value: "v2", label: "V Two" },
-      { value: "v3", label: "V Three" },
+      { value: "v3", label: "V Three" }
     ];
 
     cy.mount(
       <NDSProvider>
-        <Select options={ options } />
+        <Select options={options} />
       </NDSProvider>
     );
 

@@ -18,7 +18,8 @@ context("Files", () => {
     // the button is clicked in scripts.js
     cy.get(".fixture-btn").click();
 
-    cy.wait("@getComment").its("responseBody")
+    cy.wait("@getComment")
+      .its("responseBody")
       .should("have.property", "name")
       .and("include", "Using fixtures to represent data");
 
@@ -29,7 +30,8 @@ context("Files", () => {
     // the button is clicked in scripts.js
     cy.get(".fixture-btn").click();
 
-    cy.wait("@getComment").its("responseBody")
+    cy.wait("@getComment")
+      .its("responseBody")
       .should("have.property", "name")
       .and("include", "Using fixtures to represent data");
 
@@ -41,7 +43,8 @@ context("Files", () => {
     // the button is clicked in scripts.js
     cy.get(".fixture-btn").click();
 
-    cy.wait("@getComment").its("responseBody")
+    cy.wait("@getComment")
+      .its("responseBody")
       .should("have.property", "name")
       .and("include", "Using fixtures to represent data");
   });
@@ -63,10 +66,9 @@ context("Files", () => {
 
     // Use a response from a request to automatically
     // generate a fixture file for use later
-    cy.request("https://jsonplaceholder.cypress.io/users")
-      .then(response => {
-        cy.writeFile("cypress/fixtures/users.json", response.body);
-      });
+    cy.request("https://jsonplaceholder.cypress.io/users").then(response => {
+      cy.writeFile("cypress/fixtures/users.json", response.body);
+    });
     cy.fixture("users").should(users => {
       expect(users[0].name).to.exist;
     });
@@ -76,7 +78,7 @@ context("Files", () => {
     cy.writeFile("cypress/fixtures/profile.json", {
       id: 8739,
       name: "Jane",
-      email: "jane@example.com",
+      email: "jane@example.com"
     });
 
     cy.fixture("profile").should(profile => {

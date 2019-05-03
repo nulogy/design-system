@@ -19,22 +19,22 @@ context("Querying", () => {
     //              ↲
     // Use CSS selectors just like jQuery
 
-    cy.get("[data-test-id=\"test-example\"]").should("have.class", "example");
+    cy.get('[data-test-id="test-example"]').should("have.class", "example");
 
     // 'cy.get()' yields jQuery object, you can get its attribute
     // by invoking `.attr()` method
-    cy.get("[data-test-id=\"test-example\"]")
+    cy.get('[data-test-id="test-example"]')
       .invoke("attr", "data-test-id")
       .should("equal", "test-example");
 
     // or you can get element's CSS property
-    cy.get("[data-test-id=\"test-example\"]")
+    cy.get('[data-test-id="test-example"]')
       .invoke("css", "position")
       .should("equal", "static");
 
     // or use assertions directly during 'cy.get()'
     // https://on.cypress.io/assertions
-    cy.get("[data-test-id=\"test-example\"]")
+    cy.get('[data-test-id="test-example"]')
       .should("have.attr", "data-test-id", "test-example")
       .and("have.css", "position", "static");
   });
