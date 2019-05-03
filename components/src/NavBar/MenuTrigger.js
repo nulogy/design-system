@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
+import { DetectOutsideClick } from "../Utils";
 import { Icon } from "../Icon";
 import SubMenu from "./SubMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
@@ -115,9 +116,11 @@ class MenuTrigger extends React.Component {
     this.state = {
       subMenuOpen: false,
     };
+    this.buttonRef = React.createRef();
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -143,16 +146,16 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
-      onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
+      onFocus: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   menuTriggerEventHandlers() {
     return ({
-      onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
+      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -162,8 +165,12 @@ class MenuTrigger extends React.Component {
     clearTimeout(this.showTimeoutID);
   }
 
-  handleKeyDown(event) {
-    switch (event.keyCode) {
+  handleOutsideClick() {
+    this.hideSubMenu(true);
+  }
+
+  handleKeyDown(e) {
+    switch (e.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
@@ -184,13 +191,15 @@ class MenuTrigger extends React.Component {
           )}
         </Reference>
         {this.state.subMenuOpen && (
-        <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
-          {popperProps => (
-            <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
-            </SubMenu>
-          )}
-        </Popper>
+          <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
+            {popperProps => (
+              <DetectOutsideClick onClick={ this.handleOutsideClick }>
+                <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+                  {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
+                </SubMenu>
+              </DetectOutsideClick>
+            )}
+          </Popper>
         )}
       </Manager>
     );

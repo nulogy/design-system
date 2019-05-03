@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import theme from "../theme";
+import { DetectOutsideClick } from "../Utils";
 import { Icon } from "../Icon";
 import SubMenu from "./SubMenu";
 import SubMenuLink from "./SubMenuLink";
@@ -116,6 +117,7 @@ class SubMenuTrigger extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -141,16 +143,16 @@ class SubMenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return ({
-      onFocus: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
+      onFocus: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
 
   SubMenuTriggerEventHandlers() {
     return ({
-      onClick: () => (this.showSubMenu()),
       onBlur: () => (this.hideSubMenu()),
+      onClick: () => (this.showSubMenu()),
       onKeyDown: e => (this.handleKeyDown(e)),
     });
   }
@@ -160,8 +162,12 @@ class SubMenuTrigger extends React.Component {
     clearTimeout(this.showTimeoutID);
   }
 
-  handleKeyDown(event) {
-    switch (event.keyCode) {
+  handleOutsideClick() {
+    this.hideSubMenu(true);
+  }
+
+  handleKeyDown(e) {
+    switch (e.keyCode) {
       case keyCode.ESC:
         this.hideSubMenu(true);
         break;
@@ -184,9 +190,11 @@ class SubMenuTrigger extends React.Component {
         {this.state.subMenuOpen && (
         <Popper placement="right-start">
           {popperProps => (
-            <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-              {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
-            </SubMenu>
+            <DetectOutsideClick onClick={ this.handleOutsideClick }>
+              <SubMenu renderArrow={ false } popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
+              </SubMenu>
+            </DetectOutsideClick>
           )}
         </Popper>
         )}
