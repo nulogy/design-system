@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId } from "../Utils";
+import { withGeneratedId, DetectOutsideClick } from "../Utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -197,6 +197,7 @@ const Arrow = styled.div(
   })
 );
 
+
 /* eslint-disable react/destructuring-assignment */
 class Tooltip extends React.Component {
   constructor(props) {
@@ -207,6 +208,12 @@ class Tooltip extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
     this.showTooltip = this.showTooltip.bind(this);
+
+    this.setTriggerRef = this.setTriggerRef.bind(this);
+  }
+
+  setTriggerRef(node) {
+    this.triggerRef = node;
   }
 
   tooltipEventHandlers() {
@@ -254,16 +261,20 @@ class Tooltip extends React.Component {
     }
   }
 
+  handleClickOutside(e) {
+    if (!this.triggerRef.contains(e.target) && this.state.open === true) {this.hideTooltip(true)}
+  }
+
   render() {
     return (
       <Manager>
         <Reference>
           {({ ref }) => (
             <div
-              style={{ display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` }}
-              ref={ref}
-              {...this.triggerEventHandlers()}
-              aria-describedby={this.props.id}
+              style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }
+              ref={(node) => {ref(node); this.setTriggerRef(node)}} 
+              { ...this.triggerEventHandlers() }
+              aria-describedby={ this.props.id }
             >
               {React.cloneElement(this.props.children, {
                 "aria-describedby": this.props.id
@@ -271,21 +282,22 @@ class Tooltip extends React.Component {
             </div>
           )}
         </Reference>
-        <Popper placement={this.props.placement}>
-          {({ ref, style, placement, arrowProps }) => (
-            <TooltipContainer
-              maxWidth={this.props.maxWidth}
-              open={this.state.open}
-              role="tooltip"
-              id={this.props.id}
-              ref={ref}
-              position={style}
-              dataPlacement={placement}
-              {...this.tooltipEventHandlers()}
-            >
-              {this.props.tooltip}
-              <Arrow dataPlacement={placement} ref={arrowProps.ref} style={arrowProps.style} />
-            </TooltipContainer>
+        <Popper placement={ this.props.placement }>
+          {({
+            ref, style, placement, arrowProps,
+          }) => (
+            <DetectOutsideClick onClick={(e)=>{this.handleClickOutside(e)}}>
+              <TooltipContainer
+                maxWidth={ this.props.maxWidth }
+                open={ this.state.open }
+                role="tooltip" id={ this.props.id }
+                ref={ ref } position={ style } dataPlacement={ placement }
+                { ...this.tooltipEventHandlers() }
+              >
+                {this.props.tooltip}
+                <Arrow dataPlacement={ placement } ref={ arrowProps.ref } style={ arrowProps.style } />
+              </TooltipContainer>
+            </DetectOutsideClick>
           )}
         </Popper>
       </Manager>
