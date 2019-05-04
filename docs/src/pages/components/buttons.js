@@ -1,29 +1,59 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Button, DangerButton, PrimaryButton, QuietButton, Box, Flex, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Button,
+  DangerButton,
+  PrimaryButton,
+  QuietButton,
+  Box,
+  Flex,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  ListItem
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
+  DocText as Text,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "size", type: "String", defaultValue: "medium", description: "Accepts small, medium, or large",
+    name: "size",
+    type: "String",
+    defaultValue: "medium",
+    description: "Accepts small, medium, or large"
   },
   {
-    name: "disabled", type: "Boolean", defaultValue: "false", description: "Marks the button as disabled and unable to be activated",
+    name: "disabled",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Marks the button as disabled and unable to be activated"
   },
   {
-    name: "icon", type: "String", defaultValue: "null", description: "The icon to display. See Icons for all possible options.",
+    name: "icon",
+    type: "String",
+    defaultValue: "null",
+    description: "The icon to display. See Icons for all possible options."
   },
   {
-    name: "iconSide", type: "String", defaultValue: "right", description: "The side to display the icon",
+    name: "iconSide",
+    type: "String",
+    defaultValue: "right",
+    description: "The side to display the icon"
   },
   {
-    name: "fullWidth", type: "Boolean", defaultValue: "false", description: "Makes the button fill the width of its container",
-  },
+    name: "fullWidth",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Makes the button fill the width of its container"
+  }
 ];
 
 export default () => (
@@ -33,7 +63,9 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Buttons</Title>
-      <IntroText>Buttons make common actions immediately detectable and easy to perform.</IntroText>
+      <IntroText>
+        Buttons make common actions immediately detectable and easy to perform.
+      </IntroText>
     </Intro>
     <DocSection>
       <Button>Create project</Button>
@@ -46,11 +78,17 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Types of buttons</SectionTitle>
-      <Text>There are multiple types of buttons that all accept the same options.</Text>
+      <Text>
+        There are multiple types of buttons that all accept the same options.
+      </Text>
 
       <Box mb="x6">
         <SubsectionTitle>PrimaryButton</SubsectionTitle>
-        <Text>Primary Buttons are used for the main action in a particular context. There is usually not more than one primary button per screen and not all of the screens require a Primary button.</Text>
+        <Text>
+          Primary Buttons are used for the main action in a particular context.
+          There is usually not more than one primary button per screen and not
+          all of the screens require a Primary button.
+        </Text>
         <PrimaryButton>Create project</PrimaryButton>
         <Highlight className="js">
           {`import { PrimaryButton } from @nulogy/components;
@@ -61,7 +99,10 @@ export default () => (
 
       <Box mb="x6">
         <SubsectionTitle>DangerButton</SubsectionTitle>
-        <Text>Danger Buttons are used for destructive actions such as deleting. They are most likely to appear in confirmation dialogs.</Text>
+        <Text>
+          Danger Buttons are used for destructive actions such as deleting. They
+          are most likely to appear in confirmation dialogs.
+        </Text>
         <DangerButton>Create project</DangerButton>
         <Highlight className="js">
           {`import { DangerButton } from @nulogy/components;
@@ -72,7 +113,11 @@ export default () => (
 
       <Box mb="x6">
         <SubsectionTitle>QuietButton</SubsectionTitle>
-        <Text>Quiet Buttons are used for less important actions such as “Cancel” or actions that are not directly related to the context of the page (e.g Learn more …). Quiet buttons are often paired with a Primary button.</Text>
+        <Text>
+          Quiet Buttons are used for less important actions such as “Cancel” or
+          actions that are not directly related to the context of the page (e.g
+          Learn more …). Quiet buttons are often paired with a Primary button.
+        </Text>
         <QuietButton>Learn more</QuietButton>
         <Highlight className="js">
           {`import { QuietButton } from @nulogy/components;
@@ -84,12 +129,14 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Text>The following variations are available to all button components.</Text>
+      <Text>
+        The following variations are available to all button components.
+      </Text>
       <Box mb="x6">
         <SubsectionTitle>Small</SubsectionTitle>
         <Button size="small">Read more</Button>
         <Highlight className="js">
-          {"<Button size=\"small\">Read more</Button>"}
+          {'<Button size="small">Read more</Button>'}
         </Highlight>
       </Box>
 
@@ -97,7 +144,7 @@ export default () => (
         <SubsectionTitle>Medium</SubsectionTitle>
         <Button size="medium">Read more</Button>
         <Highlight className="js">
-          {"<Button size=\"medium\">Read more</Button>"}
+          {'<Button size="medium">Read more</Button>'}
         </Highlight>
       </Box>
 
@@ -105,7 +152,7 @@ export default () => (
         <SubsectionTitle>Large</SubsectionTitle>
         <Button size="large">Read more</Button>
         <Highlight className="js">
-          {"<Button size=\"large\">Read more</Button>"}
+          {'<Button size="large">Read more</Button>'}
         </Highlight>
       </Box>
 
@@ -119,9 +166,11 @@ export default () => (
 
       <Box mb="x6">
         <SubsectionTitle>With an icon</SubsectionTitle>
-        <Button icon="add" iconSide="left">Create project</Button>
+        <Button icon="add" iconSide="left">
+          Create project
+        </Button>
         <Highlight className="js">
-          {"<Button icon=\"add\" iconSide=\"left\">Create project</Button>"}
+          {'<Button icon="add" iconSide="left">Create project</Button>'}
         </Highlight>
       </Box>
 
@@ -137,29 +186,38 @@ export default () => (
           {"<Button disabled>Create project</Button>"}
         </Highlight>
       </Box>
-
     </DocSection>
 
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
       <ListItem>Always lead with an actionable verb</ListItem>
-      <ListItem>Whenever possible follow with a clear noun <em>(e.g: Create shipment, Approve delivery.)</em></ListItem>
+      <ListItem>
+        Whenever possible follow with a clear noun{" "}
+        <em>(e.g: Create shipment, Approve delivery.)</em>
+      </ListItem>
       <ListItem>Always use sentence case</ListItem>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Buttons">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=Buttons">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/iconic-button">Iconic button</Link></ListItem>
-      <ListItem><Link href="/components/link">Link</Link></ListItem>
+      <ListItem>
+        <Link href="/components/iconic-button">Iconic button</Link>
+      </ListItem>
+      <ListItem>
+        <Link href="/components/link">Link</Link>
+      </ListItem>
     </DocSection>
-
   </Layout>
 );

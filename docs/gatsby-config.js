@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Nulogy Design System",
     description: "Documentation for the Nulogy Design System",
-    author: "Nulogy",
+    author: "Nulogy"
   },
   plugins: [
     "gatsby-plugin-remove-serviceworker",
@@ -11,15 +11,15 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images/`,
-      },
+        path: `${__dirname}/src/images/`
+      }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/markdown/`,
-        name: "markdown-pages",
-      },
+        name: "markdown-pages"
+      }
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -30,11 +30,11 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 990,
-            },
-          },
-        ],
-      },
+              maxWidth: 990
+            }
+          }
+        ]
+      }
     },
     "gatsby-plugin-styled-components",
     {
@@ -46,9 +46,9 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/nulogy.svg", // This path is relative to the root of the site.
-      },
+        icon: "src/images/nulogy.svg" // This path is relative to the root of the site.
+      }
     },
-    "gatsby-plugin-netlify", // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
-  ],
+    "gatsby-plugin-netlify" // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
+  ]
 };

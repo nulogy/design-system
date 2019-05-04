@@ -4,16 +4,29 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Button,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  ListItem
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "", type: "", defaultValue: "", description: "",
-  },
+    name: "",
+    type: "",
+    defaultValue: "",
+    description: ""
+  }
 ];
 
 export default () => (
@@ -36,7 +49,6 @@ export default () => (
       </Highlight>
     </DocSection>
 
-
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
     </DocSection>
@@ -45,9 +57,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Variation 1</SubsectionTitle>
-        <Highlight className="js">
-          {``}
-        </Highlight>
+        <Highlight className="js" />
       </Box>
     </DocSection>
 
@@ -65,7 +75,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
@@ -74,7 +84,11 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/selectedKind=">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/selectedKind=">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
   </Layout>
 );

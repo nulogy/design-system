@@ -2,25 +2,50 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, Flex, SectionTitle, Title, Link, ListItem,
+  Box,
+  Flex,
+  SectionTitle,
+  Title,
+  Link,
+  ListItem
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, IntroText, DocSection, PropsTable,
+  DocText as Text,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "alignItems", type: "String", defaultValue: "stretch", description: "Sets align-items. Accepts flex-start, flex-end, center, or stretch.",
+    name: "alignItems",
+    type: "String",
+    defaultValue: "stretch",
+    description:
+      "Sets align-items. Accepts flex-start, flex-end, center, or stretch."
   },
   {
-    name: "flexDirection", type: "String", defaultValue: "row", description: "Set the flex-direction. Accepts row, column, row-reverse or column-reverse",
+    name: "flexDirection",
+    type: "String",
+    defaultValue: "row",
+    description:
+      "Set the flex-direction. Accepts row, column, row-reverse or column-reverse"
   },
   {
-    name: "flexWrap", type: "String", defaultValue: "nowrap", description: "Set the flex-wrap. Accepts no-wrap, wrap, or wrap-reverse",
+    name: "flexWrap",
+    type: "String",
+    defaultValue: "nowrap",
+    description: "Set the flex-wrap. Accepts no-wrap, wrap, or wrap-reverse"
   },
   {
-    name: "justifyContent", type: "String", defaultValue: "flex-start", description: "Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly",
-  },
+    name: "justifyContent",
+    type: "String",
+    defaultValue: "flex-start",
+    description:
+      "Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly"
+  }
 ];
 
 export default () => (
@@ -30,13 +55,16 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Flex</Title>
-      <IntroText>A wrapper component that extends <Link href="/components/Box">Box</Link> to create layouts using Flexbox.</IntroText>
+      <IntroText>
+        A wrapper component that extends <Link href="/components/Box">Box</Link>{" "}
+        to create layouts using Flexbox.
+      </IntroText>
     </Intro>
 
     <DocSection>
       <Flex bg="lightBlue">
-        <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
-        <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
+        <Box width={1 / 2} p="x3" m="x3" bg="blackBlue" />
+        <Box width={1 / 2} p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
       <Highlight className="js">
@@ -52,11 +80,18 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Responsive</SectionTitle>
-      <Text>Like Box, all props can be used responsively by using an object that defines small, medium and/or large, based on the <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> object</Text>
-      <Text>This example displays columns on small screens and rows on large ones.</Text>
-      <Flex bg="lightBlue" flexDirection={ { small: "column", large: "row" } }>
-        <Box width={ 1 / 2 } p="x3" m="x3" bg="blackBlue" />
-        <Box width={ 1 / 2 } p="x3" m="x3" bg="darkBlue" />
+      <Text>
+        Like Box, all props can be used responsively by using an object that
+        defines small, medium and/or large, based on the{" "}
+        <Link href="https://nulogy.design/tokens">theme.breakpoints</Link>{" "}
+        object
+      </Text>
+      <Text>
+        This example displays columns on small screens and rows on large ones.
+      </Text>
+      <Flex bg="lightBlue" flexDirection={{ small: "column", large: "row" }}>
+        <Box width={1 / 2} p="x3" m="x3" bg="blackBlue" />
+        <Box width={1 / 2} p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
       <Highlight className="js">
@@ -70,20 +105,30 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <Text>Because Flex is an extension of <Link href="/components/box">Box</Link> it accepts all the same props but adds the following:</Text>
-      <PropsTable propsRows={ propsRows } />
+      <Text>
+        Because Flex is an extension of <Link href="/components/box">Box</Link>{" "}
+        it accepts all the same props but adds the following:
+      </Text>
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/box">Box</Link></ListItem>
+      <ListItem>
+        <Link href="/components/box">Box</Link>
+      </ListItem>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://nulogy.design/tokens/">NDS theme</Link></ListItem>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Flex">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://nulogy.design/tokens/">NDS theme</Link>
+      </ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=Flex">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
-
   </Layout>
 );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "../../../components/src/theme";
 
 const Table = styled.table({
-  border: 0,
+  border: 0
 });
 
 const Column = styled.td({
@@ -24,13 +24,13 @@ const Column = styled.td({
     "&:before": { fontWeight: "bold" },
     "&:first-child:before": { content: "'Key: '" },
     "&:nth-child(2):before": { content: "'Type: '" },
-    "&:nth-child(4):before": { content: "'Description: '" },
-  },
+    "&:nth-child(4):before": { content: "'Description: '" }
+  }
 });
 
 const Header = styled.thead({
-  "tr": { fontWeight: "bold" },
-  "@media screen and (max-width: 700px)": { display: "none" },
+  tr: { fontWeight: "bold" },
+  "@media screen and (max-width: 700px)": { display: "none" }
 });
 
 const KeyTable = ({ keyRows }) => (
@@ -43,17 +43,13 @@ const KeyTable = ({ keyRows }) => (
       </tr>
     </Header>
     <tbody>
-      {
-        keyRows.map(({
-          name, type, description,
-        }) => (
-          <tr>
-            <Column>{name}</Column>
-            <Column>{type}</Column>
-            <Column>{description}</Column>
-          </tr>
-        ))
-      }
+      {keyRows.map(({ name, type, description }) => (
+        <tr>
+          <Column>{name}</Column>
+          <Column>{type}</Column>
+          <Column>{description}</Column>
+        </tr>
+      ))}
     </tbody>
   </Table>
 );
@@ -62,8 +58,8 @@ KeyTable.propTypes = {
   keyRows: PropTypes.shape({
     name: PropTypes.string,
     type: PropTypes.string,
-    description: PropTypes.string,
-  }).isRequired,
+    description: PropTypes.string
+  }).isRequired
 };
 
 export default KeyTable;

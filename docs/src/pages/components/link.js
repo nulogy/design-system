@@ -2,25 +2,46 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  ListItem
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "href", type: "String", defaultValue: "Required", description: "The destination.",
+    name: "href",
+    type: "String",
+    defaultValue: "Required",
+    description: "The destination."
   },
   {
-    name: "color", type: "String", defaultValue: "blue", description: "A custom colour to display the link in.",
+    name: "color",
+    type: "String",
+    defaultValue: "blue",
+    description: "A custom colour to display the link in."
   },
   {
-    name: "hover", type: "String", defaultValue: "Color darkened by 10%", description: "A custom hover colour",
+    name: "hover",
+    type: "String",
+    defaultValue: "Color darkened by 10%",
+    description: "A custom hover colour"
   },
   {
-    name: "underline", type: "String", defaultValue: "true", description: "Whether to show an underline or not.",
-  },
+    name: "underline",
+    type: "String",
+    defaultValue: "true",
+    description: "Whether to show an underline or not."
+  }
 ];
 
 export default () => (
@@ -30,7 +51,9 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Link</Title>
-      <IntroText>A styled <em>a</em> tag that can be used to send users to a URL.</IntroText>
+      <IntroText>
+        A styled <em>a</em> tag that can be used to send users to a URL.
+      </IntroText>
     </Intro>
 
     <DocSection>
@@ -47,33 +70,47 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Without an underline</SubsectionTitle>
-        <Link href="http://nulogy.design" underline={ false }>nulogy.design</Link>
+        <Link href="http://nulogy.design" underline={false}>
+          nulogy.design
+        </Link>
         <Highlight className="js">
-          {"<Link href=\"http://nulogy.design\" underline=\"false\">nulogy.design</Link>"}
+          {
+            '<Link href="http://nulogy.design" underline="false">nulogy.design</Link>'
+          }
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>With a custom colour</SubsectionTitle>
-        <Link color="black" hover="red" href="http://nulogy.design">nulogy.design</Link>
+        <Link color="black" hover="red" href="http://nulogy.design">
+          nulogy.design
+        </Link>
         <Highlight className="js">
-          {"<Link color=\"black\" hover=\"red\" href=\"http://nulogy.design\">nulogy.design</Link>"}
+          {
+            '<Link color="black" hover="red" href="http://nulogy.design">nulogy.design</Link>'
+          }
         </Highlight>
       </Box>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Link">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=Link">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
+      <ListItem>
+        <Link href="/components/buttons">Buttons</Link>
+      </ListItem>
     </DocSection>
   </Layout>
 );

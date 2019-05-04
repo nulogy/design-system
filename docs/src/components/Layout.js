@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Box, NDSProvider,
-} from "@nulogy/components";
+import { Box, NDSProvider } from "@nulogy/components";
 import { Helmet } from "react-helmet";
 import { Navigation } from "./Nav";
 
@@ -15,13 +13,19 @@ const Layout = ({ children }) => (
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>Welcome</title>
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
+          rel="stylesheet"
+        />
       </Helmet>
       <HighlightStyles />
       <Navigation />
-      <Box ml={ { small: 0, large: "220px" } }>
-        <Box pt={ { small: 0, large: "x8" } } px="x3" maxWidth="740px" m="0 auto">
+      <Box ml={{ small: 0, large: "220px" }}>
+        <Box pt={{ small: 0, large: "x8" }} px="x3" maxWidth="740px" m="0 auto">
           {children}
         </Box>
       </Box>
@@ -30,7 +34,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

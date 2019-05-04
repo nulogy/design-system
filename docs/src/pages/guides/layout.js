@@ -2,10 +2,22 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, Flex, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
+  Box,
+  Flex,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  List,
+  ListItem
 } from "@nulogy/components";
 import {
-  DocText as Text, Layout, Intro, IntroText, DocSection, DocSubsection,
+  DocText as Text,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  DocSubsection
 } from "../../components";
 
 export default () => (
@@ -15,15 +27,36 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Layout</Title>
-      <IntroText>This article provides a breakdown of basic concepts and directions on how to compose the layout of any complexity.</IntroText>
+      <IntroText>
+        This article provides a breakdown of basic concepts and directions on
+        how to compose the layout of any complexity.
+      </IntroText>
     </Intro>
-    <Flex mb="x8" flexDirection={ { small: "column", medium: "row", large: "row" } }>
-      <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 2 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
+    <Flex
+      mb="x8"
+      flexDirection={{ small: "column", medium: "row", large: "row" }}
+    >
+      <Flex
+        bg="whiteGrey"
+        justifyContent="center"
+        alignItems="center"
+        p="x3"
+        width={{ small: 1, medium: 2 / 3, large: 1 / 2 }}
+        height={{ small: "200px", medium: "auto", large: "auto" }}
+      >
         <Box bg="darkBlue" height="80px" width="80px" mr="x3" />
         <Box bg="darkBlue" height="80px" width="80px" mr="x3" />
         <Box bg="darkBlue" height="80px" width="80px" />
       </Flex>
-      <Flex bg="lightGrey" flexDirection="column" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 1 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
+      <Flex
+        bg="lightGrey"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        p="x3"
+        width={{ small: 1, medium: 1 / 3, large: 1 / 2 }}
+        height={{ small: "200px", medium: "auto", large: "auto" }}
+      >
         <Box height="80px" width="80px" mb="x3" bg="blackBlue" />
         <Box height="80px" width="80px" mb="x3" bg="darkBlue" />
         <Box height="80px" width="80px" bg="blue" />
@@ -32,22 +65,54 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
-      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flex</Link> components are basic building blocks of any layout composition and are based on CSS box model and CSS flexbox layout model. Listed below are the links that will help you familiarize yourself with these concepts and help you be effective at using Box and Flex components.</Text>
+      <Text>
+        <Link href="/components/box">Box</Link> and{" "}
+        <Link href="/components/flex">Flex</Link> components are basic building
+        blocks of any layout composition and are based on CSS box model and CSS
+        flexbox layout model. Listed below are the links that will help you
+        familiarize yourself with these concepts and help you be effective at
+        using Box and Flex components.
+      </Text>
       <List mb="x3">
-        <ListItem><Link href="https://www.w3schools.com/css/css_boxmodel.asp">CSS box model</Link></ListItem>
-        <ListItem><Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS flexbox layout model</Link></ListItem>
-        <ListItem><Link href="https://flexboxfroggy.com/">Flexbox Froggy</Link></ListItem>
+        <ListItem>
+          <Link href="https://www.w3schools.com/css/css_boxmodel.asp">
+            CSS box model
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+            CSS flexbox layout model
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://flexboxfroggy.com/">Flexbox Froggy</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Spacing</SectionTitle>
       <SubsectionTitle>Padding and Margins</SubsectionTitle>
-      <Text>Padding is used for adding spacing inside of the component and margin is used for adding space around the component.</Text>
-      <Flex bg="lightGrey" style={ { display: "inline-flex" } }>
-        <Box><Flex color="white" bg="blackBlue" p="x3" m="x3">Padding + Margin</Flex></Box>
-        <Box><Flex color="white" bg="blackBlue" p="x6">Padding</Flex></Box>
-        <Box><Flex color="white" bg="blackBlue" m="x6">Margin</Flex></Box>
+      <Text>
+        Padding is used for adding spacing inside of the component and margin is
+        used for adding space around the component.
+      </Text>
+      <Flex bg="lightGrey" style={{ display: "inline-flex" }}>
+        <Box>
+          <Flex color="white" bg="blackBlue" p="x3" m="x3">
+            Padding + Margin
+          </Flex>
+        </Box>
+        <Box>
+          <Flex color="white" bg="blackBlue" p="x6">
+            Padding
+          </Flex>
+        </Box>
+        <Box>
+          <Flex color="white" bg="blackBlue" m="x6">
+            Margin
+          </Flex>
+        </Box>
       </Flex>
       <Highlight>
         {`<Box bg="blackBlue" p="x3" m="x3">Padding + Margin</Box>
@@ -55,20 +120,39 @@ export default () => (
 <Box bg="blackBlue" m="x6">Margin</Box>
 `}
       </Highlight>
-      <Text><Link href="/components/box">Box</Link> and <Link href="/components/flex">Flexbox</Link> components have several style props for handling margins and paddings while adhering to the Design System's <Link href="/style/spacing">spacing scale</Link>.</Text>
+      <Text>
+        <Link href="/components/box">Box</Link> and{" "}
+        <Link href="/components/flex">Flexbox</Link> components have several
+        style props for handling margins and paddings while adhering to the
+        Design System's <Link href="/style/spacing">spacing scale</Link>.
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Layout Composition</SectionTitle>
-      <Text>Flexbox is used for composing layouts. Establishing direction, alignment, wrapping, and order is achieved through the use of Flexbox props. Do not use floats to compose layout.</Text>
+      <Text>
+        Flexbox is used for composing layouts. Establishing direction,
+        alignment, wrapping, and order is achieved through the use of Flexbox
+        props. Do not use floats to compose layout.
+      </Text>
       <DocSubsection>
-        <SubsectionTitle mt="x3">Direction (flexDirection prop)</SubsectionTitle>
+        <SubsectionTitle mt="x3">
+          Direction (flexDirection prop)
+        </SubsectionTitle>
         <DocSubsection>
-          <Text mb="x2" color="darkGrey">Horizontal layout</Text>
+          <Text mb="x2" color="darkGrey">
+            Horizontal layout
+          </Text>
           <Flex flexDirection="row" color="white">
-            <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-            <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-            <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+            <Box bg="blue" m="x1" py="x3" px="x4">
+              1
+            </Box>
+            <Box bg="darkBlue" m="x1" py="x3" px="x4">
+              2
+            </Box>
+            <Box bg="blackBlue" m="x1" py="x3" px="x4">
+              3
+            </Box>
           </Flex>
           <Highlight>
             {`<Flex flexDirection="row" color="white">
@@ -79,12 +163,20 @@ export default () => (
           </Highlight>
         </DocSubsection>
         <DocSubsection>
-          <Text mb="x2" color="darkGrey">Vertical layout</Text>
+          <Text mb="x2" color="darkGrey">
+            Vertical layout
+          </Text>
           <Flex>
             <Flex flexDirection="column" color="white">
-              <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-              <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-              <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+              <Box bg="blue" m="x1" py="x3" px="x4">
+                1
+              </Box>
+              <Box bg="darkBlue" m="x1" py="x3" px="x4">
+                2
+              </Box>
+              <Box bg="blackBlue" m="x1" py="x3" px="x4">
+                3
+              </Box>
             </Flex>
           </Flex>
           <Highlight>
@@ -99,13 +191,27 @@ export default () => (
       </DocSubsection>
       <DocSubsection>
         <SubsectionTitle>Wrapping content (flexWrap prop)</SubsectionTitle>
-        <Text>By default, Flexbox will try to fit all of its children within the line. In order to force wrapping, you will need to modify flexWrap prop.</Text>
-        <Text mb="x2" color="darkGrey">Wrapped content</Text>
+        <Text>
+          By default, Flexbox will try to fit all of its children within the
+          line. In order to force wrapping, you will need to modify flexWrap
+          prop.
+        </Text>
+        <Text mb="x2" color="darkGrey">
+          Wrapped content
+        </Text>
         <Flex flexWrap="wrap" color="white">
-          <Box bg="blue" m="x1" p="x3" width={ 1 / 3 }>1</Box>
-          <Box bg="darkBlue" m="x1" p="x3" width={ 1 / 4 }>2</Box>
-          <Box bg="blackBlue" m="x1" p="x3" width={ 1 / 3 }>3</Box>
-          <Box bg="black" m="x1" p="x3" width={ 1 / 4 }>4</Box>
+          <Box bg="blue" m="x1" p="x3" width={1 / 3}>
+            1
+          </Box>
+          <Box bg="darkBlue" m="x1" p="x3" width={1 / 4}>
+            2
+          </Box>
+          <Box bg="blackBlue" m="x1" p="x3" width={1 / 3}>
+            3
+          </Box>
+          <Box bg="black" m="x1" p="x3" width={1 / 4}>
+            4
+          </Box>
         </Flex>
         <Highlight>
           {`<Flex flexWrap="wrap" color="white">
@@ -117,14 +223,27 @@ export default () => (
         </Highlight>
       </DocSubsection>
       <DocSubsection>
-        <SubsectionTitle>Alignment (justifyContent, alignItems prop)</SubsectionTitle>
-        <Text>Content distribution along the main axis is controlled through justifyContent prop.</Text>
+        <SubsectionTitle>
+          Alignment (justifyContent, alignItems prop)
+        </SubsectionTitle>
+        <Text>
+          Content distribution along the main axis is controlled through
+          justifyContent prop.
+        </Text>
         <DocSubsection>
-          <Text mb="x2" color="darkGrey">Left aligned</Text>
+          <Text mb="x2" color="darkGrey">
+            Left aligned
+          </Text>
           <Flex justifyContent="flex-start" color="white">
-            <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-            <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-            <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+            <Box bg="blue" m="x1" py="x3" px="x4">
+              1
+            </Box>
+            <Box bg="darkBlue" m="x1" py="x3" px="x4">
+              2
+            </Box>
+            <Box bg="blackBlue" m="x1" py="x3" px="x4">
+              3
+            </Box>
           </Flex>
           <Highlight>
             {`<Flex justifyContent="flex-start" color="white">
@@ -135,11 +254,19 @@ export default () => (
           </Highlight>
         </DocSubsection>
         <DocSubsection>
-          <Text mb="x2" color="darkGrey">Centered</Text>
+          <Text mb="x2" color="darkGrey">
+            Centered
+          </Text>
           <Flex justifyContent="center" color="white">
-            <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-            <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-            <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+            <Box bg="blue" m="x1" py="x3" px="x4">
+              1
+            </Box>
+            <Box bg="darkBlue" m="x1" py="x3" px="x4">
+              2
+            </Box>
+            <Box bg="blackBlue" m="x1" py="x3" px="x4">
+              3
+            </Box>
           </Flex>
           <Highlight>
             {`<Flex justifyContent="center" color="white">
@@ -150,11 +277,19 @@ export default () => (
           </Highlight>
         </DocSubsection>
         <DocSubsection>
-          <Text mb="x2" color="darkGrey">Evenly distributed</Text>
+          <Text mb="x2" color="darkGrey">
+            Evenly distributed
+          </Text>
           <Flex justifyContent="space-between" color="white">
-            <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-            <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-            <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+            <Box bg="blue" m="x1" py="x3" px="x4">
+              1
+            </Box>
+            <Box bg="darkBlue" m="x1" py="x3" px="x4">
+              2
+            </Box>
+            <Box bg="blackBlue" m="x1" py="x3" px="x4">
+              3
+            </Box>
           </Flex>
           <Highlight>
             {`<Flex justifyContent="space-between" color="white">
@@ -164,12 +299,29 @@ export default () => (
 </Flex>`}
           </Highlight>
         </DocSubsection>
-        <Text>Alignment of items on a cross-axis is controlled through alignItems prop.</Text>
-        <Text mb="x2" color="darkGrey">Vertical centered</Text>
-        <Flex alignItems="center" color="white" bg="lightGrey" p="x1" height="240px">
-          <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-          <Box bg="darkBlue" m="x1" py="x3" px="x4">2</Box>
-          <Box bg="blackBlue" m="x1" py="x3" px="x4">3</Box>
+        <Text>
+          Alignment of items on a cross-axis is controlled through alignItems
+          prop.
+        </Text>
+        <Text mb="x2" color="darkGrey">
+          Vertical centered
+        </Text>
+        <Flex
+          alignItems="center"
+          color="white"
+          bg="lightGrey"
+          p="x1"
+          height="240px"
+        >
+          <Box bg="blue" m="x1" py="x3" px="x4">
+            1
+          </Box>
+          <Box bg="darkBlue" m="x1" py="x3" px="x4">
+            2
+          </Box>
+          <Box bg="blackBlue" m="x1" py="x3" px="x4">
+            3
+          </Box>
         </Flex>
         <Highlight>
           {`<Flex alignItems="center" color="white" bg="lightGrey" p="x1" height="200px">
@@ -181,13 +333,26 @@ export default () => (
       </DocSubsection>
       <DocSubsection>
         <SubsectionTitle>Order (order prop)</SubsectionTitle>
-        <Text>The order prop controls the order in which elements are displayed inside of the Flexbox component.</Text>
-        <Text mb="x2" color="darkGrey">Changed default order</Text>
+        <Text>
+          The order prop controls the order in which elements are displayed
+          inside of the Flexbox component.
+        </Text>
+        <Text mb="x2" color="darkGrey">
+          Changed default order
+        </Text>
         <Flex color="white">
-          <Box bg="blue" m="x1" py="x3" px="x4">1</Box>
-          <Box bg="darkBlue" m="x1" py="x3" px="x4" order="99">2</Box>
-          <Box bg="blackBlue" m="x1" py="x3" px="x4" order="-1">3</Box>
-          <Box bg="black" m="x1" py="x3" px="x4" order="1">4</Box>
+          <Box bg="blue" m="x1" py="x3" px="x4">
+            1
+          </Box>
+          <Box bg="darkBlue" m="x1" py="x3" px="x4" order="99">
+            2
+          </Box>
+          <Box bg="blackBlue" m="x1" py="x3" px="x4" order="-1">
+            3
+          </Box>
+          <Box bg="black" m="x1" py="x3" px="x4" order="1">
+            4
+          </Box>
         </Flex>
         <Highlight>
           {`<Flex color="white">
@@ -198,18 +363,37 @@ export default () => (
 </Flex>`}
         </Highlight>
       </DocSubsection>
-      <Text>A full breakdown of capabilities and list of available props and their values is available on the <Link href="/components/flex">Flex</Link> component page.</Text>
+      <Text>
+        A full breakdown of capabilities and list of available props and their
+        values is available on the <Link href="/components/flex">Flex</Link>{" "}
+        component page.
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Width</SectionTitle>
-      <Text>The width of the Box and Flex component is set through the width prop. Width accepts any number from 0–1 and is converted to a percentage. Numbers greater than 1 are interpreted as pixel values. Relative units (em/rem/vw/vh/%) are passed through string values.</Text>
-      <Text mb="x2" color="darkGrey">Varoius ways to set a width</Text>
+      <Text>
+        The width of the Box and Flex component is set through the width prop.
+        Width accepts any number from 0–1 and is converted to a percentage.
+        Numbers greater than 1 are interpreted as pixel values. Relative units
+        (em/rem/vw/vh/%) are passed through string values.
+      </Text>
+      <Text mb="x2" color="darkGrey">
+        Varoius ways to set a width
+      </Text>
       <Flex color="white">
-        <Box width={ 1 / 4 } bg="blue" m="x1" p="x3">1/4</Box>
-        <Box width={ 0.25 } bg="darkBlue" m="x1" p="x3">0.25</Box>
-        <Box width={ 140 } bg="blackBlue" m="x1" p="x3">140</Box>
-        <Box width="8.5em" bg="black" m="x1" p="x3">8.5em</Box>
+        <Box width={1 / 4} bg="blue" m="x1" p="x3">
+          1/4
+        </Box>
+        <Box width={0.25} bg="darkBlue" m="x1" p="x3">
+          0.25
+        </Box>
+        <Box width={140} bg="blackBlue" m="x1" p="x3">
+          140
+        </Box>
+        <Box width="8.5em" bg="black" m="x1" p="x3">
+          8.5em
+        </Box>
       </Flex>
       <Highlight>
         {`<Flex color="white">
@@ -222,12 +406,43 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Responsiveness</SectionTitle>
-      <Text>Providing different prop values for different breaking points that are based on the <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> is possible by passing an object to a prop.</Text>
-      <Text mb="x2" color="darkGrey">Size and background colour change based on the screen size</Text>
+      <Text>
+        Providing different prop values for different breaking points that are
+        based on the{" "}
+        <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> is
+        possible by passing an object to a prop.
+      </Text>
+      <Text mb="x2" color="darkGrey">
+        Size and background colour change based on the screen size
+      </Text>
       <Flex color="white">
-        <Box width={ { small: 1 / 9, medium: 1 / 9, large: 7 / 9 } } bg={ { small: "blue", medium: "darkBlue", large: "blackBlue" } } m="x1" py="x3" px="x4">1</Box>
-        <Box width={ { small: 1 / 9, medium: 7 / 9, large: 1 / 9 } } bg={ { small: "darkBlue", medium: "blackBlue", large: "darkBlue" } } m="x1" py="x3" px="x4">2</Box>
-        <Box width={ { small: 7 / 9, medium: 1 / 9, large: 1 / 9 } } bg={ { small: "blackBlue", medium: "blue", large: "blue" } } m="x1" py="x3" px="x4">3</Box>
+        <Box
+          width={{ small: 1 / 9, medium: 1 / 9, large: 7 / 9 }}
+          bg={{ small: "blue", medium: "darkBlue", large: "blackBlue" }}
+          m="x1"
+          py="x3"
+          px="x4"
+        >
+          1
+        </Box>
+        <Box
+          width={{ small: 1 / 9, medium: 7 / 9, large: 1 / 9 }}
+          bg={{ small: "darkBlue", medium: "blackBlue", large: "darkBlue" }}
+          m="x1"
+          py="x3"
+          px="x4"
+        >
+          2
+        </Box>
+        <Box
+          width={{ small: 7 / 9, medium: 1 / 9, large: 1 / 9 }}
+          bg={{ small: "blackBlue", medium: "blue", large: "blue" }}
+          m="x1"
+          py="x3"
+          px="x4"
+        >
+          3
+        </Box>
       </Flex>
       <Highlight>
         {`<Flex color="white">
@@ -240,13 +455,33 @@ export default () => (
 
     <DocSection>
       <SectionTitle>2-Column Layout Example</SectionTitle>
-      <Text mb="x2" color="darkGrey">Typical 2-column layout structure with a sidebar or a pannel.</Text>
-      <Flex height="400px" flexDirection={ { small: "column", medium: "row", large: "row" } }>
-        <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 2 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
-          <Text mb={ 0 }>Main content</Text>
+      <Text mb="x2" color="darkGrey">
+        Typical 2-column layout structure with a sidebar or a pannel.
+      </Text>
+      <Flex
+        height="400px"
+        flexDirection={{ small: "column", medium: "row", large: "row" }}
+      >
+        <Flex
+          bg="whiteGrey"
+          justifyContent="center"
+          alignItems="center"
+          p="x3"
+          width={{ small: 1, medium: 2 / 3, large: 1 / 2 }}
+          height={{ small: "200px", medium: "auto", large: "auto" }}
+        >
+          <Text mb={0}>Main content</Text>
         </Flex>
-        <Flex bg="lightGrey" flexDirection="column" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 1 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
-          <Text mb={ 0 }>Sidebar content</Text>
+        <Flex
+          bg="lightGrey"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          p="x3"
+          width={{ small: 1, medium: 1 / 3, large: 1 / 2 }}
+          height={{ small: "200px", medium: "auto", large: "auto" }}
+        >
+          <Text mb={0}>Sidebar content</Text>
         </Flex>
       </Flex>
       <Highlight>
@@ -263,9 +498,12 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="/components/box">Box</Link></ListItem>
-      <ListItem><Link href="/components/flex">Flex</Link></ListItem>
+      <ListItem>
+        <Link href="/components/box">Box</Link>
+      </ListItem>
+      <ListItem>
+        <Link href="/components/flex">Flex</Link>
+      </ListItem>
     </DocSection>
-
   </Layout>
 );

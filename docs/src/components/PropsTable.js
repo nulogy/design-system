@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "../../../components/src/theme";
 
 const Table = styled.table({
-  border: 0,
+  border: 0
 });
 
 const Column = styled.td({
@@ -25,13 +25,13 @@ const Column = styled.td({
     "&:first-child:before": { content: "'Prop: '" },
     "&:nth-child(2):before": { content: "'Type: '" },
     "&:nth-child(3):before": { content: "'Default value: '" },
-    "&:nth-child(4):before": { content: "'Description: '" },
-  },
+    "&:nth-child(4):before": { content: "'Description: '" }
+  }
 });
 
 const Header = styled.thead({
-  "tr": { fontWeight: "bold" },
-  "@media screen and (max-width: 700px)": { display: "none" },
+  tr: { fontWeight: "bold" },
+  "@media screen and (max-width: 700px)": { display: "none" }
 });
 
 const PropsTable = ({ propsRows }) => (
@@ -45,18 +45,14 @@ const PropsTable = ({ propsRows }) => (
       </tr>
     </Header>
     <tbody>
-      {
-        propsRows.map(({
-          name, type, defaultValue, description,
-        }) => (
-          <tr>
-            <Column>{name}</Column>
-            <Column>{type}</Column>
-            <Column>{defaultValue}</Column>
-            <Column>{description}</Column>
-          </tr>
-        ))
-      }
+      {propsRows.map(({ name, type, defaultValue, description }) => (
+        <tr>
+          <Column>{name}</Column>
+          <Column>{type}</Column>
+          <Column>{defaultValue}</Column>
+          <Column>{description}</Column>
+        </tr>
+      ))}
     </tbody>
   </Table>
 );
@@ -66,8 +62,8 @@ PropsTable.propTypes = {
     name: PropTypes.string,
     type: PropTypes.string,
     defaultValue: PropTypes.string,
-    description: PropTypes.string,
-  }).isRequired,
+    description: PropTypes.string
+  }).isRequired
 };
 
 export default PropsTable;
