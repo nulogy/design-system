@@ -39,7 +39,7 @@
     "serve": "yarn build && gatsby serve",
     "start": "yarn develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "yarn lint"
   },
   "devDependencies": {
     "eslint-import-resolver-webpack": "^0.11.0",
