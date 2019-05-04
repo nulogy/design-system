@@ -8,32 +8,37 @@ context("Cypress.Commands", () => {
   // https://on.cypress.io/custom-commands
 
   it(".add() - create a custom command", () => {
-    Cypress.Commands.add("console", {
-      prevSubject: true,
-    }, (subject, method) => {
-      // the previous subject is automatically received
-      // and the commands arguments are shifted
+    Cypress.Commands.add(
+      "console",
+      {
+        prevSubject: true
+      },
+      (subject, method) => {
+        // the previous subject is automatically received
+        // and the commands arguments are shifted
 
-      // allow us to change the console method used
-      const consoleMethod = method || "log";
+        // allow us to change the console method used
+        const consoleMethod = method || "log";
 
-      // log the subject to the console
-      // @ts-ignore TS7017
-      console[consoleMethod]("The subject is", subject); // eslint-disable-line no-console
+        // log the subject to the console
+        // @ts-ignore TS7017
+        console[consoleMethod]("The subject is", subject); // eslint-disable-line no-console
 
-      // whatever we return becomes the new subject
-      // we don't want to change the subject so
-      // we return whatever was passed in
-      return subject;
-    });
+        // whatever we return becomes the new subject
+        // we don't want to change the subject so
+        // we return whatever was passed in
+        return subject;
+      }
+    );
 
     // @ts-ignore TS2339
-    cy.get("button").console("info").then(_$button => {
-      // subject is still $button
-    });
+    cy.get("button")
+      .console("info")
+      .then(_$button => {
+        // subject is still $button
+      });
   });
 });
-
 
 context("Cypress.Cookies", () => {
   beforeEach(() => {
@@ -67,11 +72,10 @@ context("Cypress.Cookies", () => {
     // now any cookie with the name 'session_id' will
     // not be cleared before each new test runs
     Cypress.Cookies.defaults({
-      whitelist: "session_id",
+      whitelist: "session_id"
     });
   });
 });
-
 
 context("Cypress.Server", () => {
   beforeEach(() => {
@@ -85,7 +89,7 @@ context("Cypress.Server", () => {
   it(".defaults() - change default config of server", () => {
     Cypress.Server.defaults({
       delay: 0,
-      force404: false,
+      force404: false
     });
   });
 });
@@ -160,7 +164,7 @@ context("Cypress.env()", () => {
     // set multiple environment variables
     Cypress.env({
       host: "veronica.dev.local",
-      api_server: "http://localhost:8888/v1/",
+      api_server: "http://localhost:8888/v1/"
     });
 
     // get environment variable
@@ -172,7 +176,10 @@ context("Cypress.env()", () => {
 
     // get all environment variable
     expect(Cypress.env()).to.have.property("host", "veronica.dev.local");
-    expect(Cypress.env()).to.have.property("api_server", "http://localhost:8888/v2/");
+    expect(Cypress.env()).to.have.property(
+      "api_server",
+      "http://localhost:8888/v2/"
+    );
   });
 });
 
@@ -185,7 +192,6 @@ context("Cypress.log", () => {
     // https://on.cypress.io/cypress-log
   });
 });
-
 
 context("Cypress.platform", () => {
   beforeEach(() => {

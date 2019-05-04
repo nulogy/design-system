@@ -27,20 +27,18 @@ class WindowDimensions extends React.Component {
 
     return renderMenu({
       windowWidth: width,
-      windowHeight: height,
+      windowHeight: height
     });
   }
 }
 
 WindowDimensions.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.func.isRequired
 };
 
 const withWindowDimensions = Component => props => (
   <WindowDimensions>
-    {
-      windowDimensions => <Component windowDimensions={ windowDimensions } { ...props } />
-    }
+    {windowDimensions => <Component windowDimensions={windowDimensions} {...props} />}
   </WindowDimensions>
 );
 

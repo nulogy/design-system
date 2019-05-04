@@ -2,19 +2,37 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, HeaderValidation, List, ListItem,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  HeaderValidation,
+  List,
+  ListItem
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable, DocText as Text
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable,
+  DocText as Text
 } from "../../components";
 
 const propsRows = [
   {
-    name: "title", type: "String", defaultValue: "Required", description: "A heading for the error text.",
+    name: "title",
+    type: "String",
+    defaultValue: "Required",
+    description: "A heading for the error text."
   },
   {
-    name: "message", type: "String", defaultValue: "Required", description: "A description of the error and how to fix it.",
-  },
+    name: "message",
+    type: "String",
+    defaultValue: "Required",
+    description: "A description of the error and how to fix it."
+  }
 ];
 
 export default () => (
@@ -24,11 +42,18 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Header Validation</Title>
-      <IntroText>Header validation informs users of errors in the form they just tried to submit.</IntroText>
+      <IntroText>
+        Header validation informs users of errors in the form they just tried to
+        submit.
+      </IntroText>
     </Intro>
 
     <DocSection>
-      <HeaderValidation message="Instructions and description of an error" title="Error has occurred ..." mb="x3">
+      <HeaderValidation
+        message="Instructions and description of an error"
+        title="Error has occurred ..."
+        mb="x3"
+      >
         <List compact>
           <ListItem>Affected field</ListItem>
           <ListItem>Unmet criteria</ListItem>
@@ -52,10 +77,13 @@ export default () => (
       </Highlight>
     </DocSection>
 
-
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>Use Header Validation whenever a form has returned with errors so that users don't need to scroll around the form to see what needs to be fixed.</ListItem>
+      <ListItem>
+        Use Header Validation whenever a form has returned with errors so that
+        users don't need to scroll around the form to see what needs to be
+        fixed.
+      </ListItem>
     </DocSection>
 
     <DocSection>
@@ -63,7 +91,10 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>With only a message</SubsectionTitle>
 
-        <HeaderValidation title="Error has occurred ..." message="Instructions and description of an error" />
+        <HeaderValidation
+          title="Error has occurred ..."
+          message="Instructions and description of an error"
+        />
         <Highlight className="js">
           {`import { HeaderValidation } from @nulogy/components;
 
@@ -78,24 +109,33 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <Text>Guidelines for handling errors is available on the <Link href="/components/form">Form page</Link>.</Text>
+      <Text>
+        Guidelines for handling errors is available on the{" "}
+        <Link href="/components/form">Form page</Link>.
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-          <ListItem><Link href="/components/form">Form</Link></ListItem>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Header%20Validation">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=Header%20Validation">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
   </Layout>
 );

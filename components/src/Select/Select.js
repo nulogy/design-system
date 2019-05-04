@@ -10,18 +10,18 @@ import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../Utils";
 
-const getBorderColor = ({
-  error, disabled, isOpen,
-  isFocused,
-}) => {
-  const {
-    red, lightGrey, blue,
-    grey,
-  } = theme.colors;
+const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
+  const { red, lightGrey, blue, grey } = theme.colors;
 
-  if (error) { return red; }
-  if (disabled) { return lightGrey; }
-  if (isOpen || isFocused) { return blue; }
+  if (error) {
+    return red;
+  }
+  if (disabled) {
+    return lightGrey;
+  }
+  if (isOpen || isFocused) {
+    return blue;
+  }
 
   return grey;
 };
@@ -29,7 +29,7 @@ const getBorderColor = ({
 const SelectBox = styled.div(({ disabled }) => ({
   display: "flex",
   position: "relative",
-  color: disabled ? transparentize(0.6667, theme.colors.black) : null,
+  color: disabled ? transparentize(0.6667, theme.colors.black) : null
 }));
 
 const Input = styled.input(({ error, isOpen, disabled }) => ({
@@ -44,7 +44,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
     isOpen,
     disabled,
     error,
-    isFocused: false,
+    isFocused: false
   }),
   borderTopLeftRadius: theme.radii.medium,
   borderTopRightRadius: theme.radii.medium,
@@ -59,12 +59,12 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
       error,
       isOpen,
       disabled,
-      isFocused: true,
-    }),
+      isFocused: true
+    })
   },
   "&::placeholder": {
-    color: disabled ? transparentize(0.6667, theme.colors.black) : null,
-  },
+    color: disabled ? transparentize(0.6667, theme.colors.black) : null
+  }
 }));
 
 const IndicatorButton = styled.div(() => ({
@@ -72,21 +72,15 @@ const IndicatorButton = styled.div(() => ({
   position: "absolute",
   right: theme.space.half,
   bottom: theme.space.x1,
-  pointerEvents: "none",
+  pointerEvents: "none"
 }));
 
 const ToggleButton = ({ isOpen }) => (
-  <IndicatorButton>
-    {
-      isOpen
-        ? <Icon icon="upArrow" />
-        : <Icon icon="downArrow" />
-    }
-  </IndicatorButton>
+  <IndicatorButton>{isOpen ? <Icon icon="upArrow" /> : <Icon icon="downArrow" />}</IndicatorButton>
 );
 
 ToggleButton.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired
 };
 
 const Menu = styled.div(({ error, disabled, isOpen }) => ({
@@ -97,7 +91,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
     error,
     isOpen,
     disabled,
-    isHovered: false,
+    isHovered: false
   }),
   borderBottomStyle: "solid",
   borderLeftStyle: "solid",
@@ -106,7 +100,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
   marginTop: 0,
   boxShadow: theme.shadows.small,
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  zIndex: 100,
+  zIndex: 100
 }));
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
@@ -115,81 +109,94 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
   fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isActive ? theme.colors.lightBlue : null,
   "&:hover": {
-    background: theme.colors.lightBlue,
+    background: theme.colors.lightBlue
   },
   "&:last-child": {
-    borderRadius: `0 ${theme.radii.medium}`,
-  },
+    borderRadius: `0 ${theme.radii.medium}`
+  }
 }));
 
 const parseValueProp = (value, options) => options.find(o => o.value === value);
 
 const Select = ({
-  error, onChange, disabled,
-  options, optionToString, value,
-  required, placeholder, initialIsOpen,
-  id, labelText, helpText, requirementText,
+  error,
+  onChange,
+  disabled,
+  options,
+  optionToString,
+  value,
+  required,
+  placeholder,
+  initialIsOpen,
+  id,
+  labelText,
+  helpText,
+  requirementText
 }) => (
   <Field>
     <Downshift
-      itemToString={ optionToString }
-      selectedItem={ parseValueProp(value, options) }
-      onChange={ onChange }
-      defaultHighlightedIndex={ 0 }
-      initialIsOpen={ initialIsOpen }
-      inputId={ id }
+      itemToString={optionToString}
+      selectedItem={parseValueProp(value, options)}
+      onChange={onChange}
+      defaultHighlightedIndex={0}
+      initialIsOpen={initialIsOpen}
+      inputId={id}
     >
-      {
-        ({
-          getMenuProps,
-          getItemProps,
-          getInputProps,
-          getToggleButtonProps,
-          isOpen,
-          selectedItem,
-          highlightedIndex,
-        }) => (
-          <div style={ { position: "relative" } }>
-            <SelectBox { ...getToggleButtonProps({ disabled, error, isOpen }) }>
-              <MaybeFieldLabel style={ { width: "100%" } } labelText={ labelText } requirementText={ requirementText } helpText={ helpText }>
-                <Input
-                  { ...getInputProps({
-                    disabled, error, isOpen, autoComplete: "off",
-                  }) }
-                  aria-required={ required } aria-invalid={ error } placeholder={ placeholder }
-                  readOnly value={ optionToString(selectedItem) || "" }
-                />
-              </MaybeFieldLabel>
-              <ToggleButton isOpen={ isOpen } />
-            </SelectBox>
-            {
-              isOpen
-                && (
-                  <Menu { ...getMenuProps({ error, isOpen }) }>
-                    {
-                      options.map((option, index) => (
-                        <MenuItem
-                          { ...getItemProps({
-                            key: option.value,
-                            item: option,
-                            isSelected: selectedItem === option,
-                            isActive: highlightedIndex === index,
-                            index,
-                            disabled,
-                          }) }
-                        >
-                          {option.label}
-                        </MenuItem>
-                      ))
-                    }
-                  </Menu>
-                )
-            }
-          </div>
-        )
-      }
+      {({
+        getMenuProps,
+        getItemProps,
+        getInputProps,
+        getToggleButtonProps,
+        isOpen,
+        selectedItem,
+        highlightedIndex
+      }) => (
+        <div style={{ position: "relative" }}>
+          <SelectBox {...getToggleButtonProps({ disabled, error, isOpen })}>
+            <MaybeFieldLabel
+              style={{ width: "100%" }}
+              labelText={labelText}
+              requirementText={requirementText}
+              helpText={helpText}
+            >
+              <Input
+                {...getInputProps({
+                  disabled,
+                  error,
+                  isOpen,
+                  autoComplete: "off"
+                })}
+                aria-required={required}
+                aria-invalid={error}
+                placeholder={placeholder}
+                readOnly
+                value={optionToString(selectedItem) || ""}
+              />
+            </MaybeFieldLabel>
+            <ToggleButton isOpen={isOpen} />
+          </SelectBox>
+          {isOpen && (
+            <Menu {...getMenuProps({ error, isOpen })}>
+              {options.map((option, index) => (
+                <MenuItem
+                  {...getItemProps({
+                    key: option.value,
+                    item: option,
+                    isSelected: selectedItem === option,
+                    isActive: highlightedIndex === index,
+                    index,
+                    disabled
+                  })}
+                >
+                  {option.label}
+                </MenuItem>
+              ))}
+            </Menu>
+          )}
+        </div>
+      )}
     </Downshift>
-    {error && <InlineValidation mt="x1" message={ error } />}
+    {error && <InlineValidation mt="x1" message={error} />}
   </Field>
 );
 
@@ -206,7 +213,7 @@ Select.propTypes = {
   id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
-  requirementText: PropTypes.string,
+  requirementText: PropTypes.string
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -223,7 +230,7 @@ Select.defaultProps = {
   id: null,
   labelText: null,
   helpText: null,
-  requirementText: null,
+  requirementText: null
 };
 
 export default Select;

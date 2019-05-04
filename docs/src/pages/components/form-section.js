@@ -2,16 +2,32 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Button, Box, SectionTitle, SubsectionTitle, Title, Link, List, ListItem, Form, FormSection, Input
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  List,
+  ListItem,
+  Form,
+  FormSection,
+  Input
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "title", type: "string", defaultValue: "null", description: "Title of Form Section",
-  },
+    name: "title",
+    type: "string",
+    defaultValue: "null",
+    description: "Title of Form Section"
+  }
 ];
 
 export default () => (
@@ -21,19 +37,21 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Form Section</Title>
-      <IntroText>Form sections group related input fields and provide spacing.</IntroText>
+      <IntroText>
+        Form sections group related input fields and provide spacing.
+      </IntroText>
     </Intro>
 
     <DocSection>
-    <Form mb="x6">
-      <FormSection title="Personal Information">
-        <Input id="name" labelText="Name" />
-        <Input id="birthdate" labelText="Date of birth"/>
-      </FormSection>
-      <FormSection title="General Information">
-        <Input id="occupation" labelText="Occupation" />
-      </FormSection>
-    </Form>
+      <Form mb="x6">
+        <FormSection title="Personal Information">
+          <Input id="name" labelText="Name" />
+          <Input id="birthdate" labelText="Date of birth" />
+        </FormSection>
+        <FormSection title="General Information">
+          <Input id="occupation" labelText="Occupation" />
+        </FormSection>
+      </Form>
       <Highlight className="js">
         {`<Form>
     <FormSection title="Personal Information">
@@ -53,16 +71,16 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle mb="x6">Without a Title</SubsectionTitle>
         <Form mb="x6">
-        <FormSection>
+          <FormSection>
             <Input id="name" labelText="Name" />
-            <Input id="birthdate" labelText="Date of birth"/>
-        </FormSection>
-        <FormSection>
+            <Input id="birthdate" labelText="Date of birth" />
+          </FormSection>
+          <FormSection>
             <Input id="occupation" labelText="Occupation" />
-        </FormSection>
+          </FormSection>
         </Form>
         <Highlight className="js">
-        {`<Form>
+          {`<Form>
     <FormSection>
         <Input id="name" labelText="Name" />
         <Input id="birthdate" labelText="Date of birth"/>
@@ -74,27 +92,33 @@ export default () => (
     </FormSection>
 </Form>
 `}
-      </Highlight>
+        </Highlight>
       </Box>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-          <ListItem><Link href="/components/form">Form</Link></ListItem>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-        <List>
-            <ListItem><Link href="https://storybook.nulogy.design/selectedKind=Form&selectedStory=With%20form%20sections&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">View in Storybook</Link></ListItem>
-        </List>
+      <List>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/selectedKind=Form&selectedStory=With%20form%20sections&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+            View in Storybook
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

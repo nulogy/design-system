@@ -27,13 +27,21 @@ class DetectOutsideClick extends React.Component {
   render() {
     const { children } = this.props;
 
-    return <div ref={ node => { this.wrapperRef = node; } }>{ children }</div>;
+    return (
+      <div
+        ref={node => {
+          this.wrapperRef = node;
+        }}
+      >
+        {children}
+      </div>
+    );
   }
 }
 
 DetectOutsideClick.propTypes = {
   onClick: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default DetectOutsideClick;

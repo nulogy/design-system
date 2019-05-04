@@ -12,8 +12,9 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test",
-    "publish-packages": "yarn install && yarn build && yarn lerna publish"
+    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test && yarn workspace @nulogy/docs test",
+    "publish-packages": "yarn install && yarn build && yarn lerna publish",
+    "precommit": "pretty-quick --staged"
   },
   "main": "index.js",
   "license": "MIT",
@@ -30,8 +31,23 @@
     "yarn": "^1.13.0"
   },
   "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "husky": "2.2.0",
     "lerna": "3.13.0",
+    "prettier": "1.17.0",
+    "pretty-quick": "1.10.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run precommit"
+    }
   }
 }

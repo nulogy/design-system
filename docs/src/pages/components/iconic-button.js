@@ -2,19 +2,38 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, IconicButton, List, ListItem,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  IconicButton,
+  List,
+  ListItem
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "disabled", type: "Boolean", defaultValue: "false", description: "Lightens the opacity and makes the button unable to be clicked.",
+    name: "disabled",
+    type: "Boolean",
+    defaultValue: "false",
+    description:
+      "Lightens the opacity and makes the button unable to be clicked."
   },
   {
-    name: "icon", type: "String", defaultValue: "Required", description: "The icon to display. See the Icons component for all possible options.",
-  },
+    name: "icon",
+    type: "String",
+    defaultValue: "Required",
+    description:
+      "The icon to display. See the Icons component for all possible options."
+  }
 ];
 
 export default () => (
@@ -37,10 +56,11 @@ export default () => (
       </Highlight>
     </DocSection>
 
-
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>When a possible action would best be communicated via iconography</ListItem>
+      <ListItem>
+        When a possible action would best be communicated via iconography
+      </ListItem>
     </DocSection>
 
     <DocSection>
@@ -49,35 +69,44 @@ export default () => (
         <SubsectionTitle>With a label</SubsectionTitle>
         <IconicButton icon="delete">Delete</IconicButton>
         <Highlight className="js">
-          {"<IconicButton icon=\"delete\">Delete</IconicButton>"}
+          {'<IconicButton icon="delete">Delete</IconicButton>'}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Disabled</SubsectionTitle>
-        <IconicButton icon="delete" disabled>Delete</IconicButton>
+        <IconicButton icon="delete" disabled>
+          Delete
+        </IconicButton>
         <Highlight className="js">
-          {"<IconicButton icon=\"delete\" disabled>Delete</IconicButton>"}
+          {'<IconicButton icon="delete" disabled>Delete</IconicButton>'}
         </Highlight>
       </Box>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-        <ListItem><Link href="/components/buttons">Buttons</Link></ListItem>
-        <ListItem><Link href="/components/icon">Icons</Link></ListItem>
+        <ListItem>
+          <Link href="/components/buttons">Buttons</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/icon">Icons</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=IconicButton">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=IconicButton">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
-
   </Layout>
 );

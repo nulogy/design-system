@@ -14,26 +14,25 @@ const SubMenuLink = styled(Link)(props => ({
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props),
+    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props)
   },
   "&:disabled": {
-    opacity: ".5",
-  },
-
+    opacity: ".5"
+  }
 }));
 
 SubMenuLink.propTypes = {
   color: PropTypes.string,
   hover: PropTypes.string,
   bgHoverColor: PropTypes.string,
-  underline: PropTypes.bool,
+  underline: PropTypes.bool
 };
 
 SubMenuLink.defaultProps = {
   color: theme.colors.darkBlue,
   hover: theme.colors.darkBlue,
   bgHoverColor: theme.colors.lightGrey,
-  underline: false,
+  underline: false
 };
 
 export default SubMenuLink;

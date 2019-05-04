@@ -9,46 +9,34 @@ import { Fieldset } from "../Form";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
-    const {
-      value,
-      disabled,
-      required,
-      ...radioProps
-    } = radio.props;
+    const { value, disabled, required, ...radioProps } = radio.props;
     return (
       <Radio
-        { ...radioProps }
-        value={ value }
-        disabled={ props.disabled || disabled }
-        required={ props.required || required }
-        name={ props.name }
-        defaultChecked={ value === props.defaultValue ? true : undefined }
-        checked={ props.checkedValue && (value === props.checkedValue) }
-        onChange={ props.onChange }
+        {...radioProps}
+        value={value}
+        disabled={props.disabled || disabled}
+        required={props.required || required}
+        name={props.name}
+        defaultChecked={value === props.defaultValue ? true : undefined}
+        checked={props.checkedValue && value === props.checkedValue}
+        onChange={props.onChange}
       />
     );
   });
-  return (radioButtons);
+  return radioButtons;
 };
 
-const BaseRadioGroup = ({
-  className,
-  error,
-  labelText,
-  helpText,
-  requirementText,
-  ...props
-}) => (
-  <Fieldset role="radiogroup" className={ className } hasHelpText={ !!helpText }>
+const BaseRadioGroup = ({ className, error, labelText, helpText, requirementText, ...props }) => (
+  <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
     <Box mb="x1">
       <legend>
-        { labelText }
-        { requirementText && (<RequirementText>{requirementText}</RequirementText>) }
+        {labelText}
+        {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
-      { helpText && (<HelpText>{helpText}</HelpText>) }
+      {helpText && <HelpText>{helpText}</HelpText>}
     </Box>
-    { getRadioButtons(props) }
-    {error && <InlineValidation mt="x1" message={ error } />}
+    {getRadioButtons(props)}
+    {error && <InlineValidation mt="x1" message={error} />}
   </Fieldset>
 );
 
@@ -58,20 +46,20 @@ BaseRadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.shape({
-      type: PropTypes.oneOf([Radio]),
+      type: PropTypes.oneOf([Radio])
     }),
     PropTypes.arrayOf(
       PropTypes.shape({
-        type: PropTypes.oneOf([Radio]),
+        type: PropTypes.oneOf([Radio])
       })
-    ),
+    )
   ]).isRequired,
   defaultValue: PropTypes.string,
   checkedValue: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string,
   helpText: PropTypes.string,
-  requirementText: PropTypes.string,
+  requirementText: PropTypes.string
 };
 
 BaseRadioGroup.defaultProps = {
@@ -81,7 +69,7 @@ BaseRadioGroup.defaultProps = {
   onChange: undefined,
   className: null,
   helpText: null,
-  requirementText: null,
+  requirementText: null
 };
 
 const RadioGroup = styled(BaseRadioGroup)({});

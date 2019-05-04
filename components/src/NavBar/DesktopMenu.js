@@ -22,37 +22,31 @@ const ApplyMenuLinkStyles = styled.div({
       outline: "none",
       color: theme.colors.lightBlue,
       backgroundColor: theme.colors.black,
-      cursor: "pointer",
+      cursor: "pointer"
     },
     "&:disabled": {
-      opacity: ".5",
-    },
-  },
+      opacity: ".5"
+    }
+  }
 });
 
 const Nav = styled.nav({
-  display: "flex",
+  display: "flex"
 });
 
 const renderMenuTrigger = menuItem => (
-  <div key={ menuItem.name }>
-    <MenuTrigger name={ menuItem.name } menuData={ menuItem.items } />
+  <div key={menuItem.name}>
+    <MenuTrigger name={menuItem.name} menuData={menuItem.items} />
   </div>
 );
 
 const renderMenuLink = menuItem => (
-  <div key={ menuItem.name }>
-    <MenuLink href={ menuItem.href }>
-      {menuItem.name}
-    </MenuLink>
+  <div key={menuItem.name}>
+    <MenuLink href={menuItem.href}>{menuItem.name}</MenuLink>
   </div>
 );
 
-const renderCustom = menuItem => (
-  <ApplyMenuLinkStyles key={ menuItem.name }>
-    {menuItem.render()}
-  </ApplyMenuLinkStyles>
-);
+const renderCustom = menuItem => <ApplyMenuLinkStyles key={menuItem.name}>{menuItem.render()}</ApplyMenuLinkStyles>;
 
 const getRenderFunction = menuItem => {
   if (menuItem.items) {
@@ -62,37 +56,28 @@ const getRenderFunction = menuItem => {
   } else if (menuItem.render) {
     return renderCustom;
   } else {
-    return (() => (null));
+    return () => null;
   }
 };
 
-const renderMenuItem = menuItem => (getRenderFunction(menuItem)(menuItem));
+const renderMenuItem = menuItem => getRenderFunction(menuItem)(menuItem);
 
-const BaseDesktopMenu = ({
-  menuData,
-  ...props
-}) => (
-  <Nav { ...props }>
-    {menuData.map(renderMenuItem)}
-  </Nav>
-);
+const BaseDesktopMenu = ({ menuData, ...props }) => <Nav {...props}>{menuData.map(renderMenuItem)}</Nav>;
 
 BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  menuData: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
 BaseDesktopMenu.defaultProps = {
-  menuData: null,
+  menuData: null
 };
 
-const DesktopMenu = styled(BaseDesktopMenu)(
-  {
-    "div": {
-      ":not(:last-of-type)": {
-        marginRight: theme.space.x1,
-      },
-    },
-  },
-);
+const DesktopMenu = styled(BaseDesktopMenu)({
+  div: {
+    ":not(:last-of-type)": {
+      marginRight: theme.space.x1
+    }
+  }
+});
 
 export default DesktopMenu;

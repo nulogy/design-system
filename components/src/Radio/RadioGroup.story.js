@@ -11,7 +11,14 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("RadioGroup with all props", () => (
-    <RadioGroup labelText="Setting Selection" name="settingSelection" helpText="Select a setting from the menu below:" required requirementText="(Required)" defaultValue="a">
+    <RadioGroup
+      labelText="Setting Selection"
+      name="settingSelection"
+      helpText="Select a setting from the menu below:"
+      required
+      requirementText="(Required)"
+      defaultValue="a"
+    >
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />
@@ -32,7 +39,7 @@ storiesOf("RadioGroup", module)
     </RadioGroup>
   ))
   .add("Controlled", () => (
-    <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={ () => {} }>
+    <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={() => {}}>
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />

@@ -8,16 +8,14 @@ describe("NavBar", () => {
       primaryMenu: [
         {
           name: "Menu 1",
-          items: [
-            { name: "Item 1", href: "/" },
-          ],
-        },
-      ],
+          items: [{ name: "Item 1", href: "/" }]
+        }
+      ]
     };
 
     cy.mount(
       <NDSProvider>
-        <NavBar menuData={ data } />
+        <NavBar menuData={data} />
       </NDSProvider>
     );
   });

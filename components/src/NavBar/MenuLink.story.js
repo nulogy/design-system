@@ -3,9 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { Flex } from "../Flex";
 import MenuLink from "./MenuLink";
 
-storiesOf("MenuLink", module)
-  .add("MenuLink", () => (
-    <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
-      <MenuLink href="/">Menu Link 1</MenuLink>
-    </Flex>
-  ));
+storiesOf("MenuLink", module).add("MenuLink", () => (
+  <Flex bg="blackBlue" justifyContent="center" alignItems="center" p="x2">
+    <MenuLink href="/">Menu Link 1</MenuLink>
+  </Flex>
+));

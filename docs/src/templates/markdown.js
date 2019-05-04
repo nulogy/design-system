@@ -7,14 +7,27 @@ import styled from "styled-components";
 import { Intro, IntroText, Layout } from "../components";
 
 const MarkdownStyles = styled.div`
-  h1 {font-weight: 100 !important;}
-  h1, h2, h3, h4 {font-weight: 500;}
-  a, a:visited {color: tokens.color_base_blue; text-decoration: none;}
-  a:hover {color: tokens.color_base_dark_blue;}
+  h1 {
+    font-weight: 100 !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 500;
+  }
+  a,
+  a:visited {
+    color: tokens.color_base_blue;
+    text-decoration: none;
+  }
+  a:hover {
+    color: tokens.color_base_dark_blue;
+  }
 `;
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
@@ -28,10 +41,10 @@ export default function Template({
           <Title>{frontmatter.title}</Title>
           <IntroText>{frontmatter.intro}</IntroText>
         </Intro>
-        <Box maxWidth={ 800 } mb="x4">
+        <Box maxWidth={800} mb="x4">
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={ { __html: html } } // eslint-disable-line
+            dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line
           />
         </Box>
       </MarkdownStyles>
@@ -40,7 +53,7 @@ export default function Template({
 }
 
 Template.propTypes = {
-  data: PropTypes.node.isRequired,
+  data: PropTypes.node.isRequired
 };
 
 export const pageQuery = graphql`

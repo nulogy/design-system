@@ -2,16 +2,29 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, List, ListItem,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  List,
+  ListItem
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 
 const propsRows = [
   {
-    name: "compact", type: "Boolean", defaultValue: "false", description: "Removes margin between list items",
-  },
+    name: "compact",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Removes margin between list items"
+  }
 ];
 
 export default () => (
@@ -63,12 +76,16 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ propsRows } />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=List">View in Storybook</Link></ListItem>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?selectedKind=List">
+          View in Storybook
+        </Link>
+      </ListItem>
     </DocSection>
   </Layout>
 );

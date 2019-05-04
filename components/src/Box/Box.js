@@ -14,7 +14,7 @@ import {
   minHeight,
   maxHeight,
   position,
-  display,
+  display
 } from "styled-system";
 import theme from "../theme";
 
@@ -54,11 +54,11 @@ Box.propTypes = {
   ...minHeight.propTypes,
   ...maxHeight.propTypes,
   ...position.propTypes,
-  ...display.propTypes,
+  ...display.propTypes
 };
 
 Box.defaultProps = {
-  theme,
+  theme
 };
 
 export default Box;

@@ -2,10 +2,21 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Input, Link, ListItem, List
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Input,
+  Link,
+  ListItem,
+  List
 } from "@nulogy/components";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
@@ -29,8 +40,14 @@ export default () => (
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
       <List>
-        <ListItem>Users need to enter information that is best communicated in text form.</ListItem>
-        <ListItem>You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.</ListItem>
+        <ListItem>
+          Users need to enter information that is best communicated in text
+          form.
+        </ListItem>
+        <ListItem>
+          You need to collect information that varies from one user to another
+          and can’t be represented as a set of pre-determined choices.
+        </ListItem>
       </List>
     </DocSection>
     <DocSection>
@@ -39,19 +56,25 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Input labelText="Label" placeholder="I'm an input" disabled />
         <Highlight className="js">
-          {"<Input id=\"disabled-input\" placeholder=\"I'm an input\" disabled />"}
+          {'<Input id="disabled-input" placeholder="I\'m an input" disabled />'}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
         <Input labelText="Label" error="Error message" />
         <Highlight className="js">
-          {"<Input labelText=\"Label\" id=\"error-input\" error=\"Error message\" />"}
+          {'<Input labelText="Label" id="error-input" error="Error message" />'}
         </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>With all labels</SubsectionTitle>
-        <Input id="all-labels" labelText="Label" helpText="Additional help text" requirementText="(Optional)" placeholder="I'm an input" />
+        <Input
+          id="all-labels"
+          labelText="Label"
+          helpText="Additional help text"
+          requirementText="(Optional)"
+          placeholder="I'm an input"
+        />
         <Highlight className="js">
           {`<Input
   id="all-labels"
@@ -66,25 +89,35 @@ export default () => (
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
       <List>
-        <ListItem>Whenever possible match the width of the input field with the expected length of the input. If that is not possible then fill the entire width of the container.</ListItem>
+        <ListItem>
+          Whenever possible match the width of the input field with the expected
+          length of the input. If that is not possible then fill the entire
+          width of the container.
+        </ListItem>
       </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ inputProps } />
+      <PropsTable propsRows={inputProps} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-        <ListItem><Link href="/components/form">Form</Link></ListItem>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <List>
-        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Input">View in Storybook</Link></ListItem>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?selectedKind=Input">
+            View in Storybook
+          </Link>
+        </ListItem>
       </List>
     </DocSection>
   </Layout>

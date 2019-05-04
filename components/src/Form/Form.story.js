@@ -1,37 +1,40 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Input } from "../Input";
-import {
-  Form,
-  FormSection,
-} from ".";
-import {
-  Checkbox,
-  CheckboxGroup,
-} from "../Checkbox";
+import { Form, FormSection } from ".";
+import { Checkbox, CheckboxGroup } from "../Checkbox";
 import { Radio, RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
 import { HeaderValidation } from "../Validation";
 import { List, ListItem } from "../List";
 import { Select } from "../Select";
 
-const options = [
-  { value: "planned", label: "Planned" },
-  { value: "booked", label: "Booked" },
-];
+const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
 
 storiesOf("Form", module)
   .add("Form", () => (
     <Form title="New Profile">
       <Input id="name" labelText="Name" />
-      <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+      <Input
+        id="birthdate"
+        placeholder="DD-MM-YYYY"
+        labelText="Date of birth"
+        requirementText="(Optional)"
+        helpText="Enter a date below"
+      />
       <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
     </Form>
   ))
   .add("Without title", () => (
     <Form>
       <Input id="name" labelText="Name" />
-      <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+      <Input
+        id="birthdate"
+        placeholder="DD-MM-YYYY"
+        labelText="Date of birth"
+        requirementText="(Optional)"
+        helpText="Enter a date below"
+      />
       <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
     </Form>
   ))
@@ -39,7 +42,13 @@ storiesOf("Form", module)
     <Form title="New Profile">
       <FormSection title="Personal Information">
         <Input id="name" labelText="Name" />
-        <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+        <Input
+          id="birthdate"
+          placeholder="DD-MM-YYYY"
+          labelText="Date of birth"
+          requirementText="(Optional)"
+          helpText="Enter a date below"
+        />
         <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection title="General Information">
@@ -52,7 +61,13 @@ storiesOf("Form", module)
     <Form title="New Profile">
       <FormSection>
         <Input id="name" labelText="Name" />
-        <Input id="birthdate" placeholder="DD-MM-YYYY" labelText="Date of birth" requirementText="(Optional)" helpText="Enter a date below" />
+        <Input
+          id="birthdate"
+          placeholder="DD-MM-YYYY"
+          labelText="Date of birth"
+          requirementText="(Optional)"
+          helpText="Enter a date below"
+        />
         <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
       </FormSection>
       <FormSection>
@@ -68,13 +83,20 @@ storiesOf("Form", module)
           <List compact>
             <ListItem>Affected field</ListItem>
             <ListItem>Unmet criteria</ListItem>
-            <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+            <ListItem>
+              <a href="https://nulogy.design/">Affected field</a>
+            </ListItem>
           </List>
         </HeaderValidation>
         <FormSection title="Job Information">
           <Input id="project" labelText="Project" placeholder="Project 128703" />
-          <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
-          <Select id="project-status" labelText="Project status" options={ options } />
+          <Input
+            id="project-description"
+            labelText="Project description"
+            requirementText="(Optional)"
+            helpText="Project description helps identify the project."
+          />
+          <Select id="project-status" labelText="Project status" options={options} />
           <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
           <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
           <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
@@ -86,7 +108,13 @@ storiesOf("Form", module)
             <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
             <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
           </CheckboxGroup>
-          <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+          <RadioGroup
+            error="Only yes can be selected..."
+            labelText="Reconcile"
+            name="settingSelection"
+            defaultValue="yes"
+            id="reconcile"
+          >
             <Radio value="yes" labelText="Yes" />
             <Radio value="no" labelText="No" />
             <Radio value="maybe" labelText="Maybe" disabled />

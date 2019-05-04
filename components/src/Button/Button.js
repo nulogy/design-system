@@ -15,48 +15,36 @@ const size = props => {
       return {
         fontSize: `${props.theme.fontSizes.small}`,
         lineHeight: `${props.theme.lineHeights.smallTextCompressed}`,
-        padding: `${subPx(props.theme.space.half)} ${props.theme.space.x1}`,
+        padding: `${subPx(props.theme.space.half)} ${props.theme.space.x1}`
       };
     case "medium":
       return {
         fontSize: `${props.theme.fontSizes.medium}`,
-        padding: `${subPx(props.theme.space.x1, 1)} ${props.theme.space.x2}`,
+        padding: `${subPx(props.theme.space.x1, 1)} ${props.theme.space.x2}`
       };
     case "large":
       return {
         fontSize: `${props.theme.fontSizes.large}`,
         lineHeight: `${props.theme.lineHeights.subsectionTitle}`,
-        padding: `${subPx(props.theme.space.x2)} ${props.theme.space.x3}`,
-
+        padding: `${subPx(props.theme.space.x2)} ${props.theme.space.x3}`
       };
     default:
       return {
         fontSize: `${props.theme.fontSizes.medium}`,
-        padding: `${subPx(props.theme.space.x1)} ${props.theme.space.x2}`,
+        padding: `${subPx(props.theme.space.x1)} ${props.theme.space.x2}`
       };
   }
 };
 
-const BaseButton = ({
-  children,
-  iconSide,
-  icon,
-  ...props
-}) => {
-  const { lineHeights: { smallTextCompressed } } = theme;
+const BaseButton = ({ children, iconSide, icon, ...props }) => {
+  const {
+    lineHeights: { smallTextCompressed }
+  } = theme;
   return (
-    <button { ...omit(props, "fullWidth") }>
-      {(icon && iconSide === "left")
-          && (
-          <Icon size={ `${smallTextCompressed}em` } mr="half" icon={ icon } />
-          )
-        }
+    <button {...omit(props, "fullWidth")}>
+      {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
       {children}
-      {(icon && iconSide === "right")
-          && (
-          <Icon size={ `${smallTextCompressed}em` } ml="half" icon={ icon } />
-          )
-        }
+      {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
     </button>
   );
 };
@@ -64,14 +52,13 @@ const BaseButton = ({
 BaseButton.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.oneOf(iconNames),
-  iconSide: PropTypes.oneOf(["left", "right"]),
+  iconSide: PropTypes.oneOf(["left", "right"])
 };
 
 BaseButton.defaultProps = {
   icon: null,
-  iconSide: "right",
+  iconSide: "right"
 };
-
 
 const Button = styled(BaseButton)(
   size,
@@ -93,24 +80,24 @@ const Button = styled(BaseButton)(
     margin: theme.space.none,
     "&:hover, &:focus": {
       outline: "none",
-      backgroundColor: disabled ? null : theme.colors.lightBlue,
+      backgroundColor: disabled ? null : theme.colors.lightBlue
     },
     "&:active": {
       transform: "scale(0.98)",
-      transition: ".2s ease-in",
+      transition: ".2s ease-in"
     },
     "&:disabled": {
-      opacity: ".5",
-    },
+      opacity: ".5"
+    }
   }),
-  space,
+  space
 );
 
 Button.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
-  ...space.propTypes,
+  ...space.propTypes
 };
 
 export default Button;

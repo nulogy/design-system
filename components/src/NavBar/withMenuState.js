@@ -6,7 +6,7 @@ class MenuState extends React.Component {
     super();
 
     this.state = {
-      isOpen: false,
+      isOpen: false
     };
 
     this.handleOnClick = this.handleOnClick.bind(this);
@@ -20,7 +20,6 @@ class MenuState extends React.Component {
     document.addEventListener("keydown", this.handleKeyDown);
   }
 
-
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown);
   }
@@ -33,19 +32,19 @@ class MenuState extends React.Component {
     const { isOpen } = this.state;
 
     this.setState({
-      isOpen: !isOpen,
+      isOpen: !isOpen
     });
   }
 
   openMenu() {
     this.setState({
-      isOpen: true,
+      isOpen: true
     });
   }
 
   closeMenu() {
     this.setState({
-      isOpen: false,
+      isOpen: false
     });
   }
 
@@ -68,21 +67,17 @@ class MenuState extends React.Component {
       handleMenuToggle: this.handleOnClick,
       handleMenuKeydown: this.handleKeyDown,
       openMenu: this.openMenu,
-      closeMenu: this.closeMenu,
+      closeMenu: this.closeMenu
     });
   }
 }
 
 MenuState.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.func.isRequired
 };
 
 const withMenuState = MenuComponentWithoutState => props => (
-  <MenuState>
-    {
-      menuState => <MenuComponentWithoutState menuState={ menuState } { ...props } />
-    }
-  </MenuState>
+  <MenuState>{menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}</MenuState>
 );
 
 export { withMenuState };

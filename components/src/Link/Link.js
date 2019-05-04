@@ -4,33 +4,28 @@ import { color, space, themeGet } from "styled-system";
 import { darken } from "polished";
 import theme from "../theme";
 
-const getHoverColor = props => (
+const getHoverColor = props =>
   props.hover
     ? themeGet(`colors.${props.hover}`, props.hover)(props)
-    : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props))
-);
+    : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
 
-const Link = styled.a(
-  color,
-  space,
-  ({ underline, ...props }) => ({
-    textDecoration: underline ? "underline" : "none",
-    "&:hover, &:focus": {
-      color: getHoverColor(props),
-    },
-  })
-);
+const Link = styled.a(color, space, ({ underline, ...props }) => ({
+  textDecoration: underline ? "underline" : "none",
+  "&:hover, &:focus": {
+    color: getHoverColor(props)
+  }
+}));
 
 Link.propTypes = {
   underline: PropTypes.bool,
   hover: PropTypes.string,
-  ...color.propTypes,
+  ...color.propTypes
 };
 
 Link.defaultProps = {
   underline: true,
   color: "blue",
-  theme,
+  theme
 };
 
 export default Link;

@@ -1,21 +1,18 @@
 module.exports = {
-  "presets": [
+  presets: [
     [
       "@babel/preset-env",
       {
-        "targets": { "browsers": "defaults" },
-        "useBuiltIns": "entry",
-      },
+        targets: { browsers: "defaults" },
+        useBuiltIns: "entry"
+      }
     ],
-    "@babel/preset-react",
+    "@babel/preset-react"
   ],
-  "plugins": ["babel-plugin-styled-components"],
-  "env": {
-    "test": {
-      "plugins": [
-        "babel-plugin-styled-components",
-        "require-context-hook",
-      ],
-    },
-  },
+  plugins: ["babel-plugin-styled-components"],
+  env: {
+    test: {
+      plugins: ["babel-plugin-styled-components", "require-context-hook"]
+    }
+  }
 };

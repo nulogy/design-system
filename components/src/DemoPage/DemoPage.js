@@ -2,19 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Text, Title } from "../Type";
-import {
-  PrimaryButton,
-  QuietButton,
-  IconicButton,
-} from "../Button";
+import { PrimaryButton, QuietButton, IconicButton } from "../Button";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Input } from "../Input";
 import { Form, FormSection } from "../Form";
-import {
-  Checkbox,
-  CheckboxGroup,
-} from "../Checkbox";
+import { Checkbox, CheckboxGroup } from "../Checkbox";
 import { Radio, RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
 import { HeaderValidation } from "../Validation";
@@ -25,136 +18,140 @@ import NavBar from "../NavBar/NavBar";
 import theme from "../theme";
 
 const menuData = {
-  "primaryMenu": [
+  primaryMenu: [
     {
       name: "Dashboard",
       items: [
         {
           name: "Customers",
-          href: "/",
+          href: "/"
         },
         {
           name: "Invoices",
-          href: "/",
+          href: "/"
         },
         {
           name: "Projects",
-          href: "/",
+          href: "/"
         },
         {
           name: "Items",
-          href: "/",
+          href: "/"
         },
         {
           name: "Vendors",
-          href: "/",
+          href: "/"
         },
         {
           name: "Carriers",
-          href: "/",
-        },
-      ],
+          href: "/"
+        }
+      ]
     },
     {
       name: "Inspector",
       items: [
         {
           name: "Integration",
-          href: "/",
+          href: "/"
         },
         {
           name: "Site configuration",
-          href: "/",
+          href: "/"
         },
         {
           name: "Company configuration",
-          href: "/",
-        },
-      ],
+          href: "/"
+        }
+      ]
     },
     {
       name: "Reports",
       items: [
         {
           name: "Production",
-          href: "/",
+          href: "/"
         },
         {
           name: "Item cart",
-          href: "/",
+          href: "/"
         },
         {
           name: "Inventory",
-          href: "/",
-        },
-      ],
+          href: "/"
+        }
+      ]
     },
     {
       name: "Sheets",
       items: [
         {
           name: "Item locator",
-          href: "/",
+          href: "/"
         },
         {
           name: "Ship orders",
-          href: "/",
-        },
-      ],
+          href: "/"
+        }
+      ]
     },
     {
       name: "Forms",
       items: [
         {
           name: "Projects",
-          href: "/",
+          href: "/"
         },
         {
           name: "Jobs",
-          href: "/",
-        },
-      ],
-    },
+          href: "/"
+        }
+      ]
+    }
   ],
-  "secondaryMenu": [
+  secondaryMenu: [
     {
       name: "User",
       items: [
         {
           name: "Profile",
-          href: "/",
+          href: "/"
         },
         {
           name: "Preferences",
-          href: "/",
+          href: "/"
         },
         {
           name: "Logout",
-          href: "/",
-        },
-      ],
+          href: "/"
+        }
+      ]
     },
     {
       name: "Settings",
       items: [
         {
           name: "Permissions",
-          href: "/",
+          href: "/"
         },
         {
           name: "Manage account",
-          href: "/",
-        },
-      ],
-    },
-  ],
+          href: "/"
+        }
+      ]
+    }
+  ]
 };
 
 const BaseMenuItem = ({ className, children, ...props }) => (
-  <Box className={ className } { ...props }>
+  <Box className={className} {...props}>
     <Link
-      px="x3" py="x1" style={ { display: "block" } }
-      color={ theme.colors.white } underline={ false } href="http://nulogy.design"
+      px="x3"
+      py="x1"
+      style={{ display: "block" }}
+      color={theme.colors.white}
+      underline={false}
+      href="http://nulogy.design"
     >
       {children}
     </Link>
@@ -163,23 +160,17 @@ const BaseMenuItem = ({ className, children, ...props }) => (
 
 BaseMenuItem.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 BaseMenuItem.defaultProps = {
   className: null,
-  children: null,
+  children: null
 };
 
 const BaseSidebarItem = ({ className, children, ...props }) => (
-  <Box className={ className } { ...props }>
-    <Link
-      px="x3" py="x1" style={ { display: "block" } }
-      color="blue" underline={ false } href="http://nulogy.design"
-    >
+  <Box className={className} {...props}>
+    <Link px="x3" py="x1" style={{ display: "block" }} color="blue" underline={false} href="http://nulogy.design">
       {children}
     </Link>
   </Box>
@@ -187,98 +178,76 @@ const BaseSidebarItem = ({ className, children, ...props }) => (
 
 BaseSidebarItem.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 BaseSidebarItem.defaultProps = {
   className: null,
-  children: null,
+  children: null
 };
 
 const SidebarItem = styled(BaseSidebarItem)({
   "&:hover": {
-    backgroundColor: theme.colors.grey,
-  },
+    backgroundColor: theme.colors.grey
+  }
 });
 
 const BaseSidebar = ({ className, children, ...props }) => (
-  <Box
-    className={ className } bg="whiteGrey" style={ { minWidth: "256px" } }
-    { ...props }
-  >
+  <Box className={className} bg="whiteGrey" style={{ minWidth: "256px" }} {...props}>
     {children}
   </Box>
 );
 
 BaseSidebar.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 BaseSidebar.defaultProps = {
   className: null,
-  children: null,
+  children: null
 };
 
 const Sidebar = styled(BaseSidebar)({});
 
 const Chrome = ({ children, ...props }) => (
-  <Flex flexDirection="column" { ...props }>
-    <NavBar menuData={ menuData } />
-    <Box style={ { width: "100%" } }>
-      { children }
-    </Box>
+  <Flex flexDirection="column" {...props}>
+    <NavBar menuData={menuData} />
+    <Box style={{ width: "100%" }}>{children}</Box>
   </Flex>
 );
 
 Chrome.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 Chrome.defaultProps = {
-  children: null,
+  children: null
 };
 
 const Main = styled(Flex)({});
 
 const DemoPage = () => {
-  const options = [
-    { value: "planned", label: "Planned" },
-    { value: "booked", label: "Booked" },
-  ];
+  const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
   return (
     <Chrome>
       <Main
-        flexDirection={ {
+        flexDirection={{
           small: "column",
           medium: "row",
-          large: "row",
-        } }
+          large: "row"
+        }}
       >
         <Sidebar
           py="x3"
           px="x1"
-          flexDirection={ { small: "256px", medium: "256px" } }
-          order={ { small: "2", medium: "-1", large: "-1" } }
+          flexDirection={{ small: "256px", medium: "256px" }}
+          order={{ small: "2", medium: "-1", large: "-1" }}
         >
-          <Text
-            fontWeight="medium" mx="x3" mb="x1"
-          >
+          <Text fontWeight="medium" mx="x3" mb="x1">
             Contextual Menu
           </Text>
-          <Flex
-            flexDirection={ { small: "row", medium: "column", large: "column" } }
-            justifyContent="flex-start"
-          >
+          <Flex flexDirection={{ small: "row", medium: "column", large: "column" }} justifyContent="flex-start">
             <SidebarItem>Contextual Tab 1</SidebarItem>
             <SidebarItem>Contextual Tab 2</SidebarItem>
             <SidebarItem>Contextual Tab 3</SidebarItem>
@@ -288,19 +257,26 @@ const DemoPage = () => {
         </Sidebar>
         <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
-          <Box width={ { small: "100%", medium: "80%", large: "80%" } }>
+          <Box width={{ small: "100%", medium: "80%", large: "80%" }}>
             <Form title="Job 324400" mb="x4">
               <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
                 <List compact>
                   <ListItem>Affected field</ListItem>
                   <ListItem>Unmet criteria</ListItem>
-                  <ListItem><a href="https://nulogy.design/">Affected field</a></ListItem>
+                  <ListItem>
+                    <a href="https://nulogy.design/">Affected field</a>
+                  </ListItem>
                 </List>
               </HeaderValidation>
               <FormSection title="Job Information">
                 <Input id="project" labelText="Project" placeholder="Project 128703" />
-                <Input id="project-description" labelText="Project description" requirementText="(Optional)" helpText="Project description helps identify the project." />
-                <Select id="project-status" labelText="Project status" options={ options } />
+                <Input
+                  id="project-description"
+                  labelText="Project description"
+                  requirementText="(Optional)"
+                  helpText="Project description helps identify the project."
+                />
+                <Select id="project-status" labelText="Project status" options={options} />
                 <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
                 <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
                 <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
@@ -312,7 +288,13 @@ const DemoPage = () => {
                   <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
                   <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
                 </CheckboxGroup>
-                <RadioGroup error="Only yes can be selected..." labelText="Reconcile" name="settingSelection" defaultValue="yes" id="reconcile">
+                <RadioGroup
+                  error="Only yes can be selected..."
+                  labelText="Reconcile"
+                  name="settingSelection"
+                  defaultValue="yes"
+                  id="reconcile"
+                >
                   <Radio value="yes" labelText="Yes" />
                   <Radio value="no" labelText="No" />
                   <Radio value="maybe" labelText="Maybe" disabled />
@@ -322,7 +304,13 @@ const DemoPage = () => {
               <FormSection title="Rejects">
                 <Input defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
                 <Input id="quantity" labelText="Quantity" />
-                <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
+                <Toggle
+                  id="reject-visibility"
+                  labelText="Reject visibility"
+                  onText="Visible"
+                  offText="Hidden"
+                  disabled
+                />
               </FormSection>
             </Form>
           </Box>
@@ -332,10 +320,7 @@ const DemoPage = () => {
           </Flex>
         </Box>
       </Main>
-      <Flex
-        px="x3" py="x1" bg="lightGrey"
-        justifyContent="space-between" alignItems="center"
-      >
+      <Flex px="x3" py="x1" bg="lightGrey" justifyContent="space-between" alignItems="center">
         <Text>Nulogy 2019</Text>
         <IconicButton icon="user">Call support</IconicButton>
       </Flex>

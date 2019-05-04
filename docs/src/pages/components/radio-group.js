@@ -1,11 +1,23 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Link, ListItem, Radio, RadioGroup, List
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  ListItem,
+  Radio,
+  RadioGroup,
+  List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 import groupProps from "../../shared/groupProps";
 
@@ -16,11 +28,16 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Radio Group</Title>
-      <IntroText>For wrapping radio buttons with a label and help text</IntroText>
+      <IntroText>
+        For wrapping radio buttons with a label and help text
+      </IntroText>
     </Intro>
     <DocSection>
-
-      <RadioGroup labelText="Setting Selection" name="settingSelection" helpText="Select a setting from the menu below:">
+      <RadioGroup
+        labelText="Setting Selection"
+        name="settingSelection"
+        helpText="Select a setting from the menu below:"
+      >
         <Radio value="a" labelText="Option A" />
         <Radio value="b" labelText="Option B" />
         <Radio value="c" labelText="Option C" />
@@ -46,7 +63,12 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>With an error</SubsectionTitle>
-        <RadioGroup labelText="Setting Selection" name="settingSelection" helpText="Select a setting from the menu below:" error="Please select an option">
+        <RadioGroup
+          labelText="Setting Selection"
+          name="settingSelection"
+          helpText="Select a setting from the menu below:"
+          error="Please select an option"
+        >
           <Radio value="a" labelText="Option A" />
           <Radio value="b" labelText="Option B" />
           <Radio value="c" labelText="Option C" />
@@ -72,21 +94,29 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ groupProps } />
+      <PropsTable propsRows={groupProps} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-        <ListItem><Link href="/components/radio-button">Radio button</Link></ListItem>
-        <ListItem><Link href="/components/form">Form</Link></ListItem>
+        <ListItem>
+          <Link href="/components/radio-button">Radio button</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <List>
-        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=RadioGroup">View in Storybook</Link></ListItem>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?selectedKind=RadioGroup">
+            View in Storybook
+          </Link>
+        </ListItem>
       </List>
     </DocSection>
   </Layout>

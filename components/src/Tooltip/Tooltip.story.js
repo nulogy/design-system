@@ -17,23 +17,26 @@ const selectOptions = [
   { value: "rejected", label: "Rejected" },
   { value: "open", label: "Open" },
   { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" },
+  { value: "quarantine", label: "In quarantine" }
 ];
 
 const Trigger = () => (
-  <Flex width="128px" height="128px" justifyContent="center" alignItems="center" bg="lightBlue" style={ { border: "2px dashed darkBlue" } }>
+  <Flex
+    width="128px"
+    height="128px"
+    justifyContent="center"
+    alignItems="center"
+    bg="lightBlue"
+    style={{ border: "2px dashed darkBlue" }}
+  >
     Hover me
   </Flex>
 );
 
-
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <Flex p="x8">
-      <Tooltip
-        placement="bottom"
-        tooltip="I am a Tooltip!"
-      >
+      <Tooltip placement="bottom" tooltip="I am a Tooltip!">
         <Button> Button </Button>
       </Tooltip>
     </Flex>
@@ -62,181 +65,103 @@ storiesOf("Tooltip", module)
   .add("with placement", () => (
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip
-          placement="top-start"
-          tooltip="top-start"
-        >
+        <Tooltip placement="top-start" tooltip="top-start">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="top"
-          tooltip="top"
-        >
+        <Tooltip placement="top" tooltip="top">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="top-end"
-          tooltip="top-end"
-        >
+        <Tooltip placement="top-end" tooltip="top-end">
           <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip
-          placement="left-start"
-          tooltip="left-start"
-        >
+        <Tooltip placement="left-start" tooltip="left-start">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="left"
-          tooltip="left"
-        >
+        <Tooltip placement="left" tooltip="left">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="left-end"
-          tooltip="left-end"
-        >
+        <Tooltip placement="left-end" tooltip="left-end">
           <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip
-          placement="right-start"
-          tooltip="right-start"
-        >
+        <Tooltip placement="right-start" tooltip="right-start">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="right"
-          tooltip="right"
-        >
+        <Tooltip placement="right" tooltip="right">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="right-end"
-          tooltip="right-end"
-        >
+        <Tooltip placement="right-end" tooltip="right-end">
           <Trigger />
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip
-          placement="bottom-start"
-          tooltip="bottom-start"
-        >
+        <Tooltip placement="bottom-start" tooltip="bottom-start">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="bottom"
-          tooltip="bottom"
-        >
+        <Tooltip placement="bottom" tooltip="bottom">
           <Trigger />
         </Tooltip>
-        <Tooltip
-          placement="bottom-end"
-          tooltip="bottom-end"
-        >
+        <Tooltip placement="bottom-end" tooltip="bottom-end">
           <Trigger />
         </Tooltip>
       </Flex>
     </>
   ))
   .add("with Link passed in", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip={ (<Link href="/"> Link </Link>) }
-    >
+    <Tooltip placement="bottom" tooltip={<Link href="/"> Link </Link>}>
       <Button> Button </Button>
     </Tooltip>
   ))
   .add("with Button passed in", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip={ (<Button href="/"> Button </Button>) }
-    >
+    <Tooltip placement="bottom" tooltip={<Button href="/"> Button </Button>}>
       <Button> Button </Button>
     </Tooltip>
   ))
   .add("with custom showDelay", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip="Tooltip"
-      showDelay="1000"
-    >
+    <Tooltip placement="bottom" tooltip="Tooltip" showDelay="1000">
       <Button> Button </Button>
     </Tooltip>
   ))
   .add("with custom hideDelay", () => (
-    <Tooltip
-      placement="bottom"
-      tooltip="Tooltip"
-      hideDelay="1000"
-    >
+    <Tooltip placement="bottom" tooltip="Tooltip" hideDelay="1000">
       <Button> Button </Button>
     </Tooltip>
   ))
   .add("with other focusable elements", () => (
     <>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip placement="bottom" tooltip="Tooltip">
         <Button> Button </Button>
       </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip placement="bottom" tooltip="Tooltip">
         <Link href="/"> Link </Link>
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
         <Input id="tooltip-input" />
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
-        <Select id="tooltip-select" options={ selectOptions } />
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
+        <Select id="tooltip-select" options={selectOptions} />
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
         <Textarea id="tooltip-textarea" />
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
         <Text inline>Text</Text>
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
-        <Box width="100px" bg="blue">Text</Box>
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
+        <Box width="100px" bg="blue">
+          Text
+        </Box>
       </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip placement="bottom" tooltip="Tooltip">
         <Text inline>Text</Text>
       </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
-        <Box width="100px" bg="blue">Text</Box>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Box width="100px" bg="blue">
+          Text
+        </Box>
       </Tooltip>
     </>
   ));

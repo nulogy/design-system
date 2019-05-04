@@ -26,11 +26,11 @@ const MenuTriggerButton = styled.button({
     outline: "none",
     color: theme.colors.lightBlue,
     backgroundColor: theme.colors.black,
-    cursor: "pointer",
+    cursor: "pointer"
   },
   "&:disabled": {
-    opacity: ".5",
-  },
+    opacity: ".5"
+  }
 });
 
 const ApplySubMenuLinkStyles = styled.li({
@@ -50,45 +50,45 @@ const ApplySubMenuLinkStyles = styled.li({
     padding: `${theme.space.x1} ${theme.space.x2}`,
     "&:hover, &:focus": {
       outline: "none",
-      backgroundColor: theme.colors.lightGrey,
+      backgroundColor: theme.colors.lightGrey
     },
     "&:disabled": {
-      opacity: ".5",
-    },
-  },
+      opacity: ".5"
+    }
+  }
 });
 
 const keyCode = Object.freeze({
-  "TAB": 9,
-  "RETURN": 13,
-  "ESC": 27,
-  "SPACE": 32,
-  "PAGEUP": 33,
-  "PAGEDOWN": 34,
-  "END": 35,
-  "HOME": 36,
-  "LEFT": 37,
-  "UP": 38,
-  "RIGHT": 39,
-  "DOWN": 40,
+  TAB: 9,
+  RETURN: 13,
+  ESC: 27,
+  SPACE: 32,
+  PAGEUP: 33,
+  PAGEDOWN: 34,
+  END: 35,
+  HOME: 36,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40
 });
 
 const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
-    <SubMenuTrigger linkOnClick={ linkOnClick } name={ subMenuItem.name } menuData={ subMenuItem.items } />
+  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
+    <SubMenuTrigger linkOnClick={linkOnClick} name={subMenuItem.name} menuData={subMenuItem.items} />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li style={ { whiteSpace: "nowrap" } } key={ subMenuItem.name }>
-    <SubMenuLink onClick={ linkOnClick } href={ subMenuItem.href }>
+  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
+    <SubMenuLink onClick={linkOnClick} href={subMenuItem.href}>
       {subMenuItem.name}
     </SubMenuLink>
   </li>
 );
 
 const renderCustom = (subMenuItem, linkOnClick) => (
-  <ApplySubMenuLinkStyles key={ subMenuItem.name } onClick={ linkOnClick }>
+  <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={linkOnClick}>
     {subMenuItem.render()}
   </ApplySubMenuLinkStyles>
 );
@@ -101,20 +101,19 @@ const getRenderFunction = subMenuItem => {
   } else if (subMenuItem.render) {
     return renderCustom;
   } else {
-    return (() => (null));
+    return () => null;
   }
 };
 
-const renderSubMenuItems = (subMenuItems, linkOnClick) => subMenuItems.map(subMenuItem => (
-  getRenderFunction(subMenuItem)(subMenuItem, linkOnClick)
-));
+const renderSubMenuItems = (subMenuItems, linkOnClick) =>
+  subMenuItems.map(subMenuItem => getRenderFunction(subMenuItem)(subMenuItem, linkOnClick));
 
 /* eslint-disable react/destructuring-assignment */
 class MenuTrigger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subMenuOpen: false,
+      subMenuOpen: false
     };
     this.buttonRef = React.createRef();
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -145,19 +144,19 @@ class MenuTrigger extends React.Component {
   }
 
   subMenuEventHandlers() {
-    return ({
-      onBlur: () => (this.hideSubMenu()),
-      onFocus: () => (this.showSubMenu()),
-      onKeyDown: e => (this.handleKeyDown(e)),
-    });
+    return {
+      onBlur: () => this.hideSubMenu(),
+      onFocus: () => this.showSubMenu(),
+      onKeyDown: e => this.handleKeyDown(e)
+    };
   }
 
   menuTriggerEventHandlers() {
-    return ({
-      onBlur: () => (this.hideSubMenu()),
-      onClick: () => (this.showSubMenu()),
-      onKeyDown: e => (this.handleKeyDown(e)),
-    });
+    return {
+      onBlur: () => this.hideSubMenu(),
+      onClick: () => this.showSubMenu(),
+      onKeyDown: e => this.handleKeyDown(e)
+    };
   }
 
   clearScheduled() {
@@ -184,18 +183,32 @@ class MenuTrigger extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) => (
-            <MenuTriggerButton aria-haspopup="true" aria-expanded={ this.state.subMenuOpen } { ...this.props } { ...this.menuTriggerEventHandlers() } ref={ ref }>
-              { this.props.name }
-              <Icon style={ { position: "absolute", top: "11px" } } icon="downArrow" color="lightGrey" size="20px" p="2px" />
+            <MenuTriggerButton
+              aria-haspopup="true"
+              aria-expanded={this.state.subMenuOpen}
+              {...this.props}
+              {...this.menuTriggerEventHandlers()}
+              ref={ref}
+            >
+              {this.props.name}
+              <Icon
+                style={{ position: "absolute", top: "11px" }}
+                icon="downArrow"
+                color="lightGrey"
+                size="20px"
+                p="2px"
+              />
             </MenuTriggerButton>
           )}
         </Reference>
         {this.state.subMenuOpen && (
-          <Popper placement="bottom-start" modifiers={ { flip: { behavior: ["bottom"] } } }>
+          <Popper placement="bottom-start" modifiers={{ flip: { behavior: ["bottom"] } }}>
             {popperProps => (
-              <DetectOutsideClick onClick={ this.handleOutsideClick }>
-                <SubMenu popperProps={ popperProps } { ...this.subMenuEventHandlers() }>
-                  {renderSubMenuItems(this.props.menuData, () => { this.hideSubMenu(true); })}
+              <DetectOutsideClick onClick={this.handleOutsideClick}>
+                <SubMenu popperProps={popperProps} {...this.subMenuEventHandlers()}>
+                  {renderSubMenuItems(this.props.menuData, () => {
+                    this.hideSubMenu(true);
+                  })}
                 </SubMenu>
               </DetectOutsideClick>
             )}
@@ -207,18 +220,17 @@ class MenuTrigger extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-
 MenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 MenuTrigger.defaultProps = {
   menuData: null,
   showDelay: "100",
-  hideDelay: "350",
+  hideDelay: "350"
 };
 
 export default MenuTrigger;

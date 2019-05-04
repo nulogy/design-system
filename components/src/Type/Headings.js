@@ -10,7 +10,7 @@ Title.defaultProps = {
   lineHeight: theme.lineHeights.title,
   fontWeight: theme.fontWeights.light,
   mb: theme.space.x6,
-  theme,
+  theme
 };
 
 const SectionTitle = Text.withComponent("h2");
@@ -21,7 +21,7 @@ SectionTitle.defaultProps = {
   fontSize: theme.fontSizes.larger,
   lineHeight: theme.lineHeights.sectionTitle,
   mb: theme.space.x2,
-  theme,
+  theme
 };
 
 const SubsectionTitleBase = Text.withComponent("h3");
@@ -34,7 +34,7 @@ SubsectionTitle.defaultProps = {
   fontSize: theme.fontSizes.large,
   lineHeight: theme.lineHeights.subsectionTitle,
   mb: theme.space.x1,
-  theme,
+  theme
 };
 
 export { Title, SectionTitle, SubsectionTitle };

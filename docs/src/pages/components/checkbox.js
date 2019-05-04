@@ -1,11 +1,22 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import {
-  Box, SectionTitle, SubsectionTitle, Title, Checkbox, Link, ListItem, List
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Checkbox,
+  Link,
+  ListItem,
+  List
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
-  Layout, Intro, IntroText, DocSection, PropsTable,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
 } from "../../components";
 import radioProps from "../../shared/radioProps";
 
@@ -16,7 +27,9 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Checkbox</Title>
-      <IntroText>Checkboxes allow users to select any number of options from a list.</IntroText>
+      <IntroText>
+        Checkboxes allow users to select any number of options from a list.
+      </IntroText>
     </Intro>
     <DocSection>
       <Checkbox id="checkbox" labelText="I am a checkbox" />
@@ -34,7 +47,9 @@ export default () => (
         <SubsectionTitle>Disabled</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" disabled />
         <Highlight className="js">
-          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" disabled />"}
+          {
+            '<Checkbox id="disabled-checkbox" labelText="I am a checkbox" disabled />'
+          }
         </Highlight>
       </Box>
 
@@ -42,7 +57,7 @@ export default () => (
         <SubsectionTitle>Error</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" error />
         <Highlight className="js">
-          {"<Checkbox id=\"error-checkbox\" labelText=\"I am a checkbox\" error />"}
+          {'<Checkbox id="error-checkbox" labelText="I am a checkbox" error />'}
         </Highlight>
       </Box>
 
@@ -50,7 +65,9 @@ export default () => (
         <SubsectionTitle>Default Checked</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
         <Highlight className="js">
-          {"<Checkbox id=\"disabled-checkbox\" labelText=\"I am a checkbox\" defaultChecked=\"true\"/>"}
+          {
+            '<Checkbox id="disabled-checkbox" labelText="I am a checkbox" defaultChecked="true"/>'
+          }
         </Highlight>
       </Box>
     </DocSection>
@@ -58,28 +75,41 @@ export default () => (
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
       <List>
-        <ListItem>Add labels, errors and default selections with <Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
-        <ListItem>If there are many items in a list, consider using a "Show all" button</ListItem>
+        <ListItem>
+          Add labels, errors and default selections with{" "}
+          <Link href="/components/checkbox-group">Checkbox Group</Link>
+        </ListItem>
+        <ListItem>
+          If there are many items in a list, consider using a "Show all" button
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={ radioProps } />
+      <PropsTable propsRows={radioProps} />
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
-        <ListItem><Link href="/components/checkbox-group">Checkbox Group</Link></ListItem>
-        <ListItem><Link href="/components/form">Form</Link></ListItem>
+        <ListItem>
+          <Link href="/components/checkbox-group">Checkbox Group</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
       </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <List>
-        <ListItem><Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">View in Storybook</Link></ListItem>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">
+            View in Storybook
+          </Link>
+        </ListItem>
       </List>
     </DocSection>
   </Layout>

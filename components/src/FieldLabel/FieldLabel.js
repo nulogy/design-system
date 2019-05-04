@@ -7,35 +7,26 @@ import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import theme from "../theme";
 
-const Label = styled.label(
-  space,
-  ({ color }) => ({
-    color: theme.colors[color] || color,
-    display: "inline-block",
-    fontSize: theme.fontSizes.medium,
-  })
-);
+const Label = styled.label(space, ({ color }) => ({
+  color: theme.colors[color] || color,
+  display: "inline-block",
+  fontSize: theme.fontSizes.medium
+}));
 
 Label.propTypes = {
-  color: PropTypes.string,
+  color: PropTypes.string
 };
 
 Label.defaultProps = {
-  color: theme.colors.black,
+  color: theme.colors.black
 };
 
-const BaseFieldLabel = ({
-  labelText,
-  requirementText,
-  helpText,
-  children,
-  ...props
-}) => (
-  <Label style={ { display: "block" } } { ...props }>
-    <Box mb={ children && "x1" }>
+const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
+  <Label style={{ display: "block" }} {...props}>
+    <Box mb={children && "x1"}>
       {labelText}
-      {requirementText && (<RequirementText>{requirementText}</RequirementText>)}
-      {helpText && (<HelpText>{helpText}</HelpText>)}
+      {requirementText && <RequirementText>{requirementText}</RequirementText>}
+      {helpText && <HelpText>{helpText}</HelpText>}
     </Box>
     {children}
   </Label>
@@ -47,14 +38,14 @@ BaseFieldLabel.propTypes = {
   requirementText: PropTypes.string,
   helpText: PropTypes.string,
   id: PropTypes.string,
-  ...space.PropTypes,
+  ...space.PropTypes
 };
 
 BaseFieldLabel.defaultProps = {
   children: null,
   requirementText: null,
   helpText: null,
-  id: undefined,
+  id: undefined
 };
 
 const FieldLabel = styled(BaseFieldLabel)({});

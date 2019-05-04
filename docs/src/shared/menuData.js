@@ -4,151 +4,151 @@ export const menuData = [
     links: [
       {
         name: "Colour",
-        href: "/style/colour",
+        href: "/style/colour"
       },
       {
         name: "Typography",
-        href: "/style/typography",
+        href: "/style/typography"
       },
       {
         name: "Spacing",
-        href: "/style/spacing",
-      },
-    ],
+        href: "/style/spacing"
+      }
+    ]
   },
   {
     name: "Components",
     links: [
       {
         name: "Box",
-        href: "/components/box",
+        href: "/components/box"
       },
       {
         name: "Buttons",
-        href: "/components/buttons",
+        href: "/components/buttons"
       },
       {
         name: "Card",
-        href: "/components/card",
+        href: "/components/card"
       },
       {
         name: "Card Set",
-        href: "/components/card-set",
+        href: "/components/card-set"
       },
       {
         name: "Checkbox",
-        href: "/components/checkbox",
+        href: "/components/checkbox"
       },
       {
         name: "Checkbox Group",
-        href: "/components/checkbox-group",
+        href: "/components/checkbox-group"
       },
       {
         name: "Flex",
-        href: "/components/flex",
+        href: "/components/flex"
       },
       {
         name: "Form",
-        href: "/components/form",
+        href: "/components/form"
       },
       {
         name: "Form Section",
-        href: "/components/form-section",
+        href: "/components/form-section"
       },
       {
         name: "Headings",
-        href: "/components/headings",
+        href: "/components/headings"
       },
       {
         name: "Header Validation",
-        href: "/components/header-validation",
+        href: "/components/header-validation"
       },
       {
         name: "Iconic Button",
-        href: "/components/iconic-button",
+        href: "/components/iconic-button"
       },
       {
         name: "Icon",
-        href: "/components/icon",
+        href: "/components/icon"
       },
       {
         name: "Input",
-        href: "/components/input",
+        href: "/components/input"
       },
       {
         name: "Link",
-        href: "/components/link",
+        href: "/components/link"
       },
       {
         name: "List",
-        href: "/components/list",
+        href: "/components/list"
       },
       {
         name: "NavBar",
-        href: "/components/navbar",
+        href: "/components/navbar"
       },
       {
         name: "Radio",
-        href: "/components/radio",
+        href: "/components/radio"
       },
       {
         name: "Radio Group",
-        href: "/components/radio-group",
+        href: "/components/radio-group"
       },
       {
         name: "Select",
-        href: "/components/select",
+        href: "/components/select"
       },
       {
         name: "Table",
-        href: "/components/table",
+        href: "/components/table"
       },
       {
         name: "Text",
-        href: "/components/text",
+        href: "/components/text"
       },
       {
         name: "Textarea",
-        href: "/components/textarea",
+        href: "/components/textarea"
       },
       {
         name: "Toggle",
-        href: "/components/toggle",
-      },
-    ],
+        href: "/components/toggle"
+      }
+    ]
   },
   {
     name: "Guides",
     links: [
       {
         name: "For Designers",
-        href: "/guides/designers",
+        href: "/guides/designers"
       },
       {
         name: "For Developers",
-        href: "/guides/developers",
+        href: "/guides/developers"
       },
       {
         name: "Layout",
-        href: "/guides/layout",
-      },
-    ],
+        href: "/guides/layout"
+      }
+    ]
   },
   {
     name: "Resources",
     links: [
       {
         name: "Github",
-        href: "https://github.com/nulogy/design-system",
+        href: "https://github.com/nulogy/design-system"
       },
       {
         name: "Tokens",
-        href: "/tokens",
+        href: "/tokens"
       },
       {
         name: "Reading list",
-        href: "/guides/reading-list",
-      },
-    ],
-  },
+        href: "/guides/reading-list"
+      }
+    ]
+  }
 ];

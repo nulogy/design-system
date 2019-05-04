@@ -7,34 +7,24 @@ import Card from "./Card";
 import CPCard from "./CPCard";
 import theme from "../theme";
 
-const UnstyledCardSet = ({
-  children,
-  ...props
-}) => (
-  <Box { ...props }>
-    {children}
-  </Box>
-);
+const UnstyledCardSet = ({ children, ...props }) => <Box {...props}>{children}</Box>;
 
-const CardSet = styled(UnstyledCardSet)(
-  space,
-  {
-    [`${Card}, ${CPCard}`]: {
-      marginBottom: theme.space.x1,
-      "&:last-child": {
-        marginBottom: theme.space.none,
-      },
-    },
-  },
-);
+const CardSet = styled(UnstyledCardSet)(space, {
+  [`${Card}, ${CPCard}`]: {
+    marginBottom: theme.space.x1,
+    "&:last-child": {
+      marginBottom: theme.space.none
+    }
+  }
+});
 
 UnstyledCardSet.propTypes = {
   children: PropTypes.node,
-  ...space.PropTypes,
+  ...space.PropTypes
 };
 
 UnstyledCardSet.defaultProps = {
-  children: [],
+  children: []
 };
 
 export default CardSet;

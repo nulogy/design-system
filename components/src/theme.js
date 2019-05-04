@@ -16,14 +16,14 @@ export default {
     green: tokens.color_base_green,
     lightGreen: tokens.color_base_light_green,
     red: tokens.color_base_red,
-    lightRed: tokens.color_base_light_red,
+    lightRed: tokens.color_base_light_red
   },
   fontSizes: {
     small: tokens.size_font_small,
     medium: tokens.size_font_medium,
     large: tokens.size_font_large,
     larger: tokens.size_font_larger,
-    largest: tokens.size_font_largest,
+    largest: tokens.size_font_largest
   },
   lineHeights: {
     base: tokens.line_height_base,
@@ -31,13 +31,13 @@ export default {
     sectionTitle: tokens.line_height_section_title,
     subsectionTitle: tokens.line_height_subsection_title,
     smallTextBase: tokens.line_height_small_text_base,
-    smallTextCompressed: tokens.line_height_small_text_compressed,
+    smallTextCompressed: tokens.line_height_small_text_compressed
   },
   fontWeights: {
     light: tokens.weight_font_light,
     normal: tokens.weight_font_normal,
     medium: tokens.weight_font_medium,
-    bold: tokens.weight_font_bold,
+    bold: tokens.weight_font_bold
   },
   space: {
     none: tokens.size_base_none,
@@ -48,24 +48,24 @@ export default {
     x4: tokens.size_base_x_4,
     x5: tokens.size_base_x_5,
     x6: tokens.size_base_x_6,
-    x8: tokens.size_base_x_8,
+    x8: tokens.size_base_x_8
   },
   fonts: {
     base: tokens.font_family_base,
-    mono: tokens.font_family_mono,
+    mono: tokens.font_family_mono
   },
   borders: [],
   shadows: {
-    small: tokens.shadow_box_small,
+    small: tokens.shadow_box_small
   },
   radii: {
     small: tokens.radius_border_small,
     medium: tokens.radius_border_medium,
-    circle: tokens.radius_border_circle,
+    circle: tokens.radius_border_circle
   },
   breakpoints: {
     small: tokens.size_breakpoint_small,
     medium: tokens.size_breakpoint_medium,
-    large: tokens.size_breakpoint_large,
-  },
+    large: tokens.size_breakpoint_large
+  }
 };
