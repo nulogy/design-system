@@ -104,11 +104,10 @@ describe("Select", () => {
     // focus the select box
     cy.get("[aria-label='open menu'] > input").focus();
 
-    // spacebar
-    cy.get("[aria-label='open menu'] > input").type(" ");
-
-    cy.focused().type("{downarrow}");
-    cy.focused().type("{enter}");
+    cy.focused()
+      .type(" ")
+      .type("{downarrow}")
+      .type("{enter}");
 
     cy.get("div#app").should("not.contain", "label 1");
     cy.get("input").should("have.value", "label 2");
