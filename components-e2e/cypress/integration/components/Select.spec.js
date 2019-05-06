@@ -88,4 +88,29 @@ describe("Select", () => {
 
     cy.get("div#app").should("contain", "can you see me");
   });
+
+  it("selects options using the keyboard", () => {
+    const options = [
+      { value: "value 1", label: "label 1" },
+      { value: "value 2", label: "label 2" }
+    ];
+
+    cy.mount(
+      <NDSProvider>
+        <Select options={options} />
+      </NDSProvider>
+    );
+
+    // focus the select box
+    cy.get("[aria-label='open menu'] > input").focus();
+
+    // spacebar
+    cy.get("[aria-label='open menu'] > input").type(" ");
+
+    cy.focused().type("{downarrow}");
+    cy.focused().type("{enter}");
+
+    cy.get("div#app").should("not.contain", "label 1");
+    cy.get("input").should("have.value", "label 2");
+  });
 });
