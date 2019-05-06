@@ -48,4 +48,28 @@ describe("Select", () => {
     // ensure the dropdown is closed
     cy.get("div#app").should("not.contain", "V One");
   });
+
+  it("closes the dropdown when clicking outside", () => {
+    const options = [
+      { value: "v1", label: "V One" },
+      { value: "v2", label: "V Two" },
+      { value: "v3", label: "V Three" }
+    ];
+
+    const styles = { width: "500px", height: "500px" };
+
+    cy.mount(
+      <NDSProvider>
+        <div className="outer-container" style={styles}>
+          <Select options={options} />
+        </div>
+      </NDSProvider>
+    );
+
+    cy.get("[aria-label='open menu']").click();
+    cy.get("div#app").should("contain", "V Three");
+
+    cy.get("div.outer-container").click("bottomRight");
+    cy.get("div#app").should("not.contain", "V Three");
+  });
 });
