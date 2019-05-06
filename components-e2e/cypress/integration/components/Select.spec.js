@@ -72,4 +72,20 @@ describe("Select", () => {
     cy.get("div.outer-container").click("bottomRight");
     cy.get("div#app").should("not.contain", "V Three");
   });
+
+  it("opens the dropdown when the select label is clicked", () => {
+    const options = [{ value: "v1", label: "can you see me" }];
+
+    cy.mount(
+      <NDSProvider>
+        <Select labelText="click me" options={options} />
+      </NDSProvider>
+    );
+
+    cy.get("div")
+      .contains("click me")
+      .click("topLeft");
+
+    cy.get("div#app").should("contain", "can you see me");
+  });
 });
