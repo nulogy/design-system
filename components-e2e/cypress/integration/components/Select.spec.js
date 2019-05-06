@@ -18,9 +18,9 @@ describe("Select", () => {
   };
 
   const getSelectComponent = () => cy.get("[aria-label='open menu']");
-  const getPage = () => cy.get("div#app");
-  const assertDropDownIsClosed = () =>
-    cy.get("[role='listbox']").should("not.exist");
+  const getDropdownMenu = () => cy.get("[role='listbox']");
+  const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
+  const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
   it("selects the first item when opened", () => {
     renderSelect();
@@ -33,17 +33,12 @@ describe("Select", () => {
   it("selects an option on click", () => {
     renderSelect();
 
-    getPage().should("not.contain", "V Two");
+    assertDropDownIsClosed();
 
     getSelectComponent().click();
-    getPage().should("contain", "V Two");
-
-    cy.get('[role="option"]')
-      .contains("V Two")
-      .click();
+    cy.contains("V Two").click();
 
     cy.get("input").should("have.value", "V Two");
-
     assertDropDownIsClosed();
   });
 
@@ -65,7 +60,7 @@ describe("Select", () => {
     );
 
     getSelectComponent().click();
-    getPage().should("contain", "V Three");
+    assertDropDownIsOpen();
 
     cy.get("div.outer-container").click("bottomRight");
     assertDropDownIsClosed();
@@ -80,11 +75,9 @@ describe("Select", () => {
       </NDSProvider>
     );
 
-    cy.get("div")
-      .contains("click me")
-      .click("topLeft");
+    cy.contains("click me").click("topLeft");
 
-    getPage().should("contain", "can you see me");
+    assertDropDownIsOpen();
   });
 
   it("selects options using the keyboard", () => {
@@ -100,7 +93,7 @@ describe("Select", () => {
       .type("{downarrow}")
       .type("{enter}");
 
-    getPage().should("not.contain", "V One");
+    assertDropDownIsClosed();
     cy.get("input").should("have.value", "V Two");
   });
 
@@ -108,7 +101,7 @@ describe("Select", () => {
     renderSelect();
 
     getSelectComponent().click();
-    getPage().should("contain", "V One");
+    assertDropDownIsOpen();
 
     cy.focused().type("{esc}");
     assertDropDownIsClosed();
