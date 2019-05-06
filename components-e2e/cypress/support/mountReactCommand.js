@@ -62,8 +62,8 @@ Cypress.Commands.add("mount", jsx => {
   // https://github.com/bahmutov/cypress-react-unit-test/issues/3
   const html = `<body>
     <div id="app"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/${reactVersion}/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/${reactVersion}/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/${reactVersion}/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/${reactVersion}/umd/react-dom.production.min.js"></script>
   </body>`;
 
   const document = cy.state("document");
