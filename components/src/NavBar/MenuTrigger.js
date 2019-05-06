@@ -122,12 +122,12 @@ class MenuTrigger extends React.Component {
     this.setMenuRef = this.setMenuRef.bind(this);
   }
 
-  setMenuRef(node) {
-    this.menuRef = node;
-  }
-
   componentWillUnmount() {
     this.clearScheduled();
+  }
+
+  setMenuRef(node) {
+    this.menuRef = node;
   }
 
   setSubMenuState(newState, skipTimer = false) {
