@@ -148,7 +148,7 @@ storiesOf("Tooltip", module)
         <Textarea id="tooltip-textarea" />
       </Tooltip>
       <Tooltip placement="bottom" tooltip="Tooltip">
-        <Text inline bg="blue">
+        <Text mr="x2" inline bg="blue">
           Inline Text
         </Text>
       </Tooltip>
