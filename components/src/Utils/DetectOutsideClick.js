@@ -20,30 +20,33 @@ class DetectOutsideClick extends React.Component {
 
   handleOutsideClick(e) {
     const { onClick } = this.props;
+    let clickedOutside = true;
 
-    if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
-      onClick(e);
+    if (Array.isArray(this.props.clickRef)) {
+      this.props.clickRef.forEach(ref => {
+        if (ref && ref.contains(e.target)) {
+          clickedOutside = false;
+        }
+      });
+    } else {
+      if (this.props.clickRef && this.props.clickRef.contains(e.target)) {
+        clickedOutside = false;
+      }
     }
+
+    if (clickedOutside) onClick(e);
   }
 
   render() {
     const { children } = this.props;
 
-    return (
-      <div
-        ref={node => {
-          this.wrapperRef = node;
-        }}
-      >
-        {children}
-      </div>
-    );
+    return <>{children}</>;
   }
 }
 
 DetectOutsideClick.propTypes = {
   onClick: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired
+  clickRef: PropTypes.oneOfType([PropTypes.instanceOf(Element), PropTypes.arrayOf(PropTypes.instanceOf(Element))])
 };
 
 export default DetectOutsideClick;

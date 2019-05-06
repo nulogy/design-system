@@ -207,19 +207,8 @@ class Tooltip extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
     this.showTooltip = this.showTooltip.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.setTriggerRef = this.setTriggerRef.bind(this);
     this.setTooltipRef = this.setTooltipRef.bind(this);
-  }
-
-  componentDidMount() {
-    document.addEventListener("click", this.handleOutsideClick);
-    document.addEventListener("touchstart", this.handleOutsideClick);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("click", this.handleOutsideClick);
-    document.removeEventListener("touchstart", this.handleOutsideClick);
   }
 
   setTriggerRef(node) {
@@ -277,12 +266,6 @@ class Tooltip extends React.Component {
     }
   }
 
-  handleOutsideClick(e) {
-    if (!this.triggerRef.contains(e.target) && !this.tooltipRef.contains(e.target) && this.state.open === true) {
-      this.hideTooltip(true);
-    }
-  }
-
   render() {
     return (
       <Manager>
@@ -326,6 +309,14 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
+        {this.state.open && (
+          <DetectOutsideClick
+            onClick={() => {
+              this.hideTooltip(true);
+            }}
+            clickRef={[this.triggerRef, this.tooltipRef]}
+          />
+        )}
       </Manager>
     );
   }

@@ -117,6 +117,11 @@ class SubMenuTrigger extends React.Component {
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    this.setMenuRef = this.setMenuRef.bind(this);
+  }
+
+  setMenuRef(node) {
+    this.menuRef = node;
   }
 
   componentWillUnmount() {
@@ -201,11 +206,18 @@ class SubMenuTrigger extends React.Component {
         {this.state.subMenuOpen && (
           <Popper placement="right-start">
             {popperProps => (
-              <DetectOutsideClick onClick={this.handleOutsideClick}>
-                <SubMenu renderArrow={false} popperProps={popperProps} {...this.subMenuEventHandlers()}>
-                  {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
-                </SubMenu>
-              </DetectOutsideClick>
+              <SubMenu
+                renderArrow={false}
+                popperProps={popperProps}
+                {...this.subMenuEventHandlers()}
+                ref={node => {
+                  popperProps.ref(node);
+                  this.setMenuRef(node);
+                }}
+              >
+                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
+              </SubMenu>
             )}
           </Popper>
         )}
