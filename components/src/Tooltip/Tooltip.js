@@ -227,6 +227,7 @@ class Tooltip extends React.Component {
 
   triggerEventHandlers() {
     return {
+      onClick: () => this.showTooltip(),
       onFocus: () => this.showTooltip(),
       onBlur: () => this.hideTooltip(),
       onMouseEnter: () => this.showTooltip(),
