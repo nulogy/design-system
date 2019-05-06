@@ -147,23 +147,17 @@ storiesOf("Tooltip", module)
       <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
         <Textarea id="tooltip-textarea" />
       </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
-        <Text inline bg="blue">Inline Text</Text>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Text inline bg="blue">
+          Inline Text
+        </Text>
       </Tooltip>
-      <Tooltip
-        placement="bottom"
-        tooltip="Tooltip"
-      >
-        <Box width="200px" bg="blue">Box width="200px"</Box>
+      <Tooltip placement="bottom" tooltip="Tooltip">
+        <Box width="200px" bg="blue">
+          Box width 200px
+        </Box>
       </Tooltip>
-      <Tooltip
-        fullWidth
-        placement="bottom"
-        tooltip="Tooltip"
-      >
+      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
         <Box bg="blue">Box</Box>
       </Tooltip>
     </>
