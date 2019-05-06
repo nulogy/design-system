@@ -133,7 +133,10 @@ class MenuTrigger extends React.Component {
   setSubMenuState(newState, skipTimer = false) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: newState }), this.props.showDelay);
+      this.showTimeoutID = setTimeout(
+        () => this.setState({ subMenuOpen: newState }),
+        newState ? this.props.showDelay : this.props.hideDelay
+      );
     } else {
       this.setState({ subMenuOpen: newState });
     }
@@ -149,6 +152,7 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return {
+      onClick: () => this.showSubMenu(),
       onBlur: () => this.hideSubMenu(),
       onFocus: () => this.showSubMenu(),
       onKeyDown: e => this.handleKeyDown(e)
@@ -240,7 +244,7 @@ MenuTrigger.propTypes = {
 MenuTrigger.defaultProps = {
   menuData: null,
   showDelay: "100",
-  hideDelay: "350"
+  hideDelay: "200"
 };
 
 export default MenuTrigger;

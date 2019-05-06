@@ -9,6 +9,7 @@ class DetectOutsideClick extends React.Component {
   }
 
   componentDidMount() {
+    console.log("mounted");
     document.addEventListener("click", this.handleOutsideClick);
     document.addEventListener("touchstart", this.handleOutsideClick);
   }
@@ -24,11 +25,11 @@ class DetectOutsideClick extends React.Component {
 
     if (Array.isArray(clickRef)) {
       clickRef.forEach(ref => {
-        if (ref && ref.contains(e.target)) {
+        if (ref && (ref.contains(e.target) || ref === e.target)) {
           clickedOutside = false;
         }
       });
-    } else if (clickRef && clickRef.contains(e.target)) {
+    } else if (clickRef && (clickRef.contains(e.target) || clickRef === e.target)) {
       clickedOutside = false;
     }
 
@@ -44,12 +45,12 @@ class DetectOutsideClick extends React.Component {
 
 DetectOutsideClick.propTypes = {
   onClick: PropTypes.func.isRequired,
-  clickRef: PropTypes.oneOfType([PropTypes.instanceOf(Element), PropTypes.arrayOf(PropTypes.instanceOf(Element))])
-    .isRequired,
+  clickRef: PropTypes.oneOfType([PropTypes.instanceOf(Element), PropTypes.arrayOf(PropTypes.instanceOf(Element))]),
   children: PropTypes.node
 };
 
 DetectOutsideClick.defaultProps = {
+  clickRef: null,
   children: undefined
 };
 
