@@ -261,7 +261,7 @@ class Tooltip extends React.Component {
     }
   }
 
-  handleClickOutside(e) {
+  handleOutsideClick(e) {
     if (!this.triggerRef.contains(e.target) && this.state.open === true) {this.hideTooltip(true)}
   }
 
@@ -271,7 +271,7 @@ class Tooltip extends React.Component {
         <Reference>
           {({ ref }) => (
             <div
-              style={ { display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` } }
+              style={ { display: `${this.props.fullWidth ? "block" : "inline-flex"}`, minWidth: `${this.props.fullWidth ? "100%" : null}` } }
               ref={(node) => {ref(node); this.setTriggerRef(node)}} 
               { ...this.triggerEventHandlers() }
               aria-describedby={ this.props.id }
@@ -286,7 +286,7 @@ class Tooltip extends React.Component {
           {({
             ref, style, placement, arrowProps,
           }) => (
-            <DetectOutsideClick onClick={(e)=>{this.handleClickOutside(e)}}>
+            <DetectOutsideClick onClick={(e)=>{this.handleOutsideClick(e)}}>
               <TooltipContainer
                 maxWidth={ this.props.maxWidth }
                 open={ this.state.open }
