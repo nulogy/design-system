@@ -3,7 +3,7 @@ import React from "react";
 import { NDSProvider, Select } from "@nulogy/components";
 
 describe("Select", () => {
-  it("selects the first item when opened", () => {
+  const renderSelect = () => {
     const options = [
       { value: "v1", label: "V One" },
       { value: "v2", label: "V Two" },
@@ -15,6 +15,10 @@ describe("Select", () => {
         <Select options={options} />
       </NDSProvider>
     );
+  };
+
+  it("selects the first item when opened", () => {
+    renderSelect();
 
     cy.get("[aria-label='open menu']").click();
 
@@ -22,17 +26,7 @@ describe("Select", () => {
   });
 
   it("selects an option on click", () => {
-    const options = [
-      { value: "v1", label: "V One" },
-      { value: "v2", label: "V Two" },
-      { value: "v3", label: "V Three" }
-    ];
-
-    cy.mount(
-      <NDSProvider>
-        <Select options={options} />
-      </NDSProvider>
-    );
+    renderSelect();
 
     cy.get("div#app").should("not.contain", "V Two");
 
@@ -90,16 +84,7 @@ describe("Select", () => {
   });
 
   it("selects options using the keyboard", () => {
-    const options = [
-      { value: "value 1", label: "label 1" },
-      { value: "value 2", label: "label 2" }
-    ];
-
-    cy.mount(
-      <NDSProvider>
-        <Select options={options} />
-      </NDSProvider>
-    );
+    renderSelect();
 
     // focus the select box
     cy.get("[aria-label='open menu'] > input").focus();
@@ -109,23 +94,17 @@ describe("Select", () => {
       .type("{downarrow}")
       .type("{enter}");
 
-    cy.get("div#app").should("not.contain", "label 1");
-    cy.get("input").should("have.value", "label 2");
+    cy.get("div#app").should("not.contain", "V One");
+    cy.get("input").should("have.value", "V Two");
   });
 
   it("closes the dropdown when on esc", () => {
-    const options = [{ value: "the one value", label: "the one label" }];
-
-    cy.mount(
-      <NDSProvider>
-        <Select options={options} />
-      </NDSProvider>
-    );
+    renderSelect();
 
     cy.get("[aria-label='open menu'] > input").click();
-    cy.get("div#app").should("contain", "the one label");
+    cy.get("div#app").should("contain", "V One");
 
     cy.focused().type("{esc}");
-    cy.get("div#app").should("not.contain", "the one label");
+    cy.get("div#app").should("not.contain", "V One");
   });
 });
