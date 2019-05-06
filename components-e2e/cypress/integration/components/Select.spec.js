@@ -19,6 +19,8 @@ describe("Select", () => {
 
   const getSelectComponent = () => cy.get("[aria-label='open menu']");
   const getPage = () => cy.get("div#app");
+  const assertDropDownIsClosed = () =>
+    cy.get("[role='listbox']").should("not.exist");
 
   it("selects the first item when opened", () => {
     renderSelect();
@@ -42,8 +44,7 @@ describe("Select", () => {
 
     cy.get("input").should("have.value", "V Two");
 
-    // ensure the dropdown is closed
-    getPage().should("not.contain", "V One");
+    assertDropDownIsClosed();
   });
 
   it("closes the dropdown when clicking outside", () => {
@@ -67,7 +68,7 @@ describe("Select", () => {
     getPage().should("contain", "V Three");
 
     cy.get("div.outer-container").click("bottomRight");
-    getPage().should("not.contain", "V Three");
+    assertDropDownIsClosed();
   });
 
   it("opens the dropdown when the select label is clicked", () => {
@@ -110,6 +111,6 @@ describe("Select", () => {
     getPage().should("contain", "V One");
 
     cy.focused().type("{esc}");
-    getPage().should("not.contain", "V One");
+    assertDropDownIsClosed();
   });
 });
