@@ -112,4 +112,20 @@ describe("Select", () => {
     cy.get("div#app").should("not.contain", "label 1");
     cy.get("input").should("have.value", "label 2");
   });
+
+  it("closes the dropdown when on esc", () => {
+    const options = [{ value: "the one value", label: "the one label" }];
+
+    cy.mount(
+      <NDSProvider>
+        <Select options={options} />
+      </NDSProvider>
+    );
+
+    cy.get("[aria-label='open menu'] > input").click();
+    cy.get("div#app").should("contain", "the one label");
+
+    cy.focused().type("{esc}");
+    cy.get("div#app").should("not.contain", "the one label");
+  });
 });
