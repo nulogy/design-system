@@ -498,25 +498,54 @@ export default () => (
 
     <DocSection>
       <SectionTitle>IE11 and Flexbox</SectionTitle>
-      <Text>To make Flexbox work properly in IE11 additional work may be required.</Text>
-      <Text>Recorded below are the issues that have been discovered and their potential solutions. If you run into an issue that hasn't been recorder below, please leave a message in #design-system Slack channel with the description of the bug.</Text>
+      <Text>
+        To make Flexbox work properly in IE11 additional work may be required.
+        Listed below are the issues that have been discovered and their
+        potential solutions. If you are lucky enough to run into an issue that
+        hasn't been recorded, please let us now in{" "}
+        <Link href="https://nu.slack.com/messages/CBAFQ4X7X">
+          #design-system
+        </Link>{" "}
+        Slack channel.
+      </Text>
       <SubsectionTitle>Using minHeight</SubsectionTitle>
-      <Text>Setting minHeight on a flex container does not apply to its flex items. There are 2 ways to resolve with this issue:</Text>
-      <List>
-      <ListItem>Substituting minHeight with height (example|Link to storybook), and</ListItem>
-      <ListItem>Wrapping flex container with another flex container (example|Link to storybook).</ListItem>
+      <Text>
+        Setting minHeight on a flex container does not apply to its flex items.
+        There are 2 ways to resolve this issue:
+      </Text>
+      <List mb="x3">
+        <ListItem>
+          Substituting minHeight with height{" "}
+          <Link href="https://storybook.nulogy.design/?selectedKind=Flex&selectedStory=IE11%20minHeight%20solution%201&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+            (Example)
+          </Link>
+        </ListItem>
+        <ListItem>
+          Wrapping flex container with another flex container{" "}
+          <Link href="https://storybook.nulogy.design/?selectedKind=Flex&selectedStory=IE11%20minHeight%20solution%202&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+            (Example)
+          </Link>
+        </ListItem>
       </List>
-      <Text>Please refer <Link href="https://github.com/philipwalton/flexbugs#flexbug-3">here</Link> for detailed description of the bug and available solutions.</Text>
+      <Text>
+        Please refer{" "}
+        <Link href="https://github.com/philipwalton/flexbugs#flexbug-3">
+          here
+        </Link>{" "}
+        for a detailed description of the bug and available solutions.
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem>
-        <Link href="/components/box">Box</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="/components/flex">Flex</Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="/components/box">Box</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/flex">Flex</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );
