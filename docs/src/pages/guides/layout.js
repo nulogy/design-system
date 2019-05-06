@@ -497,6 +497,19 @@ export default () => (
     </DocSection>
 
     <DocSection>
+      <SectionTitle>IE11 and Flexbox</SectionTitle>
+      <Text>To make Flexbox work properly in IE11 additional work may be required.</Text>
+      <Text>Recorded below are the issues that have been discovered and their potential solutions. If you run into an issue that hasn't been recorder below, please leave a message in #design-system Slack channel with the description of the bug.</Text>
+      <SubsectionTitle>Using minHeight</SubsectionTitle>
+      <Text>Setting minHeight on a flex container does not apply to its flex items. There are 2 ways to resolve with this issue:</Text>
+      <List>
+      <ListItem>Substituting minHeight with height (example|Link to storybook), and</ListItem>
+      <ListItem>Wrapping flex container with another flex container (example|Link to storybook).</ListItem>
+      </List>
+      <Text>Please refer <Link href="https://github.com/philipwalton/flexbugs#flexbug-3">here</Link> for detailed description of the bug and available solutions.</Text>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem>
         <Link href="/components/box">Box</Link>
