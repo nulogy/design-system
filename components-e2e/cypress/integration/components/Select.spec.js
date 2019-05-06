@@ -17,10 +17,12 @@ describe("Select", () => {
     );
   };
 
+  const getSelectComponent = () => cy.get("[aria-label='open menu']");
+
   it("selects the first item when opened", () => {
     renderSelect();
 
-    cy.get("[aria-label='open menu']").click();
+    getSelectComponent().click();
 
     cy.get("[aria-selected='true']").should("have.text", "V One");
   });
@@ -30,7 +32,7 @@ describe("Select", () => {
 
     cy.get("div#app").should("not.contain", "V Two");
 
-    cy.get("[aria-label='open menu']").click();
+    getSelectComponent().click();
     cy.get("div#app").should("contain", "V Two");
 
     cy.get('[role="option"]')
@@ -60,7 +62,7 @@ describe("Select", () => {
       </NDSProvider>
     );
 
-    cy.get("[aria-label='open menu']").click();
+    getSelectComponent().click();
     cy.get("div#app").should("contain", "V Three");
 
     cy.get("div.outer-container").click("bottomRight");
@@ -87,7 +89,9 @@ describe("Select", () => {
     renderSelect();
 
     // focus the select box
-    cy.get("[aria-label='open menu'] > input").focus();
+    getSelectComponent()
+      .get("input")
+      .focus();
 
     cy.focused()
       .type(" ")
@@ -101,7 +105,7 @@ describe("Select", () => {
   it("closes the dropdown when on esc", () => {
     renderSelect();
 
-    cy.get("[aria-label='open menu'] > input").click();
+    getSelectComponent().click();
     cy.get("div#app").should("contain", "V One");
 
     cy.focused().type("{esc}");
