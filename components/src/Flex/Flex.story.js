@@ -16,11 +16,6 @@ const modernFlexWrapperStyles = {
   minHeight: "400px"
 };
 
-const ie11FlexWrapperStyles = {
-  ...baseFlexWrapperStyles,
-  height: "400px"
-};
-
 const boxStyles = {
   padding: theme.space.x6,
   background: theme.colors.grey,
@@ -214,7 +209,7 @@ storiesOf("Flex", module)
   ))
   .add("IE11 minHeight solution 1", () => (
     <>
-      <Flex style={ie11FlexWrapperStyles}>
+      <Flex style={baseFlexWrapperStyles} height="400px">
         <Box style={boxStyles}>1</Box>
         <Box style={boxStyles}>2</Box>
         <Box style={boxStyles}>3</Box>
