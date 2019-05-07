@@ -44,11 +44,13 @@ const Arrow = styled.div({
   }
 });
 
-const BaseSubMenu = ({ popperProps: { ref, style, placement, arrowProps }, renderArrow, children, ...props }) => (
-  <ul ref={ref} style={style} placement={placement} {...props}>
-    {renderArrow && <Arrow {...arrowProps} />}
-    {children}
-  </ul>
+const BaseSubMenu = React.forwardRef(
+  ({ popperProps: { style, placement, arrowProps }, renderArrow, children, ...props }, ref) => (
+    <ul ref={ref} style={style} placement={placement} {...props}>
+      {renderArrow && <Arrow {...arrowProps} />}
+      {children}
+    </ul>
+  )
 );
 
 BaseSubMenu.propTypes = {

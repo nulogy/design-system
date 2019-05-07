@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId } from "../Utils";
+import { withGeneratedId, DetectOutsideClick } from "../Utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -207,10 +207,21 @@ class Tooltip extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
     this.showTooltip = this.showTooltip.bind(this);
+    this.setTriggerRef = this.setTriggerRef.bind(this);
+    this.setTooltipRef = this.setTooltipRef.bind(this);
+  }
+
+  setTriggerRef(node) {
+    this.triggerRef = node;
+  }
+
+  setTooltipRef(node) {
+    this.tooltipRef = node;
   }
 
   tooltipEventHandlers() {
     return {
+      onClick: () => this.showTooltip(),
       onFocus: () => this.showTooltip(),
       onBlur: () => this.hideTooltip(),
       onMouseEnter: () => this.showTooltip(),
@@ -221,6 +232,7 @@ class Tooltip extends React.Component {
 
   triggerEventHandlers() {
     return {
+      onClick: () => this.showTooltip(),
       onFocus: () => this.showTooltip(),
       onBlur: () => this.hideTooltip(),
       onMouseEnter: () => this.showTooltip(),
@@ -260,8 +272,14 @@ class Tooltip extends React.Component {
         <Reference>
           {({ ref }) => (
             <div
-              style={{ display: "inline-flex", minWidth: `${this.props.fullWidth ? "100%" : null}` }}
-              ref={ref}
+              style={{
+                display: `${this.props.fullWidth ? "block" : "inline-flex"}`,
+                minWidth: `${this.props.fullWidth ? "100%" : null}`
+              }}
+              ref={node => {
+                ref(node);
+                this.setTriggerRef(node);
+              }}
               {...this.triggerEventHandlers()}
               aria-describedby={this.props.id}
             >
@@ -278,7 +296,10 @@ class Tooltip extends React.Component {
               open={this.state.open}
               role="tooltip"
               id={this.props.id}
-              ref={ref}
+              ref={node => {
+                ref(node);
+                this.setTooltipRef(node);
+              }}
               position={style}
               dataPlacement={placement}
               {...this.tooltipEventHandlers()}
@@ -288,6 +309,14 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
+        {this.state.open && (
+          <DetectOutsideClick
+            onClick={() => {
+              this.hideTooltip(true);
+            }}
+            clickRef={[this.triggerRef, this.tooltipRef]}
+          />
+        )}
       </Manager>
     );
   }

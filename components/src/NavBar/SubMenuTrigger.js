@@ -117,16 +117,24 @@ class SubMenuTrigger extends React.Component {
     this.hideSubMenu = this.hideSubMenu.bind(this);
     this.showSubMenu = this.showSubMenu.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    this.setMenuRef = this.setMenuRef.bind(this);
   }
 
   componentWillUnmount() {
     this.clearScheduled();
   }
 
+  setMenuRef(node) {
+    this.menuRef = node;
+  }
+
   setSubMenuState(newState, skipTimer = false) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.showTimeoutID = setTimeout(() => this.setState({ subMenuOpen: newState }), this.props.showDelay);
+      this.showTimeoutID = setTimeout(
+        () => this.setState({ subMenuOpen: newState }),
+        newState ? this.props.showDelay : this.props.hideDelay
+      );
     } else {
       this.setState({ subMenuOpen: newState });
     }
@@ -142,6 +150,7 @@ class SubMenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return {
+      onClick: () => this.showSubMenu(),
       onBlur: () => this.hideSubMenu(),
       onFocus: () => this.showSubMenu(),
       onKeyDown: e => this.handleKeyDown(e)
@@ -201,11 +210,18 @@ class SubMenuTrigger extends React.Component {
         {this.state.subMenuOpen && (
           <Popper placement="right-start">
             {popperProps => (
-              <DetectOutsideClick onClick={this.handleOutsideClick}>
-                <SubMenu renderArrow={false} popperProps={popperProps} {...this.subMenuEventHandlers()}>
-                  {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
-                </SubMenu>
-              </DetectOutsideClick>
+              <SubMenu
+                renderArrow={false}
+                popperProps={popperProps}
+                {...this.subMenuEventHandlers()}
+                ref={node => {
+                  popperProps.ref(node);
+                  this.setMenuRef(node);
+                }}
+              >
+                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
+                {renderSubMenuItems(this.props.menuData, this.props.linkOnClick)}
+              </SubMenu>
             )}
           </Popper>
         )}
@@ -229,7 +245,7 @@ SubMenuTrigger.defaultProps = {
   description: null,
   linkOnClick: null,
   showDelay: "100",
-  hideDelay: "350"
+  hideDelay: "200"
 };
 
 export default SubMenuTrigger;
