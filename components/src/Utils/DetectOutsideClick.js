@@ -9,7 +9,6 @@ class DetectOutsideClick extends React.Component {
   }
 
   componentDidMount() {
-    console.log("mounted");
     document.addEventListener("click", this.handleOutsideClick);
     document.addEventListener("touchstart", this.handleOutsideClick);
   }
