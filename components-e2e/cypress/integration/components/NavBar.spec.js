@@ -3,9 +3,14 @@ import React from "react";
 import { NDSProvider, NavBar } from "@nulogy/components";
 
 describe("NavBar", () => {
-  describe("the desktop menu", () => {
-    it("renders", () => {
+  context("when in desktop mode", () => {
+    beforeEach(() => {
       cy.viewport("macbook-13");
+      window.innerWidth = 1280;
+      window.innerHeight = 800;
+    });
+
+    it("can be navigated using the keyboard", () => {
       const data = {
         primaryMenu: [
           {
@@ -25,9 +30,14 @@ describe("NavBar", () => {
     });
   });
 
-  describe("the mobile menu", () => {
-    it("renders", () => {
+  context("when in mobile mode", () => {
+    before(() => {
       cy.viewport("ipad-mini");
+      window.innerWidth = 768;
+      window.innerHeight = 1024;
+    });
+
+    it("renders", () => {
       const data = {
         primaryMenu: [
           {
