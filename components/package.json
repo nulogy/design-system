@@ -49,7 +49,6 @@
   "devDependencies": {
     "@babel/core": "7.3.4",
     "@babel/preset-env": "7.3.1",
-    "@storybook/addon-backgrounds": "^5.0.11",
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-storyshots": "5.0.11",
     "@storybook/addon-storyshots-puppeteer": "5.0.11",
