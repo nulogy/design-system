@@ -8,7 +8,7 @@ import theme from "../theme";
 const iconNames = Object.keys(icons);
 
 const Svg = props => {
-  const { icon, title, size, color: fillColor } = props;
+  const { icon, title, size, color: fillColor, focusable } = props;
 
   if (!icons[icon]) return false;
   return (
@@ -18,6 +18,7 @@ const Svg = props => {
       height={size}
       fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
       viewBox={icons[icon].viewBox}
+      focusable={focusable}
       {...props}
     >
       <path d={icons[icon].path} />
@@ -29,13 +30,15 @@ Svg.propTypes = {
   icon: PropTypes.oneOf(iconNames).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  focusable: PropTypes.bool
 };
 
 Svg.defaultProps = {
   color: "currentColor",
   title: null,
-  size: "24px"
+  size: "24px",
+  focusable: false
 };
 
 const Icon = styled(Svg)(space, color, ({ size }) => ({
