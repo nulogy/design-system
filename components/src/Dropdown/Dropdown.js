@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import theme from "../theme";
 import { DetectOutsideClick } from "../Utils";
 import { IconicButton } from "../Button";
 import DropdownMenu from "./DropdownMenu";
@@ -27,7 +25,7 @@ class MenuTrigger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subMenuOpen: false
+      open: false
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.hideSubMenu = this.hideSubMenu.bind(this);
@@ -48,11 +46,11 @@ class MenuTrigger extends React.Component {
     this.clearScheduled();
     if (!skipTimer) {
       this.showTimeoutID = setTimeout(
-        () => this.setState({ subMenuOpen: newState }),
+        () => this.setState({ open: newState }),
         newState ? this.props.showDelay : this.props.hideDelay
       );
     } else {
-      this.setState({ subMenuOpen: newState });
+      this.setState({ open: newState });
     }
   }
 
@@ -101,20 +99,20 @@ class MenuTrigger extends React.Component {
   }
 
   render() {
-    const { trigger, menuContent } = this.props;
+    const { trigger, children } = this.props;
     return (
       <Manager>
         <Reference>
           {({ ref }) =>
             React.cloneElement(trigger(), {
               "aria-haspopup": true,
-              "aria-expanded": this.state.subMenuOpen,
+              "aria-expanded": this.state.open,
               ...this.menuTriggerEventHandlers(),
               ref: ref
             })
           }
         </Reference>
-        {this.state.subMenuOpen && (
+        {this.state.open && (
           <Popper placement="bottom-start" modifiers={{ flip: { behavior: ["bottom"] } }}>
             {popperProps => (
               <DropdownMenu
@@ -126,7 +124,7 @@ class MenuTrigger extends React.Component {
                 }}
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
-                {menuContent()}
+                {children}
               </DropdownMenu>
             )}
           </Popper>
@@ -138,19 +136,18 @@ class MenuTrigger extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 MenuTrigger.propTypes = {
+  children: PropTypes.node.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  menuContent: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
 };
 
 MenuTrigger.defaultProps = {
   menuData: null,
   showDelay: "100",
   hideDelay: "200",
-  trigger: () => <IconicButton icon="more" />,
-  menuContent: () => <div>empty</div>
+  trigger: () => <IconicButton icon="more" />
 };
 
 export default MenuTrigger;

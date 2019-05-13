@@ -55,9 +55,11 @@ const BaseIconicButton = React.forwardRef((props, ref) => {
   return (
     <WrapperButton ref={ref} label={children} {...props}>
       <Icon size={theme.space.x4} icon={icon} p="half" />
-      <Text mr="half" ml="half">
-        {children}
-      </Text>
+      {children && (
+        <Text mr="half" ml="half">
+          {children}
+        </Text>
+      )}
     </WrapperButton>
   );
 });
