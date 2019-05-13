@@ -14,25 +14,23 @@ const customColors = {
 storiesOf("Dropdown", module)
   .add("Dropdown", () => (
     <Dropdown>
-      <DropdownLink href="/"> Dropdown Link </DropdownLink>
-      <DropdownButton onClick={() => {}}> Dropdown Button </DropdownButton>
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     </Dropdown>
   ))
   .add("with custom trigger", () => (
     <Dropdown trigger={() => <Button>Custom Trigger</Button>}>
-      <DropdownLink href="/"> Dropdown Link </DropdownLink>
-      <DropdownButton onClick={() => {}}> Dropdown Button </DropdownButton>
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     </Dropdown>
   ))
   .add("with custom colors", () => (
     <Dropdown backgroundColor="blackBlue">
       <DropdownLink href="/" {...customColors}>
-        {" "}
-        Dropdown Link{" "}
+        Dropdown Link
       </DropdownLink>
       <DropdownButton onClick={() => {}} {...customColors}>
-        {" "}
-        Dropdown Button{" "}
+        Dropdown Button
       </DropdownButton>
     </Dropdown>
   ));
