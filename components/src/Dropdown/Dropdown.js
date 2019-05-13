@@ -108,7 +108,7 @@ class MenuTrigger extends React.Component {
               "aria-haspopup": true,
               "aria-expanded": this.state.open,
               ...this.menuTriggerEventHandlers(),
-              ref: ref
+              ref
             })
           }
         </Reference>

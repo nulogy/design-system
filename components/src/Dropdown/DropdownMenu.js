@@ -53,6 +53,8 @@ const BaseSubMenu = React.forwardRef(
 );
 
 BaseSubMenu.propTypes = {
+  borderColor: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
   children: PropTypes.node,
   renderArrow: PropTypes.bool,
   popperProps: PropTypes.shape({})
