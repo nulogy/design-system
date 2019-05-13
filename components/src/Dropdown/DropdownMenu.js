@@ -3,13 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 
-const subMenuStyles = {
-  backgroundColor: theme.colors.whiteGrey,
-  borderColor: theme.colors.whiteGrey,
-  nameColor: theme.colors.black
-};
+const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
 
-const Arrow = styled.div({
+const Arrow = styled.div(({ borderColor, backgroundColor }) => ({
   height: theme.space.x1,
   position: "absolute",
   width: theme.space.x1,
@@ -19,7 +15,7 @@ const Arrow = styled.div({
   marginTop: "-7px",
   "&:before": {
     borderStyle: "solid",
-    borderColor: `transparent transparent ${subMenuStyles.borderColor} transparent`,
+    borderColor: `transparent transparent ${getThemeColor(borderColor)} transparent`,
     borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
     content: "''",
     display: "block",
@@ -32,7 +28,7 @@ const Arrow = styled.div({
   },
   "&:after": {
     borderStyle: "solid",
-    borderColor: `transparent transparent ${subMenuStyles.backgroundColor} transparent`,
+    borderColor: `transparent transparent ${getThemeColor(backgroundColor)} transparent`,
     borderWidth: `0 ${theme.space.x1} ${theme.space.x1} ${theme.space.x1}`,
     content: "''",
     display: "block",
@@ -42,12 +38,15 @@ const Arrow = styled.div({
     width: 0,
     left: `-${theme.space.half}`
   }
-});
+}));
 
 const BaseSubMenu = React.forwardRef(
-  ({ popperProps: { style, placement, arrowProps }, renderArrow, children, ...props }, ref) => (
+  (
+    { popperProps: { style, placement, arrowProps }, renderArrow, children, borderColor, backgroundColor, ...props },
+    ref
+  ) => (
     <div ref={ref} style={style} placement={placement} {...props}>
-      {renderArrow && <Arrow {...arrowProps} />}
+      {renderArrow && <Arrow {...arrowProps} borderColor={borderColor} backgroundColor={backgroundColor} />}
       {children}
     </div>
   )
@@ -66,14 +65,13 @@ BaseSubMenu.defaultProps = {
 };
 
 const DropdownMenu = styled(BaseSubMenu)(
-  ({ renderArrow }) => ({
+  ({ renderArrow, backgroundColor, borderColor }) => ({
     listStyle: "none",
     margin: "0",
-    color: subMenuStyles.nameColor,
-    backgroundColor: subMenuStyles.backgroundColor,
+    backgroundColor: getThemeColor(backgroundColor),
     borderRadius: theme.radii.medium,
-    borderTop: `1px solid ${subMenuStyles.borderColor}`,
-    borderBottom: `1px solid ${subMenuStyles.borderColor}`,
+    borderTop: `1px solid ${getThemeColor(borderColor)}`,
+    borderBottom: `1px solid ${getThemeColor(borderColor)}`,
     boxShadow: theme.shadows.small,
     padding: "7px 0",
     transition: "opacity 0.3s",
@@ -86,10 +84,14 @@ const DropdownMenu = styled(BaseSubMenu)(
 );
 
 DropdownMenu.propTypes = {
+  borderColor: PropTypes.string,
+  backgroundColor: PropTypes.string,
   renderArrow: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
+  borderColor: "whiteGrey",
+  backgroundColor: "whiteGrey",
   renderArrow: true
 };
 

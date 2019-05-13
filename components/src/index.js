@@ -22,5 +22,6 @@ export { ListItem, List } from "./List";
 export { Textarea } from "./Textarea";
 export { Tooltip } from "./Tooltip";
 export { Card, CardSet, CPCard } from "./Card";
+export { Dropdown, DropdownLink, DropdownButton } from "./Dropdown";
 
 export { DemoPage } from "./DemoPage";
