@@ -28,8 +28,8 @@ class MenuTrigger extends React.Component {
       open: false
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.hideSubMenu = this.hideSubMenu.bind(this);
-    this.showSubMenu = this.showSubMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+    this.openMenu = this.openMenu.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.setMenuRef = this.setMenuRef.bind(this);
   }
@@ -54,29 +54,29 @@ class MenuTrigger extends React.Component {
     }
   }
 
-  hideSubMenu(skipTimer) {
+  closeMenu(skipTimer) {
     this.setSubMenuState(false, skipTimer);
   }
 
-  showSubMenu(skipTimer) {
+  openMenu(skipTimer) {
     this.setSubMenuState(true, skipTimer);
   }
 
   subMenuEventHandlers() {
     return {
       onClick: () => {
-        if (!this.state.open) this.showSubMenu();
+        if (!this.state.open) this.openMenu();
       },
-      onBlur: () => this.hideSubMenu(),
-      onFocus: () => this.showSubMenu(),
+      onBlur: () => this.closeMenu(),
+      onFocus: () => this.openMenu(),
       onKeyDown: e => this.handleKeyDown(e)
     };
   }
 
   menuTriggerEventHandlers() {
     return {
-      onBlur: () => this.hideSubMenu(),
-      onClick: () => this.showSubMenu(),
+      onBlur: () => this.closeMenu(),
+      onClick: () => this.openMenu(),
       onKeyDown: e => this.handleKeyDown(e)
     };
   }
@@ -86,13 +86,13 @@ class MenuTrigger extends React.Component {
   }
 
   handleOutsideClick() {
-    this.hideSubMenu(true);
+    this.closeMenu(true);
   }
 
   handleKeyDown(e) {
     switch (e.keyCode) {
       case keyCode.ESC:
-        this.hideSubMenu(true);
+        this.closeMenu(true);
         break;
       default:
         break;
@@ -130,10 +130,10 @@ class MenuTrigger extends React.Component {
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
                 {childrenFnc({
                   closeMenu: () => {
-                    this.hideSubMenu(true);
+                    this.closeMenu(true);
                   },
                   openMenu: () => {
-                    this.showSubMenu(true);
+                    this.openMenu(true);
                   }
                 })}
               </DropdownMenu>
@@ -148,7 +148,6 @@ class MenuTrigger extends React.Component {
 
 MenuTrigger.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
@@ -171,7 +170,6 @@ MenuTrigger.propTypes = {
 };
 
 MenuTrigger.defaultProps = {
-  menuData: null,
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
