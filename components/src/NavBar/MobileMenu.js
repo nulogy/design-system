@@ -61,15 +61,14 @@ const ApplySubMenuLinkStyles = styled.li(({ layer }) => ({
   }
 }));
 
-const MobileSubMenuLink = styled(SubMenuLink)(({ layer }) => ({
+const MobileSubMenuLink = styled(SubMenuLink).attrs({
+  hoverColor: theme.colors.white,
+  bgHoverColor: theme.colors.black
+})(({ layer }) => ({
   maxWidth: "100%",
   paddingLeft: getPaddingLeft(layer),
   a: {
-    marginBottom: theme.space.x1,
-    transition: ".2s",
-    "&:hover, &:focus": {
-      backgroundColor: theme.colors.black
-    }
+    marginBottom: theme.space.x1
   }
 }));
 
