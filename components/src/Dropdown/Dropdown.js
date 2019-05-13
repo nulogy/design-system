@@ -149,7 +149,7 @@ MenuTrigger.defaultProps = {
   menuData: null,
   showDelay: "100",
   hideDelay: "200",
-  trigger: () => <button>hi</button>,
+  trigger: () => <IconicButton icon="more" />,
   menuContent: () => <div>empty</div>
 };
 
