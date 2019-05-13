@@ -45,7 +45,7 @@ class MenuTrigger extends React.Component {
   setSubMenuState(newState, skipTimer = false) {
     this.clearScheduled();
     if (!skipTimer) {
-      this.showTimeoutID = setTimeout(
+      this.timeoutID = setTimeout(
         () => this.setState({ open: newState }),
         newState ? this.props.showDelay : this.props.hideDelay
       );
@@ -64,7 +64,9 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return {
-      onClick: () => this.showSubMenu(),
+      onClick: () => {
+        if (!this.state.open) this.showSubMenu();
+      },
       onBlur: () => this.hideSubMenu(),
       onFocus: () => this.showSubMenu(),
       onKeyDown: e => this.handleKeyDown(e)
@@ -80,8 +82,7 @@ class MenuTrigger extends React.Component {
   }
 
   clearScheduled() {
-    clearTimeout(this.hideTimeoutID);
-    clearTimeout(this.showTimeoutID);
+    clearTimeout(this.timeoutID);
   }
 
   handleOutsideClick() {
@@ -100,6 +101,7 @@ class MenuTrigger extends React.Component {
 
   render() {
     const { trigger, children, backgroundColor } = this.props;
+    const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
         <Reference>
@@ -125,7 +127,14 @@ class MenuTrigger extends React.Component {
                 }}
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
-                {children}
+                {childrenFnc({
+                  closeMenu: () => {
+                    this.hideSubMenu(true);
+                  },
+                  openMenu: () => {
+                    this.showSubMenu(true);
+                  }
+                })}
               </DropdownMenu>
             )}
           </Popper>
@@ -137,7 +146,7 @@ class MenuTrigger extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 MenuTrigger.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
