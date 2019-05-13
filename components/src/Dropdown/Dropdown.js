@@ -100,7 +100,7 @@ class MenuTrigger extends React.Component {
   }
 
   render() {
-    const { trigger, children, backgroundColor } = this.props;
+    const { trigger, children, backgroundColor, placement, modifiers, renderArrow } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
@@ -115,11 +115,12 @@ class MenuTrigger extends React.Component {
           }
         </Reference>
         {this.state.open && (
-          <Popper placement="bottom-start" modifiers={{ flip: { behavior: ["bottom"] } }}>
+          <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
               <DropdownMenu
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
+                renderArrow={renderArrow}
                 {...this.subMenuEventHandlers()}
                 ref={node => {
                   popperProps.ref(node);
@@ -151,7 +152,22 @@ MenuTrigger.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  backgroundColor: PropTypes.string
+  backgroundColor: PropTypes.string,
+  placement: PropTypes.oneOf([
+    "top",
+    "top-start",
+    "top-end",
+    "bottom",
+    "bottom-start",
+    "bottom-end",
+    "left",
+    "left-start",
+    "left-end",
+    "right",
+    "right-start",
+    "right-end"
+  ]),
+  modifiers: PropTypes.shape({})
 };
 
 MenuTrigger.defaultProps = {
@@ -159,7 +175,9 @@ MenuTrigger.defaultProps = {
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
-  backgroundColor: undefined
+  backgroundColor: undefined,
+  placement: "bottom-start",
+  modifiers: { flip: { behavior: ["bottom"] } }
 };
 
 export default MenuTrigger;
