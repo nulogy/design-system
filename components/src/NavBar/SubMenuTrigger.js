@@ -99,14 +99,13 @@ const SubMenuTrigger = props => {
   const { menuData, name, linkOnClick, ...otherProps } = props;
   return (
     <Dropdown
-      menuAs={"ul"}
       placement="right-start"
       modifiers={null}
       renderArrow={false}
       {...otherProps}
       trigger={() => <SubMenuTriggerButton name={name} />}
     >
-      {renderSubMenuItems(menuData, linkOnClick)}
+      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, linkOnClick)}</ul>
     </Dropdown>
   );
 };

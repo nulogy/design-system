@@ -102,7 +102,9 @@ const MenuTrigger = props => {
   const { menuData, name, ...otherProps } = props;
   return (
     <Dropdown {...otherProps} trigger={() => <MenuTriggerButton name={name} />}>
-      {({ closeMenu }) => renderSubMenuItems(menuData, closeMenu)}
+      {({ closeMenu }) => (
+        <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, closeMenu)}</ul>
+      )}
     </Dropdown>
   );
 };

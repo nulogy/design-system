@@ -64,8 +64,6 @@ BaseSubMenu.defaultProps = {
 
 const DropdownMenu = styled(BaseSubMenu)(
   ({ renderArrow, backgroundColor }) => ({
-    listStyle: "none",
-    margin: "0",
     backgroundColor: getThemeColor(backgroundColor),
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${getThemeColor(backgroundColor)}`,
