@@ -99,6 +99,7 @@ const SubMenuTrigger = props => {
   const { menuData, name, linkOnClick, ...otherProps } = props;
   return (
     <Dropdown
+      menuAs={"ul"}
       placement="right-start"
       modifiers={null}
       renderArrow={false}
@@ -114,17 +115,13 @@ SubMenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  linkOnClick: PropTypes.func,
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  linkOnClick: PropTypes.func
 };
 
 SubMenuTrigger.defaultProps = {
   menuData: null,
   description: null,
-  linkOnClick: null,
-  showDelay: "100",
-  hideDelay: "200"
+  linkOnClick: null
 };
 
 export default SubMenuTrigger;
