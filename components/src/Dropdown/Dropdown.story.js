@@ -33,4 +33,7 @@ storiesOf("Dropdown", module)
         Dropdown Button
       </DropdownButton>
     </Dropdown>
+  ))
+  .add("with button closing menu", () => (
+    <Dropdown>{({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}</Dropdown>
   ));

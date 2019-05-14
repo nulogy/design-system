@@ -64,9 +64,7 @@ class MenuTrigger extends React.Component {
 
   subMenuEventHandlers() {
     return {
-      onClick: () => {
-        if (!this.state.open) this.openMenu();
-      },
+      onClick: () => this.openMenu(),
       onBlur: () => this.closeMenu(),
       onFocus: () => this.openMenu(),
       onKeyDown: e => this.handleKeyDown(e)
@@ -130,11 +128,13 @@ class MenuTrigger extends React.Component {
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
                 {childrenFnc({
-                  closeMenu: () => {
+                  closeMenu: e => {
                     this.closeMenu(true);
+                    e.stopPropagation();
                   },
-                  openMenu: () => {
+                  openMenu: e => {
                     this.openMenu(true);
+                    e.stopPropagation();
                   }
                 })}
               </DropdownMenu>
