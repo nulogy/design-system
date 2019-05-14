@@ -118,6 +118,7 @@ class MenuTrigger extends React.Component {
           <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
               <DropdownMenu
+                placement={placement}
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
                 renderArrow={renderArrow}

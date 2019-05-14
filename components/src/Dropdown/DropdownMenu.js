@@ -6,10 +6,42 @@ import { PopperArrow } from "../Utils";
 
 const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
 
+const getMenuMargin = (placement, renderArrow) => {
+  const direction = String(placement).split("-")[0];
+  switch (direction) {
+    case "top":
+      return {
+        marginBottom: renderArrow ? "4px" : null
+      };
+    case "right":
+      return {
+        marginLeft: renderArrow ? "8px" : null,
+        marginTop: renderArrow ? null : "-8px"
+      };
+    case "left":
+      return {
+        marginRight: renderArrow ? "8px" : null,
+        marginTop: renderArrow ? null : "-8px"
+      };
+    case "bottom":
+    default:
+      return {
+        marginTop: renderArrow ? "4px" : null
+      };
+  }
+};
+
 const BaseSubMenu = React.forwardRef(
   ({ popperProps: { style, placement, arrowProps }, renderArrow, children, backgroundColor, ...props }, ref) => (
     <div ref={ref} style={style} placement={placement} {...props}>
-      {renderArrow && <PopperArrow {...arrowProps} backgroundColor={backgroundColor} borderColor={backgroundColor} />}
+      {renderArrow && (
+        <PopperArrow
+          {...arrowProps}
+          placement={placement}
+          backgroundColor={backgroundColor}
+          borderColor={backgroundColor}
+        />
+      )}
       {children}
     </div>
   )
@@ -29,7 +61,7 @@ BaseSubMenu.defaultProps = {
 };
 
 const DropdownMenu = styled(BaseSubMenu)(
-  ({ renderArrow, backgroundColor }) => ({
+  ({ placement, renderArrow, backgroundColor }) => ({
     backgroundColor: getThemeColor(backgroundColor),
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${getThemeColor(backgroundColor)}`,
@@ -38,7 +70,7 @@ const DropdownMenu = styled(BaseSubMenu)(
     padding: "7px 0",
     transition: "opacity 0.3s",
     zIndex: "100",
-    marginTop: renderArrow ? theme.space.half : "-8px"
+    ...getMenuMargin(placement, renderArrow)
   }),
   ({ style }) => ({
     ...style
