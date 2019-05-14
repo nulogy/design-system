@@ -5,9 +5,11 @@ import theme from "../theme";
 
 const DropdownButton = styled.button(props => ({
   display: "block",
+  width: "100%",
   cursor: "pointer",
   color: themeGet(`colors.${props.color}`, props.color)(props),
-  borderColor: "transparent",
+  border: "none",
+  textAlign: "left",
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
