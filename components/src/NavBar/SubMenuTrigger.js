@@ -35,6 +35,10 @@ const SubMenuTriggerButton = React.forwardRef(({ name, ...props }, ref) => (
   </StyledButton>
 ));
 
+SubMenuTriggerButton.propTypes = {
+  name: PropTypes.string.isRequired
+};
+
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
   whiteSpace: "nowrap",

@@ -153,6 +153,7 @@ MenuTrigger.propTypes = {
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   backgroundColor: PropTypes.string,
+  renderArrow: PropTypes.bool,
   placement: PropTypes.oneOf([
     "top",
     "top-start",
@@ -175,6 +176,7 @@ MenuTrigger.defaultProps = {
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
   backgroundColor: undefined,
+  renderArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } }
 };

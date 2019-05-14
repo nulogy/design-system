@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import theme from "../theme";
 import PropTypes from "prop-types";
+import theme from "../theme";
 
 const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
 
