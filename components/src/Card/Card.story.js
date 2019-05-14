@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Text, SubsectionTitle } from "../Type";
-import { IconicButton } from "../Button";
 import { Card, CardSet, CPCard } from ".";
 import { Dropdown, DropdownButton } from "../Dropdown";
 
