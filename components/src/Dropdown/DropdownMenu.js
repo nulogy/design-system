@@ -68,7 +68,6 @@ const DropdownMenu = styled(BaseSubMenu)(
     borderBottom: `1px solid ${getThemeColor(backgroundColor)}`,
     boxShadow: theme.shadows.small,
     padding: "7px 0",
-    transition: "opacity 0.3s",
     zIndex: "100",
     ...getMenuMargin(placement, renderArrow)
   }),
