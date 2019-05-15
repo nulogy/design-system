@@ -9,7 +9,7 @@ import { Fieldset } from "../Form";
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
-    const { value, disabled, required, ...checkboxProps } = checkbox.props;
+    const { value, disabled, required, onChange, ...checkboxProps } = checkbox.props;
     return (
       <Checkbox
         {...checkboxProps}
@@ -20,16 +20,15 @@ const getCheckboxButtons = props => {
         name={props.name}
         defaultChecked={props.defaultValue ? props.defaultValue.includes(value) : undefined}
         checked={props.checkedValue ? props.checkedValue.includes(value) : undefined}
-        onChange={props.onChange}
+        onChange={props.onChange || onChange}
       />
     );
   });
   return checkboxButtons;
 };
 
-const BaseCheckboxGroup = props => {
-  const { className, error, errorList, labelText, helpText, requirementText } = props;
-
+const BaseCheckboxGroup = ({ className, error, errorList, labelText, helpText, requirementText, ...props }) => {
+  const otherProps = { ...props, error };
   return (
     <Fieldset role="group" className={className} hasHelpText={!!helpText}>
       <Box mb="x1">
@@ -39,7 +38,7 @@ const BaseCheckboxGroup = props => {
         </legend>
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
-      {getCheckboxButtons(props)}
+      {getCheckboxButtons(otherProps)}
       {error && (
         <InlineValidation mt="x1" message={error}>
           {mapErrorsToList(errorList)}
@@ -51,7 +50,7 @@ const BaseCheckboxGroup = props => {
 
 BaseCheckboxGroup.propTypes = {
   error: PropTypes.string,
-  errorList: PropTypes.array,
+  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([

@@ -213,7 +213,7 @@ Select.propTypes = {
   required: PropTypes.bool,
   onChange: PropTypes.func,
   error: PropTypes.string,
-  errorList: PropTypes.array,
+  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   id: PropTypes.string,

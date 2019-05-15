@@ -77,7 +77,7 @@ const Input = ({ error, errorList, required, labelText, requirementText, helpTex
 Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.string,
-  errorList: PropTypes.array,
+  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,

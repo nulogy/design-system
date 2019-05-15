@@ -9,7 +9,7 @@ import { Fieldset } from "../Form";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
-    const { value, disabled, required, ...radioProps } = radio.props;
+    const { value, disabled, required, onChange, ...radioProps } = radio.props;
     return (
       <Radio
         {...radioProps}
@@ -20,16 +20,15 @@ const getRadioButtons = props => {
         name={props.name}
         defaultChecked={value === props.defaultValue ? true : undefined}
         checked={props.checkedValue && value === props.checkedValue}
-        onChange={props.onChange}
+        onChange={props.onChange || onChange}
       />
     );
   });
   return radioButtons;
 };
 
-const BaseRadioGroup = props => {
-  const { className, error, errorList, labelText, helpText, requirementText } = props;
-
+const BaseRadioGroup = ({ className, error, errorList, labelText, helpText, requirementText, ...props }) => {
+  const otherProps = { ...props, error };
   return (
     <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
       <Box mb="x1">
@@ -39,7 +38,7 @@ const BaseRadioGroup = props => {
         </legend>
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
-      {getRadioButtons(props)}
+      {getRadioButtons(otherProps)}
       {error && (
         <InlineValidation mt="x1" message={error}>
           {mapErrorsToList(errorList)}
@@ -51,7 +50,7 @@ const BaseRadioGroup = props => {
 
 BaseRadioGroup.propTypes = {
   error: PropTypes.string,
-  errorList: PropTypes.array,
+  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
