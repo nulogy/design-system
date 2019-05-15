@@ -12,6 +12,13 @@ const groupProps = [
     description: "Sets the error state and displays message"
   },
   {
+    name: "errorList",
+    type: "Array of strings or elements",
+    defaultValue: "null",
+    description:
+      "Sets the error list items, only if the error prop also has been entered"
+  },
+  {
     name: "helpText",
     type: "String",
     defaultValue: "null",
