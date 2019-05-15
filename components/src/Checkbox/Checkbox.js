@@ -122,9 +122,8 @@ BaseCheckbox.defaultProps = {
   required: false
 };
 
-const Checkbox = styled(BaseCheckbox)(({ error }) => ({
-  padding: `${theme.space.half} 0`,
-  color: error ? theme.colors.red : null
-}));
+const Checkbox = styled(BaseCheckbox)({
+  padding: `${theme.space.half} 0`
+});
 
 export default Checkbox;
