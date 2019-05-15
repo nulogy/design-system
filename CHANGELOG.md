@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- [**Breaking Change**] All refs pointing to button components now passed directly down to the underlying <button> tag.
+- [**Breaking Change**] All refs pointing to button components now forwarded down to the underlying `<button>` tag.
 - Card component now accepts all the same props as Box component.
 
 ### Deprecated
