@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { InlineValidation } from "../Validation";
+import { InlineValidation, mapErrorsToList } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -61,18 +61,23 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
-const Input = ({ error, required, labelText, requirementText, helpText, ...props }) => (
+const Input = ({ error, errorList, required, labelText, requirementText, helpText, ...props }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledInput aria-invalid={!!error} aria-required={required} error={error} {...props} />
     </MaybeFieldLabel>
-    {error && <InlineValidation mt="x1" message={error} />}
+    {error && (
+      <InlineValidation mt="x1" message={error}>
+        {mapErrorsToList(errorList)}
+      </InlineValidation>
+    )}
   </Field>
 );
 
 Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.string,
+  errorList: PropTypes.array,
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
@@ -83,6 +88,7 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   error: null,
+  errorList: null,
   required: false,
   labelText: null,
   helpText: null,
