@@ -21,7 +21,7 @@ const keyCode = Object.freeze({
 });
 
 /* eslint-disable react/destructuring-assignment */
-class MenuTrigger extends React.Component {
+class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -147,7 +147,7 @@ class MenuTrigger extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-MenuTrigger.propTypes = {
+Dropdown.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -171,7 +171,7 @@ MenuTrigger.propTypes = {
   modifiers: PropTypes.shape({})
 };
 
-MenuTrigger.defaultProps = {
+Dropdown.defaultProps = {
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
@@ -181,4 +181,4 @@ MenuTrigger.defaultProps = {
   modifiers: { flip: { behavior: ["bottom"] } }
 };
 
-export default MenuTrigger;
+export default Dropdown;
