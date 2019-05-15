@@ -6,7 +6,7 @@ import { List, ListItem } from "../List";
 storiesOf("Header Validation", module)
   .add("Header Validation", () => (
     <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
-      <List compact>
+      <List compact leftAlign>
         <ListItem>Affected field</ListItem>
         <ListItem>Unmet criteria</ListItem>
         <ListItem>

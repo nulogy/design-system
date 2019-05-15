@@ -24,6 +24,12 @@ const propsRows = [
     type: "Boolean",
     defaultValue: "false",
     description: "Removes margin between list items"
+  },
+  {
+    name: "leftAlign",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Sets padding left to align to left of container"
   }
 ];
 
@@ -66,6 +72,21 @@ export default () => (
         </List>
         <Highlight className="js">
           {`<List compact>
+  <ListItem>List item</ListItem>
+  <ListItem>List item</ListItem>
+  <ListItem>List item</ListItem>
+</List>`}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>LeftAlign</SubsectionTitle>
+        <List mb="x3" leftAlign>
+          <ListItem>List item</ListItem>
+          <ListItem>List item</ListItem>
+          <ListItem>List item</ListItem>
+        </List>
+        <Highlight className="js">
+          {`<List leftAlign>
   <ListItem>List item</ListItem>
   <ListItem>List item</ListItem>
   <ListItem>List item</ListItem>

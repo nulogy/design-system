@@ -5,27 +5,32 @@ import ListItem from "./ListItem";
 import theme from "../theme";
 
 const List = styled.ul(
+  space,
+  color,
+  fontSize,
+  fontWeight,
+  lineHeight,
   ({ compact }) => ({
     margin: 0,
     [`${ListItem}`]: {
       marginBottom: compact ? 0 : theme.space.x1
     }
   }),
-  space,
-  color,
-  fontSize,
-  fontWeight,
-  lineHeight
+  ({ leftAlign }) => ({
+    paddingLeft: leftAlign ? "18px" : null
+  })
 );
 
 List.propTypes = {
   compact: PropTypes.bool,
+  leftAlign: PropTypes.bool,
   ...space.propTypes,
   ...color.propTypes
 };
 
 List.defaultProps = {
   compact: false,
+  leftAlign: false,
   color: "currentColor"
 };
 

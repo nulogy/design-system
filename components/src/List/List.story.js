@@ -31,4 +31,11 @@ storiesOf("List", module)
       <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
       <ListItem>List Item 3</ListItem>
     </List>
+  ))
+  .add("With left alignment", () => (
+    <List leftAlign>
+      <ListItem>List Item 1</ListItem>
+      <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
+      <ListItem>List Item 3</ListItem>
+    </List>
   ));
