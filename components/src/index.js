@@ -9,6 +9,7 @@ export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "
 export { Link } from "./Link";
 export { InlineValidation, HeaderValidation } from "./Validation";
 
+export { Dropdown, DropdownLink, DropdownButton } from "./Dropdown";
 export { HelpText, RequirementText, FieldLabel, MaybeFieldLabel } from "./FieldLabel";
 export { Input } from "./Input";
 export { NavBarSearch } from "./NavBarSearch";
@@ -22,6 +23,5 @@ export { ListItem, List } from "./List";
 export { Textarea } from "./Textarea";
 export { Tooltip } from "./Tooltip";
 export { Card, CardSet, CPCard } from "./Card";
-export { Dropdown, DropdownLink, DropdownButton } from "./Dropdown";
 
 export { DemoPage } from "./DemoPage";
