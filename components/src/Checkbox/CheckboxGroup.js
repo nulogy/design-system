@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
-import { InlineValidation } from "../Validation";
+import { InlineValidation, mapErrorsToList } from "../Validation";
 import { Fieldset } from "../Form";
 
 const getCheckboxButtons = props => {
@@ -15,6 +15,7 @@ const getCheckboxButtons = props => {
         {...checkboxProps}
         value={value}
         disabled={props.disabled || disabled}
+        error={!!props.error}
         required={props.required || required}
         name={props.name}
         defaultChecked={props.defaultValue ? props.defaultValue.includes(value) : undefined}
@@ -26,22 +27,31 @@ const getCheckboxButtons = props => {
   return checkboxButtons;
 };
 
-const BaseCheckboxGroup = ({ className, error, labelText, helpText, requirementText, ...props }) => (
-  <Fieldset role="group" className={className} hasHelpText={!!helpText}>
-    <Box mb="x1">
-      <legend>
-        {labelText}
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
-      </legend>
-      {helpText && <HelpText>{helpText}</HelpText>}
-    </Box>
-    {getCheckboxButtons(props)}
-    {error && <InlineValidation mt="x1" message={error} />}
-  </Fieldset>
-);
+const BaseCheckboxGroup = props => {
+  const { className, error, errorList, labelText, helpText, requirementText } = props;
+
+  return (
+    <Fieldset role="group" className={className} hasHelpText={!!helpText}>
+      <Box mb="x1">
+        <legend>
+          {labelText}
+          {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        </legend>
+        {helpText && <HelpText>{helpText}</HelpText>}
+      </Box>
+      {getCheckboxButtons(props)}
+      {error && (
+        <InlineValidation mt="x1" message={error}>
+          {mapErrorsToList(errorList)}
+        </InlineValidation>
+      )}
+    </Fieldset>
+  );
+};
 
 BaseCheckboxGroup.propTypes = {
   error: PropTypes.string,
+  errorList: PropTypes.array,
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -64,6 +74,7 @@ BaseCheckboxGroup.propTypes = {
 
 BaseCheckboxGroup.defaultProps = {
   error: null,
+  errorList: null,
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
