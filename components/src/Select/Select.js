@@ -6,7 +6,7 @@ import { transparentize } from "polished";
 import { Field } from "../Form";
 import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { InlineValidation } from "../Validation";
+import { InlineValidation, mapErrorsToList } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -120,6 +120,7 @@ const parseValueProp = (value, options) => options.find(o => o.value === value);
 
 const Select = ({
   error,
+  errorList,
   onChange,
   disabled,
   options,
@@ -196,7 +197,11 @@ const Select = ({
         </div>
       )}
     </Downshift>
-    {error && <InlineValidation mt="x1" message={error} />}
+    {error && (
+      <InlineValidation mt="x1" message={error}>
+        {mapErrorsToList(errorList)}
+      </InlineValidation>
+    )}{" "}
   </Field>
 );
 
@@ -208,6 +213,7 @@ Select.propTypes = {
   required: PropTypes.bool,
   onChange: PropTypes.func,
   error: PropTypes.string,
+  errorList: PropTypes.array,
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   id: PropTypes.string,
@@ -223,6 +229,7 @@ Select.defaultProps = {
   required: false,
   onChange: undefined,
   error: null,
+  errorList: null,
   disabled: false,
   initialIsOpen: undefined,
   placeholder: undefined,
