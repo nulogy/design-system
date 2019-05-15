@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?selectedKind=DropdownMenu&selectedStory=DropdownMenu) component
 - Added "more" icon
+- Added support for errorList prop to Input, Textarea, Select, CheckboxGroup, and RadioGroup
 
 ### Changed
 
