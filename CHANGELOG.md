@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?selectedKind=DropdownMenu&selectedStory=DropdownMenu) component
+- Added "more" icon
 
 ### Changed
 
