@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
-import { subPx, omit } from "../Utils";
+import { subPx, omit } from "../utils";
 
 const iconNames = Object.keys(icons);
 

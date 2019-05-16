@@ -8,7 +8,7 @@ import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx } from "../utils";
 
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;

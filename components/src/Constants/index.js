@@ -1,1 +1,1 @@
-export { default as keyCodes } from "../Constants/keyCodes";
+export { default as keyCodes } from "../constants/keyCodes";

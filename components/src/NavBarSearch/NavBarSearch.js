@@ -6,7 +6,7 @@ import { Flex } from "../Flex";
 import { Input } from "../Input";
 import { Icon } from "../Icon";
 import theme from "../theme";
-import { subPx } from "../Utils";
+import { subPx } from "../utils";
 
 class BaseNavBarSearch extends React.Component {
   constructor() {
