@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Dropdown from "./Dropdown";
+import DropdownMenu from "./DropdownMenu";
 import DropdownLink from "./DropdownLink";
 import DropdownButton from "./DropdownButton";
 import { Button } from "../Button";
@@ -11,29 +11,31 @@ const customColors = {
   bgHoverColor: "black"
 };
 
-storiesOf("Dropdown", module)
-  .add("Dropdown", () => (
-    <Dropdown>
+storiesOf("DropdownMenu", module)
+  .add("DropdownMenu", () => (
+    <DropdownMenu>
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    </Dropdown>
+    </DropdownMenu>
   ))
   .add("with custom trigger", () => (
-    <Dropdown trigger={() => <Button>Custom Trigger</Button>}>
+    <DropdownMenu trigger={() => <Button>Custom Trigger</Button>}>
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    </Dropdown>
+    </DropdownMenu>
   ))
   .add("with custom colors", () => (
-    <Dropdown backgroundColor="blackBlue">
+    <DropdownMenu backgroundColor="blackBlue">
       <DropdownLink href="/" {...customColors}>
         Dropdown Link
       </DropdownLink>
       <DropdownButton onClick={() => {}} {...customColors}>
         Dropdown Button
       </DropdownButton>
-    </Dropdown>
+    </DropdownMenu>
   ))
   .add("with button closing menu", () => (
-    <Dropdown>{({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}</Dropdown>
+    <DropdownMenu>
+      {({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}
+    </DropdownMenu>
   ));

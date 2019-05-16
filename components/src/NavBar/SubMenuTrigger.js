@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import SubMenuLink from "./SubMenuLink";
-import { Dropdown } from "../Dropdown";
+import { DropdownMenu } from "../DropdownMenu";
 
 const StyledButton = styled.button({
   display: "block",
@@ -102,7 +102,7 @@ const renderSubMenuItems = (subMenuItems, linkOnClick) =>
 const SubMenuTrigger = props => {
   const { menuData, name, linkOnClick, ...otherProps } = props;
   return (
-    <Dropdown
+    <DropdownMenu
       placement="right-start"
       modifiers={null}
       renderArrow={false}
@@ -110,7 +110,7 @@ const SubMenuTrigger = props => {
       trigger={() => <SubMenuTriggerButton name={name} />}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, linkOnClick)}</ul>
-    </Dropdown>
+    </DropdownMenu>
   );
 };
 

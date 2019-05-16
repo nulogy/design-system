@@ -4,7 +4,7 @@ import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Text, SubsectionTitle } from "../Type";
 import { Card, CardSet, CPCard } from ".";
-import { Dropdown, DropdownButton } from "../Dropdown";
+import { DropdownMenu, DropdownButton } from "../DropdownMenu";
 
 storiesOf("Card", module)
   .add("Card", () => <Card>I am a card.</Card>)
@@ -24,10 +24,10 @@ storiesOf("Card", module)
     <CardSet>
       <CPCard>
         <SubsectionTitle mr="x4">Title</SubsectionTitle>
-        <Dropdown>
+        <DropdownMenu>
           <DropdownButton>Dropdown Item</DropdownButton>
           <DropdownButton>Dropdown Item</DropdownButton>
-        </Dropdown>
+        </DropdownMenu>
         <Flex justifyContent="space-between">
           <Box mr="x3">
             <Text>Item: Some item</Text>
@@ -41,10 +41,10 @@ storiesOf("Card", module)
       </CPCard>
       <CPCard>
         <SubsectionTitle mr="x4">Title</SubsectionTitle>
-        <Dropdown>
+        <DropdownMenu>
           <DropdownButton>Dropdown Item</DropdownButton>
           <DropdownButton>Dropdown Item</DropdownButton>
-        </Dropdown>
+        </DropdownMenu>
         <Flex justifyContent="space-between">
           <Box mr="x3">
             <Text>Item: Some item</Text>

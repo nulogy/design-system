@@ -1,4 +1,4 @@
-import { DropdownLink } from "../Dropdown";
+import { DropdownLink } from "../DropdownMenu";
 
 const SubMenuLink = DropdownLink;
 

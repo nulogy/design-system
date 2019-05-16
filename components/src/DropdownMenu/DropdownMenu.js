@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick } from "../Utils";
 import { IconicButton } from "../Button";
-import DropdownMenu from "./DropdownMenu";
+import DropdownMenuContainer from "./DropdownMenuContainer";
 import { keyCodes } from "../Utils";
 
 /* eslint-disable react/destructuring-assignment */
-class Dropdown extends React.Component {
+class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -101,7 +101,7 @@ class Dropdown extends React.Component {
         {this.state.open && (
           <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
-              <DropdownMenu
+              <DropdownMenuContainer
                 placement={placement}
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
@@ -123,7 +123,7 @@ class Dropdown extends React.Component {
                     e.stopPropagation();
                   }
                 })}
-              </DropdownMenu>
+              </DropdownMenuContainer>
             )}
           </Popper>
         )}
@@ -133,7 +133,7 @@ class Dropdown extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-Dropdown.propTypes = {
+DropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -157,7 +157,7 @@ Dropdown.propTypes = {
   modifiers: PropTypes.shape({})
 };
 
-Dropdown.defaultProps = {
+DropdownMenu.defaultProps = {
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
@@ -167,4 +167,4 @@ Dropdown.defaultProps = {
   modifiers: { flip: { behavior: ["bottom"] } }
 };
 
-export default Dropdown;
+export default DropdownMenu;

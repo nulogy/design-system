@@ -9,7 +9,7 @@ export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "
 export { Link } from "./Link";
 export { InlineValidation, HeaderValidation } from "./Validation";
 
-export { Dropdown, DropdownLink, DropdownButton } from "./Dropdown";
+export { DropdownMenu, DropdownLink, DropdownButton } from "./Dropdown";
 export { HelpText, RequirementText, FieldLabel, MaybeFieldLabel } from "./FieldLabel";
 export { Input } from "./Input";
 export { NavBarSearch } from "./NavBarSearch";
