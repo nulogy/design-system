@@ -1,5 +1,2 @@
-import { DropdownLink } from "../DropdownMenu";
-
-const SubMenuLink = DropdownLink;
-
+import { DropdownLink as SubMenuLink } from "../DropdownMenu";
 export default SubMenuLink;
