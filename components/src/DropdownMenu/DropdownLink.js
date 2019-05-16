@@ -30,9 +30,9 @@ DropdownLink.propTypes = {
 };
 
 DropdownLink.defaultProps = {
-  color: theme.colors.darkBlue,
-  hoverColor: theme.colors.darkBlue,
-  bgHoverColor: theme.colors.lightGrey
+  color: "darkBlue",
+  hoverColor: "darkBlue",
+  bgHoverColor: "lightGrey"
 };
 
 export default DropdownLink;

@@ -1,4 +1,4 @@
-export const keyCode = Object.freeze({
+const keyCodes = Object.freeze({
   TAB: 9,
   RETURN: 13,
   ESC: 27,
@@ -12,3 +12,5 @@ export const keyCode = Object.freeze({
   RIGHT: 39,
   DOWN: 40
 });
+
+export default keyCodes;

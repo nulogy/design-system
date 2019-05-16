@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import keyCodes from "../Utils";
+import { keyCodes } from "../Utils";
 
 class MenuState extends React.Component {
   constructor() {
