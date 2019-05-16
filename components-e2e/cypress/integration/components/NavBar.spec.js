@@ -5,9 +5,7 @@ describe("NavBar", () => {
     });
 
     it("can be navigated using the keyboard", () => {
-      cy.visit(
-        "http://localhost:8080/iframe.html?path=/story/fortests--navbar"
-      );
+      cy.renderFromStorybook("navbar");
 
       cy.wait(500);
     });
@@ -19,9 +17,8 @@ describe("NavBar", () => {
     });
 
     it("renders", () => {
-      cy.visit(
-        "http://localhost:8080/iframe.html?path=/story/fortests--navbar"
-      );
+      cy.renderFromStorybook("navbar");
+
       cy.wait(500);
     });
   });
