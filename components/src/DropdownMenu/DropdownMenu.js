@@ -84,7 +84,7 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { trigger, children, backgroundColor, placement, modifiers, renderArrow } = this.props;
+    const { trigger, children, backgroundColor, placement, modifiers, showArrow } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
@@ -105,7 +105,7 @@ class DropdownMenu extends React.Component {
                 placement={placement}
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
-                renderArrow={renderArrow}
+                showArrow={showArrow}
                 {...this.subMenuEventHandlers()}
                 ref={node => {
                   popperProps.ref(node);
@@ -139,7 +139,7 @@ DropdownMenu.propTypes = {
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   backgroundColor: PropTypes.string,
-  renderArrow: PropTypes.bool,
+  showArrow: PropTypes.bool,
   placement: PropTypes.oneOf([
     "top",
     "top-start",
@@ -162,7 +162,7 @@ DropdownMenu.defaultProps = {
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
   backgroundColor: undefined,
-  renderArrow: true,
+  showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } }
 };

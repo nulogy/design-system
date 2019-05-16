@@ -105,7 +105,7 @@ const SubMenuTrigger = props => {
     <DropdownMenu
       placement="right-start"
       modifiers={null}
-      renderArrow={false}
+      showArrow={false}
       {...otherProps}
       trigger={() => <SubMenuTriggerButton name={name} />}
     >

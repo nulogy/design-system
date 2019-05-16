@@ -6,35 +6,35 @@ import { PopperArrow } from "../Utils";
 
 const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
 
-const getMenuMargin = (placement, renderArrow) => {
+const getMenuMargin = (placement, showArrow) => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
     case "top":
       return {
-        marginBottom: renderArrow ? "4px" : null
+        marginBottom: showArrow ? "4px" : null
       };
     case "right":
       return {
-        marginLeft: renderArrow ? "8px" : null,
-        marginTop: renderArrow ? null : "-8px"
+        marginLeft: showArrow ? "8px" : null,
+        marginTop: showArrow ? null : "-8px"
       };
     case "left":
       return {
-        marginRight: renderArrow ? "8px" : null,
-        marginTop: renderArrow ? null : "-8px"
+        marginRight: showArrow ? "8px" : null,
+        marginTop: showArrow ? null : "-8px"
       };
     case "bottom":
     default:
       return {
-        marginTop: renderArrow ? "4px" : null
+        marginTop: showArrow ? "4px" : null
       };
   }
 };
 
 const BaseSubMenu = React.forwardRef(
-  ({ popperProps: { style, placement, arrowProps }, renderArrow, children, backgroundColor, ...props }, ref) => (
+  ({ popperProps: { style, placement, arrowProps }, showArrow, children, backgroundColor, ...props }, ref) => (
     <div ref={ref} style={style} placement={placement} {...props}>
-      {renderArrow && (
+      {showArrow && (
         <PopperArrow
           {...arrowProps}
           placement={placement}
@@ -50,18 +50,18 @@ const BaseSubMenu = React.forwardRef(
 BaseSubMenu.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
   children: PropTypes.node,
-  renderArrow: PropTypes.bool,
+  showArrow: PropTypes.bool,
   popperProps: PropTypes.shape({})
 };
 
 BaseSubMenu.defaultProps = {
   children: null,
-  renderArrow: true,
+  showArrow: true,
   popperProps: null
 };
 
 const DropdownMenu = styled(BaseSubMenu)(
-  ({ placement, renderArrow, backgroundColor }) => ({
+  ({ placement, showArrow, backgroundColor }) => ({
     backgroundColor: getThemeColor(backgroundColor),
     borderRadius: theme.radii.medium,
     borderTop: `1px solid ${getThemeColor(backgroundColor)}`,
@@ -69,7 +69,7 @@ const DropdownMenu = styled(BaseSubMenu)(
     boxShadow: theme.shadows.small,
     padding: "7px 0",
     zIndex: "100",
-    ...getMenuMargin(placement, renderArrow)
+    ...getMenuMargin(placement, showArrow)
   }),
   ({ style }) => ({
     ...style
@@ -78,12 +78,12 @@ const DropdownMenu = styled(BaseSubMenu)(
 
 DropdownMenu.propTypes = {
   backgroundColor: PropTypes.string,
-  renderArrow: PropTypes.bool
+  showArrow: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
   backgroundColor: "whiteGrey",
-  renderArrow: true
+  showArrow: true
 };
 
 export default DropdownMenu;
