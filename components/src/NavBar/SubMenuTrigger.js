@@ -3,8 +3,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
-import SubMenuLink from "./SubMenuLink";
 import { DropdownMenu } from "../DropdownMenu";
+import renderSubMenuItems from "./renderSubMenuItems";
 
 const StyledButton = styled.button({
   display: "block",
@@ -39,68 +39,8 @@ SubMenuTriggerButton.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-const ApplySubMenuLinkStyles = styled.li({
-  color: theme.colors.black,
-  whiteSpace: "nowrap",
-  borderColor: "transparent",
-  backgroundColor: "transparent",
-  textDecoration: "none",
-  verticalAlign: "middle",
-  lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  fontSize: theme.fontSizes.medium,
-  "> *": {
-    display: "block",
-    color: theme.colors.darkBlue,
-    textDecoration: "none",
-    padding: `${theme.space.x1} ${theme.space.x2}`,
-    "&:hover, &:focus": {
-      outline: "none",
-      backgroundColor: theme.colors.lightGrey
-    },
-    "&:disabled": {
-      opacity: ".5"
-    }
-  }
-});
-
-const renderSubMenuTrigger = (subMenuItem, linkOnClick) => (
-  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <SubMenuTrigger linkOnClick={linkOnClick} name={subMenuItem.name} menuData={subMenuItem.items} />
-  </li>
-);
-
-const renderSubMenuLink = (subMenuItem, linkOnClick) => (
-  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <SubMenuLink onClick={linkOnClick} href={subMenuItem.href}>
-      {subMenuItem.name}
-    </SubMenuLink>
-  </li>
-);
-
-const renderCustom = (subMenuItem, linkOnClick) => (
-  <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={linkOnClick}>
-    {subMenuItem.render()}
-  </ApplySubMenuLinkStyles>
-);
-
-const getRenderFunction = subMenuItem => {
-  if (subMenuItem.items) {
-    return renderSubMenuTrigger;
-  } else if (subMenuItem.href) {
-    return renderSubMenuLink;
-  } else if (subMenuItem.render) {
-    return renderCustom;
-  } else {
-    return () => null;
-  }
-};
-
-const renderSubMenuItems = (subMenuItems, linkOnClick) =>
-  subMenuItems.map(subMenuItem => getRenderFunction(subMenuItem)(subMenuItem, linkOnClick));
-
 const SubMenuTrigger = props => {
-  const { menuData, name, linkOnClick, ...otherProps } = props;
+  const { menuData, name, onItemClick, ...otherProps } = props;
   return (
     <DropdownMenu
       placement="right-start"
@@ -109,22 +49,20 @@ const SubMenuTrigger = props => {
       {...otherProps}
       trigger={() => <SubMenuTriggerButton name={name} />}
     >
-      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, linkOnClick)}</ul>
+      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, onItemClick)}</ul>
     </DropdownMenu>
   );
 };
 
 SubMenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
-  description: PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  linkOnClick: PropTypes.func
+  onItemClick: PropTypes.func
 };
 
 SubMenuTrigger.defaultProps = {
   menuData: null,
-  description: null,
-  linkOnClick: null
+  onItemClick: null
 };
 
 export default SubMenuTrigger;
