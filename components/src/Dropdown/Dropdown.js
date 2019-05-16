@@ -4,21 +4,7 @@ import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick } from "../Utils";
 import { IconicButton } from "../Button";
 import DropdownMenu from "./DropdownMenu";
-
-const keyCode = Object.freeze({
-  TAB: 9,
-  RETURN: 13,
-  ESC: 27,
-  SPACE: 32,
-  PAGEUP: 33,
-  PAGEDOWN: 34,
-  END: 35,
-  HOME: 36,
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40
-});
+import { keyCodes } from "../Utils";
 
 /* eslint-disable react/destructuring-assignment */
 class Dropdown extends React.Component {
@@ -89,7 +75,7 @@ class Dropdown extends React.Component {
 
   handleKeyDown(e) {
     switch (e.keyCode) {
-      case keyCode.ESC:
+      case keyCodes.ESC:
         this.closeMenu(true);
         break;
       default:

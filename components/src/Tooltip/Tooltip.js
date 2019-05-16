@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId, DetectOutsideClick, PopperArrow } from "../Utils";
+import { withGeneratedId, DetectOutsideClick, PopperArrow, keyCodes } from "../Utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -125,7 +125,7 @@ class Tooltip extends React.Component {
   }
 
   handleKeyDown(event) {
-    if (event.keyCode === 27) {
+    if (event.keyCode === keyCodes.ESC) {
       this.hideTooltip(true);
     }
   }

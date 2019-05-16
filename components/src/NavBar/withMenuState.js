@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import keyCodes from "../Utils";
 
 class MenuState extends React.Component {
   constructor() {
@@ -50,7 +51,7 @@ class MenuState extends React.Component {
 
   handleKeyDown(event) {
     switch (event.keyCode) {
-      case 27:
+      case keyCodes.ESC:
         this.closeMenu();
         break;
       default:
