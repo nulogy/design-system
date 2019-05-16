@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick } from "../Utils";
+import { DetectOutsideClick, keyCodes } from "../Utils";
 import { IconicButton } from "../Button";
 import DropdownMenuContainer from "./DropdownMenuContainer";
-import { keyCodes } from "../Utils";
 
 /* eslint-disable react/destructuring-assignment */
 class DropdownMenu extends React.Component {

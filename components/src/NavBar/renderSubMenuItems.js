@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
 import SubMenuLink from "./SubMenuLink";
-import SubMenuTrigger from "./SubMenuTrigger";
 
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,
@@ -29,7 +28,7 @@ const ApplySubMenuLinkStyles = styled.li({
   }
 });
 
-const renderSubMenuTrigger = (subMenuItem, onItemClick) => (
+const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
   <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
     <SubMenuTrigger onItemClick={onItemClick} name={subMenuItem.name} menuData={subMenuItem.items} />
   </li>
@@ -61,7 +60,7 @@ const getRenderFunction = subMenuItem => {
   }
 };
 
-const renderSubMenuItems = (subMenuItems, onItemClick) =>
-  subMenuItems.map(subMenuItem => getRenderFunction(subMenuItem)(subMenuItem, onItemClick));
+const renderSubMenuItems = (subMenuItems, onItemClick, SubMenuTrigger) =>
+  subMenuItems.map(subMenuItem => getRenderFunction(subMenuItem)(subMenuItem, onItemClick, SubMenuTrigger));
 
 export default renderSubMenuItems;

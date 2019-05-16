@@ -49,7 +49,9 @@ const SubMenuTrigger = props => {
       {...otherProps}
       trigger={() => <SubMenuTriggerButton name={name} />}
     >
-      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>{renderSubMenuItems(menuData, onItemClick)}</ul>
+      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
+        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
+      </ul>
     </DropdownMenu>
   );
 };
