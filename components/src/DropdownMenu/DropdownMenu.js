@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick, keyCodes } from "../Utils";
+import { DetectOutsideClick } from "../Utils";
+import { keyCodes } from "../Constants";
 import { IconicButton } from "../Button";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
