@@ -11,7 +11,7 @@ class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: this.props.defaultOpen
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
@@ -154,7 +154,8 @@ DropdownMenu.propTypes = {
     "right-start",
     "right-end"
   ]),
-  modifiers: PropTypes.shape({})
+  modifiers: PropTypes.shape({}),
+  defaultOpen: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
@@ -164,7 +165,8 @@ DropdownMenu.defaultProps = {
   backgroundColor: undefined,
   showArrow: true,
   placement: "bottom-start",
-  modifiers: { flip: { behavior: ["bottom"] } }
+  modifiers: { flip: { behavior: ["bottom"] } },
+  defaultOpen: false
 };
 
 export default DropdownMenu;

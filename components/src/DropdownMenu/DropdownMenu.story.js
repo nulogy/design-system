@@ -46,4 +46,13 @@ storiesOf("DropdownMenu", module)
         <a href="/">Custom Link Component</a>
       </DropdownItem>
     </DropdownMenu>
+  ))
+  .add("set to defaultOpen", () => (
+    <DropdownMenu defaultOpen>
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+      <DropdownItem>
+        <a href="/">Custom Link Component</a>
+      </DropdownItem>
+    </DropdownMenu>
   ));
