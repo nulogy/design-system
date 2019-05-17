@@ -26,6 +26,6 @@
 
 Cypress.Commands.add("renderFromStorybook", component => {
   cy.visit(
-    `http://localhost:8080/iframe.html?path=/story/fortests--${component}`
+    `http://localhost:8080/iframe.html?path=/story/storiesfortests--${component}`
   );
 });
