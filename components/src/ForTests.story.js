@@ -19,95 +19,34 @@ const NavBar = props => (
 
 const primaryMenu = [
   {
-    name: "Dashboard",
-    items: [
-      { name: "Customers", href: "/" },
-      { name: "Invoices", href: "/" },
-      { name: "Projects", href: "/" },
-      { name: "Items", href: "/" },
-      { name: "Vendors", href: "/" },
-      { name: "Carriers", href: "/" }
-    ]
-  },
-
-  {
-    name: "Inspector",
-    items: [
-      { name: "Integration", href: "/" },
-      { name: "Site configuration", href: "/" },
-      { name: "Company configuration", href: "/" }
-    ]
+    name: "Menu 1",
+    items: [{ name: "Menu 1-1", href: "/" }, { name: "Menu 1-2", href: "/" }]
   },
   {
-    name: "Operations",
+    name: "Menu 2",
     items: [
       {
-        name: "Production",
+        name: "SubMenu 1",
         items: [
-          { name: "Dashboard", href: "/" },
+          { name: "SubMenu 1-1", href: "/" },
           {
-            name: "Projects",
-            items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
-          },
-          { name: "Jobs", href: "/" }
-        ]
-      },
-      { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" }
-    ]
-  },
-  {
-    name: "Sheets",
-    items: [{ name: "Item locator", href: "/" }, { name: "Ship orders", href: "/" }]
-  },
-  { name: "Link", href: "/" }
-];
-
-const primaryMenuCustomLinks = [
-  {
-    name: "MenuTrigger",
-    items: [
-      {
-        name: "MenuTrigger",
-        items: [
-          {
-            name: "NormalLink",
-            href: "/"
-          },
-          {
-            name: "CustomLink",
-            render: () => <a href="/">CustomLink</a>
+            name: "SubSubMenu 1",
+            items: [{ name: "SubSubMenu 1-1", href: "/" }, { name: "SubSubMenu 1-2", href: "/" }]
           }
         ]
-      },
-      {
-        name: "NormalLink",
-        href: "/"
-      },
-      {
-        name: "CustomLink",
-        render: () => <a href="/">CustomLink</a>
       }
     ]
-  },
-  {
-    name: "NormalLink",
-    href: "/"
-  },
-  {
-    name: "CustomLink",
-    render: () => <a href="/">CustomLink</a>
   }
 ];
 
 const secondaryMenu = [
   {
-    name: "User",
-    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+    name: "Menu 3",
+    items: [{ name: "Menu 3-1", href: "/" }, { name: "Menu 3-2", href: "/" }, { name: "Menu 3-3", href: "/" }]
   },
   {
-    name: "Settings",
-    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
+    name: "Menu 4",
+    items: [{ name: "Menu 4-1", href: "/" }, { name: "Menu 4-2", href: "/" }]
   }
 ];
 
