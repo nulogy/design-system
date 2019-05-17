@@ -1,29 +1,11 @@
-import React from "react";
-
-import { NDSProvider, Select } from "@nulogy/components";
-
 describe("Select", () => {
-  const renderSelect = () => {
-    const options = [
-      { value: "v1", label: "V One" },
-      { value: "v2", label: "V Two" },
-      { value: "v3", label: "V Three" }
-    ];
-
-    cy.mount(
-      <NDSProvider>
-        <Select options={options} />
-      </NDSProvider>
-    );
-  };
-
   const getSelectComponent = () => cy.get("[aria-label='open menu']");
   const getDropdownMenu = () => cy.get("[role='listbox']");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
   it("selects the first item when opened", () => {
-    renderSelect();
+    cy.renderFromStorybook("select");
 
     getSelectComponent().click();
 
@@ -31,7 +13,7 @@ describe("Select", () => {
   });
 
   it("selects an option on click", () => {
-    renderSelect();
+    cy.renderFromStorybook("select");
 
     assertDropDownIsClosed();
 
@@ -43,45 +25,25 @@ describe("Select", () => {
   });
 
   it("closes the dropdown when clicking outside", () => {
-    const options = [
-      { value: "v1", label: "V One" },
-      { value: "v2", label: "V Two" },
-      { value: "v3", label: "V Three" }
-    ];
-
-    const styles = { width: "500px", height: "500px" };
-
-    cy.mount(
-      <NDSProvider>
-        <div className="outer-container" style={styles}>
-          <Select options={options} />
-        </div>
-      </NDSProvider>
-    );
+    cy.renderFromStorybook("select");
 
     getSelectComponent().click();
     assertDropDownIsOpen();
 
-    cy.get("div.outer-container").click("bottomRight");
+    cy.get("div#root").click("bottomRight");
     assertDropDownIsClosed();
   });
 
   it("opens the dropdown when the select label is clicked", () => {
-    const options = [{ value: "v1", label: "can you see me" }];
+    cy.renderFromStorybook("select");
 
-    cy.mount(
-      <NDSProvider>
-        <Select labelText="click me" options={options} />
-      </NDSProvider>
-    );
-
-    cy.contains("click me").click("topLeft");
+    cy.contains("Select label").click("topLeft");
 
     assertDropDownIsOpen();
   });
 
   it("selects options using the keyboard", () => {
-    renderSelect();
+    cy.renderFromStorybook("select");
 
     // focus the select box
     getSelectComponent()
@@ -98,7 +60,7 @@ describe("Select", () => {
   });
 
   it("closes the dropdown when on esc", () => {
-    renderSelect();
+    cy.renderFromStorybook("select");
 
     getSelectComponent().click();
     assertDropDownIsOpen();
