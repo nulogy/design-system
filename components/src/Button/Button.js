@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
-import { subPx, omit } from "../Utils";
+import { subPx, omit } from "../utils";
 
 const iconNames = Object.keys(icons);
 
@@ -36,18 +36,18 @@ const size = props => {
   }
 };
 
-const BaseButton = ({ children, iconSide, icon, ...props }) => {
+const BaseButton = React.forwardRef(({ children, iconSide, icon, ...props }, ref) => {
   const {
     lineHeights: { smallTextCompressed }
   } = theme;
   return (
-    <button {...omit(props, "fullWidth")}>
+    <button ref={ref} {...omit(props, "fullWidth")}>
       {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
       {children}
       {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
     </button>
   );
-};
+});
 
 BaseButton.propTypes = {
   children: PropTypes.node.isRequired,

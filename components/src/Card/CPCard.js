@@ -18,7 +18,7 @@ const CPCard = styled(props => <Card {...props} />)(space, {
   },
   [`${IconicButton}`]: {
     position: "absolute",
-    right: theme.space.none,
+    right: theme.space.x1,
     top: theme.space.x1
   }
 });

@@ -10,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx, withWindowDimensions } from "../Utils";
+import { subPx, withWindowDimensions } from "../utils";
 
 const LockBody = createGlobalStyle(({ isOpen }) => ({
   body: {

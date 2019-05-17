@@ -7,7 +7,7 @@ import { Text } from "../Type";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 
-const Wrapper = styled.button(space, ({ disabled }) => ({
+const WrapperButton = styled.button(space, ({ disabled }) => ({
   background: "transparent",
   border: "none",
   position: "relative",
@@ -49,18 +49,20 @@ const Wrapper = styled.button(space, ({ disabled }) => ({
   }
 }));
 
-const BaseIconicButton = props => {
+const BaseIconicButton = React.forwardRef((props, ref) => {
   const { children, icon } = props;
 
   return (
-    <Wrapper label={children} {...props}>
+    <WrapperButton ref={ref} label={children} {...props}>
       <Icon size={theme.space.x4} icon={icon} p="half" />
-      <Text mr="half" ml="half">
-        {children}
-      </Text>
-    </Wrapper>
+      {children && (
+        <Text mr="half" ml="half">
+          {children}
+        </Text>
+      )}
+    </WrapperButton>
   );
-};
+});
 
 const IconicButton = styled(BaseIconicButton)({});
 

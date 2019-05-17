@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import theme from "../theme";
-import { ClickInputLabel } from "../Utils";
+import { ClickInputLabel } from "../utils";
 
 const checkboxStyle = {
   checked: {

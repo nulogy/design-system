@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId, DetectOutsideClick } from "../Utils";
+import { withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
+import { keyCodes } from "../constants";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -57,146 +58,6 @@ const TooltipContainer = styled(Box)(
   })
 );
 
-const positionArrow = placement => {
-  const location = String(placement).split("-")[0];
-  switch (location) {
-    case "top":
-      return {
-        bottom: 0,
-        marginBottom: "-7px",
-        "&:before": {
-          top: "2px",
-          left: "-4px"
-        },
-        "&:after": {
-          left: "-4px"
-        }
-      };
-    case "right":
-      return {
-        left: 0,
-        marginLeft: "-8px",
-        "&:before": {
-          top: "-4px"
-        },
-        "&:after": {
-          left: "2px",
-          top: "-4px"
-        }
-      };
-    case "left":
-      return {
-        marginRight: "-8px",
-        right: 0,
-        "&:before": {
-          top: "-4px"
-        },
-        "&:after": {
-          left: "-2px",
-          top: "-4px"
-        }
-      };
-    case "bottom":
-    default:
-      return {
-        marginTop: "-7px",
-        top: 0,
-        "&:before": {
-          top: "-2px",
-          left: "-4px"
-        },
-        "&:after": {
-          left: "-4px"
-        }
-      };
-  }
-};
-
-const drawArrow = placement => {
-  const location = String(placement).split("-")[0];
-  switch (location) {
-    case "top":
-      return {
-        "&:before": {
-          borderColor: `${tooltipStyles.borderColor} transparent transparent transparent`,
-          borderWidth: "8px 8px 0 8px"
-        },
-        "&:after": {
-          borderColor: `${tooltipStyles.backgroundColor} transparent transparent transparent`,
-          borderWidth: "8px 8px 0 8px"
-        }
-      };
-    case "right":
-      return {
-        "&:before": {
-          borderColor: `transparent ${tooltipStyles.borderColor} transparent transparent`,
-          borderWidth: "8px 8px 8px 0"
-        },
-        "&:after": {
-          borderColor: `transparent ${tooltipStyles.backgroundColor} transparent transparent`,
-          borderWidth: "8px 8px 8px 0"
-        }
-      };
-    case "left":
-      return {
-        "&:before": {
-          borderColor: `transparent transparent transparent ${tooltipStyles.borderColor}`,
-          borderWidth: "8px 0 8px 8px"
-        },
-        "&:after": {
-          borderColor: `transparent transparent transparent ${tooltipStyles.backgroundColor}`,
-          borderWidth: "8px 0 8px 8px"
-        }
-      };
-    case "bottom":
-    default:
-      return {
-        "&:before": {
-          borderColor: `transparent transparent ${tooltipStyles.borderColor} transparent`,
-          borderWidth: "0 8px 8px 8px"
-        },
-        "&:after": {
-          borderColor: `transparent transparent ${tooltipStyles.backgroundColor} transparent`,
-          borderWidth: "0 8px 8px 8px",
-          left: "-4px"
-        }
-      };
-  }
-};
-
-const Arrow = styled.div(
-  {
-    position: "absolute",
-    height: theme.space.x1,
-    width: theme.space.x1,
-    margin: "12px",
-    "&:before": {
-      borderStyle: "solid",
-      content: "''",
-      display: "block",
-      height: 0,
-      margin: "auto",
-      position: "absolute",
-      width: 0
-    },
-    "&:after": {
-      borderStyle: "solid",
-      content: "''",
-      display: "block",
-      height: 0,
-      margin: "auto",
-      position: "absolute",
-      width: 0
-    }
-  },
-  ({ dataPlacement }) => ({
-    ...drawArrow(dataPlacement)
-  }),
-  ({ dataPlacement }) => ({
-    ...positionArrow(dataPlacement)
-  })
-);
-
 /* eslint-disable react/destructuring-assignment */
 class Tooltip extends React.Component {
   constructor(props) {
@@ -209,6 +70,10 @@ class Tooltip extends React.Component {
     this.showTooltip = this.showTooltip.bind(this);
     this.setTriggerRef = this.setTriggerRef.bind(this);
     this.setTooltipRef = this.setTooltipRef.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.clearScheduled();
   }
 
   setTriggerRef(node) {
@@ -261,7 +126,7 @@ class Tooltip extends React.Component {
   }
 
   handleKeyDown(event) {
-    if (event.keyCode === 27) {
+    if (event.keyCode === keyCodes.ESC) {
       this.hideTooltip(true);
     }
   }
@@ -305,7 +170,7 @@ class Tooltip extends React.Component {
               {...this.tooltipEventHandlers()}
             >
               {this.props.tooltip}
-              <Arrow dataPlacement={placement} ref={arrowProps.ref} style={arrowProps.style} />
+              <PopperArrow placement={placement} ref={arrowProps.ref} style={arrowProps.style} />
             </TooltipContainer>
           )}
         </Popper>
