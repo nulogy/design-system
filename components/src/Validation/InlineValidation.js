@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
-import { mapErrorsToList } from ".";
+import mapErrorsToList from "./mapErrorsToList";
 import theme from "../theme";
 
 const Wrapper = styled.div({
