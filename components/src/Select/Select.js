@@ -6,7 +6,7 @@ import { transparentize } from "polished";
 import { Field } from "../Form";
 import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { InlineValidation, mapErrorsToList } from "../Validation";
+import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -41,9 +41,9 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
   borderColor: getBorderColor({
-    isOpen,
-    disabled,
     error,
+    disabled,
+    isOpen,
     isFocused: false
   }),
   borderTopLeftRadius: theme.radii.medium,
@@ -57,8 +57,8 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
     cursor: "default",
     borderColor: getBorderColor({
       error,
-      isOpen,
       disabled,
+      isOpen,
       isFocused: true
     })
   },
@@ -119,7 +119,7 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
 const parseValueProp = (value, options) => options.find(o => o.value === value);
 
 const Select = ({
-  error,
+  errorMessage,
   errorList,
   onChange,
   disabled,
@@ -153,7 +153,7 @@ const Select = ({
         highlightedIndex
       }) => (
         <div style={{ position: "relative" }}>
-          <SelectBox {...getToggleButtonProps({ disabled, error, isOpen })}>
+          <SelectBox {...getToggleButtonProps({ disabled, error: !!(errorMessage || errorList), isOpen })}>
             <MaybeFieldLabel
               style={{ width: "100%" }}
               labelText={labelText}
@@ -163,12 +163,12 @@ const Select = ({
               <Input
                 {...getInputProps({
                   disabled,
-                  error,
+                  error: !!(errorMessage || errorList),
                   isOpen,
                   autoComplete: "off"
                 })}
                 aria-required={required}
-                aria-invalid={error}
+                aria-invalid={!!(errorMessage || errorList)}
                 placeholder={placeholder}
                 readOnly
                 value={optionToString(selectedItem) || ""}
@@ -177,7 +177,7 @@ const Select = ({
             <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <Menu {...getMenuProps({ error, isOpen })}>
+            <Menu {...getMenuProps({ error: !!(errorMessage || errorList), isOpen })}>
               {options.map((option, index) => (
                 <MenuItem
                   {...getItemProps({
@@ -197,11 +197,7 @@ const Select = ({
         </div>
       )}
     </Downshift>
-    {error && (
-      <InlineValidation mt="x1" message={error}>
-        {mapErrorsToList(errorList)}
-      </InlineValidation>
-    )}{" "}
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
@@ -212,7 +208,7 @@ Select.propTypes = {
   optionToString: PropTypes.func,
   required: PropTypes.bool,
   onChange: PropTypes.func,
-  error: PropTypes.string,
+  errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
@@ -228,7 +224,7 @@ Select.defaultProps = {
   value: undefined,
   required: false,
   onChange: undefined,
-  error: null,
+  errorMessage: null,
   errorList: null,
   disabled: false,
   initialIsOpen: undefined,

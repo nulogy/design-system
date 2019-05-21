@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { InlineValidation, mapErrorsToList } from "../Validation";
+import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
