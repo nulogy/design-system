@@ -9,7 +9,7 @@ const mapErrorsToList = errors => {
   return (
     <List compact leftAlign>
       {errorArray.map(error => (
-        <ListItem>{error}</ListItem>
+        <ListItem key={error}>{error}</ListItem>
       ))}
     </List>
   );

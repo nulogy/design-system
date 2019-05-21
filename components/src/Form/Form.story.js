@@ -79,7 +79,7 @@ storiesOf("Form", module)
   .add("Demo form", () => (
     <>
       <Form title="Job 324400">
-        <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+        <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
           <List compact>
             <ListItem>Affected field</ListItem>
             <ListItem>Unmet criteria</ListItem>
@@ -109,7 +109,7 @@ storiesOf("Form", module)
             <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
           </CheckboxGroup>
           <RadioGroup
-            error="Only yes can be selected..."
+            errorMessage="Only yes can be selected..."
             labelText="Reconcile"
             name="settingSelection"
             defaultValue="yes"
@@ -122,7 +122,7 @@ storiesOf("Form", module)
           <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
         </FormSection>
         <FormSection title="Rejects">
-          <Input defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry" />
+          <Input defaultValue="235432" id="items" labelText="Item" errorMessage="Item 235432 is not a valid entry" />
           <Input id="quantity" labelText="Quantity" />
           <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
         </FormSection>
