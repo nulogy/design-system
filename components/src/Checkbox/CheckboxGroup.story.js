@@ -2,13 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Checkbox, CheckboxGroup } from ".";
 
-const errorList = [
-  "Error message 1",
-  "Error message 2",
-  <>
-    Error with a <a href="/">link</a>
-  </>
-];
+const errorList = ["Error message 1", "Error message 2"];
 
 storiesOf("CheckboxGroup", module)
   .add("CheckboxGroup", () => (
@@ -32,9 +26,9 @@ storiesOf("CheckboxGroup", module)
       <Checkbox value="c" labelText="Option C" />
     </CheckboxGroup>
   ))
-  .add("with error", () => (
+  .add("with error message", () => (
     <CheckboxGroup
-      error="Please select an option"
+      errorMessage="Please select an option"
       labelText="Setting Selection"
       name="settingSelection"
       defaultValue={["a"]}
@@ -44,13 +38,13 @@ storiesOf("CheckboxGroup", module)
       <Checkbox value="c" labelText="Option C" />
     </CheckboxGroup>
   ))
-  .add("with list of errors", () => (
+  .add("with error list", () => (
     <CheckboxGroup
-      error="Please select an option"
+      errorMessage="Please select an option"
+      errorList={errorList}
       labelText="Setting Selection"
       name="settingSelection"
       defaultValue={["a"]}
-      errorList={errorList}
     >
       <Checkbox value="a" labelText="Option A" />
       <Checkbox value="b" labelText="Option B" />

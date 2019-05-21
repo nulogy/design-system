@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
-import { InlineValidation, mapErrorsToList } from "../Validation";
+import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
 
 const getRadioButtons = props => {
@@ -15,7 +15,7 @@ const getRadioButtons = props => {
         {...radioProps}
         value={value}
         disabled={props.disabled || disabled}
-        error={!!props.error}
+        error={!!(props.errorMessage || props.errorList)}
         required={props.required || required}
         name={props.name}
         defaultChecked={value === props.defaultValue ? true : undefined}
@@ -27,8 +27,8 @@ const getRadioButtons = props => {
   return radioButtons;
 };
 
-const BaseRadioGroup = ({ className, error, errorList, labelText, helpText, requirementText, ...props }) => {
-  const otherProps = { ...props, error };
+const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
+  const otherProps = { ...props, errorMessage, errorList };
   return (
     <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
       <Box mb="x1">
@@ -39,18 +39,14 @@ const BaseRadioGroup = ({ className, error, errorList, labelText, helpText, requ
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
       {getRadioButtons(otherProps)}
-      {error && (
-        <InlineValidation mt="x1" message={error}>
-          {mapErrorsToList(errorList)}
-        </InlineValidation>
-      )}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </Fieldset>
   );
 };
 
 BaseRadioGroup.propTypes = {
-  error: PropTypes.string,
-  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -72,7 +68,7 @@ BaseRadioGroup.propTypes = {
 };
 
 BaseRadioGroup.defaultProps = {
-  error: null,
+  errorMessage: null,
   errorList: null,
   defaultValue: undefined,
   checkedValue: undefined,
