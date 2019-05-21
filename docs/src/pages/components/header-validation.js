@@ -28,10 +28,16 @@ const propsRows = [
     description: "A heading for the error text."
   },
   {
-    name: "message",
+    name: "errorMessage",
     type: "String",
     defaultValue: "Required",
-    description: "A description of the error and how to fix it."
+    description: "A description of the overall error."
+  },
+  {
+    name: "errorList",
+    type: "String / Array of Strings",
+    defaultValue: "null",
+    description: "A list of individual errors."
   }
 ];
 
