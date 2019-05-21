@@ -41,6 +41,8 @@ const propsRows = [
   }
 ];
 
+const errorList = ["Affected field", "Unmet criteria"];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -63,23 +65,18 @@ export default () => (
         <List compact>
           <ListItem>Affected field</ListItem>
           <ListItem>Unmet criteria</ListItem>
-          <ListItem>
-            <a href="https://nulogy.design/">Affected field</a>
-          </ListItem>
         </List>
       </HeaderValidation>
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
-<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ...">
-  <List compact>
-    <ListItem>Affected field</ListItem>
-    <ListItem>Unmet criteria</ListItem>
-    <ListItem>
-      <a href="https://nulogy.design/">Affected field</a>
-    </ListItem>
-  </List>
-</HeaderValidation>`}
+const errorList = [
+  "Affected field",
+  "Unmet criteria"
+]
+
+<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ..." errorList={errorList}/>
+`}
       </Highlight>
     </DocSection>
 
@@ -109,6 +106,36 @@ export default () => (
   errorMessage="Instructions and description of an error"
 />
 `}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>With custom content</SubsectionTitle>
+
+        <HeaderValidation
+          errorMessage="Instructions and description of an error"
+          title="Error has occurred ..."
+          mb="x3"
+        >
+          <List compact>
+            <ListItem>Affected field</ListItem>
+            <ListItem>Unmet criteria</ListItem>
+            <ListItem>
+              <a href="https://nulogy.design/">Affected field</a>
+            </ListItem>
+          </List>
+        </HeaderValidation>
+        <Highlight className="js">
+          {`import { HeaderValidation } from @nulogy/components;
+
+<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ...">
+  <List compact>
+    <ListItem>Affected field</ListItem>
+    <ListItem>Unmet criteria</ListItem>
+    <ListItem>
+      <a href="https://nulogy.design/">Affected field</a>
+    </ListItem>
+  </List>
+</HeaderValidation>`}
         </Highlight>
       </Box>
     </DocSection>
