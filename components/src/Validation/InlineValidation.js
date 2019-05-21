@@ -19,18 +19,19 @@ const InlineValidation = ({ message, children, ...boxProps }) => (
   <Flex color={theme.colors.red} {...boxProps}>
     <Icon icon="error" mr="x1" />
     <Wrapper>
-      <Text>{message}</Text>
+      {message && <Text>{message}</Text>}
       {children}
     </Wrapper>
   </Flex>
 );
 
 InlineValidation.propTypes = {
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 InlineValidation.defaultProps = {
+  message: null,
   children: null
 };
 
