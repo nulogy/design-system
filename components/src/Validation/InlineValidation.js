@@ -16,16 +16,17 @@ const Wrapper = styled.div({
   }
 });
 
-const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) => (
-  <Flex color={theme.colors.red} {...boxProps}>
-    <Icon icon="error" mr="x1" />
-    <Wrapper>
-      {errorMessage && <Text>{errorMessage}</Text>}
-      {mapErrorsToList(errorList)}
-      {children}
-    </Wrapper>
-  </Flex>
-);
+const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) =>
+  errorMessage || errorList ? (
+    <Flex color={theme.colors.red} {...boxProps}>
+      <Icon icon="error" mr="x1" />
+      <Wrapper>
+        {errorMessage && <Text>{errorMessage}</Text>}
+        {mapErrorsToList(errorList)}
+        {children}
+      </Wrapper>
+    </Flex>
+  ) : null;
 
 InlineValidation.propTypes = {
   errorMessage: PropTypes.string,
