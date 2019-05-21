@@ -11,7 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?selectedKind=DropdownMenu&selectedStory=DropdownMenu) component
 - Added "more" icon
-- Added support for errorList prop to Input, Textarea, Select, CheckboxGroup, and RadioGroup
+- Added support for list of errors on Input, Textarea, Select, CheckboxGroup, and RadioGroup
+  errorList prop has been added
+  [**Breaking Change**] error prop renamed to errorMessage
+- Inline Validation and Header Validation now accept errorList and errorMessage props
 
 ### Changed
 
