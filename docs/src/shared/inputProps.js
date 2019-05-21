@@ -6,17 +6,16 @@ const inputProps = [
     description: "Marks the field as disabled and disallows user input"
   },
   {
-    name: "error",
+    name: "errorMessage",
     type: "String",
     defaultValue: "null",
-    description: "Sets the error state and displays message"
+    description: "Displays list of error messages and applies red style"
   },
   {
     name: "errorList",
-    type: "Array of strings or elements",
+    type: "String / Array of Strings",
     defaultValue: "null",
-    description:
-      "Sets the error list items, only if the error prop also has been entered"
+    description: "Displays list of error messages and applies red style"
   },
   {
     name: "helpText",
