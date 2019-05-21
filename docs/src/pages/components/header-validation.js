@@ -56,7 +56,7 @@ export default () => (
 
     <DocSection>
       <HeaderValidation
-        message="Instructions and description of an error"
+        errorMessage="Instructions and description of an error"
         title="Error has occurred ..."
         mb="x3"
       >
@@ -71,7 +71,7 @@ export default () => (
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
-<HeaderValidation message="Instructions and description of an error" title="Error has occurred ...">
+<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ...">
   <List compact>
     <ListItem>Affected field</ListItem>
     <ListItem>Unmet criteria</ListItem>
@@ -95,18 +95,18 @@ export default () => (
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
-        <SubsectionTitle>With only a message</SubsectionTitle>
+        <SubsectionTitle>With only an error message</SubsectionTitle>
 
         <HeaderValidation
           title="Error has occurred ..."
-          message="Instructions and description of an error"
+          errorMessage="Instructions and description of an error"
         />
         <Highlight className="js">
           {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation
   title="Error has occurred ..."
-  message="Instructions and description of an error"
+  errorMessage="Instructions and description of an error"
 />
 `}
         </Highlight>
