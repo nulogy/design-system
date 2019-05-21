@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { InlineValidation, mapErrorsToList } from "../Validation";
+import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
@@ -29,7 +29,7 @@ const getTextareaStyle = props => {
   if (props.disabled) {
     return textareaStyles.disabled;
   }
-  if (props.error) {
+  if (props.errorMessage || props.errorList) {
     return textareaStyles.error;
   }
   return textareaStyles.default;
@@ -61,24 +61,27 @@ const StyledTextarea = styled.textarea(
   props => getTextareaStyle(props)
 );
 
-const Textarea = ({ error, errorList, required, labelText, requirementText, helpText, id, ...props }) => (
+const Textarea = ({ errorMessage, errorList, required, labelText, requirementText, helpText, id, ...props }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledTextarea aria-invalid={!!error} aria-required={required} id={id} error={error} {...props} />
+      <StyledTextarea
+        aria-invalid={!!(errorMessage || errorList)}
+        aria-required={required}
+        id={id}
+        errorMessage={errorMessage}
+        errorList={errorList}
+        {...props}
+      />
     </MaybeFieldLabel>
-    {error && (
-      <InlineValidation mt="x1" message={error}>
-        {mapErrorsToList(errorList)}
-      </InlineValidation>
-    )}
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
 Textarea.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
-  error: PropTypes.string,
-  errorList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.element, PropTypes.string])),
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
@@ -90,7 +93,7 @@ Textarea.propTypes = {
 Textarea.defaultProps = {
   id: null,
   disabled: false,
-  error: null,
+  errorMessage: null,
   errorList: null,
   required: false,
   labelText: null,
