@@ -62,10 +62,10 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>With an error</SubsectionTitle>
         <CheckboxGroup
-          labelText="Setting Selection"
           name="settingSelection"
-          error="A selection must be selected"
+          labelText="Setting Selection"
           helpText="Select a setting from the menu below:"
+          errorMessage="A selection must be selected"
         >
           <Checkbox value="a" labelText="Option A" />
           <Checkbox value="b" labelText="Option B" />
@@ -79,6 +79,7 @@ export default () => (
   name="settingSelection"
   labelText="Setting Selection"
   helpText="Select a setting from the menu below:"
+  errorMessage="A selection must be selected"
 >
   <Checkbox value="a" labelText="Option A" />
   <Checkbox value="b" labelText="Option B" />

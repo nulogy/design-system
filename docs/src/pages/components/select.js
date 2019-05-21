@@ -112,13 +112,13 @@ const options = [
         <Select
           options={options}
           id="error"
-          error="Please select an inventory status"
+          errorMessage="Please select an inventory status"
         />
         <Highlight className="js">
           {`<Select
     options={ options }
     id="error"
-    error="Please select an inventory status"
+    errorMessage="Please select an inventory status"
   />`}
         </Highlight>
       </Box>
@@ -139,7 +139,7 @@ const options = [
     helpText="Additional help text"
     placeholder="Please select inventory status"
     options={ options }
-    id="all-label"
+    id="all-labels"
   />`}
         </Highlight>
       </Box>

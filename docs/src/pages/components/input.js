@@ -61,9 +61,11 @@ export default () => (
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Input labelText="Label" error="Error message" />
+        <Input labelText="Label" errorMessage="Error message" />
         <Highlight className="js">
-          {'<Input labelText="Label" id="error-input" error="Error message" />'}
+          {
+            '<Input labelText="Label" id="error-input" errorMessage="Error message" />'
+          }
         </Highlight>
       </Box>
       <Box mb="x6">
