@@ -22,7 +22,7 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
 const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Branding desktopSrc={desktopSrc} alt={alt} />
+      <Branding />
       <Flex
         justifyContent="space-between"
         alignContent="flex-end"
@@ -122,7 +122,7 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Branding mobileSrc={mobileSrc} alt={alt} />
+            <Branding />
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">
@@ -163,7 +163,8 @@ SmallNavBarNoState.propTypes = {
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
-  mobileSrc: undefined,
+  mobileSrc:
+    "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2LjQgMzEuMyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzYuNCAzMS4zIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkJCMDA7fTwvc3R5bGU+PHRpdGxlPkJyZW5kaW5nPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzIgLTIwKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzIgMTYpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDQpIj48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzAuNywxLjFsNS43LDIuM3YyMC41YzAsNC40LTUuNCw1LjItOS4xLDUuN2MyLjEtMC41LDMuNC0xLjEsMy40LTUuN1Y1LjdMMjUsMy40TDMwLjcsMS4xeiAgICAgICBNNi44LDI4LjRWMTUuOWMwLTEuMywwLjktMi43LDIuMS0zLjJsNS45LTIuNXY4bDUuNywzLjRjMS4xLDAuNiwzLjQsMC42LDMuNC0xLjF2LTMuNGwtMi4zLTEuMVYwTDQuMyw2LjRDMS45LDcuMywwLDEwLDAsMTIuNSAgICAgIHYxOC44TDYuOCwyOC40eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==",
   alt: undefined,
   style: null
 };
