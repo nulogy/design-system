@@ -11,5 +11,5 @@ storiesOf("Input", module)
   ))
   .add("set to disabled", () => <Input labelText="Set to disabled" disabled />)
   .add("with error message", () => <Input labelText="Label" errorMessage="Error message" />)
-  .add("with list of errors ", () => <Input labelText="Label" errorMessage="Error message" errorList={errorList} />)
+  .add("with error list ", () => <Input labelText="Label" errorMessage="Error message" errorList={errorList} />)
   .add("with custom ID", () => <Input id="my-own-id" labelText="Label" />);
