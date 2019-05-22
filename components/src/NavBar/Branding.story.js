@@ -6,7 +6,7 @@ import Branding from "./Branding";
 
 storiesOf("Branding", module).add("Branding", () => (
   <Flex>
-    <Box width={1 / 2}>
+    <Box width={1 / 2} p="x2">
       <Branding />
       <br />
       <br />
@@ -24,7 +24,7 @@ storiesOf("Branding", module).add("Branding", () => (
       <br />
       <Branding large solutionName="Operational Solution" />
     </Box>
-    <Box bg="black" width={1 / 2}>
+    <Box bg="black" width={1 / 2} p="x2">
       <Branding light />
       <br />
       <br />
