@@ -16,39 +16,51 @@ const logoColors = {
   }
 };
 
-const getSvgDimensions = (size, logoType) => {
-  const height = size === "large" ? "48px" : "32px";
-  let width = null;
-  if (size === "large" && logoType === "lettermark") {
-    width = "56px";
-  } else if (size === "large" && logoType === "wordmark") {
-    width = "200px";
-  } else if (size === "medium" && logoType === "lettermark") {
-    width = "37px";
-  } else {
-    width = "133px";
+const sizes = {
+  medium: {
+    wordmark: {
+      height: "32px",
+      width: "133px"
+    },
+    lettermark: {
+      height: "32px",
+      width: "37px"
+    }
+  },
+  large: {
+    wordmark: {
+      height: "48px",
+      width: "200px"
+    },
+    lettermark: {
+      height: "48px",
+      width: "56px"
+    }
   }
-  return { height, width };
 };
+
+const getLogoColor = logoColor => logoColors[logoColor] || logoColors["blue"];
+
+const getSize = (size, logoType) => (sizes[size] && sizes[size][logoType]) || sizes["medium"]["wordmark"];
 
 const BaseBranding = ({ logoType, logoSubtext, size, logoColor, ...props }) => (
   <a href="/" {...props}>
     {logoType === "lettermark" && (
-      <svg {...getSvgDimensions(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
+      <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
         <path
-          fill={logoColors[logoColor].letter}
+          fill={getLogoColor(logoColor).letter}
           d="M30.6967273,1.13648485 L36.3810909,3.40945455 L36.3810909,23.8758788 C36.3810909,28.2705455 30.9507879,29.0424242 27.2853333,29.5602424 C29.3818182,29.0424242 30.7083636,28.4606061 30.6967273,23.8758788 L30.6967273,5.68436364 L25.0123636,3.40945455 L30.6967273,1.13648485 Z M6.82084848,28.4237576 L6.82084848,15.9204848 C6.82084848,14.6618182 7.76533333,13.238303 8.91151515,12.7476364 L14.7801212,10.2264242 L14.7801212,18.1779394 L20.4644848,21.6048485 C21.6106667,22.1866667 23.8758788,22.2002424 23.8758788,20.4664242 L23.8758788,17.0550303 L21.5990303,15.9166061 L21.5990303,1.56319402e-13 L4.26666667,6.38642424 C1.91030303,7.25333333 3.55271368e-15,9.98593939 3.55271368e-15,12.5071515 L3.55271368e-15,31.2669091 L6.82084848,28.4237576 Z"
         />
       </svg>
     )}
-    {logoType === "wordmark" && (
+    {logoType !== "lettermark" && (
       <React.Fragment>
-        <svg {...getSvgDimensions(size, logoType)} viewBox="0 0 133 32" style={{ display: "block" }}>
+        <svg {...getSize(size, logoType)} viewBox="0 0 133 32" style={{ display: "block" }}>
           <path
-            fill={logoColors[logoColor].letter}
+            fill={getLogoColor(logoColor).letter}
             d="M30.6967273,1.13648485 L36.3810909,3.40945455 L36.3810909,23.8758788 C36.3810909,28.2705455 30.9507879,29.0424242 27.2853333,29.5602424 C29.3818182,29.0424242 30.7083636,28.4606061 30.6967273,23.8758788 L30.6967273,5.68436364 L25.0123636,3.40945455 L30.6967273,1.13648485 Z M6.82084848,28.4237576 L6.82084848,15.9204848 C6.82084848,14.6618182 7.76533333,13.238303 8.91151515,12.7476364 L14.7801212,10.2264242 L14.7801212,18.1779394 L20.4644848,21.6048485 C21.6106667,22.1866667 23.8758788,22.2002424 23.8758788,20.4664242 L23.8758788,17.0550303 L21.5990303,15.9166061 L21.5990303,1.56319402e-13 L4.26666667,6.38642424 C1.91030303,7.25333333 3.55271368e-15,9.98593939 3.55271368e-15,12.5071515 L3.55271368e-15,31.2669091 L6.82084848,28.4237576 Z"
           />
-          <g transform="translate(43.000000, 0.000000)" fill={logoColors[logoColor].logo}>
+          <g transform="translate(43.000000, 0.000000)" fill={getLogoColor(logoColor).logo}>
             <path d="M5.14521212,24.2224981 L1.33226763e-14,24.2224981 L1.33226763e-14,9.41134654 L4.75151515,9.41134654 L4.75151515,11.8937708 C5.43733518,11.0060378 6.29475204,10.2653615 7.27272727,9.71583139 C8.16188898,9.23817548 9.15699751,8.9920662 10.166303,9.00019502 C11.7333333,9.00019502 12.9221818,9.44948795 13.7328485,10.3480738 C14.5435152,11.2466597 14.9488485,12.5615688 14.9488485,14.2928011 L14.9488485,24.2224981 L9.83078788,24.2224981 L9.83078788,15.7376496 C9.83078788,14.961892 9.67175758,14.3755486 9.35369697,13.9786193 C9.03563636,13.58169 8.56436364,13.3877506 7.93987879,13.3968011 C7.04258586,13.3968011 6.35216162,13.6980536 5.86860606,14.3005587 C5.38505051,14.9030637 5.14391919,15.7803162 5.14521212,16.9323162 L5.14521212,24.2224981 Z" />
             <path d="M27.8366061,9 L32.9507879,9 L32.9507879,22.6203636 L28.1992727,24.5190303 L28.1992727,21.6254545 C27.5124636,22.5143219 26.6553593,23.2573653 25.6780606,23.8111515 C24.7938668,24.2845189 23.8048332,24.5279425 22.8019394,24.5190303 C21.2323232,24.5190303 20.0402424,24.0665051 19.225697,23.1614545 C18.4111515,22.256404 18.0025859,20.9408485 18,19.2147879 L18,9 L23.1452121,9 L23.1452121,17.7796364 C23.1452121,18.5553939 23.3042424,19.1443232 23.622303,19.5464242 C23.9403636,19.9485253 24.4116364,20.1482828 25.0361212,20.145697 C25.9411717,20.145697 26.631596,19.8418586 27.1073939,19.2341818 C27.5831919,18.6265051 27.8243232,17.7524848 27.8307879,16.6121212 L27.8366061,9 Z" />
             <polygon id="Path" points="38.7151515 24.5546667 36 24.5546667 36 1.088 38.7151515 1.15463195e-13" />
@@ -65,7 +77,7 @@ const BaseBranding = ({ logoType, logoSubtext, size, logoColor, ...props }) => (
 
 const Branding = styled(BaseBranding)(
   ({ logoColor }) => ({
-    color: logoColors[logoColor].text,
+    color: getLogoColor(logoColor).text,
     display: "inline-flex",
     flexDirection: "column",
     alignItems: "center",
@@ -74,10 +86,10 @@ const Branding = styled(BaseBranding)(
     letterSpacing: "0.02em",
     padding: "4px 2px",
     active: {
-      color: logoColors[logoColor].text
+      color: getLogoColor(logoColor).text
     },
     visited: {
-      color: logoColors[logoColor].text
+      color: getLogoColor(logoColor).text
     }
   }),
   ({ size }) => ({
