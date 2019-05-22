@@ -13,7 +13,7 @@ const BrandingText = styled.div({
   fontStyle: "italic",
   letterSpacing: "0.02em",
   color: theme.colors.whiteGrey,
-  marginTop: `-${theme.space.x1}`,
+  paddingTop: theme.space.half,
   marginBottom: theme.space.x4,
   marginLeft: theme.space.x3
 });
