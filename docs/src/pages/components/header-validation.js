@@ -61,12 +61,8 @@ export default () => (
         errorMessage="Instructions and description of an error"
         title="Error has occurred ..."
         mb="x3"
-      >
-        <List compact>
-          <ListItem>Affected field</ListItem>
-          <ListItem>Unmet criteria</ListItem>
-        </List>
-      </HeaderValidation>
+        errorList={errorList}
+      />
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
