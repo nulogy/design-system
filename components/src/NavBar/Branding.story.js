@@ -19,10 +19,10 @@ storiesOf("Branding", module).add("Branding", () => (
       <Branding large />
       <br />
       <br />
-      <Branding large solutionName="Operational Solution" />
-      <br />
-      <br />
       <Branding large letterMark />
+      <br />
+      <br />
+      <Branding large solutionName="Operational Solution" />
     </Box>
     <Box bg="black" width={1 / 2}>
       <Branding light />
@@ -37,10 +37,10 @@ storiesOf("Branding", module).add("Branding", () => (
       <Branding light large />
       <br />
       <br />
-      <Branding light large solutionName="Operational Solution" />
-      <br />
-      <br />
       <Branding light large letterMark />
+      <br />
+      <br />
+      <Branding light large solutionName="Operational Solution" />
     </Box>
   </Flex>
 ));
