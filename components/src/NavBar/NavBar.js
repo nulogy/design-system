@@ -113,6 +113,7 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
+      solutionName,
       style,
       ...props
     } = this.props;
@@ -140,7 +141,7 @@ class SmallNavBarNoState extends React.Component {
               )}
             </Flex>
           </Flex>
-          {isOpen && <MobileMenu menuData={menuData} closeMenu={closeMenu} />}
+          {isOpen && <MobileMenu solutionName={solutionName} menuData={menuData} closeMenu={closeMenu} />}
         </SmallHeader>
       </>
     );
@@ -155,11 +156,13 @@ SmallNavBarNoState.propTypes = {
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),
+  solutionName: PropTypes.string,
   style: PropTypes.shape({})
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
+  solutionName: null,
   style: null
 };
 

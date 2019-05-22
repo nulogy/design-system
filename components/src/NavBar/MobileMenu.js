@@ -7,6 +7,17 @@ import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
+const BrandingText = styled.div({
+  fontSize: theme.fontSizes.small,
+  lineHeight: theme.lineHeights.smallTextCompressed,
+  fontStyle: "italic",
+  letterSpacing: "0.02em",
+  color: theme.colors.whiteGrey,
+  marginTop: `-${theme.space.x1}`,
+  marginBottom: theme.space.x4,
+  marginLeft: theme.space.x3
+});
+
 const ApplyMenuLinkStyles = styled.li({
   display: "block",
   marginBottom: theme.space.x1,
@@ -186,8 +197,9 @@ const Nav = styled.nav({
   backgroundColor: theme.colors.blackBlue
 });
 
-const BaseMobileMenu = ({ menuData, closeMenu, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, solutionName, ...props }) => (
   <Nav {...props}>
+    {solutionName && <BrandingText>{solutionName}</BrandingText>}
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu)}
@@ -200,11 +212,13 @@ BaseMobileMenu.propTypes = {
     primaryMenu: PropTypes.arrayOf(PropTypes.shape({})),
     secondaryMenu: PropTypes.arrayOf(PropTypes.shape({}))
   }),
+  solutionName: PropTypes.string,
   closeMenu: PropTypes.func
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
+  solutionName: null,
   closeMenu: () => {}
 };
 
