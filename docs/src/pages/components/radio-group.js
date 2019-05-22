@@ -67,7 +67,7 @@ export default () => (
           labelText="Setting Selection"
           name="settingSelection"
           helpText="Select a setting from the menu below:"
-          error="Please select an option"
+          errorMessage="Please select an option"
         >
           <Radio value="a" labelText="Option A" />
           <Radio value="b" labelText="Option B" />
@@ -81,7 +81,7 @@ export default () => (
   labelText="Setting Selection"
   name="settingSelection"
   helpText="Select a setting from the menu below:"
-  error="Please select an option"
+  errorMessage="Please select an option"
 >
   <Radio value="a" labelText="Option A" />
   <Radio value="b" labelText="Option B" />

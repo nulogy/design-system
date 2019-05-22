@@ -28,12 +28,20 @@ const propsRows = [
     description: "A heading for the error text."
   },
   {
-    name: "message",
+    name: "errorMessage",
     type: "String",
     defaultValue: "Required",
-    description: "A description of the error and how to fix it."
+    description: "A description of the overall error."
+  },
+  {
+    name: "errorList",
+    type: "String / Array of Strings",
+    defaultValue: "null",
+    description: "A list of individual errors."
   }
 ];
+
+const errorList = ["Affected field", "Unmet criteria"];
 
 export default () => (
   <Layout>
@@ -50,30 +58,21 @@ export default () => (
 
     <DocSection>
       <HeaderValidation
-        message="Instructions and description of an error"
+        errorMessage="Instructions and description of an error"
         title="Error has occurred ..."
         mb="x3"
-      >
-        <List compact>
-          <ListItem>Affected field</ListItem>
-          <ListItem>Unmet criteria</ListItem>
-          <ListItem>
-            <a href="https://nulogy.design/">Affected field</a>
-          </ListItem>
-        </List>
-      </HeaderValidation>
+        errorList={errorList}
+      />
       <Highlight className="js">
         {`import { HeaderValidation } from @nulogy/components;
 
-<HeaderValidation message="Instructions and description of an error" title="Error has occurred ...">
-  <List compact>
-    <ListItem>Affected field</ListItem>
-    <ListItem>Unmet criteria</ListItem>
-    <ListItem>
-      <a href="https://nulogy.design/">Affected field</a>
-    </ListItem>
-  </List>
-</HeaderValidation>`}
+const errorList = [
+  "Affected field",
+  "Unmet criteria"
+]
+
+<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ..." errorList={errorList}/>
+`}
       </Highlight>
     </DocSection>
 
@@ -89,20 +88,50 @@ export default () => (
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
-        <SubsectionTitle>With only a message</SubsectionTitle>
+        <SubsectionTitle>With only an error message</SubsectionTitle>
 
         <HeaderValidation
           title="Error has occurred ..."
-          message="Instructions and description of an error"
+          errorMessage="Instructions and description of an error"
         />
         <Highlight className="js">
           {`import { HeaderValidation } from @nulogy/components;
 
 <HeaderValidation
   title="Error has occurred ..."
-  message="Instructions and description of an error"
+  errorMessage="Instructions and description of an error"
 />
 `}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>With custom content</SubsectionTitle>
+
+        <HeaderValidation
+          errorMessage="Instructions and description of an error"
+          title="Error has occurred ..."
+          mb="x3"
+        >
+          <List compact>
+            <ListItem>Affected field</ListItem>
+            <ListItem>Unmet criteria</ListItem>
+            <ListItem>
+              <a href="https://nulogy.design/">Affected field</a>
+            </ListItem>
+          </List>
+        </HeaderValidation>
+        <Highlight className="js">
+          {`import { HeaderValidation } from @nulogy/components;
+
+<HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ...">
+  <List compact>
+    <ListItem>Affected field</ListItem>
+    <ListItem>Unmet criteria</ListItem>
+    <ListItem>
+      <a href="https://nulogy.design/">Affected field</a>
+    </ListItem>
+  </List>
+</HeaderValidation>`}
         </Highlight>
       </Box>
     </DocSection>

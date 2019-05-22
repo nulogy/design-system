@@ -61,19 +61,38 @@ const StyledTextarea = styled.textarea(
   props => getTextareaStyle(props)
 );
 
-const Textarea = ({ error, required, labelText, requirementText, helpText, id, ...props }) => (
+const Textarea = ({
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  id,
+  ...props
+}) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledTextarea aria-invalid={!!error} aria-required={required} id={id} error={error} {...props} />
+      <StyledTextarea
+        aria-invalid={error}
+        aria-required={required}
+        id={id}
+        errorMessage={errorMessage}
+        errorList={errorList}
+        error={error}
+        {...props}
+      />
     </MaybeFieldLabel>
-    {error && <InlineValidation mt="x1" message={error} />}
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
 Textarea.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
-  error: PropTypes.string,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
@@ -85,7 +104,8 @@ Textarea.propTypes = {
 Textarea.defaultProps = {
   id: null,
   disabled: false,
-  error: null,
+  errorMessage: null,
+  errorList: null,
   required: false,
   labelText: null,
   helpText: null,

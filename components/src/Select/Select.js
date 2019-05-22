@@ -41,9 +41,9 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
   borderColor: getBorderColor({
-    isOpen,
-    disabled,
     error,
+    disabled,
+    isOpen,
     isFocused: false
   }),
   borderTopLeftRadius: theme.radii.medium,
@@ -57,8 +57,8 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
     cursor: "default",
     borderColor: getBorderColor({
       error,
-      isOpen,
       disabled,
+      isOpen,
       isFocused: true
     })
   },
@@ -119,7 +119,9 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
 const parseValueProp = (value, options) => options.find(o => o.value === value);
 
 const Select = ({
-  error,
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
   onChange,
   disabled,
   options,
@@ -196,7 +198,7 @@ const Select = ({
         </div>
       )}
     </Downshift>
-    {error && <InlineValidation mt="x1" message={error} />}
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
@@ -207,7 +209,9 @@ Select.propTypes = {
   optionToString: PropTypes.func,
   required: PropTypes.bool,
   onChange: PropTypes.func,
-  error: PropTypes.string,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   disabled: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   id: PropTypes.string,
@@ -222,7 +226,9 @@ Select.defaultProps = {
   value: undefined,
   required: false,
   onChange: undefined,
-  error: null,
+  error: undefined,
+  errorMessage: null,
+  errorList: null,
   disabled: false,
   initialIsOpen: undefined,
   placeholder: undefined,

@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Radio, RadioGroup } from ".";
 
+const errorList = ["Error message 1", "Error message 2"];
+
 storiesOf("RadioGroup", module)
   .add("RadioGroup", () => (
     <RadioGroup labelText="Setting Selection" name="settingSelection">
@@ -24,8 +26,26 @@ storiesOf("RadioGroup", module)
       <Radio value="c" labelText="Option C" />
     </RadioGroup>
   ))
-  .add("With error", () => (
-    <RadioGroup error="Please select an option" labelText="Setting Selection" name="settingSelection" defaultValue="a">
+  .add("with error message", () => (
+    <RadioGroup
+      errorMessage="Please select an option"
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue="a"
+    >
+      <Radio value="a" labelText="Option A" />
+      <Radio value="b" labelText="Option B" />
+      <Radio value="c" labelText="Option C" />
+    </RadioGroup>
+  ))
+  .add("with error list", () => (
+    <RadioGroup
+      errorMessage="Please select an option"
+      errorList={errorList}
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue="a"
+    >
       <Radio value="a" labelText="Option A" />
       <Radio value="b" labelText="Option B" />
       <Radio value="c" labelText="Option C" />

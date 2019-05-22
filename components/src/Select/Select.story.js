@@ -4,6 +4,8 @@ import { Select } from ".";
 import { Input } from "../Input";
 import { PrimaryButton } from "../Button";
 
+const errorList = ["Error message 1", "Error message 2"];
+
 const options = [
   { value: "accepted", label: "Accepted" },
   { value: "assigned", label: "Assigned to a line" },
@@ -72,19 +74,38 @@ storiesOf("Select", module)
   .add("Set to disabled", () => (
     <Select placeholder="Please select inventory status" options={options} disabled labelText="Inventory status" />
   ))
-  .add("Set to error", () => (
+  .add("with error message", () => (
     <>
       <Select
         placeholder="Please select inventory status"
         options={options}
-        error="Please select an inventory status"
+        errorMessage="Please select an inventory status"
         labelText="Inventory status"
       />
       <br />
       <Select
         placeholder="Please select inventory status"
         options={options}
-        error="Please select an inventory status"
+        errorMessage="Please select an inventory status"
+        initialIsOpen
+      />
+    </>
+  ))
+  .add("with error list", () => (
+    <>
+      <Select
+        placeholder="Please select inventory status"
+        options={options}
+        errorMessage="Please select an inventory status"
+        errorList={errorList}
+        labelText="Inventory status"
+      />
+      <br />
+      <Select
+        placeholder="Please select inventory status"
+        options={options}
+        errorMessage="Please select an inventory status"
+        errorList={errorList}
         initialIsOpen
       />
     </>

@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Checkbox, CheckboxGroup } from ".";
 
+const errorList = ["Error message 1", "Error message 2"];
+
 storiesOf("CheckboxGroup", module)
   .add("CheckboxGroup", () => (
     <CheckboxGroup labelText="Setting Selection" name="settingSelection">
@@ -24,9 +26,22 @@ storiesOf("CheckboxGroup", module)
       <Checkbox value="c" labelText="Option C" />
     </CheckboxGroup>
   ))
-  .add("with error", () => (
+  .add("with error message", () => (
     <CheckboxGroup
-      error="Please select an option"
+      errorMessage="Please select an option"
+      labelText="Setting Selection"
+      name="settingSelection"
+      defaultValue={["a"]}
+    >
+      <Checkbox value="a" labelText="Option A" />
+      <Checkbox value="b" labelText="Option B" />
+      <Checkbox value="c" labelText="Option C" />
+    </CheckboxGroup>
+  ))
+  .add("with error list", () => (
+    <CheckboxGroup
+      errorMessage="Please select an option"
+      errorList={errorList}
       labelText="Setting Selection"
       name="settingSelection"
       defaultValue={["a"]}

@@ -61,18 +61,35 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
-const Input = ({ error, required, labelText, requirementText, helpText, ...props }) => (
+const Input = ({
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  ...props
+}) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledInput aria-invalid={!!error} aria-required={required} error={error} {...props} />
+      <StyledInput
+        aria-invalid={error}
+        aria-required={required}
+        errorMessage={errorMessage}
+        errorList={errorList}
+        error={error}
+        {...props}
+      />
     </MaybeFieldLabel>
-    {error && <InlineValidation mt="x1" message={error} />}
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
 Input.propTypes = {
   disabled: PropTypes.bool,
-  error: PropTypes.string,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
@@ -82,7 +99,8 @@ Input.propTypes = {
 
 Input.defaultProps = {
   disabled: false,
-  error: null,
+  errorMessage: null,
+  errorList: null,
   required: false,
   labelText: null,
   helpText: null,

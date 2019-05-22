@@ -9,39 +9,44 @@ import { Fieldset } from "../Form";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
-    const { value, disabled, required, ...radioProps } = radio.props;
+    const { value, disabled, required, onChange, ...radioProps } = radio.props;
     return (
       <Radio
         {...radioProps}
         value={value}
         disabled={props.disabled || disabled}
+        error={!!(props.errorMessage || props.errorList)}
         required={props.required || required}
         name={props.name}
         defaultChecked={value === props.defaultValue ? true : undefined}
         checked={props.checkedValue && value === props.checkedValue}
-        onChange={props.onChange}
+        onChange={props.onChange || onChange}
       />
     );
   });
   return radioButtons;
 };
 
-const BaseRadioGroup = ({ className, error, labelText, helpText, requirementText, ...props }) => (
-  <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
-    <Box mb="x1">
-      <legend>
-        {labelText}
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
-      </legend>
-      {helpText && <HelpText>{helpText}</HelpText>}
-    </Box>
-    {getRadioButtons(props)}
-    {error && <InlineValidation mt="x1" message={error} />}
-  </Fieldset>
-);
+const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
+  const otherProps = { ...props, errorMessage, errorList };
+  return (
+    <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
+      <Box mb="x1">
+        <legend>
+          {labelText}
+          {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        </legend>
+        {helpText && <HelpText>{helpText}</HelpText>}
+      </Box>
+      {getRadioButtons(otherProps)}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Fieldset>
+  );
+};
 
 BaseRadioGroup.propTypes = {
-  error: PropTypes.string,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
@@ -63,7 +68,8 @@ BaseRadioGroup.propTypes = {
 };
 
 BaseRadioGroup.defaultProps = {
-  error: null,
+  errorMessage: null,
+  errorList: null,
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
+import mapErrorsToList from "./mapErrorsToList";
 import theme from "../theme";
 
 const Wrapper = styled.div({
@@ -15,22 +16,27 @@ const Wrapper = styled.div({
   }
 });
 
-const InlineValidation = ({ message, children, ...boxProps }) => (
-  <Flex color={theme.colors.red} {...boxProps}>
-    <Icon icon="error" mr="x1" />
-    <Wrapper>
-      <Text>{message}</Text>
-      {children}
-    </Wrapper>
-  </Flex>
-);
+const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) =>
+  errorMessage || errorList ? (
+    <Flex color={theme.colors.red} {...boxProps}>
+      <Icon icon="error" mr="x1" />
+      <Wrapper>
+        {errorMessage && <Text>{errorMessage}</Text>}
+        {mapErrorsToList(errorList)}
+        {children}
+      </Wrapper>
+    </Flex>
+  ) : null;
 
 InlineValidation.propTypes = {
-  message: PropTypes.string.isRequired,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 InlineValidation.defaultProps = {
+  errorMessage: null,
+  errorList: null,
   children: null
 };
 

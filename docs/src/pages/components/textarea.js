@@ -75,17 +75,21 @@ export default () => (
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Error</SubsectionTitle>
-        <Textarea id="error" labelText="Label" error="Please fill this out" />
+        <Textarea
+          id="error"
+          labelText="Label"
+          errorMessage="Please fill this out"
+        />
         <Highlight className="js">
           {
-            '<Textarea id="error" labelText="Label" error="Please fill this out" />'
+            '<Textarea id="error" labelText="Label" errorMessage="Please fill this out" />'
           }
         </Highlight>
       </Box>
       <Box>
         <SubsectionTitle>With all labels</SubsectionTitle>
         <Textarea
-          id="error"
+          id="all-labels"
           labelText="Label"
           helpText="Additional help text"
           requirementText="(Optional)"
@@ -93,7 +97,7 @@ export default () => (
         />
         <Highlight className="js">
           {`<Textarea
-  id="error"
+  id="all-labels"
   labelText="Label"
   helpText="Additional help text"
   requirementText="(Optional)"

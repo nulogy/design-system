@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Flex } from "../Flex";
 import { Text, SubsectionTitle } from "../Type";
 import { Icon } from "../Icon";
+import mapErrorsToList from "./mapErrorsToList";
 import theme from "../theme";
 
 const Wrapper = styled.div({
@@ -15,12 +16,13 @@ const Wrapper = styled.div({
   }
 });
 
-const BaseHeaderValidation = ({ title, message, children, ...boxProps }) => (
+const BaseHeaderValidation = ({ title, errorMessage, errorList, children, ...boxProps }) => (
   <Flex color="red" {...boxProps}>
     <Icon icon="error" size={theme.space.x6} mr={theme.space.x2} />
     <Wrapper>
       <SubsectionTitle mb="none">{title}</SubsectionTitle>
-      <Text>{message}</Text>
+      <Text>{errorMessage}</Text>
+      {mapErrorsToList(errorList)}
       {children}
     </Wrapper>
   </Flex>
@@ -30,11 +32,13 @@ const HeaderValidation = styled(BaseHeaderValidation)({});
 
 BaseHeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 BaseHeaderValidation.defaultProps = {
+  errorList: null,
   children: null
 };
 

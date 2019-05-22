@@ -133,9 +133,8 @@ BaseRadio.defaultProps = {
   required: false
 };
 
-const Radio = styled(BaseRadio)(({ error }) => ({
-  padding: `${theme.space.half} 0`,
-  color: error ? theme.colors.red : null
-}));
+const Radio = styled(BaseRadio)({
+  padding: `${theme.space.half} 0`
+});
 
 export default Radio;

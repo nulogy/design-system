@@ -259,7 +259,7 @@ const DemoPage = () => {
           <Title>Job Page</Title>
           <Box width={{ small: "100%", medium: "80%", large: "80%" }}>
             <Form title="Job 324400" mb="x4">
-              <HeaderValidation message="Instructions and description of an error" title="Error has occured ...">
+              <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
                 <List compact>
                   <ListItem>Affected field</ListItem>
                   <ListItem>Unmet criteria</ListItem>
@@ -277,7 +277,12 @@ const DemoPage = () => {
                   helpText="Project description helps identify the project."
                 />
                 <Select id="project-status" labelText="Project status" options={options} />
-                <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
+                <Input
+                  id="item-code"
+                  labelText="Item code"
+                  defaultValue="WS2SB6"
+                  errorMessage="Item WS2SB6 does not exist."
+                />
                 <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
                 <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
                 <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
@@ -289,7 +294,7 @@ const DemoPage = () => {
                   <Checkbox value="nikola" labelText="Nikola Pejcic" disabled />
                 </CheckboxGroup>
                 <RadioGroup
-                  error="Only yes can be selected..."
+                  errorMessage="Only yes can be selected..."
                   labelText="Reconcile"
                   name="settingSelection"
                   defaultValue="yes"
@@ -302,7 +307,12 @@ const DemoPage = () => {
                 <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
               </FormSection>
               <FormSection title="Rejects">
-                <Input defaultValue="235432" id="items" labelText="Item" error="Item 235432 is not a valid entry." />
+                <Input
+                  defaultValue="235432"
+                  id="items"
+                  labelText="Item"
+                  errorMessage="Item 235432 is not a valid entry."
+                />
                 <Input id="quantity" labelText="Quantity" />
                 <Toggle
                   id="reject-visibility"

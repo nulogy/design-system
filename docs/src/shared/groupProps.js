@@ -6,10 +6,16 @@ const groupProps = [
     description: "A value to autoselect on pageload"
   },
   {
-    name: "error",
+    name: "errorMessage",
     type: "String",
     defaultValue: "null",
-    description: "Sets the error state and displays message"
+    description: "Displays list of error messages and applies red style"
+  },
+  {
+    name: "errorList",
+    type: "Array of Strings",
+    defaultValue: "null",
+    description: "Displays list of error messages and applies red style"
   },
   {
     name: "helpText",
