@@ -121,6 +121,7 @@ const parseValueProp = (value, options) => options.find(o => o.value === value);
 const Select = ({
   errorMessage,
   errorList,
+  error = !!(errorMessage || errorList),
   onChange,
   disabled,
   options,
@@ -153,7 +154,7 @@ const Select = ({
         highlightedIndex
       }) => (
         <div style={{ position: "relative" }}>
-          <SelectBox {...getToggleButtonProps({ disabled, error: !!(errorMessage || errorList), isOpen })}>
+          <SelectBox {...getToggleButtonProps({ disabled, error, isOpen })}>
             <MaybeFieldLabel
               style={{ width: "100%" }}
               labelText={labelText}
@@ -163,12 +164,12 @@ const Select = ({
               <Input
                 {...getInputProps({
                   disabled,
-                  error: !!(errorMessage || errorList),
+                  error,
                   isOpen,
                   autoComplete: "off"
                 })}
                 aria-required={required}
-                aria-invalid={!!(errorMessage || errorList)}
+                aria-invalid={error}
                 placeholder={placeholder}
                 readOnly
                 value={optionToString(selectedItem) || ""}
@@ -177,7 +178,7 @@ const Select = ({
             <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <Menu {...getMenuProps({ error: !!(errorMessage || errorList), isOpen })}>
+            <Menu {...getMenuProps({ error, isOpen })}>
               {options.map((option, index) => (
                 <MenuItem
                   {...getItemProps({

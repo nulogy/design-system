@@ -29,7 +29,7 @@ const getInputStyle = props => {
   if (props.disabled) {
     return inputStyles.disabled;
   }
-  if (props.errorMessage || props.errorList) {
+  if (props.error) {
     return inputStyles.error;
   }
   return inputStyles.default;
@@ -61,14 +61,24 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
-const Input = ({ errorMessage, errorList, required, labelText, requirementText, helpText, ...props }) => (
+const Input = ({
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  ...props
+}) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledInput
-        aria-invalid={!!(errorMessage || errorList)}
+        aria-invalid={error}
         aria-required={required}
         errorMessage={errorMessage}
         errorList={errorList}
+        error={error}
         {...props}
       />
     </MaybeFieldLabel>

@@ -29,7 +29,7 @@ const getTextareaStyle = props => {
   if (props.disabled) {
     return textareaStyles.disabled;
   }
-  if (props.errorMessage || props.errorList) {
+  if (props.error) {
     return textareaStyles.error;
   }
   return textareaStyles.default;
@@ -61,15 +61,26 @@ const StyledTextarea = styled.textarea(
   props => getTextareaStyle(props)
 );
 
-const Textarea = ({ errorMessage, errorList, required, labelText, requirementText, helpText, id, ...props }) => (
+const Textarea = ({
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
+  required,
+  labelText,
+  requirementText,
+  helpText,
+  id,
+  ...props
+}) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledTextarea
-        aria-invalid={!!(errorMessage || errorList)}
+        aria-invalid={error}
         aria-required={required}
         id={id}
         errorMessage={errorMessage}
         errorList={errorList}
+        error={error}
         {...props}
       />
     </MaybeFieldLabel>
