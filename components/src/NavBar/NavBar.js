@@ -5,7 +5,7 @@ import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import Branding from "./Branding";
+import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
