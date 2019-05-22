@@ -39,12 +39,35 @@ const sizes = {
   }
 };
 
-const getLogoColor = logoColor => logoColors[logoColor] || logoColors["blue"];
+const getLogoColor = logoColor => logoColors[logoColor] || logoColors.blue;
 
-const getSize = (size, logoType) => (sizes[size] && sizes[size][logoType]) || sizes["medium"]["wordmark"];
+const getSize = (size, logoType) => (sizes[size] && sizes[size][logoType]) || sizes.medium.wordmark;
+
+const BrandingLink = styled.a(
+  ({ logoColor }) => ({
+    color: getLogoColor(logoColor).text,
+    display: "inline-flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textDecoration: "none",
+    fontStyle: "italic",
+    letterSpacing: "0.02em",
+    padding: "4px 2px",
+    active: {
+      color: getLogoColor(logoColor).text
+    },
+    visited: {
+      color: getLogoColor(logoColor).text
+    }
+  }),
+  ({ size }) => ({
+    fontSize: size === "large" ? theme.fontSizes.large : theme.fontSizes.small,
+    lineHeight: size === "large" ? theme.lineHeights.subsectionTitle : theme.lineHeights.smallTextCompressed
+  })
+);
 
 const BaseBranding = ({ logoType, logoSubtext, size, logoColor, ...props }) => (
-  <a href="/" {...props}>
+  <BrandingLink size={size} logoColor={logoColor} href="/" {...props}>
     {logoType === "lettermark" && (
       <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
         <path
@@ -72,44 +95,23 @@ const BaseBranding = ({ logoType, logoSubtext, size, logoColor, ...props }) => (
         {logoSubtext}
       </React.Fragment>
     )}
-  </a>
+  </BrandingLink>
 );
 
-const Branding = styled(BaseBranding)(
-  ({ logoColor }) => ({
-    color: getLogoColor(logoColor).text,
-    display: "inline-flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textDecoration: "none",
-    fontStyle: "italic",
-    letterSpacing: "0.02em",
-    padding: "4px 2px",
-    active: {
-      color: getLogoColor(logoColor).text
-    },
-    visited: {
-      color: getLogoColor(logoColor).text
-    }
-  }),
-  ({ size }) => ({
-    fontSize: size === "large" ? theme.fontSizes.large : theme.fontSizes.small,
-    lineHeight: size === "large" ? theme.lineHeights.subsectionTitle : theme.lineHeights.smallTextCompressed
-  })
-);
-
-Branding.propTypes = {
+BaseBranding.propTypes = {
   logoType: PropTypes.oneOf(["wordmark", "lettermark"]),
   logoColor: PropTypes.oneOf(["blue", "white"]),
   size: PropTypes.oneOf(["medium", "large"]),
   logoSubtext: PropTypes.string
 };
 
-Branding.defaultProps = {
+BaseBranding.defaultProps = {
   logoType: "wordmark",
   logoColor: "blue",
   size: "medium",
   logoSubtext: null
 };
+
+const Branding = styled(BaseBranding)({});
 
 export default Branding;
