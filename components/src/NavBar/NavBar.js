@@ -20,10 +20,12 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, style, ...props }) => (
+const MediumNavBar = ({ menuData, solutionName, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Branding light />
+      <Box height="40px" mt={solutionName ? "-8px" : null}>
+        <Branding light solutionName={solutionName} />
+      </Box>
       <Flex
         justifyContent="space-between"
         alignContent="flex-end"
@@ -52,13 +54,13 @@ const MediumNavBar = ({ menuData, style, ...props }) => (
 );
 
 MediumNavBar.propTypes = {
-  alt: PropTypes.string,
+  solutionName: PropTypes.string,
   menuData: PropTypes.shape({}),
   style: PropTypes.shape({})
 };
 
 MediumNavBar.defaultProps = {
-  alt: null,
+  solutionName: null,
   menuData: null,
   style: null
 };
