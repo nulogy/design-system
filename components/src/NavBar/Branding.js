@@ -22,22 +22,22 @@ const getSvgDimensions = (large, letterMark) => {
   const height = large ? "48px" : "32px";
   if (large && letterMark) {
     return {
-      height: height,
+      height,
       width: "56px"
     };
   } else if (large && !letterMark) {
     return {
-      height: height,
+      height,
       width: "200px"
     };
   } else if (!large && letterMark) {
     return {
-      height: height,
+      height,
       width: "37px"
     };
   } else {
     return {
-      height: height,
+      height,
       width: "133px"
     };
   }

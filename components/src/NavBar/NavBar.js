@@ -40,7 +40,7 @@ const MediumNavBar = ({ menuData, solutionName, style, ...props }) => (
         )}
         <Flex style={{ float: "right" }}>
           {menuData.search && (
-            <Box maxWidth="18em" mr={true ? theme.space.x1 : theme.space.none}>
+            <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
               <NavBarSearch {...menuData.search} />
             </Box>
           )}
