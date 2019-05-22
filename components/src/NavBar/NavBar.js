@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
+import { Box } from "../Box";
 import { Icon } from "../Icon";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import Branding from "./Branding";
@@ -19,10 +20,10 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
+const MediumNavBar = ({ menuData, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Branding />
+      <Branding light />
       <Flex
         justifyContent="space-between"
         alignContent="flex-end"
@@ -37,9 +38,9 @@ const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
         )}
         <Flex style={{ float: "right" }}>
           {menuData.search && (
-            <div style={{ maxWidth: "18em" }}>
+            <Box maxWidth="18em" mr={true ? theme.space.x1 : theme.space.none}>
               <NavBarSearch {...menuData.search} />
-            </div>
+            </Box>
           )}
           {menuData.secondaryMenu && (
             <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={menuData.secondaryMenu} />
@@ -52,14 +53,12 @@ const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
 
 MediumNavBar.propTypes = {
   alt: PropTypes.string,
-  desktopSrc: PropTypes.string,
   menuData: PropTypes.shape({}),
   style: PropTypes.shape({})
 };
 
 MediumNavBar.defaultProps = {
   alt: null,
-  desktopSrc: undefined,
   menuData: null,
   style: null
 };
@@ -112,8 +111,6 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
-      mobileSrc,
-      alt,
       style,
       ...props
     } = this.props;
@@ -122,7 +119,7 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Branding />
+            <Branding light letterMark />
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">
@@ -156,16 +153,11 @@ SmallNavBarNoState.propTypes = {
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),
-  mobileSrc: PropTypes.string,
-  alt: PropTypes.string,
   style: PropTypes.shape({})
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
-  mobileSrc:
-    "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2LjQgMzEuMyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzYuNCAzMS4zIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkJCMDA7fTwvc3R5bGU+PHRpdGxlPkJyZW5kaW5nPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzIgLTIwKSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzIgMTYpIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDQpIj48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzAuNywxLjFsNS43LDIuM3YyMC41YzAsNC40LTUuNCw1LjItOS4xLDUuN2MyLjEtMC41LDMuNC0xLjEsMy40LTUuN1Y1LjdMMjUsMy40TDMwLjcsMS4xeiAgICAgICBNNi44LDI4LjRWMTUuOWMwLTEuMywwLjktMi43LDIuMS0zLjJsNS45LTIuNXY4bDUuNywzLjRjMS4xLDAuNiwzLjQsMC42LDMuNC0xLjF2LTMuNGwtMi4zLTEuMVYwTDQuMyw2LjRDMS45LDcuMywwLDEwLDAsMTIuNSAgICAgIHYxOC44TDYuOCwyOC40eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==",
-  alt: undefined,
   style: null
 };
 
