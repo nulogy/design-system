@@ -46,7 +46,7 @@ const BaseCheckboxGroup = ({ className, errorMessage, errorList, labelText, help
 
 BaseCheckboxGroup.propTypes = {
   errorMessage: PropTypes.string,
-  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([

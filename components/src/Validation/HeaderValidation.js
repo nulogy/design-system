@@ -33,7 +33,7 @@ const HeaderValidation = styled(BaseHeaderValidation)({});
 BaseHeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
   errorMessage: PropTypes.string.isRequired,
-  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  errorList: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 

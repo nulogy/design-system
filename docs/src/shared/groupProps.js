@@ -13,7 +13,7 @@ const groupProps = [
   },
   {
     name: "errorList",
-    type: "String / Array of Strings",
+    type: "Array of Strings",
     defaultValue: "null",
     description: "Displays list of error messages and applies red style"
   },

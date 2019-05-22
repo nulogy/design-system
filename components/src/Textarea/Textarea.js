@@ -92,7 +92,7 @@ Textarea.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
-  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  errorList: PropTypes.arrayOf(PropTypes.string),
   required: PropTypes.bool,
   labelText: PropTypes.string,
   helpText: PropTypes.string,

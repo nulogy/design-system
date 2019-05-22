@@ -30,7 +30,7 @@ const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) =>
 
 InlineValidation.propTypes = {
   errorMessage: PropTypes.string,
-  errorList: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  errorList: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 

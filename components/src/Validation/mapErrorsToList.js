@@ -5,10 +5,9 @@ const mapErrorsToList = errors => {
   if (!Array.isArray(errors) || !errors.length) {
     return null;
   }
-  const errorArray = Array.isArray(errors) ? errors : [errors];
   return (
     <List compact leftAlign>
-      {errorArray.map(error => (
+      {errors.map(error => (
         <ListItem key={error}>{error}</ListItem>
       ))}
     </List>
