@@ -10,37 +10,37 @@ storiesOf("Branding", module).add("Branding", () => (
       <Branding />
       <br />
       <br />
-      <Branding letterMark />
+      <Branding logoType="lettermark" />
       <br />
       <br />
-      <Branding solutionName="Operational Solution" />
+      <Branding logoSubtext="Operational Solution" />
       <br />
       <br />
-      <Branding large />
+      <Branding size="large" />
       <br />
       <br />
-      <Branding large letterMark />
+      <Branding size="large" logoType="lettermark" />
       <br />
       <br />
-      <Branding large solutionName="Operational Solution" />
+      <Branding size="large" logoSubtext="Operational Solution" />
     </Box>
     <Box bg="black" width={1 / 2} p="x2">
-      <Branding light />
+      <Branding logoColor="white" />
       <br />
       <br />
-      <Branding light letterMark />
+      <Branding logoColor="white" logoType="lettermark" />
       <br />
       <br />
-      <Branding light solutionName="Operational Solution" />
+      <Branding logoColor="white" logoSubtext="Operational Solution" />
       <br />
       <br />
-      <Branding light large />
+      <Branding logoColor="white" size="large" />
       <br />
       <br />
-      <Branding light large letterMark />
+      <Branding logoColor="white" size="large" logoType="lettermark" />
       <br />
       <br />
-      <Branding light large solutionName="Operational Solution" />
+      <Branding logoColor="white" size="large" logoSubtext="Operational Solution" />
     </Box>
   </Flex>
 ));

@@ -124,5 +124,5 @@ storiesOf("NavBar", module)
   .add("With branding only", () => <NavBar menuData={{}} />)
   .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />)
   .add("With solution name", () => (
-    <NavBar solutionName="Operational Solution" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
+    <NavBar logoSubtext="Operational Solution" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
   ));

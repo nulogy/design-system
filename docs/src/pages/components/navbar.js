@@ -52,7 +52,7 @@ const propsRows = [
       "Provides data used to build link heirarchy and search functionality. See menuData Prop section below"
   },
   {
-    name: "solutionName",
+    name: "logoSubtext",
     type: "string",
     defaultValue: "null",
     description:

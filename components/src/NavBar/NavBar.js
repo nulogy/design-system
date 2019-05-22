@@ -20,11 +20,11 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, solutionName, style, ...props }) => (
+const MediumNavBar = ({ menuData, logoSubtext, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Box height="40px" mt={solutionName ? "-8px" : null}>
-        <Branding light solutionName={solutionName} />
+      <Box height="40px" mt={logoSubtext ? "-8px" : null}>
+        <Branding logoColor="white" logoSubtext={logoSubtext} />
       </Box>
       <Flex
         justifyContent="space-between"
@@ -54,13 +54,13 @@ const MediumNavBar = ({ menuData, solutionName, style, ...props }) => (
 );
 
 MediumNavBar.propTypes = {
-  solutionName: PropTypes.string,
+  logoSubtext: PropTypes.string,
   menuData: PropTypes.shape({}),
   style: PropTypes.shape({})
 };
 
 MediumNavBar.defaultProps = {
-  solutionName: null,
+  logoSubtext: null,
   menuData: null,
   style: null
 };
@@ -113,7 +113,7 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
-      solutionName,
+      logoSubtext,
       style,
       ...props
     } = this.props;
@@ -122,7 +122,7 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Branding light letterMark />
+            <Branding logoColor="white" logoType="lettermark" />
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">
@@ -141,7 +141,7 @@ class SmallNavBarNoState extends React.Component {
               )}
             </Flex>
           </Flex>
-          {isOpen && <MobileMenu solutionName={solutionName} menuData={menuData} closeMenu={closeMenu} />}
+          {isOpen && <MobileMenu logoSubtext={logoSubtext} menuData={menuData} closeMenu={closeMenu} />}
         </SmallHeader>
       </>
     );
@@ -156,13 +156,13 @@ SmallNavBarNoState.propTypes = {
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),
-  solutionName: PropTypes.string,
+  logoSubtext: PropTypes.string,
   style: PropTypes.shape({})
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
-  solutionName: null,
+  logoSubtext: null,
   style: null
 };
 
