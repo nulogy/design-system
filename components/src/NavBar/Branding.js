@@ -20,27 +20,17 @@ const getLogoColors = light => (light ? logoColors.light : logoColors.dark);
 
 const getSvgDimensions = (large, letterMark) => {
   const height = large ? "48px" : "32px";
+  let width = null;
   if (large && letterMark) {
-    return {
-      height,
-      width: "56px"
-    };
+    width = "56px";
   } else if (large && !letterMark) {
-    return {
-      height,
-      width: "200px"
-    };
+    width = "200px";
   } else if (!large && letterMark) {
-    return {
-      height,
-      width: "37px"
-    };
+    width = "37px";
   } else {
-    return {
-      height,
-      width: "133px"
-    };
+    width = "133px";
   }
+  return { height, width };
 };
 
 const BaseBranding = ({ letterMark, solutionName, large, light, ...props }) => (
