@@ -97,7 +97,12 @@ storiesOf("Form", module)
             helpText="Project description helps identify the project."
           />
           <Select id="project-status" labelText="Project status" options={options} />
-          <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" error="Item WS2SB6 does not exist." />
+          <Input
+            id="item-code"
+            labelText="Item code"
+            defaultValue="WS2SB6"
+            errorMessage="Item WS2SB6 does not exist."
+          />
           <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
           <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
           <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
