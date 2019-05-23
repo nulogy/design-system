@@ -6,9 +6,9 @@ import {
   Link,
   SubsectionTitle,
   IconicButton,
-  List
+  List,
+  Branding
 } from "@nulogy/components";
-import logo from "../images/nulogy.svg";
 import theme from "../../../components/src/theme";
 import { menuData } from "../shared/menuData";
 
@@ -108,14 +108,7 @@ class Navigation extends React.Component {
         <NavContainer isOpen={menuOpen}>
           <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
           <Box pt="x4" pb="0" px="x4">
-            <Link href="/">
-              <img
-                src={logo}
-                alt="Logo"
-                width="75px"
-                style={{ margin: "auto" }}
-              />
-            </Link>
+            <Branding logoSubtext="Design System" />
           </Box>
           <Box p="x4">
             {menuData.map(menuItem => (
