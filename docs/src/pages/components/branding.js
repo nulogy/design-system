@@ -2,10 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import {
   Branding,
-  Button,
-  DangerButton,
-  PrimaryButton,
-  QuietButton,
   Box,
   Flex,
   SectionTitle,
@@ -44,11 +40,11 @@ const propsRows = [
     description: "Accepts wordmark or lettermark to set the logo type"
   },
   {
-    name: "logoSubtext",
+    name: "subtext",
     type: "String",
     defaultValue: "null",
     description:
-      "Subtext that is placed under the logo to signify what section of the product you are in"
+      "Subtext that is placed under the logo to specify the specific software product a user is interacting with"
   },
   {
     name: "alignment",
@@ -67,8 +63,8 @@ export default () => (
     <Intro>
       <Title>Branding</Title>
       <IntroText>
-        Branding is used to communicate what Nulogy software solution the user
-        is currently in.
+        Branding is used to indicate that a user is interacting with Nulogy
+        software.
       </IntroText>
     </Intro>
     <DocSection>
@@ -109,25 +105,25 @@ export default () => (
       </Box>
 
       <Box mb="x6">
-        <SubsectionTitle>With logoSubtext</SubsectionTitle>
-        <Branding logoSubtext="Operational Solution" />
+        <SubsectionTitle>With subtext</SubsectionTitle>
+        <Branding subtext="Operational Solution" />
         <Highlight className="js">
-          {`<Branding logoSubtext="Operational Solution"/>`}
+          {`<Branding subtext="Operational Solution"/>`}
         </Highlight>
       </Box>
 
       <Box mb="x6">
         <SubsectionTitle>Alignment</SubsectionTitle>
         <Flex my="x2" justifyContent="space-between">
-          <Branding logoSubtext="Left Align" alignment="left" />
-          <Branding logoSubtext="Middle Align" alignment="middle" />
-          <Branding logoSubtext="Right Align" alignment="right" />
+          <Branding subtext="Left Align" alignment="left" />
+          <Branding subtext="Middle Align" alignment="middle" />
+          <Branding subtext="Right Align" alignment="right" />
         </Flex>
         <Highlight className="js">
           {`<Flex justifyContent="space-between">
-  <Branding logoSubtext="Left Align" alignment="left"/>
-  <Branding logoSubtext="Middle Align" alignment="middle"/>
-  <Branding logoSubtext="Right Align" alignment="right"/>
+  <Branding subtext="Left Align" alignment="left"/>
+  <Branding subtext="Middle Align" alignment="middle"/>
+  <Branding subtext="Right Align" alignment="right"/>
 </Flex>`}
         </Highlight>
       </Box>

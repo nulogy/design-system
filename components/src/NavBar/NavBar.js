@@ -20,11 +20,11 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, logoSubtext, style, ...props }) => (
+const MediumNavBar = ({ menuData, subtext, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Box height="40px" mt={logoSubtext ? "-8px" : null}>
-        <Branding logoColor="white" logoSubtext={logoSubtext} />
+      <Box height="40px" mt={subtext ? "-8px" : null}>
+        <Branding logoColor="white" subtext={subtext} />
       </Box>
       <Flex
         justifyContent="space-between"
@@ -54,13 +54,13 @@ const MediumNavBar = ({ menuData, logoSubtext, style, ...props }) => (
 );
 
 MediumNavBar.propTypes = {
-  logoSubtext: PropTypes.string,
+  subtext: PropTypes.string,
   menuData: PropTypes.shape({}),
   style: PropTypes.shape({})
 };
 
 MediumNavBar.defaultProps = {
-  logoSubtext: null,
+  subtext: null,
   menuData: null,
   style: null
 };
@@ -116,7 +116,7 @@ class SmallNavBarNoState extends React.Component {
       windowWidth,
       smallBreakpoint,
       smallScreen = windowWidth < smallBreakpoint,
-      logoSubtext,
+      subtext,
       style,
       ...props
     } = this.props;
@@ -125,11 +125,11 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Box height="40px" mt={logoSubtext && !smallScreen ? "-8px" : null}>
+            <Box height="40px" mt={subtext && !smallScreen ? "-8px" : null}>
               <Branding
                 logoColor="white"
                 logoType={smallScreen ? "lettermark" : "wordmark"}
-                logoSubtext={smallScreen ? null : logoSubtext}
+                subtext={smallScreen ? null : subtext}
               />
             </Box>
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
@@ -151,12 +151,7 @@ class SmallNavBarNoState extends React.Component {
             </Flex>
           </Flex>
           {isOpen && (
-            <MobileMenu
-              logoSubtext={logoSubtext}
-              includeLogoSubtext={smallScreen}
-              menuData={menuData}
-              closeMenu={closeMenu}
-            />
+            <MobileMenu subtext={subtext} includesubtext={smallScreen} menuData={menuData} closeMenu={closeMenu} />
           )}
         </SmallHeader>
       </>
@@ -172,14 +167,14 @@ SmallNavBarNoState.propTypes = {
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),
-  logoSubtext: PropTypes.string,
+  subtext: PropTypes.string,
   style: PropTypes.shape({}),
   smallBreakpoint: PropTypes.number
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
-  logoSubtext: null,
+  subtext: null,
   style: null,
   smallBreakpoint: 768
 };

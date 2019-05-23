@@ -78,7 +78,7 @@ const BrandingLink = styled.a(
   })
 );
 
-const BaseBranding = ({ logoType, logoSubtext, size, alignment, logoColor, ...props }) => (
+const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props }) => (
   <BrandingLink size={size} logoColor={logoColor} alignment={alignment} href="/" {...props}>
     {logoType === "lettermark" && (
       <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
@@ -104,7 +104,7 @@ const BaseBranding = ({ logoType, logoSubtext, size, alignment, logoColor, ...pr
             <path d="M75,9 L77.8276364,9 L82.2649697,20.6363636 L87.1483636,9 L89.4504242,9 L82.3813333,25.3238788 L82.2649697,25.5546667 C81.1478788,28.0965657 80.2874343,29.9066667 79.6836364,30.9849697 L76.7415758,30.9849697 C77.3683498,30.3346009 77.9302011,29.6246546 78.4191515,28.8652121 C79.0313917,27.8817808 79.5750659,26.8572886 80.046303,25.7990303 L81.0004848,23.7452121 L75,9 Z" />
           </g>
         </svg>
-        {logoSubtext}
+        {subtext}
       </React.Fragment>
     )}
   </BrandingLink>
@@ -115,7 +115,7 @@ BaseBranding.propTypes = {
   logoColor: PropTypes.oneOf(["blue", "white"]),
   size: PropTypes.oneOf(["medium", "large"]),
   alignment: PropTypes.oneOf(["left", "middle", "right"]),
-  logoSubtext: PropTypes.string
+  subtext: PropTypes.string
 };
 
 BaseBranding.defaultProps = {
@@ -123,7 +123,7 @@ BaseBranding.defaultProps = {
   logoColor: "blue",
   size: "medium",
   alignment: "left",
-  logoSubtext: null
+  subtext: null
 };
 
 const Branding = styled(BaseBranding)({});

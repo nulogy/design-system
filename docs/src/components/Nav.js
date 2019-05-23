@@ -108,7 +108,7 @@ class Navigation extends React.Component {
         <NavContainer isOpen={menuOpen}>
           <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
           <Box pt="x4" pb="0" px="x4">
-            <Branding logoSubtext="Design System" />
+            <Branding subtext="Design System" />
           </Box>
           <Box p="x4">
             {menuData.map(menuItem => (
