@@ -24,6 +24,10 @@ export const menuData = [
         href: "/components/box"
       },
       {
+        name: "Branding",
+        href: "/components/branding"
+      },
+      {
         name: "Buttons",
         href: "/components/buttons"
       },
