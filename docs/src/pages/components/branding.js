@@ -29,13 +29,13 @@ const propsRows = [
     name: "size",
     type: "String",
     defaultValue: "medium",
-    description: "Accepts medium, or large to size the logo"
+    description: "Accepts medium or large to size the logo"
   },
   {
     name: "logoColor",
     type: "String",
     defaultValue: "blue",
-    description: "Accepts blue, or white to set the logo color theme"
+    description: "Accepts blue or white to set the logo color theme"
   },
   {
     name: "logoType",
@@ -65,134 +65,49 @@ export default () => (
       </IntroText>
     </Intro>
     <DocSection>
-      <Button>Create project</Button>
+      <Branding />
       <Highlight className="js">
-        {`import { Button } from @nulogy/components;
+        {`import { Branding } from @nulogy/components;
 
-<Button>Create project</Button>
+<Branding/>
 `}
       </Highlight>
     </DocSection>
     <DocSection>
-      <SectionTitle>Types of buttons</SectionTitle>
-      <Text>
-        There are multiple types of buttons that all accept the same options.
-      </Text>
-
-      <Box mb="x6">
-        <SubsectionTitle>PrimaryButton</SubsectionTitle>
-        <Text>
-          Primary Buttons are used for the main action in a particular context.
-          There is usually not more than one primary button per screen and not
-          all of the screens require a Primary button.
-        </Text>
-        <PrimaryButton>Create project</PrimaryButton>
-        <Highlight className="js">
-          {`import { PrimaryButton } from @nulogy/components;
-
-<PrimaryButton>Create project</PrimaryButton>`}
-        </Highlight>
-      </Box>
-
-      <Box mb="x6">
-        <SubsectionTitle>DangerButton</SubsectionTitle>
-        <Text>
-          Danger Buttons are used for destructive actions such as deleting. They
-          are most likely to appear in confirmation dialogs.
-        </Text>
-        <DangerButton>Create project</DangerButton>
-        <Highlight className="js">
-          {`import { DangerButton } from @nulogy/components;
-
-<DangerButton>Create project</DangerButton>`}
-        </Highlight>
-      </Box>
-
-      <Box mb="x6">
-        <SubsectionTitle>QuietButton</SubsectionTitle>
-        <Text>
-          Quiet Buttons are used for less important actions such as “Cancel” or
-          actions that are not directly related to the context of the page (e.g
-          Learn more …). Quiet buttons are often paired with a Primary button.
-        </Text>
-        <QuietButton>Learn more</QuietButton>
-        <Highlight className="js">
-          {`import { QuietButton } from @nulogy/components;
-
-<QuietButton>Create project</QuietButton>`}
-        </Highlight>
-      </Box>
-    </DocSection>
-
-    <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Text>
-        The following variations are available to all button components.
+        The following variations are available on the Branding component.
+        Variations can be combined for the desired state.
       </Text>
       <Box mb="x6">
-        <SubsectionTitle>Small</SubsectionTitle>
-        <Button size="small">Read more</Button>
+        <SubsectionTitle>Lettermark</SubsectionTitle>
+        <Branding logoType="lettermark" />
         <Highlight className="js">
-          {'<Button size="small">Read more</Button>'}
+          {`<Branding logoType="lettermark"/>`}
         </Highlight>
       </Box>
 
       <Box mb="x6">
-        <SubsectionTitle>Medium</SubsectionTitle>
-        <Button size="medium">Read more</Button>
-        <Highlight className="js">
-          {'<Button size="medium">Read more</Button>'}
-        </Highlight>
+        <SubsectionTitle>White</SubsectionTitle>
+        <Box bg="black">
+          <Branding logoColor="white" />
+        </Box>
+        <Highlight className="js">{`<Branding logoColor="white"/>`}</Highlight>
       </Box>
 
       <Box mb="x6">
         <SubsectionTitle>Large</SubsectionTitle>
-        <Button size="large">Read more</Button>
-        <Highlight className="js">
-          {'<Button size="large">Read more</Button>'}
-        </Highlight>
+        <Branding size="large" />
+        <Highlight className="js">{`<Branding size="large"/>`}</Highlight>
       </Box>
 
       <Box mb="x6">
-        <SubsectionTitle>Full Width</SubsectionTitle>
-        <Button fullWidth>Read more</Button>
+        <SubsectionTitle>With logoSubtext</SubsectionTitle>
+        <Branding logoSubtext="Operational Solution" />
         <Highlight className="js">
-          {"<Button fullWidth>Full Width</Button>"}
+          {`<Branding logoSubtext="Operational Solution"/>`}
         </Highlight>
       </Box>
-
-      <Box mb="x6">
-        <SubsectionTitle>With an icon</SubsectionTitle>
-        <Button icon="add" iconSide="left">
-          Create project
-        </Button>
-        <Highlight className="js">
-          {'<Button icon="add" iconSide="left">Create project</Button>'}
-        </Highlight>
-      </Box>
-
-      <Box mb="x6">
-        <SubsectionTitle>Disabled</SubsectionTitle>
-        <Flex justifyContent="space-between" alignItems="center">
-          <Button disabled>Create project</Button>
-          <PrimaryButton disabled>Create project</PrimaryButton>
-          <DangerButton disabled>Delete project</DangerButton>
-          <QuietButton disabled>Edit project</QuietButton>
-        </Flex>
-        <Highlight className="js">
-          {"<Button disabled>Create project</Button>"}
-        </Highlight>
-      </Box>
-    </DocSection>
-
-    <DocSection>
-      <SectionTitle>Content guidelines</SectionTitle>
-      <ListItem>Always lead with an actionable verb</ListItem>
-      <ListItem>
-        Whenever possible follow with a clear noun{" "}
-        <em>(e.g: Create shipment, Approve delivery.)</em>
-      </ListItem>
-      <ListItem>Always use sentence case</ListItem>
     </DocSection>
 
     <DocSection>
@@ -202,7 +117,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?selectedKind=Buttons">
+        <Link href="https://storybook.nulogy.design/?selectedKind=Branding">
           View in Storybook
         </Link>
       </ListItem>
@@ -210,10 +125,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <ListItem>
-        <Link href="/components/iconic-button">Iconic button</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="/components/link">Link</Link>
+        <Link href="/components/navbar">NavBar</Link>
       </ListItem>
     </DocSection>
   </Layout>
