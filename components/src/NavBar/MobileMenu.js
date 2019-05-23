@@ -13,8 +13,8 @@ const BrandingText = styled.div({
   fontStyle: "italic",
   letterSpacing: "0.02em",
   color: theme.colors.whiteGrey,
-  paddingTop: theme.space.half,
-  marginBottom: theme.space.x4,
+  marginTop: `-${theme.space.x2}`,
+  marginBottom: theme.space.x3,
   marginLeft: theme.space.x3
 });
 
@@ -197,9 +197,9 @@ const Nav = styled.nav({
   backgroundColor: theme.colors.blackBlue
 });
 
-const BaseMobileMenu = ({ menuData, closeMenu, logoSubtext, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, logoSubtext, includeLogoSubtext, ...props }) => (
   <Nav {...props}>
-    {logoSubtext && <BrandingText>{logoSubtext}</BrandingText>}
+    {logoSubtext && includeLogoSubtext && <BrandingText>{logoSubtext}</BrandingText>}
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu)}
@@ -213,12 +213,14 @@ BaseMobileMenu.propTypes = {
     secondaryMenu: PropTypes.arrayOf(PropTypes.shape({}))
   }),
   logoSubtext: PropTypes.string,
+  includeLogoSubtext: PropTypes.bool,
   closeMenu: PropTypes.func
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
   logoSubtext: null,
+  includeLogoSubtext: true,
   closeMenu: () => {}
 };
 

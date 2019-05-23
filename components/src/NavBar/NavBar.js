@@ -113,6 +113,9 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
+      windowWidth,
+      smallBreakpoint,
+      smallScreen = windowWidth < smallBreakpoint,
       logoSubtext,
       style,
       ...props
@@ -122,7 +125,13 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Branding logoColor="white" logoType="lettermark" />
+            <Box height="40px" mt={logoSubtext && !smallScreen ? "-8px" : null}>
+              <Branding
+                logoColor="white"
+                logoType={smallScreen ? "lettermark" : "wordmark"}
+                logoSubtext={smallScreen ? null : logoSubtext}
+              />
+            </Box>
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">
@@ -141,7 +150,14 @@ class SmallNavBarNoState extends React.Component {
               )}
             </Flex>
           </Flex>
-          {isOpen && <MobileMenu logoSubtext={logoSubtext} menuData={menuData} closeMenu={closeMenu} />}
+          {isOpen && (
+            <MobileMenu
+              logoSubtext={logoSubtext}
+              includeLogoSubtext={smallScreen}
+              menuData={menuData}
+              closeMenu={closeMenu}
+            />
+          )}
         </SmallHeader>
       </>
     );
@@ -157,13 +173,15 @@ SmallNavBarNoState.propTypes = {
   }).isRequired,
   menuData: PropTypes.shape({}),
   logoSubtext: PropTypes.string,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
+  smallBreakpoint: PropTypes.number
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
   logoSubtext: null,
-  style: null
+  style: null,
+  smallBreakpoint: 768
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
@@ -177,7 +195,7 @@ const BaseNavBar = withWindowDimensions(({ menuData, breakpoint, windowDimension
   if (windowWidth >= breakpoint) {
     return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
   } else {
-    return <SmallNavBar {...props} menuData={menuData} style={navBarStyles} />;
+    return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
   }
 });
 
