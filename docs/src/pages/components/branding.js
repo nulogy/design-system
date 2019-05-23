@@ -49,6 +49,13 @@ const propsRows = [
     defaultValue: "null",
     description:
       "Subtext that is placed under the logo to signify what section of the product you are in"
+  },
+  {
+    name: "alignment",
+    type: "String",
+    defaultValue: "right",
+    description:
+      "Accepts left, middle, or right to align the logo and logo subtext"
   }
 ];
 
@@ -106,6 +113,22 @@ export default () => (
         <Branding logoSubtext="Operational Solution" />
         <Highlight className="js">
           {`<Branding logoSubtext="Operational Solution"/>`}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Alignment</SubsectionTitle>
+        <Flex my="x2" justifyContent="space-between">
+          <Branding logoSubtext="Left Align" alignment="left" />
+          <Branding logoSubtext="Middle Align" alignment="middle" />
+          <Branding logoSubtext="Right Align" alignment="right" />
+        </Flex>
+        <Highlight className="js">
+          {`<Flex justifyContent="space-between">
+  <Branding logoSubtext="Left Align" alignment="left"/>
+  <Branding logoSubtext="Middle Align" alignment="middle"/>
+  <Branding logoSubtext="Right Align" alignment="right"/>
+</Flex>`}
         </Highlight>
       </Box>
     </DocSection>

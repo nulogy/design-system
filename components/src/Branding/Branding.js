@@ -39,20 +39,32 @@ const sizes = {
   }
 };
 
+const alignments = {
+  left: "flex-start",
+  middle: "center",
+  right: "flex-end"
+};
+
 const getLogoColor = logoColor => logoColors[logoColor] || logoColors.blue;
 
 const getSize = (size, logoType) => (sizes[size] && sizes[size][logoType]) || sizes.medium.wordmark;
 
+const getAlignment = alignment => alignments[alignment] || alignments.left;
+
 const BrandingLink = styled.a(
-  ({ logoColor }) => ({
-    color: getLogoColor(logoColor).text,
+  {
     display: "inline-flex",
     flexDirection: "column",
-    alignItems: "center",
     textDecoration: "none",
     fontStyle: "italic",
     letterSpacing: "0.02em",
-    padding: "4px 2px",
+    padding: "4px 2px"
+  },
+  ({ alignment }) => ({
+    alignItems: getAlignment(alignment)
+  }),
+  ({ logoColor }) => ({
+    color: getLogoColor(logoColor).text,
     active: {
       color: getLogoColor(logoColor).text
     },
@@ -66,8 +78,8 @@ const BrandingLink = styled.a(
   })
 );
 
-const BaseBranding = ({ logoType, logoSubtext, size, logoColor, ...props }) => (
-  <BrandingLink size={size} logoColor={logoColor} href="/" {...props}>
+const BaseBranding = ({ logoType, logoSubtext, size, alignment, logoColor, ...props }) => (
+  <BrandingLink size={size} logoColor={logoColor} alignment={alignment} href="/" {...props}>
     {logoType === "lettermark" && (
       <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
         <path
@@ -102,6 +114,7 @@ BaseBranding.propTypes = {
   logoType: PropTypes.oneOf(["wordmark", "lettermark"]),
   logoColor: PropTypes.oneOf(["blue", "white"]),
   size: PropTypes.oneOf(["medium", "large"]),
+  alignment: PropTypes.oneOf(["left", "middle", "right"]),
   logoSubtext: PropTypes.string
 };
 
@@ -109,6 +122,7 @@ BaseBranding.defaultProps = {
   logoType: "wordmark",
   logoColor: "blue",
   size: "medium",
+  alignment: "left",
   logoSubtext: null
 };
 
