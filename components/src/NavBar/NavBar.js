@@ -169,14 +169,18 @@ SmallNavBarNoState.propTypes = {
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
   style: PropTypes.shape({}),
-  smallBreakpoint: PropTypes.number
+  smallBreakpoint: PropTypes.number,
+  windowWidth: PropTypes.number,
+  smallScreen: PropTypes.bool
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   style: null,
-  smallBreakpoint: 768
+  smallBreakpoint: 768,
+  windowWidth: undefined,
+  smallScreen: undefined
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
