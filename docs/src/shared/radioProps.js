@@ -1,5 +1,23 @@
 const radioProps = [
   {
+    name: "id",
+    type: "String",
+    defaultValue: "Required",
+    description: "A unique ID for this input"
+  },
+  {
+    name: "name",
+    type: "undefined",
+    defaultValue: "Required",
+    description: "Identified that groups inputs together"
+  },
+  {
+    name: "value",
+    type: "undefined",
+    defaultValue: "Required",
+    description: "Value of selection for submission"
+  },
+  {
     name: "defaultChecked",
     type: "Boolean",
     defaultValue: "false",
@@ -16,12 +34,6 @@ const radioProps = [
     type: "Boolean",
     defaultValue: "false",
     description: "Marks the field as invalid and turns red"
-  },
-  {
-    name: "id",
-    type: "String",
-    defaultValue: "Required",
-    description: "A unique ID for this input"
   },
   {
     name: "labelText",
