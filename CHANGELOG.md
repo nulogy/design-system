@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?path=/story/dropdownmenu--dropdownmenu) component
-- Added [`Branding`](https://storybook.nulogy.design/?selectedKind=Branding&selectedStory=Branding) component
+- Added [`Branding`](https://storybook.nulogy.design/?path=/story/branding--branding) component
 - Added "more" icon
 - Added support for list of errors on Input, Textarea, Select, CheckboxGroup, RadioGroup, InlineValdiation, and HeaderValidation
   - errorList prop has been added
