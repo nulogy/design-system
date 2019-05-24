@@ -7,7 +7,6 @@ import {
   SubsectionTitle,
   IconicButton,
   List,
-  Link,
   Branding
 } from "@nulogy/components";
 import theme from "../../../components/src/theme";
