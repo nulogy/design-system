@@ -125,7 +125,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Textarea">
+          <Link href="https://storybook.nulogy.design/?path=/story/textarea--textarea">
             View in Storybook
           </Link>
         </ListItem>

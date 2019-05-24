@@ -161,7 +161,7 @@ const errorList = [
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?selectedKind=Header%20Validation">
+        <Link href="https://storybook.nulogy.design/?path=/story/header-validation--header-validation">
           View in Storybook
         </Link>
       </ListItem>

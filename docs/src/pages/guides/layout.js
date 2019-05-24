@@ -516,13 +516,13 @@ export default () => (
       <List mb="x3">
         <ListItem>
           Substituting minHeight with height{" "}
-          <Link href="https://storybook.nulogy.design/?selectedKind=Flex&selectedStory=IE11%20minHeight%20solution%201&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+          <Link href="https://storybook.nulogy.design/?path=/story/flex--ie11-minheight-solution-1">
             (Example)
           </Link>
         </ListItem>
         <ListItem>
           Wrapping flex container with another flex container{" "}
-          <Link href="https://storybook.nulogy.design/?selectedKind=Flex&selectedStory=IE11%20minHeight%20solution%202&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+          <Link href="https://storybook.nulogy.design/?path=/story/flex--ie11-minheight-solution-2">
             (Example)
           </Link>
         </ListItem>

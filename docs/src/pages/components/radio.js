@@ -115,7 +115,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Radio">
+          <Link href="https://storybook.nulogy.design/?path=/story/radio--radio">
             View in storybook
           </Link>
         </ListItem>

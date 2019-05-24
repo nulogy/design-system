@@ -235,7 +235,7 @@ const search = {
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/selectedKind=NavBar">
+        <Link href="https://storybook.nulogy.design/?path=/story/navbar--navbar">
           View in Storybook
         </Link>
       </ListItem>

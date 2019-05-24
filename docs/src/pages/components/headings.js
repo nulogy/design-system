@@ -78,7 +78,7 @@ export default () => (
         <Link href="https://nulogy.design/tokens/">NDS theme</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?selectedKind=Headings">
+        <Link href="https://storybook.nulogy.design/?path=/story/headings--title">
           View in Storybook
         </Link>
       </ListItem>

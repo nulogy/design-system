@@ -114,7 +114,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/selectedKind=Form&selectedStory=With%20form%20sections&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
+          <Link href="https://storybook.nulogy.design/?path=/story/form--with-form-sections">
             View in Storybook
           </Link>
         </ListItem>
