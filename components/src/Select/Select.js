@@ -133,6 +133,7 @@ const Select = ({
   id,
   labelText,
   helpText,
+  name,
   requirementText
 }) => (
   <Field>
@@ -172,6 +173,7 @@ const Select = ({
                 aria-invalid={error}
                 placeholder={placeholder}
                 readOnly
+                name={name}
                 value={optionToString(selectedItem) || ""}
               />
             </MaybeFieldLabel>
