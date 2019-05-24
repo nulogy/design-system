@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added [`DropdownMenu`](https://storybook.nulogy.design/?selectedKind=DropdownMenu&selectedStory=DropdownMenu) component
+- Added [`DropdownMenu`](https://storybook.nulogy.design/?path=/story/dropdownmenu--dropdownmenu) component
 - Added "more" icon
 - Added support for list of errors on Input, Textarea, Select, CheckboxGroup, and RadioGroup
   - errorList prop has been added
@@ -38,8 +38,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- [Custom link components](https://storybook.nulogy.design/?selectedKind=NavBar&selectedStory=With%20custom%20link%20components) supported in the NavBar.
-- Added [`Card`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Card) and [`Cardset`](https://storybook.nulogy.design/?selectedKind=Card&selectedStory=Cardset) components
+- [Custom link components](https://storybook.nulogy.design/?path=/story/navbar--with-custom-link-components) supported in the NavBar.
+- Added [`Card`](https://storybook.nulogy.design/?path=/story/card--card) and [`Cardset`](https://storybook.nulogy.design/?path=/story/card--cardset) components
 
 ### Changed
 

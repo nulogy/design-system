@@ -59,7 +59,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Card">
+          <Link href="https://storybook.nulogy.design/?path=/story/card--card">
             View in Storybook
           </Link>
         </ListItem>

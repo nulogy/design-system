@@ -106,7 +106,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Checkbox">
+          <Link href="https://storybook.nulogy.design/?path=/story/checkbox--checkbox">
             View in Storybook
           </Link>
         </ListItem>

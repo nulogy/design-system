@@ -62,10 +62,8 @@ export default () => (
           as a library of styles, symbols, and templates
         </ListItem>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Box&selectedStory=Box&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Fstories%2Fstories-panel&background=">
-            Storybook
-          </Link>{" "}
-          as a component reference guide
+          <Link href="https://storybook.nulogy.design">Storybook</Link> as a
+          component reference guide
         </ListItem>
       </List>
     </DocSection>

@@ -163,7 +163,7 @@ const options = [
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?selectedKind=Select">
+          <Link href="https://storybook.nulogy.design/?path=/story/select--select">
             View in Storybook
           </Link>
         </ListItem>

@@ -125,7 +125,7 @@ export default () => (
         <Link href="https://nulogy.design/tokens/">NDS theme</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?selectedKind=Flex">
+        <Link href="https://storybook.nulogy.design/?path=/story/flex--flex">
           View in Storybook
         </Link>
       </ListItem>

@@ -85,7 +85,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/selectedKind=">
+        <Link href="https://storybook.nulogy.design/?path=/story/">
           View in Storybook
         </Link>
       </ListItem>
