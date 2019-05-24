@@ -1,0 +1,151 @@
+import React from "react";
+import { Helmet } from "react-helmet";
+import {
+  Branding,
+  Box,
+  Flex,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  ListItem
+} from "@nulogy/components";
+import Highlight from "react-highlight";
+import {
+  DocText as Text,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
+} from "../../components";
+
+const propsRows = [
+  {
+    name: "size",
+    type: "String",
+    defaultValue: "medium",
+    description: "Accepts medium or large to size the logo"
+  },
+  {
+    name: "logoColor",
+    type: "String",
+    defaultValue: "blue",
+    description: "Accepts blue or white to set the logo color theme"
+  },
+  {
+    name: "logoType",
+    type: "String",
+    defaultValue: "wordmark",
+    description: "Accepts wordmark or lettermark to set the logo type"
+  },
+  {
+    name: "subtext",
+    type: "String",
+    defaultValue: "null",
+    description:
+      "Subtext that is placed under the logo to specify the specific software product a user is interacting with"
+  },
+  {
+    name: "alignment",
+    type: "String",
+    defaultValue: "right",
+    description:
+      "Accepts left, middle, or right to align the logo and logo subtext"
+  }
+];
+
+export default () => (
+  <Layout>
+    <Helmet>
+      <title>Branding</title>
+    </Helmet>
+    <Intro>
+      <Title>Branding</Title>
+      <IntroText>
+        Branding is used to indicate that a user is interacting with Nulogy
+        software.
+      </IntroText>
+    </Intro>
+    <DocSection>
+      <Branding />
+      <Highlight className="js">
+        {`import { Branding } from @nulogy/components;
+
+<Branding/>
+`}
+      </Highlight>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Variations</SectionTitle>
+      <Text>
+        The following variations are available on the Branding component.
+        Variations can be combined for the desired state.
+      </Text>
+      <Box mb="x6">
+        <SubsectionTitle>Lettermark</SubsectionTitle>
+        <Branding logoType="lettermark" />
+        <Highlight className="js">
+          {`<Branding logoType="lettermark"/>`}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>White</SubsectionTitle>
+        <Box bg="black">
+          <Branding logoColor="white" />
+        </Box>
+        <Highlight className="js">{`<Branding logoColor="white"/>`}</Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Large</SubsectionTitle>
+        <Branding size="large" />
+        <Highlight className="js">{`<Branding size="large"/>`}</Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>With subtext</SubsectionTitle>
+        <Branding subtext="Operational Solution" />
+        <Highlight className="js">
+          {`<Branding subtext="Operational Solution"/>`}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Alignment</SubsectionTitle>
+        <Flex my="x2" justifyContent="space-between">
+          <Branding subtext="Left Align" alignment="left" />
+          <Branding subtext="Middle Align" alignment="middle" />
+          <Branding subtext="Right Align" alignment="right" />
+        </Flex>
+        <Highlight className="js">
+          {`<Flex justifyContent="space-between">
+  <Branding subtext="Left Align" alignment="left"/>
+  <Branding subtext="Middle Align" alignment="middle"/>
+  <Branding subtext="Right Align" alignment="right"/>
+</Flex>`}
+        </Highlight>
+      </Box>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Props</SectionTitle>
+      <PropsTable propsRows={propsRows} />
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?path=/story/branding--branding">
+          View in Storybook
+        </Link>
+      </ListItem>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <ListItem>
+        <Link href="/components/navbar">NavBar</Link>
+      </ListItem>
+    </DocSection>
+  </Layout>
+);

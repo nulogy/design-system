@@ -19,7 +19,8 @@ const Link = styled.a(color, space, ({ underline, ...props }) => ({
 Link.propTypes = {
   underline: PropTypes.bool,
   hover: PropTypes.string,
-  ...color.propTypes
+  ...color.propTypes,
+  ...space.propTypes
 };
 
 Link.defaultProps = {

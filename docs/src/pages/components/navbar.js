@@ -50,6 +50,13 @@ const propsRows = [
     defaultValue: "null",
     description:
       "Provides data used to build link heirarchy and search functionality. See menuData Prop section below"
+  },
+  {
+    name: "subtext",
+    type: "string",
+    defaultValue: "null",
+    description:
+      "Provides the subtext under the logo matching the Nulogy solution name"
   }
 ];
 

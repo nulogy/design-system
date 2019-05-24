@@ -122,4 +122,7 @@ storiesOf("NavBar", module)
   .add("Without search and secondary menu", () => <NavBar menuData={{ primaryMenu }} />)
   .add("Without search and primary menu", () => <NavBar menuData={{ secondaryMenu }} />)
   .add("With branding only", () => <NavBar menuData={{}} />)
-  .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />);
+  .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />)
+  .add("With solution name", () => (
+    <NavBar subtext="Operational Solution" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
+  ));

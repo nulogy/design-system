@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
+import { Box } from "../Box";
 import { Icon } from "../Icon";
+import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import Branding from "./Branding";
+import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
@@ -19,10 +21,17 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
+const MediumNavBar = ({ menuData, subtext, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Branding desktopSrc={desktopSrc} alt={alt} />
+      <Link
+        underline={false}
+        style={{ display: "block", height: subtext ? "56px" : "40px" }}
+        my={subtext ? "-8px" : null}
+        href="/"
+      >
+        <Branding logoColor="white" subtext={subtext} />
+      </Link>
       <Flex
         justifyContent="space-between"
         alignContent="flex-end"
@@ -37,9 +46,9 @@ const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
         )}
         <Flex style={{ float: "right" }}>
           {menuData.search && (
-            <div style={{ maxWidth: "18em" }}>
+            <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
               <NavBarSearch {...menuData.search} />
-            </div>
+            </Box>
           )}
           {menuData.secondaryMenu && (
             <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={menuData.secondaryMenu} />
@@ -51,15 +60,13 @@ const MediumNavBar = ({ menuData, desktopSrc, alt, style, ...props }) => (
 );
 
 MediumNavBar.propTypes = {
-  alt: PropTypes.string,
-  desktopSrc: PropTypes.string,
+  subtext: PropTypes.string,
   menuData: PropTypes.shape({}),
   style: PropTypes.shape({})
 };
 
 MediumNavBar.defaultProps = {
-  alt: null,
-  desktopSrc: undefined,
+  subtext: null,
   menuData: null,
   style: null
 };
@@ -112,8 +119,10 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
-      mobileSrc,
-      alt,
+      windowWidth,
+      smallBreakpoint,
+      smallScreen = windowWidth < smallBreakpoint,
+      subtext,
       style,
       ...props
     } = this.props;
@@ -122,7 +131,18 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Branding mobileSrc={mobileSrc} alt={alt} />
+            <Link
+              style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
+              my={subtext && !smallScreen ? "-8px" : null}
+              underline={false}
+              href="/"
+            >
+              <Branding
+                logoColor="white"
+                logoType={smallScreen ? "lettermark" : "wordmark"}
+                subtext={smallScreen ? null : subtext}
+              />
+            </Link>
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">
@@ -141,7 +161,9 @@ class SmallNavBarNoState extends React.Component {
               )}
             </Flex>
           </Flex>
-          {isOpen && <MobileMenu menuData={menuData} closeMenu={closeMenu} />}
+          {isOpen && (
+            <MobileMenu subtext={subtext} includesubtext={smallScreen} menuData={menuData} closeMenu={closeMenu} />
+          )}
         </SmallHeader>
       </>
     );
@@ -156,16 +178,20 @@ SmallNavBarNoState.propTypes = {
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),
-  mobileSrc: PropTypes.string,
-  alt: PropTypes.string,
-  style: PropTypes.shape({})
+  subtext: PropTypes.string,
+  style: PropTypes.shape({}),
+  smallBreakpoint: PropTypes.number,
+  windowWidth: PropTypes.number,
+  smallScreen: PropTypes.bool
 };
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,
-  mobileSrc: undefined,
-  alt: undefined,
-  style: null
+  subtext: null,
+  style: null,
+  smallBreakpoint: 768,
+  windowWidth: undefined,
+  smallScreen: undefined
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
@@ -179,7 +205,7 @@ const BaseNavBar = withWindowDimensions(({ menuData, breakpoint, windowDimension
   if (windowWidth >= breakpoint) {
     return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
   } else {
-    return <SmallNavBar {...props} menuData={menuData} style={navBarStyles} />;
+    return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
   }
 });
 
