@@ -109,10 +109,10 @@ class Navigation extends React.Component {
           <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
           <Link
             underline={false}
-            style={{ display: "block" }}
-            pt="x4"
-            pb="0"
-            px="x4"
+            style={{ display: "inline-block" }}
+            mt="x4"
+            mb="0"
+            ml="x4"
             href="/"
           >
             <Branding subtext="Design System" />
