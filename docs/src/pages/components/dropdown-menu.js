@@ -150,7 +150,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Using DropdownItem</SectionTitle>
-      <Text>
+      <Text mb={"x2"}>
         Using the Dropdown Link and DropdownButton components with the
         DropdownMenu are recommended as they provide the correct link and button
         styles for the dropdown. However, wrapping another component with
@@ -158,13 +158,15 @@ export default () => (
       </Text>
       <DropdownMenu>
         <DropdownItem>
-          <a href="/">Custom Link Component</a>
+          <a href="/" style={{ textDecoration: "none" }}>
+            Custom Link Component
+          </a>
         </DropdownItem>
       </DropdownMenu>
       <Highlight className="js">
         {`<DropdownMenu>
   <DropdownItem>
-    <a href="/">Custom Link Component</a>
+    <a href="/" style={{textDecoration:"none"}}>Custom Link Component</a>
   </DropdownItem>
 </DropdownMenu>
 `}
@@ -173,7 +175,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Closing the DropdownMenu</SectionTitle>
-      <Text>
+      <Text mb={"x2"}>
         The DropdownMenu is currently to be used as an uncontrolled component
         and comes with the functionality to handle opening and closing the menu
         internally. There are hooks provided to allow for items within the menu
