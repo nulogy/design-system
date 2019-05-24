@@ -7,6 +7,7 @@ import {
   SubsectionTitle,
   IconicButton,
   List,
+  Link,
   Branding
 } from "@nulogy/components";
 import theme from "../../../components/src/theme";
@@ -107,9 +108,16 @@ class Navigation extends React.Component {
         <LockBody isOpen={menuOpen} />
         <NavContainer isOpen={menuOpen}>
           <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
-          <Box pt="x4" pb="0" px="x4">
+          <Link
+            underline={false}
+            style={{ display: "block" }}
+            pt="x4"
+            pb="0"
+            px="x4"
+            href="/"
+          >
             <Branding subtext="Design System" />
-          </Box>
+          </Link>
           <Box p="x4">
             {menuData.map(menuItem => (
               <List key={menuItem.name} mb="x4" p="0">

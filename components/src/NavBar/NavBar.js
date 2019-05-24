@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
+import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
@@ -23,9 +24,14 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
 const MediumNavBar = ({ menuData, subtext, style, ...props }) => (
   <header {...props}>
     <Flex style={style}>
-      <Box height="40px" mt={subtext ? "-8px" : null}>
+      <Link
+        underline={false}
+        style={{ display: "block", height: subtext ? "56px" : "40px" }}
+        my={subtext ? "-8px" : null}
+        href="/"
+      >
         <Branding logoColor="white" subtext={subtext} />
-      </Box>
+      </Link>
       <Flex
         justifyContent="space-between"
         alignContent="flex-end"
@@ -125,13 +131,18 @@ class SmallNavBarNoState extends React.Component {
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <Flex style={style}>
-            <Box height="40px" mt={subtext && !smallScreen ? "-8px" : null}>
+            <Link
+              style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
+              my={subtext && !smallScreen ? "-8px" : null}
+              underline={false}
+              href="/"
+            >
               <Branding
                 logoColor="white"
                 logoType={smallScreen ? "lettermark" : "wordmark"}
                 subtext={smallScreen ? null : subtext}
               />
-            </Box>
+            </Link>
             <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
               {menuData.search && (
                 <Flex maxWidth="18em" alignItems="center" px="0">

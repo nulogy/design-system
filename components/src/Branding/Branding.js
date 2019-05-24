@@ -51,7 +51,7 @@ const getSize = (size, logoType) => (sizes[size] && sizes[size][logoType]) || si
 
 const getAlignment = alignment => alignments[alignment] || alignments.left;
 
-const BrandingLink = styled.a(
+const BrandingWrap = styled.div(
   {
     display: "inline-flex",
     flexDirection: "column",
@@ -79,7 +79,7 @@ const BrandingLink = styled.a(
 );
 
 const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props }) => (
-  <BrandingLink size={size} logoColor={logoColor} alignment={alignment} href="/" {...props}>
+  <BrandingWrap size={size} logoColor={logoColor} alignment={alignment} {...props}>
     {logoType === "lettermark" && (
       <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
         <path
@@ -107,7 +107,7 @@ const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props 
         {subtext}
       </React.Fragment>
     )}
-  </BrandingLink>
+  </BrandingWrap>
 );
 
 BaseBranding.propTypes = {
