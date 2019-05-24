@@ -207,6 +207,7 @@ const Select = ({
 Select.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
+  name: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   optionToString: PropTypes.func,
   required: PropTypes.bool,
@@ -226,6 +227,7 @@ const extractLabelFromOption = option => option && option.label;
 
 Select.defaultProps = {
   value: undefined,
+  name: undefined,
   required: false,
   onChange: undefined,
   error: undefined,
