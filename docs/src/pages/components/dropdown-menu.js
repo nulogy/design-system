@@ -125,7 +125,7 @@ export default () => (
       </Box>
 
       <Box mb="x6">
-        <SubsectionTitle>Custom </SubsectionTitle>
+        <SubsectionTitle>Custom Colors</SubsectionTitle>
         <DropdownMenu backgroundColor="blackBlue">
           <DropdownLink href="/" {...customColors}>
             Dropdown Link
@@ -174,21 +174,32 @@ export default () => (
     <DocSection>
       <SectionTitle>Closing the DropdownMenu</SectionTitle>
       <Text>
-        To allow items in the DropdownMenu to close the menu on click, use the
-        closeMenu function provided by the DropdownMenu component via the{" "}
+        The DropdownMenu is currently to be used as an uncontrolled component
+        and comes with the functionality to handle opening and closing the menu
+        internally. There are hooks provided to allow for items within the menu
+        to trigger it to close. Use the closeMenu function provided by the
+        DropdownMenu component via the{" "}
         <Link href="https://reactjs.org/docs/render-props.html">
           render props
         </Link>{" "}
-        React pattern.
+        React pattern as show below.
       </Text>
       <DropdownMenu>
         {({ closeMenu }) => (
-          <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>
+          <DropdownButton
+            onClick={e => {
+              closeMenu(e);
+            }}
+          >
+            Dropdown Button
+          </DropdownButton>
         )}
       </DropdownMenu>
       <Highlight className="js">
         {`<DropdownMenu>
-  {({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}
+  {({ closeMenu }) => (
+    <DropdownButton onClick={(e)=>{closeMenu(e)}}>Dropdown Button</DropdownButton>
+  )}
 </DropdownMenu>
 `}
       </Highlight>
