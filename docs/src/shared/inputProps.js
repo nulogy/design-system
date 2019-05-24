@@ -15,7 +15,7 @@ const inputProps = [
     name: "value",
     type: "String",
     defaultValue: "undefined",
-    description: "Value of selection for submission"
+    description: "Value of input, used when controlling the component"
   },
   {
     name: "disabled",
