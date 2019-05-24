@@ -48,6 +48,10 @@ export const menuData = [
         href: "/components/checkbox-group"
       },
       {
+        name: "Dropdown Menu",
+        href: "/components/dropdown-menu"
+      },
+      {
         name: "Flex",
         href: "/components/flex"
       },
