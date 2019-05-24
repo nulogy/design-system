@@ -150,7 +150,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Using DropdownItem</SectionTitle>
-      <Text mb={"x2"}>
+      <Text mb="x2">
         Using the Dropdown Link and DropdownButton components with the
         DropdownMenu are recommended as they provide the correct link and button
         styles for the dropdown. However, wrapping another component with
@@ -175,7 +175,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Closing the DropdownMenu</SectionTitle>
-      <Text mb={"x2"}>
+      <Text mb="x2">
         The DropdownMenu is currently to be used as an uncontrolled component.
         However, the component does come with hooks to use to close the menu
         when elements within the menu are clicked. Use the closeMenu function
