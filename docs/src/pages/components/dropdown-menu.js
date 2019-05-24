@@ -29,7 +29,7 @@ const propsRows = [
   {
     name: "trigger",
     type: "Function",
-    defaultValue: '() => <IconicButton icon="more"',
+    defaultValue: '() => <IconicButton icon="more"/>',
     description:
       "Function that returns a button component that will be used as the trigger"
   },
@@ -176,15 +176,15 @@ export default () => (
     <DocSection>
       <SectionTitle>Closing the DropdownMenu</SectionTitle>
       <Text mb={"x2"}>
-        The DropdownMenu is currently to be used as an uncontrolled component
-        and comes with the functionality to handle opening and closing the menu
-        internally. There are hooks provided to allow for items within the menu
-        to trigger it to close. Use the closeMenu function provided by the
-        DropdownMenu component via the{" "}
+        The DropdownMenu is currently to be used as an uncontrolled component.
+        However, the component does come with hooks to use to close the menu
+        when elements within the menu are clicked. Use the closeMenu function
+        provided by the DropdownMenu component via the{" "}
         <Link href="https://reactjs.org/docs/render-props.html">
           render props
         </Link>{" "}
-        React pattern as show below.
+        React pattern as shown below. Note: event must be passed in to
+        closeMenu.
       </Text>
       <DropdownMenu>
         {({ closeMenu }) => (
