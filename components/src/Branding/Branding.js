@@ -54,6 +54,7 @@ const getAlignment = alignment => alignments[alignment] || alignments.left;
 const BrandingWrap = styled.div(
   {
     display: "inline-flex",
+    userSelect: "none",
     flexDirection: "column",
     textDecoration: "none",
     fontStyle: "italic",
