@@ -33,7 +33,7 @@ const groupProps = [
   {
     name: "labelText",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "Required",
     description: "Informs users what the corresponding input field is for."
   },
   {

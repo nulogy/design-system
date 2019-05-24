@@ -7,14 +7,14 @@ const radioProps = [
   },
   {
     name: "name",
-    type: "undefined",
-    defaultValue: "Required",
+    type: "String",
+    defaultValue: "undefined",
     description: "Identified that groups inputs together"
   },
   {
     name: "value",
-    type: "undefined",
-    defaultValue: "Required",
+    type: "String",
+    defaultValue: "undefined",
     description: "Value of selection for submission"
   },
   {

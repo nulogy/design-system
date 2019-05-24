@@ -1,21 +1,21 @@
 const inputProps = [
   {
-    name: "name",
+    name: "id",
     type: "String",
     defaultValue: "Required",
+    description: "A unique ID for this input"
+  },
+  {
+    name: "name",
+    type: "String",
+    defaultValue: "undefined",
     description: "A unique name for this input"
   },
   {
     name: "value",
     type: "String",
-    defaultValue: "Required",
+    defaultValue: "undefined",
     description: "Value of selection for submission"
-  },
-  {
-    name: "id",
-    type: "String",
-    defaultValue: "Required",
-    description: "A unique ID for this input"
   },
   {
     name: "disabled",
