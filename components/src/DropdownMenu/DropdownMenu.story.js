@@ -52,7 +52,9 @@ storiesOf("DropdownMenu", module)
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
       <DropdownItem>
-        <a href="/">Custom Link Component</a>
+        <a href="/" style={{ textDecoration: "none" }}>
+          Custom Link Component
+        </a>
       </DropdownItem>
     </DropdownMenu>
   ));

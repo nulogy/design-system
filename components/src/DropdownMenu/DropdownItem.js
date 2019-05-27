@@ -23,6 +23,12 @@ const DropdownItem = styled.div(props => ({
     },
     "&:disabled": {
       opacity: ".5"
+    },
+    "&:visited": {
+      color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props)
+    },
+    "&:active": {
+      color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props)
     }
   }
 }));
