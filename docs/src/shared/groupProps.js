@@ -1,5 +1,11 @@
 const groupProps = [
   {
+    name: "name",
+    type: "String",
+    defaultValue: "Required",
+    description: "A unique name for this input that groups inputs together"
+  },
+  {
     name: "defaultValue",
     type: "String",
     defaultValue: "null",
@@ -27,14 +33,8 @@ const groupProps = [
   {
     name: "labelText",
     type: "String",
-    defaultValue: "null",
-    description: "Informs users what the corresponding input field is for."
-  },
-  {
-    name: "name",
-    type: "String",
     defaultValue: "Required",
-    description: "A unique name for this input"
+    description: "Informs users what the corresponding input field is for."
   },
   {
     name: "required",

@@ -1,5 +1,23 @@
 const inputProps = [
   {
+    name: "id",
+    type: "String",
+    defaultValue: "Required",
+    description: "A unique ID for this input"
+  },
+  {
+    name: "name",
+    type: "String",
+    defaultValue: "undefined",
+    description: "A unique name for this input"
+  },
+  {
+    name: "value",
+    type: "String",
+    defaultValue: "undefined",
+    description: "Value of input, used when controlling the component"
+  },
+  {
     name: "disabled",
     type: "Boolean",
     defaultValue: "false",
@@ -23,12 +41,6 @@ const inputProps = [
     defaultValue: "null",
     description:
       "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used."
-  },
-  {
-    name: "id",
-    type: "String",
-    defaultValue: "Required",
-    description: "A unique ID for this input"
   },
   {
     name: "labelText",
