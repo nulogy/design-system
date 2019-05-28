@@ -57,6 +57,20 @@ const propsRows = [
     defaultValue: "null",
     description:
       "Provides the subtext under the logo matching the Nulogy solution name"
+  },
+  {
+    name: "breakpointCollapseItems",
+    type: "number",
+    defaultValue: "theme.breakpoints.medium",
+    description:
+      "Provides the breakpoint where menu items will be collapsed into a dropdown menu"
+  },
+  {
+    name: "breakpointCollapseLogo",
+    type: "number",
+    defaultValue: "theme.breakpoints.small",
+    description:
+      "Provides the breakpoint where the logo is collapsed from wordmark to lettermark"
   }
 ];
 
