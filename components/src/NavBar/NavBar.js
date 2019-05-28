@@ -180,7 +180,7 @@ SmallNavBarNoState.propTypes = {
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
   style: PropTypes.shape({}),
-  breakpointCollapseLogo: PropTypes.number,
+  breakpointCollapseLogo: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   windowWidth: PropTypes.number,
   smallScreen: PropTypes.bool
 };
@@ -220,7 +220,7 @@ BaseNavBar.propTypes = {
     })
   }),
   className: PropTypes.string,
-  breakpointCollapseItems: PropTypes.number
+  breakpointCollapseItems: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 BaseNavBar.defaultProps = {
