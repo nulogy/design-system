@@ -120,8 +120,8 @@ class SmallNavBarNoState extends React.Component {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
       windowWidth,
-      smallBreakpoint,
-      smallScreen = windowWidth < smallBreakpoint,
+      breakpointCollapseLogo,
+      smallScreen = windowWidth < parseInt(breakpointCollapseLogo, 10),
       subtext,
       style,
       ...props
@@ -180,7 +180,7 @@ SmallNavBarNoState.propTypes = {
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
   style: PropTypes.shape({}),
-  smallBreakpoint: PropTypes.number,
+  breakpointCollapseLogo: PropTypes.number,
   windowWidth: PropTypes.number,
   smallScreen: PropTypes.bool
 };
@@ -189,7 +189,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   style: null,
-  smallBreakpoint: 768,
+  breakpointCollapseLogo: theme.breakpoints.small,
   windowWidth: undefined,
   smallScreen: undefined
 };
@@ -201,13 +201,15 @@ const navBarStyles = {
   padding: `${theme.space.x2} ${theme.space.x3}`
 };
 
-const BaseNavBar = withWindowDimensions(({ menuData, breakpoint, windowDimensions: { windowWidth }, ...props }) => {
-  if (windowWidth >= breakpoint) {
-    return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
-  } else {
-    return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
+const BaseNavBar = withWindowDimensions(
+  ({ menuData, breakpointCollapseItems, windowDimensions: { windowWidth }, ...props }) => {
+    if (windowWidth >= parseInt(breakpointCollapseItems, 10)) {
+      return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
+    } else {
+      return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
+    }
   }
-});
+);
 
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape({
@@ -218,13 +220,13 @@ BaseNavBar.propTypes = {
     })
   }),
   className: PropTypes.string,
-  breakpoint: PropTypes.number
+  breakpointCollapseItems: PropTypes.number
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
-  breakpoint: 1024
+  breakpointCollapseItems: theme.breakpoints.medium
 };
 
 const NavBar = styled(BaseNavBar)({});
