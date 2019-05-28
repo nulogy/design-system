@@ -61,14 +61,14 @@ const propsRows = [
   {
     name: "breakpointCollapseItems",
     type: "number",
-    defaultValue: "theme.breakpoints.medium",
+    defaultValue: "1024",
     description:
       "Provides the breakpoint where menu items will be collapsed into a dropdown menu"
   },
   {
     name: "breakpointCollapseLogo",
     type: "number",
-    defaultValue: "theme.breakpoints.small",
+    defaultValue: "768",
     description:
       "Provides the breakpoint where the logo is collapsed from wordmark to lettermark"
   }
