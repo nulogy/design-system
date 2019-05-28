@@ -141,11 +141,11 @@ export default () => (
           <Link href="https://nulogy.design/tokens">theme.breakpoints</Link>{" "}
           object
         </Text>
-        <Box color={{ small: "red", medium: "blue", large: "green" }}>
+        <Box color={{ extraSmall: "red", small: "blue", medium: "green" }}>
           Green text on large screens, blue on medium and red on small.
         </Box>
         <Highlight className="js">
-          {`<Box color={{ small: "red", medium: "blue", large: "green"}}>
+          {`<Box color={{ extraSmall: "red", small: "blue", medium: "green"}}>
   Green text on large screens, blue on medium and red on small.
 </Box>`}
         </Highlight>

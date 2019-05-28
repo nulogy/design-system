@@ -24,12 +24,15 @@ export default () => (
         available to use for Nulogy applications.
       </IntroText>
       <SectionTitle mt="x4">Typeface</SectionTitle>
-      <Flex flexDirection={{ small: "column", medium: "row" }}>
-        <Box width={{ small: 1, large: 1 / 2 }} mb={{ small: "x3", medium: 0 }}>
+      <Flex flexDirection={{ extraSmall: "column", small: "row" }}>
+        <Box
+          width={{ extraSmall: 1, medium: 1 / 2 }}
+          mb={{ extraSmall: "x3", small: 0 }}
+        >
           <SubsectionTitle>IBM Plex Sans</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
-        <Box width={{ small: 1, large: 1 / 2 }}>
+        <Box width={{ extraSmall: 1, medium: 1 / 2 }}>
           <SubsectionTitle fontFamily="mono">IBM Plex Mono</SubsectionTitle>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>

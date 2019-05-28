@@ -54,7 +54,7 @@ const iconNames = Object.keys(icons);
 const IconDisplay = props => (
   <Flex flexWrap="wrap" {...props}>
     {iconNames.map(icon => (
-      <Flex key={icon} width={{ small: 1 / 2, large: 1 / 5 }}>
+      <Flex key={icon} width={{ extraSmall: 1 / 2, medium: 1 / 5 }}>
         <Icon icon={icon} />
         <Text align="center" ml="x1">
           {icon}

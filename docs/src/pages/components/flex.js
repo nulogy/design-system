@@ -89,13 +89,16 @@ export default () => (
       <Text>
         This example displays columns on small screens and rows on large ones.
       </Text>
-      <Flex bg="lightBlue" flexDirection={{ small: "column", large: "row" }}>
+      <Flex
+        bg="lightBlue"
+        flexDirection={{ extraSmall: "column", medium: "row" }}
+      >
         <Box width={1 / 2} p="x3" m="x3" bg="blackBlue" />
         <Box width={1 / 2} p="x3" m="x3" bg="darkBlue" />
       </Flex>
 
       <Highlight className="js">
-        {`<Flex bg="lightBlue" flexDirection={{small: "column", medium: "row"}}>
+        {`<Flex bg="lightBlue" flexDirection={{extraSmall: "column", medium: "row"}}>
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>
   <Box width={1/2} p="x3" m="x3" bg="darkBlue"></Box>
 </Flex>

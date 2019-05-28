@@ -22,7 +22,7 @@ const SpacingExample = props => {
       </Flex>
       <Text
         textAlign="center"
-        fontSize={{ small: "small", large: "medium" }}
+        fontSize={{ extraSmall: "small", medium: "medium" }}
         mb="half"
       >
         {size}

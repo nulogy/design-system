@@ -233,21 +233,21 @@ const DemoPage = () => {
     <Chrome>
       <Main
         flexDirection={{
-          small: "column",
-          medium: "row",
-          large: "row"
+          extraSmall: "column",
+          small: "row",
+          medium: "row"
         }}
       >
         <Sidebar
           py="x3"
           px="x1"
-          flexDirection={{ small: "256px", medium: "256px" }}
-          order={{ small: "2", medium: "-1", large: "-1" }}
+          flexDirection={{ extraSmall: "256px", small: "256px" }}
+          order={{ extraSmall: "2", small: "-1", medium: "-1" }}
         >
           <Text fontWeight="medium" mx="x3" mb="x1">
             Contextual Menu
           </Text>
-          <Flex flexDirection={{ small: "row", medium: "column", large: "column" }} justifyContent="flex-start">
+          <Flex flexDirection={{ extraSmall: "row", small: "column", medium: "column" }} justifyContent="flex-start">
             <SidebarItem>Contextual Tab 1</SidebarItem>
             <SidebarItem>Contextual Tab 2</SidebarItem>
             <SidebarItem>Contextual Tab 3</SidebarItem>
@@ -257,7 +257,7 @@ const DemoPage = () => {
         </Sidebar>
         <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
-          <Box width={{ small: "100%", medium: "80%", large: "80%" }}>
+          <Box width={{ extraSmall: "100%", small: "80%", medium: "80%" }}>
             <Form title="Job 324400" mb="x4">
               <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
                 <List compact>

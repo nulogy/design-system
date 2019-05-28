@@ -29,10 +29,10 @@ const IndexPage = () => (
     </Intro>
 
     <Flex
-      flexDirection={{ small: "column", medium: "row" }}
-      mb={{ small: "x6", large: 0 }}
+      flexDirection={{ extraSmall: "column", small: "row" }}
+      mb={{ extraSmall: "x6", medium: 0 }}
     >
-      <Box width={{ small: 1, medium: 1 / 2 }} mb="x6">
+      <Box width={{ extraSmall: 1, small: 1 / 2 }} mb="x6">
         <SectionTitle mb="x3">Visual Style</SectionTitle>
         <Text mb="x3">
           Learn about the style that makes up Nulogy applications; including
@@ -43,7 +43,7 @@ const IndexPage = () => (
         </PrimaryButton>
       </Box>
 
-      <Box width={{ small: 1, medium: 1 / 2 }}>
+      <Box width={{ extraSmall: 1, small: 1 / 2 }}>
         <SectionTitle mb="x3">Components</SectionTitle>
         <Text mb="x3">
           Built using React, components are tested interface design patterns

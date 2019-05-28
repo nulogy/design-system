@@ -163,11 +163,11 @@ export default () => (
       <Text>
         This example displays columns on small screens and rows on large ones.
       </Text>
-      <Text color={{ small: "red", medium: "blue", large: "green" }}>
+      <Text color={{ extraSmall: "red", small: "blue", medium: "green" }}>
         Green text on large screens, blue on medium and red on small.
       </Text>
       <Highlight className="js">
-        {`<Text color={{ small: "red", medium: "blue", large: "green"}}>
+        {`<Text color={{ extraSmall: "red", small: "blue", medium: "green"}}>
   Green text on large screens, blue on medium and red on small.
 </Text>`}
       </Highlight>
