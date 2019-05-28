@@ -37,9 +37,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
       "large": { "value": "1024" },
     }
     ```
-  ```
-
-  ```
 - [**Breaking Change**] All refs pointing to button components now forwarded down to the underlying `<button>` tag.
 - Card component now accepts all the same props as Box component.
 
