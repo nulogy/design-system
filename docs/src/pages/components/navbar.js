@@ -59,14 +59,14 @@ const propsRows = [
       "Provides the subtext under the logo matching the Nulogy solution name"
   },
   {
-    name: "breakpointCollapseItems",
+    name: "breakpointUpper",
     type: "number",
     defaultValue: "1024",
     description:
       "Provides the breakpoint where menu items will be collapsed into a dropdown menu"
   },
   {
-    name: "breakpointCollapseLogo",
+    name: "breakpointLower",
     type: "number",
     defaultValue: "768",
     description:

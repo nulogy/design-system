@@ -120,8 +120,8 @@ class SmallNavBarNoState extends React.Component {
       menuData,
       menuState: { isOpen, handleMenuToggle, closeMenu },
       windowWidth,
-      breakpointCollapseLogo,
-      smallScreen = windowWidth < parseInt(breakpointCollapseLogo, 10),
+      breakpointLower,
+      smallScreen = windowWidth < parseInt(breakpointLower, 10),
       subtext,
       style,
       ...props
@@ -180,7 +180,7 @@ SmallNavBarNoState.propTypes = {
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
   style: PropTypes.shape({}),
-  breakpointCollapseLogo: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   windowWidth: PropTypes.number,
   smallScreen: PropTypes.bool
 };
@@ -189,7 +189,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   style: null,
-  breakpointCollapseLogo: theme.breakpoints.small,
+  breakpointLower: theme.breakpoints.small,
   windowWidth: undefined,
   smallScreen: undefined
 };
@@ -202,8 +202,8 @@ const navBarStyles = {
 };
 
 const BaseNavBar = withWindowDimensions(
-  ({ menuData, breakpointCollapseItems, windowDimensions: { windowWidth }, ...props }) => {
-    if (windowWidth >= parseInt(breakpointCollapseItems, 10)) {
+  ({ menuData, breakpointUpper, windowDimensions: { windowWidth }, ...props }) => {
+    if (windowWidth >= parseInt(breakpointUpper, 10)) {
       return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
     } else {
       return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
@@ -220,13 +220,13 @@ BaseNavBar.propTypes = {
     })
   }),
   className: PropTypes.string,
-  breakpointCollapseItems: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
-  breakpointCollapseItems: theme.breakpoints.medium
+  breakpointUpper: theme.breakpoints.medium
 };
 
 const NavBar = styled(BaseNavBar)({});
