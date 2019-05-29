@@ -19,16 +19,16 @@ storiesOf("LoginPages", module)
       justifyContent="center"
       flexDirection="column"
       alignItems="center"
-      bg={{ small: "white", medium: "whiteGrey", large: "whiteGrey" }}
+      bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
       <Box flexGrow="1">
         <Flex
-          height={{ small: "100%", medium: "auto", large: "auto" }}
+          height={{ extraSmall: "100%", small: "auto" }}
           width="384px"
-          borderRadius={{ small: null, medium: "medium", large: "medium" }}
-          boxShadow={{ small: null, medium: "small", large: "small" }}
-          px={{ small: "x2", medium: "x4", large: "x4" }}
-          py={{ small: "x3", medium: "x5", large: "x5" }}
+          borderRadius={{ extraSmall: null, small: "medium" }}
+          boxShadow={{ extraSmall: null, small: "small" }}
+          px={{ extraSmall: "x2", small: "x4" }}
+          py={{ extraSmall: "x3", small: "x5" }}
           bg="white"
           my="x2"
           flexDirection="column"
@@ -52,9 +52,8 @@ storiesOf("LoginPages", module)
       </Box>
       <Box
         width={{
-          small: `calc(100% - ${theme.space.x4})`,
-          medium: `calc(100% - ${theme.space.x8})`,
-          large: `calc(100% - ${theme.space.x8})`
+          extraSmall: `calc(100% - ${theme.space.x4})`,
+          small: `calc(100% - ${theme.space.x8})`
         }}
         pt="x2"
         mb="x4"
@@ -70,15 +69,15 @@ storiesOf("LoginPages", module)
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"
-      bg={{ small: "white", medium: "whiteGrey", large: "whiteGrey" }}
+      bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
       <Flex
-        height={{ small: "100%", medium: "auto", large: "auto" }}
+        height={{ extraSmall: "100%", small: "auto" }}
         width="384px"
-        borderRadius={{ small: null, medium: "medium", large: "medium" }}
-        boxShadow={{ small: null, medium: "small", large: "small" }}
-        px={{ small: "x2", medium: "x4", large: "x4" }}
-        py={{ small: "x3", medium: "x5", large: "x5" }}
+        borderRadius={{ extraSmall: null, small: "medium" }}
+        boxShadow={{ extraSmall: null, small: "small" }}
+        px={{ extraSmall: "x2", small: "x4" }}
+        py={{ extraSmall: "x3", small: "x5" }}
         bg="white"
         flexDirection="column"
         alignItems="center"
@@ -108,16 +107,16 @@ storiesOf("LoginPages", module)
       justifyContent="center"
       flexDirection="column"
       alignItems="center"
-      bg={{ small: "white", medium: "whiteGrey", large: "whiteGrey" }}
+      bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
       <Box flexGrow="1">
         <Flex
-          height={{ small: "100%", medium: "auto", large: "auto" }}
+          height={{ extraSmall: "100%", small: "auto" }}
           width="384px"
-          borderRadius={{ small: null, medium: "medium", large: "medium" }}
-          boxShadow={{ small: null, medium: "small", large: "small" }}
-          px={{ small: "x2", medium: "x4", large: "x4" }}
-          py={{ small: "x3", medium: "x5", large: "x5" }}
+          borderRadius={{ extraSmall: null, small: "medium" }}
+          boxShadow={{ extraSmall: null, small: "small" }}
+          px={{ extraSmall: "x2", small: "x4" }}
+          py={{ extraSmall: "x3", small: "x5" }}
           bg="white"
           my="x2"
           flexDirection="column"
@@ -144,9 +143,8 @@ storiesOf("LoginPages", module)
       </Box>
       <Box
         width={{
-          small: `calc(100% - ${theme.space.x4})`,
-          medium: `calc(100% - ${theme.space.x8})`,
-          large: `calc(100% - ${theme.space.x8})`
+          extraSmall: `calc(100% - ${theme.space.x4})`,
+          small: `calc(100% - ${theme.space.x8})`
         }}
         pt="x2"
         mb="x4"
@@ -162,15 +160,15 @@ storiesOf("LoginPages", module)
       minHeight="100vh"
       justifyContent="center"
       alignItems="center"
-      bg={{ small: "white", medium: "whiteGrey", large: "whiteGrey" }}
+      bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
       <Flex
-        height={{ small: "100%", medium: "auto", large: "auto" }}
+        height={{ extraSmall: "100%", small: "auto" }}
         width="384px"
-        borderRadius={{ small: null, medium: "medium", large: "medium" }}
-        boxShadow={{ small: null, medium: "small", large: "small" }}
-        px={{ small: "x2", medium: "x4", large: "x4" }}
-        py={{ small: "x3", medium: "x5", large: "x5" }}
+        borderRadius={{ extraSmall: null, small: "medium" }}
+        boxShadow={{ extraSmall: null, small: "small" }}
+        px={{ extraSmall: "x2", small: "x4" }}
+        py={{ extraSmall: "x3", small: "x5" }}
         bg="white"
         flexDirection="column"
         alignItems="center"
