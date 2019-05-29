@@ -34,15 +34,15 @@ export default () => (
     </Intro>
     <Flex
       mb="x8"
-      flexDirection={{ small: "column", medium: "row", large: "row" }}
+      flexDirection={{ extraSmall: "column", small: "row", medium: "row" }}
     >
       <Flex
         bg="whiteGrey"
         justifyContent="center"
         alignItems="center"
         p="x3"
-        width={{ small: 1, medium: 2 / 3, large: 1 / 2 }}
-        height={{ small: "200px", medium: "auto", large: "auto" }}
+        width={{ extraSmall: 1, small: 2 / 3, medium: 1 / 2 }}
+        height={{ extraSmall: "200px", small: "auto", medium: "auto" }}
       >
         <Box bg="darkBlue" height="80px" width="80px" mr="x3" />
         <Box bg="darkBlue" height="80px" width="80px" mr="x3" />
@@ -54,8 +54,8 @@ export default () => (
         justifyContent="center"
         alignItems="center"
         p="x3"
-        width={{ small: 1, medium: 1 / 3, large: 1 / 2 }}
-        height={{ small: "200px", medium: "auto", large: "auto" }}
+        width={{ extraSmall: 1, small: 1 / 3, medium: 1 / 2 }}
+        height={{ extraSmall: "200px", small: "auto", medium: "auto" }}
       >
         <Box height="80px" width="80px" mb="x3" bg="blackBlue" />
         <Box height="80px" width="80px" mb="x3" bg="darkBlue" />
@@ -417,8 +417,8 @@ export default () => (
       </Text>
       <Flex color="white">
         <Box
-          width={{ small: 1 / 9, medium: 1 / 9, large: 7 / 9 }}
-          bg={{ small: "blue", medium: "darkBlue", large: "blackBlue" }}
+          width={{ extraSmall: 1 / 9, small: 1 / 9, medium: 7 / 9 }}
+          bg={{ extraSmall: "blue", small: "darkBlue", medium: "blackBlue" }}
           m="x1"
           py="x3"
           px="x4"
@@ -426,8 +426,12 @@ export default () => (
           1
         </Box>
         <Box
-          width={{ small: 1 / 9, medium: 7 / 9, large: 1 / 9 }}
-          bg={{ small: "darkBlue", medium: "blackBlue", large: "darkBlue" }}
+          width={{ extraSmall: 1 / 9, small: 7 / 9, medium: 1 / 9 }}
+          bg={{
+            extraSmall: "darkBlue",
+            small: "blackBlue",
+            medium: "darkBlue"
+          }}
           m="x1"
           py="x3"
           px="x4"
@@ -435,8 +439,8 @@ export default () => (
           2
         </Box>
         <Box
-          width={{ small: 7 / 9, medium: 1 / 9, large: 1 / 9 }}
-          bg={{ small: "blackBlue", medium: "blue", large: "blue" }}
+          width={{ extraSmall: 7 / 9, small: 1 / 9, medium: 1 / 9 }}
+          bg={{ extraSmall: "blackBlue", small: "blue", medium: "blue" }}
           m="x1"
           py="x3"
           px="x4"
@@ -446,9 +450,9 @@ export default () => (
       </Flex>
       <Highlight>
         {`<Flex color="white">
-  <Box width={ { small: 1 / 9, medium: 1 / 9, large: 7 / 9 } } bg={ { small: "blue", medium: "darkBlue", large: "blackBlue" } } m="x1" py="x3" px="x4">1</Box>
-  <Box width={ { small: 1 / 9, medium: 7 / 9, large: 1 / 9 } } bg={ { small: "darkBlue", medium: "blackBlue", large: "darkBlue" } } m="x1" py="x3" px="x4">2</Box>
-  <Box width={ { small: 7 / 9, medium: 1 / 9, large: 1 / 9 } } bg={ { small: "blackBlue", medium: "blue", large: "blue" } } m="x1" py="x3" px="x4">3</Box>
+  <Box width={ { extraSmall: 1 / 9, small: 1 / 9, medium: 7 / 9 } } bg={ { extraSmall: "blue", small: "darkBlue", medium: "blackBlue" } } m="x1" py="x3" px="x4">1</Box>
+  <Box width={ { extraSmall: 1 / 9, small: 7 / 9, medium: 1 / 9 } } bg={ { extraSmall: "darkBlue", small: "blackBlue", medium: "darkBlue" } } m="x1" py="x3" px="x4">2</Box>
+  <Box width={ { extraSmall: 7 / 9, small: 1 / 9, medium: 1 / 9 } } bg={ { extraSmall: "blackBlue", small: "blue", medium: "blue" } } m="x1" py="x3" px="x4">3</Box>
 </Flex>`}
       </Highlight>
     </DocSection>
@@ -460,15 +464,15 @@ export default () => (
       </Text>
       <Flex
         height="400px"
-        flexDirection={{ small: "column", medium: "row", large: "row" }}
+        flexDirection={{ extraSmall: "column", small: "row", medium: "row" }}
       >
         <Flex
           bg="whiteGrey"
           justifyContent="center"
           alignItems="center"
           p="x3"
-          width={{ small: 1, medium: 2 / 3, large: 1 / 2 }}
-          height={{ small: "200px", medium: "auto", large: "auto" }}
+          width={{ extraSmall: 1, small: 2 / 3, medium: 1 / 2 }}
+          height={{ extraSmall: "200px", small: "auto", medium: "auto" }}
         >
           <Text mb={0}>Main content</Text>
         </Flex>
@@ -478,18 +482,18 @@ export default () => (
           justifyContent="center"
           alignItems="center"
           p="x3"
-          width={{ small: 1, medium: 1 / 3, large: 1 / 2 }}
-          height={{ small: "200px", medium: "auto", large: "auto" }}
+          width={{ extraSmall: 1, small: 1 / 3, medium: 1 / 2 }}
+          height={{ extraSmall: "200px", small: "auto", medium: "auto" }}
         >
           <Text mb={0}>Sidebar content</Text>
         </Flex>
       </Flex>
       <Highlight>
-        {`<Flex height="400px" flexDirection={ { small: "column", medium: "row", large: "row" } }>
-  <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 2 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
+        {`<Flex height="400px" flexDirection={ { extraSmall: "column", small: "row", medium: "row" } }>
+  <Flex bg="whiteGrey" justifyContent="center" alignItems="center" p="x3" width={ { extraSmall: 1, small: 2 / 3, medium: 1 / 2 } } height={ { extraSmall: "200px", small: "auto", medium: "auto" } }>
     <Text mb={ 0 }>Main content</Text>
   </Flex>
-  <Flex bg="lightGrey" flexDirection="column" justifyContent="center" alignItems="center" p="x3" width={ { small: 1, medium: 1 / 3, large: 1 / 2 } } height={ { small: "200px", medium: "auto", large: "auto" } }>
+  <Flex bg="lightGrey" flexDirection="column" justifyContent="center" alignItems="center" p="x3" width={ { extraSmall: 1, small: 1 / 3, medium: 1 / 2 } } height={ { extraSmall: "200px", small: "auto", medium: "auto" } }>
     <Text mb={ 0 }>Sidebar content</Text>
   </Flex>
 </Flex>`}

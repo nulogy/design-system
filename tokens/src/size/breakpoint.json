@@ -1,11 +1,11 @@
 {
-    "size": {
-      "breakpoint": {
-        "small" : { "value": "0" },        
-        "medium" : { "value": "768" },
-        "large": { "value": "1024" }
-      }
+  "size": {
+    "breakpoint": {
+      "extraSmall": { "value": "0" },
+      "small": { "value": "768" },
+      "medium": { "value": "1024" },
+      "large": { "value": "1360" },
+      "extraLarge": { "value": "1920" }
     }
   }
-
-
+}

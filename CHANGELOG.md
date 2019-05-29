@@ -18,6 +18,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [**Breaking Change**] Token values for breakpoints were changed
+  - new breakpoints
+  ```js
+    {
+      "extraSmall": { "value": "0" },
+      "small": { "value": "768" },
+      "medium": { "value": "1024" },
+      "large": { "value": "1360" },
+      "extraLarge": { "value": "1920" }
+    }
+  ```
+  - old breakpoints
+    ```js
+    {
+      "small": { "value": "0" },
+      "medium": { "value": "768" },
+      "large": { "value": "1024" },
+    }
+    ```
 - [**Breaking Change**] All refs pointing to button components now forwarded down to the underlying `<button>` tag.
 - Card component now accepts all the same props as Box component.
 
