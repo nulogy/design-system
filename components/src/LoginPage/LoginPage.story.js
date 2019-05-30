@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -34,7 +33,7 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext={"Logo Subtext"} alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
@@ -80,7 +79,7 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext={"Logo Subtext"} alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
@@ -127,7 +126,7 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext={"Logo Subtext"} alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
@@ -137,7 +136,7 @@ storiesOf("LoginPages", module)
             <PrimaryButton fullWidth>Sign In</PrimaryButton>
           </Form>
           <Box py="x1" mt="x1">
-            <Link>Forgot your password?</Link>
+            <Link href="/">Forgot your password?</Link>
           </Box>
         </Flex>
       </Box>
