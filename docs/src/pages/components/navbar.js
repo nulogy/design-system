@@ -49,14 +49,13 @@ const propsRows = [
     type: "object",
     defaultValue: "null",
     description:
-      "Provides data used to build link heirarchy and search functionality. See menuData Prop section below"
+      "Data used to build link heirarchy and search functionality. See menuData Prop section below"
   },
   {
     name: "subtext",
     type: "string",
     defaultValue: "null",
-    description:
-      "Provides the subtext under the logo matching the Nulogy solution name"
+    description: "The subtext under the logo"
   },
   {
     name: "breakpointUpper",
@@ -79,13 +78,13 @@ const menuDataKeyRows = [
     name: "primaryMenu",
     type: "array of menu item objects",
     description:
-      "Provides data to the main navigation menu, aligned to the left of the NavBar"
+      "Data to the main navigation menu, aligned to the left of the NavBar"
   },
   {
     name: "secondaryMenu",
     type: "array of menu item objects",
     description:
-      "Provides data to the secondary navigation menu, aligned to the right of the NavBar"
+      "Data to the secondary navigation menu, aligned to the right of the NavBar"
   },
   {
     name: "search",
@@ -104,19 +103,19 @@ const menuItemKeyRows = [
     name: "href",
     type: "string",
     description:
-      "Accepts a URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar"
+      "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar"
   },
   {
     name: "items",
     type: "array",
     description:
-      "Accepts an array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view"
+      "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view"
   },
   {
     name: "render",
     type: "function",
     description:
-      "Accepts a function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu"
+      "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu"
   }
 ];
 

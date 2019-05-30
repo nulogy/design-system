@@ -106,9 +106,9 @@ export default () => (
 
       <Box mb="x6">
         <SubsectionTitle>With subtext</SubsectionTitle>
-        <Branding subtext="Operational Solution" />
+        <Branding subtext="Logo Subtext" />
         <Highlight className="js">
-          {`<Branding subtext="Operational Solution"/>`}
+          {`<Branding subtext="Logo Subtext"/>`}
         </Highlight>
       </Box>
 
