@@ -14,7 +14,7 @@ storiesOf("Branding", module).add("Branding", () => (
         <Branding logoType="lettermark" />
         <br />
         <br />
-        <Branding subtext="Operational Solution" />
+        <Branding subtext="Logo Subtext" />
         <br />
         <br />
         <Branding size="large" />
@@ -23,7 +23,7 @@ storiesOf("Branding", module).add("Branding", () => (
         <Branding size="large" logoType="lettermark" />
         <br />
         <br />
-        <Branding size="large" subtext="Operational Solution" />
+        <Branding size="large" subtext="Logo Subtext" />
       </Box>
       <Box bg="black" width={1 / 2} p="x2">
         <Branding logoColor="white" />
@@ -32,7 +32,7 @@ storiesOf("Branding", module).add("Branding", () => (
         <Branding logoColor="white" logoType="lettermark" />
         <br />
         <br />
-        <Branding logoColor="white" subtext="Operational Solution" />
+        <Branding logoColor="white" subtext="Logo Subtext" />
         <br />
         <br />
         <Branding logoColor="white" size="large" />
@@ -41,7 +41,7 @@ storiesOf("Branding", module).add("Branding", () => (
         <Branding logoColor="white" size="large" logoType="lettermark" />
         <br />
         <br />
-        <Branding logoColor="white" size="large" subtext="Operational Solution" />
+        <Branding logoColor="white" size="large" subtext="Logo Subtext" />
       </Box>
     </Flex>
     <Flex my="x2" justifyContent="space-between">

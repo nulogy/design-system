@@ -17,6 +17,7 @@ const BaseForm = ({ title, children, ...props }) => (
 );
 
 const Form = styled(BaseForm)(space, ({ title }) => ({
+  width: "100%",
   [`${SectionTitle}`]: {
     marginBottom: title ? theme.space.x6 : 0
   },

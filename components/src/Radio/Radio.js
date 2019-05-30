@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { space } from "styled-system";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { Text } from "../Type";
@@ -133,8 +134,11 @@ BaseRadio.defaultProps = {
   required: false
 };
 
-const Radio = styled(BaseRadio)({
-  padding: `${theme.space.half} 0`
-});
+const Radio = styled(BaseRadio)(
+  {
+    padding: `${theme.space.half} 0`
+  },
+  space
+);
 
 export default Radio;

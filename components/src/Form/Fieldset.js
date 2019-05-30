@@ -6,7 +6,8 @@ const Fieldset = styled.fieldset({
   margin: 0,
   legend: {
     padding: 0
-  }
+  },
+  width: "100%"
 });
 
 export default Fieldset;

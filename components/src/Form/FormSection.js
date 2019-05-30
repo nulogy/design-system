@@ -18,6 +18,7 @@ const BaseFormSection = ({ title, children, ...props }) => (
 );
 
 const FormSection = styled(BaseFormSection)(({ title }) => ({
+  width: "100%",
   padding: 0,
   margin: 0,
   border: "none",
