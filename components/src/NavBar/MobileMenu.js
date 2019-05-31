@@ -133,14 +133,14 @@ const renderTopLayerMenuItems = (menuData, linkOnClick, themeColors) =>
 const SubMenu = ({ menuItem, linkOnClick, themeColors, layer }) => (
   <>
     {layer === 0 && (
-      <SubsectionTitle mb={theme.space.x1} color="grey" key={menuItem.name}>
+      <SubsectionTitle mb={theme.space.x1} color={themeColors && themeColors.mobileMenuHeading} key={menuItem.name}>
         {menuItem.name}
       </SubsectionTitle>
     )}
     {layer > 0 && (
       <Text
         mb={theme.space.x1}
-        color="grey"
+        color={themeColors && themeColors.mobileMenuHeading}
         py={theme.space.x1}
         style={{ paddingLeft: `${24 * layer + 24}px` }}
         key={menuItem.name}
