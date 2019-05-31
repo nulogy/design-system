@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Link } from "../Link";
 import theme from "../theme";
 
-const MenuLink = styled(Link)({
+const MenuLink = styled.a(({ themeColors }) => ({
   display: "block",
+  color: (themeColors && themeColors.color) || theme.colors.white,
+  textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.base,
@@ -14,12 +15,14 @@ const MenuLink = styled(Link)({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    backgroundColor: theme.colors.black
+    color: (themeColors && themeColors.hoverColor) || theme.colors.lightBlue,
+    backgroundColor: (themeColors && themeColors.hoverBackground) || theme.colors.black,
+    cursor: "pointer"
   },
   "&:disabled": {
     opacity: ".5"
   }
-});
+}));
 
 MenuLink.propTypes = {
   color: PropTypes.string,

@@ -7,10 +7,10 @@ import { DropdownMenu } from "../DropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button({
+const StyledButton = styled.button(({ themeColors }) => ({
   display: "block",
   position: "relative",
-  color: theme.colors.white,
+  color: (themeColors && themeColors.color) || theme.colors.white,
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
@@ -22,19 +22,25 @@ const StyledButton = styled.button({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
+    color: (themeColors && themeColors.hoverColor) || theme.colors.lightBlue,
+    backgroundColor: (themeColors && themeColors.hoverBackground) || theme.colors.black,
     cursor: "pointer"
   },
   "&:disabled": {
     opacity: ".5"
   }
-});
+}));
 
-const MenuTriggerButton = React.forwardRef(({ name, ...props }, ref) => (
-  <StyledButton ref={ref} {...props}>
+const MenuTriggerButton = React.forwardRef(({ name, themeColors, ...props }, ref) => (
+  <StyledButton themeColors={themeColors} ref={ref} {...props}>
     {name}
-    <Icon style={{ position: "absolute", top: "11px" }} icon="downArrow" color="lightGrey" size="20px" p="2px" />
+    <Icon
+      style={{ position: "absolute", top: "11px" }}
+      icon="downArrow"
+      color={themeColors.color || "lightGrey"}
+      size="20px"
+      p="2px"
+    />
   </StyledButton>
 ));
 
@@ -43,9 +49,9 @@ MenuTriggerButton.propTypes = {
 };
 
 const MenuTrigger = props => {
-  const { menuData, name, ...otherProps } = props;
+  const { menuData, name, themeColors, ...otherProps } = props;
   return (
-    <DropdownMenu {...otherProps} trigger={() => <MenuTriggerButton name={name} />}>
+    <DropdownMenu {...otherProps} trigger={() => <MenuTriggerButton themeColors={themeColors} name={name} />}>
       {({ closeMenu }) => (
         <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
           {renderSubMenuItems(menuData, closeMenu, SubMenuTrigger)}

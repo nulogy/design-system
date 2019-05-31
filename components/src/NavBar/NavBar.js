@@ -32,7 +32,7 @@ const themeColors = {
   white: {
     color: theme.colors.darkBlue,
     hoverColor: theme.colors.blackBlue,
-    background: theme.colors.whiteGrey,
+    background: theme.colors.lightGrey,
     hoverBackground: theme.colors.grey,
     logoColor: "blue"
   }
@@ -63,6 +63,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
       >
         {menuData.primaryMenu && (
           <DesktopMenu
+            themeColors={getThemeColor(themeColor)}
             style={{ paddingRight: theme.space.x3 }}
             aria-labelledby="primary-navigation"
             menuData={menuData.primaryMenu}
@@ -75,7 +76,11 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
             </Box>
           )}
           {menuData.secondaryMenu && (
-            <DesktopMenu aria-labelledby="secondary-navigation" pl="x2" menuData={menuData.secondaryMenu} />
+            <DesktopMenu
+              themeColors={getThemeColor(themeColor)}
+              aria-labelledby="secondary-navigation"
+              menuData={menuData.secondaryMenu}
+            />
           )}
         </Flex>
       </Flex>
