@@ -21,16 +21,40 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
   }
 }));
 
-const MediumNavBar = ({ menuData, subtext, style, ...props }) => (
+const themeColors = {
+  blue: {
+    color: theme.colors.white,
+    hoverColor: theme.colors.lightBlue,
+    background: theme.colors.blackBlue,
+    hoverBackground: theme.colors.black,
+    logoColor: "white"
+  },
+  white: {
+    color: theme.colors.darkBlue,
+    hoverColor: theme.colors.blackBlue,
+    background: theme.colors.whiteGrey,
+    hoverBackground: theme.colors.grey,
+    logoColor: "blue"
+  }
+};
+
+const getThemeColor = themeColor => themeColors[themeColor] || themeColors.blue;
+
+const NavBarBackground = styled(Flex)(({ themeColor }) => ({
+  background: getThemeColor(themeColor).background,
+  padding: `${theme.space.x2} ${theme.space.x3}`
+}));
+
+const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
   <header {...props}>
-    <Flex style={style}>
+    <NavBarBackground themeColor={themeColor}>
       <Link
         underline={false}
         style={{ display: "block", height: subtext ? "56px" : "40px" }}
         my={subtext ? "-8px" : null}
         href="/"
       >
-        <Branding logoColor="white" subtext={subtext} />
+        <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
       </Link>
       <Flex
         justifyContent="space-between"
@@ -55,7 +79,7 @@ const MediumNavBar = ({ menuData, subtext, style, ...props }) => (
           )}
         </Flex>
       </Flex>
-    </Flex>
+    </NavBarBackground>
   </header>
 );
 
@@ -71,8 +95,8 @@ MediumNavBar.defaultProps = {
   style: null
 };
 
-const MobileMenuTrigger = styled.button({
-  color: theme.colors.white,
+const MobileMenuTrigger = styled.button(({ themeColor }) => ({
+  color: getThemeColor(themeColor).color,
   background: "none",
   border: "none",
   padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
@@ -82,11 +106,11 @@ const MobileMenuTrigger = styled.button({
   height: theme.space.x5,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
+    color: getThemeColor(themeColor).color.hoverColor,
+    backgroundColor: getThemeColor(themeColor).hoverBackground,
     cursor: "pointer"
   }
-});
+}));
 
 const SmallHeader = styled.header(({ isOpen }) =>
   isOpen
@@ -123,14 +147,14 @@ class SmallNavBarNoState extends React.Component {
       breakpointLower,
       smallScreen = windowWidth < parseInt(breakpointLower, 10),
       subtext,
-      style,
+      themeColor,
       ...props
     } = this.props;
     return (
       <>
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-          <Flex style={style}>
+          <NavBarBackground themeColor={themeColor}>
             <Link
               style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
               my={subtext && !smallScreen ? "-8px" : null}
@@ -138,7 +162,7 @@ class SmallNavBarNoState extends React.Component {
               href="/"
             >
               <Branding
-                logoColor="white"
+                logoColor={getThemeColor(themeColor).logoColor}
                 logoType={smallScreen ? "lettermark" : "wordmark"}
                 subtext={smallScreen ? null : subtext}
               />
@@ -151,6 +175,7 @@ class SmallNavBarNoState extends React.Component {
               )}
               {(menuData.primaryMenu || menuData.secondaryMenu) && (
                 <MobileMenuTrigger
+                  themeColor={themeColor}
                   onClick={() => {
                     handleMenuToggle();
                   }}
@@ -160,7 +185,7 @@ class SmallNavBarNoState extends React.Component {
                 </MobileMenuTrigger>
               )}
             </Flex>
-          </Flex>
+          </NavBarBackground>
           {isOpen && (
             <MobileMenu subtext={subtext} includeSubtext={smallScreen} menuData={menuData} closeMenu={closeMenu} />
           )}
@@ -179,7 +204,6 @@ SmallNavBarNoState.propTypes = {
   }).isRequired,
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
-  style: PropTypes.shape({}),
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   windowWidth: PropTypes.number,
   smallScreen: PropTypes.bool
@@ -188,7 +212,6 @@ SmallNavBarNoState.propTypes = {
 SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
-  style: null,
   breakpointLower: theme.breakpoints.small,
   windowWidth: undefined,
   smallScreen: undefined
@@ -196,17 +219,12 @@ SmallNavBarNoState.defaultProps = {
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const navBarStyles = {
-  background: theme.colors.blackBlue,
-  padding: `${theme.space.x2} ${theme.space.x3}`
-};
-
 const BaseNavBar = withWindowDimensions(
   ({ menuData, breakpointUpper, windowDimensions: { windowWidth }, ...props }) => {
     if (windowWidth >= parseInt(breakpointUpper, 10)) {
-      return <MediumNavBar {...props} menuData={menuData} style={navBarStyles} />;
+      return <MediumNavBar {...props} menuData={menuData} />;
     } else {
-      return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} style={navBarStyles} />;
+      return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} />;
     }
   }
 );
@@ -220,13 +238,15 @@ BaseNavBar.propTypes = {
     })
   }),
   className: PropTypes.string,
-  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  colorTheme: PropTypes.oneOf(["blue", "white"])
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
-  breakpointUpper: theme.breakpoints.medium
+  breakpointUpper: theme.breakpoints.medium,
+  colorTheme: "blue"
 };
 
 const NavBar = styled(BaseNavBar)({});
