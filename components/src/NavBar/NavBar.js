@@ -192,7 +192,13 @@ class SmallNavBarNoState extends React.Component {
             </Flex>
           </NavBarBackground>
           {isOpen && (
-            <MobileMenu subtext={subtext} includeSubtext={smallScreen} menuData={menuData} closeMenu={closeMenu} />
+            <MobileMenu
+              themeColors={getThemeColor(themeColor)}
+              subtext={subtext}
+              includeSubtext={smallScreen}
+              menuData={menuData}
+              closeMenu={closeMenu}
+            />
           )}
         </SmallHeader>
       </>
