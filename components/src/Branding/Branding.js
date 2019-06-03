@@ -55,6 +55,7 @@ const getAlignment = alignment => alignments[alignment] || alignments.left;
 
 const BrandingWrap = styled.div(
   {
+    width: "100%",
     display: "inline-flex",
     userSelect: "none",
     flexDirection: "column"
@@ -123,10 +124,10 @@ const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props 
           </g>
         </svg>
         {subtext && (
-          <Flex justifyContent={getAlignment(alignment)} width={getSize(size, logoType).width}>
+          <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : null}>
             {alignment !== "left" && <Line logoColor={logoColor} />}
             <BrandingText
-              style={{ marginLeft: alignment !== "left" && "2px", marginRight: alignment !== "right" && "2px" }}
+              style={{ marginLeft: alignment !== "left" && "4px", marginRight: alignment !== "right" && "4px" }}
             >
               {subtext}
             </BrandingText>
