@@ -33,8 +33,8 @@ const themeColors = {
   white: {
     color: theme.colors.darkBlue,
     hoverColor: theme.colors.blackBlue,
-    background: theme.colors.lightGrey,
-    hoverBackground: theme.colors.grey,
+    background: theme.colors.white,
+    hoverBackground: theme.colors.whiteGrey,
     mobileMenuHeading: theme.colors.blackBlue,
     logoColor: "blue"
   }
