@@ -58,7 +58,16 @@ const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBack
 ));
 
 MenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
+};
+
+MenuTriggerButton.defaultProps = {
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
 };
 
 const MenuTrigger = props => {

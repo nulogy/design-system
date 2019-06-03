@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { display } from "styled-system";
-import { themeGet } from "styled-system";
+import { display, themeGet } from "styled-system";
+
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
 import SubMenuLink from "./SubMenuLink";
@@ -126,7 +126,7 @@ const renderSubMenu = (menuItem, linkOnClick, themeColors, layer) => (
   </li>
 );
 
-const getRenderFunction = (menuItem, layer) => {
+const getRenderFunction = menuItem => {
   if (menuItem.items) {
     return renderSubMenu;
   } else if (menuItem.render) {
@@ -138,7 +138,7 @@ const getRenderFunction = (menuItem, layer) => {
 
 const renderMenuItems = (menuItems, linkOnClick, themeColors, layer) =>
   menuItems.map(menuItem => {
-    const render = getRenderFunction(menuItem, layer);
+    const render = getRenderFunction(menuItem);
     return render(menuItem, linkOnClick, themeColors, layer);
   });
 
@@ -192,7 +192,7 @@ const Menu = styled.ul(() => ({
 
 const Nav = styled.nav(
   ({ backgroundColor }) => ({
-    backgroundColor: backgroundColor
+    backgroundColor
   }),
   {
     minHeight: "calc(100vh - 72px)"
