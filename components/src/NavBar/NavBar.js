@@ -65,7 +65,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
       >
         {menuData.primaryMenu && (
           <DesktopMenu
-            themeColors={getThemeColor(themeColor)}
+            themeColorObject={getThemeColor(themeColor)}
             style={{ paddingRight: theme.space.x3 }}
             aria-labelledby="primary-navigation"
             menuData={menuData.primaryMenu}
@@ -79,7 +79,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
           )}
           {menuData.secondaryMenu && (
             <DesktopMenu
-              themeColors={getThemeColor(themeColor)}
+              themeColorObject={getThemeColor(themeColor)}
               aria-labelledby="secondary-navigation"
               menuData={menuData.secondaryMenu}
             />
@@ -195,7 +195,7 @@ class SmallNavBarNoState extends React.Component {
           </NavBarBackground>
           {isOpen && (
             <MobileMenu
-              themeColors={getThemeColor(themeColor)}
+              themeColorObject={getThemeColor(themeColor)}
               subtext={subtext}
               includeSubtext={smallScreen}
               menuData={menuData}

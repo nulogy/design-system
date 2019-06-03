@@ -47,22 +47,22 @@ const Nav = styled.nav({
   display: "flex"
 });
 
-const renderMenuTrigger = (menuItem, themeColors) => (
+const renderMenuTrigger = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuTrigger name={menuItem.name} menuData={menuItem.items} {...themeColors} />
+    <MenuTrigger name={menuItem.name} menuData={menuItem.items} {...themeColorObject} />
   </div>
 );
 
-const renderMenuLink = (menuItem, themeColors) => (
+const renderMenuLink = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuLink href={menuItem.href} {...themeColors}>
+    <MenuLink href={menuItem.href} {...themeColorObject}>
       {menuItem.name}
     </MenuLink>
   </div>
 );
 
-const renderCustom = (menuItem, themeColors) => (
-  <ApplyMenuLinkStyles {...themeColors} key={menuItem.name}>
+const renderCustom = (menuItem, themeColorObject) => (
+  <ApplyMenuLinkStyles {...themeColorObject} key={menuItem.name}>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );
@@ -79,10 +79,10 @@ const getRenderFunction = menuItem => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColors) => getRenderFunction(menuItem)(menuItem, themeColors);
+const renderMenuItem = (menuItem, themeColorObject) => getRenderFunction(menuItem)(menuItem, themeColorObject);
 
-const BaseDesktopMenu = ({ menuData, themeColors, ...props }) => (
-  <Nav {...props}>{menuData.map(menuItem => renderMenuItem(menuItem, themeColors))}</Nav>
+const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
+  <Nav {...props}>{menuData.map(menuItem => renderMenuItem(menuItem, themeColorObject))}</Nav>
 );
 
 BaseDesktopMenu.propTypes = {

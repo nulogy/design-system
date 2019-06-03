@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display, themeGet } from "styled-system";
-
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
 import SubMenuLink from "./SubMenuLink";
@@ -106,23 +105,23 @@ const SubMenuItemsList = styled.ul({
   margin: "0"
 });
 
-const renderMenuLink = (menuItem, linkOnClick, themeColors, layer) => (
+const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
-    <MobileMenuLink layer={layer} {...themeColors} onClick={linkOnClick} href={menuItem.href}>
+    <MobileMenuLink layer={layer} {...themeColorObject} onClick={linkOnClick} href={menuItem.href}>
       {menuItem.name}
     </MobileMenuLink>
   </li>
 );
 
-const renderCustom = (menuItem, linkOnClick, themeColors, layer) => (
-  <ApplyMenuLinkStyles key={menuItem.name} {...themeColors} layer={layer} onClick={linkOnClick}>
+const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
+  <ApplyMenuLinkStyles key={menuItem.name} {...themeColorObject} layer={layer} onClick={linkOnClick}>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );
 
-const renderSubMenu = (menuItem, linkOnClick, themeColors, layer) => (
+const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.name} style={{ display: "block" }}>
-    <SubMenu menuItem={menuItem} layer={layer} themeColors={themeColors} linkOnClick={linkOnClick} />
+    <SubMenu menuItem={menuItem} layer={layer} themeColorObject={themeColorObject} linkOnClick={linkOnClick} />
   </li>
 );
 
@@ -136,26 +135,30 @@ const getRenderFunction = menuItem => {
   }
 };
 
-const renderMenuItems = (menuItems, linkOnClick, themeColors, layer) =>
+const renderMenuItems = (menuItems, linkOnClick, themeColorObject, layer) =>
   menuItems.map(menuItem => {
     const render = getRenderFunction(menuItem);
-    return render(menuItem, linkOnClick, themeColors, layer);
+    return render(menuItem, linkOnClick, themeColorObject, layer);
   });
 
-const renderTopLayerMenuItems = (menuData, linkOnClick, themeColors) =>
-  renderMenuItems(menuData, linkOnClick, themeColors, 0);
+const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
+  renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
 
-const SubMenu = ({ menuItem, linkOnClick, themeColors, layer }) => (
+const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   <>
     {layer === 0 && (
-      <SubsectionTitle mb={theme.space.x1} color={themeColors && themeColors.mobileMenuHeading} key={menuItem.name}>
+      <SubsectionTitle
+        mb={theme.space.x1}
+        color={themeColorObject && themeColorObject.mobileMenuHeading}
+        key={menuItem.name}
+      >
         {menuItem.name}
       </SubsectionTitle>
     )}
     {layer > 0 && (
       <Text
         mb={theme.space.x1}
-        color={themeColors && themeColors.mobileMenuHeading}
+        color={themeColorObject && themeColorObject.mobileMenuHeading}
         py={theme.space.x1}
         style={{ paddingLeft: `${24 * layer + 24}px` }}
         key={menuItem.name}
@@ -163,7 +166,7 @@ const SubMenu = ({ menuItem, linkOnClick, themeColors, layer }) => (
         {menuItem.name}
       </Text>
     )}
-    <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColors, layer + 1)}</SubMenuItemsList>
+    <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
   </>
 );
 
@@ -199,16 +202,16 @@ const Nav = styled.nav(
   }
 );
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColors, ...props }) => (
-  <Nav backgroundColor={themeColors && themeColors.background} {...props}>
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, ...props }) => (
+  <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     {subtext && includeSubtext && (
-      <BrandingWrap color={themeColors && themeColors.color}>
+      <BrandingWrap color={themeColorObject && themeColorObject.color}>
         <BrandingText>{subtext}</BrandingText>
       </BrandingWrap>
     )}
     <Menu>
-      {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColors)}
-      {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColors)}
+      {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
+      {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
     </Menu>
   </Nav>
 );
