@@ -144,28 +144,20 @@ const renderMenuItems = (menuItems, linkOnClick, themeColorObject, layer) =>
 const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
   renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
 
+const getSubMenuHeading = (layer, color, name) =>
+  layer === 0 ? (
+    <SubsectionTitle mb={theme.space.x1} color={color}>
+      {name}
+    </SubsectionTitle>
+  ) : (
+    <Text mb={theme.space.x1} color={color} py={theme.space.x1} style={{ paddingLeft: getPaddingLeft(layer) }}>
+      {name}
+    </Text>
+  );
+
 const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   <>
-    {layer === 0 && (
-      <SubsectionTitle
-        mb={theme.space.x1}
-        color={themeColorObject && themeColorObject.mobileMenuHeading}
-        key={menuItem.name}
-      >
-        {menuItem.name}
-      </SubsectionTitle>
-    )}
-    {layer > 0 && (
-      <Text
-        mb={theme.space.x1}
-        color={themeColorObject && themeColorObject.mobileMenuHeading}
-        py={theme.space.x1}
-        style={{ paddingLeft: `${24 * layer + 24}px` }}
-        key={menuItem.name}
-      >
-        {menuItem.name}
-      </Text>
-    )}
+    {getSubMenuHeading(layer, themeColorObject && themeColorObject.mobileMenuHeading, menuItem.name)}
     <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
   </>
 );
