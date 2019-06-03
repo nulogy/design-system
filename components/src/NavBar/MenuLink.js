@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { themeGet } from "styled-system";
 import PropTypes from "prop-types";
 import theme from "../theme";
 
-const MenuLink = styled.a(({ themeColors }) => ({
+const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
   display: "block",
-  color: (themeColors && themeColors.color) || theme.colors.white,
+  color: themeGet(`colors.${color}`, color)(color),
   textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
@@ -15,8 +16,8 @@ const MenuLink = styled.a(({ themeColors }) => ({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: (themeColors && themeColors.hoverColor) || theme.colors.lightBlue,
-    backgroundColor: (themeColors && themeColors.hoverBackground) || theme.colors.black,
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer"
   },
   "&:disabled": {
@@ -26,12 +27,14 @@ const MenuLink = styled.a(({ themeColors }) => ({
 
 MenuLink.propTypes = {
   color: PropTypes.string,
-  underline: PropTypes.bool
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
 };
 
 MenuLink.defaultProps = {
   color: theme.colors.white,
-  underline: false
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
 };
 
 export default MenuLink;

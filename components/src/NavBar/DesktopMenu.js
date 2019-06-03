@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import theme from "../theme";
+import { themeGet } from "styled-system";
 import MenuTrigger from "./MenuTrigger";
 import MenuLink from "./MenuLink";
-import theme from "../theme";
 
-const ApplyMenuLinkStyles = styled.div(({ themeColors }) => ({
+const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground }) => ({
   "*": {
     display: "block",
-    color: (themeColors && themeColors.color) || theme.colors.white,
+    color: themeGet(`colors.${color}`, color)(color),
     textDecoration: "none",
     border: "none",
     backgroundColor: "transparent",
@@ -20,8 +21,8 @@ const ApplyMenuLinkStyles = styled.div(({ themeColors }) => ({
     borderRadius: theme.radii.medium,
     "&:hover, &:focus": {
       outline: "none",
-      color: (themeColors && themeColors.hoverColor) || theme.colors.lightBlue,
-      backgroundColor: (themeColors && themeColors.hoverBackground) || theme.colors.black,
+      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
       cursor: "pointer"
     },
     "&:disabled": {
@@ -30,26 +31,38 @@ const ApplyMenuLinkStyles = styled.div(({ themeColors }) => ({
   }
 }));
 
+ApplyMenuLinkStyles.propTypes = {
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
+};
+
+ApplyMenuLinkStyles.defaultProps = {
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
+};
+
 const Nav = styled.nav({
   display: "flex"
 });
 
 const renderMenuTrigger = (menuItem, themeColors) => (
   <div key={menuItem.name}>
-    <MenuTrigger themeColors={themeColors} name={menuItem.name} menuData={menuItem.items} />
+    <MenuTrigger name={menuItem.name} menuData={menuItem.items} {...themeColors} />
   </div>
 );
 
 const renderMenuLink = (menuItem, themeColors) => (
   <div key={menuItem.name}>
-    <MenuLink themeColors={themeColors} href={menuItem.href}>
+    <MenuLink href={menuItem.href} {...themeColors}>
       {menuItem.name}
     </MenuLink>
   </div>
 );
 
 const renderCustom = (menuItem, themeColors) => (
-  <ApplyMenuLinkStyles themeColors={themeColors} key={menuItem.name}>
+  <ApplyMenuLinkStyles {...themeColors} key={menuItem.name}>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );

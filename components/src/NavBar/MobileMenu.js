@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
+import { themeGet } from "styled-system";
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
 import SubMenuLink from "./SubMenuLink";
@@ -16,12 +17,12 @@ const BrandingWrap = styled.div(
     color: theme.colors.white
   },  
   ({ color }) => ({
-    color: color,
+    color: themeGet(`colors.${color}`, color)(color)
     active: {
-      color: color
+      color: themeGet(`colors.${color}`, color)(color)
     },
     visited: {
-      color: color
+      color: themeGet(`colors.${color}`, color)(color)
     }
   }),
 );
@@ -49,12 +50,12 @@ const ApplyMenuLinkStyles = styled.li({
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;
 
-const ApplyMenuLinkStyles = styled.li(({ themeColors, layer }) => ({
+const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer }) => ({
   display: "block",
   marginBottom: theme.space.x1,
   "*": {
     display: "block",
-    color: (themeColors && themeColors.color) || theme.colors.white,
+    color: themeGet(`colors.${color}`, color)(color),
     fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
     lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
     padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
@@ -63,14 +64,28 @@ const ApplyMenuLinkStyles = styled.li(({ themeColors, layer }) => ({
     textDecoration: "none",
     "&:hover, &:focus": {
       outline: "none",
-      color: (themeColors && themeColors.hoverColor) || theme.colors.lightBlue,
-      backgroundColor: (themeColors && themeColors.hoverBackground) || theme.colors.black
+      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground)
     },
     "&:disabled": {
       opacity: ".5"
     }
   }
 }));
+
+ApplyMenuLinkStyles.propTypes = {
+  layer: PropTypes.number,
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
+};
+
+ApplyMenuLinkStyles.defaultProps = {
+  layer: 0,
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
+};
 
 const MobileMenuLink = styled(MenuLink)(
   {
@@ -93,14 +108,14 @@ const SubMenuItemsList = styled.ul({
 
 const renderMenuLink = (menuItem, linkOnClick, themeColors, layer) => (
   <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
-    <MobileMenuLink layer={layer} themeColors={themeColors} onClick={linkOnClick} href={menuItem.href}>
+    <MobileMenuLink layer={layer} {...themeColors} onClick={linkOnClick} href={menuItem.href}>
       {menuItem.name}
     </MobileMenuLink>
   </li>
 );
 
 const renderCustom = (menuItem, linkOnClick, themeColors, layer) => (
-  <ApplyMenuLinkStyles key={menuItem.name} themeColors={themeColors} layer={layer} onClick={linkOnClick}>
+  <ApplyMenuLinkStyles key={menuItem.name} {...themeColors} layer={layer} onClick={linkOnClick}>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );
