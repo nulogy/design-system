@@ -123,4 +123,6 @@ storiesOf("NavBar", module)
   .add("Without search and primary menu", () => <NavBar menuData={{ secondaryMenu }} />)
   .add("With branding only", () => <NavBar menuData={{}} />)
   .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />)
-  .add("With subtext", () => <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} />);
+  .add("With subtext", () => (
+    <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
+  ));

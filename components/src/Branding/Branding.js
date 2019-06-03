@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
+import { themeGet } from "styled-system";
+import { BrandingText } from ".";
+import { Flex } from "../Flex";
 
 const logoColors = {
   white: {
@@ -55,15 +57,8 @@ const BrandingWrap = styled.div(
   {
     display: "inline-flex",
     userSelect: "none",
-    flexDirection: "column",
-    textDecoration: "none",
-    fontStyle: "italic",
-    letterSpacing: "0.02em",
-    padding: "4px 2px"
+    flexDirection: "column"
   },
-  ({ alignment }) => ({
-    alignItems: getAlignment(alignment)
-  }),
   ({ logoColor }) => ({
     color: getLogoColor(logoColor).text,
     active: {
@@ -74,15 +69,33 @@ const BrandingWrap = styled.div(
     }
   }),
   ({ size }) => ({
-    fontSize: size === "large" ? theme.fontSizes.large : theme.fontSizes.small,
-    lineHeight: size === "large" ? theme.lineHeights.subsectionTitle : theme.lineHeights.smallTextCompressed
+    padding: size === "large" ? null : "4px 2px"
   })
 );
+
+const Line = styled.div(({ logoColor }) => ({
+  position: "relative",
+  width: "100%",
+  ":before": {
+    content: "''",
+    position: "absolute",
+    top: "50%",
+    left: 0,
+    borderTop: `1px solid ${getLogoColor(logoColor).text}`,
+    background: getLogoColor(logoColor).text,
+    width: "100%",
+    transform: "translateY(-50%)"
+  }
+}));
 
 const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props }) => (
   <BrandingWrap size={size} logoColor={logoColor} alignment={alignment} {...props}>
     {logoType === "lettermark" && (
-      <svg {...getSize(size, logoType)} viewBox="0 0 37 32" style={{ display: "block" }}>
+      <svg
+        {...getSize(size, logoType)}
+        viewBox="0 0 37 32"
+        style={{ display: "block", margin: size === "large" ? null : "2px 0" }}
+      >
         <path
           fill={getLogoColor(logoColor).letter}
           d="M30.6967273,1.13648485 L36.3810909,3.40945455 L36.3810909,23.8758788 C36.3810909,28.2705455 30.9507879,29.0424242 27.2853333,29.5602424 C29.3818182,29.0424242 30.7083636,28.4606061 30.6967273,23.8758788 L30.6967273,5.68436364 L25.0123636,3.40945455 L30.6967273,1.13648485 Z M6.82084848,28.4237576 L6.82084848,15.9204848 C6.82084848,14.6618182 7.76533333,13.238303 8.91151515,12.7476364 L14.7801212,10.2264242 L14.7801212,18.1779394 L20.4644848,21.6048485 C21.6106667,22.1866667 23.8758788,22.2002424 23.8758788,20.4664242 L23.8758788,17.0550303 L21.5990303,15.9166061 L21.5990303,1.56319402e-13 L4.26666667,6.38642424 C1.91030303,7.25333333 3.55271368e-15,9.98593939 3.55271368e-15,12.5071515 L3.55271368e-15,31.2669091 L6.82084848,28.4237576 Z"
@@ -91,7 +104,11 @@ const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props 
     )}
     {logoType !== "lettermark" && (
       <React.Fragment>
-        <svg {...getSize(size, logoType)} viewBox="0 0 133 32" style={{ display: "block" }}>
+        <svg
+          {...getSize(size, logoType)}
+          viewBox="0 0 133 32"
+          style={{ display: "block", margin: size === "large" ? null : "2px 0" }}
+        >
           <path
             fill={getLogoColor(logoColor).letter}
             d="M30.6967273,1.13648485 L36.3810909,3.40945455 L36.3810909,23.8758788 C36.3810909,28.2705455 30.9507879,29.0424242 27.2853333,29.5602424 C29.3818182,29.0424242 30.7083636,28.4606061 30.6967273,23.8758788 L30.6967273,5.68436364 L25.0123636,3.40945455 L30.6967273,1.13648485 Z M6.82084848,28.4237576 L6.82084848,15.9204848 C6.82084848,14.6618182 7.76533333,13.238303 8.91151515,12.7476364 L14.7801212,10.2264242 L14.7801212,18.1779394 L20.4644848,21.6048485 C21.6106667,22.1866667 23.8758788,22.2002424 23.8758788,20.4664242 L23.8758788,17.0550303 L21.5990303,15.9166061 L21.5990303,1.56319402e-13 L4.26666667,6.38642424 C1.91030303,7.25333333 3.55271368e-15,9.98593939 3.55271368e-15,12.5071515 L3.55271368e-15,31.2669091 L6.82084848,28.4237576 Z"
@@ -105,7 +122,17 @@ const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props 
             <path d="M75,9 L77.8276364,9 L82.2649697,20.6363636 L87.1483636,9 L89.4504242,9 L82.3813333,25.3238788 L82.2649697,25.5546667 C81.1478788,28.0965657 80.2874343,29.9066667 79.6836364,30.9849697 L76.7415758,30.9849697 C77.3683498,30.3346009 77.9302011,29.6246546 78.4191515,28.8652121 C79.0313917,27.8817808 79.5750659,26.8572886 80.046303,25.7990303 L81.0004848,23.7452121 L75,9 Z" />
           </g>
         </svg>
-        {subtext}
+        {subtext && (
+          <Flex justifyContent={getAlignment(alignment)} width={getSize(size, logoType).width}>
+            {alignment !== "left" && <Line logoColor={logoColor} />}
+            <BrandingText
+              style={{ marginLeft: alignment !== "left" && "2px", marginRight: alignment !== "right" && "2px" }}
+            >
+              {subtext}
+            </BrandingText>
+            {alignment !== "right" && <Line logoColor={logoColor} />}
+          </Flex>
+        )}
       </React.Fragment>
     )}
   </BrandingWrap>
