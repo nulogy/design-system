@@ -86,11 +86,13 @@ const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
 );
 
 BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({}))
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  themeColorObject: PropTypes.shape({})
 };
 
 BaseDesktopMenu.defaultProps = {
-  menuData: null
+  menuData: null,
+  themeColorObject: null
 };
 
 const DesktopMenu = styled(BaseDesktopMenu)({

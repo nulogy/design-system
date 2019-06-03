@@ -175,11 +175,13 @@ SubMenu.propTypes = {
   menuItem: PropTypes.shape({
     name: PropTypes.string.isRequired
   }).isRequired,
-  linkOnClick: PropTypes.func
+  linkOnClick: PropTypes.func,
+  themeColorObject: PropTypes.shape({})
 };
 
 SubMenu.defaultProps = {
-  linkOnClick: null
+  linkOnClick: null,
+  themeColorObject: undefined
 };
 
 const Menu = styled.ul(() => ({
@@ -223,14 +225,16 @@ BaseMobileMenu.propTypes = {
   }),
   subtext: PropTypes.string,
   includeSubtext: PropTypes.bool,
-  closeMenu: PropTypes.func
+  closeMenu: PropTypes.func,
+  themeColorObject: PropTypes.shape({})
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
   subtext: null,
   includeSubtext: true,
-  closeMenu: () => {}
+  closeMenu: () => {},
+  themeColorObject: undefined
 };
 
 const MobileMenu = styled(BaseMobileMenu)(display);

@@ -93,13 +93,13 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
 MediumNavBar.propTypes = {
   subtext: PropTypes.string,
   menuData: PropTypes.shape({}),
-  style: PropTypes.shape({})
+  themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
 MediumNavBar.defaultProps = {
   subtext: null,
   menuData: null,
-  style: null
+  themeColor: undefined
 };
 
 const MobileMenuTrigger = styled.button(({ themeColor }) => ({
@@ -219,7 +219,8 @@ SmallNavBarNoState.propTypes = {
   subtext: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   windowWidth: PropTypes.number,
-  smallScreen: PropTypes.bool
+  smallScreen: PropTypes.bool,
+  themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
 SmallNavBarNoState.defaultProps = {
@@ -227,7 +228,8 @@ SmallNavBarNoState.defaultProps = {
   subtext: null,
   breakpointLower: theme.breakpoints.small,
   windowWidth: undefined,
-  smallScreen: undefined
+  smallScreen: undefined,
+  themeColor: undefined
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
@@ -252,14 +254,14 @@ BaseNavBar.propTypes = {
   }),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  colorTheme: PropTypes.oneOf(["blue", "white"])
+  themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: null,
   breakpointUpper: theme.breakpoints.medium,
-  colorTheme: "blue"
+  themeColor: "blue"
 };
 
 const NavBar = styled(BaseNavBar)({});
