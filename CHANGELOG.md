@@ -11,8 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?path=/story/dropdownmenu--dropdownmenu) component
 - Added [`Branding`](https://storybook.nulogy.design/?path=/story/branding--branding) component
-- Added [https://storybook.nulogy.design/?path=/story/icon--icon]("more") icon
-- Added support for [list of errors](https://storybook.nulogy.design/?path=/story/input--with-error-list) on Input, Textarea, Select, CheckboxGroup, RadioGroup, InlineValidation, and HeaderValidation
+- Added ["more"](https://storybook.nulogy.design/?path=/story/input--with-error-list) icon
+- Added support for [https://storybook.nulogy.design/?path=/story/input--with-error-list](list of errors) on Input, Textarea, Select, CheckboxGroup, RadioGroup, InlineValidation, and HeaderValidation
   - errorList prop has been added
   - [**Breaking Change**] error prop renamed to errorMessage
 
