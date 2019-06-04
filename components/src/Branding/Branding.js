@@ -76,7 +76,7 @@ const BrandingWrap = styled.div(
     }
   }),
   ({ size }) => ({
-    padding: size === "large" ? null : "4px 2px"
+    padding: size === "large" ? null : "4px 0"
   })
 );
 
