@@ -12,12 +12,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?path=/story/dropdownmenu--dropdownmenu) component
 - Added [`Branding`](https://storybook.nulogy.design/?path=/story/branding--branding) component
 - Added ["more"](https://storybook.nulogy.design/?path=/story/input--with-error-list) icon
-- Added support for [list of errors](https://storybook.nulogy.design/?path=/story/input--with-error-list) on Input, Textarea, Select, CheckboxGroup, RadioGroup, InlineValidation, and HeaderValidation
-  - errorList prop has been added
-  - [**Breaking Change**] error prop renamed to errorMessage
 
 ### Changed
 
+- Updated the error API for form components
+  - Added support for [list of errors](https://storybook.nulogy.design/?path=/story/input--with-error-list) on Input, Textarea, Select, CheckboxGroup, RadioGroup, InlineValidation, and HeaderValidation
+  - `errorList` prop has been added for the list of errors
+  - [**Breaking Change**] `error` prop renamed to `errorMessage`
 - [**Breaking Change**] Token values for breakpoints were changed
   - new breakpoints
   ```js
@@ -38,7 +39,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     }
     ```
 - [**Breaking Change**] All refs pointing to button components now forwarded down to the underlying `<button>` tag.
-- Card component now accepts all the same props as Box component.
+- The `Card` component now extends the `Box` components, and therefore supports all of the `Box` props
 
 ### Deprecated
 
