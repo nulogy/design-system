@@ -47,6 +47,12 @@ const propsRows = [
       "Subtext that is placed under the logo to specify the specific software product a user is interacting with"
   },
   {
+    name: "withLine",
+    type: "Bool",
+    defaultValue: "false",
+    description: "Horizontal line around the subtext, subtext must be defined"
+  },
+  {
     name: "alignment",
     type: "String",
     defaultValue: "right",
@@ -125,6 +131,14 @@ export default () => (
   <Branding subtext="Middle Align" alignment="middle"/>
   <Branding subtext="Right Align" alignment="right"/>
 </Flex>`}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>With Line</SubsectionTitle>
+        <Branding withLine alignment="middle" subtext="Logo Subtext" />
+        <Highlight className="js">
+          {`<Branding withLine alignment="middle" subtext="Logo Subtext"/>`}
         </Highlight>
       </Box>
     </DocSection>
