@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+## [0.7.0] - 2019-06-04
+
+### Added
 
 - Added [`DropdownMenu`](https://storybook.nulogy.design/?path=/story/dropdownmenu--dropdownmenu) component
 - Added [`Branding`](https://storybook.nulogy.design/?path=/story/branding--branding) component
@@ -41,8 +50,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [**Breaking Change**] All refs pointing to button components now forwarded down to the underlying `<button>` tag.
 - The `Card` component now extends the `Box` components, and therefore supports all of the `Box` props
 
-### Deprecated
-
 ### Removed
 
 - Description prop in the [`NavBar`](https://nulogy.design/components/navbar/) component has been removed
@@ -51,8 +58,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - NavBar search is now styled properly in Safari.
 - Bug where NavBar and Tooltip would not close on mobile safari fixed.
-
-### Security
 
 ## [0.6.0] - 2019-04-26
 
