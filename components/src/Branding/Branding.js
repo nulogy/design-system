@@ -95,7 +95,7 @@ const Line = styled.div(({ logoColor }) => ({
   }
 }));
 
-const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props }) => (
+const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor, ...props }) => (
   <BrandingWrap size={size} logoColor={logoColor} alignment={alignment} {...props}>
     {logoType === "lettermark" && (
       <svg
@@ -131,13 +131,13 @@ const BaseBranding = ({ logoType, subtext, size, alignment, logoColor, ...props 
         </svg>
         {subtext && (
           <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : null}>
-            {alignment !== "left" && <Line logoColor={logoColor} />}
+            {alignment !== "left" && withLine && <Line logoColor={logoColor} />}
             <BrandingText
               style={{ marginLeft: alignment !== "left" && "4px", marginRight: alignment !== "right" && "4px" }}
             >
               {subtext}
             </BrandingText>
-            {alignment !== "right" && <Line logoColor={logoColor} />}
+            {alignment !== "right" && withLine && <Line logoColor={logoColor} />}
           </Flex>
         )}
       </React.Fragment>
@@ -150,6 +150,7 @@ BaseBranding.propTypes = {
   logoColor: PropTypes.oneOf(["blue", "white"]),
   size: PropTypes.oneOf(["medium", "large"]),
   alignment: PropTypes.oneOf(["left", "middle", "right"]),
+  withLine: PropTypes.bool,
   subtext: PropTypes.string
 };
 
@@ -158,6 +159,7 @@ BaseBranding.defaultProps = {
   logoColor: "blue",
   size: "medium",
   alignment: "left",
+  withLine: false,
   subtext: null
 };
 
