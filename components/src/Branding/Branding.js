@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import theme from "../theme";
 import { themeGet } from "styled-system";
 import { BrandingText } from ".";
 import { Flex } from "../Flex";
@@ -9,12 +10,14 @@ const logoColors = {
   white: {
     letter: "#F0B41C",
     logo: "#FFFFFF",
-    text: "#FFFFFF"
+    text: theme.colors.white,
+    line: theme.colors.lightGrey
   },
   blue: {
     letter: "#F0B41C",
     logo: "#1C68A5",
-    text: "#1C68A5"
+    text: "#0E77D2",
+    line: theme.colors.lightBlue
   }
 };
 
@@ -60,6 +63,9 @@ const BrandingWrap = styled.div(
     userSelect: "none",
     flexDirection: "column"
   },
+  ({ alignment }) => ({
+    alignItems: getAlignment(alignment)
+  }),
   ({ logoColor }) => ({
     color: getLogoColor(logoColor).text,
     active: {
@@ -82,8 +88,8 @@ const Line = styled.div(({ logoColor }) => ({
     position: "absolute",
     top: "50%",
     left: 0,
-    borderTop: `1px solid ${getLogoColor(logoColor).text}`,
-    background: getLogoColor(logoColor).text,
+    borderTop: `1px solid ${getLogoColor(logoColor).line}`,
+    background: getLogoColor(logoColor).line,
     width: "100%",
     transform: "translateY(-50%)"
   }
