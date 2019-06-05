@@ -70,8 +70,11 @@ export default () => (
       <SectionTitle>Contextual Colours</SectionTitle>
       <Flex flexDirection={{ extraSmall: "column", small: "row" }}>
         <Palette name="Green" colour={tokens.color_base_green} />
+        <Palette name="Light Green" colour={tokens.color_base_light_green} />
         <Palette name="Red" colour={tokens.color_base_red} />
+        <Palette name="Light Red" colour={tokens.color_base_light_red} />
         <Palette name="Yellow" colour={tokens.color_base_yellow} />
+        <Palette name="Light Yellow" colour={tokens.color_base_light_yellow} />
       </Flex>
     </DocSection>
   </Layout>
