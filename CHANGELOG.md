@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added new icons:
   - zoomIn
   - zoomOut
+  
+- Added light variations for green, red and yellow colours
 
 ### Changed
 
