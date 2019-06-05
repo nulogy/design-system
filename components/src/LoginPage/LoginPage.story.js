@@ -37,7 +37,7 @@ storiesOf("LoginPage", module)
             withLine
             size="large"
             subtext="Logo Subtext"
-            alignment="middle"
+            alignment="center"
             style={{ marginBottom: theme.space.x2 }}
           />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
@@ -89,7 +89,7 @@ storiesOf("LoginPage", module)
             withLine
             size="large"
             subtext="Logo Subtext"
-            alignment="middle"
+            alignment="center"
             style={{ marginBottom: theme.space.x2 }}
           />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
@@ -142,7 +142,7 @@ storiesOf("LoginPage", module)
             withLine
             size="large"
             subtext="Logo Subtext"
-            alignment="middle"
+            alignment="center"
             style={{ marginBottom: theme.space.x2 }}
           />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">

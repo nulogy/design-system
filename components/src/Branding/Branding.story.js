@@ -52,22 +52,22 @@ storiesOf("Branding", module).add("Branding", () => (
     </Flex>
     <Flex my="x2" justifyContent="space-between">
       <Branding subtext="Left Align" alignment="left" />
-      <Branding subtext="Middle Align" alignment="middle" />
+      <Branding subtext="Center Align" alignment="center" />
       <Branding subtext="Right Align" alignment="right" />
     </Flex>
     <Flex my="x2" justifyContent="space-between">
       <Branding withLine subtext="Left Align" alignment="left" />
-      <Branding withLine subtext="Middle Align" alignment="middle" />
+      <Branding withLine subtext="Center Align" alignment="center" />
       <Branding withLine subtext="Right Align" alignment="right" />
     </Flex>
     <Flex my="x2" justifyContent="space-between">
       <Branding size="large" subtext="Left Align" alignment="left" />
-      <Branding size="large" subtext="Middle Align" alignment="middle" />
+      <Branding size="large" subtext="Center Align" alignment="center" />
       <Branding size="large" subtext="Right Align" alignment="right" />
     </Flex>
     <Flex my="x2" justifyContent="space-between">
       <Branding size="large" withLine subtext="Left Align" alignment="left" />
-      <Branding size="large" withLine subtext="Middle Align" alignment="middle" />
+      <Branding size="large" withLine subtext="Center Align" alignment="center" />
       <Branding size="large" withLine subtext="Right Align" alignment="right" />
     </Flex>
   </>

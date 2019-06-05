@@ -57,7 +57,7 @@ const propsRows = [
     type: "String",
     defaultValue: "right",
     description:
-      "Accepts left, middle, or right to align the logo and logo subtext"
+      "Accepts left, center, or right to align the logo and logo subtext"
   }
 ];
 
@@ -122,13 +122,13 @@ export default () => (
         <SubsectionTitle>Alignment</SubsectionTitle>
         <Flex my="x2" justifyContent="space-between">
           <Branding subtext="Left Align" alignment="left" />
-          <Branding subtext="Middle Align" alignment="middle" />
+          <Branding subtext="Middle Align" alignment="center" />
           <Branding subtext="Right Align" alignment="right" />
         </Flex>
         <Highlight className="js">
           {`<Flex justifyContent="space-between">
   <Branding subtext="Left Align" alignment="left"/>
-  <Branding subtext="Middle Align" alignment="middle"/>
+  <Branding subtext="Middle Align" alignment="center"/>
   <Branding subtext="Right Align" alignment="right"/>
 </Flex>`}
         </Highlight>
@@ -136,9 +136,9 @@ export default () => (
 
       <Box mb="x6">
         <SubsectionTitle>With Line</SubsectionTitle>
-        <Branding withLine alignment="middle" subtext="Logo Subtext" />
+        <Branding withLine alignment="center" subtext="Logo Subtext" />
         <Highlight className="js">
-          {`<Branding withLine alignment="middle" subtext="Logo Subtext"/>`}
+          {`<Branding withLine alignment="center" subtext="Logo Subtext"/>`}
         </Highlight>
       </Box>
     </DocSection>

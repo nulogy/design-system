@@ -24,7 +24,7 @@ const logoColors = {
 
 const alignments = {
   left: "flex-start",
-  middle: "center",
+  center: "center",
   right: "flex-end"
 };
 
@@ -96,7 +96,7 @@ BaseBranding.propTypes = {
   logoType: PropTypes.oneOf(["wordmark", "lettermark"]),
   logoColor: PropTypes.oneOf(["blue", "white"]),
   size: PropTypes.oneOf(["medium", "large"]),
-  alignment: PropTypes.oneOf(["left", "middle", "right"]),
+  alignment: PropTypes.oneOf(["left", "center", "right"]),
   withLine: PropTypes.bool,
   subtext: PropTypes.string
 };
