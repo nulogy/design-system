@@ -122,13 +122,13 @@ export default () => (
         <SubsectionTitle>Alignment</SubsectionTitle>
         <Flex my="x2" justifyContent="space-between">
           <Branding subtext="Left Align" alignment="left" />
-          <Branding subtext="Middle Align" alignment="center" />
+          <Branding subtext="Center Align" alignment="center" />
           <Branding subtext="Right Align" alignment="right" />
         </Flex>
         <Highlight className="js">
           {`<Flex justifyContent="space-between">
   <Branding subtext="Left Align" alignment="left"/>
-  <Branding subtext="Middle Align" alignment="center"/>
+  <Branding subtext="Center Align" alignment="center"/>
   <Branding subtext="Right Align" alignment="right"/>
 </Flex>`}
         </Highlight>
