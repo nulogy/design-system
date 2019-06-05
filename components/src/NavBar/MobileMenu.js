@@ -194,9 +194,9 @@ const Nav = styled.nav({
   backgroundColor: theme.colors.blackBlue
 });
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, includesubtext, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, ...props }) => (
   <Nav {...props}>
-    {subtext && includesubtext && (
+    {subtext && includeSubtext && (
       <BrandingWrap>
         <BrandingText>{subtext}</BrandingText>
       </BrandingWrap>
@@ -214,14 +214,14 @@ BaseMobileMenu.propTypes = {
     secondaryMenu: PropTypes.arrayOf(PropTypes.shape({}))
   }),
   subtext: PropTypes.string,
-  includesubtext: PropTypes.bool,
+  includeSubtext: PropTypes.bool,
   closeMenu: PropTypes.func
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
   subtext: null,
-  includesubtext: true,
+  includeSubtext: true,
   closeMenu: () => {}
 };
 
