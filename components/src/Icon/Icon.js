@@ -7,13 +7,15 @@ import theme from "../theme";
 
 const iconNames = Object.keys(icons);
 
+/* eslint-disable react/no-array-index-key */
 const getPathElements = icon => (
   <React.Fragment>
-    {icon.path.map(path => (
-      <path d={path} />
+    {icon.path.map((path, index) => (
+      <path key={index} d={path} />
     ))}
   </React.Fragment>
 );
+/* eslint-enable react/no-array-index-key */
 
 const Svg = props => {
   const { icon, title, size, color: fillColor, focusable } = props;
