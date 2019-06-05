@@ -7,6 +7,14 @@ import theme from "../theme";
 
 const iconNames = Object.keys(icons);
 
+const getPathElements = icon => (
+  <React.Fragment>
+    {icon.path.map(path => (
+      <path d={path} />
+    ))}
+  </React.Fragment>
+);
+
 const Svg = props => {
   const { icon, title, size, color: fillColor, focusable } = props;
 
@@ -21,7 +29,7 @@ const Svg = props => {
       focusable={focusable}
       {...props}
     >
-      <path d={icons[icon].path} />
+      {getPathElements(icons[icon])}
     </svg>
   );
 };
