@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const sizes = {
   medium: {
@@ -26,5 +27,15 @@ const LettermarkLogo = ({ size, letterFill, ...props }) => (
     />
   </svg>
 );
+
+LettermarkLogo.propTypes = {
+  letterFill: PropTypes.string,
+  size: PropTypes.string
+};
+
+LettermarkLogo.defaultProps = {
+  letterFill: undefined,
+  size: undefined
+};
 
 export default LettermarkLogo;
