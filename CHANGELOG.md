@@ -8,10 +8,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
  
 ### Added
+
 ### Changed
+
+- Branding API changes
+  - [**Breaking Change**] Renamed the prop `alignment` value "middle" to "center"
+  - Adds [`withLine`](https://storybook.nulogy.design/?path=/story/branding--branding) prop
+
 ### Deprecated
+
 ### Removed
+
 ### Fixed
+
 ### Security
 
 ## [0.7.1] - 2019-06-06
