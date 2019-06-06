@@ -11,7 +11,7 @@ const alertColours = {
     borderColor: theme.colors.red,
     backgroundColor: theme.colors.lightRed
   },
-  informational: {
+  informative: {
     borderColor: theme.colors.blue,
     backgroundColor: theme.colors.lightBlue
   },
@@ -59,7 +59,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   isCloseable: false,
   title: null,
-  type: "informational"
+  type: "informative"
 };
 
 export default Alert;
