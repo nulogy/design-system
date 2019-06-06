@@ -36,7 +36,7 @@ const Alert = props => {
       borderStyle="solid"
       borderColor="red"
       borderRadius={theme.radii.medium}
-      borderLeft={`4px solid ${alertColour.borderColor}`}
+      borderLeft={`${theme.space.half} solid ${alertColour.borderColor}`}
     >
       <Flex>
         <Box>
