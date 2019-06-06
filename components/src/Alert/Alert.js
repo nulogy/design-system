@@ -39,7 +39,10 @@ const Alert = props => {
       borderLeft={`4px solid ${alertColour.borderColor}`}
     >
       <Flex>
-        <Box>{props.children}</Box>
+        <Box>
+          {props.title && <Text fontWeight="bold">{props.title}</Text>}
+          {props.children}
+        </Box>
       </Flex>
     </Box>
   );
@@ -47,10 +50,12 @@ const Alert = props => {
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "success", "warning"])
 };
 
 Alert.defaultProps = {
+  title: null,
   type: "informational"
 };
 
