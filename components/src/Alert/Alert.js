@@ -33,7 +33,7 @@ const Alert = props => (
     borderWidth="4"
     borderStyle="solid"
     borderColor="red"
-    borderRadius={theme.radii.medium}
+    borderRadius={`${theme.radii.medium} 0 0 ${theme.radii.medium}`}
     borderLeft={`${theme.space.half} solid ${alertColours[props.type].borderColor}`}
   >
     <Flex>
