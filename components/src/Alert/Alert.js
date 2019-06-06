@@ -42,10 +42,11 @@ const Alert = props => {
       <Flex>
         {props.type == "danger" && <Icon icon="error" mr="x1" color={alertColour.borderColor} />}
         {props.type == "success" && <Icon icon="check" mr="x1" color={alertColour.borderColor} />}
-        <Box>
+        <Box mr="auto">
           {props.title && <Text fontWeight="bold">{props.title}</Text>}
           {props.children}
         </Box>
+        {props.isCloseable && <Icon icon="close" color="darkGrey" size="16" />}
       </Flex>
     </Box>
   );
@@ -53,11 +54,13 @@ const Alert = props => {
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
+  isCloseable: PropTypes.node.isCloseable,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "success", "warning"])
 };
 
 Alert.defaultProps = {
+  isCloseable: false,
   title: null,
   type: "informational"
 };
