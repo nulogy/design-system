@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+ 
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+## [0.7.1] - 2019-06-06
 
 ### Added
 
@@ -14,16 +23,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - zoomOut
   
 - Added light variations for green, red and yellow [colours](https://nulogy.design/style/colour/)
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.7.0] - 2019-06-04
 
