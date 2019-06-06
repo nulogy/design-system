@@ -35,6 +35,7 @@ const Alert = props => (
     borderColor="red"
     borderRadius={`${theme.radii.medium} 0 0 ${theme.radii.medium}`}
     borderLeft={`${theme.space.half} solid ${alertColours[props.type].borderColor}`}
+    aria-role="alert"
   >
     <Flex>
       {props.type == "danger" && <Icon icon="error" mr="x1" color={alertColours[props.type].borderColor} />}
