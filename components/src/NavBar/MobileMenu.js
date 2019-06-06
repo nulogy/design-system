@@ -3,19 +3,16 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
 import { Text, SubsectionTitle } from "../Type";
+import { BrandingText } from "../Branding";
 import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const BrandingText = styled.div({
-  fontSize: theme.fontSizes.small,
-  lineHeight: theme.lineHeights.smallTextCompressed,
-  fontStyle: "italic",
-  letterSpacing: "0.02em",
-  color: theme.colors.whiteGrey,
-  marginTop: `-${theme.space.x2}`,
+const BrandingWrap = styled.div({
+  marginTop: `-${theme.space.x1}`,
   marginBottom: theme.space.x3,
-  marginLeft: theme.space.x3
+  marginLeft: theme.space.x3,
+  color: theme.colors.white
 });
 
 const ApplyMenuLinkStyles = styled.li({
@@ -197,9 +194,13 @@ const Nav = styled.nav({
   backgroundColor: theme.colors.blackBlue
 });
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, includesubtext, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, ...props }) => (
   <Nav {...props}>
-    {subtext && includesubtext && <BrandingText>{subtext}</BrandingText>}
+    {subtext && includeSubtext && (
+      <BrandingWrap>
+        <BrandingText>{subtext}</BrandingText>
+      </BrandingWrap>
+    )}
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu)}
@@ -213,14 +214,14 @@ BaseMobileMenu.propTypes = {
     secondaryMenu: PropTypes.arrayOf(PropTypes.shape({}))
   }),
   subtext: PropTypes.string,
-  includesubtext: PropTypes.bool,
+  includeSubtext: PropTypes.bool,
   closeMenu: PropTypes.func
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
   subtext: null,
-  includesubtext: true,
+  includeSubtext: true,
   closeMenu: () => {}
 };
 

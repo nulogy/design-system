@@ -11,7 +11,7 @@ import { Link } from "../Link";
 import { Checkbox } from "../Checkbox";
 import theme from "../theme";
 
-storiesOf("LoginPages", module)
+storiesOf("LoginPage", module)
   .add("Base", () => (
     <Flex
       minHeight="100vh"
@@ -33,7 +33,13 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+            style={{ marginBottom: theme.space.x2 }}
+          />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
@@ -79,7 +85,13 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+            style={{ marginBottom: theme.space.x2 }}
+          />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
@@ -126,7 +138,13 @@ storiesOf("LoginPages", module)
           flexDirection="column"
           alignItems="center"
         >
-          <Branding size="large" subtext="Logo Subtext" alignment="middle" style={{ marginBottom: theme.space.x2 }} />
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+            style={{ marginBottom: theme.space.x2 }}
+          />
           <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
             Additional Text
           </Text>
