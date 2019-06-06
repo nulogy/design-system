@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
+import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import theme from "../theme";
@@ -39,6 +40,8 @@ const Alert = props => {
       borderLeft={`${theme.space.half} solid ${alertColour.borderColor}`}
     >
       <Flex>
+        {props.type == "danger" && <Icon icon="error" mr="x1" color={alertColour.borderColor} />}
+        {props.type == "success" && <Icon icon="check" mr="x1" color={alertColour.borderColor} />}
         <Box>
           {props.title && <Text fontWeight="bold">{props.title}</Text>}
           {props.children}
