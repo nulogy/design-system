@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { display, themeGet } from "styled-system";
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
-import SubMenuLink from "./SubMenuLink";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
@@ -14,37 +13,16 @@ const BrandingWrap = styled.div(
     marginBottom: theme.space.x3,
     marginLeft: theme.space.x3,
     color: theme.colors.white
-  },  
+  },
   ({ color }) => ({
-    color: themeGet(`colors.${color}`, color)(color)
+    color: themeGet(`colors.${color}`, color)(color),
     active: {
       color: themeGet(`colors.${color}`, color)(color)
     },
     visited: {
       color: themeGet(`colors.${color}`, color)(color)
     }
-  }),
-);
-
-const ApplyMenuLinkStyles = styled.li({
-  display: "block",
-  marginBottom: theme.space.x1,
-  "*": {
-    display: "block",
-    color: theme.colors.white,
-    fontSize: theme.fontSizes.large,
-    lineHeight: theme.lineHeights.subsectionTitle,
-    padding: `${theme.space.x1} ${theme.space.x3} ${theme.space.x1} ${theme.space.x3}`,
-    borderRadius: "0",
-    textDecoration: "none",
-    "&:hover, &:focus": {
-      outline: "none",
-      backgroundColor: theme.colors.black
-    },
-    "&:disabled": {
-      opacity: ".5"
-    }
-  }
+  })
 );
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;
@@ -224,7 +202,7 @@ BaseMobileMenu.propTypes = {
 BaseMobileMenu.defaultProps = {
   menuData: null,
   subtext: null,
-  includeSubtext: true,
+  includeSubtext: false,
   closeMenu: () => {},
   themeColorObject: undefined
 };
