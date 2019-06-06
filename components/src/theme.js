@@ -13,6 +13,7 @@ export default {
     whiteGrey: tokens.color_base_white_grey,
     white: tokens.color_base_white,
     yellow: tokens.color_base_yellow,
+    lightYellow: tokens.color_base_light_yellow,
     green: tokens.color_base_green,
     lightGreen: tokens.color_base_light_green,
     red: tokens.color_base_red,
