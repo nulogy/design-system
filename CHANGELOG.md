@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added new icons:
+- Added new [icons](https://nulogy.design/components/icon/):
   - zoomIn
   - zoomOut
   
