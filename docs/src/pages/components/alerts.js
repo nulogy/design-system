@@ -1,0 +1,159 @@
+/* eslint-disable no-unused-vars, quotes, react/self-closing-comp */
+
+import React from "react";
+import { Helmet } from "react-helmet";
+import Highlight from "react-highlight";
+import {
+  Alert,
+  Button,
+  Box,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Link,
+  List,
+  ListItem
+} from "@nulogy/components";
+import {
+  DocText as Text,
+  Layout,
+  Intro,
+  IntroText,
+  DocSection,
+  PropsTable
+} from "../../components";
+
+const propsRows = [
+  {
+    name: "isCloseable",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Provides a close icon in the top right corner"
+  },
+  {
+    name: "title",
+    type: "string",
+    defaultValue: "",
+    description: "An optional title to display in bold above the main text"
+  },
+  {
+    name: "type",
+    type: "string",
+    defaultValue: "informative",
+    description:
+      "The type of alert. Accepts informative, danger, warning and success."
+  }
+];
+
+export default () => (
+  <Layout>
+    <Helmet>
+      <title>Alerts</title>
+    </Helmet>
+    <Intro>
+      <Title>Alerts</Title>
+      <IntroText>
+        Alerts are concise, event-driven messages that communicate information
+        and require minimal interaction.
+      </IntroText>
+    </Intro>
+
+    <DocSection>
+      <Alert type="danger" title="Important information" isCloseable>
+        Details about important information
+      </Alert>
+      <Highlight className="js">
+        {`import {Alert} from @nulogy/components;
+
+<Alert type="danger" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Use when</SectionTitle>
+      <List>
+        <ListItem>a user completes a task successfully</ListItem>
+        <ListItem>
+          to call attention to an error that requires attention
+        </ListItem>
+        <ListItem> to inform users about upcoming service maintenance</ListItem>
+        <ListItem> to warn users about a potential issue</ListItem>
+      </List>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Variations</SectionTitle>
+      <Box mb="x6">
+        <SubsectionTitle>Informative</SubsectionTitle>
+        <Text>
+          Informative alerts provide a user with general messages and
+          non-critical information.
+        </Text>
+        <Alert>Alert text</Alert>
+
+        <Highlight className="js">{`<Alert type="informative">Text</Alert>`}</Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Danger</SubsectionTitle>
+        <Text>
+          Danger alerts inform users about errors that require attention
+        </Text>
+        <Alert type="danger">Text</Alert>
+        <Highlight className="js">{`<Alert type="danger">Text</Alert>`}</Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Success</SubsectionTitle>
+        <Text>
+          Success alerts inform users that an action has been completed
+          successfully.
+        </Text>
+        <Alert type="success">Text</Alert>
+        <Highlight className="js">{`<Alert type="success">Text</Alert>`}</Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Warning</SubsectionTitle>
+        <Text>Warning alerts raise caution.</Text>
+        <Alert type="warning">Text</Alert>
+        <Highlight className="js">{`<Alert type="warning">Text</Alert>`}</Highlight>
+      </Box>
+      {/* <Box mb="x6">
+        <SubsectionTitle>With a title</SubsectionTitle>
+        <Alert title="Alert title">Text</Alert>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Closeable</SubsectionTitle>
+        <Alert isCloseable="true">Text</Alert>
+      </Box> */}
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Dos and Donts</SectionTitle>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Props</SectionTitle>
+      <PropsTable propsRows={propsRows} />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Content guidelines</SectionTitle>
+      <Text>
+        To provide a more detailed explanation of the message that is being
+        communicated, a link to the new screen can be provided in the child
+        content using a <Link href="/components/link">Link</Link> component.
+      </Text>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Resources</SectionTitle>
+      <ListItem>
+        <Link href="https://storybook.nulogy.design/?path=/story/alert--danger">
+          View in Storybook
+        </Link>
+      </ListItem>
+    </DocSection>
+  </Layout>
+);
