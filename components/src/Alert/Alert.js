@@ -61,8 +61,8 @@ class Alert extends React.Component {
                 {children}
               </Box>
               {isCloseable && (
-                <Link as="button" color="darkGrey" hover="blue" href="">
-                  <Icon icon="close" size="16" onClick={this.hideAlert} />
+                <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
+                  <Icon icon="close" size="16" />
                 </Link>
               )}
             </Flex>
