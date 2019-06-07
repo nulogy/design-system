@@ -99,7 +99,7 @@ export default () => (
       <Box mb="x6">
         <SubsectionTitle>Danger</SubsectionTitle>
         <Text>
-          Danger alerts inform users about errors that require attention
+          Danger alerts inform users about errors that require attention.
         </Text>
         <Alert type="danger">Text</Alert>
         <Highlight className="js">{`<Alert type="danger">Text</Alert>`}</Highlight>
