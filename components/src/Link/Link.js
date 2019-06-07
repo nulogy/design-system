@@ -7,7 +7,6 @@ import theme from "../theme";
 const resetButtonStyles = {
   background: "none",
   border: "none",
-  padding: 0,
   fontSize: theme.fontSizes.medium
 };
 
@@ -35,6 +34,7 @@ Link.propTypes = {
 Link.defaultProps = {
   underline: true,
   color: "blue",
+  p: 0,
   theme
 };
 
