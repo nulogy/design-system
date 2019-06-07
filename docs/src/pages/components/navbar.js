@@ -70,6 +70,12 @@ const propsRows = [
     defaultValue: "768",
     description:
       "Provides the breakpoint where the logo is collapsed from wordmark to lettermark"
+  },
+  {
+    name: "themeColor",
+    type: "string",
+    defaultValue: "blue",
+    description: 'Color themeing of NavBar component, either "blue" or "white"'
   }
 ];
 
