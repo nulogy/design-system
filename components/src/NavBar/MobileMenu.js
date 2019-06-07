@@ -7,23 +7,12 @@ import { BrandingText } from "../Branding";
 import MenuLink from "./MenuLink";
 import theme from "../theme";
 
-const BrandingWrap = styled.div(
-  {
-    marginTop: `-${theme.space.x1}`,
-    marginBottom: theme.space.x3,
-    marginLeft: theme.space.x3,
-    color: theme.colors.white
-  },
-  ({ color }) => ({
-    color: themeGet(`colors.${color}`, color)(color),
-    active: {
-      color: themeGet(`colors.${color}`, color)(color)
-    },
-    visited: {
-      color: themeGet(`colors.${color}`, color)(color)
-    }
-  })
-);
+const BrandingWrap = styled.div({
+  marginTop: `-${theme.space.x1}`,
+  marginBottom: theme.space.x3,
+  marginLeft: theme.space.x3,
+  color: theme.colors.white
+});
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;
 
@@ -177,8 +166,8 @@ const Nav = styled.nav(
 const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, ...props }) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     {subtext && includeSubtext && (
-      <BrandingWrap color={themeColorObject && themeColorObject.color}>
-        <BrandingText>{subtext}</BrandingText>
+      <BrandingWrap>
+        <BrandingText logoColor={themeColorObject && themeColorObject.logoColor}>{subtext}</BrandingText>
       </BrandingWrap>
     )}
     <Menu>
