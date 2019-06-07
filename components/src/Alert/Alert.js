@@ -49,7 +49,7 @@ class Alert extends React.Component {
             bg={alertColours[type].backgroundColor}
             p="x2"
             minWidth="304px"
-            borderRadius={`${theme.radii.medium} 0 0 ${theme.radii.medium}`}
+            borderRadius={theme.radii.medium}
             borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
             role="alert"
           >
