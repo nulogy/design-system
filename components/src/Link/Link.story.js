@@ -13,4 +13,5 @@ storiesOf("Link", module)
     <Link color="black" hover="red" href="http://nulogy.design">
       Link
     </Link>
-  ));
+  ))
+  .add("As a <button>", () => <Link as="button">Link</Link>);
