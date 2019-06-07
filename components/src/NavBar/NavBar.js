@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle } from "styled-components";
+import { themeGet } from "styled-system";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
@@ -12,7 +13,6 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { themeGet } from "styled-system";
 import { subPx, withWindowDimensions } from "../utils";
 
 const LockBody = createGlobalStyle(({ isOpen }) => ({
