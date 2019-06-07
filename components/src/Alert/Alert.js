@@ -77,7 +77,7 @@ Alert.propTypes = {
   children: PropTypes.node.isRequired,
   isCloseable: PropTypes.node,
   title: PropTypes.string,
-  type: PropTypes.oneOf(["danger", "success", "warning"])
+  type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
 };
 
 Alert.defaultProps = {
