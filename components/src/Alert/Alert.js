@@ -25,33 +25,36 @@ const alertColours = {
   }
 };
 
-const Alert = props => (
-  <Box
-    bg={alertColours[props.type].backgroundColor}
-    p="x2"
-    minWidth="304px"
-    borderWidth="4"
-    borderStyle="solid"
-    borderColor="red"
-    borderRadius={`${theme.radii.medium} 0 0 ${theme.radii.medium}`}
-    borderLeft={`${theme.space.half} solid ${alertColours[props.type].borderColor}`}
-    aria-role="alert"
-  >
-    <Flex>
-      {props.type == "danger" && <Icon icon="error" mr="x1" color={alertColours[props.type].borderColor} />}
-      {props.type == "success" && <Icon icon="check" mr="x1" color={alertColours[props.type].borderColor} />}
-      <Box mr="auto">
-        {props.title && <Text fontWeight="bold">{props.title}</Text>}
-        {props.children}
+class Alert extends React.Component {
+  render() {
+    const { children, isCloseable, title, type } = this.props;
+
+    return (
+      <Box
+        bg={alertColours[type].backgroundColor}
+        p="x2"
+        minWidth="304px"
+        borderRadius={`${theme.radii.medium} 0 0 ${theme.radii.medium}`}
+        borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
+        role="alert"
+      >
+        <Flex>
+          {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
+          {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
+          <Box mr="auto">
+            {title && <Text fontWeight="bold">{title}</Text>}
+            {children}
+          </Box>
+          {isCloseable && <Icon icon="close" color="darkGrey" size="16" />}
+        </Flex>
       </Box>
-      {props.isCloseable && <Icon icon="close" color="darkGrey" size="16" />}
-    </Flex>
-  </Box>
-);
+    );
+  }
+}
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
-  isCloseable: PropTypes.node.isCloseable,
+  isCloseable: PropTypes.node,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "success", "warning"])
 };
