@@ -12,6 +12,7 @@ import MobileMenu from "./MobileMenu";
 import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
+import { themeGet } from "styled-system";
 import { subPx, withWindowDimensions } from "../utils";
 
 const LockBody = createGlobalStyle(({ isOpen }) => ({
@@ -42,14 +43,14 @@ const themeColors = {
 
 const getThemeColor = themeColor => themeColors[themeColor] || themeColors.blue;
 
-const NavBarBackground = styled(Flex)(({ themeColor }) => ({
-  background: getThemeColor(themeColor).background,
+const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
+  background: backgroundColor,
   padding: `${theme.space.x2} ${theme.space.x3}`
 }));
 
 const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
   <header {...props}>
-    <NavBarBackground themeColor={themeColor}>
+    <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
       <Link
         underline={false}
         style={{ display: "block", height: subtext ? "56px" : "40px" }}
@@ -102,8 +103,8 @@ MediumNavBar.defaultProps = {
   themeColor: undefined
 };
 
-const MobileMenuTrigger = styled.button(({ themeColor }) => ({
-  color: getThemeColor(themeColor).color,
+const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground }) => ({
+  color: themeGet(`colors.${color}`, color)(color),
   background: "none",
   border: "none",
   padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
@@ -113,8 +114,8 @@ const MobileMenuTrigger = styled.button(({ themeColor }) => ({
   height: theme.space.x5,
   "&:hover, &:focus": {
     outline: "none",
-    color: getThemeColor(themeColor).color.hoverColor,
-    backgroundColor: getThemeColor(themeColor).hoverBackground,
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer"
   }
 }));
@@ -161,7 +162,7 @@ class SmallNavBarNoState extends React.Component {
       <>
         <LockBody isOpen={isOpen} />
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-          <NavBarBackground themeColor={themeColor}>
+          <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
             <Link
               style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
               my={subtext && !smallScreen ? "-8px" : null}
@@ -182,7 +183,7 @@ class SmallNavBarNoState extends React.Component {
               )}
               {(menuData.primaryMenu || menuData.secondaryMenu) && (
                 <MobileMenuTrigger
-                  themeColor={themeColor}
+                  {...getThemeColor(themeColor)}
                   onClick={() => {
                     handleMenuToggle();
                   }}
