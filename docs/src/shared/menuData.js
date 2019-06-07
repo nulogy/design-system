@@ -20,6 +20,10 @@ export const menuData = [
     name: "Components",
     links: [
       {
+        name: "Alerts",
+        href: "/components/alerts"
+      },
+      {
         name: "Box",
         href: "/components/box"
       },
