@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Branding API changes
   - [**Breaking Change**] Renamed the prop `alignment` value "middle" to "center"
   - Adds [`withLine`](https://storybook.nulogy.design/?path=/story/branding--branding) prop
-
 - Added [`Alert`](https://storybook.nulogy.design/?path=/story/alert--danger) component
 
 ### Changed
@@ -32,10 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added new [icons](https://nulogy.design/components/icon/):
-
   - zoomIn
   - zoomOut
-
 - Added light variations for green, red and yellow [colours](https://nulogy.design/style/colour/)
 
 ## [0.7.0] - 2019-06-04
