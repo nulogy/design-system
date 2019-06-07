@@ -50,7 +50,7 @@ const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBack
     <Icon
       style={{ position: "absolute", top: "11px" }}
       icon="downArrow"
-      color={color || "lightGrey"}
+      color={themeGet(`colors.${color}`, color)(color)}
       size="20px"
       p="2px"
     />
