@@ -9,12 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added [`Alert`](https://storybook.nulogy.design/?path=/story/alert--danger) component
+- Added `themeColor` prop to [`NavBar`](https://storybook.nulogy.design/?path=/story/navbar--with-alternate-themecolor) component
+
 ### Changed
 
 - Branding API changes
   - [**Breaking Change**] Renamed the prop `alignment` value "middle" to "center"
   - Adds [`withLine`](https://storybook.nulogy.design/?path=/story/branding--branding) prop
-- Added [`Alert`](https://storybook.nulogy.design/?path=/story/alert--danger) component
 
 ### Changed
 

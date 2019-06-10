@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { themeGet } from "styled-system";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import { DropdownMenu } from "../DropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button({
+const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => ({
   display: "block",
   position: "relative",
-  color: theme.colors.white,
+  color: themeGet(`colors.${color}`, color)(color),
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
@@ -22,30 +23,62 @@ const StyledButton = styled.button({
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.lightBlue,
-    backgroundColor: theme.colors.black,
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer"
   },
   "&:disabled": {
     opacity: ".5"
   }
-});
+}));
 
-const MenuTriggerButton = React.forwardRef(({ name, ...props }, ref) => (
-  <StyledButton ref={ref} {...props}>
+StyledButton.propTypes = {
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
+};
+
+StyledButton.defaultProps = {
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
+};
+
+const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBackground, ...props }, ref) => (
+  <StyledButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} ref={ref} {...props}>
     {name}
-    <Icon style={{ position: "absolute", top: "11px" }} icon="downArrow" color="lightGrey" size="20px" p="2px" />
+    <Icon
+      style={{ position: "absolute", top: "11px" }}
+      icon="downArrow"
+      color={themeGet(`colors.${color}`, color)(color)}
+      size="20px"
+      p="2px"
+    />
   </StyledButton>
 ));
 
 MenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
+};
+
+MenuTriggerButton.defaultProps = {
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
 };
 
 const MenuTrigger = props => {
-  const { menuData, name, ...otherProps } = props;
+  const { menuData, name, color, hoverColor, hoverBackground, ...otherProps } = props;
   return (
-    <DropdownMenu {...otherProps} trigger={() => <MenuTriggerButton name={name} />}>
+    <DropdownMenu
+      {...otherProps}
+      trigger={() => (
+        <MenuTriggerButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} name={name} />
+      )}
+    >
       {({ closeMenu }) => (
         <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
           {renderSubMenuItems(menuData, closeMenu, SubMenuTrigger)}
@@ -57,11 +90,17 @@ const MenuTrigger = props => {
 
 MenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
-  menuData: PropTypes.arrayOf(PropTypes.shape({}))
+  menuData: PropTypes.arrayOf(PropTypes.shape({})),
+  color: PropTypes.string,
+  hoverColor: PropTypes.string,
+  hoverBackground: PropTypes.string
 };
 
 MenuTrigger.defaultProps = {
-  menuData: null
+  menuData: null,
+  color: theme.colors.white,
+  hoverColor: theme.colors.lightBlue,
+  hoverBackground: theme.colors.black
 };
 
 export default MenuTrigger;

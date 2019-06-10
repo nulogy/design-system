@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
-import SubMenuLink from "./SubMenuLink";
+import { DropdownLink as SubMenuLink } from "../DropdownMenu";
 
 const ApplySubMenuLinkStyles = styled.li({
   color: theme.colors.black,

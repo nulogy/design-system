@@ -17,6 +17,9 @@ storiesOf("Branding", module).add("Branding", () => (
         <Branding subtext="Logo Subtext" />
         <br />
         <br />
+        <Branding withLine subtext="Logo Subtext" />
+        <br />
+        <br />
         <Branding size="large" />
         <br />
         <br />
@@ -36,6 +39,9 @@ storiesOf("Branding", module).add("Branding", () => (
         <br />
         <br />
         <Branding logoColor="white" subtext="Logo Subtext" />
+        <br />
+        <br />
+        <Branding logoColor="white" withLine subtext="Logo Subtext" />
         <br />
         <br />
         <Branding logoColor="white" size="large" />

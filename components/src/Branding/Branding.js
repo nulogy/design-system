@@ -42,15 +42,6 @@ const BrandingWrap = styled.div(
   ({ alignment }) => ({
     alignItems: getAlignment(alignment)
   }),
-  ({ logoColor }) => ({
-    color: getLogoColor(logoColor).text,
-    active: {
-      color: getLogoColor(logoColor).text
-    },
-    visited: {
-      color: getLogoColor(logoColor).text
-    }
-  }),
   ({ size }) => ({
     padding: size === "large" ? null : "4px 0"
   })
@@ -72,7 +63,7 @@ const Line = styled.div(({ logoColor }) => ({
 }));
 
 const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor, ...props }) => (
-  <BrandingWrap size={size} logoColor={logoColor} alignment={alignment} {...props}>
+  <BrandingWrap size={size} alignment={alignment} {...props}>
     {logoType === "lettermark" ? (
       <LettermarkLogo size={size} letterFill={getLogoColor(logoColor).letter} />
     ) : (
@@ -82,6 +73,7 @@ const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor,
       <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : null}>
         {alignment !== "left" && withLine && <Line logoColor={logoColor} />}
         <BrandingText
+          logoColor={logoColor}
           style={{ marginLeft: alignment !== "left" && "4px", marginRight: alignment !== "right" && "4px" }}
         >
           {subtext}
