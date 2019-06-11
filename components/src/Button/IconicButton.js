@@ -46,6 +46,11 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
         transform: "none"
       }
     }
+  },
+  "&:focus": {
+    [`${Icon}`]: {
+      boxShadow: `0 0 3px ${theme.colors.blue}`
+    }
   }
 }));
 

@@ -8,9 +8,13 @@ const DangerButton = styled(Button)(({ disabled }) => ({
   borderColor: theme.colors.red,
   backgroundColor: theme.colors.red,
   "&:hover, &:focus": {
-    outline: "none",
     backgroundColor: disabled ? null : darken(0.1, theme.colors.red),
     borderColor: disabled ? null : darken(0.1, theme.colors.red)
+  },
+  "&:focus": {
+    outline: "none",
+    borderColor: theme.colors.blue,
+    boxShadow: `0 0 3px ${theme.colors.blue}`
   }
 }));
 

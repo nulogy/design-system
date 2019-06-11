@@ -79,8 +79,12 @@ const Button = styled(BaseButton)(
     width: fullWidth ? "100%" : "auto",
     margin: theme.space.none,
     "&:hover, &:focus": {
-      outline: "none",
       backgroundColor: disabled ? null : theme.colors.lightBlue
+    },
+    "&:focus": {
+      outline: "none",
+      borderColor: theme.colors.blue,
+      boxShadow: `0 0 3px ${theme.colors.blue}`
     },
     "&:active": {
       transform: "scale(0.98)",

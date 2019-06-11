@@ -8,9 +8,13 @@ const PrimaryButton = styled(Button)(({ disabled }) => ({
   borderColor: theme.colors.blue,
   backgroundColor: theme.colors.blue,
   "&:hover, &:focus": {
-    outline: "none",
     backgroundColor: disabled ? null : darken(0.1, theme.colors.blue),
     borderColor: disabled ? null : darken(0.1, theme.colors.blue)
+  },
+  "&:focus": {
+    outline: "none",
+    borderColor: theme.colors.blue,
+    boxShadow: `0 0 3px ${theme.colors.blue}`
   }
 }));
 
