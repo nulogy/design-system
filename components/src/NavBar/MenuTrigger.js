@@ -27,6 +27,9 @@ const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => (
     backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer"
   },
+  "&:focus": {
+    boxShadow: `0 0 3px ${theme.colors.blue}`
+  },
   "&:disabled": {
     opacity: ".5"
   }

@@ -21,6 +21,9 @@ const StyledButton = styled.button({
   "&:disabled": {
     opacity: ".5"
   },
+  "&:focus": {
+    boxShadow: `0 0 3px ${theme.colors.blue}`
+  },
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
