@@ -77,7 +77,7 @@ const RadioInput = styled.input(props => ({
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualRadio}`]: {
-    boxShadow: `0 0 6px ${theme.colors.blue}`
+    boxShadow: `0 0 3px ${theme.colors.blue}`
   },
   [`&:checked + ${VisualRadio}`]: {
     ...getRadioStyle(props, "checked"),

@@ -53,7 +53,7 @@ const ToggleInput = styled.input(({ disabled }) => ({
     backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.lightBlue
   },
   [`&:focus + ${Slider}:before`]: {
-    boxShadow: disabled ? null : `0 0 6px ${theme.colors.blue}`
+    boxShadow: disabled ? null : `0 0 3px ${theme.colors.blue}`
   }
 }));
 
