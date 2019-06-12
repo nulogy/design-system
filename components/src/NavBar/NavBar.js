@@ -117,6 +117,9 @@ const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground })
     color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
     backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer"
+  },
+  "&:focus": {
+    boxShadow: `0 0 3px ${theme.colors.blue}`
   }
 }));
 

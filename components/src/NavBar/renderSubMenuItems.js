@@ -24,6 +24,9 @@ const ApplySubMenuLinkStyles = styled.li({
     },
     "&:disabled": {
       opacity: ".5"
+    },
+    "&:focus": {
+      boxShadow: `0 0 3px ${theme.colors.blue}`
     }
   }
 });
