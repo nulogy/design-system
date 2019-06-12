@@ -5,8 +5,8 @@ import { Box } from "../Box";
 import { Alert } from "../Alert";
 import mapErrorsToList from "./mapErrorsToList";
 
-const BaseHeaderValidation = ({ title, errorMessage, errorList, children }) => (
-  <Box mb="x2">
+const BaseHeaderValidation = ({ className, title, errorMessage, errorList, children }) => (
+  <Box mb="x2" className={className}>
     <Alert title={title} type="danger">
       {errorMessage}
       {mapErrorsToList(errorList)}
@@ -18,6 +18,7 @@ const BaseHeaderValidation = ({ title, errorMessage, errorList, children }) => (
 const HeaderValidation = styled(BaseHeaderValidation)({});
 
 BaseHeaderValidation.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
   errorMessage: PropTypes.string.isRequired,
   errorList: PropTypes.arrayOf(PropTypes.string),
@@ -25,6 +26,7 @@ BaseHeaderValidation.propTypes = {
 };
 
 BaseHeaderValidation.defaultProps = {
+  className: null,
   errorList: null,
   children: null
 };
