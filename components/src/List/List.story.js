@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import List from "./List";
-import ListItem from "./ListItem";
+import { List, ListItem } from "../index";
 
 storiesOf("List", module)
   .add("List", () => (

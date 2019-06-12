@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Checkbox } from ".";
+import { Checkbox } from "../index";
 
 storiesOf("Checkbox", module)
   .add("Checkbox", () => <Checkbox id="checkbox" labelText="I am a checkbox" />)

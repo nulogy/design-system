@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { IconicButton } from ".";
+import { IconicButton } from "../index";
 
 storiesOf("IconicButton", module)
   .add("With label", () => <IconicButton icon="delete">Delete</IconicButton>)

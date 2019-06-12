@@ -1,10 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "../Box";
-import { Flex } from "../Flex";
-import { Text, SubsectionTitle } from "../Type";
-import { Card, CardSet, CPCard } from ".";
-import { DropdownMenu, DropdownButton } from "../DropdownMenu";
+import { Box, Flex, Text, SubsectionTitle, Card, CardSet, CPCard, DropdownMenu, DropdownButton } from "../index";
 
 storiesOf("Card", module)
   .add("Card", () => <Card>I am a card.</Card>)

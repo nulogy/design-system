@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { DemoPage as NDSDemoPage } from ".";
+import { DemoPage as NDSDemoPage } from "../index";
 
 const ResetStorybookView = styled.div({
   position: "absolute",

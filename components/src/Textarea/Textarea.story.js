@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Textarea } from ".";
+import { Textarea } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 

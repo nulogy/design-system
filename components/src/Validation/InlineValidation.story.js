@@ -1,9 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-
-import { InlineValidation } from ".";
-import { List, ListItem } from "../List";
-import { Link } from "../Link";
+import { InlineValidation, List, ListItem, Link } from "../index";
 
 const errorList = ["Entry must be at least 3 characters long.", "Entry must contain a number."];
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Link from "./Link";
+import { Link } from "../index";
 
 storiesOf("Link", module)
   .add("Link", () => <Link href="http://nulogy.design">Link</Link>)

@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { HeaderValidation } from ".";
-import { List, ListItem } from "../List";
+import { HeaderValidation, List, ListItem } from "../index";
 
 const errorList = ["Affected field", "Unmet criteria"];
 

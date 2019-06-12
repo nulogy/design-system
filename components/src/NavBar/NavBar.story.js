@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { NavBar as NDSNavBar } from ".";
+import { NavBar as NDSNavBar } from "../index";
 
 const ResetStorybookView = styled.div({
   position: "absolute",

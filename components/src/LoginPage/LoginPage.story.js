@@ -1,15 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "../Box";
-import { Flex } from "../Flex";
-import { Branding } from "../Branding";
-import { Form } from "../Form";
-import { Input } from "../Input";
-import { Text } from "../Type";
-import { PrimaryButton } from "../Button";
-import { Link } from "../Link";
-import { Checkbox } from "../Checkbox";
 import theme from "../theme";
+import { Box, Branding, Checkbox, Flex, Form, Input, Link, PrimaryButton, Text } from "../index";
 
 storiesOf("LoginPage", module)
   .add("Base", () => (

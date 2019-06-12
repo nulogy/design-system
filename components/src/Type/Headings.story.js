@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-
-import { Text, Title, SectionTitle, SubsectionTitle } from ".";
+import { Text, Title, SectionTitle, SubsectionTitle } from "../index";
 
 storiesOf("Headings", module)
   .add("Title", () => <Title>Title</Title>)
