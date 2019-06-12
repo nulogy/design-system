@@ -1,36 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Flex } from "../Flex";
-import { Text, SubsectionTitle } from "../Type";
-import { Icon } from "../Icon";
+import { Box } from "../Box";
+import { Alert } from "../Alert";
 import mapErrorsToList from "./mapErrorsToList";
-import theme from "../theme";
 
-const Wrapper = styled.div({
-  [`${Text}`]: {
-    marginBottom: theme.space.x1
-  },
-  "> *:last-child": {
-    marginBottom: 0
-  }
-});
-
-const BaseHeaderValidation = ({ title, errorMessage, errorList, children, ...boxProps }) => (
-  <Flex color="red" {...boxProps}>
-    <Icon icon="error" size={theme.space.x6} mr={theme.space.x2} />
-    <Wrapper>
-      <SubsectionTitle mb="none">{title}</SubsectionTitle>
-      <Text>{errorMessage}</Text>
+const BaseHeaderValidation = ({ className, title, errorMessage, errorList, children }) => (
+  <Box mb="x2" className={className}>
+    <Alert title={title} type="danger">
+      {errorMessage}
       {mapErrorsToList(errorList)}
       {children}
-    </Wrapper>
-  </Flex>
+    </Alert>
+  </Box>
 );
 
 const HeaderValidation = styled(BaseHeaderValidation)({});
 
 BaseHeaderValidation.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
   errorMessage: PropTypes.string.isRequired,
   errorList: PropTypes.arrayOf(PropTypes.string),
@@ -38,6 +26,7 @@ BaseHeaderValidation.propTypes = {
 };
 
 BaseHeaderValidation.defaultProps = {
+  className: null,
   errorList: null,
   children: null
 };

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Branding API changes
   - [**Breaking Change**] Renamed the prop `alignment` value "middle" to "center"
   - Adds [`withLine`](https://storybook.nulogy.design/?path=/story/branding--branding) prop
+- [HeaderValidation](https://nulogy.design/components/header-validation/) now uses Alert component
 
 ### Changed
 
