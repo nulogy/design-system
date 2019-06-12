@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Radio, RadioGroup } from ".";
+import { Radio, RadioGroup } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 

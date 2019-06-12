@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
-import { Icon, InlineIcon } from ".";
-import { Box } from "../Box";
-import { Flex } from "../Flex";
+import { Box, Flex, Icon, InlineIcon } from "../index";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 

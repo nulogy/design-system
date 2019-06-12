@@ -1,8 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box } from "../Box";
-import { Flex } from "../Flex";
-import Branding from "./Branding";
+import { Box, Flex, Branding } from "../index";
 
 storiesOf("Branding", module).add("Branding", () => (
   <>
