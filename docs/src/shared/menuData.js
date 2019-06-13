@@ -162,8 +162,8 @@ export const menuData = [
         href: "https://github.com/nulogy/design-system"
       },
       {
-        name: "Tokens",
-        href: "/tokens"
+        name: "Theme",
+        href: "/theme"
       },
       {
         name: "Reading list",

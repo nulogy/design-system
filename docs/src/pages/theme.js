@@ -28,13 +28,13 @@ const CustomComponent = styled.div({
 export default () => (
   <Layout>
     <Helmet>
-      <title>Tokens</title>
+      <title>Theme</title>
     </Helmet>
     <Intro>
-      <Title>Tokens</Title>
+      <Title>Theme</Title>
       <IntroText>
-        Tokens are the design options for creating interfaces in Nulogy's style.
-        They can be accessed in Javascript via the theme.
+        Design options for creating interfaces in Nulogy's style can be accessed
+        in Javascript via the theme.
       </IntroText>
     </Intro>
 
@@ -60,7 +60,7 @@ export default () => (
           Styled Box
         </Box>
         <Highlight className="js">
-          {`import { Box } from @nulogy/components;
+          {`import theme from @nulogy/components;
 
 <Box bg="darkBlue" color="white" p="x3">Styled Box</Box>
 `}
