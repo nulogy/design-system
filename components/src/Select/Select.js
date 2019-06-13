@@ -100,7 +100,7 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
   marginTop: 0,
   boxShadow: theme.shadows.small,
   background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  zIndex: 100
+  zIndex: theme.zIndex.content
 }));
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
