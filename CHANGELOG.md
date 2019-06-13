@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.8.1] - 2019-06-13
+
+### Added
+
 - Added [`Alert`](https://storybook.nulogy.design/?path=/story/alert--danger) component
 - Added `themeColor` prop to [`NavBar`](https://storybook.nulogy.design/?path=/story/navbar--with-alternate-themecolor) component
 
