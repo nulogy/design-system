@@ -150,7 +150,7 @@ export default () => (
         </Highlight>
       </Box>
       <Box mb="x4">
-        <SubsectionTitle>Responsive</SubsectionTitle>
+        <SectionTitle>Responsive</SectionTitle>
         <Text>
           All Box props can be used responsively by using an object that defines
           small, medium and/or large, based on the{" "}
