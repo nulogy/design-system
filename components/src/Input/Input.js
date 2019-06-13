@@ -51,7 +51,7 @@ const StyledInput = styled.input(
       outline: "none",
       color: theme.colors.black,
       borderColor: theme.colors.blue,
-      boxShadow: `0 0 3px ${theme.colors.blue}`
+      boxShadow: theme.shadows.focus
     },
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black)

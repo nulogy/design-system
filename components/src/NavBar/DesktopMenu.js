@@ -29,7 +29,7 @@ const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground }) 
       opacity: ".5"
     },
     "&:focus": {
-      boxShadow: `0 0 3px ${theme.colors.blue}`
+      boxShadow: theme.shadows.focus
     }
   }
 }));

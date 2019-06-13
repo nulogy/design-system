@@ -21,7 +21,7 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
     cursor: "pointer"
   },
   "&:focus": {
-    boxShadow: `0 0 3px ${theme.colors.blue}`
+    boxShadow: theme.shadows.focus
   },
   "&:disabled": {
     opacity: ".5"
