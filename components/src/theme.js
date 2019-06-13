@@ -57,7 +57,10 @@ export default {
   },
   borders: [],
   shadows: {
-    small: tokens.shadow_box_small
+    small: tokens.shadow_box_small,
+    medium: tokens.shadow_box_medium,
+    large: tokens.shadow_box_large,
+    focus: tokens.shadow_focus
   },
   radii: {
     small: tokens.radius_border_small,

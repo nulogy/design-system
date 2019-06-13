@@ -9,6 +9,19 @@ storiesOf("Box", module)
       Hello World
     </Box>
   ))
+  .add("With shadows", () => (
+    <>
+      <Box p="x1" mb="x2" boxShadow="small">
+        Small shadow
+      </Box>
+      <Box p="x3" mb="x2" boxShadow="medium">
+        Medium shadow
+      </Box>
+      <Box p="x6" mb="x2" boxShadow="large">
+        Large shadow
+      </Box>
+    </>
+  ))
   .add("With a background colour", () => (
     <Box p="x3" color="white" bg="blue">
       Hello World
