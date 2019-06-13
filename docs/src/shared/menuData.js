@@ -13,6 +13,10 @@ export const menuData = [
       {
         name: "Spacing",
         href: "/style/spacing"
+      },
+      {
+        name: "Shadows",
+        href: "/style/shadows"
       }
     ]
   },

@@ -18,6 +18,7 @@ import {
   PropsTable
 } from "../../components";
 import {
+  boxShadow,
   color,
   margins,
   paddings,
@@ -26,6 +27,7 @@ import {
 } from "../../shared/systemProps";
 
 const propsRows = [
+  ...boxShadow,
   ...color,
   {
     name: "display",
@@ -59,7 +61,8 @@ export default () => (
     <Intro>
       <Title>Box</Title>
       <IntroText>
-        A layout component for controlling width, margin, padding and colour.
+        A layout component for controlling width, margin, padding, colour and
+        shadows.
       </IntroText>
     </Intro>
 
@@ -94,7 +97,7 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Text Color</SubsectionTitle>
         <Text>
-          Color can be set using a reference to the{" "}
+          Color can be set using a reference to the
           <Link href="https://nulogy.design/tokens">theme.colors</Link> object.
         </Text>
         <Box color="blue">blue</Box>
@@ -103,7 +106,7 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Background Color</SubsectionTitle>
         <Text>
-          Color can be set using a reference to the{" "}
+          Color can be set using a reference to the
           <Link href="https://nulogy.design/tokens">theme.colors</Link> object.
         </Text>
         <Box bg="lightBlue">lightBlue</Box>
@@ -114,7 +117,7 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Margins</SubsectionTitle>
         <Text>
-          Margins can be set using a reference to the{" "}
+          Margins can be set using a reference to the
           <Link href="https://nulogy.design/tokens">theme.space</Link> object.
         </Text>
         <Box bg="lightBlue" m="x3">
@@ -125,13 +128,26 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Padding</SubsectionTitle>
         <Text>
-          Padding can be set using a reference to the{" "}
+          Padding can be set using a reference to the
           <Link href="https://nulogy.design/tokens">theme.space</Link> object.
         </Text>
         <Box bg="lightBlue" p="x3">
           x3 (24px)
         </Box>
         <Highlight className="js">{'<Box p="x3">x3</Box'}</Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>Shadows</SubsectionTitle>
+        <Text>
+          There are three shadows that can be set using a reference to the
+          <Link href="https://nulogy.design/tokens">theme.shadows</Link> object.
+        </Text>
+        <Box p="x3" boxShadow="large">
+          large shadow
+        </Box>
+        <Highlight className="js">
+          {'<Box p="x3" boxShadow="large">large shadow</Box>'}
+        </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Responsive</SubsectionTitle>
