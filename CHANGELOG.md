@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- All props are now passed down to the wrapping div on the Alert component
+
 ### Security
 
 ## [0.8.0] - 2019-06-13
