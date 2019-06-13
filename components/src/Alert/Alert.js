@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { space } from "styled-system";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
-import styled from "styled-components";
-import { space } from "styled-system";
 import theme from "../theme";
 
 const alertColours = {
