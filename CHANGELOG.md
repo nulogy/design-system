@@ -11,11 +11,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- NDSProvider now sets font size to medium from theme
-
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+### Security
+
+## [0.8.1] - 2019-06-13
+
+### Changed
+
+- NDSProvider now sets font size to medium from theme
 
 ### Fixed
 
@@ -36,16 +44,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - [**Breaking Change**] Renamed the prop `alignment` value "middle" to "center"
   - Adds [`withLine`](https://storybook.nulogy.design/?path=/story/branding--branding) prop
 - [HeaderValidation](https://nulogy.design/components/header-validation/) now uses Alert component
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.7.1] - 2019-06-06
 
