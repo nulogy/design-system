@@ -12,6 +12,7 @@ const Reset = createGlobalStyle({
 const GlobalStyles = styled.div(({ theme }) => ({
   color: theme.colors.black,
   fontFamily: theme.fonts.base,
+  fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
   "-webkit-font-smoothing": "antialiased",
   "-moz-osx-font-smoothing": "grayscale",

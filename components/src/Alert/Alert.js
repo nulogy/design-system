@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { space } from "styled-system";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
@@ -26,7 +28,7 @@ const alertColours = {
   }
 };
 
-class Alert extends React.Component {
+class BaseAlert extends React.Component {
   constructor() {
     super();
 
@@ -39,7 +41,7 @@ class Alert extends React.Component {
   }
 
   render() {
-    const { children, isCloseable, title, type } = this.props;
+    const { children, isCloseable, title, type, ...props } = this.props;
     const { isVisible } = this.state;
 
     return (
@@ -52,6 +54,7 @@ class Alert extends React.Component {
             borderRadius={theme.radii.medium}
             borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
             role="alert"
+            {...props}
           >
             <Flex>
               {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
@@ -75,17 +78,19 @@ class Alert extends React.Component {
   }
 }
 
-Alert.propTypes = {
+BaseAlert.propTypes = {
   children: PropTypes.node.isRequired,
   isCloseable: PropTypes.node,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
 };
 
-Alert.defaultProps = {
+BaseAlert.defaultProps = {
   isCloseable: false,
   title: null,
   type: "informative"
 };
+
+const Alert = styled(BaseAlert)(space);
 
 export default Alert;

@@ -11,11 +11,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- NDSProvider now sets font size to medium from theme
+
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- All additional props are now passed down to the wrapping div on the Alert component
 
 ### Security
 
