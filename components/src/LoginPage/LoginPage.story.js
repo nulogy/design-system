@@ -12,7 +12,7 @@ storiesOf("LoginPage", module)
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
-      <Box flexGrow="1">
+      <Flex alignItems="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
           width="384px"
@@ -41,7 +41,7 @@ storiesOf("LoginPage", module)
             <PrimaryButton fullWidth>Sign In</PrimaryButton>
           </Form>
         </Flex>
-      </Box>
+      </Flex>
       <Box
         width={{
           extraSmall: `calc(100% - ${theme.space.x4})`,
@@ -64,7 +64,7 @@ storiesOf("LoginPage", module)
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
-      <Box flexGrow="1">
+      <Flex alignItems="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
           width="384px"
@@ -94,7 +94,7 @@ storiesOf("LoginPage", module)
             <PrimaryButton fullWidth>Sign In</PrimaryButton>
           </form>
         </Flex>
-      </Box>
+      </Flex>
       <Box
         width={{
           extraSmall: `calc(100% - ${theme.space.x4})`,
@@ -117,7 +117,7 @@ storiesOf("LoginPage", module)
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
     >
-      <Box flexGrow="1">
+      <Flex alignItems="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
           width="384px"
@@ -149,7 +149,7 @@ storiesOf("LoginPage", module)
             <Link href="/">Forgot your password?</Link>
           </Box>
         </Flex>
-      </Box>
+      </Flex>
       <Box
         width={{
           extraSmall: `calc(100% - ${theme.space.x4})`,
