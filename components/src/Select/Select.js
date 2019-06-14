@@ -8,7 +8,7 @@ import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx } from "../utils";
+import { subPx, ScrollIndicators } from "../utils";
 
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -83,7 +83,7 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired
 };
 
-const StyledMenu = styled.div(({ error, disabled }) => ({
+const Menu = styled.div(({ error, disabled }) => ({
   maxHeight: "250px",
   overflow: "scroll",
   borderWidth: "1px",
@@ -101,94 +101,6 @@ const StyledMenu = styled.div(({ error, disabled }) => ({
   boxShadow: theme.shadows.small,
   background: disabled ? theme.colors.whiteGrey : theme.colors.white
 }));
-
-class Menu extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      scrollTop: 0
-    };
-    this.menuRef = React.createRef();
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  handleScroll() {
-    if (this.menuRef.current) {
-      this.setState({
-        scrollTop: this.menuRef.current.scrollTop
-      });
-    }
-  }
-
-  contentHiddenBelow() {
-    if (this.menuRef.current) {
-      return this.state.scrollTop + this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
-    } else {
-      return false;
-    }
-  }
-
-  contentHiddenAbove() {
-    if (this.menuRef.current) {
-      return this.state.scrollTop !== 0 && this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
-    } else {
-      return false;
-    }
-  }
-
-  render() {
-    return (
-      <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
-        <div style={{ position: "relative" }}>
-          {this.contentHiddenAbove() && (
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: "calc(50% - 32px)",
-                right: "calc(50% - 32px)",
-                height: "32px",
-                width: "64px",
-                background: theme.colors.lightGrey,
-                opacity: 0.8,
-                borderRadius: "0 0 16px 16px",
-                pointerEvents: "none"
-              }}
-            >
-              <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
-            </div>
-          )}
-          <StyledMenu
-            ref={this.menuRef}
-            onScroll={this.handleScroll}
-            error={this.props.error}
-            disabled={this.props.diabled}
-          >
-            {this.props.children}
-          </StyledMenu>
-          {this.contentHiddenBelow() && (
-            <div
-              style={{
-                position: "absolute",
-                bottom: 1,
-                left: "calc(50% - 32px)",
-                right: "calc(50% - 32px)",
-                height: "32px",
-                width: "64px",
-                background: theme.colors.lightGrey,
-                opacity: 0.8,
-                borderRadius: "16px 16px 0 0",
-                pointerEvents: "none"
-              }}
-            >
-              <Icon style={{ display: "block", margin: "8px auto" }} color="darkGrey" icon="downArrow" />
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-}
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
@@ -268,25 +180,27 @@ const Select = ({
             <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <Menu {...getMenuProps({ error, isOpen })}>
-              {options.map((option, index) => (
-                <MenuItem
-                  style={{
-                    wordWrap: "break-word"
-                  }}
-                  {...getItemProps({
-                    key: option.value,
-                    item: option,
-                    isSelected: selectedItem === option,
-                    isActive: highlightedIndex === index,
-                    index,
-                    disabled
-                  })}
-                >
-                  {option.label}
-                </MenuItem>
-              ))}
-            </Menu>
+            <ScrollIndicators>
+              <Menu {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
+                {options.map((option, index) => (
+                  <MenuItem
+                    style={{
+                      wordWrap: "break-word"
+                    }}
+                    {...getItemProps({
+                      key: option.value,
+                      item: option,
+                      isSelected: selectedItem === option,
+                      isActive: highlightedIndex === index,
+                      index,
+                      disabled
+                    })}
+                  >
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </ScrollIndicators>
           )}
         </div>
       )}
