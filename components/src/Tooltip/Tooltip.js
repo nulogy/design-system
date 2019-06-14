@@ -48,7 +48,7 @@ const TooltipContainer = styled(Box)(
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
     padding: theme.space.x1,
     transition: "opacity 0.3s",
-    zIndex: "999999"
+    zIndex: theme.zIndex.content
   },
   ({ dataPlacement, open, position }) => ({
     ...getTooltipMargin(dataPlacement),

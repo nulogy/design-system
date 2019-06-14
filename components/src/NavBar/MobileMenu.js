@@ -149,7 +149,7 @@ SubMenu.defaultProps = {
 const Menu = styled.ul(() => ({
   margin: "0",
   padding: `${theme.space.x1} 0`,
-  zIndex: "10",
+  zIndex: theme.zIndex.content,
   width: "100%",
   color: theme.colors.white,
   [`${SubsectionTitle}`]: {

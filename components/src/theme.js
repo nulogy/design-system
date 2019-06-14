@@ -73,5 +73,9 @@ export default {
     medium: tokens.size_breakpoint_medium,
     large: tokens.size_breakpoint_large,
     extraLarge: tokens.size_breakpoint_extra_large
+  },
+  zIndex: {
+    content: 100,
+    overlay: 1000
   }
 };
