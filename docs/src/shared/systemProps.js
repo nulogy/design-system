@@ -144,3 +144,12 @@ export const width = [
     description: "Sets a maximum width"
   }
 ];
+
+export const boxShadow = [
+  {
+    name: "boxShadow",
+    type: "string",
+    defaultValue: "",
+    description: "Adds a shadow based on the theme.shadows objects"
+  }
+];

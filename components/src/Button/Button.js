@@ -84,7 +84,7 @@ const Button = styled(BaseButton)(
     "&:focus": {
       outline: "none",
       borderColor: theme.colors.blue,
-      boxShadow: `0 0 3px ${theme.colors.blue}`
+      boxShadow: theme.shadows.focus
     },
     "&:active": {
       transform: "scale(0.98)",

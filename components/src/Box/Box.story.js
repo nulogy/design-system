@@ -74,4 +74,16 @@ storiesOf("Box", module)
       </Box>
     </Box>
   ))
-  .add("With a shadow", () => <Box boxShadow={0}>Shadow</Box>);
+  .add("With a shadow", () => (
+    <>
+      <Box p="x1" mb="x2" boxShadow="small">
+        Small shadow
+      </Box>
+      <Box p="x3" mb="x2" boxShadow="medium">
+        Medium shadow
+      </Box>
+      <Box p="x6" mb="x2" boxShadow="large">
+        Large shadow
+      </Box>
+    </>
+  ));

@@ -14,7 +14,7 @@ const DangerButton = styled(Button)(({ disabled }) => ({
   "&:focus": {
     outline: "none",
     borderColor: theme.colors.blue,
-    boxShadow: `0 0 3px ${theme.colors.blue}`
+    boxShadow: theme.shadows.focus
   }
 }));
 

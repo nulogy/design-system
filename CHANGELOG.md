@@ -9,9 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added three new shadow tokens (medium, large, focus)
+
 ### Changed
 
 - [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
+- Changed small shadow token
 
 ### Deprecated
 

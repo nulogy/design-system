@@ -76,7 +76,7 @@ const CheckboxInput = styled.input(props => ({
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualCheckbox}`]: {
-    boxShadow: `0 0 3px ${theme.colors.blue}`
+    boxShadow: theme.shadows.focus
   },
   [`&:checked + ${VisualCheckbox}`]: {
     ...getCheckboxStyle(props, "checked"),
