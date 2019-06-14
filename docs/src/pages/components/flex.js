@@ -125,7 +125,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://nulogy.design/tokens/">NDS theme</Link>
+        <Link href="https://nulogy.design/theme/">NDS theme</Link>
       </ListItem>
       <ListItem>
         <Link href="https://storybook.nulogy.design/?path=/story/flex--flex">
