@@ -84,7 +84,7 @@ ToggleButton.propTypes = {
 };
 
 const StyledMenu = styled.div(({ error, disabled }) => ({
-  maxHeight: "200px",
+  maxHeight: "250px",
   overflow: "scroll",
   borderWidth: "1px",
   borderColor: getBorderColor({
@@ -145,12 +145,13 @@ class Menu extends React.Component {
               style={{
                 position: "absolute",
                 top: 0,
-                left: 1,
-                right: 1,
-                height: theme.space.x3,
-                width: "calc(100% - 2px)",
+                left: "calc(50% - 32px)",
+                right: "calc(50% - 32px)",
+                height: "32px",
+                width: "64px",
                 background: theme.colors.lightGrey,
                 opacity: 0.8,
+                borderRadius: "0 0 16px 16px",
                 pointerEvents: "none"
               }}
             >
@@ -170,17 +171,17 @@ class Menu extends React.Component {
               style={{
                 position: "absolute",
                 bottom: 1,
-                left: 1,
-                right: 1,
-                height: theme.space.x3,
-                width: "calc(100% - 2px)",
-                borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+                left: "calc(50% - 32px)",
+                right: "calc(50% - 32px)",
+                height: "32px",
+                width: "64px",
                 background: theme.colors.lightGrey,
                 opacity: 0.8,
+                borderRadius: "16px 16px 0 0",
                 pointerEvents: "none"
               }}
             >
-              <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
+              <Icon style={{ display: "block", margin: "8px auto" }} color="darkGrey" icon="downArrow" />
             </div>
           )}
         </div>
