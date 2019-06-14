@@ -1,16 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Button, Box, Link, Flex, Input, Select, Text, Textarea, Tooltip } from "../index";
-
-const selectOptions = [
-  { value: "accepted", label: "Accepted" },
-  { value: "assigned", label: "Assigned to a line" },
-  { value: "hold", label: "On hold" },
-  { value: "rejected", label: "Rejected" },
-  { value: "open", label: "Open" },
-  { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" }
-];
+import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
 const Trigger = () => (
   <Flex
@@ -130,15 +120,6 @@ storiesOf("Tooltip", module)
       <Tooltip placement="bottom" tooltip="Tooltip">
         <Link href="/"> Link </Link>
       </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Input id="tooltip-input" />
-      </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Select id="tooltip-select" options={selectOptions} />
-      </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Textarea id="tooltip-textarea" />
-      </Tooltip>
       <Tooltip placement="bottom" tooltip="Tooltip">
         <Text mr="x2" inline bg="blue">
           Inline Text
@@ -149,7 +130,7 @@ storiesOf("Tooltip", module)
           Box width 200px
         </Box>
       </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
+      <Tooltip placement="bottom" tooltip="Tooltip">
         <Box bg="blue">Box</Box>
       </Tooltip>
     </>

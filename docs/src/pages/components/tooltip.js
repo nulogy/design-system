@@ -31,6 +31,12 @@ const propsRows = [
     description: "The content to display inside of the tooltip"
   },
   {
+    name: "children",
+    type: "element",
+    defaultValue: "Required",
+    description: "Single child of tooltip must be able to accept a ref"
+  },
+  {
     name: "maxWidth",
     type: "string",
     defaultValue: "24em",
@@ -173,6 +179,12 @@ export default () => (
 </Tooltip>`}
         </Highlight>
       </Box>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Accessibility Guidelines</SectionTitle>
+      <ListItem>Only add a Tooltip to elements that are focusable</ListItem>
+      <ListItem>Do not hide user actions or inputs within a Tooltip</ListItem>
     </DocSection>
 
     <DocSection>
