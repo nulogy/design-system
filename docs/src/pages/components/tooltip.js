@@ -12,8 +12,7 @@ import {
   Link,
   List,
   ListItem,
-  Tooltip,
-  Text
+  Tooltip
 } from "@nulogy/components";
 import {
   Layout,
@@ -183,7 +182,12 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Accessibility Guidelines</SectionTitle>
-      <ListItem>Only add a Tooltip to elements that are focusable</ListItem>
+      <ListItem>
+        The Tooltip component is only supported for Buttons and Links
+      </ListItem>
+      <ListItem>
+        Only add a Tooltip to other elements that are focusable
+      </ListItem>
       <ListItem>Do not hide user actions or inputs within a Tooltip</ListItem>
     </DocSection>
 
