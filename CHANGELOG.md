@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
+
 ### Deprecated
 
 ### Removed
