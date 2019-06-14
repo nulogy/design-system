@@ -1,12 +1,11 @@
 import styled from "styled-components";
+import { theme } from "@nulogy/components";
 
-const IntroText = styled.p`
-  font-size: 21.333px;
-  line-height: 32px;
-  max-width: 720px;
-  color: #434d59;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 0;
-`;
+const IntroText = styled.p({
+  fontSize: theme.fontSizes.large,
+  maxWidth: "720px",
+  color: theme.colors.darkGrey,
+  margin: 0
+});
 
 export default IntroText;
