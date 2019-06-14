@@ -183,6 +183,9 @@ const Select = ({
             <Menu {...getMenuProps({ error, isOpen })}>
               {options.map((option, index) => (
                 <MenuItem
+                  style={{
+                    wordWrap: "break-word"
+                  }}
                   {...getItemProps({
                     key: option.value,
                     item: option,
