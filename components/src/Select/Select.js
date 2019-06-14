@@ -180,27 +180,29 @@ const Select = ({
             <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <ScrollIndicators>
-              <Menu {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
-                {options.map((option, index) => (
-                  <MenuItem
-                    style={{
-                      wordWrap: "break-word"
-                    }}
-                    {...getItemProps({
-                      key: option.value,
-                      item: option,
-                      isSelected: selectedItem === option,
-                      isActive: highlightedIndex === index,
-                      index,
-                      disabled
-                    })}
-                  >
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </Menu>
-            </ScrollIndicators>
+            <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
+              <ScrollIndicators>
+                <Menu {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
+                  {options.map((option, index) => (
+                    <MenuItem
+                      style={{
+                        wordWrap: "break-word"
+                      }}
+                      {...getItemProps({
+                        key: option.value,
+                        item: option,
+                        isSelected: selectedItem === option,
+                        isActive: highlightedIndex === index,
+                        index,
+                        disabled
+                      })}
+                    >
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </ScrollIndicators>
+            </div>
           )}
         </div>
       )}

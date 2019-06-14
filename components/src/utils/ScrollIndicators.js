@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "../Icon";
 import theme from "../theme";
 
-class ScrollableContainer extends React.Component {
+class ScrollIndicators extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -38,52 +38,50 @@ class ScrollableContainer extends React.Component {
 
   render() {
     return (
-      <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
-        <div style={{ position: "relative" }}>
-          {this.contentHiddenAbove() && (
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: "calc(50% - 32px)",
-                right: "calc(50% - 32px)",
-                height: "32px",
-                width: "64px",
-                background: theme.colors.lightGrey,
-                opacity: 0.8,
-                borderRadius: "0 0 16px 16px",
-                pointerEvents: "none"
-              }}
-            >
-              <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
-            </div>
-          )}
-          {React.cloneElement(this.props.children, {
-            ref: this.menuRef,
-            onScroll: this.handleScroll
-          })}
-          {this.contentHiddenBelow() && (
-            <div
-              style={{
-                position: "absolute",
-                bottom: 1,
-                left: "calc(50% - 32px)",
-                right: "calc(50% - 32px)",
-                height: "32px",
-                width: "64px",
-                background: theme.colors.lightGrey,
-                opacity: 0.8,
-                borderRadius: "16px 16px 0 0",
-                pointerEvents: "none"
-              }}
-            >
-              <Icon style={{ display: "block", margin: "8px auto" }} color="darkGrey" icon="downArrow" />
-            </div>
-          )}
-        </div>
+      <div style={{ position: "relative" }}>
+        {this.contentHiddenAbove() && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: "calc(50% - 32px)",
+              right: "calc(50% - 32px)",
+              height: "32px",
+              width: "64px",
+              background: theme.colors.lightGrey,
+              opacity: 0.8,
+              borderRadius: "0 0 16px 16px",
+              pointerEvents: "none"
+            }}
+          >
+            <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
+          </div>
+        )}
+        {React.cloneElement(this.props.children, {
+          ref: this.menuRef,
+          onScroll: this.handleScroll
+        })}
+        {this.contentHiddenBelow() && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: 1,
+              left: "calc(50% - 32px)",
+              right: "calc(50% - 32px)",
+              height: "32px",
+              width: "64px",
+              background: theme.colors.lightGrey,
+              opacity: 0.8,
+              borderRadius: "16px 16px 0 0",
+              pointerEvents: "none"
+            }}
+          >
+            <Icon style={{ display: "block", margin: "8px auto" }} color="darkGrey" icon="downArrow" />
+          </div>
+        )}
       </div>
     );
   }
 }
 
-export default ScrollableContainer;
+export default ScrollIndicators;
