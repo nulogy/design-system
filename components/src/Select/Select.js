@@ -37,7 +37,7 @@ const Input = styled.input(({ error, isOpen, disabled }) => ({
   width: "100%",
   color: theme.colors.black,
   fontSize: theme.fontSizes.medium,
-  padding: subPx(theme.space.x1),
+  padding: "7px 27px 7px 7px",
   lineHeight: theme.lineHeights.base,
   border: "1px solid",
   borderColor: getBorderColor({
