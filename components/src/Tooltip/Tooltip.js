@@ -86,7 +86,6 @@ class Tooltip extends React.Component {
 
   tooltipEventHandlers() {
     return {
-      onClick: () => this.showTooltip(),
       onFocus: () => this.showTooltip(),
       onBlur: () => this.hideTooltip(),
       onMouseEnter: () => this.showTooltip(),
@@ -97,7 +96,6 @@ class Tooltip extends React.Component {
 
   triggerEventHandlers() {
     return {
-      onClick: () => this.showTooltip(),
       onFocus: () => this.showTooltip(),
       onBlur: () => this.hideTooltip(),
       onMouseEnter: () => this.showTooltip(),
@@ -135,24 +133,15 @@ class Tooltip extends React.Component {
     return (
       <Manager>
         <Reference>
-          {({ ref }) => (
-            <div
-              style={{
-                display: `${this.props.fullWidth ? "block" : "inline-flex"}`,
-                minWidth: `${this.props.fullWidth ? "100%" : null}`
-              }}
-              ref={node => {
-                ref(node);
-                this.setTriggerRef(node);
-              }}
-              {...this.triggerEventHandlers()}
-              aria-describedby={this.props.id}
-            >
-              {React.cloneElement(this.props.children, {
-                "aria-describedby": this.props.id
-              })}
-            </div>
-          )}
+          {({ ref }) =>
+            React.cloneElement(this.props.children, {
+              "aria-haspopup": true,
+              "aria-expanded": this.state.open,
+              "aria-describedby": this.props.id,
+              ...this.triggerEventHandlers(),
+              ref
+            })
+          }
         </Reference>
         <Popper placement={this.props.placement}>
           {({ ref, style, placement, arrowProps }) => (
@@ -189,7 +178,7 @@ class Tooltip extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 Tooltip.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.element.isRequired,
   id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
   placement: PropTypes.oneOf([
@@ -208,7 +197,6 @@ Tooltip.propTypes = {
   ]),
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  fullWidth: PropTypes.bool,
   maxWidth: PropTypes.string
 };
 
@@ -216,7 +204,6 @@ Tooltip.defaultProps = {
   placement: "bottom",
   showDelay: "100",
   hideDelay: "350",
-  fullWidth: false,
   maxWidth: "24em"
 };
 

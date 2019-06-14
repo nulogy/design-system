@@ -126,6 +126,10 @@ export const menuData = [
       {
         name: "Toggle",
         href: "/components/toggle"
+      },
+      {
+        name: "Tooltip",
+        href: "/components/tooltip"
       }
     ]
   },

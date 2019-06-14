@@ -1,29 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { Button, Box, Link, Flex, Input, Select, Text, Textarea, Tooltip } from "../index";
+import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
-const selectOptions = [
-  { value: "accepted", label: "Accepted" },
-  { value: "assigned", label: "Assigned to a line" },
-  { value: "hold", label: "On hold" },
-  { value: "rejected", label: "Rejected" },
-  { value: "open", label: "Open" },
-  { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" }
-];
-
-const Trigger = () => (
-  <Flex
-    width="128px"
-    height="128px"
-    justifyContent="center"
-    alignItems="center"
-    bg="lightBlue"
-    style={{ border: "2px dashed darkBlue" }}
-  >
-    Hover me
-  </Flex>
-);
+const Trigger = styled(Flex).attrs({
+  width: "128px",
+  height: "128px",
+  justifyContent: "center",
+  alignItems: "center",
+  bg: "lightBlue"
+})({
+  border: "2px dashed darkBlue"
+});
 
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
@@ -58,46 +46,46 @@ storiesOf("Tooltip", module)
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip placement="top-start" tooltip="top-start">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="top" tooltip="top">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="top-end" tooltip="top-end">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip placement="left-start" tooltip="left-start">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="left" tooltip="left">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="left-end" tooltip="left-end">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip placement="right-start" tooltip="right-start">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="right" tooltip="right">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="right-end" tooltip="right-end">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
         <Tooltip placement="bottom-start" tooltip="bottom-start">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="bottom" tooltip="bottom">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
         <Tooltip placement="bottom-end" tooltip="bottom-end">
-          <Trigger />
+          <Trigger>Hover me</Trigger>
         </Tooltip>
       </Flex>
     </>
@@ -130,15 +118,6 @@ storiesOf("Tooltip", module)
       <Tooltip placement="bottom" tooltip="Tooltip">
         <Link href="/"> Link </Link>
       </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Input id="tooltip-input" />
-      </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Select id="tooltip-select" options={selectOptions} />
-      </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
-        <Textarea id="tooltip-textarea" />
-      </Tooltip>
       <Tooltip placement="bottom" tooltip="Tooltip">
         <Text mr="x2" inline bg="blue">
           Inline Text
@@ -149,7 +128,7 @@ storiesOf("Tooltip", module)
           Box width 200px
         </Box>
       </Tooltip>
-      <Tooltip fullWidth placement="bottom" tooltip="Tooltip">
+      <Tooltip placement="bottom" tooltip="Tooltip">
         <Box bg="blue">Box</Box>
       </Tooltip>
     </>
