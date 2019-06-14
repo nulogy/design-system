@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Fixes text overlapping with arrow Icon on Select component
+
 ### Security
 
 ## [0.8.1] - 2019-06-13
