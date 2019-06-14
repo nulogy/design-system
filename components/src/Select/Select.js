@@ -83,13 +83,13 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired
 };
 
-const Menu = styled.div(({ error, disabled, isOpen }) => ({
-  position: "absolute",
-  width: "100%",
-  borderWidth: isOpen ? "1px" : "0",
+const StyledMenu = styled.div(({ error, disabled }) => ({
+  maxHeight: "200px",
+  overflow: "scroll",
+  borderWidth: "1px",
   borderColor: getBorderColor({
     error,
-    isOpen,
+    isOpen: true,
     disabled,
     isHovered: false
   }),
@@ -99,12 +99,99 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
   borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   marginTop: 0,
   boxShadow: theme.shadows.small,
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  zIndex: theme.zIndex.content
+  background: disabled ? theme.colors.whiteGrey : theme.colors.white
 }));
+
+class Menu extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      scrollTop: 0
+    };
+    this.menuRef = React.createRef();
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll() {
+    if (this.menuRef.current) {
+      this.setState({
+        scrollTop: this.menuRef.current.scrollTop
+      });
+    }
+  }
+
+  contentHiddenBelow() {
+    if (this.menuRef.current) {
+      return this.state.scrollTop + this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
+    } else {
+      return false;
+    }
+  }
+
+  contentHiddenAbove() {
+    if (this.menuRef.current) {
+      return this.state.scrollTop !== 0 && this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
+    } else {
+      return false;
+    }
+  }
+
+  render() {
+    return (
+      <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
+        <div style={{ position: "relative" }}>
+          {this.contentHiddenAbove() && (
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 1,
+                right: 1,
+                height: theme.space.x3,
+                width: "calc(100% - 2px)",
+                background: theme.colors.lightGrey,
+                opacity: 0.8,
+                pointerEvents: "none"
+              }}
+            >
+              <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
+            </div>
+          )}
+          <StyledMenu
+            ref={this.menuRef}
+            onScroll={this.handleScroll}
+            error={this.props.error}
+            disabled={this.props.diabled}
+          >
+            {this.props.children}
+          </StyledMenu>
+          {this.contentHiddenBelow() && (
+            <div
+              style={{
+                position: "absolute",
+                bottom: 1,
+                left: 1,
+                right: 1,
+                height: theme.space.x3,
+                width: "calc(100% - 2px)",
+                borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+                background: theme.colors.lightGrey,
+                opacity: 0.8,
+                pointerEvents: "none"
+              }}
+            >
+              <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+}
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
+  userSelect: "none",
   padding: subPx(theme.space.x1),
   fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isActive ? theme.colors.lightBlue : null,
