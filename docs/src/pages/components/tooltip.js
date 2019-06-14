@@ -181,14 +181,13 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Accessibility Guidelines</SectionTitle>
+      <SectionTitle>Usage Guidelines</SectionTitle>
       <ListItem>
         The Tooltip component is only supported for Buttons and Links
       </ListItem>
       <ListItem>
         Only add a Tooltip to other elements that are focusable
       </ListItem>
-      <ListItem>Do not hide user actions or inputs within a Tooltip</ListItem>
     </DocSection>
 
     <DocSection>
