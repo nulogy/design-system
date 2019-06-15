@@ -11,11 +11,13 @@ storiesOf("LoginPage", module)
       flexDirection="column"
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
+      width="100%"
     >
-      <Flex alignItems="center" flexGrow="1">
+      <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
-          width="384px"
+          maxWidth="384px"
+          width="100%"
           borderRadius={{ extraSmall: null, small: "medium" }}
           boxShadow={{ extraSmall: null, small: "small" }}
           px={{ extraSmall: "x2", small: "x4" }}
@@ -63,11 +65,13 @@ storiesOf("LoginPage", module)
       flexDirection="column"
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
+      width="100%"
     >
-      <Flex alignItems="center" flexGrow="1">
+      <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
-          width="384px"
+          maxWidth="384px"
+          width="100%"
           borderRadius={{ extraSmall: null, small: "medium" }}
           boxShadow={{ extraSmall: null, small: "small" }}
           px={{ extraSmall: "x2", small: "x4" }}
@@ -116,11 +120,13 @@ storiesOf("LoginPage", module)
       flexDirection="column"
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
+      width="100%"
     >
-      <Flex alignItems="center" flexGrow="1">
+      <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
-          width="384px"
+          maxWidth="384px"
+          width="100%"
           borderRadius={{ extraSmall: null, small: "medium" }}
           boxShadow={{ extraSmall: null, small: "small" }}
           px={{ extraSmall: "x2", small: "x4" }}
@@ -171,11 +177,13 @@ storiesOf("LoginPage", module)
       flexDirection="column"
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
+      width="100%"
     >
-      <Flex alignItems="center" flexGrow="1">
+      <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
-          width="384px"
+          maxWidth="384px"
+          width="100%"
           borderRadius={{ extraSmall: null, small: "medium" }}
           boxShadow={{ extraSmall: null, small: "small" }}
           px={{ extraSmall: "x2", small: "x4" }}
@@ -226,11 +234,13 @@ storiesOf("LoginPage", module)
       flexDirection="column"
       alignItems="center"
       bg={{ extraSmall: "white", small: "whiteGrey" }}
+      width="100%"
     >
-      <Flex alignItems="center" flexGrow="1">
+      <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
         <Flex
           height={{ extraSmall: "100%", small: "auto" }}
-          width="384px"
+          maxWidth="384px"
+          width="100%"
           borderRadius={{ extraSmall: null, small: "medium" }}
           boxShadow={{ extraSmall: null, small: "small" }}
           px={{ extraSmall: "x2", small: "x4" }}

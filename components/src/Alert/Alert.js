@@ -50,7 +50,6 @@ class BaseAlert extends React.Component {
           <Box
             bg={alertColours[type].backgroundColor}
             p="x2"
-            minWidth="304px"
             borderRadius={theme.radii.medium}
             borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
             role="alert"
