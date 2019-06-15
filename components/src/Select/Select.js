@@ -83,8 +83,8 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired
 };
 
-const Menu = styled.div(({ error, disabled }) => ({
-  maxHeight: "250px",
+const Menu = styled.div(({ error, disabled, maxHeight }) => ({
+  maxHeight: maxHeight,
   overflow: "scroll",
   borderWidth: "1px",
   borderColor: getBorderColor({
@@ -134,7 +134,8 @@ const Select = ({
   labelText,
   helpText,
   name,
-  requirementText
+  requirementText,
+  maxHeight
 }) => (
   <Field>
     <Downshift
@@ -182,7 +183,7 @@ const Select = ({
           {isOpen && (
             <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
               <ScrollIndicators>
-                <Menu {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
+                <Menu maxHeight={maxHeight} {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
                   {options.map((option, index) => (
                     <MenuItem
                       style={{
@@ -227,7 +228,8 @@ Select.propTypes = {
   id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
-  requirementText: PropTypes.string
+  requirementText: PropTypes.string,
+  maxHeight: PropTypes.string
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -247,7 +249,8 @@ Select.defaultProps = {
   id: null,
   labelText: null,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  maxHeight: "250px"
 };
 
 export default Select;
