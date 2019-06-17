@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 
@@ -40,6 +41,7 @@ const ScrollIndicatorBottom = () => (
   </div>
 );
 
+/* eslint-disable react/destructuring-assignment */
 class ScrollIndicators extends React.Component {
   constructor() {
     super();
@@ -66,19 +68,11 @@ class ScrollIndicators extends React.Component {
   }
 
   contentHiddenBelow() {
-    if (this.menuRef.current) {
-      return this.state.scrollTop + this.offsetHeight < this.scrollHeight;
-    } else {
-      return false;
-    }
+    return this.state.scrollTop + this.offsetHeight < this.scrollHeight;
   }
 
   contentHiddenAbove() {
-    if (this.menuRef.current) {
-      return this.state.scrollTop !== 0 && this.offsetHeight < this.scrollHeight;
-    } else {
-      return false;
-    }
+    return this.state.scrollTop !== 0 && this.offsetHeight < this.scrollHeight;
   }
 
   render() {
@@ -94,5 +88,10 @@ class ScrollIndicators extends React.Component {
     );
   }
 }
+/* eslint-enable react/destructuring-assignment */
+
+ScrollIndicators.propTypes = {
+  children: PropTypes.element.isRequired
+};
 
 export default ScrollIndicators;

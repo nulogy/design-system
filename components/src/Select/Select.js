@@ -84,7 +84,7 @@ ToggleButton.propTypes = {
 };
 
 const Menu = styled.div(({ error, disabled, maxHeight }) => ({
-  maxHeight: maxHeight,
+  maxHeight,
   overflow: "scroll",
   borderWidth: "1px",
   borderColor: getBorderColor({
