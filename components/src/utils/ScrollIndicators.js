@@ -48,6 +48,13 @@ class ScrollIndicators extends React.Component {
     };
     this.menuRef = React.createRef();
     this.handleScroll = this.handleScroll.bind(this);
+    this.offsetHeight = null;
+    this.scrollHeight = null;
+  }
+
+  componentDidMount() {
+    this.offsetHeight = this.menuRef.current.offsetHeight;
+    this.scrollHeight = this.menuRef.current.scrollHeight;
   }
 
   handleScroll() {
@@ -60,7 +67,7 @@ class ScrollIndicators extends React.Component {
 
   contentHiddenBelow() {
     if (this.menuRef.current) {
-      return this.state.scrollTop + this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
+      return this.state.scrollTop + this.offsetHeight < this.scrollHeight;
     } else {
       return false;
     }
@@ -68,7 +75,7 @@ class ScrollIndicators extends React.Component {
 
   contentHiddenAbove() {
     if (this.menuRef.current) {
-      return this.state.scrollTop !== 0 && this.menuRef.current.offsetHeight < this.menuRef.current.scrollHeight;
+      return this.state.scrollTop !== 0 && this.offsetHeight < this.scrollHeight;
     } else {
       return false;
     }
