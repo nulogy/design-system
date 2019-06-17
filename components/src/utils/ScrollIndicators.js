@@ -8,13 +8,13 @@ const ScrollIndicatorTop = () => (
     style={{
       position: "absolute",
       top: 0,
-      left: "calc(50% - 32px)",
-      right: "calc(50% - 32px)",
-      height: "32px",
-      width: "64px",
+      left: `calc(50% - ${theme.space.x3})`,
+      right: `calc(50% - ${theme.space.x3})`,
+      height: theme.space.x3,
+      width: theme.space.x6,
       background: theme.colors.lightGrey,
       opacity: 0.8,
-      borderRadius: "0 0 16px 16px",
+      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
       pointerEvents: "none"
     }}
   >
@@ -27,17 +27,17 @@ const ScrollIndicatorBottom = () => (
     style={{
       position: "absolute",
       bottom: 1,
-      left: "calc(50% - 32px)",
-      right: "calc(50% - 32px)",
-      height: "32px",
-      width: "64px",
+      left: `calc(50% - ${theme.space.x3})`,
+      right: `calc(50% - ${theme.space.x3})`,
+      height: theme.space.x3,
+      width: theme.space.x6,
       background: theme.colors.lightGrey,
       opacity: 0.8,
-      borderRadius: "16px 16px 0 0",
+      borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
       pointerEvents: "none"
     }}
   >
-    <Icon style={{ display: "block", margin: "8px auto" }} color="darkGrey" icon="downArrow" />
+    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
   </div>
 );
 
