@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
+- Updates the [`Select`](https://storybook.nulogy.design/?path=/story/select--select) component
+  - Added scrolling to the dropdown
+  - Added text wrapping
+  - Added prop `maxHeight`
 - Changed small shadow token
 
 ### Deprecated
