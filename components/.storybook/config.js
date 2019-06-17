@@ -13,7 +13,7 @@ const newViewports = {
   extraSmall: {
     name: "Extra small",
     styles: {
-      width: "600px",
+      width: "320px",
       height: "100%"
     }
   },
