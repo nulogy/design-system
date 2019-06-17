@@ -250,7 +250,7 @@ Select.defaultProps = {
   labelText: null,
   helpText: null,
   requirementText: null,
-  maxHeight: "250px"
+  maxHeight: "256px"
 };
 
 export default Select;
