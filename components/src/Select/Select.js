@@ -8,7 +8,7 @@ import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx } from "../utils";
+import { subPx, ScrollIndicators } from "../utils";
 
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -83,13 +83,13 @@ ToggleButton.propTypes = {
   isOpen: PropTypes.bool.isRequired
 };
 
-const Menu = styled.div(({ error, disabled, isOpen }) => ({
-  position: "absolute",
-  width: "100%",
-  borderWidth: isOpen ? "1px" : "0",
+const Menu = styled.div(({ error, disabled, maxHeight }) => ({
+  maxHeight,
+  overflow: "scroll",
+  borderWidth: "1px",
   borderColor: getBorderColor({
     error,
-    isOpen,
+    isOpen: true,
     disabled,
     isHovered: false
   }),
@@ -99,12 +99,12 @@ const Menu = styled.div(({ error, disabled, isOpen }) => ({
   borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   marginTop: 0,
   boxShadow: theme.shadows.small,
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  zIndex: theme.zIndex.content
+  background: disabled ? theme.colors.whiteGrey : theme.colors.white
 }));
 
 const MenuItem = styled.div(({ isSelected, isActive }) => ({
   color: theme.colors.black,
+  userSelect: "none",
   padding: subPx(theme.space.x1),
   fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isActive ? theme.colors.lightBlue : null,
@@ -134,7 +134,8 @@ const Select = ({
   labelText,
   helpText,
   name,
-  requirementText
+  requirementText,
+  maxHeight
 }) => (
   <Field>
     <Downshift
@@ -180,22 +181,29 @@ const Select = ({
             <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <Menu {...getMenuProps({ error, isOpen })}>
-              {options.map((option, index) => (
-                <MenuItem
-                  {...getItemProps({
-                    key: option.value,
-                    item: option,
-                    isSelected: selectedItem === option,
-                    isActive: highlightedIndex === index,
-                    index,
-                    disabled
-                  })}
-                >
-                  {option.label}
-                </MenuItem>
-              ))}
-            </Menu>
+            <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
+              <ScrollIndicators>
+                <Menu maxHeight={maxHeight} {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
+                  {options.map((option, index) => (
+                    <MenuItem
+                      style={{
+                        wordWrap: "break-word"
+                      }}
+                      {...getItemProps({
+                        key: option.value,
+                        item: option,
+                        isSelected: selectedItem === option,
+                        isActive: highlightedIndex === index,
+                        index,
+                        disabled
+                      })}
+                    >
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </ScrollIndicators>
+            </div>
           )}
         </div>
       )}
@@ -220,7 +228,8 @@ Select.propTypes = {
   id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
-  requirementText: PropTypes.string
+  requirementText: PropTypes.string,
+  maxHeight: PropTypes.string
 };
 
 const extractLabelFromOption = option => option && option.label;
@@ -240,7 +249,8 @@ Select.defaultProps = {
   id: null,
   labelText: null,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  maxHeight: "256px"
 };
 
 export default Select;

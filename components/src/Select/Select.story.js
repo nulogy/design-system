@@ -14,6 +14,19 @@ const options = [
   { value: "quarantine", label: "In quarantine" }
 ];
 
+const wrappingOptions = [
+  {
+    value: "onestring",
+    label:
+      "Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring"
+  },
+  {
+    value: "manywords",
+    label:
+      "Many words many words many words many words many words many words many words many words many words many words many words many words many words"
+  }
+];
+
 const optionToString = option => option && option.label;
 
 class SelectWithState extends React.Component {
@@ -139,5 +152,24 @@ storiesOf("Select", module)
       options={options}
       labelText="Inventory status"
       helpText="Additional information about input"
+    />
+  ))
+  .add("With smaller maxHeight", () => (
+    <Select
+      initialIsOpen
+      maxHeight="128px"
+      value={options[0].value}
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+    />
+  ))
+  .add("With wrapping text", () => (
+    <Select
+      initialIsOpen
+      value={options[0].value}
+      placeholder="Please select inventory status"
+      options={wrappingOptions}
+      labelText="Inventory status"
     />
   ));

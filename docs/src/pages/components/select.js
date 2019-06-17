@@ -33,6 +33,12 @@ const propsRows = [
     description:
       "The options available to be selected, containing a value and a label"
   },
+  {
+    name: "maxHeight",
+    type: "String",
+    defaultValue: "256px",
+    description: "Max height of the select dropdown menu, content is scrollable"
+  },
   ...inputProps
 ];
 
