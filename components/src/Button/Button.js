@@ -78,13 +78,17 @@ const Button = styled(BaseButton)(
     borderRadius: theme.radii.medium,
     width: fullWidth ? "100%" : "auto",
     margin: theme.space.none,
-    "&:hover, &:focus": {
+    "&:hover": {
       backgroundColor: disabled ? null : theme.colors.lightBlue
     },
     "&:focus": {
       outline: "none",
       borderColor: theme.colors.blue,
-      boxShadow: theme.shadows.focus
+      boxShadow: theme.shadows.focus,
+      backgroundColor: theme.colors.white,
+      "&:hover": {
+        backgroundColor: theme.colors.lightBlue
+      }
     },
     "&:active": {
       transform: "scale(0.98)",
