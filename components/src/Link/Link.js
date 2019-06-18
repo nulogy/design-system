@@ -18,7 +18,7 @@ const getHoverColor = props =>
 const Link = styled.a(color, space, ({ underline, ...props }) => ({
   ...resetButtonStyles,
   textDecoration: underline ? "underline" : "none",
-  "&:hover, &:focus": {
+  "&:hover": {
     cursor: "pointer",
     color: getHoverColor(props)
   },
