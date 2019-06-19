@@ -26,8 +26,7 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
     fontWeight: theme.fontWeights.medium,
     textAlign: "left"
   },
-  "&:hover, &:focus": {
-    outline: "none",
+  "&:hover": {
     [`${Icon}`]: {
       backgroundColor: theme.colors.lightBlue
     }
@@ -48,6 +47,7 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
     }
   },
   "&:focus": {
+    outline: "none",
     [`${Icon}`]: {
       boxShadow: theme.shadows.focus
     }

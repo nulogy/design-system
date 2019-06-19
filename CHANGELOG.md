@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Added text wrapping
   - Added prop `maxHeight`
 - Changed small shadow token
+- Changed appearance of focused components
 - Updated login page stories to include additional responsive behaviors
 
 ### Deprecated
