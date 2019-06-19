@@ -71,7 +71,7 @@ export default () => (
         Box
       </Box>
       <Highlight className="js">
-        {`import { Box } from @nulogy/components;
+        {`import { Box } from "@nulogy/components";
 
 <Box bg="darkBlue" color="white" p="x3">Box</Box>
 `}

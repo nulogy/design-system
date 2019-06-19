@@ -76,7 +76,7 @@ export default () => (
     <DocSection>
       <Branding />
       <Highlight className="js">
-        {`import { Branding } from @nulogy/components;
+        {`import { Branding } from "@nulogy/components";
 
 <Branding/>
 `}

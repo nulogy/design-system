@@ -42,7 +42,7 @@ export default () => (
       </CheckboxGroup>
 
       <Highlight className="js">
-        {`import { Checkbox, CheckboxGroup } from @nulogy/components;
+        {`import { Checkbox, CheckboxGroup } from "@nulogy/components";
 
 <CheckboxGroup
   name="settingSelection"
@@ -73,7 +73,7 @@ export default () => (
         </CheckboxGroup>
 
         <Highlight className="js">
-          {`import { Checkbox, CheckboxGroup } from @nulogy/components;
+          {`import { Checkbox, CheckboxGroup } from "@nulogy/components";
 
 <CheckboxGroup
   name="settingSelection"

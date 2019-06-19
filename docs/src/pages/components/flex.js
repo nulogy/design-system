@@ -68,7 +68,7 @@ export default () => (
       </Flex>
 
       <Highlight className="js">
-        {`import {Box, Flex} from @nulogy/components;
+        {`import {Box, Flex} from "@nulogy/components";
 
 <Flex bg="lightBlue">
   <Box width={1/2} p="x3" m="x3" bg="blackBlue"></Box>

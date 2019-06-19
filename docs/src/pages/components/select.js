@@ -60,7 +60,7 @@ export default () => (
         id="inventory-status"
       />
       <Highlight className="js">
-        {`import { Select } from @nulogy/components;
+        {`import { Select } from "@nulogy/components";
 
 const options = [
   { value: "accepted", label: "Accepted" },

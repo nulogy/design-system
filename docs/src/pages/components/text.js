@@ -81,7 +81,7 @@ export default () => (
     <DocSection>
       <Text>Sample text</Text>
       <Highlight className="js">
-        {`import { Text } from @nulogy/components;
+        {`import { Text } from "@nulogy/components";
 
 <Text>Sample text</Text>
 `}

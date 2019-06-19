@@ -34,7 +34,7 @@ export default () => (
     <DocSection>
       <Radio id="radio" labelText="Radio button" />
       <Highlight className="js">
-        {`import { Radio } from @nulogy/components;
+        {`import { Radio } from "@nulogy/components";
 
 <Radio id="radio" labelText="Radio button" />`}
       </Highlight>

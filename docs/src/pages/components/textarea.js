@@ -43,7 +43,7 @@ export default () => (
     <DocSection>
       <Textarea labelText="Label" id="textarea" />
       <Highlight className="js">
-        {`import { Textarea } from @nulogy/components;
+        {`import { Textarea } from "@nulogy/components";
 
 <Textarea labelText="Label" id="textarea" />
 `}

@@ -32,7 +32,7 @@ export default () => (
     <DocSection>
       <Input id="input" labelText="Label" />
       <Highlight className="js">
-        {`import { Input } from @nulogy/components;
+        {`import { Input } from "@nulogy/components";
 
 <Input id="input" labelText="Input label" />`}
       </Highlight>
