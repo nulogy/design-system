@@ -9,19 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added three new shadow tokens (medium, large, focus)
-- Added login page examples to storybooks that include validation messages
-
 ### Changed
-
-- [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
-- Updates the [`Select`](https://storybook.nulogy.design/?path=/story/select--select) component
-  - Added scrolling to the dropdown
-  - Added text wrapping
-  - Added prop `maxHeight`
-- Changed small shadow token
-- Changed appearance of focused components
-- Updated login page stories to include additional responsive behaviors
 
 ### Deprecated
 
@@ -29,9 +17,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Fixes text overlapping with arrow Icon on Select component
-
 ### Security
+
+## [0.9.1] - 2019-06-19
+
+### Added
+
+- Added three new shadow tokens (medium, large, focus)
+- Added login page examples to storybooks that include validation messages
+
+### Changed
+
+- [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
+- UpdateD the [`Select`](https://storybook.nulogy.design/?path=/story/select--select) component
+  - Added scrolling to the dropdown
+  - Added text wrapping
+  - Added prop `maxHeight`
+- Changed small shadow token
+- Changed appearance of focused components
+- Updated login page stories to include additional responsive behaviors
+
+### Fixed
+
+- Fixed text overlapping with arrow Icon on Select component
 
 ## [0.8.1] - 2019-06-13
 
