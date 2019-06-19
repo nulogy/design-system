@@ -93,6 +93,7 @@ class DropdownMenu extends React.Component {
             React.cloneElement(trigger(), {
               "aria-haspopup": true,
               "aria-expanded": this.state.open,
+              type: "button",
               ...this.menuTriggerEventHandlers(),
               ref
             })
