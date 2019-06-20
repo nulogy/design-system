@@ -247,8 +247,10 @@ const search = {
 `}
         </Highlight>
         <Text mb="x2">
-          Each menu item object requires the name key as a unique identifier as
-          well as only one of the optional keys.
+          Each menu item object requires a name key. Optionally a single other
+          key can be included, depending on which key is included the menu item
+          will render as a differnt component. If no optional key is included
+          then the menu item will render as text.
         </Text>
         <Text mb="x2">
           Menu items can be nested within eachother using the items key for as
