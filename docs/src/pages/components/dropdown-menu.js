@@ -97,8 +97,8 @@ export default () => (
         <DropdownButton>Dropdown Button</DropdownButton>
       </DropdownMenu>
       <Highlight className="js">
-        {`import { DropdownMenu, DropdownLink, DropdownButton } from @nulogy/components;
-        
+        {`import { DropdownMenu, DropdownLink, DropdownButton } from "@nulogy/components";
+
 <DropdownMenu>
   <DropdownLink href="/">Dropdown Link</DropdownLink>
   <DropdownButton>Dropdown Button</DropdownButton>

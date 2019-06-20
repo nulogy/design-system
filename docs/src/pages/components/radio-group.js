@@ -44,7 +44,7 @@ export default () => (
       </RadioGroup>
 
       <Highlight className="js">
-        {`import { Radio, RadioGroup } from @nulogy/components;
+        {`import { Radio, RadioGroup } from "@nulogy/components";
 
 <RadioGroup
   labelText="Setting Selection"
@@ -75,7 +75,7 @@ export default () => (
         </RadioGroup>
 
         <Highlight className="js">
-          {`import { Radio, RadioGroup } from @nulogy/components;
+          {`import { Radio, RadioGroup } from "@nulogy/components";
 
 <RadioGroup
   labelText="Setting Selection"

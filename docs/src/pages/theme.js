@@ -60,7 +60,7 @@ export default () => (
           Styled Box
         </Box>
         <Highlight className="js">
-          {`import theme from @nulogy/components;
+          {`import theme from "@nulogy/components";
 
 <Box bg="darkBlue" color="white" p="x3">Styled Box</Box>
 `}
@@ -76,7 +76,7 @@ export default () => (
       <CustomComponent>Custom component</CustomComponent>
 
       <Highlight className="js">
-        {`import { theme } from @nulogy/components
+        {`import { theme } from "@nulogy/components"
 
 const CustomComponent = styled.div({
   background: theme.colors.darkBlue,

@@ -141,7 +141,7 @@ export default () => (
     <DocSection>
       <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
       <Highlight className="js">
-        {`import {NavBar} from @nulogy/components;
+        {`import {NavBar} from "@nulogy/components";
 
 const primaryMenu = [
   {

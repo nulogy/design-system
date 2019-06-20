@@ -82,7 +82,7 @@ export default () => (
     <DocSection>
       <Toggle id="toggle" labelText="Label" onText="On" offText="Off" />
       <Highlight className="js">
-        {`import { Toggle } from @nulogy/components;
+        {`import { Toggle } from "@nulogy/components";
 
 <Toggle id="toggle" labelText="Label" onText="On" offText="Off" />`}
       </Highlight>

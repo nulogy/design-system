@@ -50,7 +50,7 @@ export default () => (
         <ListItem>List item</ListItem>
       </List>
       <Highlight className="js">
-        {`import {List, ListItem} from @nulogy/components;
+        {`import {List, ListItem} from "@nulogy/components";
 
 <List>
   <ListItem>List item</ListItem>

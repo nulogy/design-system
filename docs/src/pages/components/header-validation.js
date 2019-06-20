@@ -64,7 +64,7 @@ export default () => (
         errorList={errorList}
       />
       <Highlight className="js">
-        {`import { HeaderValidation } from @nulogy/components;
+        {`import { HeaderValidation } from "@nulogy/components";
 
 const errorList = [
   "Affected field",
@@ -95,7 +95,7 @@ const errorList = [
           errorMessage="Instructions and description of an error"
         />
         <Highlight className="js">
-          {`import { HeaderValidation } from @nulogy/components;
+          {`import { HeaderValidation } from "@nulogy/components";
 
 <HeaderValidation
   title="Error has occurred ..."
@@ -121,7 +121,7 @@ const errorList = [
           </List>
         </HeaderValidation>
         <Highlight className="js">
-          {`import { HeaderValidation } from @nulogy/components;
+          {`import { HeaderValidation } from "@nulogy/components";
 
 <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occurred ...">
   <List compact>
