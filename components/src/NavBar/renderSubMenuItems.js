@@ -45,11 +45,16 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
   </li>
 );
 
-const renderCustom = (subMenuItem, onItemClick) => (
-  <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={onItemClick}>
-    {subMenuItem.render()}
-  </ApplySubMenuLinkStyles>
-);
+const renderCustom = (subMenuItem, onItemClick) =>
+  subMenuItem.preventDefaultStyles ? (
+    <li style={subMenuItem.desktopStyles} key={subMenuItem.name}>
+      {subMenuItem.render()}
+    </li>
+  ) : (
+    <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={onItemClick}>
+      {subMenuItem.render()}
+    </ApplySubMenuLinkStyles>
+  );
 
 const getRenderFunction = subMenuItem => {
   if (subMenuItem.items) {
