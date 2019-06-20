@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added button in storybook toolbar to allow viewing components in different sizes
+
 ### Changed
 
 - Added "type=button" to DropDownMenu to prevent it submitting a form if located inside one
