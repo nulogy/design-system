@@ -70,6 +70,12 @@ const renderCustom = (menuItem, themeColorObject) => (
   </ApplyMenuLinkStyles>
 );
 
+const renderText = (menuItem, themeColorObject) => (
+  <div key={menuItem.name} {...themeColorObject}>
+    {menuItem.name}
+  </div>
+);
+
 const getRenderFunction = menuItem => {
   if (menuItem.items) {
     return renderMenuTrigger;
@@ -78,7 +84,7 @@ const getRenderFunction = menuItem => {
   } else if (menuItem.render) {
     return renderCustom;
   } else {
-    return () => null;
+    return renderText;
   }
 };
 

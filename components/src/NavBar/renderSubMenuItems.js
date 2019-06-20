@@ -51,6 +51,8 @@ const renderCustom = (subMenuItem, onItemClick) => (
   </ApplySubMenuLinkStyles>
 );
 
+const renderText = subMenuItem => <div key={subMenuItem.name}>{subMenuItem.name}</div>;
+
 const getRenderFunction = subMenuItem => {
   if (subMenuItem.items) {
     return renderSubMenuTrigger;
@@ -59,7 +61,7 @@ const getRenderFunction = subMenuItem => {
   } else if (subMenuItem.render) {
     return renderCustom;
   } else {
-    return () => null;
+    return renderText;
   }
 };
 

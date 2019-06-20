@@ -95,13 +95,21 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   </li>
 );
 
+const renderText = (menuItem, themeColorObject) => (
+  <div key={menuItem.name} {...themeColorObject}>
+    {menuItem.name}
+  </div>
+);
+
 const getRenderFunction = menuItem => {
   if (menuItem.items) {
     return renderSubMenu;
+  } else if (menuItem.href) {
+    return renderMenuLink;
   } else if (menuItem.render) {
     return renderCustom;
   } else {
-    return renderMenuLink;
+    return renderText;
   }
 };
 
