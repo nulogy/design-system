@@ -1,23 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
+import themeGet from "styled-system";
 import { DropdownLink as SubMenuLink } from "../DropdownMenu";
 
-const ApplySubMenuLinkStyles = styled.li({
-  color: theme.colors.black,
+const getSharedStyles = () => ({
+  display: "block",
+  color: theme.colors.darkBlue,
   whiteSpace: "nowrap",
+  textDecoration: "none",
   borderColor: "transparent",
   backgroundColor: "transparent",
-  textDecoration: "none",
-  verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
-  transition: ".2s",
-  fontSize: theme.fontSizes.medium,
+  fontSize: `${theme.fontSizes.medium}`,
+  padding: `${theme.space.x1} ${theme.space.x2}`
+});
+
+const ApplySubMenuLinkStyles = styled.li({
+  verticalAlign: "middle",
   "> *": {
-    display: "block",
-    color: theme.colors.darkBlue,
+    ...getSharedStyles(),
+    transition: ".2s",
     textDecoration: "none",
-    padding: `${theme.space.x1} ${theme.space.x2}`,
     "&:hover, &:focus": {
       outline: "none",
       backgroundColor: theme.colors.lightGrey
@@ -29,6 +33,11 @@ const ApplySubMenuLinkStyles = styled.li({
       boxShadow: theme.shadows.focus
     }
   }
+});
+
+const SubMenuText = styled.li({
+  userSelect: "none",
+  ...getSharedStyles()
 });
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
@@ -51,7 +60,7 @@ const renderCustom = (subMenuItem, onItemClick) => (
   </ApplySubMenuLinkStyles>
 );
 
-const renderText = subMenuItem => <div key={subMenuItem.name}>{subMenuItem.name}</div>;
+const renderText = subMenuItem => <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>;
 
 const getRenderFunction = subMenuItem => {
   if (subMenuItem.items) {

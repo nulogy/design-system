@@ -4,21 +4,24 @@ import styled from "styled-components";
 import { themeGet } from "styled-system";
 import theme from "../theme";
 import MenuTrigger from "./MenuTrigger";
-import MenuLink from "./MenuLink";
+
+const getSharedStyles = color => ({
+  display: "block",
+  color: themeGet(`colors.${color}`, color)(color),
+  textDecoration: "none",
+  border: "none",
+  backgroundColor: "transparent",
+  verticalAlign: "middle",
+  lineHeight: theme.lineHeights.base,
+  fontSize: `${theme.fontSizes.medium}`,
+  padding: `${theme.space.x1} ${theme.space.x2}`,
+  borderRadius: theme.radii.medium
+});
 
 const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground }) => ({
   "*": {
-    display: "block",
-    color: themeGet(`colors.${color}`, color)(color),
-    textDecoration: "none",
-    border: "none",
-    backgroundColor: "transparent",
-    verticalAlign: "middle",
-    lineHeight: theme.lineHeights.base,
+    ...getSharedStyles(color),
     transition: ".2s",
-    fontSize: `${theme.fontSizes.medium}`,
-    padding: `${theme.space.x1} ${theme.space.x2}`,
-    borderRadius: theme.radii.medium,
     "&:hover, &:focus": {
       outline: "none",
       color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
@@ -46,6 +49,28 @@ ApplyMenuLinkStyles.defaultProps = {
   hoverBackground: theme.colors.black
 };
 
+const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
+  ...getSharedStyles(color),
+  transition: ".2s",
+  "&:hover, &:focus": {
+    outline: "none",
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+    cursor: "pointer"
+  },
+  "&:disabled": {
+    opacity: ".5"
+  },
+  "&:focus": {
+    boxShadow: theme.shadows.focus
+  }
+}));
+
+const MenuText = styled.div(({ textColor }) => ({
+  ...getSharedStyles(textColor),
+  userSelect: "none"
+}));
+
 const Nav = styled.nav({
   display: "flex"
 });
@@ -71,9 +96,9 @@ const renderCustom = (menuItem, themeColorObject) => (
 );
 
 const renderText = (menuItem, themeColorObject) => (
-  <div key={menuItem.name} {...themeColorObject}>
+  <MenuText key={menuItem.name} {...themeColorObject}>
     {menuItem.name}
-  </div>
+  </MenuText>
 );
 
 const getRenderFunction = menuItem => {

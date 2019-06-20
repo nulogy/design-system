@@ -28,7 +28,7 @@ const themeColors = {
     hoverColor: theme.colors.lightBlue,
     background: theme.colors.blackBlue,
     hoverBackground: theme.colors.black,
-    mobileMenuHeading: theme.colors.grey,
+    textColor: theme.colors.grey,
     logoColor: "white"
   },
   white: {
@@ -36,7 +36,7 @@ const themeColors = {
     hoverColor: theme.colors.blackBlue,
     background: theme.colors.white,
     hoverBackground: theme.colors.whiteGrey,
-    mobileMenuHeading: theme.colors.blackBlue,
+    textColor: theme.colors.blackBlue,
     logoColor: "blue"
   }
 };

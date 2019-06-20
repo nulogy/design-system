@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { display, themeGet } from "styled-system";
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
-import MenuLink from "./MenuLink";
 import theme from "../theme";
 
 const BrandingWrap = styled.div({
@@ -16,17 +15,26 @@ const BrandingWrap = styled.div({
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;
 
+const getSharedStyles = ({ color, layer }) => ({
+  display: "block",
+  color: themeGet(`colors.${color}`, color)(color),
+  textDecoration: "none",
+  border: "none",
+  backgroundColor: "transparent",
+  lineHeight: theme.lineHeights.base,
+  fontSize: `${theme.fontSizes.medium}`,
+  borderRadius: theme.radii.medium,
+  fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
+  lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
+  padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
+  paddingLeft: getPaddingLeft(layer)
+});
+
 const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer }) => ({
   display: "block",
   marginBottom: theme.space.x1,
   "*": {
-    display: "block",
-    color: themeGet(`colors.${color}`, color)(color),
-    fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
-    lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
-    padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
-    paddingLeft: getPaddingLeft(layer),
-    borderRadius: "0",
+    ...getSharedStyles({ color, layer }),
     textDecoration: "none",
     "&:hover, &:focus": {
       outline: "none",
@@ -56,18 +64,29 @@ ApplyMenuLinkStyles.defaultProps = {
   hoverBackground: theme.colors.black
 };
 
-const MobileMenuLink = styled(MenuLink)(
-  {
-    width: "100%",
-    borderRadius: "0"
+const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
+  ...getSharedStyles({ color, layer }),
+  width: "100%",
+  borderRadius: "0",
+  transition: ".2s",
+  "&:hover, &:focus": {
+    outline: "none",
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+    cursor: "pointer"
   },
-  ({ layer }) => ({
-    fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
-    lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
-    padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
-    paddingLeft: getPaddingLeft(layer)
-  })
-);
+  "&:focus": {
+    boxShadow: theme.shadows.focus
+  },
+  "&:disabled": {
+    opacity: ".5"
+  }
+}));
+
+const MenuText = styled.li(({ textColor, layer }) => ({
+  ...getSharedStyles({ color: textColor, layer }),
+  userSelect: "none"
+}));
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -77,9 +96,9 @@ const SubMenuItemsList = styled.ul({
 
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
-    <MobileMenuLink layer={layer} {...themeColorObject} onClick={linkOnClick} href={menuItem.href}>
+    <MenuLink layer={layer} {...themeColorObject} onClick={linkOnClick} href={menuItem.href}>
       {menuItem.name}
-    </MobileMenuLink>
+    </MenuLink>
   </li>
 );
 
@@ -95,10 +114,10 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   </li>
 );
 
-const renderText = (menuItem, themeColorObject) => (
-  <div key={menuItem.name} {...themeColorObject}>
+const renderText = (menuItem, linkOnClick, themeColorObject, layer) => (
+  <MenuText key={menuItem.name} layer={layer} {...themeColorObject}>
     {menuItem.name}
-  </div>
+  </MenuText>
 );
 
 const getRenderFunction = menuItem => {
@@ -135,7 +154,7 @@ const getSubMenuHeading = (layer, color, name) =>
 
 const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   <>
-    {getSubMenuHeading(layer, themeColorObject && themeColorObject.mobileMenuHeading, menuItem.name)}
+    {getSubMenuHeading(layer, themeColorObject && themeColorObject.textColor, menuItem.name)}
     <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
   </>
 );
