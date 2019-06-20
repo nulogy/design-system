@@ -100,46 +100,6 @@ const primaryMenuCustomLinks = [
   }
 ];
 
-const primaryMenuCustomPreventDefaultStyles = [
-  {
-    name: "MenuTrigger",
-    items: [
-      {
-        name: "MenuTrigger",
-        items: [
-          {
-            name: "NormalLink",
-            href: "/"
-          },
-          {
-            name: "CustomLink",
-            render: () => <a href="/">CustomLink</a>,
-            preventDefaultStyles: true
-          }
-        ]
-      },
-      {
-        name: "NormalLink",
-        href: "/"
-      },
-      {
-        name: "CustomLink",
-        render: () => <a href="/">CustomLink</a>,
-        preventDefaultStyles: true
-      }
-    ]
-  },
-  {
-    name: "NormalLink",
-    href: "/"
-  },
-  {
-    name: "CustomLink",
-    render: () => <a href="/">CustomLink</a>,
-    preventDefaultStyles: true
-  }
-];
-
 const secondaryMenu = [
   {
     name: "User",
@@ -163,9 +123,6 @@ storiesOf("NavBar", module)
   .add("Without search and primary menu", () => <NavBar menuData={{ secondaryMenu }} />)
   .add("With branding only", () => <NavBar menuData={{}} />)
   .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />)
-  .add("With prevented default styles", () => (
-    <NavBar menuData={{ primaryMenu: primaryMenuCustomPreventDefaultStyles }} />
-  ))
   .add("With subtext", () => (
     <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
   ))

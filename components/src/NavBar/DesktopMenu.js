@@ -64,16 +64,11 @@ const renderMenuLink = (menuItem, themeColorObject) => (
   </div>
 );
 
-const renderCustom = (menuItem, themeColorObject) =>
-  menuItem.preventDefaultStyles ? (
-    <li style={menuItem.desktopStyles} key={menuItem.name}>
-      {menuItem.render()}
-    </li>
-  ) : (
-    <ApplyMenuLinkStyles {...themeColorObject} key={menuItem.name}>
-      {menuItem.render()}
-    </ApplyMenuLinkStyles>
-  );
+const renderCustom = (menuItem, themeColorObject) => (
+  <ApplyMenuLinkStyles {...themeColorObject} key={menuItem.name}>
+    {menuItem.render()}
+  </ApplyMenuLinkStyles>
+);
 
 const getRenderFunction = menuItem => {
   if (menuItem.items) {

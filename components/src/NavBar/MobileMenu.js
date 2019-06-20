@@ -83,16 +83,11 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
   </li>
 );
 
-const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) =>
-  menuItem.preventDefaultStyles ? (
-    <li style={Object.assign({}, menuItem.desktopStyles, { paddingLeft: getPaddingLeft(layer) })} key={menuItem.name}>
-      {menuItem.render()}
-    </li>
-  ) : (
-    <ApplyMenuLinkStyles key={menuItem.name} {...themeColorObject} layer={layer} onClick={linkOnClick}>
-      {menuItem.render()}
-    </ApplyMenuLinkStyles>
-  );
+const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
+  <ApplyMenuLinkStyles key={menuItem.name} {...themeColorObject} layer={layer} onClick={linkOnClick}>
+    {menuItem.render()}
+  </ApplyMenuLinkStyles>
+);
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.name} style={{ display: "block" }}>
