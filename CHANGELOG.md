@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Added "type=button" to DropDownMenu to prevent it submitting a form if located inside one
+
 ### Deprecated
 
 ### Removed
