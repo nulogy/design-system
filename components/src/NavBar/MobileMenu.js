@@ -21,8 +21,6 @@ const getSharedStyles = ({ color, layer }) => ({
   textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
-  lineHeight: theme.lineHeights.base,
-  fontSize: `${theme.fontSizes.medium}`,
   borderRadius: theme.radii.medium,
   fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
   lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,

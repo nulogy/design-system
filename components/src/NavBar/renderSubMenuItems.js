@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
-import themeGet from "styled-system";
 import { DropdownLink as SubMenuLink } from "../DropdownMenu";
 
 const getSharedStyles = () => ({
