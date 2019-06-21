@@ -30,11 +30,11 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
     }
   }
 
-  if (numberOfDefiningKeys !== 1) {
+  if (numberOfDefiningKeys > 1) {
     return new Error(
       `Invalid set of keys for Menu Item with name \`${
         obj.name
-      }\` supplied to \`${componentName}\`. Include a name key and ONE of ${definingKeys}`
+      }\` supplied to \`${componentName}\`. Include a name key and optionally ONE of ${definingKeys}`
     );
   }
 
