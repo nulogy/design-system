@@ -9,6 +9,8 @@ import { Flex } from "../Flex";
 import { Text } from "../Type";
 import theme from "../theme";
 
+// to-do: delete this comment
+
 const alertColours = {
   danger: {
     borderColor: theme.colors.red,
