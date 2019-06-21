@@ -58,6 +58,12 @@ const propsRows = [
     description: "The subtext under the logo"
   },
   {
+    name: "brandingLinkHref",
+    type: "string",
+    defaultValue: "/",
+    description: "The link href for the logo"
+  },
+  {
     name: "breakpointUpper",
     type: "number",
     defaultValue: "1024",

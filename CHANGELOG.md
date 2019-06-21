@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added support for custom links on the branding image in the NavBar component.
 - Added support for non-link text in the NavBar component
 
 ### Changed

@@ -161,6 +161,9 @@ storiesOf("NavBar", module)
   .add("With subtext", () => (
     <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
   ))
+  .add("With alternative branding link", () => (
+    <NavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
+  ))
   .add("With alternate themeColor", () => (
     <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
   ));

@@ -48,14 +48,14 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`
 }));
 
-const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
+const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...props }) => (
   <header {...props}>
     <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
       <Link
         underline={false}
         style={{ display: "block", height: subtext ? "56px" : "40px" }}
         my={subtext ? "-8px" : null}
-        href="/"
+        href={brandingLinkHref}
       >
         <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
       </Link>
@@ -93,12 +93,14 @@ const MediumNavBar = ({ menuData, themeColor, subtext, ...props }) => (
 
 MediumNavBar.propTypes = {
   subtext: PropTypes.string,
+  brandingLinkHref: PropTypes.string,
   menuData: PropTypes.shape({}),
   themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
 MediumNavBar.defaultProps = {
   subtext: null,
+  brandingLinkHref: "/",
   menuData: null,
   themeColor: undefined
 };
@@ -158,6 +160,7 @@ class SmallNavBarNoState extends React.Component {
       breakpointLower,
       smallScreen = windowWidth < parseInt(breakpointLower, 10),
       subtext,
+      brandingLinkHref,
       themeColor,
       ...props
     } = this.props;
@@ -170,7 +173,7 @@ class SmallNavBarNoState extends React.Component {
               style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
               my={subtext && !smallScreen ? "-8px" : null}
               underline={false}
-              href="/"
+              href={brandingLinkHref}
             >
               <Branding
                 logoColor={getThemeColor(themeColor).logoColor}
@@ -221,6 +224,7 @@ SmallNavBarNoState.propTypes = {
   }).isRequired,
   menuData: PropTypes.shape({}),
   subtext: PropTypes.string,
+  brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   windowWidth: PropTypes.number,
   smallScreen: PropTypes.bool,
@@ -230,6 +234,7 @@ SmallNavBarNoState.propTypes = {
 SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
+  brandingLinkHref: "/",
   breakpointLower: theme.breakpoints.small,
   windowWidth: undefined,
   smallScreen: undefined,
