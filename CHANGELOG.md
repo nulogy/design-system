@@ -9,9 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added support for custom links on the branding image in the NavBar component.
-- Added support for non-link text in the NavBar component
-
 ### Changed
 
 ### Deprecated
@@ -22,21 +19,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [0.9.3] - 2019-06-21
+
+### Added
+
+- Added support for custom links on the branding image in the [NavBar](https://nulogy.design/components/navbar/) component.
+- Added support for non-link text in the [NavBar](https://nulogy.design/components/navbar/) component
+
 ## [0.9.2] - 2019-06-21
 
 ### Added
 
-- Added button in storybook toolbar to allow viewing components in different sizes
+- Added button in [storybook](http://storybook.nulogy.design) toolbar to allow viewing components in different sizes
 
 ### Changed
 
-- Added "type=button" to DropDownMenu to prevent it submitting a form if located inside one
+- Added "type=button" to [DropDownMenu](https://nulogy.design/components/dropdown-menu/) to prevent it submitting a form if located inside one
 
 ## [0.9.1] - 2019-06-19
 
 ### Added
 
-- Added three new shadow tokens (medium, large, focus)
+- Added three new [shadow](https://nulogy.design/style/shadows/) tokens (medium, large, focus)
 - Added login page examples to storybooks that include validation messages
 
 ### Changed
