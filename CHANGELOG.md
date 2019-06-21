@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added support for non-link text in the NavBar component
+
 ### Changed
 
 ### Deprecated
@@ -39,7 +41,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - [**Breaking Change**] Tooltip component API now requires there to be a single child which can accept a ref
-- UpdateD the [`Select`](https://storybook.nulogy.design/?path=/story/select--select) component
+- Updated the [`Select`](https://storybook.nulogy.design/?path=/story/select--select) component
   - Added scrolling to the dropdown
   - Added text wrapping
   - Added prop `maxHeight`
