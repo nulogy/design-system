@@ -5,7 +5,6 @@ import { DropdownLink as SubMenuLink } from "../DropdownMenu";
 
 const getSharedStyles = () => ({
   display: "block",
-  color: theme.colors.darkBlue,
   whiteSpace: "nowrap",
   textDecoration: "none",
   borderColor: "transparent",
@@ -16,6 +15,7 @@ const getSharedStyles = () => ({
 });
 
 const ApplySubMenuLinkStyles = styled.li({
+  color: theme.colors.darkBlue,
   verticalAlign: "middle",
   "> *": {
     ...getSharedStyles(),
@@ -35,6 +35,7 @@ const ApplySubMenuLinkStyles = styled.li({
 });
 
 const SubMenuText = styled.li({
+  color: theme.colors.darkGrey,
   userSelect: "none",
   ...getSharedStyles()
 });

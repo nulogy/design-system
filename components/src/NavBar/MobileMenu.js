@@ -25,12 +25,12 @@ const getSharedStyles = ({ color, layer }) => ({
   fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
   lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
   padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
-  paddingLeft: getPaddingLeft(layer)
+  paddingLeft: getPaddingLeft(layer),
+  marginBottom: theme.space.x1
 });
 
 const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer }) => ({
   display: "block",
-  marginBottom: theme.space.x1,
   "*": {
     ...getSharedStyles({ color, layer }),
     textDecoration: "none",
