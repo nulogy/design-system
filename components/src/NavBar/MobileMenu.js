@@ -82,8 +82,7 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
 }));
 
 const MenuText = styled.li(({ textColor, layer }) => ({
-  ...getSharedStyles({ color: textColor, layer }),
-  userSelect: "none"
+  ...getSharedStyles({ color: textColor, layer })
 }));
 
 const SubMenuItemsList = styled.ul({

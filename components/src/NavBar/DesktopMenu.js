@@ -67,8 +67,7 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
 }));
 
 const MenuText = styled.div(({ textColor }) => ({
-  ...getSharedStyles(textColor),
-  userSelect: "none"
+  ...getSharedStyles(textColor)
 }));
 
 const Nav = styled.nav({

@@ -36,7 +36,6 @@ const ApplySubMenuLinkStyles = styled.li({
 
 const SubMenuText = styled.li({
   color: theme.colors.darkGrey,
-  userSelect: "none",
   ...getSharedStyles()
 });
 
