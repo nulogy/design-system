@@ -23,6 +23,6 @@ storiesOf("IconicButton", module)
   ))
   .add("with a hidden label", () => (
     <IconicButton ml="x6" hiddenLabel icon="user">
-      Hovering Label
+      Hidden Label
     </IconicButton>
   ));
