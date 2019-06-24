@@ -22,7 +22,7 @@ storiesOf("IconicButton", module)
     </React.Fragment>
   ))
   .add("with a hover label", () => (
-    <IconicButton ml="x6" hoverLabel icon="user">
+    <IconicButton ml="x6" hiddenLabel icon="user">
       Hovering Label
     </IconicButton>
   ));
