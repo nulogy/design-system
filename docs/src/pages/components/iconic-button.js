@@ -28,7 +28,7 @@ const propsRows = [
       "The icon to display. See the Icons component for all possible options."
   },
   {
-    name: "hiddenLabel",
+    name: "labelHidden",
     type: "Boolean",
     defaultValue: "false",
     description:
@@ -81,11 +81,11 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>With a hidden label</SubsectionTitle>
-        <IconicButton hiddenLabel icon="delete">
+        <IconicButton labelHidden icon="delete">
           Delete
         </IconicButton>
         <Highlight className="js">
-          {'<IconicButton hiddenLabel icon="delete">Delete</IconicButton>'}
+          {'<IconicButton labelHidden icon="delete">Delete</IconicButton>'}
         </Highlight>
       </Box>
       <Box mb="x4">

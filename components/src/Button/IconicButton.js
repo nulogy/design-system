@@ -77,13 +77,13 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
   }
 }));
 
-const BaseIconicButton = React.forwardRef(({ children, icon, hiddenLabel, ...props }, forwardedRef) => (
+const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, ...props }, forwardedRef) => (
   <WrapperButton ref={forwardedRef} label={children} {...props}>
     <Manager>
       <Reference>{({ ref }) => <Icon ref={ref} size={theme.space.x4} icon={icon} p="half" />}</Reference>
       <Popper placement="bottom">
         {({ ref, style, placement }) =>
-          hiddenLabel ? (
+          labelHidden ? (
             <HoverText ref={ref} style={style} placement={placement}>
               {children}
             </HoverText>
@@ -91,7 +91,7 @@ const BaseIconicButton = React.forwardRef(({ children, icon, hiddenLabel, ...pro
         }
       </Popper>
     </Manager>
-    {children && !hiddenLabel && (
+    {children && !labelHidden && (
       <Text mr="half" ml="half">
         {children}
       </Text>
@@ -105,14 +105,14 @@ export const iconNames = Object.keys(icons);
 
 BaseIconicButton.propTypes = {
   children: PropTypes.string,
-  hiddenLabel: PropTypes.bool,
+  labelHidden: PropTypes.bool,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOf(iconNames).isRequired
 };
 
 BaseIconicButton.defaultProps = {
   children: null,
-  hiddenLabel: false,
+  labelHidden: false,
   disabled: false
 };
 

@@ -22,7 +22,7 @@ storiesOf("IconicButton", module)
     </React.Fragment>
   ))
   .add("with a hidden label", () => (
-    <IconicButton ml="x6" hiddenLabel icon="user">
+    <IconicButton ml="x6" labelHidden icon="user">
       Hidden Label
     </IconicButton>
   ));
