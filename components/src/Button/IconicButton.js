@@ -6,6 +6,7 @@ import { Icon } from "../Icon";
 import { Text } from "../Type";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
+import { Manager, Reference, Popper } from "react-popper";
 
 const WrapperButton = styled.button(space, ({ disabled }) => ({
   background: "transparent",
@@ -54,20 +55,35 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
   }
 }));
 
-const BaseIconicButton = React.forwardRef((props, ref) => {
-  const { children, icon } = props;
+const HoverText = styled.div({});
 
-  return (
-    <WrapperButton ref={ref} label={children} {...props}>
-      <Icon size={theme.space.x4} icon={icon} p="half" />
-      {children && (
-        <Text mr="half" ml="half">
-          {children}
-        </Text>
-      )}
-    </WrapperButton>
-  );
-});
+const BaseIconicButton = React.forwardRef(({ children, icon, hoverLabel, ...props }, ref) => (
+  <div style={{ display: "inline" }}>
+    <Manager>
+      <Reference>
+        {({ ref: popperRef }) => (
+          <WrapperButton ref={ref} label={children} {...props}>
+            <Icon ref={popperRef} size={theme.space.x4} icon={icon} p="half" />
+            {children && !hoverLabel && (
+              <Text mr="half" ml="half">
+                {children}
+              </Text>
+            )}
+          </WrapperButton>
+        )}
+      </Reference>
+      <Popper placement="bottom">
+        {({ ref, style, placement }) =>
+          hoverLabel ? (
+            <HoverText ref={ref} style={style} placement={placement}>
+              hey
+            </HoverText>
+          ) : null
+        }
+      </Popper>
+    </Manager>
+  </div>
+));
 
 const IconicButton = styled(BaseIconicButton)({});
 
