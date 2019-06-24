@@ -3,11 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { IconicButton } from "../index";
 
 storiesOf("IconicButton", module)
-  .add("with label", () => (
-    <IconicButton ml="60px" icon="delete">
-      Delete
-    </IconicButton>
-  ))
+  .add("with label", () => <IconicButton icon="delete">Delete</IconicButton>)
   .add("with a long label", () => (
     <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
   ))
