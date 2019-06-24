@@ -27,9 +27,15 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
     fontWeight: theme.fontWeights.medium,
     textAlign: "left"
   },
+  [`${HoverText}`]: {
+    opacity: "0"
+  },
   "&:hover": {
     [`${Icon}`]: {
       backgroundColor: theme.colors.lightBlue
+    },
+    [`${HoverText}`]: {
+      opacity: "1"
     }
   },
   "&:active": {
@@ -51,26 +57,29 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
     outline: "none",
     [`${Icon}`]: {
       boxShadow: theme.shadows.focus
+    },
+    [`${HoverText}`]: {
+      opacity: "1"
     }
   }
 }));
 
-const HoverText = styled.div({});
+const HoverText = styled.div({
+  fontSize: theme.fontSizes.small,
+  lineHeight: theme.lineHeights.smallTextBase,
+  color: theme.colors.darkBlue,
+  backgroundColor: theme.colors.lightBlue,
+  borderRadius: theme.radii.medium,
+  marginTop: theme.space.half,
+  padding: `0 ${theme.space.half}`,
+  pointerEvents: "none"
+});
 
 const BaseIconicButton = React.forwardRef(({ children, icon, hoverLabel, ...props }, ref) => (
-  <div style={{ display: "inline" }}>
+  <WrapperButton ref={ref} label={children} {...props}>
     <Manager>
       <Reference>
-        {({ ref: popperRef }) => (
-          <WrapperButton ref={ref} label={children} {...props}>
-            <Icon ref={popperRef} size={theme.space.x4} icon={icon} p="half" />
-            {children && !hoverLabel && (
-              <Text mr="half" ml="half">
-                {children}
-              </Text>
-            )}
-          </WrapperButton>
-        )}
+        {({ ref: popperRef }) => <Icon ref={popperRef} size={theme.space.x4} icon={icon} p="half" />}
       </Reference>
       <Popper placement="bottom">
         {({ ref, style, placement }) =>
@@ -82,7 +91,12 @@ const BaseIconicButton = React.forwardRef(({ children, icon, hoverLabel, ...prop
         }
       </Popper>
     </Manager>
-  </div>
+    {children && !hoverLabel && (
+      <Text mr="half" ml="half">
+        {children}
+      </Text>
+    )}
+  </WrapperButton>
 ));
 
 const IconicButton = styled(BaseIconicButton)({});
