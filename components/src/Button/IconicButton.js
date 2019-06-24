@@ -7,6 +7,7 @@ import { Text } from "../Type";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 import { Manager, Reference, Popper } from "react-popper";
+import { transparentize } from "polished";
 
 const WrapperButton = styled.button(space, ({ disabled }) => ({
   background: "transparent",
@@ -65,13 +66,14 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
 }));
 
 const HoverText = styled.div({
+  whiteSpace: "nowrap",
   fontSize: theme.fontSizes.small,
-  lineHeight: theme.lineHeights.smallTextBase,
-  color: theme.colors.darkBlue,
-  backgroundColor: theme.colors.lightBlue,
+  lineHeight: theme.lineHeights.smallTextCompressed,
+  color: theme.colors.whiteGrey,
+  backgroundColor: transparentize(0.15, theme.colors.blackBlue),
   borderRadius: theme.radii.medium,
   marginTop: theme.space.half,
-  padding: `0 ${theme.space.half}`,
+  padding: `${theme.space.half} ${theme.space.x1}`,
   pointerEvents: "none"
 });
 
@@ -85,7 +87,7 @@ const BaseIconicButton = React.forwardRef(({ children, icon, hoverLabel, ...prop
         {({ ref, style, placement }) =>
           hoverLabel ? (
             <HoverText ref={ref} style={style} placement={placement}>
-              hey
+              {children}
             </HoverText>
           ) : null
         }
