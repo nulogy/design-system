@@ -21,18 +21,25 @@ import {
 
 const propsRows = [
   {
-    name: "disabled",
-    type: "Boolean",
-    defaultValue: "false",
-    description:
-      "Lightens the opacity and makes the button unable to be clicked."
-  },
-  {
     name: "icon",
     type: "String",
     defaultValue: "Required",
     description:
       "The icon to display. See the Icons component for all possible options."
+  },
+  {
+    name: "hiddenLabel",
+    type: "Boolean",
+    defaultValue: "false",
+    description:
+      "Will display the label under the Iconic Button on hover or button focus."
+  },
+  {
+    name: "disabled",
+    type: "Boolean",
+    defaultValue: "false",
+    description:
+      "Lightens the opacity and makes the button unable to be clicked."
   }
 ];
 
@@ -70,6 +77,15 @@ export default () => (
         <IconicButton icon="delete">Delete</IconicButton>
         <Highlight className="js">
           {'<IconicButton icon="delete">Delete</IconicButton>'}
+        </Highlight>
+      </Box>
+      <Box mb="x4">
+        <SubsectionTitle>With a hidden label</SubsectionTitle>
+        <IconicButton hiddenLabel icon="delete">
+          Delete
+        </IconicButton>
+        <Highlight className="js">
+          {'<IconicButton hiddenLabel icon="delete">Delete</IconicButton>'}
         </Highlight>
       </Box>
       <Box mb="x4">
