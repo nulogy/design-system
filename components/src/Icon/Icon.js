@@ -17,12 +17,13 @@ const getPathElements = icon => (
 );
 /* eslint-enable react/no-array-index-key */
 
-const Svg = props => {
+const Svg = React.forwardRef((props, ref) => {
   const { icon, title, size, color: fillColor, focusable } = props;
 
   if (!icons[icon]) return false;
   return (
     <svg
+      ref={ref}
       aria-hidden={title == null}
       width={size}
       height={size}
@@ -34,7 +35,7 @@ const Svg = props => {
       {getPathElements(icons[icon])}
     </svg>
   );
-};
+});
 
 Svg.propTypes = {
   icon: PropTypes.oneOf(iconNames).isRequired,
