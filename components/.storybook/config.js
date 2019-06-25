@@ -1,5 +1,6 @@
 import React from "react";
 import { configure, addDecorator, addParameters } from "@storybook/react";
+import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 
@@ -48,7 +49,12 @@ const newViewports = {
 };
 
 addParameters({
-  viewport: { viewports: newViewports }
+  viewport: { viewports: newViewports },
+  options: {
+    theme: create({
+      gridCellSize: 8
+    })
+  }
 });
 
 addDecorator(story => (

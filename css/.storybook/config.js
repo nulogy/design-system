@@ -1,4 +1,5 @@
 import { configure, addParameters } from "@storybook/html";
+import { create } from "@storybook/theming";
 import "../src/nds-dev.css";
 
 const req = require.context("../src/scss", true, /\.story\.js$/);
@@ -46,7 +47,12 @@ const newViewports = {
 };
 
 addParameters({
-  viewport: { viewports: newViewports }
+  viewport: { viewports: newViewports },
+  options: {
+    theme: create({
+      gridCellSize: 8
+    })
+  }
 });
 
 configure(loadStories, module);
