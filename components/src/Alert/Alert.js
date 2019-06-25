@@ -44,36 +44,32 @@ class BaseAlert extends React.Component {
     const { children, isCloseable, title, type, ...props } = this.props;
     const { isVisible } = this.state;
 
-    return (
-      <>
-        {isVisible && (
-          <Box
-            bg={alertColours[type].backgroundColor}
-            p="x2"
-            borderRadius={theme.radii.medium}
-            borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
-            role="alert"
-            {...props}
-          >
-            <Flex>
-              {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
-              {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
-              <Box mr="auto">
-                {title && <Text fontWeight="bold">{title}</Text>}
-                {children}
-              </Box>
-              {isCloseable && (
-                <Box>
-                  <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
-                    <Icon icon="close" size="16" />
-                  </Link>
-                </Box>
-              )}
-            </Flex>
+    return isVisible ? (
+      <Box
+        bg={alertColours[type].backgroundColor}
+        p="x2"
+        borderRadius={theme.radii.medium}
+        borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
+        role="alert"
+        {...props}
+      >
+        <Flex>
+          {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
+          {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
+          <Box mr="auto">
+            {title && <Text fontWeight="bold">{title}</Text>}
+            {children}
           </Box>
-        )}
-      </>
-    );
+          {isCloseable && (
+            <Box>
+              <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
+                <Icon icon="close" size="16" />
+              </Link>
+            </Box>
+          )}
+        </Flex>
+      </Box>
+    ) : null;
   }
 }
 
