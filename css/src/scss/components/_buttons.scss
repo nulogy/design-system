@@ -28,7 +28,7 @@
   border: 1px solid $background;
 
   &:hover {
-    background: darken($background, 5%);
+    background: darken($background, 10%);
   }
 
   &:active {
@@ -46,9 +46,9 @@
   }
 
   &:focus {
-    background-color: darken($background, 5%);
+    background-color: $background;
     &:hover {
-      background-color: $background;
+      background-color: darken($background, 10%);
     }
   }
 }
@@ -61,8 +61,12 @@
     border: 1px solid $color-base-dark-blue;
   &:hover {
     background: $color-base-light-blue;
-    color: $color-base-dark-blue;
-    border: 1px solid $color-base-dark-blue;
+  }
+  &:focus {
+    background: $color-base-white;
+    &:hover {
+      background: $color-base-light-blue;
+    }
   }
 }
 
