@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 /**
  * Do not edit directly
- * Generated on Fri, 21 Jun 2019 19:45:11 GMT
+ * Generated on Fri, 21 Jun 2019 14:13:14 GMT
  */
 html,
 body {
@@ -152,11 +152,7 @@ img {
   float: right;
 }
 
-.nds-clearfix:after,
-.Alert:after,
-.Alert--danger:after,
-.Alert--success:after,
-.Alert--warning:after {
+.nds-clearfix:after {
   content: "";
   display: table;
   clear: both;
@@ -614,11 +610,7 @@ img {
   font-weight: 600;
 }
 
-.nds-clearfix:after,
-.Alert:after,
-.Alert--danger:after,
-.Alert--success:after,
-.Alert--warning:after {
+.nds-clearfix:after {
   content: "";
   display: table;
   clear: both;
@@ -645,6 +637,7 @@ img {
   border-left: 4px solid #216beb;
   padding: 16px;
   background: #e1ebfa;
+  display: flex;
 }
 .Alert__icon {
   fill: #216beb;
@@ -659,13 +652,8 @@ img {
   margin: 0;
 }
 
-.Alert__content {
-  float: left;
-}
-
 .Alert--danger__icon,
 .Alert--success__icon {
-  float: left;
   margin-right: 8px;
 }
 

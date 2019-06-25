@@ -1,6 +1,4 @@
 @mixin alert($borderColor, $backgroundColor) {
-  @extend .nds-clearfix;
-
   border-radius: $radius-border-medium;
   border-left: $size-base-half solid $borderColor;
   padding: $size-base-x-2;
@@ -13,6 +11,7 @@
 
 .Alert {
   @include alert($color-base-blue, $color-base-light-blue);
+  display: flex;
 }
 
 .Alert__title {
@@ -25,12 +24,10 @@
 }
 
 .Alert__content {
-  float: left;
 }
 
 .Alert--danger__icon,
 .Alert--success__icon {
-  float: left;
   margin-right: $size-base-x-1;
 }
 
