@@ -648,10 +648,10 @@ img {
   padding: 8px 16px;
   transition: 0.2s;
 }
-.Button:hover,
-.PrimaryButton:hover,
-.DangerButton:hover,
-.QuietButton:hover {
+.Button:not([disabled]):hover,
+.PrimaryButton:not([disabled]):hover,
+.DangerButton:not([disabled]):hover,
+.QuietButton:not([disabled]):hover {
   cursor: pointer;
 }
 .Button:focus,
@@ -761,7 +761,7 @@ img {
   color: #00438f;
   text-decoration: underline;
 }
-.QuietButton:hover {
+.QuietButton:not([disabled]):hover {
   color: #216beb;
 }
 

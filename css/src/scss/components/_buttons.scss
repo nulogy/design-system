@@ -11,7 +11,7 @@
   border-radius: $radius-border-medium;
   padding: $size-base-x-1 $size-base-x-2;
   transition: 0.2s;
-  &:hover {
+  &:not([disabled]):hover {
     cursor: pointer;
   }
   &:focus {
@@ -81,8 +81,9 @@
 .QuietButton {
   @extend %button;
   color: $color-base-dark-blue;
+  text-decoration: underline;
 
-  &:hover {
+  &:not([disabled]):hover {
     color: $color-base-blue;
   }
 }
