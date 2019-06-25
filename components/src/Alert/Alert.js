@@ -45,7 +45,7 @@ class BaseAlert extends React.Component {
     const { isVisible } = this.state;
 
     return isVisible ? (
-      <Box
+      <Flex
         bg={alertColours[type].backgroundColor}
         p="x2"
         borderRadius={theme.radii.medium}
@@ -53,22 +53,20 @@ class BaseAlert extends React.Component {
         role="alert"
         {...props}
       >
-        <Flex>
-          {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
-          {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
-          <Box mr="auto">
-            {title && <Text fontWeight="bold">{title}</Text>}
-            {children}
+        {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
+        {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
+        <Box mr="auto">
+          {title && <Text fontWeight="bold">{title}</Text>}
+          {children}
+        </Box>
+        {isCloseable && (
+          <Box>
+            <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
+              <Icon icon="close" size="16" />
+            </Link>
           </Box>
-          {isCloseable && (
-            <Box>
-              <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
-                <Icon icon="close" size="16" />
-              </Link>
-            </Box>
-          )}
-        </Flex>
-      </Box>
+        )}
+      </Flex>
     ) : null;
   }
 }
