@@ -1,7 +1,9 @@
-import { storiesOf } from '@storybook/html';
+import { storiesOf } from "@storybook/html";
 
-storiesOf('Utilities/Space', module)
-  .add('Padding', () => `
+storiesOf("Utilities|Space", module)
+  .add(
+    "Padding",
+    () => `
         <div class="nds-background--light-grey nds-margin-bottom--x1 nds-padding--none">.nds-padding--none</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 nds-padding--x1">.nds-padding--x1</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 nds-padding--x2">.nds-padding--x2</div>
@@ -29,15 +31,19 @@ storiesOf('Utilities/Space', module)
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-left--x3">.nds-padding-left--x3</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-left--x4">.nds-padding-left--x4</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-left--x6">.nds-padding-left--x6</div>
-        <div class="nds-background--light-grey nds-margin-bottom--x1 padding-left--x8">.nds-padding-left--x8</div> 
+        <div class="nds-background--light-grey nds-margin-bottom--x1 padding-left--x8">.nds-padding-left--x8</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--none">.nds-padding-right--none</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x1">.nds-padding-right--x1</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x2">.nds-padding-right--x2</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x3">.nds-padding-right--x3</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x4">.nds-padding-right--x4</div>
         <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x6">.nds-padding-right--x6</div>
-        <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x8">.nds-padding-right--x8</div>  
-    `).add('Margin', () => `
+        <div class="nds-background--light-grey nds-margin-bottom--x1 padding-right--x8">.nds-padding-right--x8</div>
+    `
+  )
+  .add(
+    "Margin",
+    () => `
         <div class="nds-background--light-grey nds-margin--x1">.nds-margin--none</div>
         <div class="nds-background--light-grey nds-margin--x1">.nds-margin--x1</div>
         <div class="nds-background--light-grey nds-margin--x2">.nds-margin--x2</div>
@@ -65,12 +71,13 @@ storiesOf('Utilities/Space', module)
         <div class="nds-background--light-grey nds-margin-left--x3">.nds-margin-left--x3</div>
         <div class="nds-background--light-grey nds-margin-left--x4">.nds-margin-left--x4</div>
         <div class="nds-background--light-grey nds-margin-left--x6">.nds-margin-left--x6</div>
-        <div class="nds-background--light-grey nds-margin-left--x8">.nds-margin-left--x8</div> 
+        <div class="nds-background--light-grey nds-margin-left--x8">.nds-margin-left--x8</div>
         <div class="nds-background--light-grey nds-margin-right--none">.nds-margin-right--none</div>
         <div class="nds-background--light-grey nds-margin-right--x1">.nds-margin-right--x1</div>
         <div class="nds-background--light-grey nds-margin-right--x2">.nds-margin-right--x2</div>
         <div class="nds-background--light-grey nds-margin-right--x3">.nds-margin-right--x3</div>
         <div class="nds-background--light-grey nds-margin-right--x4">.nds-margin-right--x4</div>
         <div class="nds-background--light-grey nds-margin-right--x6">.nds-margin-right--x6</div>
-        <div class="nds-background--light-grey nds-margin-right--x8">.nds-margin-right--x8</div>  
-  `);
+        <div class="nds-background--light-grey nds-margin-right--x8">.nds-margin-right--x8</div>
+  `
+  );
