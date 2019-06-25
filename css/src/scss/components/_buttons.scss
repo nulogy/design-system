@@ -81,7 +81,6 @@
 .QuietButton {
   @extend %button;
   color: $color-base-dark-blue;
-  text-decoration: underline;
 
   &:not([disabled]):hover {
     color: $color-base-blue;
