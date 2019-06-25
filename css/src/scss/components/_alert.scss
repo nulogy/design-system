@@ -1,0 +1,51 @@
+@mixin alert($borderColor, $backgroundColor) {
+  @extend .nds-clearfix;
+
+  border-radius: $radius-border-medium;
+  border-left: $size-base-half solid $borderColor;
+  padding: $size-base-x-2;
+  background: $backgroundColor;
+
+  &__icon {
+    fill: $borderColor;
+  }
+}
+
+.Alert {
+  @include alert($color-base-blue, $color-base-light-blue);
+}
+
+.Alert__title {
+  margin: 0;
+  font-weight: $weight-font-bold;
+}
+
+.Alert__message {
+  margin: 0;
+}
+
+.Alert__content {
+  float: left;
+}
+
+.Alert--danger__icon,
+.Alert--success__icon {
+  float: left;
+  margin-right: $size-base-x-1;
+}
+
+/* -----------------------------------------
+    ## Variations
+----------------------------------------- */
+
+.Alert--danger {
+  @include alert($color-base-red, $color-base-light-red);
+}
+
+.Alert--success {
+  @include alert($color-base-green, $color-base-light-green);
+}
+
+.Alert--warning {
+  @include alert($color-base-yellow, $color-base-light-yellow);
+}

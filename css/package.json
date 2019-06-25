@@ -7,7 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9000 -c .storybook",
+    "storybook": "start-storybook -p 9000 -c .storybook -s ./src/",
     "watch": "node-sass src/scss/nds.scss > src/nds-dev.css && node-sass --watch --recursive src/scss/nds.scss src/nds-dev.css",
     "build": "node-sass --build --output-style compact src/scss/ -o dist/",
     "start": "yarn run storybook & yarn run watch"
