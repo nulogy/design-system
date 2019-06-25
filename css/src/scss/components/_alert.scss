@@ -49,3 +49,33 @@
 .Alert--warning {
   @include alert($color-base-yellow, $color-base-light-yellow);
 }
+
+// temporarily putting styles here for ErrorPage
+
+.ErrorPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.ErrorPage__header {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.ErrorPage__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.ErrorPage__main {
+  flex-grow: 1;
+}
+
+.ErrorPage__footer {
+  border-top: 1px solid $color-base-light-grey;
+  padding-top: $size-base-x-2;
+  text-align: center;
+}
