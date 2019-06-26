@@ -690,6 +690,34 @@ img {
   fill: #ffbb00;
 }
 
+.ErrorPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.ErrorPage__header {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.ErrorPage__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.ErrorPage__main {
+  flex-grow: 1;
+}
+
+.ErrorPage__footer {
+  border-top: 1px solid #e4e7eb;
+  padding-top: 16px;
+  text-align: center;
+}
+
 /* -----------------------------------------
     ## Base button styles
 ----------------------------------------- */

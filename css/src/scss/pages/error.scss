@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+@import "../../../../tokens/dist/_variables";
+@import "../defaults";
+@import "../components/alert";
+@import "../components/link";
+
+.ErrorPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.ErrorPage__container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ErrorPage__header {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.ErrorPage__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.ErrorPage__main {
+  flex-grow: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  .Alert {
+    text-align: left;
+  }
+}
+
+.ErrorPage__footer {
+  border-top: 1px solid $color-base-light-grey;
+  padding: $size-base-x-2 0;
+  text-align: center;
+  color: $color-base-dark-grey;
+}
+
+.ErrorPage .Alert .Link {
+  color: $color-base-black;
+}

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+/**
+ * Do not edit directly
+ * Generated on Fri, 21 Jun 2019 19:45:11 GMT
+ */
+html,
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #011e38;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.5;
+}
+
+code {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Alert {
+  border-radius: 4px;
+  border-left: 4px solid #216beb;
+  padding: 16px;
+  background: #e1ebfa;
+  display: flex;
+}
+.Alert__icon {
+  fill: #216beb;
+}
+
+.Alert__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.Alert__message {
+  margin: 0;
+}
+
+.Alert--danger__icon,
+.Alert--success__icon {
+  margin-right: 8px;
+}
+
+/* -----------------------------------------
+    ## Variations
+----------------------------------------- */
+.Alert--danger {
+  border-radius: 4px;
+  border-left: 4px solid #cc1439;
+  padding: 16px;
+  background: #fae6ea;
+}
+.Alert--danger__icon {
+  fill: #cc1439;
+}
+
+.Alert--success {
+  border-radius: 4px;
+  border-left: 4px solid #008059;
+  padding: 16px;
+  background: #e9f7f2;
+}
+.Alert--success__icon {
+  fill: #008059;
+}
+
+.Alert--warning {
+  border-radius: 4px;
+  border-left: 4px solid #ffbb00;
+  padding: 16px;
+  background: #fcf5e3;
+}
+.Alert--warning__icon {
+  fill: #ffbb00;
+}
+
+.Link {
+  color: #216beb;
+}
+.Link:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+.Link:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
+}
+
+.ErrorPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.ErrorPage__container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ErrorPage__header {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.ErrorPage__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.ErrorPage__main {
+  flex-grow: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ErrorPage__main .Alert {
+  text-align: left;
+}
+
+.ErrorPage__footer {
+  border-top: 1px solid #e4e7eb;
+  padding: 16px 0;
+  text-align: center;
+  color: #434d59;
+}
+
+.ErrorPage .Alert .Link {
+  color: #011e38;
+}
