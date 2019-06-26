@@ -21,3 +21,9 @@ This is where Nulogy's design tokens are stored and converted using [Style Dicti
 `@import '/node_modules/@nulogy/tokens/dist/variables.scss';`
 
 `.blue-thing {color: $color_base_blue}`
+
+### With CSS Modules 
+
+In your component's jsx file, add `import "@nulogy/tokens/dist/variables.css";
+
+`.blue-thing {color: var(--color-base-blue)}`
