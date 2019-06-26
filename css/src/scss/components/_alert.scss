@@ -1,3 +1,7 @@
+/* -----------------------------------------
+    ## Alerts
+----------------------------------------- */
+
 @mixin alert($borderColor, $backgroundColor) {
   border-radius: $radius-border-medium;
   border-left: $size-base-half solid $borderColor;
@@ -35,9 +39,7 @@
   margin-right: $size-base-x-1;
 }
 
-/* -----------------------------------------
-    ## Variations
------------------------------------------ */
+// Variations
 
 .Alert--danger {
   @include alert($color-base-red, $color-base-light-red);

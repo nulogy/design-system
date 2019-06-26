@@ -3,6 +3,9 @@
  * Do not edit directly
  * Generated on Fri, 21 Jun 2019 19:45:11 GMT
  */
+/* -----------------------------------------
+    ## Default styles
+----------------------------------------- */
 html,
 body {
   margin: 0;
@@ -632,6 +635,9 @@ img {
   text-decoration: none;
 }
 
+/* -----------------------------------------
+    ## Alerts
+----------------------------------------- */
 .Alert {
   border-radius: 4px;
   border-left: 4px solid #216beb;
@@ -663,9 +669,6 @@ img {
   margin-right: 8px;
 }
 
-/* -----------------------------------------
-    ## Variations
------------------------------------------ */
 .Alert--danger {
   border-radius: 4px;
   border-left: 4px solid #cc1439;
@@ -706,7 +709,7 @@ img {
 }
 
 /* -----------------------------------------
-    ## Base button styles
+    ## Buttons
 ----------------------------------------- */
 .Button,
 .PrimaryButton,
@@ -736,9 +739,6 @@ img {
   box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
 }
 
-/* -----------------------------------------
-    ## Variations
------------------------------------------ */
 .Button {
   color: #216beb;
   background: #ffffff;
@@ -837,9 +837,6 @@ img {
   color: #216beb;
 }
 
-/* -----------------------------------------
-    ## Sizes
------------------------------------------ */
 .Button.small,
 .PrimaryButton.small,
 .DangerButton.small,
@@ -855,6 +852,9 @@ img {
   padding: 16px 24px !important;
 }
 
+/* -----------------------------------------
+    ## Link
+----------------------------------------- */
 .Link {
   color: #216beb;
 }
@@ -867,6 +867,9 @@ img {
   box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
 }
 
+/* -----------------------------------------
+    ## Typography
+----------------------------------------- */
 .Title {
   font-size: 46px;
   font-weight: 300;

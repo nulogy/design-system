@@ -4,8 +4,12 @@
 @import "../components/alert";
 @import "../components/link";
 
+/* -----------------------------------------
+    ## Error page
+----------------------------------------- */
+
 .ErrorPage {
-  height: calc(100vh - 24px);
+  height: calc(100vh - 16px);
   display: flex;
   flex-direction: column;
   padding-top: 24px;

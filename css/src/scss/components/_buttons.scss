@@ -1,5 +1,5 @@
 /* -----------------------------------------
-    ## Base button styles
+    ## Buttons
 ----------------------------------------- */
 
 %button {
@@ -53,9 +53,8 @@
   }
 }
 
-/* -----------------------------------------
-    ## Variations
------------------------------------------ */
+// Variations
+
 .Button {
   @include button($background: $color-base-white, $font: $color-base-blue)
     border: 1px solid $color-base-dark-blue;
@@ -87,9 +86,8 @@
   }
 }
 
-/* -----------------------------------------
-    ## Sizes
------------------------------------------ */
+// Sizes
+
 .Button.small,
 .PrimaryButton.small,
 .DangerButton.small,
