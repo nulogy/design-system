@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600");
 @import "../../../../tokens/dist/_variables";
 @import "../defaults";
 @import "../components/alert";
 @import "../components/link";
 
 .ErrorPage {
-  height: 100vh;
+  height: calc(100vh - 24px);
   display: flex;
   flex-direction: column;
   padding-top: 24px;
@@ -18,20 +18,32 @@
 
 .ErrorPage__header {
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 48px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+  @media screen and (min-width: $size-breakpoint-small) {
+    margin-top: 80px;
+    margin-bottom: 56px;
+  }
+  @media screen and (min-width: $size-breakpoint-large) {
+    margin: 0;
+  }
 }
 
 .ErrorPage__logo {
   display: block;
   margin: 0 auto;
+  &--with-homepage-link {
+    margin-top: -32px; // to align with Alert instead of container
+  }
 }
 
 .ErrorPage__main {
-  flex-grow: 1;
   max-width: 480px;
   margin: 0 auto;
   text-align: center;
+  @media screen and (min-width: $size-breakpoint-large) {
+    text-align: left;
+  }
   .Alert {
     text-align: left;
   }
@@ -39,11 +51,24 @@
 
 .ErrorPage__footer {
   border-top: 1px solid $color-base-light-grey;
-  padding: $size-base-x-2 0;
+  padding-top: $size-base-x-2;
   text-align: center;
+  font-size: $size-font-small;
   color: $color-base-dark-grey;
 }
 
-.ErrorPage .Alert .Link {
-  color: $color-base-black;
+.Link--ErrorPage {
+  color: $color-base-dark-blue;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.responsive-layout-switch-wrapper {
+  flex-grow: 1; // to push footer to bottom of page
+  @media screen and (min-width: $size-breakpoint-large) {
+    display: flex;
+    width: 720px; // 480px for alert + 200px for logo + 40px space in between
+    margin: 0 auto;
+    align-items: center;
+  }
 }

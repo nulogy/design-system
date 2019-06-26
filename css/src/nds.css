@@ -642,6 +642,9 @@ img {
 .Alert__icon {
   fill: #216beb;
 }
+.Alert a {
+  color: #011e38;
+}
 
 .Alert__title {
   margin: 0;
@@ -649,7 +652,10 @@ img {
 }
 
 .Alert__message {
-  margin: 0;
+  margin-top: 0;
+}
+.Alert__message:last-child {
+  margin-bottom: 0;
 }
 
 .Alert--danger__icon,
@@ -669,6 +675,9 @@ img {
 .Alert--danger__icon {
   fill: #cc1439;
 }
+.Alert--danger a {
+  color: #011e38;
+}
 
 .Alert--success {
   border-radius: 4px;
@@ -679,6 +688,9 @@ img {
 .Alert--success__icon {
   fill: #008059;
 }
+.Alert--success a {
+  color: #011e38;
+}
 
 .Alert--warning {
   border-radius: 4px;
@@ -688,6 +700,9 @@ img {
 }
 .Alert--warning__icon {
   fill: #ffbb00;
+}
+.Alert--warning a {
+  color: #011e38;
 }
 
 /* -----------------------------------------

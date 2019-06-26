@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600");
 /**
  * Do not edit directly
  * Generated on Fri, 21 Jun 2019 19:45:11 GMT
@@ -38,6 +38,9 @@ img {
 .Alert__icon {
   fill: #216beb;
 }
+.Alert a {
+  color: #011e38;
+}
 
 .Alert__title {
   margin: 0;
@@ -45,7 +48,10 @@ img {
 }
 
 .Alert__message {
-  margin: 0;
+  margin-top: 0;
+}
+.Alert__message:last-child {
+  margin-bottom: 0;
 }
 
 .Alert--danger__icon,
@@ -65,6 +71,9 @@ img {
 .Alert--danger__icon {
   fill: #cc1439;
 }
+.Alert--danger a {
+  color: #011e38;
+}
 
 .Alert--success {
   border-radius: 4px;
@@ -75,6 +84,9 @@ img {
 .Alert--success__icon {
   fill: #008059;
 }
+.Alert--success a {
+  color: #011e38;
+}
 
 .Alert--warning {
   border-radius: 4px;
@@ -84,6 +96,9 @@ img {
 }
 .Alert--warning__icon {
   fill: #ffbb00;
+}
+.Alert--warning a {
+  color: #011e38;
 }
 
 .Link {
@@ -99,7 +114,7 @@ img {
 }
 
 .ErrorPage {
-  height: 100vh;
+  height: calc(100vh - 24px);
   display: flex;
   flex-direction: column;
   padding-top: 24px;
@@ -112,20 +127,38 @@ img {
 
 .ErrorPage__header {
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 48px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .ErrorPage__header {
+    margin-top: 80px;
+    margin-bottom: 56px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .ErrorPage__header {
+    margin: 0;
+  }
 }
 
 .ErrorPage__logo {
   display: block;
   margin: 0 auto;
 }
+.ErrorPage__logo--with-homepage-link {
+  margin-top: -32px;
+}
 
 .ErrorPage__main {
-  flex-grow: 1;
   max-width: 480px;
   margin: 0 auto;
   text-align: center;
+}
+@media screen and (min-width: 1360px) {
+  .ErrorPage__main {
+    text-align: left;
+  }
 }
 .ErrorPage__main .Alert {
   text-align: left;
@@ -133,11 +166,26 @@ img {
 
 .ErrorPage__footer {
   border-top: 1px solid #e4e7eb;
-  padding: 16px 0;
+  padding-top: 16px;
   text-align: center;
+  font-size: 14px;
   color: #434d59;
 }
 
-.ErrorPage .Alert .Link {
-  color: #011e38;
+.Link--ErrorPage {
+  color: #00438f;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.responsive-layout-switch-wrapper {
+  flex-grow: 1;
+}
+@media screen and (min-width: 1360px) {
+  .responsive-layout-switch-wrapper {
+    display: flex;
+    width: 720px;
+    margin: 0 auto;
+    align-items: center;
+  }
 }
