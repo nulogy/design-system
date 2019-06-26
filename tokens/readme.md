@@ -24,4 +24,4 @@ In your component's jsx file, add `import "@nulogy/tokens/dist/variables.css";`
 `.blue-thing {color: var(--color-base-blue)}`
 
 ### In JS 
-If you're using javascript, you can access our theme instead of the tokens directly. For instructions on that, see [nulogy.design/theme](https://nulogy.design/theme/)
+If you're using javascript, you can access our theme instead of the tokens directly. For instructions on that, see "For custom components" at [nulogy.design/theme](https://nulogy.design/theme/)
