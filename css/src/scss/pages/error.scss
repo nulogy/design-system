@@ -8,22 +8,25 @@
     ## Error page
 ----------------------------------------- */
 
+$error-page-width: 480px;
+
 .ErrorPage {
   height: calc(100vh - 16px);
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
+  padding: $size-base-x-2;
+  padding-top: $size-base-x-3;
 }
 
 .ErrorPage__container {
-  max-width: 480px;
+  max-width: $error-page-width;
   margin: 0 auto;
 }
 
 .ErrorPage__header {
   text-align: center;
-  margin-top: 16px;
-  margin-bottom: 40px;
+  margin-top: $size-base-x-2;
+  margin-bottom: $size-base-x-5;
   @media screen and (min-width: $size-breakpoint-small) {
     margin-top: 80px;
     margin-bottom: 56px;
@@ -37,12 +40,14 @@
   display: block;
   margin: 0 auto;
   &--with-homepage-link {
-    margin-top: -32px; // to align with Alert instead of container
+    @media screen and (min-width: $size-breakpoint-large) {
+      margin-top: -32px; // to align with Alert instead of container
+    }
   }
 }
 
 .ErrorPage__main {
-  max-width: 480px;
+  max-width: $error-page-width;
   margin: 0 auto;
   text-align: center;
   @media screen and (min-width: $size-breakpoint-large) {
@@ -64,7 +69,7 @@
 .Link--ErrorPage {
   color: $color-base-dark-blue;
   display: inline-block;
-  margin-top: 16px;
+  margin-top: $size-base-x-2;
 }
 
 .responsive-layout-switch-wrapper {

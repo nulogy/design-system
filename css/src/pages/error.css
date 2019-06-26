@@ -126,6 +126,7 @@ img {
   height: calc(100vh - 16px);
   display: flex;
   flex-direction: column;
+  padding: 16px;
   padding-top: 24px;
 }
 
@@ -155,8 +156,10 @@ img {
   display: block;
   margin: 0 auto;
 }
-.ErrorPage__logo--with-homepage-link {
-  margin-top: -32px;
+@media screen and (min-width: 1360px) {
+  .ErrorPage__logo--with-homepage-link {
+    margin-top: -32px;
+  }
 }
 
 .ErrorPage__main {
