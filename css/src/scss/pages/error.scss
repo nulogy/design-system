@@ -8,7 +8,7 @@
     ## Error page
 ----------------------------------------- */
 
-$error-page-width: 480px;
+$error-page-width: 432px;
 
 .ErrorPage {
   height: 100vh;
@@ -29,7 +29,6 @@ $error-page-width: 480px;
   margin-bottom: $size-base-x-5;
   @media screen and (min-width: $size-breakpoint-small) {
     margin-top: 80px;
-    margin-bottom: 56px;
   }
   @media screen and (min-width: $size-breakpoint-large) {
     margin: 0;
@@ -76,7 +75,7 @@ $error-page-width: 480px;
   flex-grow: 1; // to push footer to bottom of page
   @media screen and (min-width: $size-breakpoint-large) {
     display: flex;
-    width: 720px; // 480px for alert + 200px for logo + 40px space in between
+    width: 672px; // 432px for alert + 200px for logo + 40px space in between
     margin: 0 auto;
     align-items: center;
   }

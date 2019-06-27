@@ -40,6 +40,7 @@ img {
   padding: 16px;
   background: #e1ebfa;
   display: flex;
+  max-width: 432px;
 }
 .Alert__icon {
   fill: #216beb;
@@ -131,7 +132,7 @@ img {
 }
 
 .ErrorPage__container {
-  max-width: 480px;
+  max-width: 432px;
   margin: 0 auto;
 }
 
@@ -143,7 +144,6 @@ img {
 @media screen and (min-width: 768px) {
   .ErrorPage__header {
     margin-top: 80px;
-    margin-bottom: 56px;
   }
 }
 @media screen and (min-width: 1360px) {
@@ -163,7 +163,7 @@ img {
 }
 
 .ErrorPage__main {
-  max-width: 480px;
+  max-width: 432px;
   margin: 0 auto;
   text-align: center;
 }
@@ -196,7 +196,7 @@ img {
 @media screen and (min-width: 1360px) {
   .responsive-layout-switch-wrapper {
     display: flex;
-    width: 720px;
+    width: 672px;
     margin: 0 auto;
     align-items: center;
   }

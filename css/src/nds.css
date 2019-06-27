@@ -644,6 +644,7 @@ img {
   padding: 16px;
   background: #e1ebfa;
   display: flex;
+  max-width: 432px;
 }
 .Alert__icon {
   fill: #216beb;
