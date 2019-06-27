@@ -116,7 +116,7 @@ const MenuItem = styled.div(({ isSelected, isActive }) => ({
   }
 }));
 
-const parseValueProp = (value, options) => options.find(o => o.value === value);
+const parseValueProp = (value, options) => options.find(o => o.value === value) || "";
 
 const Select = ({
   errorMessage,
