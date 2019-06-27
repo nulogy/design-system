@@ -9,11 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Option to hide the label on an [IconicButton](https://nulogy.design/components/iconic-button/) component so it will only appear on hover and on focus
-
 ### Changed
-
-- Ref forwarding applied to the [Icon](https://nulogy.design/components/icon/) component (ref points to the inner `svg` tag)
 
 ### Deprecated
 
@@ -21,11 +17,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+### Security
+
+## [0.10.0] - 2019-06-27
+
+### Added
+
+- Option to hide the label on an [IconicButton](https://nulogy.design/components/iconic-button/) component so it will only appear on hover and on focus
+
+### Changed
+
+- Ref forwarding applied to the [Icon](https://nulogy.design/components/icon/) component (ref points to the inner `svg` tag)
+
+### Fixed
+
 - Bug fixes for the [Select](https://storybook.nulogy.design/?path=/story/select--select-as-a-controlled-component) component
   - Passing in blank string for `value` prop now clears the value of the select
   - [**Breaking Change**] onChange now returns the value string instead of the value and label object
-
-### Security
 
 ## [0.9.3] - 2019-06-21
 
