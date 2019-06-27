@@ -11,7 +11,7 @@
 $error-page-width: 480px;
 
 .ErrorPage {
-  height: calc(100vh - 16px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: $size-base-x-2;
