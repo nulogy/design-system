@@ -12,7 +12,7 @@
     "eslint:fix": "yarn run eslint --fix",
     "start": "start-storybook -p 8080",
     "build": "webpack --mode production --config ../webpack.config.js",
-    "watch": "yarn build --watch",
+    "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "icons": "node scripts/collect-icon-svgs",
