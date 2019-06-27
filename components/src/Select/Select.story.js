@@ -56,7 +56,6 @@ storiesOf("Select", module)
         placeholder="Please select inventory status"
         options={options}
         labelText="Inventory status"
-        optionToString={optionToString}
       />
       <br />
       <Select
@@ -64,7 +63,6 @@ storiesOf("Select", module)
         placeholder="Please select inventory status"
         options={options}
         labelText="Inventory status"
-        optionToString={optionToString}
         initialIsOpen
       />
     </>
