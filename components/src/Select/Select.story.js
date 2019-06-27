@@ -27,31 +27,21 @@ const wrappingOptions = [
   }
 ];
 
-const optionToString = option => option && option.label;
-
 class SelectWithState extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { selectedOption: null };
+    this.state = { selectedValue: "" };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(selectedOption) {
-    this.setState({ selectedOption });
+  handleChange(selectedValue) {
+    this.setState({ selectedValue });
   }
 
   render() {
-    const { selectedOption } = this.state;
-    return (
-      <Select
-        onChange={this.handleChange}
-        value={selectedOption}
-        options={options}
-        optionToString={optionToString}
-        {...this.props}
-      />
-    );
+    const { selectedValue } = this.state;
+    return <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />;
   }
 }
 

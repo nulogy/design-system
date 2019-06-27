@@ -106,4 +106,49 @@ describe("Select", () => {
     cy.focused().type("{esc}");
     assertDropDownIsClosed();
   });
+
+  it("works as a controlled component", () => {
+    const options = [
+      { value: "v1", label: "V One" },
+      { value: "v2", label: "V Two" }
+    ];
+
+    class ControlledSelect extends React.Component {
+      constructor() {
+        super();
+
+        this.state = { selectedValue: "" };
+        this.handleChange = this.handleChange.bind(this);
+      }
+
+      handleChange(selectedValue) {
+        this.setState({ selectedValue });
+      }
+
+      render() {
+        const { selectedValue } = this.state;
+        return (
+          <Select
+            onChange={this.handleChange}
+            value={selectedValue}
+            options={options}
+          />
+        );
+      }
+    }
+
+    cy.mount(
+      <NDSProvider>
+        <ControlledSelect />
+      </NDSProvider>
+    );
+
+    assertDropDownIsClosed();
+
+    getSelectComponent().click();
+    cy.contains("V Two").click();
+
+    cy.get("input").should("have.value", "V Two");
+    assertDropDownIsClosed();
+  });
 });
