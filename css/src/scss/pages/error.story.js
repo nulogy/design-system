@@ -4,8 +4,8 @@ import "../../pages/error.css";
 
 // Error.css is the only css file needed
 // Use the same markup for both pages, except:
-// Error page uses `Alert Alert--danger` and includes an icon
-// Maintenance page uses unmodified `Alert` with no icon
+// Error page uses `Alert Alert--danger` and includes an icon and title
+// Maintenance page uses unmodified `Alert` with no icon or title
 // If a "back to homepage" link is needed:
 // use <a class="Link Link--ErrorPage" href="">Back to Homepage</a>
 // add the modifier "ErrorPage__logo--with-homepage-link" to `ErrorPage__logo`
@@ -51,8 +51,7 @@ storiesOf("Pages|Error", module)
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>
             </div>
             <div class="Alert__content">
-              <p class="Alert__title">We're sorry, but something went wrong.</p>
-              <p class="Alert__message">We've been notified about this issue and we'll take a look at it shortly.</p>
+              <p class="Alert__message">We are currently adding new features to Nulogy Quality Control. We should be online shortly.</p>
             </div>
           </div>
           <a class="Link Link--ErrorPage" href="javascript:">Back to Homepage</a>
