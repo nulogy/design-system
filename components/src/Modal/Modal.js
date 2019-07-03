@@ -49,14 +49,15 @@ const ModalCard = styled.div({
   overflow: "hidden",
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
-  padding: theme.space.x2,
   minWidth: "400px",
   maxWidth: "800px"
 });
 
 const ModalContent = styled.div(({ modalHasFooter = false }) => ({
-  paddingTop: theme.space.x8,
-  paddingBottom: modalHasFooter ? "80px" : theme.space.x1,
+  paddingTop: "88px",
+  paddingBottom: modalHasFooter ? "96px" : theme.space.x3,
+  paddingLeft: theme.space.x2,
+  paddingRight: theme.space.x2,
   overflow: "scroll",
   maxHeight: "70vh"
 }));
