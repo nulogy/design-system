@@ -34,18 +34,6 @@ const getButtons = (buttons, type) => {
 
 const modalHasFooter = (primaryButtons, secondaryButtons) => primaryButtons || secondaryButtons;
 
-const DimPage = styled.div({
-  width: "100vw",
-  height: "100vh",
-  position: "absolute",
-  top: 0,
-  left: 0,
-  backgroundColor: transparentize(0.1, theme.colors.whiteGrey),
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center"
-});
-
 const ModalCard = styled.div({
   display: "flex",
   flexDirection: "column",
@@ -198,6 +186,9 @@ class Modal extends React.Component {
               "*": {
                 boxSizing: "border-box"
               }
+            },
+            overlay: {
+              backgroundColor: transparentize(0.1, theme.colors.whiteGrey)
             }
           }}
         >
