@@ -45,46 +45,48 @@ const DimPage = styled.div({
 });
 
 const ModalCard = styled.div({
+  display: "flex",
+  flexDirection: "column",
   position: "relative",
   overflow: "hidden",
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
+  maxHeight: "70vh",
   minWidth: "400px",
   maxWidth: "800px"
 });
 
-const ModalContent = styled.div(({ modalHasFooter = false }) => ({
-  paddingTop: "88px",
-  paddingBottom: modalHasFooter ? "96px" : theme.space.x3,
-  paddingLeft: theme.space.x2,
-  paddingRight: theme.space.x2,
-  overflow: "scroll",
-  maxHeight: "70vh"
-}));
+const ModalContent = styled.div({
+  marginTop: "-64px",
+  marginBottom: "-80px",
+  overflow: "scroll"
+});
+
+const InnerModalContent = styled.div({
+  paddingTop: "80px",
+  paddingBottom: "94px",
+  paddingLeft: theme.space.x3,
+  paddingRight: theme.space.x3
+});
 
 const ModalHeader = styled.div({
-  position: "absolute",
   height: "64px",
-  top: 0,
-  left: theme.space.x1,
-  right: theme.space.x1,
+  padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
-  borderBottom: `solid 1px ${theme.colors.lightGrey}`
+  borderBottom: `solid 1px ${theme.colors.lightGrey}`,
+  zIndex: 2
 });
 
 const ModalFooter = styled.div({
-  position: "absolute",
   height: "72px",
-  bottom: 0,
-  left: theme.space.x1,
-  right: theme.space.x1,
+  padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
-  borderTop: `solid 1px ${theme.colors.lightGrey}`
+  borderTop: `solid 1px ${theme.colors.lightGrey}`,
+  zIndex: 2
 });
 
 const ButtonSet = styled.div({
-  margin: `${theme.space.x2} 0px`,
-  button: {
+  "button:not(:first-child)": {
     marginLeft: theme.space.x1
   }
 });
@@ -93,11 +95,11 @@ const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) =
   <DimPage>
     <ModalCard>
       <ModalHeader>
-        <SectionTitle ml="x1" mt="x2">
-          Modal Title
-        </SectionTitle>
+        <SectionTitle mb="none">Modal Title</SectionTitle>
       </ModalHeader>
-      <ModalContent modalHasFooter={modalHasFooter(primaryButtons, secondaryButtons)}>{children}</ModalContent>
+      <ModalContent>
+        <InnerModalContent>{children}</InnerModalContent>
+      </ModalContent>
       {modalHasFooter(primaryButtons, secondaryButtons) && (
         <ModalFooter>
           <ButtonSet>
