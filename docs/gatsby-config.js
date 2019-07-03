@@ -46,7 +46,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/nulogy.svg" // This path is relative to the root of the site.
+        icon: "src/images/favicon.svg" // This path is relative to the root of the site.
       }
     },
     "gatsby-plugin-netlify" // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
