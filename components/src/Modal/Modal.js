@@ -52,8 +52,12 @@ const ModalCard = styled.div({
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
   maxHeight: "70vh",
-  maxWidth: "800px",
-  margin: `0px ${theme.space.x2}`
+  width: "60%",
+  maxWidth: "720px",
+  margin: `0px ${theme.space.x2}`,
+  [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
+    width: "100%"
+  }
 });
 
 const ModalContent = styled.div({
