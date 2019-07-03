@@ -102,28 +102,6 @@ const ButtonSet = styled.div({
     marginLeft: theme.space.x1
   }
 });
-/*
-const Modal = ({ children, title, primaryButtons, secondaryButtons, type, ...props }) => (
-  <DimPage>
-    <ModalCard>
-      <ModalHeader>
-        {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
-      </ModalHeader>
-      <ModalContent>
-        <InnerModalContent>{children}</InnerModalContent>
-      </ModalContent>
-      {modalHasFooter(primaryButtons, secondaryButtons) && (
-        <ModalFooter>
-          <ButtonSet>
-            {getButtons(primaryButtons, type)}
-            {getButtons(secondaryButtons)}
-          </ButtonSet>
-        </ModalFooter>
-      )}
-    </ModalCard>
-  </DimPage>
-);
-*/
 
 ReactModal.setAppElement("#root");
 
@@ -166,6 +144,7 @@ class Modal extends React.Component {
               overflow: "hidden",
               backgroundColor: theme.colors.white,
               borderRadius: theme.radii.medium,
+              border: null,
               maxHeight: "70vh",
               width: "60%",
               maxWidth: "720px",
