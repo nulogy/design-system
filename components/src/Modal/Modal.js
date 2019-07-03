@@ -19,23 +19,25 @@ const DimPage = styled.div({
 
 const ModalCard = styled.div({
   position: "relative",
+  overflow: "hidden",
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
   padding: theme.space.x2,
-  width: "300px",
-  height: "300px"
+  minWidth: "300px",
+  maxWidth: "800px"
 });
 
 const ModalContent = styled.div({
-  //margin: `${theme.space.x8} 0`,
-  padding: `${theme.space.x8} 0px`,
+  paddingTop: theme.space.x8,
+  paddingBottom: "80px",
   overflow: "scroll",
-  height: "100%"
+  maxHeight: "70vh"
 });
 
 const ModalHeader = styled.div({
   position: "absolute",
-  top: theme.space.x2,
+  height: "64px",
+  top: 0,
   left: theme.space.x1,
   right: theme.space.x1,
   backgroundColor: transparentize(0.1, theme.colors.white),
@@ -44,7 +46,8 @@ const ModalHeader = styled.div({
 
 const ModalFooter = styled.div({
   position: "absolute",
-  bottom: theme.space.x2,
+  height: "72px",
+  bottom: 0,
   left: theme.space.x1,
   right: theme.space.x1,
   backgroundColor: transparentize(0.1, theme.colors.white),
@@ -52,7 +55,7 @@ const ModalFooter = styled.div({
 });
 
 const ButtonSet = styled.div({
-  marginTop: theme.space.x2,
+  margin: `${theme.space.x2} 0px`,
   button: {
     marginLeft: theme.space.x1
   }
@@ -62,7 +65,9 @@ const Modal = ({ children, ...props }) => (
   <DimPage>
     <ModalCard>
       <ModalHeader>
-        <SectionTitle ml="x1">Modal Title</SectionTitle>
+        <SectionTitle ml="x1" mt="x2">
+          Modal Title
+        </SectionTitle>
       </ModalHeader>
       <ModalContent>{children}</ModalContent>
       <ModalFooter>
