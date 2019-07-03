@@ -52,8 +52,8 @@ const ModalCard = styled.div({
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
   maxHeight: "70vh",
-  minWidth: "400px",
-  maxWidth: "800px"
+  maxWidth: "800px",
+  margin: `0px ${theme.space.x2}`
 });
 
 const ModalContent = styled.div({
@@ -70,7 +70,6 @@ const InnerModalContent = styled.div({
 });
 
 const ModalHeader = styled.div({
-  height: "64px",
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   borderBottom: `solid 1px ${theme.colors.lightGrey}`,
@@ -78,7 +77,6 @@ const ModalHeader = styled.div({
 });
 
 const ModalFooter = styled.div({
-  height: "72px",
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   borderTop: `solid 1px ${theme.colors.lightGrey}`,
