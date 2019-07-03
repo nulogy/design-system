@@ -93,11 +93,11 @@ const ButtonSet = styled.div({
   }
 });
 
-const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) => (
+const Modal = ({ children, title, primaryButtons, secondaryButtons, type, ...props }) => (
   <DimPage>
     <ModalCard>
       <ModalHeader>
-        <SectionTitle mb="none">Modal Title</SectionTitle>
+        {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
       </ModalHeader>
       <ModalContent>
         <InnerModalContent>{children}</InnerModalContent>
@@ -115,6 +115,7 @@ const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) =
 );
 
 Modal.propTypes = {
+  title: PropTypes.string,
   primaryButtons: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
@@ -132,6 +133,7 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
+  title: null,
   primaryButtons: null,
   secondaryButtons: null,
   type: "informative",
