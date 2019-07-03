@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton } from "../Button";
@@ -61,7 +62,31 @@ const ButtonSet = styled.div({
   }
 });
 
-const Modal = ({ children, ...props }) => (
+const getButtonComponent = type => {
+  if (type === "informative") {
+    return PrimaryButton;
+  } else if (type === "danger") {
+    return DangerButton;
+  } else {
+    return Button;
+  }
+};
+
+const getButtons = (buttons, type) => {
+  if (!Array.isArray(buttons) || !buttons.length) {
+    return null;
+  }
+
+  const ButtonComponent = getButtonComponent(type);
+
+  return buttons.map(button => (
+    <ButtonComponent onClick={button.onClick} key={button.label}>
+      {button.label}
+    </ButtonComponent>
+  ));
+};
+
+const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) => (
   <DimPage>
     <ModalCard>
       <ModalHeader>
@@ -72,12 +97,36 @@ const Modal = ({ children, ...props }) => (
       <ModalContent>{children}</ModalContent>
       <ModalFooter>
         <ButtonSet>
-          <PrimaryButton>Primary Button</PrimaryButton>
-          <Button>Button</Button>
+          {getButtons(primaryButtons, type)}
+          {getButtons(secondaryButtons)}
         </ButtonSet>
       </ModalFooter>
     </ModalCard>
   </DimPage>
 );
+
+Modal.propTypes = {
+  primaryButtons: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      onClick: PropTypes.func
+    })
+  ).isRequired,
+  secondaryButtons: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      onClick: PropTypes.func
+    })
+  ).isRequired,
+  type: PropTypes.oneOf(["danger", "informative"]),
+  children: PropTypes.node
+};
+
+Modal.defaultProps = {
+  primaryButtons: null,
+  secondaryButtons: null,
+  type: "informative",
+  children: null
+};
 
 export default Modal;
