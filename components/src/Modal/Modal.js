@@ -6,6 +6,32 @@ import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton } from "../Button";
 import theme from "../theme";
 
+const getButtonComponent = type => {
+  if (type === "informative") {
+    return PrimaryButton;
+  } else if (type === "danger") {
+    return DangerButton;
+  } else {
+    return Button;
+  }
+};
+
+const getButtons = (buttons, type) => {
+  if (!Array.isArray(buttons) || !buttons.length) {
+    return null;
+  }
+
+  const ButtonComponent = getButtonComponent(type);
+
+  return buttons.map(button => (
+    <ButtonComponent onClick={button.onClick} key={button.label}>
+      {button.label}
+    </ButtonComponent>
+  ));
+};
+
+const modalHasFooter = (primaryButtons, secondaryButtons) => primaryButtons || secondaryButtons;
+
 const DimPage = styled.div({
   width: "100vw",
   height: "100vh",
@@ -24,16 +50,16 @@ const ModalCard = styled.div({
   backgroundColor: theme.colors.white,
   borderRadius: theme.radii.medium,
   padding: theme.space.x2,
-  minWidth: "300px",
+  minWidth: "400px",
   maxWidth: "800px"
 });
 
-const ModalContent = styled.div({
+const ModalContent = styled.div(({ modalHasFooter = false }) => ({
   paddingTop: theme.space.x8,
-  paddingBottom: "80px",
+  paddingBottom: modalHasFooter ? "80px" : theme.space.x1,
   overflow: "scroll",
   maxHeight: "70vh"
-});
+}));
 
 const ModalHeader = styled.div({
   position: "absolute",
@@ -62,30 +88,6 @@ const ButtonSet = styled.div({
   }
 });
 
-const getButtonComponent = type => {
-  if (type === "informative") {
-    return PrimaryButton;
-  } else if (type === "danger") {
-    return DangerButton;
-  } else {
-    return Button;
-  }
-};
-
-const getButtons = (buttons, type) => {
-  if (!Array.isArray(buttons) || !buttons.length) {
-    return null;
-  }
-
-  const ButtonComponent = getButtonComponent(type);
-
-  return buttons.map(button => (
-    <ButtonComponent onClick={button.onClick} key={button.label}>
-      {button.label}
-    </ButtonComponent>
-  ));
-};
-
 const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) => (
   <DimPage>
     <ModalCard>
@@ -94,13 +96,15 @@ const Modal = ({ children, primaryButtons, secondaryButtons, type, ...props }) =
           Modal Title
         </SectionTitle>
       </ModalHeader>
-      <ModalContent>{children}</ModalContent>
-      <ModalFooter>
-        <ButtonSet>
-          {getButtons(primaryButtons, type)}
-          {getButtons(secondaryButtons)}
-        </ButtonSet>
-      </ModalFooter>
+      <ModalContent modalHasFooter={modalHasFooter(primaryButtons, secondaryButtons)}>{children}</ModalContent>
+      {modalHasFooter(primaryButtons, secondaryButtons) && (
+        <ModalFooter>
+          <ButtonSet>
+            {getButtons(primaryButtons, type)}
+            {getButtons(secondaryButtons)}
+          </ButtonSet>
+        </ModalFooter>
+      )}
     </ModalCard>
   </DimPage>
 );

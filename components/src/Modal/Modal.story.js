@@ -25,4 +25,11 @@ storiesOf("Modal", module)
       Content Content Content Content Content Content Content Content Content Content Content Content Content Content
       Content Content Content Content Content Content Content Content Content Content Content
     </Modal>
+  ))
+  .add("with no buttons", () => (
+    <Modal>
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
+    </Modal>
   ));
