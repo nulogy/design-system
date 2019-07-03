@@ -169,6 +169,7 @@ class Modal extends React.Component {
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           contentLabel="Example Modal"
+          shouldCloseOnOverlayClick={false}
           style={{
             content: {
               display: "flex",
