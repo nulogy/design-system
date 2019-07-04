@@ -1,21 +1,28 @@
-html, body {
-	margin: 0
+/* -----------------------------------------
+    ## Default styles
+----------------------------------------- */
+
+html,
+body {
+  margin: 0;
 }
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 body {
   color: $color-base-black;
   font-family: $font-family-base;
-  line-height: 1.5;
+  line-height: $line-height-base;
 }
 
 code {
-	font-family: $font-family-mono;
+  font-family: $font-family-mono;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

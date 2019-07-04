@@ -1,3 +1,14 @@
-#{$namespace} {  
-    &shadow {box-shadow: $shadow-box-small}
+#{$namespace} {
+  &shadow--small {
+    box-shadow: $shadow-box-small;
+  }
+  &shadow--medium {
+    box-shadow: $shadow-box-medium;
+  }
+  &shadow--large {
+    box-shadow: $shadow-box-large;
+  }
+  &shadow--focus {
+    box-shadow: $shadow-focus;
+  }
 }

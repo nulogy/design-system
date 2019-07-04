@@ -1,15 +1,24 @@
 #{$namespace} {
-    &float-left {float: left}
-    &float-right {float: right;}
-    
-    &clearfix:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    &block {display: block;}
-    &inline {display: inline !important;}
-    &inline-block {display: inline-block !important;}
-}
+  &float-left {
+    float: left;
+  }
+  &float-right {
+    float: right;
+  }
 
+  &clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &block {
+    display: block;
+  }
+  &inline {
+    display: inline !important;
+  }
+  &inline-block {
+    display: inline-block !important;
+  }
+}

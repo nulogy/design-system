@@ -1,8 +1,10 @@
 /* global document */
-import { storiesOf } from '@storybook/html';
+import { storiesOf } from "@storybook/html";
 
-storiesOf('Utilities/Color', module)
-  .add('Text', () => `
+storiesOf("Utilities|Color", module)
+  .add(
+    "Text",
+    () => `
     <p class="nds-text--black">.nds-text--black</p>
     <p class="nds-text--black-blue">.nds-text--black-blue</p>
     <p class="nds-text--dark-blue">.nds-text--dark-blue</p>
@@ -16,8 +18,11 @@ storiesOf('Utilities/Color', module)
     <p class="nds-text--yellow">.nds-text--yellow</p>
     <p class="nds-text--green">.nds-text--green</p>
     <p class="nds-text--red">.nds-text--red</p>
-  `)
-  .add('Background', () => `
+  `
+  )
+  .add(
+    "Background",
+    () => `
     <p class="nds-padding--x2 nds-text--white nds-background--black">.nds-background--black</p>
     <p class="nds-padding--x2 nds-text--white nds-background--black-blue">.nds-background--black-blue</p>
     <p class="nds-padding--x2 nds-text--white nds-background--dark-blue">.nds-background--dark-blue</p>
@@ -31,4 +36,5 @@ storiesOf('Utilities/Color', module)
     <p class="nds-padding--x2 nds-background--yellow">.nds-background--yellow</p>
     <p class="nds-padding--x2 nds-text--white nds-background--green">.nds-background--green</p>
     <p class="nds-padding--x2 nds-text--white nds-background--red">.nds-background--red</p>
-`);
+`
+  );
