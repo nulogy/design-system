@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { default as ReactModal } from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
-import { Button, PrimaryButton, DangerButton } from "../Button";
-import { NDSProvider } from "../NDSProvider";
+import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
+import { Icon } from "../Icon";
 import theme from "../theme";
 
 const getButtonComponent = type => {
@@ -103,6 +103,13 @@ const ButtonSet = styled.div({
   }
 });
 
+const ModalCloseButton = styled(CloseButton)({
+  position: "absolute",
+  top: "12px",
+  right: theme.space.x2,
+  zIndex: 3
+});
+
 ReactModal.setAppElement("#root");
 
 class Modal extends React.Component {
@@ -173,6 +180,7 @@ class Modal extends React.Component {
         >
           <ModalHeader>
             {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
+            <ModalCloseButton onClick={this.closeModal} />
           </ModalHeader>
           <ModalContent>
             <InnerModalContent>{children}</InnerModalContent>
