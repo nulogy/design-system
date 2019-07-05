@@ -63,9 +63,11 @@ const InnerModalContent = styled.div({
   paddingRight: theme.space.x3
 });
 
-const ModalHeader = styled.div({
+const getHeaderPaddingRight = closeButtonIncluded => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
+
+const ModalHeader = styled.div(({ includeClose }) => ({
   position: "relative",
-  padding: `${theme.space.x2} ${theme.space.x3}`,
+  padding: `${theme.space.x2} ${getHeaderPaddingRight(includeClose)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
   ":after": {
@@ -78,7 +80,7 @@ const ModalHeader = styled.div({
     margin: "0 auto",
     borderBottom: `solid 1px ${theme.colors.lightGrey}`
   }
-});
+}));
 
 const ModalFooter = styled.div({
   position: "relative",
@@ -133,7 +135,7 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { children, title, primaryButtons, secondaryButtons, type } = this.props;
+    const { children, title, primaryButtons, secondaryButtons, type, includeClose } = this.props;
     return (
       <div>
         <button onClick={this.openModal}>Open Modal</button>
@@ -178,9 +180,9 @@ class Modal extends React.Component {
             }
           }}
         >
-          <ModalHeader>
+          <ModalHeader includeClose={includeClose}>
             {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
-            <ModalCloseButton onClick={this.closeModal} />
+            {includeClose && <ModalCloseButton onClick={this.closeModal} />}
           </ModalHeader>
           <ModalContent>
             <InnerModalContent>{children}</InnerModalContent>
@@ -214,7 +216,8 @@ Modal.propTypes = {
     })
   ).isRequired,
   type: PropTypes.oneOf(["danger", "informative"]),
-  children: PropTypes.node
+  children: PropTypes.node,
+  includeClose: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -222,7 +225,8 @@ Modal.defaultProps = {
   primaryButtons: null,
   secondaryButtons: null,
   type: "informative",
-  children: null
+  children: null,
+  includeClose: true
 };
 
 export default Modal;
