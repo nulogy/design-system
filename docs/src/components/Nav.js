@@ -111,7 +111,7 @@ class Navigation extends React.Component {
             underline={false}
             style={{ display: "inline-block" }}
             mt="x4"
-            mb="0"
+            mb="x2"
             ml="x4"
             href="/"
           >
