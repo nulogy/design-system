@@ -76,14 +76,16 @@ const options = [
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>
-        Users need to choose a single option from a list of mutually exclusive
-        options.
-      </ListItem>
-      <ListItem>
-        There is a large data set that would be impractical for radio buttons or
-        a toggle.
-      </ListItem>
+      <List>
+        <ListItem>
+          Users need to choose a single option from a list of mutually exclusive
+          options.
+        </ListItem>
+        <ListItem>
+          There is a large data set that would be impractical for radio buttons
+          or a toggle.
+        </ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>

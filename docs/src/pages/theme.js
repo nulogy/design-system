@@ -8,6 +8,7 @@ import {
   SectionTitle,
   SubsectionTitle,
   Link,
+  List,
   ListItem,
   theme
 } from "@nulogy/components";
@@ -90,11 +91,13 @@ const CustomComponent = styled.div({
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem>
-        <Link href="https://github.com/nulogy/design-system/tree/master/tokens">
-          @nulogy/tokens
-        </Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="https://github.com/nulogy/design-system/tree/master/tokens">
+            @nulogy/tokens
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

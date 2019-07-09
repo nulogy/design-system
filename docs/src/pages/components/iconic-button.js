@@ -65,9 +65,11 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>
-        When a possible action would best be communicated via iconography
-      </ListItem>
+      <List>
+        <ListItem>
+          When a possible action would best be communicated via iconography
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
@@ -118,11 +120,13 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/iconicbutton--with-label">
-          View in Storybook
-        </Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?path=/story/iconicbutton--with-label">
+            View in Storybook
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

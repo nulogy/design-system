@@ -7,6 +7,7 @@ import {
   SectionTitle,
   Title,
   Link,
+  List,
   ListItem
 } from "@nulogy/components";
 import {
@@ -117,21 +118,25 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem>
-        <Link href="/components/box">Box</Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="/components/box">Box</Link>
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem>
-        <Link href="https://nulogy.design/theme/">NDS theme</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/flex--flex">
-          View in Storybook
-        </Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?path=/story/flex--flex">
+            View in Storybook
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

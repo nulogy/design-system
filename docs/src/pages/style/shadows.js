@@ -1,6 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Box, ListItem, Link, SectionTitle, Title } from "@nulogy/components";
+import {
+  Box,
+  List,
+  ListItem,
+  Link,
+  SectionTitle,
+  Title
+} from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
 
 export default () => (
@@ -31,12 +38,14 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Related links</SectionTitle>
-      <ListItem>
-        <Link href="/components/box">Box component</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://nulogy.design/theme/">NDS theme</Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="/components/box">Box component</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

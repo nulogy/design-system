@@ -78,11 +78,13 @@ const errorList = [
 
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>
-        Use Header Validation whenever a form has returned with errors so that
-        users don't need to scroll around the form to see what needs to be
-        fixed.
-      </ListItem>
+      <List>
+        <ListItem>
+          Use Header Validation whenever a form has returned with errors so that
+          users don't need to scroll around the form to see what needs to be
+          fixed.
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
@@ -160,11 +162,13 @@ const errorList = [
 
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/header-validation--header-validation">
-          View in Storybook
-        </Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?path=/story/header-validation--header-validation">
+            View in Storybook
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );
