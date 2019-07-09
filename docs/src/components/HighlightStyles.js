@@ -9,7 +9,7 @@ const HighlightStyles = createGlobalStyle`
   font-family: ${theme.fonts.mono};
   font-size: 14px;
   padding: ${theme.space.x2};
-  background: ${theme.colors.whiteGrey};
+  box-shadow: ${theme.shadows.medium};
   color: ${theme.colors.darkBlue};
   border-radius: 4px;
   margin-bottom: ${theme.space.x3};
