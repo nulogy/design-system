@@ -20,7 +20,7 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
 }));
 
 const NavContainer = styled(Box)(({ isOpen }) => ({
-  background: theme.colors.whiteGrey,
+  background: theme.colors.darkBlue,
   position: isOpen ? "absolute" : "fixed",
   top: 0,
   right: 0,
@@ -47,7 +47,7 @@ NavContainer.defaultProps = {
 
 const NavItem = styled.li({
   margin: theme.space.x2,
-  marginLeft: 0,
+  marginLeft: theme.space.x1,
   listStyle: "none"
 });
 
@@ -115,20 +115,28 @@ class Navigation extends React.Component {
             ml="x4"
             href="/"
           >
-            <Branding subtext="Design System" />
+            <Branding mb="x4" logoColor="white" subtext="Design System" />
           </Link>
           <Box p="x4">
             {menuData.map(menuItem => (
-              <List key={menuItem.name} mb="x4" p="0">
-                <SubsectionTitle>{menuItem.name}</SubsectionTitle>
-                {menuItem.links.map(menuLink => (
-                  <NavItem key={menuLink.href}>
-                    <Link href={menuLink.href} underline={false}>
-                      {menuLink.name}
-                    </Link>
-                  </NavItem>
-                ))}
-              </List>
+              <Box key={menuItem.name} mb="x6" p="0">
+                <SubsectionTitle color="whiteGrey">
+                  {menuItem.name}
+                </SubsectionTitle>
+                <List pl="0">
+                  {menuItem.links.map(menuLink => (
+                    <NavItem key={menuLink.href}>
+                      <Link
+                        color="white"
+                        href={menuLink.href}
+                        underline={false}
+                      >
+                        {menuLink.name}
+                      </Link>
+                    </NavItem>
+                  ))}
+                </List>
+              </Box>
             ))}
           </Box>
         </NavContainer>
