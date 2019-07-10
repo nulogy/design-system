@@ -74,14 +74,6 @@ const CloseButton = styled(Link)(({ isOpen }) => ({
   }
 }));
 
-CloseButton.propTypes = {
-  isOpen: PropTypes.bool
-};
-
-CloseButton.defaultProps = {
-  isOpen: null
-};
-
 class Navigation extends React.Component {
   constructor() {
     super();
