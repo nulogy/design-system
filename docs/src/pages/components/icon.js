@@ -107,10 +107,12 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
-      <ListItem>
-        Avoid using icons without labels unless the meaning is ubiquitous, like
-        print
-      </ListItem>
+      <List>
+        <ListItem>
+          Avoid using icons without labels unless the meaning is ubiquitous,
+          like print
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>

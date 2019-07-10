@@ -7,6 +7,7 @@ import {
   Text,
   Title,
   SectionTitle,
+  List,
   ListItem
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
@@ -93,14 +94,16 @@ export default () => (
         <em>size</em> and <em>relatedness</em>
       </Text>
       <Box mb="x2">
-        <ListItem>
-          Use less spacing inside smaller elements or between functionally
-          related elements.
-        </ListItem>
-        <ListItem>
-          Use more spacing inside larger elements or between less functionally
-          related elements
-        </ListItem>
+        <List>
+          <ListItem>
+            Use less spacing inside smaller elements or between functionally
+            related elements.
+          </ListItem>
+          <ListItem>
+            Use more spacing inside larger elements or between less functionally
+            related elements
+          </ListItem>
+        </List>
       </Box>
       <Text fontSize="small">
         <em>

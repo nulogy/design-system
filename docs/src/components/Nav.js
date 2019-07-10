@@ -5,6 +5,7 @@ import {
   Box,
   Link,
   SubsectionTitle,
+  Icon,
   IconicButton,
   List,
   Branding
@@ -20,7 +21,7 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
 }));
 
 const NavContainer = styled(Box)(({ isOpen }) => ({
-  background: theme.colors.whiteGrey,
+  background: theme.colors.darkBlue,
   position: isOpen ? "absolute" : "fixed",
   top: 0,
   right: 0,
@@ -47,7 +48,7 @@ NavContainer.defaultProps = {
 
 const NavItem = styled.li({
   margin: theme.space.x2,
-  marginLeft: 0,
+  marginLeft: theme.space.x1,
   listStyle: "none"
 });
 
@@ -60,24 +61,18 @@ const OpenButton = styled(IconicButton).attrs({
   }
 });
 
-const CloseButton = styled(IconicButton).attrs({
-  icon: "cancel"
-})(({ isOpen }) => ({
+const CloseButton = styled(Link)(({ isOpen }) => ({
+  color: theme.colors.white,
   position: "absolute",
   top: theme.space.x2,
   right: theme.space.x2,
+  "&:hover": {
+    color: theme.colors.grey
+  },
   "@media screen and (min-width: 1024px)": {
     display: isOpen ? "block" : "none"
   }
 }));
-
-CloseButton.propTypes = {
-  isOpen: PropTypes.bool
-};
-
-CloseButton.defaultProps = {
-  isOpen: null
-};
 
 class Navigation extends React.Component {
   constructor() {
@@ -106,29 +101,39 @@ class Navigation extends React.Component {
         <OpenButton onClick={this.openMenu} />
         <LockBody isOpen={menuOpen} />
         <NavContainer isOpen={menuOpen}>
-          <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
+          <CloseButton isOpen={menuOpen} onClick={this.closeMenu}>
+            <Icon icon="close" />
+          </CloseButton>
           <Link
             underline={false}
             style={{ display: "inline-block" }}
             mt="x4"
-            mb="0"
+            mb="x2"
             ml="x4"
             href="/"
           >
-            <Branding subtext="Design System" />
+            <Branding mb="x4" logoColor="white" subtext="Design System" />
           </Link>
           <Box p="x4">
             {menuData.map(menuItem => (
-              <List key={menuItem.name} mb="x4" p="0">
-                <SubsectionTitle>{menuItem.name}</SubsectionTitle>
-                {menuItem.links.map(menuLink => (
-                  <NavItem key={menuLink.href}>
-                    <Link href={menuLink.href} underline={false}>
-                      {menuLink.name}
-                    </Link>
-                  </NavItem>
-                ))}
-              </List>
+              <Box key={menuItem.name} mb="x6" p="0">
+                <SubsectionTitle color="whiteGrey">
+                  {menuItem.name}
+                </SubsectionTitle>
+                <List pl="0">
+                  {menuItem.links.map(menuLink => (
+                    <NavItem key={menuLink.href}>
+                      <Link
+                        color="white"
+                        href={menuLink.href}
+                        underline={false}
+                      >
+                        {menuLink.name}
+                      </Link>
+                    </NavItem>
+                  ))}
+                </List>
+              </Box>
             ))}
           </Box>
         </NavContainer>

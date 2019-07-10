@@ -11,6 +11,7 @@ import {
   SubsectionTitle,
   Title,
   Link,
+  List,
   ListItem
 } from "@nulogy/components";
 import Highlight from "react-highlight";
@@ -190,12 +191,14 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
-      <ListItem>Always lead with an actionable verb</ListItem>
-      <ListItem>
-        Whenever possible follow with a clear noun{" "}
-        <em>(e.g: Create shipment, Approve delivery.)</em>
-      </ListItem>
-      <ListItem>Always use sentence case</ListItem>
+      <List>
+        <ListItem>Always lead with an actionable verb</ListItem>
+        <ListItem>
+          Whenever possible follow with a clear noun{" "}
+          <em>(e.g: Create shipment, Approve delivery.)</em>
+        </ListItem>
+        <ListItem>Always use sentence case</ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
@@ -204,20 +207,24 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
-      <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/buttons--button">
-          View in Storybook
-        </Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="https://storybook.nulogy.design/?path=/story/buttons--button">
+            View in Storybook
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
-      <ListItem>
-        <Link href="/components/iconic-button">Iconic button</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="/components/link">Link</Link>
-      </ListItem>
+      <List>
+        <ListItem>
+          <Link href="/components/iconic-button">Iconic button</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/link">Link</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

@@ -41,14 +41,16 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Use when</SectionTitle>
-      <ListItem>
-        Users need to make a single choice from a set of mutually exclusive
-        options
-      </ListItem>
-      <ListItem>
-        In place of a dropdown when it would be beneficial to see all items up
-        front
-      </ListItem>
+      <List>
+        <ListItem>
+          Users need to make a single choice from a set of mutually exclusive
+          options
+        </ListItem>
+        <ListItem>
+          In place of a dropdown when it would be beneficial to see all items up
+          front
+        </ListItem>
+      </List>
     </DocSection>
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
