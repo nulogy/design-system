@@ -5,6 +5,7 @@ import {
   Box,
   Link,
   SubsectionTitle,
+  Icon,
   IconicButton,
   List,
   Branding
@@ -60,12 +61,14 @@ const OpenButton = styled(IconicButton).attrs({
   }
 });
 
-const CloseButton = styled(IconicButton).attrs({
-  icon: "cancel"
-})(({ isOpen }) => ({
+const CloseButton = styled(Link)(({ isOpen }) => ({
+  color: theme.colors.white,
   position: "absolute",
   top: theme.space.x2,
   right: theme.space.x2,
+  "&:hover": {
+    color: theme.colors.grey
+  },
   "@media screen and (min-width: 1024px)": {
     display: isOpen ? "block" : "none"
   }
@@ -106,7 +109,9 @@ class Navigation extends React.Component {
         <OpenButton onClick={this.openMenu} />
         <LockBody isOpen={menuOpen} />
         <NavContainer isOpen={menuOpen}>
-          <CloseButton isOpen={menuOpen} onClick={this.closeMenu} />
+          <CloseButton isOpen={menuOpen} onClick={this.closeMenu}>
+            <Icon icon="close" />
+          </CloseButton>
           <Link
             underline={false}
             style={{ display: "inline-block" }}
