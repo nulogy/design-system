@@ -43,9 +43,13 @@ From the `/css` directory:
 
 _Coming soon_
 
-## PR workflow
+## Pull requests
 
-_Coming soon_
+1. If you don't already have access to the [https://github.com/orgs/nulogy/teams/design-system-collaborators/members](Design System Collaborators) team on Github, request access in https://slack.com/app_redirect?channel=design-system(#design-system)
+2. Clone https://github.com/nulogy/design-system
+3. Do work on a branch and submit a PR describing the changes you've made and why you've made them 
+4. Post a link to the PR in #design-system
+5. Somebody from design ops will take a look and be in touch 
 
 ## Testing
 
