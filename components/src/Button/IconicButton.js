@@ -29,7 +29,6 @@ const WrapperButton = styled.button(space, ({ disabled }) => ({
   alignItems: "center",
   padding: `${theme.space.half} ${theme.space.none}`,
   color: theme.colors.darkBlue,
-  cursor: disabled ? "arrow" : "pointer",
 
   [`${Icon}`]: {
     borderRadius: theme.radii.circle,
