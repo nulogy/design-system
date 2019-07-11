@@ -21,7 +21,7 @@ const LockBody = createGlobalStyle(({ isOpen }) => ({
 }));
 
 const NavContainer = styled(Box)(({ isOpen }) => ({
-  background: theme.colors.darkBlue,
+  background: theme.colors.blackBlue,
   position: isOpen ? "absolute" : "fixed",
   top: 0,
   right: 0,
