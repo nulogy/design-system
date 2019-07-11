@@ -137,6 +137,7 @@ class DropdownMenu extends React.Component {
 
 DropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  disabled: PropTypes.bool,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
@@ -161,6 +162,7 @@ DropdownMenu.propTypes = {
 };
 
 DropdownMenu.defaultProps = {
+  disabled: false,
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
