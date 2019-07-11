@@ -53,4 +53,10 @@ storiesOf("DropdownMenu", module)
         </a>
       </DropdownItem>
     </DropdownMenu>
+  ))
+  .add("Set to disabled", () => (
+    <DropdownMenu disabled>
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
   ));

@@ -84,7 +84,7 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { trigger, children, backgroundColor, placement, modifiers, showArrow } = this.props;
+    const { trigger, children, disabled, backgroundColor, placement, modifiers, showArrow } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
@@ -94,6 +94,7 @@ class DropdownMenu extends React.Component {
               "aria-haspopup": true,
               "aria-expanded": this.state.open,
               type: "button",
+              disabled: disabled ? true : null,
               ...this.menuTriggerEventHandlers(),
               ref
             })

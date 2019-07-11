@@ -35,6 +35,12 @@ const propsRows = [
       "Function that returns a button component that will be used as the trigger"
   },
   {
+    name: "disabled",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Marks the button as disabled and unable to be activated"
+  },
+  {
     name: "backgroundColor",
     type: "String",
     defaultValue: "whiteGrey",
@@ -143,6 +149,20 @@ export default () => (
 <DropdownMenu backgroundColor="blackBlue">
   <DropdownLink href="/" {...customColors}>Dropdown Link</DropdownLink>
   <DropdownButton {...customColors}>Dropdown Button</DropdownButton>
+</DropdownMenu>
+`}
+        </Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Disabled</SubsectionTitle>
+        <DropdownMenu disabled>
+          <DropdownLink href="/">Dropdown Link</DropdownLink>
+          <DropdownButton>Dropdown Button</DropdownButton>
+        </DropdownMenu>
+        <Highlight className="js">
+          {`<DropdownMenu disabled>
+  <DropdownLink href="/">Dropdown Link</DropdownLink>
+  <DropdownButton>Dropdown Button</DropdownButton>
 </DropdownMenu>
 `}
         </Highlight>
