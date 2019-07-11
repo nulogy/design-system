@@ -21,7 +21,7 @@ const HoverText = styled.div({
   pointerEvents: "none"
 });
 
-const WrapperButton = styled.button(space, () => ({
+const WrapperButton = styled.button(space, ({ disabled }) => ({
   background: "transparent",
   border: "none",
   position: "relative",
@@ -29,6 +29,7 @@ const WrapperButton = styled.button(space, () => ({
   alignItems: "center",
   padding: `${theme.space.half} ${theme.space.none}`,
   color: theme.colors.darkBlue,
+  cursor: disabled ? "arrow" : "pointer",
 
   [`${Icon}`]: {
     borderRadius: theme.radii.circle,
