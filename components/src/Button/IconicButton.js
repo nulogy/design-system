@@ -21,7 +21,7 @@ const HoverText = styled.div({
   pointerEvents: "none"
 });
 
-const WrapperButton = styled.button(space, ({ disabled }) => ({
+const WrapperButton = styled.button(space, () => ({
   background: "transparent",
   border: "none",
   position: "relative",
