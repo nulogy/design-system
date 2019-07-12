@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added `disabled` prop to [DropdownMenu](https://nulogy.design/components/dropdown-menu/)
+
 ### Changed
 
 ### Deprecated

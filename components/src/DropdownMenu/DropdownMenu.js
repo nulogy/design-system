@@ -84,7 +84,7 @@ class DropdownMenu extends React.Component {
   }
 
   render() {
-    const { trigger, children, backgroundColor, placement, modifiers, showArrow } = this.props;
+    const { trigger, children, disabled, backgroundColor, placement, modifiers, showArrow } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
@@ -94,6 +94,7 @@ class DropdownMenu extends React.Component {
               "aria-haspopup": true,
               "aria-expanded": this.state.open,
               type: "button",
+              disabled: disabled ? true : null,
               ...this.menuTriggerEventHandlers(),
               ref
             })
@@ -136,6 +137,7 @@ class DropdownMenu extends React.Component {
 
 DropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  disabled: PropTypes.bool,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
@@ -160,6 +162,7 @@ DropdownMenu.propTypes = {
 };
 
 DropdownMenu.defaultProps = {
+  disabled: false,
   showDelay: "100",
   hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
