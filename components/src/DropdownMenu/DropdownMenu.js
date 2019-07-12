@@ -68,6 +68,7 @@ class StatelessDropdownMenu extends React.Component {
                 "aria-expanded": isOpen,
                 type: "button",
                 disabled: disabled ? true : null,
+                "aria-label": this.state.open ? "Close menu" : "Open menu",
                 ...this.menuTriggerEventHandlers(),
                 ref: node => {
                   ref(node);
