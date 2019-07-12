@@ -3,6 +3,7 @@ import { configure, addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
+import { withA11y } from "@storybook/addon-a11y";
 
 const req = require.context("../src", true, /\.story\.js$/);
 
@@ -47,6 +48,8 @@ const newViewports = {
     }
   }
 };
+
+addDecorator(withA11y);
 
 addParameters({
   viewport: { viewports: newViewports },
