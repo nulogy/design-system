@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added `disabled` prop to [DropdownMenu](https://nulogy.design/components/dropdown-menu/)
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +18,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 ### Security
+
+## [0.10.1] - 2019-07-12
+
+### Added
+
+- Added `disabled` prop to [DropdownMenu](https://nulogy.design/components/dropdown-menu/)
+
+### Fixed
+
+- Fixed storyshots error when tokens were missing [#341](https://github.com/nulogy/design-system/pull/341)
+- Select selection now clears when value is set to empty string [#388](https://github.com/nulogy/design-system/pull/338)
 
 ## [0.10.0] - 2019-06-27
 
