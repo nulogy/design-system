@@ -26,7 +26,7 @@ const getButtons = (buttons, type) => {
   const ButtonComponent = getButtonComponent(type);
 
   return buttons.map(button => (
-    <ButtonComponent onClick={button.onClick} key={button.label}>
+    <ButtonComponent {...button} key={button.label}>
       {button.label}
     </ButtonComponent>
   ));
