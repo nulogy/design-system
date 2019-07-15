@@ -122,11 +122,17 @@ const customStyles = error => {
 const extractLabelFromOption = option => option && option.label;
 
 ReactSelect.propTypes = {
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string
 };
 ReactSelect.defaultProps = {
+  error: undefined,
+  errorMessage: null,
+  errorList: null,
   labelText: null,
   helpText: null,
   requirementText: null
