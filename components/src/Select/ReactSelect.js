@@ -15,7 +15,7 @@ const ReactSelect = ({
   required,
   requirementText,
   helpText,
-  isDisabled,
+  disabled,
   errorMessage,
   errorList,
   error = !!(errorMessage || errorList)
@@ -27,7 +27,7 @@ const ReactSelect = ({
         options={options}
         labelText={labelText}
         styles={customStyles(error)}
-        isDisabled={isDisabled}
+        isDisabled={disabled}
         isSearchable={false}
         aria-required={required}
         aria-invalid={error}
@@ -122,6 +122,7 @@ const customStyles = error => {
 const extractLabelFromOption = option => option && option.label;
 
 ReactSelect.propTypes = {
+  disabled: false,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
@@ -130,6 +131,7 @@ ReactSelect.propTypes = {
   requirementText: PropTypes.string
 };
 ReactSelect.defaultProps = {
+  disabled: null,
   error: undefined,
   errorMessage: null,
   errorList: null,

@@ -43,6 +43,6 @@ storiesOf("Select", module).add("ReactSelect", () => (
         errorList={errorList}
       />
     </Box>
-    <ReactSelect placeholder="Please select inventory status" options={options} labelText="Disabled" isDisabled />
+    <ReactSelect placeholder="Please select inventory status" options={options} labelText="Disabled" disabled />
   </>
 ));
