@@ -18,7 +18,8 @@ const ReactSelect = ({
   disabled,
   errorMessage,
   errorList,
-  error = !!(errorMessage || errorList)
+  error = !!(errorMessage || errorList),
+  initialIsOpen
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -31,6 +32,7 @@ const ReactSelect = ({
         isSearchable={false}
         aria-required={required}
         aria-invalid={error}
+        defaultMenuIsOpen={initialIsOpen}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </MaybeFieldLabel>
@@ -128,7 +130,8 @@ ReactSelect.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string,
   helpText: PropTypes.string,
-  requirementText: PropTypes.string
+  requirementText: PropTypes.string,
+  initialIsOpen: PropTypes.bool
 };
 ReactSelect.defaultProps = {
   disabled: null,
@@ -137,7 +140,8 @@ ReactSelect.defaultProps = {
   errorList: null,
   labelText: null,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  initialIsOpen: undefined
 };
 
 export default ReactSelect;
