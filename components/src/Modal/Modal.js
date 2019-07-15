@@ -112,8 +112,6 @@ const ModalCloseButton = styled(CloseButton)({
   zIndex: 3
 });
 
-ReactModal.setAppElement("#root");
-
 const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type, closeFunction, ...props }) => (
   <ReactModal
     isOpen={isOpen}
@@ -144,8 +142,8 @@ const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type
         fontFamily: theme.fonts.base,
         fontSize: theme.fontSizes.medium,
         lineHeight: theme.lineHeights.base,
-        "-webkit-font-smoothing": "antialiased",
-        "-moz-osx-font-smoothing": "grayscale",
+        WebkitFontSmoothing: "antialiased",
+        MozOsxFontSmoothing: "grayscale",
         button: {
           fontFamily: theme.fonts.base
         },
@@ -204,7 +202,7 @@ Modal.defaultProps = {
   secondaryButtons: null,
   type: "informative",
   children: null,
-  closeFunction: false,
+  closeFunction: null,
   isOpen: true
 };
 
