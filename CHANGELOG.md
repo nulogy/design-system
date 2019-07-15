@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-- Added `disabled` prop to DropdownButton inside [DropdownMenu](https://nulogy.design/components/dropdown-menu/)
-
 ### Added
 
 ### Changed
@@ -20,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 ### Security
+
+## [0.10.2] - 2019-07-15
+
+- Added `disabled` prop to DropdownButton inside [DropdownMenu](https://nulogy.design/components/dropdown-menu/)
 
 ## [0.10.1] - 2019-07-12
 
