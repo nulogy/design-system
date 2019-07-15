@@ -100,8 +100,8 @@ const ModalFooter = styled.div({
 });
 
 const ButtonSet = styled.div({
-  "button:not(:first-child)": {
-    marginLeft: theme.space.x1
+  "button:not(:last-child)": {
+    marginRight: theme.space.x1
   }
 });
 
