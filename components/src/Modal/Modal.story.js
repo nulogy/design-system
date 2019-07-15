@@ -12,6 +12,16 @@ storiesOf("Modal", module)
       Content Content Content
     </Modal>
   ))
+  .add("with close button", () => (
+    <Modal
+      title="Modal Title"
+      closeFunction={() => {}}
+      primaryButtons={primaryButtons}
+      secondaryButtons={secondaryButtons}
+    >
+      Content Content Content
+    </Modal>
+  ))
   .add("with scrolling content", () => (
     <Modal title="Modal Title" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
       Content Content Content Content Content Content Content Content Content Content Content Content Content Content

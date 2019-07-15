@@ -65,9 +65,9 @@ const InnerModalContent = styled.div({
 
 const getHeaderPaddingRight = closeButtonIncluded => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
-const ModalHeader = styled.div(({ includeClose }) => ({
+const ModalHeader = styled.div(({ closeFunction }) => ({
   position: "relative",
-  padding: `${theme.space.x2} ${getHeaderPaddingRight(includeClose)} ${theme.space.x2} ${theme.space.x3}`,
+  padding: `${theme.space.x2} ${getHeaderPaddingRight(closeFunction)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
   ":after": {
@@ -114,100 +114,70 @@ const ModalCloseButton = styled(CloseButton)({
 
 ReactModal.setAppElement("#root");
 
-class Modal extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      modalIsOpen: false
-    };
-
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  openModal() {
-    this.setState({ modalIsOpen: true });
-  }
-
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-  }
-
-  render() {
-    const { children, title, primaryButtons, secondaryButtons, type, includeClose } = this.props;
-    return (
-      <div>
-        <button onClick={this.openModal}>Open Modal</button>
-        <ReactModal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          contentLabel="Example Modal"
-          shouldCloseOnOverlayClick={false}
-          style={{
-            content: {
-              display: "flex",
-              flexDirection: "column",
-              position: "relative",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              overflow: "hidden",
-              backgroundColor: theme.colors.white,
-              borderRadius: theme.radii.medium,
-              border: null,
-              maxHeight: "70vh",
-              width: "60%",
-              maxWidth: "720px",
-              margin: `0px ${theme.space.x2}`,
-              padding: 0,
-              [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-                width: "100%"
-              },
-              color: theme.colors.black,
-              fontFamily: theme.fonts.base,
-              fontSize: theme.fontSizes.medium,
-              lineHeight: theme.lineHeights.base,
-              "-webkit-font-smoothing": "antialiased",
-              "-moz-osx-font-smoothing": "grayscale",
-              button: {
-                fontFamily: theme.fonts.base
-              },
-              "*": {
-                boxSizing: "border-box"
-              }
-            },
-            overlay: {
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: transparentize(0.1, theme.colors.whiteGrey)
-            }
-          }}
-        >
-          <ModalHeader includeClose={includeClose}>
-            {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
-            {includeClose && <ModalCloseButton onClick={this.closeModal} />}
-          </ModalHeader>
-          <ModalContent>
-            <InnerModalContent>{children}</InnerModalContent>
-          </ModalContent>
-          {modalHasFooter(primaryButtons, secondaryButtons) && (
-            <ModalFooter>
-              <ButtonSet>
-                {getButtons(primaryButtons, type)}
-                {getButtons(secondaryButtons)}
-              </ButtonSet>
-            </ModalFooter>
-          )}
-        </ReactModal>
-      </div>
-    );
-  }
-}
-
+const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type, closeFunction, ...props }) => (
+  <ReactModal
+    isOpen={isOpen}
+    {...props}
+    shouldCloseOnOverlayClick={false}
+    style={{
+      content: {
+        display: "flex",
+        flexDirection: "column",
+        position: "relative",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        overflow: "hidden",
+        backgroundColor: theme.colors.white,
+        borderRadius: theme.radii.medium,
+        border: null,
+        maxHeight: "70vh",
+        width: "60%",
+        maxWidth: "720px",
+        margin: `0px ${theme.space.x2}`,
+        padding: 0,
+        [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
+          width: "100%"
+        },
+        color: theme.colors.black,
+        fontFamily: theme.fonts.base,
+        fontSize: theme.fontSizes.medium,
+        lineHeight: theme.lineHeights.base,
+        "-webkit-font-smoothing": "antialiased",
+        "-moz-osx-font-smoothing": "grayscale",
+        button: {
+          fontFamily: theme.fonts.base
+        },
+        "*": {
+          boxSizing: "border-box"
+        }
+      },
+      overlay: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: transparentize(0.1, theme.colors.whiteGrey)
+      }
+    }}
+  >
+    <ModalHeader closeFunction={!!closeFunction}>
+      {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
+      {closeFunction && <ModalCloseButton onClick={closeFunction} />}
+    </ModalHeader>
+    <ModalContent>
+      <InnerModalContent>{children}</InnerModalContent>
+    </ModalContent>
+    {modalHasFooter(primaryButtons, secondaryButtons) && (
+      <ModalFooter>
+        <ButtonSet>
+          {getButtons(primaryButtons, type)}
+          {getButtons(secondaryButtons)}
+        </ButtonSet>
+      </ModalFooter>
+    )}
+  </ReactModal>
+);
 Modal.propTypes = {
   title: PropTypes.string,
   primaryButtons: PropTypes.arrayOf(
@@ -224,7 +194,8 @@ Modal.propTypes = {
   ).isRequired,
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
-  includeClose: PropTypes.bool
+  closeFunction: PropTypes.func,
+  isOpen: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -233,7 +204,8 @@ Modal.defaultProps = {
   secondaryButtons: null,
   type: "informative",
   children: null,
-  includeClose: true
+  closeFunction: false,
+  isOpen: true
 };
 
 export default Modal;
