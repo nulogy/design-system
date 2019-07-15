@@ -15,7 +15,6 @@ const ReactSelect = ({
   required,
   requirementText,
   helpText,
-  isMulti,
   isDisabled,
   errorMessage,
   errorList,
@@ -26,10 +25,10 @@ const ReactSelect = ({
       <Select
         placeholder="Please select inventory status"
         options={options}
-        isMulti={isMulti}
         labelText={labelText}
         styles={customStyles(error)}
         isDisabled={isDisabled}
+        isSearchable={false}
         aria-required={required}
         aria-invalid={error}
       />
