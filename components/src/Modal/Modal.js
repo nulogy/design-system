@@ -206,4 +206,6 @@ Modal.defaultProps = {
   isOpen: true
 };
 
+Modal.setAppElement = ReactModal.setAppElement;
+
 export default Modal;

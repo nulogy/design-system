@@ -6,6 +6,8 @@ const primaryButtons = [{ label: "Primary Action", onClick: () => {} }];
 
 const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
+Modal.setAppElement("#root");
+
 storiesOf("Modal", module)
   .add("Modal", () => (
     <Modal title="Modal Title" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
