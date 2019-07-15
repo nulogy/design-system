@@ -150,6 +150,10 @@ class Modal extends React.Component {
               display: "flex",
               flexDirection: "column",
               position: "relative",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
               overflow: "hidden",
               backgroundColor: theme.colors.white,
               borderRadius: theme.radii.medium,
@@ -176,6 +180,9 @@ class Modal extends React.Component {
               }
             },
             overlay: {
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               backgroundColor: transparentize(0.1, theme.colors.whiteGrey)
             }
           }}
