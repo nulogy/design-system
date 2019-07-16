@@ -198,13 +198,13 @@ Modal.propTypes = {
       label: PropTypes.string,
       onClick: PropTypes.func
     })
-  ).isRequired,
+  ),
   secondaryButtons: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       onClick: PropTypes.func
     })
-  ).isRequired,
+  ),
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   closeFunction: PropTypes.func,
