@@ -115,12 +115,13 @@ const ReactSelect = ({
   initialIsOpen,
   maxHeight,
   onChange,
+  placeholder,
   value
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Select
-        placeholder="Please select inventory status"
+        placeholder={placeholder}
         options={options}
         labelText={labelText}
         styles={customStyles(error)}
@@ -152,6 +153,7 @@ ReactSelect.propTypes = {
   initialIsOpen: PropTypes.bool,
   maxHeight: PropTypes.string,
   onChange: PropTypes.func,
+  placeholder: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string
 };
@@ -167,6 +169,7 @@ ReactSelect.defaultProps = {
   initialIsOpen: undefined,
   maxHeight: "256px",
   onChange: undefined,
+  placeholder: undefined,
   required: false,
   value: undefined
 };
