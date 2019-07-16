@@ -114,6 +114,7 @@ const ReactSelect = ({
   id,
   initialIsOpen,
   maxHeight,
+  name,
   onChange,
   placeholder,
   value
@@ -134,6 +135,7 @@ const ReactSelect = ({
         inputId={id}
         onChange={onChange}
         value={value}
+        name={name}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </MaybeFieldLabel>
@@ -152,6 +154,7 @@ ReactSelect.propTypes = {
   id: PropTypes.string,
   initialIsOpen: PropTypes.bool,
   maxHeight: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
@@ -168,6 +171,7 @@ ReactSelect.defaultProps = {
   id: null,
   initialIsOpen: undefined,
   maxHeight: "256px",
+  name: undefined,
   onChange: undefined,
   placeholder: undefined,
   required: false,
