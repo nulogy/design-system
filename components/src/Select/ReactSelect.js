@@ -29,7 +29,7 @@ const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
 const customStyles = error => {
   return {
     option: (provided, state) => ({
-      padding: theme.space.x1,
+      padding: subPx(theme.space.x1),
       fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
       background: state.isFocused ? theme.colors.lightBlue : null
     }),
@@ -60,6 +60,14 @@ const customStyles = error => {
           isFocused: true
         })
       }
+    }),
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
+    }),
+    valueContainer: (provided, state) => ({
+      ...provided,
+      padding: subPx(theme.space.x1)
     }),
     menu: (provided, state) => ({
       marginTop: 0,
