@@ -100,9 +100,6 @@ const ModalFooter = styled.div({
 });
 
 const ButtonSet = styled.div({
-  button: {
-    fontFamily: theme.fonts.base
-  },
   "button:not(:last-child)": {
     marginRight: theme.space.x1
   }
@@ -137,6 +134,12 @@ const ReactModal2 = styled(ReactModal)({
   padding: 0,
   [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
     width: "100%"
+  },
+  button: {
+    fontFamily: theme.fonts.base
+  },
+  "*": {
+    boxSizing: "border-box"
   },
   color: theme.colors.black,
   fontFamily: theme.fonts.base,
