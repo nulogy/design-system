@@ -149,11 +149,21 @@ const ReactModal2 = styled(ReactModal)({
   MozOsxFontSmoothing: "grayscale"
 });
 
-const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type, closeFunction, ...props }) => (
+const Modal = ({
+  isOpen,
+  shouldCloseOnOverlayClick,
+  children,
+  title,
+  primaryButtons,
+  secondaryButtons,
+  type,
+  closeFunction,
+  ...props
+}) => (
   <ReactModal2
     isOpen={isOpen}
     {...props}
-    shouldCloseOnOverlayClick={false}
+    shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
     style={{
       overlay: {
         display: "flex",
@@ -198,7 +208,8 @@ Modal.propTypes = {
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   closeFunction: PropTypes.func,
-  isOpen: PropTypes.bool
+  isOpen: PropTypes.bool,
+  shouldCloseOnOverlayClick: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -208,7 +219,8 @@ Modal.defaultProps = {
   type: "informative",
   children: null,
   closeFunction: null,
-  isOpen: true
+  isOpen: true,
+  shouldCloseOnOverlayClick: true
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
