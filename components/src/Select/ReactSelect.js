@@ -9,40 +9,6 @@ import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx, ScrollIndicators } from "../utils";
 
-const ReactSelect = ({
-  options,
-  labelText,
-  required,
-  requirementText,
-  helpText,
-  disabled,
-  errorMessage,
-  errorList,
-  error = !!(errorMessage || errorList),
-  initialIsOpen,
-  maxHeight,
-  id
-}) => (
-  <Field>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        labelText={labelText}
-        styles={customStyles(error)}
-        isDisabled={disabled}
-        isSearchable={false}
-        aria-required={required}
-        aria-invalid={error}
-        defaultMenuIsOpen={initialIsOpen}
-        maxMenuHeight={maxHeight}
-        inputId={id}
-      />
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-    </MaybeFieldLabel>
-  </Field>
-);
-
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
@@ -126,6 +92,40 @@ const customStyles = error => {
 };
 
 const extractLabelFromOption = option => option && option.label;
+
+const ReactSelect = ({
+  options,
+  labelText,
+  required,
+  requirementText,
+  helpText,
+  disabled,
+  errorMessage,
+  errorList,
+  error = !!(errorMessage || errorList),
+  id,
+  initialIsOpen,
+  maxHeight
+}) => (
+  <Field>
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <Select
+        placeholder="Please select inventory status"
+        options={options}
+        labelText={labelText}
+        styles={customStyles(error)}
+        isDisabled={disabled}
+        isSearchable={false}
+        aria-required={required}
+        aria-invalid={error}
+        defaultMenuIsOpen={initialIsOpen}
+        maxMenuHeight={maxHeight}
+        inputId={id}
+      />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </MaybeFieldLabel>
+  </Field>
+);
 
 ReactSelect.propTypes = {
   disabled: false,
