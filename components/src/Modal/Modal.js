@@ -100,6 +100,9 @@ const ModalFooter = styled.div({
 });
 
 const ButtonSet = styled.div({
+  button: {
+    fontFamily: theme.fonts.base
+  },
   "button:not(:last-child)": {
     marginRight: theme.space.x1
   }
@@ -112,45 +115,43 @@ const ModalCloseButton = styled(CloseButton)({
   zIndex: 3
 });
 
+const ReactModal2 = styled(ReactModal)({
+  ":focus": {
+    outline: "none"
+  },
+  display: "flex",
+  flexDirection: "column",
+  position: "relative",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  overflow: "hidden",
+  backgroundColor: theme.colors.white,
+  borderRadius: theme.radii.medium,
+  border: null,
+  maxHeight: "70vh",
+  width: "60%",
+  maxWidth: theme.breakpoints.small,
+  margin: `0px ${theme.space.x2}`,
+  padding: 0,
+  [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
+    width: "100%"
+  },
+  color: theme.colors.black,
+  fontFamily: theme.fonts.base,
+  fontSize: theme.fontSizes.medium,
+  lineHeight: theme.lineHeights.base,
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale"
+});
+
 const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type, closeFunction, ...props }) => (
-  <ReactModal
+  <ReactModal2
     isOpen={isOpen}
     {...props}
     shouldCloseOnOverlayClick={false}
     style={{
-      content: {
-        display: "flex",
-        flexDirection: "column",
-        position: "relative",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        overflow: "hidden",
-        backgroundColor: theme.colors.white,
-        borderRadius: theme.radii.medium,
-        border: null,
-        maxHeight: "70vh",
-        width: "60%",
-        maxWidth: "720px",
-        margin: `0px ${theme.space.x2}`,
-        padding: 0,
-        [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-          width: "100%"
-        },
-        color: theme.colors.black,
-        fontFamily: theme.fonts.base,
-        fontSize: theme.fontSizes.medium,
-        lineHeight: theme.lineHeights.base,
-        WebkitFontSmoothing: "antialiased",
-        MozOsxFontSmoothing: "grayscale",
-        button: {
-          fontFamily: theme.fonts.base
-        },
-        "*": {
-          boxSizing: "border-box"
-        }
-      },
       overlay: {
         display: "flex",
         justifyContent: "center",
@@ -174,8 +175,9 @@ const Modal = ({ isOpen, children, title, primaryButtons, secondaryButtons, type
         </ButtonSet>
       </ModalFooter>
     )}
-  </ReactModal>
+  </ReactModal2>
 );
+
 Modal.propTypes = {
   title: PropTypes.string,
   primaryButtons: PropTypes.arrayOf(
