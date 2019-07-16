@@ -49,7 +49,7 @@ const customStyles = error => {
         isOpen: state.selectProps.menuIsOpen,
         isFocused: state.isFocused
       }),
-      boxShadow: state.selectProps.menuIsOpen ? theme.shadows.small : null,
+      boxShadow: state.selectProps.menuIsOpen ? theme.shadows.focus : null,
       borderRadius: theme.radii.medium,
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
@@ -78,7 +78,7 @@ const customStyles = error => {
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
       borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-      boxShadow: theme.shadows.small
+      boxShadow: theme.shadows.focus
     }),
     menuList: provided => ({
       ...provided,
