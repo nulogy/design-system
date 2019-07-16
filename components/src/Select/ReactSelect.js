@@ -137,7 +137,8 @@ ReactSelect.propTypes = {
   requirementText: PropTypes.string,
   id: PropTypes.string,
   initialIsOpen: PropTypes.bool,
-  maxHeight: PropTypes.string
+  maxHeight: PropTypes.string,
+  required: PropTypes.bool
 };
 ReactSelect.defaultProps = {
   disabled: null,
@@ -149,7 +150,8 @@ ReactSelect.defaultProps = {
   requirementText: null,
   id: null,
   initialIsOpen: undefined,
-  maxHeight: "256px"
+  maxHeight: "256px",
+  required: false
 };
 
 export default ReactSelect;
