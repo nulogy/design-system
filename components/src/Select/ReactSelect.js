@@ -92,13 +92,12 @@ const customStyles = error => {
       padding: 0
     }),
     placeholder: (provided, state) => ({
-      // ...provided,
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
     })
   };
 };
 
-const extractLabelFromOption = option => option && option.label;
+const getValue = (opts, val) => opts.find(o => o.value === val);
 
 const ReactSelect = ({
   options,
@@ -133,7 +132,7 @@ const ReactSelect = ({
         maxMenuHeight={maxHeight}
         inputId={id}
         onChange={onChange}
-        value={value}
+        value={getValue(options, value)}
         name={name}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
