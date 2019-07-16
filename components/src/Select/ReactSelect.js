@@ -6,7 +6,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx, ScrollIndicators } from "../utils";
+import { subPx } from "../utils";
 
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -41,7 +41,6 @@ const customStyles = error => {
       lineHeight: theme.lineHeights.base,
       background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
       border: `1px solid ${theme.colors.grey}`,
-      borderColor: state.isFocused ? theme.colors.blue : theme.colors.grey,
       borderColor: getBorderColor({
         error,
         disabled: state.isDisabled,
@@ -64,7 +63,7 @@ const customStyles = error => {
       ...provided,
       color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
     }),
-    valueContainer: (provided, state) => ({
+    valueContainer: provided => ({
       ...provided,
       padding: subPx(theme.space.x1)
     }),
