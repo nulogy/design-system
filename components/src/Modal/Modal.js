@@ -179,8 +179,9 @@ const Modal = ({
     {modalHasFooter(primaryButtons, secondaryButtons) && (
       <ModalFooter>
         <ButtonSet alignment={buttonAlignment}>
+          {buttonAlignment !== "left" && getButtons(secondaryButtons)}
           {getButtons(primaryButtons, type)}
-          {getButtons(secondaryButtons)}
+          {buttonAlignment === "left" && getButtons(secondaryButtons)}
         </ButtonSet>
       </ModalFooter>
     )}
