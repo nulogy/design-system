@@ -65,7 +65,7 @@ const customStyles = error => {
     }),
     valueContainer: provided => ({
       ...provided,
-      padding: subPx(theme.space.x1)
+      padding: 0
     }),
     menu: (provided, state) => ({
       marginTop: 0,
@@ -90,8 +90,12 @@ const customStyles = error => {
       ...provided,
       padding: 0
     }),
+    singleValue: () => ({
+      padding: subPx(theme.space.x1)
+    }),
     placeholder: (provided, state) => ({
-      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
+      padding: subPx(theme.space.x1)
     })
   };
 };
