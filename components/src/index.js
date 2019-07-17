@@ -21,7 +21,6 @@ export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { Radio, RadioGroup } from "./Radio";
 export { Toggle } from "./Toggle";
 export { Select } from "./Select";
-export { ReactSelect } from "./Select";
 export { Field, Fieldset, Form, FormSection } from "./Form";
 export { ListItem, List } from "./List";
 export { Textarea } from "./Textarea";

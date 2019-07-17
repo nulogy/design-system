@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import Select from "react-select";
-import styled, { createGlobalStyle } from "styled-components";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
