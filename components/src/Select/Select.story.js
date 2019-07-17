@@ -145,7 +145,7 @@ storiesOf("Select", module)
   .add("with smaller maxHeight", () => (
     <Select
       initialIsOpen
-      maxHeight="128px"
+      maxHeight="132px"
       value={options[0].value}
       placeholder="Please select inventory status"
       options={options}

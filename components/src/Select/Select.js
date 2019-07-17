@@ -168,7 +168,7 @@ ReactSelect.defaultProps = {
   requirementText: null,
   id: null,
   initialIsOpen: undefined,
-  maxHeight: "256px",
+  maxHeight: "248px",
   name: undefined,
   onChange: undefined,
   placeholder: undefined,
