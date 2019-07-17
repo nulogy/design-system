@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
+- Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
+- Select updates
+  - Now uses React-Select instead of Downshift
+  - [**Breaking Change**] When submitting a form, Select's value is submitted instead of label
+  - Default maxHeight changed to 246px to provide better scrolling affordance and ScrollIndicators removed
+
 ### Deprecated
 
 ### Removed
