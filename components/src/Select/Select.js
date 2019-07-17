@@ -96,7 +96,12 @@ const customStyles = error => {
   };
 };
 
-const getValue = (opts, val) => opts.find(o => o.value === val);
+const getValue = (opts, val) => {
+  if (val === "") {
+    return "";
+  }
+  return opts.find(o => o.value === val);
+};
 
 const ReactSelect = ({
   options,
@@ -130,7 +135,7 @@ const ReactSelect = ({
         defaultMenuIsOpen={initialIsOpen}
         maxMenuHeight={maxHeight}
         inputId={id}
-        onChange={onChange}
+        onChange={onChange && (option => onChange(option && option.value))}
         value={getValue(options, value)}
         name={name}
       />
