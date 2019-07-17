@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Modal, Button, Form, Input } from "../index";
 
-const primaryButtons = [{ label: "Primary Action", onClick: () => {} }];
+const primaryButtons = { label: "Primary Action", onClick: () => {} };
 
-const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
+const secondaryButtons = { label: "Secondary Action", onClick: () => {} };
 
 Modal.setAppElement("#root");
 
@@ -54,8 +54,8 @@ class ModalExample extends React.Component {
         <Modal
           title="Edit Profile"
           closeFunction={this.closeModal}
-          primaryButtons={[{ label: "Submit", type: "submit", form: "myForm" }]}
-          secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
+          primaryButtons={{ label: "Submit", type: "submit", form: "myForm" }}
+          secondaryButtons={{ label: "Cancel", onClick: this.closeModal }}
           isOpen={this.state.isOpen}
         >
           <Form id="myForm">
@@ -114,6 +114,18 @@ storiesOf("Modal", module)
       title="Modal Title"
       primaryButtons={primaryButtons}
       secondaryButtons={secondaryButtons}
+    >
+      Content Content Content
+    </Modal>
+  ))
+  .add("with many buttons", () => (
+    <Modal
+      title="Modal Title"
+      primaryButtons={{ label: "Primary Action", onClick: () => {} }}
+      secondaryButtons={[
+        { label: "Secondary Action 1", onClick: () => {} },
+        { label: "Secondary Action 2", onClick: () => {} }
+      ]}
     >
       Content Content Content
     </Modal>
