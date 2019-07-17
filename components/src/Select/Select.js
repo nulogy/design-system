@@ -141,7 +141,7 @@ const ReactSelect = ({
 
 ReactSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  disabled: false,
+  disabled: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
