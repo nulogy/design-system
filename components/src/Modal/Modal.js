@@ -6,6 +6,7 @@ import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
 import { Icon } from "../Icon";
+import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
 
 const getButtonComponent = type => {
@@ -99,12 +100,6 @@ const ModalFooter = styled.div({
   }
 });
 
-const ButtonSet = styled.div({
-  "button:not(:last-child)": {
-    marginRight: theme.space.x1
-  }
-});
-
 const ModalCloseButton = styled(CloseButton)({
   position: "absolute",
   top: "12px",
@@ -158,6 +153,7 @@ const Modal = ({
   secondaryButtons,
   type,
   closeFunction,
+  buttonAlignment,
   ...props
 }) => (
   <ReactModal2
@@ -182,7 +178,7 @@ const Modal = ({
     </ModalContent>
     {modalHasFooter(primaryButtons, secondaryButtons) && (
       <ModalFooter>
-        <ButtonSet>
+        <ButtonSet alignment={buttonAlignment}>
           {getButtons(primaryButtons, type)}
           {getButtons(secondaryButtons)}
         </ButtonSet>
@@ -193,6 +189,7 @@ const Modal = ({
 
 Modal.propTypes = {
   title: PropTypes.string,
+  buttonAlignment: PropTypes.oneOf(["left", "center", "right"]),
   primaryButtons: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
@@ -214,6 +211,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   title: null,
+  buttonAlignment: "right",
   primaryButtons: null,
   secondaryButtons: null,
   type: "informative",

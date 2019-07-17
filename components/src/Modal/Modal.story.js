@@ -93,23 +93,29 @@ storiesOf("Modal", module)
   ))
   .add("with danger type", () => (
     <Modal title="Modal Title" type="danger" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Modal>
   ))
-  .add("with no buttons", () => (
-    <Modal title="Modal Title">
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+  .add("with no buttons", () => <Modal title="Modal Title">Content Content Content</Modal>)
+  .add("with no title", () => <Modal>Content Content Content</Modal>)
+  .add("with left button alignment", () => (
+    <Modal
+      buttonAlignment="left"
+      title="Modal Title"
+      primaryButtons={primaryButtons}
+      secondaryButtons={secondaryButtons}
+    >
+      Content Content Content
     </Modal>
   ))
-  .add("with no title", () => (
-    <Modal>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+  .add("with spaced button alignment", () => (
+    <Modal
+      buttonAlignment="spaced"
+      title="Modal Title"
+      primaryButtons={primaryButtons}
+      secondaryButtons={secondaryButtons}
+    >
+      Content Content Content
     </Modal>
   ))
   .add("example controlled modal", () => <ModalExample />);

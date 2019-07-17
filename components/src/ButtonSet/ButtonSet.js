@@ -5,7 +5,7 @@ import theme from "../theme";
 
 const alignments = {
   left: "flex-start",
-  center: "space-between",
+  spaced: "space-between",
   right: "flex-end"
 };
 
@@ -15,7 +15,7 @@ const buttonSpacings = {
       marginRight: theme.space.x1
     }
   },
-  center: {},
+  spaced: {},
   right: {
     "button:not(:first-child)": {
       marginLeft: theme.space.x1
@@ -39,7 +39,7 @@ const ButtonSet = styled.div(({ alignment }) => ({
 }));
 
 ButtonSet.propTypes = {
-  alignment: PropTypes.oneOf(["left", "center", "right"])
+  alignment: PropTypes.oneOf(["left", "spaced", "right"])
 };
 
 ButtonSet.defaultProps = {

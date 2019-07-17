@@ -21,9 +21,9 @@ storiesOf("ButtonSet", module)
       </ButtonSet>
     </Box>
   ))
-  .add("with alignment center", () => (
+  .add("with alignment spaced", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
-      <ButtonSet alignment="center">
+      <ButtonSet alignment="spaced">
         <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
       </ButtonSet>
