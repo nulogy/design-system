@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Modal, Button, Form, Input } from "../index";
 
-const primaryButtons = { label: "Primary Action", onClick: () => {} };
+const primaryButton = { label: "Primary Action", onClick: () => {} };
 
 const secondaryButtons = { label: "Secondary Action", onClick: () => {} };
 
@@ -54,9 +54,10 @@ class ModalExample extends React.Component {
         <Modal
           title="Edit Profile"
           closeFunction={this.closeModal}
-          primaryButtons={{ label: "Submit", type: "submit", form: "myForm" }}
+          primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
           secondaryButtons={{ label: "Cancel", onClick: this.closeModal }}
           isOpen={this.state.isOpen}
+          buttonAlignment="left"
         >
           <Form id="myForm">
             <Input name="name" id="name" labelText="Name" />
@@ -70,7 +71,7 @@ class ModalExample extends React.Component {
 
 storiesOf("Modal", module)
   .add("Modal", () => (
-    <Modal title="Modal Title" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
     </Modal>
   ))
@@ -78,33 +79,28 @@ storiesOf("Modal", module)
     <Modal
       title="Modal Title"
       closeFunction={() => {}}
-      primaryButtons={primaryButtons}
+      primaryButton={primaryButton}
       secondaryButtons={secondaryButtons}
     >
       Content Content Content
     </Modal>
   ))
   .add("with scrolling content", () => (
-    <Modal title="Modal Title" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content Content Content Content Content Content Content Content Content Content Content Content
       Content Content Content Content Content Content Content Content Content Content Content Content Content Content
       Content Content Content Content Content Content Content Content Content Content Content
     </Modal>
   ))
   .add("with danger type", () => (
-    <Modal title="Modal Title" type="danger" primaryButtons={primaryButtons} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" type="danger" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
     </Modal>
   ))
   .add("with no buttons", () => <Modal title="Modal Title">Content Content Content</Modal>)
   .add("with no title", () => <Modal>Content Content Content</Modal>)
   .add("with left button alignment", () => (
-    <Modal
-      buttonAlignment="left"
-      title="Modal Title"
-      primaryButtons={primaryButtons}
-      secondaryButtons={secondaryButtons}
-    >
+    <Modal buttonAlignment="left" title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
     </Modal>
   ))
@@ -112,7 +108,7 @@ storiesOf("Modal", module)
     <Modal
       buttonAlignment="spaced"
       title="Modal Title"
-      primaryButtons={primaryButtons}
+      primaryButton={primaryButton}
       secondaryButtons={secondaryButtons}
     >
       Content Content Content
@@ -121,7 +117,7 @@ storiesOf("Modal", module)
   .add("with many buttons", () => (
     <Modal
       title="Modal Title"
-      primaryButtons={{ label: "Primary Action", onClick: () => {} }}
+      primaryButton={{ label: "Primary Action", onClick: () => {} }}
       secondaryButtons={[
         { label: "Secondary Action 1", onClick: () => {} },
         { label: "Secondary Action 2", onClick: () => {} }

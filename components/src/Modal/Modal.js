@@ -9,7 +9,7 @@ import { Icon } from "../Icon";
 import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
 
-const getButtonComponent = type => {
+const getPrimaryButtonComponent = type => {
   if (type === "informative") {
     return PrimaryButton;
   } else if (type === "danger") {
@@ -19,26 +19,31 @@ const getButtonComponent = type => {
   }
 };
 
-const mapButtons = (buttons, type) => {
+const getPrimaryButton = (button, type) => {
+  const PrimaryButtonComponent = getPrimaryButtonComponent(type);
+
+  return <PrimaryButtonComponent {...button}>{button.label}</PrimaryButtonComponent>;
+};
+
+const getSecondaryButtons = buttons => {
   const buttonArray = Array.isArray(buttons) ? buttons : [buttons];
-  const ButtonComponent = getButtonComponent(type);
 
   return buttonArray.map(button => (
-    <ButtonComponent {...button} key={button.label}>
+    <Button {...button} key={button.label}>
       {button.label}
-    </ButtonComponent>
+    </Button>
   ));
 };
 
-const getModalButtons = (primaryButtons, secondaryButtons, buttonAlignment, type) => (
+const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type) => (
   <React.Fragment>
-    {buttonAlignment !== "left" && mapButtons(secondaryButtons)}
-    {mapButtons(primaryButtons, type)}
-    {buttonAlignment === "left" && mapButtons(secondaryButtons)}
+    {buttonAlignment !== "left" && getSecondaryButtons(secondaryButtons)}
+    {getPrimaryButton(primaryButton, type)}
+    {buttonAlignment === "left" && getSecondaryButtons(secondaryButtons)}
   </React.Fragment>
 );
 
-const modalHasFooter = (primaryButtons, secondaryButtons) => primaryButtons || secondaryButtons;
+const modalHasFooter = (primaryButton, secondaryButtons) => primaryButton || secondaryButtons;
 
 const ModalCard = styled.div({
   display: "flex",
@@ -154,7 +159,7 @@ const Modal = ({
   shouldCloseOnOverlayClick,
   children,
   title,
-  primaryButtons,
+  primaryButton,
   secondaryButtons,
   type,
   closeFunction,
@@ -181,10 +186,10 @@ const Modal = ({
     <ModalContent>
       <InnerModalContent>{children}</InnerModalContent>
     </ModalContent>
-    {modalHasFooter(primaryButtons, secondaryButtons) && (
+    {modalHasFooter(primaryButton, secondaryButtons) && (
       <ModalFooter>
         <ButtonSet alignment={buttonAlignment}>
-          {getModalButtons(primaryButtons, secondaryButtons, buttonAlignment, type)}
+          {getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
         </ButtonSet>
       </ModalFooter>
     )}
@@ -194,7 +199,7 @@ const Modal = ({
 Modal.propTypes = {
   title: PropTypes.string,
   buttonAlignment: PropTypes.oneOf(["left", "center", "right"]),
-  primaryButtons: PropTypes.arrayOf(
+  primaryButton: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       onClick: PropTypes.func
@@ -216,7 +221,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   title: null,
   buttonAlignment: "right",
-  primaryButtons: null,
+  primaryButton: null,
   secondaryButtons: null,
   type: "informative",
   children: null,
