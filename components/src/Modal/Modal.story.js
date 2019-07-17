@@ -1,12 +1,72 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Modal } from "../index";
+import { Modal, Button, Form, Input } from "../index";
 
 const primaryButtons = [{ label: "Primary Action", onClick: () => {} }];
 
 const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
 Modal.setAppElement("#root");
+
+class ModalExample extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
+  }
+
+  openModal() {
+    this.setState({ isOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ isOpen: false });
+  }
+
+  handleKeyDown(event) {
+    switch (event.keyCode) {
+      case 27:
+        this.closeModal();
+        break;
+      default:
+        break;
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <Button onClick={this.openModal}>Open Modal</Button>
+        <Modal
+          title="Edit Profile"
+          closeFunction={this.closeModal}
+          primaryButtons={[{ label: "Submit", type: "submit", form: "myForm" }]}
+          secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
+          isOpen={this.state.isOpen}
+        >
+          <Form id="myForm">
+            <Input name="name" id="name" labelText="Name" />
+            <Input type="number" name="age" id="age" labelText="Age" />
+          </Form>
+        </Modal>
+      </div>
+    );
+  }
+}
 
 storiesOf("Modal", module)
   .add("Modal", () => (
@@ -51,4 +111,5 @@ storiesOf("Modal", module)
       Content Content Content Content Content Content Content Content Content Content Content Content Content Content
       Content Content Content Content Content Content Content Content Content Content Content
     </Modal>
-  ));
+  ))
+  .add("example controlled modal", () => <ModalExample />);
