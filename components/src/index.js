@@ -6,6 +6,7 @@ export { Icon, InlineIcon } from "./Icon";
 export { Text, Title, SectionTitle, SubsectionTitle } from "./Type";
 
 export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "./Button";
+export { ButtonSet } from "./ButtonSet";
 export { Link } from "./Link";
 export { InlineValidation, HeaderValidation } from "./Validation";
 
