@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Downshift from "downshift";
-import styled from "styled-components";
 import { transparentize } from "polished";
+import Select from "react-select";
+import styled, { createGlobalStyle } from "styled-components";
 import { Field } from "../Form";
-import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx, ScrollIndicators } from "../utils";
+import { subPx } from "../utils";
 
 const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -16,6 +15,7 @@ const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   if (error) {
     return red;
   }
+
   if (disabled) {
     return lightGrey;
   }
@@ -26,231 +26,154 @@ const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   return grey;
 };
 
-const SelectBox = styled.div(({ disabled }) => ({
-  display: "flex",
-  position: "relative",
-  color: disabled ? transparentize(0.6667, theme.colors.black) : null
-}));
-
-const Input = styled.input(({ error, isOpen, disabled }) => ({
-  fontFamily: theme.fonts.base,
-  width: "100%",
-  color: theme.colors.black,
-  fontSize: theme.fontSizes.medium,
-  padding: "7px 27px 7px 7px",
-  lineHeight: theme.lineHeights.base,
-  border: "1px solid",
-  borderColor: getBorderColor({
-    error,
-    disabled,
-    isOpen,
-    isFocused: false
-  }),
-  borderTopLeftRadius: theme.radii.medium,
-  borderTopRightRadius: theme.radii.medium,
-  borderBottomLeftRadius: isOpen ? 0 : theme.radii.medium,
-  borderBottomRightRadius: isOpen ? 0 : theme.radii.medium,
-  boxShadow: isOpen ? theme.shadows.small : "none",
-  outline: "none",
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  "&:hover, &:focus": {
-    cursor: "default",
-    borderColor: getBorderColor({
-      error,
-      disabled,
-      isOpen,
-      isFocused: true
+const customStyles = error => {
+  return {
+    option: (provided, state) => ({
+      padding: subPx(theme.space.x1),
+      fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
+      background: state.isFocused ? theme.colors.lightBlue : null
+    }),
+    control: (provided, state) => ({
+      display: "flex",
+      position: "relative",
+      fontFamily: theme.fonts.base,
+      width: "100%",
+      fontSize: theme.fontSizes.medium,
+      lineHeight: theme.lineHeights.base,
+      background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+      border: `1px solid ${theme.colors.grey}`,
+      borderColor: getBorderColor({
+        error,
+        disabled: state.isDisabled,
+        isOpen: state.selectProps.menuIsOpen,
+        isFocused: state.isFocused
+      }),
+      boxShadow: state.selectProps.menuIsOpen ? theme.shadows.focus : null,
+      borderRadius: theme.radii.medium,
+      borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
+      "&:hover, &:focus": {
+        borderColor: getBorderColor({
+          error,
+          disabled: state.isDisabled,
+          isOpen: state.selectProps.menuIsOpen,
+          isFocused: true
+        })
+      }
+    }),
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
+    }),
+    valueContainer: provided => ({
+      ...provided,
+      padding: subPx(theme.space.x1)
+    }),
+    menu: (provided, state) => ({
+      marginTop: 0,
+      position: "absolute",
+      zIndex: "100",
+      width: "100%",
+      background: theme.colors.white,
+      borderWidth: "1px",
+      borderColor: getBorderColor({
+        error,
+        isOpen: true,
+        disabled: state.isDisabled,
+        isFocused: false
+      }),
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      borderRightStyle: "solid",
+      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+      boxShadow: theme.shadows.focus
+    }),
+    menuList: provided => ({
+      ...provided,
+      padding: 0
+    }),
+    placeholder: (provided, state) => ({
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
     })
-  },
-  "&::placeholder": {
-    color: disabled ? transparentize(0.6667, theme.colors.black) : null
-  }
-}));
-
-const IndicatorButton = styled.div(() => ({
-  height: theme.space.x3,
-  position: "absolute",
-  right: theme.space.half,
-  bottom: theme.space.x1,
-  pointerEvents: "none"
-}));
-
-const ToggleButton = ({ isOpen }) => (
-  <IndicatorButton>{isOpen ? <Icon icon="upArrow" /> : <Icon icon="downArrow" />}</IndicatorButton>
-);
-
-ToggleButton.propTypes = {
-  isOpen: PropTypes.bool.isRequired
+  };
 };
 
-const Menu = styled.div(({ error, disabled, maxHeight }) => ({
-  maxHeight,
-  overflow: "scroll",
-  borderWidth: "1px",
-  borderColor: getBorderColor({
-    error,
-    isOpen: true,
-    disabled,
-    isHovered: false
-  }),
-  borderBottomStyle: "solid",
-  borderLeftStyle: "solid",
-  borderRightStyle: "solid",
-  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-  marginTop: 0,
-  boxShadow: theme.shadows.small,
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white
-}));
+const getValue = (opts, val) => opts.find(o => o.value === val);
 
-const MenuItem = styled.div(({ isSelected, isActive }) => ({
-  color: theme.colors.black,
-  userSelect: "none",
-  padding: subPx(theme.space.x1),
-  fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
-  background: isActive ? theme.colors.lightBlue : null,
-  "&:hover": {
-    background: theme.colors.lightBlue
-  },
-  "&:last-child": {
-    borderRadius: `0 ${theme.radii.medium}`
-  }
-}));
-
-const findOptionFromValue = (value, options) => options.find(o => o.value === value);
-
-const Select = ({
+const ReactSelect = ({
+  options,
+  labelText,
+  required,
+  requirementText,
+  helpText,
+  disabled,
   errorMessage,
   errorList,
   error = !!(errorMessage || errorList),
-  onChange,
-  disabled,
-  options,
-  optionToString,
-  value,
-  required,
-  placeholder,
-  initialIsOpen,
   id,
-  labelText,
-  helpText,
+  initialIsOpen,
+  maxHeight,
   name,
-  requirementText,
-  maxHeight
+  onChange,
+  placeholder,
+  value
 }) => (
   <Field>
-    <Downshift
-      itemToString={optionToString}
-      selectedItem={value && findOptionFromValue(value, options)}
-      onChange={onChange && (option => onChange(option && option.value))}
-      defaultHighlightedIndex={0}
-      initialIsOpen={initialIsOpen}
-      inputId={id}
-    >
-      {({
-        getMenuProps,
-        getItemProps,
-        getInputProps,
-        getToggleButtonProps,
-        isOpen,
-        selectedItem,
-        highlightedIndex
-      }) => (
-        <div style={{ position: "relative" }}>
-          <SelectBox {...getToggleButtonProps({ disabled, error, isOpen })}>
-            <MaybeFieldLabel
-              style={{ width: "100%" }}
-              labelText={labelText}
-              requirementText={requirementText}
-              helpText={helpText}
-            >
-              <Input
-                {...getInputProps({
-                  disabled,
-                  error,
-                  isOpen,
-                  autoComplete: "off"
-                })}
-                aria-required={required}
-                aria-invalid={error}
-                placeholder={placeholder}
-                readOnly
-                name={name}
-                value={optionToString(selectedItem) || ""}
-              />
-            </MaybeFieldLabel>
-            <ToggleButton isOpen={isOpen} />
-          </SelectBox>
-          {isOpen && (
-            <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
-              <ScrollIndicators>
-                <Menu maxHeight={maxHeight} {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
-                  {options.map((option, index) => (
-                    <MenuItem
-                      style={{
-                        wordWrap: "break-word"
-                      }}
-                      {...getItemProps({
-                        key: option.value,
-                        item: option,
-                        isSelected: selectedItem === option,
-                        isActive: highlightedIndex === index,
-                        index,
-                        disabled
-                      })}
-                    >
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </ScrollIndicators>
-            </div>
-          )}
-        </div>
-      )}
-    </Downshift>
-    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <Select
+        placeholder={placeholder}
+        options={options}
+        labelText={labelText}
+        styles={customStyles(error)}
+        isDisabled={disabled}
+        isSearchable={false}
+        aria-required={required}
+        aria-invalid={error}
+        defaultMenuIsOpen={initialIsOpen}
+        maxMenuHeight={maxHeight}
+        inputId={id}
+        onChange={onChange}
+        value={getValue(options, value)}
+        name={name}
+      />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </MaybeFieldLabel>
   </Field>
 );
 
-Select.propTypes = {
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  name: PropTypes.string,
+ReactSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  optionToString: PropTypes.func,
-  required: PropTypes.bool,
-  onChange: PropTypes.func,
+  disabled: false,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
-  disabled: PropTypes.bool,
-  initialIsOpen: PropTypes.bool,
-  id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string,
-  maxHeight: PropTypes.string
+  id: PropTypes.string,
+  initialIsOpen: PropTypes.bool,
+  maxHeight: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  value: PropTypes.string
 };
-
-const extractLabelFromOption = option => option && option.label;
-
-Select.defaultProps = {
-  value: undefined,
-  name: undefined,
-  required: false,
-  onChange: undefined,
+ReactSelect.defaultProps = {
+  disabled: null,
   error: undefined,
   errorMessage: null,
   errorList: null,
-  disabled: false,
-  initialIsOpen: undefined,
-  placeholder: undefined,
-  optionToString: extractLabelFromOption,
-  id: null,
   labelText: null,
   helpText: null,
   requirementText: null,
-  maxHeight: "256px"
+  id: null,
+  initialIsOpen: undefined,
+  maxHeight: "256px",
+  name: undefined,
+  onChange: undefined,
+  placeholder: undefined,
+  required: false,
+  value: undefined
 };
 
-export default Select;
+export default ReactSelect;
