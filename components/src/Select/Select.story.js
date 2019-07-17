@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Input, PrimaryButton, Select } from "../index";
+import { Button, Input, PrimaryButton, Select } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -33,15 +33,25 @@ class SelectWithState extends React.Component {
 
     this.state = { selectedValue: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.clearSelection = this.clearSelection.bind(this);
   }
 
   handleChange(selectedValue) {
     this.setState({ selectedValue });
   }
 
+  clearSelection() {
+    this.setState({ selectedValue: "" });
+  }
+
   render() {
     const { selectedValue } = this.state;
-    return <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />;
+    return (
+      <>
+        <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />
+        <Button onClick={this.clearSelection}>Clear selection</Button>
+      </>
+    );
   }
 }
 
