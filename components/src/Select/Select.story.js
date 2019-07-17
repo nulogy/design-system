@@ -49,7 +49,7 @@ storiesOf("Select", module)
   .add("Select", () => (
     <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
-  .add("Select with an option selected", () => (
+  .add("with an option selected", () => (
     <>
       <Select
         value={options[0].value}
@@ -67,10 +67,10 @@ storiesOf("Select", module)
       />
     </>
   ))
-  .add("Select as a controlled component", () => (
+  .add("as a controlled component", () => (
     <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
-  .add("Set to disabled", () => (
+  .add("set to disabled", () => (
     <Select placeholder="Please select inventory status" options={options} disabled labelText="Inventory status" />
   ))
   .add("with error message", () => (
@@ -109,7 +109,7 @@ storiesOf("Select", module)
       />
     </>
   ))
-  .add("Set to required", () => (
+  .add("set to required", () => (
     <form>
       <Input placeholder="Please select inventory status" />
       <Select
@@ -125,7 +125,7 @@ storiesOf("Select", module)
       </PrimaryButton>
     </form>
   ))
-  .add("With helpText", () => (
+  .add("with helpText", () => (
     <Select
       placeholder="Please select inventory status"
       options={options}
@@ -133,7 +133,7 @@ storiesOf("Select", module)
       helpText="Additional information about input"
     />
   ))
-  .add("With custom id", () => (
+  .add("with custom id", () => (
     <Select
       id="my-custom-id"
       placeholder="Please select inventory status"
@@ -142,7 +142,7 @@ storiesOf("Select", module)
       helpText="Additional information about input"
     />
   ))
-  .add("With smaller maxHeight", () => (
+  .add("with smaller maxHeight", () => (
     <Select
       initialIsOpen
       maxHeight="128px"
