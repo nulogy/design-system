@@ -19,7 +19,7 @@ const getButtonComponent = type => {
   }
 };
 
-const getButtons = (buttons, type) => {
+const mapButtons = (buttons, type) => {
   if (!Array.isArray(buttons) || !buttons.length) {
     return null;
   }
@@ -32,6 +32,14 @@ const getButtons = (buttons, type) => {
     </ButtonComponent>
   ));
 };
+
+const getModalButtons = (primaryButtons, secondaryButtons, alignment, type) => (
+  <React.Fragment>
+    {buttonAlignment !== "left" && mapButtons(secondaryButtons)}
+    {mapButtons(primaryButtons, type)}
+    {buttonAlignment === "left" && mapButtons(secondaryButtons)}
+  </React.Fragment>
+);
 
 const modalHasFooter = (primaryButtons, secondaryButtons) => primaryButtons || secondaryButtons;
 
@@ -179,9 +187,7 @@ const Modal = ({
     {modalHasFooter(primaryButtons, secondaryButtons) && (
       <ModalFooter>
         <ButtonSet alignment={buttonAlignment}>
-          {buttonAlignment !== "left" && getButtons(secondaryButtons)}
-          {getButtons(primaryButtons, type)}
-          {buttonAlignment === "left" && getButtons(secondaryButtons)}
+          {getModalButtons(primaryButtons, secondaryButtons, alignment, type)}
         </ButtonSet>
       </ModalFooter>
     )}
