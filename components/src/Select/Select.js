@@ -63,6 +63,9 @@ const customStyles = error => {
       ...provided,
       color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
     }),
+    input: () => ({
+      padding: subPx(theme.space.x1)
+    }),
     valueContainer: provided => ({
       ...provided,
       padding: 0
@@ -91,11 +94,11 @@ const customStyles = error => {
       padding: 0
     }),
     singleValue: () => ({
-      padding: subPx(theme.space.x1)
+      paddingLeft: subPx(theme.space.x1)
     }),
     placeholder: (provided, state) => ({
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
-      padding: subPx(theme.space.x1)
+      paddingLeft: subPx(theme.space.x1)
     })
   };
 };
@@ -108,6 +111,7 @@ const getValue = (opts, val) => {
 };
 
 const ReactSelect = ({
+  autocomplete,
   options,
   labelText,
   required,
@@ -133,7 +137,7 @@ const ReactSelect = ({
         labelText={labelText}
         styles={customStyles(error)}
         isDisabled={disabled}
-        isSearchable={false}
+        isSearchable={autocomplete}
         aria-required={required}
         aria-invalid={error}
         defaultMenuIsOpen={initialIsOpen}
@@ -149,6 +153,7 @@ const ReactSelect = ({
 );
 
 ReactSelect.propTypes = {
+  autocomplete: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
@@ -167,6 +172,7 @@ ReactSelect.propTypes = {
   value: PropTypes.string
 };
 ReactSelect.defaultProps = {
+  autocomplete: true,
   disabled: null,
   error: undefined,
   errorMessage: null,

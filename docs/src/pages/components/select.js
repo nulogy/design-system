@@ -39,6 +39,12 @@ const propsRows = [
     defaultValue: "256px",
     description: "Max height of the select dropdown menu, content is scrollable"
   },
+  {
+    name: "autocomplete",
+    type: "Boolean",
+    defaultValue: "true",
+    description: "Whether or not typing will filter the options list"
+  },
   ...inputProps
 ];
 

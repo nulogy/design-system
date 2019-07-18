@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - [**Breaking Change**] When submitting a form, Select's value is submitted instead of label
   - Default maxHeight changed to 246px to provide better scrolling affordance and ScrollIndicators removed
   - Added proper focus token
+  - Added autocomplete
 
 ### Deprecated
 
