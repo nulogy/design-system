@@ -27,6 +27,12 @@ const options = [
 
 const propsRows = [
   {
+    name: "autocomplete",
+    type: "Boolean",
+    defaultValue: "true",
+    description: "Whether or not typing will filter the options list"
+  },
+  {
     name: "options",
     type: "Array",
     defaultValue: "Required",
@@ -40,10 +46,10 @@ const propsRows = [
     description: "Max height of the select dropdown menu, content is scrollable"
   },
   {
-    name: "autocomplete",
+    name: "multiselect",
     type: "Boolean",
-    defaultValue: "true",
-    description: "Whether or not typing will filter the options list"
+    defaultValue: "false",
+    description: "Whether or not multiple selections can be made"
   },
   ...inputProps
 ];
@@ -123,10 +129,21 @@ const options = [
         />
         <Highlight className="js">
           {`<Select
-    options={ options }
-    id="error"
-    errorMessage="Please select an inventory status"
-  />`}
+  options={ options }
+  id="error"
+  errorMessage="Please select an inventory status"
+/>`}
+        </Highlight>
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Multiselect</SubsectionTitle>
+        <Select options={options} id="multiselect" multiselect />
+        <Highlight className="js">
+          {`<Select
+  options={ options }
+  id="multiselect"
+  multiselect
+/>`}
         </Highlight>
       </Box>
       <Box mb="x6">
@@ -141,13 +158,13 @@ const options = [
         />
         <Highlight className="js">
           {`<Select
-    labelText="Label"
-    requirementText="(Optional)"
-    helpText="Additional help text"
-    placeholder="Please select inventory status"
-    options={ options }
-    id="all-labels"
-  />`}
+  labelText="Label"
+  requirementText="(Optional)"
+  helpText="Additional help text"
+  placeholder="Please select inventory status"
+  options={ options }
+  id="all-labels"
+/>`}
         </Highlight>
       </Box>
     </DocSection>

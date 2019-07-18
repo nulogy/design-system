@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Default maxHeight changed to 246px to provide better scrolling affordance and ScrollIndicators removed
   - Added proper focus token
   - Added autocomplete
+  - Added multiselect support
 
 ### Deprecated
 

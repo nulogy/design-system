@@ -34,6 +34,8 @@ const customStyles = error => {
     }),
     control: (provided, state) => ({
       display: "flex",
+      height: theme.space.x5,
+      paddingLeft: theme.space.x1,
       position: "relative",
       fontFamily: theme.fonts.base,
       width: "100%",
@@ -63,9 +65,7 @@ const customStyles = error => {
       ...provided,
       color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
     }),
-    input: () => ({
-      padding: subPx(theme.space.x1)
-    }),
+    input: () => ({}),
     valueContainer: provided => ({
       ...provided,
       padding: 0
@@ -93,12 +93,43 @@ const customStyles = error => {
       ...provided,
       padding: 0
     }),
-    singleValue: () => ({
-      paddingLeft: subPx(theme.space.x1)
+    multiValue: provided => ({
+      ...provided,
+      background: theme.colors.lightGrey,
+      color: theme.colors.black,
+      margin: `0 ${theme.space.x1} 0 0`,
+      "&:last-child": {
+        marginRight: theme.space.half
+      }
+    }),
+    multiValueLabel: () => ({
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      color: theme.colors.black,
+      borderRadius: theme.radii.small,
+      fontSize: theme.fontSizes.small,
+      padding: theme.space.half,
+      paddingLeft: theme.space.x1
+    }),
+    multiValueRemove: provided => ({
+      ...provided,
+      svg: { fill: theme.colors.black },
+      borderBottomLeftRadius: 0,
+      borderTopLeftRadius: 0,
+      "&:hover": {
+        background: theme.colors.darkGrey,
+        cursor: "pointer",
+        svg: { fill: theme.colors.white }
+      }
+    }),
+    noOptionsMessage: provided => ({
+      ...provided,
+      color: theme.colors.black,
+      fontSize: "14px"
     }),
     placeholder: (provided, state) => ({
-      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
-      paddingLeft: subPx(theme.space.x1)
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
     })
   };
 };
@@ -124,6 +155,7 @@ const ReactSelect = ({
   id,
   initialIsOpen,
   maxHeight,
+  multiselect,
   name,
   onChange,
   placeholder,
@@ -146,6 +178,7 @@ const ReactSelect = ({
         onChange={onChange && (option => onChange(option && option.value))}
         value={getValue(options, value)}
         name={name}
+        isMulti={multiselect}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </MaybeFieldLabel>
@@ -165,6 +198,7 @@ ReactSelect.propTypes = {
   id: PropTypes.string,
   initialIsOpen: PropTypes.bool,
   maxHeight: PropTypes.string,
+  multiselect: PropTypes.bool,
   name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
@@ -183,6 +217,7 @@ ReactSelect.defaultProps = {
   id: null,
   initialIsOpen: undefined,
   maxHeight: "248px",
+  multiselect: false,
   name: undefined,
   onChange: undefined,
   placeholder: undefined,
