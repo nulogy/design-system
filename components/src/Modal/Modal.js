@@ -45,22 +45,6 @@ const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type)
 
 const modalHasFooter = (primaryButton, secondaryButtons) => primaryButton || secondaryButtons;
 
-const ModalCard = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  position: "relative",
-  overflow: "hidden",
-  backgroundColor: theme.colors.white,
-  borderRadius: theme.radii.medium,
-  maxHeight: "70vh",
-  width: "60%",
-  maxWidth: "720px",
-  margin: `0px ${theme.space.x2}`,
-  [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-    width: "100%"
-  }
-});
-
 const ModalContent = styled.div({
   marginTop: "-64px",
   marginBottom: "-80px",
@@ -117,7 +101,7 @@ const ModalCloseButton = styled(CloseButton)({
   zIndex: 3
 });
 
-const ReactModal2 = styled(ReactModal)({
+const StyledReactModal = styled(ReactModal)({
   ":focus": {
     outline: "none"
   },
@@ -166,7 +150,7 @@ const Modal = ({
   buttonAlignment,
   ...props
 }) => (
-  <ReactModal2
+  <StyledReactModal
     isOpen={isOpen}
     {...props}
     shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
@@ -193,7 +177,7 @@ const Modal = ({
         </ButtonSet>
       </ModalFooter>
     )}
-  </ReactModal2>
+  </StyledReactModal>
 );
 
 Modal.propTypes = {
