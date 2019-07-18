@@ -49,20 +49,41 @@ class DropdownMenu extends React.Component {
   }
 
   subMenuEventHandlers() {
-    return {
-      onClick: () => this.openMenu(),
-      onBlur: () => this.closeMenu(),
-      onFocus: () => this.openMenu(),
-      onKeyDown: e => this.handleKeyDown(e)
-    };
+    if (this.props.opensOnHover) {
+      return {
+        onMouseEnter: () => this.openMenu(),
+        onMouseLeave: () => this.closeMenu(),
+        onClick: () => this.openMenu(),
+        onBlur: () => this.closeMenu(),
+        onFocus: () => this.openMenu(),
+        onKeyDown: e => this.handleKeyDown(e)
+      };
+    } else {
+      return {
+        onClick: () => this.openMenu(),
+        onBlur: () => this.closeMenu(),
+        onFocus: () => this.openMenu(),
+        onKeyDown: e => this.handleKeyDown(e)
+      };
+    }
   }
 
   menuTriggerEventHandlers() {
-    return {
-      onBlur: () => this.closeMenu(),
-      onClick: () => this.openMenu(),
-      onKeyDown: e => this.handleKeyDown(e)
-    };
+    if (this.props.opensOnHover) {
+      return {
+        onMouseEnter: () => this.openMenu(),
+        onMouseLeave: () => this.closeMenu(),
+        onBlur: () => this.closeMenu(),
+        onClick: () => this.openMenu(),
+        onKeyDown: e => this.handleKeyDown(e)
+      };
+    } else {
+      return {
+        onBlur: () => this.closeMenu(),
+        onClick: () => this.openMenu(),
+        onKeyDown: e => this.handleKeyDown(e)
+      };
+    }
   }
 
   clearScheduled() {
@@ -158,7 +179,8 @@ DropdownMenu.propTypes = {
     "right-end"
   ]),
   modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool
+  defaultOpen: PropTypes.bool,
+  opensOnHover: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
@@ -170,7 +192,8 @@ DropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false
+  defaultOpen: false,
+  opensOnHover: false
 };
 
 export default DropdownMenu;

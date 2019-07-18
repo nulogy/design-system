@@ -46,6 +46,7 @@ const SubMenuTrigger = props => {
   const { menuData, name, onItemClick, ...otherProps } = props;
   return (
     <DropdownMenu
+      opensOnHover
       placement="right-start"
       modifiers={null}
       showArrow={false}
