@@ -183,7 +183,7 @@ const Modal = ({
 
 Modal.propTypes = {
   title: PropTypes.string,
-  buttonAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  buttonAlignment: PropTypes.oneOf(["left", "spaced", "right"]),
   primaryButton: PropTypes.shape({}),
   secondaryButtons: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.shape({})), PropTypes.shape({})]),
   type: PropTypes.oneOf(["danger", "informative"]),
