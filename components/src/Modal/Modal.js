@@ -184,15 +184,7 @@ Modal.propTypes = {
   title: PropTypes.string,
   buttonAlignment: PropTypes.oneOf(["left", "center", "right"]),
   primaryButton: PropTypes.shape({}),
-  secondaryButtons: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        onClick: PropTypes.func
-      })
-    ),
-    PropTypes.shape({})
-  ]),
+  secondaryButtons: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.shape({})), PropTypes.shape({})]),
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   closeFunction: PropTypes.func,
