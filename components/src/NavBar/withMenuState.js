@@ -23,6 +23,7 @@ class MenuState extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown);
+    this.clearScheduled();
   }
 
   clearScheduled() {
@@ -95,7 +96,7 @@ MenuState.propTypes = {
   children: PropTypes.func.isRequired
 };
 
-const withMenuState = MenuComponentWithoutState => (props, showDelay, hideDelay) => (
+const withMenuState = MenuComponentWithoutState => ({ showDelay, hideDelay, ...props }) => (
   <MenuState showDelay={showDelay} hideDelay={hideDelay}>
     {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
   </MenuState>
