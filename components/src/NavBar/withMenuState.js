@@ -25,28 +25,46 @@ class MenuState extends React.Component {
     document.removeEventListener("keydown", this.handleKeyDown);
   }
 
-  handleOnClick() {
-    this.toggleMenu();
+  clearScheduled() {
+    clearTimeout(this.timeoutID);
   }
 
-  toggleMenu() {
-    const { isOpen } = this.state;
-
-    this.setState({
-      isOpen: !isOpen
-    });
+  setMenuState(newState, skipTimer = true) {
+    this.clearScheduled();
+    this.conditionallyApplyDelay(
+      () => this.setState({ isOpen: newState }),
+      skipTimer,
+      newState ? this.props.showDelay : this.props.hideDelay
+    );
   }
 
-  openMenu() {
-    this.setState({
-      isOpen: true
-    });
+  toggleMenu(skipTimer = true) {
+    this.clearScheduled();
+    this.conditionallyApplyDelay(
+      () => this.setState(prevState => ({ isOpen: !prevState.isOpen })),
+      skipTimer,
+      this.state.isOpen ? this.props.hideDelay : this.props.showDelay
+    );
   }
 
-  closeMenu() {
-    this.setState({
-      isOpen: false
-    });
+  conditionallyApplyDelay(fnc, skipTimer, delay) {
+    if (!skipTimer) {
+      this.timeoutID = setTimeout(fnc, delay);
+    } else {
+      fnc();
+    }
+  }
+
+  closeMenu(skipTimer) {
+    this.setMenuState(false, skipTimer);
+  }
+
+  openMenu(skipTimer) {
+    this.setMenuState(true, skipTimer);
+  }
+
+  handleOnClick(skipTimer) {
+    this.toggleMenu(skipTimer);
   }
 
   handleKeyDown(event) {
@@ -77,8 +95,10 @@ MenuState.propTypes = {
   children: PropTypes.func.isRequired
 };
 
-const withMenuState = MenuComponentWithoutState => props => (
-  <MenuState>{menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}</MenuState>
+const withMenuState = MenuComponentWithoutState => (props, showDelay, hideDelay) => (
+  <MenuState showDelay={showDelay} hideDelay={hideDelay}>
+    {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
+  </MenuState>
 );
 
 export { withMenuState };
