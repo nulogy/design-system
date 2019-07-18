@@ -78,7 +78,7 @@ storiesOf("Modal", module)
   .add("with close button", () => (
     <Modal
       title="Modal Title"
-      closeFunction={() => {}}
+      onRequestClose={() => {}}
       primaryButton={primaryButton}
       secondaryButtons={secondaryButtons}
     >
