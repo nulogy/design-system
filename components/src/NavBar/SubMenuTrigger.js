@@ -52,14 +52,7 @@ const SubMenuTrigger = props => {
       triggerTogglesMenuState={false}
       {...otherProps}
       trigger={({ closeMenu, openMenu }) => (
-        <SubMenuTriggerButton
-          name={name}
-          onClick={() => {
-            console.log("click");
-          }}
-          onMouseEnter={openMenu}
-          onMouseLeave={closeMenu}
-        />
+        <SubMenuTriggerButton name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
       )}
     >
       {({ closeMenu, openMenu }) => (

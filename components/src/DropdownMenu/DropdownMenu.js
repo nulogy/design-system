@@ -33,12 +33,13 @@ class DropdownMenu extends React.Component {
     this.triggerRef = node;
   }
 
-  conditionallyApplyDelay(fnc, skipTimer, delay) {
-    if (!skipTimer) {
-      this.timeoutID = setTimeout(fnc, delay);
-    } else {
-      fnc();
-    }
+  setMenuState(newState, skipTimer = false) {
+    this.clearScheduled();
+    this.conditionallyApplyDelay(
+      () => this.setState({ open: newState }),
+      skipTimer,
+      newState ? this.props.showDelay : this.props.hideDelay
+    );
   }
 
   toggleMenuState(skipTimer = false) {
@@ -50,13 +51,12 @@ class DropdownMenu extends React.Component {
     );
   }
 
-  setMenuState(newState, skipTimer = false) {
-    this.clearScheduled();
-    this.conditionallyApplyDelay(
-      () => this.setState({ open: newState }),
-      skipTimer,
-      newState ? this.props.showDelay : this.props.hideDelay
-    );
+  conditionallyApplyDelay(fnc, skipTimer, delay) {
+    if (!skipTimer) {
+      this.timeoutID = setTimeout(fnc, delay);
+    } else {
+      fnc();
+    }
   }
 
   closeMenu(skipTimer) {
@@ -96,8 +96,7 @@ class DropdownMenu extends React.Component {
     clearTimeout(this.timeoutID);
   }
 
-  handleOutsideClick(e) {
-    console.log(e.target);
+  handleOutsideClick() {
     this.closeMenu();
   }
 
