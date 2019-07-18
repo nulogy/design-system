@@ -18,6 +18,7 @@ class DropdownMenu extends React.Component {
     this.openMenu = this.openMenu.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.setMenuRef = this.setMenuRef.bind(this);
+    this.setTriggerRef = this.setTriggerRef.bind(this);
   }
 
   componentWillUnmount() {
@@ -28,16 +29,34 @@ class DropdownMenu extends React.Component {
     this.menuRef = node;
   }
 
+  setTriggerRef(node) {
+    this.triggerRef = node;
+  }
+
+  conditionallyApplyDelay(fnc, skipTimer, delay) {
+    if (!skipTimer) {
+      this.timeoutID = setTimeout(fnc, delay);
+    } else {
+      fnc();
+    }
+  }
+
+  toggleSubMenuState(skipTimer = false) {
+    this.clearScheduled();
+    this.conditionallyApplyDelay(
+      () => this.setState(prevState => ({ open: !prevState.open })),
+      skipTimer,
+      this.state.open ? this.props.hideDelay : this.props.showDelay
+    );
+  }
+
   setSubMenuState(newState, skipTimer = false) {
     this.clearScheduled();
-    if (!skipTimer) {
-      this.timeoutID = setTimeout(
-        () => this.setState({ open: newState }),
-        newState ? this.props.showDelay : this.props.hideDelay
-      );
-    } else {
-      this.setState({ open: newState });
-    }
+    this.conditionallyApplyDelay(
+      () => this.setState({ open: newState }),
+      skipTimer,
+      newState ? this.props.showDelay : this.props.hideDelay
+    );
   }
 
   closeMenu(skipTimer) {
@@ -49,49 +68,29 @@ class DropdownMenu extends React.Component {
   }
 
   subMenuEventHandlers() {
-    if (this.props.opensOnHover) {
-      return {
-        onMouseEnter: () => this.openMenu(),
-        onMouseLeave: () => this.closeMenu(),
-        onClick: () => this.openMenu(),
-        onBlur: () => this.closeMenu(),
-        onFocus: () => this.openMenu(),
-        onKeyDown: e => this.handleKeyDown(e)
-      };
-    } else {
-      return {
-        onClick: () => this.openMenu(),
-        onBlur: () => this.closeMenu(),
-        onFocus: () => this.openMenu(),
-        onKeyDown: e => this.handleKeyDown(e)
-      };
-    }
+    return {
+      onBlur: () => this.closeMenu(),
+      onFocus: () => this.openMenu(),
+      onClick: () => this.openMenu(),
+      onKeyDown: e => this.handleKeyDown(e)
+    };
   }
 
   menuTriggerEventHandlers() {
-    if (this.props.opensOnHover) {
-      return {
-        onMouseEnter: () => this.openMenu(),
-        onMouseLeave: () => this.closeMenu(),
-        onBlur: () => this.closeMenu(),
-        onClick: () => this.openMenu(),
-        onKeyDown: e => this.handleKeyDown(e)
-      };
-    } else {
-      return {
-        onBlur: () => this.closeMenu(),
-        onClick: () => this.openMenu(),
-        onKeyDown: e => this.handleKeyDown(e)
-      };
-    }
+    return {
+      onBlur: () => this.closeMenu(),
+      onClick: () => this.toggleSubMenuState(),
+      onKeyDown: e => this.handleKeyDown(e)
+    };
   }
 
   clearScheduled() {
     clearTimeout(this.timeoutID);
   }
 
-  handleOutsideClick() {
-    this.closeMenu(true);
+  handleOutsideClick(e) {
+    console.log(e.target);
+    this.closeMenu();
   }
 
   handleKeyDown(e) {
@@ -111,14 +110,29 @@ class DropdownMenu extends React.Component {
       <Manager>
         <Reference>
           {({ ref }) =>
-            React.cloneElement(trigger(), {
-              "aria-haspopup": true,
-              "aria-expanded": this.state.open,
-              type: "button",
-              disabled: disabled ? true : null,
-              ...this.menuTriggerEventHandlers(),
-              ref
-            })
+            React.cloneElement(
+              trigger({
+                closeMenu: e => {
+                  this.closeMenu(true);
+                  e.stopPropagation();
+                },
+                openMenu: e => {
+                  this.openMenu(true);
+                  e.stopPropagation();
+                }
+              }),
+              {
+                "aria-haspopup": true,
+                "aria-expanded": this.state.open,
+                type: "button",
+                disabled: disabled ? true : null,
+                ...this.menuTriggerEventHandlers(),
+                ref: node => {
+                  ref(node);
+                  this.setTriggerRef(node);
+                }
+              }
+            )
           }
         </Reference>
         {this.state.open && (
@@ -135,7 +149,7 @@ class DropdownMenu extends React.Component {
                   this.setMenuRef(node);
                 }}
               >
-                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
+                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                 {childrenFnc({
                   closeMenu: e => {
                     this.closeMenu(true);
@@ -179,8 +193,7 @@ DropdownMenu.propTypes = {
     "right-end"
   ]),
   modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool,
-  opensOnHover: PropTypes.bool
+  defaultOpen: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
@@ -192,8 +205,7 @@ DropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false,
-  opensOnHover: false
+  defaultOpen: false
 };
 
 export default DropdownMenu;
