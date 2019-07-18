@@ -59,7 +59,7 @@ class ModalExample extends React.Component {
           isOpen={this.state.isOpen}
           buttonAlignment="left"
         >
-          <Form id="myForm">
+          <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
             <Input type="number" name="age" id="age" labelText="Age" />
           </Form>
