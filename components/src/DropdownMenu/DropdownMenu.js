@@ -41,7 +41,7 @@ class DropdownMenu extends React.Component {
     }
   }
 
-  toggleSubMenuState(skipTimer = false) {
+  toggleMenuState(skipTimer = false) {
     this.clearScheduled();
     this.conditionallyApplyDelay(
       () => this.setState(prevState => ({ open: !prevState.open })),
@@ -50,7 +50,7 @@ class DropdownMenu extends React.Component {
     );
   }
 
-  setSubMenuState(newState, skipTimer = false) {
+  setMenuState(newState, skipTimer = false) {
     this.clearScheduled();
     this.conditionallyApplyDelay(
       () => this.setState({ open: newState }),
@@ -60,14 +60,22 @@ class DropdownMenu extends React.Component {
   }
 
   closeMenu(skipTimer) {
-    this.setSubMenuState(false, skipTimer);
+    this.setMenuState(false, skipTimer);
   }
 
   openMenu(skipTimer) {
-    this.setSubMenuState(true, skipTimer);
+    this.setMenuState(true, skipTimer);
   }
 
-  subMenuEventHandlers() {
+  handleTriggerClick() {
+    if (this.props.triggerTogglesMenuState) {
+      this.toggleMenuState();
+    } else {
+      this.openMenu();
+    }
+  }
+
+  menuEventHandlers() {
     return {
       onBlur: () => this.closeMenu(),
       onFocus: () => this.openMenu(),
@@ -79,7 +87,7 @@ class DropdownMenu extends React.Component {
   menuTriggerEventHandlers() {
     return {
       onBlur: () => this.closeMenu(),
-      onClick: () => this.toggleSubMenuState(),
+      onClick: () => this.handleTriggerClick(),
       onKeyDown: e => this.handleKeyDown(e)
     };
   }
@@ -143,7 +151,7 @@ class DropdownMenu extends React.Component {
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
                 showArrow={showArrow}
-                {...this.subMenuEventHandlers()}
+                {...this.menuEventHandlers()}
                 ref={node => {
                   popperProps.ref(node);
                   this.setMenuRef(node);
@@ -193,7 +201,8 @@ DropdownMenu.propTypes = {
     "right-end"
   ]),
   modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool
+  defaultOpen: PropTypes.bool,
+  triggerTogglesMenuState: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
@@ -205,7 +214,8 @@ DropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false
+  defaultOpen: false,
+  triggerTogglesMenuState: true
 };
 
 export default DropdownMenu;

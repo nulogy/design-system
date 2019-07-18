@@ -46,16 +46,27 @@ const SubMenuTrigger = props => {
   const { menuData, name, onItemClick, ...otherProps } = props;
   return (
     <DropdownMenu
-      opensOnHover
       placement="right-start"
       modifiers={null}
       showArrow={false}
+      triggerTogglesMenuState={false}
       {...otherProps}
-      trigger={() => <SubMenuTriggerButton name={name} />}
+      trigger={({ closeMenu, openMenu }) => (
+        <SubMenuTriggerButton
+          name={name}
+          onClick={() => {
+            console.log("click");
+          }}
+          onMouseEnter={openMenu}
+          onMouseLeave={closeMenu}
+        />
+      )}
     >
-      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
-      </ul>
+      {({ closeMenu, openMenu }) => (
+        <ul onMouseEnter={openMenu} onMouseLeave={closeMenu} style={{ listStyle: "none", margin: "0", padding: "0" }}>
+          {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
+        </ul>
+      )}
     </DropdownMenu>
   );
 };
