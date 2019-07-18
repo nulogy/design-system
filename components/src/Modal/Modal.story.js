@@ -53,7 +53,7 @@ class ModalExample extends React.Component {
         <Button onClick={this.openModal}>Open Modal</Button>
         <Modal
           title="Edit Profile"
-          closeFunction={this.closeModal}
+          onRequestClose={this.closeModal}
           primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
           secondaryButtons={{ label: "Cancel", onClick: this.closeModal }}
           isOpen={this.state.isOpen}

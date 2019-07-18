@@ -60,9 +60,9 @@ const InnerModalContent = styled.div({
 
 const getHeaderPaddingRight = closeButtonIncluded => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
-const ModalHeader = styled.div(({ closeFunction }) => ({
+const ModalHeader = styled.div(({ hasCloseButton }) => ({
   position: "relative",
-  padding: `${theme.space.x2} ${getHeaderPaddingRight(closeFunction)} ${theme.space.x2} ${theme.space.x3}`,
+  padding: `${theme.space.x2} ${getHeaderPaddingRight(hasCloseButton)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
   ":after": {
@@ -146,11 +146,12 @@ const Modal = ({
   primaryButton,
   secondaryButtons,
   type,
-  closeFunction,
+  onRequestClose,
   buttonAlignment,
   ...props
 }) => (
   <StyledReactModal
+    onRequestClose={onRequestClose}
     isOpen={isOpen}
     {...props}
     shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
@@ -163,9 +164,9 @@ const Modal = ({
       }
     }}
   >
-    <ModalHeader closeFunction={!!closeFunction}>
+    <ModalHeader hasCloseButton={!!onRequestClose}>
       {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
-      {closeFunction && <ModalCloseButton onClick={closeFunction} />}
+      {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
     </ModalHeader>
     <ModalContent>
       <InnerModalContent>{children}</InnerModalContent>
@@ -187,7 +188,7 @@ Modal.propTypes = {
   secondaryButtons: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.shape({})), PropTypes.shape({})]),
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
-  closeFunction: PropTypes.func,
+  onRequestClose: PropTypes.func,
   isOpen: PropTypes.bool,
   shouldCloseOnOverlayClick: PropTypes.bool
 };
@@ -199,7 +200,7 @@ Modal.defaultProps = {
   secondaryButtons: null,
   type: "informative",
   children: null,
-  closeFunction: null,
+  onRequestClose: null,
   isOpen: true,
   shouldCloseOnOverlayClick: true
 };
