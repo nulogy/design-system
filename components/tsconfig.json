@@ -4,6 +4,7 @@
     "declaration": true,
     "noEmit": true,
     "outDir": "./lib",
+    "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
   },
