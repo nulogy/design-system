@@ -4,10 +4,10 @@ import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState } from "../utils";
 import { keyCodes } from "../constants";
 import { IconicButton } from "../Button";
-import DropdownMenuContainer from "./DropdownMenuContainer";
+import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
-class StatelessDropdownMenu extends React.Component {
+class StatelessNavBarDropdownMenu extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ class StatelessDropdownMenu extends React.Component {
   menuTriggerEventHandlers() {
     return {
       onBlur: () => this.props.menuState.closeMenu(false),
-      onClick: () => this.props.menuState.toggleMenu()
+      onClick: () => this.handleTriggerClick(false)
     };
   }
 
@@ -39,6 +39,14 @@ class StatelessDropdownMenu extends React.Component {
     };
   }
 
+  handleTriggerClick() {
+    if (this.props.triggerTogglesMenuState) {
+      this.props.menuState.toggleMenu();
+    } else {
+      this.props.menuState.openMenu();
+    }
+  }
+
   handleOutsideClick() {
     this.props.menuState.closeMenu(false);
   }
@@ -47,8 +55,6 @@ class StatelessDropdownMenu extends React.Component {
     const {
       trigger,
       children,
-      disabled,
-      backgroundColor,
       placement,
       modifiers,
       showArrow,
@@ -74,7 +80,6 @@ class StatelessDropdownMenu extends React.Component {
                 "aria-haspopup": true,
                 "aria-expanded": isOpen,
                 type: "button",
-                disabled: disabled ? true : null,
                 ...this.menuTriggerEventHandlers(),
                 ref: node => {
                   ref(node);
@@ -89,7 +94,6 @@ class StatelessDropdownMenu extends React.Component {
             {popperProps => (
               <DropdownMenuContainer
                 placement={placement}
-                backgroundColor={backgroundColor}
                 popperProps={popperProps}
                 showArrow={showArrow}
                 {...this.menuEventHandlers()}
@@ -119,50 +123,32 @@ class StatelessDropdownMenu extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-StatelessDropdownMenu.propTypes = {
+StatelessNavBarDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  disabled: PropTypes.bool,
-  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  backgroundColor: PropTypes.string,
+  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   showArrow: PropTypes.bool,
-  placement: PropTypes.oneOf([
-    "top",
-    "top-start",
-    "top-end",
-    "bottom",
-    "bottom-start",
-    "bottom-end",
-    "left",
-    "left-start",
-    "left-end",
-    "right",
-    "right-start",
-    "right-end"
-  ]),
+  placement: PropTypes.oneOf(["bottom-start", "right-start"]),
   modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool
+  triggerTogglesMenuState: PropTypes.bool
 };
 
-StatelessDropdownMenu.defaultProps = {
-  disabled: false,
-  trigger: () => <IconicButton icon="more" />,
-  backgroundColor: undefined,
+StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false
+  triggerTogglesMenuState: true
 };
 
-const DropdownMenu = withMenuState(StatelessDropdownMenu);
+const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);
 
-DropdownMenu.propTypes = {
+NavBarDropdownMenu.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
-DropdownMenu.defaultProps = {
-  showDelay: "100",
-  hideDelay: "200"
+NavBarDropdownMenu.defaultProps = {
+  showDelay: "0",
+  hideDelay: "100"
 };
 
-export default DropdownMenu;
+export default NavBarDropdownMenu;
