@@ -160,7 +160,7 @@ const Modal = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: transparentize(0.1, theme.colors.whiteGrey)
+        backgroundColor: transparentize(0.5, theme.colors.blackBlue)
       }
     }}
   >
