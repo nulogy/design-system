@@ -6,3 +6,4 @@ export { default as withWindowDimensions } from "./withWindowDimensions";
 export { default as DetectOutsideClick } from "./DetectOutsideClick";
 export { default as PopperArrow } from "./PopperArrow";
 export { default as ScrollIndicators } from "./ScrollIndicators";
+export { default as withMenuState } from "./withMenuState";

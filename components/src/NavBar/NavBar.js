@@ -10,10 +10,9 @@ import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import { withMenuState } from "./withMenuState";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx, withWindowDimensions } from "../utils";
+import { subPx, withWindowDimensions, withMenuState } from "../utils";
 
 const LockBody = createGlobalStyle(({ isOpen }) => ({
   body: {

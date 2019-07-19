@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
-import { withMenuState } from "../NavBar/withMenuState.js";
+import { withMenuState, withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,

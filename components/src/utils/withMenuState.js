@@ -97,4 +97,4 @@ const withMenuState = MenuComponentWithoutState => ({ showDelay = 0, hideDelay =
   </MenuState>
 );
 
-export { withMenuState };
+export default withMenuState;

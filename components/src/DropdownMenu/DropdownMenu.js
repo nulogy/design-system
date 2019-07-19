@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick } from "../utils";
+import { DetectOutsideClick, withMenuState } from "../utils";
 import { keyCodes } from "../constants";
 import { IconicButton } from "../Button";
-import { withMenuState } from "../NavBar/withMenuState.js";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
