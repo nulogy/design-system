@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 import { keyCodes } from "../constants";
 
 class MenuState extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    console.log(this.props.defaultOpen);
 
     this.state = {
-      isOpen: false
+      isOpen: this.props.defaultOpen
     };
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -95,28 +97,32 @@ class MenuState extends React.Component {
 MenuState.propTypes = {
   children: PropTypes.func.isRequired,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultOpen: PropTypes.bool
 };
 
 MenuState.defaultProps = {
   showDelay: 0,
-  hideDelay: 0
+  hideDelay: 0,
+  defaultOpen: false
 };
 
 const withMenuState = MenuComponentWithoutState => {
-  const MenuComponent = ({ showDelay, hideDelay, ...props }) => (
-    <MenuState showDelay={showDelay} hideDelay={hideDelay}>
+  const MenuComponent = ({ showDelay, hideDelay, defaultOpen, ...props }) => (
+    <MenuState showDelay={showDelay} hideDelay={hideDelay} defaultOpen={defaultOpen}>
       {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
     </MenuState>
   );
   MenuComponent.propTypes = {
     showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    defaultOpen: PropTypes.bool
   };
 
   MenuComponent.defaultProps = {
     showDelay: 0,
-    hideDelay: 0
+    hideDelay: 0,
+    defaultOpen: false
   };
 
   return MenuComponent;

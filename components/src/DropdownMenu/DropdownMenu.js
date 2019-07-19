@@ -144,8 +144,7 @@ StatelessDropdownMenu.propTypes = {
     "right-start",
     "right-end"
   ]),
-  modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool
+  modifiers: PropTypes.shape({})
 };
 
 StatelessDropdownMenu.defaultProps = {
@@ -154,20 +153,21 @@ StatelessDropdownMenu.defaultProps = {
   backgroundColor: undefined,
   showArrow: true,
   placement: "bottom-start",
-  modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false
+  modifiers: { flip: { behavior: ["bottom"] } }
 };
 
 const DropdownMenu = withMenuState(StatelessDropdownMenu);
 
 DropdownMenu.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultOpen: PropTypes.bool
 };
 
 DropdownMenu.defaultProps = {
   showDelay: "100",
-  hideDelay: "200"
+  hideDelay: "200",
+  defaultOpen: false
 };
 
 export default DropdownMenu;
