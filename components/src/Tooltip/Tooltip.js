@@ -144,6 +144,11 @@ StatelessTooltip.propTypes = {
   children: PropTypes.element.isRequired,
   id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    openMenu: PropTypes.func,
+    closeMenu: PropTypes.func
+  }).isRequired,
   placement: PropTypes.oneOf([
     "top",
     "top-start",
