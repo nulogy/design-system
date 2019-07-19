@@ -27,47 +27,47 @@ class MenuState extends React.Component {
     this.clearScheduled();
   }
 
-  setMenuState(newState, skipTimer = true) {
+  setMenuState(nextIsOpenState, skipDelay) {
     const { showDelay, hideDelay } = this.props;
 
     this.clearScheduled();
     this.conditionallyApplyDelay(
-      () => this.setState({ isOpen: newState }),
-      skipTimer,
-      newState ? showDelay : hideDelay
+      () => this.setState({ isOpen: nextIsOpenState }),
+      nextIsOpenState ? showDelay : hideDelay,
+      skipDelay
     );
   }
 
-  toggleMenu(skipTimer = true) {
+  toggleMenu(skipDelay) {
     const { isOpen } = this.state;
     const { showDelay, hideDelay } = this.props;
 
     this.clearScheduled();
     this.conditionallyApplyDelay(
       () => this.setState(prevState => ({ isOpen: !prevState.isOpen })),
-      skipTimer,
-      isOpen ? hideDelay : showDelay
+      isOpen ? hideDelay : showDelay,
+      skipDelay
     );
+  }
+
+  closeMenu(skipDelay) {
+    this.setMenuState(false, skipDelay);
+  }
+
+  openMenu(skipDelay) {
+    this.setMenuState(true, skipDelay);
   }
 
   clearScheduled() {
     clearTimeout(this.timeoutID);
   }
 
-  conditionallyApplyDelay(fnc, skipTimer, delay) {
-    if (!skipTimer) {
+  conditionallyApplyDelay(fnc, delay, skipDelay = true) {
+    if (!skipDelay) {
       this.timeoutID = setTimeout(fnc, delay);
     } else {
       fnc();
     }
-  }
-
-  closeMenu(skipTimer) {
-    this.setMenuState(false, skipTimer);
-  }
-
-  openMenu(skipTimer) {
-    this.setMenuState(true, skipTimer);
   }
 
   handleKeyDown(event) {
