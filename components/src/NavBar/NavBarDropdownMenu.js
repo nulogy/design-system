@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState } from "../utils";
-import { keyCodes } from "../constants";
-import { IconicButton } from "../Button";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
@@ -58,7 +56,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
       placement,
       modifiers,
       showArrow,
-      menuState: { isOpen, toggleMenu, closeMenu, openMenu }
+      menuState: { isOpen, closeMenu, openMenu }
     } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
@@ -126,6 +124,12 @@ class StatelessNavBarDropdownMenu extends React.Component {
 StatelessNavBarDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    openMenu: PropTypes.func,
+    closeMenu: PropTypes.func,
+    toggleMenu: PropTypes.func
+  }).isRequired,
   showArrow: PropTypes.bool,
   placement: PropTypes.oneOf(["bottom-start", "right-start"]),
   modifiers: PropTypes.shape({}),
