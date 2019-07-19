@@ -48,6 +48,7 @@ class ModalExample extends React.Component {
   }
 
   render() {
+    const { isOpen } = this.state;
     return (
       <div>
         <Button onClick={this.openModal}>Open Modal</Button>
@@ -56,7 +57,7 @@ class ModalExample extends React.Component {
           onRequestClose={this.closeModal}
           primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
           secondaryButtons={{ label: "Cancel", onClick: this.closeModal }}
-          isOpen={this.state.isOpen}
+          isOpen={isOpen}
           buttonAlignment="left"
         >
           <Form id="myForm" mb="x2">

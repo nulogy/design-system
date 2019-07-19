@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { default as ReactModal } from "react-modal";
+import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
-import { Icon } from "../Icon";
 import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
 

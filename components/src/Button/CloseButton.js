@@ -1,10 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
-import { transparentize } from "polished";
 import { Icon } from "../Icon";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
 
 const WrapperButton = styled.button(({ disabled }) => ({
   background: "transparent",
@@ -50,7 +47,7 @@ const WrapperButton = styled.button(({ disabled }) => ({
 
 const BaseCloseButton = React.forwardRef(({ ...props }, ref) => (
   <WrapperButton aria-label="close" ref={ref} label="close" {...props}>
-    <Icon size={theme.space.x4} icon={"close"} p="half" />
+    <Icon size={theme.space.x4} icon="close" p="half" />
   </WrapperButton>
 ));
 
