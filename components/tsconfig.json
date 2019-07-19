@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "moduleResolution": "node",
     "noEmit": true,
     "outDir": "./lib",
     "skipLibCheck": true,
