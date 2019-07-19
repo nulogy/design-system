@@ -7,12 +7,13 @@ module.exports = {
         useBuiltIns: "entry"
       }
     ],
+    "@babel/preset-typescript",
     "@babel/preset-react"
   ],
-  plugins: ["babel-plugin-styled-components"],
+  plugins: ["@babel/proposal-class-properties", "babel-plugin-styled-components"],
   env: {
     test: {
-      plugins: ["babel-plugin-styled-components", "require-context-hook"]
+      plugins: ["@babel/proposal-class-properties", "babel-plugin-styled-components", "require-context-hook"]
     }
   }
 };
