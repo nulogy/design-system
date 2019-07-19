@@ -6,8 +6,10 @@ class MenuState extends React.Component {
   constructor(props) {
     super(props);
 
+    const { defaultOpen } = this.props;
+
     this.state = {
-      isOpen: this.props.defaultOpen
+      isOpen: defaultOpen
     };
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
