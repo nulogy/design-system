@@ -14,7 +14,11 @@ const buttonSpacings = {
       marginRight: theme.space.x1
     }
   },
-  spaced: {},
+  spaced: {
+    "button:not(:last-child)": {
+      marginRight: theme.space.x1
+    }
+  },
   right: {
     "button:not(:first-child)": {
       marginLeft: theme.space.x1
