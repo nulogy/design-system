@@ -27,7 +27,7 @@ class StatelessDropdownMenu extends React.Component {
   menuTriggerEventHandlers() {
     return {
       onBlur: () => this.props.menuState.closeMenu(false),
-      onClick: () => this.handleTriggerClick(false)
+      onClick: () => this.props.menuState.toggleMenu()
     };
   }
 
@@ -37,14 +37,6 @@ class StatelessDropdownMenu extends React.Component {
       onFocus: () => this.props.menuState.openMenu(false),
       onClick: () => this.props.menuState.openMenu(false)
     };
-  }
-
-  handleTriggerClick() {
-    if (this.props.triggerTogglesMenuState) {
-      this.props.menuState.toggleMenu();
-    } else {
-      this.openMenu();
-    }
   }
 
   handleOutsideClick() {
@@ -70,11 +62,11 @@ class StatelessDropdownMenu extends React.Component {
             React.cloneElement(
               trigger({
                 closeMenu: e => {
-                  closeMenu;
+                  closeMenu();
                   e.stopPropagation();
                 },
                 openMenu: e => {
-                  openMenu;
+                  openMenu();
                   e.stopPropagation();
                 }
               }),
@@ -109,11 +101,11 @@ class StatelessDropdownMenu extends React.Component {
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                 {childrenFnc({
                   closeMenu: e => {
-                    this.closeMenu(true);
+                    closeMenu();
                     e.stopPropagation();
                   },
                   openMenu: e => {
-                    this.openMenu(true);
+                    openMenu();
                     e.stopPropagation();
                   }
                 })}
@@ -150,8 +142,7 @@ StatelessDropdownMenu.propTypes = {
     "right-end"
   ]),
   modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool,
-  triggerTogglesMenuState: PropTypes.bool
+  defaultOpen: PropTypes.bool
 };
 
 StatelessDropdownMenu.defaultProps = {
@@ -161,8 +152,7 @@ StatelessDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  defaultOpen: false,
-  triggerTogglesMenuState: true
+  defaultOpen: false
 };
 
 const DropdownMenu = withMenuState(StatelessDropdownMenu);
