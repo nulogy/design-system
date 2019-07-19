@@ -69,8 +69,8 @@ const ModalHeader = styled.div(({ hasCloseButton }) => ({
     content: "''",
     position: "absolute",
     bottom: 0,
-    left: theme.space.x2,
-    right: theme.space.x2,
+    left: theme.space.x1,
+    right: theme.space.x1,
     display: "block",
     margin: "0 auto",
     borderBottom: `solid 1px ${theme.colors.lightGrey}`
@@ -86,8 +86,8 @@ const ModalFooter = styled.div({
     content: "''",
     position: "absolute",
     top: 0,
-    left: theme.space.x2,
-    right: theme.space.x2,
+    left: theme.space.x1,
+    right: theme.space.x1,
     display: "block",
     margin: "0 auto",
     borderBottom: `solid 1px ${theme.colors.lightGrey}`
