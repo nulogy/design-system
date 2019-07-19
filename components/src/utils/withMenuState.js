@@ -6,8 +6,6 @@ class MenuState extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.defaultOpen);
-
     this.state = {
       isOpen: this.props.defaultOpen
     };
