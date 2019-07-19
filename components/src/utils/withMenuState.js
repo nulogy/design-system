@@ -25,26 +25,31 @@ class MenuState extends React.Component {
     this.clearScheduled();
   }
 
-  clearScheduled() {
-    clearTimeout(this.timeoutID);
-  }
-
   setMenuState(newState, skipTimer = true) {
+    const { showDelay, hideDelay } = this.props;
+
     this.clearScheduled();
     this.conditionallyApplyDelay(
       () => this.setState({ isOpen: newState }),
       skipTimer,
-      newState ? this.props.showDelay : this.props.hideDelay
+      newState ? showDelay : hideDelay
     );
   }
 
   toggleMenu(skipTimer = true) {
+    const { isOpen } = this.state;
+    const { showDelay, hideDelay } = this.props;
+
     this.clearScheduled();
     this.conditionallyApplyDelay(
       () => this.setState(prevState => ({ isOpen: !prevState.isOpen })),
       skipTimer,
-      this.state.isOpen ? this.props.hideDelay : this.props.showDelay
+      isOpen ? hideDelay : showDelay
     );
+  }
+
+  clearScheduled() {
+    clearTimeout(this.timeoutID);
   }
 
   conditionallyApplyDelay(fnc, skipTimer, delay) {
@@ -88,13 +93,33 @@ class MenuState extends React.Component {
 }
 
 MenuState.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
-const withMenuState = MenuComponentWithoutState => ({ showDelay = 0, hideDelay = 0, ...props }) => (
-  <MenuState showDelay={showDelay} hideDelay={hideDelay}>
-    {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
-  </MenuState>
-);
+MenuState.defaultProps = {
+  showDelay: 0,
+  hideDelay: 0
+};
+
+const withMenuState = MenuComponentWithoutState => {
+  const MenuComponent = ({ showDelay, hideDelay, ...props }) => (
+    <MenuState showDelay={showDelay} hideDelay={hideDelay}>
+      {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
+    </MenuState>
+  );
+  MenuComponent.propTypes = {
+    showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  };
+
+  MenuComponent.defaultProps = {
+    showDelay: 0,
+    hideDelay: 0
+  };
+
+  return MenuComponent;
+};
 
 export default withMenuState;
