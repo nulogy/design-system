@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
+
 ### Deprecated
 
 ### Removed
