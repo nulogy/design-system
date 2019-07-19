@@ -42,7 +42,7 @@ class StatelessDropdownMenu extends React.Component {
 
   handleTriggerClick() {
     if (this.props.triggerTogglesMenuState) {
-      this.props.menuState.handleMenuToggle();
+      this.props.menuState.toggleMenu();
     } else {
       this.openMenu();
     }
@@ -61,7 +61,7 @@ class StatelessDropdownMenu extends React.Component {
       placement,
       modifiers,
       showArrow,
-      menuState: { isOpen, handleMenuToggle, closeMenu, openMenu }
+      menuState: { isOpen, toggleMenu, closeMenu, openMenu }
     } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (

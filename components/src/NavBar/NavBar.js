@@ -155,7 +155,7 @@ class SmallNavBarNoState extends React.Component {
   render() {
     const {
       menuData,
-      menuState: { isOpen, handleMenuToggle, closeMenu },
+      menuState: { isOpen, toggleMenu, closeMenu },
       windowWidth,
       breakpointLower,
       smallScreen = windowWidth < parseInt(breakpointLower, 10),
@@ -191,7 +191,7 @@ class SmallNavBarNoState extends React.Component {
                 <MobileMenuTrigger
                   {...getThemeColor(themeColor)}
                   onClick={() => {
-                    handleMenuToggle();
+                    toggleMenu();
                   }}
                   aria-expanded={isOpen ? true : null}
                 >
@@ -219,7 +219,7 @@ class SmallNavBarNoState extends React.Component {
 SmallNavBarNoState.propTypes = {
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool,
-    handleMenuToggle: PropTypes.func,
+    toggleMenu: PropTypes.func,
     closeMenu: PropTypes.func
   }).isRequired,
   menuData: PropTypes.shape({}),

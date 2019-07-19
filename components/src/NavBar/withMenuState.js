@@ -10,7 +10,6 @@ class MenuState extends React.Component {
       isOpen: false
     };
 
-    this.handleOnClick = this.handleOnClick.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.openMenu = this.openMenu.bind(this);
@@ -64,10 +63,6 @@ class MenuState extends React.Component {
     this.setMenuState(true, skipTimer);
   }
 
-  handleOnClick(skipTimer) {
-    this.toggleMenu(skipTimer);
-  }
-
   handleKeyDown(event) {
     switch (event.keyCode) {
       case keyCodes.ESC:
@@ -84,7 +79,7 @@ class MenuState extends React.Component {
 
     return renderMenu({
       isOpen,
-      handleMenuToggle: this.handleOnClick,
+      toggleMenu: this.toggleMenu,
       handleMenuKeydown: this.handleKeyDown,
       openMenu: this.openMenu,
       closeMenu: this.closeMenu
@@ -96,7 +91,7 @@ MenuState.propTypes = {
   children: PropTypes.func.isRequired
 };
 
-const withMenuState = MenuComponentWithoutState => ({ showDelay, hideDelay, ...props }) => (
+const withMenuState = MenuComponentWithoutState => ({ showDelay = 0, hideDelay = 0, ...props }) => (
   <MenuState showDelay={showDelay} hideDelay={hideDelay}>
     {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
   </MenuState>
