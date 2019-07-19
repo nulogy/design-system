@@ -4,7 +4,7 @@ import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 
-const req = require.context("../src", true, /\.story\.js$/);
+const req = require.context("../src", true, /\.story\.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
