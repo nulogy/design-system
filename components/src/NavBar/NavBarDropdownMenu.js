@@ -67,11 +67,9 @@ class StatelessNavBarDropdownMenu extends React.Component {
               trigger({
                 closeMenu: e => {
                   closeMenu();
-                  e.stopPropagation();
                 },
                 openMenu: e => {
                   openMenu();
-                  e.stopPropagation();
                 }
               }),
               {
@@ -104,11 +102,9 @@ class StatelessNavBarDropdownMenu extends React.Component {
                 {childrenFnc({
                   closeMenu: e => {
                     closeMenu();
-                    e.stopPropagation();
                   },
                   openMenu: e => {
                     openMenu();
-                    e.stopPropagation();
                   }
                 })}
               </DropdownMenuContainer>
