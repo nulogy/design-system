@@ -148,7 +148,7 @@ NavBarDropdownMenu.propTypes = {
 
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",
-  hideDelay: "100"
+  hideDelay: "0"
 };
 
 export default NavBarDropdownMenu;
