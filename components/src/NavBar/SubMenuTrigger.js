@@ -59,11 +59,9 @@ const SubMenuTrigger = props => {
         <SubMenuTriggerButton name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
       )}
     >
-      {({ closeMenu, openMenu }) => (
-        <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-          {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
-        </ul>
-      )}
+      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
+        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
+      </ul>
     </NavBarDropdownMenu>
   );
 };

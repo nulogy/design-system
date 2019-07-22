@@ -98,12 +98,8 @@ class StatelessNavBarDropdownMenu extends React.Component {
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                 {childrenFnc({
-                  closeMenu: e => {
-                    closeMenu();
-                  },
-                  openMenu: e => {
-                    openMenu();
-                  }
+                  closeMenu,
+                  openMenu
                 })}
               </DropdownMenuContainer>
             )}
