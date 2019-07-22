@@ -26,8 +26,8 @@ const Link = styled.a<LinkProps>(color, space, ({ underline, color, hover, theme
 }));
 
 interface LinkProps extends ColorProps, SpaceProps {
-  underline: boolean;
-  hover: string;
+  underline?: boolean;
+  hover?: string;
 }
 
 Link.defaultProps = {
