@@ -56,6 +56,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
       placement,
       modifiers,
       showArrow,
+      dropdownMenuContainerEventHandlers,
       menuState: { isOpen, closeMenu, openMenu }
     } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
@@ -93,6 +94,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
                   popperProps.ref(node);
                   this.setMenuRef(node);
                 }}
+                {...dropdownMenuContainerEventHandlers({ openMenu, closeMenu })}
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                 {childrenFnc({
@@ -125,14 +127,16 @@ StatelessNavBarDropdownMenu.propTypes = {
   showArrow: PropTypes.bool,
   placement: PropTypes.oneOf(["bottom-start", "right-start"]),
   modifiers: PropTypes.shape({}),
-  triggerTogglesMenuState: PropTypes.bool
+  triggerTogglesMenuState: PropTypes.bool,
+  dropdownMenuContainerEventHandlers: PropTypes.func
 };
 
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: { flip: { behavior: ["bottom"] } },
-  triggerTogglesMenuState: true
+  triggerTogglesMenuState: true,
+  dropdownMenuContainerEventHandlers: () => {}
 };
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);

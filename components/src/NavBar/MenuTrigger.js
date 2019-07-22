@@ -84,7 +84,14 @@ const MenuTrigger = props => {
     >
       {({ closeMenu }) => (
         <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-          {renderSubMenuItems(menuData, closeMenu, SubMenuTrigger)}
+          {renderSubMenuItems(
+            menuData,
+            e => {
+              closeMenu(e);
+              e.stopPropagation();
+            },
+            SubMenuTrigger
+          )}
         </ul>
       )}
     </NavBarDropdownMenu>
