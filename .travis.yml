@@ -16,3 +16,8 @@ cache:
   directories:
     - node_modules
     - ~/.cache
+
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
