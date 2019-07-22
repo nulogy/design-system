@@ -1,14 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, color } from "styled-system";
-import icons from "../../icons/icons.json";
+import { space, color, SpaceProps, ColorProps } from "styled-system";
+import { icons, IconDataEntry } from "../../icons/icons";
 import theme from "../theme";
 
-const iconNames = Object.keys(icons);
-
 /* eslint-disable react/no-array-index-key */
-const getPathElements = icon => (
+const getPathElements = (icon: IconDataEntry) => (
   <React.Fragment>
     {icon.path.map((path, index) => (
       <path key={index} d={path} />
@@ -17,10 +14,10 @@ const getPathElements = icon => (
 );
 /* eslint-enable react/no-array-index-key */
 
-const Svg = React.forwardRef((props, ref) => {
+const Svg = React.forwardRef<SVGSVGElement, SvgProps>((props, ref) => {
   const { icon, title, size, color: fillColor, focusable } = props;
 
-  if (!icons[icon]) return false;
+  if (!icons[icon]) return null;
   return (
     <svg
       ref={ref}
@@ -37,35 +34,33 @@ const Svg = React.forwardRef((props, ref) => {
   );
 });
 
-Svg.propTypes = {
-  icon: PropTypes.oneOf(iconNames).isRequired,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  title: PropTypes.string,
-  color: PropTypes.string,
-  focusable: PropTypes.bool
-};
+interface SvgProps {
+  icon: string; // TODO: Limit to iconNames
+  size?: string | number;
+  title?: string;
+  color?: string;
+  focusable?: string;
+}
 
 Svg.defaultProps = {
   color: "currentColor",
-  title: null,
   size: "24px",
-  focusable: false
+  focusable: "false"
 };
 
-const Icon = styled(Svg)(space, color, ({ size }) => ({
+const Icon = styled(Svg)<IconProps>(space, color, ({ size }) => ({
   minWidth: size
 }));
 
-Icon.propTypes = {
-  icon: PropTypes.oneOf(iconNames).isRequired,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  title: PropTypes.string,
-  color: PropTypes.string
-};
+interface IconProps extends SpaceProps, ColorProps {
+  icon: string; // TODO: Limit to iconNames
+  size?: string | number;
+  title?: string;
+  color?: string;
+}
 
 Icon.defaultProps = {
   color: "currentColor",
-  title: null,
   size: "24px"
 };
 
@@ -84,7 +79,7 @@ const IconContainer = styled.span(space, {
   width: `${iconSizeRatio}em`
 });
 
-export const InlineIcon = props => (
+export const InlineIcon = (props: any) => (
   <IconContainer {...props}>
     <CenteredIcon size={`${iconSizeRatio}em`} {...props} />
   </IconContainer>

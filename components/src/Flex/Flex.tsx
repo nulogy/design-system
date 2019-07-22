@@ -12,11 +12,4 @@ const Flex = styled(Box)(
   justifyContent
 );
 
-Flex.propTypes = {
-  ...flexWrap.propTypes,
-  ...flexDirection.propTypes,
-  ...alignItems.propTypes,
-  ...justifyContent.propTypes
-};
-
 export default Flex;

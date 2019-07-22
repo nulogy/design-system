@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
 import { Box, Flex, Icon, InlineIcon } from "../index";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
+import { icons } from "../../icons/icons";
 
 const iconNames = Object.keys(icons);
 const iconSubset = iconNames.slice(0, 5);

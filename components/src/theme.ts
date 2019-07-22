@@ -1,6 +1,6 @@
 import * as tokens from "@nulogy/tokens";
 
-export default {
+const defaultTheme: DefaultTheme = {
   colors: {
     black: tokens.color_base_black,
     blackBlue: tokens.color_base_black_blue,
@@ -79,3 +79,5 @@ export default {
     overlay: 1000
   }
 };
+
+export default defaultTheme;

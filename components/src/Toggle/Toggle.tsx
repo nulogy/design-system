@@ -37,15 +37,31 @@ MaybeToggleTitle.defaultProps = {
   helpText: null
 };
 
-class BaseToggle extends React.Component {
+class BaseToggle extends React.Component<BaseToggleProps, BaseToggleState> {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       toggled: !!(props.toggled || props.defaultToggled)
     };
     this.handleClick = this.handleClick.bind(this);
     this.inputRef = React.createRef();
   }
+
+  static defaultProps = {
+    onChange: () => {},
+    toggled: undefined,
+    defaultToggled: undefined,
+    disabled: false,
+    onText: null,
+    offText: null,
+    id: null,
+    value: "on",
+    className: null,
+    required: false,
+    helpText: null,
+    labelText: null,
+    requirementText: null
+  };
 
   handleClick(e) {
     const { toggled } = this.props;
@@ -114,37 +130,25 @@ class BaseToggle extends React.Component {
   }
 }
 
-BaseToggle.propTypes = {
-  onChange: PropTypes.func,
-  toggled: PropTypes.bool,
-  defaultToggled: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onText: PropTypes.string,
-  offText: PropTypes.string,
-  id: PropTypes.string,
-  value: PropTypes.string,
-  className: PropTypes.string,
-  required: PropTypes.bool,
-  helpText: PropTypes.string,
-  labelText: PropTypes.string,
-  requirementText: PropTypes.string
-};
-
-BaseToggle.defaultProps = {
-  onChange: () => {},
-  toggled: undefined,
-  defaultToggled: undefined,
-  disabled: false,
-  onText: null,
-  offText: null,
-  id: null,
-  value: "on",
-  className: null,
-  required: false,
-  helpText: null,
-  labelText: null,
-  requirementText: null
-};
+// BaseToggle.propTypes = {
+interface BaseToggleProps {
+  onChange?: () => void;
+  toggled?: boolean;
+  defaultToggled?: boolean;
+  disabled?: boolean;
+  onText?: string;
+  offText?: string;
+  id?: string;
+  value?: string;
+  className?: string;
+  required?: boolean;
+  helpText?: string;
+  labelText?: string;
+  requirementText?: string;
+}
+interface BaseToggleState {
+  toggled: boolean;
+}
 
 const Toggle = styled(BaseToggle)({
   padding: `${theme.space.half} 0`,

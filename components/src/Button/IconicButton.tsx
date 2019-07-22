@@ -7,7 +7,7 @@ import { transparentize } from "polished";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
+import { icons } from "../../icons/icons";
 
 const HoverText = styled.div({
   whiteSpace: "nowrap",

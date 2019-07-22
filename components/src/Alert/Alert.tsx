@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import { Box } from "../Box";
@@ -28,13 +27,29 @@ const alertColours = {
   }
 };
 
-class BaseAlert extends React.Component {
-  constructor() {
-    super();
+interface Props {
+  children: ReactNode;
+  isCloseable?: ReactNode;
+  title?: string;
+  type: "danger" | "informative" | "success" | "warning";
+}
+interface State {
+  isVisible: boolean;
+}
+
+class BaseAlert extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
 
     this.state = { isVisible: true };
     this.hideAlert = this.hideAlert.bind(this);
   }
+
+  static defaultProps = {
+    isCloseable: false,
+    title: null,
+    type: "informative"
+  };
 
   hideAlert() {
     this.setState({ isVisible: false });
@@ -70,19 +85,6 @@ class BaseAlert extends React.Component {
     ) : null;
   }
 }
-
-BaseAlert.propTypes = {
-  children: PropTypes.node.isRequired,
-  isCloseable: PropTypes.node,
-  title: PropTypes.string,
-  type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
-};
-
-BaseAlert.defaultProps = {
-  isCloseable: false,
-  title: null,
-  type: "informative"
-};
 
 const Alert = styled(BaseAlert)(space);
 

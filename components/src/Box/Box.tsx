@@ -15,13 +15,47 @@ import {
   minHeight,
   maxHeight,
   position,
-  display
+  display,
+  ColorProps,
+  SpaceProps,
+  WidthProps,
+  MinWidthProps,
+  MaxWidthProps,
+  BordersProps,
+  BorderRadiusProps,
+  BoxShadowProps,
+  TextAlignProps,
+  OrderProps,
+  FlexGrowProps,
+  HeightProps,
+  MinHeightProps,
+  MaxHeightProps,
+  PositionProps,
+  DisplayProps
 } from "styled-system";
 import theme from "../theme";
 
 const flexGrow = style({ prop: "flexGrow" });
 
-const Box = styled.div(
+interface BoxProps
+  extends ColorProps,
+    SpaceProps,
+    WidthProps,
+    MinWidthProps,
+    MaxWidthProps,
+    BordersProps,
+    BorderRadiusProps,
+    BoxShadowProps,
+    TextAlignProps,
+    OrderProps,
+    FlexGrowProps,
+    HeightProps,
+    MinHeightProps,
+    MaxHeightProps,
+    PositionProps,
+    DisplayProps {}
+
+const Box = styled.div<BoxProps>(
   color,
   space,
   width,
@@ -40,25 +74,6 @@ const Box = styled.div(
   position,
   display
 );
-
-Box.propTypes = {
-  ...color.propTypes,
-  ...space.propTypes,
-  ...width.propTypes,
-  ...minWidth.propTypes,
-  ...maxWidth.propTypes,
-  ...borders.propTypes,
-  ...borderRadius.propTypes,
-  ...boxShadow.propTypes,
-  ...textAlign.propTypes,
-  ...order.propTypes,
-  ...flexGrow.propTypes,
-  ...height.propTypes,
-  ...minHeight.propTypes,
-  ...maxHeight.propTypes,
-  ...position.propTypes,
-  ...display.propTypes
-};
 
 Box.defaultProps = {
   theme
