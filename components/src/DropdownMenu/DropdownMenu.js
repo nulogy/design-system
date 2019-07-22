@@ -81,6 +81,10 @@ class StatelessDropdownMenu extends React.Component {
           <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
               <DropdownMenuContainer
+                onMouseDown={e => {
+                  e.preventDefault();
+                  e.target.focus();
+                }}
                 placement={placement}
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}

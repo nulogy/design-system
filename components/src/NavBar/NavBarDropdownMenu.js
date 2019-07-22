@@ -94,6 +94,10 @@ class StatelessNavBarDropdownMenu extends React.Component {
                   popperProps.ref(node);
                   this.setMenuRef(node);
                 }}
+                onMouseDown={e => {
+                  e.preventDefault();
+                  e.target.focus();
+                }}
                 {...dropdownMenuContainerEventHandlers({ openMenu, closeMenu })}
               >
                 <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
@@ -144,7 +148,7 @@ NavBarDropdownMenu.propTypes = {
 
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",
-  hideDelay: "0"
+  hideDelay: "100"
 };
 
 export default NavBarDropdownMenu;
