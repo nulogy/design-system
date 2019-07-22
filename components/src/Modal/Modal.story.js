@@ -115,6 +115,17 @@ storiesOf("Modal", module)
       Content Content Content
     </Modal>
   ))
+  .add("with custom maxWidth", () => (
+    <Modal
+      title="Modal Title"
+      width="100%"
+      maxWidth="400px"
+      primaryButton={primaryButton}
+      secondaryButtons={secondaryButtons}
+    >
+      Content Content Content
+    </Modal>
+  ))
   .add("with many buttons", () => (
     <Modal
       title="Modal Title"

@@ -102,42 +102,47 @@ const ModalCloseButton = styled(CloseButton)({
   zIndex: 3
 });
 
-const StyledReactModal = styled(ReactModal)({
-  ":focus": {
-    outline: "none"
-  },
-  display: "flex",
-  flexDirection: "column",
-  position: "relative",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  overflow: "hidden",
-  backgroundColor: theme.colors.white,
-  borderRadius: theme.radii.medium,
-  border: null,
-  maxHeight: "70vh",
-  width: "60%",
-  maxWidth: theme.breakpoints.small,
-  margin: `0px ${theme.space.x2}`,
-  padding: 0,
-  [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
-    width: "100%"
-  },
-  button: {
-    fontFamily: theme.fonts.base
-  },
-  "*": {
-    boxSizing: "border-box"
-  },
-  color: theme.colors.black,
-  fontFamily: theme.fonts.base,
-  fontSize: theme.fontSizes.medium,
-  lineHeight: theme.lineHeights.base,
-  WebkitFontSmoothing: "antialiased",
-  MozOsxFontSmoothing: "grayscale"
-});
+const StyledReactModal = styled(ReactModal)(
+  ({ width, maxWidth }) => ({
+    width: width,
+    maxWidth: maxWidth
+  }),
+  {
+    ":focus": {
+      outline: "none"
+    },
+    display: "flex",
+    flexDirection: "column",
+    position: "relative",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    overflow: "hidden",
+    backgroundColor: theme.colors.white,
+    borderRadius: theme.radii.medium,
+    border: null,
+    maxHeight: "70vh",
+    margin: `0px ${theme.space.x2}`,
+    padding: 0,
+    [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
+      width: "100%",
+      maxWidth: "100%"
+    },
+    button: {
+      fontFamily: theme.fonts.base
+    },
+    "*": {
+      boxSizing: "border-box"
+    },
+    color: theme.colors.black,
+    fontFamily: theme.fonts.base,
+    fontSize: theme.fontSizes.medium,
+    lineHeight: theme.lineHeights.base,
+    WebkitFontSmoothing: "antialiased",
+    MozOsxFontSmoothing: "grayscale"
+  }
+);
 
 const Modal = ({
   isOpen,
@@ -191,7 +196,9 @@ Modal.propTypes = {
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
   isOpen: PropTypes.bool,
-  shouldCloseOnOverlayClick: PropTypes.bool
+  shouldCloseOnOverlayClick: PropTypes.bool,
+  width: PropTypes.string,
+  maxWidth: PropTypes.string
 };
 
 Modal.defaultProps = {
@@ -203,7 +210,9 @@ Modal.defaultProps = {
   children: null,
   onRequestClose: null,
   isOpen: true,
-  shouldCloseOnOverlayClick: true
+  shouldCloseOnOverlayClick: true,
+  width: "60%",
+  maxWidth: theme.breakpoints.small
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
