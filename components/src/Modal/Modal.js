@@ -210,7 +210,7 @@ Modal.defaultProps = {
   onRequestClose: null,
   isOpen: true,
   shouldCloseOnOverlayClick: true,
-  maxWidth: "456px"
+  maxWidth: "624px"
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
