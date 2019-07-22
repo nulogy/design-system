@@ -106,7 +106,7 @@ const ModalCloseButton = styled(CloseButton)({
 
 const StyledReactModal = styled(ReactModal)(
   ({ maxWidth }) => ({
-    maxWidth: maxWidth
+    maxWidth
   }),
   {
     ":focus": {
