@@ -116,13 +116,7 @@ storiesOf("Modal", module)
     </Modal>
   ))
   .add("with custom maxWidth", () => (
-    <Modal
-      title="Modal Title"
-      width="100%"
-      maxWidth="400px"
-      primaryButton={primaryButton}
-      secondaryButtons={secondaryButtons}
-    >
+    <Modal title="Modal Title" maxWidth="1000px" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
     </Modal>
   ))
@@ -130,12 +124,24 @@ storiesOf("Modal", module)
     <Modal
       title="Modal Title"
       primaryButton={{ label: "Primary Action", onClick: () => {} }}
-      secondaryButtons={[
-        { label: "Secondary Action 1", onClick: () => {} },
-        { label: "Secondary Action 2", onClick: () => {} }
-      ]}
+      secondaryButtons={[{ label: "Secondary 1", onClick: () => {} }, { label: "Secondary 2", onClick: () => {} }]}
     >
       Content Content Content
+    </Modal>
+  ))
+  .add("styled as a form", () => (
+    <Modal
+      title="Edit Profile"
+      onRequestClose={() => {}}
+      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
+      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
+      buttonAlignment="left"
+      maxWidth="456px"
+    >
+      <Form id="myForm" mb="x2">
+        <Input name="name" id="name" labelText="Name" />
+        <Input type="number" name="age" id="age" labelText="Age" />
+      </Form>
     </Modal>
   ))
   .add("example controlled modal", () => <ModalExample />);

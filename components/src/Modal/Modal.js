@@ -103,8 +103,7 @@ const ModalCloseButton = styled(CloseButton)({
 });
 
 const StyledReactModal = styled(ReactModal)(
-  ({ width, maxWidth }) => ({
-    width: width,
+  ({ maxWidth }) => ({
     maxWidth: maxWidth
   }),
   {
@@ -122,6 +121,7 @@ const StyledReactModal = styled(ReactModal)(
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.medium,
     border: null,
+    width: "100%",
     maxHeight: "70vh",
     margin: `0px ${theme.space.x2}`,
     padding: 0,
@@ -197,7 +197,6 @@ Modal.propTypes = {
   onRequestClose: PropTypes.func,
   isOpen: PropTypes.bool,
   shouldCloseOnOverlayClick: PropTypes.bool,
-  width: PropTypes.string,
   maxWidth: PropTypes.string
 };
 
@@ -211,8 +210,7 @@ Modal.defaultProps = {
   onRequestClose: null,
   isOpen: true,
   shouldCloseOnOverlayClick: true,
-  width: "60%",
-  maxWidth: theme.breakpoints.small
+  maxWidth: "456px"
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
