@@ -60,14 +60,8 @@ class StatelessDropdownMenu extends React.Component {
           {({ ref }) =>
             React.cloneElement(
               trigger({
-                closeMenu: e => {
-                  closeMenu();
-                  e.stopPropagation();
-                },
-                openMenu: e => {
-                  openMenu();
-                  e.stopPropagation();
-                }
+                closeMenu,
+                openMenu
               }),
               {
                 "aria-haspopup": true,
