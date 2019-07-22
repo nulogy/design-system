@@ -44,6 +44,8 @@ const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type)
   </React.Fragment>
 );
 
+const modalHasHeader = (onRequestClose, title) => onRequestClose || title;
+
 const modalHasFooter = (primaryButton, secondaryButtons) => primaryButton || secondaryButtons;
 
 const ModalContent = styled.div({
@@ -170,10 +172,12 @@ const Modal = ({
       }
     }}
   >
-    <ModalHeader hasCloseButton={!!onRequestClose}>
-      {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
-      {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
-    </ModalHeader>
+    {modalHasHeader(onRequestClose, title) && (
+      <ModalHeader hasCloseButton={onRequestClose}>
+        {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
+        {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
+      </ModalHeader>
+    )}
     <ModalContent>
       <InnerModalContent>{children}</InnerModalContent>
     </ModalContent>

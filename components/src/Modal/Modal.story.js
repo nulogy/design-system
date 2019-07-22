@@ -99,7 +99,11 @@ storiesOf("Modal", module)
     </Modal>
   ))
   .add("with no buttons", () => <Modal title="Modal Title">Content Content Content</Modal>)
-  .add("with no title", () => <Modal>Content Content Content</Modal>)
+  .add("with no title", () => (
+    <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+      Content Content Content
+    </Modal>
+  ))
   .add("with left button alignment", () => (
     <Modal buttonAlignment="left" title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
