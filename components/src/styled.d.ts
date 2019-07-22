@@ -1,5 +1,4 @@
 import "styled-components";
-// and extend them!
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
@@ -34,4 +33,12 @@ declare module "styled-components" {
       [key: string]: number;
     };
   }
+}
+
+declare module "styled-system" {
+  interface ThemeProps {
+    theme: DefaultTheme;
+  }
+  type ThemePropsFunc = (props: ThemeProps) => string;
+  declare function themeGet(path: string, fallback?: any): ThemePropsFunc;
 }
