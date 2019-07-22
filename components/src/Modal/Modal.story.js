@@ -4,7 +4,7 @@ import { Modal, Button, Form, Input } from "../index";
 
 const primaryButton = { label: "Primary Action", onClick: () => {} };
 
-const secondaryButtons = { label: "Secondary Action", onClick: () => {} };
+const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
 Modal.setAppElement("#root");
 
@@ -56,7 +56,7 @@ class ModalExample extends React.Component {
           title="Edit Profile"
           onRequestClose={this.closeModal}
           primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-          secondaryButtons={{ label: "Cancel", onClick: this.closeModal }}
+          secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
           isOpen={isOpen}
           buttonAlignment="left"
         >

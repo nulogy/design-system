@@ -25,9 +25,11 @@ const getPrimaryButton = (button, type) => {
 };
 
 const getSecondaryButtons = buttons => {
-  const buttonArray = Array.isArray(buttons) ? buttons : [buttons];
+  if (!Array.isArray(buttons)) {
+    return null;
+  }
 
-  return buttonArray.map(button => (
+  return buttons.map(button => (
     <Button {...button} key={button.label}>
       {button.label}
     </Button>
@@ -184,7 +186,7 @@ Modal.propTypes = {
   title: PropTypes.string,
   buttonAlignment: PropTypes.oneOf(["left", "spaced", "right"]),
   primaryButton: PropTypes.shape({}),
-  secondaryButtons: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.shape({})), PropTypes.shape({})]),
+  secondaryButtons: PropTypes.arrayOf(PropTypes.shape({})),
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
