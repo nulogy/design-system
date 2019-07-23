@@ -136,7 +136,13 @@ storiesOf("Select", module)
     </form>
   ))
   .add("with multiselect", () => (
-    <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" multiselect />
+    <Select
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+      multiselect
+    />
   ))
   .add("with helpText", () => (
     <Select

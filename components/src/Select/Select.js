@@ -148,6 +148,7 @@ const ReactSelect = ({
   required,
   requirementText,
   helpText,
+  noOptionsMessage,
   disabled,
   errorMessage,
   errorList,
@@ -164,6 +165,7 @@ const ReactSelect = ({
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Select
+        noOptionsMessage={noOptionsMessage}
         placeholder={placeholder}
         options={options}
         labelText={labelText}
@@ -194,6 +196,7 @@ ReactSelect.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string,
   helpText: PropTypes.string,
+  noOptionsMessage: PropTypes.func,
   requirementText: PropTypes.string,
   id: PropTypes.string,
   initialIsOpen: PropTypes.bool,
@@ -213,6 +216,7 @@ ReactSelect.defaultProps = {
   errorList: null,
   labelText: null,
   helpText: null,
+  noOptionsMessage: () => null,
   requirementText: null,
   id: null,
   initialIsOpen: undefined,
