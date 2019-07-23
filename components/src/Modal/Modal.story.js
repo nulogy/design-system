@@ -6,7 +6,9 @@ const primaryButton = { label: "Primary Action", onClick: () => {} };
 
 const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
-Modal.setAppElement("#root");
+console.log(process.env.NODE_ENV);
+
+if (process.env.NODE_ENV !== "test") Modal.setAppElement("#root");
 
 class ModalExample extends React.Component {
   constructor() {
