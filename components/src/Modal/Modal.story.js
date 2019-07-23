@@ -1,14 +1,22 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Modal, Button, Form, Input } from "../index";
+import { Modal as NDSModal, Button, Form, Input } from "../index";
+
+const env = process.env.NODE_ENV;
+
+if (env !== "test") NDSModal.setAppElement("#root");
+
+const envProps = {
+  ariaHideApp: env === "test" ? false : undefined
+};
+
+const Modal = props => <NDSModal {...envProps} {...props} />;
 
 const primaryButton = { label: "Primary Action", onClick: () => {} };
 
 const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
-console.log(process.env.NODE_ENV);
-
-if (process.env.NODE_ENV !== "test") Modal.setAppElement("#root");
+// Modal.setAppElement("#root")
 
 class ModalExample extends React.Component {
   constructor() {
