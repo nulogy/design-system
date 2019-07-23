@@ -36,13 +36,18 @@ const getSecondaryButtons = buttons => {
   ));
 };
 
-const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type) => (
-  <React.Fragment>
-    {buttonAlignment === "spaced" && getSecondaryButtons(secondaryButtons)}
-    {getPrimaryButton(primaryButton, type)}
-    {buttonAlignment !== "spaced" && getSecondaryButtons(secondaryButtons)}
-  </React.Fragment>
-);
+const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type) =>
+  buttonAlignment === "spaced" ? (
+    <React.Fragment>
+      {getSecondaryButtons(secondaryButtons)}
+      {getPrimaryButton(primaryButton, type)}
+    </React.Fragment>
+  ) : (
+    <React.Fragment>
+      {getPrimaryButton(primaryButton, type)}
+      {getSecondaryButtons(secondaryButtons)}
+    </React.Fragment>
+  );
 
 const modalHasHeader = (onRequestClose, title) => onRequestClose || title;
 
