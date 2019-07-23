@@ -38,9 +38,9 @@ const getSecondaryButtons = buttons => {
 
 const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type) => (
   <React.Fragment>
-    {buttonAlignment !== "left" && getSecondaryButtons(secondaryButtons)}
+    {buttonAlignment === "spaced" && getSecondaryButtons(secondaryButtons)}
     {getPrimaryButton(primaryButton, type)}
-    {buttonAlignment === "left" && getSecondaryButtons(secondaryButtons)}
+    {buttonAlignment !== "spaced" && getSecondaryButtons(secondaryButtons)}
   </React.Fragment>
 );
 
@@ -193,7 +193,7 @@ const Modal = ({
 
 Modal.propTypes = {
   title: PropTypes.string,
-  buttonAlignment: PropTypes.oneOf(["left", "spaced", "right"]),
+  buttonAlignment: PropTypes.oneOf(["left", "spaced"]),
   primaryButton: PropTypes.shape({}),
   secondaryButtons: PropTypes.arrayOf(PropTypes.shape({})),
   type: PropTypes.oneOf(["danger", "informative"]),
@@ -206,7 +206,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   title: null,
-  buttonAlignment: "right",
+  buttonAlignment: "left",
   primaryButton: null,
   secondaryButtons: null,
   type: "informative",

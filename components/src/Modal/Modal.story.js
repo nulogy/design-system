@@ -68,7 +68,6 @@ class ModalExample extends React.Component {
           primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
           secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
           isOpen={isOpen}
-          buttonAlignment="left"
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
@@ -108,14 +107,13 @@ storiesOf("Modal", module)
       Content Content Content
     </Modal>
   ))
-  .add("with no buttons", () => <Modal title="Modal Title">Content Content Content</Modal>)
-  .add("with no title", () => (
-    <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+  .add("with no buttons", () => (
+    <Modal title="Modal Title" onRequestClose={() => {}}>
       Content Content Content
     </Modal>
   ))
-  .add("with left button alignment", () => (
-    <Modal buttonAlignment="left" title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+  .add("with no title", () => (
+    <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
     </Modal>
   ))
