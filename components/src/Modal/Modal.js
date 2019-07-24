@@ -173,7 +173,8 @@ const Modal = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: transparentize(0.5, theme.colors.blackBlue)
+        backgroundColor: transparentize(0.5, theme.colors.blackBlue),
+        zIndex: theme.zIndex.overlay
       }
     }}
   >
