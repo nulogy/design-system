@@ -4,8 +4,10 @@ const preventIOSScroll = e => {
   e.preventDefault();
 };
 
-class LockBodyScrollForDesktopAndIOS extends React.Component {
-  constructor() {
+const defaultFnc = e => {};
+
+class LockBodyScroll extends React.Component {
+  constructor(props) {
     super();
     const initialBodyOverflow = undefined;
   }
@@ -14,11 +16,13 @@ class LockBodyScrollForDesktopAndIOS extends React.Component {
     this.initialBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.body.addEventListener("touchmove", preventIOSScroll, { passive: false });
+    this.props.newScrollingContainer.addEventListener("touchmove", defaultFnc, { passive: false });
   }
 
   componentWillUnmount() {
     document.body.style.overflow = this.initialBodyOverflow;
     document.body.removeEventListener("touchmove", preventIOSScroll, { passive: false });
+    this.props.newScrollingContainer.removeEventListener("touchmove", defaultFnc, { passive: false });
   }
 
   render() {
@@ -26,4 +30,4 @@ class LockBodyScrollForDesktopAndIOS extends React.Component {
   }
 }
 
-export default LockBodyScrollForDesktopAndIOS;
+export default LockBodyScroll;
