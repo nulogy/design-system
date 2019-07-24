@@ -6,4 +6,8 @@ export { default as withWindowDimensions } from "./withWindowDimensions";
 export { default as DetectOutsideClick } from "./DetectOutsideClick";
 export { default as PopperArrow } from "./PopperArrow";
 export { default as ScrollIndicators } from "./ScrollIndicators";
+<<<<<<< HEAD
 export { default as withMenuState } from "./withMenuState";
+=======
+export { default as LockBodyScrollForDesktopAndIOS } from "./LockBodyScrollForDesktopAndIOS";
+>>>>>>> adds util component that prevents scolling of the body on iOS and desktop

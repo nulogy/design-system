@@ -7,6 +7,7 @@ import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
 import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
+import { LockBodyScrollForDesktopAndIOS } from "../utils";
 
 const getPrimaryButtonComponent = type => {
   if (type === "informative") {
@@ -178,6 +179,7 @@ const Modal = ({
       }
     }}
   >
+    {isOpen && <LockBodyScrollForDesktopAndIOS />}
     {modalHasHeader(onRequestClose, title) && (
       <ModalHeader hasCloseButton={onRequestClose}>
         {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
