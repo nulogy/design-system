@@ -12,14 +12,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { subPx, withWindowDimensions, withMenuState } from "../utils";
-
-const LockBody = createGlobalStyle(({ isOpen }) => ({
-  body: {
-    height: isOpen ? "100%" : null,
-    overflow: isOpen ? "hidden" : null
-  }
-}));
+import { LockBodyScroll, subPx, withWindowDimensions, withMenuState } from "../utils";
 
 const themeColors = {
   blue: {
@@ -166,7 +159,7 @@ class SmallNavBarNoState extends React.Component {
     } = this.props;
     return (
       <>
-        <LockBody isOpen={isOpen} />
+        {isOpen && <LockBodyScroll />}
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
             <Link
