@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
   Button,
+  PrimaryButton,
   Box,
   SectionTitle,
   SubsectionTitle,
@@ -81,7 +82,7 @@ class ModalStateWrapper extends React.Component {
     const { isOpen } = this.state;
     return (
       <div>
-        <Button onClick={this.openModal}>Open Modal</Button>
+        <PrimaryButton onClick={this.openModal}>Open Modal</PrimaryButton>
         {children({
           isOpen,
           closeModal: this.closeModal,
@@ -104,9 +105,8 @@ export default () => (
     <Intro>
       <Title>Modal</Title>
       <IntroText>
-        Modal dialog is a secondary window that allows introduction of a
-        sub-flow while maintaining the original context. Modal dialog are used
-        to introduce friction when needed.
+        Modal is a window that allows introduction of secondary flows while
+        maintaining the original context.
       </IntroText>
     </Intro>
 
@@ -136,13 +136,54 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Use when</SectionTitle>
+      <SectionTitle>Use</SectionTitle>
+      <List>
+        <ListItem>When mportant warnings require immediate attention</ListItem>
+        <ListItem>
+          To prevent irreversible changes by creating friction
+        </ListItem>
+        <ListItem>
+          To fragment a complex workflow into simpler steps such as creating,
+          editing
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
-        <SubsectionTitle>Variation 1</SubsectionTitle>
+        <SubsectionTitle>Text</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Form</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Multi-Step Process</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Without the Actions</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Without the Title</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Without the Title Bar</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+    </DocSection>
+
+    <DocSection>
+      <Box mb="x6">
+        <SubsectionTitle>Text and form</SubsectionTitle>
+        <Highlight className="js" />
+      </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Multi-step process</SubsectionTitle>
         <Highlight className="js" />
       </Box>
     </DocSection>
