@@ -100,6 +100,10 @@ export const menuData = [
         href: "/components/list"
       },
       {
+        name: "Modal",
+        href: "/components/modal"
+      },
+      {
         name: "NavBar",
         href: "/components/navbar"
       },
