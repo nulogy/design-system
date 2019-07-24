@@ -105,8 +105,8 @@ export default () => (
     <Intro>
       <Title>Modal</Title>
       <IntroText>
-        Modal is a window that allows introduction of secondary flows while
-        maintaining the original context.
+        Modal is a window that appears on top of the main content and allows
+        introduction of secondary flows while maintaining the original context.
       </IntroText>
     </Intro>
 
