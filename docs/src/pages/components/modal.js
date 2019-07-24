@@ -138,7 +138,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Use</SectionTitle>
       <List>
-        <ListItem>When mportant warnings require immediate attention</ListItem>
+        <ListItem>When important warnings require immediate attention</ListItem>
         <ListItem>
           To prevent irreversible changes by creating friction
         </ListItem>
