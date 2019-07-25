@@ -199,7 +199,7 @@ const Modal = ({
     overlayClassName={overlayClassName}
     className={className}
     aria={{
-      labelledby: ariaLabelledBy,
+      labelledby: title ? "modal-title" : undefined,
       describedby: ariaDescribedBy
     }}
     shouldCloseOnOverlayClick={true}
@@ -213,7 +213,13 @@ const Modal = ({
     {isOpen && <LockBodyScroll />}
     {modalHasHeader(onRequestClose, title) && (
       <ModalHeader hasCloseButton={onRequestClose}>
-        {title ? <SectionTitle mb="none">{title}</SectionTitle> : <div style={{ height: theme.space.x4 }} />}
+        {title ? (
+          <SectionTitle id="modal-title" mb="none">
+            {title}
+          </SectionTitle>
+        ) : (
+          <div style={{ height: theme.space.x4 }} />
+        )}
         {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
       </ModalHeader>
     )}
@@ -243,7 +249,6 @@ Modal.propTypes = {
   onAfterOpen: PropTypes.func,
   shouldFocusAfterRender: PropTypes.bool,
   shouldReturnFocusAfterClose: PropTypes.bool,
-  ariaLabelledBy: PropTypes.string,
   ariaDescribedBy: PropTypes.string,
   maxWidth: PropTypes.string,
   portalClassName: PropTypes.string,
@@ -266,7 +271,6 @@ Modal.defaultProps = {
   onAfterOpen: null,
   shouldFocusAfterRender: true,
   shouldReturnFocusAfterClose: true,
-  ariaLabelledBy: null,
   ariaDescribedBy: null,
   maxWidth: "624px",
   portalClassName: undefined,
