@@ -15,7 +15,8 @@ import {
   ListItem,
   Modal,
   Input,
-  Form
+  Form,
+  Text
 } from "@nulogy/components";
 import {
   Layout,
