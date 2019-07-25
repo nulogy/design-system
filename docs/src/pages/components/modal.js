@@ -14,7 +14,9 @@ import {
   Link,
   List,
   ListItem,
-  Modal
+  Modal,
+  Input,
+  Form
 } from "@nulogy/components";
 import {
   Layout,
@@ -26,7 +28,61 @@ import {
 
 const propsRows = [
   {
-    name: "",
+    name: "isOpen",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "shouldCloseOnOverlayClick",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "children",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "title",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "primaryButton",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "secondaryButtons",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "buttonAlignment",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "type",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "onRequestClose",
+    type: "",
+    defaultValue: "",
+    description: ""
+  },
+  {
+    name: "maxWidth",
     type: "",
     defaultValue: "",
     description: ""
@@ -51,14 +107,6 @@ class ModalStateWrapper extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
-  }
-
   openModal() {
     this.setState({ isOpen: true });
   }
@@ -67,22 +115,12 @@ class ModalStateWrapper extends React.Component {
     this.setState({ isOpen: false });
   }
 
-  handleKeyDown(event) {
-    switch (event.keyCode) {
-      case 27:
-        this.closeModal();
-        break;
-      default:
-        break;
-    }
-  }
-
   render() {
     const { children } = this.props;
     const { isOpen } = this.state;
     return (
       <div>
-        <PrimaryButton onClick={this.openModal}>Open Modal</PrimaryButton>
+        <Button onClick={this.openModal}>Open Modal</Button>
         {children({
           isOpen,
           closeModal: this.closeModal,
@@ -117,7 +155,7 @@ export default () => (
             title="Modal Title"
             isOpen={isOpen}
             onRequestClose={closeModal}
-            primaryButton={primaryButton}
+            primaryButton={{ label: "Primary Action", onClick: () => {} }}
             secondaryButtons={secondaryButtons}
           >
             Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -128,9 +166,56 @@ export default () => (
         )}
       </ModalStateWrapper>
       <Highlight className="js">
-        {`import {Button} from "@nulogy/components";
+        {`import { Modal, Button } from "@nulogy/components";
 
-<Button>Create project</Button>
+const primaryButton = { label: "Primary Action", onClick: () => {} };
+const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
+
+Modal.setAppElement("#root");
+
+class ModalExample extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  openModal() {
+    this.setState({ isOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ isOpen: false });
+  }
+
+  render() {
+    const { children } = this.props;
+    const { isOpen } = this.state;
+    return (
+      <div>
+        <Button onClick={this.openModal}>Open Modal</Button>
+        <Modal
+          title="Modal Title"
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          primaryButton={primaryButton}
+          secondaryButtons={secondaryButtons}
+        >
+          Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </Modal>
+      </div>
+    );
+  }
+}
 `}
       </Highlight>
     </DocSection>
@@ -138,13 +223,15 @@ export default () => (
     <DocSection>
       <SectionTitle>Use</SectionTitle>
       <List>
-        <ListItem>When important warnings require immediate attention</ListItem>
         <ListItem>
-          To prevent irreversible changes by creating friction
+          When important warnings require immediate attention.
+        </ListItem>
+        <ListItem>
+          To prevent irreversible changes by creating friction.
         </ListItem>
         <ListItem>
           To fragment a complex workflow into simpler steps such as creating,
-          editing
+          editing, etc.
         </ListItem>
       </List>
     </DocSection>
@@ -153,38 +240,207 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x6">
         <SubsectionTitle>Text</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              title="Modal Title"
+              isOpen={isOpen}
+              onRequestClose={closeModal}
+              primaryButton={primaryButton}
+              secondaryButtons={secondaryButtons}
+            >
+              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  title="Modal Title"
+  isOpen={isOpen}
+  onRequestClose={closeModal}
+  primaryButton={{ label: "Primary Action", onClick: () => {} }}
+  secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
+>
+  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris nisi ut aliquip ex ea commodo consequat.
+</Modal>
+`}
+        </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Form</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              title="Edit Profile"
+              onRequestClose={closeModal}
+              primaryButton={{
+                label: "Submit",
+                type: "submit",
+                form: "editProfile"
+              }}
+              secondaryButtons={[{ label: "Cancel", onClick: closeModal }]}
+              isOpen={isOpen}
+              maxWidth="456px"
+            >
+              <Form id="editProfile" mb="x2">
+                <Input name="name" id="name" labelText="Name" />
+                <Input type="number" name="age" id="age" labelText="Age" />
+              </Form>
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  title="Edit Profile"
+  onRequestClose={closeModal}
+  primaryButton={{ label: "Submit", type: "submit", form: "editProfile" }}
+  secondaryButtons={[{ label: "Cancel", onClick: closeModal }]}
+  isOpen={isOpen}
+  maxWidth="456px"
+>
+  <Form id="editProfile" mb="x2">
+    <Input name="name" id="name" labelText="Name" />
+    <Input type="number" name="age" id="age" labelText="Age" />
+  </Form>
+</Modal>
+`}
+        </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Multi-Step Process</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              title="Enter Address"
+              buttonAlignment="spaced"
+              onRequestClose={closeModal}
+              primaryButton={{ label: "Next", onClick: () => {} }}
+              secondaryButtons={[{ label: "Previous", onClick: () => {} }]}
+              isOpen={isOpen}
+              maxWidth="456px"
+            >
+              <Form id="myForm" mb="x2">
+                <Input name="country" id="country" labelText="Country" />
+                <Input name="state" id="state" labelText="State" />
+              </Form>
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  title="Enter Address"
+  buttonAlignment="spaced"
+  onRequestClose={closeModal}
+  primaryButton={{ label: "Next", onClick: ()=>{} }}
+  secondaryButtons={[{ label: "Previous", onClick: ()=>{} }]}
+  isOpen={isOpen}
+  maxWidth="456px"
+>
+  <Form id="myForm" mb="x2">
+    <Input name="country" id="country" labelText="Country" />
+    <Input name="state" id="state" labelText="State" />
+  </Form>
+</Modal>
+`}
+        </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Without the Actions</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              title="Modal Title"
+              isOpen={isOpen}
+              onRequestClose={closeModal}
+            >
+              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  title="Modal Title"
+  isOpen={isOpen}
+  onRequestClose={closeModal}
+>
+  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris nisi ut aliquip ex ea commodo consequat.
+</Modal>
+`}
+        </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Without the Title</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              isOpen={isOpen}
+              onRequestClose={closeModal}
+              primaryButton={primaryButton}
+              secondaryButtons={secondaryButtons}
+            >
+              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  isOpen={isOpen}
+  onRequestClose={closeModal}
+  primaryButton={{ label: "Primary Action", onClick: () => {} }}
+  secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
+>
+  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris nisi ut aliquip ex ea commodo consequat.
+</Modal>
+`}
+        </Highlight>
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Without the Title Bar</SubsectionTitle>
-        <Highlight className="js" />
-      </Box>
-    </DocSection>
-
-    <DocSection>
-      <Box mb="x6">
-        <SubsectionTitle>Text and form</SubsectionTitle>
-        <Highlight className="js" />
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Multi-step process</SubsectionTitle>
-        <Highlight className="js" />
+        <ModalStateWrapper>
+          {({ isOpen, closeModal }) => (
+            <Modal
+              isOpen={isOpen}
+              primaryButton={primaryButton}
+              secondaryButtons={[{ label: "Close", onClick: closeModal }]}
+            >
+              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </Modal>
+          )}
+        </ModalStateWrapper>
+        <Highlight className="js">
+          {`<Modal
+  isOpen={isOpen}
+  primaryButton={{ label: "Primary Action", onClick: () => {} }}
+  secondaryButtons={[{ label: "Close", onClick: closeModal}]}
+>
+  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+  laboris nisi ut aliquip ex ea commodo consequat.
+</Modal>
+`}
+        </Highlight>
       </Box>
     </DocSection>
 
