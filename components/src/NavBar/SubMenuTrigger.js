@@ -6,7 +6,7 @@ import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button({
+const StyledButton = styled.button(({ isOpen }) => ({
   display: "block",
   position: "relative",
   color: theme.colors.darkBlue,
@@ -14,32 +14,37 @@ const StyledButton = styled.button({
   lineHeight: theme.lineHeights.base,
   width: "100%",
   padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
-  "&:hover, &:focus": {
-    outline: "none",
+  "&:hover": {
     backgroundColor: theme.colors.lightGrey
   },
   "&:disabled": {
     opacity: ".5"
   },
   "&:focus": {
+    outline: "none",
     boxShadow: theme.shadows.focus
   },
   border: "none",
-  backgroundColor: "transparent",
+  backgroundColor: isOpen ? theme.colors.lightGrey : "transparent",
   textDecoration: "none",
   textAlign: "left",
   cursor: "pointer"
-});
+}));
 
-const SubMenuTriggerButton = React.forwardRef(({ name, ...props }, ref) => (
-  <StyledButton ref={ref} {...props}>
+const SubMenuTriggerButton = React.forwardRef(({ name, isOpen, ...props }, ref) => (
+  <StyledButton isOpen={isOpen} ref={ref} {...props}>
     {name}
     <Icon style={{ position: "absolute", top: "11px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
   </StyledButton>
 ));
 
 SubMenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool
+};
+
+SubMenuTriggerButton.defaultProps = {
+  isOpen: false
 };
 
 const SubMenuTrigger = props => {
@@ -55,8 +60,8 @@ const SubMenuTrigger = props => {
         onMouseEnter: openMenu,
         onMouseLeave: closeMenu
       })}
-      trigger={({ closeMenu, openMenu }) => (
-        <SubMenuTriggerButton name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
+      trigger={({ closeMenu, openMenu, isOpen }) => (
+        <SubMenuTriggerButton isOpen={isOpen} name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
       )}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
