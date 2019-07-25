@@ -263,9 +263,9 @@ Modal.defaultProps = {
   ariaLabelledBy: null,
   ariaDescribedBy: null,
   maxWidth: "624px",
-  portalClassName: "",
-  overlayClassName: "",
-  className: ""
+  portalClassName: undefined,
+  overlayClassName: undefined,
+  className: undefined
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
