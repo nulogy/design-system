@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
-import { keyCodes } from "../constants";
+import { withMenuState, withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -59,21 +58,12 @@ const TooltipContainer = styled(Box)(
 );
 
 /* eslint-disable react/destructuring-assignment */
-class Tooltip extends React.Component {
+class StatelessTooltip extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      open: false
-    };
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.hideTooltip = this.hideTooltip.bind(this);
-    this.showTooltip = this.showTooltip.bind(this);
+
     this.setTriggerRef = this.setTriggerRef.bind(this);
     this.setTooltipRef = this.setTooltipRef.bind(this);
-  }
-
-  componentWillUnmount() {
-    this.clearScheduled();
   }
 
   setTriggerRef(node) {
@@ -86,47 +76,20 @@ class Tooltip extends React.Component {
 
   tooltipEventHandlers() {
     return {
-      onFocus: () => this.showTooltip(),
-      onBlur: () => this.hideTooltip(),
-      onMouseEnter: () => this.showTooltip(),
-      onMouseLeave: () => this.hideTooltip(),
-      onKeyDown: e => this.handleKeyDown(e)
+      onFocus: () => this.props.menuState.openMenu(false),
+      onBlur: () => this.props.menuState.closeMenu(false),
+      onMouseEnter: () => this.props.menuState.openMenu(false),
+      onMouseLeave: () => this.props.menuState.closeMenu(false)
     };
   }
 
   triggerEventHandlers() {
     return {
-      onFocus: () => this.showTooltip(),
-      onBlur: () => this.hideTooltip(),
-      onMouseEnter: () => this.showTooltip(),
-      onMouseLeave: () => this.hideTooltip(),
-      onKeyDown: e => this.handleKeyDown(e)
+      onFocus: () => this.props.menuState.openMenu(false),
+      onBlur: () => this.props.menuState.closeMenu(false),
+      onMouseEnter: () => this.props.menuState.openMenu(false),
+      onMouseLeave: () => this.props.menuState.closeMenu(false)
     };
-  }
-
-  clearScheduled() {
-    clearTimeout(this.hideTimeoutID);
-    clearTimeout(this.showTimeoutID);
-  }
-
-  hideTooltip(skipTimer) {
-    this.clearScheduled();
-    if (!skipTimer) {
-      this.hideTimeoutID = setTimeout(() => this.setState({ open: false }), this.props.hideDelay);
-    } else {
-      this.setState({ open: false });
-    }
-  }
-
-  showTooltip() {
-    this.clearScheduled();
-    this.showTimeoutID = setTimeout(() => this.setState({ open: true }), this.props.showDelay);
-  }
-
-  handleKeyDown(event) {
-    if (event.keyCode === keyCodes.ESC) {
-      this.hideTooltip(true);
-    }
   }
 
   render() {
@@ -136,7 +99,7 @@ class Tooltip extends React.Component {
           {({ ref }) =>
             React.cloneElement(this.props.children, {
               "aria-haspopup": true,
-              "aria-expanded": this.state.open,
+              "aria-expanded": this.props.menuState.isOpen,
               "aria-describedby": this.props.id,
               ...this.triggerEventHandlers(),
               ref
@@ -147,7 +110,7 @@ class Tooltip extends React.Component {
           {({ ref, style, placement, arrowProps }) => (
             <TooltipContainer
               maxWidth={this.props.maxWidth}
-              open={this.state.open}
+              open={this.props.menuState.isOpen}
               role="tooltip"
               id={this.props.id}
               ref={node => {
@@ -163,10 +126,10 @@ class Tooltip extends React.Component {
             </TooltipContainer>
           )}
         </Popper>
-        {this.state.open && (
+        {this.props.menuState.isOpen && (
           <DetectOutsideClick
             onClick={() => {
-              this.hideTooltip(true);
+              this.props.menuState.openMenu();
             }}
             clickRef={[this.triggerRef, this.tooltipRef]}
           />
@@ -177,10 +140,15 @@ class Tooltip extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-Tooltip.propTypes = {
+StatelessTooltip.propTypes = {
   children: PropTypes.element.isRequired,
   id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    openMenu: PropTypes.func,
+    closeMenu: PropTypes.func
+  }).isRequired,
   placement: PropTypes.oneOf([
     "top",
     "top-start",
@@ -195,16 +163,24 @@ Tooltip.propTypes = {
     "right-start",
     "right-end"
   ]),
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   maxWidth: PropTypes.string
 };
 
-Tooltip.defaultProps = {
+StatelessTooltip.defaultProps = {
   placement: "bottom",
-  showDelay: "100",
-  hideDelay: "350",
   maxWidth: "24em"
+};
+
+const Tooltip = withMenuState(StatelessTooltip);
+
+Tooltip.propTypes = {
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+};
+
+Tooltip.defaultProps = {
+  showDelay: "100",
+  hideDelay: "350"
 };
 
 export default withGeneratedId(Tooltip);

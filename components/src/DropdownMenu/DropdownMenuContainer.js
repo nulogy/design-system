@@ -60,7 +60,7 @@ BaseSubMenu.defaultProps = {
   popperProps: null
 };
 
-const DropdownMenu = styled(BaseSubMenu)(
+const DropdownMenuContainer = styled(BaseSubMenu)(
   ({ placement, showArrow, backgroundColor }) => ({
     backgroundColor: getThemeColor(backgroundColor),
     borderRadius: theme.radii.medium,
@@ -76,14 +76,14 @@ const DropdownMenu = styled(BaseSubMenu)(
   })
 );
 
-DropdownMenu.propTypes = {
+DropdownMenuContainer.propTypes = {
   backgroundColor: PropTypes.string,
   showArrow: PropTypes.bool
 };
 
-DropdownMenu.defaultProps = {
+DropdownMenuContainer.defaultProps = {
   backgroundColor: "whiteGrey",
   showArrow: true
 };
 
-export default DropdownMenu;
+export default DropdownMenuContainer;

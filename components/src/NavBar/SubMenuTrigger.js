@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
-import { DropdownMenu } from "../DropdownMenu";
+import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 
 const StyledButton = styled.button({
@@ -45,17 +45,24 @@ SubMenuTriggerButton.propTypes = {
 const SubMenuTrigger = props => {
   const { menuData, name, onItemClick, ...otherProps } = props;
   return (
-    <DropdownMenu
+    <NavBarDropdownMenu
       placement="right-start"
       modifiers={null}
       showArrow={false}
+      triggerTogglesMenuState={false}
       {...otherProps}
-      trigger={() => <SubMenuTriggerButton name={name} />}
+      dropdownMenuContainerEventHandlers={({ openMenu, closeMenu }) => ({
+        onMouseEnter: openMenu,
+        onMouseLeave: closeMenu
+      })}
+      trigger={({ closeMenu, openMenu }) => (
+        <SubMenuTriggerButton name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
+      )}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
         {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
       </ul>
-    </DropdownMenu>
+    </NavBarDropdownMenu>
   );
 };
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
 import theme from "../theme";
 import { Icon } from "../Icon";
-import { DropdownMenu } from "../DropdownMenu";
+import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
@@ -76,7 +76,7 @@ MenuTriggerButton.defaultProps = {
 const MenuTrigger = props => {
   const { menuData, name, color, hoverColor, hoverBackground, ...otherProps } = props;
   return (
-    <DropdownMenu
+    <NavBarDropdownMenu
       {...otherProps}
       trigger={() => (
         <MenuTriggerButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} name={name} />
@@ -84,10 +84,17 @@ const MenuTrigger = props => {
     >
       {({ closeMenu }) => (
         <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-          {renderSubMenuItems(menuData, closeMenu, SubMenuTrigger)}
+          {renderSubMenuItems(
+            menuData,
+            e => {
+              closeMenu(e);
+              e.stopPropagation();
+            },
+            SubMenuTrigger
+          )}
         </ul>
       )}
-    </DropdownMenu>
+    </NavBarDropdownMenu>
   );
 };
 

@@ -1,127 +1,108 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick } from "../utils";
-import { keyCodes } from "../constants";
+import { DetectOutsideClick, withMenuState } from "../utils";
 import { IconicButton } from "../Button";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
-class DropdownMenu extends React.Component {
+class StatelessDropdownMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      open: this.props.defaultOpen
-    };
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
-    this.openMenu = this.openMenu.bind(this);
+
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.setMenuRef = this.setMenuRef.bind(this);
-  }
-
-  componentWillUnmount() {
-    this.clearScheduled();
+    this.setTriggerRef = this.setTriggerRef.bind(this);
   }
 
   setMenuRef(node) {
     this.menuRef = node;
   }
 
-  setSubMenuState(newState, skipTimer = false) {
-    this.clearScheduled();
-    if (!skipTimer) {
-      this.timeoutID = setTimeout(
-        () => this.setState({ open: newState }),
-        newState ? this.props.showDelay : this.props.hideDelay
-      );
-    } else {
-      this.setState({ open: newState });
-    }
-  }
-
-  closeMenu(skipTimer) {
-    this.setSubMenuState(false, skipTimer);
-  }
-
-  openMenu(skipTimer) {
-    this.setSubMenuState(true, skipTimer);
-  }
-
-  subMenuEventHandlers() {
-    return {
-      onClick: () => this.openMenu(),
-      onBlur: () => this.closeMenu(),
-      onFocus: () => this.openMenu(),
-      onKeyDown: e => this.handleKeyDown(e)
-    };
+  setTriggerRef(node) {
+    this.triggerRef = node;
   }
 
   menuTriggerEventHandlers() {
     return {
-      onBlur: () => this.closeMenu(),
-      onClick: () => this.openMenu(),
-      onKeyDown: e => this.handleKeyDown(e)
+      onBlur: () => this.props.menuState.closeMenu(false),
+      onClick: () => this.props.menuState.toggleMenu()
     };
   }
 
-  clearScheduled() {
-    clearTimeout(this.timeoutID);
+  menuEventHandlers() {
+    return {
+      onBlur: () => this.props.menuState.closeMenu(false),
+      onFocus: () => this.props.menuState.openMenu(false),
+      onClick: () => this.props.menuState.openMenu(false)
+    };
   }
 
   handleOutsideClick() {
-    this.closeMenu(true);
-  }
-
-  handleKeyDown(e) {
-    switch (e.keyCode) {
-      case keyCodes.ESC:
-        this.closeMenu(true);
-        break;
-      default:
-        break;
-    }
+    this.props.menuState.closeMenu(false);
   }
 
   render() {
-    const { trigger, children, disabled, backgroundColor, placement, modifiers, showArrow } = this.props;
+    const {
+      trigger,
+      children,
+      disabled,
+      backgroundColor,
+      placement,
+      modifiers,
+      showArrow,
+      menuState: { isOpen, closeMenu, openMenu }
+    } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
         <Reference>
           {({ ref }) =>
-            React.cloneElement(trigger(), {
-              "aria-haspopup": true,
-              "aria-expanded": this.state.open,
-              type: "button",
-              disabled: disabled ? true : null,
-              ...this.menuTriggerEventHandlers(),
-              ref
-            })
+            React.cloneElement(
+              trigger({
+                closeMenu,
+                openMenu
+              }),
+              {
+                "aria-haspopup": true,
+                "aria-expanded": isOpen,
+                type: "button",
+                disabled: disabled ? true : null,
+                ...this.menuTriggerEventHandlers(),
+                ref: node => {
+                  ref(node);
+                  this.setTriggerRef(node);
+                }
+              }
+            )
           }
         </Reference>
-        {this.state.open && (
+        {isOpen && (
           <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
               <DropdownMenuContainer
+                onMouseDown={e => {
+                  e.preventDefault();
+                  e.target.focus();
+                }}
                 placement={placement}
                 backgroundColor={backgroundColor}
                 popperProps={popperProps}
                 showArrow={showArrow}
-                {...this.subMenuEventHandlers()}
+                {...this.menuEventHandlers()}
                 ref={node => {
                   popperProps.ref(node);
                   this.setMenuRef(node);
                 }}
               >
-                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={this.menuRef} />
+                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                 {childrenFnc({
                   closeMenu: e => {
-                    this.closeMenu(true);
+                    closeMenu();
                     e.stopPropagation();
                   },
                   openMenu: e => {
-                    this.openMenu(true);
+                    openMenu();
                     e.stopPropagation();
                   }
                 })}
@@ -135,11 +116,15 @@ class DropdownMenu extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-DropdownMenu.propTypes = {
+StatelessDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
+  menuState: PropTypes.shape({
+    isOpen: PropTypes.bool,
+    openMenu: PropTypes.func,
+    closeMenu: PropTypes.func,
+    toggleMenu: PropTypes.func
+  }).isRequired,
   disabled: PropTypes.bool,
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   backgroundColor: PropTypes.string,
   showArrow: PropTypes.bool,
@@ -157,19 +142,29 @@ DropdownMenu.propTypes = {
     "right-start",
     "right-end"
   ]),
-  modifiers: PropTypes.shape({}),
-  defaultOpen: PropTypes.bool
+  modifiers: PropTypes.shape({})
 };
 
-DropdownMenu.defaultProps = {
+StatelessDropdownMenu.defaultProps = {
   disabled: false,
-  showDelay: "100",
-  hideDelay: "200",
   trigger: () => <IconicButton icon="more" />,
   backgroundColor: undefined,
   showArrow: true,
   placement: "bottom-start",
-  modifiers: { flip: { behavior: ["bottom"] } },
+  modifiers: { flip: { behavior: ["bottom"] } }
+};
+
+const DropdownMenu = withMenuState(StatelessDropdownMenu);
+
+DropdownMenu.propTypes = {
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultOpen: PropTypes.bool
+};
+
+DropdownMenu.defaultProps = {
+  showDelay: "100",
+  hideDelay: "200",
   defaultOpen: false
 };
 
