@@ -67,7 +67,8 @@ class StatelessNavBarDropdownMenu extends React.Component {
             React.cloneElement(
               trigger({
                 closeMenu,
-                openMenu
+                openMenu,
+                isOpen
               }),
               {
                 "aria-haspopup": true,
