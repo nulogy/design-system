@@ -183,7 +183,9 @@ const Modal = ({
   portalClassName,
   overlayClassName,
   className,
-  maxWidth
+  maxWidth,
+  appElement,
+  ariaHideApp
 }) => (
   <StyledReactModal
     maxWidth={maxWidth}
@@ -205,6 +207,8 @@ const Modal = ({
     style={{
       overlay: overlayStyle
     }}
+    appElement={appElement}
+    ariaHideApp={ariaHideApp}
   >
     {isOpen && <LockBodyScroll />}
     {modalHasHeader(onRequestClose, title) && (
@@ -244,7 +248,9 @@ Modal.propTypes = {
   maxWidth: PropTypes.string,
   portalClassName: PropTypes.string,
   overlayClassName: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  appElement: PropTypes.element,
+  ariaHideApp: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -265,7 +271,9 @@ Modal.defaultProps = {
   maxWidth: "624px",
   portalClassName: undefined,
   overlayClassName: undefined,
-  className: undefined
+  className: undefined,
+  appElement: undefined,
+  ariaHideApp: true
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
