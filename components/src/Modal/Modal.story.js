@@ -68,6 +68,7 @@ class ModalExample extends React.Component {
           primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
           secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
           isOpen={isOpen}
+          maxWidth="456px"
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
@@ -147,7 +148,6 @@ storiesOf("Modal", module)
       onRequestClose={() => {}}
       primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
       secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      buttonAlignment="left"
       maxWidth="456px"
     >
       <Form id="myForm" mb="x2">
