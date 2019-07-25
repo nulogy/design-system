@@ -28,15 +28,6 @@ class ModalExample extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   openModal() {
@@ -45,16 +36,6 @@ class ModalExample extends React.Component {
 
   closeModal() {
     this.setState({ isOpen: false });
-  }
-
-  handleKeyDown(event) {
-    switch (event.keyCode) {
-      case 27:
-        this.closeModal();
-        break;
-      default:
-        break;
-    }
   }
 
   render() {

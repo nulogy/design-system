@@ -161,14 +161,16 @@ const Modal = ({
   secondaryButtons,
   type,
   onRequestClose,
+  onAfterOpen,
   buttonAlignment,
   ...props
 }) => (
   <StyledReactModal
     onRequestClose={onRequestClose}
+    onAfterOpen={onAfterOpen}
     isOpen={isOpen}
     {...props}
-    shouldCloseOnOverlayClick={shouldCloseOnOverlayClick}
+    shouldCloseOnOverlayClick={true}
     style={{
       overlay: {
         display: "flex",
@@ -207,8 +209,8 @@ Modal.propTypes = {
   type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
+  onAfterOpen: PropTypes.func,
   isOpen: PropTypes.bool,
-  shouldCloseOnOverlayClick: PropTypes.bool,
   maxWidth: PropTypes.string
 };
 
@@ -220,8 +222,8 @@ Modal.defaultProps = {
   type: "informative",
   children: null,
   onRequestClose: null,
+  onAfterOpen: null,
   isOpen: true,
-  shouldCloseOnOverlayClick: true,
   maxWidth: "624px"
 };
 
