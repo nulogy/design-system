@@ -9,7 +9,9 @@ describe("Select", () => {
 
     getSelectComponent().click();
 
-    cy.get("[aria-selected='true']").should("have.text", "V One");
+    cy.focused().type("{enter}");
+
+    cy.focused().should("have.text", "V One");
   });
 
   it("selects an option on click", () => {
