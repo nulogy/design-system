@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- NavBar bug fixes
+  - Fixes inconsistent focus styling in submenu triggers
+  - Fixes inability to tell which submenu is open
+
 ### Security
 
 ## [0.10.2] - 2019-07-15
