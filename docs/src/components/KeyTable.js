@@ -4,12 +4,14 @@ import styled from "styled-components";
 import theme from "../../../components/src/theme";
 
 const Table = styled.table({
-  border: 0
+  border: 0,
+  fontSize: theme.fontSizes.small
 });
 
 const Column = styled.td({
   border: 0,
   padding: `${theme.space.x1} ${theme.space.x3}`,
+  verticalAlign: "top",
 
   "&:first-child": { paddingLeft: 0 },
   "&:last-child": { paddingRight: 0 },

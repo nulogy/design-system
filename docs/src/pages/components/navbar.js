@@ -22,6 +22,7 @@ import {
   PropsTable,
   KeyTable
 } from "../../components";
+import { theme } from "@nulogy/components/src";
 
 const primaryMenu = [
   {
@@ -229,7 +230,7 @@ const search = {
 `}
         </Highlight>
         <KeyTable keyRows={menuDataKeyRows} />
-        <Text mb="x2">
+        <Text my="x2">
           Not providing data for primaryMenu, secondaryMenu or search will
           result in those components not being included.
         </Text>
