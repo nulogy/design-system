@@ -167,7 +167,6 @@ const overlayStyle = {
 
 const Modal = ({
   isOpen,
-  shouldCloseOnOverlayClick,
   children,
   title,
   primaryButton,
@@ -176,17 +175,18 @@ const Modal = ({
   onRequestClose,
   onAfterOpen,
   buttonAlignment,
-  ariaLabel,
   shouldFocusAfterRender,
   shouldReturnFocusAfterClose,
+  ariaLabel,
   ariaLabelledBy,
   ariaDescribedBy,
   portalClassName,
   overlayClassName,
   className,
-  ...props
+  maxWidth
 }) => (
   <StyledReactModal
+    maxWidth={maxWidth}
     contentLabel={ariaLabel}
     onRequestClose={onRequestClose}
     onAfterOpen={onAfterOpen}
@@ -200,7 +200,6 @@ const Modal = ({
       labelledby: ariaLabelledBy,
       describedby: ariaDescribedBy
     }}
-    {...props}
     shouldCloseOnOverlayClick={true}
     shouldCloseOnEsc={true}
     style={{
@@ -228,6 +227,7 @@ const Modal = ({
 );
 
 Modal.propTypes = {
+  isOpen: PropTypes.bool,
   title: PropTypes.string,
   ariaLabel: PropTypes.string,
   buttonAlignment: PropTypes.oneOf(["left", "spaced"]),
@@ -237,7 +237,6 @@ Modal.propTypes = {
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
   onAfterOpen: PropTypes.func,
-  isOpen: PropTypes.bool,
   shouldFocusAfterRender: PropTypes.bool,
   shouldReturnFocusAfterClose: PropTypes.bool,
   ariaLabelledBy: PropTypes.string,
@@ -249,6 +248,7 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
+  isOpen: true,
   title: null,
   ariaLabel: null,
   buttonAlignment: "left",
@@ -258,7 +258,6 @@ Modal.defaultProps = {
   children: null,
   onRequestClose: null,
   onAfterOpen: null,
-  isOpen: true,
   shouldFocusAfterRender: true,
   shouldReturnFocusAfterClose: true,
   ariaLabelledBy: null,
