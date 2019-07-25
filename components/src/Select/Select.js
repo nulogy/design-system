@@ -160,11 +160,13 @@ const ReactSelect = ({
   name,
   onChange,
   placeholder,
-  value
+  value,
+  className
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Select
+        className={className}
         noOptionsMessage={noOptionsMessage}
         placeholder={placeholder}
         options={options}
