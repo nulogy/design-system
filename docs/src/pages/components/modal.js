@@ -106,13 +106,6 @@ const propsRows = [
       "String indicating how the modal content should be announced to screenreaders"
   },
   {
-    name: "ariaLabelledBy",
-    type: "String",
-    defaultValue: "null",
-    description:
-      "String indicating the aria label of the modal (optional for enhanced accessibility if needed)"
-  },
-  {
     name: "ariaDescribedBy",
     type: "String",
     defaultValue: "null",
@@ -500,10 +493,27 @@ class ModalExample extends React.Component {
 
     <DocSection>
       <SectionTitle>Accessibility guidelines</SectionTitle>
+      <Text>
+        In order to hide the rest of the application to screen-readers when the
+        modal is open, make sure to use `Modal.setAppElement(el)` where el is
+        the root element of the app.
+      </Text>
+      <Text>
+        When there is no visible label on the Modal (ie. title prop), you should
+        use the ariaLabel prop to provide a modal label. The aria-labelledby
+        attribute is automatically applied if the title prop is specified. If
+        the modal requires additional description for screen-readers, us the
+        ariaDescribedBy prop.
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Responsive information</SectionTitle>
+      <Text>
+        The Modal component has a width of "100%" and a customizable set
+        maxWidth value. The Modal will force maxWidth to 100% when the screen is
+        smaller than the small breakpoint (768px).
+      </Text>
     </DocSection>
 
     <DocSection>
