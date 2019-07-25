@@ -11,7 +11,7 @@ describe("Select", () => {
 
     cy.focused().type("{enter}");
 
-    cy.focused().should("have.text", "V One");
+    getValue().should("have.text", "V One");
   });
 
   it("selects an option on click", () => {
@@ -22,7 +22,7 @@ describe("Select", () => {
     getSelectComponent().click();
     cy.contains("V Two").click();
 
-    cy.get("input").should("have.value", "V Two");
+    getValue().should("have.text", "V Two");
     assertDropDownIsClosed();
   });
 
@@ -48,17 +48,14 @@ describe("Select", () => {
     cy.renderFromStorybook("select--base");
 
     // focus the select box
-    getSelectComponent()
-      .get("input")
-      .focus();
+    getSelectComponent().click();
 
     cy.focused()
-      .type(" ")
       .type("{downarrow}")
       .type("{enter}");
 
     assertDropDownIsClosed();
-    cy.get("input").should("have.value", "V Two");
+    getValue().should("have.text", "V Two");
   });
 
   it("closes the dropdown when on esc", () => {
@@ -79,7 +76,7 @@ describe("Select", () => {
     getSelectComponent().click();
     cy.contains("V Two").click();
 
-    cy.get("input").should("have.value", "V Two");
+    getValue().should("have.text", "V Two");
     assertDropDownIsClosed();
   });
 });

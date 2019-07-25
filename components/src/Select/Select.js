@@ -161,12 +161,14 @@ const ReactSelect = ({
   onChange,
   placeholder,
   value,
-  className
+  className,
+  classNamePrefix
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Select
         className={className}
+        classNamePrefix={classNamePrefix}
         noOptionsMessage={noOptionsMessage}
         placeholder={placeholder}
         options={options}
@@ -208,7 +210,9 @@ ReactSelect.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  value: PropTypes.string
+  value: PropTypes.string,
+  className: PropTypes.string,
+  classNamePrefix: PropTypes.string
 };
 ReactSelect.defaultProps = {
   autocomplete: true,
@@ -228,7 +232,9 @@ ReactSelect.defaultProps = {
   onChange: undefined,
   placeholder: undefined,
   required: false,
-  value: undefined
+  value: undefined,
+  className: null,
+  classNamePrefix: undefined
 };
 
 export default ReactSelect;
