@@ -1,11 +1,6 @@
 import React from "react";
 
 class LockBodyScroll extends React.Component {
-  constructor(props) {
-    super();
-    const initialBodyOverflow = undefined;
-  }
-
   componentDidMount() {
     this.initialBodyOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
