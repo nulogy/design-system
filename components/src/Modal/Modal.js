@@ -152,6 +152,19 @@ const StyledReactModal = styled(ReactModal)(
   }
 );
 
+const overlayStyle = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: transparentize(0.5, theme.colors.blackBlue),
+  zIndex: theme.zIndex.overlay
+};
+
 const Modal = ({
   isOpen,
   shouldCloseOnOverlayClick,
@@ -163,22 +176,35 @@ const Modal = ({
   onRequestClose,
   onAfterOpen,
   buttonAlignment,
+  ariaLabel,
+  shouldFocusAfterRender,
+  shouldReturnFocusAfterClose,
+  ariaLabelledBy,
+  ariaDescribedBy,
+  portalClassName,
+  overlayClassName,
+  className,
   ...props
 }) => (
   <StyledReactModal
+    contentLabel={ariaLabel}
     onRequestClose={onRequestClose}
     onAfterOpen={onAfterOpen}
+    shouldFocusAfterRender={shouldFocusAfterRender}
+    shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
     isOpen={isOpen}
+    portalClassName={portalClassName}
+    overlayClassName={overlayClassName}
+    className={className}
+    aria={{
+      labelledby: ariaLabelledBy,
+      describedby: ariaDescribedBy
+    }}
     {...props}
     shouldCloseOnOverlayClick={true}
+    shouldCloseOnEsc={true}
     style={{
-      overlay: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: transparentize(0.5, theme.colors.blackBlue),
-        zIndex: theme.zIndex.overlay
-      }
+      overlay: overlayStyle
     }}
   >
     {isOpen && <LockBodyScroll />}
@@ -203,6 +229,7 @@ const Modal = ({
 
 Modal.propTypes = {
   title: PropTypes.string,
+  ariaLabel: PropTypes.string,
   buttonAlignment: PropTypes.oneOf(["left", "spaced"]),
   primaryButton: PropTypes.shape({}),
   secondaryButtons: PropTypes.arrayOf(PropTypes.shape({})),
@@ -211,11 +238,19 @@ Modal.propTypes = {
   onRequestClose: PropTypes.func,
   onAfterOpen: PropTypes.func,
   isOpen: PropTypes.bool,
-  maxWidth: PropTypes.string
+  shouldFocusAfterRender: PropTypes.bool,
+  shouldReturnFocusAfterClose: PropTypes.bool,
+  ariaLabelledBy: PropTypes.string,
+  ariaDescribedBy: PropTypes.string,
+  maxWidth: PropTypes.string,
+  portalClassName: PropTypes.string,
+  overlayClassName: PropTypes.string,
+  className: PropTypes.string
 };
 
 Modal.defaultProps = {
   title: null,
+  ariaLabel: null,
   buttonAlignment: "left",
   primaryButton: null,
   secondaryButtons: null,
@@ -224,7 +259,14 @@ Modal.defaultProps = {
   onRequestClose: null,
   onAfterOpen: null,
   isOpen: true,
-  maxWidth: "624px"
+  shouldFocusAfterRender: true,
+  shouldReturnFocusAfterClose: true,
+  ariaLabelledBy: null,
+  ariaDescribedBy: null,
+  maxWidth: "624px",
+  portalClassName: "",
+  overlayClassName: "",
+  className: ""
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
