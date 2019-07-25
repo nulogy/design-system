@@ -14,14 +14,14 @@ const StyledButton = styled.button({
   lineHeight: theme.lineHeights.base,
   width: "100%",
   padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
-  "&:hover, &:focus": {
-    outline: "none",
+  "&:hover": {
     backgroundColor: theme.colors.lightGrey
   },
   "&:disabled": {
     opacity: ".5"
   },
   "&:focus": {
+    outline: "none",
     boxShadow: theme.shadows.focus
   },
   border: "none",
