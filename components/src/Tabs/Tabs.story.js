@@ -20,12 +20,12 @@ storiesOf("Tabs", module)
     </Tabs>
   ))
   .add("with all tab states", () => (
-    <Tabs>
+    <div>
       <Tab>Tab</Tab>
       <Tab selected>Tab</Tab>
       <Tab disabled>Tab</Tab>
       <Tab disabled selected>
         Tab
       </Tab>
-    </Tabs>
+    </div>
   ));

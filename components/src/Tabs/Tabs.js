@@ -26,11 +26,13 @@ class Tabs extends React.Component {
 
     return (
       <div>
-        {React.Children.map(children, (child, index) =>
-          React.cloneElement(child, {
-            onClick: () => {
-              this.handleTabClick(index);
-            },
+        {React.Children.map(children, (tab, index) =>
+          React.cloneElement(tab, {
+            onClick: this.props.selectedIndex
+              ? tab.props.onClick
+              : () => {
+                  this.handleTabClick(index);
+                },
             index: index,
             selected: index === selectedIndex ? true : false
           })
