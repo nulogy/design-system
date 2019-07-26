@@ -46,7 +46,8 @@ const getBarStyles = (selected, disabled) => {
   }
 };
 
-const Tab = styled.button(({ selected, disabled }) => ({
+const Tab = styled.button(({ selected, disabled, fullWidth }) => ({
+  width: fullWidth ? "100%" : undefined,
   fontWeight: theme.fontWeights.medium,
   textDecoration: "none",
   fontSize: theme.fontSizes.medium,

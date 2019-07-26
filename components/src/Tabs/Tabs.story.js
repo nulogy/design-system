@@ -11,6 +11,14 @@ storiesOf("Tabs", module)
       <Tab>Tab 4</Tab>
     </Tabs>
   ))
+  .add("set to fitted", () => (
+    <Tabs fitted>
+      <Tab>Tab 1</Tab>
+      <Tab>Tab 2</Tab>
+      <Tab>Tab 3</Tab>
+      <Tab>Tab 4</Tab>
+    </Tabs>
+  ))
   .add("with a selectedIndex", () => (
     <Tabs selectedIndex={1}>
       <Tab>Tab 1</Tab>

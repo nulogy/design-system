@@ -4,6 +4,7 @@ import theme from "../theme";
 import React from "react";
 
 const TabContainer = styled.div({
+  display: "flex",
   whiteSpace: "nowrap",
   overflowX: "scroll",
   position: "relative",
@@ -37,7 +38,7 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, fitted } = this.props;
     const { selectedIndex } = this.state;
 
     return (
@@ -50,7 +51,8 @@ class Tabs extends React.Component {
                   this.handleTabClick(index);
                 },
             index: index,
-            selected: index === selectedIndex ? true : false
+            selected: index === selectedIndex ? true : false,
+            fullWidth: fitted
           })
         )}
       </TabContainer>
