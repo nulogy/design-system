@@ -178,7 +178,6 @@ const Modal = ({
   shouldFocusAfterRender,
   shouldReturnFocusAfterClose,
   ariaLabel,
-  ariaLabelledBy,
   ariaDescribedBy,
   portalClassName,
   overlayClassName,
@@ -202,8 +201,8 @@ const Modal = ({
       labelledby: title ? "modal-title" : undefined,
       describedby: ariaDescribedBy
     }}
-    shouldCloseOnOverlayClick={true}
-    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick
+    shouldCloseOnEsc
     style={{
       overlay: overlayStyle
     }}
