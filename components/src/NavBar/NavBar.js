@@ -51,6 +51,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
   <header {...props}>
     <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
       <Link
+        aria-label="Nulogy logo"
         underline={false}
         style={{ display: "block", height: subtext ? "56px" : "40px" }}
         my={subtext ? "-8px" : null}
@@ -67,7 +68,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
           <DesktopMenu
             themeColorObject={getThemeColor(themeColor)}
             style={{ paddingRight: theme.space.x3 }}
-            aria-labelledby="primary-navigation"
+            aria-label="Primary navigation"
             menuData={menuData.primaryMenu}
           />
         )}
@@ -80,7 +81,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
           {menuData.secondaryMenu && (
             <DesktopMenu
               themeColorObject={getThemeColor(themeColor)}
-              aria-labelledby="secondary-navigation"
+              aria-label="Secondary navigation"
               menuData={menuData.secondaryMenu}
             />
           )}
@@ -169,6 +170,7 @@ class SmallNavBarNoState extends React.Component {
         <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
           <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
             <Link
+              aria-label="Nulogy logo"
               style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
               my={subtext && !smallScreen ? "-8px" : null}
               underline={false}
