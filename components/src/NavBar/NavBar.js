@@ -13,6 +13,7 @@ import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { PreventBodyElementScrolling, subPx, withWindowDimensions, withMenuState } from "../utils";
+import ReactResizeDetector from "react-resize-detector";
 
 const themeColors = {
   blue: {
@@ -124,7 +125,7 @@ const SmallHeader = styled.header(({ isOpen }) =>
         position: "fixed",
         width: "100%",
         height: "100%",
-        zIndex: theme.zIndex.content,
+        zIndex: theme.zIndex.overlay,
         overflow: "scroll",
         top: "0",
         left: "0",
@@ -149,9 +150,9 @@ class SmallNavBarNoState extends React.Component {
     const {
       menuData,
       menuState: { isOpen, toggleMenu, closeMenu },
-      windowWidth,
+      width,
       breakpointLower,
-      smallScreen = windowWidth < parseInt(breakpointLower, 10),
+      smallScreen = width < parseInt(breakpointLower, 10),
       subtext,
       brandingLinkHref,
       themeColor,
@@ -217,7 +218,7 @@ SmallNavBarNoState.propTypes = {
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  windowWidth: PropTypes.number,
+  width: PropTypes.number,
   smallScreen: PropTypes.bool,
   themeColor: PropTypes.oneOf(["blue", "white"])
 };
@@ -227,21 +228,25 @@ SmallNavBarNoState.defaultProps = {
   subtext: null,
   brandingLinkHref: "/",
   breakpointLower: theme.breakpoints.small,
-  windowWidth: undefined,
+  width: undefined,
   smallScreen: undefined,
   themeColor: undefined
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const BaseNavBar = withWindowDimensions(
-  ({ menuData, breakpointUpper, windowDimensions: { windowWidth }, ...props }) => {
-    if (windowWidth >= parseInt(breakpointUpper, 10)) {
-      return <MediumNavBar {...props} menuData={menuData} />;
-    } else {
-      return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} />;
-    }
+const SelectNavBarBasedOnWidth = ({ width, breakpointUpper, ...props }) => {
+  if (width >= parseInt(breakpointUpper, 10)) {
+    return <MediumNavBar {...props} />;
+  } else {
+    return <SmallNavBar {...props} width={width} />;
   }
+};
+
+const BaseNavBar = props => (
+  <ReactResizeDetector handleWidth>
+    <SelectNavBarBasedOnWidth {...props} />
+  </ReactResizeDetector>
 );
 
 BaseNavBar.propTypes = {
