@@ -27,6 +27,7 @@ export { Textarea } from "./Textarea";
 export { Tooltip } from "./Tooltip";
 export { Card, CardSet, CPCard } from "./Card";
 export { Modal } from "./Modal";
+export { Tab, Tabs } from "./Tabs";
 
 export { DemoPage } from "./DemoPage";
 
