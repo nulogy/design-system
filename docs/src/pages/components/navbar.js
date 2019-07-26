@@ -14,6 +14,7 @@ import {
   ListItem,
   Text
 } from "@nulogy/components";
+import { theme } from "@nulogy/components/src";
 import {
   Layout,
   Intro,
@@ -22,7 +23,6 @@ import {
   PropsTable,
   KeyTable
 } from "../../components";
-import { theme } from "@nulogy/components/src";
 
 const primaryMenu = [
   {
