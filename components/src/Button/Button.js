@@ -74,7 +74,7 @@ const Button = styled(BaseButton)(
     cursor: disabled ? "default" : "pointer",
     color: theme.colors.blue,
     backgroundColor: theme.colors.white,
-    border: `1px solid ${theme.colors.darkBlue}`,
+    border: `1px solid ${theme.colors.blue}`,
     borderRadius: theme.radii.medium,
     width: fullWidth ? "100%" : "auto",
     margin: theme.space.none,
