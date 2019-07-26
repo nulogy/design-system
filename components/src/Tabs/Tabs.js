@@ -15,8 +15,9 @@ class Tabs extends React.Component {
   }
 
   handleTabClick(index) {
-    console.log("click");
-    console.log(index);
+    this.setState({
+      selectedIndex: index
+    });
   }
 
   render() {
