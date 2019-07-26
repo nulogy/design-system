@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added Accessibility tab to storybook
+
 ### Changed
 
 - Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
@@ -20,8 +22,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - NavBar bug fixes
+
   - Fixes inconsistent focus styling in submenu triggers
   - Fixes inability to tell which submenu is open
+
+- Fixed minor markup issues in `Alert`, `RadioGroup`, `CheckboxGroup`, `NavBar`, `DropDownMenu`, `Toggle` and `Form without title`
 
 ### Security
 
