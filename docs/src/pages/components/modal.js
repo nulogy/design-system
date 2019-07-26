@@ -538,7 +538,7 @@ class ModalExample extends React.Component {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/">
+          <Link href="https://storybook.nulogy.design/?path=/story/modal--modal">
             View in Storybook
           </Link>
         </ListItem>

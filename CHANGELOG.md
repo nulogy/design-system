@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added Accessibility tab to storybook
+- Added [Modal](https://nulogy.design/components/modal/) component
 
 ### Changed
 
