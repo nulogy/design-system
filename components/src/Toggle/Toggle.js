@@ -75,7 +75,7 @@ class BaseToggle extends React.Component {
     return (
       <Field className={className}>
         <MaybeToggleTitle
-          id={`${labelText}-label`}
+          id={labelText && `${labelText}-label`}
           labelText={labelText}
           requirementText={requirementText}
           helpText={helpText}
@@ -95,7 +95,7 @@ class BaseToggle extends React.Component {
               required={required}
               aria-required={required}
               aria-invalid={error}
-              aria-labelledby={`${labelText}-label`}
+              aria-labelledby={labelText && `${labelText}-label`}
               onClick={e => {
                 this.handleClick(e);
               }}

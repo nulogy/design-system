@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Box } from "../Box";
 import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
+import theme from "../theme";
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
@@ -30,17 +30,17 @@ const getRadioButtons = props => {
 const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
   const otherProps = { ...props, errorMessage, errorList };
   return (
-    <Fieldset role="radiogroup" className={className} hasHelpText={!!helpText}>
-      <Box mb="x1">
-        <legend>
+    <div role="radiogroup">
+      <Fieldset className={className} hasHelpText={!!helpText}>
+        <legend style={{ marginBottom: theme.space.x1 }}>
           {labelText}
           {requirementText && <RequirementText>{requirementText}</RequirementText>}
         </legend>
         {helpText && <HelpText>{helpText}</HelpText>}
-      </Box>
-      {getRadioButtons(otherProps)}
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-    </Fieldset>
+        {getRadioButtons(otherProps)}
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      </Fieldset>
+    </div>
   );
 };
 

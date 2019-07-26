@@ -61,7 +61,7 @@ class BaseAlert extends React.Component {
         </Box>
         {isCloseable && (
           <Box>
-            <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert}>
+            <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert} aria-label="Close">
               <Icon icon="close" size="16" />
             </Link>
           </Box>

@@ -11,7 +11,7 @@ import theme from "../theme";
 
 const BaseForm = ({ title, children, ...props }) => (
   <form {...props}>
-    <SectionTitle>{title}</SectionTitle>
+    {title && <SectionTitle>{title}</SectionTitle>}
     {children}
   </form>
 );
