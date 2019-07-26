@@ -3,6 +3,22 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import React from "react";
 
+const TabContainer = styled.div({
+  whiteSpace: "nowrap",
+  overflowX: "scroll",
+  position: "relative",
+  "&:before": {
+    content: "''",
+    backgroundColor: theme.colors.grey,
+    height: "1px",
+    display: "block",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0
+  }
+});
+
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +41,7 @@ class Tabs extends React.Component {
     const { selectedIndex } = this.state;
 
     return (
-      <div>
+      <TabContainer>
         {React.Children.map(children, (tab, index) =>
           React.cloneElement(tab, {
             onClick: this.props.selectedIndex
@@ -37,7 +53,7 @@ class Tabs extends React.Component {
             selected: index === selectedIndex ? true : false
           })
         )}
-      </div>
+      </TabContainer>
     );
   }
 }
