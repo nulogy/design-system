@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- [Button](https://nulogy.design/components/buttons/) now uses the proper border colour (`blue`)
+
 - NavBar bug fixes
 
   - Fixes inconsistent focus styling in submenu triggers
