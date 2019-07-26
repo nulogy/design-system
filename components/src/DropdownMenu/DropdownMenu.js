@@ -61,14 +61,15 @@ class StatelessDropdownMenu extends React.Component {
             React.cloneElement(
               trigger({
                 closeMenu,
-                openMenu
+                openMenu,
+                isOpen
               }),
               {
                 "aria-haspopup": true,
                 "aria-expanded": isOpen,
                 type: "button",
                 disabled: disabled ? true : null,
-                "aria-label": this.state.open ? "Close menu" : "Open menu",
+                "aria-label": isOpen ? "Close menu" : "Open menu",
                 ...this.menuTriggerEventHandlers(),
                 ref: node => {
                   ref(node);
