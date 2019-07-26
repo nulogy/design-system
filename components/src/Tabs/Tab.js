@@ -2,42 +2,45 @@ import styled from "styled-components";
 import theme from "../theme";
 import React from "react";
 
-const selectedBarStyles = {
-  content: "''",
-  backgroundColor: theme.colors.darkBlue,
-  height: "3px",
-  display: "block",
-  position: "absolute",
-  bottom: 0,
-  left: 0,
-  right: 0,
-  borderRadius: "2px 2px 0 0"
+const barStyles = {
+  expanded: {
+    content: "''",
+    backgroundColor: theme.colors.darkBlue,
+    height: "3px",
+    display: "block",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderRadius: "2px 2px 0 0"
+  },
+  default: {
+    content: "''",
+    backgroundColor: theme.colors.grey,
+    height: "1px",
+    display: "block",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0
+  }
 };
 
 const getBarStyles = (selected, disabled) => {
   if (selected) {
     return {
-      "&:before": selectedBarStyles
+      "&:before": barStyles.expanded
     };
   } else {
     return {
-      "&:before": {
-        content: "''",
-        backgroundColor: theme.colors.grey,
-        height: "1px",
-        display: "block",
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0
-      },
+      "&:before": barStyles.default,
       "&:hover": {
-        "&:before": disabled
-          ? {}
-          : {
-              ...selectedBarStyles,
+        "&:before": !disabled
+          ? {
+              ...barStyles.expanded,
               backgroundColor: theme.colors.lightBlue
             }
+          : null
       }
     };
   }
