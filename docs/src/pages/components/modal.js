@@ -524,6 +524,14 @@ class ModalExample extends React.Component {
 
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/components/form">Form</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/buttons">Buttons</Link>
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>
