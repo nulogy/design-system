@@ -7,7 +7,7 @@ import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
 import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
-import { LockBodyScroll } from "../utils";
+import { PreventBodyElementScrolling } from "../utils";
 
 const getPrimaryButtonComponent = type => {
   if (type === "informative") {
@@ -209,29 +209,30 @@ const Modal = ({
     appElement={appElement}
     ariaHideApp={ariaHideApp}
   >
-    {isOpen && <LockBodyScroll />}
-    {modalHasHeader(onRequestClose, title) && (
-      <ModalHeader hasCloseButton={onRequestClose}>
-        {title ? (
-          <SectionTitle id="modal-title" mb="none">
-            {title}
-          </SectionTitle>
-        ) : (
-          <div style={{ height: theme.space.x4 }} />
-        )}
-        {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
-      </ModalHeader>
-    )}
-    <ModalContent>
-      <InnerModalContent>{children}</InnerModalContent>
-    </ModalContent>
-    {modalHasFooter(primaryButton, secondaryButtons) && (
-      <ModalFooter>
-        <ButtonSet alignment={buttonAlignment}>
-          {getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
-        </ButtonSet>
-      </ModalFooter>
-    )}
+    <PreventBodyElementScrolling>
+      {modalHasHeader(onRequestClose, title) && (
+        <ModalHeader hasCloseButton={onRequestClose}>
+          {title ? (
+            <SectionTitle id="modal-title" mb="none">
+              {title}
+            </SectionTitle>
+          ) : (
+            <div style={{ height: theme.space.x4 }} />
+          )}
+          {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
+        </ModalHeader>
+      )}
+      <ModalContent>
+        <InnerModalContent>{children}</InnerModalContent>
+      </ModalContent>
+      {modalHasFooter(primaryButton, secondaryButtons) && (
+        <ModalFooter>
+          <ButtonSet alignment={buttonAlignment}>
+            {getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
+          </ButtonSet>
+        </ModalFooter>
+      )}
+    </PreventBodyElementScrolling>
   </StyledReactModal>
 );
 

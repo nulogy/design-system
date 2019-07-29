@@ -7,4 +7,4 @@ export { default as DetectOutsideClick } from "./DetectOutsideClick";
 export { default as PopperArrow } from "./PopperArrow";
 export { default as ScrollIndicators } from "./ScrollIndicators";
 export { default as withMenuState } from "./withMenuState";
-export { default as LockBodyScroll } from "./LockBodyScroll";
+export { default as PreventBodyElementScrolling } from "./PreventBodyElementScrolling";

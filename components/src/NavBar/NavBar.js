@@ -12,7 +12,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { LockBodyScroll, subPx, withWindowDimensions, withMenuState } from "../utils";
+import { PreventBodyElementScrolling, subPx, withWindowDimensions, withMenuState } from "../utils";
 
 const themeColors = {
   blue: {
@@ -158,43 +158,40 @@ class SmallNavBarNoState extends React.Component {
       ...props
     } = this.props;
     return (
-      <>
-        {isOpen && <LockBodyScroll />}
-        <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-          <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
-            <Link
-              aria-label="Nulogy logo"
-              style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
-              my={subtext && !smallScreen ? "-8px" : null}
-              underline={false}
-              href={brandingLinkHref}
-            >
-              <Branding
-                logoColor={getThemeColor(themeColor).logoColor}
-                logoType={smallScreen ? "lettermark" : "wordmark"}
-                subtext={smallScreen ? null : subtext}
-              />
-            </Link>
-            <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
-              {menuData.search && (
-                <Flex maxWidth="18em" alignItems="center" px="0">
-                  <NavBarSearch {...menuData.search} />
-                </Flex>
-              )}
-              {(menuData.primaryMenu || menuData.secondaryMenu) && (
-                <MobileMenuTrigger
-                  {...getThemeColor(themeColor)}
-                  onClick={() => {
-                    toggleMenu();
-                  }}
-                  aria-expanded={isOpen ? true : null}
-                >
-                  {isOpen ? <Icon icon="close" title="Close Menu" /> : <Icon icon="menu" title="Open Menu" />}
-                </MobileMenuTrigger>
-              )}
-            </Flex>
-          </NavBarBackground>
-          {isOpen && (
+      <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
+        <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+          <Link
+            aria-label="Nulogy logo"
+            style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
+            my={subtext && !smallScreen ? "-8px" : null}
+            underline={false}
+            href={brandingLinkHref}
+          >
+            <Branding
+              logoColor={getThemeColor(themeColor).logoColor}
+              logoType={smallScreen ? "lettermark" : "wordmark"}
+              subtext={smallScreen ? null : subtext}
+            />
+          </Link>
+          <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
+            {menuData.search && (
+              <Flex maxWidth="18em" alignItems="center" px="0">
+                <NavBarSearch {...menuData.search} />
+              </Flex>
+            )}
+            {(menuData.primaryMenu || menuData.secondaryMenu) && (
+              <MobileMenuTrigger
+                {...getThemeColor(themeColor)}
+                onClick={toggleMenu}
+                aria-expanded={isOpen ? true : null}
+              >
+                {isOpen ? <Icon icon="close" title="Close Menu" /> : <Icon icon="menu" title="Open Menu" />}
+              </MobileMenuTrigger>
+            )}
+          </Flex>
+        </NavBarBackground>
+        {isOpen && (
+          <PreventBodyElementScrolling>
             <MobileMenu
               themeColorObject={getThemeColor(themeColor)}
               subtext={subtext}
@@ -202,9 +199,9 @@ class SmallNavBarNoState extends React.Component {
               menuData={menuData}
               closeMenu={closeMenu}
             />
-          )}
-        </SmallHeader>
-      </>
+          </PreventBodyElementScrolling>
+        )}
+      </SmallHeader>
     );
   }
 }
