@@ -317,11 +317,15 @@ class ModalExample extends React.Component {
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Form</SubsectionTitle>
-        <Text>
+        <Text mb="x2">
           The form variant of the modal should be used whenever a user is inputs
           data into a modal. The important differences in this variant is to set
           a more appropriate maxWidth than the default modal. 456px is
           recommended for most basic forms.
+        </Text>
+        <Text mb="x2">
+          Note that the form attribute on the button as used in this example is
+          not supported in IE11.
         </Text>
         <ModalStateWrapper>
           {({ isOpen, closeModal }) => (
