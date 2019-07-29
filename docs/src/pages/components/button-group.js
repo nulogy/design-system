@@ -29,10 +29,11 @@ import {
 
 const propsRows = [
   {
-    name: "",
-    type: "",
-    defaultValue: "",
-    description: ""
+    name: "alignment",
+    type: "String",
+    defaultValue: "left",
+    description:
+      "Aligns the buttons within the group. One of left, spaced, or right."
   }
 ];
 
