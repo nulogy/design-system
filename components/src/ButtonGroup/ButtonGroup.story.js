@@ -15,9 +15,9 @@ storiesOf("ButtonGroup", module)
   .add("with alignment right", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
       <ButtonGroup alignment="right">
-        <Button>Button</Button>
-        <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
+        <Button>Button</Button>
+        <Button>Button</Button>
       </ButtonGroup>
     </Box>
   ))

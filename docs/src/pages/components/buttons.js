@@ -192,12 +192,20 @@ export default () => (
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
       <List>
-        <ListItem>Always lead with an actionable verb</ListItem>
+        <ListItem>Always lead with an actionable verb.</ListItem>
         <ListItem>
           Whenever possible follow with a clear noun{" "}
-          <em>(e.g: Create shipment, Approve delivery.)</em>
+          <em>(e.g: Create shipment, Approve delivery).</em>
         </ListItem>
-        <ListItem>Always use sentence case</ListItem>
+        <ListItem>Always use sentence case.</ListItem>
+        <ListItem>
+          Order buttons in a set from most important on the left to least
+          important on the right.
+        </ListItem>
+        <ListItem>
+          Do not include more than one PrimaryButton or DangerButton on a page
+          at once.
+        </ListItem>
       </List>
     </DocSection>
 
@@ -218,6 +226,9 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
+        <ListItem>
+          <Link href="/components/button-group">Button Group</Link>
+        </ListItem>
         <ListItem>
           <Link href="/components/iconic-button">Iconic button</Link>
         </ListItem>

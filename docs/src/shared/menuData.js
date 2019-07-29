@@ -40,6 +40,10 @@ export const menuData = [
         href: "/components/buttons"
       },
       {
+        name: "Button Group",
+        href: "/components/button-group"
+      },
+      {
         name: "Card",
         href: "/components/card"
       },
