@@ -46,7 +46,7 @@ const KeyTable = ({ keyRows }) => (
     </Header>
     <tbody>
       {keyRows.map(({ name, type, description }) => (
-        <tr>
+        <tr key={name}>
           <Column>{name}</Column>
           <Column>{type}</Column>
           <Column>{description}</Column>
@@ -57,11 +57,13 @@ const KeyTable = ({ keyRows }) => (
 );
 
 KeyTable.propTypes = {
-  keyRows: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    description: PropTypes.string
-  }).isRequired
+  keyRows: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      type: PropTypes.string,
+      description: PropTypes.string
+    })
+  ).isRequired
 };
 
 export default KeyTable;

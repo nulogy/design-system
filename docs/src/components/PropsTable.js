@@ -48,7 +48,7 @@ const PropsTable = ({ propsRows }) => (
     </Header>
     <tbody>
       {propsRows.map(({ name, type, defaultValue, description }) => (
-        <tr>
+        <tr key={name}>
           <Column>{name}</Column>
           <Column>{type}</Column>
           <Column>{defaultValue}</Column>
@@ -60,12 +60,14 @@ const PropsTable = ({ propsRows }) => (
 );
 
 PropsTable.propTypes = {
-  propsRows: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    defaultValue: PropTypes.string,
-    description: PropTypes.string
-  }).isRequired
+  propsRows: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      type: PropTypes.string,
+      defaultValue: PropTypes.string,
+      description: PropTypes.string
+    })
+  ).isRequired
 };
 
 export default PropsTable;
