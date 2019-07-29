@@ -30,7 +30,7 @@ const getAlignment = alignment => alignments[alignment] || alignments.right;
 
 const getButtonSpacing = alignment => buttonSpacings[alignment] || buttonSpacings.right;
 
-const ButtonSet = styled.div(({ alignment }) => ({
+const ButtonGroup = styled.div(({ alignment }) => ({
   display: "flex",
   flexWrap: "wrap",
   marginBottom: `-${theme.space.x1}`,
@@ -41,12 +41,12 @@ const ButtonSet = styled.div(({ alignment }) => ({
   ...getButtonSpacing(alignment)
 }));
 
-ButtonSet.propTypes = {
+ButtonGroup.propTypes = {
   alignment: PropTypes.oneOf(["left", "spaced", "right"])
 };
 
-ButtonSet.defaultProps = {
+ButtonGroup.defaultProps = {
   alignment: "right"
 };
 
-export default ButtonSet;
+export default ButtonGroup;

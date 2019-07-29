@@ -1,44 +1,44 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Box, ButtonSet, Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "../index";
+import { Box, ButtonGroup, Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "../index";
 
-storiesOf("ButtonSet", module)
-  .add("ButtonSet", () => (
+storiesOf("ButtonGroup", module)
+  .add("ButtonGroup", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
-      <ButtonSet>
+      <ButtonGroup>
         <Button>Button</Button>
         <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
-      </ButtonSet>
+      </ButtonGroup>
     </Box>
   ))
   .add("with alignment left", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
-      <ButtonSet alignment="left">
+      <ButtonGroup alignment="left">
         <PrimaryButton>Button</PrimaryButton>
         <Button>Button</Button>
         <Button>Button</Button>
-      </ButtonSet>
+      </ButtonGroup>
     </Box>
   ))
   .add("with alignment spaced", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
-      <ButtonSet alignment="spaced">
+      <ButtonGroup alignment="spaced">
         <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
-      </ButtonSet>
+      </ButtonGroup>
     </Box>
   ))
   .add("more button types", () => (
     <Box bg="whiteGrey" p="x2" width="600px">
-      <ButtonSet>
+      <ButtonGroup>
         <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
         <DangerButton>Button</DangerButton>
         <QuietButton>Button</QuietButton>
         <IconicButton icon="menu" />
         <IconicButton icon="menu">Button</IconicButton>
-      </ButtonSet>
+      </ButtonGroup>
     </Box>
   ))
   .add(
@@ -46,7 +46,7 @@ storiesOf("ButtonSet", module)
     () => (
       <>
         <Box bg="whiteGrey" p="x2">
-          <ButtonSet>
+          <ButtonGroup>
             <Button>Button</Button>
             <Button>Button</Button>
             <Button>Button</Button>
@@ -57,10 +57,10 @@ storiesOf("ButtonSet", module)
             <Button>Button</Button>
             <Button>Button</Button>
             <Button>Button</Button>
-          </ButtonSet>
+          </ButtonGroup>
         </Box>
         <Box bg="whiteGrey" p="x2" mt="x2">
-          <ButtonSet alignment="left">
+          <ButtonGroup alignment="left">
             <Button>Button</Button>
             <Button>Button</Button>
             <Button>Button</Button>
@@ -71,7 +71,7 @@ storiesOf("ButtonSet", module)
             <Button>Button</Button>
             <Button>Button</Button>
             <Button>Button</Button>
-          </ButtonSet>
+          </ButtonGroup>
         </Box>
       </>
     ),

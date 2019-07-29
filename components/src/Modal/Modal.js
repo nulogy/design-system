@@ -5,7 +5,7 @@ import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
 import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
-import { ButtonSet } from "../ButtonSet";
+import { ButtonGroup } from "../ButtonGroup";
 import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
@@ -243,9 +243,9 @@ class Modal extends React.Component {
           <ModalContent>{children}</ModalContent>
           {this.modalHasFooter(primaryButton, secondaryButtons) && (
             <ModalFooter>
-              <ButtonSet alignment={buttonAlignment}>
+              <ButtonGroup alignment={buttonAlignment}>
                 {this.getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
-              </ButtonSet>
+              </ButtonGroup>
             </ModalFooter>
           )}
         </PreventBodyElementScrolling>
