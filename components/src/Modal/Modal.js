@@ -121,11 +121,9 @@ const overlayStyle = {
 };
 
 class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  getPrimaryButtonComponent() {
+    const { type } = this.props;
 
-  getPrimaryButtonComponent(type) {
     if (type === "informative") {
       return PrimaryButton;
     } else if (type === "danger") {
@@ -135,47 +133,54 @@ class Modal extends React.Component {
     }
   }
 
-  getPrimaryButton(button, type) {
+  getPrimaryButton() {
+    const { primaryButton, type } = this.props;
     const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
 
-    return <PrimaryButtonComponent {...button}>{button.label}</PrimaryButtonComponent>;
+    return <PrimaryButtonComponent {...primaryButton}>{primaryButton.label}</PrimaryButtonComponent>;
   }
 
-  getSecondaryButtons(buttons) {
-    if (!Array.isArray(buttons)) {
+  getSecondaryButtons() {
+    const { secondaryButtons } = this.props;
+
+    if (!Array.isArray(secondaryButtons)) {
       return null;
     }
 
-    return buttons.map(button => (
+    return secondaryButtons.map(button => (
       <Button {...button} key={button.label}>
         {button.label}
       </Button>
     ));
   }
 
-  getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type) {
+  getModalButtons() {
+    const { buttonAlignment } = this.props;
+
     if (buttonAlignment === "spaced") {
       return (
         <React.Fragment>
-          {this.getSecondaryButtons(secondaryButtons)}
-          {this.getPrimaryButton(primaryButton, type)}
+          {this.getSecondaryButtons()}
+          {this.getPrimaryButton()}
         </React.Fragment>
       );
     } else {
       return (
         <React.Fragment>
-          {this.getPrimaryButton(primaryButton, type)}
-          {this.getSecondaryButtons(secondaryButtons)}
+          {this.getPrimaryButton()}
+          {this.getSecondaryButtons()}
         </React.Fragment>
       );
     }
   }
 
-  modalHasHeader(onRequestClose, title) {
+  modalHasHeader() {
+    const { onRequestClose, title } = this.props;
     return onRequestClose || title;
   }
 
-  modalHasFooter(primaryButton, secondaryButtons) {
+  modalHasFooter() {
+    const { primaryButton, secondaryButtons } = this.props;
     return primaryButton || secondaryButtons;
   }
 
