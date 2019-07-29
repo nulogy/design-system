@@ -227,7 +227,6 @@ class ModalExample extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   openModal() {
@@ -318,6 +317,12 @@ class ModalExample extends React.Component {
       </Box>
       <Box mb="x6">
         <SubsectionTitle>Form</SubsectionTitle>
+        <Text>
+          The form variant of the modal should be used whenever a user is inputs
+          data into a modal. The important differences in this variant is to set
+          a more appropriate maxWidth than the default modal. 456px is
+          recommended for most basic forms.
+        </Text>
         <ModalStateWrapper>
           {({ isOpen, closeModal }) => (
             <Modal
@@ -489,21 +494,31 @@ class ModalExample extends React.Component {
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Dos and Donts</SectionTitle>
+      <SectionTitle>Closing the Modal</SectionTitle>
+      <Text mb="x2">
+        To close the modal using the built-in methods, the prop onRequestClose
+        must be passed in. This prop should be the function that closes the
+        modal. By providing this prop all three methods of closing the modal are
+        enabled together: the close button, clicking outside the modal, and
+        pressing the escape key. If you do not provide the onRequestClose prop,
+        ensure that the there is another way to close the modal, for example a
+        cancel button.{" "}
+      </Text>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Accessibility guidelines</SectionTitle>
-      <Text>
+      <Text mb="x2">
         In order to hide the rest of the application to screen-readers when the
         modal is open, make sure to use `Modal.setAppElement(el)` where el is
-        the root element of the app.
+        the root element of the app. This will set the aria-hidden attribute to
+        true when the moda is open.
       </Text>
       <Text>
         When there is no visible label on the Modal (ie. title prop), you should
         use the ariaLabel prop to provide a modal label. The aria-labelledby
         attribute is automatically applied if the title prop is specified. If
-        the modal requires additional description for screen-readers, us the
+        the modal requires additional description for screen-readers, use the
         ariaDescribedBy prop.
       </Text>
     </DocSection>
