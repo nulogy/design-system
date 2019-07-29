@@ -9,51 +9,6 @@ import { ButtonSet } from "../ButtonSet";
 import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
-const getPrimaryButtonComponent = type => {
-  if (type === "informative") {
-    return PrimaryButton;
-  } else if (type === "danger") {
-    return DangerButton;
-  } else {
-    return Button;
-  }
-};
-
-const getPrimaryButton = (button, type) => {
-  const PrimaryButtonComponent = getPrimaryButtonComponent(type);
-
-  return <PrimaryButtonComponent {...button}>{button.label}</PrimaryButtonComponent>;
-};
-
-const getSecondaryButtons = buttons => {
-  if (!Array.isArray(buttons)) {
-    return null;
-  }
-
-  return buttons.map(button => (
-    <Button {...button} key={button.label}>
-      {button.label}
-    </Button>
-  ));
-};
-
-const getModalButtons = (primaryButton, secondaryButtons, buttonAlignment, type) =>
-  buttonAlignment === "spaced" ? (
-    <React.Fragment>
-      {getSecondaryButtons(secondaryButtons)}
-      {getPrimaryButton(primaryButton, type)}
-    </React.Fragment>
-  ) : (
-    <React.Fragment>
-      {getPrimaryButton(primaryButton, type)}
-      {getSecondaryButtons(secondaryButtons)}
-    </React.Fragment>
-  );
-
-const modalHasHeader = (onRequestClose, title) => onRequestClose || title;
-
-const modalHasFooter = (primaryButton, secondaryButtons) => primaryButton || secondaryButtons;
-
 const ModalContent = styled.div({
   marginTop: "-64px",
   marginBottom: "-80px",
@@ -165,76 +120,139 @@ const overlayStyle = {
   zIndex: theme.zIndex.overlay
 };
 
-const Modal = ({
-  isOpen,
-  children,
-  title,
-  primaryButton,
-  secondaryButtons,
-  type,
-  onRequestClose,
-  onAfterOpen,
-  buttonAlignment,
-  shouldFocusAfterRender,
-  shouldReturnFocusAfterClose,
-  ariaLabel,
-  ariaDescribedBy,
-  portalClassName,
-  overlayClassName,
-  className,
-  maxWidth,
-  appElement,
-  ariaHideApp
-}) => (
-  <StyledReactModal
-    maxWidth={maxWidth}
-    contentLabel={ariaLabel}
-    onRequestClose={onRequestClose}
-    onAfterOpen={onAfterOpen}
-    shouldFocusAfterRender={shouldFocusAfterRender}
-    shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
-    isOpen={isOpen}
-    portalClassName={portalClassName}
-    overlayClassName={overlayClassName}
-    className={className}
-    aria={{
-      labelledby: title ? "modal-title" : undefined,
-      describedby: ariaDescribedBy
-    }}
-    shouldCloseOnOverlayClick
-    shouldCloseOnEsc
-    style={{
-      overlay: overlayStyle
-    }}
-    appElement={appElement}
-    ariaHideApp={ariaHideApp}
-  >
-    <PreventBodyElementScrolling>
-      {modalHasHeader(onRequestClose, title) && (
-        <ModalHeader hasCloseButton={onRequestClose}>
-          {title ? (
-            <SectionTitle id="modal-title" mb="none">
-              {title}
-            </SectionTitle>
-          ) : (
-            <div style={{ height: theme.space.x4 }} />
+class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  getPrimaryButtonComponent(type) {
+    if (type === "informative") {
+      return PrimaryButton;
+    } else if (type === "danger") {
+      return DangerButton;
+    } else {
+      return Button;
+    }
+  }
+
+  getPrimaryButton(button, type) {
+    const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
+
+    return <PrimaryButtonComponent {...button}>{button.label}</PrimaryButtonComponent>;
+  }
+
+  getSecondaryButtons(buttons) {
+    if (!Array.isArray(buttons)) {
+      return null;
+    }
+
+    return buttons.map(button => (
+      <Button {...button} key={button.label}>
+        {button.label}
+      </Button>
+    ));
+  }
+
+  getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type) {
+    if (buttonAlignment === "spaced") {
+      return (
+        <React.Fragment>
+          {this.getSecondaryButtons(secondaryButtons)}
+          {this.getPrimaryButton(primaryButton, type)}
+        </React.Fragment>
+      );
+    } else {
+      return (
+        <React.Fragment>
+          {this.getPrimaryButton(primaryButton, type)}
+          {this.getSecondaryButtons(secondaryButtons)}
+        </React.Fragment>
+      );
+    }
+  }
+
+  modalHasHeader(onRequestClose, title) {
+    return onRequestClose || title;
+  }
+
+  modalHasFooter(primaryButton, secondaryButtons) {
+    return primaryButton || secondaryButtons;
+  }
+
+  render() {
+    const {
+      isOpen,
+      children,
+      title,
+      primaryButton,
+      secondaryButtons,
+      type,
+      onRequestClose,
+      onAfterOpen,
+      buttonAlignment,
+      shouldFocusAfterRender,
+      shouldReturnFocusAfterClose,
+      ariaLabel,
+      ariaDescribedBy,
+      portalClassName,
+      overlayClassName,
+      className,
+      maxWidth,
+      appElement,
+      ariaHideApp
+    } = this.props;
+    return (
+      <StyledReactModal
+        maxWidth={maxWidth}
+        contentLabel={ariaLabel}
+        onRequestClose={onRequestClose}
+        onAfterOpen={onAfterOpen}
+        shouldFocusAfterRender={shouldFocusAfterRender}
+        shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
+        isOpen={isOpen}
+        portalClassName={portalClassName}
+        overlayClassName={overlayClassName}
+        className={className}
+        aria={{
+          labelledby: title ? "modal-title" : undefined,
+          describedby: ariaDescribedBy
+        }}
+        shouldCloseOnOverlayClick
+        shouldCloseOnEsc
+        style={{
+          overlay: overlayStyle
+        }}
+        appElement={appElement}
+        ariaHideApp={ariaHideApp}
+      >
+        <PreventBodyElementScrolling>
+          {this.modalHasHeader(onRequestClose, title) && (
+            <ModalHeader hasCloseButton={onRequestClose}>
+              {title ? (
+                <SectionTitle id="modal-title" mb="none">
+                  {title}
+                </SectionTitle>
+              ) : (
+                <div style={{ height: theme.space.x4 }} />
+              )}
+              {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
+            </ModalHeader>
           )}
-          {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
-        </ModalHeader>
-      )}
-      <ModalContent>
-        <InnerModalContent>{children}</InnerModalContent>
-      </ModalContent>
-      {modalHasFooter(primaryButton, secondaryButtons) && (
-        <ModalFooter>
-          <ButtonSet alignment={buttonAlignment}>
-            {getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
-          </ButtonSet>
-        </ModalFooter>
-      )}
-    </PreventBodyElementScrolling>
-  </StyledReactModal>
-);
+          <ModalContent>
+            <InnerModalContent>{children}</InnerModalContent>
+          </ModalContent>
+          {this.modalHasFooter(primaryButton, secondaryButtons) && (
+            <ModalFooter>
+              <ButtonSet alignment={buttonAlignment}>
+                {this.getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
+              </ButtonSet>
+            </ModalFooter>
+          )}
+        </PreventBodyElementScrolling>
+      </StyledReactModal>
+    );
+  }
+}
 
 Modal.propTypes = {
   isOpen: PropTypes.bool,
