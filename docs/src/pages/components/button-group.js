@@ -71,7 +71,7 @@ export default () => (
       <List>
         <ListItem>
           Always use the Button Group component when there are multiple buttons
-          beside eachother.
+          beside each other.
         </ListItem>
       </List>
     </DocSection>
