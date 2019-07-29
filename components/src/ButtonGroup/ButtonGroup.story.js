@@ -6,35 +6,35 @@ storiesOf("ButtonGroup", module)
   .add("ButtonGroup", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
       <ButtonGroup>
-        <Button>Button</Button>
-        <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
+        <Button>Button</Button>
+        <Button>Button</Button>
       </ButtonGroup>
     </Box>
   ))
-  .add("with alignment left", () => (
+  .add("with alignment right", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
-      <ButtonGroup alignment="left">
+      <ButtonGroup alignment="right">
+        <Button>Button</Button>
+        <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
-        <Button>Button</Button>
-        <Button>Button</Button>
       </ButtonGroup>
     </Box>
   ))
   .add("with alignment spaced", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
       <ButtonGroup alignment="spaced">
-        <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
+        <Button>Button</Button>
       </ButtonGroup>
     </Box>
   ))
   .add("more button types", () => (
     <Box bg="whiteGrey" p="x2" width="600px">
       <ButtonGroup>
-        <Button>Button</Button>
         <PrimaryButton>Button</PrimaryButton>
         <DangerButton>Button</DangerButton>
+        <Button>Button</Button>
         <QuietButton>Button</QuietButton>
         <IconicButton icon="menu" />
         <IconicButton icon="menu">Button</IconicButton>
@@ -60,7 +60,7 @@ storiesOf("ButtonGroup", module)
           </ButtonGroup>
         </Box>
         <Box bg="whiteGrey" p="x2" mt="x2">
-          <ButtonGroup alignment="left">
+          <ButtonGroup alignment="right">
             <Button>Button</Button>
             <Button>Button</Button>
             <Button>Button</Button>

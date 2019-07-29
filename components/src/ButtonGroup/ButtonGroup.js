@@ -26,9 +26,9 @@ const buttonSpacings = {
   }
 };
 
-const getAlignment = alignment => alignments[alignment] || alignments.right;
+const getAlignment = alignment => alignments[alignment] || alignments.left;
 
-const getButtonSpacing = alignment => buttonSpacings[alignment] || buttonSpacings.right;
+const getButtonSpacing = alignment => buttonSpacings[alignment] || buttonSpacings.left;
 
 const ButtonGroup = styled.div(({ alignment }) => ({
   display: "flex",
@@ -46,7 +46,7 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
-  alignment: "right"
+  alignment: "left"
 };
 
 export default ButtonGroup;
