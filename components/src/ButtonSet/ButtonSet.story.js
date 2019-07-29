@@ -41,35 +41,39 @@ storiesOf("ButtonSet", module)
       </ButtonSet>
     </Box>
   ))
-  .add("wrapping buttons", () => (
-    <>
-      <Box bg="whiteGrey" p="x2">
-        <ButtonSet>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-        </ButtonSet>
-      </Box>
-      <Box bg="whiteGrey" p="x2" mt="x2">
-        <ButtonSet alignment="left">
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-          <Button>Button</Button>
-        </ButtonSet>
-      </Box>
-    </>
-  ));
+  .add(
+    "wrapping buttons",
+    () => (
+      <>
+        <Box bg="whiteGrey" p="x2">
+          <ButtonSet>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+          </ButtonSet>
+        </Box>
+        <Box bg="whiteGrey" p="x2" mt="x2">
+          <ButtonSet alignment="left">
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+          </ButtonSet>
+        </Box>
+      </>
+    ),
+    { viewport: { defaultViewport: "extraSmall" } }
+  );
