@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { themeGet } from "styled-system";
+import { fontSize, themeGet } from "styled-system";
 import theme from "../theme";
 
-const DropdownButton = styled.button(props => ({
+const DropdownButton = styled.button(fontSize, props => ({
   display: "block",
   width: "100%",
   cursor: props.disabled ? "default" : "pointer",
@@ -13,7 +13,6 @@ const DropdownButton = styled.button(props => ({
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.base,
   transition: ".2s",
-  fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover": {
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
@@ -34,14 +33,16 @@ DropdownButton.propTypes = {
   color: PropTypes.string,
   disabled: PropTypes.bool,
   hoverColor: PropTypes.string,
-  bgHoverColor: PropTypes.string
+  bgHoverColor: PropTypes.string,
+  fontSize: PropTypes.string
 };
 
 DropdownButton.defaultProps = {
   color: theme.colors.darkBlue,
   disabled: false,
   hoverColor: theme.colors.darkBlue,
-  bgHoverColor: theme.colors.lightGrey
+  bgHoverColor: theme.colors.lightGrey,
+  fontSize: "medium"
 };
 
 export default DropdownButton;
