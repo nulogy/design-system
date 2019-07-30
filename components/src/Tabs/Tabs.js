@@ -109,8 +109,8 @@ class Tabs extends React.Component {
     this.handleTabClick = this.handleTabClick.bind(this);
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
     this.getTabWidths = this.getTabWidths.bind(this);
-    this.setScrollLeftStateByTabIndex = this.setScrollLeftStateByTabIndex.bind(this);
-    this.getScrollLeftByTabIndex = this.getScrollLeftByTabIndex.bind(this);
+    this.setScrollLeftState = this.setScrollLeftState.bind(this);
+    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
   }
 
   componentDidMount() {
@@ -121,9 +121,16 @@ class Tabs extends React.Component {
   handleIndicatorClick(side) {
     if (side === "right") {
       const lastVisibleTab = this.findLastVisibleTab();
-      this.setScrollLeftStateByTabIndex(lastVisibleTab);
+      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - this.indicatorWidth;
+      this.setScrollLeftState(scrollLeft);
     } else {
-      this.setScrollLeftStateByTabIndex(5);
+      const firstVisibleTab = this.findFirstVisibleTab();
+      const scrollLeft =
+        this.getScrollLeftValueByTabIndex(firstVisibleTab) +
+        this.indicatorWidth +
+        this.tabWidths[firstVisibleTab] -
+        this.state.offsetWidth;
+      this.setScrollLeftState(scrollLeft);
     }
   }
 
@@ -140,30 +147,40 @@ class Tabs extends React.Component {
     return null;
   }
 
-  getScrollLeftByTabIndex(index) {
+  findFirstVisibleTab() {
+    const leftMarker = this.state.scrollLeft + this.indicatorWidth;
+    let scrollLeftSum = 0;
+
+    for (let i = 0; i < this.tabWidths.length; i++) {
+      scrollLeftSum = scrollLeftSum + this.tabWidths[i];
+      if (leftMarker <= scrollLeftSum) {
+        return i;
+      }
+    }
+    return null;
+  }
+
+  getScrollLeftValueByTabIndex(index) {
     let scrollLeftSum = 0;
     for (let i = 0; i < index; i++) {
       scrollLeftSum = scrollLeftSum + this.tabWidths[i];
     }
-    return scrollLeftSum - this.indicatorWidth;
+    return scrollLeftSum;
   }
 
-  setScrollLeftStateByTabIndex(index) {
-    this.setState({ scrollLeft: this.getScrollLeftByTabIndex(index) }, this.setScrollLeft);
+  setScrollLeftState(scrollLeft) {
+    this.setState({ scrollLeft: scrollLeft }, this.applyScrollLeft);
   }
 
-  setScrollLeft() {
+  applyScrollLeft() {
     this.tabsRef.current.scrollLeft = this.state.scrollLeft;
   }
 
   getTabWidths() {
-    let sum = 0;
     for (let i = 0; i < this.tabRefs.length; i++) {
       this.tabWidths[i] = this.tabRefs[i].offsetWidth;
       sum = sum + this.tabWidths[i];
     }
-    console.log(this.tabWidths);
-    console.log(sum);
   }
 
   handleResize() {
