@@ -9,6 +9,14 @@ storiesOf("Tabs", module)
       <Tab>Tab 2</Tab>
       <Tab>Tab 3</Tab>
       <Tab>Tab 4</Tab>
+      <Tab>Tab 5</Tab>
+      <Tab>Tab 6</Tab>
+      <Tab>Tab 7</Tab>
+      <Tab>Tab 8</Tab>
+      <Tab>Tab 9</Tab>
+      <Tab>Tab 10</Tab>
+      <Tab>Tab 11</Tab>
+      <Tab>Tab 12</Tab>
     </Tabs>
   ))
   .add("set to fitted", () => (
