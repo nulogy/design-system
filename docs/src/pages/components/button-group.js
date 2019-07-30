@@ -78,7 +78,7 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
 
       <Box mb="x6">
-        <SubsectionTitle>Aligmnet Right</SubsectionTitle>
+        <SubsectionTitle>Right-aligned</SubsectionTitle>
         <Text mb="x2">
           Button alignment is set to right when grouping actions associated with
           pages, tables, lists, or records.
@@ -103,7 +103,7 @@ export default () => (
       </Box>
 
       <Box mb="x6">
-        <SubsectionTitle>Alignment Spaced</SubsectionTitle>
+        <SubsectionTitle>Spaced</SubsectionTitle>
         <Text mb="x2">
           Button alignment is set to spaced when dealing with multi-step flows
           with previous and next buttons.
