@@ -179,7 +179,6 @@ class Tabs extends React.Component {
   getTabWidths() {
     for (let i = 0; i < this.tabRefs.length; i++) {
       this.tabWidths[i] = this.tabRefs[i].offsetWidth;
-      sum = sum + this.tabWidths[i];
     }
   }
 
