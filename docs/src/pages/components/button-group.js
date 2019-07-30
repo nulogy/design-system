@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars, quotes, react/self-closing-comp */
+/* eslint-disable quotes, react/self-closing-comp */
 
 import React from "react";
 import { Helmet } from "react-helmet";
@@ -6,9 +6,6 @@ import Highlight from "react-highlight";
 import {
   Button,
   PrimaryButton,
-  DangerButton,
-  QuietButton,
-  IconicButton,
   ButtonGroup,
   Box,
   SectionTitle,
