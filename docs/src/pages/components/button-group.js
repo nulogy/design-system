@@ -76,30 +76,6 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x6">
-        <SubsectionTitle>Alignment Left</SubsectionTitle>
-        <Text mb="x2">
-          This is the default button group alignment. Commonly used for modals
-          and forms.
-        </Text>
-        <Box bg="whiteGrey" p="x2">
-          <ButtonGroup>
-            <PrimaryButton>Button</PrimaryButton>
-            <Button>Button</Button>
-            <Button>Button</Button>
-          </ButtonGroup>
-        </Box>
-        <Highlight className="js">
-          {`import { ButtonGroup, Button, PrimaryButton } from "@nulogy/components";
-
-<ButtonGroup>
-  <PrimaryButton>Button</PrimaryButton>
-  <Button>Button</Button>
-  <Button>Button</Button>
-</ButtonGroup>
-`}
-        </Highlight>
-      </Box>
 
       <Box mb="x6">
         <SubsectionTitle>Aligmnet Right</SubsectionTitle>
