@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import React from "react";
+import React, { PureComponent } from "react";
 import ReactResizeDetector from "react-resize-detector";
 
 const TabContainer = styled.div({
   display: "flex",
   whiteSpace: "nowrap",
   overflowX: "scroll",
+  overflowY: "hidden",
+  "::-webkit-scrollbar": {
+    display: "none"
+  },
   position: "relative",
   "&:before": {
     content: "''",
@@ -21,37 +25,35 @@ const TabContainer = styled.div({
   }
 });
 
-const ScrollIndicatorLeft = ({ left }) => (
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      bottom: 0,
-      left: left,
-      height: theme.space.x6,
-      width: theme.space.x6,
-      background: theme.colors.lightGrey,
-      opacity: 0.8,
-      pointerEvents: "none"
-    }}
-  />
-);
+const ScrollIndicatorButton = styled.button(({ side, scrollLeft }) => ({
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  left: side === "left" ? scrollLeft : undefined,
+  right: side === "right" ? scrollLeft * -1 : undefined,
+  height: theme.space.x6,
+  width: theme.space.x6,
+  background: theme.colors.lightGrey,
+  opacity: 0.8,
+  zIndex: theme.zIndex.overlay
+}));
 
-const ScrollIndicatorRight = ({ right }) => (
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      bottom: 0,
-      right: right,
-      height: theme.space.x6,
-      width: theme.space.x6,
-      background: theme.colors.lightGrey,
-      opacity: 0.8,
-      pointerEvents: "none"
-    }}
-  />
-);
+class ScrollIndicator extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.onClick(this.props.side);
+  }
+
+  render() {
+    return (
+      <ScrollIndicatorButton onClick={this.handleClick} side={this.props.side} scrollLeft={this.props.scrollLeft} />
+    );
+  }
+}
 
 class Tabs extends React.Component {
   constructor(props) {
@@ -105,14 +107,20 @@ class Tabs extends React.Component {
     });
   }
 
+  handleIndicatorClick(side) {
+    console.log("clicked" + side);
+  }
+
   render() {
     const { children, fitted } = this.props;
-    const { selectedIndex } = this.state;
+    const { selectedIndex, scrollLeft } = this.state;
 
     return (
       <TabContainer onScroll={this.handleScroll} ref={this.tabsRef}>
         <ReactResizeDetector handleWidth onResize={this.handleResize} />
-        {this.contentHiddenLeft() && <ScrollIndicatorLeft left={this.state.scrollLeft} />}
+        {this.contentHiddenLeft() && (
+          <ScrollIndicator side="left" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
+        )}
         {React.Children.map(children, (tab, index) =>
           React.cloneElement(tab, {
             onClick: this.props.selectedIndex
@@ -125,7 +133,9 @@ class Tabs extends React.Component {
             fullWidth: fitted
           })
         )}
-        {this.contentHiddenRight() && <ScrollIndicatorRight right={this.state.scrollLeft * -1} />}
+        {this.contentHiddenRight() && (
+          <ScrollIndicator side="right" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
+        )}
       </TabContainer>
     );
   }
