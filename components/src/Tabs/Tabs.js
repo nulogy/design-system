@@ -1,8 +1,41 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import React, { PureComponent } from "react";
+import React from "react";
 import ReactResizeDetector from "react-resize-detector";
+
+const ScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
+  style: {
+    left: side === "left" ? scrollLeft : undefined,
+    right: side === "right" ? scrollLeft * -1 : undefined
+  }
+}))({
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  height: theme.space.x6,
+  width: theme.space.x6,
+  background: theme.colors.lightGrey,
+  opacity: 0.8,
+  zIndex: theme.zIndex.overlay
+});
+
+class ScrollIndicator extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.onClick(this.props.side);
+  }
+
+  render() {
+    return (
+      <ScrollIndicatorButton onClick={this.handleClick} side={this.props.side} scrollLeft={this.props.scrollLeft} />
+    );
+  }
+}
 
 const TabContainer = styled.div({
   display: "flex",
@@ -25,36 +58,6 @@ const TabContainer = styled.div({
   }
 });
 
-const ScrollIndicatorButton = styled.button(({ side, scrollLeft }) => ({
-  position: "absolute",
-  top: 0,
-  bottom: 0,
-  left: side === "left" ? scrollLeft : undefined,
-  right: side === "right" ? scrollLeft * -1 : undefined,
-  height: theme.space.x6,
-  width: theme.space.x6,
-  background: theme.colors.lightGrey,
-  opacity: 0.8,
-  zIndex: theme.zIndex.overlay
-}));
-
-class ScrollIndicator extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.props.onClick(this.props.side);
-  }
-
-  render() {
-    return (
-      <ScrollIndicatorButton onClick={this.handleClick} side={this.props.side} scrollLeft={this.props.scrollLeft} />
-    );
-  }
-}
-
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
@@ -70,6 +73,7 @@ class Tabs extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
+    this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
   }
 
   componentDidMount() {
@@ -108,7 +112,25 @@ class Tabs extends React.Component {
   }
 
   handleIndicatorClick(side) {
-    console.log("clicked" + side);
+    if (side === "left") {
+      this.setState(
+        prevProps => ({
+          scrollLeft: prevProps.scrollLeft - 10
+        }),
+        this.setScrollLeft
+      );
+    } else {
+      this.setState(
+        prevProps => ({
+          scrollLeft: prevProps.scrollLeft + 10
+        }),
+        this.setScrollLeft
+      );
+    }
+  }
+
+  setScrollLeft() {
+    this.tabsRef.current.scrollLeft = this.state.scrollLeft;
   }
 
   render() {
