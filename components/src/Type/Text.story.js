@@ -8,21 +8,21 @@ storiesOf("Text", module)
   .add("With a color", () => <Text color="blue">Small text</Text>)
   .add("With a size", () => <Text fontSize="small">Small text</Text>)
   .add("With a custom margin", () => (
-    <React.Fragment>
+    <>
       <Text mb="x3">Default text</Text>
       <Text>Default text</Text>
-    </React.Fragment>
+    </>
   ))
   .add("Set to inline", () => (
-    <React.Fragment>
+    <>
       <Text inline mr="x1">
         Default text
       </Text>
       <Text inline>Default text</Text>
-    </React.Fragment>
+    </>
   ))
   .add("Set to disabled", () => (
-    <React.Fragment>
+    <>
       <Box bg="white" p="x2" m="x2">
         <Text disabled>Default text</Text>
       </Box>
@@ -36,5 +36,5 @@ storiesOf("Text", module)
           Default text
         </Text>
       </Box>
-    </React.Fragment>
+    </>
   ));

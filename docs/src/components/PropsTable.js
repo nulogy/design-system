@@ -4,12 +4,14 @@ import styled from "styled-components";
 import theme from "../../../components/src/theme";
 
 const Table = styled.table({
-  border: 0
+  border: 0,
+  fontSize: theme.fontSizes.small
 });
 
 const Column = styled.td({
   border: 0,
-  padding: `${theme.space.x1} ${theme.space.x3}`,
+  padding: `${theme.space.x1} ${theme.space.x2}`,
+  verticalAlign: "top",
 
   "&:first-child": { paddingLeft: 0 },
   "&:last-child": { paddingRight: 0 },
@@ -40,13 +42,13 @@ const PropsTable = ({ propsRows }) => (
       <tr>
         <Column>Prop</Column>
         <Column>Type</Column>
-        <Column width="150px">Default value</Column>
+        <Column>Default value</Column>
         <Column>Description</Column>
       </tr>
     </Header>
     <tbody>
       {propsRows.map(({ name, type, defaultValue, description }) => (
-        <tr>
+        <tr key={name}>
           <Column>{name}</Column>
           <Column>{type}</Column>
           <Column>{defaultValue}</Column>
@@ -58,12 +60,14 @@ const PropsTable = ({ propsRows }) => (
 );
 
 PropsTable.propTypes = {
-  propsRows: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    defaultValue: PropTypes.string,
-    description: PropTypes.string
-  }).isRequired
+  propsRows: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      type: PropTypes.string,
+      defaultValue: PropTypes.string,
+      description: PropTypes.string
+    })
+  ).isRequired
 };
 
 export default PropsTable;

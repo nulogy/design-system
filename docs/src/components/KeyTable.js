@@ -4,12 +4,14 @@ import styled from "styled-components";
 import theme from "../../../components/src/theme";
 
 const Table = styled.table({
-  border: 0
+  border: 0,
+  fontSize: theme.fontSizes.small
 });
 
 const Column = styled.td({
   border: 0,
   padding: `${theme.space.x1} ${theme.space.x3}`,
+  verticalAlign: "top",
 
   "&:first-child": { paddingLeft: 0 },
   "&:last-child": { paddingRight: 0 },
@@ -44,7 +46,7 @@ const KeyTable = ({ keyRows }) => (
     </Header>
     <tbody>
       {keyRows.map(({ name, type, description }) => (
-        <tr>
+        <tr key={name}>
           <Column>{name}</Column>
           <Column>{type}</Column>
           <Column>{description}</Column>
@@ -55,11 +57,13 @@ const KeyTable = ({ keyRows }) => (
 );
 
 KeyTable.propTypes = {
-  keyRows: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    description: PropTypes.string
-  }).isRequired
+  keyRows: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      type: PropTypes.string,
+      description: PropTypes.string
+    })
+  ).isRequired
 };
 
 export default KeyTable;

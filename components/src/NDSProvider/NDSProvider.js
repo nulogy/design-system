@@ -29,12 +29,12 @@ const GlobalStyles = styled.div(({ theme }) => ({
 }));
 
 const NDSProvider = ({ theme, children }) => (
-  <React.Fragment>
+  <>
     <Reset />
     <GlobalStyles theme={theme}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </GlobalStyles>
-  </React.Fragment>
+  </>
 );
 
 NDSProvider.propTypes = {
