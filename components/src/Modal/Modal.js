@@ -12,10 +12,7 @@ import { PreventBodyElementScrolling } from "../utils";
 const ModalContent = styled.div({
   marginTop: "-64px",
   marginBottom: "-80px",
-  overflow: "scroll"
-});
-
-const InnerModalContent = styled.div({
+  overflow: "scroll",
   paddingTop: "80px",
   paddingBottom: "94px",
   paddingLeft: theme.space.x3,
@@ -243,9 +240,7 @@ class Modal extends React.Component {
               {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
             </ModalHeader>
           )}
-          <ModalContent>
-            <InnerModalContent>{children}</InnerModalContent>
-          </ModalContent>
+          <ModalContent>{children}</ModalContent>
           {this.modalHasFooter(primaryButton, secondaryButtons) && (
             <ModalFooter>
               <ButtonSet alignment={buttonAlignment}>
