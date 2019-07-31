@@ -109,20 +109,17 @@ class Tabs extends React.Component {
 
     this.tabsRef = React.createRef();
     this.tabRefs = [];
-    this.tabWidths = [];
     this.indicatorWidth = 40;
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
-    this.getTabWidths = this.getTabWidths.bind(this);
     this.setScrollLeftState = this.setScrollLeftState.bind(this);
     this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
   }
 
   componentDidMount() {
     this.handleResize();
-    this.getTabWidths();
   }
 
   handleIndicatorClick(side) {
@@ -135,7 +132,7 @@ class Tabs extends React.Component {
       const scrollLeft =
         this.getScrollLeftValueByTabIndex(firstVisibleTab) +
         this.indicatorWidth +
-        this.tabWidths[firstVisibleTab] -
+        this.tabRefs[firstVisibleTab].offsetWidth -
         this.state.offsetWidth;
       this.setScrollLeftState(scrollLeft);
     }
@@ -145,8 +142,8 @@ class Tabs extends React.Component {
     const rightMarker = this.state.scrollLeft + this.state.offsetWidth - this.indicatorWidth;
     let scrollLeftSum = 0;
 
-    for (let i = 0; i < this.tabWidths.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabWidths[i];
+    for (let i = 0; i < this.tabRefs.length; i++) {
+      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
       if (rightMarker <= scrollLeftSum) {
         return i;
       }
@@ -158,8 +155,8 @@ class Tabs extends React.Component {
     const leftMarker = this.state.scrollLeft + this.indicatorWidth;
     let scrollLeftSum = 0;
 
-    for (let i = 0; i < this.tabWidths.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabWidths[i];
+    for (let i = 0; i < this.tabRefs.length; i++) {
+      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
       if (leftMarker <= scrollLeftSum) {
         return i;
       }
@@ -170,7 +167,7 @@ class Tabs extends React.Component {
   getScrollLeftValueByTabIndex(index) {
     let scrollLeftSum = 0;
     for (let i = 0; i < index; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabWidths[i];
+      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
     }
     return scrollLeftSum;
   }
@@ -181,12 +178,6 @@ class Tabs extends React.Component {
 
   applyScrollLeft() {
     this.tabsRef.current.scrollLeft = this.state.scrollLeft;
-  }
-
-  getTabWidths() {
-    for (let i = 0; i < this.tabRefs.length; i++) {
-      this.tabWidths[i] = this.tabRefs[i].offsetWidth;
-    }
   }
 
   handleResize() {
