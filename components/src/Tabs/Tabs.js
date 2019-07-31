@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import React from "react";
 import { Icon } from "../Icon";
-import { TabFocusManager } from ".";
+import { TabFocusManager, TabScrollManager } from ".";
 
 const ScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
   style: {
@@ -99,102 +99,16 @@ class Tabs extends React.Component {
 
     this.state = {
       selectedIndex: this.props.selectedIndex || null,
-      focusedIndex: 0,
       scrollLeft: 0
     };
 
     this.tabsRef = React.createRef();
     this.tabRefs = [];
-    this.indicatorWidth = 40;
-    this.handleScroll = this.handleScroll.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
-    this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
-    this.setScrollLeftState = this.setScrollLeftState.bind(this);
-    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
   }
 
   componentDidMount() {
     this.forceUpdate();
-  }
-
-  handleIndicatorClick(side) {
-    if (side === "right") {
-      const lastVisibleTab = this.findLastVisibleTab();
-      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - this.indicatorWidth;
-      this.setScrollLeftState(scrollLeft);
-    } else {
-      const firstVisibleTab = this.findFirstVisibleTab();
-      const scrollLeft =
-        this.getScrollLeftValueByTabIndex(firstVisibleTab) +
-        this.indicatorWidth +
-        this.tabRefs[firstVisibleTab].offsetWidth -
-        this.tabsRef.current.offsetWidth;
-      this.setScrollLeftState(scrollLeft);
-    }
-  }
-
-  findLastVisibleTab() {
-    const rightMarker = this.tabsRef.current.scrollLeft + this.tabsRef.current.offsetWidth - this.indicatorWidth;
-    let scrollLeftSum = 0;
-
-    for (let i = 0; i < this.tabRefs.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
-      if (rightMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-
-  findFirstVisibleTab() {
-    const leftMarker = this.tabsRef.current.scrollLeft + this.indicatorWidth;
-    let scrollLeftSum = 0;
-
-    for (let i = 0; i < this.tabRefs.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
-      if (leftMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-
-  getScrollLeftValueByTabIndex(index) {
-    let scrollLeftSum = 0;
-    for (let i = 0; i < index; i++) {
-      scrollLeftSum = scrollLeftSum + this.tabRefs[i].offsetWidth;
-    }
-    return scrollLeftSum;
-  }
-
-  setScrollLeftState(scrollLeft) {
-    this.setState({ scrollLeft: scrollLeft }, this.applyScrollLeft);
-  }
-
-  applyScrollLeft() {
-    this.tabsRef.current.scrollLeft = this.state.scrollLeft;
-  }
-
-  handleScroll() {
-    if (this.tabsRef.current) {
-      this.setState({
-        scrollLeft: this.tabsRef.current.scrollLeft
-      });
-    }
-  }
-
-  contentHiddenRight() {
-    if (!this.tabsRef.current) {
-      return false;
-    }
-    return this.state.scrollLeft + this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
-  }
-
-  contentHiddenLeft() {
-    if (!this.tabsRef.current) {
-      return false;
-    }
-    return this.state.scrollLeft !== 0 && this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
   }
 
   handleTabClick(index) {
@@ -205,39 +119,43 @@ class Tabs extends React.Component {
 
   render() {
     const { children, fitted } = this.props;
-    const { selectedIndex, scrollLeft } = this.state;
+    const { selectedIndex } = this.state;
 
     return (
-      <TabFocusManager tabRefs={this.tabRefs}>
-        {({ onKeyDown, setFocusToTab, focusedIndex }) => (
-          <TabContainer onKeyDown={onKeyDown} onScroll={this.handleScroll} ref={this.tabsRef}>
-            {this.contentHiddenLeft() && (
-              <ScrollIndicator tabIndex={-1} side="left" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
-            )}
-            {React.Children.map(children, (tab, index) =>
-              React.cloneElement(tab, {
-                onClick: this.props.selectedIndex
-                  ? tab.props.onClick
-                  : () => {
-                      setFocusToTab(index);
-                      this.handleTabClick(index);
+      <TabScrollManager tabsRef={this.tabsRef} tabRefs={this.tabRefs}>
+        {({ scrollLeft, handleScroll, handleIndicatorClick, contentHiddenLeft, contentHiddenRight }) => (
+          <TabFocusManager tabRefs={this.tabRefs}>
+            {({ onKeyDown, setFocusToTab, focusedIndex }) => (
+              <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabsRef}>
+                {contentHiddenLeft() && (
+                  <ScrollIndicator tabIndex={-1} side="left" scrollLeft={scrollLeft} onClick={handleIndicatorClick} />
+                )}
+                {React.Children.map(children, (tab, index) =>
+                  React.cloneElement(tab, {
+                    onClick: this.props.selectedIndex
+                      ? tab.props.onClick
+                      : () => {
+                          setFocusToTab(index);
+                          this.handleTabClick(index);
+                        },
+                    onFocus: e => {
+                      e.stopPropagation();
                     },
-                onFocus: e => {
-                  e.stopPropagation();
-                },
-                index: index,
-                tabIndex: index === focusedIndex ? 0 : -1,
-                selected: index === selectedIndex ? true : false,
-                fullWidth: fitted,
-                ref: ref => (this.tabRefs[index] = ref)
-              })
+                    index: index,
+                    tabIndex: index === focusedIndex ? 0 : -1,
+                    selected: index === selectedIndex ? true : false,
+                    fullWidth: fitted,
+                    ref: ref => (this.tabRefs[index] = ref)
+                  })
+                )}
+                {contentHiddenRight() && (
+                  <ScrollIndicator tabIndex={-1} side="right" scrollLeft={scrollLeft} onClick={handleIndicatorClick} />
+                )}
+              </TabContainer>
             )}
-            {this.contentHiddenRight() && (
-              <ScrollIndicator tabIndex={-1} side="right" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
-            )}
-          </TabContainer>
+          </TabFocusManager>
         )}
-      </TabFocusManager>
+      </TabScrollManager>
     );
   }
 }
