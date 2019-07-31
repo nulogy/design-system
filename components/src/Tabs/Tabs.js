@@ -4,6 +4,7 @@ import theme from "../theme";
 import React from "react";
 import ReactResizeDetector from "react-resize-detector";
 import { Icon } from "../Icon";
+import { keyCodes } from "../utils";
 
 const ScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
   style: {
@@ -18,7 +19,6 @@ const ScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
   height: theme.space.x5,
   width: theme.space.x5,
   background: theme.colors.white,
-  borderRadius: theme.radii.medium,
   opacity: 0.8,
   zIndex: theme.zIndex.tabsScollIndicator,
   display: "inline-flex",
@@ -61,7 +61,12 @@ class ScrollIndicator extends React.PureComponent {
 
   render() {
     return (
-      <ScrollIndicatorButton onClick={this.handleClick} side={this.props.side} scrollLeft={this.props.scrollLeft}>
+      <ScrollIndicatorButton
+        {...this.props}
+        onClick={this.handleClick}
+        side={this.props.side}
+        scrollLeft={this.props.scrollLeft}
+      >
         <Icon icon={this.props.side === "right" ? "rightArrow" : "leftArrow"} />
       </ScrollIndicatorButton>
     );
@@ -95,6 +100,7 @@ class Tabs extends React.Component {
 
     this.state = {
       selectedIndex: this.props.selectedIndex || null,
+      focusedIndex: 0,
       scrollLeft: 0,
       offsetWidth: 0,
       scrollWidth: 0
@@ -111,6 +117,9 @@ class Tabs extends React.Component {
     this.getTabWidths = this.getTabWidths.bind(this);
     this.setScrollLeftState = this.setScrollLeftState.bind(this);
     this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
+    this.onKeyPress = this.onKeyPress.bind(this);
+    this.focusNextTab = this.focusNextTab.bind(this);
+    this.focusPreviousTab = this.focusPreviousTab.bind(this);
   }
 
   componentDidMount() {
@@ -206,20 +215,62 @@ class Tabs extends React.Component {
   }
 
   handleTabClick(index) {
+    this.tabRefs[index].focus();
     this.setState({
-      selectedIndex: index
+      selectedIndex: index,
+      focusedIndex: index
     });
+  }
+
+  focusNextTab() {
+    this.setState(
+      prevState => ({
+        focusedIndex: prevState.focusedIndex === this.tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
+      }),
+      this.setFocusToTab
+    );
+  }
+
+  focusPreviousTab() {
+    this.setState(
+      prevState => ({
+        focusedIndex: prevState.focusedIndex === 0 ? this.tabRefs.length - 1 : prevState.focusedIndex - 1
+      }),
+      this.setFocusToTab
+    );
+  }
+
+  setFocusToTab() {
+    console.log(this.state.focusedIndex);
+    this.tabRefs[this.state.focusedIndex].focus();
+  }
+
+  onKeyPress(e) {
+    switch (e.key) {
+      case "ArrowLeft":
+        e.preventDefault();
+        this.focusPreviousTab();
+        break;
+
+      case "ArrowRight":
+        e.preventDefault();
+        this.focusNextTab();
+        break;
+
+      default:
+        break;
+    }
   }
 
   render() {
     const { children, fitted } = this.props;
-    const { selectedIndex, scrollLeft } = this.state;
+    const { selectedIndex, focusedIndex, scrollLeft } = this.state;
 
     return (
-      <TabContainer onScroll={this.handleScroll} ref={this.tabsRef}>
+      <TabContainer onKeyDown={this.onKeyPress} onScroll={this.handleScroll} ref={this.tabsRef}>
         <ReactResizeDetector handleWidth onResize={this.handleResize} />
         {this.contentHiddenLeft() && (
-          <ScrollIndicator side="left" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
+          <ScrollIndicator tabIndex={-1} side="left" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
         )}
         {React.Children.map(children, (tab, index) =>
           React.cloneElement(tab, {
@@ -228,14 +279,18 @@ class Tabs extends React.Component {
               : () => {
                   this.handleTabClick(index);
                 },
+            onFocus: e => {
+              e.stopPropagation();
+            },
             index: index,
+            tabIndex: index === focusedIndex ? 0 : -1,
             selected: index === selectedIndex ? true : false,
             fullWidth: fitted,
             ref: ref => (this.tabRefs[index] = ref)
           })
         )}
         {this.contentHiddenRight() && (
-          <ScrollIndicator side="right" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
+          <ScrollIndicator tabIndex={-1} side="right" scrollLeft={scrollLeft} onClick={this.handleIndicatorClick} />
         )}
       </TabContainer>
     );

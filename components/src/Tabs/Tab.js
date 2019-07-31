@@ -22,7 +22,8 @@ const barStyles = {
     position: "absolute",
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
+    zIndex: theme.zIndex.tabsBar
   }
 };
 
@@ -62,8 +63,7 @@ const Tab = styled.button(({ selected, disabled, fullWidth }) => ({
   position: "relative",
   "&:focus": {
     outline: "none",
-    borderColor: theme.colors.blue,
-    boxShadow: theme.shadows.focus,
+    backgroundColor: theme.colors.lightBlue,
     "&:hover": {}
   },
   "&:active": {},
