@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import theme from "../theme";
-import React from "react";
 
 const barStyles = {
   expanded: {

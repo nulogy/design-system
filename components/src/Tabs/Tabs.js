@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../theme";
 import React from "react";
-import { Icon } from "../Icon";
-import { TabFocusManager, TabScrollManager, TabScrollIndicator } from ".";
+import theme from "../theme";
+import TabFocusManager from "./TabFocusManager";
+import TabScrollManager from "./TabScrollManager";
+import TabScrollIndicator from "./TabScrollIndicator";
 
 const TabContainer = styled.div({
   display: "flex",
@@ -30,18 +31,35 @@ class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
+    const { selectedIndex } = this.props;
+
     this.state = {
-      selectedIndex: this.props.selectedIndex || null,
-      scrollLeft: 0
+      selectedIndex: selectedIndex || null
     };
 
     this.tabsRef = React.createRef();
     this.tabRefs = [];
     this.handleTabClick = this.handleTabClick.bind(this);
+    this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
+    this.contentHiddenRight = this.contentHiddenRight.bind(this);
   }
 
   componentDidMount() {
     this.forceUpdate();
+  }
+
+  contentHiddenRight() {
+    if (!this.tabsRef.current) {
+      return false;
+    }
+    return this.tabsRef.current.scrollLeft + this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
+  }
+
+  contentHiddenLeft() {
+    if (!this.tabsRef.current) {
+      return false;
+    }
+    return this.tabsRef.current.scrollLeft !== 0 && this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
   }
 
   handleTabClick(index) {
@@ -51,16 +69,16 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const { children, fitted } = this.props;
+    const { selectedIndex: controlledSelectedIndex, children, fitted } = this.props;
     const { selectedIndex } = this.state;
 
     return (
       <TabScrollManager tabsRef={this.tabsRef} tabRefs={this.tabRefs}>
-        {({ scrollLeft, handleScroll, handleIndicatorClick, contentHiddenLeft, contentHiddenRight }) => (
+        {({ scrollLeft, handleScroll, handleIndicatorClick }) => (
           <TabFocusManager tabRefs={this.tabRefs}>
             {({ onKeyDown, setFocusToTab, focusedIndex }) => (
               <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabsRef}>
-                {contentHiddenLeft() && (
+                {this.contentHiddenLeft() && (
                   <TabScrollIndicator
                     tabIndex={-1}
                     side="left"
@@ -70,7 +88,7 @@ class Tabs extends React.Component {
                 )}
                 {React.Children.map(children, (tab, index) =>
                   React.cloneElement(tab, {
-                    onClick: this.props.selectedIndex
+                    onClick: controlledSelectedIndex
                       ? tab.props.onClick
                       : () => {
                           setFocusToTab(index);
@@ -79,14 +97,16 @@ class Tabs extends React.Component {
                     onFocus: e => {
                       e.stopPropagation();
                     },
-                    index: index,
+                    index,
                     tabIndex: index === focusedIndex ? 0 : -1,
-                    selected: index === selectedIndex ? true : false,
+                    selected: index === selectedIndex,
                     fullWidth: fitted,
-                    ref: ref => (this.tabRefs[index] = ref)
+                    ref: ref => {
+                      this.tabRefs[index] = ref;
+                    }
                   })
                 )}
-                {contentHiddenRight() && (
+                {this.contentHiddenRight() && (
                   <TabScrollIndicator
                     tabIndex={-1}
                     side="right"
@@ -105,12 +125,14 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   children: PropTypes.node,
-  selectedIndex: PropTypes.number
+  selectedIndex: PropTypes.number,
+  fitted: PropTypes.bool
 };
 
 Tabs.defaultProps = {
   children: null,
-  selectedIndex: undefined
+  selectedIndex: undefined,
+  fitted: false
 };
 
 export default Tabs;

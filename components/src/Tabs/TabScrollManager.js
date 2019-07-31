@@ -1,9 +1,5 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import theme from "../theme";
 import React from "react";
-import { Icon } from "../Icon";
-import { TabFocusManager } from ".";
+import PropTypes from "prop-types";
 
 class TabScrollManager extends React.Component {
   constructor(props) {
@@ -18,11 +14,52 @@ class TabScrollManager extends React.Component {
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
     this.setScrollLeftState = this.setScrollLeftState.bind(this);
     this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
-    this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
-    this.contentHiddenRight = this.contentHiddenRight.bind(this);
+  }
+
+  setScrollLeftState(scrollLeft) {
+    this.setState({ scrollLeft }, this.applyScrollLeft);
+  }
+
+  getScrollLeftValueByTabIndex(index) {
+    const { tabRefs } = this.props;
+    let scrollLeftSum = 0;
+    for (let i = 0; i < index; i += 1) {
+      scrollLeftSum += tabRefs[i].offsetWidth;
+    }
+    return scrollLeftSum;
+  }
+
+  findLastVisibleTab() {
+    const { tabsRef, tabRefs } = this.props;
+    const rightMarker = tabsRef.current.scrollLeft + tabsRef.current.offsetWidth - this.indicatorWidth;
+    let scrollLeftSum = 0;
+
+    for (let i = 0; i < tabRefs.length; i += 1) {
+      scrollLeftSum += tabRefs[i].offsetWidth;
+      if (rightMarker <= scrollLeftSum) {
+        return i;
+      }
+    }
+    return null;
+  }
+
+  findFirstVisibleTab() {
+    const { tabsRef, tabRefs } = this.props;
+    const leftMarker = tabsRef.current.scrollLeft + this.indicatorWidth;
+    let scrollLeftSum = 0;
+
+    for (let i = 0; i < tabRefs.length; i += 1) {
+      scrollLeftSum += tabRefs[i].offsetWidth;
+      if (leftMarker <= scrollLeftSum) {
+        return i;
+      }
+    }
+    return null;
   }
 
   handleIndicatorClick(side) {
+    const { tabRefs, tabsRef } = this.props;
+
     if (side === "right") {
       const lastVisibleTab = this.findLastVisibleTab();
       const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - this.indicatorWidth;
@@ -32,91 +69,34 @@ class TabScrollManager extends React.Component {
       const scrollLeft =
         this.getScrollLeftValueByTabIndex(firstVisibleTab) +
         this.indicatorWidth +
-        this.props.tabRefs[firstVisibleTab].offsetWidth -
-        this.props.tabsRef.current.offsetWidth;
+        tabRefs[firstVisibleTab].offsetWidth -
+        tabsRef.current.offsetWidth;
       this.setScrollLeftState(scrollLeft);
     }
   }
 
-  findLastVisibleTab() {
-    const rightMarker =
-      this.props.tabsRef.current.scrollLeft + this.props.tabsRef.current.offsetWidth - this.indicatorWidth;
-    let scrollLeftSum = 0;
-
-    for (let i = 0; i < this.props.tabRefs.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.props.tabRefs[i].offsetWidth;
-      if (rightMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-
-  findFirstVisibleTab() {
-    const leftMarker = this.props.tabsRef.current.scrollLeft + this.indicatorWidth;
-    let scrollLeftSum = 0;
-
-    for (let i = 0; i < this.props.tabRefs.length; i++) {
-      scrollLeftSum = scrollLeftSum + this.props.tabRefs[i].offsetWidth;
-      if (leftMarker <= scrollLeftSum) {
-        return i;
-      }
-    }
-    return null;
-  }
-
-  getScrollLeftValueByTabIndex(index) {
-    let scrollLeftSum = 0;
-    for (let i = 0; i < index; i++) {
-      scrollLeftSum = scrollLeftSum + this.props.tabRefs[i].offsetWidth;
-    }
-    return scrollLeftSum;
-  }
-
-  setScrollLeftState(scrollLeft) {
-    this.setState({ scrollLeft: scrollLeft }, this.applyScrollLeft);
-  }
-
   applyScrollLeft() {
-    this.props.tabsRef.current.scrollLeft = this.state.scrollLeft;
+    const { tabsRef } = this.props;
+    const { scrollLeft } = this.state;
+    tabsRef.current.scrollLeft = scrollLeft;
   }
 
   handleScroll() {
-    if (this.props.tabsRef.current) {
+    const { tabsRef } = this.props;
+    if (tabsRef.current) {
       this.setState({
-        scrollLeft: this.props.tabsRef.current.scrollLeft
+        scrollLeft: tabsRef.current.scrollLeft
       });
     }
   }
 
-  contentHiddenRight() {
-    if (!this.props.tabsRef.current) {
-      return false;
-    }
-    return this.state.scrollLeft + this.props.tabsRef.current.offsetWidth < this.props.tabsRef.current.scrollWidth;
-  }
-
-  contentHiddenLeft() {
-    if (!this.props.tabsRef.current) {
-      return false;
-    }
-    return (
-      this.state.scrollLeft !== 0 && this.props.tabsRef.current.offsetWidth < this.props.tabsRef.current.scrollWidth
-    );
-  }
-
-  handleTabClick(index) {
-    this.setState({
-      selectedIndex: index
-    });
-  }
-
   render() {
     const { scrollLeft } = this.state;
+    const { children } = this.props;
 
     return (
       <>
-        {this.props.children({
+        {children({
           scrollLeft,
           handleScroll: this.handleScroll,
           handleIndicatorClick: this.handleIndicatorClick,
@@ -127,5 +107,16 @@ class TabScrollManager extends React.Component {
     );
   }
 }
+
+TabScrollManager.propTypes = {
+  children: PropTypes.func.isRequired,
+  tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
+  tabsRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+};
+
+TabScrollManager.defaultProps = {
+  tabRefs: undefined,
+  tabsRef: undefined
+};
 
 export default TabScrollManager;

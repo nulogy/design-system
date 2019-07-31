@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import React from "react";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import React from "react";
 import { Icon } from "../Icon";
-import { TabFocusManager, TabScrollManager } from ".";
 
 const TabScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
   style: {
@@ -49,21 +48,32 @@ class TabScrollIndicator extends React.PureComponent {
   }
 
   handleClick() {
-    this.props.onClick(this.props.side);
+    const { onClick, side } = this.props;
+
+    onClick(side);
   }
 
   render() {
+    const { side, scrollLeft } = this.props;
+
     return (
-      <TabScrollIndicatorButton
-        {...this.props}
-        onClick={this.handleClick}
-        side={this.props.side}
-        scrollLeft={this.props.scrollLeft}
-      >
-        <Icon icon={this.props.side === "right" ? "rightArrow" : "leftArrow"} />
+      <TabScrollIndicatorButton {...this.props} onClick={this.handleClick} side={side} scrollLeft={scrollLeft}>
+        <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
       </TabScrollIndicatorButton>
     );
   }
 }
+
+TabScrollIndicator.propTypes = {
+  onClick: PropTypes.func,
+  side: PropTypes.oneOf(["left", "right"]),
+  scrollLeft: PropTypes.number
+};
+
+TabScrollIndicator.defaultProps = {
+  onClick: () => {},
+  side: "left",
+  scrollLeft: 0
+};
 
 export default TabScrollIndicator;

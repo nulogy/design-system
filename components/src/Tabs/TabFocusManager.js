@@ -1,10 +1,5 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import theme from "../theme";
 import React from "react";
-import ReactResizeDetector from "react-resize-detector";
-import { Icon } from "../Icon";
-import { keyCodes } from "../utils";
+import PropTypes from "prop-types";
 
 class TabFocusManager extends React.Component {
   constructor(props) {
@@ -18,38 +13,6 @@ class TabFocusManager extends React.Component {
     this.focusNextTab = this.focusNextTab.bind(this);
     this.focusPreviousTab = this.focusPreviousTab.bind(this);
     this.setFocusToTab = this.setFocusToTab.bind(this);
-  }
-
-  focusNextTab() {
-    this.setState(
-      prevState => ({
-        focusedIndex: prevState.focusedIndex === this.props.tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
-      }),
-      this.updateFocusedTab
-    );
-  }
-
-  focusPreviousTab() {
-    this.setState(
-      prevState => ({
-        focusedIndex: prevState.focusedIndex === 0 ? this.props.tabRefs.length - 1 : prevState.focusedIndex - 1
-      }),
-      this.updateFocusedTab
-    );
-  }
-
-  updateFocusedTab() {
-    this.props.tabRefs[this.state.focusedIndex].focus();
-  }
-
-  setFocusToTab(index) {
-    console.log(index);
-    this.setState(
-      {
-        focusedIndex: index
-      },
-      this.updateFocusedTab
-    );
   }
 
   onKeyDown(e) {
@@ -69,12 +32,51 @@ class TabFocusManager extends React.Component {
     }
   }
 
+  setFocusToTab(index) {
+    this.setState(
+      {
+        focusedIndex: index
+      },
+      this.updateFocusedTab
+    );
+  }
+
+  focusNextTab() {
+    const { tabRefs } = this.props;
+
+    this.setState(
+      prevState => ({
+        focusedIndex: prevState.focusedIndex === tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
+      }),
+      this.updateFocusedTab
+    );
+  }
+
+  focusPreviousTab() {
+    const { tabRefs } = this.props;
+
+    this.setState(
+      prevState => ({
+        focusedIndex: prevState.focusedIndex === 0 ? tabRefs.length - 1 : prevState.focusedIndex - 1
+      }),
+      this.updateFocusedTab
+    );
+  }
+
+  updateFocusedTab() {
+    const { tabRefs } = this.props;
+    const { focusedIndex } = this.state;
+
+    tabRefs[focusedIndex].focus();
+  }
+
   render() {
     const { focusedIndex } = this.state;
+    const { children } = this.props;
 
     return (
       <>
-        {this.props.children({
+        {children({
           focusedIndex,
           onKeyDown: this.onKeyDown,
           setFocusToTab: this.setFocusToTab
@@ -83,5 +85,14 @@ class TabFocusManager extends React.Component {
     );
   }
 }
+
+TabFocusManager.propTypes = {
+  children: PropTypes.func.isRequired,
+  tabRefs: PropTypes.arrayOf(PropTypes.shape({ current: PropTypes.instanceOf(Element) }))
+};
+
+TabFocusManager.defaultProps = {
+  tabRefs: undefined
+};
 
 export default TabFocusManager;
