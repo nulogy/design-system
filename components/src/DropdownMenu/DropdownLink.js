@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { fontSize, themeGet } from "styled-system";
+import { themeGet } from "styled-system";
 import theme from "../theme";
 
-const DropdownLink = styled.a(fontSize, props => ({
+const DropdownLink = styled.a(props => ({
   display: "block",
   textDecoration: "none",
   color: themeGet(`colors.${props.color}`, props.color)(props),
   borderColor: "transparent",
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.base,
+  fontSize: theme.fontSizes.medium,
   transition: ".2s",
-  padding: `${theme.space.half} ${theme.space.x2}`,
+  padding: `${theme.space.x1} ${theme.space.x2}`,
   "&:hover": {
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
     backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props)
@@ -28,15 +29,13 @@ const DropdownLink = styled.a(fontSize, props => ({
 DropdownLink.propTypes = {
   color: PropTypes.string,
   hoverColor: PropTypes.string,
-  bgHoverColor: PropTypes.string,
-  fontSize: PropTypes.string
+  bgHoverColor: PropTypes.string
 };
 
 DropdownLink.defaultProps = {
   color: "darkBlue",
   hoverColor: "darkBlue",
-  bgHoverColor: "lightGrey",
-  fontSize: "medium"
+  bgHoverColor: "lightGrey"
 };
 
 export default DropdownLink;
