@@ -191,13 +191,31 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Content guidelines</SectionTitle>
+      <SubsectionTitle>Button labeling</SubsectionTitle>
+      <Box mb="x2">
+        <List>
+          <ListItem>Always lead with an actionable verb.</ListItem>
+          <ListItem>
+            Whenever possible follow with a clear noun{" "}
+            <em>(e.g: Create shipment, Approve delivery).</em>
+          </ListItem>
+          <ListItem>Always use sentence case.</ListItem>
+        </List>
+      </Box>
+
+      <SubsectionTitle>Button grouping</SubsectionTitle>
       <List>
-        <ListItem>Always lead with an actionable verb</ListItem>
         <ListItem>
-          Whenever possible follow with a clear noun{" "}
-          <em>(e.g: Create shipment, Approve delivery.)</em>
+          Use the <Link href="/components/button-group">Button Group</Link>{" "}
+          component to associate a group of buttons together.
         </ListItem>
-        <ListItem>Always use sentence case</ListItem>
+        <ListItem>
+          Order buttons in a group from most important on the left to least
+          important on the right.
+        </ListItem>
+        <ListItem>
+          Only have one PrimaryButton or DangerButton on the page at one time.
+        </ListItem>
       </List>
     </DocSection>
 
@@ -218,6 +236,9 @@ export default () => (
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
       <List>
+        <ListItem>
+          <Link href="/components/button-group">Button Group</Link>
+        </ListItem>
         <ListItem>
           <Link href="/components/iconic-button">Iconic button</Link>
         </ListItem>

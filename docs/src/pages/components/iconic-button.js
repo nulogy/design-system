@@ -113,6 +113,9 @@ export default () => (
           <Link href="/components/buttons">Buttons</Link>
         </ListItem>
         <ListItem>
+          <Link href="/components/button-group">Button Group</Link>
+        </ListItem>
+        <ListItem>
           <Link href="/components/icon">Icons</Link>
         </ListItem>
       </List>
