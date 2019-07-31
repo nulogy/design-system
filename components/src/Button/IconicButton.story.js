@@ -8,14 +8,14 @@ storiesOf("IconicButton", module)
     <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
   ))
   .add("set to disabled", () => (
-    <React.Fragment>
+    <>
       <IconicButton icon="cancel" disabled>
         Cancel
       </IconicButton>
       <IconicButton icon="lock" disabled>
         Lock
       </IconicButton>
-    </React.Fragment>
+    </>
   ))
   .add("with a hidden label", () => (
     <IconicButton ml="x6" labelHidden icon="user">

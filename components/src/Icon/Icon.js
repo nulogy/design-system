@@ -9,11 +9,11 @@ const iconNames = Object.keys(icons);
 
 /* eslint-disable react/no-array-index-key */
 const getPathElements = icon => (
-  <React.Fragment>
+  <>
     {icon.path.map((path, index) => (
       <path key={index} d={path} />
     ))}
-  </React.Fragment>
+  </>
 );
 /* eslint-enable react/no-array-index-key */
 

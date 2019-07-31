@@ -159,17 +159,17 @@ class Modal extends React.Component {
 
     if (buttonAlignment === "spaced") {
       return (
-        <React.Fragment>
+        <>
           {this.getSecondaryButtons()}
           {this.getPrimaryButton()}
-        </React.Fragment>
+        </>
       );
     } else {
       return (
-        <React.Fragment>
+        <>
           {this.getPrimaryButton()}
           {this.getSecondaryButtons()}
-        </React.Fragment>
+        </>
       );
     }
   }

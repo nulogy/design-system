@@ -22,17 +22,17 @@ IconCode.propTypes = {
 
 storiesOf("Icon", module)
   .add("Icon", () => (
-    <React.Fragment>
+    <>
       {iconNames.map(iconName => (
         <Flex my="x2" key={iconName}>
           <Icon mr="20px" icon={iconName} />
           <IconCode icon={iconName} />
         </Flex>
       ))}
-    </React.Fragment>
+    </>
   ))
   .add("InlineIcon", () => (
-    <React.Fragment>
+    <>
       {[1, 2, 3, 4].map(size => (
         <p style={{ fontSize: `${size}em` }} key={size}>
           @{size}em: &nbsp;
@@ -41,10 +41,10 @@ storiesOf("Icon", module)
           ))}
         </p>
       ))}
-    </React.Fragment>
+    </>
   ))
   .add("With a color", () => (
-    <React.Fragment>
+    <>
       {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(
         color => (
           <Box key={color}>
@@ -54,10 +54,10 @@ storiesOf("Icon", module)
           </Box>
         )
       )}
-    </React.Fragment>
+    </>
   ))
   .add("With a size", () => (
-    <React.Fragment>
+    <>
       {[theme.space.x1, theme.space.x2, theme.space.x3].map(size => (
         <Box key={size}>
           {iconSubset.map(iconName => (
@@ -65,7 +65,7 @@ storiesOf("Icon", module)
           ))}
         </Box>
       ))}
-    </React.Fragment>
+    </>
   ))
   .add("With added margin", () => (
     <Box m="x3">
@@ -93,7 +93,7 @@ storiesOf("Icon", module)
     </Box>
   ))
   .add("With accessibility title", () => (
-    <React.Fragment>
+    <>
       <Flex p="x2">
         <Icon icon="user" title="User account" />
         {" This has a title attribute so it will be read by assistive devices."}
@@ -102,5 +102,5 @@ storiesOf("Icon", module)
         <Icon icon="user" />
         {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
       </Flex>
-    </React.Fragment>
+    </>
   ));

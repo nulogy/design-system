@@ -5,7 +5,7 @@ import { List, ListItem, Text, Title, SectionTitle, SubsectionTitle } from "../i
 import theme from "../theme";
 
 storiesOf("Typography", module).add("Article", () => (
-  <React.Fragment>
+  <>
     <Title>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Title>
     <SectionTitle>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SectionTitle>
     <Text mb="x3">
@@ -71,5 +71,5 @@ storiesOf("Typography", module).add("Article", () => (
       purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim
       congue velit.
     </Text>
-  </React.Fragment>
+  </>
 ));
