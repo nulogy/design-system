@@ -116,10 +116,6 @@ export const menuData = [
         href: "/components/select"
       },
       {
-        name: "Table",
-        href: "/components/table"
-      },
-      {
         name: "Text",
         href: "/components/text"
       },
