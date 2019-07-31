@@ -30,8 +30,8 @@ class TabScrollManager extends React.Component {
   }
 
   findLastVisibleTab() {
-    const { tabsRef, tabRefs } = this.props;
-    const rightMarker = tabsRef.current.scrollLeft + tabsRef.current.offsetWidth - this.indicatorWidth;
+    const { tabContainerRef, tabRefs } = this.props;
+    const rightMarker = tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth - this.indicatorWidth;
     let scrollLeftSum = 0;
 
     for (let i = 0; i < tabRefs.length; i += 1) {
@@ -44,8 +44,8 @@ class TabScrollManager extends React.Component {
   }
 
   findFirstVisibleTab() {
-    const { tabsRef, tabRefs } = this.props;
-    const leftMarker = tabsRef.current.scrollLeft + this.indicatorWidth;
+    const { tabContainerRef, tabRefs } = this.props;
+    const leftMarker = tabContainerRef.current.scrollLeft + this.indicatorWidth;
     let scrollLeftSum = 0;
 
     for (let i = 0; i < tabRefs.length; i += 1) {
@@ -58,7 +58,7 @@ class TabScrollManager extends React.Component {
   }
 
   handleIndicatorClick(side) {
-    const { tabRefs, tabsRef } = this.props;
+    const { tabRefs, tabContainerRef } = this.props;
 
     if (side === "right") {
       const lastVisibleTab = this.findLastVisibleTab();
@@ -70,22 +70,22 @@ class TabScrollManager extends React.Component {
         this.getScrollLeftValueByTabIndex(firstVisibleTab) +
         this.indicatorWidth +
         tabRefs[firstVisibleTab].offsetWidth -
-        tabsRef.current.offsetWidth;
+        tabContainerRef.current.offsetWidth;
       this.setScrollLeftState(scrollLeft);
     }
   }
 
   applyScrollLeft() {
-    const { tabsRef } = this.props;
+    const { tabContainerRef } = this.props;
     const { scrollLeft } = this.state;
-    tabsRef.current.scrollLeft = scrollLeft;
+    tabContainerRef.current.scrollLeft = scrollLeft;
   }
 
   handleScroll() {
-    const { tabsRef } = this.props;
-    if (tabsRef.current) {
+    const { tabContainerRef } = this.props;
+    if (tabContainerRef.current) {
       this.setState({
-        scrollLeft: tabsRef.current.scrollLeft
+        scrollLeft: tabContainerRef.current.scrollLeft
       });
     }
   }
@@ -111,12 +111,12 @@ class TabScrollManager extends React.Component {
 TabScrollManager.propTypes = {
   children: PropTypes.func.isRequired,
   tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
-  tabsRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  tabContainerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
 };
 
 TabScrollManager.defaultProps = {
   tabRefs: undefined,
-  tabsRef: undefined
+  tabContainerRef: undefined
 };
 
 export default TabScrollManager;

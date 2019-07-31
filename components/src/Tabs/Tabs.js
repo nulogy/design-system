@@ -37,7 +37,7 @@ class Tabs extends React.Component {
       selectedIndex: selectedIndex || null
     };
 
-    this.tabsRef = React.createRef();
+    this.tabContainerRef = React.createRef();
     this.tabRefs = [];
     this.handleTabClick = this.handleTabClick.bind(this);
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
@@ -49,17 +49,23 @@ class Tabs extends React.Component {
   }
 
   contentHiddenRight() {
-    if (!this.tabsRef.current) {
+    if (!this.tabContainerRef.current) {
       return false;
     }
-    return this.tabsRef.current.scrollLeft + this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
+    return (
+      this.tabContainerRef.current.scrollLeft + this.tabContainerRef.current.offsetWidth <
+      this.tabContainerRef.current.scrollWidth
+    );
   }
 
   contentHiddenLeft() {
-    if (!this.tabsRef.current) {
+    if (!this.tabContainerRef.current) {
       return false;
     }
-    return this.tabsRef.current.scrollLeft !== 0 && this.tabsRef.current.offsetWidth < this.tabsRef.current.scrollWidth;
+    return (
+      this.tabContainerRef.current.scrollLeft !== 0 &&
+      this.tabContainerRef.current.offsetWidth < this.tabContainerRef.current.scrollWidth
+    );
   }
 
   handleTabClick(index) {
@@ -73,11 +79,11 @@ class Tabs extends React.Component {
     const { selectedIndex } = this.state;
 
     return (
-      <TabScrollManager tabsRef={this.tabsRef} tabRefs={this.tabRefs}>
+      <TabScrollManager tabContainerRef={this.tabContainerRef} tabRefs={this.tabRefs}>
         {({ scrollLeft, handleScroll, handleIndicatorClick }) => (
           <TabFocusManager tabRefs={this.tabRefs}>
             {({ onKeyDown, setFocusToTab, focusedIndex }) => (
-              <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabsRef}>
+              <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabContainerRef}>
                 {this.contentHiddenLeft() && (
                   <TabScrollIndicator
                     tabIndex={-1}
