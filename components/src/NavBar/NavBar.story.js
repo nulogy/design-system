@@ -33,9 +33,19 @@ const primaryMenu = [
   {
     name: "Inspector",
     items: [
-      { name: "Integration", href: "/" },
-      { name: "Site configuration", href: "/" },
-      { name: "Company configuration", href: "/" }
+      { name: "Dashboard", href: "/" },
+      { name: "Moves", href: "/" },
+      { name: "Pick Lists", href: "/" },
+      { name: "Receive Orders", href: "/" },
+      { name: "Receipts", href: "/" },
+      { name: "Ship Orders", href: "/" },
+      { name: "Shipments", href: "/" },
+      { name: "Item Lists", href: "/" },
+      { name: "Cycle Counts", href: "/" },
+      { name: "Blind Counts", href: "/" },
+      { name: "Inbound Stock Transfer Orders", href: "/" },
+      { name: "Inbound Stock Transfers", href: "/" },
+      { name: "Outbound Stock Transfers", href: "/" }
     ]
   },
   {
