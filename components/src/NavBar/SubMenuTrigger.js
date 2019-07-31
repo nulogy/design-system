@@ -10,10 +10,10 @@ const StyledButton = styled.button(({ isOpen }) => ({
   display: "block",
   position: "relative",
   color: theme.colors.darkBlue,
-  fontSize: theme.fontSizes.medium,
-  lineHeight: theme.lineHeights.base,
+  fontSize: theme.fontSizes.small,
+  lineHeight: theme.lineHeights.smallTextBase,
   width: "100%",
-  padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.half} 28px ${theme.space.half} ${theme.space.x2}`,
   "&:hover": {
     backgroundColor: theme.colors.lightGrey
   },
@@ -34,7 +34,7 @@ const StyledButton = styled.button(({ isOpen }) => ({
 const SubMenuTriggerButton = React.forwardRef(({ name, isOpen, ...props }, ref) => (
   <StyledButton isOpen={isOpen} ref={ref} {...props}>
     {name}
-    <Icon style={{ position: "absolute", top: "11px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+    <Icon style={{ position: "absolute", top: "7px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
   </StyledButton>
 ));
 

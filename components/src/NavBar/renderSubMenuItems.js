@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { fontSize, lineHeight, space } from "styled-system";
 import theme from "../theme";
-import { DropdownLink as SubMenuLink } from "../DropdownMenu";
+import { DropdownLink } from "../DropdownMenu";
+
+const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
 
 const getSharedStyles = () => ({
   display: "block",
@@ -9,9 +12,9 @@ const getSharedStyles = () => ({
   textDecoration: "none",
   borderColor: "transparent",
   backgroundColor: "transparent",
-  lineHeight: theme.lineHeights.base,
-  fontSize: `${theme.fontSizes.medium}`,
-  padding: `${theme.space.x1} ${theme.space.x2}`
+  lineHeight: theme.lineHeights.smallTextBase,
+  fontSize: `${theme.fontSizes.small}`,
+  padding: `${theme.space.half} ${theme.space.x2}`
 });
 
 const ApplySubMenuLinkStyles = styled.li({
@@ -47,7 +50,7 @@ const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
   <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <SubMenuLink onClick={onItemClick} href={subMenuItem.href}>
+    <SubMenuLink fontSize="small" lineHeight="smallTextBase" py="half" onClick={onItemClick} href={subMenuItem.href}>
       {subMenuItem.name}
     </SubMenuLink>
   </li>
