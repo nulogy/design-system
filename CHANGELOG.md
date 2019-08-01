@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added [Tabs](https://nulogy.design/components/tabs/) component
+- Added Accessibility tab to storybook
+- Added [Modal](https://nulogy.design/components/modal/) component
+- A token for states that are focused and in error ([See example here](https://storybook.nulogy.design/?path=/story/select--with-error-list))
 
 ### Changed
 
