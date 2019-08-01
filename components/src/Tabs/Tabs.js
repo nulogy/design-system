@@ -31,11 +31,13 @@ class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
-    const { selectedIndex } = this.props;
+    const { defaultSelectedIndex } = this.props;
 
     this.state = {
-      selectedIndex: selectedIndex || null
+      selectedIndex: defaultSelectedIndex === null ? null : defaultSelectedIndex
     };
+
+    console.log(this.state.selectedIndex);
 
     this.tabContent = [];
     this.tabContainerRef = React.createRef();
@@ -90,7 +92,6 @@ class Tabs extends React.Component {
   getTabContent() {
     const { children } = this.props;
     const { selectedIndex } = this.state;
-
     let tabContent = null;
 
     React.Children.map(children, (tab, index) => {
@@ -124,13 +125,13 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   children: PropTypes.node,
-  selectedIndex: PropTypes.number,
+  defaultSelectedIndex: PropTypes.number,
   fitted: PropTypes.bool
 };
 
 Tabs.defaultProps = {
   children: null,
-  selectedIndex: undefined,
+  defaultSelectedIndex: null,
   fitted: false
 };
 
