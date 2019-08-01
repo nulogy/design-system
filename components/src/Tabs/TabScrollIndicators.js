@@ -44,8 +44,8 @@ class TabScrollIndicators extends React.Component {
 
     return (
       <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
-        {this.contentHiddenLeft() && <TabScrollIndicator tabIndex={-1} side="left" onClick={onIndicatorClick} />}
-        {this.contentHiddenRight() && <TabScrollIndicator tabIndex={-1} side="right" onClick={onIndicatorClick} />}
+        {this.contentHiddenLeft() && <TabScrollIndicator side="left" onClick={onIndicatorClick} />}
+        {this.contentHiddenRight() && <TabScrollIndicator side="right" onClick={onIndicatorClick} />}
       </TabScrollIndicatorContainer>
     );
   }

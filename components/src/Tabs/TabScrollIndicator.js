@@ -50,11 +50,21 @@ class TabScrollIndicator extends React.PureComponent {
     onClick(side);
   }
 
+  preventFocusMovement(e) {
+    e.preventDefault();
+  }
+
   render() {
     const { side } = this.props;
 
     return (
-      <TabScrollIndicatorButton {...this.props} onClick={this.handleClick} side={side}>
+      <TabScrollIndicatorButton
+        {...this.props}
+        tabIndex={-1}
+        onClick={this.handleClick}
+        onMouseDown={this.preventFocusMovement}
+        side={side}
+      >
         <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
       </TabScrollIndicatorButton>
     );
