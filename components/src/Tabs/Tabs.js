@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import theme from "../theme";
 import TabFocusManager from "./TabFocusManager";
-import TabScrollManager from "./TabScrollManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 import ReactResizeDetector from "react-resize-detector";
 
@@ -63,40 +62,36 @@ class Tabs extends React.Component {
     const { selectedIndex } = this.state;
 
     return (
-      <TabScrollManager tabContainerRef={this.tabContainerRef} tabRefs={this.tabRefs}>
-        {({ handleScroll, handleIndicatorClick }) => (
-          <TabFocusManager tabRefs={this.tabRefs}>
-            {({ onKeyDown, setFocusToTab, focusedIndex }) => (
-              <>
-                <TabScrollIndicators tabContainerRef={this.tabContainerRef} onIndicatorClick={handleIndicatorClick} />
-                <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabContainerRef}>
-                  <ReactResizeDetector handleWidth onResize={this.onResize} />
-                  {React.Children.map(children, (tab, index) =>
-                    React.cloneElement(tab, {
-                      onClick: controlledSelectedIndex
-                        ? tab.props.onClick
-                        : () => {
-                            setFocusToTab(index);
-                            this.handleTabClick(index);
-                          },
-                      onFocus: e => {
-                        e.stopPropagation();
+      <TabFocusManager tabRefs={this.tabRefs}>
+        {({ onKeyDown, setFocusToTab, focusedIndex }) => (
+          <>
+            <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef} />
+            <TabContainer onKeyDown={onKeyDown} ref={this.tabContainerRef}>
+              <ReactResizeDetector handleWidth onResize={this.onResize} />
+              {React.Children.map(children, (tab, index) =>
+                React.cloneElement(tab, {
+                  onClick: controlledSelectedIndex
+                    ? tab.props.onClick
+                    : () => {
+                        setFocusToTab(index);
+                        this.handleTabClick(index);
                       },
-                      index,
-                      tabIndex: index === focusedIndex ? 0 : -1,
-                      selected: index === selectedIndex,
-                      fullWidth: fitted,
-                      ref: ref => {
-                        this.tabRefs[index] = ref;
-                      }
-                    })
-                  )}
-                </TabContainer>
-              </>
-            )}
-          </TabFocusManager>
+                  onFocus: e => {
+                    e.stopPropagation();
+                  },
+                  index,
+                  tabIndex: index === focusedIndex ? 0 : -1,
+                  selected: index === selectedIndex,
+                  fullWidth: fitted,
+                  ref: ref => {
+                    this.tabRefs[index] = ref;
+                  }
+                })
+              )}
+            </TabContainer>
+          </>
         )}
-      </TabScrollManager>
+      </TabFocusManager>
     );
   }
 }
