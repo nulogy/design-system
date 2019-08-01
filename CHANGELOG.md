@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added [Tabs](https://nulogy.design/components/tabs/) component
 - Added Accessibility tab to storybook
 - Added [Modal](https://nulogy.design/components/modal/) component
-- A token for states that are focused and in error ([See example here](https://storybook.nulogy.design/?path=/story/select--with-error-list))
+- Added token for states that are focused and in error ([See example here](https://storybook.nulogy.design/?path=/story/select--with-error-list))
 
 ### Changed
 
@@ -37,6 +37,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.11.0] - 2019-08-06
 
 ### Added
+  - Fixed inconsistent focus styling in submenu triggers
+  - Fixed inability to tell which submenu is open
 
 - Added [Modal](https://nulogy.design/components/modal/) component
 - Added new icons to the [Icon](https://nulogy.design/components/icon/) component: accessTime, block, checkCircleOutline, errorFilled, getApp, publish, removeCircleOutline
