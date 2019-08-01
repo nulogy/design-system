@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
 
@@ -46,7 +47,7 @@ const getBarStyles = (selected, disabled) => {
   }
 };
 
-const Tab = styled.button(({ selected, disabled, fullWidth }) => ({
+const TabButton = styled.button(({ selected, disabled, fullWidth }) => ({
   width: fullWidth ? "100%" : undefined,
   fontWeight: theme.fontWeights.medium,
   textDecoration: "none",
@@ -71,5 +72,11 @@ const Tab = styled.button(({ selected, disabled, fullWidth }) => ({
   },
   ...getBarStyles(selected, disabled)
 }));
+
+const Tab = React.forwardRef(({ label, ...props }, ref) => (
+  <TabButton ref={ref} {...props}>
+    {label}
+  </TabButton>
+));
 
 export default Tab;

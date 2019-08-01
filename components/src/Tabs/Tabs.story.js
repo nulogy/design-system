@@ -5,62 +5,60 @@ import { Tab, Tabs } from ".";
 storiesOf("Tabs", module)
   .add("Tabs", () => (
     <Tabs>
-      <Tab>Tab 1</Tab>
-      <Tab>Tab 2</Tab>
-      <Tab>Tab 3</Tab>
-      <Tab>Tab 4</Tab>
-      <Tab>Tab 5</Tab>
-      <Tab>Tab 6</Tab>
-      <Tab>Tab 7</Tab>
-      <Tab>Tab 8</Tab>
-      <Tab>Tab 9</Tab>
-      <Tab>Tab 10</Tab>
-      <Tab>Tab 11</Tab>
-      <Tab>Tab 12</Tab>
+      <Tab label="Tab 1">Tab 1 Content</Tab>
+      <Tab label="Tab 2">Tab 2 Content</Tab>
+      <Tab label="Tab 3">Tab 3 Content</Tab>
+      <Tab label="Tab 4">Tab 4 Content</Tab>
+      <Tab label="Tab 5">Tab 5 Content</Tab>
+      <Tab label="Tab 6">Tab 6 Content</Tab>
+      <Tab label="Tab 7">Tab 7 Content</Tab>
+      <Tab label="Tab 8">Tab 8 Content</Tab>
+      <Tab label="Tab 9">Tab 9 Content</Tab>
+      <Tab label="Tab 10">Tab 10 Content</Tab>
+      <Tab label="Tab 11">Tab 11 Content</Tab>
+      <Tab label="Tab 12">Tab 12 Content</Tab>
     </Tabs>
   ))
   .add("set to fitted", () => (
     <Tabs fitted>
-      <Tab>Tab 1</Tab>
-      <Tab>Tab 2</Tab>
-      <Tab>Tab 3</Tab>
-      <Tab>Tab 4</Tab>
+      <Tab label="Tab 1">Tab 1 Content</Tab>
+      <Tab label="Tab 2">Tab 2 Content</Tab>
+      <Tab label="Tab 3">Tab 3 Content</Tab>
+      <Tab label="Tab 4">Tab 4 Content</Tab>
     </Tabs>
   ))
   .add("with a selectedIndex", () => (
     <Tabs selectedIndex={1}>
-      <Tab>Tab 1</Tab>
-      <Tab>Tab 2</Tab>
-      <Tab>Tab 3</Tab>
-      <Tab>Tab 4</Tab>
+      <Tab label="Tab 1">Tab 1 Content</Tab>
+      <Tab label="Tab 2">Tab 2 Content</Tab>
+      <Tab label="Tab 3">Tab 3 Content</Tab>
+      <Tab label="Tab 4">Tab 4 Content</Tab>
     </Tabs>
   ))
   .add("with all tab states", () => (
     <div>
-      <Tab>Tab</Tab>
-      <Tab selected>Tab</Tab>
-      <Tab disabled>Tab</Tab>
-      <Tab disabled selected>
-        Tab
-      </Tab>
+      <Tab label="Tab" />
+      <Tab label="Tab" selected />
+      <Tab label="Tab" disabled />
+      <Tab label="Tab" disabled selected />
     </div>
   ))
   .add("TESTING tabs", () => (
     <>
       <button>1</button>
       <Tabs>
-        <Tab>Tab 1</Tab>
-        <Tab>Tab 2</Tab>
-        <Tab>Tab 3</Tab>
-        <Tab>Tab 4</Tab>
-        <Tab>Tab 5</Tab>
-        <Tab>Tab 6</Tab>
-        <Tab>Tab 7</Tab>
-        <Tab>Tab 8</Tab>
-        <Tab>Tab 9</Tab>
-        <Tab>Tab 10</Tab>
-        <Tab>Tab 11</Tab>
-        <Tab>Tab 12</Tab>
+        <Tab label="Tab 1">Tab 1 Content</Tab>
+        <Tab label="Tab 2">Tab 2 Content</Tab>
+        <Tab label="Tab 3">Tab 3 Content</Tab>
+        <Tab label="Tab 4">Tab 4 Content</Tab>
+        <Tab label="Tab 5">Tab 5 Content</Tab>
+        <Tab label="Tab 6">Tab 6 Content</Tab>
+        <Tab label="Tab 7">Tab 7 Content</Tab>
+        <Tab label="Tab 8">Tab 8 Content</Tab>
+        <Tab label="Tab 9">Tab 9 Content</Tab>
+        <Tab label="Tab 10">Tab 10 Content</Tab>
+        <Tab label="Tab 11">Tab 11 Content</Tab>
+        <Tab label="Tab 12">Tab 12 Content</Tab>
       </Tabs>
       <button>2</button>
     </>
@@ -68,18 +66,18 @@ storiesOf("Tabs", module)
   .add("TESTING container", () => (
     <div style={{ maxWidth: "500px" }}>
       <Tabs>
-        <Tab>Tab 1</Tab>
-        <Tab>Tab 2</Tab>
-        <Tab>Tab 3</Tab>
-        <Tab>Tab 4</Tab>
-        <Tab>Tab 5</Tab>
-        <Tab>Tab 6</Tab>
-        <Tab>Tab 7</Tab>
-        <Tab>Tab 8</Tab>
-        <Tab>Tab 9</Tab>
-        <Tab>Tab 10</Tab>
-        <Tab>Tab 11</Tab>
-        <Tab>Tab 12</Tab>
+        <Tab label="Tab 1">Tab 1 Content</Tab>
+        <Tab label="Tab 2">Tab 2 Content</Tab>
+        <Tab label="Tab 3">Tab 3 Content</Tab>
+        <Tab label="Tab 4">Tab 4 Content</Tab>
+        <Tab label="Tab 5">Tab 5 Content</Tab>
+        <Tab label="Tab 6">Tab 6 Content</Tab>
+        <Tab label="Tab 7">Tab 7 Content</Tab>
+        <Tab label="Tab 8">Tab 8 Content</Tab>
+        <Tab label="Tab 9">Tab 9 Content</Tab>
+        <Tab label="Tab 10">Tab 10 Content</Tab>
+        <Tab label="Tab 11">Tab 11 Content</Tab>
+        <Tab label="Tab 12">Tab 12 Content</Tab>
       </Tabs>
     </div>
   ));

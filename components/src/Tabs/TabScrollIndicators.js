@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
+import smoothscroll from "smoothscroll-polyfill";
 import theme from "../theme";
 import TabScrollIndicator from "./TabScrollIndicator";
-import smoothscroll from "smoothscroll-polyfill";
 
 smoothscroll.polyfill();
 
 const TabScrollIndicatorContainer = styled.div(({ width }) => ({
   position: "absolute",
-  width: width,
+  width,
   height: theme.space.x5
 }));
 
@@ -27,6 +27,7 @@ class TabScrollIndicators extends React.Component {
     this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
     this.contentHiddenRight = this.contentHiddenRight.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   contentHiddenRight() {
@@ -91,6 +92,11 @@ class TabScrollIndicators extends React.Component {
     return null;
   }
 
+  handleScroll() {
+    const { tabContainerRef } = this.props;
+    this.setState({ scrollLeft: tabContainerRef.current.scrollLeft });
+  }
+
   handleIndicatorClick(side) {
     const { tabRefs, tabContainerRef } = this.props;
 
@@ -116,18 +122,22 @@ class TabScrollIndicators extends React.Component {
   }
 
   render() {
-    const { tabContainerRef } = this.props;
+    const { tabContainerRef, children } = this.props;
 
     return (
-      <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
-        {this.contentHiddenLeft() && <TabScrollIndicator side="left" onClick={this.handleIndicatorClick} />}
-        {this.contentHiddenRight() && <TabScrollIndicator side="right" onClick={this.handleIndicatorClick} />}
-      </TabScrollIndicatorContainer>
+      <>
+        <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
+          {this.contentHiddenLeft() && <TabScrollIndicator side="left" onClick={this.handleIndicatorClick} />}
+          {this.contentHiddenRight() && <TabScrollIndicator side="right" onClick={this.handleIndicatorClick} />}
+        </TabScrollIndicatorContainer>
+        {children({ handleScroll: this.handleScroll })}
+      </>
     );
   }
 }
 
 TabScrollIndicators.propTypes = {
+  children: PropTypes.func.isRequired,
   tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
   tabContainerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
 };
