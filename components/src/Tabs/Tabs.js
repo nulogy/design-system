@@ -79,6 +79,7 @@ class Tabs extends React.Component {
         index,
         tabIndex: index === focusedIndex ? 0 : -1,
         selected: index === selectedIndex,
+        "aria-selected": index === selectedIndex,
         fullWidth: fitted,
         ref: ref => {
           this.tabRefs[index] = ref;
@@ -111,7 +112,7 @@ class Tabs extends React.Component {
           {({ onKeyDown, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll }) => (
-                <TabContainer onScroll={handleScroll} onKeyDown={onKeyDown} ref={this.tabContainerRef}>
+                <TabContainer role="tablist" onScroll={handleScroll} onKeyDown={onKeyDown} ref={this.tabContainerRef}>
                   <ReactResizeDetector handleWidth onResize={this.onResize} />
                   {this.getTabs(setFocusToTab, focusedIndex)}
                 </TabContainer>

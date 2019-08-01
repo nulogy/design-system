@@ -88,4 +88,20 @@ storiesOf("Tabs", module)
         <Tab label="Tab 12">Tab 12 Content</Tab>
       </Tabs>
     </div>
+  ))
+  .add("TESTING persistant tab content", () => (
+    <Tabs>
+      <Tab label="Tab 1">
+        Tab 1 Content
+        <input />
+      </Tab>
+      <Tab label="Tab 2">
+        Tab 2 Content
+        <input />
+      </Tab>
+      <Tab label="Tab 3">
+        Tab 3 Content
+        <input />
+      </Tab>
+    </Tabs>
   ));
