@@ -92,12 +92,14 @@ class Tabs extends React.Component {
   getTabContent() {
     const { children } = this.props;
     const { selectedIndex } = this.state;
-    let tabContent = null;
 
-    React.Children.map(children, (tab, index) => {
-      if (selectedIndex === index) {
-        tabContent = tab.props.children;
-      }
+    const tabContent = React.Children.map(children, (tab, index) => {
+      const selected = index === selectedIndex;
+      return (
+        <div aria-hidden={!selected} hidden={!selected} selected={selected}>
+          {tab.props.children}
+        </div>
+      );
     });
     return tabContent;
   }
