@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import smoothscroll from "smoothscroll-polyfill";
+
+smoothscroll.polyfill();
 
 class TabScrollManager extends React.Component {
   constructor(props) {
@@ -78,11 +81,10 @@ class TabScrollManager extends React.Component {
   applyScrollLeft() {
     const { tabContainerRef } = this.props;
     const { scrollLeft } = this.state;
-    tabContainerRef.current.scrollLeft = scrollLeft;
+    tabContainerRef.current.scroll({ left: scrollLeft, behavior: "smooth" });
   }
 
   handleScroll() {
-    console.log("handleScroll");
     const { tabContainerRef } = this.props;
     if (tabContainerRef.current) {
       this.setState({
