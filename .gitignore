@@ -85,3 +85,6 @@ yarn-error.log*
 
 **/cypress/screenshots
 **/cypress/videos
+
+# RubyMine settings
+.idea
