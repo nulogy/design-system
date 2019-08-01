@@ -8,10 +8,10 @@ import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
+const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
-  if (error) {
+  if (errored) {
     return red;
   }
 
@@ -58,7 +58,7 @@ const customStyles = error => {
       background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
       border: `1px solid ${theme.colors.grey}`,
       borderColor: getBorderColor({
-        error,
+        errored: error,
         disabled: state.isDisabled,
         isOpen: state.selectProps.menuIsOpen,
         isFocused: state.isFocused
@@ -68,7 +68,7 @@ const customStyles = error => {
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
-          error,
+          errored: error,
           disabled: state.isDisabled,
           isOpen: state.selectProps.menuIsOpen,
           isFocused: true
@@ -92,7 +92,7 @@ const customStyles = error => {
       background: theme.colors.white,
       borderWidth: "1px",
       borderColor: getBorderColor({
-        error,
+        errored: error,
         isOpen: true,
         disabled: state.isDisabled,
         isFocused: false
