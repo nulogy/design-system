@@ -37,6 +37,7 @@ class Tabs extends React.Component {
       selectedIndex: selectedIndex || null
     };
 
+    this.tabContent = [];
     this.tabContainerRef = React.createRef();
     this.tabRefs = [];
     this.handleTabClick = this.handleTabClick.bind(this);
@@ -86,6 +87,20 @@ class Tabs extends React.Component {
     return tabs;
   }
 
+  getTabContent() {
+    const { children } = this.props;
+    const { selectedIndex } = this.state;
+
+    let tabContent = null;
+
+    React.Children.map(children, (tab, index) => {
+      if (selectedIndex === index) {
+        tabContent = tab.props.children;
+      }
+    });
+    return tabContent;
+  }
+
   render() {
     return (
       <>
@@ -101,7 +116,7 @@ class Tabs extends React.Component {
             </TabScrollIndicators>
           )}
         </TabFocusManager>
-        {this.tabContent}
+        {this.getTabContent()}
       </>
     );
   }
