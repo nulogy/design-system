@@ -14,7 +14,6 @@ import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { PreventBodyElementScrolling, subPx, withWindowDimensions, withMenuState } from "../utils";
-import ReactResizeDetector from "react-resize-detector";
 
 const themeColors = {
   blue: {
