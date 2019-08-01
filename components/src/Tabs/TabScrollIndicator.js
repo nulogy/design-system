@@ -6,8 +6,8 @@ import { Icon } from "../Icon";
 
 const TabScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
   style: {
-    left: side === "left" ? scrollLeft : undefined,
-    right: side === "right" ? scrollLeft * -1 : undefined
+    left: side === "left" ? 0 : undefined,
+    right: side === "right" ? 0 : undefined
   }
 }))({
   position: "absolute",

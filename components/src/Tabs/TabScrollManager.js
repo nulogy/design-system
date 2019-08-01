@@ -82,6 +82,7 @@ class TabScrollManager extends React.Component {
   }
 
   handleScroll() {
+    console.log("handleScroll");
     const { tabContainerRef } = this.props;
     if (tabContainerRef.current) {
       this.setState({
