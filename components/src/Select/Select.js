@@ -44,7 +44,11 @@ const customStyles = error => {
     option: (provided, state) => ({
       padding: subPx(theme.space.x1),
       fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
-      background: state.isFocused ? theme.colors.lightBlue : null
+      background: state.isFocused ? theme.colors.lightBlue : null,
+      "&:last-child": {
+        borderBottomLeftRadius: theme.radii.medium,
+        borderBottomRightRadius: theme.radii.medium
+      }
     }),
     control: (provided, state) => ({
       display: "flex",
