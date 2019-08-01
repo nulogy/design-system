@@ -3,3 +3,4 @@ export { default as Tabs } from "./Tabs";
 export { default as TabFocusManager } from "./TabFocusManager";
 export { default as TabScrollManager } from "./TabScrollManager";
 export { default as TabScrollIndicator } from "./TabScrollIndicator";
+export { default as TabScrollIndicators } from "./TabScrollIndicators";

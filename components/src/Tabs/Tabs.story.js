@@ -45,7 +45,7 @@ storiesOf("Tabs", module)
       </Tab>
     </div>
   ))
-  .add("TESTING", () => (
+  .add("TESTING tabs", () => (
     <>
       <button>1</button>
       <Tabs>
@@ -64,4 +64,22 @@ storiesOf("Tabs", module)
       </Tabs>
       <button>2</button>
     </>
+  ))
+  .add("TESTING container", () => (
+    <div style={{ maxWidth: "500px" }}>
+      <Tabs>
+        <Tab>Tab 1</Tab>
+        <Tab>Tab 2</Tab>
+        <Tab>Tab 3</Tab>
+        <Tab>Tab 4</Tab>
+        <Tab>Tab 5</Tab>
+        <Tab>Tab 6</Tab>
+        <Tab>Tab 7</Tab>
+        <Tab>Tab 8</Tab>
+        <Tab>Tab 9</Tab>
+        <Tab>Tab 10</Tab>
+        <Tab>Tab 11</Tab>
+        <Tab>Tab 12</Tab>
+      </Tabs>
+    </div>
   ));

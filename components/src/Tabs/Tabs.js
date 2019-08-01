@@ -4,7 +4,7 @@ import React from "react";
 import theme from "../theme";
 import TabFocusManager from "./TabFocusManager";
 import TabScrollManager from "./TabScrollManager";
-import TabScrollIndicator from "./TabScrollIndicator";
+import TabScrollIndicators from "./TabScrollIndicators";
 import ReactResizeDetector from "react-resize-detector";
 
 const TabContainer = styled.div({
@@ -41,8 +41,6 @@ class Tabs extends React.Component {
     this.tabContainerRef = React.createRef();
     this.tabRefs = [];
     this.handleTabClick = this.handleTabClick.bind(this);
-    this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
-    this.contentHiddenRight = this.contentHiddenRight.bind(this);
     this.onResize = this.onResize.bind(this);
   }
 
@@ -52,26 +50,6 @@ class Tabs extends React.Component {
 
   onResize() {
     this.forceUpdate();
-  }
-
-  contentHiddenRight() {
-    if (!this.tabContainerRef.current) {
-      return false;
-    }
-    return (
-      this.tabContainerRef.current.scrollLeft + this.tabContainerRef.current.offsetWidth <
-      this.tabContainerRef.current.scrollWidth
-    );
-  }
-
-  contentHiddenLeft() {
-    if (!this.tabContainerRef.current) {
-      return false;
-    }
-    return (
-      this.tabContainerRef.current.scrollLeft !== 0 &&
-      this.tabContainerRef.current.offsetWidth < this.tabContainerRef.current.scrollWidth
-    );
   }
 
   handleTabClick(index) {
@@ -90,20 +68,7 @@ class Tabs extends React.Component {
           <TabFocusManager tabRefs={this.tabRefs}>
             {({ onKeyDown, setFocusToTab, focusedIndex }) => (
               <>
-                <div
-                  style={{
-                    position: "absolute",
-                    width: this.tabContainerRef.current ? this.tabContainerRef.current.offsetWidth : 0,
-                    height: "40px"
-                  }}
-                >
-                  {this.contentHiddenLeft() && (
-                    <TabScrollIndicator tabIndex={-1} side="left" onClick={handleIndicatorClick} />
-                  )}
-                  {this.contentHiddenRight() && (
-                    <TabScrollIndicator tabIndex={-1} side="right" onClick={handleIndicatorClick} />
-                  )}
-                </div>
+                <TabScrollIndicators tabContainerRef={this.tabContainerRef} onIndicatorClick={handleIndicatorClick} />
                 <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabContainerRef}>
                   <ReactResizeDetector handleWidth onResize={this.onResize} />
                   {React.Children.map(children, (tab, index) =>
