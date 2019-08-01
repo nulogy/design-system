@@ -92,13 +92,11 @@ class TabScrollManager extends React.Component {
   }
 
   render() {
-    const { scrollLeft } = this.state;
     const { children } = this.props;
 
     return (
       <>
         {children({
-          scrollLeft,
           handleScroll: this.handleScroll,
           handleIndicatorClick: this.handleIndicatorClick,
           contentHiddenLeft: this.contentHiddenLeft,

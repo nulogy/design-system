@@ -4,16 +4,13 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
 
-const TabScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => ({
-  style: {
-    left: side === "left" ? 0 : undefined,
-    right: side === "right" ? 0 : undefined
-  }
-}))({
+const TabScrollIndicatorButton = styled.button(({ side }) => ({
   position: "absolute",
   color: theme.colors.black,
   top: 0,
   bottom: 0,
+  left: side === "left" ? 0 : undefined,
+  right: side === "right" ? 0 : undefined,
   height: theme.space.x5,
   width: theme.space.x5,
   background: theme.colors.white,
@@ -39,7 +36,7 @@ const TabScrollIndicatorButton = styled.button.attrs(({ side, scrollLeft }) => (
   "&:disabled": {
     opacity: ".5"
   }
-});
+}));
 
 class TabScrollIndicator extends React.PureComponent {
   constructor(props) {
@@ -54,10 +51,10 @@ class TabScrollIndicator extends React.PureComponent {
   }
 
   render() {
-    const { side, scrollLeft } = this.props;
+    const { side } = this.props;
 
     return (
-      <TabScrollIndicatorButton {...this.props} onClick={this.handleClick} side={side} scrollLeft={scrollLeft}>
+      <TabScrollIndicatorButton {...this.props} onClick={this.handleClick} side={side}>
         <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
       </TabScrollIndicatorButton>
     );
@@ -66,14 +63,12 @@ class TabScrollIndicator extends React.PureComponent {
 
 TabScrollIndicator.propTypes = {
   onClick: PropTypes.func,
-  side: PropTypes.oneOf(["left", "right"]),
-  scrollLeft: PropTypes.number
+  side: PropTypes.oneOf(["left", "right"])
 };
 
 TabScrollIndicator.defaultProps = {
   onClick: () => {},
-  side: "left",
-  scrollLeft: 0
+  side: "left"
 };
 
 export default TabScrollIndicator;

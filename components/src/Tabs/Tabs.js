@@ -86,7 +86,7 @@ class Tabs extends React.Component {
 
     return (
       <TabScrollManager tabContainerRef={this.tabContainerRef} tabRefs={this.tabRefs}>
-        {({ scrollLeft, handleScroll, handleIndicatorClick }) => (
+        {({ handleScroll, handleIndicatorClick }) => (
           <TabFocusManager tabRefs={this.tabRefs}>
             {({ onKeyDown, setFocusToTab, focusedIndex }) => (
               <>
@@ -98,20 +98,10 @@ class Tabs extends React.Component {
                   }}
                 >
                   {this.contentHiddenLeft() && (
-                    <TabScrollIndicator
-                      tabIndex={-1}
-                      side="left"
-                      scrollLeft={scrollLeft}
-                      onClick={handleIndicatorClick}
-                    />
+                    <TabScrollIndicator tabIndex={-1} side="left" onClick={handleIndicatorClick} />
                   )}
                   {this.contentHiddenRight() && (
-                    <TabScrollIndicator
-                      tabIndex={-1}
-                      side="right"
-                      scrollLeft={scrollLeft}
-                      onClick={handleIndicatorClick}
-                    />
+                    <TabScrollIndicator tabIndex={-1} side="right" onClick={handleIndicatorClick} />
                   )}
                 </div>
                 <TabContainer onKeyDown={onKeyDown} onScroll={handleScroll} ref={this.tabContainerRef}>
