@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - [Button](https://nulogy.design/components/buttons/) now uses the proper border colour (`blue`)
+- [IconicButton](https://nulogy.design/components/iconic-button/) now uses the `aria-label` attribute instead of the `label` attribute
 
 - NavBar bug fixes
 

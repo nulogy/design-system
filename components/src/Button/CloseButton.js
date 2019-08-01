@@ -46,7 +46,7 @@ const WrapperButton = styled.button(({ disabled }) => ({
 }));
 
 const BaseCloseButton = React.forwardRef(({ ...props }, ref) => (
-  <WrapperButton aria-label="close" ref={ref} label="close" {...props}>
+  <WrapperButton aria-label="close" ref={ref} {...props}>
     <Icon size={theme.space.x4} icon="close" p="half" />
   </WrapperButton>
 ));
