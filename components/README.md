@@ -12,7 +12,7 @@ Built with React, compononents make it easy to create interfaces that conform to
 Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,600) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 ```
 
