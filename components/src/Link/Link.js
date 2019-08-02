@@ -21,10 +21,6 @@ const Link = styled.a(color, space, ({ underline, ...props }) => ({
   "&:hover": {
     cursor: "pointer",
     color: getHoverColor(props)
-  },
-  "&:focus": {
-    outline: "none",
-    boxShadow: theme.shadows.focus
   }
 }));
 
