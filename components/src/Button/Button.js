@@ -70,7 +70,7 @@ const Button = styled(BaseButton)(
     textDecoration: "none",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
-    transition: ".2s",
+    transition: "background-color .2s",
     cursor: disabled ? "default" : "pointer",
     color: theme.colors.blue,
     backgroundColor: theme.colors.white,
@@ -92,7 +92,7 @@ const Button = styled(BaseButton)(
     },
     "&:active": {
       transform: "scale(0.98)",
-      transition: ".2s ease-in"
+      transition: "scale .2s ease-in"
     },
     "&:disabled": {
       opacity: ".5"
