@@ -30,11 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - [IconicButton](https://nulogy.design/components/iconic-button/) now uses the `aria-label` attribute instead of the `label` attribute
 
 - NavBar bug fixes
-
-  - Fixes inconsistent focus styling in submenu triggers
-  - Fixes inability to tell which submenu is open
-
-- Fixed minor markup issues in `Alert`, `RadioGroup`, `CheckboxGroup`, `NavBar`, `DropDownMenu`, `Toggle` and `Form without title`
+  - Changes focus styling on Navbar submenu trigger to indicate when the submenu is open
 
 ### Security
 
