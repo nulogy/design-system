@@ -65,7 +65,7 @@ const menuData = {
   ]
 };
 
-// Table Code Starts here //
+// Table  Code Starts here //
 //------------------------//
 const Table = styled.table({
   border: 0,
@@ -104,7 +104,7 @@ const Header = styled.thead({
     borderBottom: "1px solid",
     borderColor: theme.colors.lightGrey
   },
-  "@media screen and (max-width: 700px)": { display: "none" }
+  [`@media screen and (max-width: ${theme.breakpoints.small})`]: { display: "none" }
 });
 
 const InventoryStatusTable = ({ rows }) => (
@@ -376,22 +376,37 @@ class InvetoryStatusesPage extends React.Component {
       }
     ];
 
-    const DefaultStatusesView = props => (
-      <Flex justifyContent="space-between">
-        <Box mr="x8" width={1 / 2}>
-          <DataPair
-            mb="x4"
-            labelText="Auto Quarantine on Production"
-            value={"value"}
-            overrideText={"Override enabled on Item Master"}
-          />
-          <DataPair mb="x4" labelText="Inventory rejected on Jobs" value={"value"} />
-        </Box>
-        <Box mr="x8" width={1 / 2}>
-          <DataPair mb="x4" labelText="Auto Quarantine on Receipt" value={"value"} />
-          <DataPair mb="x4" labelText="Inventory created by Blind Counts" value={"value"} />
-        </Box>
-      </Flex>
+    const DefaultStatusesView = () => (
+      <>
+        <Flex mb="x3" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
+          <Box mr="x8" width="100%">
+            <Box>
+              <SubsectionTitle mb="x2">Auto Quarantine on Production</SubsectionTitle>
+              <DataPair mb="x3" labelText="Items" value={"All Items"} />
+              <DataPair mb="x1" labelText="Quarantine Status" value={"Quarantined"} />
+              <Text mb="x4" color="darkGrey">
+                (Override enabled on Item Master)
+              </Text>
+            </Box>
+          </Box>
+          <Box mr="x8" width="100%">
+            <Box>
+              <SubsectionTitle mb="x2">Auto Quarantine on Receipt</SubsectionTitle>
+              <DataPair mb="x3" labelText="Items" value={"No Items"} />
+              <DataPair mb="x4" labelText="Quarantine Status" value={"--"} />
+            </Box>
+          </Box>
+        </Flex>
+        <SubsectionTitle mb="x2">Other Defaults</SubsectionTitle>
+        <Flex justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
+          <Box mr="x8" mb="x2" width="100%">
+            <DataPair mb="x3" labelText="Inventory rejected on Jobs" value={"Hold"} />
+          </Box>
+          <Box mr="x8" mb="x2" width="100%">
+            <DataPair mb="x3" labelText="Inventory created by Blind Counts" value={"Damaged"} />
+          </Box>
+        </Flex>
+      </>
     );
 
     // "Auto Quarantine on Production/Receipt" options
@@ -423,7 +438,7 @@ class InvetoryStatusesPage extends React.Component {
       { value: "damaged", label: "Damaged" }
     ];
 
-    const DefaultStatusesEdit = props => (
+    const DefaultStatusesEdit = () => (
       <>
         <Flex mb="x3" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
           <Box mr="x8" width="100%">
@@ -451,7 +466,7 @@ class InvetoryStatusesPage extends React.Component {
             <Checkbox mb="x2" labelText="Allow override on Item Master" />
           </Box>
         </Flex>
-        <SubsectionTitle mb="x2">Other Defaults?</SubsectionTitle>
+        <SubsectionTitle mb="x2">Other Defaults</SubsectionTitle>
         <Flex justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
           <Box mr="x8" mb="x2" width="100%">
             {/*if no saved value: default to first item*/}
@@ -476,7 +491,7 @@ class InvetoryStatusesPage extends React.Component {
       <ResetStorybookView>
         <BodyStyleReset />
         <NavBar menuData={menuData} />
-        <div style={{ maxWidth: "980px", margin: "0 auto" }}>
+        <Box maxWidth="996px" mx="auto" px="x1">
           <Title mt="x5" ml="x3" mb="x3">
             Toronto Facility: Inventory Statuses
           </Title>
@@ -515,14 +530,11 @@ class InvetoryStatusesPage extends React.Component {
             </Flex>
             {this.state.defaultStatusEdit ? DefaultStatusesEdit() : DefaultStatusesView()}
           </PackManagerCard>
-        </div>
+        </Box>
         <Footer />
       </ResetStorybookView>
     );
   }
 }
 
-storiesOf("Inventory Statuses", module)
-  .add("Page", () => <InvetoryStatusesPage />)
-  .add("Table with row being edited", () => <InventoryStatusTable edit rows={inventoryStatusTableData} />)
-  .add("Table with disabled row", () => <InventoryStatusTable disable rows={inventoryStatusTableData} />);
+storiesOf("Inventory Statuses", module).add("Page", () => <InvetoryStatusesPage />);
