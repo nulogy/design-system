@@ -35,7 +35,7 @@ const SelectBox = styled.div(({ disabled }) => ({
 const Input = styled.input(({ error, isOpen, disabled, maxWidth }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
-  maxWidth: maxWidth,
+  maxWidth,
   color: theme.colors.black,
   fontSize: theme.fontSizes.medium,
   padding: "7px 27px 7px 7px",
@@ -165,7 +165,7 @@ const Select = ({
               requirementText={requirementText}
               helpText={helpText}
             >
-              <div style={{ position: "relative", width: "100%", maxWidth: inputMaxWidth ? inputMaxWidth : "100%" }}>
+              <div style={{ position: "relative", width: "100%", maxWidth: inputMaxWidth || "100%" }}>
                 <Input
                   {...getInputProps({
                     disabled,
@@ -190,7 +190,7 @@ const Select = ({
               style={{
                 position: "absolute",
                 width: "100%",
-                maxWidth: inputMaxWidth ? inputMaxWidth : "100%",
+                maxWidth: inputMaxWidth || "100%",
                 zIndex: theme.zIndex.content
               }}
             >
