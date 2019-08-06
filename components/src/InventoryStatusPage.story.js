@@ -1,10 +1,10 @@
 import React from "react";
-//consider using styled components when you have to make your own compoennts as well!
+// consider using styled components when you have to make your own compoennts as well!
 import styled, { createGlobalStyle } from "styled-components";
 import { storiesOf } from "@storybook/react";
 import {
   Checkbox,
-  Select,
+  Select as NDSSelect,
   Text,
   Box,
   NavBar,
@@ -21,7 +21,7 @@ import {
   Input,
   Link,
   theme
-} from "./index"; //"@nulogy/components"
+} from "./index"; // "@nulogy/components"
 
 const BodyStyleReset = createGlobalStyle({
   body: {
@@ -61,6 +61,11 @@ const menuData = {
   ]
 };
 
+const Select = ({ boxProps, ...props }) => (
+  <Box {...boxProps}>
+    <NDSSelect {...props} />
+  </Box>
+);
 // Table  Code Starts here //
 // ------------------------//
 const Table = styled.table({
@@ -314,7 +319,7 @@ const Footer = styled.div({
 
 const DataPair = props => (
   <Box width="100%" {...props}>
-    <Text mb="x2">{props.labelText}</Text>
+    <Text mb="x1">{props.labelText}</Text>
     <Text color="darkGrey">{props.value}</Text>
   </Box>
 );
@@ -381,9 +386,10 @@ class InvetoryStatusesPage extends React.Component {
             <DataPair labelText="Items" value="All Items" />
             <DataPair labelText="Quarantine Status" value="Quarantined" />
           </Flex>
-          <Text mb="x4" color="darkGrey">
-            <i>(Override enabled on Item Master)</i>
+          <Text style={{ fontStyle: "italic" }} mb="x4" color="darkGrey">
+            (Override enabled on Item Master)
           </Text>
+          {/* The Override text should only be present when the value is true, otherwise remove and set the mb on the Flex above to x4 */}
         </Box>
         <Box>
           <SubsectionTitle mb="x2">Auto Quarantine on Receipt</SubsectionTitle>
@@ -391,6 +397,7 @@ class InvetoryStatusesPage extends React.Component {
             <DataPair labelText="Items" value="No Items" />
             <DataPair labelText="Quarantine Status" value="--" />
           </Flex>
+          {/* The Override text is not present in this example */}
         </Box>
         <Box>
           <SubsectionTitle mb="x2">Other Defaults</SubsectionTitle>
@@ -436,38 +443,54 @@ class InvetoryStatusesPage extends React.Component {
         <Box>
           <SubsectionTitle mb="x2">Auto Quarantine on Production</SubsectionTitle>
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            {/* if no saved value: defualt to no-options */}
-            <Select inputMaxWidth="324px" options={autoQuarantineOptions} labelText="Items" />
-            {/* if no saved value: no default */}
-            <Select inputMaxWidth="324px" options={quarantinedStatuses} labelText="Quarantine Status" />
+            <Box width="100%">
+              {/* if no saved value: defualt to no-options */}
+              <Select boxProps={{ maxWidth: "324px" }} options={autoQuarantineOptions} labelText="Items" />
+            </Box>
+            <Box width="100%">
+              {/* if no saved value: no default */}
+              <Select
+                boxProps={{ width: "100%", maxWidth: "324px" }}
+                options={quarantinedStatuses}
+                labelText="Quarantine Status"
+              />
+            </Box>
           </Flex>
           <Checkbox mb="x4" labelText="Allow override on Item Master" />
         </Box>
         <Box>
           <SubsectionTitle mb="x2">Auto Quarantine on Receipt</SubsectionTitle>
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            {/* if no saved value: defualt to no-options */}
-            <Select inputMaxWidth="324px" options={autoQuarantineOptions} labelText="Items" />
-            {/* if no saved value: no default */}
-            <Select inputMaxWidth="324px" options={quarantinedStatuses} labelText="Quarantine Status" />
+            <Box width="100%">
+              {/* if no saved value: defualt to no-options */}
+              <Select boxProps={{ maxWidth: "324px" }} options={autoQuarantineOptions} labelText="Items" />
+            </Box>
+            <Box width="100%">
+              {/* if no saved value: no default */}
+              <Select boxProps={{ maxWidth: "324px" }} options={quarantinedStatuses} labelText="Quarantine Status" />
+            </Box>
           </Flex>
           <Checkbox mb="x4" labelText="Allow override on Item Master" />
         </Box>
         <Box>
           <SubsectionTitle mb="x2">Other Defaults</SubsectionTitle>
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            {/* if no saved value: default to first item */}
-            <Select
-              inputMaxWidth="324px"
-              options={quarantinedAndRejectedStatuses}
-              labelText="Inventory rejected on Jobs"
-            />
-            {/* if no saved value: default to first item */}
-            <Select
-              inputMaxWidth="324px"
-              options={allInventoryStatuses}
-              labelText="Inventory created by Blind Counts"
-            />
+            <Box width="100%">
+              {/* if no saved value: default to first item */}
+              <Select
+                boxProps={{ maxWidth: "324px" }}
+                options={quarantinedAndRejectedStatuses}
+                labelText="Inventory rejected on Jobs"
+              />
+            </Box>
+            <Box width="100%">
+              {/* if no saved value: default to first item */}
+              <Select
+                boxProps={{ maxWidth: "324px" }}
+                options={allInventoryStatuses}
+                labelText="Inventory created by Blind Counts"
+              />
+            </Box>
           </Flex>
         </Box>
       </>
