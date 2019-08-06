@@ -1,5 +1,5 @@
 import React from "react";
-// consider using styled components when you have to make your own compoennts as well!
+// consider using styled components when you have to make your own components as well!
 import styled, { createGlobalStyle } from "styled-components";
 import { storiesOf } from "@storybook/react";
 import {
@@ -188,7 +188,7 @@ class CreateInventoryStatusModal extends React.Component {
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
-            <Select
+            <NDSSelect
               options={inventoryStatusCategoryOptions}
               type="number"
               name="category"
@@ -247,7 +247,7 @@ class EditInventoryStatusModal extends React.Component {
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
-            <Select
+            <NDSSelect
               options={inventoryStatusCategoryOptions}
               type="number"
               name="category"
@@ -285,12 +285,6 @@ class DisableInventoryStatusModal extends React.Component {
   render() {
     const { isOpen } = this.state;
 
-    const inventoryStatusCategoryOptions = [
-      { value: "quarantined", label: "Quarantined" },
-      { value: "rejected", label: "Rejected" },
-      { value: "unavaliable", label: "Unavaliable" }
-    ];
-
     return (
       <span>
         <Link as="button" underline={false} onClick={this.openModal}>
@@ -324,7 +318,7 @@ const DataPair = props => (
   </Box>
 );
 
-class InvetoryStatusesPage extends React.Component {
+class InventoryStatusesPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -383,7 +377,7 @@ class InvetoryStatusesPage extends React.Component {
         <Box>
           <SubsectionTitle mb="x2">Auto Quarantine on Production</SubsectionTitle>
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            <DataPair labelText="Items" value="All Items" />
+            <DataPair mb={{ extraSmall: "x4", small: "none" }} labelText="Items" value="All Items" />
             <DataPair labelText="Quarantine Status" value="Quarantined" />
           </Flex>
           <Text style={{ fontStyle: "italic" }} mb="x4" color="darkGrey">
@@ -394,7 +388,7 @@ class InvetoryStatusesPage extends React.Component {
         <Box>
           <SubsectionTitle mb="x2">Auto Quarantine on Receipt</SubsectionTitle>
           <Flex mb="x4" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            <DataPair labelText="Items" value="No Items" />
+            <DataPair mb={{ extraSmall: "x4", small: "none" }} labelText="Items" value="No Items" />
             <DataPair labelText="Quarantine Status" value="--" />
           </Flex>
           {/* The Override text is not present in this example */}
@@ -402,7 +396,7 @@ class InvetoryStatusesPage extends React.Component {
         <Box>
           <SubsectionTitle mb="x2">Other Defaults</SubsectionTitle>
           <Flex mb="x4" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
-            <DataPair labelText="Inventory rejected on Jobs" value="Hold" />
+            <DataPair mb={{ extraSmall: "x4", small: "none" }} labelText="Inventory rejected on Jobs" value="Hold" />
             <DataPair labelText="Inventory created by Blind Counts" value="Damaged" />
           </Flex>
         </Box>
@@ -445,7 +439,11 @@ class InvetoryStatusesPage extends React.Component {
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
             <Box width="100%">
               {/* if no saved value: defualt to no-options */}
-              <Select boxProps={{ maxWidth: "324px" }} options={autoQuarantineOptions} labelText="Items" />
+              <Select
+                boxProps={{ maxWidth: "324px", mb: { extraSmall: "x4", small: "none" } }}
+                options={autoQuarantineOptions}
+                labelText="Items"
+              />
             </Box>
             <Box width="100%">
               {/* if no saved value: no default */}
@@ -463,7 +461,11 @@ class InvetoryStatusesPage extends React.Component {
           <Flex mb="x1" justifyContent="space-between" flexDirection={{ extraSmall: "column", small: "row" }}>
             <Box width="100%">
               {/* if no saved value: defualt to no-options */}
-              <Select boxProps={{ maxWidth: "324px" }} options={autoQuarantineOptions} labelText="Items" />
+              <Select
+                boxProps={{ maxWidth: "324px", mb: { extraSmall: "x4", small: "none" } }}
+                options={autoQuarantineOptions}
+                labelText="Items"
+              />
             </Box>
             <Box width="100%">
               {/* if no saved value: no default */}
@@ -478,7 +480,7 @@ class InvetoryStatusesPage extends React.Component {
             <Box width="100%">
               {/* if no saved value: default to first item */}
               <Select
-                boxProps={{ maxWidth: "324px" }}
+                boxProps={{ maxWidth: "324px", mb: { extraSmall: "x4", small: "none" } }}
                 options={quarantinedAndRejectedStatuses}
                 labelText="Inventory rejected on Jobs"
               />
@@ -546,4 +548,4 @@ class InvetoryStatusesPage extends React.Component {
   }
 }
 
-storiesOf("Inventory Statuses", module).add("Page", () => <InvetoryStatusesPage />);
+storiesOf("Inventory Statuses", module).add("Page", () => <InventoryStatusesPage />);
