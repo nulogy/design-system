@@ -17,10 +17,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
 - Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
+- Changed how focused [DropDownMenu](https://nulogy.design/components/dropdown-menu/) items look
 
 ### Deprecated
 
 ### Removed
+
+- Removed custom focus styles on [Links](https://nulogy.design/components/link) in favour of browser outline
 
 ### Fixed
 

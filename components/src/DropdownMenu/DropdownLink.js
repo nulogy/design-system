@@ -13,13 +13,16 @@ const DropdownLink = styled.a(props => ({
   fontSize: theme.fontSizes.medium,
   transition: ".2s",
   padding: `${theme.space.x1} ${theme.space.x2}`,
+  borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
     backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props)
   },
   "&:focus": {
     outline: "none",
-    boxShadow: theme.shadows.focus
+    color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
+    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props),
+    borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
   },
   "&:disabled": {
     opacity: ".5"

@@ -27,6 +27,7 @@ const NavContainer = styled(Box)(({ isOpen }) => ({
   right: 0,
   bottom: 0,
   left: 0,
+  padding: `0 ${theme.space.x2}`,
   overflow: "scroll",
   zIndex: theme.zIndex.overlay,
   height: "100%",
@@ -45,6 +46,21 @@ NavContainer.propTypes = {
 NavContainer.defaultProps = {
   isOpen: null
 };
+
+const NavLink = styled(Link)({
+  transition: "background .2s",
+  padding: theme.space.x1,
+  marginLeft: theme.space.x1,
+  borderRadius: theme.radii.medium,
+  "&:hover": {
+    background: theme.colors.black
+  },
+  "&:focus": {
+    outline: "none",
+    background: theme.colors.black,
+    boxShadow: theme.shadows.focus
+  }
+});
 
 const NavItem = styled.li({
   margin: theme.space.x2,
@@ -104,7 +120,7 @@ class Navigation extends React.Component {
           <CloseButton isOpen={menuOpen} onClick={this.closeMenu}>
             <Icon icon="close" />
           </CloseButton>
-          <Link
+          <NavLink
             underline={false}
             style={{ display: "inline-block" }}
             mt="x4"
@@ -113,23 +129,23 @@ class Navigation extends React.Component {
             href="/"
           >
             <Branding mb="x4" logoColor="white" subtext="Design System" />
-          </Link>
-          <Box p="x4">
+          </NavLink>
+          <Box mt="x4">
             {menuData.map(menuItem => (
               <Box key={menuItem.name} mb="x6" p="0">
-                <SubsectionTitle color="whiteGrey">
+                <SubsectionTitle color="whiteGrey" ml="x2">
                   {menuItem.name}
                 </SubsectionTitle>
                 <List pl="0">
                   {menuItem.links.map(menuLink => (
                     <NavItem key={menuLink.href}>
-                      <Link
+                      <NavLink
                         color="white"
                         href={menuLink.href}
                         underline={false}
                       >
                         {menuLink.name}
-                      </Link>
+                      </NavLink>
                     </NavItem>
                   ))}
                 </List>

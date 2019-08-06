@@ -17,7 +17,7 @@ const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => (
   textDecoration: "none",
   verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
-  transition: ".2s",
+  transition: "background-color .2s",
   fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
   borderRadius: theme.radii.medium,

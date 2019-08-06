@@ -14,6 +14,8 @@ const StyledButton = styled.button(({ isOpen }) => ({
   lineHeight: theme.lineHeights.smallTextBase,
   width: "100%",
   padding: `${theme.space.half} 28px ${theme.space.half} ${theme.space.x2}`,
+  border: "none",
+  borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
     backgroundColor: theme.colors.lightGrey
   },
@@ -22,9 +24,10 @@ const StyledButton = styled.button(({ isOpen }) => ({
   },
   "&:focus": {
     outline: "none",
-    boxShadow: theme.shadows.focus
+    color: theme.colors.darkBlue,
+    backgroundColor: theme.colors.lightGrey,
+    borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
   },
-  border: "none",
   backgroundColor: isOpen ? theme.colors.lightGrey : "transparent",
   textDecoration: "none",
   textAlign: "left",
