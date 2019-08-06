@@ -1,3 +1,4 @@
 {
-  "projectId": "cr35kv"
+  "projectId": "cr35kv",
+  "baseUrl": "http://localhost:8080"
 }
