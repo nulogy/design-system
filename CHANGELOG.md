@@ -9,20 +9,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added Accessibility tab to storybook
-- Added [Modal](https://nulogy.design/components/modal/) component
-- Added new icons to the [Icon](https://nulogy.design/components/icon/) component: accessTime, block, checkCircleOutline, errorFilled, getApp, publish, removeCircleOutline
-
 ### Changed
-
-- Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
-- Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
-- Changed how focused [DropDownMenu](https://nulogy.design/components/dropdown-menu/) items look
-- Update focus styles on [Links](https://nulogy.design/components/link) to use the browser's default outline
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+### Security
+
+## [0.11.0] - 2019-08-06
+
+### Added
+
+- Added [Modal](https://nulogy.design/components/modal/) component
+- Added new icons to the [Icon](https://nulogy.design/components/icon/) component: accessTime, block, checkCircleOutline, errorFilled, getApp, publish, removeCircleOutline
+- Added Accessibility tab to storybook
+
+### Changed
+
+- [**Breaking Change**] Changed [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
+- Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
+- Changed how focused [DropDownMenu](https://nulogy.design/components/dropdown-menu/) items look
+- Update focus styles on [Links](https://nulogy.design/components/link) to use the browser's default outline
 
 ### Fixed
 
@@ -31,8 +41,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - NavBar bug fixes
   - Changes focus styling on Navbar submenu trigger to indicate when the submenu is open
-
-### Security
 
 ## [0.10.2] - 2019-07-15
 
