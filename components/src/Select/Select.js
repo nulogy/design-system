@@ -32,10 +32,9 @@ const SelectBox = styled.div(({ disabled }) => ({
   color: disabled ? transparentize(0.6667, theme.colors.black) : null
 }));
 
-const Input = styled.input(({ error, isOpen, disabled, maxWidth }) => ({
+const Input = styled.input(({ error, isOpen, disabled }) => ({
   fontFamily: theme.fonts.base,
   width: "100%",
-  maxWidth,
   color: theme.colors.black,
   fontSize: theme.fontSizes.medium,
   padding: "7px 27px 7px 7px",
@@ -136,8 +135,7 @@ const Select = ({
   helpText,
   name,
   requirementText,
-  maxHeight,
-  inputMaxWidth
+  maxHeight
 }) => (
   <Field>
     <Downshift
@@ -165,35 +163,25 @@ const Select = ({
               requirementText={requirementText}
               helpText={helpText}
             >
-              <div style={{ position: "relative", width: "100%", maxWidth: inputMaxWidth || "100%" }}>
-                <Input
-                  {...getInputProps({
-                    disabled,
-                    error,
-                    isOpen,
-                    autoComplete: "off"
-                  })}
-                  width={inputMaxWidth}
-                  aria-required={required}
-                  aria-invalid={error}
-                  placeholder={placeholder}
-                  readOnly
-                  name={name}
-                  value={optionToString(selectedItem) || ""}
-                />
-                <ToggleButton isOpen={isOpen} />
-              </div>
+              <Input
+                {...getInputProps({
+                  disabled,
+                  error,
+                  isOpen,
+                  autoComplete: "off"
+                })}
+                aria-required={required}
+                aria-invalid={error}
+                placeholder={placeholder}
+                readOnly
+                name={name}
+                value={optionToString(selectedItem) || ""}
+              />
             </MaybeFieldLabel>
+            <ToggleButton isOpen={isOpen} />
           </SelectBox>
           {isOpen && (
-            <div
-              style={{
-                position: "absolute",
-                width: "100%",
-                maxWidth: inputMaxWidth || "100%",
-                zIndex: theme.zIndex.content
-              }}
-            >
+            <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
               <ScrollIndicators>
                 <Menu maxHeight={maxHeight} {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
                   {options.map((option, index) => (
