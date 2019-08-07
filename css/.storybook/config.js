@@ -1,6 +1,7 @@
 import { configure, addParameters } from "@storybook/html";
 import { create } from "@storybook/theming";
 import "../src/nds.css";
+import { theme } from "../index";
 
 const req = require.context("../src/scss", true, /\.story\.js$/);
 
@@ -19,28 +20,28 @@ const newViewports = {
   small: {
     name: "Small",
     styles: {
-      width: "768px",
+      width: theme.breakpoint.small,
       height: "100%"
     }
   },
   medium: {
     name: "Medium",
     styles: {
-      width: "1024px",
+      width: theme.breakpoint.medium,
       height: "100%"
     }
   },
   large: {
     name: "Large",
     styles: {
-      width: "1360px",
+      width: theme.breakpoint.large,
       height: "100%"
     }
   },
   extraLarge: {
     name: "Extra large",
     styles: {
-      width: "1920px",
+      width: theme.breakpoint.extraLarge,
       height: "100%"
     }
   }
