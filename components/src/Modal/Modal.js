@@ -132,6 +132,11 @@ class Modal extends React.Component {
 
   getPrimaryButton() {
     const { primaryButton, type } = this.props;
+
+    if (!primaryButton) {
+      return null;
+    }
+
     const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
 
     return <PrimaryButtonComponent {...primaryButton}>{primaryButton.label}</PrimaryButtonComponent>;
