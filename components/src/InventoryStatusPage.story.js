@@ -3,6 +3,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { storiesOf } from "@storybook/react";
 import {
+  Alert,
   Checkbox,
   Select as NDSSelect,
   Text,
@@ -22,6 +23,9 @@ import {
   Link,
   Field,
   FieldLabel,
+  List,
+  ListItem,
+  Toggle,
   theme
 } from "./index"; // "@nulogy/components"
 
@@ -190,14 +194,8 @@ class CreateInventoryStatusModal extends React.Component {
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
-            <NDSSelect
-              options={inventoryStatusCategoryOptions}
-              type="number"
-              name="category"
-              id="category"
-              labelText="Category"
-            />
-            <Input type="number" name="age" id="integration-key" labelText="Integration Key" />
+            <NDSSelect options={inventoryStatusCategoryOptions} name="category" id="category" labelText="Category" />
+            <Input name="age" id="integration-key" labelText="Integration Key" />
           </Form>
         </Modal>
       </div>
@@ -228,12 +226,6 @@ class EditInventoryStatusModal extends React.Component {
   render() {
     const { isOpen } = this.state;
 
-    const inventoryStatusCategoryOptions = [
-      { value: "quarantined", label: "Quarantined" },
-      { value: "rejected", label: "Rejected" },
-      { value: "unavaliable", label: "Unavaliable" }
-    ];
-
     return (
       <span>
         <Link as="button" underline={false} onClick={this.openModal}>
@@ -254,7 +246,7 @@ class EditInventoryStatusModal extends React.Component {
                 <Text color="darkGrey">Rejected</Text>
               </FieldLabel>
             </Field>
-            <Input type="number" name="age" id="integration-key" labelText="Integration Key" />
+            <Input name="integration-key" id="integration-key" labelText="Integration Key" />
           </Form>
         </Modal>
       </span>
@@ -294,7 +286,7 @@ class DisableInventoryStatusModal extends React.Component {
           title="Disable Inventory Status"
           type="danger"
           onRequestClose={this.closeModal}
-          primaryButton={{ label: "Confirm", type: "submit", form: "myForm" }}
+          primaryButton={{ label: "Disable", type: "submit", form: "myForm" }}
           secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
           isOpen={isOpen}
         >
@@ -362,13 +354,13 @@ class InventoryStatusesPage extends React.Component {
       {
         name: "Damaged",
         category: "Rejected",
-        integrationKey: "5",
-        disabled: true
+        integrationKey: "5"
       },
       {
         name: "Unavaliable",
         category: "Unavaliable",
-        integrationKey: "6"
+        integrationKey: "6",
+        disabled: true
       }
     ];
 
@@ -518,6 +510,7 @@ class InventoryStatusesPage extends React.Component {
               </SectionTitle>
               <CreateInventoryStatusModal />
             </Flex>
+            <Toggle onText="Enabled" offText="Disabled" labelText="Editing for site users" />
             <InventoryStatusTable rows={inventoryStatusTableData} />
           </PackManagerCard>
           <PackManagerCard>
@@ -548,4 +541,37 @@ class InventoryStatusesPage extends React.Component {
   }
 }
 
-storiesOf("Inventory Statuses", module).add("Page", () => <InventoryStatusesPage />);
+storiesOf("Inventory Statuses", module)
+  .add("Page", () => <InventoryStatusesPage />)
+  .add("Modal with inline errors", () => (
+    <Modal
+      title="Create Inventory Status"
+      primaryButton={{ label: "Create", type: "submit", form: "myForm" }}
+      secondaryButtons={[{ label: "Cancel" }]}
+      maxWidth="456px"
+    >
+      <Form id="myForm" mb="x2">
+        <Input name="name" id="name" labelText="Name" errorMessage="Name has already been taken." />
+        <NDSSelect options={{ label: "Label", value: "value" }} name="category" id="category" labelText="Category" />
+        <Input
+          name="integration-key"
+          id="integration-key"
+          labelText="Integration Key"
+          errorMessage="Integration key has already been taken."
+        />
+      </Form>
+    </Modal>
+  ))
+  .add("Cannot disable Inventory Status modal", () => (
+    <Modal title="Cannot Disable Inventory Status" primaryButton={{ label: "Okay" }} secondaryButtons={null}>
+      <Alert type="danger" title="Inventory Status cannot be disabled because:">
+        <List leftAlign compact>
+          <ListItem>Inventory Status is being used as a default.</ListItem>
+          <ListItem>
+            All inventory with this status has been changed. Use the <Link>Item Locator</Link> to find and change all
+            items with this status.
+          </ListItem>
+        </List>
+      </Alert>
+    </Modal>
+  ));
