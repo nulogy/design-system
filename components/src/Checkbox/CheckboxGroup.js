@@ -30,17 +30,15 @@ const getCheckboxButtons = props => {
 const BaseCheckboxGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
   const otherProps = { ...props, errorMessage, errorList };
   return (
-    <div role="group">
-      <Fieldset className={className} hasHelpText={!!helpText}>
-        <legend style={{ marginBottom: theme.space.x1 }}>
-          {labelText}
-          {requirementText && <RequirementText>{requirementText}</RequirementText>}
-        </legend>
-        {helpText && <HelpText>{helpText}</HelpText>}
-        {getCheckboxButtons(otherProps)}
-        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-      </Fieldset>
-    </div>
+    <Fieldset className={className} hasHelpText={!!helpText}>
+      <legend style={{ marginBottom: theme.space.x1 }}>
+        {labelText}
+        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+      </legend>
+      {helpText && <HelpText>{helpText}</HelpText>}
+      {getCheckboxButtons(otherProps)}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Fieldset>
   );
 };
 
