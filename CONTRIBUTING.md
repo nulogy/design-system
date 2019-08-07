@@ -33,8 +33,7 @@ From the `/components/` directory:
 
 To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)
 
-- Install plop globally, if necessary, with `yarn add plop -g`
-- From the `components` directory, run `yarn new ComponentName` (make sure your name is in CamelCase)
+- From the `components` directory, run `yarn new ComponentName` (make sure your name is in PascalCase)
 
 ## Writing CSS
 
