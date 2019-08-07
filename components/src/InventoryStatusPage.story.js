@@ -20,6 +20,8 @@ import {
   Form,
   Input,
   Link,
+  Field,
+  FieldLabel,
   theme
 } from "./index"; // "@nulogy/components"
 
@@ -247,13 +249,11 @@ class EditInventoryStatusModal extends React.Component {
         >
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
-            <NDSSelect
-              options={inventoryStatusCategoryOptions}
-              type="number"
-              name="category"
-              id="category"
-              labelText="Category"
-            />
+            <Field>
+              <FieldLabel labelText="Category">
+                <Text color="darkGrey">Rejected</Text>
+              </FieldLabel>
+            </Field>
             <Input type="number" name="age" id="integration-key" labelText="Integration Key" />
           </Form>
         </Modal>
