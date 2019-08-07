@@ -5,7 +5,7 @@ module.exports = function(plop) {
       {
         type: "input",
         name: "name",
-        message: "Enter a CamelCase name for your component:"
+        message: "Enter a PascalCase name for your component:"
       }
     ],
     actions: [
