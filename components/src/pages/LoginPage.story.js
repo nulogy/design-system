@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import theme from "../theme";
 import { Alert, Box, Branding, Checkbox, Flex, Form, Input, Link, PrimaryButton, Text } from "../index";
 
-storiesOf("LoginPage", module)
+storiesOf("Pages/LoginPage", module)
   .add("Base", () => (
     <Flex
       minHeight="100vh"
