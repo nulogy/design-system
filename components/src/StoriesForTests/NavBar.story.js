@@ -54,4 +54,6 @@ const search = {
   onSubmit: () => {}
 };
 
-storiesOf("StoriesForTests", module).add("NavBar", () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />);
+storiesOf("zzzStoriesForTests", module).add("NavBar", () => (
+  <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
+));

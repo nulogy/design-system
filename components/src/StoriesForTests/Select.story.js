@@ -10,4 +10,4 @@ const TestComponent = () => (
   </NDSProvider>
 );
 
-storiesOf("StoriesForTests", module).add("Select", () => <TestComponent />);
+storiesOf("zzzStoriesForTests", module).add("Select", () => <TestComponent />);
