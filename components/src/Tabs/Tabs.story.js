@@ -120,4 +120,20 @@ storiesOf("Tabs", module)
         <input />
       </Tab>
     </Tabs>
+  ))
+  .add("TESTING classNames", () => (
+    <Tabs className="tabs-className" tabContentClassName="tab-content-className">
+      <Tab className="tab-className" label="Tab 1">
+        Tab 1 Content
+        <input />
+      </Tab>
+      <Tab className="tab-className" label="Tab 2">
+        Tab 2 Content
+        <input />
+      </Tab>
+      <Tab className="tab-className" label="Tab 3">
+        Tab 3 Content
+        <input />
+      </Tab>
+    </Tabs>
   ));

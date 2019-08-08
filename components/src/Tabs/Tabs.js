@@ -91,7 +91,7 @@ class Tabs extends React.Component {
   }
 
   getTabContent() {
-    const { children, renderTabContentOnlyWhenSelected } = this.props;
+    const { children, renderTabContentOnlyWhenSelected, tabContentClassName } = this.props;
     const { selectedIndex } = this.state;
 
     const tabContent = React.Children.map(children, (tab, index) => {
@@ -100,7 +100,7 @@ class Tabs extends React.Component {
         return null;
       } else {
         return (
-          <div aria-hidden={!selected} hidden={!selected} selected={selected}>
+          <div className={tabContentClassName} aria-hidden={!selected} hidden={!selected} selected={selected}>
             {tab.props.children}
           </div>
         );
@@ -110,13 +110,21 @@ class Tabs extends React.Component {
   }
 
   render() {
+    const { className } = this.props;
+
     return (
       <>
         <TabFocusManager tabRefs={this.tabRefs}>
           {({ onKeyDown, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll }) => (
-                <TabContainer role="tablist" onScroll={handleScroll} onKeyDown={onKeyDown} ref={this.tabContainerRef}>
+                <TabContainer
+                  className={className}
+                  role="tablist"
+                  onScroll={handleScroll}
+                  onKeyDown={onKeyDown}
+                  ref={this.tabContainerRef}
+                >
                   <ReactResizeDetector handleWidth onResize={this.onResize} />
                   {this.getTabs(setFocusToTab, focusedIndex)}
                 </TabContainer>
@@ -132,6 +140,8 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
+  tabContentClassName: PropTypes.string,
   defaultSelectedIndex: PropTypes.number,
   renderTabContentOnlyWhenSelected: PropTypes.bool,
   fitted: PropTypes.bool
@@ -139,6 +149,8 @@ Tabs.propTypes = {
 
 Tabs.defaultProps = {
   children: null,
+  className: null,
+  tabContentClassName: null,
   defaultSelectedIndex: null,
   renderTabContentOnlyWhenSelected: false,
   fitted: false
