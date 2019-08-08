@@ -53,18 +53,28 @@ class Tabs extends React.Component {
     this.forceUpdate();
   }
 
+  getSelectedIndex() {
+    const { selectedIndex: controlledSelectedIndex } = this.props;
+    const { selectedIndex: uncontrolledSelectedIndex } = this.state;
+
+    return controlledSelectedIndex === undefined ? uncontrolledSelectedIndex : controlledSelectedIndex;
+  }
+
   getTabs(setFocusToTab, focusedIndex) {
     const { fitted, children } = this.props;
-    const { selectedIndex } = this.state;
+
+    const selectedIndex = this.getSelectedIndex();
 
     const tabs = React.Children.map(children, (tab, index) =>
       React.cloneElement(tab, {
-        onClick: tab.props.onClick
-          ? tab.props.onClick
-          : () => {
-              setFocusToTab(index);
-              this.handleTabClick(index);
-            },
+        onClick: () => {
+          setFocusToTab(index);
+          if (tab.props.onClick) {
+            tab.props.onClick(index);
+          } else {
+            this.handleTabClick(index);
+          }
+        },
         onFocus: e => {
           e.stopPropagation();
         },
@@ -84,7 +94,8 @@ class Tabs extends React.Component {
 
   getTabContent() {
     const { children, renderTabContentOnlyWhenSelected, tabContentClassName } = this.props;
-    const { selectedIndex } = this.state;
+
+    const selectedIndex = this.getSelectedIndex();
 
     const tabContent = React.Children.map(children, (tab, index) => {
       const selected = index === selectedIndex;

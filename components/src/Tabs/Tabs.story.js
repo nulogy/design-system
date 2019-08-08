@@ -2,6 +2,43 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Tab, Tabs } from ".";
 
+class ControlledTabs extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedIndex: 1
+    };
+
+    this.setSelectedTab = this.setSelectedTab.bind(this);
+  }
+
+  setSelectedTab(index) {
+    this.setState({ selectedIndex: index });
+  }
+
+  render() {
+    return (
+      <>
+        <Tabs selectedIndex={this.state.selectedIndex}>
+          <Tab onClick={this.setSelectedTab} label="Tab 1">
+            Uncontrolled Content: Tab 1
+          </Tab>
+          <Tab onClick={this.setSelectedTab} label="Tab 2">
+            Uncontrolled Content: Tab 2
+          </Tab>
+          <Tab onClick={this.setSelectedTab} label="Tab 3">
+            Uncontrolled Content: Tab 3
+          </Tab>
+          <Tab onClick={this.setSelectedTab} label="Tab 4">
+            Uncontrolled Content: Tab 4
+          </Tab>
+        </Tabs>
+        <div>Contolled Content: Tab {this.state.selectedIndex + 1}</div>
+      </>
+    );
+  }
+}
+
 storiesOf("Tabs", module)
   .add("Tabs", () => (
     <Tabs>
@@ -136,4 +173,5 @@ storiesOf("Tabs", module)
         <input />
       </Tab>
     </Tabs>
-  ));
+  ))
+  .add("TESTING controlled Tabs", () => <ControlledTabs />);

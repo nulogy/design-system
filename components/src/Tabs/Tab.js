@@ -80,7 +80,7 @@ const Tab = React.forwardRef(({ label, ...props }, ref) => (
 ));
 
 Tab.propTypes = {
-  label: PropTypes.element
+  label: PropTypes.node
 };
 
 Tab.defaultProps = {
