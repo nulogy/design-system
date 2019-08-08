@@ -62,7 +62,6 @@ class Tabs extends React.Component {
 
   getTabs(setFocusToTab, focusedIndex) {
     const { fitted, children } = this.props;
-
     const selectedIndex = this.getSelectedIndex();
 
     const tabs = React.Children.map(children, (tab, index) =>
@@ -94,11 +93,11 @@ class Tabs extends React.Component {
 
   getTabContent() {
     const { children, renderTabContentOnlyWhenSelected, tabContentClassName } = this.props;
-
     const selectedIndex = this.getSelectedIndex();
 
     const tabContent = React.Children.map(children, (tab, index) => {
       const selected = index === selectedIndex;
+
       if (renderTabContentOnlyWhenSelected && !selected) {
         return null;
       } else {

@@ -6,7 +6,7 @@ class ControlledTabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: 1
+      selectedIndex: null
     };
 
     this.setSelectedTab = this.setSelectedTab.bind(this);
@@ -33,7 +33,7 @@ class ControlledTabs extends React.Component {
             Uncontrolled Content: Tab 4
           </Tab>
         </Tabs>
-        <div>Contolled Content: Tab {this.state.selectedIndex + 1}</div>
+        {this.state.selectedIndex !== null && <div>Contolled Content: Tab {this.state.selectedIndex + 1}</div>}
       </>
     );
   }

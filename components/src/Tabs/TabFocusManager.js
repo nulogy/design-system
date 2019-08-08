@@ -15,8 +15,10 @@ class TabFocusManager extends React.Component {
     this.setFocusToTab = this.setFocusToTab.bind(this);
   }
 
-  componentDidUpdate() {
-    this.updateFocusedTab();
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.focusedIndex !== this.state.focusedIndex) {
+      this.updateFocusedTab();
+    }
   }
 
   handleArrowNavigation(e) {
