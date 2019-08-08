@@ -31,6 +31,10 @@ From the `/components/` directory:
 - `yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development.
 - `yarn build` will rebuild the package exports for production.
 
+To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)
+
+- From the `components` directory, run `yarn new ComponentName` (make sure your name is in PascalCase)
+
 ## Writing CSS
 
 Our CSS package provides a way to access our tokens
@@ -47,9 +51,9 @@ _Coming soon_
 
 1. If you don't already have access to the [Design System Collaborators](https://github.com/orgs/nulogy/teams/design-system-collaborators/members) team on Github, request access in [#design-system](https://slack.com/app_redirect?channel=design-system)
 2. Clone https://github.com/nulogy/design-system
-3. Do work on a branch and submit a PR describing the changes you've made and why you've made them 
+3. Do work on a branch and submit a PR describing the changes you've made and why you've made them
 4. Post a link to the PR in #design-system
-5. Somebody from design ops will take a look and be in touch 
+5. Somebody from design ops will take a look and be in touch
 
 ## Testing
 
