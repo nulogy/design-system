@@ -53,7 +53,6 @@ const TabButton = styled.button(({ selected, disabled, fullWidth }) => ({
   textDecoration: "none",
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
-  transition: ".2s",
   cursor: disabled ? "default" : "pointer",
   color: theme.colors.darkBlue,
   backgroundColor: "transparent",
