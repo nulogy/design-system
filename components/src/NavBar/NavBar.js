@@ -13,7 +13,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { PreventBodyElementScrolling, subPx, withWindowDimensions, withMenuState } from "../utils";
+import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
 const themeColors = {
   blue: {

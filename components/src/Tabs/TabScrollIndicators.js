@@ -30,6 +30,19 @@ class TabScrollIndicators extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
+  setScrollLeftState(scrollLeft) {
+    this.setState({ scrollLeft }, this.applyScrollLeft);
+  }
+
+  getScrollLeftValueByTabIndex(index) {
+    const { tabRefs } = this.props;
+    let scrollLeftSum = 0;
+    for (let i = 0; i < index; i += 1) {
+      scrollLeftSum += tabRefs[i].offsetWidth;
+    }
+    return scrollLeftSum;
+  }
+
   contentHiddenRight() {
     const { tabContainerRef } = this.props;
     if (!tabContainerRef.current) {
@@ -49,19 +62,6 @@ class TabScrollIndicators extends React.Component {
       tabContainerRef.current.scrollLeft !== 0 &&
       tabContainerRef.current.offsetWidth < tabContainerRef.current.scrollWidth
     );
-  }
-
-  setScrollLeftState(scrollLeft) {
-    this.setState({ scrollLeft }, this.applyScrollLeft);
-  }
-
-  getScrollLeftValueByTabIndex(index) {
-    const { tabRefs } = this.props;
-    let scrollLeftSum = 0;
-    for (let i = 0; i < index; i += 1) {
-      scrollLeftSum += tabRefs[i].offsetWidth;
-    }
-    return scrollLeftSum;
   }
 
   findLastVisibleTab() {

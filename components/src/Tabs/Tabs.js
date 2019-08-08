@@ -37,8 +37,6 @@ class Tabs extends React.Component {
       selectedIndex: defaultSelectedIndex === null ? null : defaultSelectedIndex
     };
 
-    console.log(this.state.selectedIndex);
-
     this.tabContent = [];
     this.tabContainerRef = React.createRef();
     this.tabRefs = [];
@@ -55,19 +53,13 @@ class Tabs extends React.Component {
     this.forceUpdate();
   }
 
-  handleTabClick(index) {
-    this.setState({
-      selectedIndex: index
-    });
-  }
-
   getTabs(setFocusToTab, focusedIndex) {
-    const { selectedIndex: controlledSelectedIndex, fitted, children } = this.props;
+    const { fitted, children } = this.props;
     const { selectedIndex } = this.state;
 
     const tabs = React.Children.map(children, (tab, index) =>
       React.cloneElement(tab, {
-        onClick: controlledSelectedIndex
+        onClick: tab.props.onClick
           ? tab.props.onClick
           : () => {
               setFocusToTab(index);
@@ -107,6 +99,12 @@ class Tabs extends React.Component {
       }
     });
     return tabContent;
+  }
+
+  handleTabClick(index) {
+    this.setState({
+      selectedIndex: index
+    });
   }
 
   render() {

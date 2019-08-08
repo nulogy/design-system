@@ -106,7 +106,7 @@ storiesOf("Tabs", module)
     </Tabs>
   ))
   .add("TESTING re-rending tab content", () => (
-    <Tabs renderTabContentOnlyWhenSelected={true}>
+    <Tabs renderTabContentOnlyWhenSelected>
       <Tab label="Tab 1">
         Tab 1 Content
         <input />
