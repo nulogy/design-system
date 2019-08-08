@@ -91,16 +91,20 @@ class Tabs extends React.Component {
   }
 
   getTabContent() {
-    const { children } = this.props;
+    const { children, renderTabContentOnlyWhenSelected } = this.props;
     const { selectedIndex } = this.state;
 
     const tabContent = React.Children.map(children, (tab, index) => {
       const selected = index === selectedIndex;
-      return (
-        <div aria-hidden={!selected} hidden={!selected} selected={selected}>
-          {tab.props.children}
-        </div>
-      );
+      if (renderTabContentOnlyWhenSelected && !selected) {
+        return null;
+      } else {
+        return (
+          <div aria-hidden={!selected} hidden={!selected} selected={selected}>
+            {tab.props.children}
+          </div>
+        );
+      }
     });
     return tabContent;
   }
@@ -129,12 +133,14 @@ class Tabs extends React.Component {
 Tabs.propTypes = {
   children: PropTypes.node,
   defaultSelectedIndex: PropTypes.number,
+  renderTabContentOnlyWhenSelected: PropTypes.bool,
   fitted: PropTypes.bool
 };
 
 Tabs.defaultProps = {
   children: null,
   defaultSelectedIndex: null,
+  renderTabContentOnlyWhenSelected: false,
   fitted: false
 };
 
