@@ -17,9 +17,10 @@ class ControlledTabs extends React.Component {
   }
 
   render() {
+    const { selectedIndex } = this.state;
     return (
       <>
-        <Tabs selectedIndex={this.state.selectedIndex}>
+        <Tabs selectedIndex={selectedIndex}>
           <Tab onClick={this.setSelectedTab} label="Tab 1">
             Uncontrolled Content: Tab 1
           </Tab>
@@ -33,7 +34,7 @@ class ControlledTabs extends React.Component {
             Uncontrolled Content: Tab 4
           </Tab>
         </Tabs>
-        {this.state.selectedIndex !== null && <div>Contolled Content: Tab {this.state.selectedIndex + 1}</div>}
+        {selectedIndex !== null && <div>Contolled Content: Tab {selectedIndex + 1}</div>}
       </>
     );
   }

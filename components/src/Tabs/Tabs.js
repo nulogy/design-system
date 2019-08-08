@@ -150,6 +150,7 @@ Tabs.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   tabContentClassName: PropTypes.string,
+  selectedIndex: PropTypes.number,
   defaultSelectedIndex: PropTypes.number,
   renderTabContentOnlyWhenSelected: PropTypes.bool,
   fitted: PropTypes.bool
@@ -159,6 +160,7 @@ Tabs.defaultProps = {
   children: null,
   className: null,
   tabContentClassName: null,
+  selectedIndex: undefined,
   defaultSelectedIndex: null,
   renderTabContentOnlyWhenSelected: false,
   fitted: false

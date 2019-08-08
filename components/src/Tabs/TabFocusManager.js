@@ -16,9 +16,16 @@ class TabFocusManager extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.focusedIndex !== this.state.focusedIndex) {
+    const { focusedIndex } = this.state;
+    if (prevState.focusedIndex !== focusedIndex) {
       this.updateFocusedTab();
     }
+  }
+
+  setFocusToTab(index) {
+    this.setState({
+      focusedIndex: index
+    });
   }
 
   handleArrowNavigation(e) {
@@ -36,12 +43,6 @@ class TabFocusManager extends React.Component {
       default:
         break;
     }
-  }
-
-  setFocusToTab(index) {
-    this.setState({
-      focusedIndex: index
-    });
   }
 
   focusNextTab() {
