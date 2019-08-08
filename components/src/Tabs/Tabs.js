@@ -113,14 +113,14 @@ class Tabs extends React.Component {
     return (
       <>
         <TabFocusManager tabRefs={this.tabRefs}>
-          {({ onKeyDown, setFocusToTab, focusedIndex }) => (
+          {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll }) => (
                 <TabContainer
                   className={className}
                   role="tablist"
                   onScroll={handleScroll}
-                  onKeyDown={onKeyDown}
+                  onKeyDown={handleArrowNavigation}
                   ref={this.tabContainerRef}
                 >
                   <ReactResizeDetector handleWidth onResize={this.onResize} />

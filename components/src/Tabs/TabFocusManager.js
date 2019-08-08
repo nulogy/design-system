@@ -9,13 +9,17 @@ class TabFocusManager extends React.Component {
       focusedIndex: 0
     };
 
-    this.onKeyDown = this.onKeyDown.bind(this);
+    this.handleArrowNavigation = this.handleArrowNavigation.bind(this);
     this.focusNextTab = this.focusNextTab.bind(this);
     this.focusPreviousTab = this.focusPreviousTab.bind(this);
     this.setFocusToTab = this.setFocusToTab.bind(this);
   }
 
-  onKeyDown(e) {
+  componentDidUpdate() {
+    this.updateFocusedTab();
+  }
+
+  handleArrowNavigation(e) {
     switch (e.key) {
       case "ArrowLeft":
         e.preventDefault();
@@ -33,34 +37,25 @@ class TabFocusManager extends React.Component {
   }
 
   setFocusToTab(index) {
-    this.setState(
-      {
-        focusedIndex: index
-      },
-      this.updateFocusedTab
-    );
+    this.setState({
+      focusedIndex: index
+    });
   }
 
   focusNextTab() {
     const { tabRefs } = this.props;
 
-    this.setState(
-      prevState => ({
-        focusedIndex: prevState.focusedIndex === tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
-      }),
-      this.updateFocusedTab
-    );
+    this.setState(prevState => ({
+      focusedIndex: prevState.focusedIndex === tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
+    }));
   }
 
   focusPreviousTab() {
     const { tabRefs } = this.props;
 
-    this.setState(
-      prevState => ({
-        focusedIndex: prevState.focusedIndex === 0 ? tabRefs.length - 1 : prevState.focusedIndex - 1
-      }),
-      this.updateFocusedTab
-    );
+    this.setState(prevState => ({
+      focusedIndex: prevState.focusedIndex === 0 ? tabRefs.length - 1 : prevState.focusedIndex - 1
+    }));
   }
 
   updateFocusedTab() {
@@ -78,7 +73,7 @@ class TabFocusManager extends React.Component {
       <>
         {children({
           focusedIndex,
-          onKeyDown: this.onKeyDown,
+          handleArrowNavigation: this.handleArrowNavigation,
           setFocusToTab: this.setFocusToTab
         })}
       </>
