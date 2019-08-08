@@ -16,7 +16,7 @@ storiesOf("Pages/ErrorPage", module)
           <Box
             mb={{ extraSmall: "x5", small: "x4", large: 0 }}
             mt={{ extraSmall: "x2", small: "80px", large: 0 }}
-            mr={{ extraSmall: 0, large: "x2" }}
+            mr={{ extraSmall: 0, large: "x3" }}
           >
             <Branding size="large" />
           </Box>
@@ -40,8 +40,8 @@ storiesOf("Pages/ErrorPage", module)
         <Flex width="100%" flexDirection={{ extraSmall: "column", large: "row" }} alignItems="center">
           <Box
             mb={{ extraSmall: "x5", small: "x4", large: 0 }}
-            mt={{ extraSmall: "x2", small: "80px", large: 0 }}
-            mr={{ extraSmall: 0, large: "x2" }}
+            mt={{ extraSmall: "x2", small: "80px", large: `-${theme.space.x4}` }}
+            mr={{ extraSmall: 0, large: "x3" }}
           >
             <Branding size="large" />
           </Box>
@@ -67,7 +67,7 @@ storiesOf("Pages/ErrorPage", module)
           <Box
             mb={{ extraSmall: "x5", small: "x4", large: 0 }}
             mt={{ extraSmall: "x2", small: "80px", large: 0 }}
-            mr={{ extraSmall: 0, large: "x2" }}
+            mr={{ extraSmall: 0, large: "x3" }}
           >
             <Branding size="large" />
           </Box>
