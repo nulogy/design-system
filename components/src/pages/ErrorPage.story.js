@@ -45,8 +45,8 @@ storiesOf("Pages/ErrorPage", module)
           >
             <Branding size="large" />
           </Box>
-          <Box maxWidth={ErrorPageAlertWidth} textAlign="center">
-            <Alert type="danger" title="We're sorry, but something went wrong." textAlign="left" mb="x2">
+          <Box maxWidth={ErrorPageAlertWidth}>
+            <Alert type="danger" title="We're sorry, but something went wrong." mb="x2">
               We&apos;ve been notified about this issue and we&apos;ll take a look at it shortly.
             </Alert>
             <Link href="#">Back to homepage</Link>
