@@ -82,7 +82,8 @@ const StyledReactModal = styled(ReactModal)(
     borderRadius: theme.radii.medium,
     border: null,
     width: "100%",
-    maxHeight: "70vh",
+    height: "auto",
+    maxHeight: `calc(100vh - ${theme.space.x4})`,
     margin: `0px ${theme.space.x2}`,
     padding: 0,
     [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
@@ -132,6 +133,11 @@ class Modal extends React.Component {
 
   getPrimaryButton() {
     const { primaryButton, type } = this.props;
+
+    if (!primaryButton) {
+      return null;
+    }
+
     const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
 
     return <PrimaryButtonComponent {...primaryButton}>{primaryButton.label}</PrimaryButtonComponent>;
