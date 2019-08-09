@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "cypress open",
-    "test": "yarn lint && yarn cypress run --spec '**/components/**/*spec.js'",
+    "start": "yarn concurrently --kill-others \"yarn workspace @nulogy/components start --ci\" \"yarn wait-on http://localhost:8080 && cypress open\"",
+    "test": "yarn workspace @nulogy/components build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ../components/storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
     "lint": "yarn run eslint",
     "eslint": "eslint --config .eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix"
@@ -17,12 +17,15 @@
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.5",
     "babel-plugin-macros": "2.5.1",
+    "concurrently": "4.1.1",
     "cypress": "3.2.0",
     "eslint": "5.16.0",
     "eslint-plugin-chai-friendly": "0.4.1",
     "eslint-plugin-cypress": "2.2.1",
+    "http-server": "0.11.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "wait-on": "3.2.0",
     "webpack": ">=2"
   },
   "dependencies": {
