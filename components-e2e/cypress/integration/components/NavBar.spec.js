@@ -5,7 +5,7 @@ describe("NavBar", () => {
     });
 
     it("can be navigated using the keyboard", () => {
-      cy.renderFromStorybook("navbar");
+      cy.renderFromStorybook("navbar--base");
 
       cy.wait(500);
     });
@@ -17,7 +17,7 @@ describe("NavBar", () => {
     });
 
     it("renders", () => {
-      cy.renderFromStorybook("navbar");
+      cy.renderFromStorybook("navbar--base");
 
       cy.wait(500);
     });

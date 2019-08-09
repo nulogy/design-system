@@ -28,9 +28,9 @@ class ControlledSelect extends React.Component {
   }
 }
 
-storiesOf("zzzStoriesForTests", module)
-  .add("Select", () => <TestComponent />)
-  .add("Controlled Select", () => (
+storiesOf("StoriesForTests/Select", module)
+  .add("Base", () => <TestComponent />)
+  .add("Controlled", () => (
     <NDSProvider>
       <ControlledSelect />
     </NDSProvider>
