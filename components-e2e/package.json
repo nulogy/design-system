@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "yarn concurrently --kill-others \"yarn workspace @nulogy/components start --ci\" \"yarn wait-on http://localhost:8080 && cypress open\"",
-    "test": "yarn workspace @nulogy/components build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ../components/storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run --spec '**/components/**/*spec.js'\"",
+    "test": "yarn workspace @nulogy/components build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ../components/storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
     "lint": "yarn run eslint",
     "eslint": "eslint --config .eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix"
