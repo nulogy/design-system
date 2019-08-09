@@ -10,4 +10,28 @@ const TestComponent = () => (
   </NDSProvider>
 );
 
-storiesOf("zzzStoriesForTests", module).add("Select", () => <TestComponent />);
+class ControlledSelect extends React.Component {
+  constructor() {
+    super();
+
+    this.state = { selectedValue: "" };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(selectedValue) {
+    this.setState({ selectedValue });
+  }
+
+  render() {
+    const { selectedValue } = this.state;
+    return <Select onChange={this.handleChange} value={selectedValue} options={options} />;
+  }
+}
+
+storiesOf("zzzStoriesForTests", module)
+  .add("Select", () => <TestComponent />)
+  .add("Controlled Select", () => (
+    <NDSProvider>
+      <ControlledSelect />
+    </NDSProvider>
+  ));
