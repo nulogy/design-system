@@ -21,7 +21,6 @@ class TabScrollIndicators extends React.Component {
       scrollLeft: 0
     };
 
-    this.indicatorWidth = 40;
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
     this.setScrollLeftState = this.setScrollLeftState.bind(this);
     this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
@@ -65,8 +64,8 @@ class TabScrollIndicators extends React.Component {
   }
 
   findLastVisibleTab() {
-    const { tabContainerRef, tabRefs } = this.props;
-    const rightMarker = tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth - this.indicatorWidth;
+    const { tabContainerRef, tabRefs, indicatorWidth } = this.props;
+    const rightMarker = tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth - indicatorWidth;
     let scrollLeftSum = 0;
 
     for (let i = 0; i < tabRefs.length; i += 1) {
@@ -79,8 +78,8 @@ class TabScrollIndicators extends React.Component {
   }
 
   findFirstVisibleTab() {
-    const { tabContainerRef, tabRefs } = this.props;
-    const leftMarker = tabContainerRef.current.scrollLeft + this.indicatorWidth;
+    const { tabContainerRef, tabRefs, indicatorWidth } = this.props;
+    const leftMarker = tabContainerRef.current.scrollLeft + indicatorWidth;
     let scrollLeftSum = 0;
 
     for (let i = 0; i < tabRefs.length; i += 1) {
@@ -98,17 +97,17 @@ class TabScrollIndicators extends React.Component {
   }
 
   handleIndicatorClick(side) {
-    const { tabRefs, tabContainerRef } = this.props;
+    const { tabRefs, tabContainerRef, indicatorWidth } = this.props;
 
     if (side === "right") {
       const lastVisibleTab = this.findLastVisibleTab();
-      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - this.indicatorWidth;
+      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - indicatorWidth;
       this.setScrollLeftState(scrollLeft);
     } else {
       const firstVisibleTab = this.findFirstVisibleTab();
       const scrollLeft =
         this.getScrollLeftValueByTabIndex(firstVisibleTab) +
-        this.indicatorWidth +
+        indicatorWidth +
         tabRefs[firstVisibleTab].offsetWidth -
         tabContainerRef.current.offsetWidth;
       this.setScrollLeftState(scrollLeft);
@@ -122,13 +121,17 @@ class TabScrollIndicators extends React.Component {
   }
 
   render() {
-    const { tabContainerRef, children } = this.props;
+    const { tabContainerRef, indicatorWidth, children } = this.props;
 
     return (
       <>
         <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
-          {this.contentHiddenLeft() && <TabScrollIndicator side="left" onClick={this.handleIndicatorClick} />}
-          {this.contentHiddenRight() && <TabScrollIndicator side="right" onClick={this.handleIndicatorClick} />}
+          {this.contentHiddenLeft() && (
+            <TabScrollIndicator width={indicatorWidth} side="left" onClick={this.handleIndicatorClick} />
+          )}
+          {this.contentHiddenRight() && (
+            <TabScrollIndicator width={indicatorWidth} side="right" onClick={this.handleIndicatorClick} />
+          )}
         </TabScrollIndicatorContainer>
         {children({ handleScroll: this.handleScroll })}
       </>
@@ -139,12 +142,14 @@ class TabScrollIndicators extends React.Component {
 TabScrollIndicators.propTypes = {
   children: PropTypes.func.isRequired,
   tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
-  tabContainerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  tabContainerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  indicatorWidth: PropTypes.number
 };
 
 TabScrollIndicators.defaultProps = {
   tabRefs: undefined,
-  tabContainerRef: undefined
+  tabContainerRef: undefined,
+  indicatorWidth: 40
 };
 
 export default TabScrollIndicators;

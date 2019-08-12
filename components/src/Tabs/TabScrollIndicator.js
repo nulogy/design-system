@@ -4,15 +4,15 @@ import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
 
-const TabScrollIndicatorButton = styled.button(({ side }) => ({
+const TabScrollIndicatorButton = styled.button(({ side, width }) => ({
   position: "absolute",
   color: theme.colors.black,
   top: 0,
   bottom: 0,
   left: side === "left" ? 0 : undefined,
   right: side === "right" ? 0 : undefined,
-  height: theme.space.x5,
-  width: theme.space.x5,
+  height: width,
+  width,
   background: theme.colors.white,
   opacity: 0.8,
   zIndex: theme.zIndex.tabsScollIndicator,
@@ -73,12 +73,14 @@ class TabScrollIndicator extends React.PureComponent {
 
 TabScrollIndicator.propTypes = {
   onClick: PropTypes.func,
-  side: PropTypes.oneOf(["left", "right"])
+  side: PropTypes.oneOf(["left", "right"]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 TabScrollIndicator.defaultProps = {
   onClick: () => {},
-  side: "left"
+  side: "left",
+  width: 40
 };
 
 export default TabScrollIndicator;
