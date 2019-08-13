@@ -142,7 +142,7 @@ class TabScrollIndicators extends React.Component {
 TabScrollIndicators.propTypes = {
   children: PropTypes.func.isRequired,
   tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
-  tabContainerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  tabContainerRef: PropTypes.shape({ current: PropTypes.elementType }),
   indicatorWidth: PropTypes.number
 };
 
