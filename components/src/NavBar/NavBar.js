@@ -135,6 +135,8 @@ const SmallHeader = styled.header(({ isOpen }) =>
     : null
 );
 
+const pixelDigitsFrom = pixelString => parseInt(pixelString, 10);
+
 /* eslint-disable react/destructuring-assignment */
 class SmallNavBarNoState extends React.Component {
   constructor() {
@@ -146,22 +148,16 @@ class SmallNavBarNoState extends React.Component {
     if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
   }
 
-  pixelDigitsFrom(pixelString) {
-    return parseInt(pixelString, 10);
-  }
-
   isSmallScreen() {
     const { breakpointLower, width } = this.props;
 
-    return width < this.pixelDigitsFrom(breakpointLower);
+    return width < pixelDigitsFrom(breakpointLower);
   }
 
   render() {
     const {
       menuData,
       menuState: { isOpen, toggleMenu, closeMenu },
-      width,
-      breakpointLower,
       subtext,
       brandingLinkHref,
       themeColor,
