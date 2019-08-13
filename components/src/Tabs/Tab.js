@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 
 const barStyles = {
-  selected: {
+  expanded: {
     content: "''",
     backgroundColor: theme.colors.darkBlue,
     height: "3px",
@@ -28,14 +28,14 @@ const barStyles = {
   }
 };
 
-const getBarStyles = selected => (selected ? barStyles.selected : barStyles.default);
+const getBarStyles = selected => (selected ? barStyles.expanded : barStyles.default);
 
 const getBarHoverStyles = (selected, disabled) => {
   if (disabled || selected) {
     return null;
   } else {
     return {
-      ...barStyles.selected,
+      ...barStyles.expanded,
       backgroundColor: theme.colors.lightBlue
     };
   }
