@@ -5,8 +5,6 @@ import smoothscroll from "smoothscroll-polyfill";
 import theme from "../theme";
 import TabScrollIndicator from "./TabScrollIndicator";
 
-smoothscroll.polyfill();
-
 const TabScrollIndicatorContainer = styled.div(({ width }) => ({
   position: "absolute",
   width,
@@ -27,6 +25,10 @@ class TabScrollIndicators extends React.Component {
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
     this.contentHiddenRight = this.contentHiddenRight.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    smoothscroll.polyfill();
   }
 
   setScrollLeftState(scrollLeft) {
