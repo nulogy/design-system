@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 
 const barStyles = {
-  expanded: {
+  selected: {
     content: "''",
     backgroundColor: theme.colors.darkBlue,
     height: "3px",
@@ -28,22 +28,15 @@ const barStyles = {
   }
 };
 
-const getBarStyles = (selected, disabled) => {
-  if (selected) {
-    return {
-      "&:before": barStyles.expanded
-    };
+const getBarStyles = selected => (selected ? barStyles.selected : barStyles.default);
+
+const getBarHoverStyles = (selected, disabled) => {
+  if (disabled || selected) {
+    return null;
   } else {
     return {
-      "&:before": barStyles.default,
-      "&:hover": {
-        "&:before": !disabled
-          ? {
-              ...barStyles.expanded,
-              backgroundColor: theme.colors.lightBlue
-            }
-          : null
-      }
+      ...barStyles.selected,
+      backgroundColor: theme.colors.lightBlue
     };
   }
 };
@@ -70,7 +63,14 @@ const TabButton = styled.button(({ selected, disabled, fullWidth }) => ({
   "&:disabled": {
     opacity: ".5"
   },
-  ...getBarStyles(selected, disabled)
+  "&:before": {
+    ...getBarStyles(selected)
+  },
+  "&:hover": {
+    "&:before": {
+      ...getBarHoverStyles(selected, disabled)
+    }
+  }
 }));
 
 const Tab = React.forwardRef(({ label, ...props }, ref) => (
