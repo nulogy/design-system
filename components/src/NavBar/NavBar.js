@@ -146,13 +146,22 @@ class SmallNavBarNoState extends React.Component {
     if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
   }
 
+  pixelDigitsFrom(pixelString) {
+    return parseInt(pixelString, 10);
+  }
+
+  isSmallScreen() {
+    const { breakpointLower, width } = this.props;
+
+    return width < this.pixelDigitsFrom(breakpointLower);
+  }
+
   render() {
     const {
       menuData,
       menuState: { isOpen, toggleMenu, closeMenu },
       width,
       breakpointLower,
-      smallScreen = width < parseInt(breakpointLower, 10),
       subtext,
       brandingLinkHref,
       themeColor,
@@ -163,15 +172,15 @@ class SmallNavBarNoState extends React.Component {
         <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
           <Link
             aria-label="Nulogy logo"
-            style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
-            my={subtext && !smallScreen ? "-8px" : null}
+            style={{ display: "block", height: subtext && !this.isSmallScreen() ? "56px" : "40px" }}
+            my={subtext && !this.isSmallScreen() ? "-8px" : null}
             underline={false}
             href={brandingLinkHref}
           >
             <Branding
               logoColor={getThemeColor(themeColor).logoColor}
-              logoType={smallScreen ? "lettermark" : "wordmark"}
-              subtext={smallScreen ? null : subtext}
+              logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
+              subtext={this.isSmallScreen() ? null : subtext}
             />
           </Link>
           <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
@@ -196,7 +205,7 @@ class SmallNavBarNoState extends React.Component {
             <MobileMenu
               themeColorObject={getThemeColor(themeColor)}
               subtext={subtext}
-              includeSubtext={smallScreen}
+              includeSubtext={this.isSmallScreen()}
               menuData={menuData}
               closeMenu={closeMenu}
             />
@@ -219,7 +228,6 @@ SmallNavBarNoState.propTypes = {
   brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   width: PropTypes.number,
-  smallScreen: PropTypes.bool,
   themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
@@ -229,7 +237,6 @@ SmallNavBarNoState.defaultProps = {
   brandingLinkHref: "/",
   breakpointLower: theme.breakpoints.small,
   width: undefined,
-  smallScreen: undefined,
   themeColor: undefined
 };
 
