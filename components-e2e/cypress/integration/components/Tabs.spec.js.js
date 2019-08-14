@@ -74,4 +74,37 @@ describe("Tabs", () => {
 
     cy.focused().should("have.text", "Tab 4");
   });
+
+  //persistance tests
+  it("persists input values of tab when hidden", () => {
+    cy.renderFromStorybook("tabs--with-input-and-persistant-content");
+
+    cy.get(".Tab1").click();
+
+    cy.get(".Input1").type("value");
+
+    cy.get(".Tab2").click();
+
+    cy.get(".Input2").should("have.value", "");
+
+    cy.get(".Tab1").click();
+
+    cy.get(".Input1").should("have.value", "value");
+  });
+
+  it("does not persists input values of tab when hidden if 'renderTabContentOnlyWhenSelected = true'", () => {
+    cy.renderFromStorybook("tabs--with-input-and-not-persistant-content");
+
+    cy.get(".Tab1").click();
+
+    cy.get(".Input1").type("value");
+
+    cy.get(".Tab2").click();
+
+    cy.get(".Input2").should("have.value", "");
+
+    cy.get(".Tab1").click();
+
+    cy.get(".Input1").should("have.value", "");
+  });
 });

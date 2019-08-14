@@ -21,6 +21,32 @@ const TestComponent = () => (
   </NDSProvider>
 );
 
+const TestComponentWithInputs = () => (
+  <NDSProvider>
+    <Tabs className="TabContainer" tabContentClassName="TabContent">
+      <Tab label="Tab 1" className="Tab1">
+        <input className="Input1" />
+      </Tab>
+      <Tab label="Tab 2" className="Tab2">
+        <input className="Input2" />
+      </Tab>
+    </Tabs>
+  </NDSProvider>
+);
+
+const TestComponentWithInputsNotPersistant = () => (
+  <NDSProvider>
+    <Tabs renderTabContentOnlyWhenSelected={true} className="TabContainer" tabContentClassName="TabContent">
+      <Tab label="Tab 1" className="Tab1">
+        <input className="Input1" />
+      </Tab>
+      <Tab label="Tab 2" className="Tab2">
+        <input className="Input2" />
+      </Tab>
+    </Tabs>
+  </NDSProvider>
+);
+
 class ControlledTabs extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +79,8 @@ class ControlledTabs extends React.Component {
 
 storiesOf("StoriesForTests/Tabs", module)
   .add("Base", () => <TestComponent />)
+  .add("With Input and Persistant Content", () => <TestComponentWithInputs />)
+  .add("With Input and Not Persistant Content", () => <TestComponentWithInputsNotPersistant />)
   .add("Controlled", () => (
     <NDSProvider>
       <ControlledTabs />
