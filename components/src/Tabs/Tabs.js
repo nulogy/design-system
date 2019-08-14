@@ -41,16 +41,7 @@ class Tabs extends React.Component {
     this.tabContainerRef = React.createRef();
     this.tabRefs = [];
     this.handleTabClick = this.handleTabClick.bind(this);
-    this.onResize = this.onResize.bind(this);
     this.getTabs = this.getTabs.bind(this);
-  }
-
-  componentDidMount() {
-    this.forceUpdate();
-  }
-
-  onResize() {
-    this.forceUpdate();
   }
 
   getSelectedIndex() {
@@ -125,7 +116,7 @@ class Tabs extends React.Component {
         <TabFocusManager tabRefs={this.tabRefs}>
           {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
-              {({ handleScroll }) => (
+              {({ handleScroll, handleResize }) => (
                 <TabContainer
                   className={className}
                   role="tablist"
@@ -133,7 +124,7 @@ class Tabs extends React.Component {
                   onKeyDown={handleArrowNavigation}
                   ref={this.tabContainerRef}
                 >
-                  <ReactResizeDetector handleWidth onResize={this.onResize} />
+                  <ReactResizeDetector handleWidth onResize={handleResize} />
                   {this.getTabs(setFocusToTab, focusedIndex)}
                 </TabContainer>
               )}

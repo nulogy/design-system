@@ -25,6 +25,7 @@ class TabScrollIndicators extends React.Component {
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
     this.contentHiddenRight = this.contentHiddenRight.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   componentDidMount() {
@@ -94,6 +95,13 @@ class TabScrollIndicators extends React.Component {
     this.conditionallyUpdateState();
   }
 
+  handleResize() {
+    this.setState({
+      contentHiddenLeft: this.contentHiddenLeft(),
+      contentHiddenRight: this.contentHiddenRight()
+    });
+  }
+
   conditionallyUpdateState() {
     const { contentHiddenLeft, contentHiddenRight } = this.state;
     const currentContentHiddenLeft = this.contentHiddenLeft();
@@ -145,7 +153,7 @@ class TabScrollIndicators extends React.Component {
             <TabScrollIndicator width={indicatorWidth} side="right" onClick={this.handleIndicatorClick} />
           )}
         </TabScrollIndicatorContainer>
-        {children({ handleScroll: this.handleScroll })}
+        {children({ handleScroll: this.handleScroll, handleResize: this.handleResize })}
       </>
     );
   }
