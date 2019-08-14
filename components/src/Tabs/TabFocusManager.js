@@ -49,7 +49,7 @@ class TabFocusManager extends React.Component {
     const { tabRefs } = this.props;
 
     this.setState(prevState => ({
-      focusedIndex: prevState.focusedIndex === tabRefs.length - 1 ? 0 : prevState.focusedIndex + 1
+      focusedIndex: (prevState.focusedIndex + 1) % tabRefs.length
     }));
   }
 
@@ -57,7 +57,7 @@ class TabFocusManager extends React.Component {
     const { tabRefs } = this.props;
 
     this.setState(prevState => ({
-      focusedIndex: prevState.focusedIndex === 0 ? tabRefs.length - 1 : prevState.focusedIndex - 1
+      focusedIndex: (prevState.focusedIndex - 1 + tabRefs.length) % tabRefs.length
     }));
   }
 
