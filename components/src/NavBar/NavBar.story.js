@@ -66,10 +66,6 @@ const primaryMenu = [
       { name: "Inventory", href: "/" }
     ]
   },
-  {
-    name: "Sheets",
-    items: [{ name: "Item locator", href: "/" }, { name: "Ship orders", href: "/" }]
-  },
   { name: "Link", href: "/" }
 ];
 

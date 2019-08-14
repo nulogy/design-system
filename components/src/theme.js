@@ -76,6 +76,8 @@ export default {
   },
   zIndex: {
     content: 100,
+    tabsScollIndicator: 200,
+    tabsBar: 210,
     overlay: 1000
   }
 };

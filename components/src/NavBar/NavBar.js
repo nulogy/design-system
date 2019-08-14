@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { themeGet } from "styled-system";
+import ReactResizeDetector from "react-resize-detector";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
@@ -12,7 +13,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
-import { PreventBodyElementScrolling, subPx, withWindowDimensions, withMenuState } from "../utils";
+import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
 const themeColors = {
   blue: {
@@ -124,7 +125,7 @@ const SmallHeader = styled.header(({ isOpen }) =>
         position: "fixed",
         width: "100%",
         height: "100%",
-        zIndex: theme.zIndex.content,
+        zIndex: theme.zIndex.overlay,
         overflow: "scroll",
         top: "0",
         left: "0",
@@ -133,6 +134,8 @@ const SmallHeader = styled.header(({ isOpen }) =>
       }
     : null
 );
+
+const pixelDigitsFrom = pixelString => parseInt(pixelString, 10);
 
 /* eslint-disable react/destructuring-assignment */
 class SmallNavBarNoState extends React.Component {
@@ -145,13 +148,16 @@ class SmallNavBarNoState extends React.Component {
     if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
   }
 
+  isSmallScreen() {
+    const { breakpointLower, width } = this.props;
+
+    return width < pixelDigitsFrom(breakpointLower);
+  }
+
   render() {
     const {
       menuData,
       menuState: { isOpen, toggleMenu, closeMenu },
-      windowWidth,
-      breakpointLower,
-      smallScreen = windowWidth < parseInt(breakpointLower, 10),
       subtext,
       brandingLinkHref,
       themeColor,
@@ -162,15 +168,15 @@ class SmallNavBarNoState extends React.Component {
         <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
           <Link
             aria-label="Nulogy logo"
-            style={{ display: "block", height: subtext && !smallScreen ? "56px" : "40px" }}
-            my={subtext && !smallScreen ? "-8px" : null}
+            style={{ display: "block", height: subtext && !this.isSmallScreen() ? "56px" : "40px" }}
+            my={subtext && !this.isSmallScreen() ? "-8px" : null}
             underline={false}
             href={brandingLinkHref}
           >
             <Branding
               logoColor={getThemeColor(themeColor).logoColor}
-              logoType={smallScreen ? "lettermark" : "wordmark"}
-              subtext={smallScreen ? null : subtext}
+              logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
+              subtext={this.isSmallScreen() ? null : subtext}
             />
           </Link>
           <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
@@ -195,7 +201,7 @@ class SmallNavBarNoState extends React.Component {
             <MobileMenu
               themeColorObject={getThemeColor(themeColor)}
               subtext={subtext}
-              includeSubtext={smallScreen}
+              includeSubtext={this.isSmallScreen()}
               menuData={menuData}
               closeMenu={closeMenu}
             />
@@ -217,8 +223,7 @@ SmallNavBarNoState.propTypes = {
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  windowWidth: PropTypes.number,
-  smallScreen: PropTypes.bool,
+  width: PropTypes.number,
   themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
@@ -227,21 +232,24 @@ SmallNavBarNoState.defaultProps = {
   subtext: null,
   brandingLinkHref: "/",
   breakpointLower: theme.breakpoints.small,
-  windowWidth: undefined,
-  smallScreen: undefined,
+  width: undefined,
   themeColor: undefined
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const BaseNavBar = withWindowDimensions(
-  ({ menuData, breakpointUpper, windowDimensions: { windowWidth }, ...props }) => {
-    if (windowWidth >= parseInt(breakpointUpper, 10)) {
-      return <MediumNavBar {...props} menuData={menuData} />;
-    } else {
-      return <SmallNavBar {...props} windowWidth={windowWidth} menuData={menuData} />;
-    }
+const SelectNavBarBasedOnWidth = ({ width, breakpointUpper, ...props }) => {
+  if (width >= parseInt(breakpointUpper, 10)) {
+    return <MediumNavBar {...props} />;
+  } else {
+    return <SmallNavBar {...props} width={width} />;
   }
+};
+
+const BaseNavBar = props => (
+  <ReactResizeDetector handleWidth>
+    <SelectNavBarBasedOnWidth {...props} />
+  </ReactResizeDetector>
 );
 
 BaseNavBar.propTypes = {
