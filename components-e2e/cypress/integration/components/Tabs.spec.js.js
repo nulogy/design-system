@@ -35,6 +35,14 @@ describe("Tabs", () => {
   });
 
   //focus
+  it("focuses the first tab by default", () => {
+    cy.renderFromStorybook("tabs--base");
+
+    cy.get("button[tabindex=0]").focus();
+
+    cy.focused().should("have.text", "Tab 1");
+  });
+
   it("moves to the next tab when right arrow key is pressed", () => {
     cy.renderFromStorybook("tabs--base");
 
