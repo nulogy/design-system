@@ -43,6 +43,20 @@ describe("Tabs", () => {
     cy.focused().should("have.text", "Tab 1");
   });
 
+  it("will remember the last tab that was focused when focus leaves and then returns", () => {
+    cy.renderFromStorybook("tabs--base");
+
+    cy.get("button[tabindex=0]").type("{rightarrow}");
+
+    cy.focused().should("have.text", "Tab 2");
+
+    cy.get("body").click();
+
+    cy.focused().should("not.exist");
+
+    cy.get("button[tabindex=0]").should("have.text", "Tab 2");
+  });
+
   it("moves to the next tab when right arrow key is pressed", () => {
     cy.renderFromStorybook("tabs--base");
 
