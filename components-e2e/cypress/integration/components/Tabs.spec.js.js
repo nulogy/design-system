@@ -75,6 +75,43 @@ describe("Tabs", () => {
     cy.focused().should("have.text", "Tab 4");
   });
 
+  //indicators tests
+  it("scrolls to last visible Tab to left on right indicator click", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get("svg[icon=rightArrow]").click();
+    cy.get(".TabContainer").should("have.prop", "scrollLeft", 48);
+  });
+
+  it("scrolls to first visible Tab to right on left indicator click", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get(".TabContainer").scrollTo("right");
+
+    cy.get("svg[icon=leftArrow]").click();
+    cy.get(".TabContainer").should("have.prop", "scrollLeft", 279);
+  });
+
+  it("scrolls to end on right indicator click when near the end of the container", () => {
+    const containerWidth = 327;
+
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get(".TabContainer").scrollTo(containerWidth - 10);
+
+    cy.get("svg[icon=rightArrow]").click();
+    cy.get(".TabContainer").should("have.prop", "scrollLeft", containerWidth);
+  });
+
+  it("scrolls to start on left indicator click when near the start of the container", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get(".TabContainer").scrollTo(10);
+
+    cy.get("svg[icon=leftArrow]").click();
+    cy.get(".TabContainer").should("have.prop", "scrollLeft", 0);
+  });
+
   //persistance tests
   it("persists input values of tab when hidden", () => {
     cy.renderFromStorybook("tabs--with-input-and-persistant-content");

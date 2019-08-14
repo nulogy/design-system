@@ -21,6 +21,33 @@ const TestComponent = () => (
   </NDSProvider>
 );
 
+const TestComponentScrolling = () => (
+  <NDSProvider>
+    <div style={{ width: "200px" }}>
+      <Tabs className="TabContainer" tabContentClassName="TabContent">
+        <Tab label="Tab 1" className="Tab1">
+          Tab 1 Content
+        </Tab>
+        <Tab label="Tab 2" className="Tab2">
+          Tab 2 Content
+        </Tab>
+        <Tab label="Tab 3" className="Tab3">
+          Tab 3 Content
+        </Tab>
+        <Tab label="Tab 4" className="Tab4">
+          Tab 4 Content
+        </Tab>
+        <Tab label="Tab 5" className="Tab4">
+          Tab 5 Content
+        </Tab>
+        <Tab label="Tab 6" className="Tab4">
+          Tab 6 Content
+        </Tab>
+      </Tabs>
+    </div>
+  </NDSProvider>
+);
+
 const TestComponentWithInputs = () => (
   <NDSProvider>
     <Tabs className="TabContainer" tabContentClassName="TabContent">
@@ -81,6 +108,7 @@ storiesOf("StoriesForTests/Tabs", module)
   .add("Base", () => <TestComponent />)
   .add("With Input and Persistant Content", () => <TestComponentWithInputs />)
   .add("With Input and Not Persistant Content", () => <TestComponentWithInputsNotPersistant />)
+  .add("With Scrolling", () => <TestComponentScrolling />)
   .add("Controlled", () => (
     <NDSProvider>
       <ControlledTabs />
