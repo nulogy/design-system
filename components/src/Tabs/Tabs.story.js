@@ -12,7 +12,7 @@ class ControlledTabs extends React.Component {
     this.setSelectedTab = this.setSelectedTab.bind(this);
   }
 
-  setSelectedTab(index) {
+  setSelectedTab(e, index) {
     this.setState({ selectedIndex: index });
   }
 
@@ -20,19 +20,11 @@ class ControlledTabs extends React.Component {
     const { selectedIndex } = this.state;
     return (
       <>
-        <Tabs selectedIndex={selectedIndex}>
-          <Tab onClick={this.setSelectedTab} label="Tab 1">
-            Uncontrolled Content: Tab 1
-          </Tab>
-          <Tab onClick={this.setSelectedTab} label="Tab 2">
-            Uncontrolled Content: Tab 2
-          </Tab>
-          <Tab onClick={this.setSelectedTab} label="Tab 3">
-            Uncontrolled Content: Tab 3
-          </Tab>
-          <Tab onClick={this.setSelectedTab} label="Tab 4">
-            Uncontrolled Content: Tab 4
-          </Tab>
+        <Tabs onTabClick={this.setSelectedTab} selectedIndex={selectedIndex}>
+          <Tab label="Tab 1">Uncontrolled Content: Tab 1</Tab>
+          <Tab label="Tab 2">Uncontrolled Content: Tab 2</Tab>
+          <Tab label="Tab 3">Uncontrolled Content: Tab 3</Tab>
+          <Tab label="Tab 4">Uncontrolled Content: Tab 4</Tab>
         </Tabs>
         {selectedIndex !== null && <div>Contolled Content: Tab {selectedIndex + 1}</div>}
       </>

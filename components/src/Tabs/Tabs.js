@@ -52,15 +52,18 @@ class Tabs extends React.Component {
   }
 
   getTabs(setFocusToTab, focusedIndex) {
-    const { fitted, children } = this.props;
+    const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
 
     const tabs = React.Children.map(children, (tab, index) =>
       React.cloneElement(tab, {
-        onClick: () => {
+        onClick: e => {
           setFocusToTab(index);
           if (tab.props.onClick) {
-            tab.props.onClick(index);
+            tab.props.onClick(e);
+          }
+          if (onTabClick) {
+            onTabClick(e, index);
           } else {
             this.handleTabClick(index);
           }
@@ -144,7 +147,8 @@ Tabs.propTypes = {
   selectedIndex: PropTypes.number,
   defaultSelectedIndex: PropTypes.number,
   renderTabContentOnlyWhenSelected: PropTypes.bool,
-  fitted: PropTypes.bool
+  fitted: PropTypes.bool,
+  onTabClick: PropTypes.func
 };
 
 Tabs.defaultProps = {
@@ -154,7 +158,8 @@ Tabs.defaultProps = {
   selectedIndex: undefined,
   defaultSelectedIndex: null,
   renderTabContentOnlyWhenSelected: false,
-  fitted: false
+  fitted: false,
+  onTabClick: undefined
 };
 
 export default Tabs;
