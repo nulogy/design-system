@@ -4,11 +4,19 @@ import { NDSProvider, Tab, Tabs } from "..";
 
 const TestComponent = () => (
   <NDSProvider>
-    <Tabs>
-      <Tab label="Tab 1">Tab 1 Content</Tab>
-      <Tab label="Tab 2">Tab 2 Content</Tab>
-      <Tab label="Tab 3">Tab 3 Content</Tab>
-      <Tab label="Tab 4">Tab 4 Content</Tab>
+    <Tabs className="TabContainer" tabContentClassName="TabContent">
+      <Tab label="Tab 1" className="Tab1">
+        Tab 1 Content
+      </Tab>
+      <Tab label="Tab 2" className="Tab2">
+        Tab 2 Content
+      </Tab>
+      <Tab label="Tab 3" className="Tab3">
+        Tab 3 Content
+      </Tab>
+      <Tab label="Tab 4" className="Tab4">
+        Tab 4 Content
+      </Tab>
     </Tabs>
   </NDSProvider>
 );
