@@ -46,9 +46,7 @@ describe("Tabs", () => {
   it("moves to the next tab when right arrow key is pressed", () => {
     cy.renderFromStorybook("tabs--base");
 
-    cy.get(".Tab1")
-      .click()
-      .type("{rightarrow}");
+    cy.get(".Tab1").type("{rightarrow}");
 
     cy.focused().should("have.text", "Tab 2");
   });
@@ -56,9 +54,7 @@ describe("Tabs", () => {
   it("moves to the previous tab whenleft arrow key is pressed", () => {
     cy.renderFromStorybook("tabs--base");
 
-    cy.get(".Tab2")
-      .click()
-      .type("{leftarrow}");
+    cy.get(".Tab2").type("{leftarrow}");
 
     cy.focused().should("have.text", "Tab 1");
   });
@@ -66,9 +62,7 @@ describe("Tabs", () => {
   it("moves to the first tab when right arrow key is pressed on last tab", () => {
     cy.renderFromStorybook("tabs--base");
 
-    cy.get(".Tab4")
-      .click()
-      .type("{rightarrow}");
+    cy.get(".Tab4").type("{rightarrow}");
 
     cy.focused().should("have.text", "Tab 1");
   });
@@ -76,9 +70,7 @@ describe("Tabs", () => {
   it("moves to the last tab when left arrow key is pressed on first tab", () => {
     cy.renderFromStorybook("tabs--base");
 
-    cy.get(".Tab1")
-      .click()
-      .type("{leftarrow}");
+    cy.get(".Tab1").type("{leftarrow}");
 
     cy.focused().should("have.text", "Tab 4");
   });
