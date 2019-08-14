@@ -130,10 +130,6 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Dos and Donts</SectionTitle>
-    </DocSection>
-
-    <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
     </DocSection>
