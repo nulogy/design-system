@@ -76,6 +76,31 @@ describe("Tabs", () => {
   });
 
   //indicators tests
+  it("only renders right scroll indicator when tabs are hidden on the right", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get("svg[icon=leftArrow]").should("not.exist");
+    cy.get("svg[icon=rightArrow]").should("exist");
+  });
+
+  it("only renders left scroll indicator when tabs are hidden on the left", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get(".TabContainer").scrollTo("right");
+
+    cy.get("svg[icon=leftArrow]").should("exist");
+    cy.get("svg[icon=rightArrow]").should("not.exist");
+  });
+
+  it("renders both scroll indicators when tabs are hidden on the left and right", () => {
+    cy.renderFromStorybook("tabs--with-scrolling");
+
+    cy.get(".TabContainer").scrollTo(50);
+
+    cy.get("svg[icon=leftArrow]").should("not.exist");
+    cy.get("svg[icon=rightArrow]").should("exist");
+  });
+
   it("scrolls to last visible Tab to left on right indicator click", () => {
     cy.renderFromStorybook("tabs--with-scrolling");
 
