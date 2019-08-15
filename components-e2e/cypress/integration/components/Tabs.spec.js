@@ -1,12 +1,12 @@
 describe("Tabs", () => {
-  //behavior tests
+  // behavior tests
   it("renders tab components", () => {
     cy.renderFromStorybook("tabs--base");
 
     cy.get(".Tab1").should("have.text", "Tab 1");
   });
 
-  it("selects the tab that is clicked", () => {
+  it("selects the tab on click", () => {
     cy.renderFromStorybook("tabs--base");
 
     cy.get(".Tab1")
@@ -15,7 +15,7 @@ describe("Tabs", () => {
       .should("have.attr", "aria-selected", "true");
   });
 
-  it("moves focus to the tab that is clicked", () => {
+  it("moves focus to the tab on click", () => {
     cy.renderFromStorybook("tabs--base");
 
     cy.get(".Tab1").click();
@@ -23,7 +23,7 @@ describe("Tabs", () => {
     cy.focused().should("have.text", "Tab 1");
   });
 
-  it("opens tab content when the tab is clicked", () => {
+  it("displays the tab content on click", () => {
     cy.renderFromStorybook("tabs--base");
 
     cy.get(".Tab1").click();
@@ -42,7 +42,7 @@ describe("Tabs", () => {
       .should("have.attr", "aria-selected", "true");
   });
 
-  //focus
+  // focus
   it("focuses the first tab by default", () => {
     cy.renderFromStorybook("tabs--base");
 
@@ -97,7 +97,7 @@ describe("Tabs", () => {
     cy.focused().should("have.text", "Tab 4");
   });
 
-  //indicators tests
+  // indicators tests
   it("only renders right scroll indicator when tabs are hidden on the right", () => {
     cy.renderFromStorybook("tabs--with-scrolling");
 
@@ -159,7 +159,7 @@ describe("Tabs", () => {
     cy.get(".TabContainer").should("have.prop", "scrollLeft", 0);
   });
 
-  //persistance tests
+  // persistance tests
   it("persists input values of tab when hidden", () => {
     cy.renderFromStorybook("tabs--with-input-and-persistant-content");
 
