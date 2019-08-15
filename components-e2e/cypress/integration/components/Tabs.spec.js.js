@@ -34,6 +34,14 @@ describe("Tabs", () => {
     );
   });
 
+  it("selects a tab when enter is pressed on it", () => {
+    cy.renderFromStorybook("tabs--base");
+
+    cy.get(".Tab1")
+      .type("{enter}")
+      .should("have.attr", "aria-selected", "true");
+  });
+
   //focus
   it("focuses the first tab by default", () => {
     cy.renderFromStorybook("tabs--base");
@@ -50,7 +58,7 @@ describe("Tabs", () => {
 
     cy.focused().should("have.text", "Tab 2");
 
-    cy.get("body").click();
+    cy.focused().blur();
 
     cy.focused().should("not.exist");
 
