@@ -51,7 +51,7 @@ class Tabs extends React.Component {
     return controlledSelectedIndex === undefined ? uncontrolledSelectedIndex : controlledSelectedIndex;
   }
 
-  getTabs(setFocusToTab, focusedIndex) {
+  getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
     const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
 
@@ -71,6 +71,7 @@ class Tabs extends React.Component {
         onFocus: e => {
           e.stopPropagation();
         },
+        onKeyDown: handleArrowNavigation,
         index,
         tabIndex: index === focusedIndex ? 0 : -1,
         selected: index === selectedIndex,
@@ -120,15 +121,9 @@ class Tabs extends React.Component {
           {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll, handleResize }) => (
-                <TabContainer
-                  className={className}
-                  role="tablist"
-                  onScroll={handleScroll}
-                  onKeyDown={handleArrowNavigation}
-                  ref={this.tabContainerRef}
-                >
+                <TabContainer className={className} role="tablist" onScroll={handleScroll} ref={this.tabContainerRef}>
                   <ReactResizeDetector handleWidth onResize={handleResize} />
-                  {this.getTabs(setFocusToTab, focusedIndex)}
+                  {this.getTabs(setFocusToTab, focusedIndex, handleArrowNavigation)}
                 </TabContainer>
               )}
             </TabScrollIndicators>
