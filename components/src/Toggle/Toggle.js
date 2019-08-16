@@ -63,6 +63,8 @@ class BaseToggle extends React.Component {
       onText,
       offText,
       className,
+      inputClassName,
+      titleClassName,
       required,
       error,
       id,
@@ -75,6 +77,7 @@ class BaseToggle extends React.Component {
     return (
       <Field className={className}>
         <MaybeToggleTitle
+          className={titleClassName}
           id={labelText && `${labelText}-label`}
           labelText={labelText}
           requirementText={requirementText}
@@ -101,6 +104,7 @@ class BaseToggle extends React.Component {
               }}
               {...props}
               ref={this.inputRef}
+              className={inputClassName}
             />
             {(onText || offText) && (
               <Text disabled={disabled} mb="none" ml="x1">
@@ -124,6 +128,8 @@ BaseToggle.propTypes = {
   id: PropTypes.string,
   value: PropTypes.string,
   className: PropTypes.string,
+  inputClassName: PropTypes.string,
+  titleClassName: PropTypes.string,
   required: PropTypes.bool,
   helpText: PropTypes.string,
   labelText: PropTypes.string,
@@ -140,6 +146,8 @@ BaseToggle.defaultProps = {
   id: null,
   value: "on",
   className: null,
+  inputClassName: null,
+  titleClassName: null,
   required: false,
   helpText: null,
   labelText: null,
