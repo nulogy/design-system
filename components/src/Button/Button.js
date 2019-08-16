@@ -48,13 +48,13 @@ const WrapperButton = styled.button(
     textDecoration: "none",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
-    transition: "background-color .2s",
     cursor: disabled ? "default" : "pointer",
     color: theme.colors.blue,
     backgroundColor: theme.colors.white,
     border: `1px solid ${theme.colors.blue}`,
     borderRadius: theme.radii.medium,
     margin: theme.space.none,
+    transition: "background-color .2s, transform .2s ease-in",
     "&:hover": {
       backgroundColor: disabled ? null : theme.colors.lightBlue
     },
@@ -68,8 +68,7 @@ const WrapperButton = styled.button(
       }
     },
     "&:active": {
-      transform: "scale(0.98)",
-      transition: "scale .2s ease-in"
+      transform: "scale(0.98)"
     },
     "&:disabled": {
       opacity: ".5"
