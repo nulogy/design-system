@@ -40,13 +40,32 @@ const groupProps = [
     name: "required",
     type: "Boolean",
     defaultValue: "false",
-    description: "Makes the field require selection before the form will submit"
+    description:
+      "Makes the field require selection before the form will submit."
   },
   {
     name: "requirementText",
     type: "String",
     defaultValue: "null",
-    description: "(Optional) or (Required)"
+    description: "(Optional) or (Required)."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the group wrapper."
+  },
+  {
+    name: "legendClassName",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the legend of the group."
+  },
+  {
+    name: "validationclassName",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the inline validation component."
   }
 ];
 

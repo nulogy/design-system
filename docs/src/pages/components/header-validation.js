@@ -38,6 +38,12 @@ const propsRows = [
     type: "String / Array of Strings",
     defaultValue: "null",
     description: "A list of individual errors."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the wrapper element"
   }
 ];
 

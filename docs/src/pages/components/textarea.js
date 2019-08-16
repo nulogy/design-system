@@ -25,7 +25,7 @@ const propsRows = [
     name: "rows",
     type: "Number",
     defaultValue: "3",
-    description: "A custom number of rows to show by default"
+    description: "A custom number of rows to show by default."
   },
   ...inputProps
 ];

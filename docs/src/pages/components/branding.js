@@ -26,39 +26,45 @@ const propsRows = [
     name: "size",
     type: "String",
     defaultValue: "medium",
-    description: "Accepts medium or large to size the logo"
+    description: "Accepts medium or large to size the logo."
   },
   {
     name: "logoColor",
     type: "String",
     defaultValue: "blue",
-    description: "Accepts blue or white to set the logo color theme"
+    description: "Accepts blue or white to set the logo color theme."
   },
   {
     name: "logoType",
     type: "String",
     defaultValue: "wordmark",
-    description: "Accepts wordmark or lettermark to set the logo type"
+    description: "Accepts wordmark or lettermark to set the logo type."
   },
   {
     name: "subtext",
     type: "String",
     defaultValue: "null",
     description:
-      "Subtext that is placed under the logo to specify the specific software product a user is interacting with"
+      "Subtext that is placed under the logo to specify the specific software product a user is interacting with."
   },
   {
     name: "withLine",
     type: "Bool",
     defaultValue: "false",
-    description: "Horizontal line around the subtext, subtext must be defined"
+    description: "Horizontal line around the subtext, subtext must be defined."
   },
   {
     name: "alignment",
     type: "String",
     defaultValue: "right",
     description:
-      "Accepts left, center, or right to align the logo and logo subtext"
+      "Accepts left, center, or right to align the logo and logo subtext."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the branding component."
   }
 ];
 

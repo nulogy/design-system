@@ -50,39 +50,39 @@ const propsRows = [
     type: "object",
     defaultValue: "null",
     description:
-      "Data used to build link heirarchy and search functionality. See menuData Prop section below"
+      "Data used to build link heirarchy and search functionality. See menuData Prop section below."
   },
   {
     name: "subtext",
     type: "string",
     defaultValue: "null",
-    description: "The subtext under the logo"
+    description: "The subtext under the logo."
   },
   {
     name: "brandingLinkHref",
     type: "string",
     defaultValue: "/",
-    description: "The link href for the logo"
+    description: "The link href for the logo."
   },
   {
     name: "breakpointUpper",
     type: "number",
     defaultValue: "1024",
     description:
-      "Provides the breakpoint where menu items will be collapsed into a dropdown menu"
+      "Provides the breakpoint where menu items will be collapsed into a dropdown menu."
   },
   {
     name: "breakpointLower",
     type: "number",
     defaultValue: "768",
     description:
-      "Provides the breakpoint where the logo is collapsed from wordmark to lettermark"
+      "Provides the breakpoint where the logo is collapsed from wordmark to lettermark."
   },
   {
     name: "themeColor",
     type: "string",
     defaultValue: "blue",
-    description: 'Color themeing of NavBar component, either "blue" or "white"'
+    description: 'Color themeing of NavBar component, either "blue" or "white".'
   }
 ];
 
@@ -91,18 +91,18 @@ const menuDataKeyRows = [
     name: "primaryMenu",
     type: "array of menu item objects",
     description:
-      "Data to the main navigation menu, aligned to the left of the NavBar"
+      "Data to the main navigation menu, aligned to the left of the NavBar."
   },
   {
     name: "secondaryMenu",
     type: "array of menu item objects",
     description:
-      "Data to the secondary navigation menu, aligned to the right of the NavBar"
+      "Data to the secondary navigation menu, aligned to the right of the NavBar."
   },
   {
     name: "search",
     type: "object",
-    description: "Object's onSubmit key provides onSubmit to search"
+    description: "Object's onSubmit key provides onSubmit to search."
   }
 ];
 
@@ -110,25 +110,25 @@ const menuItemKeyRows = [
   {
     name: "name",
     type: "string (required)",
-    description: "Unique identifier for the menu item"
+    description: "Unique identifier for the menu item."
   },
   {
     name: "href",
     type: "string",
     description:
-      "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar"
+      "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar."
   },
   {
     name: "items",
     type: "array",
     description:
-      "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view"
+      "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view."
   },
   {
     name: "render",
     type: "function",
     description:
-      "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu"
+      "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu."
   }
 ];
 

@@ -46,6 +46,12 @@ const propsRows = [
     defaultValue: "flex-start",
     description:
       "Sets justify-content. Accepts flex-start, flex-end, center, space-around, or space-evenly"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "null",
+    description: "className passed to the flex component."
   }
 ];
 
