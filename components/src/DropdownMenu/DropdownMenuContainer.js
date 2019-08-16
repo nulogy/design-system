@@ -59,7 +59,7 @@ BaseSubMenu.propTypes = {
 };
 
 BaseSubMenu.defaultProps = {
-  className: null,
+  classname: undefined,
   children: null,
   showArrow: true,
   popperProps: null

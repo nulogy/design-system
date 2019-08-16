@@ -49,7 +49,7 @@ Svg.propTypes = {
 
 Svg.defaultProps = {
   color: "currentColor",
-  className: null,
+  classname: undefined,
   title: null,
   size: "24px",
   focusable: false

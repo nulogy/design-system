@@ -152,7 +152,7 @@ StatelessDropdownMenu.propTypes = {
 
 StatelessDropdownMenu.defaultProps = {
   disabled: false,
-  className: null,
+  classname: undefined,
   trigger: () => <IconicButton icon="more" />,
   backgroundColor: undefined,
   showArrow: true,

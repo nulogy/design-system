@@ -83,9 +83,9 @@ BaseCheckboxGroup.defaultProps = {
   defaultValue: undefined,
   checkedValue: undefined,
   onChange: undefined,
-  className: null,
-  legendClassName: null,
-  validationClassName: null,
+  classname: undefined,
+  legendclassname: undefined,
+  validationclassname: undefined,
   helpText: null,
   requirementText: null
 };

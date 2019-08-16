@@ -97,19 +97,19 @@ const togglePropsRows = [
   {
     name: "className",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the container element."
   },
   {
-    name: "inputClassName",
+    name: "inputclassName",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the input element."
   },
   {
-    name: "titleClassName",
+    name: "titleclassName",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the title text element."
   }
 ];

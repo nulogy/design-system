@@ -56,19 +56,19 @@ const radioProps = [
   {
     name: "className",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the wrapper"
   },
   {
-    name: "labelClassName",
+    name: "labelclassName",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the label"
   },
   {
-    name: "inputClassName",
+    name: "inputclassName",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the input"
   }
 ];

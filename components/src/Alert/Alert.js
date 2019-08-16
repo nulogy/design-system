@@ -81,7 +81,7 @@ BaseAlert.propTypes = {
 };
 
 BaseAlert.defaultProps = {
-  className: null,
+  classname: undefined,
   isCloseable: false,
   title: null,
   type: "informative"

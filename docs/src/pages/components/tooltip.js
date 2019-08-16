@@ -63,7 +63,7 @@ const propsRows = [
   {
     name: "className",
     type: "String",
-    defaultValue: "null",
+    defaultValue: "undefined",
     description: "className passed to the tooltip container element."
   }
 ];

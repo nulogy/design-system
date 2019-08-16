@@ -30,7 +30,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
-  className: null,
+  classname: undefined,
   compact: false,
   leftAlign: false,
   color: "currentColor"

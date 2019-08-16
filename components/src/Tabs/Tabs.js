@@ -149,8 +149,8 @@ Tabs.propTypes = {
 
 Tabs.defaultProps = {
   children: null,
-  className: null,
-  tabContentClassName: null,
+  classname: undefined,
+  tabContentclassname: undefined,
   selectedIndex: undefined,
   defaultSelectedIndex: null,
   renderTabContentOnlyWhenSelected: false,

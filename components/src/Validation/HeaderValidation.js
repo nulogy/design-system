@@ -24,7 +24,7 @@ BaseHeaderValidation.propTypes = {
 };
 
 BaseHeaderValidation.defaultProps = {
-  className: null,
+  classname: undefined,
   errorList: null,
   children: null,
   mb: "x2"

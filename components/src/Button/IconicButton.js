@@ -121,7 +121,7 @@ BaseIconicButton.propTypes = {
 
 BaseIconicButton.defaultProps = {
   children: null,
-  className: null,
+  classname: undefined,
   labelHidden: false,
   disabled: false
 };
