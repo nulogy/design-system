@@ -75,19 +75,19 @@ const inputProps = [
     description: "className passed to the wrapper element."
   },
   {
-    name: "inputclassName",
+    name: "inputClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the input element."
   },
   {
-    name: "validationclassName",
+    name: "validationClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the inline validation component."
   },
   {
-    name: "labelclassName",
+    name: "labelClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the label component."

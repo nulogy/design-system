@@ -101,13 +101,13 @@ const togglePropsRows = [
     description: "className passed to the container element."
   },
   {
-    name: "inputclassName",
+    name: "inputClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the input element."
   },
   {
-    name: "titleclassName",
+    name: "titleClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the title text element."

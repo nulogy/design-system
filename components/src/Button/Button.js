@@ -106,7 +106,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  classname: undefined,
+  className: undefined,
   icon: null,
   iconSide: "right",
   size: "medium",

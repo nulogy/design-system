@@ -16,7 +16,7 @@ ListItem.propTypes = {
 };
 
 ListItem.defaultProps = {
-  classname: undefined,
+  className: undefined,
   color: "currentColor",
   mb: theme.space.x1
 };

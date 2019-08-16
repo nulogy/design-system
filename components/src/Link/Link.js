@@ -33,7 +33,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-  classname: undefined,
+  className: undefined,
   underline: true,
   color: "blue",
   p: 0,

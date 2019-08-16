@@ -36,7 +36,7 @@ InlineValidation.propTypes = {
 };
 
 InlineValidation.defaultProps = {
-  classname: undefined,
+  className: undefined,
   errorMessage: null,
   errorList: null,
   children: null

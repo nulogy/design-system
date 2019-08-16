@@ -101,7 +101,7 @@ BaseBranding.defaultProps = {
   alignment: "left",
   withLine: false,
   subtext: null,
-  classname: undefined
+  className: undefined
 };
 
 const Branding = styled(BaseBranding)({});

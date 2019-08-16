@@ -120,14 +120,14 @@ const propsRows = [
     description: "className passed to the modal component."
   },
   {
-    name: "portalclassName",
+    name: "portalClassName",
     type: "String",
     defaultValue: "undefined",
     description:
       "className passed to the portal created for the modal component."
   },
   {
-    name: "overlayclassName",
+    name: "overlayClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the overlay component."

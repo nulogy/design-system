@@ -172,7 +172,7 @@ StatelessTooltip.propTypes = {
 };
 
 StatelessTooltip.defaultProps = {
-  classname: undefined,
+  className: undefined,
   placement: "bottom",
   maxWidth: "24em"
 };

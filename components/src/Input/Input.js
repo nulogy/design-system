@@ -112,10 +112,10 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  classname: undefined,
-  inputclassname: undefined,
-  labelclassname: undefined,
-  validationclassname: undefined,
+  className: undefined,
+  inputclassName: undefined,
+  labelclassName: undefined,
+  validationclassName: undefined,
   disabled: false,
   errorMessage: null,
   errorList: null,

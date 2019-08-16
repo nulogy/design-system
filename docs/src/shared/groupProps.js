@@ -56,13 +56,13 @@ const groupProps = [
     description: "className passed to the group wrapper."
   },
   {
-    name: "legendclassName",
+    name: "legendClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the legend of the group."
   },
   {
-    name: "validationclassName",
+    name: "validationClassName",
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the inline validation component."

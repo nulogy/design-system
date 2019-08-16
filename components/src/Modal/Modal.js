@@ -297,9 +297,9 @@ Modal.defaultProps = {
   shouldReturnFocusAfterClose: true,
   ariaDescribedBy: null,
   maxWidth: "624px",
-  portalclassname: undefined,
-  overlayclassname: undefined,
-  classname: undefined,
+  portalclassName: undefined,
+  overlayclassName: undefined,
+  className: undefined,
   appElement: undefined,
   ariaHideApp: true
 };

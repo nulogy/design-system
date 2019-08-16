@@ -48,7 +48,7 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   alignment: "left",
-  classname: undefined
+  className: undefined
 };
 
 export default ButtonGroup;

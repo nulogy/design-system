@@ -116,10 +116,10 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
-  classname: undefined,
-  inputclassname: undefined,
-  labelclassname: undefined,
-  validationclassname: undefined,
+  className: undefined,
+  inputclassName: undefined,
+  labelclassName: undefined,
+  validationclassName: undefined,
   id: null,
   disabled: false,
   errorMessage: null,
