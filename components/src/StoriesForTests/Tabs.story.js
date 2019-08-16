@@ -63,7 +63,7 @@ const TestComponentWithInputs = () => (
 
 const TestComponentWithInputsNotPersistant = () => (
   <NDSProvider>
-    <Tabs renderTabContentOnlyWhenSelected={true} className="TabContainer" tabContentClassName="TabContent">
+    <Tabs renderTabContentOnlyWhenSelected className="TabContainer" tabContentClassName="TabContent">
       <Tab label="Tab 1" className="Tab1">
         <input className="Input1" />
       </Tab>
