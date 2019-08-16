@@ -26,7 +26,7 @@ class ControlledTabs extends React.Component {
           <Tab label="Tab 3">Uncontrolled Content: Tab 3</Tab>
           <Tab label="Tab 4">Uncontrolled Content: Tab 4</Tab>
         </Tabs>
-        {selectedIndex !== null && <div>Contolled Content: Tab {selectedIndex + 1}</div>}
+        {selectedIndex !== null && <div>Controlled Content: Tab {selectedIndex + 1}</div>}
       </>
     );
   }

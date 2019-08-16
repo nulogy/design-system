@@ -1,5 +1,4 @@
 describe("Tabs", () => {
-  // behavior tests
   it("renders tab components", () => {
     cy.renderFromStorybook("tabs--base");
 
@@ -42,7 +41,6 @@ describe("Tabs", () => {
       .should("have.attr", "aria-selected", "true");
   });
 
-  // focus
   it("focuses the first tab by default", () => {
     cy.renderFromStorybook("tabs--base");
 
@@ -97,7 +95,6 @@ describe("Tabs", () => {
     cy.focused().should("have.text", "Tab 4");
   });
 
-  // indicators tests
   it("only renders right scroll indicator when tabs are hidden on the right", () => {
     cy.renderFromStorybook("tabs--with-scrolling");
 
@@ -159,7 +156,6 @@ describe("Tabs", () => {
     cy.get(".TabContainer").should("have.prop", "scrollLeft", 0);
   });
 
-  // persistance tests
   it("persists input values of tab when hidden", () => {
     cy.renderFromStorybook("tabs--with-input-and-persistant-content");
 
@@ -190,5 +186,31 @@ describe("Tabs", () => {
     cy.get(".Tab1").click();
 
     cy.get(".Input1").should("have.value", "");
+  });
+
+  it("is controllable", () => {
+    cy.renderFromStorybook("tabs--controlled");
+
+    cy.get(".Tab1").click();
+
+    cy.get(".UncontrolledTabContent[aria-hidden=false]").should(
+      "have.text",
+      "Uncontrolled Content: Tab 1"
+    );
+    cy.get(".ControlledTabContent").should(
+      "have.text",
+      "Controlled Content: Tab 1"
+    );
+
+    cy.get(".Tab2").click();
+
+    cy.get(".UncontrolledTabContent[aria-hidden=false]").should(
+      "have.text",
+      "Uncontrolled Content: Tab 2"
+    );
+    cy.get(".ControlledTabContent").should(
+      "have.text",
+      "Controlled Content: Tab 2"
+    );
   });
 });

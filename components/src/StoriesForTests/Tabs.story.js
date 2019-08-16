@@ -92,13 +92,28 @@ class ControlledTabs extends React.Component {
     const { selectedIndex } = this.state;
     return (
       <>
-        <Tabs onTabClick={this.setSelectedTab} selectedIndex={selectedIndex}>
-          <Tab label="Tab 1">Uncontrolled Content: Tab 1</Tab>
-          <Tab label="Tab 2">Uncontrolled Content: Tab 2</Tab>
-          <Tab label="Tab 3">Uncontrolled Content: Tab 3</Tab>
-          <Tab label="Tab 4">Uncontrolled Content: Tab 4</Tab>
+        <Tabs
+          className="TabContainer"
+          tabContentClassName="UncontrolledTabContent"
+          onTabClick={this.setSelectedTab}
+          selectedIndex={selectedIndex}
+        >
+          <Tab label="Tab 1" className="Tab1">
+            Uncontrolled Content: Tab 1
+          </Tab>
+          <Tab label="Tab 2" className="Tab2">
+            Uncontrolled Content: Tab 2
+          </Tab>
+          <Tab label="Tab 3" className="Tab3">
+            Uncontrolled Content: Tab 3
+          </Tab>
+          <Tab label="Tab 4" className="Tab4">
+            Uncontrolled Content: Tab 4
+          </Tab>
         </Tabs>
-        {selectedIndex !== null && <div>Contolled Content: Tab {selectedIndex + 1}</div>}
+        {selectedIndex !== null && (
+          <div className="ControlledTabContent">Controlled Content: Tab {selectedIndex + 1}</div>
+        )}
       </>
     );
   }
