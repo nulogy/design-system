@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Alert } from "../Alert";
 import mapErrorsToList from "./mapErrorsToList";
 
-const BaseHeaderValidation = ({ className, title, errorMessage, errorList, children }) => (
-  <Alert className={className} title={title} type="danger">
+const BaseHeaderValidation = ({ className, title, errorMessage, errorList, children, mb }) => (
+  <Alert mb={mb} className={className} title={title} type="danger">
     {errorMessage}
     {mapErrorsToList(errorList)}
     {children}
@@ -19,13 +19,15 @@ BaseHeaderValidation.propTypes = {
   title: PropTypes.string.isRequired,
   errorMessage: PropTypes.string.isRequired,
   errorList: PropTypes.arrayOf(PropTypes.string),
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 BaseHeaderValidation.defaultProps = {
   className: null,
   errorList: null,
-  children: null
+  children: null,
+  mb: "x2"
 };
 
 export default HeaderValidation;
