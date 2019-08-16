@@ -29,6 +29,7 @@ const getCheckboxButtons = props => {
 
 const BaseCheckboxGroup = ({
   className,
+  legendClassName,
   validationClassName,
   errorMessage,
   errorList,
@@ -40,7 +41,7 @@ const BaseCheckboxGroup = ({
   const otherProps = { ...props, errorMessage, errorList };
   return (
     <Fieldset className={className} hasHelpText={!!helpText}>
-      <legend style={{ marginBottom: theme.space.x1 }}>
+      <legend className={legendClassName} style={{ marginBottom: theme.space.x1 }}>
         {labelText}
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
@@ -70,6 +71,7 @@ BaseCheckboxGroup.propTypes = {
   checkedValue: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func,
   className: PropTypes.string,
+  legendClassName: PropTypes.string,
   validationClassName: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string
@@ -82,6 +84,7 @@ BaseCheckboxGroup.defaultProps = {
   checkedValue: undefined,
   onChange: undefined,
   className: null,
+  legendClassName: null,
   validationClassName: null,
   helpText: null,
   requirementText: null

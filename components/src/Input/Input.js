@@ -69,11 +69,21 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
+  className,
+  inputClassName,
+  labelClassName,
+  validationClassName,
   ...props
 }) => (
-  <Field>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+  <Field className={className}>
+    <MaybeFieldLabel
+      className={labelClassName}
+      labelText={labelText}
+      requirementText={requirementText}
+      helpText={helpText}
+    >
       <StyledInput
+        className={inputClassName}
         aria-invalid={error}
         aria-required={required}
         errorMessage={errorMessage}
@@ -82,11 +92,15 @@ const Input = ({
         {...props}
       />
     </MaybeFieldLabel>
-    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    <InlineValidation className={validationClassName} mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
 Input.propTypes = {
+  className: PropTypes.string,
+  inputClassName: PropTypes.string,
+  labelClassName: PropTypes.string,
+  validationClassName: PropTypes.string,
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
@@ -98,6 +112,10 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  className: null,
+  inputClassName: null,
+  labelClassName: null,
+  validationClassName: null,
   disabled: false,
   errorMessage: null,
   errorList: null,
