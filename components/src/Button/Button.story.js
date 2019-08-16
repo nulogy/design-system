@@ -27,7 +27,7 @@ storiesOf("Buttons", module)
   .add("Set to full width", () => <PrimaryButton fullWidth>Create project</PrimaryButton>)
   .add("Set to disabled", () => <PrimaryButton disabled>Create project</PrimaryButton>)
   .add("As a link", () => (
-    <PrimaryButton as="a" href="/">
+    <PrimaryButton asLink href="/">
       Create project
     </PrimaryButton>
   ));

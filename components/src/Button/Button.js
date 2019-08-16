@@ -80,12 +80,12 @@ const WrapperButton = styled.button(
   space
 );
 
-const BaseButton = React.forwardRef(({ children, iconSide, icon, className, ...props }, ref) => {
+const Button = React.forwardRef(({ children, iconSide, icon, className, asLink, ...props }, ref) => {
   const {
     lineHeights: { smallTextCompressed }
   } = theme;
   return (
-    <WrapperButton ref={ref} className={className} {...props}>
+    <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} {...props}>
       {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
       {children}
       {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
@@ -93,26 +93,26 @@ const BaseButton = React.forwardRef(({ children, iconSide, icon, className, ...p
   );
 });
 
-BaseButton.propTypes = {
+Button.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   icon: PropTypes.oneOf(iconNames),
-  iconSide: PropTypes.oneOf(["left", "right"])
-};
-
-BaseButton.defaultProps = {
-  className: null,
-  icon: null,
-  iconSide: "right"
-};
-
-const Button = styled(BaseButton)({});
-
-Button.propTypes = {
+  iconSide: PropTypes.oneOf(["left", "right"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  asLink: PropTypes.bool,
   ...space.propTypes
+};
+
+Button.defaultProps = {
+  className: null,
+  icon: null,
+  iconSide: "right",
+  size: "medium",
+  disabled: false,
+  fullWidth: false,
+  asLink: false
 };
 
 export default Button;
