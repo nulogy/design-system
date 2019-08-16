@@ -9,7 +9,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added many new className related props to all components, see [docs](https://nulogy.design/)
+
 ### Changed
+
+- [**Breaking Change**] Changed API for using Button as a link
+
+  - old:
+
+  ```js
+  <Button as="a">Click</Button>
+  ```
+
+  - new:
+
+  ```js
+  <Button asLink>Click</Button>
+  ```
 
 ### Deprecated
 
