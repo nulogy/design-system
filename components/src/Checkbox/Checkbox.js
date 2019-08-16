@@ -90,10 +90,10 @@ const CheckboxInput = styled.input(props => ({
 }));
 
 const BaseCheckbox = props => {
-  const { className, inputClassName, labelText, disabled, checked, required, error } = props;
+  const { className, labelClassName, inputClassName, labelText, disabled, checked, required, error } = props;
   return (
     <Box className={className}>
-      <ClickInputLabel disabled={disabled}>
+      <ClickInputLabel className={labelClassName} disabled={disabled}>
         <CheckboxInput
           className={inputClassName}
           type="checkbox"
@@ -117,6 +117,7 @@ BaseCheckbox.propTypes = {
   error: PropTypes.bool,
   id: PropTypes.string,
   className: PropTypes.string,
+  labelClassName: PropTypes.string,
   inputClassName: PropTypes.string,
   required: PropTypes.bool
 };
@@ -128,6 +129,7 @@ BaseCheckbox.defaultProps = {
   error: false,
   id: null,
   className: null,
+  labelClassName: null,
   inputClassName: null,
   required: false
 };
