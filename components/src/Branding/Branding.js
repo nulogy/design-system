@@ -62,8 +62,8 @@ const Line = styled.div(({ logoColor }) => ({
   }
 }));
 
-const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor, ...props }) => (
-  <BrandingWrap size={size} alignment={alignment} {...props}>
+const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor, className, ...props }) => (
+  <BrandingWrap size={size} alignment={alignment} className={className} {...props}>
     {logoType === "lettermark" ? (
       <LettermarkLogo size={size} letterFill={getLogoColor(logoColor).letter} />
     ) : (
@@ -90,7 +90,8 @@ BaseBranding.propTypes = {
   size: PropTypes.oneOf(["medium", "large"]),
   alignment: PropTypes.oneOf(["left", "center", "right"]),
   withLine: PropTypes.bool,
-  subtext: PropTypes.string
+  subtext: PropTypes.string,
+  className: PropTypes.string
 };
 
 BaseBranding.defaultProps = {
@@ -99,7 +100,8 @@ BaseBranding.defaultProps = {
   size: "medium",
   alignment: "left",
   withLine: false,
-  subtext: null
+  subtext: null,
+  className: null
 };
 
 const Branding = styled(BaseBranding)({});
