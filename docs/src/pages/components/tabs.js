@@ -111,7 +111,7 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Tabs</Title>
-      <IntroText>For navigation between sections of related content.</IntroText>
+      <IntroText>For navigating between sections of related content.</IntroText>
     </Intro>
 
     <DocSection>
