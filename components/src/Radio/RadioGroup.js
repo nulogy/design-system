@@ -84,8 +84,8 @@ BaseRadioGroup.defaultProps = {
   checkedValue: undefined,
   onChange: undefined,
   className: undefined,
-  legendclassName: undefined,
-  validationclassName: undefined,
+  legendClassName: undefined,
+  validationClassName: undefined,
   helpText: null,
   requirementText: null
 };

@@ -134,8 +134,8 @@ BaseRadio.defaultProps = {
   error: false,
   id: null,
   className: undefined,
-  labelclassName: undefined,
-  inputclassName: undefined,
+  labelClassName: undefined,
+  inputClassName: undefined,
   required: false
 };
 
