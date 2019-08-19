@@ -1,13 +1,135 @@
 describe("NavBar", () => {
+  const renderNavBar = () => {
+    cy.renderFromStorybook("navbar--base");
+    cy.wait(500);
+  };
+
   context("when in desktop mode", () => {
     beforeEach(() => {
       cy.viewport("macbook-13");
     });
 
-    it("can be navigated using the keyboard", () => {
-      cy.renderFromStorybook("navbar--base");
+    it("can open a submenu on click", () => {
+      renderNavBar();
 
-      cy.wait(500);
+      cy.contains("Menu 1").click();
+
+      cy.contains("Menu 1-1").should("exist");
+    });
+
+    it("closes a first level submenu on click when one is open", () => {
+      renderNavBar();
+
+      cy.contains("Menu 1").click();
+
+      cy.contains("Menu 1-1").should("exist");
+
+      cy.contains("Menu 1").click();
+
+      cy.contains("Menu 1-1").should("not.exist");
+    });
+
+    it("can open multiple layers of submenus", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").click();
+
+      cy.contains("Menu 2-1-2").click();
+
+      cy.contains("Menu 2-1-2-1").should("exist");
+    });
+
+    it("closes all open submenus on escape key press", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").click();
+
+      cy.contains("Menu 2-1-2").click();
+
+      cy.get("body").type("{esc}");
+
+      cy.contains("Menu 2-1").should("not.exist");
+    });
+
+    it("closes all open submenus on click outside of menus", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").click();
+
+      cy.contains("Menu 2-1-2").click();
+
+      cy.get("body").click();
+
+      cy.contains("Menu 2-1").should("not.exist");
+    });
+
+    it("opens nested submenus on mouse hover of the trigger", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").trigger("mouseover");
+
+      cy.contains("Menu 2-1-2").should("exist");
+    });
+
+    it("closes nested submenus on mouse leave of the trigger", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").trigger("mouseover");
+      cy.contains("Menu 2-1").trigger("mouseout");
+
+      cy.contains("Menu 2-1-2").should("not.exist");
+    });
+
+    it("closes all nested submenus when mouse leaves any nested submenu", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").trigger("mouseover");
+      cy.contains("Menu 2-1-2").trigger("mouseover");
+
+      cy.contains("Menu 2-1-2-2").should("exist");
+
+      cy.contains("Menu 2-1-2").trigger("mouseout");
+
+      cy.contains("Menu 2-1-2").should("not.exist");
+      cy.contains("Menu 2-1").should("exist");
+    });
+
+    it("enforces one submenu tree is open at once", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").should("exist");
+
+      cy.contains("Menu 1").click();
+
+      cy.contains("Menu 2-1").should("not.exist");
+    });
+
+    it("enforces one nested submenu tree is open at once", () => {
+      renderNavBar();
+
+      cy.contains("Menu 2").click();
+
+      cy.contains("Menu 2-1").click();
+
+      cy.contains("Menu 2-1-1").should("exist");
+
+      cy.contains("Menu 2-2").click();
+
+      cy.contains("Menu 2-1-1").should("not.exist");
     });
   });
 
@@ -17,9 +139,7 @@ describe("NavBar", () => {
     });
 
     it("renders", () => {
-      cy.renderFromStorybook("navbar--base");
-
-      cy.wait(500);
+      renderNavBar();
     });
   });
 });

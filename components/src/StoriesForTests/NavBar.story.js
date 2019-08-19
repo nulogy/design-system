@@ -26,14 +26,18 @@ const primaryMenu = [
     name: "Menu 2",
     items: [
       {
-        name: "SubMenu 1",
+        name: "Menu 2-1",
         items: [
-          { name: "SubMenu 1-1", href: "/" },
+          { name: "Menu 2-1-1", href: "/" },
           {
-            name: "SubSubMenu 1",
-            items: [{ name: "SubSubMenu 1-1", href: "/" }, { name: "SubSubMenu 1-2", href: "/" }]
+            name: "Menu 2-1-2",
+            items: [{ name: "Menu 2-1-2-1", href: "/" }, { name: "Menu 2-1-2-2", href: "/" }]
           }
         ]
+      },
+      {
+        name: "Menu 2-2",
+        items: [{ name: "Menu 2-2-1", href: "/" }]
       }
     ]
   }
