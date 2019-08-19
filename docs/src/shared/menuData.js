@@ -124,6 +124,10 @@ export const menuData = [
         href: "/components/select"
       },
       {
+        name: "Tabs",
+        href: "/components/tabs"
+      },
+      {
         name: "Text",
         href: "/components/text"
       },

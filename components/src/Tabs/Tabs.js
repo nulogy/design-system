@@ -11,6 +11,7 @@ const TabContainer = styled.div({
   whiteSpace: "nowrap",
   overflowX: "scroll",
   overflowY: "hidden",
+  marginBottom: theme.space.x1,
   "::-webkit-scrollbar": {
     display: "none"
   },

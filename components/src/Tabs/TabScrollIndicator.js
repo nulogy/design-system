@@ -26,6 +26,7 @@ const TabScrollIndicatorButton = styled.button(({ side, width }) => ({
   backgroundColor: theme.colors.white,
   border: `0px solid`,
   margin: theme.space.none,
+  cursor: "pointer",
   "&:hover": {
     backgroundColor: theme.colors.lightBlue
   },
