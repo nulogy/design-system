@@ -1,16 +1,11 @@
 describe("NavBar", () => {
-  const renderNavBar = () => {
-    cy.renderFromStorybook("navbar--base");
-    cy.wait(500);
-  };
-
   context("when in desktop mode", () => {
     beforeEach(() => {
       cy.viewport("macbook-13");
     });
 
     it("can open a submenu on click", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 1").click();
 
@@ -18,7 +13,7 @@ describe("NavBar", () => {
     });
 
     it("closes a first level submenu on click when one is open", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 1").click();
 
@@ -30,7 +25,7 @@ describe("NavBar", () => {
     });
 
     it("can open multiple layers of submenus", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -42,7 +37,7 @@ describe("NavBar", () => {
     });
 
     it("closes all open submenus on escape key press", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -56,7 +51,7 @@ describe("NavBar", () => {
     });
 
     it("closes all open submenus on click outside of menus", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -70,7 +65,7 @@ describe("NavBar", () => {
     });
 
     it("opens nested submenus on mouse hover of the trigger", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -80,7 +75,7 @@ describe("NavBar", () => {
     });
 
     it("closes nested submenus on mouse leave of the trigger", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -91,7 +86,7 @@ describe("NavBar", () => {
     });
 
     it("closes all nested submenus when mouse leaves any nested submenu", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -107,7 +102,7 @@ describe("NavBar", () => {
     });
 
     it("enforces one submenu tree is open at once", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -119,7 +114,7 @@ describe("NavBar", () => {
     });
 
     it("enforces one nested submenu tree is open at once", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
 
       cy.contains("Menu 2").click();
 
@@ -139,7 +134,7 @@ describe("NavBar", () => {
     });
 
     it("renders", () => {
-      renderNavBar();
+      cy.renderFromStorybook("navbar--base");
     });
   });
 });
