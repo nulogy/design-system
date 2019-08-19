@@ -13,7 +13,7 @@ const StyledButton = styled.button(({ isOpen }) => ({
   fontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextBase,
   width: "100%",
-  padding: `${theme.space.half} 28px ${theme.space.half} ${theme.space.x2}`,
+  padding: `${theme.space.half} 28px ${theme.space.half} 12px`,
   border: "none",
   borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
