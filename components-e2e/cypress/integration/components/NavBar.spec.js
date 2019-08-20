@@ -190,7 +190,7 @@ describe("NavBar", () => {
       cy.get("nav").should("not.exist");
     });
 
-    it("resets the scroll position of the menu when closed and opened", () => {
+    it.only("resets the scroll position of the menu when closed and opened", () => {
       cy.viewport("iphone-6");
 
       cy.renderFromStorybook("navbar--base");
@@ -199,7 +199,7 @@ describe("NavBar", () => {
 
       cy.get("header").scrollTo("bottom");
 
-      cy.get("svg[icon='close']").click();
+      cy.get("body").type("{esc}");
       cy.get("svg[icon='menu']").click();
 
       cy.get("header").should("have.prop", "scrollTop", 0);
