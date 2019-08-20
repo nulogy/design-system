@@ -135,7 +135,7 @@ StatelessNavBarDropdownMenu.propTypes = {
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
-  modifiers: { flip: { behavior: ["bottom"] } },
+  modifiers: null,
   triggerTogglesMenuState: true,
   dropdownMenuContainerEventHandlers: () => {}
 };
