@@ -129,8 +129,42 @@ describe("NavBar", () => {
 
     it("renders the search component", () => {
       cy.renderFromStorybook("navbar--base");
-      cy.wait(100);
+
       cy.get("input[type='search']").should("exist");
+    });
+
+    it("renders text in the menu", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Text").should("exist");
+      cy.contains("Text 2").should("exist");
+    });
+
+    it("renders custom components in the menu", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Custom").should("exist");
+      cy.contains("Custom 2").should("exist");
+    });
+
+    it("renders text in the submenu", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Button").click();
+      cy.contains("Submenu Text").should("exist");
+
+      cy.contains("Button 2").click();
+      cy.contains("Submenu Text 2").should("exist");
+    });
+
+    it("renders custom components in the submenu", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Button").click();
+      cy.contains("Submenu Custom").should("exist");
+
+      cy.contains("Button 2").click();
+      cy.contains("Submenu Custom 2").should("exist");
     });
   });
 
@@ -211,12 +245,38 @@ describe("NavBar", () => {
       cy.get("header").should("have.prop", "scrollTop", 0);
     });
 
-    it.only("renders the search component", () => {
+    it("renders the search component", () => {
       cy.renderFromStorybook("navbar--base");
 
-      cy.wait(100);
-
       cy.get("input[type='search']").should("exist");
+    });
+
+    it("renders text in top level", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Text").should("exist");
+      cy.contains("Text 2").should("exist");
+    });
+
+    it("renders custom components in top level", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Custom").should("exist");
+      cy.contains("Custom 2").should("exist");
+    });
+
+    it("renders text in nested levels", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Submenu Text").should("exist");
+      cy.contains("Submenu Text 2").should("exist");
+    });
+
+    it("renders custom components in nested levels", () => {
+      cy.renderFromStorybook("navbar--custom-render-components");
+
+      cy.contains("Submenu Custom").should("exist");
+      cy.contains("Submenu Custom 2").should("exist");
     });
   });
 });
