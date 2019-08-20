@@ -143,7 +143,7 @@ describe("NavBar", () => {
       cy.get("nav").should("exist");
     });
 
-    it.only("closes the menu when the button is clicked and menu is open", () => {
+    it("closes the menu when the button is clicked and menu is open", () => {
       cy.renderFromStorybook("navbar--base");
 
       cy.get("nav").should("not.exist");
@@ -153,6 +153,33 @@ describe("NavBar", () => {
       cy.get("nav").should("exist");
 
       cy.get("svg[icon='close']").click();
+
+      cy.get("nav").should("not.exist");
+    });
+
+    it("renders all nested menu links", () => {
+      cy.renderFromStorybook("navbar--base");
+
+      cy.get("nav").should("not.exist");
+
+      cy.get("svg[icon='menu']").click();
+
+      cy.contains("Menu 1").should("exist");
+      cy.contains("Menu 2-1-2-2").should("exist");
+      cy.contains("Menu 3").should("exist");
+      cy.contains("Menu 4-2").should("exist");
+    });
+
+    it("closes the menu on escape key press", () => {
+      cy.renderFromStorybook("navbar--base");
+
+      cy.get("nav").should("not.exist");
+
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("nav").should("exist");
+
+      cy.get("body").type("{esc}");
 
       cy.get("nav").should("not.exist");
     });
