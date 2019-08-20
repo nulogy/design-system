@@ -81,7 +81,12 @@ const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, ...pro
   <WrapperButton ref={forwardedRef} aria-label={children} {...props}>
     <Manager>
       <Reference>{({ ref }) => <Icon ref={ref} size={theme.space.x4} icon={icon} p="half" />}</Reference>
-      <Popper placement="bottom">
+      <Popper
+        placement="bottom"
+        modifiers={{
+          preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+        }}
+      >
         {({ ref, style, placement }) =>
           labelHidden ? (
             <HoverText ref={ref} style={style} placement={placement}>
