@@ -146,8 +146,6 @@ describe("NavBar", () => {
     it("closes the menu when the button is clicked and menu is open", () => {
       cy.renderFromStorybook("navbar--base");
 
-      cy.get("nav").should("not.exist");
-
       cy.get("svg[icon='menu']").click();
 
       cy.get("nav").should("exist");
@@ -160,8 +158,6 @@ describe("NavBar", () => {
     it("renders all nested menu links", () => {
       cy.renderFromStorybook("navbar--base");
 
-      cy.get("nav").should("not.exist");
-
       cy.get("svg[icon='menu']").click();
 
       cy.contains("Menu 1").should("exist");
@@ -173,7 +169,17 @@ describe("NavBar", () => {
     it("closes the menu on escape key press", () => {
       cy.renderFromStorybook("navbar--base");
 
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("nav").should("exist");
+
+      cy.get("body").type("{esc}");
+
       cy.get("nav").should("not.exist");
+    });
+
+    it("closes the menu on escape key press", () => {
+      cy.renderFromStorybook("navbar--base");
 
       cy.get("svg[icon='menu']").click();
 
@@ -182,6 +188,21 @@ describe("NavBar", () => {
       cy.get("body").type("{esc}");
 
       cy.get("nav").should("not.exist");
+    });
+
+    it("resets the scroll position of the menu when closed and opened", () => {
+      cy.viewport("iphone-6");
+
+      cy.renderFromStorybook("navbar--base");
+
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("header").scrollTo("bottom");
+
+      cy.get("svg[icon='close']").click();
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("header").should("have.prop", "scrollTop", 0);
     });
   });
 });
