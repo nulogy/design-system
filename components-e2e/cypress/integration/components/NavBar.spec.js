@@ -133,8 +133,28 @@ describe("NavBar", () => {
       cy.viewport("ipad-mini");
     });
 
-    it("renders", () => {
+    it("opens the menu when the button is clicked", () => {
       cy.renderFromStorybook("navbar--base");
+
+      cy.get("nav").should("not.exist");
+
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("nav").should("exist");
+    });
+
+    it.only("closes the menu when the button is clicked and menu is open", () => {
+      cy.renderFromStorybook("navbar--base");
+
+      cy.get("nav").should("not.exist");
+
+      cy.get("svg[icon='menu']").click();
+
+      cy.get("nav").should("exist");
+
+      cy.get("svg[icon='close']").click();
+
+      cy.get("nav").should("not.exist");
     });
   });
 });
