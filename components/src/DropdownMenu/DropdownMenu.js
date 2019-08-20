@@ -153,7 +153,9 @@ StatelessDropdownMenu.defaultProps = {
   backgroundColor: undefined,
   showArrow: true,
   placement: "bottom-start",
-  modifiers: { flip: { behavior: ["bottom"] } }
+  modifiers: {
+    preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+  }
 };
 
 const DropdownMenu = withMenuState(StatelessDropdownMenu);
