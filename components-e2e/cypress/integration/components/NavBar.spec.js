@@ -126,6 +126,12 @@ describe("NavBar", () => {
 
       cy.contains("Menu 2-1-1").should("not.exist");
     });
+
+    it("renders the search component", () => {
+      cy.renderFromStorybook("navbar--base");
+      cy.wait(100);
+      cy.get("input[type='search']").should("exist");
+    });
   });
 
   context("when in mobile mode", () => {
@@ -190,7 +196,7 @@ describe("NavBar", () => {
       cy.get("nav").should("not.exist");
     });
 
-    it.only("resets the scroll position of the menu when closed and opened", () => {
+    it("resets the scroll position of the menu when closed and opened", () => {
       cy.viewport("iphone-6");
 
       cy.renderFromStorybook("navbar--base");
@@ -203,6 +209,14 @@ describe("NavBar", () => {
       cy.get("svg[icon='menu']").click();
 
       cy.get("header").should("have.prop", "scrollTop", 0);
+    });
+
+    it.only("renders the search component", () => {
+      cy.renderFromStorybook("navbar--base");
+
+      cy.wait(100);
+
+      cy.get("input[type='search']").should("exist");
     });
   });
 });
