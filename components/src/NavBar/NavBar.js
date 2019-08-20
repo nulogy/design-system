@@ -238,11 +238,13 @@ SmallNavBarNoState.defaultProps = {
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const SelectNavBarBasedOnWidth = ({ width, breakpointUpper, ...props }) => {
-  if (width >= parseInt(breakpointUpper, 10)) {
+const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }) => {
+  let currentWidth = width || window.innerWidth;
+
+  if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
     return <MediumNavBar {...props} />;
   } else {
-    return <SmallNavBar {...props} width={width} />;
+    return <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />;
   }
 };
 
