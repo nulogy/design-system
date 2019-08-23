@@ -1,6 +1,7 @@
 describe("Select", () => {
-  const getSelectComponent = () => cy.get("[aria-label='open menu']");
-  const getDropdownMenu = () => cy.get("[role='listbox']");
+  const getSelectComponent = () => cy.get(".Select");
+  const getDropdownMenu = () => cy.get(".SelectTest__menu");
+  const getValue = () => cy.get(".SelectTest__control");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
@@ -20,7 +21,10 @@ describe("Select", () => {
     assertDropDownIsClosed();
 
     getSelectComponent().click();
-    cy.contains("V Two").click();
+
+    getDropdownMenu()
+      .contains("V Two")
+      .click();
 
     getValue().should("have.text", "V Two");
     assertDropDownIsClosed();
@@ -34,14 +38,6 @@ describe("Select", () => {
 
     cy.get("div#root").click("bottomRight");
     assertDropDownIsClosed();
-  });
-
-  it("opens the dropdown when the select label is clicked", () => {
-    cy.renderFromStorybook("select--base");
-
-    cy.contains("Select label").click("topLeft");
-
-    assertDropDownIsOpen();
   });
 
   it("selects options using the keyboard", () => {
