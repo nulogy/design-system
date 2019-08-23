@@ -1,7 +1,4 @@
-const path = require("path");
-
-module.exports = {
-  target: "node", // https://github.com/emotion-js/emotion/issues/1113
+const baseConfig = {
   output: {
     libraryTarget: "umd"
   },
@@ -30,3 +27,15 @@ module.exports = {
     ]
   }
 };
+
+const serverConfig = Object.assign({}, baseConfig, { target: "node" });
+serverConfig.output = Object.assign({}, serverConfig.output, {
+  filename: "main.js"
+});
+
+const clientConfig = Object.assign({}, baseConfig, { target: "web" });
+clientConfig.output = Object.assign({}, clientConfig.output, {
+  filename: "main.browser.js"
+});
+
+module.exports = [serverConfig, clientConfig];
