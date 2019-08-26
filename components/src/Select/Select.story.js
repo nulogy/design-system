@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Input, PrimaryButton, Select } from "../index";
+import { Button, Input, PrimaryButton, Select } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -33,15 +33,25 @@ class SelectWithState extends React.Component {
 
     this.state = { selectedValue: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.clearSelection = this.clearSelection.bind(this);
   }
 
   handleChange(selectedValue) {
     this.setState({ selectedValue });
   }
 
+  clearSelection() {
+    this.setState({ selectedValue: "" });
+  }
+
   render() {
     const { selectedValue } = this.state;
-    return <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />;
+    return (
+      <>
+        <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />
+        <Button onClick={this.clearSelection}>Clear selection</Button>
+      </>
+    );
   }
 }
 
@@ -49,7 +59,7 @@ storiesOf("Select", module)
   .add("Select", () => (
     <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
-  .add("Select with an option selected", () => (
+  .add("with an option selected", () => (
     <>
       <Select
         value={options[0].value}
@@ -67,10 +77,10 @@ storiesOf("Select", module)
       />
     </>
   ))
-  .add("Select as a controlled component", () => (
+  .add("as a controlled component", () => (
     <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
-  .add("Set to disabled", () => (
+  .add("set to disabled", () => (
     <Select placeholder="Please select inventory status" options={options} disabled labelText="Inventory status" />
   ))
   .add("with error message", () => (
@@ -109,7 +119,7 @@ storiesOf("Select", module)
       />
     </>
   ))
-  .add("Set to required", () => (
+  .add("set to required", () => (
     <form>
       <Input placeholder="Please select inventory status" />
       <Select
@@ -125,7 +135,16 @@ storiesOf("Select", module)
       </PrimaryButton>
     </form>
   ))
-  .add("With helpText", () => (
+  .add("with multiselect", () => (
+    <Select
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+      multiselect
+    />
+  ))
+  .add("with helpText", () => (
     <Select
       placeholder="Please select inventory status"
       options={options}
@@ -133,7 +152,7 @@ storiesOf("Select", module)
       helpText="Additional information about input"
     />
   ))
-  .add("With custom id", () => (
+  .add("with custom id", () => (
     <Select
       id="my-custom-id"
       placeholder="Please select inventory status"
@@ -142,10 +161,10 @@ storiesOf("Select", module)
       helpText="Additional information about input"
     />
   ))
-  .add("With smaller maxHeight", () => (
+  .add("with smaller maxHeight", () => (
     <Select
       initialIsOpen
-      maxHeight="128px"
+      maxHeight="132px"
       value={options[0].value}
       placeholder="Please select inventory status"
       options={options}

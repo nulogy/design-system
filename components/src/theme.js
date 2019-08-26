@@ -60,7 +60,8 @@ export default {
     small: tokens.shadow_box_small,
     medium: tokens.shadow_box_medium,
     large: tokens.shadow_box_large,
-    focus: tokens.shadow_focus
+    focus: tokens.shadow_focus,
+    error: tokens.shadow_error
   },
   radii: {
     small: tokens.radius_border_small,

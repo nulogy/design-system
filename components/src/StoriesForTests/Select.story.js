@@ -6,7 +6,7 @@ const options = [{ value: "v1", label: "V One" }, { value: "v2", label: "V Two" 
 
 const TestComponent = () => (
   <NDSProvider>
-    <Select labelText="Select label" options={options} />
+    <Select labelText="Select label" options={options} className="Select" classNamePrefix="SelectTest" />
   </NDSProvider>
 );
 
@@ -24,7 +24,15 @@ class ControlledSelect extends React.Component {
 
   render() {
     const { selectedValue } = this.state;
-    return <Select onChange={this.handleChange} value={selectedValue} options={options} />;
+    return (
+      <Select
+        onChange={this.handleChange}
+        value={selectedValue}
+        options={options}
+        className="Select"
+        classNamePrefix="SelectTest"
+      />
+    );
   }
 }
 

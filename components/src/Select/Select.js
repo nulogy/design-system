@@ -1,21 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Downshift from "downshift";
-import styled from "styled-components";
 import { transparentize } from "polished";
+import Select from "react-select";
 import { Field } from "../Form";
-import { Icon } from "../Icon";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
-import { subPx, ScrollIndicators } from "../utils";
+import { subPx } from "../utils";
 
-const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
+const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
-  if (error) {
+  if (errored) {
     return red;
   }
+
   if (disabled) {
     return lightGrey;
   }
@@ -26,231 +25,234 @@ const getBorderColor = ({ error, disabled, isOpen, isFocused }) => {
   return grey;
 };
 
-const SelectBox = styled.div(({ disabled }) => ({
-  display: "flex",
-  position: "relative",
-  color: disabled ? transparentize(0.6667, theme.colors.black) : null
-}));
+const getShadow = ({ errored, isOpen }) => {
+  const { focus, error } = theme.shadows;
 
-const Input = styled.input(({ error, isOpen, disabled }) => ({
-  fontFamily: theme.fonts.base,
-  width: "100%",
-  color: theme.colors.black,
-  fontSize: theme.fontSizes.medium,
-  padding: "7px 27px 7px 7px",
-  lineHeight: theme.lineHeights.base,
-  border: "1px solid",
-  borderColor: getBorderColor({
-    error,
-    disabled,
-    isOpen,
-    isFocused: false
-  }),
-  borderTopLeftRadius: theme.radii.medium,
-  borderTopRightRadius: theme.radii.medium,
-  borderBottomLeftRadius: isOpen ? 0 : theme.radii.medium,
-  borderBottomRightRadius: isOpen ? 0 : theme.radii.medium,
-  boxShadow: isOpen ? theme.shadows.small : "none",
-  outline: "none",
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white,
-  "&:hover, &:focus": {
-    cursor: "default",
-    borderColor: getBorderColor({
-      error,
-      disabled,
-      isOpen,
-      isFocused: true
-    })
-  },
-  "&::placeholder": {
-    color: disabled ? transparentize(0.6667, theme.colors.black) : null
+  if (isOpen) {
+    if (errored) {
+      return error;
+    } else {
+      return focus;
+    }
+  } else {
+    return null;
   }
-}));
-
-const IndicatorButton = styled.div(() => ({
-  height: theme.space.x3,
-  position: "absolute",
-  right: theme.space.half,
-  bottom: theme.space.x1,
-  pointerEvents: "none"
-}));
-
-const ToggleButton = ({ isOpen }) => (
-  <IndicatorButton>{isOpen ? <Icon icon="upArrow" /> : <Icon icon="downArrow" />}</IndicatorButton>
-);
-
-ToggleButton.propTypes = {
-  isOpen: PropTypes.bool.isRequired
 };
 
-const Menu = styled.div(({ error, disabled, maxHeight }) => ({
-  maxHeight,
-  overflow: "scroll",
-  borderWidth: "1px",
-  borderColor: getBorderColor({
-    error,
-    isOpen: true,
-    disabled,
-    isHovered: false
-  }),
-  borderBottomStyle: "solid",
-  borderLeftStyle: "solid",
-  borderRightStyle: "solid",
-  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-  marginTop: 0,
-  boxShadow: theme.shadows.small,
-  background: disabled ? theme.colors.whiteGrey : theme.colors.white
-}));
+const customStyles = error => {
+  return {
+    option: (provided, state) => ({
+      padding: subPx(theme.space.x1),
+      fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
+      background: state.isFocused ? theme.colors.lightBlue : null,
+      "&:last-child": {
+        borderBottomLeftRadius: theme.radii.medium,
+        borderBottomRightRadius: theme.radii.medium
+      }
+    }),
+    control: (provided, state) => ({
+      display: "flex",
+      height: theme.space.x5,
+      paddingLeft: theme.space.x1,
+      position: "relative",
+      fontFamily: theme.fonts.base,
+      width: "100%",
+      fontSize: theme.fontSizes.medium,
+      lineHeight: theme.lineHeights.base,
+      background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+      border: `1px solid ${theme.colors.grey}`,
+      borderColor: getBorderColor({
+        errored: error,
+        disabled: state.isDisabled,
+        isOpen: state.selectProps.menuIsOpen,
+        isFocused: state.isFocused
+      }),
+      boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen }),
+      borderRadius: theme.radii.medium,
+      borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
+      "&:hover, &:focus": {
+        borderColor: getBorderColor({
+          errored: error,
+          disabled: state.isDisabled,
+          isOpen: state.selectProps.menuIsOpen,
+          isFocused: true
+        })
+      }
+    }),
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
+    }),
+    input: () => ({}),
+    valueContainer: provided => ({
+      ...provided,
+      padding: 0
+    }),
+    menu: (provided, state) => ({
+      marginTop: 0,
+      position: "absolute",
+      zIndex: "100",
+      width: "100%",
+      background: theme.colors.white,
+      borderWidth: "1px",
+      borderColor: getBorderColor({
+        errored: error,
+        isOpen: true,
+        disabled: state.isDisabled,
+        isFocused: false
+      }),
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      borderRightStyle: "solid",
+      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+      boxShadow: getShadow({ errored: error, isOpen: true })
+    }),
+    menuList: provided => ({
+      ...provided,
+      padding: 0
+    }),
+    multiValue: provided => ({
+      ...provided,
+      background: theme.colors.lightGrey,
+      color: theme.colors.black,
+      margin: `0 ${theme.space.x1} 0 0`,
+      "&:last-child": {
+        marginRight: theme.space.half
+      }
+    }),
+    multiValueLabel: () => ({
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      color: theme.colors.black,
+      borderRadius: theme.radii.small,
+      fontSize: theme.fontSizes.small,
+      padding: theme.space.half,
+      paddingLeft: theme.space.x1
+    }),
+    multiValueRemove: provided => ({
+      ...provided,
+      svg: { fill: theme.colors.black },
+      borderBottomLeftRadius: 0,
+      borderTopLeftRadius: 0,
+      "&:hover": {
+        background: theme.colors.darkGrey,
+        cursor: "pointer",
+        svg: { fill: theme.colors.white }
+      }
+    }),
+    noOptionsMessage: provided => ({
+      ...provided,
+      color: theme.colors.black,
+      fontSize: "14px"
+    }),
+    placeholder: (provided, state) => ({
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
+    })
+  };
+};
 
-const MenuItem = styled.div(({ isSelected, isActive }) => ({
-  color: theme.colors.black,
-  userSelect: "none",
-  padding: subPx(theme.space.x1),
-  fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
-  background: isActive ? theme.colors.lightBlue : null,
-  "&:hover": {
-    background: theme.colors.lightBlue
-  },
-  "&:last-child": {
-    borderRadius: `0 ${theme.radii.medium}`
+const getValue = (opts, val) => {
+  if (val === "") {
+    return "";
   }
-}));
+  return opts.find(o => o.value === val);
+};
 
-const findOptionFromValue = (value, options) => options.find(o => o.value === value);
-
-const Select = ({
+const ReactSelect = ({
+  autocomplete,
+  options,
+  labelText,
+  required,
+  requirementText,
+  helpText,
+  noOptionsMessage,
+  disabled,
   errorMessage,
   errorList,
   error = !!(errorMessage || errorList),
-  onChange,
-  disabled,
-  options,
-  optionToString,
-  value,
-  required,
-  placeholder,
-  initialIsOpen,
   id,
-  labelText,
-  helpText,
+  initialIsOpen,
+  maxHeight,
+  multiselect,
   name,
-  requirementText,
-  maxHeight
+  onChange,
+  placeholder,
+  value,
+  className,
+  classNamePrefix
 }) => (
   <Field>
-    <Downshift
-      itemToString={optionToString}
-      selectedItem={value && findOptionFromValue(value, options)}
-      onChange={onChange && (option => onChange(option && option.value))}
-      defaultHighlightedIndex={0}
-      initialIsOpen={initialIsOpen}
-      inputId={id}
-    >
-      {({
-        getMenuProps,
-        getItemProps,
-        getInputProps,
-        getToggleButtonProps,
-        isOpen,
-        selectedItem,
-        highlightedIndex
-      }) => (
-        <div style={{ position: "relative" }}>
-          <SelectBox {...getToggleButtonProps({ disabled, error, isOpen })}>
-            <MaybeFieldLabel
-              style={{ width: "100%" }}
-              labelText={labelText}
-              requirementText={requirementText}
-              helpText={helpText}
-            >
-              <Input
-                {...getInputProps({
-                  disabled,
-                  error,
-                  isOpen,
-                  autoComplete: "off"
-                })}
-                aria-required={required}
-                aria-invalid={error}
-                placeholder={placeholder}
-                readOnly
-                name={name}
-                value={optionToString(selectedItem) || ""}
-              />
-            </MaybeFieldLabel>
-            <ToggleButton isOpen={isOpen} />
-          </SelectBox>
-          {isOpen && (
-            <div style={{ position: "absolute", width: "100%", zIndex: theme.zIndex.content }}>
-              <ScrollIndicators>
-                <Menu maxHeight={maxHeight} {...getMenuProps({ error, isOpen }, { suppressRefError: true })}>
-                  {options.map((option, index) => (
-                    <MenuItem
-                      style={{
-                        wordWrap: "break-word"
-                      }}
-                      {...getItemProps({
-                        key: option.value,
-                        item: option,
-                        isSelected: selectedItem === option,
-                        isActive: highlightedIndex === index,
-                        index,
-                        disabled
-                      })}
-                    >
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </ScrollIndicators>
-            </div>
-          )}
-        </div>
-      )}
-    </Downshift>
-    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <Select
+        className={className}
+        classNamePrefix={classNamePrefix}
+        noOptionsMessage={noOptionsMessage}
+        placeholder={placeholder}
+        options={options}
+        labelText={labelText}
+        styles={customStyles(error)}
+        isDisabled={disabled}
+        isSearchable={autocomplete}
+        aria-required={required}
+        aria-invalid={error}
+        defaultMenuIsOpen={initialIsOpen}
+        maxMenuHeight={maxHeight}
+        inputId={id}
+        onChange={onChange && (option => onChange(option && option.value))}
+        value={getValue(options, value)}
+        name={name}
+        isMulti={multiselect}
+      />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </MaybeFieldLabel>
   </Field>
 );
 
-Select.propTypes = {
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  name: PropTypes.string,
+ReactSelect.propTypes = {
+  autocomplete: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  optionToString: PropTypes.func,
-  required: PropTypes.bool,
-  onChange: PropTypes.func,
+  disabled: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
-  disabled: PropTypes.bool,
-  initialIsOpen: PropTypes.bool,
-  id: PropTypes.string,
   labelText: PropTypes.string,
   helpText: PropTypes.string,
+  noOptionsMessage: PropTypes.func,
   requirementText: PropTypes.string,
-  maxHeight: PropTypes.string
+  id: PropTypes.string,
+  initialIsOpen: PropTypes.bool,
+  maxHeight: PropTypes.string,
+  multiselect: PropTypes.bool,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  value: PropTypes.string,
+  className: PropTypes.string,
+  classNamePrefix: PropTypes.string
 };
-
-const extractLabelFromOption = option => option && option.label;
-
-Select.defaultProps = {
-  value: undefined,
-  name: undefined,
-  required: false,
-  onChange: undefined,
+ReactSelect.defaultProps = {
+  autocomplete: true,
+  disabled: null,
   error: undefined,
   errorMessage: null,
   errorList: null,
-  disabled: false,
-  initialIsOpen: undefined,
-  placeholder: undefined,
-  optionToString: extractLabelFromOption,
-  id: null,
   labelText: null,
   helpText: null,
+  noOptionsMessage: () => null,
   requirementText: null,
-  maxHeight: "256px"
+  id: null,
+  initialIsOpen: undefined,
+  maxHeight: "248px",
+  multiselect: false,
+  name: undefined,
+  onChange: undefined,
+  placeholder: undefined,
+  required: false,
+  value: undefined,
+  className: null,
+  classNamePrefix: undefined
 };
 
-export default Select;
+export default ReactSelect;

@@ -1,16 +1,8 @@
-const path = require("path");
-
-module.exports = {
+const baseConfig = {
   output: {
-    libraryTarget: "umd",
-    globalObject: "(typeof self !== 'undefined' ? self : this)",
-    // https://github.com/markdalgleish/static-site-generator-webpack-plugin/issues/130
+    libraryTarget: "umd"
   },
-  externals: [
-    "react",
-    "react-dom",
-    "styled-components",
-  ],
+  externals: ["react", "react-dom", "styled-components"],
   module: {
     rules: [
       {
@@ -19,19 +11,31 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/react"],
-          },
-        },
+            presets: ["@babel/react"]
+          }
+        }
       },
       {
         test: /\.stories\.jsx?$/,
         loaders: [require.resolve("@storybook/addon-storysource/loader")],
-        enforce: "pre",
+        enforce: "pre"
       },
       {
         test: /\.svg$/,
-        loader: "svg-sprite-loader",
-      },
-    ],
-  },
+        loader: "svg-sprite-loader"
+      }
+    ]
+  }
 };
+
+const serverConfig = Object.assign({}, baseConfig, { target: "node" });
+serverConfig.output = Object.assign({}, serverConfig.output, {
+  filename: "main.js"
+});
+
+const clientConfig = Object.assign({}, baseConfig, { target: "web" });
+clientConfig.output = Object.assign({}, clientConfig.output, {
+  filename: "main.browser.js"
+});
+
+module.exports = [serverConfig, clientConfig];

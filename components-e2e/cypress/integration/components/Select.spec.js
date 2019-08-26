@@ -1,6 +1,7 @@
 describe("Select", () => {
-  const getSelectComponent = () => cy.get("[aria-label='open menu']");
-  const getDropdownMenu = () => cy.get("[role='listbox']");
+  const getSelectComponent = () => cy.get(".Select");
+  const getDropdownMenu = () => cy.get(".SelectTest__menu");
+  const getValue = () => cy.get(".SelectTest__control");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
@@ -9,7 +10,9 @@ describe("Select", () => {
 
     getSelectComponent().click();
 
-    cy.get("[aria-selected='true']").should("have.text", "V One");
+    cy.focused().type("{enter}");
+
+    getValue().should("have.text", "V One");
   });
 
   it("selects an option on click", () => {
@@ -18,9 +21,12 @@ describe("Select", () => {
     assertDropDownIsClosed();
 
     getSelectComponent().click();
-    cy.contains("V Two").click();
 
-    cy.get("input").should("have.value", "V Two");
+    getDropdownMenu()
+      .contains("V Two")
+      .click();
+
+    getValue().should("have.text", "V Two");
     assertDropDownIsClosed();
   });
 
@@ -34,29 +40,18 @@ describe("Select", () => {
     assertDropDownIsClosed();
   });
 
-  it("opens the dropdown when the select label is clicked", () => {
-    cy.renderFromStorybook("select--base");
-
-    cy.contains("Select label").click("topLeft");
-
-    assertDropDownIsOpen();
-  });
-
   it("selects options using the keyboard", () => {
     cy.renderFromStorybook("select--base");
 
     // focus the select box
-    getSelectComponent()
-      .get("input")
-      .focus();
+    getSelectComponent().click();
 
     cy.focused()
-      .type(" ")
       .type("{downarrow}")
       .type("{enter}");
 
     assertDropDownIsClosed();
-    cy.get("input").should("have.value", "V Two");
+    getValue().should("have.text", "V Two");
   });
 
   it("closes the dropdown when on esc", () => {
@@ -77,7 +72,7 @@ describe("Select", () => {
     getSelectComponent().click();
     cy.contains("V Two").click();
 
-    cy.get("input").should("have.value", "V Two");
+    getValue().should("have.text", "V Two");
     assertDropDownIsClosed();
   });
 });
