@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added many new className related props to all components, see [docs](https://nulogy.design/)
+- Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alerts/)
 
 ### Changed
 
