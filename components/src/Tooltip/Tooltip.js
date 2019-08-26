@@ -106,7 +106,10 @@ class StatelessTooltip extends React.Component {
             })
           }
         </Reference>
-        <Popper placement={this.props.placement}>
+        <Popper
+          placement={this.props.placement}
+          modifiers={{ preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" } }}
+        >
           {({ ref, style, placement, arrowProps }) => (
             <TooltipContainer
               maxWidth={this.props.maxWidth}

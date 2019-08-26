@@ -17,6 +17,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Fixes a navbar flashing issue
+  - When the screensize was for the "medium" navbar, it would initially
+    flash the "small" navbar. Now it properly detects the window size to
+    avoid the flashing.
+- Sets the viewport as the container for components using `Popper.js`
+  - `DropdownMenu`, `NavBarDropdown`, `IconicButton`, `Tooltips`
+
 ### Security
 
 ## [0.12.0] - 2019-08-26

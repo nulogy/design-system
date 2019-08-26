@@ -14,7 +14,7 @@ const DropdownButton = styled.button(props => ({
   lineHeight: theme.lineHeights.base,
   fontSize: theme.fontSizes.medium,
   transition: ".2s",
-  padding: `${theme.space.x1} ${theme.space.x2}`,
+  padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
   borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),

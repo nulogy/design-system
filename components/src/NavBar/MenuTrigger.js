@@ -78,6 +78,11 @@ const MenuTrigger = props => {
   return (
     <NavBarDropdownMenu
       {...otherProps}
+      placement="bottom-start"
+      modifiers={{
+        flip: { behavior: ["bottom"] },
+        preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+      }}
       trigger={() => (
         <MenuTriggerButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} name={name} />
       )}

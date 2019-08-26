@@ -43,7 +43,7 @@ const BrandingWrap = styled.div(
     alignItems: getAlignment(alignment)
   }),
   ({ size }) => ({
-    padding: size === "large" ? null : "4px 0"
+    padding: size === "large" ? null : "2px 0"
   })
 );
 
@@ -70,7 +70,7 @@ const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor,
       <WordmarkLogo size={size} letterFill={getLogoColor(logoColor).letter} logoFill={getLogoColor(logoColor).logo} />
     )}
     {subtext && (
-      <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : null}>
+      <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : "2px"}>
         {alignment !== "left" && withLine && <Line logoColor={logoColor} />}
         <BrandingText
           logoColor={logoColor}

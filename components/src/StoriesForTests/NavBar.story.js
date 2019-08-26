@@ -26,14 +26,18 @@ const primaryMenu = [
     name: "Menu 2",
     items: [
       {
-        name: "SubMenu 1",
+        name: "Menu 2-1",
         items: [
-          { name: "SubMenu 1-1", href: "/" },
+          { name: "Menu 2-1-1", href: "/" },
           {
-            name: "SubSubMenu 1",
-            items: [{ name: "SubSubMenu 1-1", href: "/" }, { name: "SubSubMenu 1-2", href: "/" }]
+            name: "Menu 2-1-2",
+            items: [{ name: "Menu 2-1-2-1", href: "/" }, { name: "Menu 2-1-2-2", href: "/" }]
           }
         ]
+      },
+      {
+        name: "Menu 2-2",
+        items: [{ name: "Menu 2-2-1", href: "/" }]
       }
     ]
   }
@@ -50,10 +54,88 @@ const secondaryMenu = [
   }
 ];
 
+const customPrimaryMenu = [
+  {
+    name: "Text"
+  },
+  {
+    name: "Link",
+    href: "/"
+  },
+  {
+    name: "Custom",
+    render: () => <span>Custom</span>
+  },
+  {
+    name: "Button",
+    items: [
+      {
+        name: "Submenu Text"
+      },
+      {
+        name: "Submenu Link",
+        href: "/"
+      },
+      {
+        name: "Submenu Custom",
+        render: () => <span>Submenu Custom</span>
+      },
+      {
+        name: "Submenu Button",
+        items: [
+          {
+            name: "Nested Submenu Text"
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const customSecondaryMenu = [
+  {
+    name: "Text 2"
+  },
+  {
+    name: "Link 2",
+    href: "/"
+  },
+  {
+    name: "Custom 2",
+    render: () => <span>Custom 2</span>
+  },
+  {
+    name: "Button 2",
+    items: [
+      {
+        name: "Submenu Text 2"
+      },
+      {
+        name: "Submenu Link 2",
+        href: "/"
+      },
+      {
+        name: "Submenu Custom 2",
+        render: () => <span>Submenu Custom 2</span>
+      },
+      {
+        name: "Submenu Button 2",
+        items: [
+          {
+            name: "Nested Submenu Text 2"
+          }
+        ]
+      }
+    ]
+  }
+];
+
 const search = {
   onSubmit: () => {}
 };
 
-storiesOf("StoriesForTests/NavBar", module).add("Base", () => (
-  <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
-));
+storiesOf("StoriesForTests/NavBar", module)
+  .add("Base", () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />)
+  .add("Custom Render Components", () => (
+    <NavBar defaultOpen menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu: customSecondaryMenu }} />
+  ));
