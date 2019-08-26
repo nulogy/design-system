@@ -9,22 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added [Tabs](https://nulogy.design/components/tabs/) component
-- Added Accessibility tab to storybook
-- Added [Modal](https://nulogy.design/components/modal/) component
-- Added token for states that are focused and in error ([See example here](https://storybook.nulogy.design/?path=/story/select--with-error-list))
-
 ### Changed
-
-- Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
-- Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
-- [Select](https://storybook.nulogy.design/?path=/story/select--select-as-a-controlled-component) updates
-  - Now uses React-Select instead of Downshift
-  - [**Breaking Change**] When submitting a form, Select's value is submitted instead of label
-  - Default maxHeight changed to 246px to provide better scrolling affordance and ScrollIndicators removed
-  - Added proper focus token
-  - Added autocomplete
-  - Added multiselect support
 
 ### Deprecated
 
@@ -34,11 +19,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [0.2.0] - 2019-08-26
+
+### Added
+
+- Added [Tabs](https://nulogy.design/components/tabs/) component
+- Added Accessibility tab to [storybook](https://storybook.nulogy.design)
+- Added [Modal](https://nulogy.design/components/modal/) component
+- Added token for states that are focused and in error ([See example here](https://storybook.nulogy.design/?path=/story/select--with-error-list))
+
+### Changed
+
+- Enhanced [NavBar](https://nulogy.design/components/navbar/) component behavior so that nested menus will open on hover
+- Reduced [NavBar](https://nulogy.design/components/navbar/) submenu font-size to 14px
+- [Select](https://storybook.nulogy.design/?path=/story/select--select) updates
+  - Now uses [React-Select](https://react-select.com) instead of [Downshift](https://github.com/downshift-js/downshift)
+  - [**Breaking Change**] When submitting a form, Select's value is submitted instead of label
+  - Default maxHeight changed to 246px to provide better scrolling affordance and ScrollIndicators removed
+  - Added autocomplete by default
+  - Added optional [multiselect support](https://storybook.nulogy.design/?path=/story/select--with-multiselect)
+
 ## [0.11.0] - 2019-08-06
 
 ### Added
-  - Fixed inconsistent focus styling in submenu triggers
-  - Fixed inability to tell which submenu is open
+
+- Fixed inconsistent focus styling in submenu triggers
+- Fixed inability to tell which submenu is open
 
 - Added [Modal](https://nulogy.design/components/modal/) component
 - Added new icons to the [Icon](https://nulogy.design/components/icon/) component: accessTime, block, checkCircleOutline, errorFilled, getApp, publish, removeCircleOutline
