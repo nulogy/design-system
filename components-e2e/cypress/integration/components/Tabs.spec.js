@@ -27,10 +27,7 @@ describe("Tabs", () => {
 
     cy.get(".Tab1").click();
 
-    cy.get(".TabContent[aria-hidden=false]").should(
-      "have.text",
-      "Tab 1 Content"
-    );
+    cy.get("[aria-hidden=false]").should("have.text", "Tab 1 Content");
   });
 
   it("selects a tab when enter is pressed on it", () => {
@@ -193,7 +190,7 @@ describe("Tabs", () => {
 
     cy.get(".Tab1").click();
 
-    cy.get(".UncontrolledTabContent[aria-hidden=false]").should(
+    cy.get("[aria-hidden=false]").should(
       "have.text",
       "Uncontrolled Content: Tab 1"
     );
@@ -204,7 +201,7 @@ describe("Tabs", () => {
 
     cy.get(".Tab2").click();
 
-    cy.get(".UncontrolledTabContent[aria-hidden=false]").should(
+    cy.get("[aria-hidden=false]").should(
       "have.text",
       "Uncontrolled Content: Tab 2"
     );
