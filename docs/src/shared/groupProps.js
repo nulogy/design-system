@@ -54,18 +54,6 @@ const groupProps = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the group wrapper."
-  },
-  {
-    name: "legendClassName",
-    type: "String",
-    defaultValue: "undefined",
-    description: "className passed to the legend of the group."
-  },
-  {
-    name: "validationClassName",
-    type: "String",
-    defaultValue: "undefined",
-    description: "className passed to the inline validation component."
   }
 ];
 

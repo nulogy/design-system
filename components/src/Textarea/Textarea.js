@@ -71,20 +71,11 @@ const Textarea = ({
   helpText,
   id,
   className,
-  inputClassName,
-  labelClassName,
-  validationClassName,
   ...props
 }) => (
   <Field className={className}>
-    <MaybeFieldLabel
-      className={labelClassName}
-      labelText={labelText}
-      requirementText={requirementText}
-      helpText={helpText}
-    >
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledTextarea
-        className={inputClassName}
         aria-invalid={error}
         aria-required={required}
         id={id}
@@ -94,15 +85,12 @@ const Textarea = ({
         {...props}
       />
     </MaybeFieldLabel>
-    <InlineValidation className={validationClassName} mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 );
 
 Textarea.propTypes = {
   className: PropTypes.string,
-  inputClassName: PropTypes.string,
-  labelClassName: PropTypes.string,
-  validationClassName: PropTypes.string,
   id: PropTypes.string,
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -117,9 +105,6 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   className: undefined,
-  inputClassName: undefined,
-  labelClassName: undefined,
-  validationClassName: undefined,
   id: null,
   disabled: false,
   errorMessage: null,

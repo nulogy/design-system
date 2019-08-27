@@ -27,27 +27,17 @@ const getRadioButtons = props => {
   return radioButtons;
 };
 
-const BaseRadioGroup = ({
-  className,
-  legendClassName,
-  validationClassName,
-  errorMessage,
-  errorList,
-  labelText,
-  helpText,
-  requirementText,
-  ...props
-}) => {
+const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
   const otherProps = { ...props, errorMessage, errorList };
   return (
     <Fieldset className={className} hasHelpText={!!helpText}>
-      <legend className={legendClassName} style={{ marginBottom: theme.space.x1 }}>
+      <legend style={{ marginBottom: theme.space.x1 }}>
         {labelText}
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getRadioButtons(otherProps)}
-      <InlineValidation className={validationClassName} mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </Fieldset>
   );
 };
@@ -71,8 +61,6 @@ BaseRadioGroup.propTypes = {
   checkedValue: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string,
-  legendClassName: PropTypes.string,
-  validationClassName: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string
 };
@@ -84,8 +72,6 @@ BaseRadioGroup.defaultProps = {
   checkedValue: undefined,
   onChange: undefined,
   className: undefined,
-  legendClassName: undefined,
-  validationClassName: undefined,
   helpText: null,
   requirementText: null
 };

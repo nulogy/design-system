@@ -91,12 +91,11 @@ const RadioInput = styled.input(props => ({
 }));
 
 const BaseRadio = props => {
-  const { className, inputClassName, labelClassName, labelText, disabled, checked, required, error } = props;
+  const { className, labelText, disabled, checked, required, error } = props;
   return (
     <Box className={className}>
-      <ClickInputLabel className={labelClassName} disabled={disabled}>
+      <ClickInputLabel disabled={disabled}>
         <RadioInput
-          className={inputClassName}
           type="radio"
           aria-checked={checked}
           {...props}
@@ -122,8 +121,6 @@ BaseRadio.propTypes = {
   error: PropTypes.bool,
   id: PropTypes.string,
   className: PropTypes.string,
-  labelClassName: PropTypes.string,
-  inputClassName: PropTypes.string,
   required: PropTypes.bool
 };
 
@@ -134,8 +131,6 @@ BaseRadio.defaultProps = {
   error: false,
   id: null,
   className: undefined,
-  labelClassName: undefined,
-  inputClassName: undefined,
   required: false
 };
 
