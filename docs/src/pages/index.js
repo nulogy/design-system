@@ -38,7 +38,7 @@ const IndexPage = () => (
           Learn about the style that makes up Nulogy applications; including
           logo usage, typography, our colour system, iconography and spacing.
         </Text>
-        <PrimaryButton as="a" href="/style/colour">
+        <PrimaryButton asLink href="/style/colour">
           Use our visual style
         </PrimaryButton>
       </Box>
@@ -49,7 +49,7 @@ const IndexPage = () => (
           Built using React, components are tested interface design patterns
           designed to ensure a consistent experience for our users.
         </Text>
-        <PrimaryButton as="a" href="components/box">
+        <PrimaryButton asLink href="components/box">
           Use our components
         </PrimaryButton>
       </Box>
