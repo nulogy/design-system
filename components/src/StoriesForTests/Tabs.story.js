@@ -4,7 +4,7 @@ import { NDSProvider, Tab, Tabs } from "..";
 
 const TestComponent = () => (
   <NDSProvider>
-    <Tabs className="TabContainer" tabContentClassName="TabContent">
+    <Tabs className="TabContainer">
       <Tab label="Tab 1" className="Tab1">
         Tab 1 Content
       </Tab>
@@ -24,7 +24,7 @@ const TestComponent = () => (
 const TestComponentScrolling = () => (
   <NDSProvider>
     <div style={{ width: "200px" }}>
-      <Tabs className="TabContainer" tabContentClassName="TabContent">
+      <Tabs className="TabContainer">
         <Tab label="Tab 1" className="Tab1">
           Tab 1 Content
         </Tab>
@@ -50,7 +50,7 @@ const TestComponentScrolling = () => (
 
 const TestComponentWithInputs = () => (
   <NDSProvider>
-    <Tabs className="TabContainer" tabContentClassName="TabContent">
+    <Tabs className="TabContainer">
       <Tab label="Tab 1" className="Tab1">
         <input className="Input1" />
       </Tab>
@@ -63,7 +63,7 @@ const TestComponentWithInputs = () => (
 
 const TestComponentWithInputsNotPersistant = () => (
   <NDSProvider>
-    <Tabs renderTabContentOnlyWhenSelected className="TabContainer" tabContentClassName="TabContent">
+    <Tabs renderTabContentOnlyWhenSelected className="TabContainer">
       <Tab label="Tab 1" className="Tab1">
         <input className="Input1" />
       </Tab>
@@ -92,12 +92,7 @@ class ControlledTabs extends React.Component {
     const { selectedIndex } = this.state;
     return (
       <>
-        <Tabs
-          className="TabContainer"
-          tabContentClassName="UncontrolledTabContent"
-          onTabClick={this.setSelectedTab}
-          selectedIndex={selectedIndex}
-        >
+        <Tabs className="TabContainer" onTabClick={this.setSelectedTab} selectedIndex={selectedIndex}>
           <Tab label="Tab 1" className="Tab1">
             Uncontrolled Content: Tab 1
           </Tab>

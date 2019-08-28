@@ -18,7 +18,7 @@ const getPathElements = icon => (
 /* eslint-enable react/no-array-index-key */
 
 const Svg = React.forwardRef((props, ref) => {
-  const { icon, title, size, color: fillColor, focusable } = props;
+  const { icon, className, title, size, color: fillColor, focusable } = props;
 
   if (!icons[icon]) return false;
   return (
@@ -30,6 +30,7 @@ const Svg = React.forwardRef((props, ref) => {
       fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
       viewBox={icons[icon].viewBox}
       focusable={focusable}
+      className={className}
       {...props}
     >
       {getPathElements(icons[icon])}
@@ -39,6 +40,7 @@ const Svg = React.forwardRef((props, ref) => {
 
 Svg.propTypes = {
   icon: PropTypes.oneOf(iconNames).isRequired,
+  className: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   color: PropTypes.string,
@@ -47,6 +49,7 @@ Svg.propTypes = {
 
 Svg.defaultProps = {
   color: "currentColor",
+  className: undefined,
   title: null,
   size: "24px",
   focusable: false

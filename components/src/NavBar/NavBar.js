@@ -269,7 +269,7 @@ BaseNavBar.propTypes = {
 
 BaseNavBar.defaultProps = {
   menuData: null,
-  className: null,
+  className: undefined,
   breakpointUpper: theme.breakpoints.medium,
   themeColor: "blue"
 };

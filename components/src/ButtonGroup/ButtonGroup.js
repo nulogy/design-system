@@ -42,11 +42,13 @@ const ButtonGroup = styled.div(({ alignment }) => ({
 }));
 
 ButtonGroup.propTypes = {
-  alignment: PropTypes.oneOf(["left", "spaced", "right"])
+  alignment: PropTypes.oneOf(["left", "spaced", "right"]),
+  className: PropTypes.string
 };
 
 ButtonGroup.defaultProps = {
-  alignment: "left"
+  alignment: "left",
+  className: undefined
 };
 
 export default ButtonGroup;

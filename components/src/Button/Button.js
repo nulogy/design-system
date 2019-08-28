@@ -5,64 +5,42 @@ import PropTypes from "prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
-import { subPx, omit } from "../utils";
+import { subPx } from "../utils";
 
 const iconNames = Object.keys(icons);
 
-const size = props => {
-  switch (props.size) {
+const getSize = size => {
+  switch (size) {
     case "small":
       return {
-        fontSize: `${props.theme.fontSizes.small}`,
-        lineHeight: `${props.theme.lineHeights.smallTextCompressed}`,
-        padding: `${subPx(props.theme.space.half)} ${props.theme.space.x1}`
+        fontSize: `${theme.fontSizes.small}`,
+        lineHeight: `${theme.lineHeights.smallTextCompressed}`,
+        padding: `${subPx(theme.space.half)} ${theme.space.x1}`
       };
     case "medium":
       return {
-        fontSize: `${props.theme.fontSizes.medium}`,
-        padding: `${subPx(props.theme.space.x1, 1)} ${props.theme.space.x2}`
+        fontSize: `${theme.fontSizes.medium}`,
+        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`
       };
     case "large":
       return {
-        fontSize: `${props.theme.fontSizes.large}`,
-        lineHeight: `${props.theme.lineHeights.subsectionTitle}`,
-        padding: `${subPx(props.theme.space.x2)} ${props.theme.space.x3}`
+        fontSize: `${theme.fontSizes.large}`,
+        lineHeight: `${theme.lineHeights.subsectionTitle}`,
+        padding: `${subPx(theme.space.x2)} ${theme.space.x3}`
       };
     default:
       return {
-        fontSize: `${props.theme.fontSizes.medium}`,
-        padding: `${subPx(props.theme.space.x1)} ${props.theme.space.x2}`
+        fontSize: `${theme.fontSizes.medium}`,
+        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`
       };
   }
 };
 
-const BaseButton = React.forwardRef(({ children, iconSide, icon, ...props }, ref) => {
-  const {
-    lineHeights: { smallTextCompressed }
-  } = theme;
-  return (
-    <button ref={ref} {...omit(props, "fullWidth")}>
-      {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
-      {children}
-      {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
-    </button>
-  );
-});
-
-BaseButton.propTypes = {
-  children: PropTypes.node.isRequired,
-  icon: PropTypes.oneOf(iconNames),
-  iconSide: PropTypes.oneOf(["left", "right"])
-};
-
-BaseButton.defaultProps = {
-  icon: null,
-  iconSide: "right"
-};
-
-const Button = styled(BaseButton)(
-  size,
-  ({ disabled, fullWidth }) => ({
+const WrapperButton = styled.button(
+  ({ fullWidth }) => ({
+    width: fullWidth ? "100%" : "auto"
+  }),
+  ({ disabled }) => ({
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
@@ -70,14 +48,13 @@ const Button = styled(BaseButton)(
     textDecoration: "none",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
-    transition: "background-color .2s",
     cursor: disabled ? "default" : "pointer",
     color: theme.colors.blue,
     backgroundColor: theme.colors.white,
     border: `1px solid ${theme.colors.blue}`,
     borderRadius: theme.radii.medium,
-    width: fullWidth ? "100%" : "auto",
     margin: theme.space.none,
+    transition: "background-color .2s, transform .2s ease-in",
     "&:hover": {
       backgroundColor: disabled ? null : theme.colors.lightBlue
     },
@@ -91,21 +68,51 @@ const Button = styled(BaseButton)(
       }
     },
     "&:active": {
-      transform: "scale(0.98)",
-      transition: "scale .2s ease-in"
+      transform: "scale(0.98)"
     },
     "&:disabled": {
       opacity: ".5"
     }
   }),
+  ({ size }) => ({
+    ...getSize(size)
+  }),
   space
 );
 
+const Button = React.forwardRef(({ children, iconSide, icon, className, asLink, ...props }, ref) => {
+  const {
+    lineHeights: { smallTextCompressed }
+  } = theme;
+  return (
+    <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} {...props}>
+      {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
+      {children}
+      {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
+    </WrapperButton>
+  );
+});
+
 Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  icon: PropTypes.oneOf(iconNames),
+  iconSide: PropTypes.oneOf(["left", "right"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  asLink: PropTypes.bool,
   ...space.propTypes
+};
+
+Button.defaultProps = {
+  className: undefined,
+  icon: null,
+  iconSide: "right",
+  size: "medium",
+  disabled: false,
+  fullWidth: false,
+  asLink: false
 };
 
 export default Button;

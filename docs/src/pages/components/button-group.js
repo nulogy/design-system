@@ -31,6 +31,12 @@ const propsRows = [
     defaultValue: "left",
     description:
       "Aligns the buttons within the group. One of left, spaced, or right."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the button group component"
   }
 ];
 

@@ -25,45 +25,51 @@ const propsRows = [
     name: "color",
     type: "String",
     defaultValue: "darkBlue",
-    description: "Sets color based on the theme.color object"
+    description: "Sets color based on the theme.color object."
   },
   {
     name: "disabled",
     type: "Boolean",
     defaultValue: "false",
-    description: "Lightens text to imply that it's disabled"
+    description: "Lightens text to imply that it's disabled."
   },
   {
     name: "fontSize",
     type: "String",
     defaultValue: "16px",
-    description: "Sets font size based on the theme.fontSize object"
+    description: "Sets font size based on the theme.fontSize object."
   },
   {
     name: "fontFamily",
     type: "String",
     defaultValue: "IBM Plex Sans",
-    description: "Sets font family based on the theme.fontFamily object"
+    description: "Sets font family based on the theme.fontFamily object."
   },
   {
     name: "inline",
     type: "Boolean",
     defaultValue: "false",
-    description: "Displays text inline instead of as a block"
+    description: "Displays text inline instead of as a block."
   },
   {
     name: "lineHeight",
     type: "String",
     defaultValue: "1.5",
-    description: "Sets line height based on the theme.lineHeight object"
+    description: "Sets line height based on the theme.lineHeight object."
   },
   {
     name: "textAlign",
     type: "String",
     defaultValue: "left",
-    description: "Sets text-align to either left, center or right"
+    description: "Sets text-align to either left, center or right."
   },
-  ...margins
+  ...margins,
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the text component."
+  }
 ];
 
 export default () => (

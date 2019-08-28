@@ -52,6 +52,12 @@ const radioProps = [
     type: "Boolean",
     defaultValue: "false",
     description: "Makes the field require input before the form will submit"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the wrapper"
   }
 ];
 

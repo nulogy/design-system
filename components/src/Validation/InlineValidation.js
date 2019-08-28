@@ -16,9 +16,9 @@ const Wrapper = styled.div({
   }
 });
 
-const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) =>
+const InlineValidation = ({ className, errorMessage, errorList, children, ...boxProps }) =>
   errorMessage || errorList ? (
-    <Flex color={theme.colors.red} {...boxProps}>
+    <Flex className={className} color={theme.colors.red} {...boxProps}>
       <Icon icon="error" mr="x1" />
       <Wrapper>
         {errorMessage && <Text>{errorMessage}</Text>}
@@ -29,12 +29,14 @@ const InlineValidation = ({ errorMessage, errorList, children, ...boxProps }) =>
   ) : null;
 
 InlineValidation.propTypes = {
+  className: PropTypes.string,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 InlineValidation.defaultProps = {
+  className: undefined,
   errorMessage: null,
   errorList: null,
   children: null

@@ -139,7 +139,7 @@ BaseToggle.defaultProps = {
   offText: null,
   id: null,
   value: "on",
-  className: null,
+  className: undefined,
   required: false,
   helpText: null,
   labelText: null,

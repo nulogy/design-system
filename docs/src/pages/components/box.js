@@ -51,7 +51,13 @@ const propsRows = [
     description: "Sets the CSS position property"
   },
   ...paddings,
-  ...width
+  ...width,
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the box component."
+  }
 ];
 
 export default () => (

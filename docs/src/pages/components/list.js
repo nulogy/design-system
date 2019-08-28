@@ -30,6 +30,12 @@ const propsRows = [
     type: "Boolean",
     defaultValue: "false",
     description: "Sets padding left to align to left of container"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the list component."
   }
 ];
 

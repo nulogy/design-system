@@ -27,6 +27,12 @@ const propsRows = [
     type: "string",
     defaultValue: "null",
     description: "Title of Form Section"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the form section component."
   }
 ];
 

@@ -31,106 +31,106 @@ const propsRows = [
     name: "isOpen",
     type: "Boolean",
     defaultValue: "true",
-    description: "Controls whether the modal is open or closed"
+    description: "Controls whether the modal is open or closed."
   },
   {
     name: "title",
     type: "String",
     defaultValue: "null",
-    description: "The title appearing at the top of the modal"
+    description: "The title appearing at the top of the modal."
   },
   {
     name: "primaryButton",
     type: "Object",
     defaultValue: "null",
     description:
-      "The primary action of the modal, accepts label tag for label and all other Button component props"
+      "The primary action of the modal, accepts label tag for label and all other Button component props."
   },
   {
     name: "secondaryButtons",
     type: "Array",
     defaultValue: "null",
     description:
-      "The secondary action(s) of the modal, accepts an array of objects with label tag and other Button props"
+      "The secondary action(s) of the modal, accepts an array of objects with label tag and other Button props."
   },
   {
     name: "buttonAlignment",
     type: "String",
     defaultValue: "left",
     description:
-      "Controls the placement and order of button in the modal, either 'left' or 'spaced'"
+      "Controls the placement and order of button in the modal, either 'left' or 'spaced'."
   },
   {
     name: "type",
     type: "String",
     defaultValue: "informative",
     description:
-      "Controls the style of the modal buttons, either 'informative' or 'danger'"
+      "Controls the style of the modal buttons, either 'informative' or 'danger'."
   },
   {
     name: "onRequestClose",
     type: "Function",
     defaultValue: "null",
     description:
-      "Function that is run when the modal requests to be closed (esc key, clicking outside, clicking close), also renders the close button is passed in"
+      "Function that is run when the modal requests to be closed (esc key, clicking outside, clicking close), also renders the close button is passed in."
   },
   {
     name: "onAfterOpen",
     type: "Function",
     defaultValue: "null",
-    description: "Function that is run after the modal has opened"
+    description: "Function that is run after the modal has opened."
   },
   {
     name: "maxWidth",
     type: "String",
     defaultValue: "624px",
     description:
-      "Maximum width of the modal, modal will always compress responsively when the screen shrinks"
+      "Maximum width of the modal, modal will always compress responsively when the screen shrinks."
   },
   {
     name: "shouldFocusAfterRender",
     type: "Boolean",
     defaultValue: "true",
-    description: "Move focus into the modal when it is rendered"
+    description: "Move focus into the modal when it is rendered."
   },
   {
     name: "shouldReturnFocusAfterClose",
     type: "Boolean",
     defaultValue: "true",
-    description: "Move focus back to what triggered the modal after it closes"
+    description: "Move focus back to what triggered the modal after it closes."
   },
   {
     name: "ariaLabel",
     type: "String",
     defaultValue: "null",
     description:
-      "String indicating how the modal content should be announced to screenreaders"
+      "String indicating how the modal content should be announced to screenreaders."
   },
   {
     name: "ariaDescribedBy",
     type: "String",
     defaultValue: "null",
     description:
-      "String indicating the aria description of the modal (optional for enhanced accessibility if needed)"
+      "String indicating the aria description of the modal (optional for enhanced accessibility if needed)."
   },
   {
     name: "className",
     type: "String",
     defaultValue: "undefined",
-    description: "className passed to the modal component"
+    description: "className passed to the modal component."
   },
   {
     name: "portalClassName",
     type: "String",
     defaultValue: "undefined",
     description:
-      "className passed to the portal created for the modal component"
+      "className passed to the portal created for the modal component."
   },
   {
     name: "overlayClassName",
     type: "String",
     defaultValue: "undefined",
-    description: "className passed to the overlay component"
+    description: "className passed to the overlay component."
   }
 ];
 

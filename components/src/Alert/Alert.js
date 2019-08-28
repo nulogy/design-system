@@ -41,7 +41,7 @@ class BaseAlert extends React.Component {
   }
 
   render() {
-    const { children, isCloseable, title, type, ...props } = this.props;
+    const { children, isCloseable, title, type, className, ...props } = this.props;
     const { isVisible } = this.state;
 
     return isVisible ? (
@@ -51,6 +51,7 @@ class BaseAlert extends React.Component {
         borderRadius={theme.radii.medium}
         borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
         role="alert"
+        className={className}
         {...props}
       >
         {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
@@ -73,12 +74,14 @@ class BaseAlert extends React.Component {
 
 BaseAlert.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   isCloseable: PropTypes.node,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
 };
 
 BaseAlert.defaultProps = {
+  className: undefined,
   isCloseable: false,
   title: null,
   type: "informative"

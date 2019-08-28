@@ -69,9 +69,10 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
+  className,
   ...props
 }) => (
-  <Field>
+  <Field className={className}>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledInput
         aria-invalid={error}
@@ -87,6 +88,7 @@ const Input = ({
 );
 
 Input.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
@@ -98,6 +100,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  className: undefined,
   disabled: false,
   errorMessage: null,
   errorList: null,

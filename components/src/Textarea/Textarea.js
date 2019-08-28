@@ -70,9 +70,10 @@ const Textarea = ({
   requirementText,
   helpText,
   id,
+  className,
   ...props
 }) => (
-  <Field>
+  <Field className={className}>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <StyledTextarea
         aria-invalid={error}
@@ -89,6 +90,7 @@ const Textarea = ({
 );
 
 Textarea.propTypes = {
+  className: PropTypes.string,
   id: PropTypes.string,
   disabled: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -102,6 +104,7 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
+  className: undefined,
   id: null,
   disabled: false,
   errorMessage: null,

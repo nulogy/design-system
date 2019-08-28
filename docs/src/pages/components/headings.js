@@ -31,6 +31,12 @@ const propsRows = [
     type: "String",
     defaultValue: "left",
     description: "Sets text-align to either left, center or right"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the heading component"
   }
 ];
 

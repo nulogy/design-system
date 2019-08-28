@@ -29,13 +29,13 @@ const propsRows = [
     name: "size",
     type: "String",
     defaultValue: "medium",
-    description: "Accepts small, medium, or large"
+    description: "Accepts small, medium, or large."
   },
   {
     name: "disabled",
     type: "Boolean",
     defaultValue: "false",
-    description: "Marks the button as disabled and unable to be activated"
+    description: "Marks the button as disabled and unable to be activated."
   },
   {
     name: "icon",
@@ -47,13 +47,19 @@ const propsRows = [
     name: "iconSide",
     type: "String",
     defaultValue: "right",
-    description: "The side to display the icon"
+    description: "The side to display the icon."
   },
   {
     name: "fullWidth",
     type: "Boolean",
     defaultValue: "false",
-    description: "Makes the button fill the width of its container"
+    description: "Makes the button fill the width of its container."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the button component."
   }
 ];
 

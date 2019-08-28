@@ -32,50 +32,56 @@ const propsRows = [
     type: "Function",
     defaultValue: '() => <IconicButton icon="more"/>',
     description:
-      "Function that returns a button component that will be used as the trigger"
+      "Function that returns a button component that will be used as the trigger."
   },
   {
     name: "disabled",
     type: "Boolean",
     defaultValue: "false",
-    description: "Marks the button as disabled and unable to be activated"
+    description: "Marks the button as disabled and unable to be activated."
   },
   {
     name: "backgroundColor",
     type: "String",
     defaultValue: "whiteGrey",
-    description: "Background color of the menu container"
+    description: "Background color of the menu container."
   },
   {
     name: "showArrow",
     type: "Bool",
     defaultValue: "true",
-    description: "Determines if the arrow is shown on the menu container"
+    description: "Determines if the arrow is shown on the menu container."
   },
   {
     name: "placement",
     type: "String",
     defaultValue: "bottom-start",
     description:
-      "One of top, bottom, left, or right with optional -start or -end appended to place the menu container relative to the trigger"
+      "One of top, bottom, left, or right with optional -start or -end appended to place the menu container relative to the trigger."
   },
   {
     name: "showDelay",
     type: "Number",
     defaultValue: "100",
-    description: "Buffer delay time to show the dropdown menu when opening"
+    description: "Buffer delay time to show the dropdown menu when opening."
   },
   {
     name: "hideDelay",
     type: "Number",
     defaultValue: "200",
-    description: "Buffer delay time to hide the dropdown menu when closing"
+    description: "Buffer delay time to hide the dropdown menu when closing."
   },
   {
     name: "defaultOpen",
     type: "Bool",
     defaultValue: "false",
-    description: "State of the dropdown menu when mounted"
+    description: "State of the dropdown menu when mounted."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the dropdown menu container."
   }
 ];
 

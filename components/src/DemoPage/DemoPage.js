@@ -164,7 +164,7 @@ BaseMenuItem.propTypes = {
 };
 
 BaseMenuItem.defaultProps = {
-  className: null,
+  className: undefined,
   children: null
 };
 
@@ -182,7 +182,7 @@ BaseSidebarItem.propTypes = {
 };
 
 BaseSidebarItem.defaultProps = {
-  className: null,
+  className: undefined,
   children: null
 };
 
@@ -204,7 +204,7 @@ BaseSidebar.propTypes = {
 };
 
 BaseSidebar.defaultProps = {
-  className: null,
+  className: undefined,
   children: null
 };
 

@@ -42,6 +42,12 @@ const propsRows = [
     type: "String",
     defaultValue: "true",
     description: "Whether to show an underline or not."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the link component."
   }
 ];
 

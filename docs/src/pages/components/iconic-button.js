@@ -40,6 +40,12 @@ const propsRows = [
     defaultValue: "false",
     description:
       "Lightens the opacity and makes the button unable to be clicked."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the button component."
   }
 ];
 

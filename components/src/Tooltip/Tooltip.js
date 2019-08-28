@@ -57,7 +57,6 @@ const TooltipContainer = styled(Box)(
   })
 );
 
-/* eslint-disable react/destructuring-assignment */
 class StatelessTooltip extends React.Component {
   constructor(props) {
     super(props);
@@ -75,47 +74,50 @@ class StatelessTooltip extends React.Component {
   }
 
   tooltipEventHandlers() {
+    const { menuState } = this.props;
+
     return {
-      onFocus: () => this.props.menuState.openMenu(false),
-      onBlur: () => this.props.menuState.closeMenu(false),
-      onMouseEnter: () => this.props.menuState.openMenu(false),
-      onMouseLeave: () => this.props.menuState.closeMenu(false)
+      onFocus: () => menuState.openMenu(false),
+      onBlur: () => menuState.closeMenu(false),
+      onMouseEnter: () => menuState.openMenu(false),
+      onMouseLeave: () => menuState.closeMenu(false)
     };
   }
 
   triggerEventHandlers() {
+    const { menuState } = this.props;
+
     return {
-      onFocus: () => this.props.menuState.openMenu(false),
-      onBlur: () => this.props.menuState.closeMenu(false),
-      onMouseEnter: () => this.props.menuState.openMenu(false),
-      onMouseLeave: () => this.props.menuState.closeMenu(false)
+      onFocus: () => menuState.openMenu(false),
+      onBlur: () => menuState.closeMenu(false),
+      onMouseEnter: () => menuState.openMenu(false),
+      onMouseLeave: () => menuState.closeMenu(false)
     };
   }
 
   render() {
+    const { className, tooltip, maxWidth, children, menuState, id, placement: popperPlacement } = this.props;
     return (
       <Manager>
         <Reference>
           {({ ref }) =>
-            React.cloneElement(this.props.children, {
+            React.cloneElement(children, {
               "aria-haspopup": true,
-              "aria-expanded": this.props.menuState.isOpen,
-              "aria-describedby": this.props.id,
+              "aria-expanded": menuState.isOpen,
+              "aria-describedby": id,
               ...this.triggerEventHandlers(),
               ref
             })
           }
         </Reference>
-        <Popper
-          placement={this.props.placement}
-          modifiers={{ preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" } }}
-        >
+        <Popper placement={popperPlacement}>
           {({ ref, style, placement, arrowProps }) => (
             <TooltipContainer
-              maxWidth={this.props.maxWidth}
-              open={this.props.menuState.isOpen}
+              className={className}
+              maxWidth={maxWidth}
+              open={menuState.isOpen}
               role="tooltip"
-              id={this.props.id}
+              id={id}
               ref={node => {
                 ref(node);
                 this.setTooltipRef(node);
@@ -124,15 +126,15 @@ class StatelessTooltip extends React.Component {
               dataPlacement={placement}
               {...this.tooltipEventHandlers()}
             >
-              {this.props.tooltip}
+              {tooltip}
               <PopperArrow placement={placement} ref={arrowProps.ref} style={arrowProps.style} />
             </TooltipContainer>
           )}
         </Popper>
-        {this.props.menuState.isOpen && (
+        {menuState.isOpen && (
           <DetectOutsideClick
             onClick={() => {
-              this.props.menuState.openMenu();
+              menuState.openMenu();
             }}
             clickRef={[this.triggerRef, this.tooltipRef]}
           />
@@ -141,10 +143,10 @@ class StatelessTooltip extends React.Component {
     );
   }
 }
-/* eslint-enable react/destructuring-assignment */
 
 StatelessTooltip.propTypes = {
   children: PropTypes.element.isRequired,
+  className: PropTypes.string,
   id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
   menuState: PropTypes.shape({
@@ -170,6 +172,7 @@ StatelessTooltip.propTypes = {
 };
 
 StatelessTooltip.defaultProps = {
+  className: undefined,
   placement: "bottom",
   maxWidth: "24em"
 };

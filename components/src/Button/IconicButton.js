@@ -21,64 +21,67 @@ const HoverText = styled.div({
   pointerEvents: "none"
 });
 
-const WrapperButton = styled.button(space, ({ disabled }) => ({
-  background: "transparent",
-  border: "none",
-  position: "relative",
-  display: "inline-flex",
-  alignItems: "center",
-  padding: `${theme.space.half} ${theme.space.none}`,
-  color: theme.colors.darkBlue,
-  cursor: disabled ? "default" : "pointer",
+const WrapperButton = styled.button(
+  ({ disabled }) => ({
+    background: "transparent",
+    border: "none",
+    position: "relative",
+    display: "inline-flex",
+    alignItems: "center",
+    padding: `${theme.space.half} ${theme.space.none}`,
+    color: theme.colors.darkBlue,
+    cursor: disabled ? "default" : "pointer",
 
-  [`${Icon}`]: {
-    borderRadius: theme.radii.circle,
-    transition: ".2s"
-  },
-  [`${Text}`]: {
-    display: "block",
-    fontWeight: theme.fontWeights.medium,
-    textAlign: "left"
-  },
-  [`${HoverText}`]: {
-    opacity: "0"
-  },
-  "&:hover": {
     [`${Icon}`]: {
-      backgroundColor: theme.colors.lightBlue
+      borderRadius: theme.radii.circle,
+      transition: ".2s"
+    },
+    [`${Text}`]: {
+      display: "block",
+      fontWeight: theme.fontWeights.medium,
+      textAlign: "left"
     },
     [`${HoverText}`]: {
-      opacity: "1"
-    }
-  },
-  "&:active": {
-    [`${Icon}`]: {
-      transform: "scale(0.875)",
-      transition: ".2s ease-in"
-    }
-  },
-  "&:disabled": {
-    opacity: ".5",
-    "&:hover, &:active": {
+      opacity: "0"
+    },
+    "&:hover": {
       [`${Icon}`]: {
-        background: "none",
-        transform: "none"
+        backgroundColor: theme.colors.lightBlue
+      },
+      [`${HoverText}`]: {
+        opacity: "1"
+      }
+    },
+    "&:active": {
+      [`${Icon}`]: {
+        transform: "scale(0.875)",
+        transition: ".2s ease-in"
+      }
+    },
+    "&:disabled": {
+      opacity: ".5",
+      "&:hover, &:active": {
+        [`${Icon}`]: {
+          background: "none",
+          transform: "none"
+        }
+      }
+    },
+    "&:focus": {
+      outline: "none",
+      [`${Icon}`]: {
+        boxShadow: theme.shadows.focus
+      },
+      [`${HoverText}`]: {
+        opacity: "1"
       }
     }
-  },
-  "&:focus": {
-    outline: "none",
-    [`${Icon}`]: {
-      boxShadow: theme.shadows.focus
-    },
-    [`${HoverText}`]: {
-      opacity: "1"
-    }
-  }
-}));
+  }),
+  space
+);
 
-const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, ...props }, forwardedRef) => (
-  <WrapperButton ref={forwardedRef} aria-label={children} {...props}>
+const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, className, ...props }, forwardedRef) => (
+  <WrapperButton ref={forwardedRef} aria-label={children} className={className} {...props}>
     <Manager>
       <Reference>{({ ref }) => <Icon ref={ref} size={theme.space.x4} icon={icon} p="half" />}</Reference>
       <Popper
@@ -110,6 +113,7 @@ export const iconNames = Object.keys(icons);
 
 BaseIconicButton.propTypes = {
   children: PropTypes.string,
+  className: PropTypes.string,
   labelHidden: PropTypes.bool,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOf(iconNames).isRequired
@@ -117,6 +121,7 @@ BaseIconicButton.propTypes = {
 
 BaseIconicButton.defaultProps = {
   children: null,
+  className: undefined,
   labelHidden: false,
   disabled: false
 };

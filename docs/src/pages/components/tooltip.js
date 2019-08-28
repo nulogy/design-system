@@ -27,38 +27,44 @@ const propsRows = [
     name: "tooltip",
     type: "node",
     defaultValue: "Required",
-    description: "The content to display inside of the tooltip"
+    description: "The content to display inside of the tooltip."
   },
   {
     name: "children",
     type: "element",
     defaultValue: "Required",
-    description: "Single child of tooltip must be able to accept a ref"
+    description: "Single child of tooltip must be able to accept a ref."
   },
   {
     name: "maxWidth",
     type: "string",
     defaultValue: "24em",
-    description: "Width of the tooltip"
+    description: "Width of the tooltip."
   },
   {
     name: "placement",
     type: "string",
     defaultValue: "bottom",
     description:
-      "The position of the tooltip relative to its trigger. Accepts top, top-start, top-end, bottom, bottom-end, left, left-start, left-end, right, right-start and right-end"
+      "The position of the tooltip relative to its trigger. Accepts top, top-start, top-end, bottom, bottom-end, left, left-start, left-end, right, right-start and right-end."
   },
   {
     name: "showDelay",
     type: "number|string",
     defaultValue: "100",
-    description: "Time in seconds before the tooltip appears"
+    description: "Time in seconds before the tooltip appears."
   },
   {
     name: "hideDelay",
     type: "number|string",
     defaultValue: "350",
-    description: "Time in seconds before the tooltip disappears"
+    description: "Time in seconds before the tooltip disappears."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the tooltip container element."
   }
 ];
 

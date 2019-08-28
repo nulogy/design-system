@@ -28,13 +28,13 @@ const propsRows = [
     name: "isCloseable",
     type: "boolean",
     defaultValue: "false",
-    description: "Provides a close icon in the top right corner"
+    description: "Provides a close icon in the top right corner."
   },
   {
     name: "title",
     type: "string",
     defaultValue: "",
-    description: "An optional title to display in bold above the main text"
+    description: "An optional title to display in bold above the main text."
   },
   {
     name: "type",
@@ -42,6 +42,12 @@ const propsRows = [
     defaultValue: "informative",
     description:
       "The type of alert. Accepts informative, danger, warning and success."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the alert component."
   }
 ];
 

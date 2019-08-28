@@ -39,6 +39,12 @@ const propsRows = [
     type: "string",
     defaultValue: "null",
     description: "Form title"
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the form component."
   }
 ];
 

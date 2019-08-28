@@ -22,6 +22,7 @@ const List = styled.ul(
 );
 
 List.propTypes = {
+  className: PropTypes.string,
   compact: PropTypes.bool,
   leftAlign: PropTypes.bool,
   ...space.propTypes,
@@ -29,6 +30,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
+  className: undefined,
   compact: false,
   leftAlign: false,
   color: "currentColor"

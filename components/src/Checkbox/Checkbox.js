@@ -119,7 +119,7 @@ BaseCheckbox.defaultProps = {
   disabled: false,
   error: false,
   id: null,
-  className: null,
+  className: undefined,
   required: false
 };
 

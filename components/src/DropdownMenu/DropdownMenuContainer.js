@@ -32,8 +32,11 @@ const getMenuMargin = (placement, showArrow) => {
 };
 
 const BaseSubMenu = React.forwardRef(
-  ({ popperProps: { style, placement, arrowProps }, showArrow, children, backgroundColor, ...props }, ref) => (
-    <div ref={ref} style={style} placement={placement} {...props}>
+  (
+    { popperProps: { style, placement, arrowProps }, showArrow, children, backgroundColor, className, ...props },
+    ref
+  ) => (
+    <div ref={ref} style={style} placement={placement} className={className} {...props}>
       {showArrow && (
         <PopperArrow
           {...arrowProps}
@@ -48,6 +51,7 @@ const BaseSubMenu = React.forwardRef(
 );
 
 BaseSubMenu.propTypes = {
+  className: PropTypes.string,
   backgroundColor: PropTypes.string.isRequired,
   children: PropTypes.node,
   showArrow: PropTypes.bool,
@@ -55,6 +59,7 @@ BaseSubMenu.propTypes = {
 };
 
 BaseSubMenu.defaultProps = {
+  className: undefined,
   children: null,
   showArrow: true,
   popperProps: null

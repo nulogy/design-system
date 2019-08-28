@@ -36,13 +36,26 @@ const togglePropsRows = [
     name: "id",
     type: "String",
     defaultValue: "Required",
-    description: "A unique ID for this input"
+    description: "A unique ID for this input."
+  },
+  {
+    name: "value",
+    type: "String",
+    defaultValue: "on",
+    description: "Value on the input that can be submitted."
+  },
+  {
+    name: "helpText",
+    type: "String",
+    defaultValue: "null",
+    description:
+      "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used."
   },
   {
     name: "labelText",
     type: "String",
     defaultValue: "null",
-    description: "Label for the input"
+    description: "Informs users what the corresponding input field is for."
   },
   {
     name: "offText",
@@ -57,16 +70,35 @@ const togglePropsRows = [
     description: "A label for the toggle's on state."
   },
   {
+    name: "toggled",
+    type: "Boolean",
+    defaultValue: "undefined",
+    description: "State of the toggle, use to control the toggle component."
+  },
+  {
     name: "onChange",
     type: "Function",
     defaultValue: "null",
-    description: ""
+    description:
+      "Function that triggers when toggle is clicked, used to control component."
   },
   {
     name: "required",
     type: "Boolean",
     defaultValue: "false",
-    description: "Makes the field require input before the form will submit"
+    description: "Makes the field require input before the form will submit."
+  },
+  {
+    name: "requirementText",
+    type: "String",
+    defaultValue: "null",
+    description: "(Optional) or (Required)."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the container element."
   }
 ];
 

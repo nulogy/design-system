@@ -46,6 +46,12 @@ const propsRows = [
     defaultValue: "null",
     description:
       "Alternative text to be read by assistive devices. Leave blank if icon is purely decorative."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the svg element."
   }
 ];
 
