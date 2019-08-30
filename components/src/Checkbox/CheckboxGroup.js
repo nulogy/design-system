@@ -7,6 +7,12 @@ import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
 import theme from "../theme";
 
+const labelTextStyles = {
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+};
+
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
     const { value, disabled, required, onChange, ...checkboxProps } = checkbox.props;
@@ -32,7 +38,7 @@ const BaseCheckboxGroup = ({ className, errorMessage, errorList, labelText, help
   return (
     <Fieldset className={className} hasHelpText={!!helpText}>
       <legend style={{ marginBottom: theme.space.x1 }}>
-        {labelText}
+        <span style={labelTextStyles}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}

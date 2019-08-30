@@ -7,6 +7,12 @@ import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
 import theme from "../theme";
 
+const labelTextStyles = {
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+};
+
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
     const { value, disabled, required, onChange, ...radioProps } = radio.props;
@@ -32,7 +38,7 @@ const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpTex
   return (
     <Fieldset className={className} hasHelpText={!!helpText}>
       <legend style={{ marginBottom: theme.space.x1 }}>
-        {labelText}
+        <span style={labelTextStyles}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}

@@ -7,10 +7,15 @@ import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import theme from "../theme";
 
+const labelTextStyles = {
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+};
+
 const Label = styled.label(space, ({ color }) => ({
   color: theme.colors[color] || color,
-  display: "inline-block",
-  fontSize: theme.fontSizes.medium
+  display: "inline-block"
 }));
 
 Label.propTypes = {
@@ -24,7 +29,7 @@ Label.defaultProps = {
 const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
   <Label style={{ display: "block" }} {...props}>
     <Box mb={children && "x1"}>
-      {labelText}
+      <span style={labelTextStyles}>{labelText}</span>
       {requirementText && <RequirementText>{requirementText}</RequirementText>}
       {helpText && <HelpText>{helpText}</HelpText>}
     </Box>

@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Changed [label](https://storybook.nulogy.design/?path=/story/fieldlabel--fieldlabel) styles from 16px Regular to 14px Bold
 - [**Breaking Change**] Changed API for using Button as a link
 
   - old:
