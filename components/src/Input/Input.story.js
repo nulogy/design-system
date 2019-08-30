@@ -7,7 +7,13 @@ const errorList = ["Error message 1", "Error message 2"];
 storiesOf("Input", module)
   .add("Input", () => <Input labelText="Input" />)
   .add("with all props", () => (
-    <Input placeholder="Placeholder" labelText="Input" helpText="Additional help text" required />
+    <Input
+      placeholder="Placeholder"
+      labelText="Input"
+      helpText="Additional help text"
+      requirementText="Required"
+      required
+    />
   ))
   .add("set to disabled", () => <Input labelText="Set to disabled" disabled />)
   .add("with error message", () => <Input labelText="Label" errorMessage="Error message" />)
