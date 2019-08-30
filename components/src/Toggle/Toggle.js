@@ -9,11 +9,17 @@ import theme from "../theme";
 import { ClickInputLabel, omit } from "../utils";
 import ToggleButton from "./ToggleButton";
 
+const labelTextStyles = {
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+};
+
 const MaybeToggleTitle = ({ labelText, requirementText, helpText, children, ...props }) =>
   labelText ? (
     <div {...props}>
       <Box mb={children && "x1"}>
-        {labelText}
+        <span style={labelTextStyles}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
