@@ -1,17 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
-
-const Trigger = styled(Flex).attrs({
-  width: "128px",
-  height: "128px",
-  justifyContent: "center",
-  alignItems: "center",
-  bg: "lightBlue"
-})({
-  border: "2px dashed darkBlue"
-});
 
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
@@ -47,47 +36,47 @@ storiesOf("Tooltip", module)
   .add("with placement", () => (
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="top-start" tooltip="top-start">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="top-start" tooltip="top-start" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="top" tooltip="top">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="top" tooltip="top" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="top-end" tooltip="top-end">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="top-end" tooltip="top-end" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around" menuState={{ isOpen: true }}>
+        <Tooltip placement="left-start" tooltip="left-start" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="left" tooltip="left" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="left-end" tooltip="left-end" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around" menuState={{ isOpen: true }}>
+        <Tooltip placement="right-start" tooltip="right-start" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="right" tooltip="right" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="right-end" tooltip="right-end" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="left-start" tooltip="left-start">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="bottom-start" tooltip="bottom-start" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="left" tooltip="left">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="bottom" tooltip="bottom" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="left-end" tooltip="left-end">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-      </Flex>
-      <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="right-start" tooltip="right-start">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-        <Tooltip placement="right" tooltip="right">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-        <Tooltip placement="right-end" tooltip="right-end">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-      </Flex>
-      <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="bottom-start" tooltip="bottom-start">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-        <Tooltip placement="bottom" tooltip="bottom">
-          <Trigger>Hover me</Trigger>
-        </Tooltip>
-        <Tooltip placement="bottom-end" tooltip="bottom-end">
-          <Trigger>Hover me</Trigger>
+        <Tooltip placement="bottom-end" tooltip="bottom-end" menuState={{ isOpen: true }}>
+          <Button>Tooltip trigger</Button>
         </Tooltip>
       </Flex>
     </>
