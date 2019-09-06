@@ -27,3 +27,7 @@
 Cypress.Commands.add("renderFromStorybook", component => {
   cy.visit(`/iframe.html?path=/story/storiesfortests-${component}`);
 });
+
+Cypress.Commands.add("pressEscapeKey", () => {
+  cy.get("body").type("{esc}");
+});

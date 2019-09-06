@@ -44,7 +44,7 @@ describe("DropdownMenu", () => {
 
     getOpenButton().click();
 
-    cy.get("body").type("{esc}");
+    cy.pressEscapeKey();
 
     assertDropdownIsClosed();
   });
