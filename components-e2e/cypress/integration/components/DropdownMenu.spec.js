@@ -7,19 +7,17 @@ describe("DropdownMenu", () => {
   const assertDropdownIsClosed = () => getDropdownLink().should("not.exist");
   const enterKeyCode = 13;
 
-  it("toggles the menu with click", () => {
+  it("toggles the menu on click", () => {
     cy.renderFromStorybook("dropdownmenu--base");
 
     getOpenButton().click();
-
     assertDropdownIsOpen();
 
     getCloseButton().click();
-
     assertDropdownIsClosed();
   });
 
-  it("toggles the menu with enter", () => {
+  it("toggles the menu on enter", () => {
     cy.renderFromStorybook("dropdownmenu--base");
 
     getOpenButton()
@@ -41,7 +39,7 @@ describe("DropdownMenu", () => {
     assertDropdownIsClosed();
   });
 
-  it("closes the menu when hitting escape", () => {
+  it("closes the menu on escape", () => {
     cy.renderFromStorybook("dropdownmenu--base");
 
     getOpenButton().click();
@@ -61,7 +59,7 @@ describe("DropdownMenu", () => {
     assertDropdownIsClosed();
   });
 
-  it("scrolls through the list with tab", () => {
+  it("scrolls through the list on tabpress", () => {
     cy.renderFromStorybook("dropdownmenu--base");
 
     getOpenButton()
