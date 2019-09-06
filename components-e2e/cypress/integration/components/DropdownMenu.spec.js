@@ -54,7 +54,7 @@ describe("DropdownMenu", () => {
 
     getOpenButton().click();
 
-    cy.get("body").click();
+    cy.clickOutsideElement();
 
     assertDropdownIsClosed();
   });

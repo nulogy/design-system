@@ -31,3 +31,7 @@ Cypress.Commands.add("renderFromStorybook", component => {
 Cypress.Commands.add("pressEscapeKey", () => {
   cy.get("body").type("{esc}");
 });
+
+Cypress.Commands.add("clickOutsideElement", () => {
+  cy.get("body").click();
+});
