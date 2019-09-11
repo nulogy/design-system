@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-balham.css";
+import style from "./styles.scss";
 
 class Table extends React.Component {
   constructor(props) {
