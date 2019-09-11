@@ -17,28 +17,6 @@ describe("DropdownMenu", () => {
     assertDropdownIsClosed();
   });
 
-  it("toggles the menu on enter", () => {
-    cy.renderFromStorybook("dropdownmenu--base");
-
-    getOpenButton()
-      .click()
-      .trigger("keypress", {
-        keyCode: enterKeyCode,
-        which: enterKeyCode
-      });
-
-    assertDropdownIsOpen();
-
-    getCloseButton()
-      .click()
-      .trigger("keypress", {
-        keyCode: enterKeyCode,
-        which: enterKeyCode
-      });
-
-    assertDropdownIsClosed();
-  });
-
   it("closes the menu on escape", () => {
     cy.renderFromStorybook("dropdownmenu--base");
 
