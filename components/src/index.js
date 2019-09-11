@@ -34,3 +34,4 @@ export { DemoPage } from "./DemoPage";
 // Components listed after this comment have been automatically
 // added to this page and may need to be moved up in the list
 // if they are dependencies for other components
+export { Table } from "./Table";
