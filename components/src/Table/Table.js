@@ -2,6 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { AgGridReact } from "ag-grid-react";
 import style from "./styles.scss";
+import { DropdownMenu, DropdownButton, DropdownItem } from "../DropdownMenu";
+
+class NameCellRenderer extends React.Component {
+  render() {
+    return (
+      <div style={{ position: "relative", top: "5px", textAlign: "right" }}>
+        <DropdownMenu>
+          <DropdownButton onClick={() => {}}>Edit</DropdownButton>
+          <DropdownButton onClick={() => {}}>Delete</DropdownButton>
+        </DropdownMenu>
+      </div>
+    );
+  }
+}
 
 class Table extends React.Component {
   constructor(props) {
@@ -11,21 +25,30 @@ class Table extends React.Component {
         {
           headerName: "Make",
           field: "make",
-          sortable: true,
-          checkboxSelect: true
+          checkboxSelection: true,
+          headerCheckboxSelection: true,
+          resizable: true,
+          sortable: true
         },
         {
           headerName: "Model",
-          field: "model"
+          field: "model",
+          resizable: true
         },
         {
           headerName: "Price",
-          field: "price"
+          field: "price",
+          filter: "agNumberColumnFilter"
+        },
+        {
+          headerName: "",
+          field: "actions",
+          cellRendererFramework: NameCellRenderer
         }
       ],
       rowData: [
         {
-          make: "Toyota",
+          make: "Toyota very long cell that will have to wrap and do things for sure",
           model: "Celica",
           price: 35000
         },
@@ -37,16 +60,25 @@ class Table extends React.Component {
         {
           make: "Porsche",
           model: "Boxter",
-          price: 72000
+          price: 10000
         }
-      ]
+      ],
+      rowHeight: 56,
+      headerHeight: 56
     };
   }
 
   render() {
     return (
-      <div style={{ height: "150px", width: "600px" }} className="ag-theme-balham">
-        <AgGridReact rowSelection="multiple" columnDefs={this.state.columnDefs} rowData={this.state.rowData} />
+      <div className="ag-theme-balham">
+        <AgGridReact
+          rowSelection="multiple"
+          columnDefs={this.state.columnDefs}
+          rowData={this.state.rowData}
+          rowDragManaged
+          suppressRowTransform // for dropdownmenu
+          domLayout="autoHeight"
+        />
       </div>
     );
   }

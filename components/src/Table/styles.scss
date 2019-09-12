@@ -1,5 +1,66 @@
+// https://www.ag-grid.com/javascript-grid-themes-provided/#customizing-sass-variables
+@import "../node_modules/@nulogy/tokens/dist/variables.scss";
+
+// global
 $font-family: "IBM Plex Sans";
 $font-size: "16px";
+$border-color: $color-base-white;
+$selected-color: $color-base-white-grey;
+// $primary-color:transparent;
+
+// header
+$secondary-font-family: $font-family-base;
+$secondary-font-size: $size-font-medium;
+$secondary-font-weight: $weight-font-normal;
+$secondary-foreground-color: $color-base-dark-grey;
+$header-background-color: $color-base-white;
+$header-height: 56px;
+
+// cells
+$row-height: 56px;
+$cell-horizontal-padding: $size-base-x-1;
 
 @import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
 @import "../node_modules/ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
+/* enable basic browser text selection in grid cells, which ag-grid turns off by default */
+div.ag-root .ag-cell-focus {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.ag-header-container {
+  border-bottom: 1px solid $color-base-light-grey;
+}
+
+// to support dropdownMenu
+// isn't working by itself, needs something else i think
+// https://embed.plnkr.co/plunk/7EQt9WlJyYpl90bC
+.ag-cell {
+  overflow: visible;
+}
+
+.ag-row {
+  z-index: 0;
+}
+
+.ag-row.ag-row-focus {
+  z-index: 1;
+}
+.ag-root,
+.ag-body-viewport,
+.ag-body-viewport-wrapper,
+.ag-center-cols-clipper {
+  overflow: visible;
+}
+
+/*
+
+Questions:
+  tooltip when text is truncated?
+  design Q: show gridline? for column resizing
+
+
+*/
