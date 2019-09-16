@@ -179,6 +179,7 @@ const ReactSelect = ({
   onChange,
   placeholder,
   value,
+  defaultValue,
   className,
   classNamePrefix
 }) => (
@@ -200,6 +201,7 @@ const ReactSelect = ({
         maxMenuHeight={maxHeight}
         inputId={id}
         onChange={onChange && (option => onChange(option && option.value))}
+        defaultValue={getValue(options, defaultValue)}
         value={getValue(options, value)}
         name={name}
         isMulti={multiselect}
