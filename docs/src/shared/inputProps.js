@@ -18,6 +18,12 @@ const inputProps = [
     description: "Value of input, used when controlling the component"
   },
   {
+    name: "defaultValue",
+    type: "String",
+    defaultValue: "",
+    description: "Default value of input"
+  },
+  {
     name: "disabled",
     type: "Boolean",
     defaultValue: "false",
