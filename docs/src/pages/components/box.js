@@ -105,7 +105,7 @@ export default () => (
         <SubsectionTitle>Text Color</SubsectionTitle>
         <Text>
           Color can be set using a reference to the{" "}
-          <Link href="https://nulogy.design/tokens">theme.colors</Link> object.
+          <Link href="https://nulogy.design/theme">theme.colors</Link> object.
         </Text>
         <Box color="blue">blue</Box>
         <Highlight className="js">{'<Box color="blue">blue</Box>'}</Highlight>
@@ -114,7 +114,7 @@ export default () => (
         <SubsectionTitle>Background Color</SubsectionTitle>
         <Text>
           Color can be set using a reference to the{" "}
-          <Link href="https://nulogy.design/tokens">theme.colors</Link> object.
+          <Link href="https://nulogy.design/theme">theme.colors</Link> object.
         </Text>
         <Box bg="lightBlue">lightBlue</Box>
         <Highlight className="js">
@@ -125,7 +125,7 @@ export default () => (
         <SubsectionTitle>Margins</SubsectionTitle>
         <Text>
           Margins can be set using a reference to the{" "}
-          <Link href="https://nulogy.design/tokens">theme.space</Link> object.
+          <Link href="https://nulogy.design/theme">theme.space</Link> object.
         </Text>
         <Box bg="lightBlue" m="x3">
           x3 (24px)
@@ -136,7 +136,7 @@ export default () => (
         <SubsectionTitle>Padding</SubsectionTitle>
         <Text>
           Padding can be set using a reference to the{" "}
-          <Link href="https://nulogy.design/tokens">theme.space</Link> object.
+          <Link href="https://nulogy.design/theme">theme.space</Link> object.
         </Text>
         <Box bg="lightBlue" p="x3">
           x3 (24px)
@@ -147,7 +147,7 @@ export default () => (
         <SubsectionTitle>Shadows</SubsectionTitle>
         <Text>
           There are three shadows that can be set using a reference to the{" "}
-          <Link href="https://nulogy.design/tokens">theme.shadows</Link> object.
+          <Link href="https://nulogy.design/theme">theme.shadows</Link> object.
         </Text>
         <Box p="x3" boxShadow="large">
           large shadow
@@ -161,7 +161,7 @@ export default () => (
         <Text>
           All Box props can be used responsively by using an object that defines
           small, medium and/or large, based on the{" "}
-          <Link href="https://nulogy.design/tokens">theme.breakpoints</Link>{" "}
+          <Link href="https://nulogy.design/theme">theme.breakpoints</Link>{" "}
           object
         </Text>
         <Box color={{ extraSmall: "red", small: "blue", medium: "green" }}>

@@ -409,7 +409,7 @@ export default () => (
       <Text>
         Providing different prop values for different breaking points that are
         based on the{" "}
-        <Link href="https://nulogy.design/tokens">theme.breakpoints</Link> is
+        <Link href="https://nulogy.design/theme">theme.breakpoints</Link> is
         possible by passing an object to a prop.
       </Text>
       <Text mb="x2" color="darkGrey">
