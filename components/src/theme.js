@@ -20,6 +20,7 @@ export default {
     lightRed: tokens.color_base_light_red
   },
   fontSizes: {
+    smaller: tokens.size_font_smaller,
     small: tokens.size_font_small,
     medium: tokens.size_font_medium,
     large: tokens.size_font_large,
