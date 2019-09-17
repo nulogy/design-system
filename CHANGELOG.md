@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alerts/)
-- Added Drag Indicator icon
+- Added [Drag](https://nulogy.design/components/icon/) icon
 
 ### Changed
 
