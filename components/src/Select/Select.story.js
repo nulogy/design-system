@@ -59,6 +59,14 @@ storiesOf("Select", module)
   .add("Select", () => (
     <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
+  .add("with a defaultValue", () => (
+    <Select
+      defaultValue={options[0].value}
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+    />
+  ))
   .add("with an option selected", () => (
     <>
       <Select

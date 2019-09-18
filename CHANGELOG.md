@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alerts/)
+- Added `defaultValue` to [Select](http://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue)
 - Added Drag icon to [Icon component](https://nulogy.design/components/icon/)
 
 ### Changed
