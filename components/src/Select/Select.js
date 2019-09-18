@@ -231,6 +231,7 @@ ReactSelect.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string,
+  defaultValue: PropTypes.string,
   className: PropTypes.string,
   classNamePrefix: PropTypes.string
 };
