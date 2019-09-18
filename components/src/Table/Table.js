@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Table as RVTable, Column as RVColumn, AutoSizer } from "react-virtualized";
+import { Table as RVTable, Column as RVColumn, AutoSizer, WindowScroller } from "react-virtualized";
 
 import { theme } from "..";
 
@@ -66,21 +66,31 @@ const generateColumns = columns =>
 
 const rowGetter = rows => ({ index }) => rows[index];
 
+const ROW_HEIGHT = 56;
+
 const Table = ({ columns, rows }) => (
-  <AutoSizer disableHeight>
-    {({ width }) => (
-      <StyledTable
-        width={width}
-        height={56 * (rows.length + 1)}
-        rowHeight={56}
-        headerHeight={56}
-        rowGetter={rowGetter(rows)}
-        rowCount={rows.length}
-      >
-        {generateColumns(columns)}
-      </StyledTable>
+  <WindowScroller>
+    {({ height, isScrolling, onChildScroll, scrollTop }) => (
+      <AutoSizer disableHeight>
+        {({ width }) => (
+          <StyledTable
+            autoHeight
+            width={width}
+            height={height}
+            isScrolling={isScrolling}
+            onScroll={onChildScroll}
+            scrollTop={scrollTop}
+            rowHeight={ROW_HEIGHT}
+            headerHeight={ROW_HEIGHT}
+            rowGetter={rowGetter(rows)}
+            rowCount={rows.length}
+          >
+            {generateColumns(columns)}
+          </StyledTable>
+        )}
+      </AutoSizer>
     )}
-  </AutoSizer>
+  </WindowScroller>
 );
 Table.propTypes = {};
 
