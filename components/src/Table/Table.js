@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Table as RVTable, Column as RVColumn } from "react-virtualized";
+import { Table as RVTable, Column as RVColumn, AutoSizer } from "react-virtualized";
 
 import { theme } from "..";
 
@@ -67,16 +67,20 @@ const generateColumns = columns =>
 const rowGetter = rows => ({ index }) => rows[index];
 
 const Table = ({ columns, rows }) => (
-  <StyledTable
-    width={300}
-    height={500}
-    rowHeight={56}
-    headerHeight={56}
-    rowGetter={rowGetter(rows)}
-    rowCount={rows.length}
-  >
-    {generateColumns(columns)}
-  </StyledTable>
+  <AutoSizer disableHeight>
+    {({ width }) => (
+      <StyledTable
+        width={width}
+        height={56 * (rows.length + 1)}
+        rowHeight={56}
+        headerHeight={56}
+        rowGetter={rowGetter(rows)}
+        rowCount={rows.length}
+      >
+        {generateColumns(columns)}
+      </StyledTable>
+    )}
+  </AutoSizer>
 );
 Table.propTypes = {};
 
