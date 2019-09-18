@@ -6,7 +6,27 @@ import { Box } from "../Box";
 storiesOf("Text", module)
   .add("Text", () => <Text>Default text</Text>)
   .add("With a color", () => <Text color="blue">Small text</Text>)
-  .add("With a size", () => <Text fontSize="small">Small text</Text>)
+  .add("With a line height", () => (
+    <>
+      <Box bg="whiteGrey" p="x2" mb="x3">
+        <Text size="small" lineHeight="smallTextBase">
+          smallTextBase (1.71428571)
+        </Text>
+        <Text size="small" lineHeight="smallTextBase">
+          smallTextBase (1.71428571)
+        </Text>
+      </Box>
+      <Box bg="whiteGrey" p="x2" mb="x3">
+        <Text size="small" lineHeight="smallTextCompressed">
+          smallTextCompressed (1.14285714)
+        </Text>
+        <Text size="small" lineHeight="smallTextCompressed">
+          smallTextCompressed (1.14285714)
+        </Text>
+      </Box>
+    </>
+  ))
+  .add("With a size", () => <Text fontSize="smaller">Small text</Text>)
   .add("With a custom margin", () => (
     <>
       <Text mb="x3">Default text</Text>
