@@ -237,6 +237,7 @@ ReactSelect.propTypes = {
 ReactSelect.defaultProps = {
   autocomplete: true,
   disabled: null,
+  defaultValue: undefined,
   error: undefined,
   errorMessage: null,
   errorList: null,
