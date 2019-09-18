@@ -66,8 +66,8 @@ export default () => (
     <DocSection mb="x8">
       <SectionTitle>Interface text</SectionTitle>
       <Text>
-        Standard text should set at 16px for most cases, but 14px is also
-        available.
+        Standard text should set at 16px for most cases, but 14px or 12px is
+        also available.
       </Text>
     </DocSection>
   </Layout>
