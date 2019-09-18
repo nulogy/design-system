@@ -39,12 +39,23 @@ const StyledTable = styled(RVTable)({
     textOverflow: "ellipsis",
     whiteSpace: "nowrap"
   },
+  ".ReactVirtualized__Table__rowColumn.rowColumn--alignRight": {
+    textAlign: "right"
+  },
   ".ReactVirtualized__Table__headerColumn:first-of-type": {},
   ".ReactVirtualized__Table__rowColumn:first-of-type": {}
 });
 
 const generateColumns = columns =>
-  columns.map(({ label, dataKey }, index) => <RVColumn key={index} label={label} dataKey={dataKey} width={100} />);
+  columns.map(({ label, dataKey, align }, index) => (
+    <RVColumn
+      className={align === "right" ? "rowColumn--alignRight" : undefined}
+      key={index}
+      label={label}
+      dataKey={dataKey}
+      width={100}
+    />
+  ));
 
 const rowGetter = rows => ({ index }) => rows[index];
 
