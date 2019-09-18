@@ -20,6 +20,9 @@ const StyledTable = styled(RVTable)({
     flexDirection: "row",
     alignItems: "center"
   },
+  ".ReactVirtualized__Table__row:hover": {
+    backgroundColor: theme.colors.whiteGrey
+  },
   ".ReactVirtualized__Table__headerTruncatedText": {
     display: "inline-block",
     maxWidth: "100%",
@@ -28,22 +31,26 @@ const StyledTable = styled(RVTable)({
     overflow: "hidden"
   },
   ".ReactVirtualized__Table__headerColumn": {
-    marginRight: `${theme.space.x2}`,
-    minWidth: `${theme.space.x6}`,
+    marginRight: theme.space.x2,
+    minWidth: theme.space.x6,
     textOverflow: "ellipsis",
     whiteSpace: "nowrap"
   },
   ".ReactVirtualized__Table__rowColumn": {
-    marginRight: `${theme.space.x2}`,
-    minWidth: `${theme.space.x6}`,
+    marginRight: theme.space.x2,
+    minWidth: theme.space.x6,
     textOverflow: "ellipsis",
     whiteSpace: "nowrap"
   },
   ".ReactVirtualized__Table__rowColumn.rowColumn--alignRight": {
     textAlign: "right"
   },
-  ".ReactVirtualized__Table__headerColumn:first-of-type": {},
-  ".ReactVirtualized__Table__rowColumn:first-of-type": {}
+  ".ReactVirtualized__Table__headerColumn:first-of-type": {
+    marginLeft: theme.space.x2
+  },
+  ".ReactVirtualized__Table__rowColumn:first-of-type": {
+    marginLeft: theme.space.x2
+  }
 });
 
 const generateColumns = columns =>
@@ -61,7 +68,7 @@ const rowGetter = rows => ({ index }) => rows[index];
 
 const Table = ({ columns, rows }) => (
   <StyledTable
-    width={500}
+    width={300}
     height={500}
     rowHeight={56}
     headerHeight={56}
