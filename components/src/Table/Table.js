@@ -50,6 +50,9 @@ const StyledTable = styled(RVTable)({
   },
   ".ReactVirtualized__Table__rowColumn:first-of-type": {
     marginLeft: theme.space.x2
+  },
+  ".ReactVirtualized__Grid:focus": {
+    outline: "none"
   }
 });
 
