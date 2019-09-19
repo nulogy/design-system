@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.13.0] - 2019-09-19
+
+### Added
+
 - Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alerts/)
 - Added `defaultValue` to [Select](http://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue)
 - Added Drag icon to [Icon component](https://nulogy.design/components/icon/)
@@ -29,10 +43,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   ```js
   <Button asLink>Click</Button>
   ```
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
