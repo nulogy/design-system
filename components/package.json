@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -79,7 +79,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "@nulogy/tokens": "^0.12.0",
+    "@nulogy/tokens": "^0.13.0",
     "@storybook/theming": "^5.0.11",
     "downshift": "3.2.2",
     "plop": "^2.4.0",
