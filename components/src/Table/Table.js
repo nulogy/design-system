@@ -103,6 +103,11 @@ const Table = ({ columns, rows, noRowsContent }) => (
   </WindowScroller>
 );
 Table.propTypes = {
+  columns: PropTypes.shape({
+    label: PropTypes.string,
+    dataKey: PropTypes.string
+  }).isRequired,
+  rows: PropTypes.objectOf(PropTypes.object).isRequired,
   noRowsContent: PropTypes.string
 };
 
