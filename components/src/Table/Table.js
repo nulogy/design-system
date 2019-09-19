@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Table as RVTable, Column as RVColumn, AutoSizer, WindowScroller } from "react-virtualized";
 
-import { theme } from "..";
+import { theme, Box } from "..";
 
 const StyledTable = styled(RVTable)({
   ".ReactVirtualized__Table": {},
@@ -56,6 +56,12 @@ const StyledTable = styled(RVTable)({
   }
 });
 
+const NoRowsContainer = styled(Box)({
+  padding: `${theme.space.x3} 0`,
+  fontSize: theme.fontSizes.small,
+  color: theme.colors.darkGrey
+});
+
 const generateColumns = columns =>
   columns.map(({ label, dataKey, align }, index) => (
     <RVColumn
@@ -71,7 +77,7 @@ const rowGetter = rows => ({ index }) => rows[index];
 
 const ROW_HEIGHT = 56;
 
-const Table = ({ columns, rows }) => (
+const Table = ({ columns, rows, noRowsContent }) => (
   <WindowScroller>
     {({ height, isScrolling, onChildScroll, scrollTop }) => (
       <AutoSizer disableHeight>
@@ -87,6 +93,7 @@ const Table = ({ columns, rows }) => (
             headerHeight={ROW_HEIGHT}
             rowGetter={rowGetter(rows)}
             rowCount={rows.length}
+            noRowsRenderer={() => <NoRowsContainer>{noRowsContent}</NoRowsContainer>}
           >
             {generateColumns(columns)}
           </StyledTable>
@@ -95,8 +102,12 @@ const Table = ({ columns, rows }) => (
     )}
   </WindowScroller>
 );
-Table.propTypes = {};
+Table.propTypes = {
+  noRowsContent: PropTypes.string
+};
 
-Table.defaultProps = {};
+Table.defaultProps = {
+  noRowsContent: "No records have been created for this table."
+};
 
 export default Table;
