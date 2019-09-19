@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Table } from ".";
+import { Box } from "..";
 
 const columns = [
   { label: "Column 1", dataKey: "c1" },
@@ -32,4 +33,9 @@ storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
   .add("with a lot of data", () => <Table columns={columns} rows={generateLotsOfRows()} />)
-  .add("with no data", () => <Table columns={columns} rows={[]} />);
+  .add("with no data", () => <Table columns={columns} rows={[]} />)
+  .add("truncated", () => (
+    <Box width={400}>
+      <Table columns={columns} rows={generateLotsOfRows()} />
+    </Box>
+  ));
