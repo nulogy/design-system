@@ -63,13 +63,15 @@ const NoRowsContainer = styled(Box)({
 });
 
 const generateColumns = columns =>
-  columns.map(({ label, dataKey, align }, index) => (
+  columns.map(({ label, dataKey, align }) => (
     <RVColumn
       className={align === "right" ? "rowColumn--alignRight" : undefined}
-      key={index}
+      key={dataKey}
       label={label}
       dataKey={dataKey}
       width={100}
+      flexGrow={1}
+      flexShrink={1}
     />
   ));
 
