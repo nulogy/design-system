@@ -18,7 +18,7 @@ const columnsWithAlignment = [
   { label: "Column 3", dataKey: "c3", align: "right" }
 ];
 
-const rowData = [{ c1: "r1c1", c2: "r1c2", c3: "r1c3" }, { c1: "r2c1", c2: "r2c2", c3: "r2c3" }];
+const rowData = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "r1c3" }, { c1: "r2c1", c2: "r2c2", c3: "r2c3" }];
 
 const generateLotsOfRows = () => {
   const rows = [];
@@ -36,6 +36,6 @@ storiesOf("Table", module)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("truncated", () => (
     <Box width={400}>
-      <Table columns={columns} rows={generateLotsOfRows()} />
+      <Table columns={columns} rows={rowData} />
     </Box>
   ));
