@@ -22,7 +22,7 @@ const rowData = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "r1c3" }, { c1: "r2c1", c
 
 const generateLotsOfRows = () => {
   const rows = [];
-  for (let i = 0; i < 10000; i++) {
+  for (let i = 0; i < 10000; i += 1) {
     rows.push({ c1: `r${i}c1`, c2: `r${i}c2`, c3: `r${i}c3`, c4: `r${i}c4`, c5: `r${i}c5`, c6: `r${i}c6` });
   }
 
