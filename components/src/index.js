@@ -29,8 +29,6 @@ export { Card, CardSet, CPCard } from "./Card";
 export { Modal } from "./Modal";
 export { Tab, Tabs } from "./Tabs";
 
-export { DemoPage } from "./DemoPage";
+export { Table } from "./Table";
 
-// Components listed after this comment have been automatically
-// added to this page and may need to be moved up in the list
-// if they are dependencies for other components
+export { DemoPage } from "./DemoPage";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Text, Title } from "../Type";
+import { Text, Title, SubsectionTitle } from "../Type";
 import { PrimaryButton, QuietButton, IconicButton } from "../Button";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -15,6 +15,7 @@ import { List, ListItem } from "../List";
 import { Select } from "../Select";
 import { Link } from "../Link";
 import NavBar from "../NavBar/NavBar";
+import { Table } from "../Table";
 import theme from "../theme";
 
 const menuData = {
@@ -227,6 +228,14 @@ Chrome.defaultProps = {
 
 const Main = styled(Flex)({});
 
+const columns = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3" }
+];
+
+const rowData = [{ c1: "r1c1", c2: "r1c2", c3: "r1c3" }, { c1: "r2c1", c2: "r2c2", c3: "r2c3" }];
+
 const DemoPage = () => {
   const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
   return (
@@ -257,6 +266,10 @@ const DemoPage = () => {
         </Sidebar>
         <Box width="100%" bg="white" p="x3">
           <Title>Job Page</Title>
+
+          <SubsectionTitle>Some summary data</SubsectionTitle>
+          <Table columns={columns} rows={rowData} />
+
           <Box width={{ extraSmall: "100%", small: "80%", medium: "80%" }}>
             <Form title="Job 324400" mb="x4">
               <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
@@ -268,6 +281,7 @@ const DemoPage = () => {
                   </ListItem>
                 </List>
               </HeaderValidation>
+
               <FormSection title="Job Information">
                 <Input id="project" labelText="Project" placeholder="Project 128703" />
                 <Input
