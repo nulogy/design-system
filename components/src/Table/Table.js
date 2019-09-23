@@ -111,7 +111,7 @@ Table.propTypes = {
       dataKey: PropTypes.string.isRequired
     })
   ).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.object)).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   noRowsContent: PropTypes.string
 };
 
