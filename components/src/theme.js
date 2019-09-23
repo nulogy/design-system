@@ -20,6 +20,7 @@ export default {
     lightRed: tokens.color_base_light_red
   },
   fontSizes: {
+    smaller: tokens.size_font_smaller,
     small: tokens.size_font_small,
     medium: tokens.size_font_medium,
     large: tokens.size_font_large,
@@ -32,7 +33,8 @@ export default {
     sectionTitle: tokens.line_height_section_title,
     subsectionTitle: tokens.line_height_subsection_title,
     smallTextBase: tokens.line_height_small_text_base,
-    smallTextCompressed: tokens.line_height_small_text_compressed
+    smallTextCompressed: tokens.line_height_small_text_compressed,
+    smallerText: tokens.line_height_smaller_text
   },
   fontWeights: {
     light: tokens.weight_font_light,
