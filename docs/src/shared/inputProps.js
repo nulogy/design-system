@@ -2,7 +2,7 @@ const inputProps = [
   {
     name: "id",
     type: "String",
-    defaultValue: "Required",
+    defaultValue: "null",
     description: "A unique ID for this input"
   },
   {
