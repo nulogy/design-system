@@ -22,7 +22,7 @@ import {
 const propsRows = [
   {
     name: "column",
-    type: "object",
+    type: "array",
     defaultValue: "Required",
     description: "An array of column objects consisting of a label and dataKey"
   },
