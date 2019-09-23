@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Table as RVTable, Column as RVColumn, AutoSizer, WindowScroller } from "react-virtualized";
 
-import { theme, Box } from "..";
+import theme from "../theme";
+import { Box } from "../Box";
 
 const StyledTable = styled(RVTable)({
   ".ReactVirtualized__Table": {},
