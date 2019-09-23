@@ -8,7 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+
 - Added 12px font size to [theme](https://nulogy.design/theme/)
+- Added a [Table](https://storybook.nulogy.design/?path=/story/table--table-with-data)
+  - Currently in-development
+    - Read-only so far
 
 ### Changed
 
