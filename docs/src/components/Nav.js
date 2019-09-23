@@ -48,6 +48,7 @@ NavContainer.defaultProps = {
 };
 
 const NavLink = styled(Link)({
+  display: "inline-block",
   transition: "background .2s",
   padding: theme.space.x1,
   marginLeft: theme.space.x1,
@@ -63,7 +64,6 @@ const NavLink = styled(Link)({
 });
 
 const NavItem = styled.li({
-  margin: theme.space.x2,
   marginLeft: theme.space.x1,
   listStyle: "none"
 });
@@ -132,7 +132,7 @@ class Navigation extends React.Component {
           </NavLink>
           <Box mt="x4">
             {menuData.map(menuItem => (
-              <Box key={menuItem.name} mb="x6" p="0">
+              <Box key={menuItem.name} mb="x5" p="0">
                 <SubsectionTitle color="whiteGrey" ml="x2">
                   {menuItem.name}
                 </SubsectionTitle>
