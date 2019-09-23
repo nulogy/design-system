@@ -32,7 +32,7 @@ const generateLotsOfRows = () => {
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
-  .add("with a lot of data", () => <Table columns={columns} rows={generateLotsOfRows()} />)
+  // .add("with a lot of data", () => <Table columns={columns} rows={generateLotsOfRows()} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("truncated", () => (
     <Box width={400}>
