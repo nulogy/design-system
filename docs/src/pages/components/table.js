@@ -4,6 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
+  Box,
   SectionTitle,
   Title,
   Link,
@@ -47,6 +48,19 @@ const dateToString = ({ rowData, dataKey }) => {
   return new Date(cellContent).toDateString();
 };
 
+// eslint-disable-next-line react/prop-types
+const customCellRenderer = ({ cellData }) => (
+  <Box bg="blue" color="white" p="x1" display="inline-block" title={cellData}>
+    <span role="img" aria-label="star">
+      ⭐
+    </span>
+    {cellData}
+    <span role="img" aria-label="star">
+      ⭐
+    </span>
+  </Box>
+);
+
 const columns = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
@@ -62,6 +76,12 @@ const columnsWithFormatter = [
 const rows = [
   { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
+];
+
+const columnsWithCellRenderer = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
 ];
 
 export default () => (
@@ -81,7 +101,7 @@ export default () => (
       <Highlight className="js">
         {`import {Table} from "@nulogy/table";
 
-const columnsWithFormatter = [
+const columns = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
   { label: "Column 3", dataKey: "c3" },
@@ -115,7 +135,41 @@ const columnsWithFormatter = [
 
 const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
-<Table columns={columnsWithFormatter} rows={rows} />
+<Table columns={columnsWithFormatter} rows={rows} />`}
+      </Highlight>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>With a custom component</SectionTitle>
+      <Text>
+        Providing a cellRenderer function inside the column data will allow
+        display of arbitrary cell content.
+      </Text>
+      <Table columns={columnsWithCellRenderer} rows={rows} />
+      <Highlight className="js">
+        {`const customCellRenderer = ({ cellData }) => (
+  <Box bg="blue" color="white" p="x1" display="inline-block" title={cellData}>
+    <span role="img" aria-label="star">
+      ⭐
+    </span>
+    {cellData}
+    <span role="img" aria-label="star">
+      ⭐
+    </span>
+  </Box>
+);
+
+const columnsWithCellRenderer = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
+];
+
+const rows = [
+  { c1: "r1c1", c2: "r1c2", c3: "r1c3" },
+  { c1: "r2c1", c2: "r2c2", c3: "r2c3" }
+];
+
+<Table columns={columnsWithCellRenderer} rows={rows} />
 `}
       </Highlight>
     </DocSection>
