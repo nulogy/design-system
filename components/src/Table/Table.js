@@ -64,7 +64,7 @@ const NoRowsContainer = styled(Box)({
 });
 
 const generateColumns = columns =>
-  columns.map(({ label, dataKey, align }) => (
+  columns.map(({ label, dataKey, align, cellDataGetter }) => (
     <RVColumn
       className={align === "right" ? "rowColumn--alignRight" : undefined}
       key={dataKey}
@@ -73,6 +73,7 @@ const generateColumns = columns =>
       width={100}
       flexGrow={1}
       flexShrink={1}
+      cellDataGetter={cellDataGetter}
     />
   ));
 
@@ -80,7 +81,7 @@ const rowGetter = rows => ({ index }) => rows[index];
 
 const ROW_HEIGHT = 56;
 
-const Table = ({ columns, rows, noRowsContent }) => (
+const Table = ({ columns, rows, noRowsContent, cellDataGetter }) => (
   <WindowScroller>
     {({ height, isScrolling, onChildScroll, scrollTop }) => (
       <AutoSizer disableHeight>
