@@ -149,6 +149,16 @@ const getValue = (opts, val) => {
   return opts.find(o => o.value === val);
 };
 
+const extractValue = (options, isMulti) => {
+  if (options === undefined) return options;
+
+  if (isMulti) {
+    return options.map(o => o.value);
+  } else {
+    return options.value;
+  }
+};
+
 const ReactSelect = ({
   autocomplete,
   options,
@@ -190,7 +200,7 @@ const ReactSelect = ({
         defaultMenuIsOpen={initialIsOpen}
         maxMenuHeight={maxHeight}
         inputId={id}
-        onChange={onChange && (option => onChange(option && option.value))}
+        onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
         defaultValue={getValue(options, defaultValue)}
         value={getValue(options, value)}
         name={name}
