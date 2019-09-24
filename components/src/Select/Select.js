@@ -11,31 +11,22 @@ import { subPx } from "../utils";
 const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
-  if (errored) {
-    return red;
-  }
-
-  if (disabled) {
-    return lightGrey;
-  }
-  if (isOpen || isFocused) {
-    return blue;
-  }
+  if (errored) return red;
+  if (disabled) return lightGrey;
+  if (isOpen || isFocused) return blue;
 
   return grey;
 };
 
 const getShadow = ({ errored, isOpen }) => {
+  if (!isOpen) return null;
+
   const { focus, error } = theme.shadows;
 
-  if (isOpen) {
-    if (errored) {
-      return error;
-    } else {
-      return focus;
-    }
+  if (errored) {
+    return error;
   } else {
-    return null;
+    return focus;
   }
 };
 
@@ -153,9 +144,8 @@ const customStyles = error => {
 };
 
 const getValue = (opts, val) => {
-  if (val === "") {
-    return "";
-  }
+  if (val === "") return val;
+
   return opts.find(o => o.value === val);
 };
 
