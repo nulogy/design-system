@@ -12,14 +12,7 @@ describe("select", () => {
 
     const callback = jest.fn();
 
-    const { container, queryByText } = render(
-      <Select
-        noOptionsMessage={() => "No options"}
-        options={options}
-        labelText="Select something"
-        onChange={callback}
-      />
-    );
+    const { container, queryByText } = render(<Select options={options} onChange={callback} />);
 
     selectOption("Two", container, queryByText);
 
@@ -37,15 +30,7 @@ describe("multi select", () => {
 
     const callback = jest.fn();
 
-    const { container, queryByText } = render(
-      <Select
-        noOptionsMessage={() => "No options"}
-        options={options}
-        labelText="Select some things"
-        multiselect
-        onChange={callback}
-      />
-    );
+    const { container, queryByText } = render(<Select options={options} multiselect onChange={callback} />);
 
     selectOption("Three", container, queryByText);
 
