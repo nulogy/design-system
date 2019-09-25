@@ -33,8 +33,9 @@ describe("multi select", () => {
     const { container, queryByText } = render(<Select options={options} multiselect onChange={callback} />);
 
     selectOption("Three", container, queryByText);
+    selectOption("Two", container, queryByText);
 
-    expect(callback).toHaveBeenCalledWith(["three"]);
+    expect(callback).toHaveBeenCalledWith(["three", "two"]);
   });
 });
 
