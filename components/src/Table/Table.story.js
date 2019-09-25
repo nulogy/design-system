@@ -26,7 +26,7 @@ const columnsWithAlignment = [
 const columnsWithFormatter = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellDataGetter: dateToString }
+  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
 ];
 
 const rowData = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
