@@ -9,11 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added 12px font size to [theme](https://nulogy.design/theme/)
-- Added a [Table](https://storybook.nulogy.design/?path=/story/table--table-with-data)
-  - Currently in-development
-    - Read-only so far
-
 ### Changed
 
 ### Deprecated
@@ -23,6 +18,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 ### Security
+
+## [0.13.1] - 2019-09-25
+
+### Added
+
+- Added 12px font size to [theme](https://nulogy.design/theme/)
+- Added a [Table](https://storybook.nulogy.design/?path=/story/table--table-with-data)
+  - Currently in-development
+    - Read-only so far
+
+### Fixed
+
+- `Select`'s `onChange` now returns an array of the values of the selected options.
+  - Before, it used to return `undefined`. :(
+  - Now, if the options are `[{label: "A", value: "a"}, {label: "B", value: "b"}]`, and you select both, `onChange` will return `["a", "b"]`
 
 ## [0.13.0] - 2019-09-19
 
