@@ -174,6 +174,10 @@ export const menuData = [
         href: "https://github.com/nulogy/design-system"
       },
       {
+        name: "Storybook",
+        href: "https://storybook.nulogy.design"
+      },
+      {
         name: "Theme",
         href: "/theme"
       },
