@@ -38,12 +38,12 @@ describe("multi select", () => {
   });
 });
 
-function selectOption(text, container, queryByText) {
-  expect(queryByText(text)).toBeNull();
+function selectOption(optionText, container, queryByText) {
+  expect(queryByText(optionText)).toBeNull();
 
   fireEvent.focus(container.querySelector("input"));
   fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
 
-  expect(queryByText(text)).not.toBeNull();
-  fireEvent.click(queryByText(text));
+  expect(queryByText(optionText)).not.toBeNull();
+  fireEvent.click(queryByText(optionText));
 }
