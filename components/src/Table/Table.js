@@ -81,7 +81,7 @@ const rowGetter = rows => ({ index }) => rows[index];
 
 const ROW_HEIGHT = 56;
 
-const Table = ({ columns, rows, noRowsContent, cellDataGetter }) => (
+const Table = ({ columns, rows, noRowsContent }) => (
   <WindowScroller>
     {({ height, isScrolling, onChildScroll, scrollTop }) => (
       <AutoSizer disableHeight>
