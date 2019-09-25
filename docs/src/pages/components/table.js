@@ -94,7 +94,7 @@ export default () => (
       </Box>
       <Alert>
         This component is in active development and may not be available in the
-        latest NDS release. For more information, see #design-systems on slack.
+        latest NDS release. For more information, see #design-system on slack.
       </Alert>
     </Intro>
 
