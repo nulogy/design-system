@@ -9,7 +9,8 @@ import {
   Link,
   List,
   ListItem,
-  Table
+  Table,
+  Text
 } from "@nulogy/components";
 import {
   Layout,
@@ -41,15 +42,26 @@ const propsRows = [
   }
 ];
 
+const dateToString = ({ rowData, dataKey }) => {
+  const cellContent = rowData[dataKey];
+  return new Date(cellContent).toDateString();
+};
+
 const columns = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
   { label: "Column 3", dataKey: "c3" }
 ];
 
-const rowData = [
-  { c1: "r1c1", c2: "r1c2", c3: "r1c3" },
-  { c1: "r2c1", c2: "r2c2", c3: "r2c3" }
+const columnsWithFormatter = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
+];
+
+const rows = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
 ];
 
 export default () => (
@@ -65,22 +77,45 @@ export default () => (
     </Intro>
 
     <DocSection>
-      <Table columns={columns} rows={rowData} />
+      <Table columns={columns} rows={rows} />
       <Highlight className="js">
         {`import {Table} from "@nulogy/table";
 
-const columns = [
+const columnsWithFormatter = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
   { label: "Column 3", dataKey: "c3" },
 ];
 
-const rows = [
-  { c1: "r1c1", c2: "r1c2", c3: "r1c3" },
-  { c1: "r2c1", c2: "r2c2", c3: "r2c3" }
-];
+const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
 <Table columns={columns} rows={rows} />
+`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With a cell formatter</SectionTitle>
+      <Text>
+        Providing a cellFormatter function inside the column data will allow
+        formatting of the cell contents.
+      </Text>
+      <Table columns={columnsWithFormatter} rows={rows} />
+      <Highlight className="js">
+        {`const dateToString = ({ rows, dataKey }) => {
+  const cellContent = rows[dataKey];
+  return new Date(cellContent).toDateString();
+};
+
+const columnsWithFormatter = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
+];
+
+const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+
+<Table columns={columnsWithFormatter} rows={rows} />
 `}
       </Highlight>
     </DocSection>
