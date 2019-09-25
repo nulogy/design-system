@@ -18,6 +18,20 @@ describe("select", () => {
 
     expect(callback).toHaveBeenCalledWith("two");
   });
+
+  it("selects the specified default value", () => {
+    const options = [
+      { label: "One", value: "one" },
+      { label: "Two", value: "two" },
+      { label: "Three", value: "three" }
+    ];
+
+    const { container, queryByText } = render(<Select options={options} defaultValue="two" />);
+
+    expect(container).toHaveTextContent("Two");
+    selectOption("Three", container, queryByText);
+    expect(container).toHaveTextContent("Three");
+  });
 });
 
 describe("multi select", () => {
@@ -39,11 +53,15 @@ describe("multi select", () => {
   });
 });
 
+function openDropdown(container) {
+  fireEvent.focus(container.querySelector("input"));
+  fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
+}
+
 function selectOption(optionText, container, queryByText) {
   expect(queryByText(optionText)).toBeNull();
 
-  fireEvent.focus(container.querySelector("input"));
-  fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
+  openDropdown(container);
 
   expect(queryByText(optionText)).not.toBeNull();
   fireEvent.click(queryByText(optionText));
