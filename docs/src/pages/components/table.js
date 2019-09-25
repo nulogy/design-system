@@ -4,6 +4,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
+  Box,
+  Alert,
   IconicButton,
   SectionTitle,
   Title,
@@ -85,9 +87,15 @@ export default () => (
     </Helmet>
     <Intro>
       <Title>Table</Title>
-      <IntroText>
-        Tables are used for displaying columns and rows of data.
-      </IntroText>
+      <Box mb="x3">
+        <IntroText>
+          Tables are used for displaying columns and rows of data.
+        </IntroText>
+      </Box>
+      <Alert>
+        This component is in active development and may not be available in the
+        latest NDS release. For more information, see #design-systems on slack.
+      </Alert>
     </Intro>
 
     <DocSection>
@@ -153,8 +161,8 @@ const columnsWithCellRenderer = [
 ];
 
 const rows = [
-  { c1: "r1c1", c2: "r1c2", c3: "r1c3" },
-  { c1: "r2c1", c2: "r2c2", c3: "r2c3" }
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
 ];
 
 <Table columns={columnsWithCellRenderer} rows={rows} />
