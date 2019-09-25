@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Table } from ".";
-import { Box } from "..";
+import { Box, IconicButton } from "..";
 
 const dateToString = ({ rowData, dataKey }) => {
   const cellContent = rowData[dataKey];
@@ -10,15 +10,9 @@ const dateToString = ({ rowData, dataKey }) => {
 
 // eslint-disable-next-line react/prop-types
 const customCellRenderer = ({ cellData }) => (
-  <Box bg="blue" color="white" p="x1" display="inline-block" title={cellData}>
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-    {cellData}
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-  </Box>
+  <>
+    <IconicButton icon="delete">{cellData}</IconicButton>
+  </>
 );
 
 const columns = [

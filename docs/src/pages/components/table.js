@@ -4,7 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Box,
+  IconicButton,
   SectionTitle,
   Title,
   Link,
@@ -50,15 +50,9 @@ const dateToString = ({ rowData, dataKey }) => {
 
 // eslint-disable-next-line react/prop-types
 const customCellRenderer = ({ cellData }) => (
-  <Box bg="blue" color="white" p="x1" display="inline-block" title={cellData}>
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-    {cellData}
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-  </Box>
+  <>
+    <IconicButton icon="delete">{cellData}</IconicButton>
+  </>
 );
 
 const columns = [
@@ -147,15 +141,9 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
       <Table columns={columnsWithCellRenderer} rows={rows} />
       <Highlight className="js">
         {`const customCellRenderer = ({ cellData }) => (
-  <Box bg="blue" color="white" p="x1" display="inline-block" title={cellData}>
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-    {cellData}
-    <span role="img" aria-label="star">
-      ⭐
-    </span>
-  </Box>
+  <>
+    <IconicButton icon="delete">{cellData}</IconicButton>
+  </>
 );
 
 const columnsWithCellRenderer = [
