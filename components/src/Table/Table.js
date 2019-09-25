@@ -64,7 +64,7 @@ const NoRowsContainer = styled(Box)({
 });
 
 const generateColumns = columns =>
-  columns.map(({ label, dataKey, align, cellFormatter }) => (
+  columns.map(({ label, dataKey, align, cellFormatter, cellRenderer }) => (
     <RVColumn
       className={align === "right" ? "rowColumn--alignRight" : undefined}
       key={dataKey}
@@ -74,6 +74,7 @@ const generateColumns = columns =>
       flexGrow={1}
       flexShrink={1}
       cellDataGetter={cellFormatter}
+      cellRenderer={cellRenderer}
     />
   ));
 
