@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { Box, Flex, Text, Title, SectionTitle } from "@nulogy/components";
+import {
+  Box,
+  Flex,
+  Text,
+  Title,
+  SectionTitle,
+  List,
+  ListItem,
+  Link
+} from "@nulogy/components";
 import * as tokens from "@nulogy/tokens";
 import { Layout, DocSection, Intro, IntroText } from "../../components";
 
@@ -76,6 +85,15 @@ export default () => (
         <Palette name="Yellow" colour={tokens.color_base_yellow} />
         <Palette name="Light Yellow" colour={tokens.color_base_light_yellow} />
       </Flex>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related links</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

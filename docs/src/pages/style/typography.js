@@ -1,10 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Highlight from "react-highlight";
 import {
   Box,
   Flex,
   Text,
   Title,
+  Link,
+  List,
+  ListItem,
   SectionTitle,
   SubsectionTitle
 } from "@nulogy/components";
@@ -82,6 +86,25 @@ export default () => (
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
 `}
       </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related links</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://nulogy.design/components/text">
+            Text component
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://nulogy.design/components/headings">
+            Headings component
+          </Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );
