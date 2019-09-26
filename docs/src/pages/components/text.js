@@ -164,7 +164,7 @@ export default () => (
       <Text>
         All Text props can be used responsively by using an object that defines
         small, medium and/or large, based on the{" "}
-        <Link href="https://nulogy.design/theme">theme.breakpoints</Link> object
+        <Link href="/theme">theme.breakpoints</Link> object
       </Text>
       <Text>
         This example displays columns on small screens and rows on large ones.
@@ -197,7 +197,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+          <Link href="/theme/">NDS theme</Link>
         </ListItem>
         <ListItem>
           <Link href="https://storybook.nulogy.design/?path=/story/textarea--textarea">

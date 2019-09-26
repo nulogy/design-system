@@ -8,7 +8,8 @@ import {
   Title,
   SectionTitle,
   List,
-  ListItem
+  ListItem,
+  Link
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
 import theme from "../../../../components/src/theme";
@@ -111,6 +112,14 @@ export default () => (
           element, e.g a button’s text and it’s icon.
         </em>
       </Text>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Related links</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/theme/">NDS theme</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );

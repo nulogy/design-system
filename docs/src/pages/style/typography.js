@@ -1,10 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Highlight from "react-highlight";
 import {
   Box,
   Flex,
   Text,
   Title,
+  Link,
+  List,
+  ListItem,
   SectionTitle,
   SubsectionTitle
 } from "@nulogy/components";
@@ -69,6 +73,34 @@ export default () => (
         Standard text should set at 16px for most cases, but 14px or 12px is
         also available.
       </Text>
+    </DocSection>
+    <DocSection mb="x8">
+      <SectionTitle>Usage</SectionTitle>
+      <Text>
+        Plex can be loaded in your application through whichever method you
+        prefer to load fonts. An example of loading through Google fonts is
+        shown below.
+      </Text>
+      <Highlight className="js">
+        {`<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
+`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related links</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/theme/">NDS theme</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/text">Text component</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/headings">Headings component</Link>
+        </ListItem>
+      </List>
     </DocSection>
   </Layout>
 );
