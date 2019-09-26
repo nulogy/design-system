@@ -70,5 +70,18 @@ export default () => (
         also available.
       </Text>
     </DocSection>
+    <DocSection mb="x8">
+      <SectionTitle>Usage</SectionTitle>
+      <Text>
+        Plex can be loaded in your application through whichever method you
+        prefer to load fonts. An example of loading through Google fonts is
+        shown below.
+      </Text>
+      <Highlight className="js">
+        {`<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
+`}
+      </Highlight>
+    </DocSection>
   </Layout>
 );
