@@ -85,7 +85,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+          <Link href="/theme/">NDS theme</Link>
         </ListItem>
         <ListItem>
           <Link href="https://storybook.nulogy.design/?path=/story/headings--title">

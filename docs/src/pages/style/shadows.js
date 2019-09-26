@@ -43,7 +43,7 @@ export default () => (
           <Link href="/components/box">Box component</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+          <Link href="/theme/">NDS theme</Link>
         </ListItem>
       </List>
     </DocSection>

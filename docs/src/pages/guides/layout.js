@@ -408,9 +408,8 @@ export default () => (
       <SectionTitle>Responsiveness</SectionTitle>
       <Text>
         Providing different prop values for different breaking points that are
-        based on the{" "}
-        <Link href="https://nulogy.design/theme">theme.breakpoints</Link> is
-        possible by passing an object to a prop.
+        based on the <Link href="/theme">theme.breakpoints</Link> is possible by
+        passing an object to a prop.
       </Text>
       <Text mb="x2" color="darkGrey">
         Size and background colour change based on the screen size

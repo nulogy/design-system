@@ -91,7 +91,7 @@ export default () => (
       <SectionTitle>Related links</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+          <Link href="/theme/">NDS theme</Link>
         </ListItem>
       </List>
     </DocSection>

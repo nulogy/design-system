@@ -92,17 +92,13 @@ export default () => (
       <SectionTitle>Related links</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://nulogy.design/theme/">NDS theme</Link>
+          <Link href="/theme/">NDS theme</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://nulogy.design/components/text">
-            Text component
-          </Link>
+          <Link href="/components/text">Text component</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://nulogy.design/components/headings">
-            Headings component
-          </Link>
+          <Link href="/components/headings">Headings component</Link>
         </ListItem>
       </List>
     </DocSection>
