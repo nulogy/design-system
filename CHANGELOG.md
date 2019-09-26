@@ -19,6 +19,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [0.13.2] - 2019-09-26
+
+### Security
+
+- Fixes #388
+- Also updates a bunch of dependencies to address `yarn audit` issues
+
 ## [0.13.1] - 2019-09-25
 
 ### Added
