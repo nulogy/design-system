@@ -51,7 +51,6 @@ const getCheckboxStyle = (props, checked) => {
 const VisualCheckbox = styled.div({
   minWidth: theme.space.x2,
   height: theme.space.x2,
-  marginRight: theme.space.x1,
   borderRadius: theme.radii.small,
   border: "solid 1px",
   position: "relative",
@@ -96,7 +95,9 @@ const BaseCheckbox = props => {
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput type="checkbox" required={required} aria-required={required} aria-invalid={error} {...props} />
         <VisualCheckbox disabled={disabled} checked={checked} />
-        <Text disabled={disabled}> {labelText} </Text>
+        <Text disabled={disabled} ml={theme.space.x1}>
+          {labelText}
+        </Text>
       </ClickInputLabel>
     </Box>
   );
