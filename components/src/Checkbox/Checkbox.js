@@ -95,9 +95,7 @@ const BaseCheckbox = props => {
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput type="checkbox" required={required} aria-required={required} aria-invalid={error} {...props} />
         <VisualCheckbox disabled={disabled} checked={checked} />
-        <Text disabled={disabled} ml={theme.space.x1}>
-          {labelText}
-        </Text>
+        <Text disabled={disabled}>{labelText}</Text>
       </ClickInputLabel>
     </Box>
   );
@@ -128,6 +126,11 @@ BaseCheckbox.defaultProps = {
 const Checkbox = styled(BaseCheckbox)(
   {
     padding: `${theme.space.half} 0`
+  },
+  {
+    [`& ${Text}`]: {
+      marginLeft: theme.space.x1
+    }
   },
   space
 );
