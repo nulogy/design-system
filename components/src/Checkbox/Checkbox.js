@@ -104,7 +104,7 @@ const BaseCheckbox = props => {
 };
 
 BaseCheckbox.propTypes = {
-  labelText: PropTypes.string.isRequired,
+  labelText: PropTypes.string,
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -115,6 +115,7 @@ BaseCheckbox.propTypes = {
 };
 
 BaseCheckbox.defaultProps = {
+  labelText: undefined,
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,

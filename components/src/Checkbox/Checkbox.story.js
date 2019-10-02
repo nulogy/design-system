@@ -11,6 +11,11 @@ storiesOf("Checkbox", module)
       <Checkbox id="checkbox-2" checked disabled labelText="I am disabled" />
     </>
   ))
+  .add("Checkbox with no label", () => (
+    <>
+      <Checkbox />
+    </>
+  ))
   .add("Set to error", () => (
     <>
       <Checkbox id="checkbox" error labelText="I am error" />
