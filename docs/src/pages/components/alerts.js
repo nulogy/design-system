@@ -125,6 +125,21 @@ export default () => (
         <Alert type="warning">Text</Alert>
         <Highlight className="js">{`<Alert type="warning">Text</Alert>`}</Highlight>
       </Box>
+      <Box mb="x6">
+        <SubsectionTitle>Alert with Link</SubsectionTitle>
+        <Text>
+          A link may be added to the content of an alert. Within alerts, link
+          text is always displayed in black.
+        </Text>
+        <Alert>
+          Alert text with <Link href="/">linked details</Link>.
+        </Alert>
+        <Highlight className="js">
+          {`<Alert>
+  Alert text <Link href="/">linked details</Link>.
+</Alert>`}
+        </Highlight>
+      </Box>
       {/* <Box mb="x6">
         <SubsectionTitle>With a title</SubsectionTitle>
         <Alert title="Alert title">Text</Alert>
