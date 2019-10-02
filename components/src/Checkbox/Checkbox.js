@@ -95,7 +95,7 @@ const BaseCheckbox = props => {
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput type="checkbox" required={required} aria-required={required} aria-invalid={error} {...props} />
         <VisualCheckbox disabled={disabled} checked={checked} />
-        <Text disabled={disabled}>{labelText}</Text>
+        {labelText && <Text disabled={disabled}>{labelText}</Text>}
       </ClickInputLabel>
     </Box>
   );
