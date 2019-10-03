@@ -1,32 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import { space } from "styled-system";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
-import theme from "../theme";
-
-const alertColours = {
-  danger: {
-    borderColor: theme.colors.red,
-    backgroundColor: theme.colors.lightRed
-  },
-  informative: {
-    borderColor: theme.colors.blue,
-    backgroundColor: theme.colors.lightBlue
-  },
-  success: {
-    borderColor: theme.colors.green,
-    backgroundColor: theme.colors.lightGreen
-  },
-  warning: {
-    borderColor: theme.colors.yellow,
-    backgroundColor: theme.colors.lightYellow
-  }
-};
 
 class BaseAlert extends React.Component {
   constructor() {
@@ -41,14 +21,33 @@ class BaseAlert extends React.Component {
   }
 
   render() {
-    const { children, isCloseable, title, type, className, ...props } = this.props;
+    const { children, isCloseable, title, type, className, theme, ...props } = this.props;
     const { isVisible } = this.state;
+
+    const alertColours = {
+      danger: {
+        borderColor: theme.colors.red,
+        backgroundColor: theme.colors.lightRed
+      },
+      informative: {
+        borderColor: theme.colors.blue,
+        backgroundColor: theme.colors.lightBlue
+      },
+      success: {
+        borderColor: theme.colors.green,
+        backgroundColor: theme.colors.lightGreen
+      },
+      warning: {
+        borderColor: theme.colors.yellow,
+        backgroundColor: theme.colors.lightYellow
+      }
+    };
 
     return isVisible ? (
       <Flex
         bg={alertColours[type].backgroundColor}
         p="x2"
-        borderRadius={theme.radii.medium}
+        borderRadius="medium"
         borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
         role="alert"
         className={className}
@@ -77,7 +76,8 @@ BaseAlert.propTypes = {
   className: PropTypes.string,
   isCloseable: PropTypes.node,
   title: PropTypes.string,
-  type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
+  type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
+  theme: PropTypes.node.isRequired
 };
 
 BaseAlert.defaultProps = {
@@ -89,4 +89,4 @@ BaseAlert.defaultProps = {
 
 const Alert = styled(BaseAlert)(space);
 
-export default Alert;
+export default withTheme(Alert);
