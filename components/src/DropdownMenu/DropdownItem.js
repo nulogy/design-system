@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
-import theme from "../theme";
 
 const DropdownItem = styled.div(props => ({
   "*": {
@@ -12,10 +11,10 @@ const DropdownItem = styled.div(props => ({
     border: "none",
     textAlign: "left",
     backgroundColor: "transparent",
-    lineHeight: theme.lineHeights.base,
+    lineHeight: props.theme.lineHeights.base,
     transition: ".2s",
-    fontSize: `${theme.fontSizes.medium}`,
-    padding: `${theme.space.x1} ${theme.space.x2}`,
+    fontSize: props.theme.fontSizes.medium,
+    padding: `${props.theme.space.x1} ${props.theme.space.x2}`,
     "&:hover, &:focus": {
       outline: "none",
       color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),

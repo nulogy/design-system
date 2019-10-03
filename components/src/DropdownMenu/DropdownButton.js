@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "styled-system";
-import theme from "../theme";
 
 const DropdownButton = styled.button(props => ({
   display: "block",
@@ -11,11 +10,11 @@ const DropdownButton = styled.button(props => ({
   border: "none",
   textAlign: "left",
   backgroundColor: "transparent",
-  lineHeight: theme.lineHeights.base,
-  fontSize: theme.fontSizes.medium,
+  lineHeight: props.theme.lineHeights.base,
+  fontSize: props.theme.fontSizes.medium,
   transition: ".2s",
-  padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
-  borderLeft: `${theme.space.half} solid transparent`,
+  padding: `${props.theme.space.x1} ${props.theme.space.x2} ${props.theme.space.x1} 12px`,
+  borderLeft: `${props.theme.space.half} solid transparent`,
   "&:hover": {
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
     backgroundColor: props.disabled
@@ -26,7 +25,7 @@ const DropdownButton = styled.button(props => ({
     outline: "none",
     color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
     backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props),
-    borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
+    borderLeft: `${props.theme.space.half}  solid ${props.theme.colors.blue}`
   },
   "&:disabled": {
     opacity: ".5"
@@ -41,10 +40,10 @@ DropdownButton.propTypes = {
 };
 
 DropdownButton.defaultProps = {
-  color: theme.colors.darkBlue,
+  color: "darkBlue",
   disabled: false,
-  hoverColor: theme.colors.darkBlue,
-  bgHoverColor: theme.colors.lightGrey
+  hoverColor: "darkBlue",
+  bgHoverColor: "lightGrey"
 };
 
 export default DropdownButton;
