@@ -4,21 +4,43 @@ import styled from "styled-components";
 
 import theme from "../theme";
 
+const StyledTable = styled.table({
+  borderCollapse: "collapse",
+  width: "100%",
+  "thead tr": {
+    color: theme.colors.darkGrey,
+    borderBottom: `1px solid ${theme.colors.lightGrey}`
+  },
+  "thead th": {
+    fontWeight: "normal",
+    textAlign: "left",
+    padding: "15px 0",
+    paddingRight: "16px",
+    "&:first-of-type": {
+      paddingLeft: "16px"
+    }
+  }
+});
+
 const Table = ({ columns, rows, noRowsContent }) => (
-  <table>
-    <tr>
-      {columns.map(({ label }) => (
-        <th>{label}</th>
-      ))}
-    </tr>
-    {rows.map(row => (
+  <StyledTable>
+    <thead>
       <tr>
-        {columns.map(({ dataKey }) => (
-          <td>{row[dataKey]}</td>
+        {columns.map(({ label }) => (
+          <th>{label}</th>
         ))}
       </tr>
-    ))}
-  </table>
+    </thead>
+    <tbody>
+      {rows.map(row => (
+        <tr>
+          {columns.map(({ dataKey }) => (
+            <td>{row[dataKey]}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </StyledTable>
 );
 Table.propTypes = {
   columns: PropTypes.arrayOf(
