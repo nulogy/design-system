@@ -19,6 +19,14 @@ const StyledTable = styled.table({
     "&:first-of-type": {
       paddingLeft: "16px"
     }
+  },
+  "tbody td": {
+    textAlign: "left",
+    padding: "15px 0",
+    paddingRight: "16px",
+    "&:first-of-type": {
+      paddingLeft: "16px"
+    }
   }
 });
 
