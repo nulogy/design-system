@@ -4,7 +4,7 @@ import { Table } from ".";
 import { Box, IconicButton } from "..";
 
 const dateToString = cellData => {
-  return new Date(cellData).toDateString();
+  return new Date(cellData).toUTCString();
 };
 
 // eslint-disable-next-line react/prop-types
