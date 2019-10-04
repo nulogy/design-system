@@ -12,10 +12,16 @@ const StyledTable = styled.table({
     color: theme.colors.darkGrey,
     borderBottom: `1px solid ${theme.colors.lightGrey}`
   },
-  "thead th": {
+  th: {
     fontWeight: "normal",
     textAlign: "left",
     padding: "15px 0",
+    paddingRight: "16px",
+    "&:first-of-type": {
+      paddingLeft: "16px"
+    }
+  },
+  td: {
     paddingRight: "16px",
     "&:first-of-type": {
       paddingLeft: "16px"
@@ -32,25 +38,24 @@ const NoRowsContainer = styled(Box)({
   color: theme.colors.darkGrey
 });
 
-const StyledTableCell = styled.td({
-  textAlign: "left",
-  padding: "15px 0",
-  paddingRight: "16px",
-  "&:first-of-type": {
-    paddingLeft: "16px"
-  }
+const StyledTextCell = styled.div({
+  paddingTop: "15px",
+  paddingBottom: "15px"
 });
-const TableCell = ({ children, align }) => (
-  <StyledTableCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTableCell>
+
+const TextCell = ({ children, align }) => (
+  <StyledTextCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTextCell>
 );
 
 const formatData = (data, formatter) => (formatter ? formatter(data) : data);
-const defaultCellRenderer = (cellData, { cellFormatter }) => formatData(cellData, cellFormatter);
+const defaultCellRenderer = (cellData, { cellFormatter, align }) => (
+  <TextCell align={align}>{formatData(cellData, cellFormatter)}</TextCell>
+);
 
-const renderCell = (row, { cellRenderer, dataKey, align, ...columnOptions }) => {
+const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
   const renderer = cellRenderer || defaultCellRenderer;
 
-  return <TableCell align={align}>{renderer(row[dataKey], columnOptions)}</TableCell>;
+  return renderer(row[dataKey], columnOptions);
 };
 
 const Table = ({ columns, rows, noRowsContent }) => (
@@ -64,7 +69,13 @@ const Table = ({ columns, rows, noRowsContent }) => (
     </thead>
     <tbody>
       {rows.length > 0 ? (
-        rows.map(row => <tr>{columns.map(column => renderCell(row, column))}</tr>)
+        rows.map(row => (
+          <tr>
+            {columns.map(column => (
+              <td>{renderCellContent(row, column)}</td>
+            ))}
+          </tr>
+        ))
       ) : (
         <tr>
           <td colSpan={columns.length - 1}>
