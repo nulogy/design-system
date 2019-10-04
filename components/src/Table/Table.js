@@ -27,6 +27,9 @@ const StyledTable = styled.table({
     "&:first-of-type": {
       paddingLeft: "16px"
     }
+  },
+  ".table-cell--alignRight": {
+    textAlign: "right"
   }
 });
 
@@ -42,8 +45,8 @@ const Table = ({ columns, rows, noRowsContent }) => (
     <tbody>
       {rows.map(row => (
         <tr>
-          {columns.map(({ dataKey }) => (
-            <td>{row[dataKey]}</td>
+          {columns.map(({ dataKey, align }) => (
+            <td className={align === "right" ? "table-cell--alignRight" : null}>{row[dataKey]}</td>
           ))}
         </tr>
       ))}
