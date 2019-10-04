@@ -64,6 +64,5 @@ function selectOption(optionText, container, queryByText) {
   openDropdown(container);
 
   expect(queryByText(optionText)).not.toBeNull();
-
   fireEvent.click(queryByText(optionText));
 }

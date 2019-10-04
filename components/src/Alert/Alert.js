@@ -28,12 +28,6 @@ const alertColours = {
   }
 };
 
-const alertStyles = {
-  [`${Link}`]: {
-    color: theme.colors.black
-  }
-};
-
 class BaseAlert extends React.Component {
   constructor() {
     super();
@@ -93,6 +87,6 @@ BaseAlert.defaultProps = {
   type: "informative"
 };
 
-const Alert = styled(BaseAlert)(space, alertStyles);
+const Alert = styled(BaseAlert)(space);
 
 export default Alert;
