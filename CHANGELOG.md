@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Table
+  - [**Breaking Change**] `cellFormatter`'s API has been updated
+    - Before: `cellFormatter({rowData, dataKey})`
+    - Now: `cellFormatter(cellData)`
+  - [**Behaviour Change**] Table headers are no longer fixed
+  - [**Behaviour Change**] Table columns are no longer equal widths by default
+    - They now behave exactly the same as HTML columns. Auto-determined by the content of the cells.
+
 ### Deprecated
 
 ### Removed
