@@ -47,13 +47,12 @@ const TextCell = ({ children, align }) => (
   <StyledTextCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTextCell>
 );
 
-const formatData = (data, formatter) => (formatter ? formatter(data) : data);
-const defaultCellRenderer = (cellData, { cellFormatter, align }) => (
-  <TextCell align={align}>{formatData(cellData, cellFormatter)}</TextCell>
+const textCellRenderer = (cellData, { cellFormatter, align }) => (
+  <TextCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TextCell>
 );
 
 const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
-  const renderer = cellRenderer || defaultCellRenderer;
+  const renderer = cellRenderer || textCellRenderer;
 
   return renderer(row[dataKey], columnOptions);
 };
