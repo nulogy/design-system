@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Alert } from "../index";
+import { Link } from "../Link";
 
 storiesOf("Alert", module)
   .add("Danger", () => <Alert type="danger">Danger alert</Alert>)
@@ -11,5 +12,10 @@ storiesOf("Alert", module)
   .add("With a title", () => (
     <Alert title="Danger title!" type="danger">
       Danger alert
+    </Alert>
+  ))
+  .add("With a link", () => (
+    <Alert>
+      An alert with <Link href="/">linked details</Link>.
     </Alert>
   ));
