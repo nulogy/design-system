@@ -57,6 +57,15 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
   return renderer(row[dataKey], columnOptions);
 };
 
+const renderRows = (rows, columns) =>
+  rows.map(row => (
+    <tr>
+      {columns.map(column => (
+        <td>{renderCellContent(row, column)}</td>
+      ))}
+    </tr>
+  ));
+
 const Table = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
     <thead>
@@ -68,13 +77,7 @@ const Table = ({ columns, rows, noRowsContent }) => (
     </thead>
     <tbody>
       {rows.length > 0 ? (
-        rows.map(row => (
-          <tr>
-            {columns.map(column => (
-              <td>{renderCellContent(row, column)}</td>
-            ))}
-          </tr>
-        ))
+        renderRows(rows, columns)
       ) : (
         <tr>
           <td colSpan={columns.length - 1}>
