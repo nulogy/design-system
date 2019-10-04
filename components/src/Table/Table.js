@@ -44,6 +44,8 @@ const TableCell = ({ children, align }) => (
   <StyledTableCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTableCell>
 );
 
+const formatData = (data, formatter) => (formatter ? formatter(data) : data);
+
 const Table = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
     <thead>
@@ -57,8 +59,8 @@ const Table = ({ columns, rows, noRowsContent }) => (
       {rows.length > 0 ? (
         rows.map(row => (
           <tr>
-            {columns.map(({ dataKey, align }) => (
-              <TableCell align={align}>{row[dataKey]}</TableCell>
+            {columns.map(({ dataKey, align, cellFormatter }) => (
+              <TableCell align={align}>{formatData(row[dataKey], cellFormatter)}</TableCell>
             ))}
           </tr>
         ))
@@ -76,7 +78,8 @@ Table.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      dataKey: PropTypes.string.isRequired
+      dataKey: PropTypes.string.isRequired,
+      cellFormatter: PropTypes.func
     })
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,

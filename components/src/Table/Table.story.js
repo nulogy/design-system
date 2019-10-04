@@ -3,9 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { Table } from ".";
 import { Box, IconicButton } from "..";
 
-const dateToString = ({ rowData, dataKey }) => {
-  const cellContent = rowData[dataKey];
-  return new Date(cellContent).toDateString();
+const dateToString = cellData => {
+  return new Date(cellData).toDateString();
 };
 
 // eslint-disable-next-line react/prop-types
