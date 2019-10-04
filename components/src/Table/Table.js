@@ -47,6 +47,16 @@ const TextCell = ({ children, align }) => (
   <StyledTextCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTextCell>
 );
 
+TextCell.propTypes = {
+  children: PropTypes.string,
+  align: PropTypes.string
+};
+
+TextCell.defaultProps = {
+  children: "",
+  align: undefined
+};
+
 const textCellRenderer = (cellData, { cellFormatter, align }) => (
   <TextCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TextCell>
 );
@@ -58,10 +68,10 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
 };
 
 const renderRows = (rows, columns) =>
-  rows.map(row => (
-    <tr>
+  rows.map((row, index) => (
+    <tr key={index}>
       {columns.map(column => (
-        <td>{renderCellContent(row, column)}</td>
+        <td key={column.dataKey}>{renderCellContent(row, column)}</td>
       ))}
     </tr>
   ));
@@ -71,7 +81,7 @@ const Table = ({ columns, rows, noRowsContent }) => (
     <thead>
       <tr>
         {columns.map(({ label }) => (
-          <th>{label}</th>
+          <th key={label}>{label}</th>
         ))}
       </tr>
     </thead>
