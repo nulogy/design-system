@@ -8,7 +8,7 @@ const dateToString = cellData => {
 };
 
 // eslint-disable-next-line react/prop-types
-const customCellRenderer = ({ cellData }) => (
+const customCellRenderer = cellData => (
   <>
     <IconicButton icon="delete">{cellData}</IconicButton>
   </>

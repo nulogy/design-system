@@ -45,6 +45,13 @@ const TableCell = ({ children, align }) => (
 );
 
 const formatData = (data, formatter) => (formatter ? formatter(data) : data);
+const defaultCellRenderer = (cellData, { cellFormatter }) => formatData(cellData, cellFormatter);
+
+const renderCell = (row, { cellRenderer, dataKey, align, ...columnOptions }) => {
+  const renderer = cellRenderer || defaultCellRenderer;
+
+  return <TableCell align={align}>{renderer(row[dataKey], columnOptions)}</TableCell>;
+};
 
 const Table = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
@@ -57,13 +64,7 @@ const Table = ({ columns, rows, noRowsContent }) => (
     </thead>
     <tbody>
       {rows.length > 0 ? (
-        rows.map(row => (
-          <tr>
-            {columns.map(({ dataKey, align, cellFormatter }) => (
-              <TableCell align={align}>{formatData(row[dataKey], cellFormatter)}</TableCell>
-            ))}
-          </tr>
-        ))
+        rows.map(row => <tr>{columns.map(column => renderCell(row, column))}</tr>)
       ) : (
         <tr>
           <td colSpan={columns.length - 1}>
