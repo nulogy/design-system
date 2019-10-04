@@ -67,6 +67,7 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
   return renderer(row[dataKey], columnOptions);
 };
 
+/* eslint-disable react/no-array-index-key */
 const renderRows = (rows, columns) =>
   rows.map((row, index) => (
     <tr key={index}>
@@ -75,6 +76,7 @@ const renderRows = (rows, columns) =>
       ))}
     </tr>
   ));
+/* eslint-enable react/no-array-index-key */
 
 const Table = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
