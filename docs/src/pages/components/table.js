@@ -45,13 +45,12 @@ const propsRows = [
   }
 ];
 
-const dateToString = ({ rowData, dataKey }) => {
-  const cellContent = rowData[dataKey];
-  return new Date(cellContent).toDateString();
+const dateToString = cellData => {
+  return new Date(cellData).toDateString();
 };
 
 // eslint-disable-next-line react/prop-types
-const customCellRenderer = ({ cellData }) => (
+const customCellRenderer = cellData => (
   <>
     <IconicButton icon="delete">{cellData}</IconicButton>
   </>
@@ -124,9 +123,8 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
       </Text>
       <Table columns={columnsWithFormatter} rows={rows} />
       <Highlight className="js">
-        {`const dateToString = ({ rows, dataKey }) => {
-  const cellContent = rows[dataKey];
-  return new Date(cellContent).toDateString();
+        {`const dateToString = (cellData) => {
+  return new Date(cellData).toDateString();
 };
 
 const columnsWithFormatter = [

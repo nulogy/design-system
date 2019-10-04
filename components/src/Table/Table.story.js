@@ -3,13 +3,12 @@ import { storiesOf } from "@storybook/react";
 import { Table } from ".";
 import { Box, IconicButton } from "..";
 
-const dateToString = ({ rowData, dataKey }) => {
-  const cellContent = rowData[dataKey];
-  return new Date(cellContent).toDateString();
+const dateToString = cellData => {
+  return new Date(cellData).toUTCString();
 };
 
 // eslint-disable-next-line react/prop-types
-const customCellRenderer = ({ cellData }) => (
+const customCellRenderer = cellData => (
   <>
     <IconicButton icon="delete">{cellData}</IconicButton>
   </>
@@ -50,7 +49,7 @@ storiesOf("Table", module)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
   .add("with a custom component", () => <Table columns={columnsWithCellRenderer} rows={rowData} />)
-  .add("truncated", () => (
+  .add("with wrapping text", () => (
     <Box width={400}>
       <Table columns={columns} rows={rowData} />
     </Box>

@@ -1,59 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Table as RVTable, Column as RVColumn, AutoSizer, WindowScroller } from "react-virtualized";
 
 import theme from "../theme";
 import { Box } from "../Box";
 
-const StyledTable = styled(RVTable)({
-  ".ReactVirtualized__Table": {},
-  ".ReactVirtualized__Table__Grid": {},
-  ".ReactVirtualized__Table__headerRow": {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+const StyledTable = styled.table({
+  borderCollapse: "collapse",
+  width: "100%",
+  "thead tr": {
     color: theme.colors.darkGrey,
     borderBottom: `1px solid ${theme.colors.lightGrey}`
   },
-  ".ReactVirtualized__Table__row": {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center"
+  th: {
+    fontWeight: "normal",
+    textAlign: "left",
+    padding: "15px 0",
+    paddingRight: "16px",
+    "&:first-of-type": {
+      paddingLeft: "16px"
+    }
   },
-  ".ReactVirtualized__Table__row:hover": {
-    backgroundColor: theme.colors.whiteGrey
+  td: {
+    paddingRight: "16px",
+    "&:first-of-type": {
+      paddingLeft: "16px"
+    }
   },
-  ".ReactVirtualized__Table__headerTruncatedText": {
-    display: "inline-block",
-    maxWidth: "100%",
-    whiteSpace: "nowrap",
-    textOverflow: "ellipsis",
-    overflow: "hidden"
-  },
-  ".ReactVirtualized__Table__headerColumn": {
-    marginRight: theme.space.x2,
-    minWidth: theme.space.x6,
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap"
-  },
-  ".ReactVirtualized__Table__rowColumn": {
-    marginRight: theme.space.x2,
-    minWidth: theme.space.x6,
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap"
-  },
-  ".ReactVirtualized__Table__rowColumn.rowColumn--alignRight": {
+  ".table-cell--alignRight": {
     textAlign: "right"
-  },
-  ".ReactVirtualized__Table__headerColumn:first-of-type": {
-    marginLeft: theme.space.x2
-  },
-  ".ReactVirtualized__Table__rowColumn:first-of-type": {
-    marginLeft: theme.space.x2
-  },
-  ".ReactVirtualized__Grid:focus": {
-    outline: "none"
   }
 });
 
@@ -63,55 +38,74 @@ const NoRowsContainer = styled(Box)({
   color: theme.colors.darkGrey
 });
 
-const generateColumns = columns =>
-  columns.map(({ label, dataKey, align, cellFormatter, cellRenderer }) => (
-    <RVColumn
-      className={align === "right" ? "rowColumn--alignRight" : undefined}
-      key={dataKey}
-      label={label}
-      dataKey={dataKey}
-      width={100}
-      flexGrow={1}
-      flexShrink={1}
-      cellDataGetter={cellFormatter}
-      cellRenderer={cellRenderer}
-    />
+const StyledTextCell = styled.div({
+  paddingTop: "15px",
+  paddingBottom: "15px"
+});
+
+const TextCell = ({ children, align }) => (
+  <StyledTextCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTextCell>
+);
+
+TextCell.propTypes = {
+  children: PropTypes.string,
+  align: PropTypes.string
+};
+
+TextCell.defaultProps = {
+  children: "",
+  align: undefined
+};
+
+const textCellRenderer = (cellData, { cellFormatter, align }) => (
+  <TextCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TextCell>
+);
+
+const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
+  const renderer = cellRenderer || textCellRenderer;
+
+  return renderer(row[dataKey], columnOptions);
+};
+
+/* eslint-disable react/no-array-index-key */
+const renderRows = (rows, columns) =>
+  rows.map((row, index) => (
+    <tr key={index}>
+      {columns.map(column => (
+        <td key={column.dataKey}>{renderCellContent(row, column)}</td>
+      ))}
+    </tr>
   ));
-
-const rowGetter = rows => ({ index }) => rows[index];
-
-const ROW_HEIGHT = 56;
+/* eslint-enable react/no-array-index-key */
 
 const Table = ({ columns, rows, noRowsContent }) => (
-  <WindowScroller>
-    {({ height, isScrolling, onChildScroll, scrollTop }) => (
-      <AutoSizer disableHeight>
-        {({ width }) => (
-          <StyledTable
-            autoHeight
-            width={width}
-            height={height}
-            isScrolling={isScrolling}
-            onScroll={onChildScroll}
-            scrollTop={scrollTop}
-            rowHeight={ROW_HEIGHT}
-            headerHeight={ROW_HEIGHT}
-            rowGetter={rowGetter(rows)}
-            rowCount={rows.length}
-            noRowsRenderer={() => <NoRowsContainer>{noRowsContent}</NoRowsContainer>}
-          >
-            {generateColumns(columns)}
-          </StyledTable>
-        )}
-      </AutoSizer>
-    )}
-  </WindowScroller>
+  <StyledTable>
+    <thead>
+      <tr>
+        {columns.map(({ label }) => (
+          <th key={label}>{label}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.length > 0 ? (
+        renderRows(rows, columns)
+      ) : (
+        <tr>
+          <td colSpan={columns.length - 1}>
+            <NoRowsContainer>{noRowsContent}</NoRowsContainer>
+          </td>
+        </tr>
+      )}
+    </tbody>
+  </StyledTable>
 );
 Table.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      dataKey: PropTypes.string.isRequired
+      dataKey: PropTypes.string.isRequired,
+      cellFormatter: PropTypes.func
     })
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
