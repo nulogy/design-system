@@ -49,7 +49,7 @@ storiesOf("Table", module)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
   .add("with a custom component", () => <Table columns={columnsWithCellRenderer} rows={rowData} />)
-  .add("truncated", () => (
+  .add("with wrapping text", () => (
     <Box width={400}>
       <Table columns={columns} rows={rowData} />
     </Box>
