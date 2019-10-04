@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import theme from "../theme";
+import { Box } from "../Box";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
@@ -20,18 +21,28 @@ const StyledTable = styled.table({
       paddingLeft: "16px"
     }
   },
-  "tbody td": {
-    textAlign: "left",
-    padding: "15px 0",
-    paddingRight: "16px",
-    "&:first-of-type": {
-      paddingLeft: "16px"
-    }
-  },
   ".table-cell--alignRight": {
     textAlign: "right"
   }
 });
+
+const NoRowsContainer = styled(Box)({
+  padding: `${theme.space.x3} 0`,
+  fontSize: theme.fontSizes.small,
+  color: theme.colors.darkGrey
+});
+
+const StyledTableCell = styled.td({
+  textAlign: "left",
+  padding: "15px 0",
+  paddingRight: "16px",
+  "&:first-of-type": {
+    paddingLeft: "16px"
+  }
+});
+const TableCell = ({ children, align }) => (
+  <StyledTableCell className={align === "right" ? "table-cell--alignRight" : null}>{children}</StyledTableCell>
+);
 
 const Table = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
@@ -43,13 +54,21 @@ const Table = ({ columns, rows, noRowsContent }) => (
       </tr>
     </thead>
     <tbody>
-      {rows.map(row => (
+      {rows.length > 0 ? (
+        rows.map(row => (
+          <tr>
+            {columns.map(({ dataKey, align }) => (
+              <TableCell align={align}>{row[dataKey]}</TableCell>
+            ))}
+          </tr>
+        ))
+      ) : (
         <tr>
-          {columns.map(({ dataKey, align }) => (
-            <td className={align === "right" ? "table-cell--alignRight" : null}>{row[dataKey]}</td>
-          ))}
+          <td colSpan={columns.length - 1}>
+            <NoRowsContainer>{noRowsContent}</NoRowsContainer>
+          </td>
         </tr>
-      ))}
+      )}
     </tbody>
   </StyledTable>
 );
