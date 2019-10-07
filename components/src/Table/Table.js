@@ -66,7 +66,7 @@ const textCellRenderer = (cellData, { cellFormatter, align }) => (
 const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
   const renderer = cellRenderer || textCellRenderer;
 
-  return renderer(row[dataKey], columnOptions);
+  return renderer(row[dataKey], columnOptions, row);
 };
 
 /* eslint-disable react/no-array-index-key */
@@ -85,18 +85,27 @@ const renderHeaderCellContent = column => (column.headerRenderer ? column.header
 const renderColumns = columns =>
   columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
 
-const transformColumnsAndRows = (columns, rows) => {
+const transformColumnsAndRows = (columns, rows, onSelectRow, onSelectHeader) => {
+  const selectCellRenderer = (cellData, columnData, row) => {
+    const selectRowHandler = () => onSelectRow(row);
+    return <Checkbox id="checkbox" checked={false} onChange={selectRowHandler} />;
+  };
+
+  const selectHeaderRenderer = ({ label }) => (
+    <Checkbox id="selectable-1" labelText={label} checked={false} onChange={onSelectHeader} />
+  );
+  const SELECTABLE_COLUMN_DATA_KEY = "selectable1";
   const selectableColumn = {
     label: "Select All",
-    dataKey: "selectable1",
-    cellRenderer: () => <Checkbox id="checkbox" />,
-    headerRenderer: ({ label }) => <Checkbox id="selectable-1" labelText={label} />
+    dataKey: SELECTABLE_COLUMN_DATA_KEY,
+    cellRenderer: selectCellRenderer,
+    headerRenderer: selectHeaderRenderer
   };
   const selectableCell = {
-    [selectableColumn.dataKey]: false
+    [SELECTABLE_COLUMN_DATA_KEY]: false
   };
   const transformedColumns = [selectableColumn, ...columns];
-  const transformedRows = rows.map(row => ({ selectableCell, ...row }));
+  const transformedRows = rows.map(row => ({ ...selectableCell, ...row }));
   return {
     rows: transformedRows,
     columns: transformedColumns
@@ -124,8 +133,8 @@ const BaseTable = ({ columns, rows, noRowsContent }) => (
 
 const withSelectable = TableComponent => {
   return props => {
-    const { columns, rows, hasSelectableRows } = props;
-    const transformedTableData = transformColumnsAndRows(columns, rows, hasSelectableRows);
+    const { columns, rows, onSelectHeader, onSelectRow } = props;
+    const transformedTableData = transformColumnsAndRows(columns, rows, onSelectRow, onSelectHeader);
     return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
   };
 };
@@ -144,7 +153,10 @@ Table.propTypes = {
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   noRowsContent: PropTypes.string,
-  hasSelectableRows: PropTypes.bool
+  hasSelectableRows: PropTypes.bool,
+  onSelectHeader: PropTypes.func,
+  onSelectRow: PropTypes.func,
+  selectedRows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
 };
 
 Table.defaultProps = {

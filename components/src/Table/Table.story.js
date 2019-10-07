@@ -43,6 +43,9 @@ const columnsWithFormatter = [
 
 const rowData = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
+const onSelectHeader = () => console.log("header selected");
+const onSelectRow = row => console.log(row);
+
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
@@ -54,4 +57,12 @@ storiesOf("Table", module)
       <Table columns={columns} rows={rowData} />
     </Box>
   ))
-  .add("with selectable rows", () => <Table columns={columns} rows={rowData} hasSelectableRows />);
+  .add("with selectable rows", () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      hasSelectableRows
+      onSelectRow={onSelectRow}
+      onSelectHeader={onSelectHeader}
+    />
+  ));
