@@ -53,4 +53,5 @@ storiesOf("Table", module)
     <Box width={400}>
       <Table columns={columns} rows={rowData} />
     </Box>
-  ));
+  ))
+  .add("with selectable rows", () => <Table columns={columns} rows={rowData} hasSelectableRows />);

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import theme from "../theme";
 import { Box } from "../Box";
+import { Checkbox } from "../Checkbox";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
@@ -11,15 +12,6 @@ const StyledTable = styled.table({
   "thead tr": {
     color: theme.colors.darkGrey,
     borderBottom: `1px solid ${theme.colors.lightGrey}`
-  },
-  th: {
-    fontWeight: "normal",
-    textAlign: "left",
-    padding: "15px 0",
-    paddingRight: "16px",
-    "&:first-of-type": {
-      paddingLeft: "16px"
-    }
   },
   td: {
     paddingRight: "16px",
@@ -41,6 +33,16 @@ const NoRowsContainer = styled(Box)({
 const StyledTextCell = styled.div({
   paddingTop: "15px",
   paddingBottom: "15px"
+});
+
+const StyledTh = styled.th({
+  fontWeight: "normal",
+  textAlign: "left",
+  padding: "15px 0",
+  paddingRight: "16px",
+  "&:first-of-type": {
+    paddingLeft: "16px"
+  }
 });
 
 const TextCell = ({ children, align }) => (
@@ -78,14 +80,33 @@ const renderRows = (rows, columns) =>
   ));
 /* eslint-enable react/no-array-index-key */
 
-const Table = ({ columns, rows, noRowsContent }) => (
+const renderHeaderCellContent = column => (column.headerRenderer ? column.headerRenderer(column) : <>{column.label}</>);
+
+const renderColumns = columns =>
+  columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
+
+const transformColumnsAndRows = (columns, rows) => {
+  const selectableColumn = {
+    label: "Select All",
+    dataKey: "selectable1",
+    cellRenderer: () => <Checkbox id="checkbox" />,
+    headerRenderer: ({ label }) => <Checkbox id="selectable-1" labelText={label} />
+  };
+  const selectableCell = {
+    [selectableColumn.dataKey]: false
+  };
+  const transformedColumns = [selectableColumn, ...columns];
+  const transformedRows = rows.map(row => ({ selectableCell, ...row }));
+  return {
+    rows: transformedRows,
+    columns: transformedColumns
+  };
+};
+
+const BaseTable = ({ columns, rows, noRowsContent }) => (
   <StyledTable>
     <thead>
-      <tr>
-        {columns.map(({ label }) => (
-          <th key={label}>{label}</th>
-        ))}
-      </tr>
+      <tr>{renderColumns(columns)}</tr>
     </thead>
     <tbody>
       {rows.length > 0 ? (
@@ -100,20 +121,35 @@ const Table = ({ columns, rows, noRowsContent }) => (
     </tbody>
   </StyledTable>
 );
+
+const withSelectable = TableComponent => {
+  return props => {
+    const { columns, rows, hasSelectableRows } = props;
+    const transformedTableData = transformColumnsAndRows(columns, rows, hasSelectableRows);
+    return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
+  };
+};
+
+const Table = props => (props.hasSelectableRows ? withSelectable(BaseTable)(props) : BaseTable(props));
+
 Table.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       dataKey: PropTypes.string.isRequired,
-      cellFormatter: PropTypes.func
+      cellFormatter: PropTypes.func,
+      cellRenderer: PropTypes.func,
+      headerRenderer: PropTypes.func
     })
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-  noRowsContent: PropTypes.string
+  noRowsContent: PropTypes.string,
+  hasSelectableRows: PropTypes.bool
 };
 
 Table.defaultProps = {
-  noRowsContent: "No records have been created for this table."
+  noRowsContent: "No records have been created for this table.",
+  hasSelectableRows: false
 };
 
 export default Table;
