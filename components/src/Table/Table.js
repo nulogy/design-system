@@ -85,16 +85,22 @@ const renderHeaderCellContent = column => (column.headerRenderer ? column.header
 const renderColumns = columns =>
   columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
 
-const addSelectableColumn = (columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows) => {
+const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows }) => {
+  const SELECTABLE_COLUMN_DATA_KEY = "selectable1";
   const selectCellRenderer = (cellData, columnData, row) => {
     const selectRowHandler = () => onSelectRow(row);
-    return <Checkbox id="checkbox" checked={row[SELECTABLE_COLUMN_DATA_KEY]} onChange={selectRowHandler} />;
+    return (
+      <Checkbox
+        aria-label="toggle row selection"
+        checked={row[SELECTABLE_COLUMN_DATA_KEY]}
+        onChange={selectRowHandler}
+      />
+    );
   };
 
-  const selectHeaderRenderer = ({ label }) => (
-    <Checkbox id="selectable-1" labelText={label} checked={false} onChange={onSelectHeader} />
+  const selectHeaderRenderer = () => (
+    <Checkbox id="selectable-1" checked={false} onChange={onSelectHeader} aria-label="toggle all row selections" />
   );
-  const SELECTABLE_COLUMN_DATA_KEY = "selectable1";
   const selectableColumn = {
     label: "Select All",
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
@@ -133,22 +139,14 @@ const BaseTable = ({ columns, rows, noRowsContent }) => (
 
 const withSelectable = TableComponent => {
   return props => {
-    const { columns, rows, onSelectHeader, onSelectRow, keyField, selectedRows } = props;
-    const transformedTableData = addSelectableColumn(
-      columns,
-      rows,
-      onSelectRow,
-      onSelectHeader,
-      keyField,
-      selectedRows
-    );
+    const transformedTableData = addSelectableColumn(props);
     return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
   };
 };
 
 const Table = props => (props.hasSelectableRows ? withSelectable(BaseTable)(props) : BaseTable(props));
 
-Table.propTypes = {
+BaseTable.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -158,8 +156,14 @@ Table.propTypes = {
       headerRenderer: PropTypes.func
     })
   ).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-  noRowsContent: PropTypes.string,
+  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool]))).isRequired,
+  noRowsContent: PropTypes.string
+};
+BaseTable.defaultProps = {
+  noRowsContent: "No records have been created for this table."
+};
+Table.propTypes = {
+  ...BaseTable.propTypes,
   keyField: PropTypes.string,
   hasSelectableRows: PropTypes.bool,
   onSelectHeader: PropTypes.func,
@@ -168,7 +172,7 @@ Table.propTypes = {
 };
 
 Table.defaultProps = {
-  noRowsContent: "No records have been created for this table.",
+  ...BaseTable.defaultProps,
   hasSelectableRows: false,
   keyField: "id",
   selectedRows: []
