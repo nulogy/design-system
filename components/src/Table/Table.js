@@ -85,10 +85,10 @@ const renderHeaderCellContent = column => (column.headerRenderer ? column.header
 const renderColumns = columns =>
   columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
 
-const transformColumnsAndRows = (columns, rows, onSelectRow, onSelectHeader) => {
+const addSelectableColumn = (columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows) => {
   const selectCellRenderer = (cellData, columnData, row) => {
     const selectRowHandler = () => onSelectRow(row);
-    return <Checkbox id="checkbox" checked={false} onChange={selectRowHandler} />;
+    return <Checkbox id="checkbox" checked={row[SELECTABLE_COLUMN_DATA_KEY]} onChange={selectRowHandler} />;
   };
 
   const selectHeaderRenderer = ({ label }) => (
@@ -101,11 +101,11 @@ const transformColumnsAndRows = (columns, rows, onSelectRow, onSelectHeader) => 
     cellRenderer: selectCellRenderer,
     headerRenderer: selectHeaderRenderer
   };
-  const selectableCell = {
-    [SELECTABLE_COLUMN_DATA_KEY]: false
-  };
+  const selectableCell = id => ({
+    [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(id)
+  });
   const transformedColumns = [selectableColumn, ...columns];
-  const transformedRows = rows.map(row => ({ ...selectableCell, ...row }));
+  const transformedRows = rows.map(row => ({ ...selectableCell(row[keyField]), ...row }));
   return {
     rows: transformedRows,
     columns: transformedColumns
@@ -133,8 +133,15 @@ const BaseTable = ({ columns, rows, noRowsContent }) => (
 
 const withSelectable = TableComponent => {
   return props => {
-    const { columns, rows, onSelectHeader, onSelectRow } = props;
-    const transformedTableData = transformColumnsAndRows(columns, rows, onSelectRow, onSelectHeader);
+    const { columns, rows, onSelectHeader, onSelectRow, keyField, selectedRows } = props;
+    const transformedTableData = addSelectableColumn(
+      columns,
+      rows,
+      onSelectRow,
+      onSelectHeader,
+      keyField,
+      selectedRows
+    );
     return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
   };
 };
@@ -153,15 +160,18 @@ Table.propTypes = {
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   noRowsContent: PropTypes.string,
+  keyField: PropTypes.string,
   hasSelectableRows: PropTypes.bool,
   onSelectHeader: PropTypes.func,
   onSelectRow: PropTypes.func,
-  selectedRows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+  selectedRows: PropTypes.arrayOf(PropTypes.string)
 };
 
 Table.defaultProps = {
   noRowsContent: "No records have been created for this table.",
-  hasSelectableRows: false
+  hasSelectableRows: false,
+  keyField: "id",
+  selectedRows: []
 };
 
 export default Table;

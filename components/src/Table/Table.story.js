@@ -41,7 +41,10 @@ const columnsWithFormatter = [
   { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
 ];
 
-const rowData = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+const rowData = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+];
 
 const onSelectHeader = () => console.log("header selected");
 const onSelectRow = row => console.log(row);
@@ -64,5 +67,16 @@ storiesOf("Table", module)
       hasSelectableRows
       onSelectRow={onSelectRow}
       onSelectHeader={onSelectHeader}
+    />
+  ))
+  .add("with preselected rows", () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      hasSelectableRows
+      onSelectRow={onSelectRow}
+      onSelectHeader={onSelectHeader}
+      selectedRows={["r2c1"]}
+      keyField="c1"
     />
   ));
