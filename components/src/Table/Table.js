@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 import theme from "../theme";
 import { Box } from "../Box";
-import { Checkbox } from "../Checkbox";
+
+import withSelectable from "./withSelectable";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
@@ -69,7 +70,6 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
   return renderer(row[dataKey], columnOptions, row);
 };
 
-/* eslint-disable react/no-array-index-key */
 const renderRows = (rows, columns, keyField) =>
   rows.map(row => (
     <tr key={row[keyField]}>
@@ -78,45 +78,11 @@ const renderRows = (rows, columns, keyField) =>
       ))}
     </tr>
   ));
-/* eslint-enable react/no-array-index-key */
 
 const renderHeaderCellContent = column => (column.headerRenderer ? column.headerRenderer(column) : <>{column.label}</>);
 
 const renderColumns = columns =>
   columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
-
-const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows }) => {
-  const SELECTABLE_COLUMN_DATA_KEY = "selectable1";
-  const selectCellRenderer = (cellData, columnData, row) => {
-    const selectRowHandler = () => onSelectRow(row);
-    return (
-      <Checkbox
-        aria-label="toggle row selection"
-        checked={row[SELECTABLE_COLUMN_DATA_KEY]}
-        onChange={selectRowHandler}
-      />
-    );
-  };
-
-  const selectHeaderRenderer = () => (
-    <Checkbox id="selectable-1" checked={false} onChange={onSelectHeader} aria-label="toggle all row selections" />
-  );
-  const selectableColumn = {
-    label: "Select All",
-    dataKey: SELECTABLE_COLUMN_DATA_KEY,
-    cellRenderer: selectCellRenderer,
-    headerRenderer: selectHeaderRenderer
-  };
-  const selectableCell = id => ({
-    [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(id)
-  });
-  const transformedColumns = [selectableColumn, ...columns];
-  const transformedRows = rows.map(row => ({ ...selectableCell(row[keyField]), ...row }));
-  return {
-    rows: transformedRows,
-    columns: transformedColumns
-  };
-};
 
 const BaseTable = ({ columns, rows, noRowsContent, keyField }) => (
   <StyledTable>
@@ -136,13 +102,6 @@ const BaseTable = ({ columns, rows, noRowsContent, keyField }) => (
     </tbody>
   </StyledTable>
 );
-
-const withSelectable = TableComponent => {
-  return props => {
-    const transformedTableData = addSelectableColumn(props);
-    return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
-  };
-};
 
 const Table = props => (props.hasSelectableRows ? withSelectable(BaseTable)(props) : BaseTable(props));
 
