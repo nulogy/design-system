@@ -156,7 +156,8 @@ BaseTable.propTypes = {
       headerRenderer: PropTypes.func
     })
   ).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool]))).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
+    .isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string
 };
