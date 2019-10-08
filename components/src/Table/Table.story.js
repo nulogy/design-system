@@ -52,7 +52,7 @@ const onSelectRow = row => console.log(row);
 const lotsOfRows = numRows => {
   const rows = [];
 
-  for (let i = 0; i < numRows; i++) {
+  for (let i = 0; i < numRows; i += 1) {
     const row = {
       id: i,
       c1: "some data",
