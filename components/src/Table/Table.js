@@ -79,7 +79,8 @@ const renderRows = (rows, columns, keyField) =>
     </tr>
   ));
 
-const renderHeaderCellContent = column => (column.headerRenderer ? column.headerRenderer(column) : <>{column.label}</>);
+const defaultHeaderRenderer = ({ label }) => label;
+const renderHeaderCellContent = ({ headerRenderer = defaultHeaderRenderer, ...column }) => headerRenderer(column);
 
 const renderColumns = columns =>
   columns.map(column => <StyledTh key={column.label}>{renderHeaderCellContent(column)}</StyledTh>);
