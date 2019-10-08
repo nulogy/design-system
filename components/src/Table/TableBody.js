@@ -1,0 +1,98 @@
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import theme from "../theme";
+import { Box } from "../Box";
+
+const StyledNoRowsContainer = styled(Box)({
+  padding: `${theme.space.x3} 0`,
+  fontSize: theme.fontSizes.small,
+  color: theme.colors.darkGrey
+});
+
+const StyledTextCell = styled.div(({ align }) => ({
+  paddingTop: theme.space.x2,
+  paddingBottom: theme.space.x2,
+  textAlign: align
+}));
+
+const StyledTd = styled.td({
+  paddingRight: theme.space.x2,
+  "&:first-of-type": {
+    paddingLeft: theme.space.x2
+  }
+});
+
+const TextCell = ({ children, align }) => <StyledTextCell align={align}>{children}</StyledTextCell>;
+
+TextCell.propTypes = {
+  children: PropTypes.string,
+  align: PropTypes.string
+};
+
+TextCell.defaultProps = {
+  children: "",
+  align: undefined
+};
+
+const textCellRenderer = (cellData, { cellFormatter, align }) => (
+  <TextCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TextCell>
+);
+
+const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
+  const renderer = cellRenderer || textCellRenderer;
+
+  return renderer(row[dataKey], columnOptions, row);
+};
+
+const renderAllRows = (rows, columns, keyField) =>
+  rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />);
+
+const TableBodyRow = ({ row, columns, key }) => (
+  <tr key={key}>
+    {columns.map(column => (
+      <StyledTd key={column.dataKey}>{renderCellContent(row, column)}</StyledTd>
+    ))}
+  </tr>
+);
+
+const NoRowsContainer = ({ colSpan, children }) => (
+  <tr>
+    <td colSpan={colSpan}>
+      <StyledNoRowsContainer>{children}</StyledNoRowsContainer>
+    </td>
+  </tr>
+);
+
+const TableBody = ({ rows, columns, keyField, noRowsContent }) => (
+  <tbody>
+    {rows.length > 0 ? (
+      renderAllRows(rows, columns, keyField)
+    ) : (
+      <NoRowsContainer colSpan={columns.length - 1}>{noRowsContent}</NoRowsContainer>
+    )}
+  </tbody>
+);
+
+TableBody.propTypes = {
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      align: PropTypes.oneOf(["right", "left", "center"]),
+      label: PropTypes.string.isRequired,
+      dataKey: PropTypes.string.isRequired,
+      cellFormatter: PropTypes.func,
+      cellRenderer: PropTypes.func,
+      headerRenderer: PropTypes.func
+    })
+  ).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
+    .isRequired,
+  noRowsContent: PropTypes.string,
+  keyField: PropTypes.string
+};
+TableBody.defaultProps = {
+  noRowsContent: "No records have been created for this table.",
+  keyField: "id"
+};
+
+export default TableBody;
