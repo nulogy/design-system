@@ -70,9 +70,9 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
 };
 
 /* eslint-disable react/no-array-index-key */
-const renderRows = (rows, columns) =>
-  rows.map((row, index) => (
-    <tr key={index}>
+const renderRows = (rows, columns, keyField) =>
+  rows.map(row => (
+    <tr key={row[keyField]}>
       {columns.map(column => (
         <td key={column.dataKey}>{renderCellContent(row, column)}</td>
       ))}
@@ -118,14 +118,14 @@ const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyFi
   };
 };
 
-const BaseTable = ({ columns, rows, noRowsContent }) => (
+const BaseTable = ({ columns, rows, noRowsContent, keyField }) => (
   <StyledTable>
     <thead>
       <tr>{renderColumns(columns)}</tr>
     </thead>
     <tbody>
       {rows.length > 0 ? (
-        renderRows(rows, columns)
+        renderRows(rows, columns, keyField)
       ) : (
         <tr>
           <td colSpan={columns.length - 1}>
@@ -157,14 +157,15 @@ BaseTable.propTypes = {
     })
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.bool]))).isRequired,
-  noRowsContent: PropTypes.string
+  noRowsContent: PropTypes.string,
+  keyField: PropTypes.string
 };
 BaseTable.defaultProps = {
-  noRowsContent: "No records have been created for this table."
+  noRowsContent: "No records have been created for this table.",
+  keyField: "id"
 };
 Table.propTypes = {
   ...BaseTable.propTypes,
-  keyField: PropTypes.string,
   hasSelectableRows: PropTypes.bool,
   onSelectHeader: PropTypes.func,
   onSelectRow: PropTypes.func,
@@ -174,7 +175,6 @@ Table.propTypes = {
 Table.defaultProps = {
   ...BaseTable.defaultProps,
   hasSelectableRows: false,
-  keyField: "id",
   selectedRows: []
 };
 
