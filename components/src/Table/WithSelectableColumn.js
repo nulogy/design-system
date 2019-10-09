@@ -3,25 +3,22 @@ import { Checkbox } from "../Checkbox";
 
 const SELECTABLE_COLUMN_DATA_KEY = "selectable1";
 
-const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows }) => {
-  const selectCellRenderer = (cellData, columnData, row) => {
-    const selectRowHandler = () => onSelectRow(row);
-    return (
-      <Checkbox
-        aria-label="toggle row selection"
-        checked={row[SELECTABLE_COLUMN_DATA_KEY]}
-        onChange={selectRowHandler}
-      />
-    );
-  };
+const selectHeaderRenderer = onSelectHeader => () => (
+  <Checkbox checked={false} onChange={onSelectHeader} aria-label="toggle all row selections" />
+);
 
-  const selectHeaderRenderer = () => (
-    <Checkbox checked={false} onChange={onSelectHeader} aria-label="toggle all row selections" />
+const selectCellRenderer = onSelectRow => (cellData, columnData, row) => {
+  const selectRowHandler = () => onSelectRow(row);
+  return (
+    <Checkbox aria-label="toggle row selection" checked={row[SELECTABLE_COLUMN_DATA_KEY]} onChange={selectRowHandler} />
   );
+};
+
+const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyField, selectedRows }) => {
   const selectableColumn = {
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
-    cellRenderer: selectCellRenderer,
-    headerRenderer: selectHeaderRenderer
+    cellRenderer: selectCellRenderer(onSelectRow),
+    headerRenderer: selectHeaderRenderer(onSelectHeader)
   };
   const selectableCellData = id => ({
     [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(id)
