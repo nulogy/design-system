@@ -24,7 +24,7 @@ BaseTable.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       align: PropTypes.oneOf(["right", "left", "center"]),
-      label: PropTypes.string.isRequired,
+      label: PropTypes.string,
       dataKey: PropTypes.string.isRequired,
       cellFormatter: PropTypes.func,
       cellRenderer: PropTypes.func,

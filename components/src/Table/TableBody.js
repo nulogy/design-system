@@ -4,6 +4,16 @@ import styled from "styled-components";
 import theme from "../theme";
 import { Box } from "../Box";
 
+const rowType = PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]));
+const columnType = PropTypes.shape({
+  align: PropTypes.oneOf(["right", "left", "center"]),
+  label: PropTypes.string,
+  dataKey: PropTypes.string.isRequired,
+  cellFormatter: PropTypes.func,
+  cellRenderer: PropTypes.func,
+  headerRenderer: PropTypes.func
+});
+
 const StyledNoRowsContainer = styled(Box)({
   padding: `${theme.space.x3} 0`,
   fontSize: theme.fontSizes.small,
@@ -48,13 +58,18 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
 const renderAllRows = (rows, columns, keyField) =>
   rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />);
 
-const TableBodyRow = ({ row, columns, key }) => (
-  <tr key={key}>
+const TableBodyRow = ({ row, columns }) => (
+  <tr>
     {columns.map(column => (
       <StyledTd key={column.dataKey}>{renderCellContent(row, column)}</StyledTd>
     ))}
   </tr>
 );
+
+TableBodyRow.propTypes = {
+  row: rowType.isRequired,
+  columns: PropTypes.arrayOf(columnType).isRequired
+};
 
 const NoRowsContainer = ({ colSpan, children }) => (
   <tr>
@@ -63,6 +78,11 @@ const NoRowsContainer = ({ colSpan, children }) => (
     </td>
   </tr>
 );
+
+NoRowsContainer.propTypes = {
+  colSpan: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired
+};
 
 const TableBody = ({ rows, columns, keyField, noRowsContent }) => (
   <tbody>
@@ -75,18 +95,8 @@ const TableBody = ({ rows, columns, keyField, noRowsContent }) => (
 );
 
 TableBody.propTypes = {
-  columns: PropTypes.arrayOf(
-    PropTypes.shape({
-      align: PropTypes.oneOf(["right", "left", "center"]),
-      label: PropTypes.string.isRequired,
-      dataKey: PropTypes.string.isRequired,
-      cellFormatter: PropTypes.func,
-      cellRenderer: PropTypes.func,
-      headerRenderer: PropTypes.func
-    })
-  ).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
-    .isRequired,
+  columns: PropTypes.arrayOf(columnType).isRequired,
+  rows: PropTypes.arrayOf(rowType).isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string
 };
