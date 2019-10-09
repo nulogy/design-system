@@ -268,7 +268,7 @@ const DemoPage = () => {
           <Title>Job Page</Title>
 
           <SubsectionTitle>Some summary data</SubsectionTitle>
-          <Table columns={columns} rows={rowData} />
+          <Table columns={columns} rows={rowData} keyField="c1" />
 
           <Box width={{ extraSmall: "100%", small: "80%", medium: "80%" }}>
             <Form title="Job 324400" mb="x4">
