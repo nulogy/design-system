@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
-import WithSelectableColumn from "./WithSelectableColumn";
+import withSelectableColumn from "./withSelectableColumn";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
@@ -18,7 +18,7 @@ const BaseTable = ({ columns, rows, noRowsContent, keyField }) => (
   </StyledTable>
 );
 
-const Table = props => (props.hasSelectableRows ? WithSelectableColumn(BaseTable)(props) : BaseTable(props));
+const Table = props => (props.hasSelectableRows ? withSelectableColumn(BaseTable)(props) : BaseTable(props));
 
 BaseTable.propTypes = {
   columns: PropTypes.arrayOf(

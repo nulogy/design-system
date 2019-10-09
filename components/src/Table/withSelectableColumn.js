@@ -20,8 +20,8 @@ const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyFi
     cellRenderer: selectCellRenderer(onSelectRow),
     headerRenderer: selectHeaderRenderer(onSelectHeader)
   };
-  const selectableCellData = id => ({
-    [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(id)
+  const selectableCellData = rowKey => ({
+    [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(rowKey)
   });
   const transformedColumns = [selectableColumn, ...columns];
   const transformedRows = rows.map(row => ({ ...selectableCellData(row[keyField]), ...row }));
@@ -31,11 +31,11 @@ const addSelectableColumn = ({ columns, rows, onSelectRow, onSelectHeader, keyFi
   };
 };
 
-const WithSelectableColumn = TableComponent => {
+const withSelectableColumn = TableComponent => {
   return props => {
     const transformedTableData = addSelectableColumn(props);
     return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
   };
 };
 
-export default WithSelectableColumn;
+export default withSelectableColumn;
