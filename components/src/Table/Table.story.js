@@ -146,5 +146,6 @@ storiesOf("Table", module)
       onSelectHeader={onSelectHeader}
       selectedRows={["r2c1"]}
       keyField="c1"
+      onChangeSelection={action("on change")}
     />
   ));
