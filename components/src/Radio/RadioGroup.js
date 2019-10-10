@@ -33,10 +33,10 @@ const getRadioButtons = props => {
   return radioButtons;
 };
 
-const BaseRadioGroup = ({ className, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
+const BaseRadioGroup = ({ className, id, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
   const otherProps = { ...props, errorMessage, errorList };
   return (
-    <Fieldset className={className} hasHelpText={!!helpText}>
+    <Fieldset className={className} id={id} hasHelpText={!!helpText}>
       <legend style={{ marginBottom: theme.space.x1 }}>
         <span style={labelTextStyles}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
@@ -67,6 +67,7 @@ BaseRadioGroup.propTypes = {
   checkedValue: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string,
+  id: PropTypes.string,
   helpText: PropTypes.string,
   requirementText: PropTypes.string
 };
@@ -78,6 +79,7 @@ BaseRadioGroup.defaultProps = {
   checkedValue: undefined,
   onChange: undefined,
   className: undefined,
+  id: undefined,
   helpText: null,
   requirementText: null
 };
