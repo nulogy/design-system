@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { Table } from ".";
 import { Box, IconicButton } from "..";
 
@@ -47,8 +46,8 @@ const rowData = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
 ];
 
-const onSelectHeader = action("header selected");
-const onSelectRow = action("row clicked");
+const onSelectHeader = () => {};
+const onSelectRow = row => row;
 
 const lotsOfRows = numRows => {
   const rows = [];
