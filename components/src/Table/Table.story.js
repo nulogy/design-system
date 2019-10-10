@@ -45,10 +45,6 @@ const rowData = [
   { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
 ];
-
-const onSelectHeader = () => {};
-const onSelectRow = row => row;
-
 const lotsOfRows = numRows => {
   const rows = [];
 
@@ -119,33 +115,15 @@ storiesOf("Table", module)
       <Table columns={columns} rows={rowData} />
     </Box>
   ))
-  .add("with selectable rows", () => (
-    <Table
-      columns={columns}
-      rows={rowData}
-      hasSelectableRows
-      onSelectRow={onSelectRow}
-      onSelectHeader={onSelectHeader}
-    />
-  ))
-  .add("with lots of rows and columns", () => (
-    <Table
-      columns={lotsOfColumns}
-      rows={lotsOfRows(50)}
-      hasSelectableRows
-      onSelectRow={onSelectRow}
-      onSelectHeader={onSelectHeader}
-    />
-  ))
+  .add("with selectable rows", () => <Table columns={columns} rows={rowData} hasSelectableRows />)
+  .add("with lots of rows and columns", () => <Table columns={lotsOfColumns} rows={lotsOfRows(50)} hasSelectableRows />)
   .add("with preselected rows", () => (
     <Table
       columns={columns}
       rows={rowData}
       hasSelectableRows
-      onSelectRow={onSelectRow}
-      onSelectHeader={onSelectHeader}
       selectedRows={["r2c1"]}
       keyField="c1"
-      onChangeSelection={action("on change")}
+      onChangeSelection={() => {}}
     />
   ));
