@@ -46,5 +46,13 @@ describe("Table", () => {
         .click();
       cy.get(headerCheckboxInputSelector).should("be.checked");
     });
+    it("becomes selected if all rows are selected", () => {
+      cy.renderFromStorybook("table--with-preselected-rows");
+
+      cy.get("tbody input[type='checkbox']")
+        .first()
+        .click();
+      getSelectAllCheckbox().should("be.checked");
+    });
   });
 });
