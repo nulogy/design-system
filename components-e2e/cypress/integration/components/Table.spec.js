@@ -18,14 +18,22 @@ describe("Table", () => {
       .should("be.checked");
   });
 
-  it("selects a row on click", () => {
-    cy.renderFromStorybook("table--with-preselected-rows");
+  describe("Select All Checkbox", () => {
+    it("selects all rows when there are unselected rows", () => {
+      cy.renderFromStorybook("table--with-preselected-rows");
 
-    getSelectAllCheckbox().click();
-    getSelectAllCheckbox().should("be.checked");
-    cy.get("tbody input[type='checkbox']").should("be.checked");
+      getSelectAllCheckbox().click();
+      getSelectAllCheckbox().should("be.checked");
+      cy.get("tbody input[type='checkbox']").should("be.checked");
+    });
 
-    getSelectAllCheckbox().click();
-    getSelectAllCheckbox().should("not.be.checked");
+    it("deselect all rows when all rows are selected", () => {
+      cy.renderFromStorybook("table--with-preselected-rows");
+
+      getSelectAllCheckbox()
+        .click()
+        .click();
+      getSelectAllCheckbox().should("not.be.checked");
+    });
   });
 });
