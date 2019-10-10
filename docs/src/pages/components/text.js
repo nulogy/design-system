@@ -99,13 +99,27 @@ export default () => (
       <SectionTitle>Variations</SectionTitle>
       <Box mb="x4">
         <SubsectionTitle>Alignment</SubsectionTitle>
-        <Text textAlign="right">Right-aligned text</Text>
+        <Text textAlign="left" mb="0">
+          Left-aligned text
+        </Text>
+        <Text textAlign="center" mb="0">
+          Center-aligned text
+        </Text>
+        <Text textAlign="right" mb="0">
+          Right-aligned text
+        </Text>
         <Highlight className="js">
-          {'<Text textAlign="right">Right-aligned text</Text>'}
+          {`<Text textAlign="left">Left-aligned text</Text>
+<Text textAlign="center">Center-aligned text</Text>
+<Text textAlign="right">Right-aligned text</Text>`}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Colour</SubsectionTitle>
+        <Text>
+          Color can be set to Nulogy using a reference to the{" "}
+          <Link href="/theme">theme.colors</Link> object.
+        </Text>
         <Text color="blue">Blue text</Text>
         <Highlight className="js">
           {'<Text color="blue">Blue text</Text>'}
@@ -121,10 +135,10 @@ export default () => (
       <Box mb="x4">
         <SubsectionTitle>Inline</SubsectionTitle>
         <Text inline>Inline text </Text>
-        <Text inline>Doesn't cause a line break text</Text>
+        <Text inline>Doesn't cause a line break</Text>
         <Highlight className="js">
           {`<Text inline>Inline text </Text>
-<Text inline>Doesn't cause a line break text</Text>`}
+<Text inline>Doesn't cause a line break</Text>`}
         </Highlight>
       </Box>
       <Box mb="x4">
@@ -136,25 +150,62 @@ export default () => (
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Size</SubsectionTitle>
-        <Text fontSize="largest">Text with a custom size</Text>
+        <Text>
+          Font size can be set using a reference to the{" "}
+          <Link href="/theme">theme.fontSizes</Link> object.
+        </Text>
+        <Text fontSize="smaller" mb="0">
+          Smaller text
+        </Text>
+        <Text fontSize="small" mb="0">
+          Small text
+        </Text>
+        <Text fontSize="medium" mb="0">
+          Medium text (default)
+        </Text>
+        <Text fontSize="large" mb="0">
+          Large text
+        </Text>
+        <Text fontSize="larger" mb="0">
+          Larger text
+        </Text>
+        <Text fontSize="largest" mb="0">
+          Largest text
+        </Text>
+
         <Highlight className="js">
-          {'<Text fontSize="large">Large text</Text>'}
+          {`<Text fontSize="smaller">Smaller text</Text>
+<Text fontSize="small">Small text</Text>
+<Text fontSize="medium">Medium text (default)</Text>
+<Text fontSize="large">Large</Text>
+<Text fontSize="larger">Larger</Text>
+<Text fontSize="largest">Largest</Text>`}
         </Highlight>
       </Box>
       <Box mb="x4">
         <SubsectionTitle>Weight</SubsectionTitle>
-        <Text fontWeight="bold">Bold text</Text>
+        <Text>
+          Font weight can be set using a reference to the{" "}
+          <Link href="/theme">theme.fontWeights</Link> object.
+        </Text>
+        <Text fontWeight="light" mb="0">
+          Light
+        </Text>
+        <Text fontWeight="normal" mb="0">
+          Normal (default)
+        </Text>
+        <Text fontWeight="medium" mb="0">
+          Medium bold
+        </Text>
+        <Text fontWeight="bold" mb="0">
+          Bold
+        </Text>
+
         <Highlight className="js">
-          {'<Text fontWeight="bold">Bold text</Text>'}
-        </Highlight>
-      </Box>
-      <Box mb="x4">
-        <SubsectionTitle>Line-height</SubsectionTitle>
-        <Text lineHeight={2}>Double-spaced text</Text>
-        <Text lineHeight={2}>Double-spaced text</Text>
-        <Highlight className="js">
-          {`<Text lineHeight={2}>Double-spaced text</Text>
-<Text>Double-spaced text</Text>`}
+          {`<Text fontWeight="light">Light</Text>
+<Text fontWeight="normal">Normal (default)</Text>
+<Text fontWeight="medium">Medium bold</Text>
+<Text fontWeight="bold">Bold</Text>`}
         </Highlight>
       </Box>
     </DocSection>
