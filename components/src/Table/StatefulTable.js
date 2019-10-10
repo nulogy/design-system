@@ -25,12 +25,14 @@ class StatefulTable extends React.Component {
 
   onSelectRow = row => {
     const { selectedRows } = this.state;
-    const { keyField } = this.props;
+    const { keyField, rows } = this.props;
+    const newSelectedRows = !row.selected
+      ? [...selectedRows, row[keyField]]
+      : selectedRows.filter(rowKey => rowKey !== row[keyField]);
     this.setState(
       {
-        selectedRows: !row.selected
-          ? [...selectedRows, row[keyField]]
-          : selectedRows.filter(rowKey => rowKey !== row[keyField])
+        selectedRows: newSelectedRows,
+        isHeaderSelected: newSelectedRows.length === rows.length
       },
       this.onChangeSelectionHandler
     );
