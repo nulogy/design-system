@@ -47,6 +47,7 @@ const rowData = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
 ];
 
+// TODO: remove these handlers
 const onSelectHeader = action("header selected");
 const onSelectRow = action("row clicked");
 
