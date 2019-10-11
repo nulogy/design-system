@@ -52,6 +52,7 @@ class StatelessDropdownMenu extends React.Component {
       modifiers,
       showArrow,
       className,
+      id,
       menuState: { isOpen, closeMenu, openMenu }
     } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
@@ -85,6 +86,7 @@ class StatelessDropdownMenu extends React.Component {
             {popperProps => (
               <DropdownMenuContainer
                 className={className}
+                id={id}
                 onMouseDown={e => {
                   e.preventDefault();
                   e.target.focus();
@@ -123,6 +125,7 @@ class StatelessDropdownMenu extends React.Component {
 StatelessDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   className: PropTypes.string,
+  id: PropTypes.string,
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool,
     openMenu: PropTypes.func,
@@ -153,6 +156,7 @@ StatelessDropdownMenu.propTypes = {
 StatelessDropdownMenu.defaultProps = {
   disabled: false,
   className: undefined,
+  id: undefined,
   trigger: () => <IconicButton icon="more" />,
   backgroundColor: undefined,
   showArrow: true,

@@ -205,6 +205,7 @@ class Modal extends React.Component {
       portalClassName,
       overlayClassName,
       className,
+      id,
       maxWidth,
       appElement,
       ariaHideApp
@@ -221,6 +222,7 @@ class Modal extends React.Component {
         portalClassName={portalClassName}
         overlayClassName={overlayClassName}
         className={className}
+        id={id}
         aria={{
           labelledby: title ? "modal-title" : undefined,
           describedby: ariaDescribedBy
@@ -278,6 +280,7 @@ Modal.propTypes = {
   portalClassName: PropTypes.string,
   overlayClassName: PropTypes.string,
   className: PropTypes.string,
+  id: PropTypes.string,
   appElement: PropTypes.element,
   ariaHideApp: PropTypes.bool
 };
@@ -300,6 +303,7 @@ Modal.defaultProps = {
   portalClassName: undefined,
   overlayClassName: undefined,
   className: undefined,
+  id: undefined,
   appElement: undefined,
   ariaHideApp: true
 };
