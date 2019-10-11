@@ -10,8 +10,8 @@ const StyledTable = styled.table({
   width: "100%"
 });
 
-const BaseTable = ({ columns, rows, noRowsContent, keyField }) => (
-  <StyledTable>
+const BaseTable = ({ columns, rows, noRowsContent, keyField, id }) => (
+  <StyledTable id={id}>
     <TableHead columns={columns} />
     <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} />
   </StyledTable>
@@ -31,12 +31,14 @@ BaseTable.propTypes = {
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
     .isRequired,
   noRowsContent: PropTypes.string,
-  keyField: PropTypes.string
+  keyField: PropTypes.string,
+  id: PropTypes.string
 };
 
 BaseTable.defaultProps = {
   noRowsContent: "No records have been created for this table.",
-  keyField: "id"
+  keyField: "id",
+  id: undefined
 };
 
 export default BaseTable;
