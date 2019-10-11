@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { NDSProvider, Table } from "..";
+import { Table } from "..";
 
 const columns = [
   { label: "Column 1", dataKey: "c1" },

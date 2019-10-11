@@ -124,6 +124,6 @@ storiesOf("Table", module)
       hasSelectableRows
       selectedRows={["r2c1"]}
       keyField="c1"
-      onChangeSelection={() => {}}
+      onRowSelectionChange={() => {}}
     />
   ));

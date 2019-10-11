@@ -15,11 +15,11 @@ class StatefulTable extends React.Component {
     };
   }
 
-  onChangeSelectionHandler = () => {
-    const { onChangeSelection } = this.props;
+  onRowSelectionChangeHandler = () => {
+    const { onRowSelectionChange } = this.props;
     const { selectedRows } = this.state;
-    if (onChangeSelection) {
-      onChangeSelection(selectedRows);
+    if (onRowSelectionChange) {
+      onRowSelectionChange(selectedRows);
     }
   };
 
@@ -34,7 +34,7 @@ class StatefulTable extends React.Component {
         selectedRows: newSelectedRows,
         isHeaderSelected: newSelectedRows.length === rows.length
       },
-      this.onChangeSelectionHandler
+      this.onRowSelectionChangeHandler
     );
   };
 
@@ -46,7 +46,7 @@ class StatefulTable extends React.Component {
         isHeaderSelected: !isHeaderSelected,
         selectedRows: selectedRows.length < rows.length ? getAllRowKeys(rows, keyField) : []
       },
-      this.onChangeSelectionHandler
+      this.onRowSelectionChangeHandler
     );
   };
 
@@ -66,7 +66,7 @@ class StatefulTable extends React.Component {
 StatefulTable.propTypes = {
   ...BaseTable.propTypes,
   selectedRows: PropTypes.arrayOf(PropTypes.string),
-  onChangeSelection: PropTypes.func
+  onRowSelectionChange: PropTypes.func
 };
 
 StatefulTable.defaultProps = {

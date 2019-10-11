@@ -42,7 +42,7 @@ const addSelectableColumn = ({
 const withSelectableColumn = TableComponent => {
   return props => {
     const transformedTableData = addSelectableColumn(props);
-    return <TableComponent rows={transformedTableData.rows} columns={transformedTableData.columns} />;
+    return <TableComponent {...props} rows={transformedTableData.rows} columns={transformedTableData.columns} />;
   };
 };
 
