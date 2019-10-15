@@ -1,9 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, color } from "styled-system";
+import { space } from "styled-system";
 import theme from "../theme";
-import { relative } from "path";
 
 const StatusIndicatorColours = {
   neutral: {
@@ -39,22 +37,22 @@ const StatusIndicatorColours = {
 };
 
 const getStatusIndicatorColours = props => {
-  if (props.type == "neutral") {
+  if (props.type === "neutral") {
     return StatusIndicatorColours.neutral;
   }
-  if (props.type == "quiet") {
+  if (props.type === "quiet") {
     return StatusIndicatorColours.quiet;
   }
-  if (props.type == "danger") {
+  if (props.type === "danger") {
     return StatusIndicatorColours.danger;
   }
-  if (props.type == "informative") {
+  if (props.type === "informative") {
     return StatusIndicatorColours.informative;
   }
-  if (props.type == "success") {
+  if (props.type === "success") {
     return StatusIndicatorColours.success;
   }
-  if (props.type == "warning") {
+  if (props.type === "warning") {
     return StatusIndicatorColours.warning;
   }
   return StatusIndicatorColours.neutral;
@@ -71,7 +69,7 @@ const StatusIndicator = styled.p(
     padding: `0 ${theme.space.x1}`,
     borderRadius: theme.space.x1,
     position: "relative",
-    top: "-0.125em"
+    top: "-2px"
   },
   space,
   props => getStatusIndicatorColours(props)
