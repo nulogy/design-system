@@ -25,7 +25,8 @@ BaseTable.propTypes = {
       dataKey: PropTypes.string.isRequired,
       cellFormatter: PropTypes.func,
       cellRenderer: PropTypes.func,
-      headerRenderer: PropTypes.func
+      headerRenderer: PropTypes.func,
+      width: PropTypes.string
     })
   ).isRequired,
   rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
