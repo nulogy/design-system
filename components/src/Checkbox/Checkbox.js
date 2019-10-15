@@ -54,7 +54,7 @@ const VisualCheckbox = styled.div({
   borderRadius: theme.radii.small,
   border: "solid 1px",
   position: "relative",
-  top: theme.space.half,
+  alignSelf: "center",
   "&:before": {
     content: "''",
     display: "none",
