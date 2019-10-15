@@ -35,6 +35,12 @@ const columnsWithAlignment = [
   { label: "Column 3", dataKey: "c3", align: "right" }
 ];
 
+const columnsWithWidths = [
+  { label: "Column 1", dataKey: "c1", width: "30%" },
+  { label: "Column 2", dataKey: "c2", width: "60%" },
+  { label: "Column 3", dataKey: "c3", width: "10%" }
+];
+
 const columnsWithFormatter = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
@@ -126,4 +132,5 @@ storiesOf("Table", module)
       keyField="c1"
       onRowSelectionChange={() => {}}
     />
-  ));
+  ))
+  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />);
