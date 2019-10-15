@@ -96,6 +96,12 @@ const columnsWithFormatter = [
   { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
 ];
 
+const columnsWithWidths = [
+  { label: "Column 1", dataKey: "c1", width: "30%" },
+  { label: "Column 2", dataKey: "c2", width: "60%" },
+  { label: "Column 3", dataKey: "c3", width: "10%" }
+];
+
 const rows = [
   { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
@@ -228,6 +234,24 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
 
 <Table hasSelectableRows columns={columns} rows={rows} keyField="c1" onRowSelectionChange={selectedRows => selectedRows}/>
 `}
+      </Highlight>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>With custom column widths</SectionTitle>
+      <Text>
+        A width for a column can be set (as px or %) inside the column data.
+      </Text>
+      <Table columns={columnsWithWidths} rows={rows} />
+      <Highlight className="js">
+        {`const columnsWithWidths = [
+  { label: "Column 1", dataKey: "c1", width: "30%" },
+  { label: "Column 2", dataKey: "c2", width: "60%" },
+  { label: "Column 3", dataKey: "c3", width: "10%" }
+];
+
+const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+
+<Table columns={columnsWithWidths} rows={rows} />`}
       </Highlight>
     </DocSection>
 
