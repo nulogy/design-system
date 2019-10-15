@@ -23,7 +23,11 @@ const defaultHeaderRenderer = ({ label }) => label;
 const renderHeaderCellContent = ({ headerRenderer = defaultHeaderRenderer, ...column }) => headerRenderer(column);
 
 const renderColumns = columns =>
-  columns.map(column => <StyledTh key={column.dataKey}>{renderHeaderCellContent(column)}</StyledTh>);
+  columns.map(column => (
+    <StyledTh scope="col" key={column.dataKey}>
+      {renderHeaderCellContent(column)}
+    </StyledTh>
+  ));
 
 const TableHead = ({ columns }) => (
   <thead>
