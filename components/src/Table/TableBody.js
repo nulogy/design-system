@@ -33,6 +33,12 @@ const StyledTd = styled.td({
   }
 });
 
+const StyledTr = styled.tr({
+  "&:hover": {
+    backgroundColor: theme.colors.whiteGrey
+  }
+});
+
 const TextCell = ({ children, align }) => <StyledTextCell align={align}>{children}</StyledTextCell>;
 
 TextCell.propTypes = {
@@ -59,11 +65,11 @@ const renderAllRows = (rows, columns, keyField) =>
   rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />);
 
 const TableBodyRow = ({ row, columns }) => (
-  <tr>
+  <StyledTr>
     {columns.map(column => (
       <StyledTd key={column.dataKey}>{renderCellContent(row, column)}</StyledTd>
     ))}
-  </tr>
+  </StyledTr>
 );
 
 TableBodyRow.propTypes = {
