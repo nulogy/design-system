@@ -124,6 +124,10 @@ export const menuData = [
         href: "/components/select"
       },
       {
+        name: "StatusIndicator",
+        href: "/components/status-indicator"
+      },
+      {
         name: "Table",
         href: "/components/table"
       },
