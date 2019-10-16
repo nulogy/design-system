@@ -1,17 +1,24 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Table } from ".";
-import { Box, IconicButton } from "..";
+import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu } from "..";
 
 const dateToString = cellData => {
   return new Date(cellData).toUTCString();
 };
 
 // eslint-disable-next-line react/prop-types
-const customCellRenderer = cellData => (
-  <>
-    <IconicButton icon="delete">{cellData}</IconicButton>
-  </>
+const iconicButtonCellRenderer = cellData => <IconicButton icon="delete">{cellData}</IconicButton>;
+
+const dropdownCellRenderer = cellData => (
+  <Box textAlign="right">
+    <DropdownMenu>
+      <DropdownLink href="/">See Date: {cellData}</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown 1</DropdownButton>
+      <DropdownButton onClick={() => {}}>Dropdown 2</DropdownButton>
+      <DropdownButton onClick={() => {}}>Dropdown 3</DropdownButton>
+    </DropdownMenu>
+  </Box>
 );
 
 const columns = [
@@ -23,10 +30,10 @@ const columns = [
   { label: "Column 6", dataKey: "c6" }
 ];
 
-const columnsWithCellRenderer = [
+const getColumnsWithCellRenderer = cellRenderer => [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
+  { label: "Column 3", dataKey: "c3", cellRenderer }
 ];
 
 const columnsWithAlignment = [
@@ -115,7 +122,12 @@ storiesOf("Table", module)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom component", () => <Table columns={columnsWithCellRenderer} rows={rowData} />)
+  .add("with a custom component: iconic button", () => (
+    <Table columns={getColumnsWithCellRenderer(iconicButtonCellRenderer)} rows={rowData} />
+  ))
+  .add("with a custom component: dropdown", () => (
+    <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
+  ))
   .add("with wrapping text", () => (
     <Box width={400}>
       <Table columns={columns} rows={rowData} />
