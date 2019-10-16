@@ -76,7 +76,7 @@ const StatusIndicator = styled.p(
 );
 
 StatusIndicator.propTypes = {
-  type: PropTypes.oneOf(["danger", "informative", "success", "warning", "quiet"]),
+  type: PropTypes.oneOf(["neutral", "danger", "informative", "success", "warning", "quiet"]),
   ...space.PropTypes
 };
 
