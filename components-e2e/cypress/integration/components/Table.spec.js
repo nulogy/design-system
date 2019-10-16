@@ -1,19 +1,22 @@
 describe("Table", () => {
-  const getSelectAllCheckbox = () => cy.get("th input[type='checkbox']");
+  const headerCheckboxSelector = "th div[class*='Checkbox__VisualCheckbox']";
+  const headerCheckboxInputSelector = "th input[type='checkbox']";
+  const rowCheckboxSelector = "tbody div[class*='Checkbox__VisualCheckbox']";
+  const rowCheckboxInputSelector = "th input[type='checkbox']";
   it("toggles the value of the header checkbox on click", () => {
     cy.renderFromStorybook("table--with-preselected-rows");
 
-    getSelectAllCheckbox().click();
-    getSelectAllCheckbox().should("be.checked");
+    cy.get(headerCheckboxSelector).click();
+    cy.get(headerCheckboxInputSelector).should("be.checked");
   });
 
   it("selects a row on click", () => {
     cy.renderFromStorybook("table--with-preselected-rows");
 
-    cy.get("tbody input[type='checkbox']")
+    cy.get(rowCheckboxSelector)
       .first()
       .click();
-    cy.get("tbody input[type='checkbox']")
+    cy.get(rowCheckboxInputSelector)
       .first()
       .should("be.checked");
   });
@@ -22,26 +25,26 @@ describe("Table", () => {
     it("selects all rows when there are unselected rows", () => {
       cy.renderFromStorybook("table--with-preselected-rows");
 
-      getSelectAllCheckbox().click();
-      getSelectAllCheckbox().should("be.checked");
-      cy.get("tbody input[type='checkbox']").should("be.checked");
+      cy.get(headerCheckboxSelector).click();
+      cy.get(headerCheckboxInputSelector).should("be.checked");
+      cy.get(rowCheckboxInputSelector).should("be.checked");
     });
 
     it("deselect all rows when all rows are selected", () => {
       cy.renderFromStorybook("table--with-preselected-rows");
 
-      getSelectAllCheckbox()
+      cy.get(headerCheckboxSelector)
         .click()
         .click();
-      getSelectAllCheckbox().should("not.be.checked");
+      cy.get(headerCheckboxInputSelector).should("not.be.checked");
     });
     it("becomes selected if all rows are selected", () => {
       cy.renderFromStorybook("table--with-preselected-rows");
 
-      cy.get("tbody input[type='checkbox']")
+      cy.get(rowCheckboxSelector)
         .first()
         .click();
-      getSelectAllCheckbox().should("be.checked");
+      cy.get(headerCheckboxInputSelector).should("be.checked");
     });
   });
 });
