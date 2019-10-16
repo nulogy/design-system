@@ -25,7 +25,7 @@ import {
 
 const propsRows = [
   {
-    name: "column",
+    name: "columns",
     type: "array",
     defaultValue: "Required",
     description: "An array of column objects consisting of a label and dataKey"
@@ -42,6 +42,34 @@ const propsRows = [
     type: "string",
     defaultValue: "No records have been created for this table.",
     description: "What to display when the table has no data"
+  },
+  {
+    name: "keyField",
+    type: "string",
+    defaultValue: "id",
+    description:
+      "The name of the key to use as a unique identifier for individual rows"
+  },
+  {
+    name: "hasSelectableRows",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "Displays a column of checkboxes allowing the user to select rows in the table"
+  },
+  {
+    name: "selectedRows",
+    type: "array",
+    defaultValue: "empty",
+    description:
+      "An array of row id's that should be marked as selected in the table"
+  },
+  {
+    name: "onRowSelectionChange",
+    type: "function",
+    defaultValue: "none",
+    description:
+      "The function that should be called when a row selection changes. The array of rows currently selected is passed in as an argument."
   }
 ];
 
@@ -164,6 +192,41 @@ const rows = [
 ];
 
 <Table columns={columnsWithCellRenderer} rows={rows} />
+`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With selectable rows</SectionTitle>
+      <Text>
+        Setting hasSelectableRows on the Table will add a column of checkboxes
+        to the table so that rows can be selected by the user. Using the
+        checkbox in the head of the table will toggle the selection of all rows.
+      </Text>
+      <Text>
+        A keyField should be specified to provide unique ids for rows (by
+        default the keyField will be "id" and expect a property of id in the row
+        objects).
+      </Text>
+      <Table
+        hasSelectableRows
+        columns={columns}
+        rows={rows}
+        keyField="c1"
+        onRowSelectionChange={selectedRows => selectedRows}
+      />
+      <Highlight className="js">
+        {`import {Table} from "@nulogy/table";
+
+const columns = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3" },
+];
+
+const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+
+<Table hasSelectableRows columns={columns} rows={rows} keyField="c1" onRowSelectionChange={selectedRows => selectedRows}/>
 `}
       </Highlight>
     </DocSection>
