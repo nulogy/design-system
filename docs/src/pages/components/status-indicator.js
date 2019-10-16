@@ -55,10 +55,11 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Used to</SectionTitle>
+      <SectionTitle>Use to</SectionTitle>
       <List>
         <ListItem>
-          Show progression through the life cycle stages of an object
+          Show a progression through the life cycle stages of an object
+          (Started, In progress, In review, Completed, ...)
         </ListItem>
         <ListItem>
           Compare objects qualitatively (Example: Good, Bad, Quarantined, ...)
