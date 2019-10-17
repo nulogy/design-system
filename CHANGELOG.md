@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added [Status Indicator](https://storybook.nulogy.design/?path=/story/status-indicator--all) component
+
 ### Changed
 
 - Table
