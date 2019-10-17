@@ -177,8 +177,12 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
       <SectionTitle>With a custom component</SectionTitle>
       <Text>
         Providing a cellRenderer function inside the column data will allow
-        display of arbitrary cell content. See storybook for other examples of
-        implementing different custom components using cellRenderer.
+        display of arbitrary cell content. See{" "}
+        <Link href="https://storybook.nulogy.design/?path=/story/table--table-with-data">
+          Storybook
+        </Link>{" "}
+        for other examples of implementing different custom components using
+        cellRenderer.
       </Text>
       <Table columns={columnsWithCellRenderer} rows={rows} />
       <Highlight className="js">
