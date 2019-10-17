@@ -67,6 +67,12 @@ storiesOf("Select", module)
       labelText="Inventory status"
     />
   ))
+  .add("with a blank value", () => {
+    const optionsWithBlank = [{ value: null, label: "" }, ...options];
+    return (
+      <Select placeholder="Please select inventory status" options={optionsWithBlank} labelText="Inventory status" />
+    );
+  })
   .add("with an option selected", () => (
     <>
       <Select
@@ -85,6 +91,7 @@ storiesOf("Select", module)
       />
     </>
   ))
+
   .add("as a controlled component", () => (
     <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
