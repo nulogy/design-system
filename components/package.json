@@ -44,6 +44,9 @@
   },
   "main": "dist/main.js",
   "browser": "dist/main.browser.js",
+  "files": [
+    "/dist"
+  ],
   "peerDependencies": {
     "react": ">=16.3.2",
     "react-dom": ">=16.3.2"
