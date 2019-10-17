@@ -28,7 +28,7 @@ storiesOf("StatusIndicator", module)
     </>
   ))
 
-  .add("Neutral", () => <StatusIndicator type="quiet">Neutral</StatusIndicator>)
+  .add("Neutral", () => <StatusIndicator type="neutral">Neutral</StatusIndicator>)
   .add("Quiet", () => <StatusIndicator type="quiet">Quiet</StatusIndicator>)
   .add("Informative", () => <StatusIndicator type="informative">Informative</StatusIndicator>)
   .add("Success", () => <StatusIndicator type="success">Success</StatusIndicator>)
