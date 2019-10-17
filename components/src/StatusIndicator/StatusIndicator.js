@@ -36,8 +36,8 @@ const StatusIndicatorColours = {
   }
 };
 
-const getStatusIndicatorColours = props => {
-  return StatusIndicatorColours[props.type];
+const getStatusIndicatorColours = type => {
+  return StatusIndicatorColours[type];
 };
 
 const StatusIndicator = styled.p(
@@ -54,7 +54,7 @@ const StatusIndicator = styled.p(
     top: "-2px"
   },
   space,
-  props => getStatusIndicatorColours(props)
+  ({ type }) => getStatusIndicatorColours(type)
 );
 
 StatusIndicator.propTypes = {
