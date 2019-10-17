@@ -94,7 +94,7 @@ Input.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   required: PropTypes.bool,
   labelText: PropTypes.string,
-  helpText: PropTypes.string,
+  helpText: PropTypes.node,
   requirementText: PropTypes.string,
   ...space.PropTypes
 };

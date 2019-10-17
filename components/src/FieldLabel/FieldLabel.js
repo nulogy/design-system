@@ -41,7 +41,7 @@ BaseFieldLabel.propTypes = {
   labelText: PropTypes.string.isRequired,
   children: PropTypes.node,
   requirementText: PropTypes.string,
-  helpText: PropTypes.string,
+  helpText: PropTypes.node,
   id: PropTypes.string,
   ...space.PropTypes
 };

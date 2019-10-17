@@ -33,7 +33,7 @@ MaybeToggleTitle.propTypes = {
   labelText: PropTypes.string,
   children: PropTypes.node,
   requirementText: PropTypes.string,
-  helpText: PropTypes.string
+  helpText: PropTypes.node
 };
 
 MaybeToggleTitle.defaultProps = {
@@ -131,7 +131,7 @@ BaseToggle.propTypes = {
   value: PropTypes.string,
   className: PropTypes.string,
   required: PropTypes.bool,
-  helpText: PropTypes.string,
+  helpText: PropTypes.node,
   labelText: PropTypes.string,
   requirementText: PropTypes.string
 };
