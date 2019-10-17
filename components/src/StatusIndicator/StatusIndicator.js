@@ -37,25 +37,7 @@ const StatusIndicatorColours = {
 };
 
 const getStatusIndicatorColours = props => {
-  if (props.type === "neutral") {
-    return StatusIndicatorColours.neutral;
-  }
-  if (props.type === "quiet") {
-    return StatusIndicatorColours.quiet;
-  }
-  if (props.type === "danger") {
-    return StatusIndicatorColours.danger;
-  }
-  if (props.type === "informative") {
-    return StatusIndicatorColours.informative;
-  }
-  if (props.type === "success") {
-    return StatusIndicatorColours.success;
-  }
-  if (props.type === "warning") {
-    return StatusIndicatorColours.warning;
-  }
-  return StatusIndicatorColours.neutral;
+  return StatusIndicatorColours[props.type];
 };
 
 const StatusIndicator = styled.p(
