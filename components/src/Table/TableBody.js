@@ -11,7 +11,8 @@ const columnType = PropTypes.shape({
   dataKey: PropTypes.string.isRequired,
   cellFormatter: PropTypes.func,
   cellRenderer: PropTypes.func,
-  headerRenderer: PropTypes.func
+  headerRenderer: PropTypes.func,
+  width: PropTypes.string
 });
 
 const StyledNoRowsContainer = styled(Box)({
@@ -26,12 +27,13 @@ const StyledTextCell = styled.div(({ align }) => ({
   textAlign: align
 }));
 
-const StyledTd = styled.td({
+const StyledTd = styled.td(({ width }) => ({
+  width,
   paddingRight: theme.space.x2,
   "&:first-of-type": {
     paddingLeft: theme.space.x2
   }
-});
+}));
 
 const StyledTr = styled.tr({
   "&:hover": {
@@ -67,7 +69,9 @@ const renderAllRows = (rows, columns, keyField) =>
 const TableBodyRow = ({ row, columns }) => (
   <StyledTr>
     {columns.map(column => (
-      <StyledTd key={column.dataKey}>{renderCellContent(row, column)}</StyledTd>
+      <StyledTd key={column.dataKey} width={column.width}>
+        {renderCellContent(row, column)}
+      </StyledTd>
     ))}
   </StyledTr>
 );
