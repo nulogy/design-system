@@ -7,6 +7,9 @@ import { Box } from "../Box";
 storiesOf("StatusIndicator", module)
   .add("All", () => (
     <>
+      <StatusIndicator type="neutral" mr="half">
+        Neutral
+      </StatusIndicator>
       <StatusIndicator type="quiet" mr="half">
         Quiet
       </StatusIndicator>
@@ -25,6 +28,7 @@ storiesOf("StatusIndicator", module)
     </>
   ))
 
+  .add("Neutral", () => <StatusIndicator type="quiet">Neutral</StatusIndicator>)
   .add("Quiet", () => <StatusIndicator type="quiet">Quiet</StatusIndicator>)
   .add("Informative", () => <StatusIndicator type="informative">Informative</StatusIndicator>)
   .add("Success", () => <StatusIndicator type="success">Success</StatusIndicator>)
