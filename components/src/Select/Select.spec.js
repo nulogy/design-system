@@ -51,6 +51,19 @@ describe("multi select", () => {
 
     expect(callback).toHaveBeenCalledWith(["three", "two"]);
   });
+
+  it("selects the specified default values", () => {
+    const options = [
+      { label: "One", value: "one" },
+      { label: "Two", value: "two" },
+      { label: "Three", value: "three" }
+    ];
+
+    const { container } = render(<Select options={options} multiselect defaultValue={["one", "two"]} />);
+
+    expect(container).toHaveTextContent("One");
+    expect(container).toHaveTextContent("Two");
+  });
 });
 
 function openDropdown(container) {
