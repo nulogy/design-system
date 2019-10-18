@@ -30,6 +30,7 @@ const customStyles = error => {
       padding: subPx(theme.space.x1),
       fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
       background: state.isFocused ? theme.colors.lightBlue : null,
+      minHeight: theme.space.x4,
       "&:last-child": {
         borderBottomLeftRadius: theme.radii.medium,
         borderBottomRightRadius: theme.radii.medium
