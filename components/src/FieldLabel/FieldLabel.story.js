@@ -7,7 +7,7 @@ const CustomInput = props => <Input {...props} />;
 
 const helpTextWithLink = (
   <>
-    I am help text. I can be a string or a node that includes a <Link href="#">link</Link>.
+    I am help text. I can be a string or a node that includes a <Link href="http://nulogy.design">link</Link>.
   </>
 );
 
