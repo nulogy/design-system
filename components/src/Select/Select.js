@@ -90,7 +90,7 @@ ReactSelect.propTypes = {
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
   labelText: PropTypes.string,
-  helpText: PropTypes.string,
+  helpText: PropTypes.node,
   noOptionsMessage: PropTypes.func,
   requirementText: PropTypes.string,
   id: PropTypes.string,

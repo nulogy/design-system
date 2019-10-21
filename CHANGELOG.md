@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- [HelpText](https://storybook.nulogy.design/?path=/story/fieldlabel--with-helptext) can now accept a React node to be able to pass in links
 - Table
   - [**Breaking Change**] `cellFormatter`'s API has been updated
     - Before: `cellFormatter({rowData, dataKey})`

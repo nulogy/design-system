@@ -77,7 +77,7 @@ BaseCheckboxGroup.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   id: PropTypes.string,
-  helpText: PropTypes.string,
+  helpText: PropTypes.node,
   requirementText: PropTypes.string
 };
 
