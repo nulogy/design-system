@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 ### Security
 
+## [0.14.1] - 2019-10-21
+
+### Changed
+  - Library now only includes dist files, instead of the entire design system source 
+
 ## [0.14.0] - 2019-10-21
 
 ### Added
@@ -37,17 +42,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - [**Behaviour Change**] Table columns are no longer equal widths by default
     - They now behave exactly the same as HTML columns. Auto-determined by the content of the cells.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 - Select 
   - [defaultValue](https://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue) now works correctly for multiselect 
   - fixed style when providing a [blank value](https://storybook.nulogy.design/?path=/story/select--with-a-blank-value)
-
-### Security
-
 
 ## [0.13.2] - 2019-09-26
 
