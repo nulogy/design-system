@@ -6,10 +6,18 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
 
-const getValue = (opts, val) => {
-  if (val === "") return val;
+const getOption = (options, value) => {
+  if (value == null || value === "") return value;
 
-  return opts.find(o => o.value === val);
+  return options.find(o => o.value === value);
+};
+
+const getReactSelectValue = (options, input) => {
+  if (Array.isArray(input)) {
+    return input.map(i => getOption(options, i));
+  }
+
+  return getOption(options, input);
 };
 
 const extractValue = (options, isMulti) => {
@@ -64,8 +72,8 @@ const ReactSelect = ({
         maxMenuHeight={maxHeight}
         inputId={id}
         onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
-        defaultValue={getValue(options, defaultValue)}
-        value={getValue(options, value)}
+        defaultValue={getReactSelectValue(options, defaultValue)}
+        value={getReactSelectValue(options, value)}
         name={name}
         isMulti={multiselect}
       />
@@ -93,8 +101,8 @@ ReactSelect.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  value: PropTypes.string,
-  defaultValue: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   className: PropTypes.string,
   classNamePrefix: PropTypes.string
 };
