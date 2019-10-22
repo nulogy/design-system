@@ -33,3 +33,4 @@ export { Table } from "./Table";
 
 export { DemoPage } from "./DemoPage";
 export { StatusIndicator } from "./StatusIndicator";
+export { Pagination } from "./Pagination";
