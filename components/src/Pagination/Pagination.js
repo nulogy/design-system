@@ -5,30 +5,39 @@ import theme from "../theme";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 
-const PaginationButton = styled.button({
+const PaginationButton = styled.button(props => ({
   border: 0,
   fontSize: theme.fontSizes.small,
   padding: `${theme.space.x1} ${theme.space.x2}`,
   lineHeight: theme.lineHeights.smallTextBase,
   display: "flex",
   borderRadius: "2px",
+  color: props.disabled ? theme.colors.grey : theme.colors.black,
   "&:not(:last-child)": {
     marginRight: theme.space.x2
   },
-  "&:hover": {
-    cursor: "pointer"
-  }
-});
+  cursor: props.disabled ? "default" : "pointer"
+}));
 
-const PreviousButton = () => {
+const PreviousButton = props => {
+  const { disabled } = props;
   return (
-    <PaginationButton>
+    <PaginationButton disabled={disabled}>
       <Icon icon="leftArrow" /> Previous
     </PaginationButton>
   );
 };
 
 const NextButton = () => {
+PreviousButton.propTypes = {
+  disabled: PropTypes.bool
+};
+
+PreviousButton.defaultProps = {
+  disabled: false
+};
+
+const NextButton = disabled => {
   return (
     <PaginationButton>
       Next <Icon icon="rightArrow" />
@@ -46,7 +55,7 @@ const Pagination = props => {
 
   return (
     <Flex>
-      <PreviousButton />
+      <PreviousButton disabled={currentPage === 1} />
       {pages.map(page => {
         return <PageNumber currentPage={currentPage === page}>{page}</PageNumber>;
       })}
