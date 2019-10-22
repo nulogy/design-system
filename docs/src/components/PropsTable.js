@@ -1,62 +1,41 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import theme from "../../../components/src/theme";
+import { Table, Text } from "@nulogy/components";
 
-const Table = styled.table({
-  border: 0,
-  fontSize: theme.fontSizes.small
-});
+const smallTextRenderer = cellData => (
+  <Text py="x1" fontSize="small">
+    {cellData}
+  </Text>
+);
 
-const Column = styled.td({
-  border: 0,
-  padding: `${theme.space.x1} ${theme.space.x2}`,
-  verticalAlign: "top",
-
-  "&:first-child": { paddingLeft: 0 },
-  "&:last-child": { paddingRight: 0 },
-
-  "@media screen and (max-width: 700px)": {
-    display: "block",
-    padding: theme.space.x1,
-    paddingLeft: 0,
-
-    "&:last-child": { marginBottom: theme.space.x3 },
-
-    "&:before": { fontWeight: "bold" },
-    "&:first-child:before": { content: "'Prop: '" },
-    "&:nth-child(2):before": { content: "'Type: '" },
-    "&:nth-child(3):before": { content: "'Default value: '" },
-    "&:nth-child(4):before": { content: "'Description: '" }
+const columns = [
+  {
+    label: `Name`,
+    dataKey: "name",
+    width: "20%",
+    cellRenderer: smallTextRenderer
+  },
+  {
+    label: "Type",
+    dataKey: "type",
+    width: "10%",
+    cellRenderer: smallTextRenderer
+  },
+  {
+    label: "Default value",
+    dataKey: "defaultValue",
+    width: "20%",
+    cellRenderer: smallTextRenderer
+  },
+  {
+    label: "Description",
+    dataKey: "description",
+    cellRenderer: smallTextRenderer
   }
-});
-
-const Header = styled.thead({
-  tr: { fontWeight: "bold" },
-  "@media screen and (max-width: 700px)": { display: "none" }
-});
+];
 
 const PropsTable = ({ propsRows }) => (
-  <Table>
-    <Header>
-      <tr>
-        <Column>Prop</Column>
-        <Column>Type</Column>
-        <Column>Default value</Column>
-        <Column>Description</Column>
-      </tr>
-    </Header>
-    <tbody>
-      {propsRows.map(({ name, type, defaultValue, description }) => (
-        <tr key={name}>
-          <Column>{name}</Column>
-          <Column>{type}</Column>
-          <Column>{defaultValue}</Column>
-          <Column>{description}</Column>
-        </tr>
-      ))}
-    </tbody>
-  </Table>
+  <Table rows={propsRows} columns={columns} />
 );
 
 PropsTable.propTypes = {
