@@ -63,10 +63,15 @@ const Pagination = props => {
   const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
 
   return (
-    <Flex>
+    <Flex as="nav" aria-label="Pagination navigation">
       <PreviousButton disabled={currentPage === 1} />
       {pages.map(page => {
-        return <PageNumber currentPage={currentPage === page}>{page}</PageNumber>;
+        const isCurrentPage = currentPage === page;
+        return (
+          <PageNumber currentPage={isCurrentPage} aria-current={isCurrentPage} aria-label={`Go to page ${page}`}>
+            {page}
+          </PageNumber>
+        );
       })}
       <NextButton disabled={currentPage === totalPages} />
     </Flex>
