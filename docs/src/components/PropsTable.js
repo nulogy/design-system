@@ -10,7 +10,7 @@ const smallTextRenderer = cellData => (
 
 const columns = [
   {
-    label: `Name`,
+    label: "Name",
     dataKey: "name",
     width: "20%",
     cellRenderer: smallTextRenderer
