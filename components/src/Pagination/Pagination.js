@@ -28,7 +28,6 @@ const PreviousButton = props => {
   );
 };
 
-const NextButton = () => {
 PreviousButton.propTypes = {
   disabled: PropTypes.bool
 };
@@ -37,12 +36,22 @@ PreviousButton.defaultProps = {
   disabled: false
 };
 
-const NextButton = disabled => {
+const NextButton = props => {
+  const { disabled } = props;
+
   return (
-    <PaginationButton>
+    <PaginationButton disabled={disabled}>
       Next <Icon icon="rightArrow" />
     </PaginationButton>
   );
+};
+
+NextButton.propTypes = {
+  disabled: PropTypes.bool
+};
+
+NextButton.defaultProps = {
+  disabled: false
 };
 
 const PageNumber = styled(PaginationButton)(props => ({
@@ -59,7 +68,7 @@ const Pagination = props => {
       {pages.map(page => {
         return <PageNumber currentPage={currentPage === page}>{page}</PageNumber>;
       })}
-      <NextButton />
+      <NextButton disabled={currentPage === totalPages} />
     </Flex>
   );
 };
