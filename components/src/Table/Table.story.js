@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { Table } from ".";
 import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu } from "..";
 
@@ -133,8 +134,17 @@ storiesOf("Table", module)
       <Table columns={columns} rows={rowData} />
     </Box>
   ))
-  .add("with selectable rows", () => <Table columns={columns} rows={rowData} hasSelectableRows />)
-  .add("with lots of rows and columns", () => <Table columns={lotsOfColumns} rows={lotsOfRows(50)} hasSelectableRows />)
+  .add("with selectable rows", () => (
+    <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
+  ))
+  .add("with lots of rows and columns", () => (
+    <Table
+      columns={lotsOfColumns}
+      rows={lotsOfRows(50)}
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+    />
+  ))
   .add("with preselected rows", () => (
     <Table
       columns={columns}
@@ -142,7 +152,7 @@ storiesOf("Table", module)
       hasSelectableRows
       selectedRows={["r2c1"]}
       keyField="c1"
-      onRowSelectionChange={() => {}}
+      onRowSelectionChange={action("row selection changed")}
     />
   ))
   .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />);
