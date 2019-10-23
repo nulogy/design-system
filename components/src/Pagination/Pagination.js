@@ -110,7 +110,7 @@ const Pagination = props => {
               aria-current={isCurrentPage}
               currentPage={isCurrentPage}
               disabled={isCurrentPage}
-              aria-label={`Go to page ${page}`}
+              aria-label={isCurrentPage ? null : `Go to page ${page}`}
               key={page}
               onClick={onSelectPage}
             >
