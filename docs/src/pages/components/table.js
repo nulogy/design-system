@@ -135,7 +135,7 @@ export default () => (
     <DocSection>
       <Table columns={columns} rows={rows} />
       <Highlight className="js">
-        {`import {Table} from "@nulogy/table";
+        {`import {Table} from "@nulogy/components";
 
 const columns = [
   { label: "Column 1", dataKey: "c1" },
