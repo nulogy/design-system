@@ -34,37 +34,41 @@ const PaginationButton = styled.button(props => ({
 }));
 
 const PreviousButton = props => {
-  const { disabled } = props;
+  const { disabled, onClick } = props;
   return (
-    <PaginationButton disabled={disabled}>
+    <PaginationButton disabled={disabled} onClick={onClick}>
       <Icon icon="leftArrow" ml="-8px" /> Previous
     </PaginationButton>
   );
 };
 
 PreviousButton.propTypes = {
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 PreviousButton.defaultProps = {
-  disabled: false
+  disabled: false,
+  onClick: null
 };
 
 const NextButton = props => {
-  const { disabled } = props;
+  const { disabled, onClick } = props;
   return (
-    <PaginationButton disabled={disabled}>
+    <PaginationButton disabled={disabled} onClick={onClick}>
       Next <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
 };
 
 NextButton.propTypes = {
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 NextButton.defaultProps = {
-  disabled: false
+  disabled: false,
+  onClick: null
 };
 
 const PageNumber = styled(PaginationButton)(props => ({
@@ -86,11 +90,11 @@ const getPageItemstoDisplay = (totalPages, currentPage) => {
 };
 
 const Pagination = props => {
-  const { currentPage, totalPages, onNext } = props;
+  const { currentPage, totalPages, onNext, onPrevious, onSelectPage } = props;
 
   return (
     <Flex as="nav" aria-label="Pagination navigation">
-      <PreviousButton disabled={currentPage === 1} />
+      <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
       {getPageItemstoDisplay(totalPages, currentPage).map(page => {
         const isCurrentPage = currentPage === page;
 
@@ -108,6 +112,7 @@ const Pagination = props => {
               disabled={isCurrentPage}
               aria-label={`Go to page ${page}`}
               key={page}
+              onClick={onSelectPage}
             >
               {page}
             </PageNumber>
@@ -121,11 +126,15 @@ const Pagination = props => {
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
-  onNext: PropTypes.func
+  onNext: PropTypes.func,
+  onPrevious: PropTypes.func,
+  onSelectPage: PropTypes.func
 };
 
 Pagination.defaultProps = {
-  onNext: null
+  onNext: null,
+  onPrevious: null,
+  onSelectPage: null
 };
 
 export default Pagination;

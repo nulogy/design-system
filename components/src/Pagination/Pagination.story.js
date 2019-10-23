@@ -3,7 +3,15 @@ import { storiesOf } from "@storybook/react";
 import { Pagination } from ".";
 
 storiesOf("Pagination", module)
-  .add("Pagination", () => <Pagination currentPage={5} totalPages={10} onNext={() => console.log("next")} />)
+  .add("Pagination", () => (
+    <Pagination
+      currentPage={5}
+      totalPages={10}
+      onNext={() => console.log("next")}
+      onPrevious={() => console.log("previous")}
+      onSelectPage={() => console.log("page selected")}
+    />
+  ))
   .add("on the first page", () => <Pagination currentPage={1} totalPages={10} />)
   .add("on the last page", () => <Pagination currentPage={10} totalPages={10} />)
   .add("with less than 5 pages", () => <Pagination currentPage={3} totalPages={4} />);
