@@ -26,7 +26,7 @@ const PreviousButton = props => {
   const { disabled } = props;
   return (
     <PaginationButton disabled={disabled}>
-      <Icon icon="leftArrow" /> Previous
+      <Icon icon="leftArrow" ml="-8px" /> Previous
     </PaginationButton>
   );
 };
@@ -43,7 +43,7 @@ const NextButton = props => {
   const { disabled } = props;
   return (
     <PaginationButton disabled={disabled}>
-      Next <Icon icon="rightArrow" />
+      Next <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
 };
