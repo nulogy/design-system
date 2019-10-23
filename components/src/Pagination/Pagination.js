@@ -11,12 +11,15 @@ const PaginationButton = styled.button(props => ({
   padding: `${theme.space.x1} ${theme.space.x2}`,
   lineHeight: theme.lineHeights.smallTextBase,
   display: "flex",
-  borderRadius: "2px",
+  borderRadius: "4px",
   color: props.disabled ? theme.colors.grey : theme.colors.black,
   "&:not(:last-child)": {
     marginRight: theme.space.x2
   },
-  cursor: props.disabled ? "default" : "pointer"
+  cursor: props.disabled ? "default" : "pointer",
+  "&:hover": {
+    background: props.currentPage ? theme.colors.darkBlue : props.disabled ? "initial" : theme.colors.lightGrey
+  }
 }));
 
 const PreviousButton = props => {
@@ -38,7 +41,6 @@ PreviousButton.defaultProps = {
 
 const NextButton = props => {
   const { disabled } = props;
-
   return (
     <PaginationButton disabled={disabled}>
       Next <Icon icon="rightArrow" />
@@ -55,7 +57,9 @@ NextButton.defaultProps = {
 };
 
 const PageNumber = styled(PaginationButton)(props => ({
-  background: props.currentPage ? theme.colors.whiteGrey : "transparent"
+  background: props.currentPage ? theme.colors.darkBlue : "transparent",
+  color: props.currentPage ? theme.colors.whiteGrey : theme.colors.black,
+  ...props
 }));
 
 const Pagination = props => {
@@ -68,7 +72,12 @@ const Pagination = props => {
       {pages.map(page => {
         const isCurrentPage = currentPage === page;
         return (
-          <PageNumber currentPage={isCurrentPage} aria-current={isCurrentPage} aria-label={`Go to page ${page}`}>
+          <PageNumber
+            aria-current={isCurrentPage}
+            currentPage={isCurrentPage}
+            disabled={isCurrentPage}
+            aria-label={`Go to page ${page}`}
+          >
             {page}
           </PageNumber>
         );
