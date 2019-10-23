@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
+import { Text } from "../Type";
 
 const getHoverBackground = (currentPage, disabled) => {
   if (currentPage) {
@@ -72,37 +73,59 @@ const PageNumber = styled(PaginationButton)(props => ({
   ...props
 }));
 
-const Pagination = props => {
-  const { currentPage, totalPages } = props;
+const SEPERATOR = "...";
+
+const getPageItemstoDisplay = (totalPages, currentPage) => {
   const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
+  if (totalPages <= 5) return pages;
+  if (currentPage === 1) return [...pages.splice(currentPage - 1, 2), SEPERATOR, totalPages];
+  if (currentPage === totalPages) return [1, SEPERATOR, ...pages.splice(totalPages - 2, 2)];
+  else {
+    return [1, SEPERATOR, ...pages.splice(currentPage - 2, 3), SEPERATOR, totalPages];
+  }
+};
+
+const Pagination = props => {
+  const { currentPage, totalPages, onNext } = props;
 
   return (
     <Flex as="nav" aria-label="Pagination navigation">
       <PreviousButton disabled={currentPage === 1} />
-      {pages.map(page => {
+      {getPageItemstoDisplay(totalPages, currentPage).map(page => {
         const isCurrentPage = currentPage === page;
-        return (
-          <PageNumber
-            aria-current={isCurrentPage}
-            currentPage={isCurrentPage}
-            disabled={isCurrentPage}
-            aria-label={`Go to page ${page}`}
-            key={page}
-          >
-            {page}
-          </PageNumber>
-        );
+
+        if (page === SEPERATOR)
+          return (
+            <Text py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
+              {SEPERATOR}
+            </Text>
+          );
+        else
+          return (
+            <PageNumber
+              aria-current={isCurrentPage}
+              currentPage={isCurrentPage}
+              disabled={isCurrentPage}
+              aria-label={`Go to page ${page}`}
+              key={page}
+            >
+              {page}
+            </PageNumber>
+          );
       })}
-      <NextButton disabled={currentPage === totalPages} />
+      <NextButton disabled={currentPage === totalPages} onClick={onNext} />
     </Flex>
   );
 };
 
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
-  totalPages: PropTypes.number.isRequired
+  totalPages: PropTypes.number.isRequired,
+  onNext: PropTypes.func
 };
 
-Pagination.defaultProps = {};
+Pagination.defaultProps = {
+  onNext: null
+};
 
 export default Pagination;
