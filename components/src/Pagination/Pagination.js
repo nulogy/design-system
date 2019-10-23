@@ -5,20 +5,30 @@ import theme from "../theme";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 
+const getHoverBackground = (currentPage, disabled) => {
+  if (currentPage) {
+    return theme.colors.darkBlue;
+  }
+  if (disabled) {
+    return "inital";
+  }
+  return theme.colors.lightGrey;
+};
+
 const PaginationButton = styled.button(props => ({
-  border: 0,
   fontSize: theme.fontSizes.small,
   padding: `${theme.space.x1} ${theme.space.x2}`,
   lineHeight: theme.lineHeights.smallTextBase,
   display: "flex",
   borderRadius: "4px",
+  border: `1px solid ${theme.colors.lightGrey}`,
   color: props.disabled ? theme.colors.grey : theme.colors.black,
   "&:not(:last-child)": {
     marginRight: theme.space.x2
   },
   cursor: props.disabled ? "default" : "pointer",
   "&:hover": {
-    background: props.currentPage ? theme.colors.darkBlue : props.disabled ? "initial" : theme.colors.lightGrey
+    background: getHoverBackground(props.currentPage, props.disabled)
   }
 }));
 
