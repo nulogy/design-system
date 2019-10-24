@@ -83,6 +83,8 @@ const getPageItemstoDisplay = (totalPages, currentPage) => {
   if (totalPages <= 5) return pages;
   if (currentPage === 1) return [...pages.slice(currentPage - 1, 2), SEPERATOR, totalPages];
   if (currentPage === totalPages) return [1, SEPERATOR, ...pages.slice(totalPages - 2, totalPages)];
+  if (currentPage === 2) return [...pages.slice(currentPage - 2, 3), SEPERATOR, totalPages];
+  if (currentPage === totalPages - 1) return [1, SEPERATOR, ...pages.slice(totalPages - 3, totalPages)];
   else {
     return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 1), SEPERATOR, totalPages];
   }
