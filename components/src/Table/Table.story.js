@@ -65,7 +65,7 @@ const lotsOfRows = numRows => {
   for (let i = 0; i < numRows; i += 1) {
     const row = {
       id: i,
-      c1: "some data",
+      c1: `some data ${i}`,
       c2: "some data",
       c3: "some data",
       c4: "some data",
@@ -155,4 +155,13 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
     />
   ))
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />);
+  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />)
+  .add("with pagination", () => (
+    <Table
+      columns={lotsOfColumns}
+      rows={lotsOfRows(120)}
+      hasSelectableRows
+      rowsPerPage={4}
+      onRowSelectionChange={row => console.log(row)}
+    />
+  ));
