@@ -6,27 +6,36 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
- 
+
 ### Added
+
+- Added [Pagination](http://nulogy.design/components/pagination) component
+
 ### Changed
+
 ### Deprecated
+
 ### Removed
+
 ### Fixed
+
 ### Security
 
 ## [0.14.1] - 2019-10-21
 
 ### Changed
-  - Library now only includes dist files, instead of the entire design system source 
+
+- Library now only includes dist files, instead of the entire design system source
 
 ## [0.14.0] - 2019-10-21
 
 ### Added
+
 - Added [Status Indicator](https://storybook.nulogy.design/?path=/story/status-indicator--all) component
 - Table
-  - Added support for [selectable rows](https://storybook.nulogy.design/?path=/story/table--with-selectable-rows) 
+  - Added support for [selectable rows](https://storybook.nulogy.design/?path=/story/table--with-selectable-rows)
   - Added support for [custom column widths](https://storybook.nulogy.design/?path=/story/table--with-custom-column-widths)
-  - 
+  -
 
 ### Changed
 
@@ -37,14 +46,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - Now: `cellFormatter(cellData)`
       - [**Breaking Change**] `cellRenderer`'s API has been updated
     - Before: `cellRenderer({rowData, dataKey})`
-    - Now: `cellRenderer(cellData, columnOptions, rowData)` 
+    - Now: `cellRenderer(cellData, columnOptions, rowData)`
   - [**Behaviour Change**] Table headers are no longer fixed
   - [**Behaviour Change**] Table columns are no longer equal widths by default
     - They now behave exactly the same as HTML columns. Auto-determined by the content of the cells.
 
 ### Fixed
-- Select 
-  - [defaultValue](https://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue) now works correctly for multiselect 
+
+- Select
+  - [defaultValue](https://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue) now works correctly for multiselect
   - fixed style when providing a [blank value](https://storybook.nulogy.design/?path=/story/select--with-a-blank-value)
 
 ## [0.13.2] - 2019-09-26
