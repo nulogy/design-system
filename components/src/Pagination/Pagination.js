@@ -86,7 +86,11 @@ const getPageItemstoDisplay = (totalPages, currentPage) => {
   if (currentPage === 2) return [...pages.slice(currentPage - 2, 3), SEPERATOR, totalPages];
   if (currentPage === totalPages - 1) return [1, SEPERATOR, ...pages.slice(totalPages - 3, totalPages)];
   else {
-    return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 1), SEPERATOR, totalPages];
+    const currentPageWithNeighbours = pages.slice(currentPage - 2, currentPage + 1);
+    if (currentPageWithNeighbours[0] === 2) return [1, ...currentPageWithNeighbours, SEPERATOR, totalPages];
+    else if (currentPageWithNeighbours[currentPageWithNeighbours.length - 1] === totalPages - 1)
+      return [1, SEPERATOR, ...currentPageWithNeighbours, totalPages];
+    return [1, SEPERATOR, ...currentPageWithNeighbours, SEPERATOR, totalPages];
   }
 };
 
