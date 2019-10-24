@@ -112,6 +112,10 @@ export const menuData = [
         href: "/components/navbar"
       },
       {
+        name: "Pagination",
+        href: "/components/pagination"
+      },
+      {
         name: "Radio",
         href: "/components/radio"
       },
