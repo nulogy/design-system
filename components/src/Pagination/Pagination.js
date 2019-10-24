@@ -82,10 +82,10 @@ const SEPERATOR = "...";
 const getPageItemstoDisplay = (totalPages, currentPage) => {
   const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
   if (totalPages <= 5) return pages;
-  if (currentPage === 1) return [...pages.splice(currentPage - 1, 2), SEPERATOR, totalPages];
-  if (currentPage === totalPages) return [1, SEPERATOR, ...pages.splice(totalPages - 2, 2)];
+  if (currentPage === 1) return [...pages.slice(currentPage - 1, 2), SEPERATOR, totalPages];
+  if (currentPage === totalPages) return [1, SEPERATOR, ...pages.slice(totalPages - 2, totalPages)];
   else {
-    return [1, SEPERATOR, ...pages.splice(currentPage - 2, 3), SEPERATOR, totalPages];
+    return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 1), SEPERATOR, totalPages];
   }
 };
 
