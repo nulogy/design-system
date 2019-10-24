@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { Pagination } from ".";
 
 storiesOf("Pagination", module)
@@ -7,9 +8,9 @@ storiesOf("Pagination", module)
     <Pagination
       currentPage={5}
       totalPages={10}
-      onNext={() => console.log("next")}
-      onPrevious={() => console.log("previous")}
-      onSelectPage={() => console.log("page selected")}
+      onNext={action("next")}
+      onPrevious={action("previous")}
+      onSelectPage={action("selected")}
     />
   ))
   .add("on the first page", () => <Pagination currentPage={1} totalPages={10} />)
