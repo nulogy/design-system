@@ -152,6 +152,7 @@ storiesOf("Select", module)
   ))
   .add("with multiselect", () => (
     <Select
+      defaultValue={["accepted", "assigned"]}
       noOptionsMessage={() => "No options"}
       placeholder="Please select inventory status"
       options={options}
