@@ -73,8 +73,7 @@ NextButton.defaultProps = {
 
 const PageNumber = styled(PaginationButton)(props => ({
   background: props.currentPage ? theme.colors.darkBlue : "transparent",
-  color: props.currentPage ? theme.colors.whiteGrey : theme.colors.black,
-  ...props
+  color: props.currentPage ? theme.colors.whiteGrey : theme.colors.black
 }));
 
 const SEPERATOR = "...";
