@@ -152,6 +152,7 @@ class StatefulTable extends React.Component {
 
         {rowsPerPage && (
           <Pagination
+            pt="x2"
             currentPage={currentPage}
             totalPages={paginatedRows.length}
             onSelectPage={this.goToPage}

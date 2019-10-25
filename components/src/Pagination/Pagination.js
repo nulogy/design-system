@@ -92,10 +92,10 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
 };
 
 const Pagination = props => {
-  const { currentPage, totalPages, onNext, onPrevious, onSelectPage } = props;
+  const { currentPage, totalPages, onNext, onPrevious, onSelectPage, ...restProps } = props;
 
   return (
-    <Flex as="nav" aria-label="Pagination navigation" justifyContent="flex-end">
+    <Flex as="nav" aria-label="Pagination navigation" justifyContent="flex-end" {...restProps}>
       <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
       {getPageItemstoDisplay(totalPages, currentPage).map((page, index) => {
         const isCurrentPage = currentPage === page;
