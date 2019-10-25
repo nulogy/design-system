@@ -51,6 +51,18 @@ const propsRows = [
     defaultValue: "false",
     description: "Whether or not multiple selections can be made"
   },
+  {
+    name: "value",
+    type: "String | Array",
+    defaultValue: "undefined",
+    description: "Value of input, used when controlling the component"
+  },
+  {
+    name: "defaultValue",
+    type: "String | Array",
+    defaultValue: "",
+    description: "Default value of input"
+  },
   ...inputProps
 ];
 

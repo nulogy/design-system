@@ -27,6 +27,18 @@ const propsRows = [
     defaultValue: "3",
     description: "A custom number of rows to show by default."
   },
+  {
+    name: "value",
+    type: "String",
+    defaultValue: "undefined",
+    description: "Value of input, used when controlling the component"
+  },
+  {
+    name: "defaultValue",
+    type: "String",
+    defaultValue: "",
+    description: "Default value of input"
+  },
   ...inputProps
 ];
 

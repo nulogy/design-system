@@ -20,6 +20,22 @@ import {
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
+const propsRows = [
+  {
+    name: "value",
+    type: "String",
+    defaultValue: "undefined",
+    description: "Value of input, used when controlling the component"
+  },
+  {
+    name: "defaultValue",
+    type: "String",
+    defaultValue: "",
+    description: "Default value of input"
+  },
+  ...inputProps
+];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -100,7 +116,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={inputProps} />
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
