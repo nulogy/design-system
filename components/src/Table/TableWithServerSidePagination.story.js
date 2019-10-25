@@ -76,4 +76,4 @@ class TableWithServerSidePagination extends React.Component {
   }
 }
 
-storiesOf("Table", module).add("with server-side pagination", () => <TableWithServerSidePagination />);
+storiesOf("Table", module).add("with server-side pagination (SkipStoryshot)", () => <TableWithServerSidePagination />);

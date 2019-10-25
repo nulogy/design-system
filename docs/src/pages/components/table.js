@@ -366,7 +366,7 @@ const manyRowsForPagination = [
         and Table components can also be used together to support server-side
         pagination or other custom behaviour. An example of such an
         implementation can be found in{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-server-side-pagination">
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-server-side-pagination-skipstoryshot">
           Storybook
         </Link>
         .
