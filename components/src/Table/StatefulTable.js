@@ -25,14 +25,14 @@ class StatefulTable extends React.Component {
 
   onRowSelectionChangeHandler = () => {
     const { onRowSelectionChange } = this.props;
-    const { selectedRows, paginatedRows, currentPage } = this.state;
+    const { selectedRows, currentPage } = this.state;
     if (onRowSelectionChange) {
-      onRowSelectionChange(this.selectedRowsOnPage(selectedRows, paginatedRows, currentPage));
+      onRowSelectionChange(this.selectedRowsByPageSelector(selectedRows, currentPage));
     }
   };
 
   onSelectRow = row => {
-    const { paginatedRows, currentPage } = this.state;
+    const { currentPage } = this.state;
     const { keyField } = this.props;
     const currentRowKey = row[keyField];
     const newRowSelections = !row.selected
@@ -41,16 +41,16 @@ class StatefulTable extends React.Component {
     this.setState(
       {
         selectedRows: newRowSelections,
-        isHeaderSelected: this.allRowsSelectedOnPage(newRowSelections, paginatedRows, currentPage)
+        isHeaderSelected: this.areAllRowsSelectedOnPage(newRowSelections, currentPage)
       },
       this.onRowSelectionChangeHandler
     );
   };
 
   onSelectHeader = () => {
-    const { isHeaderSelected, paginatedRows, currentPage } = this.state;
+    const { isHeaderSelected, currentPage } = this.state;
     const { keyField } = this.props;
-    const currentRowKeys = getAllRowKeys(this.getRowsOnPage(paginatedRows, currentPage), keyField);
+    const currentRowKeys = getAllRowKeys(this.rowsByPageSelector(currentPage), keyField);
     this.setState(
       {
         isHeaderSelected: !isHeaderSelected,
@@ -82,34 +82,37 @@ class StatefulTable extends React.Component {
     return selectedRows.filter(row => !rowKeysToRemove.includes(row));
   };
 
-  getRowsOnPage = (rows, pageNumber) => {
-    return rows[pageNumber - 1];
+  rowsByPageSelector = pageNumber => {
+    const { paginatedRows } = this.state;
+    return paginatedRows[pageNumber - 1];
   };
 
   goToPage = pageNumber => {
-    const { selectedRows, paginatedRows } = this.state;
+    const { selectedRows } = this.state;
+    const { hasSelectableRows } = this.props;
     this.setState(
       {
         currentPage: pageNumber,
-        isHeaderSelected: this.allRowsSelectedOnPage(selectedRows, paginatedRows, pageNumber)
+        ...(hasSelectableRows && {
+          isHeaderSelected: this.areAllRowsSelectedOnPage(selectedRows, pageNumber)
+        })
       },
       this.onPageSelectionChangeHandler
     );
   };
 
-  selectedRowsOnPage = (selectedRows, paginatedRows, pageNumber) => {
-    const currentRows = this.getRowsOnPage(paginatedRows, pageNumber);
+  selectedRowsByPageSelector = (selectedRows, pageNumber) => {
+    const currentRows = this.rowsByPageSelector(pageNumber);
     const { keyField } = this.props;
     const allRowKeysOnPage = getAllRowKeys(currentRows, keyField);
-    return selectedRows.filter(rowKey => allRowKeysOnPage.includes(rowKey));
+    return allRowKeysOnPage.filter(rowKey => selectedRows.includes(rowKey));
   };
 
-  allRowsSelectedOnPage = (selectedRows, paginatedRows, pageNumber) => {
-    // TODO: needs degugging, not working when returning to a page
+  areAllRowsSelectedOnPage = (selectedRows, pageNumber) => {
     const { keyField } = this.props;
-    const currentRows = this.getRowsOnPage(paginatedRows, pageNumber);
+    const currentRows = this.rowsByPageSelector(pageNumber);
     const allRowKeysOnPage = getAllRowKeys(currentRows, keyField);
-    return allRowKeysOnPage.length === this.selectedRowsOnPage(selectedRows, paginatedRows, pageNumber).length;
+    return allRowKeysOnPage.length === this.selectedRowsByPageSelector(selectedRows, pageNumber).length;
   };
 
   goToPrevPage = () => {
@@ -135,11 +138,11 @@ class StatefulTable extends React.Component {
     const { rowsPerPage, hasSelectableRows } = this.props;
     const props = {
       ...this.props,
-      rows: this.getRowsOnPage(paginatedRows, currentPage),
+      rows: this.rowsByPageSelector(currentPage),
       ...(hasSelectableRows && {
         onSelectRow: this.onSelectRow,
         onSelectHeader: this.onSelectHeader,
-        selectedRows: this.selectedRowsOnPage(selectedRows, paginatedRows, currentPage),
+        selectedRows: this.selectedRowsByPageSelector(selectedRows, currentPage),
         isHeaderSelected
       })
     };

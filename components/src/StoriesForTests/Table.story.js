@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Table } from "..";
+import { getMockRows, mockColumns } from "../Table/Table.mock-utils";
 
 const columns = [
   { label: "Column 1", dataKey: "c1" },
@@ -16,6 +17,18 @@ const rowData = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
 ];
 
-storiesOf("StoriesForTests/Table", module).add("with preselected rows", () => (
-  <Table columns={columns} rows={rowData} hasSelectableRows selectedRows={["r2c1"]} keyField="c1" />
-));
+storiesOf("StoriesForTests/Table", module)
+  .add("with preselected rows", () => (
+    <Table columns={columns} rows={rowData} hasSelectableRows selectedRows={["r2c1"]} keyField="c1" />
+  ))
+  .add("with pagination", () => <Table columns={mockColumns} rows={getMockRows(23)} rowsPerPage={4} keyField="c1" />)
+  .add("with pagination and selectable rows", () => (
+    <Table
+      columns={mockColumns}
+      rows={getMockRows(56)}
+      rowsPerPage={5}
+      hasSelectableRows
+      selectedRows={["r2c1"]}
+      keyField="c1"
+    />
+  ));

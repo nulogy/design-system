@@ -4,8 +4,8 @@ import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 
 const Table = props => {
-  const { hasSelectableRows } = props;
-  return hasSelectableRows ? <StatefulTable {...props} /> : <BaseTable {...props} />;
+  const { hasSelectableRows, rowsPerPage } = props;
+  return hasSelectableRows || rowsPerPage ? <StatefulTable {...props} /> : <BaseTable {...props} />;
 };
 
 Table.propTypes = {

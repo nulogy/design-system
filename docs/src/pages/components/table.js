@@ -71,6 +71,19 @@ const propsRows = [
     defaultValue: "none",
     description:
       "The function that should be called when a row selection changes. The array of rows currently selected is passed in as an argument."
+  },
+  {
+    name: "rowsPerPage",
+    type: "number",
+    defaultValue: "none",
+    description: "The number of rows to display per page"
+  },
+  {
+    name: "onPageChange",
+    type: "function",
+    defaultValue: "none",
+    description:
+      "The function that should be called when a current page changes. The page number that is currently selected is passed in as an argument."
   }
 ];
 
@@ -108,6 +121,17 @@ const rows = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
 ];
 
+const manyRowsForPagination = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" },
+  { c1: "r3c1", c2: "r3c2", c3: "2019-09-23" },
+  { c1: "r4c1", c2: "r4c2", c3: "2019-09-23" },
+  { c1: "r5c1", c2: "r5c2", c3: "2019-09-23" },
+  { c1: "r6c1", c2: "r6c2", c3: "2019-09-22" },
+  { c1: "r7c1", c2: "r7c2", c3: "2019-09-21" },
+  { c1: "r8c1", c2: "r8c2", c3: "2019-09-10" },
+  { c1: "r9c1", c2: "r9c2", c3: "2019-09-22" }
+];
 const columnsWithCellRenderer = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
@@ -256,6 +280,60 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
 const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
 <Table columns={columnsWithWidths} rows={rows} />`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With pagination</SectionTitle>
+      <Text>
+        Setting rowsPerPage on the Table will add a{" "}
+        <Link href="https://nulogy.design//components/pagination">
+          Pagination
+        </Link>{" "}
+        component to the table. A maximum of the specified rowsPerPage will be
+        shown on each page.
+      </Text>
+      <Text>
+        Providing a function to onPageChange will allow tracking of the current
+        page number. It is fired whenever the page changes and takes in the
+        current page number as an argument.
+      </Text>
+      <Table
+        columns={columns}
+        rows={manyRowsForPagination}
+        rowsPerPage={3}
+        keyField="c1"
+        onPageChange={pageNum => pageNum}
+      />
+      <Highlight className="js">
+        {`import {Table} from "@nulogy/table";
+
+const columns = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3" },
+];
+
+const manyRowsForPagination = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" },
+  { c1: "r3c1", c2: "r3c2", c3: "2019-09-23" },
+  { c1: "r4c1", c2: "r4c2", c3: "2019-09-23" },
+  { c1: "r5c1", c2: "r5c2", c3: "2019-09-23" },
+  { c1: "r6c1", c2: "r6c2", c3: "2019-09-22" },
+  { c1: "r7c1", c2: "r7c2", c3: "2019-09-21" },
+  { c1: "r8c1", c2: "r8c2", c3: "2019-09-10" },
+  { c1: "r9c1", c2: "r9c2", c3: "2019-09-22" }
+];
+
+<Table
+        columns={columns}
+        rows={manyRowsForPagination}
+        rowsPerPage={3}
+        keyField="c1"
+        onPageChange={pageNum => pageNum}
+      />
+`}
       </Highlight>
     </DocSection>
 
