@@ -80,32 +80,30 @@ const SEPERATOR = "...";
 
 const getPageItemstoDisplay = (totalPages, currentPage) => {
   const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
-  if (totalPages <= 5) return pages;
-  if (currentPage === 1) return [...pages.slice(currentPage - 1, 2), SEPERATOR, totalPages];
-  if (currentPage === totalPages) return [1, SEPERATOR, ...pages.slice(totalPages - 2, totalPages)];
-  if (currentPage === 2) return [...pages.slice(currentPage - 2, 3), SEPERATOR, totalPages];
-  if (currentPage === totalPages - 1) return [1, SEPERATOR, ...pages.slice(totalPages - 3, totalPages)];
-  else {
-    const currentPageWithNeighbours = pages.slice(currentPage - 2, currentPage + 1);
-    if (currentPageWithNeighbours[0] === 2) return [1, ...currentPageWithNeighbours, SEPERATOR, totalPages];
-    else if (currentPageWithNeighbours[currentPageWithNeighbours.length - 1] === totalPages - 1)
-      return [1, SEPERATOR, ...currentPageWithNeighbours, totalPages];
-    return [1, SEPERATOR, ...currentPageWithNeighbours, SEPERATOR, totalPages];
+  const MAX_PAGES_TO_SHOW = 6;
+  if (totalPages <= MAX_PAGES_TO_SHOW) return pages;
+  if (currentPage <= MAX_PAGES_TO_SHOW - 1) {
+    return [...pages.slice(0, 5), SEPERATOR, totalPages];
   }
+  if (currentPage > totalPages - 5) {
+    return [1, SEPERATOR, ...pages.slice(totalPages - 5)];
+  }
+  return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPERATOR, totalPages];
 };
 
 const Pagination = props => {
   const { currentPage, totalPages, onNext, onPrevious, onSelectPage } = props;
 
   return (
-    <Flex as="nav" aria-label="Pagination navigation">
+    <Flex as="nav" aria-label="Pagination navigation" justifyContent="flex-end">
       <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
-      {getPageItemstoDisplay(totalPages, currentPage).map(page => {
+      {getPageItemstoDisplay(totalPages, currentPage).map((page, index) => {
         const isCurrentPage = currentPage === page;
 
         if (page === SEPERATOR)
           return (
-            <Text py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
+            // eslint-disable-next-line react/no-array-index-key
+            <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
               {SEPERATOR}
             </Text>
           );
@@ -117,7 +115,7 @@ const Pagination = props => {
               disabled={isCurrentPage}
               aria-label={isCurrentPage ? null : `Go to page ${page}`}
               key={page}
-              onClick={onSelectPage}
+              onClick={() => onSelectPage(page)}
             >
               {page}
             </PageNumber>
