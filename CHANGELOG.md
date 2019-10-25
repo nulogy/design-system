@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added [Pagination](http://nulogy.design/components/pagination) component
+- Added (http://nulogy.design/components/table) a pagination feature to the table
 
 ### Changed
 
