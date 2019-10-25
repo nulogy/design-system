@@ -306,7 +306,7 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
       <SectionTitle>With pagination</SectionTitle>
       <Text>
         Setting rowsPerPage on the Table will add a{" "}
-        <Link href="https://nulogy.design//components/pagination">
+        <Link href="https://nulogy.design/components/pagination">
           Pagination
         </Link>{" "}
         component to the table. A maximum of the specified rowsPerPage will be
@@ -353,6 +353,27 @@ const manyRowsForPagination = [
         onPageChange={pageNum => pageNum}
       />
 `}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With server-side or custom pagination</SectionTitle>
+      <Text>
+        The{" "}
+        <Link href="https://nulogy.design/components/pagination">
+          Pagination
+        </Link>{" "}
+        and Table components can also be used together to support server-side
+        pagination or other custom behaviour. An example of such an
+        implementation can be found in{" "}
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-server-side-pagination">
+          Storybook
+        </Link>
+        .
+      </Text>
+      <Table loading columns={columns} rows={rows} keyField="c1" />
+      <Highlight className="js">
+        {`<Table loading hasSelectableRows columns={columns} rows={rows} keyField="c1"/>`}
       </Highlight>
     </DocSection>
 
