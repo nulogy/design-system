@@ -78,7 +78,7 @@ const PageNumber = styled(PaginationButton)(props => ({
 
 const SEPERATOR = "...";
 
-const getPageItemstoDisplay = (totalPages, currentPage) => {
+export const getPageItemstoDisplay = (totalPages, currentPage) => {
   const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
   const MAX_PAGES_TO_SHOW = 6;
   if (totalPages <= MAX_PAGES_TO_SHOW) return pages;
