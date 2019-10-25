@@ -15,7 +15,7 @@ const columnType = PropTypes.shape({
   width: PropTypes.string
 });
 
-const StyledNoRowsContainer = styled(Box)({
+const StyledMessageContainer = styled(Box)({
   padding: `${theme.space.x3} 0`,
   fontSize: theme.fontSizes.small,
   color: theme.colors.darkGrey
@@ -63,8 +63,12 @@ const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => 
   return renderer(row[dataKey], columnOptions, row);
 };
 
-const renderAllRows = (rows, columns, keyField) =>
-  rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />);
+const renderRows = (rows, columns, keyField, noRowsContent) =>
+  rows.length > 0 ? (
+    rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />)
+  ) : (
+    <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
+  );
 
 const TableBodyRow = ({ row, columns }) => (
   <StyledTr>
@@ -81,26 +85,28 @@ TableBodyRow.propTypes = {
   columns: PropTypes.arrayOf(columnType).isRequired
 };
 
-const NoRowsContainer = ({ colSpan, children }) => (
+const TableMessageContainer = ({ colSpan, children }) => (
   <tr>
     <td colSpan={colSpan}>
-      <StyledNoRowsContainer>{children}</StyledNoRowsContainer>
+      <StyledMessageContainer>{children}</StyledMessageContainer>
     </td>
   </tr>
 );
 
-NoRowsContainer.propTypes = {
+TableMessageContainer.propTypes = {
   colSpan: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired
 };
 
-const TableBody = ({ rows, columns, keyField, noRowsContent }) => (
+const LoadingContent = ({ colSpan }) => <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>;
+
+LoadingContent.propTypes = {
+  colSpan: PropTypes.number.isRequired
+};
+
+const TableBody = ({ rows, columns, keyField, noRowsContent, loading }) => (
   <tbody>
-    {rows.length > 0 ? (
-      renderAllRows(rows, columns, keyField)
-    ) : (
-      <NoRowsContainer colSpan={columns.length - 1}>{noRowsContent}</NoRowsContainer>
-    )}
+    {!loading ? renderRows(rows, columns, keyField, noRowsContent) : <LoadingContent colSpan={columns.length - 1} />}
   </tbody>
 );
 
@@ -108,11 +114,13 @@ TableBody.propTypes = {
   columns: PropTypes.arrayOf(columnType).isRequired,
   rows: PropTypes.arrayOf(rowType).isRequired,
   noRowsContent: PropTypes.string,
-  keyField: PropTypes.string
+  keyField: PropTypes.string,
+  loading: PropTypes.bool
 };
 TableBody.defaultProps = {
   noRowsContent: "No records have been created for this table.",
-  keyField: "id"
+  keyField: "id",
+  loading: false
 };
 
 export default TableBody;

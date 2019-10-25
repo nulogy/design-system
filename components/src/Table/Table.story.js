@@ -65,6 +65,7 @@ storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
+  .add("loading", () => <Table columns={columns} rows={rowData} loading />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
   .add("with a custom component: iconic button", () => (
     <Table columns={getColumnsWithCellRenderer(iconicButtonCellRenderer)} rows={rowData} />
