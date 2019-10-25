@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added [Pagination](http://nulogy.design/components/pagination) component
 - Added pagination feature to [table](http://nulogy.design/components/table)
+- Added loading option to [table](http://nulogy.design/components/table)
 
 ### Changed
 

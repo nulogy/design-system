@@ -39,6 +39,13 @@ const propsRows = [
       "An array of row objects, where the key name matches the dataKey of the column"
   },
   {
+    name: "loading",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "A boolean that will show the table body in a loading state when set to true"
+  },
+  {
     name: "noRowsContent",
     type: "string",
     defaultValue: "No records have been created for this table.",
@@ -280,6 +287,18 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
 const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
 <Table columns={columnsWithWidths} rows={rows} />`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With loading state</SectionTitle>
+      <Text>
+        The table can be set to loading while row data is being fetched. It will
+        show rows when the loading prop is set to false.
+      </Text>
+      <Table loading columns={columns} rows={rows} keyField="c1" />
+      <Highlight className="js">
+        {`<Table loading hasSelectableRows columns={columns} rows={rows} keyField="c1"/>`}
       </Highlight>
     </DocSection>
 

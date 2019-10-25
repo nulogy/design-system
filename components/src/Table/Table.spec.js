@@ -116,4 +116,21 @@ describe("Table", () => {
       });
     });
   });
+  describe("loading", () => {
+    it("shows only loading text when loading", () => {
+      const wrapper = mount(<Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows loading />);
+      const rows = wrapper.find("tbody tr");
+      const loadingCell = wrapper.find("tbody tr td");
+      expect(loadingCell.text()).toEqual("Loading...");
+      expect(rows.length).toEqual(1);
+    });
+    it("shows rows when not loading", () => {
+      const rowData = getMockRows(20);
+      const wrapper = mount(<Table columns={mockColumns} rows={rowData} hasSelectableRows loading={false} />);
+      const rows = wrapper.find("tbody tr");
+      const cell = wrapper.find("tbody tr td");
+      expect(cell.at(0).text()).not.toEqual("Loading...");
+      expect(rows.length).toEqual(20);
+    });
+  });
 });
