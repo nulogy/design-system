@@ -3,5 +3,6 @@ import { mount } from "enzyme";
 import "jest-styled-components";
 
 initStoryshots({
-  renderer: mount
+  renderer: mount,
+  storyNameRegex: /^((?!.*?SkipStoryshot).)*$/
 });
