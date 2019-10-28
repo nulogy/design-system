@@ -89,7 +89,6 @@ const MenuTrigger = props => {
         flip: { behavior: ["bottom"] },
         setPopperWidth: {
           enabled: true,
-          order: 849,
           fn: setDropdownMinWidth
         },
         preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
