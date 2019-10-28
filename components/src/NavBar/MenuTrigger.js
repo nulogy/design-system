@@ -75,12 +75,23 @@ MenuTriggerButton.defaultProps = {
 
 const MenuTrigger = props => {
   const { menuData, name, color, hoverColor, hoverBackground, ...otherProps } = props;
+  let dropdownMinWidth = "auto";
+  const setDropdownMinWidth = popperData => {
+    // Popper.js throws an error if popperData is not returned from this fn
+    dropdownMinWidth = `${popperData.instance.reference.clientWidth}px`;
+    return popperData;
+  };
   return (
     <NavBarDropdownMenu
       {...otherProps}
       placement="bottom-start"
       modifiers={{
         flip: { behavior: ["bottom"] },
+        setPopperWidth: {
+          enabled: true,
+          order: 849,
+          fn: setDropdownMinWidth
+        },
         preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
       }}
       trigger={() => (
@@ -88,7 +99,7 @@ const MenuTrigger = props => {
       )}
     >
       {({ closeMenu }) => (
-        <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
+        <ul style={{ listStyle: "none", margin: "0", padding: "0", minWidth: dropdownMinWidth }}>
           {renderSubMenuItems(
             menuData,
             e => {
