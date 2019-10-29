@@ -158,6 +158,7 @@ class StatefulTable extends React.Component {
             onSelectPage={this.goToPage}
             onNext={this.goToNextPage}
             onPrevious={this.goToPrevPage}
+            justifyContent="flex-end"
           />
         )}
       </>
