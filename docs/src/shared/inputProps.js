@@ -67,6 +67,13 @@ const inputProps = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the wrapper element."
+  },
+  {
+    name: "onChange",
+    type: "Function",
+    defaultValue: "undefined",
+    description:
+      "change event handler that will be run whenever the value of the input is updated."
   }
 ];
 

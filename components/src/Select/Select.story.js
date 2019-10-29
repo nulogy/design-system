@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { Button, Input, PrimaryButton, Select } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
@@ -57,12 +58,18 @@ class SelectWithState extends React.Component {
 
 storiesOf("Select", module)
   .add("Select", () => (
-    <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+    <Select
+      placeholder="Please select inventory status"
+      onChange={action("selection changed")}
+      options={options}
+      labelText="Inventory status"
+    />
   ))
   .add("with a defaultValue", () => (
     <Select
       defaultValue={options[0].value}
       placeholder="Please select inventory status"
+      onChange={action("selection changed")}
       options={options}
       labelText="Inventory status"
     />
@@ -70,7 +77,12 @@ storiesOf("Select", module)
   .add("with a blank value", () => {
     const optionsWithBlank = [{ value: null, label: "" }, ...options];
     return (
-      <Select placeholder="Please select inventory status" options={optionsWithBlank} labelText="Inventory status" />
+      <Select
+        placeholder="Please select inventory status"
+        onChange={action("selection changed")}
+        options={optionsWithBlank}
+        labelText="Inventory status"
+      />
     );
   })
   .add("with an option selected", () => (
@@ -80,6 +92,7 @@ storiesOf("Select", module)
         placeholder="Please select inventory status"
         options={options}
         labelText="Inventory status"
+        onChange={action("selection changed")}
       />
       <br />
       <Select
@@ -88,6 +101,7 @@ storiesOf("Select", module)
         options={options}
         labelText="Inventory status"
         initialIsOpen
+        onChange={action("selection changed")}
       />
     </>
   ))
@@ -96,7 +110,13 @@ storiesOf("Select", module)
     <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
   .add("set to disabled", () => (
-    <Select placeholder="Please select inventory status" options={options} disabled labelText="Inventory status" />
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      onChange={action("selection changed")}
+      disabled
+      labelText="Inventory status"
+    />
   ))
   .add("with error message", () => (
     <>
@@ -105,6 +125,7 @@ storiesOf("Select", module)
         options={options}
         errorMessage="Please select an inventory status"
         labelText="Inventory status"
+        onChange={action("selection changed")}
       />
       <br />
       <Select
@@ -112,6 +133,7 @@ storiesOf("Select", module)
         options={options}
         errorMessage="Please select an inventory status"
         initialIsOpen
+        onChange={action("selection changed")}
       />
     </>
   ))
@@ -123,6 +145,7 @@ storiesOf("Select", module)
         errorMessage="Please select an inventory status"
         errorList={errorList}
         labelText="Inventory status"
+        onChange={action("selection changed")}
       />
       <br />
       <Select
@@ -131,6 +154,7 @@ storiesOf("Select", module)
         errorMessage="Please select an inventory status"
         errorList={errorList}
         initialIsOpen
+        onChange={action("selection changed")}
       />
     </>
   ))
@@ -144,6 +168,7 @@ storiesOf("Select", module)
         requirementText="(Required)"
         style={{ marginTop: "5px" }}
         labelText="Inventory status"
+        onChange={action("selection changed")}
       />
       <PrimaryButton mt="x1" type="submit">
         Submit
@@ -157,6 +182,7 @@ storiesOf("Select", module)
       placeholder="Please select inventory status"
       options={options}
       labelText="Inventory status"
+      onChange={action("selection changed")}
       multiselect
     />
   ))
@@ -166,6 +192,7 @@ storiesOf("Select", module)
       options={options}
       labelText="Inventory status"
       helpText="Additional information about input"
+      onChange={action("selection changed")}
     />
   ))
   .add("with custom id", () => (
@@ -175,6 +202,7 @@ storiesOf("Select", module)
       options={options}
       labelText="Inventory status"
       helpText="Additional information about input"
+      onChange={action("selection changed")}
     />
   ))
   .add("with smaller maxHeight", () => (
@@ -185,6 +213,7 @@ storiesOf("Select", module)
       placeholder="Please select inventory status"
       options={options}
       labelText="Inventory status"
+      onChange={action("selection changed")}
     />
   ))
   .add("With wrapping text", () => (
@@ -194,5 +223,6 @@ storiesOf("Select", module)
       placeholder="Please select inventory status"
       options={wrappingOptions}
       labelText="Inventory status"
+      onChange={action("selection changed")}
     />
   ));
