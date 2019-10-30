@@ -28,7 +28,7 @@ class TableWithServerSidePagination extends React.Component {
   getData = (pageNumber, callback) => {
     const QUANTITY = 5;
     const startingIndex = (pageNumber - 1) * QUANTITY;
-    const url = `http://jsonplaceholder.typicode.com/todos?_start=${startingIndex}&_limit=${QUANTITY}`;
+    const url = `https://jsonplaceholder.typicode.com/todos?_start=${startingIndex}&_limit=${QUANTITY}`;
 
     fetch(url)
       .then(response => response.json())
