@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Modal as NDSModal, Button, Form, Input } from "../index";
+import { Text } from "../Type";
 
 const env = process.env.NODE_ENV;
 
@@ -79,9 +80,16 @@ storiesOf("Modal", module)
   ))
   .add("with scrolling content", () => (
     <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
     </Modal>
   ))
   .add("with danger type", () => (
