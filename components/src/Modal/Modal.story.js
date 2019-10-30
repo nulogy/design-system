@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Modal as NDSModal, Button, Form, Input } from "../index";
-import { Text } from "../Type";
+import { Modal as NDSModal, Button, Form, Input, Select, Text } from "../index";
+import { PrimaryButton } from "../Button";
 
 const env = process.env.NODE_ENV;
 
@@ -16,6 +16,16 @@ const Modal = props => <NDSModal {...envProps} {...props} />;
 const primaryButton = { label: "Primary Action", onClick: () => {} };
 
 const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
+
+const options = [
+  { value: "accepted", label: "Accepted" },
+  { value: "assigned", label: "Assigned to a line" },
+  { value: "hold", label: "On hold" },
+  { value: "rejected", label: "Rejected" },
+  { value: "open", label: "Open" },
+  { value: "progress", label: "In progress" },
+  { value: "quarantine", label: "In quarantine" }
+];
 
 // Modal.setAppElement("#root")
 
@@ -92,6 +102,16 @@ storiesOf("Modal", module)
       </Text>
     </Modal>
   ))
+  .add("with scrolling content and no footer", () => (
+    <Modal title="Modal Title">
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <PrimaryButton>Some text</PrimaryButton>
+    </Modal>
+  ))
   .add("with danger type", () => (
     <Modal title="Modal Title" type="danger" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
@@ -142,6 +162,58 @@ storiesOf("Modal", module)
       <Form id="myForm" mb="x2">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
+      </Form>
+    </Modal>
+  ))
+  .add("with select", () => (
+    <Modal
+      title="Edit Profile"
+      onRequestClose={() => {}}
+      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
+      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
+      maxWidth="456px"
+    >
+      <Form id="myForm" mb="x2">
+        <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+      </Form>
+    </Modal>
+  ))
+  .add("with select and content after", () => (
+    <Modal
+      title="Edit Profile"
+      onRequestClose={() => {}}
+      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
+      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
+      maxWidth="456px"
+    >
+      <Form id="myForm" mb="x2">
+        <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+        <Input name="name" id="name" labelText="Name" />
+        <Input type="number" name="age" id="age" labelText="Age" />
+      </Form>
+    </Modal>
+  ))
+  .add("with select and content before", () => (
+    <Modal
+      title="Edit Profile"
+      onRequestClose={() => {}}
+      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
+      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
+      maxWidth="456px"
+    >
+      <Form id="myForm" mb="x2">
+        <Input name="name" id="name" labelText="Name" />
+        <Input type="number" name="age" id="age" labelText="Age" />
+        <Input name="name" id="name" labelText="Name" />
+        <Input type="number" name="age" id="age" labelText="Age" />
+        <Input name="name" id="name" labelText="Name" />
+        <Input type="number" name="age" id="age" labelText="Age" />
+        <Select
+          maxHeight="96px"
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+        />
       </Form>
     </Modal>
   ))

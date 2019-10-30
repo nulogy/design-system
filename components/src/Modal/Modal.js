@@ -77,7 +77,6 @@ const StyledReactModal = styled(ReactModal)(
     left: 0,
     right: 0,
     bottom: 0,
-    overflow: "hidden",
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.medium,
     border: null,
