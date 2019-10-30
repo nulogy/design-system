@@ -23,6 +23,51 @@ import {
   PropsTable
 } from "../../components";
 
+const columnKeys = [
+  {
+    name: "label",
+    type: "string",
+    defaultValue: "Required",
+    description: "The label used in the header of the table column"
+  },
+  {
+    name: "dataKey",
+    type: "string",
+    defaultValue: "Required",
+    description:
+      "Unique key for the column, used as the keys to define cell content for the column of each row"
+  },
+  {
+    name: "align",
+    type: "string enum ('left', 'right' or 'center')",
+    defaultValue: "left",
+    description:
+      "sets the alignment of the text for the column in the default cell"
+  },
+  {
+    name: "cellFormatter",
+    type: "function",
+    defaultValue: "undefined",
+    description:
+      "Used to format cell text. It should return a string or react component."
+  },
+  {
+    name: "cellRenderer",
+    type: "function",
+    description:
+      "Used to override the cell component. No padding or other styles will be added in this case. It should return a react component. "
+  }
+];
+
+const rowKeys = [
+  {
+    name: "id",
+    type: "string",
+    description:
+      "Unique id for each row, required if another keyField is not passed to the Table"
+  }
+];
+
 const propsRows = [
   {
     name: "columns",
@@ -94,12 +139,12 @@ const propsRows = [
   }
 ];
 
-const dateToString = cellData => {
+const dateToString = ({ cellData }) => {
   return new Date(cellData).toDateString();
 };
 
 // eslint-disable-next-line react/prop-types
-const customCellRenderer = cellData => (
+const customCellRenderer = ({ cellData }) => (
   <>
     <IconicButton icon="delete">{cellData}</IconicButton>
   </>
@@ -412,6 +457,21 @@ const manyRowsForPagination = [
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Column Type</SectionTitle>
+      <PropsTable propsRows={columnKeys} />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Row Type</SectionTitle>
+      <Text>
+        Rows should have keys corresponding to the dataKeys provided in the
+        columns. In addition, there are a few extra keys used by the table that
+        can be provided to each row
+      </Text>
+      <PropsTable propsRows={rowKeys} />
     </DocSection>
 
     <DocSection>

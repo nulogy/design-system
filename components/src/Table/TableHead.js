@@ -18,9 +18,9 @@ const StyledTh = styled.th({
   }
 });
 
-const defaultHeaderRenderer = ({ label }) => label;
+const defaultheaderFormatter = ({ label }) => label;
 
-const renderHeaderCellContent = ({ headerRenderer = defaultHeaderRenderer, ...column }) => headerRenderer(column);
+const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...column }) => headerFormatter(column);
 
 const renderColumns = columns =>
   columns.map(column => (
@@ -41,9 +41,9 @@ TableHead.propTypes = {
       align: PropTypes.oneOf(["right", "left", "center"]),
 
       dataKey: PropTypes.string.isRequired,
-      cellFormatter: PropTypes.func,
       cellRenderer: PropTypes.func,
-      headerRenderer: PropTypes.func
+      cellFormatter: PropTypes.func,
+      headerFormatter: PropTypes.func
     })
   ).isRequired
 };

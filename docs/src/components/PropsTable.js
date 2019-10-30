@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Table, Text } from "@nulogy/components";
 
-const smallTextRenderer = cellData => (
+const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
     {cellData}
   </Text>

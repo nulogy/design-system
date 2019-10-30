@@ -3,11 +3,11 @@ import { Checkbox } from "../Checkbox";
 
 const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
-const selectHeaderRenderer = (onSelectHeader, isHeaderSelected) => () => (
+const selectHeaderFormatter = (onSelectHeader, isHeaderSelected) => () => (
   <Checkbox checked={isHeaderSelected} onChange={onSelectHeader} aria-label="toggle all row selections" />
 );
 
-const selectCellRenderer = onSelectRow => (cellData, columnData, row) => {
+const selectCellRenderer = onSelectRow => ({ cellData, columnData, row }) => {
   const selectRowHandler = () => onSelectRow(row);
   return (
     <Checkbox aria-label="toggle row selection" checked={row[SELECTABLE_COLUMN_DATA_KEY]} onChange={selectRowHandler} />
@@ -26,7 +26,7 @@ const addSelectableColumn = ({
   const selectableColumn = {
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
     cellRenderer: selectCellRenderer(onSelectRow),
-    headerRenderer: selectHeaderRenderer(onSelectHeader, isHeaderSelected)
+    headerFormatter: selectHeaderFormatter(onSelectHeader, isHeaderSelected)
   };
   const selectableCellData = rowKey => ({
     [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(rowKey)

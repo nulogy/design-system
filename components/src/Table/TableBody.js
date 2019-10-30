@@ -31,27 +31,32 @@ const StyledTr = styled.tr({
   }
 });
 
-const TextCell = ({ children, align }) => <StyledTextCell align={align}>{children}</StyledTextCell>;
+const TextCell = ({ children, cellFormatter, align }) => {
+  return (
+    <StyledTextCell align={align}>{cellFormatter ? cellFormatter({ cellData: children }) : children}</StyledTextCell>
+  );
+};
 
 TextCell.propTypes = {
   children: PropTypes.string,
-  align: PropTypes.string
+  align: PropTypes.string,
+  cellFormatter: PropTypes.func
 };
 
 TextCell.defaultProps = {
   children: "",
-  align: undefined
+  align: "left",
+  cellFormatter: undefined
 };
 
-const textCellRenderer = (cellData, { cellFormatter, align }) => (
-  <TextCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TextCell>
-);
-
-const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
-  const renderer = cellRenderer || textCellRenderer;
-
-  return renderer(row[dataKey], columnOptions, row);
-};
+const renderCellContent = (row, { cellRenderer, dataKey, ...column }) =>
+  cellRenderer ? (
+    cellRenderer({ cellData: row[dataKey], column, row })
+  ) : (
+    <TextCell cellFormatter={column.cellFormatter} align={column.align}>
+      {row[dataKey]}
+    </TextCell>
+  );
 
 const renderRows = (rows, columns, keyField, noRowsContent) =>
   rows.length > 0 ? (
