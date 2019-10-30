@@ -27,13 +27,31 @@ const propsRows = [
     name: "currentPage",
     type: "number",
     defaultValue: "Required",
-    description: "The currently active page"
+    description: "The currently active page."
   },
   {
     name: "totalPages",
     type: "number",
     defaultValue: "Required",
     description: "The total number of pages to show pagination for."
+  },
+  {
+    name: "onNext",
+    type: "function",
+    defaultValue: "null",
+    description: "The function to run when the next button is clicked."
+  },
+  {
+    name: "onPrevious",
+    type: "function",
+    defaultValue: "null",
+    description: "The function to run when the previous button is clicked."
+  },
+  {
+    name: "onSelectPage",
+    type: "function",
+    defaultValue: "null",
+    description: "The function to run when a page number is clicked."
   }
 ];
 
