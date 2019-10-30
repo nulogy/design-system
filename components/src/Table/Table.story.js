@@ -100,6 +100,7 @@ storiesOf("Table", module)
     />
   ))
   .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />)
+  .add("with a footer", () => <Table columns={columns} rows={rowData} footerRows />)
   .add("with pagination", () => (
     <Table
       columns={mockColumns}
