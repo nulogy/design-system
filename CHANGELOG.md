@@ -10,12 +10,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added [Pagination](http://nulogy.design/components/pagination) component
-- Added pagination feature to [table](http://nulogy.design/components/table)
-- Added loading option to [table](http://nulogy.design/components/table)
+- Added pagination feature to [Table](http://nulogy.design/components/table)
+- Added loading option to [Table](http://nulogy.design/components/table)
 
 ### Changed
 
-- set minWidth of the dropdown items in the navBar to the width of the button that opens the dropdown (https://nulogy.design/components/navbar/)
+- Set `minWidth` of the dropdown items in the [NavBar](https://nulogy.design/components/navbar/) to the width of the button that opens the dropdown
 
 ### Deprecated
 
