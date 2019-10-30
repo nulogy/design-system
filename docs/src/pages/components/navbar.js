@@ -216,7 +216,7 @@ const search = {
         <Text>
           The menuData prop is used to provide links to the NavBar, assemble
           their heirarchy, and provide the search field's onSubmit handler. The
-          direct children in the menuData object are show below:
+          direct children in the menuData object are shown below:
         </Text>
         <Highlight className="js">
           {`const menuData = {
@@ -254,10 +254,10 @@ const search = {
 `}
         </Highlight>
         <Text mb="x2">
-          Each menu item object requires a name key. Optionally a single other
-          key can be included, depending on which key is included the menu item
-          will render as a differnt component. If no optional key is included
-          then the menu item will render as text.
+          Each menu item object requires a "name" key. The "name" key will be
+          used as the label for the menu item unless a "render" key is used.
+          Adding "items" to the menu item object will render a dropdown with the
+          specified items.
         </Text>
         <Text mb="x2">
           Menu items can be nested within eachother using the items key for as

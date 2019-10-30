@@ -71,10 +71,10 @@ const primaryMenu = [
 
 const primaryMenuCustomLinks = [
   {
-    name: "MenuTrigger",
+    name: "Dashboard",
     items: [
       {
-        name: "MenuTrigger",
+        name: "Invoices",
         items: [
           {
             name: "NormalLink",
@@ -87,28 +87,28 @@ const primaryMenuCustomLinks = [
         ]
       },
       {
-        name: "NormalLink",
+        name: "Projects",
         href: "/"
       },
       {
-        name: "CustomLink",
+        name: "Customers",
         render: () => <a href="/">CustomLink</a>
       }
     ]
   },
   {
-    name: "NormalLink",
+    name: "Inspector",
     href: "/"
   },
   {
-    name: "CustomLink",
-    render: () => <a href="/">CustomLink</a>
+    name: "Custom Link",
+    render: () => <a href="/">Custom Link</a>
   }
 ];
 
 const primaryMenuText = [
   {
-    name: "MenuTrigger",
+    name: "Dashboard",
     items: [
       {
         name: "MenuTrigger",
@@ -142,7 +142,7 @@ const primaryMenuText = [
 
 const secondaryMenu = [
   {
-    name: "User",
+    name: "User@Nulogy.com",
     items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
   },
   {

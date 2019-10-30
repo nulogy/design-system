@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- set minWidth of the dropdown items in the navBar to the width of the button that opens the dropdown (https://nulogy.design/components/navbar/)
+
 ### Deprecated
 
 ### Removed
