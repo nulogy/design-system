@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.14.2] - 2019-10-31
+
+### Added
+
 - Added [Pagination](http://nulogy.design/components/pagination) component
 - Added pagination feature to [Table](http://nulogy.design/components/table)
 - Added loading option to [Table](http://nulogy.design/components/table)
@@ -17,14 +31,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Set `minWidth` of the dropdown items in the [NavBar](https://nulogy.design/components/navbar/) to the width of the button that opens the dropdown
 
-### Deprecated
-
-### Removed
-
 ### Fixed
-- Stopped unnecessary scrollbars from appearing in the Modal 
 
-### Security
+- Stopped unnecessary scrollbars from appearing in the Modal
 
 ## [0.14.1] - 2019-10-21
 
