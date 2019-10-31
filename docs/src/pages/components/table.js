@@ -145,6 +145,11 @@ const columnsWithCellRenderer = [
   { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
 ];
 
+const footerRowData = [
+  { c1: "Total", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22" }
+];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -299,6 +304,33 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
       <Table loading columns={columns} rows={rows} keyField="c1" />
       <Highlight className="js">
         {`<Table loading hasSelectableRows columns={columns} rows={rows} keyField="c1"/>`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>With footer</SectionTitle>
+      <Text>
+        A footer can be added to the table by adding an array of rows to the
+        footerRows prop.
+      </Text>
+      <Table columns={columns} rows={rows} footerRows={footerRowData} />
+      <Highlight className="js">
+        {`import {Table} from "@nulogy/table";
+
+const columns = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3" },
+];
+
+const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+
+const footerRowData = [
+  { c1: "Total", c2: "r1c2", c3: "2019-09-21" },
+  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22" }
+];
+<Table columns={columns} rows={rows} footerRows={footerRowData}/>
+`}
       </Highlight>
     </DocSection>
 
