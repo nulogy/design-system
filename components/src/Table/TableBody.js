@@ -3,17 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import { Box } from "../Box";
-
-const rowType = PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]));
-const columnType = PropTypes.shape({
-  align: PropTypes.oneOf(["right", "left", "center"]),
-  label: PropTypes.string,
-  dataKey: PropTypes.string.isRequired,
-  cellFormatter: PropTypes.func,
-  cellRenderer: PropTypes.func,
-  headerRenderer: PropTypes.func,
-  width: PropTypes.string
-});
+import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
 
 const StyledMessageContainer = styled(Box)({
   padding: `${theme.space.x3} 0`,
@@ -81,8 +71,8 @@ const TableBodyRow = ({ row, columns }) => (
 );
 
 TableBodyRow.propTypes = {
-  row: rowType.isRequired,
-  columns: PropTypes.arrayOf(columnType).isRequired
+  row: rowPropType.isRequired,
+  columns: columnsPropType.isRequired
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
@@ -111,8 +101,8 @@ const TableBody = ({ rows, columns, keyField, noRowsContent, loading }) => (
 );
 
 TableBody.propTypes = {
-  columns: PropTypes.arrayOf(columnType).isRequired,
-  rows: PropTypes.arrayOf(rowType).isRequired,
+  columns: columnsPropType.isRequired,
+  rows: rowsPropType.isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   loading: PropTypes.bool

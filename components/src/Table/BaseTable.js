@@ -5,22 +5,7 @@ import PropTypes from "prop-types";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-
-const columnsPropType = PropTypes.arrayOf(
-  PropTypes.shape({
-    align: PropTypes.oneOf(["right", "left", "center"]),
-    label: PropTypes.string,
-    dataKey: PropTypes.string.isRequired,
-    cellFormatter: PropTypes.func,
-    cellRenderer: PropTypes.func,
-    headerRenderer: PropTypes.func,
-    width: PropTypes.string
-  })
-);
-
-const rowsPropType = PropTypes.arrayOf(
-  PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]))
-);
+import { columnsPropType, rowsPropType } from "./Table.types";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
