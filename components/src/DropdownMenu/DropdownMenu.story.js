@@ -54,6 +54,21 @@ storiesOf("DropdownMenu", module)
       </DropdownItem>
     </DropdownMenu>
   ))
+  .add("with scrollable parent as boundaries element", () => (
+    <div style={{ maxHeight: "400px", overflow: "auto", marginTop: "150px", border: "2px dashed blue" }}>
+      <div style={{ height: "300px", background: "#eee" }}>Section 1</div>
+      <DropdownMenu>
+        <DropdownLink href="/">Dropdown Link</DropdownLink>
+        <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+        <DropdownItem>
+          <a href="/" style={{ textDecoration: "none" }}>
+            Custom Link Component
+          </a>
+        </DropdownItem>
+      </DropdownMenu>
+      <div style={{ height: "300px", background: "#ddd" }}>Section 2</div>
+    </div>
+  ))
   .add("Set to disabled", () => (
     <DropdownMenu disabled>
       <DropdownLink href="/">Dropdown Link</DropdownLink>
