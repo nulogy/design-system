@@ -6,6 +6,22 @@ import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 
+const columnsPropType = PropTypes.arrayOf(
+  PropTypes.shape({
+    align: PropTypes.oneOf(["right", "left", "center"]),
+    label: PropTypes.string,
+    dataKey: PropTypes.string.isRequired,
+    cellFormatter: PropTypes.func,
+    cellRenderer: PropTypes.func,
+    headerRenderer: PropTypes.func,
+    width: PropTypes.string
+  })
+);
+
+const rowsPropType = PropTypes.arrayOf(
+  PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]))
+);
+
 const StyledTable = styled.table({
   borderCollapse: "collapse",
   width: "100%"
@@ -15,36 +31,26 @@ const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footer
   <StyledTable id={id}>
     <TableHead columns={columns} />
     <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} loading={loading} />
-    {footerRows && <TableFoot columns={columns} />}
+    {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
   </StyledTable>
 );
 
 BaseTable.propTypes = {
-  columns: PropTypes.arrayOf(
-    PropTypes.shape({
-      align: PropTypes.oneOf(["right", "left", "center"]),
-      label: PropTypes.string,
-      dataKey: PropTypes.string.isRequired,
-      cellFormatter: PropTypes.func,
-      cellRenderer: PropTypes.func,
-      headerRenderer: PropTypes.func,
-      width: PropTypes.string
-    })
-  ).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])))
-    .isRequired,
+  columns: columnsPropType.isRequired,
+  rows: rowsPropType.isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   id: PropTypes.string,
   loading: PropTypes.bool,
-  footerRows: PropTypes.bool
+  footerRows: rowsPropType
 };
 
 BaseTable.defaultProps = {
   noRowsContent: "No records have been created for this table.",
   keyField: "id",
   id: undefined,
-  loading: false
+  loading: false,
+  footerRows: []
 };
 
 export default BaseTable;

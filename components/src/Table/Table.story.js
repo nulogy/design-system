@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
-import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu } from "..";
+import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
 
 const dateToString = cellData => {
@@ -61,6 +61,11 @@ const rowData = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
 ];
 
+const footerRowData = [
+  { c1: "Total", c2: "r1c2", c3: "2019-09-21", id: "r1" },
+  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+];
+
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
@@ -100,7 +105,13 @@ storiesOf("Table", module)
     />
   ))
   .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />)
-  .add("with a footer", () => <Table columns={columns} rows={rowData} footerRows />)
+  .add("with a footer", () => (
+    <>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
+      <Text mt="x6">Loading state:</Text>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
+    </>
+  ))
   .add("with pagination", () => (
     <Table
       columns={mockColumns}
