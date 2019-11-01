@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -10,7 +11,6 @@ const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString();
 };
 
-// eslint-disable-next-line react/prop-types
 const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
 
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
