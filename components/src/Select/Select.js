@@ -119,7 +119,7 @@ ReactSelect.defaultProps = {
   noOptionsMessage: () => null,
   requirementText: null,
   id: null,
-  initialIsOpen: true,
+  initialIsOpen: undefined,
   maxHeight: "248px",
   multiselect: false,
   name: undefined,
