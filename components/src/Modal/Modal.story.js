@@ -181,7 +181,7 @@ storiesOf("Modal", module)
       secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
       maxWidth="456px"
     >
-      <Form id="myForm">
+      <Form id="myForm" mb="x2">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
         <Input name="name" id="name" labelText="Name" />
@@ -199,12 +199,14 @@ storiesOf("Modal", module)
   ))
   .add("with select and no buttons", () => (
     <Modal title="Modal Title" onRequestClose={() => {}}>
-      <Select
-        maxHeight="94px"
-        placeholder="Please select inventory status"
-        options={options}
-        labelText="Inventory status"
-      />
+      <Form id="myForm" mb="x2">
+        <Select
+          maxHeight="96px"
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+        />
+      </Form>
     </Modal>
   ))
   .add("example controlled modal", () => <ModalExample />);
