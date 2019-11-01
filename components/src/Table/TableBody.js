@@ -4,6 +4,7 @@ import styled from "styled-components";
 import theme from "../theme";
 import { Box } from "../Box";
 import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
+import TableCell from "./TableCell";
 
 const StyledMessageContainer = styled(Box)({
   padding: `${theme.space.x3} 0`,
@@ -11,52 +12,11 @@ const StyledMessageContainer = styled(Box)({
   color: theme.colors.darkGrey
 });
 
-const StyledTextCell = styled.div(({ align }) => ({
-  paddingTop: theme.space.x2,
-  paddingBottom: theme.space.x2,
-  textAlign: align
-}));
-
-const StyledTd = styled.td(({ width }) => ({
-  width,
-  paddingRight: theme.space.x2,
-  "&:first-of-type": {
-    paddingLeft: theme.space.x2
-  }
-}));
-
 const StyledTr = styled.tr({
   "&:hover": {
     backgroundColor: theme.colors.whiteGrey
   }
 });
-
-const TextCell = ({ children, cellFormatter, align }) => {
-  return (
-    <StyledTextCell align={align}>{cellFormatter ? cellFormatter({ cellData: children }) : children}</StyledTextCell>
-  );
-};
-
-TextCell.propTypes = {
-  children: PropTypes.string,
-  align: PropTypes.string,
-  cellFormatter: PropTypes.func
-};
-
-TextCell.defaultProps = {
-  children: "",
-  align: "left",
-  cellFormatter: undefined
-};
-
-const renderCellContent = (row, { cellRenderer, dataKey, ...column }) =>
-  cellRenderer ? (
-    cellRenderer({ cellData: row[dataKey], column, row })
-  ) : (
-    <TextCell cellFormatter={column.cellFormatter} align={column.align}>
-      {row[dataKey]}
-    </TextCell>
-  );
 
 const renderRows = (rows, columns, keyField, noRowsContent) =>
   rows.length > 0 ? (
@@ -68,9 +28,7 @@ const renderRows = (rows, columns, keyField, noRowsContent) =>
 const TableBodyRow = ({ row, columns }) => (
   <StyledTr>
     {columns.map(column => (
-      <StyledTd key={column.dataKey} width={column.width}>
-        {renderCellContent(row, column)}
-      </StyledTd>
+      <TableCell key={column.dataKey} row={row} column={column} />
     ))}
   </StyledTr>
 );
