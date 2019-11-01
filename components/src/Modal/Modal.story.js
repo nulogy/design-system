@@ -181,7 +181,7 @@ storiesOf("Modal", module)
       secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
       maxWidth="456px"
     >
-      <Form id="myForm" mb="x2">
+      <Form id="myForm">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
         <Input name="name" id="name" labelText="Name" />
