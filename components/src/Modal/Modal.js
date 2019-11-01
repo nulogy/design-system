@@ -11,10 +11,11 @@ import { PreventBodyElementScrolling } from "../utils";
 
 const ModalContent = styled.div({
   marginTop: "-64px",
-  marginBottom: "-80px",
+
+  marginBottom: "-72px",
   overflow: "auto",
-  paddingTop: "80px",
-  paddingBottom: "94px",
+  paddingTop: "88px",
+  paddingBottom: "96px",
   paddingLeft: theme.space.x3,
   paddingRight: theme.space.x3
 });
@@ -82,7 +83,7 @@ const StyledReactModal = styled(ReactModal)(
     border: null,
     width: "100%",
     height: "auto",
-    maxHeight: `calc(100vh - ${theme.space.x4})`,
+    maxHeight: `calc(100vh - ${theme.space.x8})`,
     margin: `0px ${theme.space.x2}`,
     padding: 0,
     [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
