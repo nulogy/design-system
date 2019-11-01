@@ -27,6 +27,7 @@ const ModalHeader = styled.div(({ hasCloseButton }) => ({
   padding: `${theme.space.x2} ${getHeaderPaddingRight(hasCloseButton)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
+  borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
   ":after": {
     content: "''",
     position: "absolute",
@@ -44,6 +45,7 @@ const ModalFooter = styled.div({
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
+  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   ":after": {
     content: "''",
     position: "absolute",
