@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Modal as NDSModal, Button, Form, Input, Select, Text } from "../index";
-import { PrimaryButton } from "../Button";
 
 const env = process.env.NODE_ENV;
 
