@@ -11,7 +11,6 @@ import { PreventBodyElementScrolling } from "../utils";
 
 const ModalContent = styled.div({
   marginTop: "-64px",
-
   marginBottom: "-72px",
   overflow: "auto",
   paddingTop: "88px",
