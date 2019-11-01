@@ -102,39 +102,6 @@ storiesOf("Modal", module)
       </Text>
     </Modal>
   ))
-  .add("with scrolling content and no footer", () => (
-    <Modal title="Modal Title">
-      <Text>
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content ContentContent Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content ContentContent Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content ContentContent Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content ContentContent
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content ContentContent Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content ContentContent Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content ContentContent Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-        Content
-      </Text>
-      <PrimaryButton>Some text</PrimaryButton>
-    </Modal>
-  ))
   .add("with danger type", () => (
     <Modal title="Modal Title" type="danger" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
@@ -197,26 +164,16 @@ storiesOf("Modal", module)
       maxWidth="456px"
     >
       <Form id="myForm" mb="x2">
-        <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+        <Select
+          maxHeight="96px"
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+        />
       </Form>
     </Modal>
   ))
-  .add("with select and content after", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
-      <Form id="myForm" mb="x2">
-        <Select placeholder="Please select inventory status" options={options} labelText="Inventory status" />
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-      </Form>
-    </Modal>
-  ))
-  .add("with select and content before", () => (
+  .add("with select and scrolling content", () => (
     <Modal
       title="Edit Profile"
       onRequestClose={() => {}}
@@ -238,6 +195,16 @@ storiesOf("Modal", module)
           labelText="Inventory status"
         />
       </Form>
+    </Modal>
+  ))
+  .add("with select and no buttons", () => (
+    <Modal title="Modal Title" onRequestClose={() => {}}>
+      <Select
+        maxHeight="94px"
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+      />
     </Modal>
   ))
   .add("example controlled modal", () => <ModalExample />);
