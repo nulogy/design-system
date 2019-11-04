@@ -46,4 +46,10 @@ storiesOf("Input", module)
         <PrimaryButton>Send</PrimaryButton>
       </Form>
     </>
+  ))
+  .add("with a sufix", () => (
+    <>
+      <Input labelText="Label" sufix="eaches" />
+      <Input sufix="pallets and bo jkdshf khsbfsd fsdgshkgf ksdjf kjdsgf xes" />
+    </>
   ));
