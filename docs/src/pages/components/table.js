@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars, quotes, react/self-closing-comp */
+/* eslint-disable no-unused-vars, quotes, react/self-closing-comp, react/prop-types */
 
 import React from "react";
 import { Helmet } from "react-helmet";
@@ -173,8 +173,6 @@ const propsRows = [
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toDateString();
 };
-
-// eslint-disable-next-line react/prop-types
 const customCellRenderer = ({ cellData }) => (
   <>
     <IconicButton icon="delete">{cellData}</IconicButton>

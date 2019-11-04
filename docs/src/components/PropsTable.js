@@ -8,6 +8,10 @@ const smallTextRenderer = ({ cellData }) => (
   </Text>
 );
 
+smallTextRenderer.propTypes = {
+  cellData: PropTypes.string.isRequired
+};
+
 const columns = [
   {
     label: "Name",
