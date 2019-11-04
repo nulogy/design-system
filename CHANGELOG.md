@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added an option to add a footer to the Table [Table](http://nulogy.design/components/table) component
+
 ### Changed
 
 - Changed spacing in Modal [Modal](http://nulogy.design/components/modal) component
