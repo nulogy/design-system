@@ -47,15 +47,20 @@ const columnKeys = [
   {
     name: "cellFormatter",
     type: "function",
-    defaultValue: "undefined",
     description:
-      "Used to format cell text. It should return a string or react component."
+      "Used to format the table cell. It should return a string or react component."
   },
   {
     name: "cellRenderer",
     type: "function",
     description:
       "Used to override the cell component. No padding or other styles will be added in this case. It should return a react component. "
+  },
+  {
+    name: "headerFormatter",
+    type: "function",
+    description:
+      "Used to format the column's header. It should return a string or react component."
   }
 ];
 
@@ -65,6 +70,32 @@ const rowKeys = [
     type: "string",
     description:
       "Unique id for each row, required if another keyField is not passed to the Table"
+  }
+];
+
+const customCellArgumentKeys = [
+  {
+    name: "cellData",
+    type: "string",
+    description: "Text in the current cell, as passed in in the rows object"
+  },
+  {
+    name: "column",
+    type: "column",
+    description: "The column object the cell belongs to"
+  },
+  {
+    name: "row",
+    type: "row",
+    description: "The row object the cell belongs to"
+  }
+];
+
+const headerFormatterArgumentKeys = [
+  {
+    name: "column",
+    type: "column",
+    description: "The current column object"
   }
 ];
 
@@ -150,6 +181,12 @@ const customCellRenderer = ({ cellData }) => (
   </>
 );
 
+const customHeaderFormatter = ({ label }) => (
+  <>
+    <IconicButton icon="delete">{label}</IconicButton>
+  </>
+);
+
 const columns = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
@@ -184,10 +221,15 @@ const manyRowsForPagination = [
   { c1: "r8c1", c2: "r8c2", c3: "2019-09-10" },
   { c1: "r9c1", c2: "r9c2", c3: "2019-09-22" }
 ];
-const columnsWithCellRenderer = [
+const columnsWithCustomCells = [
   { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
+  { label: "Date", dataKey: "c3", cellFormatter: dateToString },
+  {
+    label: "Actions",
+    dataKey: "c2",
+    headerFormatter: customHeaderFormatter,
+    cellRenderer: customCellRenderer
+  }
 ];
 
 const footerRowData = [
@@ -232,49 +274,48 @@ const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1"
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With a cell formatter</SectionTitle>
+      <SectionTitle>With a custom component</SectionTitle>
       <Text>
-        Providing a cellFormatter function inside the column data will allow
-        formatting of the cell contents.
+        A custom component can be implemented using a Formatter or Renderer
+        function.
       </Text>
-      <Table columns={columnsWithFormatter} rows={rows} />
+      <Text>
+        The props that exist for custom components in cells are CellFormatter
+        and CellRenderer. Use CellFormatter to maintain the paddings and styles
+        on the cell. For completely custom styles, use the cellRenderer.
+      </Text>
+      <Text>
+        Similarly headers can be customized using the HeaderFormatter function
+        props. See{" "}
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-a-cell-formatter">
+          Storybook
+        </Link>{" "}
+        for other examples of implementing different custom components.
+      </Text>
+      <Table columns={columnsWithCustomCells} rows={rows} />
       <Highlight className="js">
-        {`const dateToString = (cellData) => {
+        {`const customCellRenderer = ({cellData}) => (
+    <IconicButton icon="delete">{cellData}</IconicButton>
+);
+const dateToString = ({cellData}) => {
   return new Date(cellData).toDateString();
 };
 
-const columnsWithFormatter = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
-];
-
-const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
-
-<Table columns={columnsWithFormatter} rows={rows} />`}
-      </Highlight>
-    </DocSection>
-    <DocSection>
-      <SectionTitle>With a custom component</SectionTitle>
-      <Text>
-        Providing a cellRenderer function inside the column data will allow
-        display of arbitrary cell content. See{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table--table-with-data">
-          Storybook
-        </Link>{" "}
-        for other examples of implementing different custom components using
-        cellRenderer.
-      </Text>
-      <Table columns={columnsWithCellRenderer} rows={rows} />
-      <Highlight className="js">
-        {`const customCellRenderer = (cellData) => (
-    <IconicButton icon="delete">{cellData}</IconicButton>
+const customHeaderFormatter = ({ label }) => (
+  <>
+    <IconicButton icon="delete">{label}</IconicButton>
+  </>
 );
 
-const columnsWithCellRenderer = [
+const columnsWithCustomCells = [
   { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellRenderer: customCellRenderer }
+  { label: "Date", dataKey: "c3", cellFormatter: dateToString },
+  {
+    label: "Actions",
+    dataKey: "c2",
+    headerFormatter: customHeaderFormatter,
+    cellRenderer: customCellRenderer
+  }
 ];
 
 const rows = [
@@ -282,7 +323,7 @@ const rows = [
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
 ];
 
-<Table columns={columnsWithCellRenderer} rows={rows} />
+<Table columns={columnsWithCustomCells} rows={rows} />
 `}
       </Highlight>
     </DocSection>
@@ -472,6 +513,25 @@ const manyRowsForPagination = [
         can be provided to each row
       </Text>
       <PropsTable propsRows={rowKeys} />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>CellRenderer / CellFormatter Argument Type</SectionTitle>
+      <Text>
+        Use CellFormatter to maintain the styles within the cell while providing
+        a custom component or string. Use CellRenderer when using completely
+        custom styles.
+      </Text>
+      <PropsTable propsRows={customCellArgumentKeys} />
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>HeaderFormatter Argument Type</SectionTitle>
+      <Text>
+        Use HeaderFormatter to provide a custom header component. Styles on the
+        header cell will be maintained.
+      </Text>
+      <PropsTable propsRows={headerFormatterArgumentKeys} />
     </DocSection>
 
     <DocSection>
