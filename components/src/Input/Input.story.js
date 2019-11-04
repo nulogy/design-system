@@ -24,4 +24,5 @@ storiesOf("Input", module)
   .add("with error list ", () => (
     <Input labelText="Label" errorMessage="Error message" errorList={errorList} onChange={action("value changed")} />
   ))
-  .add("with custom ID", () => <Input id="my-own-id" labelText="Label" onChange={action("value changed")} />);
+  .add("with custom ID", () => <Input id="my-own-id" labelText="Label" onChange={action("value changed")} />)
+  .add("set to required", () => <Input required labelText="Label" onChange={action("value changed")} />);

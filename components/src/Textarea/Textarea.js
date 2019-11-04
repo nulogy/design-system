@@ -78,6 +78,7 @@ const Textarea = ({
       <StyledTextarea
         aria-invalid={error}
         aria-required={required}
+        required={required}
         id={id}
         errorMessage={errorMessage}
         errorList={errorList}

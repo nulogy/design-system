@@ -30,4 +30,5 @@ storiesOf("Textarea", module)
     />
   ))
   .add("With custom number of rows", () => <Textarea labelText="Label" rows={7} onChange={action("value changed")} />)
-  .add("With custom id", () => <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} />);
+  .add("With custom id", () => <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} />)
+  .add("set to required", () => <Textarea required labelText="Label" onChange={action("value changed")} />);
