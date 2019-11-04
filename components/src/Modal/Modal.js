@@ -11,10 +11,10 @@ import { PreventBodyElementScrolling } from "../utils";
 
 const ModalContent = styled.div({
   marginTop: "-64px",
-  marginBottom: "-80px",
+  marginBottom: "-72px",
   overflow: "auto",
-  paddingTop: "80px",
-  paddingBottom: "94px",
+  paddingTop: "88px",
+  paddingBottom: "96px",
   paddingLeft: theme.space.x3,
   paddingRight: theme.space.x3
 });
@@ -26,6 +26,7 @@ const ModalHeader = styled.div(({ hasCloseButton }) => ({
   padding: `${theme.space.x2} ${getHeaderPaddingRight(hasCloseButton)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
+  borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
   ":after": {
     content: "''",
     position: "absolute",
@@ -43,6 +44,7 @@ const ModalFooter = styled.div({
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
+  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   ":after": {
     content: "''",
     position: "absolute",
@@ -77,13 +79,12 @@ const StyledReactModal = styled(ReactModal)(
     left: 0,
     right: 0,
     bottom: 0,
-    overflow: "hidden",
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.medium,
     border: null,
     width: "100%",
     height: "auto",
-    maxHeight: `calc(100vh - ${theme.space.x4})`,
+    maxHeight: `calc(100vh - ${theme.space.x8})`,
     margin: `0px ${theme.space.x2}`,
     padding: 0,
     [`@media only screen and (max-width: ${theme.breakpoints.small})`]: {
