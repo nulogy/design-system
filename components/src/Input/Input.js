@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
+import { Text } from "../Type";
+import { Flex } from "../Flex";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
@@ -61,6 +63,11 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
+const Sufix = styled(Text)`
+  margin-left: ${theme.space.x1};
+  white-space: nowrap;
+`;
+
 const Input = ({
   errorMessage,
   errorList,
@@ -69,20 +76,24 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
+  sufix,
   className,
   ...props
 }) => (
   <Field className={className}>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledInput
-        aria-invalid={error}
-        aria-required={required}
-        required={required}
-        errorMessage={errorMessage}
-        errorList={errorList}
-        error={error}
-        {...props}
-      />
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText} sufix={sufix}>
+      <Flex alignItems="center">
+        <StyledInput
+          aria-invalid={error}
+          aria-required={required}
+          required={required}
+          errorMessage={errorMessage}
+          errorList={errorList}
+          error={error}
+          {...props}
+        />
+        <Sufix>{sufix}</Sufix>
+      </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
@@ -97,6 +108,7 @@ Input.propTypes = {
   labelText: PropTypes.string,
   helpText: PropTypes.node,
   requirementText: PropTypes.string,
+  sufix: PropTypes.string,
   ...space.PropTypes
 };
 
@@ -108,7 +120,8 @@ Input.defaultProps = {
   required: false,
   labelText: null,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  sufix: null
 };
 
 export default Input;
