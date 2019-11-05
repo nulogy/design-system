@@ -487,10 +487,18 @@ const manyRowsForPagination = [
         </Link>
         .
       </Text>
-      <Table loading columns={columns} rows={rows} keyField="c1" />
-      <Highlight className="js">
-        {`<Table loading hasSelectableRows columns={columns} rows={rows} keyField="c1"/>`}
-      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Filtering</SectionTitle>
+      <Text>
+        Filtering can be implemented by passing filtered rows to the rows prop
+        of the table. See an example of filtering in
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-filtering-skipstoryshot">
+          Storybook
+        </Link>
+        .
+      </Text>
     </DocSection>
 
     <DocSection>
