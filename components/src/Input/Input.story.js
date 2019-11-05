@@ -50,6 +50,8 @@ storiesOf("Input", module)
   .add("with a sufix", () => (
     <>
       <Input labelText="Label" sufix="eaches" />
-      <Input sufix="pallets and bo jkdshf khsbfsd fsdgshkgf ksdjf kjdsgf xes" />
+      <Input sufix="pallets and boxes" />
+      <Input labelText="Label" sufix="eaches" sufixWidth="180px" />
+      <Input sufix="pallets and boxes" sufixWidth="180px" />
     </>
   ));
