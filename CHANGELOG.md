@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - storybook actions addon should be in devDependencies
+- multiselect should not error when clicking x on last item
 
 ### Security
 
