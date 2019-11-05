@@ -5,6 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { Text } from "../Type";
+import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -40,7 +41,7 @@ const getInputStyle = props => {
 const StyledInput = styled.input(
   {
     display: "block",
-    width: "100%",
+    flexGrow: "1",
     border: "1px solid",
     borderRadius: theme.radii.medium,
     padding: subPx(theme.space.x1),
@@ -65,7 +66,7 @@ const StyledInput = styled.input(
 
 const Sufix = styled(Text)`
   margin-left: ${theme.space.x1};
-  white-space: nowrap;
+  margin-top: ${theme.space.x1};
 `;
 
 const Input = ({
@@ -77,12 +78,19 @@ const Input = ({
   requirementText,
   helpText,
   sufix,
+  sufixWidth,
   className,
   ...props
 }) => (
   <Field className={className}>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText} sufix={sufix}>
-      <Flex alignItems="center">
+    <MaybeFieldLabel
+      labelText={labelText}
+      requirementText={requirementText}
+      helpText={helpText}
+      sufix={sufix}
+      sufixWidth={sufixWidth}
+    >
+      <Flex alignItems="flex-start">
         <StyledInput
           aria-invalid={error}
           aria-required={required}
@@ -92,7 +100,9 @@ const Input = ({
           error={error}
           {...props}
         />
-        <Sufix>{sufix}</Sufix>
+        <Box width={sufixWidth}>
+          <Sufix>{sufix}</Sufix>
+        </Box>
       </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
@@ -109,6 +119,7 @@ Input.propTypes = {
   helpText: PropTypes.node,
   requirementText: PropTypes.string,
   sufix: PropTypes.string,
+  sufixWidth: PropTypes.string,
   ...space.PropTypes
 };
 
@@ -121,7 +132,8 @@ Input.defaultProps = {
   labelText: null,
   helpText: null,
   requirementText: null,
-  sufix: null
+  sufix: null,
+  sufixWidth: null
 };
 
 export default Input;
