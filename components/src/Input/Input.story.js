@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Input } from "../index";
+import { Input, Form, PrimaryButton } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -25,4 +25,11 @@ storiesOf("Input", module)
     <Input labelText="Label" errorMessage="Error message" errorList={errorList} onChange={action("value changed")} />
   ))
   .add("with custom ID", () => <Input id="my-own-id" labelText="Label" onChange={action("value changed")} />)
-  .add("set to required", () => <Input required labelText="Label" onChange={action("value changed")} />);
+  .add("set to required", () => (
+    <>
+      <Form title="Required field example">
+        <Input required labelText="Label" onChange={action("value changed")} />
+        <PrimaryButton>Send</PrimaryButton>
+      </Form>
+    </>
+  ));
