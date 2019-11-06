@@ -31,7 +31,11 @@ const TableFooterRow = ({ row, columns, loading }) => (
           {row[column.dataKey]}
         </StyledTh>
       ) : (
-        !loading && <TableCell key={column.dataKey} row={row} column={column} />
+        !loading && (
+          <TableCell key={column.dataKey} row={row} column={column}>
+            {row[column.dataKey]}
+          </TableCell>
+        )
       )
     )}
   </StyledFooterRow>

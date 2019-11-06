@@ -6,12 +6,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
- 
+
 ### Added
+
+- Added full an option for heading in the [Table](http://nulogy.design/components/table)
+- Added an option to customize cells per row to acheive custom styles for headings in [Table](http://nulogy.design/components/table)
+
 ### Changed
+
+- Removed all paddings including horizontal padding on TableCell when using a cellRenderer in Table [Table](http://nulogy.design/components/table)
+
 ### Deprecated
+
 ### Removed
+
 ### Fixed
+
 ### Security
 
 ## [0.15.0] - 2019-11-06

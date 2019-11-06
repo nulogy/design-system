@@ -56,3 +56,6 @@ export const mockColumns = [
   { label: "Column 20", dataKey: "c20" },
   { label: "Column 21", dataKey: "c21" }
 ];
+
+export const getMockColumns = n =>
+  Array.from({ length: n }, (_, i) => i + 1).map(item => ({ label: `Column ${item}`, dataKey: `c${item}` }));

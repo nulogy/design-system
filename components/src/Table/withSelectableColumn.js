@@ -38,7 +38,7 @@ const addSelectableColumn = ({
 }) => {
   const selectableColumn = {
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
-    cellRenderer: selectCellRenderer(onSelectRow),
+    cellFormatter: selectCellRenderer(onSelectRow),
     headerFormatter: selectHeaderFormatter(onSelectHeader, isHeaderSelected)
   };
   const selectableCellData = rowKey => ({

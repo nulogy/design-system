@@ -25,13 +25,25 @@ const renderRows = (rows, columns, keyField, noRowsContent) =>
     <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
   );
 
-const TableBodyRow = ({ row, columns }) => (
-  <StyledTr>
-    {columns.map(column => (
-      <TableCell key={column.dataKey} row={row} column={column} />
-    ))}
-  </StyledTr>
-);
+const TableBodyRow = ({ row, columns }) => {
+  const renderAllCells = () =>
+    columns.map(column => (
+      <TableCell key={column.dataKey} row={row} column={column}>
+        {row[column.dataKey]}
+      </TableCell>
+    ));
+  return (
+    <StyledTr>
+      {row.heading ? (
+        <TableCell row={row} column={{}} colSpan={columns.length}>
+          {row.heading}
+        </TableCell>
+      ) : (
+        renderAllCells()
+      )}
+    </StyledTr>
+  );
+};
 
 TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
