@@ -20,20 +20,6 @@ const StyledTh = styled.th({
   color: theme.colors.darkGrey
 });
 
-const StyledTd = styled.td(() => ({
-  paddingRight: theme.space.x2
-}));
-
-const tableCellRenderer = (cellData, { cellFormatter, align }) => (
-  <TableCell align={align}>{cellFormatter ? cellFormatter(cellData) : cellData}</TableCell>
-);
-
-const renderCellContent = (row, { cellRenderer, dataKey, ...columnOptions }) => {
-  const renderer = cellRenderer || tableCellRenderer;
-
-  return renderer(row[dataKey], columnOptions, row);
-};
-
 const renderRows = (rows, columns, keyField, loading) =>
   rows.map(row => <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} />);
 
@@ -45,11 +31,7 @@ const TableFooterRow = ({ row, columns, loading }) => (
           {row[column.dataKey]}
         </StyledTh>
       ) : (
-        !loading && (
-          <StyledTd key={column.dataKey} width={column.width}>
-            {renderCellContent(row, column)}
-          </StyledTd>
-        )
+        !loading && <TableCell key={column.dataKey} row={row} column={column} />
       )
     )}
   </StyledFooterRow>

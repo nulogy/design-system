@@ -1,18 +1,21 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
 import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
+import { Button } from "../Button";
 
-const dateToString = cellData => {
+const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString();
 };
 
-// eslint-disable-next-line react/prop-types
-const iconicButtonCellRenderer = cellData => <IconicButton icon="delete">{cellData}</IconicButton>;
+const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
 
-const dropdownCellRenderer = cellData => (
+const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
+
+const dropdownCellRenderer = ({ cellData }) => (
   <Box textAlign="right">
     <DropdownMenu>
       <DropdownLink href="/">See Date: {cellData}</DropdownLink>
@@ -36,6 +39,12 @@ const getColumnsWithCellRenderer = cellRenderer => [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
   { label: "Column 3", dataKey: "c3", cellRenderer }
+];
+
+const getColumnsWithheaderFormatter = headerFormatter => [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3", headerFormatter }
 ];
 
 const columnsWithAlignment = [
@@ -72,11 +81,14 @@ storiesOf("Table", module)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("loading", () => <Table columns={columns} rows={rowData} loading />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom component: iconic button", () => (
+  .add("with a custom table cell component: iconic button", () => (
     <Table columns={getColumnsWithCellRenderer(iconicButtonCellRenderer)} rows={rowData} />
   ))
-  .add("with a custom component: dropdown", () => (
+  .add("with a custom table cell component: dropdown", () => (
     <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
+  ))
+  .add("with a custom column label component: button", () => (
+    <Table columns={getColumnsWithheaderFormatter(buttonRenderer)} rows={rowData} />
   ))
   .add("with wrapping text", () => (
     <Box width={400}>

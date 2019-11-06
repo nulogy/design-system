@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Changed spacing in Modal [Modal](http://nulogy.design/components/modal) component
+- Table
+  - [**Breaking Change**] `cellFormatter` and `cellRenderer` APIs have been updated so arguments are within an object
+    - Before: `cellFormatter: (cellData, column, row) => {}`
+    - Now: `cellFormatter: ({cellData, column, row}) => {}`
+  - `cellFormatter` can now return a react component or a string instead of being limited to strings
 
 ### Deprecated
 
