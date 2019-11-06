@@ -6,10 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+ 
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+## [0.15.0] - 2019-11-06
 
 ### Added
 
 - Added an option to add a footer to the Table [Table](http://nulogy.design/components/table) component
+- Added an example of implementing filters with the Table [Table](http://nulogy.design/components/table) component
 
 ### Changed
 
@@ -20,16 +30,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - Now: `cellFormatter: ({cellData, column, row}) => {}`
   - `cellFormatter` can now return a react component or a string instead of being limited to strings
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
-- storybook actions addon should be in devDependencies
-- multiselect encountered a undefined .map error when clearing all options because the check before mapping was checking strictly for the value undefined and not null
-
-### Security
+- Storybook actions addon should be in devDependencies (https://github.com/nulogy/design-system/pull/432)
+- Multiselect encountered a undefined .map error when clearing all options because the check before mapping was checking strictly for the value undefined and not null (https://github.com/nulogy/design-system/pull/433)
 
 ## [0.14.2] - 2019-10-31
 
