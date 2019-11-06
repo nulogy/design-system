@@ -34,6 +34,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Storybook actions addon should be in devDependencies (https://github.com/nulogy/design-system/pull/432)
 - Multiselect encountered a undefined .map error when clearing all options because the check before mapping was checking strictly for the value undefined and not null (https://github.com/nulogy/design-system/pull/433)
+- Fixed text input and textarea required functionality
+
+### Security
 
 ## [0.14.2] - 2019-10-31
 
