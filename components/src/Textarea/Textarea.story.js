@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Textarea } from "../index";
+import { Textarea, Form, PrimaryButton } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -31,4 +31,11 @@ storiesOf("Textarea", module)
   ))
   .add("With custom number of rows", () => <Textarea labelText="Label" rows={7} onChange={action("value changed")} />)
   .add("With custom id", () => <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} />)
-  .add("set to required", () => <Textarea required labelText="Label" onChange={action("value changed")} />);
+  .add("set to required", () => (
+    <>
+      <Form title="Required field example">
+        <Textarea required labelText="Label" onChange={action("value changed")} />
+        <PrimaryButton>Send</PrimaryButton>
+      </Form>
+    </>
+  ));
