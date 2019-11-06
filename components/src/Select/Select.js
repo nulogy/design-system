@@ -21,7 +21,7 @@ const getReactSelectValue = (options, input) => {
 };
 
 const extractValue = (options, isMulti) => {
-  if (options === undefined) return options;
+  if (options == null) return options;
 
   if (isMulti) {
     return options.map(o => o.value);

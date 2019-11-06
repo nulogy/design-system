@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - storybook actions addon should be in devDependencies
+- multiselect encountered a undefined .map error when clearing all options because the check before mapping was checking strictly for the value undefined and not null
 
 ### Security
 
