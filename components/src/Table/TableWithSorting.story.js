@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
-import { Table, Text, Flex } from "..";
-import { IconicButton } from "../Button";
+import { Table } from "..";
 
 const COLUMNS = [{ label: "Name", dataKey: "name" }, { label: "Population (x 1000)", dataKey: "population" }];
 
@@ -24,21 +23,15 @@ const getSortedRows = (rows, columnKey, sortFunction) => rows.sort((a, b) => sor
 
 const INITIAL_SORTED_ROWS = getSortedRows(ROWS, "name", numericAlphabeticalSort);
 
-const SortableColumnHeader = ({ onChange, label, ascending }) => (
-  <Flex alignItems="center">
-    <Text>{label}</Text>
-    <IconicButton icon={ascending ? "downArrow" : "upArrow"} onClick={onChange} />
-  </Flex>
-);
-
 const TableWithSorting = () => {
   const [rows, setRows] = useState(INITIAL_SORTED_ROWS);
   const [sortState, setSortState] = useState({
-    name: false
+    name: false,
+    current: "name"
   });
 
   const sortRows = sortObj => {
-    const columnKey = Object.keys(sortState)[0];
+    const columnKey = sortObj.current;
     if (columnKey) {
       const sortedRows = getSortedRows(rows, columnKey, numericAlphabeticalSort);
       setRows(sortObj[columnKey] ? sortedRows : sortedRows.reverse());
@@ -50,9 +43,10 @@ const TableWithSorting = () => {
   }, [sortState]);
 
   const onSortChange = dataKey => {
-    console.log(dataKey);
     return setSortState(state => ({
-      [dataKey]: !state[dataKey]
+      ...state,
+      [dataKey]: !state[dataKey],
+      current: dataKey
     }));
   };
   const transformColumn = (column, onChange) => {
@@ -60,7 +54,12 @@ const TableWithSorting = () => {
     return {
       ...column,
       headerFormatter: ({ label, dataKey }) => (
-        <SortableColumnHeader onChange={() => onChange(dataKey, isAscending)} label={label} ascending={isAscending} />
+        <Table.SortingHeader
+          onChange={() => onChange(dataKey, isAscending)}
+          label={label}
+          ascending={isAscending}
+          active={dataKey === sortState.current}
+        />
       )
     };
   };
