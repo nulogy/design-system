@@ -2,14 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
-import { space, textAlign } from "styled-system";
+import { space } from "styled-system";
 import { Field } from "../Form";
-import { Text } from "../Type";
-import { Sufix } from "../FieldLabel";
-import { Prefix } from "../FieldLabel";
-import { Box } from "../Box";
 import { Flex } from "../Flex";
-import { MaybeFieldLabel } from "../FieldLabel";
+import { MaybeFieldLabel, Prefix, Sufix } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
@@ -81,7 +77,6 @@ const Input = ({
   sufixAlignment,
   prefixAlignment,
   className,
-  textAlign,
   ...props
 }) => (
   <Field className={className}>
