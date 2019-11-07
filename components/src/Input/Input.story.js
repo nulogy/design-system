@@ -47,7 +47,7 @@ storiesOf("Input", module)
       </Form>
     </>
   ))
-  .add("with a affix", () => (
+  .add("with a affix (prefix and sufix)", () => (
     <>
       <Form title="Sufix" mb="x6">
         <FormSection>

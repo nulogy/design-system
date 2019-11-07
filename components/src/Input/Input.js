@@ -116,6 +116,8 @@ Input.propTypes = {
   sufix: PropTypes.string,
   sufixWidth: PropTypes.string,
   sufixAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  prefix: PropTypes.string,
+  prefixWidth: PropTypes.string,
   prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
   ...space.PropTypes
 };
@@ -132,7 +134,9 @@ Input.defaultProps = {
   sufix: null,
   sufixWidth: null,
   sufixAlignment: "left",
-  textAlign: "center"
+  prefix: null,
+  prefixWidth: null,
+  prefixAlignment: "left"
 };
 
 export default Input;
