@@ -19,11 +19,8 @@ const TableCell = ({ row, column, colSpan, children }) => {
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
   const cellContent = cellFormatter ? cellFormatter({ cellData: children, column, row }) : children;
-  const CustomizedCell = ({ renderer, cellData, colSpan }) => (
-    <td colSpan={colSpan}>{renderer ? renderer({ cellData, column, row }) : cellData}</td>
-  );
   if (isCustomCell) {
-    return <CustomizedCell renderer={cellRenderer} cellData={children} colSpan={colSpan} />;
+    return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData: children, column, row }) : children}</td>;
   }
   return <StyledTableCell align={column.align}>{cellContent}</StyledTableCell>;
 };
@@ -31,7 +28,12 @@ const TableCell = ({ row, column, colSpan, children }) => {
 TableCell.propTypes = {
   column: columnPropType.isRequired,
   row: rowPropType.isRequired,
-  colSpan: PropTypes.number.isRequired
+  colSpan: PropTypes.number.isRequired,
+  children: PropTypes.node
+};
+
+TableCell.defaultProps = {
+  children: ""
 };
 
 export default TableCell;
