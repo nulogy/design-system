@@ -103,6 +103,25 @@ export default () => (
 />`}
         </Highlight>
       </Box>
+      <Box mb="x6">
+        <SubsectionTitle>With Prefix and Sufix Label</SubsectionTitle>
+        <Input
+          id="all-labels"
+          labelText="Label"
+          placeholder="I'm an input"
+          prefix="I'm prefix label"
+          sufix="I'm sufix label"
+        />
+        <Highlight className="js">
+          {`<Input
+  id="all-labels"
+  labelText="Label"
+  placeholder="I'm an input"
+  prefix="I'm prefix label"
+  sufix="I'm sufix label"
+/>`}
+        </Highlight>
+      </Box>
     </DocSection>
     <DocSection>
       <SectionTitle>Guidelines</SectionTitle>
