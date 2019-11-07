@@ -5,6 +5,8 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { Text } from "../Type";
+import { MaybeSufix } from "../FieldLabel";
+import { MaybePrefix } from "../FieldLabel";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -64,11 +66,6 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
-const Sufix = styled(Text)`
-  margin-left: ${theme.space.x1};
-  margin-top: ${theme.space.x1};
-`;
-
 const Input = ({
   errorMessage,
   errorList,
@@ -78,19 +75,16 @@ const Input = ({
   requirementText,
   helpText,
   sufix,
+  prefix,
   sufixWidth,
+  prefixWidth,
   className,
   ...props
 }) => (
   <Field className={className}>
-    <MaybeFieldLabel
-      labelText={labelText}
-      requirementText={requirementText}
-      helpText={helpText}
-      sufix={sufix}
-      sufixWidth={sufixWidth}
-    >
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
+        <MaybePrefix prefix={prefix} prefixWidth={prefixWidth} />
         <StyledInput
           aria-invalid={error}
           aria-required={required}
@@ -100,9 +94,7 @@ const Input = ({
           error={error}
           {...props}
         />
-        <Box width={sufixWidth}>
-          <Sufix>{sufix}</Sufix>
-        </Box>
+        <MaybeSufix sufix={sufix} sufixWidth={sufixWidth} />
       </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

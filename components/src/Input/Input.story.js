@@ -53,5 +53,7 @@ storiesOf("Input", module)
       <Input sufix="pallets and boxes" />
       <Input labelText="Label" sufix="eaches" sufixWidth="180px" />
       <Input sufix="pallets and boxes" sufixWidth="180px" />
+      <Input prefix="pallets and boxes" prefixWidth="180px" />
+      <Input sufix="pallets and boxes" prefix="pallets and boxes" />
     </>
   ));
