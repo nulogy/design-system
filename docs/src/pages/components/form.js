@@ -14,7 +14,7 @@ import {
   Select,
   Textarea,
   PrimaryButton,
-  Button
+  QuietButton
 } from "@nulogy/components";
 import {
   DocText as Text,
@@ -77,7 +77,7 @@ export default () => (
           <Textarea rows="4" mb="x6" labelText="Project description" />
           <Box mb="x6">
             <PrimaryButton mr="x1">Create project</PrimaryButton>
-            <Button>Cancel</Button>
+            <QuietButton>Cancel</QuietButton>
           </Box>
         </Form>
       </Box>
@@ -89,7 +89,7 @@ export default () => (
   <Textarea rows="4" mb="x6" labelText="Project description" />
   <Box mb="x6">
     <PrimaryButton mr="x1">Create project</PrimaryButton>
-    <Button>Cancel</Button>
+    <QuietButton>Cancel</QuietButton>
   </Box>
 </Form>`}
       </Highlight>
@@ -110,7 +110,7 @@ export default () => (
           />
           <Box mb="x6" mt="x6">
             <PrimaryButton mr="x1">Create project</PrimaryButton>
-            <Button>Cancel</Button>
+            <QuietButton>Cancel</QuietButton>
           </Box>
         </Form>
       </Box>
@@ -121,7 +121,7 @@ export default () => (
   <Select mb="x6" placeholder="Please select project status" options={options} labelText="Project status" />
   <Box mb="x6">
     <PrimaryButton mr="x1">Create project</PrimaryButton>
-    <Button>Cancel</Button>
+    <QuietButton>Cancel</QuietButton>
   </Box>
 </Form>`}
       </Highlight>
