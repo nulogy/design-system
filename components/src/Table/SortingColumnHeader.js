@@ -6,7 +6,7 @@ const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) 
   const defaultAriaLabel = `sort ${ascending ? "descending" : "ascending"}`;
   return (
     <Flex alignItems="center">
-      <Text color={active ? "blue" : "black"}>{label}</Text>
+      <Text mr="x1">{label}</Text>
       <ControlIcon
         icon={ascending ? "downArrow" : "upArrow"}
         label={ariaLabel || defaultAriaLabel}
