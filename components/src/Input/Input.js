@@ -77,6 +77,7 @@ const Input = ({
       <StyledInput
         aria-invalid={error}
         aria-required={required}
+        required={required}
         errorMessage={errorMessage}
         errorList={errorList}
         error={error}
