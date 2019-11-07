@@ -13,7 +13,7 @@ export { InlineValidation, HeaderValidation } from "./Validation";
 export { Alert } from "./Alert";
 export { Branding, BrandingText } from "./Branding";
 export { DropdownMenu, DropdownLink, DropdownButton, DropdownItem } from "./DropdownMenu";
-export { HelpText, RequirementText, FieldLabel, MaybeFieldLabel } from "./FieldLabel";
+export { HelpText, RequirementText, FieldLabel, MaybeFieldLabel, MaybeSufix, MaybePrefix } from "./FieldLabel";
 export { Input } from "./Input";
 export { NavBarSearch } from "./NavBarSearch";
 export { NavBar } from "./NavBar";
