@@ -20,18 +20,22 @@ const StyledTr = styled.tr({
 
 const renderRows = (rows, columns, keyField, noRowsContent) =>
   rows.length > 0 ? (
-    rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} />)
+    rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} keyField={keyField} />)
   ) : (
     <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
   );
 
-const TableBodyRow = ({ row, columns }) => (
-  <StyledTr>
-    {columns.map(column => (
-      <TableCell key={column.dataKey} row={row} column={column} />
-    ))}
-  </StyledTr>
-);
+const TableBodyRow = ({ row, columns }) => {
+  const renderAllCells = () =>
+    columns.map(column => (
+      <TableCell key={column.dataKey} row={row} column={column} cellData={[row[column.dataKey]]} />
+    ));
+  return (
+    <StyledTr>
+      {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
+    </StyledTr>
+  );
+};
 
 TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
