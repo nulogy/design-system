@@ -35,6 +35,10 @@ To generate the files needed for a new component, you can use [Plop](https://plo
 
 - From the `components` directory, run `yarn new ComponentName` (make sure your name is in PascalCase)
 
+## Adding icons
+
+[How to add icons](https://github.com/nulogy/design-system/blob/master/components/icons/README.md)
+
 ## Writing CSS
 
 Our CSS package provides a way to access our tokens
