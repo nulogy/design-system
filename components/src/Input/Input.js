@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
-import { space } from "styled-system";
+import { space, textAlign } from "styled-system";
 import { Field } from "../Form";
 import { Text } from "../Type";
-import { MaybeSufix } from "../FieldLabel";
-import { MaybePrefix } from "../FieldLabel";
+import { Sufix } from "../FieldLabel";
+import { Prefix } from "../FieldLabel";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -78,13 +78,16 @@ const Input = ({
   prefix,
   sufixWidth,
   prefixWidth,
+  sufixAlignment,
+  prefixAlignment,
   className,
+  textAlign,
   ...props
 }) => (
   <Field className={className}>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
-        <MaybePrefix prefix={prefix} prefixWidth={prefixWidth} />
+        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
         <StyledInput
           aria-invalid={error}
           aria-required={required}
@@ -94,7 +97,7 @@ const Input = ({
           error={error}
           {...props}
         />
-        <MaybeSufix sufix={sufix} sufixWidth={sufixWidth} />
+        <Sufix sufix={sufix} sufixWidth={sufixWidth} textAlign={sufixAlignment} />
       </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
@@ -112,6 +115,8 @@ Input.propTypes = {
   requirementText: PropTypes.string,
   sufix: PropTypes.string,
   sufixWidth: PropTypes.string,
+  sufixAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
   ...space.PropTypes
 };
 
@@ -125,7 +130,9 @@ Input.defaultProps = {
   helpText: null,
   requirementText: null,
   sufix: null,
-  sufixWidth: null
+  sufixWidth: null,
+  sufixAlignment: "left",
+  textAlign: "center"
 };
 
 export default Input;
