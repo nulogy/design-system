@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export const columnPropType = PropTypes.shape({
   align: PropTypes.oneOf(["right", "left", "center"]),
   label: PropTypes.string,
-  dataKey: PropTypes.string.isRequired,
+  dataKey: PropTypes.string,
   cellFormatter: PropTypes.func,
   cellRenderer: PropTypes.func,
   headerRenderer: PropTypes.func,
@@ -11,7 +11,7 @@ export const columnPropType = PropTypes.shape({
 });
 
 export const rowPropType = PropTypes.objectOf(
-  PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool])
+  PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool, PropTypes.func])
 );
 
 export const columnsPropType = PropTypes.arrayOf(columnPropType);

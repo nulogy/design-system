@@ -48,13 +48,13 @@ const columnKeys = [
     name: "cellFormatter",
     type: "function",
     description:
-      "Used to format the table cell. It should return a string or react component."
+      "Used to format the table cells in the column. It should return a string or react component."
   },
   {
     name: "cellRenderer",
     type: "function",
     description:
-      "Used to override the cell component. No padding or other styles will be added in this case. It should return a react component. "
+      "Used to override the cell component in the column. No padding or other styles will be added in this case. It should return a react component."
   },
   {
     name: "headerFormatter",
@@ -70,6 +70,18 @@ const rowKeys = [
     type: "string",
     description:
       "Unique id for each row, required if another keyField is not passed to the Table"
+  },
+  {
+    name: "heading",
+    type: "string",
+    description:
+      "Creates a heading out of the row that spans the full-width of the table"
+  },
+  {
+    name: "cellRenderer",
+    type: "function",
+    description:
+      "Used to override the cell component in the row. No padding or other styles will be added in this case. It should return a react component."
   }
 ];
 
@@ -189,12 +201,6 @@ const columns = [
   { label: "Column 1", dataKey: "c1" },
   { label: "Column 2", dataKey: "c2" },
   { label: "Column 3", dataKey: "c3" }
-];
-
-const columnsWithFormatter = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
 ];
 
 const columnsWithWidths = [
@@ -470,6 +476,20 @@ const manyRowsForPagination = [
       />
 `}
       </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Headings</SectionTitle>
+      <Text>
+        Headings that span the full width of a row can be added within the
+        table's rows. To add a heading add a row with the key "heading." The
+        appearance of the heading can be customized by adding a cellRenderer to
+        the row. See an example in
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-full-width-section">
+          Storybook
+        </Link>
+        .
+      </Text>
     </DocSection>
 
     <DocSection>

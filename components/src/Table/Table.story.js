@@ -4,12 +4,20 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
 import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu, Text } from "..";
-import { getMockRows, mockColumns } from "./Table.mock-utils";
+import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString();
 };
+
+const sectionRow = ({ cellData }) => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text fontWeight="bold" color="blackBlue">
+      {cellData}
+    </Text>
+  </Box>
+);
 
 const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
 
@@ -68,6 +76,16 @@ const columnsWithFormatter = [
 const rowData = [
   { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+];
+
+const rowDataWithSections = [
+  { heading: "section 1", id: "1" },
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "2" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
+  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
+  { heading: "section 2", cellRenderer: sectionRow, id: "5" },
+  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
+  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
 ];
 
 const footerRowData = [
@@ -142,4 +160,5 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
     />
-  ));
+  ))
+  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />);
