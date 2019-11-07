@@ -14,26 +14,29 @@ const StyledTableCell = styled.td(({ align }) => ({
   }
 }));
 
-const TableCell = ({ row, column, colSpan, children }) => {
+const TableCell = ({ row, column, colSpan, cellData }) => {
   const cellRenderer = row.cellRenderer || column.cellRenderer;
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
-  const cellContent = cellFormatter ? cellFormatter({ cellData: children, column, row }) : children;
+  const cellContent = cellFormatter ? cellFormatter({ cellData, column, row }) : cellData;
   if (isCustomCell) {
-    return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData: children, column, row }) : children}</td>;
+    return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}</td>;
   }
   return <StyledTableCell align={column.align}>{cellContent}</StyledTableCell>;
 };
 
 TableCell.propTypes = {
-  column: columnPropType.isRequired,
-  row: rowPropType.isRequired,
-  colSpan: PropTypes.number.isRequired,
-  children: PropTypes.node
+  column: columnPropType,
+  row: rowPropType,
+  colSpan: PropTypes.number,
+  cellData: PropTypes.oneOfType([PropTypes.node, PropTypes.bool])
 };
 
 TableCell.defaultProps = {
-  children: ""
+  column: {},
+  row: {},
+  cellData: "",
+  colSpan: null
 };
 
 export default TableCell;

@@ -79,13 +79,13 @@ const rowData = [
 ];
 
 const rowDataWithSections = [
-  { heading: "section 1" },
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" },
-  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22" },
-  { heading: "section 2", cellRenderer: sectionRow },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22" },
-  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22" }
+  { heading: "section 1", id: "1" },
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "2" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
+  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
+  { heading: "section 2", cellRenderer: sectionRow, id: "5" },
+  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
+  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
 ];
 
 const footerRowData = [
@@ -161,4 +161,4 @@ storiesOf("Table", module)
       onPageChange={action("page changed")}
     />
   ))
-  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} keyField="c1" />);
+  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />);
