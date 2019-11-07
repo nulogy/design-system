@@ -5,30 +5,25 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import theme from "../theme";
 
-const Prefix = styled(Text)`
-  margin-right: ${theme.space.x1};
-  margin-top: ${theme.space.x1};
-`;
-
-const MaybePrefix = ({ prefix, prefixWidth, children, ...props }) =>
+const Prefix = ({ prefix, prefixWidth, children, ...props }) =>
   prefix ? (
-    <Box width={prefixWidth}>
-      <Prefix>{prefix}</Prefix>
+    <Box width={prefixWidth} pt="x1" pr="x1" pb="x1">
+      <Text {...props}>{prefix}</Text>
     </Box>
   ) : (
     <>{children}</>
   );
 
-MaybePrefix.propTypes = {
+Prefix.propTypes = {
   prefix: PropTypes.string,
   prefixWidth: PropTypes.string,
   children: PropTypes.node
 };
 
-MaybePrefix.defaultProps = {
+Prefix.defaultProps = {
   prefix: null,
   children: null,
   prefixWidth: null
 };
 
-export default MaybePrefix;
+export default Prefix;

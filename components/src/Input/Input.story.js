@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, PrimaryButton } from "../index";
+import { Input, Form, FormSection, PrimaryButton, SectionTitle, SubsectionTitle } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -47,13 +47,34 @@ storiesOf("Input", module)
       </Form>
     </>
   ))
-  .add("with a sufix", () => (
+  .add("with a affix", () => (
     <>
-      <Input labelText="Label" sufix="eaches" />
-      <Input sufix="pallets and boxes" />
-      <Input labelText="Label" sufix="eaches" sufixWidth="180px" />
-      <Input sufix="pallets and boxes" sufixWidth="180px" />
-      <Input prefix="pallets and boxes" prefixWidth="180px" />
-      <Input sufix="pallets and boxes" prefix="pallets and boxes" />
+      <Form title="Sufix" mb="x6">
+        <FormSection>
+          <Input sufix="Eaches" />
+          <Input sufix="Pallets and boxes" />
+        </FormSection>
+        <FormSection title="With Custom Width">
+          <Input sufix="Eaches" sufixWidth="360px" prefixAlignment="right" />
+          <Input sufix="Pallets and boxes" sufixWidth="360px" />
+        </FormSection>
+      </Form>
+      <Form title="Prefix" mb="x6">
+        <FormSection>
+          <Input prefix="Eaches" />
+          <Input prefix="Pallets and boxes" />
+        </FormSection>
+        <FormSection title="With Custom Width">
+          <Input prefix="Eaches" prefixWidth="360px" />
+          <Input prefix="Pallets and boxes" prefixWidth="360px" />
+        </FormSection>
+        <FormSection title="With right alignment">
+          <Input prefix="Eaches" prefixWidth="360px" prefixAlignment="right" />
+          <Input prefix="Pallets and boxes" prefixWidth="360px" prefixAlignment="right" />
+        </FormSection>
+      </Form>
+      <Form title="Prefix and Sufix" mb="x6">
+        <Input prefix="Quantitty" sufix="Eches" />
+      </Form>
     </>
   ));

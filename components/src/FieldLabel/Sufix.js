@@ -5,30 +5,25 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import theme from "../theme";
 
-const Sufix = styled(Text)`
-  margin-left: ${theme.space.x1};
-  margin-top: ${theme.space.x1};
-`;
-
-const MaybeSufix = ({ sufix, sufixWidth, children, ...props }) =>
+const Sufix = ({ sufix, sufixWidth, children, ...props }) =>
   sufix ? (
-    <Box width={sufixWidth}>
-      <Sufix>{sufix}</Sufix>
+    <Box width={sufixWidth} pt="x1" pb="x1" pl="x1">
+      <Text {...props}>{sufix}</Text>
     </Box>
   ) : (
     <>{children}</>
   );
 
-MaybeSufix.propTypes = {
+Sufix.propTypes = {
   sufix: PropTypes.string,
   sufixWidth: PropTypes.string,
   children: PropTypes.node
 };
 
-MaybeSufix.defaultProps = {
+Sufix.defaultProps = {
   sufix: null,
   children: null,
   sufixWidth: null
 };
 
-export default MaybeSufix;
+export default Sufix;
