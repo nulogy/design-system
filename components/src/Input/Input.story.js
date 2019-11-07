@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, FormSection, PrimaryButton, SectionTitle, SubsectionTitle } from "../index";
+import { Input, Form, FormSection, PrimaryButton } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
