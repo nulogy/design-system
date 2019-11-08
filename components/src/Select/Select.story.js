@@ -2,6 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Button, Input, PrimaryButton, Select } from "../index";
+import { Box } from "../Box";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -13,6 +14,16 @@ const options = [
   { value: "open", label: "Open" },
   { value: "progress", label: "In progress" },
   { value: "quarantine", label: "In quarantine" }
+];
+
+const partnerCompanyName = [
+  { value: "2", label: "PCN2 12387387484895884957848576867587685780" },
+  { value: "4", label: "PCN4 12387387484895884957848576867587685780" },
+  { value: "1", label: "PCN1 12387387484895884957848576867587685780" },
+  { value: "9", label: "PCN9 12387387484895884957848576867587685780" },
+  { value: "7", label: "PCN7 12387387484895884957848576867587685780" },
+  { value: "6", label: "PCN6 12387387484895884957848576867587685780" },
+  { value: "3", label: "PCN3 12387387484895884957848576867587685780e" }
 ];
 
 const wrappingOptions = [
@@ -187,16 +198,42 @@ storiesOf("Select", module)
     </form>
   ))
   .add("with multiselect", () => (
-    <Select
-      defaultValue={["accepted", "assigned"]}
-      noOptionsMessage={() => "No options"}
-      placeholder="Please select inventory status"
-      options={options}
-      labelText="Inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      multiselect
-    />
+    <>
+      <Select
+        defaultValue={["accepted", "assigned"]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        multiselect
+      />
+      <Box width="300px">
+        <Select
+          defaultValue={partnerCompanyName.map(item => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={partnerCompanyName}
+          labelText="PCN"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+        />
+      </Box>
+      <Box width="400px">
+        <Select
+          defaultValue={options.map(item => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+        />
+      </Box>
+    </>
   ))
   .add("with helpText", () => (
     <Select

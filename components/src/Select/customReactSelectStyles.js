@@ -38,7 +38,7 @@ const customStyles = error => {
     }),
     control: (provided, state) => ({
       display: "flex",
-      height: theme.space.x5,
+      minHeight: theme.space.x5,
       paddingLeft: theme.space.x1,
       position: "relative",
       fontFamily: theme.fonts.base,
@@ -72,7 +72,9 @@ const customStyles = error => {
     input: () => ({}),
     valueContainer: provided => ({
       ...provided,
-      padding: 0
+      padding: 0,
+      overflow: "auto",
+      maxHeight: "150px"
     }),
     menu: (provided, state) => ({
       marginTop: 0,
@@ -101,7 +103,7 @@ const customStyles = error => {
       ...provided,
       background: theme.colors.lightGrey,
       color: theme.colors.black,
-      margin: `0 ${theme.space.x1} 0 0`,
+      margin: `2px ${theme.space.x1} 2px 0`,
       "&:last-child": {
         marginRight: theme.space.half
       }
