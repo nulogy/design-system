@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added full an option for heading in the [Table](http://nulogy.design/components/table)
 - Added an option to customize cells per row to acheive custom styles for headings in [Table](http://nulogy.design/components/table)
 - Added onBlur to [Select](http://nulogy.design/components/select)
+- Addde ability to ad prefix and suffix to the [Input](http://nulogy.design/components/input) component.
 
 ### Changed
 
