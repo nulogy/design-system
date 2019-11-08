@@ -33,16 +33,16 @@ storiesOf("Input", module)
       </Form>
     </>
   ))
-  .add("with a affix (prefix and sufix)", () => (
+  .add("with a affix (prefix and suffix)", () => (
     <>
-      <Form title="Sufix" mb="x6">
+      <Form title="Suffix" mb="x6">
         <FormSection>
-          <Input sufix="Eaches" />
-          <Input sufix="Pallets and boxes" />
+          <Input suffix="Eaches" />
+          <Input suffix="Pallets and boxes" />
         </FormSection>
         <FormSection title="With Custom Width">
-          <Input sufix="Eaches" sufixWidth="360px" prefixAlignment="right" />
-          <Input sufix="Pallets and boxes" sufixWidth="360px" />
+          <Input suffix="Eaches" suffixWidth="360px" prefixAlignment="right" />
+          <Input suffix="Pallets and boxes" suffixWidth="360px" />
         </FormSection>
       </Form>
       <Form title="Prefix" mb="x6">
@@ -59,8 +59,8 @@ storiesOf("Input", module)
           <Input prefix="Pallets and boxes" prefixWidth="360px" prefixAlignment="right" />
         </FormSection>
       </Form>
-      <Form title="Prefix and Sufix" mb="x6">
-        <Input prefix="Quantity" sufix="Eaches" />
+      <Form title="Prefix and Suffix" mb="x6">
+        <Input prefix="Quantity" suffix="Eaches" />
       </Form>
     </>
   ));
