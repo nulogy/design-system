@@ -112,6 +112,13 @@ const inputProps = [
     defaultValue: "undefined",
     description:
       "change event handler that will be run whenever the value of the input is updated."
+  },
+  {
+    name: "onBlur",
+    type: "Function",
+    defaultValue: "undefined",
+    description:
+      "change event handler that will be run whenever the input loses focus."
   }
 ];
 

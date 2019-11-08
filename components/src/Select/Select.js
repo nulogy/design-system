@@ -52,7 +52,8 @@ const ReactSelect = ({
   value,
   defaultValue,
   className,
-  classNamePrefix
+  classNamePrefix,
+  onBlur
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -71,6 +72,7 @@ const ReactSelect = ({
         defaultMenuIsOpen={initialIsOpen}
         maxMenuHeight={maxHeight}
         inputId={id}
+        onBlur={onBlur}
         onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
         defaultValue={getReactSelectValue(options, defaultValue)}
         value={getReactSelectValue(options, value)}
@@ -98,6 +100,7 @@ ReactSelect.propTypes = {
   maxHeight: PropTypes.string,
   multiselect: PropTypes.bool,
   name: PropTypes.string,
+  onBlur: PropTypes.func,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
@@ -123,6 +126,7 @@ ReactSelect.defaultProps = {
   maxHeight: "248px",
   multiselect: false,
   name: undefined,
+  onBlur: undefined,
   onChange: undefined,
   placeholder: undefined,
   required: false,

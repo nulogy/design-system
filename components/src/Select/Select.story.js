@@ -61,6 +61,7 @@ storiesOf("Select", module)
     <Select
       placeholder="Please select inventory status"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
       options={options}
       labelText="Inventory status"
     />
@@ -70,6 +71,7 @@ storiesOf("Select", module)
       defaultValue={options[0].value}
       placeholder="Please select inventory status"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
       options={options}
       labelText="Inventory status"
     />
@@ -80,6 +82,7 @@ storiesOf("Select", module)
       <Select
         placeholder="Please select inventory status"
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
         options={optionsWithBlank}
         labelText="Inventory status"
       />
@@ -93,6 +96,7 @@ storiesOf("Select", module)
         options={options}
         labelText="Inventory status"
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
       <br />
       <Select
@@ -102,6 +106,7 @@ storiesOf("Select", module)
         labelText="Inventory status"
         initialIsOpen
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
     </>
   ))
@@ -114,6 +119,7 @@ storiesOf("Select", module)
       placeholder="Please select inventory status"
       options={options}
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
       disabled
       labelText="Inventory status"
     />
@@ -126,6 +132,7 @@ storiesOf("Select", module)
         errorMessage="Please select an inventory status"
         labelText="Inventory status"
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
       <br />
       <Select
@@ -134,6 +141,7 @@ storiesOf("Select", module)
         errorMessage="Please select an inventory status"
         initialIsOpen
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
     </>
   ))
@@ -146,6 +154,7 @@ storiesOf("Select", module)
         errorList={errorList}
         labelText="Inventory status"
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
       <br />
       <Select
@@ -155,6 +164,7 @@ storiesOf("Select", module)
         errorList={errorList}
         initialIsOpen
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
     </>
   ))
@@ -169,6 +179,7 @@ storiesOf("Select", module)
         style={{ marginTop: "5px" }}
         labelText="Inventory status"
         onChange={action("selection changed")}
+        onBlur={action("blurred")}
       />
       <PrimaryButton mt="x1" type="submit">
         Submit
@@ -183,6 +194,7 @@ storiesOf("Select", module)
       options={options}
       labelText="Inventory status"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
       multiselect
     />
   ))
@@ -193,6 +205,7 @@ storiesOf("Select", module)
       labelText="Inventory status"
       helpText="Additional information about input"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
     />
   ))
   .add("with custom id", () => (
@@ -203,6 +216,7 @@ storiesOf("Select", module)
       labelText="Inventory status"
       helpText="Additional information about input"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
     />
   ))
   .add("with smaller maxHeight", () => (
@@ -214,6 +228,7 @@ storiesOf("Select", module)
       options={options}
       labelText="Inventory status"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
     />
   ))
   .add("With wrapping text", () => (
@@ -224,5 +239,6 @@ storiesOf("Select", module)
       options={wrappingOptions}
       labelText="Inventory status"
       onChange={action("selection changed")}
+      onBlur={action("blurred")}
     />
   ));
