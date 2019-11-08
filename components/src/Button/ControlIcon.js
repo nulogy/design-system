@@ -27,7 +27,8 @@ const StyledButton = styled.button(({ toggled, disabled }) => ({
     boxShadow: theme.shadows.focus
   },
   "&:hover": {
-    color: theme.colors.blackBlue
+    color: theme.colors.blackBlue,
+    backgroundColor: theme.colors.lightGrey
   }
 }));
 
