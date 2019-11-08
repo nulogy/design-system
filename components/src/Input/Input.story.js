@@ -74,7 +74,7 @@ storiesOf("Input", module)
         </FormSection>
       </Form>
       <Form title="Prefix and Sufix" mb="x6">
-        <Input prefix="Quantitty" sufix="Eches" />
+        <Input prefix="Quantity" sufix="Eaches" />
       </Form>
     </>
   ));
