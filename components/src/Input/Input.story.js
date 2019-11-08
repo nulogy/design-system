@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, PrimaryButton } from "../index";
+import { Input, Form, FormSection, PrimaryButton } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -44,6 +44,37 @@ storiesOf("Input", module)
       <Form title="Required field example">
         <Input required labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
         <PrimaryButton>Send</PrimaryButton>
+      </Form>
+    </>
+  ))
+  .add("with a affix (prefix and suffix)", () => (
+    <>
+      <Form title="Suffix" mb="x6">
+        <FormSection>
+          <Input suffix="Eaches" />
+          <Input suffix="Pallets and boxes" />
+        </FormSection>
+        <FormSection title="With Custom Width">
+          <Input suffix="Eaches" suffixWidth="360px" prefixAlignment="right" />
+          <Input suffix="Pallets and boxes" suffixWidth="360px" />
+        </FormSection>
+      </Form>
+      <Form title="Prefix" mb="x6">
+        <FormSection>
+          <Input prefix="Eaches" />
+          <Input prefix="Pallets and boxes" />
+        </FormSection>
+        <FormSection title="With Custom Width">
+          <Input prefix="Eaches" prefixWidth="360px" />
+          <Input prefix="Pallets and boxes" prefixWidth="360px" />
+        </FormSection>
+        <FormSection title="With right alignment">
+          <Input prefix="Eaches" prefixWidth="360px" prefixAlignment="right" />
+          <Input prefix="Pallets and boxes" prefixWidth="360px" prefixAlignment="right" />
+        </FormSection>
+      </Form>
+      <Form title="Prefix and Suffix" mb="x6">
+        <Input prefix="Quantity" suffix="Eaches" />
       </Form>
     </>
   ));

@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
+import { Flex } from "../Flex";
 import { MaybeFieldLabel } from "../FieldLabel";
+import Prefix from "./Prefix";
+import Suffix from "./Suffix";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
@@ -38,7 +41,7 @@ const getInputStyle = props => {
 const StyledInput = styled.input(
   {
     display: "block",
-    width: "100%",
+    flexGrow: "1",
     border: "1px solid",
     borderRadius: theme.radii.medium,
     padding: subPx(theme.space.x1),
@@ -69,20 +72,30 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
+  suffix,
+  prefix,
+  suffixWidth,
+  prefixWidth,
+  suffixAlignment,
+  prefixAlignment,
   className,
   ...props
 }) => (
   <Field className={className}>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledInput
-        aria-invalid={error}
-        aria-required={required}
-        required={required}
-        errorMessage={errorMessage}
-        errorList={errorList}
-        error={error}
-        {...props}
-      />
+      <Flex alignItems="flex-start">
+        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
+        <StyledInput
+          aria-invalid={error}
+          aria-required={required}
+          required={required}
+          errorMessage={errorMessage}
+          errorList={errorList}
+          error={error}
+          {...props}
+        />
+        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
+      </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
@@ -97,6 +110,12 @@ Input.propTypes = {
   labelText: PropTypes.string,
   helpText: PropTypes.node,
   requirementText: PropTypes.string,
+  suffix: PropTypes.string,
+  suffixWidth: PropTypes.string,
+  suffixAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  prefix: PropTypes.string,
+  prefixWidth: PropTypes.string,
+  prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
   ...space.PropTypes
 };
 
@@ -108,7 +127,13 @@ Input.defaultProps = {
   required: false,
   labelText: null,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  suffix: null,
+  suffixWidth: null,
+  suffixAlignment: "left",
+  prefix: null,
+  prefixWidth: null,
+  prefixAlignment: "left"
 };
 
 export default Input;
