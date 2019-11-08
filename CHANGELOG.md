@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Removed all paddings including horizontal padding on TableCell when using a cellRenderer in Table [Table](http://nulogy.design/components/table)
 
+- Addde ability to ad prefix and suffix to the [Input](http://nulogy.design/components/input) component.
+
+### Changed
+
 ### Deprecated
 
 ### Removed
