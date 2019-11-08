@@ -5,7 +5,7 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { Flex } from "../Flex";
-import { MaybeFieldLabel, Prefix, Sufix } from "../FieldLabel";
+import { MaybeFieldLabel, Prefix, Suffix } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import theme from "../theme";
 import { subPx } from "../utils";
@@ -70,11 +70,11 @@ const Input = ({
   labelText,
   requirementText,
   helpText,
-  sufix,
+  suffix,
   prefix,
-  sufixWidth,
+  suffixWidth,
   prefixWidth,
-  sufixAlignment,
+  suffixAlignment,
   prefixAlignment,
   className,
   ...props
@@ -92,7 +92,7 @@ const Input = ({
           error={error}
           {...props}
         />
-        <Sufix sufix={sufix} sufixWidth={sufixWidth} textAlign={sufixAlignment} />
+        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
       </Flex>
     </MaybeFieldLabel>
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
@@ -108,9 +108,9 @@ Input.propTypes = {
   labelText: PropTypes.string,
   helpText: PropTypes.node,
   requirementText: PropTypes.string,
-  sufix: PropTypes.string,
-  sufixWidth: PropTypes.string,
-  sufixAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  suffix: PropTypes.string,
+  suffixWidth: PropTypes.string,
+  suffixAlignment: PropTypes.oneOf(["left", "center", "right"]),
   prefix: PropTypes.string,
   prefixWidth: PropTypes.string,
   prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
@@ -126,9 +126,9 @@ Input.defaultProps = {
   labelText: null,
   helpText: null,
   requirementText: null,
-  sufix: null,
-  sufixWidth: null,
-  sufixAlignment: "left",
+  suffix: null,
+  suffixWidth: null,
+  suffixAlignment: "left",
   prefix: null,
   prefixWidth: null,
   prefixAlignment: "left"
