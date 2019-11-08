@@ -14,7 +14,7 @@ export { Alert } from "./Alert";
 export { Branding, BrandingText } from "./Branding";
 export { DropdownMenu, DropdownLink, DropdownButton, DropdownItem } from "./DropdownMenu";
 export { HelpText, RequirementText, FieldLabel, MaybeFieldLabel } from "./FieldLabel";
-export { Input, Suffix, Prefix } from "./Input";
+export { Input } from "./Input";
 export { NavBarSearch } from "./NavBarSearch";
 export { NavBar } from "./NavBar";
 export { Checkbox, CheckboxGroup } from "./Checkbox";

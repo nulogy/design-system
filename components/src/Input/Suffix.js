@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
 
-const Suffix = ({ suffix, suffixWidth, children, ...props }) =>
+const Suffix = ({ suffix, suffixWidth, ...props }) =>
   suffix && (
     <Box width={suffixWidth} pt="x1" pb="x1" pl="x1">
       <Text {...props}>{suffix}</Text>
