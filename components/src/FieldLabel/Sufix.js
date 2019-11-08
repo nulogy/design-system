@@ -4,12 +4,10 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 
 const Sufix = ({ sufix, sufixWidth, children, ...props }) =>
-  sufix ? (
-    <Box width={sufixWidth} pt="x1" pb="x1" pl="x1">
+  sufix && (
+    <Box width={sufixWidth} pt="x1" pr="x1" pb="x1">
       <Text {...props}>{sufix}</Text>
     </Box>
-  ) : (
-    <>{children}</>
   );
 
 Sufix.propTypes = {
