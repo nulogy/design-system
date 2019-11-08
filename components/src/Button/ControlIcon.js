@@ -6,31 +6,34 @@ import theme from "../theme";
 
 const getIconColorByState = ({ toggled, disabled }) => {
   if (toggled) {
-    return theme.colors.blue;
+    return theme.colors.darkBlue;
   }
   if (disabled) {
     return theme.colors.grey;
   }
-  return theme.colors.black;
+  return theme.colors.darkGrey;
 };
 
-const StyledButton = styled.button({
+const StyledButton = styled.button(({ toggled, disabled }) => ({
   background: "transparent",
   border: "none",
   display: "flex",
   alignItems: "center",
   padding: 0,
   borderRadius: theme.radii.circle,
-  color: theme.colors.blue,
+  color: getIconColorByState({ toggled, disabled }),
   "&:focus": {
     outline: "none",
     boxShadow: theme.shadows.focus
+  },
+  "&:hover": {
+    color: theme.colors.blackBlue
   }
-});
+}));
 
 const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, ...props }, ref) => (
-  <StyledButton aria-label={label} ref={ref} disabled={disabled} {...props}>
-    <Icon size={theme.space.x4} icon={icon} color={getIconColorByState({ toggled, disabled })} p="half" />
+  <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} {...props}>
+    <Icon size={theme.space.x4} icon={icon} p="half" />
   </StyledButton>
 ));
 
