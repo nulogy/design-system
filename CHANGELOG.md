@@ -30,15 +30,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added ability to add preffix and suffix to the [Input](http://nulogy.design/components/input) component
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
 - Height on select changed to min-height to support multiple rows of selections (https://github.com/nulogy/design-system/pull/441)
 
-### Security
 
 ## [0.15.0] - 2019-11-06
 
