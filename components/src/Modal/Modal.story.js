@@ -12,10 +12,6 @@ const envProps = {
 
 const Modal = props => <NDSModal {...envProps} {...props} />;
 
-const primaryButton = { label: "Primary Action", onClick: () => {} };
-
-const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
-
 const options = [
   { value: "accepted", label: "Accepted" },
   { value: "assigned", label: "Assigned to a line" },
@@ -53,14 +49,7 @@ class ModalExample extends React.Component {
     return (
       <div>
         <Button onClick={this.openModal}>Open Modal</Button>
-        <Modal
-          title="Edit Profile"
-          onRequestClose={this.closeModal}
-          primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-          secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
-          isOpen={isOpen}
-          maxWidth="456px"
-        >
+        <Modal title="Edit Profile" onRequestClose={this.closeModal} isOpen={isOpen} maxWidth="456px">
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
             <Input type="number" name="age" id="age" labelText="Age" />
@@ -72,23 +61,14 @@ class ModalExample extends React.Component {
 }
 
 storiesOf("Modal", module)
-  .add("Modal", () => (
-    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
+  .add("Modal", () => <Modal title="Modal Title">Content Content Content</Modal>)
   .add("with close button", () => (
-    <Modal
-      title="Modal Title"
-      onRequestClose={() => {}}
-      primaryButton={primaryButton}
-      secondaryButtons={secondaryButtons}
-    >
+    <Modal title="Modal Title" onRequestClose={() => {}}>
       Content Content Content
     </Modal>
   ))
   .add("with scrolling content", () => (
-    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title">
       <Text>
         Content Content Content Content Content Content Content Content Content Content Content Content Content Content
         Content Content Content Content Content Content Content Content Content Content Content Content Content Content
@@ -101,24 +81,14 @@ storiesOf("Modal", module)
       </Text>
     </Modal>
   ))
-  .add("with no title", () => (
-    <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
+  .add("with no title", () => <Modal>Content Content Content</Modal>)
   .add("with custom maxWidth", () => (
-    <Modal title="Modal Title" maxWidth="1000px" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" maxWidth="1000px">
       Content Content Content
     </Modal>
   ))
   .add("with select", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
+    <Modal title="Edit Profile" onRequestClose={() => {}} maxWidth="456px">
       <Form id="myForm" mb="x2">
         <Select
           maxHeight="96px"
@@ -130,13 +100,7 @@ storiesOf("Modal", module)
     </Modal>
   ))
   .add("with select and scrolling content", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
+    <Modal title="Edit Profile" onRequestClose={() => {}} maxWidth="456px">
       <Form id="myForm" mb="x2">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />

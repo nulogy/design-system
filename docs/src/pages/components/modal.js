@@ -40,27 +40,6 @@ const propsRows = [
     description: "The title appearing at the top of the modal."
   },
   {
-    name: "primaryButton",
-    type: "Object",
-    defaultValue: "null",
-    description:
-      "The primary action of the modal, accepts label tag for label and all other Button component props."
-  },
-  {
-    name: "secondaryButtons",
-    type: "Array",
-    defaultValue: "null",
-    description:
-      "The secondary action(s) of the modal, accepts an array of objects with label tag and other Button props."
-  },
-  {
-    name: "buttonAlignment",
-    type: "String",
-    defaultValue: "left",
-    description:
-      "Controls the placement and order of button in the modal, either 'left' or 'spaced'."
-  },
-  {
     name: "onRequestClose",
     type: "Function",
     defaultValue: "null",
@@ -127,9 +106,6 @@ const propsRows = [
   }
 ];
 
-const primaryButton = { label: "Primary Action", onClick: () => {} };
-const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
-
 Modal.setAppElement("#___gatsby");
 
 class ModalStateWrapper extends React.Component {
@@ -192,8 +168,6 @@ export default () => (
             title="Modal Title"
             isOpen={isOpen}
             onRequestClose={closeModal}
-            primaryButton={{ label: "Primary Action", onClick: () => {} }}
-            secondaryButtons={secondaryButtons}
           >
             Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -204,9 +178,6 @@ export default () => (
       </ModalStateWrapper>
       <Highlight className="js">
         {`import { Modal, Button } from "@nulogy/components";
-
-const primaryButton = { label: "Primary Action", onClick: () => {} };
-const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
 Modal.setAppElement("#root");
 
@@ -240,8 +211,6 @@ class ModalExample extends React.Component {
           title="Modal Title"
           isOpen={isOpen}
           onRequestClose={closeModal}
-          primaryButton={primaryButton}
-          secondaryButtons={secondaryButtons}
         >
           Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -282,8 +251,6 @@ class ModalExample extends React.Component {
               title="Modal Title"
               isOpen={isOpen}
               onRequestClose={closeModal}
-              primaryButton={primaryButton}
-              secondaryButtons={secondaryButtons}
             >
               Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -297,8 +264,6 @@ class ModalExample extends React.Component {
   title="Modal Title"
   isOpen={isOpen}
   onRequestClose={closeModal}
-  primaryButton={{ label: "Primary Action", onClick: () => {} }}
-  secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
 >
   Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
   elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -325,12 +290,6 @@ class ModalExample extends React.Component {
             <Modal
               title="Edit Profile"
               onRequestClose={closeModal}
-              primaryButton={{
-                label: "Submit",
-                type: "submit",
-                form: "editProfile"
-              }}
-              secondaryButtons={[{ label: "Cancel", onClick: closeModal }]}
               isOpen={isOpen}
               maxWidth="456px"
             >
@@ -345,8 +304,6 @@ class ModalExample extends React.Component {
           {`<Modal
   title="Edit Profile"
   onRequestClose={closeModal}
-  primaryButton={{ label: "Submit", type: "submit", form: "editProfile" }}
-  secondaryButtons={[{ label: "Cancel", onClick: closeModal }]}
   isOpen={isOpen}
   maxWidth="456px"
 >
@@ -366,8 +323,6 @@ class ModalExample extends React.Component {
               title="Enter Address"
               buttonAlignment="spaced"
               onRequestClose={closeModal}
-              primaryButton={{ label: "Next", onClick: () => {} }}
-              secondaryButtons={[{ label: "Previous", onClick: () => {} }]}
               isOpen={isOpen}
               maxWidth="456px"
             >
@@ -383,8 +338,6 @@ class ModalExample extends React.Component {
   title="Enter Address"
   buttonAlignment="spaced"
   onRequestClose={closeModal}
-  primaryButton={{ label: "Next", onClick: ()=>{} }}
-  secondaryButtons={[{ label: "Previous", onClick: ()=>{} }]}
   isOpen={isOpen}
   maxWidth="456px"
 >
@@ -430,12 +383,7 @@ class ModalExample extends React.Component {
         <SubsectionTitle>Without the Title</SubsectionTitle>
         <ModalStateWrapper>
           {({ isOpen, closeModal }) => (
-            <Modal
-              isOpen={isOpen}
-              onRequestClose={closeModal}
-              primaryButton={primaryButton}
-              secondaryButtons={secondaryButtons}
-            >
+            <Modal isOpen={isOpen} onRequestClose={closeModal}>
               Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -447,8 +395,6 @@ class ModalExample extends React.Component {
           {`<Modal
   isOpen={isOpen}
   onRequestClose={closeModal}
-  primaryButton={{ label: "Primary Action", onClick: () => {} }}
-  secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
 >
   Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
   elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -462,11 +408,7 @@ class ModalExample extends React.Component {
         <SubsectionTitle>Without the Title Bar</SubsectionTitle>
         <ModalStateWrapper>
           {({ isOpen, closeModal }) => (
-            <Modal
-              isOpen={isOpen}
-              primaryButton={primaryButton}
-              secondaryButtons={[{ label: "Close", onClick: closeModal }]}
-            >
+            <Modal isOpen={isOpen}>
               Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -477,8 +419,6 @@ class ModalExample extends React.Component {
         <Highlight className="js">
           {`<Modal
   isOpen={isOpen}
-  primaryButton={{ label: "Primary Action", onClick: () => {} }}
-  secondaryButtons={[{ label: "Close", onClick: closeModal}]}
 >
   Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
   elit, sed do eiusmod tempor incididunt ut labore et dolore magna

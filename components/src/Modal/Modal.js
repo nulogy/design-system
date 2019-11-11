@@ -120,64 +120,6 @@ const overlayStyle = {
 };
 
 class Modal extends React.Component {
-  getPrimaryButtonComponent() {
-    const { type } = this.props;
-
-    if (type === "informative") {
-      return PrimaryButton;
-    } else if (type === "danger") {
-      return DangerButton;
-    } else {
-      return Button;
-    }
-  }
-
-  getPrimaryButton() {
-    const { primaryButton, type } = this.props;
-
-    if (!primaryButton) {
-      return null;
-    }
-
-    const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
-
-    return <PrimaryButtonComponent {...primaryButton}>{primaryButton.label}</PrimaryButtonComponent>;
-  }
-
-  getSecondaryButtons() {
-    const { secondaryButtons } = this.props;
-
-    if (!Array.isArray(secondaryButtons)) {
-      return null;
-    }
-
-    return secondaryButtons.map(button => (
-      <Button {...button} key={button.label}>
-        {button.label}
-      </Button>
-    ));
-  }
-
-  getModalButtons() {
-    const { buttonAlignment } = this.props;
-
-    if (buttonAlignment === "spaced") {
-      return (
-        <>
-          {this.getSecondaryButtons()}
-          {this.getPrimaryButton()}
-        </>
-      );
-    } else {
-      return (
-        <>
-          {this.getPrimaryButton()}
-          {this.getSecondaryButtons()}
-        </>
-      );
-    }
-  }
-
   modalHasHeader() {
     const { onRequestClose, title } = this.props;
     return onRequestClose || title;
@@ -193,12 +135,9 @@ class Modal extends React.Component {
       isOpen,
       children,
       title,
-      primaryButton,
-      secondaryButtons,
       type,
       onRequestClose,
       onAfterOpen,
-      buttonAlignment,
       shouldFocusAfterRender,
       shouldReturnFocusAfterClose,
       ariaLabel,
@@ -250,13 +189,7 @@ class Modal extends React.Component {
             </ModalHeader>
           )}
           <ModalContent>{children}</ModalContent>
-          {this.modalHasFooter(primaryButton, secondaryButtons) && (
-            <ModalFooter>
-              <ButtonGroup alignment={buttonAlignment}>
-                {this.getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
-              </ButtonGroup>
-            </ModalFooter>
-          )}
+          <ModalFooter>conditionally show me with footercontent prop :)</ModalFooter>
         </PreventBodyElementScrolling>
       </StyledReactModal>
     );
@@ -267,9 +200,6 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   title: PropTypes.string,
   ariaLabel: PropTypes.string,
-  buttonAlignment: PropTypes.oneOf(["left", "spaced"]),
-  primaryButton: PropTypes.shape({}),
-  secondaryButtons: PropTypes.arrayOf(PropTypes.shape({})),
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
   onAfterOpen: PropTypes.func,
@@ -289,9 +219,6 @@ Modal.defaultProps = {
   isOpen: true,
   title: null,
   ariaLabel: null,
-  buttonAlignment: "left",
-  primaryButton: null,
-  secondaryButtons: null,
   children: null,
   onRequestClose: null,
   onAfterOpen: null,
