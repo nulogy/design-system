@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Height on select changed to min-height to support multiple rows of selections
+
 ### Security
 
 ## [0.15.0] - 2019-11-06
