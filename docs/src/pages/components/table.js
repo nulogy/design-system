@@ -522,6 +522,22 @@ const manyRowsForPagination = [
     </DocSection>
 
     <DocSection>
+      <SectionTitle>Sorting</SectionTitle>
+      <Text>
+        Sorting can be implemented using the headerFormatter to pass a{" "}
+        <Link href="https://storybook.nulogy.design/?path=/story/table-headers--sorting-header">
+          SortingHeader
+        </Link>{" "}
+        component or another custom header to the column that should be
+        sortable. See an example of the complete implementation with table in
+        <Link href="https://storybook.nulogy.design/?path=/story/table--with-sorting">
+          Storybook
+        </Link>
+        .
+      </Text>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
     </DocSection>
