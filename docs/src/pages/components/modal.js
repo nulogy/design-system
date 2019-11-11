@@ -61,13 +61,6 @@ const propsRows = [
       "Controls the placement and order of button in the modal, either 'left' or 'spaced'."
   },
   {
-    name: "type",
-    type: "String",
-    defaultValue: "informative",
-    description:
-      "Controls the style of the modal buttons, either 'informative' or 'danger'."
-  },
-  {
     name: "onRequestClose",
     type: "Function",
     defaultValue: "null",
