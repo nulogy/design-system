@@ -5,21 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.15.1] - 2019-11-11
 
 ### Added
 
-- Added full an option for heading in the [Table](http://nulogy.design/components/table)
+- Added full-table width heading support in the in the [Table](http://nulogy.design/components/table)
 - Added an option to customize cells per row to acheive custom styles for headings in [Table](http://nulogy.design/components/table)
 - Added onBlur to [Select](http://nulogy.design/components/select)
+- Added an example of sorting to [Table](http://nulogy.design/components/table) along with a SortingHeader component which can be used when is sorted by column
 
 ### Changed
 
 - Removed all paddings including horizontal padding on TableCell when using a cellRenderer in Table [Table](http://nulogy.design/components/table)
 
-- Addde ability to ad prefix and suffix to the [Input](http://nulogy.design/components/input) component.
-
-### Changed
+- Added ability to add preffix and suffix to the [Input](http://nulogy.design/components/input) component
 
 ### Deprecated
 
@@ -27,7 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Height on select changed to min-height to support multiple rows of selections
+- Height on select changed to min-height to support multiple rows of selections (https://github.com/nulogy/design-system/pull/441)
 
 ### Security
 
