@@ -101,57 +101,14 @@ storiesOf("Modal", module)
       </Text>
     </Modal>
   ))
-  .add("with danger type", () => (
-    <Modal title="Modal Title" type="danger" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
-  .add("with no buttons", () => (
-    <Modal title="Modal Title" onRequestClose={() => {}}>
-      Content Content Content
-    </Modal>
-  ))
   .add("with no title", () => (
     <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
-  .add("with spaced button alignment", () => (
-    <Modal
-      buttonAlignment="spaced"
-      title="Modal Title"
-      primaryButton={primaryButton}
-      secondaryButtons={secondaryButtons}
-    >
       Content Content Content
     </Modal>
   ))
   .add("with custom maxWidth", () => (
     <Modal title="Modal Title" maxWidth="1000px" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
       Content Content Content
-    </Modal>
-  ))
-  .add("with many buttons", () => (
-    <Modal
-      title="Modal Title"
-      primaryButton={{ label: "Primary Action", onClick: () => {} }}
-      secondaryButtons={[{ label: "Secondary 1", onClick: () => {} }, { label: "Secondary 2", onClick: () => {} }]}
-    >
-      Content Content Content
-    </Modal>
-  ))
-  .add("styled as a form", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
-      <Form id="myForm" mb="x2">
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-      </Form>
     </Modal>
   ))
   .add("with select", () => (
