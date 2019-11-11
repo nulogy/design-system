@@ -8,15 +8,16 @@ const StyledHeaderRow = styled.tr({
   borderBottom: `1px solid ${theme.colors.lightGrey}`
 });
 
-const StyledTh = styled.th({
+const StyledTh = styled.th(({ width }) => ({
   fontWeight: "normal",
   textAlign: "left",
   padding: `${theme.space.x2} 0`,
   paddingRight: theme.space.x2,
   "&:first-of-type": {
     paddingLeft: theme.space.x2
-  }
-});
+  },
+  width: width || "auto"
+}));
 
 const defaultheaderFormatter = ({ label }) => label;
 
@@ -24,7 +25,7 @@ const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...
 
 const renderColumns = columns =>
   columns.map(column => (
-    <StyledTh scope="col" key={column.dataKey}>
+    <StyledTh scope="col" key={column.dataKey} width={column.width}>
       {renderHeaderCellContent(column)}
     </StyledTh>
   ));
