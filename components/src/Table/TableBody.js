@@ -29,9 +29,16 @@ const TableBodyRow = ({ row, columns }) => {
   const renderAllCells = () =>
     columns.map(column => <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} />);
   return (
-    <StyledTr>
-      {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
-    </StyledTr>
+    <>
+      <StyledTr>
+        {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
+      </StyledTr>
+      {row.expandedContent && row.expanded && (
+        <tr>
+          <td colSpan={columns.length}>{row.expandedContent()}</td>
+        </tr>
+      )}
+    </>
   );
 };
 

@@ -6,19 +6,25 @@ import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 import { columnsPropType, rowsPropType } from "./Table.types";
+import withExpandableColumn from "./withExpandableColumn";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
   width: "100%"
 });
 
-const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows }) => (
-  <StyledTable id={id}>
-    <TableHead columns={columns} />
-    <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} loading={loading} />
-    {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
-  </StyledTable>
-);
+const BaseTable = ({ hasExpandableRows, ...props }) => {
+  const TableComponent = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows }) => {
+    return (
+      <StyledTable id={id}>
+        <TableHead columns={columns} />
+        <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} loading={loading} />
+        {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
+      </StyledTable>
+    );
+  };
+  return hasExpandableRows ? withExpandableColumn(TableComponent)(props) : <TableComponent {...props} />;
+};
 
 BaseTable.propTypes = {
   columns: columnsPropType.isRequired,
@@ -27,7 +33,8 @@ BaseTable.propTypes = {
   keyField: PropTypes.string,
   id: PropTypes.string,
   loading: PropTypes.bool,
-  footerRows: rowsPropType
+  footerRows: rowsPropType,
+  hasExpandableRows: PropTypes.bool
 };
 
 BaseTable.defaultProps = {
@@ -35,7 +42,8 @@ BaseTable.defaultProps = {
   keyField: "id",
   id: undefined,
   loading: false,
-  footerRows: []
+  footerRows: [],
+  hasExpandableRows: false
 };
 
 export default BaseTable;
