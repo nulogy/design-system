@@ -241,6 +241,20 @@ const footerRowData = [
   { c1: "Attainment", c2: "r2c2", c3: "2019-09-22" }
 ];
 
+const expandedContent = () => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text fontWeight="bold" color="blackBlue">
+      Expands!
+    </Text>
+  </Box>
+);
+
+const rowDataWithExpandedContent = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent },
+  { c1: "row 3 cell 1", c2: "r3c2", c3: "2019-09-21", id: "r3" }
+];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -491,6 +505,51 @@ const manyRowsForPagination = [
         .
       </Text>
     </DocSection>
+
+    <DocSection>
+      <SectionTitle>With expandable rows</SectionTitle>
+      <Text>
+        Setting hasExpandableRows and providing expandedContent on a row will
+        add a button that can be used to expand and collapse content.
+        ExpandedContent should return a react node that should be rendered when
+        the row is expanded.
+      </Text>
+      <Text>
+        A keyField should be specified to provide unique ids for rows (by
+        default the keyField will be "id" and expect a property of id in the row
+        objects).
+      </Text>
+      <Table
+        columns={columns}
+        rows={rowDataWithExpandedContent}
+        hasExpandableRows
+        keyField="c1"
+      />
+      <Highlight className="js">
+        {`import {Table} from "@nulogy/table";
+
+const columns = [
+  { label: "Column 1", dataKey: "c1" },
+  { label: "Column 2", dataKey: "c2" },
+  { label: "Column 3", dataKey: "c3" },
+];
+
+const rowDataWithExpandedContent = [
+  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent },
+  { c1: "row 3 cell 1", c2: "r3c2", c3: "2019-09-21", id: "r3" }
+];
+
+<Table
+      columns={columns}
+      rows={rowDataWithExpandedContent}
+      hasExpandableRows
+      keyField="c1"
+    />
+`}
+      </Highlight>
+    </DocSection>
+    <DocSection />
 
     <DocSection>
       <SectionTitle>With server-side or custom pagination</SectionTitle>
