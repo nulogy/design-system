@@ -27,9 +27,7 @@ const renderRows = (rows, columns, keyField, noRowsContent) =>
 
 const TableBodyRow = ({ row, columns }) => {
   const renderAllCells = () =>
-    columns.map(column => (
-      <TableCell key={column.dataKey} row={row} column={column} cellData={[row[column.dataKey]]} />
-    ));
+    columns.map(column => <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} />);
   return (
     <StyledTr>
       {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
