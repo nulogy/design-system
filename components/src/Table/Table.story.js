@@ -97,18 +97,16 @@ const rowDataWithSections = [
 ];
 
 const rowDataWithExpandable = [
-  { heading: "section 1", id: "1" },
   {
     c1: "row 1 cell 1",
     c2: "r1c2",
     c3: "2019-09-21",
     id: "2",
-    expanded: true,
     expandedContent
   },
   { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
   { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
+  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
   { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
 ];
 
@@ -191,6 +189,16 @@ storiesOf("Table", module)
       columns={getMockColumns(3)}
       rows={rowDataWithExpandable}
       hasExpandableRows
-      onExpandRow={row => console.log(row)}
+      onExpandRow={action("toggled expand")}
+    />
+  ))
+  .add("with selectable and expandable rows", () => (
+    <Table
+      columns={getMockColumns(3)}
+      rows={rowDataWithExpandable}
+      hasExpandableRows
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+      onExpandRow={action("toggled expand")}
     />
   ));
