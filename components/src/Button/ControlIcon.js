@@ -27,6 +27,7 @@ const StyledButton = styled.button(({ toggled, disabled }) => ({
     boxShadow: theme.shadows.focus
   },
   "&:hover": {
+    cursor: "pointer",
     color: theme.colors.blackBlue,
     backgroundColor: theme.colors.lightGrey
   }
