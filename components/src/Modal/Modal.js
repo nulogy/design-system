@@ -148,7 +148,8 @@ class Modal extends React.Component {
       id,
       maxWidth,
       appElement,
-      ariaHideApp
+      ariaHideApp,
+      footerContent
     } = this.props;
     return (
       <StyledReactModal
@@ -189,7 +190,7 @@ class Modal extends React.Component {
             </ModalHeader>
           )}
           <ModalContent>{children}</ModalContent>
-          <ModalFooter>conditionally show me with footercontent prop :)</ModalFooter>
+          {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
         </PreventBodyElementScrolling>
       </StyledReactModal>
     );
@@ -212,7 +213,8 @@ Modal.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   appElement: PropTypes.element,
-  ariaHideApp: PropTypes.bool
+  ariaHideApp: PropTypes.bool,
+  footerContent: PropTypes.node
 };
 
 Modal.defaultProps = {
@@ -231,7 +233,8 @@ Modal.defaultProps = {
   className: undefined,
   id: undefined,
   appElement: undefined,
-  ariaHideApp: true
+  ariaHideApp: true,
+  footerContent: null
 };
 
 Modal.setAppElement = ReactModal.setAppElement;

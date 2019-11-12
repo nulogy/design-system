@@ -6,6 +6,9 @@ import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
   Button,
+  ButtonGroup,
+  PrimaryButton,
+  QuietButton,
   Box,
   SectionTitle,
   SubsectionTitle,
@@ -45,6 +48,13 @@ const propsRows = [
     defaultValue: "null",
     description:
       "Function that is run when the modal requests to be closed (esc key, clicking outside, clicking close), also renders the close button is passed in."
+  },
+  {
+    name: "footerContent",
+    type: "Node",
+    defaultValue: "null",
+    description:
+      "The content (usually buttons) to appear at the bottom of the modal."
   },
   {
     name: "onAfterOpen",
@@ -108,7 +118,7 @@ const propsRows = [
 
 Modal.setAppElement("#___gatsby");
 
-class ModalStateWrapper extends React.Component {
+class ModalExample extends React.Component {
   constructor() {
     super();
 
@@ -129,24 +139,30 @@ class ModalStateWrapper extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
     const { isOpen } = this.state;
+    const controlledModalButtons = (
+      <ButtonGroup>
+        <PrimaryButton type="submit">Save</PrimaryButton>
+        <QuietButton onClick={this.closeModal}>Cancel</QuietButton>
+      </ButtonGroup>
+    );
+
     return (
       <div>
         <Button onClick={this.openModal}>Open Modal</Button>
-        {children({
-          isOpen,
-          closeModal: this.closeModal,
-          openModal: this.openModal
-        })}
+        <Modal
+          title="Edit Profile"
+          footerContent={controlledModalButtons}
+          onRequestClose={this.closeModal}
+          isOpen={isOpen}
+          maxWidth="456px"
+        >
+          Are you sure you'd like to save these settings?
+        </Modal>
       </div>
     );
   }
 }
-
-ModalStateWrapper.propTypes = {
-  children: PropTypes.func.isRequired
-};
 
 export default () => (
   <Layout>
@@ -162,22 +178,14 @@ export default () => (
     </Intro>
 
     <DocSection>
-      <ModalStateWrapper>
-        {({ isOpen, closeModal }) => (
-          <Modal
-            title="Modal Title"
-            isOpen={isOpen}
-            onRequestClose={closeModal}
-          >
-            Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat.
-          </Modal>
-        )}
-      </ModalStateWrapper>
+      <ModalExample />
       <Highlight className="js">
-        {`import { Modal, Button } from "@nulogy/components";
+        {`import {
+  Modal,
+  ButtonGroup,
+  PrimaryButton,
+  QuietButton
+} from "@nulogy/components";
 
 Modal.setAppElement("#root");
 
@@ -204,6 +212,12 @@ class ModalExample extends React.Component {
   render() {
     const { children } = this.props;
     const { isOpen } = this.state;
+    const buttons = (
+      <ButtonGroup>
+        <PrimaryButton type="submit" onClick={}>Save</PrimaryButton>
+        <QuietButton onClick={this.closeModal}>Cancel</QuietButton>
+      </ButtonGroup>
+    );
     return (
       <div>
         <Button onClick={this.openModal}>Open Modal</Button>
@@ -211,11 +225,9 @@ class ModalExample extends React.Component {
           title="Modal Title"
           isOpen={isOpen}
           onRequestClose={closeModal}
+          footerContent={buttons}
         >
-          Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
+        Are you sure you'd like to save these settings?
         </Modal>
       </div>
     );
@@ -242,204 +254,21 @@ class ModalExample extends React.Component {
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Variations</SectionTitle>
-      <Box mb="x6">
-        <SubsectionTitle>Text</SubsectionTitle>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal
-              title="Modal Title"
-              isOpen={isOpen}
-              onRequestClose={closeModal}
-            >
-              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  title="Modal Title"
-  isOpen={isOpen}
-  onRequestClose={closeModal}
->
-  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  laboris nisi ut aliquip ex ea commodo consequat.
-</Modal>
-`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Form</SubsectionTitle>
-        <Text mb="x2">
-          The form variant of the modal should be used whenever a user will
-          input data into the modal. The important difference in this variant is
-          to set a more appropriate maxWidth than the default modal. 456px is
-          recommended for most basic forms.
-        </Text>
-        <Text mb="x2">
-          Note that the form attribute on the button as used in this example is
-          not supported in IE11.
-        </Text>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal
-              title="Edit Profile"
-              onRequestClose={closeModal}
-              isOpen={isOpen}
-              maxWidth="456px"
-            >
-              <Form id="editProfile" mb="x2">
-                <Input name="name" id="name" labelText="Name" />
-                <Input type="number" name="age" id="age" labelText="Age" />
-              </Form>
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  title="Edit Profile"
-  onRequestClose={closeModal}
-  isOpen={isOpen}
-  maxWidth="456px"
->
-  <Form id="editProfile" mb="x2">
-    <Input name="name" id="name" labelText="Name" />
-    <Input type="number" name="age" id="age" labelText="Age" />
-  </Form>
-</Modal>
-`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Multi-Step Process</SubsectionTitle>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal
-              title="Enter Address"
-              buttonAlignment="spaced"
-              onRequestClose={closeModal}
-              isOpen={isOpen}
-              maxWidth="456px"
-            >
-              <Form id="myForm" mb="x2">
-                <Input name="country" id="country" labelText="Country" />
-                <Input name="state" id="state" labelText="State" />
-              </Form>
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  title="Enter Address"
-  buttonAlignment="spaced"
-  onRequestClose={closeModal}
-  isOpen={isOpen}
-  maxWidth="456px"
->
-  <Form id="myForm" mb="x2">
-    <Input name="country" id="country" labelText="Country" />
-    <Input name="state" id="state" labelText="State" />
-  </Form>
-</Modal>
-`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Without the Actions</SubsectionTitle>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal
-              title="Modal Title"
-              isOpen={isOpen}
-              onRequestClose={closeModal}
-            >
-              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  title="Modal Title"
-  isOpen={isOpen}
-  onRequestClose={closeModal}
->
-  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  laboris nisi ut aliquip ex ea commodo consequat.
-</Modal>
-`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Without the Title</SubsectionTitle>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal isOpen={isOpen} onRequestClose={closeModal}>
-              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  isOpen={isOpen}
-  onRequestClose={closeModal}
->
-  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  laboris nisi ut aliquip ex ea commodo consequat.
-</Modal>
-`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Without the Title Bar</SubsectionTitle>
-        <ModalStateWrapper>
-          {({ isOpen, closeModal }) => (
-            <Modal isOpen={isOpen}>
-              Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </Modal>
-          )}
-        </ModalStateWrapper>
-        <Highlight className="js">
-          {`<Modal
-  isOpen={isOpen}
->
-  Modal Content. Lorem ipsum dolor sit amet, consectetur adipiscing
-  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-  laboris nisi ut aliquip ex ea commodo consequat.
-</Modal>
-`}
-        </Highlight>
-      </Box>
-    </DocSection>
-
-    <DocSection>
       <SectionTitle>Closing the Modal</SectionTitle>
       <Text mb="x2">
-        To close the modal using the built-in methods, the prop onRequestClose
+        To close the modal using the built-in methods, the prop{" "}
+        <Text inline fontFamily="monospace">
+          onRequestClose{" "}
+        </Text>
         must be passed in. This prop should be the function that closes the
         modal. By providing this prop all three methods of closing the modal are
         enabled together: the close button, clicking outside the modal, and
-        pressing the escape key. If you do not provide the onRequestClose prop,
-        ensure that there is another way to close the modal, for example a
-        cancel button.{" "}
+        pressing the escape key. If you do not provide the{" "}
+        <Text inline fontFamily="monospace">
+          onRequestClose{" "}
+        </Text>{" "}
+        prop, ensure that there is another way to close the modal, for example a
+        cancel button.
       </Text>
     </DocSection>
 
@@ -447,9 +276,15 @@ class ModalExample extends React.Component {
       <SectionTitle>Accessibility guidelines</SectionTitle>
       <Text mb="x2">
         In order to hide the rest of the application to screen-readers when the
-        modal is open, make sure to use `Modal.setAppElement(el)` where el is
-        the root element of the app. This will set the aria-hidden attribute to
-        true when the modal is open.
+        modal is open, make sure to use{" "}
+        <Text inline fontFamily="monospace">
+          Modal.setAppElement(el){" "}
+        </Text>{" "}
+        where el is the root element of the app. This will set{" "}
+        <Text inline fontFamily="monospace">
+          aria-hidden=true{" "}
+        </Text>
+        when the modal is open.
       </Text>
       <Text>
         When there is no visible label on the Modal (ie. title prop), you should
