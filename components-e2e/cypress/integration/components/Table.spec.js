@@ -12,17 +12,16 @@ describe("Table", () => {
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
   const paginationButtons = () => cy.get(paginationButtonSelector);
 
-  describe("table--with-preselected-rows", () => {
+  const selectableRowsTests = storyName => {
+    beforeEach(() => {
+      cy.renderFromStorybook(storyName);
+    });
     it("toggles the value of the header checkbox on click", () => {
-      cy.renderFromStorybook("table--with-preselected-rows");
-
       selectAll().click();
       selectAllInput().should("be.checked");
     });
 
     it("selects a row on click", () => {
-      cy.renderFromStorybook("table--with-preselected-rows");
-
       rowCheckboxes()
         .first()
         .click();
@@ -34,8 +33,6 @@ describe("Table", () => {
 
     describe("Select All Checkbox", () => {
       it("selects all rows when there are unselected rows", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         selectAll().click();
 
         selectAllInput().should("be.checked");
@@ -43,8 +40,6 @@ describe("Table", () => {
       });
 
       it("deselect all rows when all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         selectAll()
           .click()
           .click();
@@ -52,8 +47,6 @@ describe("Table", () => {
         selectAllInput().should("not.be.checked");
       });
       it("becomes selected if all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         rowCheckboxes()
           .first()
           .click();
@@ -61,10 +54,6 @@ describe("Table", () => {
         selectAllInput().should("be.checked");
       });
       it("becomes unselected if not all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         selectAll().click();
 
         selectAllInput().should("be.checked");
@@ -83,6 +72,10 @@ describe("Table", () => {
         selectAllInput().should("not.be.checked");
       });
     });
+  };
+
+  describe("table--with-selected-rows-with-defaults", () => {
+    selectableRowsTests("table--with-selected-rows-with-defaults");
   });
   describe("table--with-pagination", () => {
     it("navigates to next page when next button is clicked", () => {
@@ -162,5 +155,10 @@ describe("Table", () => {
       selectAllInput().should("be.checked");
       rowCheckboxesInput().should("be.checked");
     });
+  });
+  describe("table--with-expandable-and-selectable-rows-with-defaults", () => {
+    selectableRowsTests(
+      "table--with-expandable-and-selectable-rows-with-defaults"
+    );
   });
 });
