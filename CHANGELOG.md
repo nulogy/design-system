@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-
 ## [Unreleased]
  
 ### Added
@@ -14,6 +13,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 ### Fixed
 ### Security
+
+
+## [0.15.2] - 2019-11-13
+ 
+### Fixed
+- fixes cellData being passed within an array (https://github.com/nulogy/design-system/pull/443)
+- fixes customWidths in table not being applied (https://github.com/nulogy/design-system/pull/442)
 
 ## [0.15.1] - 2019-11-11
 
