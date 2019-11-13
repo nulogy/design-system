@@ -104,7 +104,7 @@ export default () => (
         </Highlight>
       </Box>
       <Box mb="x6">
-        <SubsectionTitle>With Prefix and fix Label</SubsectionTitle>
+        <SubsectionTitle>With Prefix and Suffix</SubsectionTitle>
         <Input
           id="all-labels"
           labelText="Label"
@@ -118,7 +118,7 @@ export default () => (
   labelText="Label"
   placeholder="I'm an input"
   prefix="I'm prefix label"
-  sufix="I'm sufix label"
+  suffix="I'm sufix label"
 />`}
         </Highlight>
       </Box>
