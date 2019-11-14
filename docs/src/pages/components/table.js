@@ -157,8 +157,7 @@ const propsRows = [
     name: "selectedRows",
     type: "array",
     defaultValue: "empty",
-    description:
-      "An array of row id's that should be marked as selected in the table"
+    description: "An array of row id's that are marked as selected in the table"
   },
   {
     name: "onRowSelectionChange",
@@ -166,6 +165,19 @@ const propsRows = [
     defaultValue: "none",
     description:
       "The function that should be called when a row selection changes. The array of rows currently selected is passed in as an argument."
+  },
+  {
+    name: "expandedRows",
+    type: "array",
+    defaultValue: "empty",
+    description: "An array of row id's that are expanded in the table"
+  },
+  {
+    name: "onRowExpansionChange",
+    type: "function",
+    defaultValue: "none",
+    description:
+      "The function that should be called when a row is expanded or collapsed. The array of rows currently expanded is passed in as an argument."
   },
   {
     name: "rowsPerPage",
@@ -523,6 +535,7 @@ const manyRowsForPagination = [
         columns={columns}
         rows={rowDataWithExpandedContent}
         hasExpandableRows
+        onRowExpansionChange={() => {}}
         keyField="c1"
       />
       <Highlight className="js">
@@ -544,6 +557,7 @@ const rowDataWithExpandedContent = [
       columns={columns}
       rows={rowDataWithExpandedContent}
       hasExpandableRows
+      onRowExpansionChange={() => {}}
       keyField="c1"
     />
 `}

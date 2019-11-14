@@ -189,7 +189,7 @@ storiesOf("Table", module)
       columns={getMockColumns(3)}
       rows={rowDataWithExpandable}
       hasExpandableRows
-      onExpandRow={action("toggled expand")}
+      onRowExpansionChange={action("toggled expand")}
     />
   ))
   .add("with selectable and expandable rows", () => (
@@ -199,6 +199,6 @@ storiesOf("Table", module)
       hasExpandableRows
       hasSelectableRows
       onRowSelectionChange={action("row selection changed")}
-      onExpandRow={action("toggled expand")}
+      onRowExpansionChange={action("toggled expand")}
     />
   ));

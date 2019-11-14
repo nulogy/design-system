@@ -4,7 +4,7 @@ import { render, fireEvent } from "@testing-library/react";
 
 import { Pagination } from "../Pagination";
 import { Table } from ".";
-import { mockColumns, getMockRows } from "./Table.mock-utils";
+import { mockColumns, getMockRows, getMockColumns } from "./Table.mock-utils";
 
 describe("Table", () => {
   describe("row selections", () => {
@@ -34,6 +34,64 @@ describe("Table", () => {
         fireEvent.click(container.querySelectorAll("input")[0]);
         expect(callback).toHaveBeenCalledWith([rowData[0].c1, rowData[1].c1]);
         fireEvent.click(container.querySelectorAll("input")[0]);
+        expect(callback).toHaveBeenCalledWith([]);
+      });
+    });
+  });
+  describe("expandedRows", () => {
+    describe("onRowExpansionChange:", () => {
+      it("returns the expanded rows when the a row was expanded or collapsed", () => {
+        const expandedContent = () => <p>Expands!</p>;
+        const rowData = [
+          {
+            c1: "row 1 cell 1",
+            c2: "r1c2",
+            c3: "2019-09-21",
+            id: "2",
+            expandedContent
+          },
+          { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
+          { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
+          { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
+          { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+        ];
+        const callback = jest.fn();
+
+        const { container } = render(
+          <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
+        );
+
+        fireEvent.click(container.querySelectorAll("button")[0]);
+
+        expect(callback).toHaveBeenCalledWith(["2"]);
+      });
+      it("returns an empty array if no rows are expanded", () => {
+        const expandedContent = () => <p>Expands!</p>;
+        const rowData = [
+          {
+            c1: "row 1 cell 1",
+            c2: "r1c2",
+            c3: "2019-09-21",
+            id: "2",
+            expandedContent
+          },
+          { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
+          { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
+          { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
+          { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+        ];
+        const callback = jest.fn();
+
+        const { container } = render(
+          <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
+        );
+
+        fireEvent.click(container.querySelectorAll("button")[1]);
+
+        expect(callback).toHaveBeenCalledWith(["6"]);
+
+        fireEvent.click(container.querySelectorAll("button")[1]);
+
         expect(callback).toHaveBeenCalledWith([]);
       });
     });

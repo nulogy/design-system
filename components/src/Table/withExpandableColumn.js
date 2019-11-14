@@ -6,8 +6,8 @@ import { SELECTABLE_COLUMN_DATA_KEY } from "./withSelectableColumn";
 
 const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
 
-const ExpandCell = ({ row, onExpandRow }) => {
-  const expandRowHandler = () => onExpandRow(row);
+const ExpandCell = ({ row, onRowExpansionChange }) => {
+  const expandRowHandler = () => onRowExpansionChange(row);
   return (
     <>
       {row.expandedContent && (
@@ -23,17 +23,19 @@ const ExpandCell = ({ row, onExpandRow }) => {
 
 ExpandCell.propTypes = {
   row: rowPropType.isRequired,
-  onExpandRow: PropTypes.func
+  onRowExpansionChange: PropTypes.func
 };
 
 ExpandCell.defaultProps = {
-  onExpandRow: null
+  onRowExpansionChange: null
 };
-const expandCellRenderer = onExpandRow => props => <ExpandCell onExpandRow={onExpandRow} {...props} />;
-const addExpandableColumn = ({ columns, onExpandRow }) => {
+const expandCellRenderer = onRowExpansionChange => props => (
+  <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />
+);
+const addExpandableColumn = ({ columns, onRowExpansionChange }) => {
   const expandableColumn = {
     dataKey: EXPANDABLE_COLUMN_DATA_KEY,
-    cellFormatter: expandCellRenderer(onExpandRow),
+    cellFormatter: expandCellRenderer(onRowExpansionChange),
     width: "30px"
   };
   const hasSelectableColumn = columns[0].dataKey === SELECTABLE_COLUMN_DATA_KEY;
@@ -55,16 +57,8 @@ const addExpandableCell = ({ rows, keyField, expandedRows }) => {
 
 const withExpandableColumn = TableComponent => {
   return props => {
-    const { rows, columns, keyField, expandedRows, onExpandRow } = props;
-    const transformedRows = addExpandableCell({
-      rows,
-      keyField,
-      expandedRows
-    });
-    const transformedColumns = addExpandableColumn({
-      columns,
-      onExpandRow
-    });
+    const transformedRows = addExpandableCell(props);
+    const transformedColumns = addExpandableColumn(props);
     return <TableComponent {...props} rows={transformedRows} columns={transformedColumns} />;
   };
 };

@@ -27,8 +27,7 @@ const expandedContent = () => (
 
 const rowDataWithExpandedContent = [
   { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent },
-  { c1: "row 3 cell 1", c2: "r3c2", c3: "2019-09-21", id: "r3" }
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent }
 ];
 
 storiesOf("StoriesForTests/Table", module)
@@ -56,6 +55,7 @@ storiesOf("StoriesForTests/Table", module)
       expandedRows={["r2c1"]}
       selectedRows={["r2c1"]}
       keyField="c1"
+      onRowExpansionChange={() => {}}
     />
   ))
   .add("with expandable rows with defaults", () => (

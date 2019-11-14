@@ -3,14 +3,20 @@ describe("Table", () => {
   const headerCheckboxInputSelector = "th input[type='checkbox']";
   const rowCheckboxSelector = "tbody div[class*='Checkbox__VisualCheckbox']";
   const rowCheckboxInputSelector = "tbody input[type='checkbox']";
+  // const rowCheckboxInputUncheckedSelector = "tbody input[type='checkbox']:not(:checked)";
+  const rowExpandButtonSelector = "tbody svg[icon*='downArrow']";
+  const rowCollapseButtonSelector = "tbody svg[icon*='upArrow']";
 
   const paginationButtonSelector =
     "button[class*='Pagination__PaginationButton']";
   const selectAll = () => cy.get(headerCheckboxSelector);
   const selectAllInput = () => cy.get(headerCheckboxInputSelector);
   const rowCheckboxes = () => cy.get(rowCheckboxSelector);
+  // const rowCheckboxesUnchecked = () => cy.get(rowCheckboxInputUncheckedSelector);
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
   const paginationButtons = () => cy.get(paginationButtonSelector);
+  const expandButtons = () => cy.get(rowExpandButtonSelector);
+  const collapseButtons = () => cy.get(rowCollapseButtonSelector);
 
   const selectableRowsTests = storyName => {
     beforeEach(() => {
@@ -40,9 +46,8 @@ describe("Table", () => {
       });
 
       it("deselect all rows when all rows are selected", () => {
-        selectAll()
-          .click()
-          .click();
+        selectAll().click();
+        selectAll().click();
 
         selectAllInput().should("not.be.checked");
       });
@@ -160,5 +165,19 @@ describe("Table", () => {
     selectableRowsTests(
       "table--with-expandable-and-selectable-rows-with-defaults"
     );
+    it("collapses the row when expanded", () => {
+      expandButtons().should("not.exist");
+      collapseButtons().click();
+      expandButtons().should("exist");
+      cy.get("tbody").should("not.contain", "Expands!");
+    });
+    it("expands the row when collapsed", () => {
+      collapseButtons().click();
+      expandButtons().should("exist");
+      expandButtons().click();
+      collapseButtons().should("exist");
+      expandButtons().should("not.exist");
+      cy.get("tbody").should("contain", "Expands!");
+    });
   });
 });
