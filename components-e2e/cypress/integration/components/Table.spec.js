@@ -3,6 +3,8 @@ describe("Table", () => {
   const headerCheckboxInputSelector = "th input[type='checkbox']";
   const rowCheckboxSelector = "tbody div[class*='Checkbox__VisualCheckbox']";
   const rowCheckboxInputSelector = "tbody input[type='checkbox']";
+  const rowExpandButtonSelector = "tbody svg[icon*='downArrow']";
+  const rowCollapseButtonSelector = "tbody svg[icon*='upArrow']";
 
   const paginationButtonSelector =
     "button[class*='Pagination__PaginationButton']";
@@ -11,18 +13,19 @@ describe("Table", () => {
   const rowCheckboxes = () => cy.get(rowCheckboxSelector);
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
   const paginationButtons = () => cy.get(paginationButtonSelector);
+  const expandButtons = () => cy.get(rowExpandButtonSelector);
+  const collapseButtons = () => cy.get(rowCollapseButtonSelector);
 
-  describe("table--with-preselected-rows", () => {
+  const selectableRowsTests = storyName => {
+    beforeEach(() => {
+      cy.renderFromStorybook(storyName);
+    });
     it("toggles the value of the header checkbox on click", () => {
-      cy.renderFromStorybook("table--with-preselected-rows");
-
       selectAll().click();
       selectAllInput().should("be.checked");
     });
 
     it("selects a row on click", () => {
-      cy.renderFromStorybook("table--with-preselected-rows");
-
       rowCheckboxes()
         .first()
         .click();
@@ -34,8 +37,6 @@ describe("Table", () => {
 
     describe("Select All Checkbox", () => {
       it("selects all rows when there are unselected rows", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         selectAll().click();
 
         selectAllInput().should("be.checked");
@@ -43,17 +44,12 @@ describe("Table", () => {
       });
 
       it("deselect all rows when all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
-        selectAll()
-          .click()
-          .click();
+        selectAll().click();
+        selectAll().click();
 
         selectAllInput().should("not.be.checked");
       });
       it("becomes selected if all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         rowCheckboxes()
           .first()
           .click();
@@ -61,10 +57,6 @@ describe("Table", () => {
         selectAllInput().should("be.checked");
       });
       it("becomes unselected if not all rows are selected", () => {
-        cy.renderFromStorybook("table--with-preselected-rows");
-
-        cy.renderFromStorybook("table--with-preselected-rows");
-
         selectAll().click();
 
         selectAllInput().should("be.checked");
@@ -83,6 +75,10 @@ describe("Table", () => {
         selectAllInput().should("not.be.checked");
       });
     });
+  };
+
+  describe("table--with-selected-rows-with-defaults", () => {
+    selectableRowsTests("table--with-selected-rows-with-defaults");
   });
   describe("table--with-pagination", () => {
     it("navigates to next page when next button is clicked", () => {
@@ -161,6 +157,25 @@ describe("Table", () => {
 
       selectAllInput().should("be.checked");
       rowCheckboxesInput().should("be.checked");
+    });
+  });
+  describe("table--with-expandable-and-selectable-rows-with-defaults", () => {
+    selectableRowsTests(
+      "table--with-expandable-and-selectable-rows-with-defaults"
+    );
+    it("collapses the row when expanded", () => {
+      expandButtons().should("not.exist");
+      collapseButtons().click();
+      expandButtons().should("exist");
+      cy.get("tbody").should("not.contain", "Expands!");
+    });
+    it("expands the row when collapsed", () => {
+      collapseButtons().click();
+      expandButtons().should("exist");
+      expandButtons().click();
+      collapseButtons().should("exist");
+      expandButtons().should("not.exist");
+      cy.get("tbody").should("contain", "Expands!");
     });
   });
 });

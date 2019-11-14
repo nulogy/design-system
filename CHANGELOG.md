@@ -6,18 +6,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
- 
+
 ### Added
+
+- Adds support for expandable rows in Table [Table](http://nulogy.design/components/table)
+
 ### Changed
+
 ### Deprecated
+
 ### Removed
+
 ### Fixed
+
 ### Security
 
-
 ## [0.15.2] - 2019-11-13
- 
+
 ### Fixed
+
 - fixes cellData being passed within an array (https://github.com/nulogy/design-system/pull/443)
 - fixes customWidths in table not being applied (https://github.com/nulogy/design-system/pull/442)
 
@@ -37,7 +44,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added ability to add preffix and suffix to the [Input](http://nulogy.design/components/input) component
 
 - Height on select changed to min-height to support multiple rows of selections (https://github.com/nulogy/design-system/pull/441)
-
 
 ## [0.15.0] - 2019-11-06
 

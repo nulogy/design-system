@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Checkbox } from "../Checkbox";
 import { rowPropType } from "./Table.types";
 
-const SELECTABLE_COLUMN_DATA_KEY = "selected";
+export const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
 const selectHeaderFormatter = (onSelectHeader, isHeaderSelected) => () => (
   <Checkbox checked={isHeaderSelected} onChange={onSelectHeader} aria-label="toggle all row selections" />
@@ -39,7 +39,8 @@ const addSelectableColumn = ({
   const selectableColumn = {
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
     cellFormatter: selectCellRenderer(onSelectRow),
-    headerFormatter: selectHeaderFormatter(onSelectHeader, isHeaderSelected)
+    headerFormatter: selectHeaderFormatter(onSelectHeader, isHeaderSelected),
+    width: "30px"
   };
   const selectableCellData = rowKey => ({
     [SELECTABLE_COLUMN_DATA_KEY]: selectedRows.includes(rowKey)

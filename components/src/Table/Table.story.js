@@ -19,6 +19,14 @@ const sectionRow = ({ cellData }) => (
   </Box>
 );
 
+const expandedContent = () => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text fontWeight="bold" color="blackBlue">
+      Expands!
+    </Text>
+  </Box>
+);
+
 const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
 
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
@@ -85,6 +93,20 @@ const rowDataWithSections = [
   { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
   { heading: "section 2", cellRenderer: sectionRow, id: "5" },
   { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
+  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+];
+
+const rowDataWithExpandable = [
+  {
+    c1: "row 1 cell 1",
+    c2: "r1c2",
+    c3: "2019-09-21",
+    id: "2",
+    expandedContent
+  },
+  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
+  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
+  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
   { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
 ];
 
@@ -161,4 +183,22 @@ storiesOf("Table", module)
       onPageChange={action("page changed")}
     />
   ))
-  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />);
+  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />)
+  .add("with expandable rows", () => (
+    <Table
+      columns={getMockColumns(3)}
+      rows={rowDataWithExpandable}
+      hasExpandableRows
+      onRowExpansionChange={action("toggled expand")}
+    />
+  ))
+  .add("with selectable and expandable rows", () => (
+    <Table
+      columns={getMockColumns(3)}
+      rows={rowDataWithExpandable}
+      hasExpandableRows
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+      onRowExpansionChange={action("toggled expand")}
+    />
+  ));
