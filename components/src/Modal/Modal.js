@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
-import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
-import { ButtonGroup } from "../ButtonGroup";
+import { CloseButton } from "../Button";
 import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
@@ -125,17 +124,11 @@ class Modal extends React.Component {
     return onRequestClose || title;
   }
 
-  modalHasFooter() {
-    const { primaryButton, secondaryButtons } = this.props;
-    return primaryButton || secondaryButtons;
-  }
-
   render() {
     const {
       isOpen,
       children,
       title,
-      type,
       onRequestClose,
       onAfterOpen,
       shouldFocusAfterRender,
