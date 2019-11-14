@@ -12,15 +12,13 @@ const StyledTable = styled.table({
   width: "100%"
 });
 
-const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows }) => {
-  return (
-    <StyledTable id={id}>
-      <TableHead columns={columns} />
-      <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} loading={loading} />
-      {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
-    </StyledTable>
-  );
-};
+const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows }) => (
+  <StyledTable id={id}>
+    <TableHead columns={columns} />
+    <TableBody columns={columns} rows={rows} keyField={keyField} noRowsContent={noRowsContent} loading={loading} />
+    {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
+  </StyledTable>
+);
 
 BaseTable.propTypes = {
   columns: columnsPropType.isRequired,

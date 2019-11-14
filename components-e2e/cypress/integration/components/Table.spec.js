@@ -3,7 +3,6 @@ describe("Table", () => {
   const headerCheckboxInputSelector = "th input[type='checkbox']";
   const rowCheckboxSelector = "tbody div[class*='Checkbox__VisualCheckbox']";
   const rowCheckboxInputSelector = "tbody input[type='checkbox']";
-  // const rowCheckboxInputUncheckedSelector = "tbody input[type='checkbox']:not(:checked)";
   const rowExpandButtonSelector = "tbody svg[icon*='downArrow']";
   const rowCollapseButtonSelector = "tbody svg[icon*='upArrow']";
 
@@ -12,7 +11,6 @@ describe("Table", () => {
   const selectAll = () => cy.get(headerCheckboxSelector);
   const selectAllInput = () => cy.get(headerCheckboxInputSelector);
   const rowCheckboxes = () => cy.get(rowCheckboxSelector);
-  // const rowCheckboxesUnchecked = () => cy.get(rowCheckboxInputUncheckedSelector);
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
   const paginationButtons = () => cy.get(paginationButtonSelector);
   const expandButtons = () => cy.get(rowExpandButtonSelector);

@@ -35,7 +35,7 @@ const TableBodyRow = ({ row, columns }) => {
       </StyledTr>
       {row.expandedContent && row.expanded && (
         <tr>
-          <td colSpan={columns.length}>{row.expandedContent()}</td>
+          <td colSpan={columns.length}>{row.expandedContent({ row })}</td>
         </tr>
       )}
     </>
