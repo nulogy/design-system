@@ -1,8 +1,12 @@
-import initStoryshots from "@storybook/addon-storyshots";
+import initStoryshots, { multiSnapshotWithOptions } from "@storybook/addon-storyshots";
 import { mount } from "enzyme";
+import { createSerializer } from "enzyme-to-json";
 import "jest-styled-components";
 
 initStoryshots({
-  renderer: mount,
-  storyNameRegex: /^((?!.*?SkipStoryshot).)*$/
+  storyNameRegex: /^((?!.*?SkipStoryshot).)*$/,
+  snapshotSerializers: [createSerializer()],
+  test: multiSnapshotWithOptions({
+    renderer: mount
+  })
 });
