@@ -19,8 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
   ```
   <Modal
-
-
+    primaryButton={{ label: "Primary Action", onClick: () => {} }}
+    secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
   />
   ```
 
