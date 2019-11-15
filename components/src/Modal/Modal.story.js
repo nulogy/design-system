@@ -119,7 +119,7 @@ storiesOf("Modal", module)
   ))
   .add("with no title", () => <Modal footerContent={modalButtons}>Content Content Content</Modal>)
   .add("with no footerContent", () => (
-    <Modal title="Without footerContent" onRequestClose>
+    <Modal title="Without footerContent" onRequestClose={() => {}}>
       Content Content Content
     </Modal>
   ))
