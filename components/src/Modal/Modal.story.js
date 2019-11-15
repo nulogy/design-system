@@ -118,6 +118,11 @@ storiesOf("Modal", module)
     </Modal>
   ))
   .add("with no title", () => <Modal footerContent={modalButtons}>Content Content Content</Modal>)
+  .add("with no footerContent", () => (
+    <Modal title="Without footerContent" onRequestClose>
+      Content Content Content
+    </Modal>
+  ))
   .add("with custom maxWidth", () => (
     <Modal title="Modal Title" footerContent={modalButtons} maxWidth="1000px">
       Content Content Content
