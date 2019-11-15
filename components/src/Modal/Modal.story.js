@@ -1,6 +1,16 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Modal as NDSModal, Button, Form, Input, Select, Text } from "../index";
+import {
+  Modal as NDSModal,
+  Button,
+  QuietButton,
+  PrimaryButton,
+  ButtonGroup,
+  Form,
+  Input,
+  Select,
+  Text
+} from "../index";
 
 const env = process.env.NODE_ENV;
 
@@ -11,10 +21,6 @@ const envProps = {
 };
 
 const Modal = props => <NDSModal {...envProps} {...props} />;
-
-const primaryButton = { label: "Primary Action", onClick: () => {} };
-
-const secondaryButtons = [{ label: "Secondary Action", onClick: () => {} }];
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -50,14 +56,22 @@ class ModalExample extends React.Component {
 
   render() {
     const { isOpen } = this.state;
+    const controlledModalButtons = (
+      <ButtonGroup>
+        <PrimaryButton type="submit" form="myForm">
+          Add job to line
+        </PrimaryButton>
+        <QuietButton onClick={this.closeModal}>Cancel</QuietButton>
+      </ButtonGroup>
+    );
+
     return (
       <div>
         <Button onClick={this.openModal}>Open Modal</Button>
         <Modal
           title="Edit Profile"
+          footerContent={controlledModalButtons}
           onRequestClose={this.closeModal}
-          primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-          secondaryButtons={[{ label: "Cancel", onClick: this.closeModal }]}
           isOpen={isOpen}
           maxWidth="456px"
         >
@@ -71,24 +85,26 @@ class ModalExample extends React.Component {
   }
 }
 
+const modalButtons = (
+  <ButtonGroup>
+    <PrimaryButton>Add job to line</PrimaryButton>
+    <QuietButton>Cancel</QuietButton>
+  </ButtonGroup>
+);
+
 storiesOf("Modal", module)
   .add("Modal", () => (
-    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+    <Modal footerContent={modalButtons} title="Modal Title">
       Content Content Content
     </Modal>
   ))
   .add("with close button", () => (
-    <Modal
-      title="Modal Title"
-      onRequestClose={() => {}}
-      primaryButton={primaryButton}
-      secondaryButtons={secondaryButtons}
-    >
+    <Modal title="Modal Title" footerContent={modalButtons} onRequestClose={() => {}}>
       Content Content Content
     </Modal>
   ))
   .add("with scrolling content", () => (
-    <Modal title="Modal Title" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" footerContent={modalButtons}>
       <Text>
         Content Content Content Content Content Content Content Content Content Content Content Content Content Content
         Content Content Content Content Content Content Content Content Content Content Content Content Content Content
@@ -101,67 +117,19 @@ storiesOf("Modal", module)
       </Text>
     </Modal>
   ))
-  .add("with danger type", () => (
-    <Modal title="Modal Title" type="danger" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
-  .add("with no buttons", () => (
-    <Modal title="Modal Title" onRequestClose={() => {}}>
-      Content Content Content
-    </Modal>
-  ))
-  .add("with no title", () => (
-    <Modal primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
-      Content Content Content
-    </Modal>
-  ))
-  .add("with spaced button alignment", () => (
-    <Modal
-      buttonAlignment="spaced"
-      title="Modal Title"
-      primaryButton={primaryButton}
-      secondaryButtons={secondaryButtons}
-    >
+  .add("with no title", () => <Modal footerContent={modalButtons}>Content Content Content</Modal>)
+  .add("with no footerContent", () => (
+    <Modal title="Without footerContent" onRequestClose={() => {}}>
       Content Content Content
     </Modal>
   ))
   .add("with custom maxWidth", () => (
-    <Modal title="Modal Title" maxWidth="1000px" primaryButton={primaryButton} secondaryButtons={secondaryButtons}>
+    <Modal title="Modal Title" footerContent={modalButtons} maxWidth="1000px">
       Content Content Content
-    </Modal>
-  ))
-  .add("with many buttons", () => (
-    <Modal
-      title="Modal Title"
-      primaryButton={{ label: "Primary Action", onClick: () => {} }}
-      secondaryButtons={[{ label: "Secondary 1", onClick: () => {} }, { label: "Secondary 2", onClick: () => {} }]}
-    >
-      Content Content Content
-    </Modal>
-  ))
-  .add("styled as a form", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
-      <Form id="myForm" mb="x2">
-        <Input name="name" id="name" labelText="Name" />
-        <Input type="number" name="age" id="age" labelText="Age" />
-      </Form>
     </Modal>
   ))
   .add("with select", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
+    <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
       <Form id="myForm" mb="x2">
         <Select
           maxHeight="96px"
@@ -173,13 +141,7 @@ storiesOf("Modal", module)
     </Modal>
   ))
   .add("with select and scrolling content", () => (
-    <Modal
-      title="Edit Profile"
-      onRequestClose={() => {}}
-      primaryButton={{ label: "Submit", type: "submit", form: "myForm" }}
-      secondaryButtons={[{ label: "Cancel", onClick: () => {} }]}
-      maxWidth="456px"
-    >
+    <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
       <Form id="myForm" mb="x2">
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
@@ -187,18 +149,6 @@ storiesOf("Modal", module)
         <Input type="number" name="age" id="age" labelText="Age" />
         <Input name="name" id="name" labelText="Name" />
         <Input type="number" name="age" id="age" labelText="Age" />
-        <Select
-          maxHeight="96px"
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-        />
-      </Form>
-    </Modal>
-  ))
-  .add("with select and no buttons", () => (
-    <Modal title="Modal Title" onRequestClose={() => {}}>
-      <Form id="myForm" mb="x2">
         <Select
           maxHeight="96px"
           placeholder="Please select inventory status"

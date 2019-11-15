@@ -13,6 +13,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- **BREAKING CHANGE** [Modals](nulogy.design/components/Modal/) no longer accept `primaryButton` or `secondaryButtons` props and instead have `footerContent` that can accept a React node, allowing more flexibility in the content of a Modal's footer.
+
+  Old API:
+
+  ```
+  <Modal
+    primaryButton={{ label: "Primary Action", onClick: () => {} }}
+    secondaryButtons={[{ label: "Secondary Action", onClick: () => {} }]}
+  />
+  ```
+
+  New API:
+
+  ```
+  const modalButtons = (
+    <ButtonGroup>
+      <PrimaryButton onClick={}>Primary Action</PrimaryButton>
+      <QuietButton onClick={}>Secondary Action</QuietButton>
+    </ButtonGroup>
+  );
+
+  <Modal footerContent={modalButtons}>
+  ```
+
 ### Deprecated
 
 ### Removed

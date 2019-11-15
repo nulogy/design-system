@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
-import { Button, PrimaryButton, DangerButton, CloseButton } from "../Button";
-import { ButtonGroup } from "../ButtonGroup";
+import { CloseButton } from "../Button";
 import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
@@ -120,72 +119,9 @@ const overlayStyle = {
 };
 
 class Modal extends React.Component {
-  getPrimaryButtonComponent() {
-    const { type } = this.props;
-
-    if (type === "informative") {
-      return PrimaryButton;
-    } else if (type === "danger") {
-      return DangerButton;
-    } else {
-      return Button;
-    }
-  }
-
-  getPrimaryButton() {
-    const { primaryButton, type } = this.props;
-
-    if (!primaryButton) {
-      return null;
-    }
-
-    const PrimaryButtonComponent = this.getPrimaryButtonComponent(type);
-
-    return <PrimaryButtonComponent {...primaryButton}>{primaryButton.label}</PrimaryButtonComponent>;
-  }
-
-  getSecondaryButtons() {
-    const { secondaryButtons } = this.props;
-
-    if (!Array.isArray(secondaryButtons)) {
-      return null;
-    }
-
-    return secondaryButtons.map(button => (
-      <Button {...button} key={button.label}>
-        {button.label}
-      </Button>
-    ));
-  }
-
-  getModalButtons() {
-    const { buttonAlignment } = this.props;
-
-    if (buttonAlignment === "spaced") {
-      return (
-        <>
-          {this.getSecondaryButtons()}
-          {this.getPrimaryButton()}
-        </>
-      );
-    } else {
-      return (
-        <>
-          {this.getPrimaryButton()}
-          {this.getSecondaryButtons()}
-        </>
-      );
-    }
-  }
-
   modalHasHeader() {
     const { onRequestClose, title } = this.props;
     return onRequestClose || title;
-  }
-
-  modalHasFooter() {
-    const { primaryButton, secondaryButtons } = this.props;
-    return primaryButton || secondaryButtons;
   }
 
   render() {
@@ -193,12 +129,8 @@ class Modal extends React.Component {
       isOpen,
       children,
       title,
-      primaryButton,
-      secondaryButtons,
-      type,
       onRequestClose,
       onAfterOpen,
-      buttonAlignment,
       shouldFocusAfterRender,
       shouldReturnFocusAfterClose,
       ariaLabel,
@@ -209,7 +141,8 @@ class Modal extends React.Component {
       id,
       maxWidth,
       appElement,
-      ariaHideApp
+      ariaHideApp,
+      footerContent
     } = this.props;
     return (
       <StyledReactModal
@@ -250,13 +183,7 @@ class Modal extends React.Component {
             </ModalHeader>
           )}
           <ModalContent>{children}</ModalContent>
-          {this.modalHasFooter(primaryButton, secondaryButtons) && (
-            <ModalFooter>
-              <ButtonGroup alignment={buttonAlignment}>
-                {this.getModalButtons(primaryButton, secondaryButtons, buttonAlignment, type)}
-              </ButtonGroup>
-            </ModalFooter>
-          )}
+          {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
         </PreventBodyElementScrolling>
       </StyledReactModal>
     );
@@ -267,10 +194,6 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   title: PropTypes.string,
   ariaLabel: PropTypes.string,
-  buttonAlignment: PropTypes.oneOf(["left", "spaced"]),
-  primaryButton: PropTypes.shape({}),
-  secondaryButtons: PropTypes.arrayOf(PropTypes.shape({})),
-  type: PropTypes.oneOf(["danger", "informative"]),
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
   onAfterOpen: PropTypes.func,
@@ -283,17 +206,14 @@ Modal.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   appElement: PropTypes.element,
-  ariaHideApp: PropTypes.bool
+  ariaHideApp: PropTypes.bool,
+  footerContent: PropTypes.node
 };
 
 Modal.defaultProps = {
   isOpen: true,
   title: null,
   ariaLabel: null,
-  buttonAlignment: "left",
-  primaryButton: null,
-  secondaryButtons: null,
-  type: "informative",
   children: null,
   onRequestClose: null,
   onAfterOpen: null,
@@ -306,7 +226,8 @@ Modal.defaultProps = {
   className: undefined,
   id: undefined,
   appElement: undefined,
-  ariaHideApp: true
+  ariaHideApp: true,
+  footerContent: null
 };
 
 Modal.setAppElement = ReactModal.setAppElement;
