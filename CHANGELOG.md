@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.16.0] - 2019-11-15
+
+### Added
+
 - Adds support for expandable rows in Table [Table](http://nulogy.design/components/table)
 
 ### Changed
@@ -36,14 +50,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
   <Modal footerContent={modalButtons}>
   ```
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.15.2] - 2019-11-13
 
