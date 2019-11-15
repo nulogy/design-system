@@ -1,6 +1,6 @@
 ## Description
 
-Describe previous functionality and new changes...
+**Include what change you're making, why, and link to any relevant JIRA issues**
 
 ## Changes include
 
@@ -11,7 +11,7 @@ Describe previous functionality and new changes...
 
 ## Checklist
 
-Check all that apply, remove checkbox but leave the text if the task is not applicable to this changes:
+**Please check all that apply.**
 
 - [ ] Storybook updated with examples of new functionality
 - [ ] Storybook uses variable and realistic data (ex: short and long text)
@@ -20,23 +20,9 @@ Check all that apply, remove checkbox but leave the text if the task is not appl
 - [ ] e2e tests added for component interations
 - [ ] jest tests added for component API that may not be captured with storyshots (change handlers, renderers etc)
 - [ ] Changelog updated
-
-## Considerations
-
-- [ ] Responsive functionality for mobile, tablet and desktop
-
-#### Description:
-
-- [ ] Accessibility (includes accessibility tags and keyboard functionality, colour contrast)
-
-#### Description:
+- [ ] Accessibility (includes relevant tags, keyboard functionality, colour contrast)
 
 ## Before Merging
 
 - [ ] Tested storybook deployment preview
 - [ ] Tested docs deployment preview
-- [ ] Visual changes verified using `storyshots:visual:against-master`
-
-### Screenshots
-
-### Other comments
