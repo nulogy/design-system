@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [0.16.1] - 2019-11-18
+
+### Added
+
+- Added `addCircleOutline` [icon](https://nulogy.design/components/icon/)
+
 ## [0.16.0] - 2019-11-15
 
 ### Added
