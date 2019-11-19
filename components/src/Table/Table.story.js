@@ -141,27 +141,24 @@ const footerRowData = [
 
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
-  .add("Table without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
-  .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
+  .add("without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
-  .add("loading", () => <Table columns={columns} rows={rowData} loading />)
-  .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom table cell component: dropdown", () => (
+  .add("with no data and custom content", () => (
+    <Table columns={columns} rows={[]} noRowsContent="No jobs are available" />
+  ))
+
+  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
+  .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
+  .add("with a custom cell component", () => (
     <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
   ))
-  .add("with a custom column label component: button", () => (
+  .add("With cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
+  .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
+  .add("with a custom column label component", () => (
     <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
   ))
   .add("with selectable rows", () => (
     <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
-  ))
-  .add("with lots of rows and columns", () => (
-    <Table
-      columns={mockColumns}
-      rows={getMockRows(50)}
-      hasSelectableRows
-      onRowSelectionChange={action("row selection changed")}
-    />
   ))
   .add("with preselected rows", () => (
     <Table
@@ -172,14 +169,6 @@ storiesOf("Table", module)
       keyField="c1"
       onRowSelectionChange={action("row selection changed")}
     />
-  ))
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
-  .add("with a footer", () => (
-    <>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
-      <Text mt="x6">Loading state:</Text>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
-    </>
   ))
   .add("with pagination", () => (
     <Table
@@ -200,7 +189,21 @@ storiesOf("Table", module)
       onPageChange={action("page changed")}
     />
   ))
-  .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
+  .add("with a footer", () => (
+    <>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
+      <Text mt="x6">Loading state:</Text>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
+    </>
+  ))
+  .add("with lots of rows and columns", () => (
+    <Table
+      columns={mockColumns}
+      rows={getMockRows(50)}
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+    />
+  ))
   .add("with expandable rows", () => (
     <Table
       columns={columns}
@@ -218,4 +221,5 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
       onRowExpansionChange={action("toggled expand")}
     />
-  ));
+  ))
+  .add("loading", () => <Table columns={columns} rows={rowData} loading />);
