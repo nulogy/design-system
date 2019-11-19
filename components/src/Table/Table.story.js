@@ -136,8 +136,8 @@ const rowDataWithExpandable = [
 ];
 
 const footerRowData = [
-  { c1: "Total", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+  { c1: "Total", c2: "18,000 eaches", c3: "7,725 eaches", id: "r1" },
+  { c1: "Attainment", c2: "", c3: "41.5%", id: "r2" }
 ];
 
 storiesOf("Table", module)
