@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
-import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu, Text } from "..";
+import { Box, DropdownButton, DropdownMenu, Text } from "..";
 import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
