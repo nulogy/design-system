@@ -66,9 +66,10 @@ const getColumnsWithHeaderFormatter = headerFormatter => [
 ];
 
 const columnsWithAlignment = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", align: "right" }
+  { label: "Date", dataKey: "c1" },
+  { label: "Expected Eaches", dataKey: "c2" },
+  { label: "Actual Eaches", dataKey: "c4" },
+  { label: "", dataKey: "c3", align: "right" }
 ];
 
 const columnsWithWidths = [
