@@ -27,8 +27,6 @@ const expandedContent = () => (
   </Box>
 );
 
-const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
-
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const dropdownCellRenderer = ({ cellData }) => (
