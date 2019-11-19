@@ -61,7 +61,7 @@ const getColumnsWithheaderFormatter = headerFormatter => [
 const getColumnsWithHeaderFormatter = headerFormatter => [
   { label: "Date", dataKey: "c1" },
   { label: "Expected Quantity", dataKey: "c2" },
-  { label: "Expected Quantity", dataKey: "c3" },
+  { label: "Actual Quantity", dataKey: "c3" },
   { label: "Add record", dataKey: "c4", headerFormatter }
 ];
 
