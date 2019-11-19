@@ -147,19 +147,11 @@ storiesOf("Table", module)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("loading", () => <Table columns={columns} rows={rowData} loading />)
   .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom table cell component: iconic button", () => (
-    <Table columns={getColumnsWithCellRenderer(iconicButtonCellRenderer)} rows={rowData} />
-  ))
   .add("with a custom table cell component: dropdown", () => (
     <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
   ))
   .add("with a custom column label component: button", () => (
-    <Table columns={getColumnsWithheaderFormatter(buttonRenderer)} rows={rowData} />
-  ))
-  .add("with wrapping text", () => (
-    <Box width={400}>
-      <Table columns={columns} rows={rowData} />
-    </Box>
+    <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
   ))
   .add("with selectable rows", () => (
     <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
