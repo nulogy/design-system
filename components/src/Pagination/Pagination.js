@@ -21,7 +21,7 @@ const PaginationButton = styled.button(props => ({
   padding: `${theme.space.x1} ${theme.space.x2}`,
   lineHeight: theme.lineHeights.smallTextBase,
   display: "flex",
-  borderRadius: "4px",
+  borderRadius: theme.radii.medium,
   border: `1px solid ${props.currentPage ? theme.colors.darkBlue : theme.colors.lightGrey}`,
   color: props.disabled ? theme.colors.grey : theme.colors.black,
   "&:not(:last-child)": {
