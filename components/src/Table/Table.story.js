@@ -80,9 +80,9 @@ const columnsWithWidths = [
 ];
 
 const columnsWithFormatter = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
+  { label: "Date", dataKey: "c1", cellFormatter: dateToString },
+  { label: "Expected Quantity", dataKey: "c2" },
+  { label: "Actual Quantity", dataKey: "c3" }
 ];
 
 const rowData = [
