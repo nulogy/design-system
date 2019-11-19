@@ -187,9 +187,9 @@ storiesOf("Table", module)
   ))
   .add("with pagination", () => (
     <Table
-      columns={mockColumns}
-      rows={getMockRows(50)}
-      rowsPerPage={5}
+      columns={columns}
+      rows={rowData}
+      rowsPerPage={1}
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
     />
