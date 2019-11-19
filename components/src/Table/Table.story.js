@@ -54,10 +54,6 @@ const getColumnsWithCellRenderer = cellRenderer => [
   { label: "Column 3", dataKey: "c3", cellRenderer }
 ];
 
-const getColumnsWithheaderFormatter = headerFormatter => [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", headerFormatter }
 const getColumnsWithHeaderFormatter = headerFormatter => [
   { label: "Date", dataKey: "c1" },
   { label: "Expected Quantity", dataKey: "c2" },
