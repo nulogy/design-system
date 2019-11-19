@@ -124,14 +124,14 @@ const rowDataWithSections = [
 ];
 
 const rowDataWithExpandable = [
-  ...rowData,
-  {
-    c1: "2019-10-24",
-    c2: "2,475 eaches",
-    c3: "-",
-    id: "9",
-    expandedContent
-  }
+  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
+  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
+  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
+  { c1: "2019-10-04", c2: "2,475 eaches", c3: "675 eaches", id: "r4", expandedContent },
+  { c1: "2019-10-07", c2: "2,475 eaches", c3: "1,575 eaches", id: "r5" },
+  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
+  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
+  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
 ];
 
 const footerRowData = [
