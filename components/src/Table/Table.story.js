@@ -113,13 +113,14 @@ const rowDataWithWidths = [
 ];
 
 const rowDataWithSections = [
-  { heading: "section 1", id: "1" },
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "2" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
-  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
-  { heading: "section 2", cellRenderer: sectionRow, id: "5" },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
-  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
+  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
+  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
+  { c1: "2019-10-04", c2: "2,475 eaches", c3: "675 eaches", id: "r4" },
+  { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r5" },
+  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
+  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
+  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
 ];
 
 const rowDataWithExpandable = [
@@ -199,7 +200,7 @@ storiesOf("Table", module)
       onPageChange={action("page changed")}
     />
   ))
-  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />)
+  .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
   .add("with expandable rows", () => (
     <Table
       columns={columns}
