@@ -67,9 +67,10 @@ const columnsWithAlignment = [
 ];
 
 const columnsWithWidths = [
-  { label: "Column 1", dataKey: "c1", width: "30%" },
-  { label: "Column 2", dataKey: "c2", width: "60%" },
-  { label: "Column 3", dataKey: "c3", width: "10%" }
+  { label: "Date", dataKey: "c1" },
+  { label: "Expected Quantity", dataKey: "c2" },
+  { label: "Actual Quantity", dataKey: "c3" },
+  { label: "Note", dataKey: "c4", width: "50%" }
 ];
 
 const columnsWithFormatter = [
@@ -88,6 +89,21 @@ const rowData = [
   { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
   { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
 ];
+const rowDataWithWidths = [
+  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
+  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
+  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
+  {
+    c1: "2019-10-04",
+    c2: "2,475 eaches",
+    c3: "675 eaches",
+    c4: "1c Other Plant-related issue, equipment issues",
+    id: "r4"
+  },
+  { c1: "2019-10-07", c2: "2,475 eaches", c3: "1,575 eaches", id: "r5" },
+  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
+  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
+  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
 ];
 
 const rowDataWithSections = [
@@ -161,7 +177,7 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
     />
   ))
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />)
+  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
   .add("with a footer", () => (
     <>
       <Table columns={columns} rows={rowData} footerRows={footerRowData} />
