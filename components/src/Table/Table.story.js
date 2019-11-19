@@ -123,17 +123,14 @@ const rowDataWithSections = [
 ];
 
 const rowDataWithExpandable = [
+  ...rowData,
   {
-    c1: "row 1 cell 1",
-    c2: "r1c2",
-    c3: "2019-09-21",
-    id: "2",
+    c1: "2019-10-24",
+    c2: "2,475 eaches",
+    c3: "-",
+    id: "9",
     expandedContent
-  },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
-  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
-  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+  }
 ];
 
 const footerRowData = [
@@ -205,7 +202,7 @@ storiesOf("Table", module)
   .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />)
   .add("with expandable rows", () => (
     <Table
-      columns={getMockColumns(3)}
+      columns={columns}
       rows={rowDataWithExpandable}
       hasExpandableRows
       onRowExpansionChange={action("toggled expand")}
