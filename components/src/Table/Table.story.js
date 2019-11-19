@@ -169,7 +169,7 @@ storiesOf("Table", module)
       columns={columns}
       rows={rowData}
       hasSelectableRows
-      selectedRows={["r2c1"]}
+      selectedRows={["2019-10-01"]}
       keyField="c1"
       onRowSelectionChange={action("row selection changed")}
     />
