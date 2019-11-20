@@ -30,12 +30,10 @@ const expandedContent = () => (
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const dropdownCellRenderer = ({ cellData }) => (
-  <Box textAlign="right" px="x1">
+  <Box textAlign="right" pr="x3">
     <DropdownMenu>
-      <DropdownLink href="/">See Date: {cellData}</DropdownLink>
-      <DropdownButton onClick={() => {}}>Dropdown 1</DropdownButton>
-      <DropdownButton onClick={() => {}}>Dropdown 2</DropdownButton>
-      <DropdownButton onClick={() => {}}>Dropdown 3</DropdownButton>
+      <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
+      <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
     </DropdownMenu>
   </Box>
 );
@@ -49,7 +47,7 @@ const columns = [
 const getColumnsWithCellRenderer = cellRenderer => [
   { label: "Date", dataKey: "c1" },
   { label: "Expected Quantity", dataKey: "c2" },
-  { label: "", dataKey: "c3", cellRenderer: dropdownCellRenderer }
+  { label: "", dataKey: "c3", cellRenderer }
 ];
 
 const getColumnsWithHeaderFormatter = headerFormatter => [
