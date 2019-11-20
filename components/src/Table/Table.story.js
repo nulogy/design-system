@@ -135,6 +135,23 @@ const rowDataWithExpandable = [
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
+const rowDataWithEverything = [
+  { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r1" },
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r2", expandedContent },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r3" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r4" },
+  {
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    note: "1c Other Plant-related issue, equipment issues",
+    id: "r5"
+  },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r6" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
+  { heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9", expandedContent },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r10" }
 ];
 
 const footerRowData = [
@@ -225,4 +242,17 @@ storiesOf("Table", module)
       onRowExpansionChange={action("toggled expand")}
     />
   ))
-  .add("loading", () => <Table columns={columns} rows={rowData} loading />);
+  .add("loading", () => <Table columns={columns} rows={rowData} loading />)
+  .add("with everything", () => (
+    <Table
+      columns={columnsWithEverything}
+      rows={rowDataWithEverything}
+      footerRows={footerRowData}
+      rowsPerPage={5}
+      hasExpandableRows
+      onRowExpansionChange={action("toggled expand")}
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+      onPageChange={action("page changed")}
+    />
+  ));
