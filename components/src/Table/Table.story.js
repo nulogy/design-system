@@ -39,96 +39,107 @@ const dropdownCellRenderer = ({ cellData }) => (
 );
 
 const columns = [
-  { label: "Date", dataKey: "c1" },
-  { label: "Expected Quantity", dataKey: "c2" },
-  { label: "Actual Quantity", dataKey: "c3" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
 
 const getColumnsWithCellRenderer = cellRenderer => [
-  { label: "Date", dataKey: "c1" },
-  { label: "Expected Quantity", dataKey: "c2" },
-  { label: "", dataKey: "c3", cellRenderer }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "", dataKey: "actualQuantity", cellRenderer }
 ];
 
 const getColumnsWithHeaderFormatter = headerFormatter => [
-  { label: "Date", dataKey: "c1" },
-  { label: "Expected Quantity", dataKey: "c2" },
-  { label: "Actual Quantity", dataKey: "c3" },
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
   { label: "Add record", dataKey: "c4", headerFormatter }
 ];
 
 const columnsWithAlignment = [
-  { label: "Date", dataKey: "c1" },
-  { label: "Expected Eaches", dataKey: "c2" },
-  { label: "Actual Eaches", dataKey: "c4" },
-  { label: "", dataKey: "c3", align: "right" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Eaches", dataKey: "expectedQuantity" },
+  { label: "Actual Eaches", dataKey: "actualQuantity" },
+  { label: "", dataKey: "actualQuantity", align: "right" }
 ];
 
 const columnsWithWidths = [
-  { label: "Date", dataKey: "c1" },
-  { label: "Expected Quantity", dataKey: "c2" },
-  { label: "Actual Quantity", dataKey: "c3" },
-  { label: "Note", dataKey: "c4", width: "50%" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  { label: "Note", dataKey: "note", width: "50%" }
 ];
 
 const columnsWithFormatter = [
-  { label: "Date", dataKey: "c1", cellFormatter: dateToString },
-  { label: "Expected Quantity", dataKey: "c2" },
-  { label: "Actual Quantity", dataKey: "c3" }
+  { label: "Date", dataKey: "date", cellFormatter: dateToString },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
+];
+
+const columnsWithEverything = [
+  { label: "Date", dataKey: "date", cellFormatter: dateToString, width: "15%" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
+  { label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
+  { label: "Note", dataKey: "note", width: "45%" },
+  { label: "", dataKey: "actions", width: "5%", cellRenderer: dropdownCellRenderer }
 ];
 
 const rowData = [
-  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
-  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
-  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
-  { c1: "2019-10-04", c2: "2,475 eaches", c3: "675 eaches", id: "r4" },
-  { c1: "2019-10-07", c2: "2,475 eaches", c3: "1,575 eaches", id: "r5" },
-  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
-  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
-  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
+
 const rowDataWithWidths = [
-  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
-  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
-  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
   {
-    c1: "2019-10-04",
-    c2: "2,475 eaches",
-    c3: "675 eaches",
-    c4: "1c Other Plant-related issue, equipment issues",
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    note: "1c Other Plant-related issue, equipment issues",
     id: "r4"
   },
-  { c1: "2019-10-07", c2: "2,475 eaches", c3: "1,575 eaches", id: "r5" },
-  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
-  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
-  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
 const rowDataWithSections = [
-  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
-  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
-  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
-  { c1: "2019-10-04", c2: "2,475 eaches", c3: "675 eaches", id: "r4" },
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
   { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r5" },
-  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
-  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
-  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
 const rowDataWithExpandable = [
-  { c1: "2019-10-01", c2: "2,025 eaches", c3: "1,800 eaches", id: "r1" },
-  { c1: "2019-10-02", c2: "2,475 eaches", c3: "2,250 eaches", id: "r2" },
-  { c1: "2019-10-03", c2: "2,475 eaches", c3: "1,425 eaches", id: "r3" },
-  { c1: "2019-10-04", c2: "2,475 eaches", c3: "675 eaches", id: "r4", expandedContent },
-  { c1: "2019-10-07", c2: "2,475 eaches", c3: "1,575 eaches", id: "r5" },
-  { c1: "2019-10-22", c2: "1,725 eaches", c3: "-", id: "r6" },
-  { c1: "2019-10-23", c2: "2,475 eaches", c3: "-", id: "r7" },
-  { c1: "2019-10-24", c2: "2,475 eaches", c3: "-", id: "r8" }
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4", expandedContent },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
+];
+
 ];
 
 const footerRowData = [
-  { c1: "Total", c2: "18,000 eaches", c3: "7,725 eaches", id: "r1" },
-  { c1: "Attainment", c2: "", c3: "41.5%", id: "r2" }
+  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "r1" },
+  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "r2" }
 ];
 
 storiesOf("Table", module)
@@ -158,7 +169,7 @@ storiesOf("Table", module)
       rows={rowData}
       hasSelectableRows
       selectedRows={["2019-10-01"]}
-      keyField="c1"
+      keyField="date"
       onRowSelectionChange={action("row selection changed")}
     />
   ))
