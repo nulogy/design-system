@@ -32,7 +32,7 @@ const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const dropdownCellRenderer = ({ cellData }) => (
-  <Box textAlign="right">
+  <Box textAlign="right" px="x1">
     <DropdownMenu>
       <DropdownLink href="/">See Date: {cellData}</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown 1</DropdownButton>

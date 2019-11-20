@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Restyled border colour of the active page button in pagination.
+
 ### Deprecated
 
 ### Removed

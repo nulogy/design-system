@@ -17750,7 +17750,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                             <button
                               aria-current={true}
                               aria-label={null}
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kNFeCo"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                               disabled={true}
                               onClick={[Function]}
                             >
@@ -36186,7 +36186,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                             <button
                               aria-current={true}
                               aria-label={null}
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kNFeCo"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                               disabled={true}
                               onClick={[Function]}
                             >
