@@ -5,5 +5,6 @@ export { default as PropsTable } from "./PropsTable";
 export { default as KeyTable } from "./KeyTable";
 export { default as Image } from "./Image";
 export { default as DocText } from "./DocText";
+export { default as InlineCode } from "./InlineCode";
 export { default as Intro } from "./Intro";
 export { default as IntroText } from "./IntroText";
