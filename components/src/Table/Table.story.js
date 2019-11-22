@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
-import { Box, IconicButton, DropdownButton, DropdownLink, DropdownMenu, Text } from "..";
+import { Box, DropdownButton, DropdownMenu, Text } from "..";
 import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
@@ -27,117 +27,193 @@ const expandedContent = () => (
   </Box>
 );
 
-const iconicButtonCellRenderer = ({ cellData }) => <IconicButton icon="delete">{cellData}</IconicButton>;
-
 const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const dropdownCellRenderer = ({ cellData }) => (
-  <Box textAlign="right" px="x1">
+  <Box textAlign="right" pr="x3">
     <DropdownMenu>
-      <DropdownLink href="/">See Date: {cellData}</DropdownLink>
-      <DropdownButton onClick={() => {}}>Dropdown 1</DropdownButton>
-      <DropdownButton onClick={() => {}}>Dropdown 2</DropdownButton>
-      <DropdownButton onClick={() => {}}>Dropdown 3</DropdownButton>
+      <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
+      <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
     </DropdownMenu>
   </Box>
 );
 
 const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
-  { label: "Column 4", dataKey: "c4" },
-  { label: "Column 5", dataKey: "c5" },
-  { label: "Column 6", dataKey: "c6" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
 
 const getColumnsWithCellRenderer = cellRenderer => [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellRenderer }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "", dataKey: "actualQuantity", cellRenderer }
 ];
 
-const getColumnsWithheaderFormatter = headerFormatter => [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", headerFormatter }
+const getColumnsWithHeaderFormatter = headerFormatter => [
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  { label: "Add record", dataKey: "c4", headerFormatter }
 ];
 
 const columnsWithAlignment = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", align: "right" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Eaches", dataKey: "expectedQuantity" },
+  { label: "Actual Eaches", dataKey: "actualQuantity", align: "right" }
 ];
 
 const columnsWithWidths = [
-  { label: "Column 1", dataKey: "c1", width: "30%" },
-  { label: "Column 2", dataKey: "c2", width: "60%" },
-  { label: "Column 3", dataKey: "c3", width: "10%" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  { label: "Note", dataKey: "note", width: "50%" }
 ];
 
 const columnsWithFormatter = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3", cellFormatter: dateToString }
+  { label: "Date", dataKey: "date", cellFormatter: dateToString },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
+];
+
+const columnsWithEverything = [
+  { label: "Date", dataKey: "date", cellFormatter: dateToString, width: "15%" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
+  { label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
+  { label: "Note", dataKey: "note", width: "45%" },
+  { label: "", dataKey: "actions", width: "5%", cellRenderer: dropdownCellRenderer }
 ];
 
 const rowData = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
+];
+
+const rowDataWithWidths = [
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  {
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    note: "1c Other Plant-related issue, equipment issues",
+    id: "r4"
+  },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
 const rowDataWithSections = [
-  { heading: "section 1", id: "1" },
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "2" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
-  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
-  { heading: "section 2", cellRenderer: sectionRow, id: "5" },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6" },
-  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
+  { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
 const rowDataWithExpandable = [
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4", expandedContent },
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
+];
+
+const rowDataWithEverything = [
+  { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r1" },
+  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r2", expandedContent },
+  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r3" },
+  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r4" },
   {
-    c1: "row 1 cell 1",
-    c2: "r1c2",
-    c3: "2019-09-21",
-    id: "2",
-    expandedContent
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    note: "1c Other Plant-related issue, equipment issues",
+    id: "r5"
   },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "3" },
-  { c1: "r3c1", c2: "r2c2", c3: "2019-09-22", id: "4" },
-  { c1: "r4c1", c2: "r2c2", c3: "2019-09-22", id: "6", expandedContent },
-  { c1: "r5c1", c2: "r2c2", c3: "2019-09-22", id: "7" }
+  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r6" },
+  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
+  { heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
+  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9", expandedContent },
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r10" }
 ];
 
 const footerRowData = [
-  { c1: "Total", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22", id: "r2" }
+  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "r1" },
+  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "r2" }
 ];
 
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
-  .add("Table without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
-  .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
+  .add("without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
-  .add("loading", () => <Table columns={columns} rows={rowData} loading />)
-  .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom table cell component: iconic button", () => (
-    <Table columns={getColumnsWithCellRenderer(iconicButtonCellRenderer)} rows={rowData} />
+  .add("with no data and custom content", () => (
+    <Table columns={columns} rows={[]} noRowsContent="No jobs are available" />
   ))
-  .add("with a custom table cell component: dropdown", () => (
+
+  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
+  .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
+  .add("with a custom cell component", () => (
     <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
   ))
-  .add("with a custom column label component: button", () => (
-    <Table columns={getColumnsWithheaderFormatter(buttonRenderer)} rows={rowData} />
-  ))
-  .add("with wrapping text", () => (
-    <Box width={400}>
-      <Table columns={columns} rows={rowData} />
-    </Box>
+  .add("With cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
+  .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
+  .add("with a custom column label component", () => (
+    <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
   ))
   .add("with selectable rows", () => (
     <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
+  ))
+  .add("with preselected rows", () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      hasSelectableRows
+      selectedRows={["2019-10-01"]}
+      keyField="date"
+      onRowSelectionChange={action("row selection changed")}
+    />
+  ))
+  .add("with pagination", () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      rowsPerPage={1}
+      onRowSelectionChange={action("row selection changed")}
+      onPageChange={action("page changed")}
+    />
+  ))
+  .add("with pagination and selectable rows", () => (
+    <Table
+      columns={columns}
+      rows={rowData}
+      hasSelectableRows
+      rowsPerPage={4}
+      onRowSelectionChange={action("row selection changed")}
+      onPageChange={action("page changed")}
+    />
+  ))
+  .add("with a footer", () => (
+    <>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
+      <Text mt="x6">Loading state:</Text>
+      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
+    </>
   ))
   .add("with lots of rows and columns", () => (
     <Table
@@ -147,47 +223,9 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
     />
   ))
-  .add("with preselected rows", () => (
-    <Table
-      columns={columns}
-      rows={rowData}
-      hasSelectableRows
-      selectedRows={["r2c1"]}
-      keyField="c1"
-      onRowSelectionChange={action("row selection changed")}
-    />
-  ))
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowData} />)
-  .add("with a footer", () => (
-    <>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
-      <Text mt="x6">Loading state:</Text>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
-    </>
-  ))
-  .add("with pagination", () => (
-    <Table
-      columns={mockColumns}
-      rows={getMockRows(50)}
-      rowsPerPage={5}
-      onRowSelectionChange={action("row selection changed")}
-      onPageChange={action("page changed")}
-    />
-  ))
-  .add("with pagination and selectable rows", () => (
-    <Table
-      columns={mockColumns}
-      rows={getMockRows(50)}
-      hasSelectableRows
-      rowsPerPage={4}
-      onRowSelectionChange={action("row selection changed")}
-      onPageChange={action("page changed")}
-    />
-  ))
-  .add("with full width section", () => <Table columns={getMockColumns(3)} rows={rowDataWithSections} />)
   .add("with expandable rows", () => (
     <Table
-      columns={getMockColumns(3)}
+      columns={columns}
       rows={rowDataWithExpandable}
       hasExpandableRows
       onRowExpansionChange={action("toggled expand")}
@@ -201,5 +239,19 @@ storiesOf("Table", module)
       hasSelectableRows
       onRowSelectionChange={action("row selection changed")}
       onRowExpansionChange={action("toggled expand")}
+    />
+  ))
+  .add("loading", () => <Table columns={columns} rows={rowData} loading />)
+  .add("with everything", () => (
+    <Table
+      columns={columnsWithEverything}
+      rows={rowDataWithEverything}
+      footerRows={footerRowData}
+      rowsPerPage={5}
+      hasExpandableRows
+      onRowExpansionChange={action("toggled expand")}
+      hasSelectableRows
+      onRowSelectionChange={action("row selection changed")}
+      onPageChange={action("page changed")}
     />
   ));

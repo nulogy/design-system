@@ -210,7 +210,7 @@ const expandedContent = () => (
 );
 
 const dateToString = ({ cellData }) => {
-  return new Date(cellData).toDateString();
+  return new Date(cellData).toUTCString();
 };
 const customCellRenderer = () => (
   <>
