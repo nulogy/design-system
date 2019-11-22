@@ -14,7 +14,6 @@
     "build": "webpack --mode production --config ../webpack.config.js",
     "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
     "icons": "node scripts/collect-icon-svgs",
     "storyshots": "yarn workspace @nulogy/tokens build && jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
