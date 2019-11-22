@@ -5,22 +5,22 @@ import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
   Box,
-  Alert,
   IconicButton,
   SectionTitle,
   Title,
   Link,
   List,
   ListItem,
-  Table,
-  Text
+  Table
 } from "@nulogy/components";
 import {
   Layout,
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode,
+  DocText as Text
 } from "../../components";
 
 const columnKeys = [
@@ -194,12 +194,22 @@ const propsRows = [
   }
 ];
 
+const expandedContent = () => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text mb={0} fontWeight="bold" color="blackBlue">
+      Expands!
+    </Text>
+  </Box>
+);
+
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toDateString();
 };
 const customCellRenderer = ({ cellData }) => (
   <>
-    <IconicButton icon="delete">{cellData}</IconicButton>
+    <IconicButton icon="delete" onClick={console.log(cellData)}>
+      Remove
+    </IconicButton>
   </>
 );
 
@@ -210,65 +220,155 @@ const customHeaderFormatter = ({ label }) => (
 );
 
 const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" }
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
 
 const columnsWithWidths = [
-  { label: "Column 1", dataKey: "c1", width: "30%" },
-  { label: "Column 2", dataKey: "c2", width: "60%" },
-  { label: "Column 3", dataKey: "c3", width: "10%" }
+  { label: "Date", dataKey: "date", width: "40%" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
 
 const rows = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2"
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
+  {
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    id: "r4"
+  },
+  {
+    date: "2019-10-07",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,575 eaches",
+    id: "r5"
+  },
+  {
+    date: "2019-10-22",
+    expectedQuantity: "1,725 eaches",
+    actualQuantity: "-",
+    id: "r6"
+  },
+  {
+    date: "2019-10-23",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r7"
+  },
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r8"
+  }
 ];
 
-const manyRowsForPagination = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" },
-  { c1: "r3c1", c2: "r3c2", c3: "2019-09-23" },
-  { c1: "r4c1", c2: "r4c2", c3: "2019-09-23" },
-  { c1: "r5c1", c2: "r5c2", c3: "2019-09-23" },
-  { c1: "r6c1", c2: "r6c2", c3: "2019-09-22" },
-  { c1: "r7c1", c2: "r7c2", c3: "2019-09-21" },
-  { c1: "r8c1", c2: "r8c2", c3: "2019-09-10" },
-  { c1: "r9c1", c2: "r9c2", c3: "2019-09-22" }
-];
-const columnsWithCustomCells = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Date", dataKey: "c3", cellFormatter: dateToString },
+const rowDataWithExpandedContent = [
   {
-    label: "Actions",
-    dataKey: "c2",
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2",
+    expandedContent: expandedContent
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
+  {
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    id: "r4"
+  },
+  {
+    date: "2019-10-07",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,575 eaches",
+    id: "r5"
+  },
+  {
+    date: "2019-10-22",
+    expectedQuantity: "1,725 eaches",
+    actualQuantity: "-",
+    id: "r6"
+  },
+  {
+    date: "2019-10-23",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r7"
+  },
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r8"
+  }
+];
+
+const getMockColumns = n =>
+  Array.from({ length: n }, (_, i) => i + 1).map(item => ({
+    label: `Column ${item}`,
+    dataKey: `c${item}`
+  }));
+
+const columnsWithCustomCells = [
+  { label: "Date", dataKey: "date", cellFormatter: dateToString },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  {
+    label: "Remove all",
+    dataKey: "actions",
     headerFormatter: customHeaderFormatter,
     cellRenderer: customCellRenderer
   }
 ];
 
 const footerRowData = [
-  { c1: "Total", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22" }
-];
-
-const expandedContent = () => (
-  <Box bg="lightBlue" py="x1" px="x2">
-    <Text fontWeight="bold" color="blackBlue">
-      Expands!
-    </Text>
-  </Box>
-);
-
-const rowDataWithExpandedContent = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent },
-  { c1: "row 3 cell 1", c2: "r3c2", c3: "2019-09-21", id: "r3" }
+  {
+    date: "Total",
+    expectedQuantity: "18,000 eaches",
+    actualQuantity: "7,725 eaches",
+    id: "r1"
+  },
+  {
+    date: "Attainment",
+    expectedQuantity: "",
+    actualQuantity: "41.5%",
+    id: "r2"
+  }
 ];
 
 export default () => (
-  <Layout>
+  <Layout propsTable={<PropsTable propsRows={propsRows} />}>
     <Helmet>
       <title>Table</title>
     </Helmet>
@@ -279,50 +379,69 @@ export default () => (
           Tables are used for displaying columns and rows of data.
         </IntroText>
       </Box>
-      <Alert>
-        This component is in active development and may not be available in the
-        latest NDS release. For more information, see #design-system on slack.
-      </Alert>
     </Intro>
 
     <DocSection>
-      <Table columns={columns} rows={rows} />
+      <Table columns={columns} rows={rows} keyField="date" />
       <Highlight className="js">
         {`import {Table} from "@nulogy/components";
 
 const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
+  { label: "Date", dataKey: "date" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
 
-const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
+const rows = [
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2"
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
+  ...
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r8"
+  }
+];
 
-<Table columns={columns} rows={rows} />
+<Table columns={columns} rows={rows} keyField="date"/>
 `}
       </Highlight>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With a custom component</SectionTitle>
+      <SectionTitle>Customizing cell display</SectionTitle>
       <Text>
-        A custom component can be implemented using a Formatter or Renderer
-        function.
+        A custom component can be implemented using a{" "}
+        <InlineCode>CellFormatter</InlineCode> (to maintain the existing cell
+        styles) or <InlineCode>CellRenderer</InlineCode> (for completely custom
+        styles).
       </Text>
       <Text>
-        The props that exist for custom components in cells are CellFormatter
-        and CellRenderer. Use CellFormatter to maintain the paddings and styles
-        on the cell. For completely custom styles, use the cellRenderer.
-      </Text>
-      <Text>
-        Similarly headers can be customized using the HeaderFormatter function
-        props. See{" "}
+        Similarly headers can be customized using the{" "}
+        <InlineCode>HeaderFormatter</InlineCode> function props. See{" "}
         <Link href="https://storybook.nulogy.design/?path=/story/table--with-a-cell-formatter">
           Storybook
         </Link>{" "}
         for other examples of implementing different custom components.
       </Text>
-      <Table columns={columnsWithCustomCells} rows={rows} />
+      <Table columns={columnsWithCustomCells} rows={rows} keyField="date" />
       <Highlight className="js">
         {`const customCellRenderer = ({cellData}) => (
     <IconicButton icon="delete">{cellData}</IconicButton>
@@ -338,19 +457,15 @@ const customHeaderFormatter = ({ label }) => (
 );
 
 const columnsWithCustomCells = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Date", dataKey: "c3", cellFormatter: dateToString },
+  { label: "Date", dataKey: "date", cellFormatter: dateToString },
+  { label: "Expected Quantity", dataKey: "expectedQuantity",},
+  { label: "Actual Quantity", dataKey: "actualQuantity",},
   {
-    label: "Actions",
-    dataKey: "c2",
+    label: "Remove all",
+    dataKey: "actions",
     headerFormatter: customHeaderFormatter,
     cellRenderer: customCellRenderer
   }
-];
-
-const rows = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }
 ];
 
 <Table columns={columnsWithCustomCells} rows={rows} />
@@ -359,147 +474,116 @@ const rows = [
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With selectable rows</SectionTitle>
+      <SectionTitle>Selectable rows</SectionTitle>
       <Text>
-        Setting hasSelectableRows on the Table will add a column of checkboxes
-        to the table so that rows can be selected by the user. Using the
-        checkbox in the head of the table will toggle the selection of all rows.
+        Setting <InlineCode>hasSelectableRows</InlineCode> on the Table will add
+        a column of checkboxes to the table so that rows can be selected by the
+        user. Using the checkbox in the head of the table will toggle the
+        selection of all rows.
       </Text>
       <Text>
-        A keyField should be specified to provide unique ids for rows (by
-        default the keyField will be "id" and expect a property of id in the row
-        objects).
+        A <InlineCode>keyField</InlineCode> should be specified to provide
+        unique <InlineCode>id</InlineCode>s for rows (by default the keyField
+        will be "id" and expect a property of id in the row objects).
       </Text>
       <Table
         hasSelectableRows
         columns={columns}
         rows={rows}
-        keyField="c1"
+        keyField="date"
         onRowSelectionChange={selectedRows => selectedRows}
       />
       <Highlight className="js">
-        {`import {Table} from "@nulogy/table";
-
-const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
-];
-
-const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
-
-<Table hasSelectableRows columns={columns} rows={rows} keyField="c1" onRowSelectionChange={selectedRows => selectedRows}/>
+        {`<Table
+  columns={columns}
+  rows={rows}
+  keyField="date"
+  HasSelectableRows
+  onRowSelectionChange={selectedRows => selectedRows}
+/>
 `}
       </Highlight>
     </DocSection>
     <DocSection>
-      <SectionTitle>With custom column widths</SectionTitle>
+      <SectionTitle>Column widths</SectionTitle>
       <Text>
-        A width for a column can be set (as px or %) inside the column data.
+        A width for a column can be set (as actual size or percentage) inside
+        the column data.
       </Text>
       <Table columns={columnsWithWidths} rows={rows} />
       <Highlight className="js">
         {`const columnsWithWidths = [
-  { label: "Column 1", dataKey: "c1", width: "30%" },
-  { label: "Column 2", dataKey: "c2", width: "60%" },
-  { label: "Column 3", dataKey: "c3", width: "10%" }
+  { label: "Date", dataKey: "date", width: "40%" },
+  { label: "Expected Quantity", dataKey: "expectedQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity" }
 ];
-
-const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
 
 <Table columns={columnsWithWidths} rows={rows} />`}
       </Highlight>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With loading state</SectionTitle>
+      <SectionTitle>Loading state</SectionTitle>
       <Text>
         The table can be set to loading while row data is being fetched. It will
-        show rows when the loading prop is set to false.
+        show rows when the <InlineCode>loading</InlineCode> prop is set to
+        false.
       </Text>
-      <Table loading columns={columns} rows={rows} keyField="c1" />
+      <Table loading columns={[columns]} rows={rows} />
       <Highlight className="js">
-        {`<Table loading hasSelectableRows columns={columns} rows={rows} keyField="c1"/>`}
+        {`<Table loading columns={[columns]} rows={rows} />`}
       </Highlight>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With footer</SectionTitle>
+      <SectionTitle>Footer</SectionTitle>
       <Text>
-        A footer can be added to the table by adding an array of rows to the
-        footerRows prop.
+        A footer can be added to the table by adding an array of rows to the{" "}
+        <InlineCode>footerRows</InlineCode> prop.
       </Text>
       <Table columns={columns} rows={rows} footerRows={footerRowData} />
       <Highlight className="js">
         {`import {Table} from "@nulogy/table";
 
-const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
+const footerRows = [
+  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches" },
+  { date: "Attainment", expectedQuantity: "", actualQuantity: "	41.5%" }
 ];
 
-const rows = [{ c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" }, { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" }];
-
-const footerRowData = [
-  { c1: "Total", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "Attainment", c2: "r2c2", c3: "2019-09-22" }
-];
-<Table columns={columns} rows={rows} footerRows={footerRowData}/>
+<Table columns={columns} rows={rows} footerRows={footerRows} />
 `}
       </Highlight>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With pagination</SectionTitle>
+      <SectionTitle>Pagination</SectionTitle>
       <Text>
-        Setting rowsPerPage on the Table will add a{" "}
+        Setting <InlineCode>rowsPerPage</InlineCode> on the Table will add a{" "}
         <Link href="https://nulogy.design/components/pagination">
           Pagination
         </Link>{" "}
-        component to the table. A maximum of the specified rowsPerPage will be
-        shown on each page.
+        component to the table. A maximum of the specified{" "}
+        <InlineCode>rowsPerPage</InlineCode> will be shown on each page.
       </Text>
       <Text>
-        Providing a function to onPageChange will allow tracking of the current
-        page number. It is fired whenever the page changes and takes in the
-        current page number as an argument.
+        Providing a function to <InlineCode>onPageChange</InlineCode> will allow
+        tracking of the current page number. It is fired whenever the page
+        changes and takes in the current page number as an argument.
       </Text>
       <Table
         columns={columns}
-        rows={manyRowsForPagination}
+        rows={rows}
         rowsPerPage={3}
-        keyField="c1"
+        keyField="date"
         onPageChange={pageNum => pageNum}
       />
       <Highlight className="js">
-        {`import {Table} from "@nulogy/table";
-
-const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
-];
-
-const manyRowsForPagination = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22" },
-  { c1: "r3c1", c2: "r3c2", c3: "2019-09-23" },
-  { c1: "r4c1", c2: "r4c2", c3: "2019-09-23" },
-  { c1: "r5c1", c2: "r5c2", c3: "2019-09-23" },
-  { c1: "r6c1", c2: "r6c2", c3: "2019-09-22" },
-  { c1: "r7c1", c2: "r7c2", c3: "2019-09-21" },
-  { c1: "r8c1", c2: "r8c2", c3: "2019-09-10" },
-  { c1: "r9c1", c2: "r9c2", c3: "2019-09-22" }
-];
-
-<Table
-        columns={columns}
-        rows={manyRowsForPagination}
-        rowsPerPage={3}
-        keyField="c1"
-        onPageChange={pageNum => pageNum}
-      />
+        {`<Table
+  columns={columns}
+  rows={rows}
+  rowsPerPage={3}
+  onPageChange={pageNum => pageNum}
+/>
 `}
       </Highlight>
     </DocSection>
@@ -508,9 +592,10 @@ const manyRowsForPagination = [
       <SectionTitle>Headings</SectionTitle>
       <Text>
         Headings that span the full width of a row can be added within the
-        table's rows. To add a heading add a row with the key "heading." The
-        appearance of the heading can be customized by adding a cellRenderer to
-        the row. See an example in
+        table's rows. To add a heading add a row with a key of{" "}
+        <InlineCode>heading</InlineCode> The appearance of the heading can be
+        customized by adding a <InlineCode>cellRenderer</InlineCode> to the row.
+        See an example in{" "}
         <Link href="https://storybook.nulogy.design/?path=/story/table--with-full-width-section">
           Storybook
         </Link>
@@ -519,54 +604,32 @@ const manyRowsForPagination = [
     </DocSection>
 
     <DocSection>
-      <SectionTitle>With expandable rows</SectionTitle>
+      <SectionTitle>Expandable rows</SectionTitle>
       <Text>
-        Setting hasExpandableRows and providing expandedContent on a row will
-        add a button that can be used to expand and collapse content.
-        ExpandedContent should return a react node that should be rendered when
-        the row is expanded.
+        Setting <InlineCode>hasExpandableRows</InlineCode> and providing{" "}
+        <InlineCode>expandedContent</InlineCode> on a row will add a button that
+        can be used to expand and collapse content.
+        <InlineCode>expandedContent</InlineCode> should return a React node that
+        should be rendered when the row is expanded.
       </Text>
       <Text>
-        A keyField should be specified to provide unique ids for rows (by
-        default the keyField will be "id" and expect a property of id in the row
-        objects).
+        A <InlineCode>keyField</InlineCode> should be specified to provide
+        unique ids for rows (by default the keyField will be "id" and expect a
+        property of id in the row objects).
       </Text>
       <Table
         columns={columns}
         rows={rowDataWithExpandedContent}
         hasExpandableRows
         onRowExpansionChange={() => {}}
-        keyField="c1"
       />
-      <Highlight className="js">
-        {`import {Table} from "@nulogy/table";
 
-const columns = [
-  { label: "Column 1", dataKey: "c1" },
-  { label: "Column 2", dataKey: "c2" },
-  { label: "Column 3", dataKey: "c3" },
-];
-
-const rowDataWithExpandedContent = [
-  { c1: "row 1 cell 1", c2: "r1c2", c3: "2019-09-21", id: "r1" },
-  { c1: "r2c1", c2: "r2c2", c3: "2019-09-22", id: "r2", expandedContent },
-  { c1: "row 3 cell 1", c2: "r3c2", c3: "2019-09-21", id: "r3" }
-];
-
-<Table
-      columns={columns}
-      rows={rowDataWithExpandedContent}
-      hasExpandableRows
-      onRowExpansionChange={() => {}}
-      keyField="c1"
-    />
-`}
-      </Highlight>
+      <Highlight className="js">{``}</Highlight>
     </DocSection>
     <DocSection />
 
     <DocSection>
-      <SectionTitle>With server-side or custom pagination</SectionTitle>
+      <SectionTitle>Server-side or custom pagination</SectionTitle>
       <Text>
         The{" "}
         <Link href="https://nulogy.design/components/pagination">

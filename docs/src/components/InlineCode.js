@@ -6,8 +6,6 @@ const InlineCode = styled.span({
   fontFamily: "IBM Plex Mono",
   background: theme.colors.lightBlue,
   fontSize: "14px"
-  // padding: "2px",
-  // borderRadius: "2px"
 });
 
 export default InlineCode;
