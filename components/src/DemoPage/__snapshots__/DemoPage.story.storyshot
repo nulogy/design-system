@@ -11992,6 +11992,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                       },
                                                     ]
                                                   }
+                                                  compact={false}
                                                   footerRows={Array []}
                                                   hasSelectableRows={false}
                                                   isHeaderSelected={false}
@@ -12033,6 +12034,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                         },
                                                       ]
                                                     }
+                                                    compact={false}
                                                     footerRows={Array []}
                                                     hasSelectableRows={false}
                                                     isHeaderSelected={false}
@@ -12106,6 +12108,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                 },
                                                               ]
                                                             }
+                                                            compact={false}
                                                           >
                                                             <thead>
                                                               <TableHead__StyledHeaderRow>
@@ -12139,27 +12142,29 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                   <tr
                                                                     className="TableHead__StyledHeaderRow-msr3t5-0 dCTkDK"
                                                                   >
-                                                                    <TableHead__StyledTh
+                                                                    <StyledTh
+                                                                      compact={false}
                                                                       key="c1"
                                                                       scope="col"
                                                                     >
                                                                       <StyledComponent
+                                                                        compact={false}
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
                                                                             "attrs": Array [],
                                                                             "componentStyle": ComponentStyle {
-                                                                              "componentId": "TableHead__StyledTh-msr3t5-1",
+                                                                              "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "bQoogK",
+                                                                              "lastClassName": "eunBIc",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
                                                                             },
-                                                                            "displayName": "TableHead__StyledTh",
+                                                                            "displayName": "StyledTh",
                                                                             "foldedComponentIds": Array [],
                                                                             "render": [Function],
-                                                                            "styledComponentId": "TableHead__StyledTh-msr3t5-1",
+                                                                            "styledComponentId": "StyledTh-sc-10nzyk9-0",
                                                                             "target": "th",
                                                                             "toString": [Function],
                                                                             "usesTheme": false,
@@ -12171,34 +12176,36 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="TableHead__StyledTh-msr3t5-1 bQoogK"
+                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
                                                                           scope="col"
                                                                         >
                                                                           Column 1
                                                                         </th>
                                                                       </StyledComponent>
-                                                                    </TableHead__StyledTh>
-                                                                    <TableHead__StyledTh
+                                                                    </StyledTh>
+                                                                    <StyledTh
+                                                                      compact={false}
                                                                       key="c2"
                                                                       scope="col"
                                                                     >
                                                                       <StyledComponent
+                                                                        compact={false}
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
                                                                             "attrs": Array [],
                                                                             "componentStyle": ComponentStyle {
-                                                                              "componentId": "TableHead__StyledTh-msr3t5-1",
+                                                                              "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "bQoogK",
+                                                                              "lastClassName": "eunBIc",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
                                                                             },
-                                                                            "displayName": "TableHead__StyledTh",
+                                                                            "displayName": "StyledTh",
                                                                             "foldedComponentIds": Array [],
                                                                             "render": [Function],
-                                                                            "styledComponentId": "TableHead__StyledTh-msr3t5-1",
+                                                                            "styledComponentId": "StyledTh-sc-10nzyk9-0",
                                                                             "target": "th",
                                                                             "toString": [Function],
                                                                             "usesTheme": false,
@@ -12210,34 +12217,36 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="TableHead__StyledTh-msr3t5-1 bQoogK"
+                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
                                                                           scope="col"
                                                                         >
                                                                           Column 2
                                                                         </th>
                                                                       </StyledComponent>
-                                                                    </TableHead__StyledTh>
-                                                                    <TableHead__StyledTh
+                                                                    </StyledTh>
+                                                                    <StyledTh
+                                                                      compact={false}
                                                                       key="c3"
                                                                       scope="col"
                                                                     >
                                                                       <StyledComponent
+                                                                        compact={false}
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
                                                                             "attrs": Array [],
                                                                             "componentStyle": ComponentStyle {
-                                                                              "componentId": "TableHead__StyledTh-msr3t5-1",
+                                                                              "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "bQoogK",
+                                                                              "lastClassName": "eunBIc",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
                                                                             },
-                                                                            "displayName": "TableHead__StyledTh",
+                                                                            "displayName": "StyledTh",
                                                                             "foldedComponentIds": Array [],
                                                                             "render": [Function],
-                                                                            "styledComponentId": "TableHead__StyledTh-msr3t5-1",
+                                                                            "styledComponentId": "StyledTh-sc-10nzyk9-0",
                                                                             "target": "th",
                                                                             "toString": [Function],
                                                                             "usesTheme": false,
@@ -12249,13 +12258,13 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="TableHead__StyledTh-msr3t5-1 bQoogK"
+                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
                                                                           scope="col"
                                                                         >
                                                                           Column 3
                                                                         </th>
                                                                       </StyledComponent>
-                                                                    </TableHead__StyledTh>
+                                                                    </StyledTh>
                                                                   </tr>
                                                                 </StyledComponent>
                                                               </TableHead__StyledHeaderRow>
@@ -12278,6 +12287,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                 },
                                                               ]
                                                             }
+                                                            compact={false}
                                                             keyField="c1"
                                                             loading={false}
                                                             noRowsContent="No records have been created for this table."
@@ -12315,6 +12325,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                     },
                                                                   ]
                                                                 }
+                                                                compact={false}
                                                                 key="r1c1"
                                                                 keyField="c1"
                                                                 row={
@@ -12368,6 +12379,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 1",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c1"
                                                                         row={
                                                                           Object {
@@ -12377,8 +12389,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),
@@ -12421,6 +12436,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 2",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c2"
                                                                         row={
                                                                           Object {
@@ -12430,8 +12446,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),
@@ -12474,6 +12493,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 3",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c3"
                                                                         row={
                                                                           Object {
@@ -12483,8 +12503,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),
@@ -12539,6 +12562,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                     },
                                                                   ]
                                                                 }
+                                                                compact={false}
                                                                 key="r2c1"
                                                                 keyField="c1"
                                                                 row={
@@ -12592,6 +12616,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 1",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c1"
                                                                         row={
                                                                           Object {
@@ -12601,8 +12626,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),
@@ -12645,6 +12673,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 2",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c2"
                                                                         row={
                                                                           Object {
@@ -12654,8 +12683,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),
@@ -12698,6 +12730,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "label": "Column 3",
                                                                           }
                                                                         }
+                                                                        compact={false}
                                                                         key="c3"
                                                                         row={
                                                                           Object {
@@ -12707,8 +12740,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           }
                                                                         }
                                                                       >
-                                                                        <TableCell__StyledTableCell>
+                                                                        <TableCell__StyledTableCell
+                                                                          compact={false}
+                                                                        >
                                                                           <StyledComponent
+                                                                            compact={false}
                                                                             forwardedComponent={
                                                                               Object {
                                                                                 "$$typeof": Symbol(react.forward_ref),

@@ -13,9 +13,9 @@ const StyledTable = styled.table({
   background: "white"
 });
 
-const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows, rowHovers }) => (
+const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows, rowHovers, compact }) => (
   <StyledTable id={id}>
-    <TableHead columns={columns} />
+    <TableHead columns={columns} compact={compact} />
     <TableBody
       columns={columns}
       rows={rows}
@@ -23,6 +23,7 @@ const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footer
       noRowsContent={noRowsContent}
       loading={loading}
       rowHovers={rowHovers}
+      compact={compact}
     />
     {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
   </StyledTable>
@@ -36,7 +37,8 @@ BaseTable.propTypes = {
   id: PropTypes.string,
   loading: PropTypes.bool,
   footerRows: rowsPropType,
-  rowHovers: PropTypes.bool
+  rowHovers: PropTypes.bool,
+  compact: PropTypes.bool
 };
 
 BaseTable.defaultProps = {
@@ -45,7 +47,8 @@ BaseTable.defaultProps = {
   id: undefined,
   loading: false,
   footerRows: [],
-  rowHovers: true
+  rowHovers: true,
+  compact: false
 };
 
 export default BaseTable;

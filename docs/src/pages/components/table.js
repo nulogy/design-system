@@ -534,9 +534,21 @@ const columnsWithCustomCells = [
         show rows when the <InlineCode>loading</InlineCode> prop is set to
         false.
       </Text>
-      <Table loading columns={[columns]} rows={rows} />
+      <Table loading columns={columns} rows={rows} />
       <Highlight className="js">
-        {`<Table loading columns={[columns]} rows={rows} />`}
+        {`<Table loading columns={columns} rows={rows} />`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Compact Styling</SectionTitle>
+      <Text>
+        The table can be set to use compact styling which decreases the paddings
+        when the <InlineCode>compact</InlineCode> prop is set to true.
+      </Text>
+      <Table columns={columns} rows={rows} compact />
+      <Highlight className="js">
+        {`<Table columns={columns} rows={rows} compact />`}
       </Highlight>
     </DocSection>
 

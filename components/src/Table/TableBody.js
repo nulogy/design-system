@@ -18,22 +18,35 @@ const StyledTr = styled.tr(({ rowHovers }) => ({
   }
 }));
 
-const renderRows = (rows, columns, keyField, noRowsContent, rowHovers) =>
+const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact) =>
   rows.length > 0 ? (
     rows.map(row => (
-      <TableBodyRow row={row} columns={columns} key={row[keyField]} keyField={keyField} rowHovers={rowHovers} />
+      <TableBodyRow
+        row={row}
+        columns={columns}
+        key={row[keyField]}
+        keyField={keyField}
+        rowHovers={rowHovers}
+        compact={compact}
+      />
     ))
   ) : (
     <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
   );
 
-const TableBodyRow = ({ row, columns, rowHovers }) => {
+const TableBodyRow = ({ row, columns, rowHovers, compact }) => {
   const renderAllCells = () =>
-    columns.map(column => <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} />);
+    columns.map(column => (
+      <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} compact={compact} />
+    ));
   return (
     <>
       <StyledTr rowHovers={rowHovers}>
-        {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
+        {row.heading ? (
+          <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
+        ) : (
+          renderAllCells()
+        )}
       </StyledTr>
       {row.expandedContent && row.expanded && (
         <tr>
@@ -47,7 +60,8 @@ const TableBodyRow = ({ row, columns, rowHovers }) => {
 TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
   columns: columnsPropType.isRequired,
-  rowHovers: PropTypes.bool.isRequired
+  rowHovers: PropTypes.bool.isRequired,
+  compact: PropTypes.isRequired
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
@@ -69,10 +83,10 @@ LoadingContent.propTypes = {
   colSpan: PropTypes.number.isRequired
 };
 
-const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers }) => (
+const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers, compact }) => (
   <tbody>
     {!loading ? (
-      renderRows(rows, columns, keyField, noRowsContent, rowHovers)
+      renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact)
     ) : (
       <LoadingContent colSpan={columns.length - 1} />
     )}
@@ -85,7 +99,8 @@ TableBody.propTypes = {
   rowHovers: PropTypes.bool.isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  compact: PropTypes.isRequired
 };
 TableBody.defaultProps = {
   noRowsContent: "No records have been created for this table.",
