@@ -8,7 +8,11 @@ import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
 const dateToString = ({ cellData }) => {
-  return new Date(cellData).toUTCString();
+  return new Date(cellData)
+    .toUTCString()
+    .split(" ")
+    .splice(0, 4)
+    .join(" ");
 };
 
 const sectionRow = ({ cellData }) => (
