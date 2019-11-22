@@ -8,7 +8,7 @@ import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
 const dateToString = ({ cellData }) => {
-  return new Date(cellData).toDateString();
+  return new Date(cellData).toUTCString();
 };
 
 const sectionRow = ({ cellData }) => (
