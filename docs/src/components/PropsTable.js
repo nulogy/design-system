@@ -1,6 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Table, Text } from "@nulogy/components";
+import InlineCode from "./InlineCode";
+
+const propName = ({ cellData }) => (
+  <Text py="x1" fontSize="small">
+    <InlineCode>{cellData}</InlineCode>
+  </Text>
+);
+
+propName.propTypes = {
+  cellData: PropTypes.string.isRequired
+};
 
 const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
@@ -17,7 +28,7 @@ const columns = [
     label: "Name",
     dataKey: "name",
     width: "20%",
-    cellRenderer: smallTextRenderer
+    cellRenderer: propName
   },
   {
     label: "Type",
@@ -26,20 +37,21 @@ const columns = [
     cellRenderer: smallTextRenderer
   },
   {
-    label: "Default value",
+    label: "Default",
     dataKey: "defaultValue",
-    width: "20%",
+    width: "15%",
     cellRenderer: smallTextRenderer
   },
   {
     label: "Description",
     dataKey: "description",
+    width: "50%",
     cellRenderer: smallTextRenderer
   }
 ];
 
 const PropsTable = ({ propsRows }) => (
-  <Table rows={propsRows} columns={columns} />
+  <Table rows={propsRows} columns={columns} keyField="name" />
 );
 
 PropsTable.propTypes = {
