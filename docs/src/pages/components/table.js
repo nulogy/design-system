@@ -198,6 +198,12 @@ const propsRows = [
     defaultValue: "true",
     description:
       "Whether or not to show a light grey background on a row when hovering it"
+  },
+  {
+    name: "compact",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Whether or not to display the table in compact mode"
   }
 ];
 
