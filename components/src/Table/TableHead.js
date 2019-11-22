@@ -38,7 +38,7 @@ TableHead.propTypes = {
       headerFormatter: PropTypes.func
     })
   ).isRequired,
-  compact: PropTypes.isRequired
+  compact: PropTypes.bool.isRequired
 };
 
 export default TableHead;
