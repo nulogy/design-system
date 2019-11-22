@@ -48,7 +48,7 @@ const columns = [
 ];
 
 const PropsTable = ({ propsRows }) => (
-  <Table rows={propsRows} columns={columns} />
+  <Table rows={propsRows} columns={columns} keyField="name" />
 );
 
 PropsTable.propTypes = {
