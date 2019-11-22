@@ -37,14 +37,15 @@ TableCell.propTypes = {
   row: rowPropType,
   colSpan: PropTypes.number,
   cellData: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  compact: PropTypes.isRequired
+  compact: PropTypes.bool
 };
 
 TableCell.defaultProps = {
   column: {},
   row: {},
   cellData: "",
-  colSpan: null
+  colSpan: null,
+  compact: false
 };
 
 export default TableCell;

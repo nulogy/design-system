@@ -61,7 +61,7 @@ TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
   columns: columnsPropType.isRequired,
   rowHovers: PropTypes.bool.isRequired,
-  compact: PropTypes.isRequired
+  compact: PropTypes.bool.isRequired
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
@@ -100,7 +100,7 @@ TableBody.propTypes = {
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   loading: PropTypes.bool,
-  compact: PropTypes.isRequired
+  compact: PropTypes.bool.isRequired
 };
 TableBody.defaultProps = {
   noRowsContent: "No records have been created for this table.",
