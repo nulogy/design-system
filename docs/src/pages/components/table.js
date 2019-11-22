@@ -294,7 +294,7 @@ const rowDataWithExpandedContent = [
     expectedQuantity: "2,475 eaches",
     actualQuantity: "2,250 eaches",
     id: "r2",
-    expandedContent: expandedContent
+    expandedContent
   },
   {
     date: "2019-10-03",
@@ -624,7 +624,15 @@ const footerRows = [
         onRowExpansionChange={() => {}}
       />
 
-      <Highlight className="js">{``}</Highlight>
+      <Highlight className="js">
+        {`<Table
+  columns={columns}
+  rows={rowDataWithExpandedContent}
+  hasExpandableRows
+  onRowExpansionChange={() => {}}
+/>
+`}
+      </Highlight>
     </DocSection>
     <DocSection />
 

@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Table, Text } from "@nulogy/components";
-import styled from "styled-components";
 import InlineCode from "./InlineCode";
 
 const propName = ({ cellData }) => (
@@ -9,6 +8,10 @@ const propName = ({ cellData }) => (
     <InlineCode>{cellData}</InlineCode>
   </Text>
 );
+
+propName.propTypes = {
+  cellData: PropTypes.string.isRequired
+};
 
 const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
