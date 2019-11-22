@@ -12064,10 +12064,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                                                               "isStatic": false,
-                                                              "lastClassName": "fLepcs",
+                                                              "lastClassName": "ycode",
                                                               "rules": Array [
                                                                 "border-collapse: collapse;",
                                                                 "width: 100%;",
+                                                                "background: white;",
                                                               ],
                                                             },
                                                             "displayName": "BaseTable__StyledTable",
@@ -12084,7 +12085,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                         forwardedRef={null}
                                                       >
                                                         <table
-                                                          className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                                                          className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                                                         >
                                                           <TableHead
                                                             columns={

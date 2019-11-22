@@ -9,7 +9,8 @@ import { columnsPropType, rowsPropType } from "./Table.types";
 
 const StyledTable = styled.table({
   borderCollapse: "collapse",
-  width: "100%"
+  width: "100%",
+  background: "white"
 });
 
 const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows }) => (

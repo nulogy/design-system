@@ -750,10 +750,11 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                               "componentStyle": ComponentStyle {
                                 "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                                 "isStatic": false,
-                                "lastClassName": "fLepcs",
+                                "lastClassName": "ycode",
                                 "rules": Array [
                                   "border-collapse: collapse;",
                                   "width: 100%;",
+                                  "background: white;",
                                 ],
                               },
                               "displayName": "BaseTable__StyledTable",
@@ -770,7 +771,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                           forwardedRef={null}
                         >
                           <table
-                            className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                            className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                           >
                             <TableHead
                               columns={
@@ -5352,10 +5353,11 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                             "componentStyle": ComponentStyle {
                               "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                               "isStatic": false,
-                              "lastClassName": "fLepcs",
+                              "lastClassName": "ycode",
                               "rules": Array [
                                 "border-collapse: collapse;",
                                 "width: 100%;",
+                                "background: white;",
                               ],
                             },
                             "displayName": "BaseTable__StyledTable",
@@ -5372,7 +5374,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                         forwardedRef={null}
                       >
                         <table
-                          className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                          className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                         >
                           <TableHead
                             columns={
@@ -9296,10 +9298,11 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                             "isStatic": false,
-                            "lastClassName": "fLepcs",
+                            "lastClassName": "ycode",
                             "rules": Array [
                               "border-collapse: collapse;",
                               "width: 100%;",
+                              "background: white;",
                             ],
                           },
                           "displayName": "BaseTable__StyledTable",
@@ -9316,7 +9319,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                       forwardedRef={null}
                     >
                       <table
-                        className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                        className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                       >
                         <TableHead
                           columns={
@@ -21943,10 +21946,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                             "componentStyle": ComponentStyle {
                               "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                               "isStatic": false,
-                              "lastClassName": "fLepcs",
+                              "lastClassName": "ycode",
                               "rules": Array [
                                 "border-collapse: collapse;",
                                 "width: 100%;",
+                                "background: white;",
                               ],
                             },
                             "displayName": "BaseTable__StyledTable",
@@ -21963,7 +21967,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                         forwardedRef={null}
                       >
                         <table
-                          className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                          className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                         >
                           <TableHead
                             columns={
@@ -37320,10 +37324,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                               "isStatic": false,
-                              "lastClassName": "fLepcs",
+                              "lastClassName": "ycode",
                               "rules": Array [
                                 "border-collapse: collapse;",
                                 "width: 100%;",
+                                "background: white;",
                               ],
                             },
                             "displayName": "BaseTable__StyledTable",
@@ -37340,7 +37345,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                         forwardedRef={null}
                       >
                         <table
-                          className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                          className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                         >
                           <TableHead
                             columns={
@@ -41079,10 +41084,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                             "componentStyle": ComponentStyle {
                               "componentId": "BaseTable__StyledTable-sc-10lnp9m-0",
                               "isStatic": false,
-                              "lastClassName": "fLepcs",
+                              "lastClassName": "ycode",
                               "rules": Array [
                                 "border-collapse: collapse;",
                                 "width: 100%;",
+                                "background: white;",
                               ],
                             },
                             "displayName": "BaseTable__StyledTable",
@@ -41099,7 +41105,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                         forwardedRef={null}
                       >
                         <table
-                          className="BaseTable__StyledTable-sc-10lnp9m-0 fLepcs"
+                          className="BaseTable__StyledTable-sc-10lnp9m-0 ycode"
                         >
                           <TableHead
                             columns={
