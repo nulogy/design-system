@@ -34,7 +34,7 @@
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
-    "build": "yarn workspace @nulogy/components build && gatsby build",
+    "build": "yarn install && yarn workspace @nulogy/components build && gatsby build",
     "develop": "yarn workspace @nulogy/components build && gatsby develop",
     "serve": "yarn build && gatsby serve",
     "start": "yarn develop",
