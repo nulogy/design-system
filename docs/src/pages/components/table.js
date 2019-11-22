@@ -205,11 +205,9 @@ const expandedContent = () => (
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toDateString();
 };
-const customCellRenderer = ({ cellData }) => (
+const customCellRenderer = () => (
   <>
-    <IconicButton icon="delete" onClick={console.log(cellData)}>
-      Remove
-    </IconicButton>
+    <IconicButton icon="delete">Remove</IconicButton>
   </>
 );
 
