@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Restyled border colour of the active page button in pagination.
+- Restyled border colour of the active page button in [Pagination](https://nulogy.design/components/pagination).
+- [Table](https://nulogy.design/components/table) now has a white background instead of transparent
 
 ### Deprecated
 
