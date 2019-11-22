@@ -165,7 +165,7 @@ storiesOf("Table", module)
   .add("with no data and custom content", () => (
     <Table columns={columns} rows={[]} noRowsContent="No jobs are available" />
   ))
-
+  .add("with compact styling", () => <Table columns={columns} rows={rowData} compact />)
   .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
   .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
   .add("with a custom cell component", () => (

@@ -3,21 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import TableCell from "./TableCell";
+import StyledTh from "./StyledTh";
 import { columnsPropType, rowsPropType, rowPropType } from "./Table.types";
 
 const StyledFooterRow = styled.tr({
   "&:first-of-type": {
     borderTop: `1px solid ${theme.colors.lightGrey}`
   }
-});
-
-const StyledTh = styled.th({
-  fontWeight: "normal",
-  textAlign: "left",
-  padding: `${theme.space.x2} 0`,
-  paddingRight: theme.space.x2,
-  paddingLeft: theme.space.x2,
-  color: theme.colors.darkGrey
 });
 
 const renderRows = (rows, columns, keyField, loading) =>

@@ -4,17 +4,20 @@ import styled from "styled-components";
 import theme from "../theme";
 import { columnPropType, rowPropType } from "./Table.types";
 
-const StyledTableCell = styled.td(({ align }) => ({
-  paddingTop: theme.space.x2,
-  paddingBottom: theme.space.x2,
-  textAlign: align,
-  paddingRight: theme.space.x2,
-  "&:first-child": {
-    paddingLeft: theme.space.x2
-  }
-}));
+const StyledTableCell = styled.td(({ align, compact }) => {
+  const padding = compact ? theme.space.x1 : theme.space.x2;
+  return {
+    paddingTop: padding,
+    paddingBottom: padding,
+    textAlign: align,
+    paddingRight: padding,
+    "&:first-child": {
+      paddingLeft: padding
+    }
+  };
+});
 
-const TableCell = ({ row, column, colSpan, cellData }) => {
+const TableCell = ({ row, column, colSpan, cellData, compact }) => {
   const cellRenderer = row.cellRenderer || column.cellRenderer;
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
@@ -22,14 +25,19 @@ const TableCell = ({ row, column, colSpan, cellData }) => {
   if (isCustomCell) {
     return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}</td>;
   }
-  return <StyledTableCell align={column.align}>{cellContent}</StyledTableCell>;
+  return (
+    <StyledTableCell align={column.align} compact={compact}>
+      {cellContent}
+    </StyledTableCell>
+  );
 };
 
 TableCell.propTypes = {
   column: columnPropType,
   row: rowPropType,
   colSpan: PropTypes.number,
-  cellData: PropTypes.oneOfType([PropTypes.node, PropTypes.bool])
+  cellData: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
+  compact: PropTypes.isRequired
 };
 
 TableCell.defaultProps = {
