@@ -117,6 +117,7 @@ const footerRowData = [
 
 storiesOf("Table", module)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
+  .add("Table without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
   .add("Cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
   .add("loading", () => <Table columns={columns} rows={rowData} loading />)
