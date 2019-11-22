@@ -6,16 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
+ 
 ### Added
 
-- [Table](https://nulogy.design/components/table) now supports compact mode the the compact boolean prop
-
 ### Changed
-
-- Restyled border colour of the active page button in [Pagination](https://nulogy.design/components/pagination).
-- [Table](https://nulogy.design/components/table) now has a white background instead of transparent
-- [Table](http://nulogy.design/components/table) now allows setting `rowHovers={false}` to remove the light grey background when hovering a row
 
 ### Deprecated
 
@@ -24,6 +18,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 ### Security
+
+## [0.16.2] - 2019-11-18
+
+### Added
+
+- [Table](https://nulogy.design/components/table) now supports compact mode with the new compact boolean prop
+- [Table](https://nulogy.design/components/table) now supports setting `rowHovers={false}` to remove the light gray background when hovering a row
+
+### Changed
+
+- Restyled border colour of the active page button in [Pagination](https://nulogy.design/components/pagination).
+- [Table](https://nulogy.design/components/table) now has a white background instead of transparent
 
 ## [0.16.1] - 2019-11-18
 
