@@ -3,9 +3,9 @@ import { theme } from "@nulogy/components";
 
 const InlineCode = styled.span({
   display: "inline",
-  fontFamily: "IBM Plex Mono",
+  fontFamily: theme.fonts.mono,
   background: theme.colors.lightBlue,
-  fontSize: "14px"
+  fontSize: theme.fontSizes.small
 });
 
 export default InlineCode;
