@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- [Table](https://nulogy.design/components/table) now supports compact mode the the compact boolean prop
+
 ### Changed
 
 - Restyled border colour of the active page button in [Pagination](https://nulogy.design/components/pagination).
