@@ -47,7 +47,7 @@ const TableBodyRow = ({ row, columns, rowHovers }) => {
 TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
   columns: columnsPropType.isRequired,
-  rowHovers: PropTypes.isRequired
+  rowHovers: PropTypes.bool.isRequired
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
