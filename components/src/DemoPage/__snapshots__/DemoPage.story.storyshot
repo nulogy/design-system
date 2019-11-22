@@ -11999,6 +11999,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                   loading={false}
                                                   noRowsContent="No records have been created for this table."
                                                   onRowExpansionChange={null}
+                                                  rowHovers={true}
                                                   rows={
                                                     Array [
                                                       Object {
@@ -12039,6 +12040,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                     loading={false}
                                                     noRowsContent="No records have been created for this table."
                                                     onRowExpansionChange={null}
+                                                    rowHovers={true}
                                                     rows={
                                                       Array [
                                                         Object {
@@ -12279,6 +12281,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                             keyField="c1"
                                                             loading={false}
                                                             noRowsContent="No records have been created for this table."
+                                                            rowHovers={true}
                                                             rows={
                                                               Array [
                                                                 Object {
@@ -12321,8 +12324,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                     "c3": "r1c3",
                                                                   }
                                                                 }
+                                                                rowHovers={true}
                                                               >
-                                                                <TableBody__StyledTr>
+                                                                <TableBody__StyledTr
+                                                                  rowHovers={true}
+                                                                >
                                                                   <StyledComponent
                                                                     forwardedComponent={
                                                                       Object {
@@ -12333,9 +12339,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           "isStatic": false,
                                                                           "lastClassName": "gvDwxX",
                                                                           "rules": Array [
-                                                                            "&:hover {",
-                                                                            "background-color: #f0f2f5;",
-                                                                            "}",
+                                                                            [Function],
                                                                           ],
                                                                         },
                                                                         "displayName": "TableBody__StyledTr",
@@ -12350,6 +12354,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                       }
                                                                     }
                                                                     forwardedRef={null}
+                                                                    rowHovers={true}
                                                                   >
                                                                     <tr
                                                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -12543,8 +12548,11 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                     "c3": "r2c3",
                                                                   }
                                                                 }
+                                                                rowHovers={true}
                                                               >
-                                                                <TableBody__StyledTr>
+                                                                <TableBody__StyledTr
+                                                                  rowHovers={true}
+                                                                >
                                                                   <StyledComponent
                                                                     forwardedComponent={
                                                                       Object {
@@ -12555,9 +12563,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                           "isStatic": false,
                                                                           "lastClassName": "gvDwxX",
                                                                           "rules": Array [
-                                                                            "&:hover {",
-                                                                            "background-color: #f0f2f5;",
-                                                                            "}",
+                                                                            [Function],
                                                                           ],
                                                                         },
                                                                         "displayName": "TableBody__StyledTr",
@@ -12572,6 +12578,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                       }
                                                                     }
                                                                     forwardedRef={null}
+                                                                    rowHovers={true}
                                                                   >
                                                                     <tr
                                                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
