@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Restyled border colour of the active page button in [Pagination](https://nulogy.design/components/pagination).
 - [Table](https://nulogy.design/components/table) now has a white background instead of transparent
+- [Table](http://nulogy.design/components/table) now allows setting `rowHovers={false}` to remove the light grey background when hovering a row
 
 ### Deprecated
 

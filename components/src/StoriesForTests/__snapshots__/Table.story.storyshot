@@ -430,6 +430,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={[Function]}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -495,6 +496,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={[Function]}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -562,6 +564,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                   onRowExpansionChange={[Function]}
                   onSelectHeader={[Function]}
                   onSelectRow={[Function]}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -634,6 +637,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                     onRowExpansionChange={[Function]}
                     onSelectHeader={[Function]}
                     onSelectRow={[Function]}
+                    rowHovers={true}
                     rows={
                       Array [
                         Object {
@@ -714,6 +718,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                       onRowExpansionChange={[Function]}
                       onSelectHeader={[Function]}
                       onSelectRow={[Function]}
+                      rowHovers={true}
                       rows={
                         Array [
                           Object {
@@ -1763,6 +1768,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                               keyField="c1"
                               loading={false}
                               noRowsContent="No records have been created for this table."
+                              rowHovers={true}
                               rows={
                                 Array [
                                   Object {
@@ -1838,8 +1844,11 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                       "selected": false,
                                     }
                                   }
+                                  rowHovers={true}
                                 >
-                                  <TableBody__StyledTr>
+                                  <TableBody__StyledTr
+                                    rowHovers={true}
+                                  >
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
@@ -1850,9 +1859,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                             "isStatic": false,
                                             "lastClassName": "gvDwxX",
                                             "rules": Array [
-                                              "&:hover {",
-                                              "background-color: #f0f2f5;",
-                                              "}",
+                                              [Function],
                                             ],
                                           },
                                           "displayName": "TableBody__StyledTr",
@@ -1867,6 +1874,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                         }
                                       }
                                       forwardedRef={null}
+                                      rowHovers={true}
                                     >
                                       <tr
                                         className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -2969,8 +2977,11 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                       "selected": true,
                                     }
                                   }
+                                  rowHovers={true}
                                 >
-                                  <TableBody__StyledTr>
+                                  <TableBody__StyledTr
+                                    rowHovers={true}
+                                  >
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
@@ -2981,9 +2992,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                             "isStatic": false,
                                             "lastClassName": "gvDwxX",
                                             "rules": Array [
-                                              "&:hover {",
-                                              "background-color: #f0f2f5;",
-                                              "}",
+                                              [Function],
                                             ],
                                           },
                                           "displayName": "TableBody__StyledTr",
@@ -2998,6 +3007,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                         }
                                       }
                                       forwardedRef={null}
+                                      rowHovers={true}
                                     >
                                       <tr
                                         className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -5135,6 +5145,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={null}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -5196,6 +5207,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={null}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -5257,6 +5269,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                   loading={false}
                   noRowsContent="No records have been created for this table."
                   onRowExpansionChange={[Function]}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -5323,6 +5336,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                     loading={false}
                     noRowsContent="No records have been created for this table."
                     onRowExpansionChange={[Function]}
+                    rowHovers={true}
                     rows={
                       Array [
                         Object {
@@ -5759,6 +5773,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                             keyField="c1"
                             loading={false}
                             noRowsContent="No records have been created for this table."
+                            rowHovers={true}
                             rows={
                               Array [
                                 Object {
@@ -5825,8 +5840,11 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                     "id": "r1",
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -5837,9 +5855,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -5854,6 +5870,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -6307,8 +6324,11 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                     "id": "r2",
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -6319,9 +6339,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -6336,6 +6354,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -7876,6 +7895,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={null}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -8531,6 +8551,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={null}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -9186,6 +9207,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                   loading={false}
                   noRowsContent="No records have been created for this table."
                   onRowExpansionChange={null}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -10359,6 +10381,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                           keyField="c1"
                           loading={false}
                           noRowsContent="No records have been created for this table."
+                          rowHovers={true}
                           rows={
                             Array [
                               Object {
@@ -10578,8 +10601,11 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                   "id": 0,
                                 }
                               }
+                              rowHovers={true}
                             >
-                              <TableBody__StyledTr>
+                              <TableBody__StyledTr
+                                rowHovers={true}
+                              >
                                 <StyledComponent
                                   forwardedComponent={
                                     Object {
@@ -10590,9 +10616,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                         "isStatic": false,
                                         "lastClassName": "gvDwxX",
                                         "rules": Array [
-                                          "&:hover {",
-                                          "background-color: #f0f2f5;",
-                                          "}",
+                                          [Function],
                                         ],
                                       },
                                       "displayName": "TableBody__StyledTr",
@@ -10607,6 +10631,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
+                                  rowHovers={true}
                                 >
                                   <tr
                                     className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -12244,8 +12269,11 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                   "id": 1,
                                 }
                               }
+                              rowHovers={true}
                             >
-                              <TableBody__StyledTr>
+                              <TableBody__StyledTr
+                                rowHovers={true}
+                              >
                                 <StyledComponent
                                   forwardedComponent={
                                     Object {
@@ -12256,9 +12284,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                         "isStatic": false,
                                         "lastClassName": "gvDwxX",
                                         "rules": Array [
-                                          "&:hover {",
-                                          "background-color: #f0f2f5;",
-                                          "}",
+                                          [Function],
                                         ],
                                       },
                                       "displayName": "TableBody__StyledTr",
@@ -12273,6 +12299,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
+                                  rowHovers={true}
                                 >
                                   <tr
                                     className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -13910,8 +13937,11 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                   "id": 2,
                                 }
                               }
+                              rowHovers={true}
                             >
-                              <TableBody__StyledTr>
+                              <TableBody__StyledTr
+                                rowHovers={true}
+                              >
                                 <StyledComponent
                                   forwardedComponent={
                                     Object {
@@ -13922,9 +13952,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                         "isStatic": false,
                                         "lastClassName": "gvDwxX",
                                         "rules": Array [
-                                          "&:hover {",
-                                          "background-color: #f0f2f5;",
-                                          "}",
+                                          [Function],
                                         ],
                                       },
                                       "displayName": "TableBody__StyledTr",
@@ -13939,6 +13967,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
+                                  rowHovers={true}
                                 >
                                   <tr
                                     className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -15576,8 +15605,11 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                   "id": 3,
                                 }
                               }
+                              rowHovers={true}
                             >
-                              <TableBody__StyledTr>
+                              <TableBody__StyledTr
+                                rowHovers={true}
+                              >
                                 <StyledComponent
                                   forwardedComponent={
                                     Object {
@@ -15588,9 +15620,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                         "isStatic": false,
                                         "lastClassName": "gvDwxX",
                                         "rules": Array [
-                                          "&:hover {",
-                                          "background-color: #f0f2f5;",
-                                          "}",
+                                          [Function],
                                         ],
                                       },
                                       "displayName": "TableBody__StyledTr",
@@ -15605,6 +15635,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                     }
                                   }
                                   forwardedRef={null}
+                                  rowHovers={true}
                                 >
                                   <tr
                                     className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -18670,6 +18701,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={null}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -20121,6 +20153,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={null}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -21574,6 +21607,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                   onRowExpansionChange={null}
                   onSelectHeader={[Function]}
                   onSelectRow={[Function]}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -21805,6 +21839,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                     onRowExpansionChange={null}
                     onSelectHeader={[Function]}
                     onSelectRow={[Function]}
+                    rowHovers={true}
                     rows={
                       Array [
                         Object {
@@ -23614,6 +23649,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                             keyField="c1"
                             loading={false}
                             noRowsContent="No records have been created for this table."
+                            rowHovers={true}
                             rows={
                               Array [
                                 Object {
@@ -23869,8 +23905,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -23881,9 +23920,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -23898,6 +23935,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -26231,8 +26269,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -26243,9 +26284,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -26260,6 +26299,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -28593,8 +28633,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -28605,9 +28648,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -28622,6 +28663,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -30955,8 +30997,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -30967,9 +31012,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -30984,6 +31027,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -33317,8 +33361,11 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -33329,9 +33376,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -33346,6 +33391,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -37123,6 +37169,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={null}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -37177,6 +37224,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={null}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -37233,6 +37281,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                   onRowExpansionChange={null}
                   onSelectHeader={[Function]}
                   onSelectRow={[Function]}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -37295,6 +37344,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                     onRowExpansionChange={null}
                     onSelectHeader={[Function]}
                     onSelectRow={[Function]}
+                    rowHovers={true}
                     rows={
                       Array [
                         Object {
@@ -38287,6 +38337,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                             keyField="c1"
                             loading={false}
                             noRowsContent="No records have been created for this table."
+                            rowHovers={true}
                             rows={
                               Array [
                                 Object {
@@ -38353,8 +38404,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -38365,9 +38419,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -38382,6 +38434,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -39392,8 +39445,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -39404,9 +39460,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -39421,6 +39475,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -40867,6 +40922,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
               loading={false}
               noRowsContent="No records have been created for this table."
               onRowExpansionChange={null}
+              rowHovers={true}
               rows={
                 Array [
                   Object {
@@ -40925,6 +40981,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                 loading={false}
                 noRowsContent="No records have been created for this table."
                 onRowExpansionChange={null}
+                rowHovers={true}
                 rows={
                   Array [
                     Object {
@@ -40985,6 +41042,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                   onRowExpansionChange={null}
                   onSelectHeader={[Function]}
                   onSelectRow={[Function]}
+                  rowHovers={true}
                   rows={
                     Array [
                       Object {
@@ -41051,6 +41109,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                     onRowExpansionChange={null}
                     onSelectHeader={[Function]}
                     onSelectRow={[Function]}
+                    rowHovers={true}
                     rows={
                       Array [
                         Object {
@@ -42047,6 +42106,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                             keyField="c1"
                             loading={false}
                             noRowsContent="No records have been created for this table."
+                            rowHovers={true}
                             rows={
                               Array [
                                 Object {
@@ -42113,8 +42173,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                     "selected": false,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -42125,9 +42188,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -42142,6 +42203,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"
@@ -43152,8 +43214,11 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                     "selected": true,
                                   }
                                 }
+                                rowHovers={true}
                               >
-                                <TableBody__StyledTr>
+                                <TableBody__StyledTr
+                                  rowHovers={true}
+                                >
                                   <StyledComponent
                                     forwardedComponent={
                                       Object {
@@ -43164,9 +43229,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                           "isStatic": false,
                                           "lastClassName": "gvDwxX",
                                           "rules": Array [
-                                            "&:hover {",
-                                            "background-color: #f0f2f5;",
-                                            "}",
+                                            [Function],
                                           ],
                                         },
                                         "displayName": "TableBody__StyledTr",
@@ -43181,6 +43244,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                       }
                                     }
                                     forwardedRef={null}
+                                    rowHovers={true}
                                   >
                                     <tr
                                       className="TableBody__StyledTr-sc-1amzhx8-0 gvDwxX"

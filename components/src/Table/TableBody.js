@@ -12,25 +12,27 @@ const StyledMessageContainer = styled(Box)({
   color: theme.colors.darkGrey
 });
 
-const StyledTr = styled.tr({
+const StyledTr = styled.tr(({ rowHovers }) => ({
   "&:hover": {
-    backgroundColor: theme.colors.whiteGrey
+    backgroundColor: rowHovers ? theme.colors.whiteGrey : null
   }
-});
+}));
 
-const renderRows = (rows, columns, keyField, noRowsContent) =>
+const renderRows = (rows, columns, keyField, noRowsContent, rowHovers) =>
   rows.length > 0 ? (
-    rows.map(row => <TableBodyRow row={row} columns={columns} key={row[keyField]} keyField={keyField} />)
+    rows.map(row => (
+      <TableBodyRow row={row} columns={columns} key={row[keyField]} keyField={keyField} rowHovers={rowHovers} />
+    ))
   ) : (
     <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
   );
 
-const TableBodyRow = ({ row, columns }) => {
+const TableBodyRow = ({ row, columns, rowHovers }) => {
   const renderAllCells = () =>
     columns.map(column => <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} />);
   return (
     <>
-      <StyledTr>
+      <StyledTr rowHovers={rowHovers}>
         {row.heading ? <TableCell row={row} colSpan={columns.length} cellData={row.heading} /> : renderAllCells()}
       </StyledTr>
       {row.expandedContent && row.expanded && (
@@ -44,7 +46,8 @@ const TableBodyRow = ({ row, columns }) => {
 
 TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired
+  columns: columnsPropType.isRequired,
+  rowHovers: PropTypes.bool.isRequired
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
@@ -66,15 +69,20 @@ LoadingContent.propTypes = {
   colSpan: PropTypes.number.isRequired
 };
 
-const TableBody = ({ rows, columns, keyField, noRowsContent, loading }) => (
+const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers }) => (
   <tbody>
-    {!loading ? renderRows(rows, columns, keyField, noRowsContent) : <LoadingContent colSpan={columns.length - 1} />}
+    {!loading ? (
+      renderRows(rows, columns, keyField, noRowsContent, rowHovers)
+    ) : (
+      <LoadingContent colSpan={columns.length - 1} />
+    )}
   </tbody>
 );
 
 TableBody.propTypes = {
   columns: columnsPropType.isRequired,
   rows: rowsPropType.isRequired,
+  rowHovers: PropTypes.bool.isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   loading: PropTypes.bool

@@ -191,6 +191,13 @@ const propsRows = [
     defaultValue: "none",
     description:
       "The function that should be called when a current page changes. The page number that is currently selected is passed in as an argument."
+  },
+  {
+    name: "rowHovers",
+    type: "boolean",
+    defaultValue: "true",
+    description:
+      "Whether or not to show a light grey background on a row when hovering it"
   }
 ];
 
