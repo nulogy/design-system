@@ -60,8 +60,7 @@ const getColumnsWithHeaderFormatter = headerFormatter => [
 const columnsWithAlignment = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Eaches", dataKey: "expectedQuantity" },
-  { label: "Actual Eaches", dataKey: "actualQuantity" },
-  { label: "", dataKey: "actualQuantity", align: "right" }
+  { label: "Actual Eaches", dataKey: "actualQuantity", align: "right" }
 ];
 
 const columnsWithWidths = [
