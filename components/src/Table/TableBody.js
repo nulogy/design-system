@@ -82,6 +82,7 @@ const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers 
 TableBody.propTypes = {
   columns: columnsPropType.isRequired,
   rows: rowsPropType.isRequired,
+  rowHovers: PropTypes.bool.isRequired,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   loading: PropTypes.bool
