@@ -15,19 +15,32 @@ const StyledFooterRow = styled.tr({
 const renderRows = (rows, columns, keyField, loading) =>
   rows.map(row => <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} />);
 
-const TableFooterRow = ({ row, columns, loading }) => (
-  <StyledFooterRow>
-    {columns.map((column, index) =>
-      index === 0 ? (
-        <StyledTh key={column.dataKey} scope="row">
-          {row[column.dataKey]}
-        </StyledTh>
-      ) : (
-        !loading && <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} />
-      )
-    )}
-  </StyledFooterRow>
-);
+const TableFooterRow = ({ row, columns, loading }) => {
+  console.log(columns);
+  const columnsWithoutControls = columns.filter(
+    column => column.dataKey !== "selected" && column.dataKey !== "expanded"
+  );
+  return (
+    <StyledFooterRow>
+      {columnsWithoutControls.map((column, index) =>
+        index === 0 ? (
+          <StyledTh key={column.dataKey} scope="row">
+            {row[column.dataKey]}
+          </StyledTh>
+        ) : (
+          !loading && (
+            <TableCell
+              key={column.dataKey}
+              row={row}
+              column={{ dataKey: column.dataKey, label: column.label }}
+              cellData={row[column.dataKey]}
+            />
+          )
+        )
+      )}
+    </StyledFooterRow>
+  );
+};
 
 TableFooterRow.propTypes = {
   row: rowPropType.isRequired,
