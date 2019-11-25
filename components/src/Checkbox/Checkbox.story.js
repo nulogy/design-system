@@ -2,6 +2,47 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Checkbox } from "../index";
 
+class CheckboxWithState extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { checkbox1: props.selectedCheckbox == "checkbox1", checkbox2: props.selectedCheckbox == "checkbox2" };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(key) {
+    console.log(key);
+    this.setState(state => ({
+      ...state,
+      [key]: !state[key]
+    }));
+  }
+
+  clearSelection() {
+    this.setState({ selectedValue: "" });
+  }
+
+  render() {
+    const { checkbox1, checkbox2 } = this.state;
+    return (
+      <>
+        <Checkbox
+          id="checkbox-1"
+          checked={checkbox1}
+          onChange={() => this.handleChange("checkbox1")}
+          labelText="I am controlled and checked"
+        />
+        <Checkbox
+          id="checkbox-2"
+          checked={checkbox2}
+          onChange={() => this.handleChange("checkbox2")}
+          labelText="I am controlled and unchecked"
+        />
+      </>
+    );
+  }
+}
+
 storiesOf("Checkbox", module)
   .add("Checkbox", () => <Checkbox id="checkbox" labelText="I am a checkbox" />)
   .add("Set to defaultChecked", () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />)
@@ -27,9 +68,8 @@ storiesOf("Checkbox", module)
       <Checkbox id="checkbox" labelText="I am a checkbox" required />
     </>
   ))
-  .add("Controlled", () => (
+  .add("With state", () => (
     <>
-      <Checkbox id="checkbox-1" checked onChange={() => {}} labelText="I am controlled and checked" />
-      <Checkbox id="checkbox-2" checked={false} onChange={() => {}} labelText="I am controlled and unchecked" />
+      <CheckboxWithState selectedCheckbox="checkbox1" />
     </>
   ));
