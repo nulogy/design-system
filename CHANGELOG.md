@@ -19,17 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - [Select](http://nulogy.design/components/select) now supports `menuIsOpen`, `onMenuOpen`, and `onMenuClose`
 
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
 ## [0.16.2] - 2019-11-22
 
 ### Added
