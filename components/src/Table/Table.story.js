@@ -214,9 +214,9 @@ storiesOf("Table", module)
   ))
   .add("with a footer", () => (
     <>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} />
+      <Table columns={columns} keyField="date" rows={rowData} footerRows={footerRowData} />
       <Text mt="x6">Loading state:</Text>
-      <Table columns={columns} rows={rowData} footerRows={footerRowData} loading />
+      <Table columns={columns} keyField="date" rows={rowData} footerRows={footerRowData} loading />
     </>
   ))
   .add("with lots of rows and columns", () => (
