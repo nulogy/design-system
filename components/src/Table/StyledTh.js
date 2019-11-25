@@ -9,7 +9,7 @@ const StyledTh = styled.th(({ width, compact }) => {
     padding: `${padding} 0`,
     paddingRight: padding,
     color: theme.colors.darkGrey,
-    "&:first-of-type": {
+    "&:first-child": {
       paddingLeft: padding
     },
     width: width || "auto"
