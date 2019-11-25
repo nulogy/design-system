@@ -25,7 +25,7 @@ const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footer
       rowHovers={rowHovers}
       compact={compact}
     />
-    {footerRows && <TableFoot columns={columns} rows={footerRows} loading={loading} />}
+    {footerRows && <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} />}
   </StyledTable>
 );
 
