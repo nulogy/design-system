@@ -12801,7 +12801,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                 },
                                                               ]
                                                             }
-                                                            keyField="id"
+                                                            keyField="c1"
                                                             loading={false}
                                                             rows={Array []}
                                                           >
