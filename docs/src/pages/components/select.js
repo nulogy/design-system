@@ -63,6 +63,25 @@ const propsRows = [
     defaultValue: "",
     description: "Default value of input"
   },
+  {
+    name: "menuIsOpen",
+    type: "Boolean",
+    defaultValue: "undefined",
+    description:
+      "Controls whether the menu is open; If unset, then NDS controls this implicitly instead"
+  },
+  {
+    name: "onMenuOpen",
+    type: "Function",
+    defaultValue: "undefined",
+    description: "Event handler for when the menu is opened"
+  },
+  {
+    name: "onMenuClose",
+    type: "Function",
+    defaultValue: "undefined",
+    description: "Event handler for when the menu is closed"
+  },
   ...inputProps
 ];
 
