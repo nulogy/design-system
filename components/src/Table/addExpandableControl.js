@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ControlIcon } from "..";
 import { rowPropType } from "./Table.types";
-import { SELECTABLE_COLUMN_DATA_KEY } from "./withSelectableColumn";
+import { SELECTABLE_COLUMN_DATA_KEY } from "./addSelectableControl";
 
 const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
 
@@ -55,12 +55,7 @@ const addExpandableCell = ({ rows, keyField, expandedRows }) => {
   return transformedRows;
 };
 
-const withExpandableColumn = TableComponent => {
-  return props => {
-    const transformedRows = addExpandableCell(props);
-    const transformedColumns = addExpandableColumn(props);
-    return <TableComponent {...props} rows={transformedRows} columns={transformedColumns} />;
-  };
-};
-
-export default withExpandableColumn;
+export const addExpandableControl = props => ({
+  rows: addExpandableCell(props),
+  columns: addExpandableColumn(props)
+});

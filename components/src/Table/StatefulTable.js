@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import withSelectableColumn from "./withSelectableColumn";
 import BaseTable from "./BaseTable";
 import { Pagination } from "../Pagination";
-import withExpandableColumn from "./withExpandableColumn";
+import { addExpandableControl } from "./addExpandableControl";
+import { addSelectableControl } from "./addSelectableControl";
 
 const getAllRowKeys = (rows, keyField) => rows.map(row => row[keyField]);
 
@@ -167,38 +167,39 @@ class StatefulTable extends React.Component {
     }
   };
 
-  getTableComponent = () => {
+  getControlProps = () => {
+    const { selectedRows, isHeaderSelected, currentPage, expandedRows } = this.state;
     const { hasSelectableRows, hasExpandableRows } = this.props;
-    const SelectableTable = withSelectableColumn(BaseTable);
-    const ExpandableTable = withExpandableColumn(BaseTable);
-    const ExpandableSelectableTable = withExpandableColumn(SelectableTable);
-    if (hasSelectableRows && hasExpandableRows) return ExpandableSelectableTable;
-    if (hasSelectableRows) return SelectableTable;
-    if (hasExpandableRows) return ExpandableTable;
-    return BaseTable;
-  };
-
-  render() {
-    const { selectedRows, isHeaderSelected, paginatedRows, currentPage, expandedRows } = this.state;
-    const { rowsPerPage, hasSelectableRows, hasExpandableRows } = this.props;
+    const selectionConfig = {
+      onSelectRow: this.onSelectRow,
+      onSelectHeader: this.onSelectHeader,
+      selectedRows: this.currentRowsByPageSelector(selectedRows, currentPage),
+      isHeaderSelected
+    };
+    const expandableConfig = {
+      onRowExpansionChange: this.onExpandRow,
+      expandedRows
+    };
     const props = {
       ...this.props,
       rows: this.rowsByPageSelector(currentPage),
-      ...(hasSelectableRows && {
-        onSelectRow: this.onSelectRow,
-        onSelectHeader: this.onSelectHeader,
-        selectedRows: this.currentRowsByPageSelector(selectedRows, currentPage),
-        isHeaderSelected
-      }),
-      ...(hasExpandableRows && {
-        onRowExpansionChange: this.onExpandRow,
-        expandedRows
-      })
+      ...(hasSelectableRows && selectionConfig),
+      ...(hasExpandableRows && expandableConfig)
     };
-    const TableComponent = this.getTableComponent();
+    const selectableProps = { ...props, ...addSelectableControl(props) };
+    const expandableProps = { ...props, ...addExpandableControl(props) };
+    if (hasSelectableRows && hasExpandableRows) return { ...props, ...addExpandableControl(selectableProps) };
+    if (hasSelectableRows) return selectableProps;
+    if (hasExpandableRows) return expandableProps;
+    return props;
+  };
+
+  render() {
+    const { paginatedRows, currentPage } = this.state;
+    const { rowsPerPage } = this.props;
     return (
       <>
-        <TableComponent {...props} />
+        <BaseTable {...this.getControlProps()} />
 
         {rowsPerPage && (
           <Pagination
