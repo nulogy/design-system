@@ -4782,7 +4782,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                   },
                                 ]
                               }
-                              keyField="id"
+                              keyField="c1"
                               loading={false}
                               rows={Array []}
                             >
@@ -7557,7 +7557,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                 },
                               ]
                             }
-                            keyField="id"
+                            keyField="c1"
                             loading={false}
                             rows={Array []}
                           >
@@ -17801,7 +17801,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                               },
                             ]
                           }
-                          keyField="id"
+                          keyField="c1"
                           loading={false}
                           rows={Array []}
                         >
@@ -36747,7 +36747,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                 },
                               ]
                             }
-                            keyField="id"
+                            keyField="c1"
                             loading={false}
                             rows={Array []}
                           >
@@ -41604,7 +41604,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                 },
                               ]
                             }
-                            keyField="id"
+                            keyField="c1"
                             loading={false}
                             rows={Array []}
                           >
@@ -45451,7 +45451,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                 },
                               ]
                             }
-                            keyField="id"
+                            keyField="c1"
                             loading={false}
                             rows={Array []}
                           >

@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
- 
+
 ### Added
 ### Changed
 ### Deprecated
 ### Removed
 ### Fixed
+
+- Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer
+
 ### Security
 
 ## [0.16.3] - 2019-11-25
