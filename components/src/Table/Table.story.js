@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Text } from "..";
-import { getMockRows, mockColumns, getMockColumns } from "./Table.mock-utils";
+import { getMockRows, mockColumns } from "./Table.mock-utils";
 import { Button } from "../Button";
 
 const dateToString = ({ cellData }) => {
@@ -237,7 +237,7 @@ storiesOf("Table", module)
   ))
   .add("with selectable and expandable rows", () => (
     <Table
-      columns={getMockColumns(3)}
+      columns={columns}
       rows={rowDataWithExpandable}
       hasExpandableRows
       hasSelectableRows
