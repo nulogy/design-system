@@ -4,14 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
 ## [Unreleased]
 
 ### Added
+
 ### Changed
+
+- Table footer headers will always be displayed in the first column even when combined with selectable and expandable options
+
 ### Deprecated
+
 ### Removed
+
 ### Fixed
 
+- Fixed bug where cellRenderers on columns were being applied in the table footer
 - Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer
 
 ### Security

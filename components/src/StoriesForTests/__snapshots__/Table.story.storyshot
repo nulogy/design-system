@@ -872,7 +872,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -893,7 +893,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           width="30px"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 sXJR"
+                                            className="StyledTh-sc-10nzyk9-0 cziffQ"
                                             scope="col"
                                             width="30px"
                                           >
@@ -1469,7 +1469,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1490,7 +1490,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           width="30px"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 sXJR"
+                                            className="StyledTh-sc-10nzyk9-0 cziffQ"
                                             scope="col"
                                             width="30px"
                                           />
@@ -1510,7 +1510,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1530,7 +1530,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 1
@@ -1551,7 +1551,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1571,7 +1571,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 2
@@ -1592,7 +1592,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1612,7 +1612,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 3
@@ -1633,7 +1633,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1653,7 +1653,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 4
@@ -1674,7 +1674,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1694,7 +1694,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 5
@@ -1715,7 +1715,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "StyledTh-sc-10nzyk9-0",
                                                 "isStatic": false,
-                                                "lastClassName": "eunBIc",
+                                                "lastClassName": "PAzBv",
                                                 "rules": Array [
                                                   [Function],
                                                 ],
@@ -1735,7 +1735,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                           scope="col"
                                         >
                                           <th
-                                            className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                            className="StyledTh-sc-10nzyk9-0 PAzBv"
                                             scope="col"
                                           >
                                             Column 6
@@ -5566,7 +5566,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5587,7 +5587,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         width="30px"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 sXJR"
+                                          className="StyledTh-sc-10nzyk9-0 cziffQ"
                                           scope="col"
                                           width="30px"
                                         />
@@ -5607,7 +5607,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5627,7 +5627,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 1
@@ -5648,7 +5648,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5668,7 +5668,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 2
@@ -5689,7 +5689,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5709,7 +5709,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 3
@@ -5730,7 +5730,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5750,7 +5750,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 4
@@ -5771,7 +5771,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5791,7 +5791,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 5
@@ -5812,7 +5812,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5832,7 +5832,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 6
@@ -9650,7 +9650,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9670,7 +9670,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 1
@@ -9691,7 +9691,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9711,7 +9711,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 2
@@ -9732,7 +9732,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9752,7 +9752,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 3
@@ -9773,7 +9773,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9793,7 +9793,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 4
@@ -9814,7 +9814,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9834,7 +9834,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 5
@@ -9855,7 +9855,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9875,7 +9875,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 6
@@ -9896,7 +9896,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9916,7 +9916,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 7
@@ -9937,7 +9937,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9957,7 +9957,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 8
@@ -9978,7 +9978,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -9998,7 +9998,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 9
@@ -10019,7 +10019,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10039,7 +10039,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 10
@@ -10060,7 +10060,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10080,7 +10080,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 11
@@ -10101,7 +10101,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10121,7 +10121,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 12
@@ -10142,7 +10142,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10162,7 +10162,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 13
@@ -10183,7 +10183,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10203,7 +10203,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 14
@@ -10224,7 +10224,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10244,7 +10244,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 15
@@ -10265,7 +10265,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10285,7 +10285,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 16
@@ -10306,7 +10306,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10326,7 +10326,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 17
@@ -10347,7 +10347,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10367,7 +10367,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 18
@@ -10388,7 +10388,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10408,7 +10408,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 19
@@ -10429,7 +10429,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10449,7 +10449,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 20
@@ -10470,7 +10470,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "StyledTh-sc-10nzyk9-0",
                                             "isStatic": false,
-                                            "lastClassName": "eunBIc",
+                                            "lastClassName": "PAzBv",
                                             "rules": Array [
                                               [Function],
                                             ],
@@ -10490,7 +10490,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                                       scope="col"
                                     >
                                       <th
-                                        className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                        className="StyledTh-sc-10nzyk9-0 PAzBv"
                                         scope="col"
                                       >
                                         Column 21
@@ -22706,7 +22706,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -22727,7 +22727,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         width="30px"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 sXJR"
+                                          className="StyledTh-sc-10nzyk9-0 cziffQ"
                                           scope="col"
                                           width="30px"
                                         >
@@ -23302,7 +23302,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23322,7 +23322,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 1
@@ -23343,7 +23343,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23363,7 +23363,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 2
@@ -23384,7 +23384,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23404,7 +23404,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 3
@@ -23425,7 +23425,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23445,7 +23445,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 4
@@ -23466,7 +23466,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23486,7 +23486,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 5
@@ -23507,7 +23507,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23527,7 +23527,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 6
@@ -23548,7 +23548,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23568,7 +23568,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 7
@@ -23589,7 +23589,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23609,7 +23609,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 8
@@ -23630,7 +23630,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23650,7 +23650,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 9
@@ -23671,7 +23671,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23691,7 +23691,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 10
@@ -23712,7 +23712,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23732,7 +23732,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 11
@@ -23753,7 +23753,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23773,7 +23773,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 12
@@ -23794,7 +23794,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23814,7 +23814,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 13
@@ -23835,7 +23835,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23855,7 +23855,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 14
@@ -23876,7 +23876,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23896,7 +23896,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 15
@@ -23917,7 +23917,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23937,7 +23937,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 16
@@ -23958,7 +23958,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -23978,7 +23978,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 17
@@ -23999,7 +23999,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -24019,7 +24019,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 18
@@ -24040,7 +24040,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -24060,7 +24060,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 19
@@ -24081,7 +24081,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -24101,7 +24101,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 20
@@ -24122,7 +24122,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -24142,7 +24142,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 21
@@ -38534,7 +38534,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -38555,7 +38555,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         width="30px"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 sXJR"
+                                          className="StyledTh-sc-10nzyk9-0 cziffQ"
                                           scope="col"
                                           width="30px"
                                         >
@@ -39130,7 +39130,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39150,7 +39150,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 1
@@ -39171,7 +39171,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39191,7 +39191,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 2
@@ -39212,7 +39212,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39232,7 +39232,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 3
@@ -39253,7 +39253,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39273,7 +39273,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 4
@@ -39294,7 +39294,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39314,7 +39314,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 5
@@ -39335,7 +39335,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -39355,7 +39355,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 6
@@ -42381,7 +42381,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -42402,7 +42402,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         width="30px"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 sXJR"
+                                          className="StyledTh-sc-10nzyk9-0 cziffQ"
                                           scope="col"
                                           width="30px"
                                         >
@@ -42977,7 +42977,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -42997,7 +42997,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 1
@@ -43018,7 +43018,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -43038,7 +43038,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 2
@@ -43059,7 +43059,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -43079,7 +43079,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 3
@@ -43100,7 +43100,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -43120,7 +43120,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 4
@@ -43141,7 +43141,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -43161,7 +43161,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 5
@@ -43182,7 +43182,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             "componentStyle": ComponentStyle {
                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                               "isStatic": false,
-                                              "lastClassName": "eunBIc",
+                                              "lastClassName": "PAzBv",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -43202,7 +43202,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                         scope="col"
                                       >
                                         <th
-                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                           scope="col"
                                         >
                                           Column 6

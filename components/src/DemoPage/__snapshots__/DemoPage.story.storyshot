@@ -12156,7 +12156,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "eunBIc",
+                                                                              "lastClassName": "PAzBv",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
@@ -12176,7 +12176,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                                                           scope="col"
                                                                         >
                                                                           Column 1
@@ -12197,7 +12197,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "eunBIc",
+                                                                              "lastClassName": "PAzBv",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
@@ -12217,7 +12217,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                                                           scope="col"
                                                                         >
                                                                           Column 2
@@ -12238,7 +12238,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "StyledTh-sc-10nzyk9-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "eunBIc",
+                                                                              "lastClassName": "PAzBv",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                               ],
@@ -12258,7 +12258,7 @@ exports[`Storyshots DemoPage Demo Page 1`] = `
                                                                         scope="col"
                                                                       >
                                                                         <th
-                                                                          className="StyledTh-sc-10nzyk9-0 eunBIc"
+                                                                          className="StyledTh-sc-10nzyk9-0 PAzBv"
                                                                           scope="col"
                                                                         >
                                                                           Column 3
