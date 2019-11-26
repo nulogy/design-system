@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { number } from "prop-types";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../theme";
 import TableCell from "./TableCell";
@@ -20,13 +20,8 @@ const TableFooterRow = ({ row, columns, loading }) => {
     column => column.dataKey !== "selected" && column.dataKey !== "expanded"
   );
   const numberOfControlColumns = columns.length - columnsWithoutControls.length;
-  // const renderEmptyCells = () =>
-  //   Array(numberOfControlColumns)
-  //     .fill()
-  //     .map(() => <td />);
   return (
     <StyledFooterRow>
-      {/* {renderEmptyCells()} */}
       {columnsWithoutControls.map((column, index) =>
         index === 0 ? (
           <StyledTh key={column.dataKey} scope="row" colSpan={numberOfControlColumns + 1}>

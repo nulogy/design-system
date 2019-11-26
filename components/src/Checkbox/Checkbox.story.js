@@ -6,21 +6,15 @@ class CheckboxWithState extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { checkbox1: props.selectedCheckbox == "checkbox1", checkbox2: props.selectedCheckbox == "checkbox2" };
-    this.handleChange = this.handleChange.bind(this);
+    this.state = { checkbox1: false, checkbox2: false };
   }
 
-  handleChange(key) {
-    console.log(key);
+  handleChange = key => {
     this.setState(state => ({
       ...state,
       [key]: !state[key]
     }));
-  }
-
-  clearSelection() {
-    this.setState({ selectedValue: "" });
-  }
+  };
 
   render() {
     const { checkbox1, checkbox2 } = this.state;
@@ -70,6 +64,6 @@ storiesOf("Checkbox", module)
   ))
   .add("With state", () => (
     <>
-      <CheckboxWithState selectedCheckbox="checkbox1" />
+      <CheckboxWithState />
     </>
   ));
