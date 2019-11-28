@@ -65,6 +65,12 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the tooltip container element."
+  },
+  {
+    name: "defaultOpen",
+    type: "boolean",
+    defaultValue: "false",
+    description: "when set to true the tooltip will be open by default"
   }
 ];
 

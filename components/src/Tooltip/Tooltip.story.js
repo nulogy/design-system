@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
 storiesOf("Tooltip", module)
@@ -121,4 +122,9 @@ storiesOf("Tooltip", module)
         <Box bg="blue">Box</Box>
       </Tooltip>
     </>
+  ))
+  .add("open by default", () => (
+    <Tooltip placement="bottom" tooltip="Tooltip" defaultOpen>
+      <Button> Button </Button>
+    </Tooltip>
   ));
