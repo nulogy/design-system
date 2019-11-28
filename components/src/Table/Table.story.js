@@ -2,6 +2,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { withKnobs, boolean } from "@storybook/addon-knobs";
 import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
@@ -158,11 +159,12 @@ const rowDataWithEverything = [
 ];
 
 const footerRowData = [
-  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches" },
-  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%" }
+  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "f1" },
+  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "f2" }
 ];
 
 storiesOf("Table", module)
+  .addDecorator(withKnobs)
   .add("Table with data", () => <Table columns={columns} rows={rowData} />)
   .add("without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
   .add("with no data", () => <Table columns={columns} rows={[]} />)
@@ -252,9 +254,9 @@ storiesOf("Table", module)
       rows={rowDataWithEverything}
       footerRows={footerRowData}
       rowsPerPage={5}
-      hasExpandableRows
+      hasExpandableRows={boolean("Expandable", true)}
       onRowExpansionChange={action("toggled expand")}
-      hasSelectableRows
+      hasSelectableRows={boolean("Selectable", true)}
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
     />

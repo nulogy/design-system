@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - Fixed bug where cellRenderers on columns were being applied in the table footer
+- Fixed bug that caused focus to be lost when selecting or expanding items in the table
 - Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer
 
 ### Security

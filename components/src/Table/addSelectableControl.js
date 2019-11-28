@@ -27,7 +27,7 @@ SelectCell.defaultProps = {
 
 const selectCellRenderer = onSelectRow => props => <SelectCell onSelectRow={onSelectRow} {...props} />;
 
-const addSelectableColumn = ({
+export const addSelectableControl = ({
   columns,
   rows,
   onSelectRow,
@@ -52,12 +52,3 @@ const addSelectableColumn = ({
     columns: transformedColumns
   };
 };
-
-const withSelectableColumn = TableComponent => {
-  return props => {
-    const transformedTableData = addSelectableColumn(props);
-    return <TableComponent {...props} rows={transformedTableData.rows} columns={transformedTableData.columns} />;
-  };
-};
-
-export default withSelectableColumn;
