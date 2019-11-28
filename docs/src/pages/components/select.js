@@ -82,6 +82,12 @@ const propsRows = [
     defaultValue: "undefined",
     description: "Event handler for when the menu is closed"
   },
+  {
+    name: "onInputChange",
+    type: "Function",
+    defaultValue: "undefined",
+    description: "Event handler for when the value typed into the input changes"
+  },
   ...inputProps
 ];
 

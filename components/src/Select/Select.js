@@ -56,7 +56,8 @@ const ReactSelect = ({
   onBlur,
   menuIsOpen,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+  onInputChange
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -84,6 +85,7 @@ const ReactSelect = ({
         menuIsOpen={menuIsOpen}
         onMenuOpen={onMenuOpen}
         onMenuClose={onMenuClose}
+        onInputChange={onInputChange}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </MaybeFieldLabel>
@@ -116,7 +118,8 @@ ReactSelect.propTypes = {
   classNamePrefix: PropTypes.string,
   menuIsOpen: PropTypes.bool,
   onMenuOpen: PropTypes.func,
-  onMenuClose: PropTypes.func
+  onMenuClose: PropTypes.func,
+  onInputChange: PropTypes.func
 };
 
 ReactSelect.defaultProps = {
@@ -144,7 +147,8 @@ ReactSelect.defaultProps = {
   classNamePrefix: undefined,
   menuIsOpen: undefined,
   onMenuOpen: undefined,
-  onMenuClose: undefined
+  onMenuClose: undefined,
+  onInputChange: undefined
 };
 
 export default ReactSelect;

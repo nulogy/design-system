@@ -75,6 +75,7 @@ storiesOf("Select", module)
       onBlur={action("blurred")}
       options={options}
       labelText="Inventory status"
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("with a defaultValue", () => (
@@ -85,6 +86,7 @@ storiesOf("Select", module)
       onBlur={action("blurred")}
       options={options}
       labelText="Inventory status"
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("with a blank value", () => {
@@ -96,6 +98,7 @@ storiesOf("Select", module)
         onBlur={action("blurred")}
         options={optionsWithBlank}
         labelText="Inventory status"
+        onInputChange={action("typed input value changed")}
       />
     );
   })
@@ -108,6 +111,8 @@ storiesOf("Select", module)
         labelText="Inventory status"
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
+        loading
       />
       <br />
       <Select
@@ -118,6 +123,7 @@ storiesOf("Select", module)
         initialIsOpen
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
     </>
   ))
@@ -133,6 +139,7 @@ storiesOf("Select", module)
       onBlur={action("blurred")}
       disabled
       labelText="Inventory status"
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("with error message", () => (
@@ -144,6 +151,7 @@ storiesOf("Select", module)
         labelText="Inventory status"
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
       <br />
       <Select
@@ -153,6 +161,7 @@ storiesOf("Select", module)
         initialIsOpen
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
     </>
   ))
@@ -166,6 +175,7 @@ storiesOf("Select", module)
         labelText="Inventory status"
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
       <br />
       <Select
@@ -176,6 +186,7 @@ storiesOf("Select", module)
         initialIsOpen
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
     </>
   ))
@@ -191,6 +202,7 @@ storiesOf("Select", module)
         labelText="Inventory status"
         onChange={action("selection changed")}
         onBlur={action("blurred")}
+        onInputChange={action("typed input value changed")}
       />
       <PrimaryButton mt="x1" type="submit">
         Submit
@@ -208,6 +220,7 @@ storiesOf("Select", module)
         onChange={action("selection changed")}
         onBlur={action("blurred")}
         multiselect
+        onInputChange={action("typed input value changed")}
       />
       <Box width="300px">
         <Select
@@ -219,6 +232,7 @@ storiesOf("Select", module)
           onChange={action("selection changed")}
           onBlur={action("blurred")}
           multiselect
+          onInputChange={action("typed input value changed")}
         />
       </Box>
       <Box width="400px">
@@ -231,6 +245,7 @@ storiesOf("Select", module)
           onChange={action("selection changed")}
           onBlur={action("blurred")}
           multiselect
+          onInputChange={action("typed input value changed")}
         />
       </Box>
     </>
@@ -243,6 +258,7 @@ storiesOf("Select", module)
       helpText="Additional information about input"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("with custom id", () => (
@@ -254,6 +270,7 @@ storiesOf("Select", module)
       helpText="Additional information about input"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("with smaller maxHeight", () => (
@@ -266,6 +283,7 @@ storiesOf("Select", module)
       labelText="Inventory status"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
     />
   ))
   .add("With wrapping text", () => (
@@ -277,5 +295,6 @@ storiesOf("Select", module)
       labelText="Inventory status"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
     />
   ));
