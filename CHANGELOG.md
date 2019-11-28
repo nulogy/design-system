@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- [Select](http://nulogy.design/components/select) now supports `onInputChange`
+
 ### Changed
 
 - Table footer headers will always be displayed in the first column even when combined with selectable and expandable options
