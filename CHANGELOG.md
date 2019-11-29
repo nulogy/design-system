@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+ 
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+## [0.16.4] - 2019-11-29
 
 ### Added
 
@@ -13,7 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Table footer headers will always be displayed in the first column even when combined with selectable and expandable options
+- Table footer headers will always be displayed in the first column even when combined with selectable and expandable options (https://github.com/nulogy/design-system/pull/469)
 
 ### Deprecated
 
