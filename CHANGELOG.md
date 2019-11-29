@@ -24,17 +24,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Table footer headers will always be displayed in the first column even when combined with selectable and expandable options (https://github.com/nulogy/design-system/pull/469)
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
-- Fixed bug where cellRenderers on columns were being applied in the table footer
-- Fixed bug that caused focus to be lost when selecting or expanding items in the table
-- Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer
+- Fixed bug where cellRenderers on columns were being applied in the table footer (https://github.com/nulogy/design-system/pull/469)
+- Fixed bug that caused focus to be lost when selecting or expanding items in the table (https://github.com/nulogy/design-system/pull/470)
+- Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer (https://github.com/nulogy/design-system/pull/466)
 
-### Security
 
 ## [0.16.3] - 2019-11-25
 
