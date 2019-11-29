@@ -6851,13 +6851,14 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa jAdjeH"
                 >
                   <Component
+                    defaultOpen={true}
                     maxWidth="128px"
                     placement="bottom"
                     tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-5"
                         maxWidth="128px"
@@ -6866,7 +6867,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                         tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -6877,7 +6878,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -6892,7 +6893,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-5"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -6907,7 +6908,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-5"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -6919,7 +6920,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-5"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -6958,7 +6959,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-5"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -6985,7 +6986,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-5"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -7000,7 +7001,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -7192,7 +7193,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "bghhYL",
+                                            "lastClassName": "SFncy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -7281,7 +7282,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -7380,13 +7381,13 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP bghhYL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP SFncy"
                                         id="random-id-5"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently.
@@ -7470,6 +7471,15 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -13596,12 +13606,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa bBCvTo"
                 >
                   <Component
+                    defaultOpen={true}
                     placement="top-start"
                     tooltip="top-start"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-6"
                         placement="top-start"
@@ -13609,7 +13620,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="top-start"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -13620,7 +13631,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -13635,7 +13646,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-6"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -13650,7 +13661,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-6"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -13662,7 +13673,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-6"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -13701,7 +13712,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-6"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -13728,7 +13739,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-6"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -13743,7 +13754,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -13935,7 +13946,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -14024,7 +14035,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -14123,13 +14134,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-6"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         top-start
@@ -14213,6 +14224,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -14220,12 +14240,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="top"
                     tooltip="top"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-7"
                         placement="top"
@@ -14233,7 +14254,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="top"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -14244,7 +14265,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -14259,7 +14280,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-7"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -14274,7 +14295,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-7"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -14286,7 +14307,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-7"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -14325,7 +14346,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-7"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -14352,7 +14373,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-7"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -14367,7 +14388,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -14559,7 +14580,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -14648,7 +14669,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -14747,13 +14768,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-7"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         top
@@ -14837,6 +14858,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -14844,12 +14874,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="top-end"
                     tooltip="top-end"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-8"
                         placement="top-end"
@@ -14857,7 +14888,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="top-end"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -14868,7 +14899,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -14883,7 +14914,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-8"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -14898,7 +14929,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-8"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -14910,7 +14941,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-8"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -14949,7 +14980,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-8"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -14976,7 +15007,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-8"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -14991,7 +15022,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -15183,7 +15214,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -15272,7 +15303,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -15371,13 +15402,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-8"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         top-end
@@ -15461,6 +15492,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -15795,12 +15835,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa bBCvTo"
                 >
                   <Component
+                    defaultOpen={true}
                     placement="left-start"
                     tooltip="left-start"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-9"
                         placement="left-start"
@@ -15808,7 +15849,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="left-start"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -15819,7 +15860,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -15834,7 +15875,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-9"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -15849,7 +15890,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-9"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -15861,7 +15902,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-9"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -15900,7 +15941,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-9"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -15927,7 +15968,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-9"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -15942,7 +15983,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -16134,7 +16175,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -16223,7 +16264,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -16322,13 +16363,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-9"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         left-start
@@ -16412,6 +16453,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -16419,12 +16469,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="left"
                     tooltip="left"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-10"
                         placement="left"
@@ -16432,7 +16483,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="left"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -16443,7 +16494,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -16458,7 +16509,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-10"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -16473,7 +16524,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-10"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -16485,7 +16536,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-10"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -16524,7 +16575,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-10"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -16551,7 +16602,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-10"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -16566,7 +16617,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -16758,7 +16809,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -16847,7 +16898,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -16946,13 +16997,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-10"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         left
@@ -17036,6 +17087,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -17043,12 +17103,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="left-end"
                     tooltip="left-end"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-11"
                         placement="left-end"
@@ -17056,7 +17117,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="left-end"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -17067,7 +17128,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -17082,7 +17143,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-11"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -17097,7 +17158,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-11"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -17109,7 +17170,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-11"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -17148,7 +17209,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-11"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -17175,7 +17236,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-11"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -17190,7 +17251,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -17382,7 +17443,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -17471,7 +17532,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -17570,13 +17631,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-11"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         left-end
@@ -17660,6 +17721,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -17994,12 +18064,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa bBCvTo"
                 >
                   <Component
+                    defaultOpen={true}
                     placement="right-start"
                     tooltip="right-start"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-12"
                         placement="right-start"
@@ -18007,7 +18078,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="right-start"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -18018,7 +18089,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -18033,7 +18104,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-12"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -18048,7 +18119,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-12"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -18060,7 +18131,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-12"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -18099,7 +18170,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-12"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -18126,7 +18197,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-12"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -18141,7 +18212,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -18333,7 +18404,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -18422,7 +18493,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -18521,13 +18592,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-12"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         right-start
@@ -18611,6 +18682,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -18618,12 +18698,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="right"
                     tooltip="right"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-13"
                         placement="right"
@@ -18631,7 +18712,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="right"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -18642,7 +18723,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -18657,7 +18738,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-13"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -18672,7 +18753,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-13"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -18684,7 +18765,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-13"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -18723,7 +18804,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-13"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -18750,7 +18831,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-13"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -18765,7 +18846,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -18957,7 +19038,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -19046,7 +19127,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -19145,13 +19226,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-13"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         right
@@ -19235,6 +19316,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -19242,12 +19332,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="right-end"
                     tooltip="right-end"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-14"
                         placement="right-end"
@@ -19255,7 +19346,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="right-end"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -19266,7 +19357,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -19281,7 +19372,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-14"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -19296,7 +19387,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-14"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -19308,7 +19399,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-14"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -19347,7 +19438,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-14"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -19374,7 +19465,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-14"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -19389,7 +19480,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -19581,7 +19672,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -19670,7 +19761,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -19769,13 +19860,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-14"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         right-end
@@ -19859,6 +19950,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -20193,12 +20293,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa bBCvTo"
                 >
                   <Component
+                    defaultOpen={true}
                     placement="bottom-start"
                     tooltip="bottom-start"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-15"
                         placement="bottom-start"
@@ -20206,7 +20307,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="bottom-start"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -20217,7 +20318,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -20232,7 +20333,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-15"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -20247,7 +20348,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-15"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -20259,7 +20360,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-15"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -20298,7 +20399,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-15"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -20325,7 +20426,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-15"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -20340,7 +20441,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -20532,7 +20633,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -20621,7 +20722,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -20720,13 +20821,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-15"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         bottom-start
@@ -20810,6 +20911,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -20817,12 +20927,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="bottom"
                     tooltip="bottom"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-16"
                         placement="bottom"
@@ -20830,7 +20941,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="bottom"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -20841,7 +20952,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -20856,7 +20967,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-16"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -20871,7 +20982,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-16"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -20883,7 +20994,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-16"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -20922,7 +21033,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-16"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -20949,7 +21060,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-16"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -20964,7 +21075,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -21156,7 +21267,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -21245,7 +21356,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -21344,13 +21455,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-16"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         bottom
@@ -21434,6 +21545,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -21441,12 +21561,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                     </WithGeneratedId>
                   </Component>
                   <Component
+                    defaultOpen={true}
                     placement="bottom-end"
                     tooltip="bottom-end"
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-17"
                         placement="bottom-end"
@@ -21454,7 +21575,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         tooltip="bottom-end"
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -21465,7 +21586,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -21480,7 +21601,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-17"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -21495,7 +21616,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-17"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -21507,7 +21628,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-17"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -21546,7 +21667,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-17"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -21573,7 +21694,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-17"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -21588,7 +21709,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -21780,7 +21901,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -21869,7 +21990,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -21968,13 +22089,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-17"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         bottom-end
@@ -22058,6 +22179,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>
@@ -22784,12 +22914,13 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                   className="Box-sc-1qu1edy-0 sc-bdVaJa jAdjeH"
                 >
                   <Component
+                    defaultOpen={true}
                     placement="bottom"
                     tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
                   >
                     <WithGeneratedId>
                       <MenuComponent
-                        defaultOpen={false}
+                        defaultOpen={true}
                         hideDelay="350"
                         id="random-id-4"
                         placement="bottom"
@@ -22797,7 +22928,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                         tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
                       >
                         <MenuState
-                          defaultOpen={false}
+                          defaultOpen={true}
                           hideDelay="350"
                           showDelay="100"
                         >
@@ -22808,7 +22939,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                               Object {
                                 "closeMenu": [Function],
                                 "handleMenuKeydown": [Function],
-                                "isOpen": false,
+                                "isOpen": true,
                                 "openMenu": [Function],
                                 "toggleMenu": [Function],
                               }
@@ -22823,7 +22954,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                 >
                                   <ForwardRef
                                     aria-describedby="random-id-4"
-                                    aria-expanded={false}
+                                    aria-expanded={true}
                                     aria-haspopup={true}
                                     asLink={false}
                                     disabled={false}
@@ -22838,7 +22969,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                   >
                                     <Button__WrapperButton
                                       aria-describedby="random-id-4"
-                                      aria-expanded={false}
+                                      aria-expanded={true}
                                       aria-haspopup={true}
                                       disabled={false}
                                       fullWidth={false}
@@ -22850,7 +22981,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                     >
                                       <StyledComponent
                                         aria-describedby="random-id-4"
-                                        aria-expanded={false}
+                                        aria-expanded={true}
                                         aria-haspopup={true}
                                         disabled={false}
                                         forwardedComponent={
@@ -22889,7 +23020,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                       >
                                         <button
                                           aria-describedby="random-id-4"
-                                          aria-expanded={false}
+                                          aria-expanded={true}
                                           aria-haspopup={true}
                                           className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                           disabled={false}
@@ -22916,7 +23047,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                   referenceElement={
                                     <button
                                       aria-describedby="random-id-4"
-                                      aria-expanded="false"
+                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
                                     >
@@ -22931,7 +23062,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                     onFocus={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    open={false}
+                                    open={true}
                                     position={
                                       Object {
                                         "left": 0,
@@ -23123,7 +23254,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-jWBwVP",
                                             "isStatic": false,
-                                            "lastClassName": "hjigbL",
+                                            "lastClassName": "gCXFcy",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -23212,7 +23343,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                       onFocus={[Function]}
                                       onMouseEnter={[Function]}
                                       onMouseLeave={[Function]}
-                                      open={false}
+                                      open={true}
                                       position={
                                         Object {
                                           "left": 0,
@@ -23311,13 +23442,13 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
+                                        className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                         id="random-id-4"
                                         onBlur={[Function]}
                                         onFocus={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
-                                        open={false}
+                                        open={true}
                                         role="tooltip"
                                       >
                                         I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters.
@@ -23401,6 +23532,15 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                   </Styled(Box)>
                                 </InnerPopper>
                               </Popper>
+                              <DetectOutsideClick
+                                clickRef={
+                                  Array [
+                                    undefined,
+                                    undefined,
+                                  ]
+                                }
+                                onClick={[Function]}
+                              />
                             </Manager>
                           </StatelessTooltip>
                         </MenuState>

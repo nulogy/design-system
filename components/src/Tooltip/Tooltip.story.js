@@ -16,6 +16,7 @@ storiesOf("Tooltip", module)
       <Tooltip
         placement="bottom"
         tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
+        defaultOpen
       >
         <Button> Button </Button>
       </Tooltip>
@@ -27,6 +28,7 @@ storiesOf("Tooltip", module)
         placement="bottom"
         tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
         maxWidth="128px"
+        defaultOpen
       >
         <Button> Button </Button>
       </Tooltip>
@@ -35,46 +37,46 @@ storiesOf("Tooltip", module)
   .add("with placement", () => (
     <>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="top-start" tooltip="top-start">
+        <Tooltip placement="top-start" tooltip="top-start" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="top" tooltip="top">
+        <Tooltip placement="top" tooltip="top" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="top-end" tooltip="top-end">
-          <Button>Tooltip trigger</Button>
-        </Tooltip>
-      </Flex>
-      <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="left-start" tooltip="left-start">
-          <Button>Tooltip trigger</Button>
-        </Tooltip>
-        <Tooltip placement="left" tooltip="left">
-          <Button>Tooltip trigger</Button>
-        </Tooltip>
-        <Tooltip placement="left-end" tooltip="left-end">
+        <Tooltip placement="top-end" tooltip="top-end" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="right-start" tooltip="right-start">
+        <Tooltip placement="left-start" tooltip="left-start" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="right" tooltip="right">
+        <Tooltip placement="left" tooltip="left" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="right-end" tooltip="right-end">
+        <Tooltip placement="left-end" tooltip="left-end" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
       </Flex>
       <Flex my="x6" mx="x8" justifyContent="space-around">
-        <Tooltip placement="bottom-start" tooltip="bottom-start">
+        <Tooltip placement="right-start" tooltip="right-start" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="bottom" tooltip="bottom">
+        <Tooltip placement="right" tooltip="right" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
-        <Tooltip placement="bottom-end" tooltip="bottom-end">
+        <Tooltip placement="right-end" tooltip="right-end" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+      </Flex>
+      <Flex my="x6" mx="x8" justifyContent="space-around">
+        <Tooltip placement="bottom-start" tooltip="bottom-start" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="bottom" tooltip="bottom" defaultOpen>
+          <Button>Tooltip trigger</Button>
+        </Tooltip>
+        <Tooltip placement="bottom-end" tooltip="bottom-end" defaultOpen>
           <Button>Tooltip trigger</Button>
         </Tooltip>
       </Flex>
