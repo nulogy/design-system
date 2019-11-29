@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
 storiesOf("Tooltip", module)
