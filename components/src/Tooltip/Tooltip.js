@@ -182,7 +182,7 @@ const Tooltip = withMenuState(StatelessTooltip);
 Tooltip.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  defaultOpen: PropTypes.boolean
+  defaultOpen: PropTypes.bool
 };
 
 Tooltip.defaultProps = {
