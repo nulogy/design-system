@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import BaseTable from "./BaseTable";
 import { Pagination } from "../Pagination";
@@ -12,7 +12,7 @@ const paginateRows = (rows, rowsPerPage) =>
     ? rows.reduce((acc, item, i) => (i % rowsPerPage ? acc : [...acc, rows.slice(i, i + rowsPerPage)]), [])
     : [rows];
 
-class StatefulTable extends React.Component {
+class StatefulTable extends Component {
   constructor(props) {
     super(props);
     const { selectedRows, expandedRows, rowsPerPage, rows } = this.props;
