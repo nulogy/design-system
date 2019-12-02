@@ -1,3 +1,14 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.16.5](https://github.com/nulogy/design-system/compare/v0.16.4...v0.16.5) (2019-12-02)
+
+### Features
+
+- use conventional commits to automatically update change logs and package version ([#476](https://github.com/nulogy/design-system/issues/476)) ([7f5be53](https://github.com/nulogy/design-system/commit/7f5be53))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
