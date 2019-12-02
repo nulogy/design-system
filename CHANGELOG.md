@@ -5,15 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
- 
-### Added
-### Changed
-### Deprecated
-### Removed
-### Fixed
-### Security
-
 ## [0.16.4] - 2019-11-29
 
 ### Added
@@ -29,7 +20,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed bug where cellRenderers on columns were being applied in the table footer (https://github.com/nulogy/design-system/pull/469)
 - Fixed bug that caused focus to be lost when selecting or expanding items in the table (https://github.com/nulogy/design-system/pull/470)
 - Fixed bug that caused `Each child in a list should have a unique "key" prop` warning when using the table footer (https://github.com/nulogy/design-system/pull/466)
-
 
 ## [0.16.3] - 2019-11-25
 

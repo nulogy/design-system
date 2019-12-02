@@ -237,7 +237,7 @@ storiesOf("Table", module)
       onRowExpansionChange={action("toggled expand")}
     />
   ))
-  .add("with selectable and expandable rows", () => (
+  .add("with selectable, expandable rows", () => (
     <Table
       columns={columns}
       rows={rowDataWithExpandable}
