@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
@@ -34,7 +34,7 @@ const alertStyles = {
   }
 };
 
-class BaseAlert extends React.Component {
+class BaseAlert extends Component {
   constructor() {
     super();
 
