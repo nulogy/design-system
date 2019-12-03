@@ -165,12 +165,12 @@ const footerRowData = [
 
 storiesOf("Table", module)
   .addDecorator(withKnobs)
-  .add(" with data", () => <Table columns={columns} rows={rowData} />)
-  .add("without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
-  .add("with no data", () => <Table columns={columns} rows={[]} />)
-  .add("with custom no data message", () => <Table columns={columns} rows={[]} noRowsContent="No jobs are available" />)
-  .add("with compact styling", () => <Table columns={columns} rows={rowData} compact />)
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
+  // .add(" with data", () => <Table columns={columns} rows={rowData} />)
+  // .add("without row hovers", () => <Table columns={columns} rows={rowData} rowHovers={false} />)
+  // .add("with no data", () => <Table columns={columns} rows={[]} />)
+  // .add("with custom no data message", () => <Table columns={columns} rows={[]} noRowsContent="No jobs are available" />)
+  // .add("with compact styling", () => <Table columns={columns} rows={rowData} compact />)
+  // .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
   .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
   .add("with a custom cell component", () => (
     <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
