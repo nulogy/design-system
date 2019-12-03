@@ -2,10 +2,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
-const bunchOfTooltips = Array.from(Array(50).keys()).map(i => {
+const bunchOfTooltips = Array.from(Array(100).keys()).map(i => {
   return (
     <Tooltip id={i} placement="bottom" tooltip={`I am Tooltip ${i} !`}>
-      <Button> Button {i} </Button>
+      <Button m="x2"> Button {i} </Button>
     </Tooltip>
   );
 });
@@ -13,9 +13,17 @@ storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <>
       <Flex>
-        <Box height="500px" width="60%" bg="red" />
-
-        <Box height="500px" style={{ overflow: "scroll" }} flexDirection="column">
+        <Box width="70%">
+          <Box height="500px" width="100%" bg="darkBlue" />
+          <Box height="500px" width="100%" bg="blue" />
+          <Box height="500px" width="100%" bg="darkBlue" />
+          <Box height="500px" width="100%" bg="blue" />
+        </Box>
+        <Box
+          width="30%"
+          style={{ overflow: "auto", position: "fixed", right: 0, height: "100%" }}
+          flexDirection="column"
+        >
           <Flex p="x8" flexDirection="column">
             {bunchOfTooltips}
           </Flex>
