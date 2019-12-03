@@ -7,6 +7,33 @@ import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
 
+const dateToString = ({ cellData }) => {
+  return new Date(cellData)
+    .toUTCString()
+    .split(" ")
+    .splice(0, 4)
+    .join(" ");
+};
+
+const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
+
+const sectionRow = ({ cellData }) => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text fontWeight="bold" color="blackBlue">
+      {cellData}
+    </Text>
+  </Box>
+);
+
+const dropdownCellRenderer = ({ cellData }) => (
+  <Box textAlign="right" pr="x3">
+    <DropdownMenu>
+      <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
+      <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
+    </DropdownMenu>
+  </Box>
+);
+
 const columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
@@ -70,32 +97,6 @@ const getColumnsWithHeaderFormatter = headerFormatter => [
   { label: "Actual Quantity", dataKey: "actualQuantity" },
   { label: "Add record", dataKey: "c4", headerFormatter }
 ];
-const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
-
-const dateToString = ({ cellData }) => {
-  return new Date(cellData)
-    .toUTCString()
-    .split(" ")
-    .splice(0, 4)
-    .join(" ");
-};
-
-const sectionRow = ({ cellData }) => (
-  <Box bg="lightBlue" py="x1" px="x2">
-    <Text fontWeight="bold" color="blackBlue">
-      {cellData}
-    </Text>
-  </Box>
-);
-
-const dropdownCellRenderer = ({ cellData }) => (
-  <Box textAlign="right" pr="x3">
-    <DropdownMenu>
-      <DropdownButton onClick={action(cellData)}>Edit</DropdownButton>
-      <DropdownButton onClick={action(cellData)}>Delete</DropdownButton>
-    </DropdownMenu>
-  </Box>
-);
 
 const footerRowData = [
   { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "f1" },
