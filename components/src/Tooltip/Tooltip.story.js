@@ -4,11 +4,15 @@ import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
-    <Flex p="x8">
-      <Tooltip placement="bottom" tooltip="I am a Tooltip!">
-        <Button> Button </Button>
-      </Tooltip>
-    </Flex>
+    <>
+      <Flex p="x8">
+        <Tooltip placement="bottom" tooltip="I am a Tooltip!" defaultOpen>
+          <Button> Button </Button>
+        </Tooltip>
+      </Flex>
+      <Box height="500px" width="100%" bg="red" />
+      <Box height="500px" width="100%" bg="blue" />
+    </>
   ))
   .add("with wrapped text", () => (
     <Flex p="x8">
