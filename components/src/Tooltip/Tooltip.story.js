@@ -2,16 +2,25 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
+const bunchOfTooltips = Array.from(Array(50).keys()).map(i => {
+  return (
+    <Tooltip id={i} placement="bottom" tooltip={`I am Tooltip ${i} !`}>
+      <Button> Button {i} </Button>
+    </Tooltip>
+  );
+});
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <>
-      <Flex p="x8">
-        <Tooltip placement="bottom" tooltip="I am a Tooltip!" defaultOpen>
-          <Button> Button </Button>
-        </Tooltip>
+      <Flex>
+        <Box height="500px" width="60%" bg="red" />
+
+        <Box height="500px" style={{ overflow: "scroll" }} flexDirection="column">
+          <Flex p="x8" flexDirection="column">
+            {bunchOfTooltips}
+          </Flex>
+        </Box>
       </Flex>
-      <Box height="500px" width="100%" bg="red" />
-      <Box height="500px" width="100%" bg="blue" />
     </>
   ))
   .add("with wrapped text", () => (
