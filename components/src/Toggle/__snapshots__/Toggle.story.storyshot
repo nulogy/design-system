@@ -391,6 +391,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             <Styled(BaseToggle)
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
               toggled={true}
             >
@@ -422,6 +423,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 forwardedRef={null}
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
                 toggled={true}
               >
@@ -1445,6 +1447,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             <Styled(BaseToggle)
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
               toggled={false}
             >
@@ -1476,6 +1479,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 forwardedRef={null}
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
                 toggled={false}
               >
@@ -2891,7 +2895,9 @@ exports[`Storyshots Toggle Toggle 1`] = `
               }
             }
           >
-            <Styled(BaseToggle)>
+            <Styled(BaseToggle)
+              onChange={[Function]}
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
@@ -2918,6 +2924,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                   }
                 }
                 forwardedRef={null}
+                onChange={[Function]}
               >
                 <BaseToggle
                   className="sc-cvbbAY lmseSz"
@@ -3893,6 +3900,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
             <Styled(BaseToggle)
               defaultToggled={true}
               labelText="Toggle"
+              onChange={[Function]}
             >
               <StyledComponent
                 defaultToggled={true}
@@ -3922,6 +3930,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                 }
                 forwardedRef={null}
                 labelText="Toggle"
+                onChange={[Function]}
               >
                 <BaseToggle
                   className="sc-cvbbAY lmseSz"
@@ -5262,6 +5271,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
               disabled={true}
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
             >
               <StyledComponent
@@ -5293,6 +5303,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 forwardedRef={null}
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
               >
                 <BaseToggle
@@ -6314,6 +6325,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
               id="toggle-2"
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
             >
               <StyledComponent
@@ -6347,6 +6359,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 id="toggle-2"
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
               >
                 <BaseToggle
@@ -7766,6 +7779,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
               helpText="Turns setting on/off"
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
               required={true}
               requirementText="(Required)"
@@ -7800,6 +7814,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                 helpText="Turns setting on/off"
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
                 required={true}
                 requirementText="(Required)"
@@ -9374,6 +9389,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
               id="my-custom-id"
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
             >
               <StyledComponent
@@ -9405,6 +9421,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                 id="my-custom-id"
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
               >
                 <BaseToggle
@@ -10820,6 +10837,7 @@ exports[`Storyshots Toggle With long text 1`] = `
               defaultToggled={true}
               labelText="Toggle"
               offText="not this one"
+              onChange={[Function]}
               onText="this state has a very long text label to explain it's state"
             >
               <StyledComponent
@@ -10851,6 +10869,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                 forwardedRef={null}
                 labelText="Toggle"
                 offText="not this one"
+                onChange={[Function]}
                 onText="this state has a very long text label to explain it's state"
               >
                 <BaseToggle
@@ -12266,6 +12285,7 @@ exports[`Storyshots Toggle With text 1`] = `
             <Styled(BaseToggle)
               labelText="Toggle"
               offText="off"
+              onChange={[Function]}
               onText="on"
             >
               <StyledComponent
@@ -12296,6 +12316,7 @@ exports[`Storyshots Toggle With text 1`] = `
                 forwardedRef={null}
                 labelText="Toggle"
                 offText="off"
+                onChange={[Function]}
                 onText="on"
               >
                 <BaseToggle
