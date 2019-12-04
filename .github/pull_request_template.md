@@ -19,7 +19,6 @@
 - [ ] Updated and reviewed changes to storyshots
 - [ ] e2e tests added for component interations
 - [ ] jest tests added for component API that may not be captured with storyshots (change handlers, renderers etc)
-- [ ] Changelog updated
 - [ ] Accessibility (includes relevant tags, keyboard functionality, colour contrast)
 
 ## Before Merging
