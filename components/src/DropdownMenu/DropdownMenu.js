@@ -4,6 +4,16 @@ import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState } from "../utils";
 import { IconicButton } from "../Button";
 import DropdownMenuContainer from "./DropdownMenuContainer";
+import { deprecatedProp } from "../utils/deprecatedProp";
+
+const DEFAULT_POPPER_MODIFIERS = {
+  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+};
+
+const transformPropsToModifiers = ({ boundariesElement }) => ({
+  ...DEFAULT_POPPER_MODIFIERS,
+  boundariesElement
+});
 
 /* eslint-disable react/destructuring-assignment */
 class StatelessDropdownMenu extends React.Component {
@@ -53,7 +63,8 @@ class StatelessDropdownMenu extends React.Component {
       showArrow,
       className,
       id,
-      menuState: { isOpen, closeMenu, openMenu }
+      menuState: { isOpen, closeMenu, openMenu },
+      boundariesElement
     } = this.props;
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
@@ -82,7 +93,7 @@ class StatelessDropdownMenu extends React.Component {
           }
         </Reference>
         {isOpen && (
-          <Popper placement={placement} modifiers={modifiers}>
+          <Popper placement={false} modifiers={modifiers || transformPropsToModifiers({ boundariesElement })}>
             {popperProps => (
               <DropdownMenuContainer
                 className={className}
@@ -120,7 +131,24 @@ class StatelessDropdownMenu extends React.Component {
     );
   }
 }
-/* eslint-enable react/destructuring-assignment */
+
+const DropdownMenu = withMenuState(StatelessDropdownMenu);
+
+DropdownMenu.propTypes = {
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultOpen: PropTypes.bool,
+  modifiers: deprecatedProp(PropTypes.shape({}), "boundariesElement"),
+  boundariesElement: PropTypes.string
+};
+
+DropdownMenu.defaultProps = {
+  showDelay: "100",
+  hideDelay: "200",
+  defaultOpen: false,
+  modifiers: undefined,
+  boundariesElement: "viewport"
+};
 
 StatelessDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
@@ -150,7 +178,7 @@ StatelessDropdownMenu.propTypes = {
     "right-start",
     "right-end"
   ]),
-  modifiers: PropTypes.shape({})
+  ...DropdownMenu.propTypes
 };
 
 StatelessDropdownMenu.defaultProps = {
@@ -161,23 +189,7 @@ StatelessDropdownMenu.defaultProps = {
   backgroundColor: undefined,
   showArrow: true,
   placement: "bottom-start",
-  modifiers: {
-    preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
-  }
-};
-
-const DropdownMenu = withMenuState(StatelessDropdownMenu);
-
-DropdownMenu.propTypes = {
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  defaultOpen: PropTypes.bool
-};
-
-DropdownMenu.defaultProps = {
-  showDelay: "100",
-  hideDelay: "200",
-  defaultOpen: false
+  ...DropdownMenu.defaultProps
 };
 
 export default DropdownMenu;
