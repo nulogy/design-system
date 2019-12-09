@@ -16,31 +16,29 @@ const StyledDateInputIcon = styled(Icon)({
   pointerEvents: "none"
 });
 
-const DatePickerInput = ({ value, onClick }) => (
+const DatePickerInput = ({ value, onClick, onChange, selectedDate }) => (
   <>
-    <Input value={value} onClick={onClick} />
+    <Input value={formatDate(selectedDate)} onClick={onClick} onChange={onChange} />
     <StyledDateInputIcon icon="calendarToday" size={theme.space.x2} />
   </>
 );
-class DatePicker extends React.Component {
-  state = {
-    startDate: new Date()
+
+const formatDate = date => format(date, "DD/MM/YYYY");
+
+const DatePicker = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const handleSelectedDateChange = date => {
+    setSelectedDate(date);
   };
 
-  handleStartDateChange = date => {
-    this.setState({
-      startDate: date
-    });
-  };
-
-  render() {
-    const { startDate } = this.state;
-
-    return (
-      <ReactDatePicker selected={startDate} onChange={this.handleStartDateChange} customInput={<DatePickerInput />} />
-    );
-  }
-}
+  return (
+    <ReactDatePicker
+      selected={selectedDate}
+      onChange={this.handleSelectedDateChange}
+      customInput={<DatePickerInput selectedDate={selectedDate} />}
+    />
+  );
+};
 
 DatePicker.propTypes = {};
 
