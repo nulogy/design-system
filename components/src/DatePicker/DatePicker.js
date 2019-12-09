@@ -39,20 +39,28 @@ DatePickerHeader.propTypes = {
   nextMonthButtonDisabled: PropTypes.bool.isRequired
 };
 
-const DatePickerInput = ({ onClick, onChange, value }) => (
-  <>
-    <Input value={value} onClick={onClick} onChange={onChange} label="a label" />
-    <StyledDateInputIcon icon="calendarToday" size={theme.space.x2} />
-  </>
-);
+const DatePickerInput = ({ onClick, onChange, onInputChange, value }) => {
+  const handleChange = e => {
+    onInputChange(e);
+    onChange(e);
+  };
+
+  return (
+    <>
+      <Input value={value} onClick={onClick} onChange={handleChange} label="a label" />
+      <StyledDateInputIcon icon="calendarToday" size={theme.space.x2} />
+    </>
+  );
+};
 
 DatePickerInput.propTypes = {
   onClick: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.PropTypes.instanceOf(Date).isRequired
+  value: PropTypes.PropTypes.instanceOf(Date).isRequired,
+  onInputChange: PropTypes.func.isRequired
 };
 
-const DatePicker = ({ selected, onChange, dateFormat }) => {
+const DatePicker = ({ selected, onChange, dateFormat, onChangeInput }) => {
   const [selectedDate, setSelectedDate] = useState(selected);
 
   const handleSelectedDateChange = date => {
@@ -63,7 +71,9 @@ const DatePicker = ({ selected, onChange, dateFormat }) => {
   };
   const handleInputChange = event => {
     const { value } = event.target;
-    setSelectedDate(value);
+    if (onChangeInput) {
+      onChangeInput(value);
+    }
   };
 
   return (
@@ -72,7 +82,7 @@ const DatePicker = ({ selected, onChange, dateFormat }) => {
         selected={selectedDate}
         dateFormat={dateFormat}
         onChange={handleSelectedDateChange}
-        customInput={<DatePickerInput onChange={handleInputChange} />}
+        customInput={<DatePickerInput onInputChange={handleInputChange} />}
         renderCustomHeader={DatePickerHeader}
         disabledKeyboardNavigation
         strictParsing
@@ -84,13 +94,15 @@ const DatePicker = ({ selected, onChange, dateFormat }) => {
 DatePicker.propTypes = {
   selected: PropTypes.instanceOf(Date),
   dateFormat: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  onChangeInput: PropTypes.func
 };
 
 DatePicker.defaultProps = {
   selected: new Date(),
   dateFormat: "dd/MM/yyyy",
-  onChange: undefined
+  onChange: undefined,
+  onChangeInput: undefined
 };
 
 export default DatePicker;
