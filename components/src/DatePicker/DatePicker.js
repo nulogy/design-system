@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./datepicker.css";
 import theme from "../theme";
 import { Input } from "../Input";
 import { Icon } from "../Icon";
@@ -32,11 +33,13 @@ const DatePicker = () => {
   };
 
   return (
-    <ReactDatePicker
-      selected={selectedDate}
-      onChange={this.handleSelectedDateChange}
-      customInput={<DatePickerInput selectedDate={selectedDate} />}
-    />
+    <div className="nds-datepicker">
+      <ReactDatePicker
+        selected={selectedDate}
+        onChange={handleSelectedDateChange}
+        customInput={<DatePickerInput selectedDate={selectedDate} />}
+      />
+    </div>
   );
 };
 
