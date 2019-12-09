@@ -4,8 +4,11 @@ import styled from "styled-components";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./datepicker.css";
+import { format } from "date-fns";
 import theme from "../theme";
 import { Text, Flex, Input, Icon, ControlIcon } from "..";
+
+const DATEPICKER_CSS_CLASS = "nds-datepicker";
 
 const StyledDateInputIcon = styled(Icon)({
   position: "absolute",
@@ -64,7 +67,7 @@ const DatePicker = ({ selected, onChange, dateFormat }) => {
   };
 
   return (
-    <div className="nds-datepicker">
+    <div className={DATEPICKER_CSS_CLASS}>
       <ReactDatePicker
         selected={selectedDate}
         dateFormat={dateFormat}
