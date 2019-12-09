@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./datepicker.css";
 import theme from "../theme";
-import { Input } from "../Input";
-import { Icon } from "../Icon";
+import { Text, Flex, Input, Icon, ControlIcon } from "..";
 
 const StyledDateInputIcon = styled(Icon)({
   position: "absolute",
@@ -17,34 +16,78 @@ const StyledDateInputIcon = styled(Icon)({
   pointerEvents: "none"
 });
 
-const DatePickerInput = ({ value, onClick, onChange, selectedDate }) => (
+const DatePickerHeader = ({ date, decreaseMonth, increaseMonth, prevMonthButtonDisabled, nextMonthButtonDisabled }) => (
+  <Flex justifyContent="space-between">
+    <Text fontWeight="bold" color={theme.colors.blackBlue} pl={theme.space.x2} pr={theme.space.x3}>
+      {format(date, "MMMM yyyy")}
+    </Text>
+    <Flex>
+      <ControlIcon icon="leftArrow" onClick={decreaseMonth} disabled={prevMonthButtonDisabled} />
+      <ControlIcon icon="rightArrow" onClick={increaseMonth} disabled={nextMonthButtonDisabled} />
+    </Flex>
+  </Flex>
+);
+
+DatePickerHeader.propTypes = {
+  date: PropTypes.instanceOf(Date).isRequired,
+  decreaseMonth: PropTypes.func.isRequired,
+  increaseMonth: PropTypes.func.isRequired,
+  prevMonthButtonDisabled: PropTypes.bool.isRequired,
+  nextMonthButtonDisabled: PropTypes.bool.isRequired
+};
+
+const DatePickerInput = ({ onClick, onChange, value }) => (
   <>
-    <Input value={formatDate(selectedDate)} onClick={onClick} onChange={onChange} />
+    <Input value={value} onClick={onClick} onChange={onChange} label="a label" />
     <StyledDateInputIcon icon="calendarToday" size={theme.space.x2} />
   </>
 );
 
-const formatDate = date => format(date, "DD/MM/YYYY");
+DatePickerInput.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.PropTypes.instanceOf(Date).isRequired
+};
 
-const DatePicker = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+const DatePicker = ({ selected, onChange, dateFormat }) => {
+  const [selectedDate, setSelectedDate] = useState(selected);
+
   const handleSelectedDateChange = date => {
+    if (onChange) {
+      onChange(date);
+    }
     setSelectedDate(date);
+  };
+  const handleInputChange = event => {
+    const { value } = event.target;
+    setSelectedDate(value);
   };
 
   return (
     <div className="nds-datepicker">
       <ReactDatePicker
         selected={selectedDate}
+        dateFormat={dateFormat}
         onChange={handleSelectedDateChange}
-        customInput={<DatePickerInput selectedDate={selectedDate} />}
+        customInput={<DatePickerInput onChange={handleInputChange} />}
+        renderCustomHeader={DatePickerHeader}
+        disabledKeyboardNavigation
+        strictParsing
       />
     </div>
   );
 };
 
-DatePicker.propTypes = {};
+DatePicker.propTypes = {
+  selected: PropTypes.instanceOf(Date),
+  dateFormat: PropTypes.string,
+  onChange: PropTypes.func
+};
 
-DatePicker.defaultProps = {};
+DatePicker.defaultProps = {
+  selected: new Date(),
+  dateFormat: "dd/MM/yyyy",
+  onChange: undefined
+};
 
 export default DatePicker;
