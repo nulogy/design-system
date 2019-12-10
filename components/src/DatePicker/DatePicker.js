@@ -64,10 +64,15 @@ const DatePickerInput = ({ onClick, onChange, onInputChange, value }) => {
 };
 
 DatePickerInput.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+  onChange: PropTypes.func,
   value: PropTypes.instanceOf(Date).isRequired,
   onInputChange: PropTypes.func.isRequired
+};
+
+DatePickerInput.defaultProps = {
+  onClick: undefined,
+  onChange: undefined
 };
 
 const DatePicker = ({ selected, onChange, dateFormat, onChangeInput }) => {
