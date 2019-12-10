@@ -25,8 +25,18 @@ const DatePickerHeader = ({ date, decreaseMonth, increaseMonth, prevMonthButtonD
       {format(date, "MMMM yyyy")}
     </Text>
     <Flex>
-      <ControlIcon icon="leftArrow" onClick={decreaseMonth} disabled={prevMonthButtonDisabled} />
-      <ControlIcon icon="rightArrow" onClick={increaseMonth} disabled={nextMonthButtonDisabled} />
+      <ControlIcon
+        icon="leftArrow"
+        label="go to previous month"
+        onClick={decreaseMonth}
+        disabled={prevMonthButtonDisabled}
+      />
+      <ControlIcon
+        icon="rightArrow"
+        label="go to next month"
+        onClick={increaseMonth}
+        disabled={nextMonthButtonDisabled}
+      />
     </Flex>
   </Flex>
 );
@@ -56,7 +66,7 @@ const DatePickerInput = ({ onClick, onChange, onInputChange, value }) => {
 DatePickerInput.propTypes = {
   onClick: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.PropTypes.instanceOf(Date).isRequired,
+  value: PropTypes.instanceOf(Date).isRequired,
   onInputChange: PropTypes.func.isRequired
 };
 
