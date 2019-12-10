@@ -393,7 +393,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
               selected={2019-01-01T05:00:00.000Z}
             >
               <div
-                className="nds-datepicker"
+                className="nds-date-picker"
               >
                 <t
                   allowSameDay={false}
