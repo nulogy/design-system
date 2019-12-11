@@ -141,7 +141,7 @@ Input.propTypes = {
   prefix: PropTypes.string,
   prefixWidth: PropTypes.string,
   prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
-  icon: undefined,
+  icon: PropTypes.string,
   ...space.PropTypes
 };
 
