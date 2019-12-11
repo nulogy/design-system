@@ -19,4 +19,12 @@ storiesOf("DatePicker", module)
       onChangeInput={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
     />
+  ))
+  .add("with custom placeholder", () => (
+    <DatePicker
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onChangeInput={action("input changed")}
+      inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
+    />
   ));

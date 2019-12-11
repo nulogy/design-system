@@ -5349,7 +5349,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                         <CustomInput
                           id="input1"
                         >
-                          <Input
+                          <ForwardRef
                             disabled={false}
                             errorList={null}
                             errorMessage={null}
@@ -6487,7 +6487,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                 </div>
                               </StyledComponent>
                             </Styled(Box)>
-                          </Input>
+                          </ForwardRef>
                         </CustomInput>
                       </label>
                     </StyledComponent>

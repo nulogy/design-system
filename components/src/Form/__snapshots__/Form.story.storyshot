@@ -2335,7 +2335,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -3937,8 +3937,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -5690,7 +5690,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                             <ReactSelect
                               autocomplete={true}
                               className={null}
@@ -8010,7 +8010,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                 </StyledComponent>
                               </Styled(Box)>
                             </ReactSelect>
-                            <Input
+                            <ForwardRef
                               defaultValue="WS2SB6"
                               disabled={false}
                               errorList={null}
@@ -10148,8 +10148,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -11751,8 +11751,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               defaultValue="18 000"
                               disabled={true}
                               errorList={null}
@@ -13354,8 +13354,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -14957,8 +14957,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -16560,7 +16560,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                             <Styled(BaseCheckboxGroup)
                               labelText="Line Lead"
                               name="linelead"
@@ -23147,7 +23147,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               defaultValue="235432"
                               disabled={false}
                               errorList={null}
@@ -25285,8 +25285,8 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -26883,7 +26883,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                             <Styled(BaseToggle)
                               disabled={true}
                               id="reject-visibility"
@@ -28698,7 +28698,7 @@ exports[`Storyshots Form Form 1`] = `
                         </h2>
                       </StyledComponent>
                     </styled.h2>
-                    <Input
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -30295,8 +30295,8 @@ exports[`Storyshots Form Form 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
-                    <Input
+                    </ForwardRef>
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -32053,8 +32053,8 @@ exports[`Storyshots Form Form 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
-                    <Input
+                    </ForwardRef>
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -33726,7 +33726,7 @@ exports[`Storyshots Form Form 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
+                    </ForwardRef>
                   </form>
                 </BaseForm>
               </StyledComponent>
@@ -34846,7 +34846,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -36443,8 +36443,8 @@ exports[`Storyshots Form With form sections 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -38201,8 +38201,8 @@ exports[`Storyshots Form With form sections 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -39874,7 +39874,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -40241,7 +40241,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -41838,8 +41838,8 @@ exports[`Storyshots Form With form sections 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -43436,7 +43436,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -44232,7 +44232,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                           <fieldset
                             className="sc-kGXeez chOAbO"
                           >
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -45829,8 +45829,8 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -47587,8 +47587,8 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -49260,7 +49260,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -49299,7 +49299,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                           <fieldset
                             className="sc-kGXeez chOAbO"
                           >
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -50896,8 +50896,8 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -52494,7 +52494,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -52934,7 +52934,7 @@ exports[`Storyshots Form Without title 1`] = `
                   <form
                     className="sc-kpOJdX xWASZ"
                   >
-                    <Input
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -54531,8 +54531,8 @@ exports[`Storyshots Form Without title 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
-                    <Input
+                    </ForwardRef>
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -56289,8 +56289,8 @@ exports[`Storyshots Form Without title 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
-                    <Input
+                    </ForwardRef>
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -57962,7 +57962,7 @@ exports[`Storyshots Form Without title 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
+                    </ForwardRef>
                   </form>
                 </BaseForm>
               </StyledComponent>

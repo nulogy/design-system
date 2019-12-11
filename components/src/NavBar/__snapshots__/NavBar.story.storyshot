@@ -5335,7 +5335,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                           className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                                                           role="search"
                                                                         >
-                                                                          <Input
+                                                                          <ForwardRef
                                                                             aria-labelledby="global-search"
                                                                             disabled={false}
                                                                             errorList={null}
@@ -6488,7 +6488,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                                 </div>
                                                                               </StyledComponent>
                                                                             </Styled(Box)>
-                                                                          </Input>
+                                                                          </ForwardRef>
                                                                           <button
                                                                             aria-label="global-search"
                                                                             id="global-search"
@@ -22683,7 +22683,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                           className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                                                           role="search"
                                                                         >
-                                                                          <Input
+                                                                          <ForwardRef
                                                                             aria-labelledby="global-search"
                                                                             disabled={false}
                                                                             errorList={null}
@@ -23836,7 +23836,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                                 </div>
                                                                               </StyledComponent>
                                                                             </Styled(Box)>
-                                                                          </Input>
+                                                                          </ForwardRef>
                                                                           <button
                                                                             aria-label="global-search"
                                                                             id="global-search"
@@ -44879,7 +44879,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                           className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                                                           role="search"
                                                                         >
-                                                                          <Input
+                                                                          <ForwardRef
                                                                             aria-labelledby="global-search"
                                                                             disabled={false}
                                                                             errorList={null}
@@ -46032,7 +46032,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                                 </div>
                                                                               </StyledComponent>
                                                                             </Styled(Box)>
-                                                                          </Input>
+                                                                          </ForwardRef>
                                                                           <button
                                                                             aria-label="global-search"
                                                                             id="global-search"

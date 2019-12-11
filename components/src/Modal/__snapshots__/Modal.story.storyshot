@@ -16303,7 +16303,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                               id="myForm"
                                               mb="x2"
                                             >
-                                              <Input
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -17905,8 +17905,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
-                                              <Input
+                                              </ForwardRef>
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -19513,8 +19513,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
-                                              <Input
+                                              </ForwardRef>
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -21116,8 +21116,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
-                                              <Input
+                                              </ForwardRef>
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -22724,8 +22724,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
-                                              <Input
+                                              </ForwardRef>
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -24327,8 +24327,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
-                                              <Input
+                                              </ForwardRef>
+                                              <ForwardRef
                                                 disabled={false}
                                                 errorList={null}
                                                 errorMessage={null}
@@ -25935,7 +25935,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     </div>
                                                   </StyledComponent>
                                                 </Styled(Box)>
-                                              </Input>
+                                              </ForwardRef>
                                               <ReactSelect
                                                 autocomplete={true}
                                                 className={null}

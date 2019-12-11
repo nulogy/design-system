@@ -63,7 +63,7 @@ DatePicker.defaultProps = {
   dateFormat: DEFAULT_DATE_FORMAT,
   onChange: undefined,
   onChangeInput: undefined,
-  inputProps: undefined
+  inputProps: {}
 };
 
 export default DatePicker;

@@ -1132,7 +1132,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                 className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                 role="search"
                               >
-                                <Input
+                                <ForwardRef
                                   aria-labelledby="global-search"
                                   disabled={false}
                                   errorList={null}
@@ -2285,7 +2285,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </Styled(Box)>
-                                </Input>
+                                </ForwardRef>
                                 <button
                                   aria-label="global-search"
                                   id="global-search"
@@ -3540,7 +3540,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                 className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                 role="search"
                               >
-                                <Input
+                                <ForwardRef
                                   aria-labelledby="global-search-2"
                                   disabled={false}
                                   errorList={null}
@@ -4693,7 +4693,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </Styled(Box)>
-                                </Input>
+                                </ForwardRef>
                                 <button
                                   aria-label="global-search-2"
                                   id="global-search-2"

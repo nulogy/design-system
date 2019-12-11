@@ -388,7 +388,7 @@ exports[`Storyshots Input Input 1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={false}
               errorList={null}
               errorMessage={null}
@@ -1990,7 +1990,7 @@ exports[`Storyshots Input Input 1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>
@@ -2387,7 +2387,7 @@ exports[`Storyshots Input set to disabled 1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={true}
               errorList={null}
               errorMessage={null}
@@ -3984,7 +3984,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>
@@ -4738,7 +4738,7 @@ exports[`Storyshots Input set to required 1`] = `
                         </h2>
                       </StyledComponent>
                     </styled.h2>
-                    <Input
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -6340,7 +6340,7 @@ exports[`Storyshots Input set to required 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
+                    </ForwardRef>
                     <Styled(Component)>
                       <StyledComponent
                         forwardedComponent={
@@ -7283,7 +7283,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                           <fieldset
                             className="sc-kGXeez chOAbO"
                           >
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -8843,8 +8843,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -10404,7 +10404,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -10771,7 +10771,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -12331,8 +12331,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -13892,7 +13892,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -14296,7 +14296,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                           <fieldset
                             className="sc-kGXeez chOAbO"
                           >
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -15856,8 +15856,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -17417,7 +17417,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -17784,7 +17784,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -19344,8 +19344,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -20905,7 +20905,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -21272,7 +21272,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 </legend>
                               </StyledComponent>
                             </Styled(Styled(styled.h3))>
-                            <Input
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -22832,8 +22832,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
-                            <Input
+                            </ForwardRef>
+                            <ForwardRef
                               disabled={false}
                               errorList={null}
                               errorMessage={null}
@@ -24393,7 +24393,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   </div>
                                 </StyledComponent>
                               </Styled(Box)>
-                            </Input>
+                            </ForwardRef>
                           </fieldset>
                         </BaseFormSection>
                       </StyledComponent>
@@ -24763,7 +24763,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         </h2>
                       </StyledComponent>
                     </styled.h2>
-                    <Input
+                    <ForwardRef
                       disabled={false}
                       errorList={null}
                       errorMessage={null}
@@ -26750,7 +26750,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                           </div>
                         </StyledComponent>
                       </Styled(Box)>
-                    </Input>
+                    </ForwardRef>
                   </form>
                 </BaseForm>
               </StyledComponent>
@@ -27151,7 +27151,7 @@ exports[`Storyshots Input with all props 1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={false}
               errorList={null}
               errorMessage={null}
@@ -28913,7 +28913,7 @@ exports[`Storyshots Input with all props 1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>
@@ -29310,7 +29310,7 @@ exports[`Storyshots Input with custom ID 1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={false}
               errorList={null}
               errorMessage={null}
@@ -30917,7 +30917,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>
@@ -31314,7 +31314,7 @@ exports[`Storyshots Input with error list  1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={false}
               errorList={
                 Array [
@@ -33689,7 +33689,7 @@ exports[`Storyshots Input with error list  1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>
@@ -34086,7 +34086,7 @@ exports[`Storyshots Input with error message 1`] = `
               }
             }
           >
-            <Input
+            <ForwardRef
               disabled={false}
               errorList={null}
               errorMessage="Error message"
@@ -36224,7 +36224,7 @@ exports[`Storyshots Input with error message 1`] = `
                   </div>
                 </StyledComponent>
               </Styled(Box)>
-            </Input>
+            </ForwardRef>
           </ThemeProvider>
         </div>
       </StyledComponent>

@@ -2211,7 +2211,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                         }
                                       }
                                     >
-                                      <Input
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -3803,8 +3803,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
-                                      <Input
+                                      </ForwardRef>
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -5401,7 +5401,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
+                                      </ForwardRef>
                                       <Styled(Component)
                                         fullWidth={true}
                                       >
@@ -9096,7 +9096,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                         }
                                       }
                                     >
-                                      <Input
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -10688,8 +10688,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
-                                      <Input
+                                      </ForwardRef>
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -12286,7 +12286,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
+                                      </ForwardRef>
                                       <Styled(Component)
                                         fullWidth={true}
                                       >
@@ -15908,7 +15908,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                         }
                                       }
                                     >
-                                      <Input
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -17500,8 +17500,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
-                                      <Input
+                                      </ForwardRef>
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -19098,7 +19098,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
+                                      </ForwardRef>
                                       <Styled(Component)
                                         fullWidth={true}
                                       >
@@ -21935,7 +21935,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                         }
                                       }
                                     >
-                                      <Input
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -23527,8 +23527,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
-                                      <Input
+                                      </ForwardRef>
+                                      <ForwardRef
                                         disabled={false}
                                         errorList={null}
                                         errorMessage={null}
@@ -25125,7 +25125,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                             </div>
                                           </StyledComponent>
                                         </Styled(Box)>
-                                      </Input>
+                                      </ForwardRef>
                                       <Styled(Component)
                                         fullWidth={true}
                                       >
@@ -28591,7 +28591,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                   }
                                 }
                               >
-                                <Input
+                                <ForwardRef
                                   disabled={false}
                                   errorList={null}
                                   errorMessage={null}
@@ -30187,8 +30187,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </Styled(Box)>
-                                </Input>
-                                <Input
+                                </ForwardRef>
+                                <ForwardRef
                                   disabled={false}
                                   errorList={null}
                                   errorMessage={null}
@@ -31785,7 +31785,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </Styled(Box)>
-                                </Input>
+                                </ForwardRef>
                                 <Styled(BaseCheckbox)
                                   labelText="Remember me"
                                   mb="x3"

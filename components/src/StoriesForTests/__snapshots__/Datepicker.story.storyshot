@@ -389,7 +389,8 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
             }
           >
             <DatePicker
-              dateFormat="dd/MM/yyyy"
+              dateFormat="dd MMM yyyy"
+              inputProps={Object {}}
               selected={2019-01-01T05:00:00.000Z}
             >
               <div
@@ -400,10 +401,16 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                   allowSameDay={false}
                   customInput={
                     <ForwardRef
+                      dateFormat="dd MMM yyyy"
+                      inputProps={
+                        Object {
+                          "placeholder": "dd Mon YYYY",
+                        }
+                      }
                       onInputChange={[Function]}
                     />
                   }
-                  dateFormat="dd/MM/yyyy"
+                  dateFormat="dd MMM yyyy"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
@@ -464,7 +471,13 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                       >
                         <ForwardRef
                           className=""
+                          dateFormat="dd MMM yyyy"
                           disabled={false}
+                          inputProps={
+                            Object {
+                              "placeholder": "dd Mon YYYY",
+                            }
+                          }
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
@@ -472,7 +485,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
                           readOnly={false}
-                          value="01/01/2019"
+                          value="01 Jan 2019"
                         />
                       </div>
                     }
@@ -492,7 +505,13 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                             >
                               <ForwardRef
                                 className=""
+                                dateFormat="dd MMM yyyy"
                                 disabled={false}
+                                inputProps={
+                                  Object {
+                                    "placeholder": "dd Mon YYYY",
+                                  }
+                                }
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
@@ -500,34 +519,29 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
                                 readOnly={false}
-                                value="01/01/2019"
+                                value="01 Jan 2019"
                               >
-                                <Input
-                                  className=""
+                                <ForwardRef
                                   disabled={false}
                                   errorList={null}
                                   errorMessage={null}
                                   helpText={null}
                                   icon="calendarToday"
                                   labelText={null}
-                                  onBlur={[Function]}
                                   onChange={[Function]}
                                   onClick={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
+                                  placeholder="dd Mon YYYY"
                                   prefix={null}
                                   prefixAlignment="left"
                                   prefixWidth={null}
-                                  readOnly={false}
                                   required={false}
                                   requirementText={null}
                                   suffix={null}
                                   suffixAlignment="left"
                                   suffixWidth={null}
-                                  value="01/01/2019"
+                                  value="01 Jan 2019"
                                 >
                                   <Styled(Box)
-                                    className=""
                                     theme={
                                       Object {
                                         "borders": Array [],
@@ -616,7 +630,6 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                     }
                                   >
                                     <StyledComponent
-                                      className=""
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -781,7 +794,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                           "withComponent": [Function],
                                         }
                                       }
-                                      forwardedRef={null}
+                                      forwardedRef={[Function]}
                                       theme={
                                         Object {
                                           "borders": Array [],
@@ -1210,14 +1223,11 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                   errorList={null}
                                                   errorMessage={null}
                                                   icon="calendarToday"
-                                                  onBlur={[Function]}
                                                   onChange={[Function]}
                                                   onClick={[Function]}
-                                                  onFocus={[Function]}
-                                                  onKeyDown={[Function]}
-                                                  readOnly={false}
+                                                  placeholder="dd Mon YYYY"
                                                   required={false}
-                                                  value="01/01/2019"
+                                                  value="01 Jan 2019"
                                                 >
                                                   <Box
                                                     position="relative"
@@ -1569,14 +1579,11 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                           error={false}
                                                           errorList={null}
                                                           errorMessage={null}
-                                                          onBlur={[Function]}
                                                           onChange={[Function]}
                                                           onClick={[Function]}
-                                                          onFocus={[Function]}
-                                                          onKeyDown={[Function]}
-                                                          readOnly={false}
+                                                          placeholder="dd Mon YYYY"
                                                           required={false}
-                                                          value="01/01/2019"
+                                                          value="01 Jan 2019"
                                                         >
                                                           <StyledComponent
                                                             aria-invalid={false}
@@ -1629,28 +1636,22 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                               }
                                                             }
                                                             forwardedRef={null}
-                                                            onBlur={[Function]}
                                                             onChange={[Function]}
                                                             onClick={[Function]}
-                                                            onFocus={[Function]}
-                                                            onKeyDown={[Function]}
-                                                            readOnly={false}
+                                                            placeholder="dd Mon YYYY"
                                                             required={false}
-                                                            value="01/01/2019"
+                                                            value="01 Jan 2019"
                                                           >
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
                                                               className="Input__StyledInput-sc-1x697oj-0 epaPSA"
                                                               disabled={false}
-                                                              onBlur={[Function]}
                                                               onChange={[Function]}
                                                               onClick={[Function]}
-                                                              onFocus={[Function]}
-                                                              onKeyDown={[Function]}
-                                                              readOnly={false}
+                                                              placeholder="dd Mon YYYY"
                                                               required={false}
-                                                              value="01/01/2019"
+                                                              value="01 Jan 2019"
                                                             />
                                                           </StyledComponent>
                                                         </Input__StyledInput>
@@ -1779,7 +1780,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                       </div>
                                     </StyledComponent>
                                   </Styled(Box)>
-                                </Input>
+                                </ForwardRef>
                               </ForwardRef>
                             </div>
                           </div>
