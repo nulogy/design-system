@@ -13,12 +13,7 @@ export const DatePickerStyles = createGlobalStyle({
       backgroundColor: theme.colors.white,
       borderBottom: "none",
       borderTopLeftRadius: theme.radii.medium,
-      borderTopRightRadius: theme.radii.medium,
-      p: {
-        fontSize: theme.fontSizes.large,
-        paddingRight: theme.space.x1,
-        paddingLeft: theme.space.x1
-      }
+      borderTopRightRadius: theme.radii.medium
     },
     ".react-datepicker__triangle": {
       display: "none"
@@ -43,7 +38,7 @@ export const DatePickerStyles = createGlobalStyle({
     ".react-datepicker__day": {
       padding: theme.colors.x1,
       fontSize: theme.fontSizes.medium,
-      borderRadius: theme.radii.small,
+      borderRadius: theme.radii.medium,
       color: theme.colors.darkGrey,
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
@@ -69,11 +64,11 @@ export const DatePickerStyles = createGlobalStyle({
     },
     ".react-datepicker__day-name, .react-datepicker__day": {
       display: "inline-block",
-      width: theme.space.x4,
-      lineHeight: theme.space.x4,
+      width: theme.space.x5,
+      lineHeight: theme.space.x5,
       color: theme.colors.darkGrey,
       textAlign: "center",
-      margin: theme.space.x1
+      margin: theme.space.half
     },
     ".react-datepicker__day--selected": {
       color: theme.colors.white,

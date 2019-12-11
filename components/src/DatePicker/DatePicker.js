@@ -6,6 +6,9 @@ import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 
+const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
+const DEFAULT_PLACEHOLDER = "dd Mon YYYY";
+
 const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps }) => {
   const [selectedDate, setSelectedDate] = useState(selected);
 
@@ -22,6 +25,15 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps 
     }
   };
 
+  const transformedInputProps = {
+    ...inputProps,
+    placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
+  };
+
+  const customInput = (
+    <DatePickerInput inputProps={transformedInputProps} dateFormat={dateFormat} onInputChange={handleInputChange} />
+  );
+
   return (
     <div className="nds-date-picker">
       <DatePickerStyles />
@@ -29,7 +41,7 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps 
         selected={selectedDate}
         dateFormat={dateFormat}
         onChange={handleSelectedDateChange}
-        customInput={<DatePickerInput {...inputProps} onInputChange={handleInputChange} />}
+        customInput={customInput}
         renderCustomHeader={DatePickerHeader}
         disabledKeyboardNavigation
         strictParsing
@@ -47,8 +59,8 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
-  selected: new Date(),
-  dateFormat: "dd/MM/yyyy",
+  selected: undefined,
+  dateFormat: DEFAULT_DATE_FORMAT,
   onChange: undefined,
   onChangeInput: undefined,
   inputProps: undefined
