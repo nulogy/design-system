@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
-import "./DatePicker.css";
+import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 
@@ -25,6 +24,7 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput }) => {
 
   return (
     <div className="nds-date-picker">
+      <DatePickerStyles />
       <ReactDatePicker
         selected={selectedDate}
         dateFormat={dateFormat}

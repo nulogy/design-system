@@ -60,6 +60,10 @@ export const menuData = [
         href: "/components/checkbox-group"
       },
       {
+        name: "Datepicker",
+        href: "/components/date-picker"
+      },
+      {
         name: "Dropdown Menu",
         href: "/components/dropdown-menu"
       },
