@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
@@ -89,41 +89,46 @@ InputField.defaultProps = {
   icon: undefined
 };
 
-const Input = ({
-  errorMessage,
-  errorList,
-  error = !!(errorMessage || errorList),
-  required,
-  labelText,
-  requirementText,
-  helpText,
-  suffix,
-  prefix,
-  suffixWidth,
-  prefixWidth,
-  suffixAlignment,
-  prefixAlignment,
-  className,
-  ...props
-}) => (
-  <Field className={className}>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <Flex alignItems="flex-start">
-        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <InputField
-          aria-invalid={error}
-          aria-required={required}
-          required={required}
-          errorMessage={errorMessage}
-          errorList={errorList}
-          error={error}
-          {...props}
-        />
-        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
-      </Flex>
-    </MaybeFieldLabel>
-    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-  </Field>
+const Input = forwardRef(
+  (
+    {
+      errorMessage,
+      errorList,
+      error = !!(errorMessage || errorList),
+      required,
+      labelText,
+      requirementText,
+      helpText,
+      suffix,
+      prefix,
+      suffixWidth,
+      prefixWidth,
+      suffixAlignment,
+      prefixAlignment,
+      className,
+      ...props
+    },
+    ref
+  ) => (
+    <Field className={className} ref={ref}>
+      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <Flex alignItems="flex-start">
+          <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
+          <InputField
+            aria-invalid={error}
+            aria-required={required}
+            required={required}
+            errorMessage={errorMessage}
+            errorList={errorList}
+            error={error}
+            {...props}
+          />
+          <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
+        </Flex>
+      </MaybeFieldLabel>
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Field>
+  )
 );
 
 Input.propTypes = {
