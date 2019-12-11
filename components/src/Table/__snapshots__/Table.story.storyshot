@@ -925,9 +925,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-kkGfuU",
+                                                  "componentId": "sc-iAyFgw",
                                                   "isStatic": false,
-                                                  "lastClassName": "fCpvZH",
+                                                  "lastClassName": "kDTxQF",
                                                   "rules": Array [
                                                     "padding: 4px 0;",
                                                     "& .sc-bxivhb {",
@@ -939,7 +939,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "displayName": "Styled(BaseCheckbox)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-kkGfuU",
+                                                "styledComponentId": "sc-iAyFgw",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -953,7 +953,7 @@ exports[`Storyshots Table with everything 1`] = `
                                             <BaseCheckbox
                                               aria-label="toggle all row selections"
                                               checked={false}
-                                              className="sc-kkGfuU fCpvZH"
+                                              className="sc-iAyFgw kDTxQF"
                                               disabled={false}
                                               error={false}
                                               id={null}
@@ -961,7 +961,7 @@ exports[`Storyshots Table with everything 1`] = `
                                               required={false}
                                             >
                                               <Box
-                                                className="sc-kkGfuU fCpvZH"
+                                                className="sc-iAyFgw kDTxQF"
                                                 theme={
                                                   Object {
                                                     "borders": Array [],
@@ -1050,7 +1050,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-kkGfuU fCpvZH"
+                                                  className="sc-iAyFgw kDTxQF"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -1301,7 +1301,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
+                                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
                                                   >
                                                     <ClickInputLabel
                                                       disabled={false}
@@ -1342,7 +1342,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                             aria-label="toggle all row selections"
                                                             aria-required={false}
                                                             checked={false}
-                                                            className="sc-kkGfuU fCpvZH"
+                                                            className="sc-iAyFgw kDTxQF"
                                                             disabled={false}
                                                             error={false}
                                                             id={null}
@@ -1355,7 +1355,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                               aria-label="toggle all row selections"
                                                               aria-required={false}
                                                               checked={false}
-                                                              className="sc-kkGfuU fCpvZH"
+                                                              className="sc-iAyFgw kDTxQF"
                                                               disabled={false}
                                                               error={false}
                                                               forwardedComponent={
@@ -1392,7 +1392,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                 aria-label="toggle all row selections"
                                                                 aria-required={false}
                                                                 checked={false}
-                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
+                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
                                                                 disabled={false}
                                                                 id={null}
                                                                 onChange={[Function]}
@@ -2553,9 +2553,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kkGfuU",
+                                                        "componentId": "sc-iAyFgw",
                                                         "isStatic": false,
-                                                        "lastClassName": "fCpvZH",
+                                                        "lastClassName": "kDTxQF",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -2567,7 +2567,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kkGfuU",
+                                                      "styledComponentId": "sc-iAyFgw",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -2581,7 +2581,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-kkGfuU fCpvZH"
+                                                    className="sc-iAyFgw kDTxQF"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -2589,7 +2589,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-kkGfuU fCpvZH"
+                                                      className="sc-iAyFgw kDTxQF"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -2678,7 +2678,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-kkGfuU fCpvZH"
+                                                        className="sc-iAyFgw kDTxQF"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -2929,7 +2929,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -2970,7 +2970,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-kkGfuU fCpvZH"
+                                                                  className="sc-iAyFgw kDTxQF"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -2983,7 +2983,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-kkGfuU fCpvZH"
+                                                                    className="sc-iAyFgw kDTxQF"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -3020,7 +3020,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -4477,9 +4477,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kkGfuU",
+                                                        "componentId": "sc-iAyFgw",
                                                         "isStatic": false,
-                                                        "lastClassName": "fCpvZH",
+                                                        "lastClassName": "kDTxQF",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -4491,7 +4491,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kkGfuU",
+                                                      "styledComponentId": "sc-iAyFgw",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -4505,7 +4505,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-kkGfuU fCpvZH"
+                                                    className="sc-iAyFgw kDTxQF"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -4513,7 +4513,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-kkGfuU fCpvZH"
+                                                      className="sc-iAyFgw kDTxQF"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -4602,7 +4602,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-kkGfuU fCpvZH"
+                                                        className="sc-iAyFgw kDTxQF"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -4853,7 +4853,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -4894,7 +4894,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-kkGfuU fCpvZH"
+                                                                  className="sc-iAyFgw kDTxQF"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -4907,7 +4907,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-kkGfuU fCpvZH"
+                                                                    className="sc-iAyFgw kDTxQF"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -4944,7 +4944,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -6240,9 +6240,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kkGfuU",
+                                                        "componentId": "sc-iAyFgw",
                                                         "isStatic": false,
-                                                        "lastClassName": "fCpvZH",
+                                                        "lastClassName": "kDTxQF",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -6254,7 +6254,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kkGfuU",
+                                                      "styledComponentId": "sc-iAyFgw",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -6268,7 +6268,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-kkGfuU fCpvZH"
+                                                    className="sc-iAyFgw kDTxQF"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -6276,7 +6276,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-kkGfuU fCpvZH"
+                                                      className="sc-iAyFgw kDTxQF"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -6365,7 +6365,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-kkGfuU fCpvZH"
+                                                        className="sc-iAyFgw kDTxQF"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -6616,7 +6616,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -6657,7 +6657,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-kkGfuU fCpvZH"
+                                                                  className="sc-iAyFgw kDTxQF"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -6670,7 +6670,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-kkGfuU fCpvZH"
+                                                                    className="sc-iAyFgw kDTxQF"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -6707,7 +6707,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -8006,9 +8006,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kkGfuU",
+                                                        "componentId": "sc-iAyFgw",
                                                         "isStatic": false,
-                                                        "lastClassName": "fCpvZH",
+                                                        "lastClassName": "kDTxQF",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -8020,7 +8020,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-kkGfuU",
+                                                      "styledComponentId": "sc-iAyFgw",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -8034,7 +8034,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-kkGfuU fCpvZH"
+                                                    className="sc-iAyFgw kDTxQF"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -8042,7 +8042,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-kkGfuU fCpvZH"
+                                                      className="sc-iAyFgw kDTxQF"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -8131,7 +8131,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-kkGfuU fCpvZH"
+                                                        className="sc-iAyFgw kDTxQF"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -8382,7 +8382,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -8423,7 +8423,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-kkGfuU fCpvZH"
+                                                                  className="sc-iAyFgw kDTxQF"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -8436,7 +8436,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-kkGfuU fCpvZH"
+                                                                    className="sc-iAyFgw kDTxQF"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -8473,7 +8473,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -10884,9 +10884,9 @@ exports[`Storyshots Table with everything 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -10897,7 +10897,7 @@ exports[`Storyshots Table with everything 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -10911,7 +10911,7 @@ exports[`Storyshots Table with everything 1`] = `
                             <button
                               aria-current={true}
                               aria-label={null}
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
                               disabled={true}
                               onClick={[Function]}
                             >
@@ -10937,9 +10937,9 @@ exports[`Storyshots Table with everything 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -10950,7 +10950,7 @@ exports[`Storyshots Table with everything 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -10964,7 +10964,7 @@ exports[`Storyshots Table with everything 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 2"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
@@ -12739,9 +12739,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12752,7 +12752,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12766,7 +12766,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={true}
                               aria-label={null}
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
                               disabled={true}
                               onClick={[Function]}
                             >
@@ -12792,9 +12792,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12805,7 +12805,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12819,7 +12819,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 2"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
@@ -12845,9 +12845,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12858,7 +12858,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12872,7 +12872,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 3"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
@@ -12898,9 +12898,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12911,7 +12911,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12925,7 +12925,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 4"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
@@ -12951,9 +12951,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12964,7 +12964,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12978,7 +12978,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 5"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
@@ -13080,9 +13080,9 @@ exports[`Storyshots Table with pagination 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jlyJG",
+                                  "componentId": "sc-gipzik",
                                   "isStatic": false,
-                                  "lastClassName": "inhhrl",
+                                  "lastClassName": "khatUV",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -13093,7 +13093,7 @@ exports[`Storyshots Table with pagination 1`] = `
                                   "Pagination__PaginationButton-sc-1fsx1pp-0",
                                 ],
                                 "render": [Function],
-                                "styledComponentId": "sc-jlyJG",
+                                "styledComponentId": "sc-gipzik",
                                 "target": "button",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -13107,7 +13107,7 @@ exports[`Storyshots Table with pagination 1`] = `
                             <button
                               aria-current={false}
                               aria-label="Go to page 8"
-                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
+                              className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
                               disabled={false}
                               onClick={[Function]}
                             >
