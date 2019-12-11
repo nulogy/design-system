@@ -4,8 +4,10 @@ import theme from "../theme";
 export const DatePickerStyles = createGlobalStyle({
   ".nds-date-picker": {
     ".react-datepicker__input-container": {
-      position: "relative",
-      width: "184px"
+      width: "184px",
+      input: {
+        position: "relative"
+      }
     },
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
@@ -27,8 +29,8 @@ export const DatePickerStyles = createGlobalStyle({
     ".react-datepicker": {
       backgroundColor: theme.colors.white,
       outline: "none",
-      border: "1px solid #216beb",
-      boxShadow: "0px 0px 5px 0px rgba(33, 107, 235, 0.9)",
+      border: `1px solid ${theme.colors.blue}`,
+      boxShadow: theme.shadows.focus,
       borderRadius: theme.radii.medium,
       display: "inline-block",
       position: "relative",
@@ -36,23 +38,25 @@ export const DatePickerStyles = createGlobalStyle({
     },
     ".react-datepicker__day-name": {
       textTransform: "uppercase",
-      fontSize: "10px"
+      fontSize: theme.fontSizes.smaller
     },
     ".react-datepicker__day": {
       padding: theme.colors.x1,
       fontSize: theme.fontSizes.medium,
-      borderRadius: theme.radii.medium,
+      borderRadius: theme.radii.small,
+      color: theme.colors.darkGrey,
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
         color: theme.colors.black
+      },
+      "&--today": {
+        fontWeight: theme.fontWeights.bold,
+        color: theme.colors.black
+      },
+      "&--outside-month": {
+        color: theme.colors.darkGrey,
+        fontSize: theme.fontSizes.smaller
       }
-    },
-    ".react-datepicker__day--today": {
-      fontWeight: theme.fontWeights.bold
-    },
-    ".react-datepicker__day--outside-month": {
-      color: theme.colors.darkGrey,
-      fontSize: theme.fontSizes.smaller
     },
     ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text": {
       cursor: "pointer"
@@ -69,7 +73,7 @@ export const DatePickerStyles = createGlobalStyle({
       lineHeight: theme.space.x4,
       color: theme.colors.darkGrey,
       textAlign: "center",
-      margin: "0.166rem"
+      margin: theme.space.x1
     },
     ".react-datepicker__day--selected": {
       color: theme.colors.white,

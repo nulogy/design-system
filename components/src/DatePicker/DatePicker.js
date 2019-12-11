@@ -6,7 +6,7 @@ import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 
-const DatePicker = ({ selected, onChange, dateFormat, onChangeInput }) => {
+const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps }) => {
   const [selectedDate, setSelectedDate] = useState(selected);
 
   const handleSelectedDateChange = date => {
@@ -29,7 +29,7 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput }) => {
         selected={selectedDate}
         dateFormat={dateFormat}
         onChange={handleSelectedDateChange}
-        customInput={<DatePickerInput onInputChange={handleInputChange} />}
+        customInput={<DatePickerInput {...inputProps} onInputChange={handleInputChange} />}
         renderCustomHeader={DatePickerHeader}
         disabledKeyboardNavigation
         strictParsing
@@ -42,14 +42,16 @@ DatePicker.propTypes = {
   selected: PropTypes.instanceOf(Date),
   dateFormat: PropTypes.string,
   onChange: PropTypes.func,
-  onChangeInput: PropTypes.func
+  onChangeInput: PropTypes.func,
+  inputProps: PropTypes.shape({})
 };
 
 DatePicker.defaultProps = {
   selected: new Date(),
   dateFormat: "dd/MM/yyyy",
   onChange: undefined,
-  onChangeInput: undefined
+  onChangeInput: undefined,
+  inputProps: undefined
 };
 
 export default DatePicker;

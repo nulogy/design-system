@@ -5,6 +5,8 @@ import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { Flex } from "../Flex";
+import { Icon } from "../Icon";
+import { Box } from "../Box";
 import { MaybeFieldLabel } from "../FieldLabel";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
@@ -64,6 +66,29 @@ const StyledInput = styled.input(
   props => getInputStyle(props)
 );
 
+const StyledInputIcon = styled(Icon)({
+  position: "absolute",
+  right: "8px",
+  color: theme.colors.darkGrey,
+  bottom: "50%",
+  transform: "translateY(50%)",
+  pointerEvents: "none"
+});
+
+const InputField = ({ icon, ...props }) => (
+  <Box position="relative">
+    <StyledInput {...props} />
+    {icon && <StyledInputIcon icon={icon} size={theme.space.x2} />}
+  </Box>
+);
+
+InputField.propTypes = {
+  icon: PropTypes.string
+};
+InputField.defaultProps = {
+  icon: undefined
+};
+
 const Input = ({
   errorMessage,
   errorList,
@@ -85,7 +110,7 @@ const Input = ({
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
         <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <StyledInput
+        <InputField
           aria-invalid={error}
           aria-required={required}
           required={required}
@@ -116,6 +141,7 @@ Input.propTypes = {
   prefix: PropTypes.string,
   prefixWidth: PropTypes.string,
   prefixAlignment: PropTypes.oneOf(["left", "center", "right"]),
+  icon: undefined,
   ...space.PropTypes
 };
 
@@ -133,7 +159,8 @@ Input.defaultProps = {
   suffixAlignment: "left",
   prefix: null,
   prefixWidth: null,
-  prefixAlignment: "left"
+  prefixAlignment: "left",
+  icon: undefined
 };
 
 export default Input;
