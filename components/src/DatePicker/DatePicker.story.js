@@ -13,7 +13,7 @@ storiesOf("DatePicker", module)
   ))
   .add("with custom date format", () => (
     <DatePicker
-      selected={new Date("Fri, 01 Jan 2019")}
+      selected={new Date("2019-01-01T05:00:00.000Z")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
       onChangeInput={action("input changed")}
