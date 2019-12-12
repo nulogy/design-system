@@ -25,14 +25,10 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps 
     }
   };
 
-  const transformedInputProps = {
+  const customInputProps = {
     ...inputProps,
     placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
   };
-
-  const customInput = (
-    <DatePickerInput inputProps={transformedInputProps} dateFormat={dateFormat} onInputChange={handleInputChange} />
-  );
 
   return (
     <div className="nds-date-picker">
@@ -41,7 +37,9 @@ const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps 
         selected={selectedDate}
         dateFormat={dateFormat}
         onChange={handleSelectedDateChange}
-        customInput={customInput}
+        customInput={
+          <DatePickerInput inputProps={customInputProps} dateFormat={dateFormat} onInputChange={handleInputChange} />
+        }
         renderCustomHeader={DatePickerHeader}
         disabledKeyboardNavigation
         strictParsing

@@ -18,14 +18,12 @@ const DatePickerHeader = ({ date, decreaseMonth, increaseMonth, prevMonthButtonD
     <Flex pr="x2">
       <StyledNavigationButton
         icon="leftArrow"
-        // size={theme.space.x5}
         label="go to previous month"
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
       />
       <StyledNavigationButton
         icon="rightArrow"
-        // size={theme.space.x5}
         label="go to next month"
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
