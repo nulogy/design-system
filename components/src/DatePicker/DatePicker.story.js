@@ -27,4 +27,23 @@ storiesOf("DatePicker", module)
       onChangeInput={action("input changed")}
       inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
     />
+  ))
+  .add("with error state", () => (
+    <DatePicker
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onChangeInput={action("input changed")}
+      inputProps={{ labelText: "Expiry Date", errorMessage: "The date is invalid" }}
+    />
+  ))
+  .add("with error list", () => (
+    <DatePicker
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onChangeInput={action("input changed")}
+      inputProps={{
+        labelText: "Expiry Date",
+        errorList: ["The date is in the past", "The date must be after the starting date"]
+      }}
+    />
   ));
