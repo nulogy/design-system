@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 
@@ -9,44 +9,58 @@ import DatePickerHeader from "./DatePickerHeader";
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
 
-const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps }) => {
-  const [selectedDate, setSelectedDate] = useState(selected);
+class DatePicker extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedDate: props.selected };
+  }
 
-  const handleSelectedDateChange = date => {
-    if (onChange) {
-      onChange(date);
-    }
-    setSelectedDate(date);
-  };
-  const handleInputChange = event => {
+  handleInputChange = event => {
     const { value } = event.target;
+    const { onChangeInput } = this.props;
     if (onChangeInput) {
       onChangeInput(value);
     }
   };
 
-  const customInputProps = {
-    ...inputProps,
-    placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
+  handleSelectedDateChange = date => {
+    const { onChange } = this.props;
+    if (onChange) {
+      onChange(date);
+    }
+    this.setState({
+      selectedDate: date
+    });
   };
 
-  return (
-    <div className="nds-date-picker">
-      <DatePickerStyles />
-      <ReactDatePicker
-        selected={selectedDate}
-        dateFormat={dateFormat}
-        onChange={handleSelectedDateChange}
-        customInput={
-          <DatePickerInput inputProps={customInputProps} dateFormat={dateFormat} onInputChange={handleInputChange} />
-        }
-        renderCustomHeader={DatePickerHeader}
-        disabledKeyboardNavigation
-        strictParsing
-      />
-    </div>
-  );
-};
+  render() {
+    const { dateFormat, inputProps } = this.props;
+    const { selectedDate } = this.state;
+    const customInputProps = {
+      ...inputProps,
+      placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
+    };
+
+    const customInput = (
+      <DatePickerInput inputProps={customInputProps} dateFormat={dateFormat} onInputChange={this.handleInputChange} />
+    );
+
+    return (
+      <div className="nds-date-picker">
+        <DatePickerStyles />
+        <ReactDatePicker
+          selected={selectedDate}
+          dateFormat={dateFormat}
+          onChange={this.handleSelectedDateChange}
+          customInput={customInput}
+          renderCustomHeader={DatePickerHeader}
+          disabledKeyboardNavigation
+          strictParsing
+        />
+      </div>
+    );
+  }
+}
 
 DatePicker.propTypes = {
   selected: PropTypes.instanceOf(Date),
