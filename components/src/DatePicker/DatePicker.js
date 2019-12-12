@@ -7,7 +7,7 @@ import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
-const DEFAULT_PLACEHOLDER = "dd Mon YYYY";
+const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
 
 const DatePicker = ({ selected, onChange, dateFormat, onChangeInput, inputProps }) => {
   const [selectedDate, setSelectedDate] = useState(selected);

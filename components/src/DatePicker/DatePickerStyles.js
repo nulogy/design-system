@@ -29,17 +29,31 @@ export const DatePickerStyles = createGlobalStyle({
       borderRadius: theme.radii.medium,
       display: "inline-block",
       position: "relative",
-      padding: theme.space.x2
+      padding: theme.space.x1,
+      paddingTop: theme.space.x2
     },
-    ".react-datepicker__day-name": {
-      textTransform: "uppercase",
-      fontSize: theme.fontSizes.smaller
+    ".react-datepicker__day-names": {
+      paddingTop: theme.space.x2,
+      ".react-datepicker__day-name": {
+        textTransform: "uppercase",
+        fontSize: theme.fontSizes.smaller,
+        display: "inline-block",
+        width: theme.space.x5,
+        color: theme.colors.darkGrey,
+        textAlign: "center",
+        margin: theme.space.half
+      }
     },
     ".react-datepicker__day": {
-      padding: theme.colors.x1,
+      padding: theme.colors.x2,
       fontSize: theme.fontSizes.medium,
       borderRadius: theme.radii.medium,
       color: theme.colors.darkGrey,
+      display: "inline-block",
+      width: theme.space.x5,
+      lineHeight: theme.space.x5,
+      textAlign: "center",
+      margin: theme.space.half,
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
         color: theme.colors.black
@@ -61,14 +75,6 @@ export const DatePickerStyles = createGlobalStyle({
     },
     ".react-datepicker__day-names, .react-datepicker__week": {
       whiteSpace: "nowrap"
-    },
-    ".react-datepicker__day-name, .react-datepicker__day": {
-      display: "inline-block",
-      width: theme.space.x5,
-      lineHeight: theme.space.x5,
-      color: theme.colors.darkGrey,
-      textAlign: "center",
-      margin: theme.space.half
     },
     ".react-datepicker__day--selected": {
       color: theme.colors.white,
