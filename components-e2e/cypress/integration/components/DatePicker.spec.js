@@ -10,7 +10,7 @@ describe("Datepicker", () => {
 
     describe("has the correct defaults", () => {
       it("has the correct date selected by default", () => {
-        getDateInputComponent().should("have.value", "01/01/2019");
+        getDateInputComponent().should("have.value", "01 Jan 2019");
       });
     });
 
@@ -43,12 +43,12 @@ describe("Datepicker", () => {
         cy.get(".react-datepicker__day--002")
           .first()
           .click();
-        getDateInputComponent().should("have.value", "02/01/2019");
+        getDateInputComponent().should("have.value", "02 Jan 2019");
       });
 
       it("allows the user to select a date by typing", () => {
         cy.get("input").type("{backspace}{backspace}20");
-        getDateInputComponent().should("have.value", "01/01/2020");
+        getDateInputComponent().should("have.value", "01 Jan 2020");
       });
 
       it("hides the calendar when a date is selected", () => {
