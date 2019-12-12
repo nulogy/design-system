@@ -404,7 +404,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                       dateFormat="dd MMM yyyy"
                       inputProps={
                         Object {
-                          "placeholder": "dd Mon YYYY",
+                          "placeholder": "DD Mon YYYY",
                         }
                       }
                       onInputChange={[Function]}
@@ -475,7 +475,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                           disabled={false}
                           inputProps={
                             Object {
-                              "placeholder": "dd Mon YYYY",
+                              "placeholder": "DD Mon YYYY",
                             }
                           }
                           onBlur={[Function]}
@@ -509,7 +509,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                 disabled={false}
                                 inputProps={
                                   Object {
-                                    "placeholder": "dd Mon YYYY",
+                                    "placeholder": "DD Mon YYYY",
                                   }
                                 }
                                 onBlur={[Function]}
@@ -530,7 +530,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                   labelText={null}
                                   onChange={[Function]}
                                   onClick={[Function]}
-                                  placeholder="dd Mon YYYY"
+                                  placeholder="DD Mon YYYY"
                                   prefix={null}
                                   prefixAlignment="left"
                                   prefixWidth={null}
@@ -1225,7 +1225,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                   icon="calendarToday"
                                                   onChange={[Function]}
                                                   onClick={[Function]}
-                                                  placeholder="dd Mon YYYY"
+                                                  placeholder="DD Mon YYYY"
                                                   required={false}
                                                   value="01 Jan 2019"
                                                 >
@@ -1581,7 +1581,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                           errorMessage={null}
                                                           onChange={[Function]}
                                                           onClick={[Function]}
-                                                          placeholder="dd Mon YYYY"
+                                                          placeholder="DD Mon YYYY"
                                                           required={false}
                                                           value="01 Jan 2019"
                                                         >
@@ -1638,7 +1638,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                             forwardedRef={null}
                                                             onChange={[Function]}
                                                             onClick={[Function]}
-                                                            placeholder="dd Mon YYYY"
+                                                            placeholder="DD Mon YYYY"
                                                             required={false}
                                                             value="01 Jan 2019"
                                                           >
@@ -1649,7 +1649,7 @@ exports[`Storyshots StoriesForTests/Datepicker default 1`] = `
                                                               disabled={false}
                                                               onChange={[Function]}
                                                               onClick={[Function]}
-                                                              placeholder="dd Mon YYYY"
+                                                              placeholder="DD Mon YYYY"
                                                               required={false}
                                                               value="01 Jan 2019"
                                                             />

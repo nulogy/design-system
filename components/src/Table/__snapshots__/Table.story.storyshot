@@ -3183,6 +3183,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                 icon="downArrow"
                                                 label="toggle expansion"
                                                 onClick={[Function]}
+                                                size="32px"
                                                 toggled={false}
                                               >
                                                 <ControlIcon__StyledButton
@@ -3230,7 +3231,6 @@ exports[`Storyshots Table with everything 1`] = `
                                                       <Styled(Component)
                                                         color="currentColor"
                                                         icon="downArrow"
-                                                        p="half"
                                                         size="32px"
                                                         title={null}
                                                       >
@@ -3292,28 +3292,25 @@ exports[`Storyshots Table with everything 1`] = `
                                                           }
                                                           forwardedRef={null}
                                                           icon="downArrow"
-                                                          p="half"
                                                           size="32px"
                                                           title={null}
                                                         >
                                                           <ForwardRef
-                                                            className="sc-bwzfXH bbrsYH"
+                                                            className="sc-bwzfXH jQNEzN"
                                                             color="currentColor"
                                                             focusable={false}
                                                             icon="downArrow"
-                                                            p="half"
                                                             size="32px"
                                                             title={null}
                                                           >
                                                             <svg
                                                               aria-hidden={true}
-                                                              className="sc-bwzfXH bbrsYH"
+                                                              className="sc-bwzfXH jQNEzN"
                                                               color="currentColor"
                                                               fill="currentColor"
                                                               focusable={false}
                                                               height="32px"
                                                               icon="downArrow"
-                                                              p="half"
                                                               size="32px"
                                                               title={null}
                                                               viewBox="0 0 24 24"

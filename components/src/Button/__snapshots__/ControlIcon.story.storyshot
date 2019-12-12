@@ -393,6 +393,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
               icon="close"
               label="close"
               onClick={[Function]}
+              size="32px"
               toggled={false}
             >
               <ControlIcon__StyledButton
@@ -440,7 +441,6 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
                     <Styled(Component)
                       color="currentColor"
                       icon="close"
-                      p="half"
                       size="32px"
                       title={null}
                     >
@@ -458,7 +458,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bbrsYH",
+                              "lastClassName": "jQNEzN",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -502,28 +502,25 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
                         }
                         forwardedRef={null}
                         icon="close"
-                        p="half"
                         size="32px"
                         title={null}
                       >
                         <ForwardRef
-                          className="sc-bwzfXH bbrsYH"
+                          className="sc-bwzfXH jQNEzN"
                           color="currentColor"
                           focusable={false}
                           icon="close"
-                          p="half"
                           size="32px"
                           title={null}
                         >
                           <svg
                             aria-hidden={true}
-                            className="sc-bwzfXH bbrsYH"
+                            className="sc-bwzfXH jQNEzN"
                             color="currentColor"
                             fill="currentColor"
                             focusable={false}
                             height="32px"
                             icon="close"
-                            p="half"
                             size="32px"
                             title={null}
                             viewBox="0 0 24 24"
@@ -942,6 +939,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
               icon="close"
               label="close"
               onClick={[Function]}
+              size="32px"
               toggled={false}
             >
               <ControlIcon__StyledButton
@@ -989,7 +987,6 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
                     <Styled(Component)
                       color="currentColor"
                       icon="close"
-                      p="half"
                       size="32px"
                       title={null}
                     >
@@ -1007,7 +1004,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bbrsYH",
+                              "lastClassName": "jQNEzN",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1051,28 +1048,25 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
                         }
                         forwardedRef={null}
                         icon="close"
-                        p="half"
                         size="32px"
                         title={null}
                       >
                         <ForwardRef
-                          className="sc-bwzfXH bbrsYH"
+                          className="sc-bwzfXH jQNEzN"
                           color="currentColor"
                           focusable={false}
                           icon="close"
-                          p="half"
                           size="32px"
                           title={null}
                         >
                           <svg
                             aria-hidden={true}
-                            className="sc-bwzfXH bbrsYH"
+                            className="sc-bwzfXH jQNEzN"
                             color="currentColor"
                             fill="currentColor"
                             focusable={false}
                             height="32px"
                             icon="close"
-                            p="half"
                             size="32px"
                             title={null}
                             viewBox="0 0 24 24"
@@ -1491,6 +1485,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
               icon="close"
               label="close"
               onClick={[Function]}
+              size="32px"
               toggled={true}
             >
               <ControlIcon__StyledButton
@@ -1538,7 +1533,6 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
                     <Styled(Component)
                       color="currentColor"
                       icon="close"
-                      p="half"
                       size="32px"
                       title={null}
                     >
@@ -1556,7 +1550,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": false,
-                              "lastClassName": "bbrsYH",
+                              "lastClassName": "jQNEzN",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1600,28 +1594,25 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
                         }
                         forwardedRef={null}
                         icon="close"
-                        p="half"
                         size="32px"
                         title={null}
                       >
                         <ForwardRef
-                          className="sc-bwzfXH bbrsYH"
+                          className="sc-bwzfXH jQNEzN"
                           color="currentColor"
                           focusable={false}
                           icon="close"
-                          p="half"
                           size="32px"
                           title={null}
                         >
                           <svg
                             aria-hidden={true}
-                            className="sc-bwzfXH bbrsYH"
+                            className="sc-bwzfXH jQNEzN"
                             color="currentColor"
                             fill="currentColor"
                             focusable={false}
                             height="32px"
                             icon="close"
-                            p="half"
                             size="32px"
                             title={null}
                             viewBox="0 0 24 24"

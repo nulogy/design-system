@@ -410,7 +410,7 @@ exports[`Storyshots DatePicker default 1`] = `
                       inputProps={
                         Object {
                           "labelText": "Expiry Date",
-                          "placeholder": "dd Mon YYYY",
+                          "placeholder": "DD Mon YYYY",
                         }
                       }
                       onInputChange={[Function]}
@@ -481,7 +481,7 @@ exports[`Storyshots DatePicker default 1`] = `
                           inputProps={
                             Object {
                               "labelText": "Expiry Date",
-                              "placeholder": "dd Mon YYYY",
+                              "placeholder": "DD Mon YYYY",
                             }
                           }
                           onBlur={[Function]}
@@ -516,7 +516,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                 inputProps={
                                   Object {
                                     "labelText": "Expiry Date",
-                                    "placeholder": "dd Mon YYYY",
+                                    "placeholder": "DD Mon YYYY",
                                   }
                                 }
                                 onBlur={[Function]}
@@ -537,7 +537,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
-                                  placeholder="dd Mon YYYY"
+                                  placeholder="DD Mon YYYY"
                                   prefix={null}
                                   prefixAlignment="left"
                                   prefixWidth={null}
@@ -1685,7 +1685,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                               icon="calendarToday"
                                                               onChange={[Function]}
                                                               onClick={[Function]}
-                                                              placeholder="dd Mon YYYY"
+                                                              placeholder="DD Mon YYYY"
                                                               required={false}
                                                               value=""
                                                             >
@@ -2041,7 +2041,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                                       errorMessage={null}
                                                                       onChange={[Function]}
                                                                       onClick={[Function]}
-                                                                      placeholder="dd Mon YYYY"
+                                                                      placeholder="DD Mon YYYY"
                                                                       required={false}
                                                                       value=""
                                                                     >
@@ -2098,7 +2098,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                                         forwardedRef={null}
                                                                         onChange={[Function]}
                                                                         onClick={[Function]}
-                                                                        placeholder="dd Mon YYYY"
+                                                                        placeholder="DD Mon YYYY"
                                                                         required={false}
                                                                         value=""
                                                                       >
@@ -2109,7 +2109,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                                           disabled={false}
                                                                           onChange={[Function]}
                                                                           onClick={[Function]}
-                                                                          placeholder="dd Mon YYYY"
+                                                                          placeholder="DD Mon YYYY"
                                                                           required={false}
                                                                           value=""
                                                                         />
