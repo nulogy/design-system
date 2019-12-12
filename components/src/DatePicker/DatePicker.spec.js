@@ -7,12 +7,12 @@ describe("DatePicker", () => {
   describe("date selection", () => {
     const onChange = jest.fn();
     const onChangeInput = jest.fn();
-    const { container } = render(
-      <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
-    );
-    const input = container.querySelectorAll("input")[0];
 
     it("returns the selected date when the selection has changed", () => {
+      const { container } = render(
+        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
+      );
+      const input = container.querySelectorAll("input")[0];
       const newDate = new Date("Sat, 02 Jan 2019");
       fireEvent.click(input);
       fireEvent.click(container.querySelectorAll(".react-datepicker__day--002")[0]);
@@ -21,6 +21,10 @@ describe("DatePicker", () => {
     });
 
     it("returns the value of the input when it is typed into", () => {
+      const { container } = render(
+        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
+      );
+      const input = container.querySelectorAll("input")[0];
       input.value = "20/02";
       Simulate.change(input);
 
