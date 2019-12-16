@@ -1,6 +1,5 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { Simulate } from "react-dom/test-utils";
 import { DatePicker } from ".";
 
 describe("DatePicker", () => {
@@ -21,14 +20,20 @@ describe("DatePicker", () => {
     });
 
     it("returns the value of the input when it is typed into", () => {
-      const { container } = render(
-        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
+      const labelText = "Expiry Date";
+      const { getByLabelText } = render(
+        <DatePicker
+          selected={new Date("Fri, 01 Jan 2019")}
+          onChange={onChange}
+          onChangeInput={onChangeInput}
+          inputProps={{ labelText }}
+        />
       );
-      const input = container.querySelectorAll("input")[0];
-      input.value = "20/02";
-      Simulate.change(input);
+      const value = "20/02";
+      const input = getByLabelText(labelText);
+      fireEvent.change(input, { target: { value } });
 
-      expect(onChangeInput).toHaveBeenCalledWith("20/02");
+      expect(onChangeInput).toHaveBeenCalledWith(value);
     });
   });
 });
