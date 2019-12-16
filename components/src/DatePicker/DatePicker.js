@@ -54,6 +54,7 @@ class DatePicker extends Component {
           onChange={this.handleSelectedDateChange}
           customInput={customInput}
           renderCustomHeader={DatePickerHeader}
+          excludeDates={[selectedDate]}
           disabledKeyboardNavigation
           strictParsing
         />

@@ -78,7 +78,12 @@ export const DatePickerStyles = createGlobalStyle({
     },
     ".react-datepicker__day--selected": {
       color: theme.colors.white,
-      background: theme.colors.darkBlue
+      background: theme.colors.darkBlue,
+      cursor: "initial",
+      "&:hover": {
+        color: theme.colors.white,
+        background: theme.colors.darkBlue
+      }
     }
   }
 });
