@@ -4,7 +4,10 @@ import { format } from "date-fns";
 import styled from "styled-components";
 
 import theme from "../theme";
-import { Text, Flex, ControlIcon } from "..";
+
+import { Flex } from "../Flex";
+import { Text } from "../Type";
+import { ControlIcon } from "../Button";
 
 const StyledNavigationButton = styled(ControlIcon)({
   marginLeft: theme.space.x2
