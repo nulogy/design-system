@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 
-import { DatePickerStyles } from "./DatePickerStyles";
+// import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 
@@ -47,7 +47,7 @@ class DatePicker extends Component {
 
     return (
       <div className="nds-date-picker">
-        <DatePickerStyles />
+        {/* <DatePickerStyles /> */}
         <ReactDatePicker
           selected={selectedDate}
           dateFormat={dateFormat}

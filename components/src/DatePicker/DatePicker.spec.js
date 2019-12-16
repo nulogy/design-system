@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-// import { Simulate } from "react-dom/test-utils";
+import { Simulate } from "react-dom/test-utils";
 import { DatePicker } from ".";
 
 describe("DatePicker", () => {
@@ -20,16 +20,15 @@ describe("DatePicker", () => {
       expect(onChange.mock.calls[0][0]).toEqual(newDate);
     });
 
-    // TODO: investigate why this test fails in CI, but not locally
-    // it("returns the value of the input when it is typed into", () => {
-    //   const { container } = render(
-    //     <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
-    //   );
-    //   const input = container.querySelectorAll("input")[0];
-    //   input.value = "20/02";
-    //   Simulate.change(input);
+    it("returns the value of the input when it is typed into", () => {
+      const { container } = render(
+        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
+      );
+      const input = container.querySelectorAll("input")[0];
+      input.value = "20/02";
+      Simulate.change(input);
 
-    //   expect(onChangeInput).toHaveBeenCalledWith("20/02");
-    // });
+      expect(onChangeInput).toHaveBeenCalledWith("20/02");
+    });
   });
 });
