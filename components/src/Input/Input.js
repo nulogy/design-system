@@ -56,7 +56,10 @@ const StyledInput = styled.input(
       outline: "none",
       color: theme.colors.black,
       borderColor: theme.colors.blue,
-      boxShadow: theme.shadows.focus
+      boxShadow: theme.shadows.focus,
+      " ~ svg": {
+        fill: theme.colors.darkBlue
+      }
     },
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black)
