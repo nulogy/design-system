@@ -3858,7 +3858,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -3875,6 +3875,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -3902,7 +3905,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="project"
                                                                       placeholder="Project 128703"
@@ -5613,7 +5616,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -5630,6 +5633,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -5656,7 +5662,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="project-description"
                                                                       required={false}
@@ -9534,7 +9540,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -9551,6 +9557,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -9577,7 +9586,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={true}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 gscJBg"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 jaYuCp"
                                                                       defaultValue="WS2SB6"
                                                                       disabled={false}
                                                                       id="item-code"
@@ -11672,7 +11681,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -11689,6 +11698,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -11716,7 +11728,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="eaches-expected"
                                                                       placeholder="2 000"
@@ -13276,7 +13288,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -13293,6 +13305,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -13319,7 +13334,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 euAFlo"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 fZdqPf"
                                                                       defaultValue="18 000"
                                                                       disabled={true}
                                                                       id="eaches-remaining"
@@ -14878,7 +14893,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -14895,6 +14910,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -14922,7 +14940,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="scheduled-start"
                                                                       placeholder="MMM-DD-YYYY"
@@ -16481,7 +16499,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -16498,6 +16516,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -16525,7 +16546,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="scheduled-end"
                                                                       placeholder="MMM-DD-YYYY"
@@ -24671,7 +24692,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -24688,6 +24709,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -24714,7 +24738,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={true}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 gscJBg"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 jaYuCp"
                                                                       defaultValue="235432"
                                                                       disabled={false}
                                                                       id="items"
@@ -26806,7 +26830,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -26823,6 +26847,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -26849,7 +26876,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="quantity"
                                                                       required={false}
@@ -30218,7 +30245,7 @@ exports[`Storyshots Form Form 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -30235,6 +30262,9 @@ exports[`Storyshots Form Form 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -30261,7 +30291,7 @@ exports[`Storyshots Form Form 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="name"
                                                               required={false}
@@ -31974,7 +32004,7 @@ exports[`Storyshots Form Form 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -31991,6 +32021,9 @@ exports[`Storyshots Form Form 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -32018,7 +32051,7 @@ exports[`Storyshots Form Form 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="birthdate"
                                                               placeholder="DD-MM-YYYY"
@@ -33649,7 +33682,7 @@ exports[`Storyshots Form Form 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -33666,6 +33699,9 @@ exports[`Storyshots Form Form 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -33692,7 +33728,7 @@ exports[`Storyshots Form Form 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="birthplace"
                                                               required={false}
@@ -36366,7 +36402,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -36383,6 +36419,9 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -36409,7 +36448,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="name"
                                                                       required={false}
@@ -38122,7 +38161,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -38139,6 +38178,9 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -38166,7 +38208,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="birthdate"
                                                                       placeholder="DD-MM-YYYY"
@@ -39797,7 +39839,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -39814,6 +39856,9 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -39840,7 +39885,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="birthplace"
                                                                       required={false}
@@ -41761,7 +41806,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -41778,6 +41823,9 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -41804,7 +41852,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="gender"
                                                                       required={false}
@@ -43359,7 +43407,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -43376,6 +43424,9 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -43402,7 +43453,7 @@ exports[`Storyshots Form With form sections 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="occupation"
                                                                       required={false}
@@ -45752,7 +45803,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -45769,6 +45820,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -45795,7 +45849,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="name"
                                                                       required={false}
@@ -47508,7 +47562,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -47525,6 +47579,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -47552,7 +47609,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="birthdate"
                                                                       placeholder="DD-MM-YYYY"
@@ -49183,7 +49240,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -49200,6 +49257,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -49226,7 +49286,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="birthplace"
                                                                       required={false}
@@ -50819,7 +50879,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -50836,6 +50896,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -50862,7 +50925,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="gender"
                                                                       required={false}
@@ -52417,7 +52480,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                         "componentStyle": ComponentStyle {
                                                                           "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "epaPSA",
+                                                                          "lastClassName": "bdyRjp",
                                                                           "rules": Array [
                                                                             "display: block;",
                                                                             "flex-grow: 1;",
@@ -52434,6 +52497,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                             "color: #011e38;",
                                                                             "border-color: #216beb;",
                                                                             "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                            " ~ svg {",
+                                                                            "fill: #00438f;",
+                                                                            "}",
                                                                             "}",
                                                                             "::placeholder {",
                                                                             "color: rgba(1,30,56,0.6);",
@@ -52460,7 +52526,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                                                                     <input
                                                                       aria-invalid={false}
                                                                       aria-required={false}
-                                                                      className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                      className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                       disabled={false}
                                                                       id="occupation"
                                                                       required={false}
@@ -54454,7 +54520,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -54471,6 +54537,9 @@ exports[`Storyshots Form Without title 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -54497,7 +54566,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="name"
                                                               required={false}
@@ -56210,7 +56279,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -56227,6 +56296,9 @@ exports[`Storyshots Form Without title 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -56254,7 +56326,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="birthdate"
                                                               placeholder="DD-MM-YYYY"
@@ -57885,7 +57957,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                                 "componentStyle": ComponentStyle {
                                                                   "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "bdyRjp",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -57902,6 +57974,9 @@ exports[`Storyshots Form Without title 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -57928,7 +58003,7 @@ exports[`Storyshots Form Without title 1`] = `
                                                             <input
                                                               aria-invalid={false}
                                                               aria-required={false}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                               disabled={false}
                                                               id="birthplace"
                                                               required={false}

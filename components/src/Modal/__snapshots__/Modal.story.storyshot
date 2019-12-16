@@ -15289,7 +15289,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="name"
                                               name="name"
                                             />
@@ -15323,7 +15323,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="age"
                                               name="age"
                                               type="number"
@@ -15358,7 +15358,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="name"
                                               name="name"
                                             />
@@ -15392,7 +15392,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="age"
                                               name="age"
                                               type="number"
@@ -15427,7 +15427,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="name"
                                               name="name"
                                             />
@@ -15461,7 +15461,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                             <input
                                               aria-invalid="false"
                                               aria-required="false"
-                                              class="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                              class="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                               id="age"
                                               name="age"
                                               type="number"
@@ -17826,7 +17826,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -17843,6 +17843,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -17870,7 +17873,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="name"
                                                                                         name="name"
@@ -19432,7 +19435,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -19449,6 +19452,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -19477,7 +19483,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="age"
                                                                                         name="age"
@@ -21037,7 +21043,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -21054,6 +21060,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -21081,7 +21090,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="name"
                                                                                         name="name"
@@ -22643,7 +22652,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -22660,6 +22669,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -22688,7 +22700,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="age"
                                                                                         name="age"
@@ -24248,7 +24260,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -24265,6 +24277,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -24292,7 +24307,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="name"
                                                                                         name="name"
@@ -25854,7 +25869,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                           "componentStyle": ComponentStyle {
                                                                                             "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                             "isStatic": false,
-                                                                                            "lastClassName": "epaPSA",
+                                                                                            "lastClassName": "bdyRjp",
                                                                                             "rules": Array [
                                                                                               "display: block;",
                                                                                               "flex-grow: 1;",
@@ -25871,6 +25886,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                               "color: #011e38;",
                                                                                               "border-color: #216beb;",
                                                                                               "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                              " ~ svg {",
+                                                                                              "fill: #00438f;",
+                                                                                              "}",
                                                                                               "}",
                                                                                               "::placeholder {",
                                                                                               "color: rgba(1,30,56,0.6);",
@@ -25899,7 +25917,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       <input
                                                                                         aria-invalid={false}
                                                                                         aria-required={false}
-                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                        className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                         disabled={false}
                                                                                         id="age"
                                                                                         name="age"

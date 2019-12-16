@@ -3728,7 +3728,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -3745,6 +3745,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -3770,7 +3773,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                               />
@@ -5324,7 +5327,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -5341,6 +5344,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -5367,7 +5373,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                                 type="password"
@@ -10613,7 +10619,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -10630,6 +10636,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -10655,7 +10664,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                               />
@@ -12209,7 +12218,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -12226,6 +12235,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -12252,7 +12264,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                                 type="password"
@@ -17425,7 +17437,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -17442,6 +17454,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -17467,7 +17482,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                               />
@@ -19021,7 +19036,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -19038,6 +19053,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -19064,7 +19082,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                                 type="password"
@@ -23452,7 +23470,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -23469,6 +23487,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -23494,7 +23515,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                               />
@@ -25048,7 +25069,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                                   "componentStyle": ComponentStyle {
                                                                                     "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                                     "isStatic": false,
-                                                                                    "lastClassName": "epaPSA",
+                                                                                    "lastClassName": "bdyRjp",
                                                                                     "rules": Array [
                                                                                       "display: block;",
                                                                                       "flex-grow: 1;",
@@ -25065,6 +25086,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                                       "color: #011e38;",
                                                                                       "border-color: #216beb;",
                                                                                       "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                      " ~ svg {",
+                                                                                      "fill: #00438f;",
+                                                                                      "}",
                                                                                       "}",
                                                                                       "::placeholder {",
                                                                                       "color: rgba(1,30,56,0.6);",
@@ -25091,7 +25115,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                               <input
                                                                                 aria-invalid={false}
                                                                                 aria-required={false}
-                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                                 disabled={false}
                                                                                 required={false}
                                                                                 type="password"
@@ -30111,7 +30135,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "epaPSA",
+                                                                              "lastClassName": "bdyRjp",
                                                                               "rules": Array [
                                                                                 "display: block;",
                                                                                 "flex-grow: 1;",
@@ -30128,6 +30152,9 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                                 "color: #011e38;",
                                                                                 "border-color: #216beb;",
                                                                                 "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                " ~ svg {",
+                                                                                "fill: #00438f;",
+                                                                                "}",
                                                                                 "}",
                                                                                 "::placeholder {",
                                                                                 "color: rgba(1,30,56,0.6);",
@@ -30154,7 +30181,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                         <input
                                                                           aria-invalid={false}
                                                                           aria-required={false}
-                                                                          className="Input__StyledInput-sc-1x697oj-0 cxaSmO"
+                                                                          className="Input__StyledInput-sc-1x697oj-0 kPdSW"
                                                                           disabled={false}
                                                                           required={false}
                                                                         />
@@ -31708,7 +31735,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "Input__StyledInput-sc-1x697oj-0",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "epaPSA",
+                                                                              "lastClassName": "bdyRjp",
                                                                               "rules": Array [
                                                                                 "display: block;",
                                                                                 "flex-grow: 1;",
@@ -31725,6 +31752,9 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                                 "color: #011e38;",
                                                                                 "border-color: #216beb;",
                                                                                 "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                " ~ svg {",
+                                                                                "fill: #00438f;",
+                                                                                "}",
                                                                                 "}",
                                                                                 "::placeholder {",
                                                                                 "color: rgba(1,30,56,0.6);",
@@ -31751,7 +31781,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                         <input
                                                                           aria-invalid={false}
                                                                           aria-required={false}
-                                                                          className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                          className="Input__StyledInput-sc-1x697oj-0 bdyRjp"
                                                                           disabled={false}
                                                                           required={false}
                                                                           type="password"
