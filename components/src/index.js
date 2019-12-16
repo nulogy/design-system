@@ -35,3 +35,4 @@ export { DemoPage } from "./DemoPage";
 export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";
 export { DatePicker } from "./DatePicker";
+export { TimePicker } from "./TimePicker";
