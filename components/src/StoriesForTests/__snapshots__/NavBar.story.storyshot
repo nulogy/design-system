@@ -612,15 +612,15 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kEYyzF",
+                              "componentId": "sc-kkGfuU",
                               "isStatic": false,
-                              "lastClassName": "gfWKdx",
+                              "lastClassName": "gqJIVH",
                               "rules": Array [],
                             },
                             "displayName": "Styled(BaseNavBar)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kEYyzF",
+                            "styledComponentId": "sc-kkGfuU",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -722,7 +722,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                       >
                         <BaseNavBar
                           breakpointUpper="1024px"
-                          className="sc-kEYyzF gfWKdx"
+                          className="sc-kkGfuU gqJIVH"
                           menuData={
                             Object {
                               "primaryMenu": Array [
@@ -828,7 +828,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                             <ChildWrapper>
                               <SelectNavBarBasedOnWidth
                                 breakpointUpper="1024px"
-                                className="sc-kEYyzF gfWKdx"
+                                className="sc-kkGfuU gqJIVH"
                                 menuData={
                                   Object {
                                     "primaryMenu": Array [
@@ -923,7 +923,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                               >
                                 <MediumNavBar
                                   brandingLinkHref="/"
-                                  className="sc-kEYyzF gfWKdx"
+                                  className="sc-kkGfuU gqJIVH"
                                   menuData={
                                     Object {
                                       "primaryMenu": Array [
@@ -1018,7 +1018,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                   themeColor="blue"
                                 >
                                   <header
-                                    className="sc-kEYyzF gfWKdx"
+                                    className="sc-kkGfuU gqJIVH"
                                   >
                                     <Styled(Styled(Box))
                                       backgroundColor="#122b47"
@@ -1202,9 +1202,9 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                             },
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-hMqMXs",
+                                              "componentId": "sc-kEYyzF",
                                               "isStatic": false,
-                                              "lastClassName": "cPtRMU",
+                                              "lastClassName": "jhTLdn",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -1243,7 +1243,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                               "justifyContent": [Function],
                                             },
                                             "render": [Function],
-                                            "styledComponentId": "sc-hMqMXs",
+                                            "styledComponentId": "sc-kEYyzF",
                                             "target": "div",
                                             "toString": [Function],
                                             "usesTheme": false,
@@ -1340,7 +1340,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-bdVaJa sc-hMqMXs cPtRMU"
+                                          className="Box-sc-1qu1edy-0 sc-bdVaJa sc-kEYyzF jhTLdn"
                                         >
                                           <Link
                                             aria-label="Nulogy logo"
@@ -2246,9 +2246,9 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-jKJlTe",
+                                                          "componentId": "sc-eNQAEJ",
                                                           "isStatic": false,
-                                                          "lastClassName": "cfMlcP",
+                                                          "lastClassName": "fCXhDR",
                                                           "rules": Array [
                                                             "div {",
                                                             ":not(:last-of-type) {",
@@ -2260,7 +2260,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                         "displayName": "Styled(BaseDesktopMenu)",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-jKJlTe",
+                                                        "styledComponentId": "sc-eNQAEJ",
                                                         "target": [Function],
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -2340,7 +2340,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                   >
                                                     <BaseDesktopMenu
                                                       aria-label="Primary navigation"
-                                                      className="sc-jKJlTe cfMlcP"
+                                                      className="sc-eNQAEJ fCXhDR"
                                                       menuData={
                                                         Array [
                                                           Object {
@@ -2412,7 +2412,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                     >
                                                       <DesktopMenu__Nav
                                                         aria-label="Primary navigation"
-                                                        className="sc-jKJlTe cfMlcP"
+                                                        className="sc-eNQAEJ fCXhDR"
                                                         style={
                                                           Object {
                                                             "paddingRight": "24px",
@@ -2421,7 +2421,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                       >
                                                         <StyledComponent
                                                           aria-label="Primary navigation"
-                                                          className="sc-jKJlTe cfMlcP"
+                                                          className="sc-eNQAEJ fCXhDR"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -2454,7 +2454,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                         >
                                                           <nav
                                                             aria-label="Primary navigation"
-                                                            className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-jKJlTe cfMlcP"
+                                                            className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-eNQAEJ fCXhDR"
                                                             style={
                                                               Object {
                                                                 "paddingRight": "24px",
@@ -3625,7 +3625,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "Box-sc-1qu1edy-0",
                                                                 "isStatic": false,
-                                                                "lastClassName": "ioXwgu",
+                                                                "lastClassName": "eMNiba",
                                                                 "rules": Array [
                                                                   [Function],
                                                                   [Function],
@@ -3795,9 +3795,9 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-dxgOiQ",
+                                                                      "componentId": "sc-ckVGcZ",
                                                                       "isStatic": false,
-                                                                      "lastClassName": "fzipLs",
+                                                                      "lastClassName": "gaawaX",
                                                                       "rules": Array [
                                                                         "background: #e1ebfa;",
                                                                         "border-radius: 4px;",
@@ -3847,7 +3847,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                     "displayName": "Styled(BaseNavBarSearch)",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-dxgOiQ",
+                                                                    "styledComponentId": "sc-ckVGcZ",
                                                                     "target": [Function],
                                                                     "toString": [Function],
                                                                     "usesTheme": false,
@@ -3859,12 +3859,12 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                 onSubmit={[Function]}
                                                               >
                                                                 <BaseNavBarSearch
-                                                                  className="sc-dxgOiQ fzipLs"
+                                                                  className="sc-ckVGcZ gaawaX"
                                                                   name="global-search"
                                                                   onSubmit={[Function]}
                                                                 >
                                                                   <form
-                                                                    className="sc-dxgOiQ fzipLs"
+                                                                    className="sc-ckVGcZ gaawaX"
                                                                     onSubmit={[Function]}
                                                                   >
                                                                     <Styled(Box)
@@ -4188,7 +4188,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                           className="Box-sc-1qu1edy-0 sc-bdVaJa gzoWJL"
                                                                           role="search"
                                                                         >
-                                                                          <Input
+                                                                          <ForwardRef
                                                                             aria-labelledby="global-search"
                                                                             disabled={false}
                                                                             errorList={null}
@@ -4881,7 +4881,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                             prefixWidth={null}
                                                                                             textAlign="left"
                                                                                           />
-                                                                                          <Input__StyledInput
+                                                                                          <InputField
                                                                                             aria-invalid={false}
                                                                                             aria-labelledby="global-search"
                                                                                             aria-required={true}
@@ -4894,76 +4894,436 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                             required={true}
                                                                                             type="search"
                                                                                           >
-                                                                                            <StyledComponent
-                                                                                              aria-invalid={false}
-                                                                                              aria-labelledby="global-search"
-                                                                                              aria-required={true}
-                                                                                              disabled={false}
-                                                                                              error={false}
-                                                                                              errorList={null}
-                                                                                              errorMessage={null}
-                                                                                              forwardedComponent={
+                                                                                            <Box
+                                                                                              position="relative"
+                                                                                              theme={
                                                                                                 Object {
-                                                                                                  "$$typeof": Symbol(react.forward_ref),
-                                                                                                  "attrs": Array [],
-                                                                                                  "componentStyle": ComponentStyle {
-                                                                                                    "componentId": "Input__StyledInput-sc-1x697oj-0",
-                                                                                                    "isStatic": false,
-                                                                                                    "lastClassName": "epaPSA",
-                                                                                                    "rules": Array [
-                                                                                                      "display: block;",
-                                                                                                      "flex-grow: 1;",
-                                                                                                      "border: 1px solid;",
-                                                                                                      "border-radius: 4px;",
-                                                                                                      "padding: 7px;",
-                                                                                                      "font-size: 16px;",
-                                                                                                      "font-family: 'IBM Plex Sans', sans-serif;",
-                                                                                                      "line-height: 1.5;",
-                                                                                                      "margin: 0px;",
-                                                                                                      "min-height: 40px;",
-                                                                                                      "&:focus {",
-                                                                                                      "outline: none;",
-                                                                                                      "color: #011e38;",
-                                                                                                      "border-color: #216beb;",
-                                                                                                      "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
-                                                                                                      "}",
-                                                                                                      "::placeholder {",
-                                                                                                      "color: rgba(1,30,56,0.6);",
-                                                                                                      "}",
-                                                                                                      [Function],
-                                                                                                      [Function],
-                                                                                                    ],
+                                                                                                  "borders": Array [],
+                                                                                                  "breakpoints": Object {
+                                                                                                    "extraLarge": "1920px",
+                                                                                                    "extraSmall": "0px",
+                                                                                                    "large": "1360px",
+                                                                                                    "medium": "1024px",
+                                                                                                    "small": "768px",
                                                                                                   },
-                                                                                                  "displayName": "Input__StyledInput",
-                                                                                                  "foldedComponentIds": Array [],
-                                                                                                  "render": [Function],
-                                                                                                  "styledComponentId": "Input__StyledInput-sc-1x697oj-0",
-                                                                                                  "target": "input",
-                                                                                                  "toString": [Function],
-                                                                                                  "usesTheme": false,
-                                                                                                  "warnTooManyClasses": [Function],
-                                                                                                  "withComponent": [Function],
+                                                                                                  "colors": Object {
+                                                                                                    "black": "#011e38",
+                                                                                                    "blackBlue": "#122b47",
+                                                                                                    "blue": "#216beb",
+                                                                                                    "darkBlue": "#00438f",
+                                                                                                    "darkGrey": "#434d59",
+                                                                                                    "green": "#008059",
+                                                                                                    "grey": "#c0c8d1",
+                                                                                                    "lightBlue": "#e1ebfa",
+                                                                                                    "lightGreen": "#e9f7f2",
+                                                                                                    "lightGrey": "#e4e7eb",
+                                                                                                    "lightRed": "#fae6ea",
+                                                                                                    "lightYellow": "#fcf5e3",
+                                                                                                    "red": "#cc1439",
+                                                                                                    "white": "#ffffff",
+                                                                                                    "whiteGrey": "#f0f2f5",
+                                                                                                    "yellow": "#ffbb00",
+                                                                                                  },
+                                                                                                  "fontSizes": Object {
+                                                                                                    "large": "20px",
+                                                                                                    "larger": "26px",
+                                                                                                    "largest": "46px",
+                                                                                                    "medium": "16px",
+                                                                                                    "small": "14px",
+                                                                                                    "smaller": "12px",
+                                                                                                  },
+                                                                                                  "fontWeights": Object {
+                                                                                                    "bold": "600",
+                                                                                                    "light": "300",
+                                                                                                    "medium": "500",
+                                                                                                    "normal": "400",
+                                                                                                  },
+                                                                                                  "fonts": Object {
+                                                                                                    "base": "'IBM Plex Sans', sans-serif",
+                                                                                                    "mono": "'IBM Plex Mono', monospace",
+                                                                                                  },
+                                                                                                  "lineHeights": Object {
+                                                                                                    "base": "1.5",
+                                                                                                    "sectionTitle": "1.23076923",
+                                                                                                    "smallTextBase": "1.71428571",
+                                                                                                    "smallTextCompressed": "1.14285714",
+                                                                                                    "smallerText": "1.33333333",
+                                                                                                    "subsectionTitle": "1.2",
+                                                                                                    "title": "1.04347826",
+                                                                                                  },
+                                                                                                  "radii": Object {
+                                                                                                    "circle": "50%",
+                                                                                                    "medium": "4px",
+                                                                                                    "small": "2px",
+                                                                                                  },
+                                                                                                  "shadows": Object {
+                                                                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                                                                  },
+                                                                                                  "space": Object {
+                                                                                                    "half": "4px",
+                                                                                                    "none": "0px",
+                                                                                                    "x1": "8px",
+                                                                                                    "x2": "16px",
+                                                                                                    "x3": "24px",
+                                                                                                    "x4": "32px",
+                                                                                                    "x5": "40px",
+                                                                                                    "x6": "48px",
+                                                                                                    "x8": "64px",
+                                                                                                  },
+                                                                                                  "zIndex": Object {
+                                                                                                    "content": 100,
+                                                                                                    "overlay": 1000,
+                                                                                                    "tabsBar": 210,
+                                                                                                    "tabsScollIndicator": 200,
+                                                                                                  },
                                                                                                 }
                                                                                               }
-                                                                                              forwardedRef={null}
-                                                                                              id="navbar-search"
-                                                                                              placeholder="Search Nulogy ..."
-                                                                                              required={true}
-                                                                                              type="search"
                                                                                             >
-                                                                                              <input
-                                                                                                aria-invalid={false}
-                                                                                                aria-labelledby="global-search"
-                                                                                                aria-required={true}
-                                                                                                className="Input__StyledInput-sc-1x697oj-0 epaPSA"
-                                                                                                disabled={false}
-                                                                                                id="navbar-search"
-                                                                                                placeholder="Search Nulogy ..."
-                                                                                                required={true}
-                                                                                                type="search"
-                                                                                              />
-                                                                                            </StyledComponent>
-                                                                                          </Input__StyledInput>
+                                                                                              <StyledComponent
+                                                                                                forwardedComponent={
+                                                                                                  Object {
+                                                                                                    "$$typeof": Symbol(react.forward_ref),
+                                                                                                    "_foldedDefaultProps": Object {
+                                                                                                      "theme": Object {
+                                                                                                        "borders": Array [],
+                                                                                                        "breakpoints": Object {
+                                                                                                          "extraLarge": "1920px",
+                                                                                                          "extraSmall": "0px",
+                                                                                                          "large": "1360px",
+                                                                                                          "medium": "1024px",
+                                                                                                          "small": "768px",
+                                                                                                        },
+                                                                                                        "colors": Object {
+                                                                                                          "black": "#011e38",
+                                                                                                          "blackBlue": "#122b47",
+                                                                                                          "blue": "#216beb",
+                                                                                                          "darkBlue": "#00438f",
+                                                                                                          "darkGrey": "#434d59",
+                                                                                                          "green": "#008059",
+                                                                                                          "grey": "#c0c8d1",
+                                                                                                          "lightBlue": "#e1ebfa",
+                                                                                                          "lightGreen": "#e9f7f2",
+                                                                                                          "lightGrey": "#e4e7eb",
+                                                                                                          "lightRed": "#fae6ea",
+                                                                                                          "lightYellow": "#fcf5e3",
+                                                                                                          "red": "#cc1439",
+                                                                                                          "white": "#ffffff",
+                                                                                                          "whiteGrey": "#f0f2f5",
+                                                                                                          "yellow": "#ffbb00",
+                                                                                                        },
+                                                                                                        "fontSizes": Object {
+                                                                                                          "large": "20px",
+                                                                                                          "larger": "26px",
+                                                                                                          "largest": "46px",
+                                                                                                          "medium": "16px",
+                                                                                                          "small": "14px",
+                                                                                                          "smaller": "12px",
+                                                                                                        },
+                                                                                                        "fontWeights": Object {
+                                                                                                          "bold": "600",
+                                                                                                          "light": "300",
+                                                                                                          "medium": "500",
+                                                                                                          "normal": "400",
+                                                                                                        },
+                                                                                                        "fonts": Object {
+                                                                                                          "base": "'IBM Plex Sans', sans-serif",
+                                                                                                          "mono": "'IBM Plex Mono', monospace",
+                                                                                                        },
+                                                                                                        "lineHeights": Object {
+                                                                                                          "base": "1.5",
+                                                                                                          "sectionTitle": "1.23076923",
+                                                                                                          "smallTextBase": "1.71428571",
+                                                                                                          "smallTextCompressed": "1.14285714",
+                                                                                                          "smallerText": "1.33333333",
+                                                                                                          "subsectionTitle": "1.2",
+                                                                                                          "title": "1.04347826",
+                                                                                                        },
+                                                                                                        "radii": Object {
+                                                                                                          "circle": "50%",
+                                                                                                          "medium": "4px",
+                                                                                                          "small": "2px",
+                                                                                                        },
+                                                                                                        "shadows": Object {
+                                                                                                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                                                                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                                                                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                                                                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                                                                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                                                                        },
+                                                                                                        "space": Object {
+                                                                                                          "half": "4px",
+                                                                                                          "none": "0px",
+                                                                                                          "x1": "8px",
+                                                                                                          "x2": "16px",
+                                                                                                          "x3": "24px",
+                                                                                                          "x4": "32px",
+                                                                                                          "x5": "40px",
+                                                                                                          "x6": "48px",
+                                                                                                          "x8": "64px",
+                                                                                                        },
+                                                                                                        "zIndex": Object {
+                                                                                                          "content": 100,
+                                                                                                          "overlay": 1000,
+                                                                                                          "tabsBar": 210,
+                                                                                                          "tabsScollIndicator": 200,
+                                                                                                        },
+                                                                                                      },
+                                                                                                    },
+                                                                                                    "attrs": Array [],
+                                                                                                    "componentStyle": ComponentStyle {
+                                                                                                      "componentId": "Box-sc-1qu1edy-0",
+                                                                                                      "isStatic": false,
+                                                                                                      "lastClassName": "eMNiba",
+                                                                                                      "rules": Array [
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                        [Function],
+                                                                                                      ],
+                                                                                                    },
+                                                                                                    "displayName": "Box",
+                                                                                                    "foldedComponentIds": Array [],
+                                                                                                    "propTypes": Object {
+                                                                                                      "bg": [Function],
+                                                                                                      "border": [Function],
+                                                                                                      "borderBottom": [Function],
+                                                                                                      "borderLeft": [Function],
+                                                                                                      "borderRadius": [Function],
+                                                                                                      "borderRight": [Function],
+                                                                                                      "borderTop": [Function],
+                                                                                                      "boxShadow": [Function],
+                                                                                                      "color": [Function],
+                                                                                                      "display": [Function],
+                                                                                                      "flexGrow": [Function],
+                                                                                                      "height": [Function],
+                                                                                                      "m": [Function],
+                                                                                                      "maxHeight": [Function],
+                                                                                                      "maxWidth": [Function],
+                                                                                                      "mb": [Function],
+                                                                                                      "minHeight": [Function],
+                                                                                                      "minWidth": [Function],
+                                                                                                      "ml": [Function],
+                                                                                                      "mr": [Function],
+                                                                                                      "mt": [Function],
+                                                                                                      "mx": [Function],
+                                                                                                      "my": [Function],
+                                                                                                      "order": [Function],
+                                                                                                      "p": [Function],
+                                                                                                      "pb": [Function],
+                                                                                                      "pl": [Function],
+                                                                                                      "position": [Function],
+                                                                                                      "pr": [Function],
+                                                                                                      "pt": [Function],
+                                                                                                      "px": [Function],
+                                                                                                      "py": [Function],
+                                                                                                      "textAlign": [Function],
+                                                                                                      "width": [Function],
+                                                                                                    },
+                                                                                                    "render": [Function],
+                                                                                                    "styledComponentId": "Box-sc-1qu1edy-0",
+                                                                                                    "target": "div",
+                                                                                                    "toString": [Function],
+                                                                                                    "usesTheme": false,
+                                                                                                    "warnTooManyClasses": [Function],
+                                                                                                    "withComponent": [Function],
+                                                                                                  }
+                                                                                                }
+                                                                                                forwardedRef={null}
+                                                                                                position="relative"
+                                                                                                theme={
+                                                                                                  Object {
+                                                                                                    "borders": Array [],
+                                                                                                    "breakpoints": Object {
+                                                                                                      "extraLarge": "1920px",
+                                                                                                      "extraSmall": "0px",
+                                                                                                      "large": "1360px",
+                                                                                                      "medium": "1024px",
+                                                                                                      "small": "768px",
+                                                                                                    },
+                                                                                                    "colors": Object {
+                                                                                                      "black": "#011e38",
+                                                                                                      "blackBlue": "#122b47",
+                                                                                                      "blue": "#216beb",
+                                                                                                      "darkBlue": "#00438f",
+                                                                                                      "darkGrey": "#434d59",
+                                                                                                      "green": "#008059",
+                                                                                                      "grey": "#c0c8d1",
+                                                                                                      "lightBlue": "#e1ebfa",
+                                                                                                      "lightGreen": "#e9f7f2",
+                                                                                                      "lightGrey": "#e4e7eb",
+                                                                                                      "lightRed": "#fae6ea",
+                                                                                                      "lightYellow": "#fcf5e3",
+                                                                                                      "red": "#cc1439",
+                                                                                                      "white": "#ffffff",
+                                                                                                      "whiteGrey": "#f0f2f5",
+                                                                                                      "yellow": "#ffbb00",
+                                                                                                    },
+                                                                                                    "fontSizes": Object {
+                                                                                                      "large": "20px",
+                                                                                                      "larger": "26px",
+                                                                                                      "largest": "46px",
+                                                                                                      "medium": "16px",
+                                                                                                      "small": "14px",
+                                                                                                      "smaller": "12px",
+                                                                                                    },
+                                                                                                    "fontWeights": Object {
+                                                                                                      "bold": "600",
+                                                                                                      "light": "300",
+                                                                                                      "medium": "500",
+                                                                                                      "normal": "400",
+                                                                                                    },
+                                                                                                    "fonts": Object {
+                                                                                                      "base": "'IBM Plex Sans', sans-serif",
+                                                                                                      "mono": "'IBM Plex Mono', monospace",
+                                                                                                    },
+                                                                                                    "lineHeights": Object {
+                                                                                                      "base": "1.5",
+                                                                                                      "sectionTitle": "1.23076923",
+                                                                                                      "smallTextBase": "1.71428571",
+                                                                                                      "smallTextCompressed": "1.14285714",
+                                                                                                      "smallerText": "1.33333333",
+                                                                                                      "subsectionTitle": "1.2",
+                                                                                                      "title": "1.04347826",
+                                                                                                    },
+                                                                                                    "radii": Object {
+                                                                                                      "circle": "50%",
+                                                                                                      "medium": "4px",
+                                                                                                      "small": "2px",
+                                                                                                    },
+                                                                                                    "shadows": Object {
+                                                                                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                                                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                                                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                                                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                                                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                                                                    },
+                                                                                                    "space": Object {
+                                                                                                      "half": "4px",
+                                                                                                      "none": "0px",
+                                                                                                      "x1": "8px",
+                                                                                                      "x2": "16px",
+                                                                                                      "x3": "24px",
+                                                                                                      "x4": "32px",
+                                                                                                      "x5": "40px",
+                                                                                                      "x6": "48px",
+                                                                                                      "x8": "64px",
+                                                                                                    },
+                                                                                                    "zIndex": Object {
+                                                                                                      "content": 100,
+                                                                                                      "overlay": 1000,
+                                                                                                      "tabsBar": 210,
+                                                                                                      "tabsScollIndicator": 200,
+                                                                                                    },
+                                                                                                  }
+                                                                                                }
+                                                                                              >
+                                                                                                <div
+                                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                                >
+                                                                                                  <Input__StyledInput
+                                                                                                    aria-invalid={false}
+                                                                                                    aria-labelledby="global-search"
+                                                                                                    aria-required={true}
+                                                                                                    disabled={false}
+                                                                                                    error={false}
+                                                                                                    errorList={null}
+                                                                                                    errorMessage={null}
+                                                                                                    id="navbar-search"
+                                                                                                    placeholder="Search Nulogy ..."
+                                                                                                    required={true}
+                                                                                                    type="search"
+                                                                                                  >
+                                                                                                    <StyledComponent
+                                                                                                      aria-invalid={false}
+                                                                                                      aria-labelledby="global-search"
+                                                                                                      aria-required={true}
+                                                                                                      disabled={false}
+                                                                                                      error={false}
+                                                                                                      errorList={null}
+                                                                                                      errorMessage={null}
+                                                                                                      forwardedComponent={
+                                                                                                        Object {
+                                                                                                          "$$typeof": Symbol(react.forward_ref),
+                                                                                                          "attrs": Array [],
+                                                                                                          "componentStyle": ComponentStyle {
+                                                                                                            "componentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                                                            "isStatic": false,
+                                                                                                            "lastClassName": "epaPSA",
+                                                                                                            "rules": Array [
+                                                                                                              "display: block;",
+                                                                                                              "flex-grow: 1;",
+                                                                                                              "border: 1px solid;",
+                                                                                                              "border-radius: 4px;",
+                                                                                                              "padding: 7px;",
+                                                                                                              "font-size: 16px;",
+                                                                                                              "font-family: 'IBM Plex Sans', sans-serif;",
+                                                                                                              "line-height: 1.5;",
+                                                                                                              "margin: 0px;",
+                                                                                                              "min-height: 40px;",
+                                                                                                              "&:focus {",
+                                                                                                              "outline: none;",
+                                                                                                              "color: #011e38;",
+                                                                                                              "border-color: #216beb;",
+                                                                                                              "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                                                              "}",
+                                                                                                              "::placeholder {",
+                                                                                                              "color: rgba(1,30,56,0.6);",
+                                                                                                              "}",
+                                                                                                              [Function],
+                                                                                                              [Function],
+                                                                                                            ],
+                                                                                                          },
+                                                                                                          "displayName": "Input__StyledInput",
+                                                                                                          "foldedComponentIds": Array [],
+                                                                                                          "render": [Function],
+                                                                                                          "styledComponentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                                                          "target": "input",
+                                                                                                          "toString": [Function],
+                                                                                                          "usesTheme": false,
+                                                                                                          "warnTooManyClasses": [Function],
+                                                                                                          "withComponent": [Function],
+                                                                                                        }
+                                                                                                      }
+                                                                                                      forwardedRef={null}
+                                                                                                      id="navbar-search"
+                                                                                                      placeholder="Search Nulogy ..."
+                                                                                                      required={true}
+                                                                                                      type="search"
+                                                                                                    >
+                                                                                                      <input
+                                                                                                        aria-invalid={false}
+                                                                                                        aria-labelledby="global-search"
+                                                                                                        aria-required={true}
+                                                                                                        className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                                                                        disabled={false}
+                                                                                                        id="navbar-search"
+                                                                                                        placeholder="Search Nulogy ..."
+                                                                                                        required={true}
+                                                                                                        type="search"
+                                                                                                      />
+                                                                                                    </StyledComponent>
+                                                                                                  </Input__StyledInput>
+                                                                                                </div>
+                                                                                              </StyledComponent>
+                                                                                            </Box>
+                                                                                          </InputField>
                                                                                           <Suffix
                                                                                             suffix={null}
                                                                                             suffixWidth={null}
@@ -4981,7 +5341,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                 </div>
                                                                               </StyledComponent>
                                                                             </Styled(Box)>
-                                                                          </Input>
+                                                                          </ForwardRef>
                                                                           <button
                                                                             aria-label="global-search"
                                                                             id="global-search"
@@ -5147,9 +5507,9 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jKJlTe",
+                                                                "componentId": "sc-eNQAEJ",
                                                                 "isStatic": false,
-                                                                "lastClassName": "cfMlcP",
+                                                                "lastClassName": "fCXhDR",
                                                                 "rules": Array [
                                                                   "div {",
                                                                   ":not(:last-of-type) {",
@@ -5161,7 +5521,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                               "displayName": "Styled(BaseDesktopMenu)",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jKJlTe",
+                                                              "styledComponentId": "sc-eNQAEJ",
                                                               "target": [Function],
                                                               "toString": [Function],
                                                               "usesTheme": false,
@@ -5217,7 +5577,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                         >
                                                           <BaseDesktopMenu
                                                             aria-label="Secondary navigation"
-                                                            className="sc-jKJlTe cfMlcP"
+                                                            className="sc-eNQAEJ fCXhDR"
                                                             menuData={
                                                               Array [
                                                                 Object {
@@ -5265,11 +5625,11 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                           >
                                                             <DesktopMenu__Nav
                                                               aria-label="Secondary navigation"
-                                                              className="sc-jKJlTe cfMlcP"
+                                                              className="sc-eNQAEJ fCXhDR"
                                                             >
                                                               <StyledComponent
                                                                 aria-label="Secondary navigation"
-                                                                className="sc-jKJlTe cfMlcP"
+                                                                className="sc-eNQAEJ fCXhDR"
                                                                 forwardedComponent={
                                                                   Object {
                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -5297,7 +5657,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                               >
                                                                 <nav
                                                                   aria-label="Secondary navigation"
-                                                                  className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-jKJlTe cfMlcP"
+                                                                  className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-eNQAEJ fCXhDR"
                                                                 >
                                                                   <div
                                                                     key="Menu 3"
@@ -6547,15 +6907,15 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kEYyzF",
+                              "componentId": "sc-kkGfuU",
                               "isStatic": false,
-                              "lastClassName": "gfWKdx",
+                              "lastClassName": "gqJIVH",
                               "rules": Array [],
                             },
                             "displayName": "Styled(BaseNavBar)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kEYyzF",
+                            "styledComponentId": "sc-kkGfuU",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -6645,7 +7005,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                       >
                         <BaseNavBar
                           breakpointUpper="1024px"
-                          className="sc-kEYyzF gfWKdx"
+                          className="sc-kkGfuU gqJIVH"
                           defaultOpen={true}
                           menuData={
                             Object {
@@ -6740,7 +7100,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                             <ChildWrapper>
                               <SelectNavBarBasedOnWidth
                                 breakpointUpper="1024px"
-                                className="sc-kEYyzF gfWKdx"
+                                className="sc-kkGfuU gqJIVH"
                                 defaultOpen={true}
                                 menuData={
                                   Object {
@@ -6824,7 +7184,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                               >
                                 <MediumNavBar
                                   brandingLinkHref="/"
-                                  className="sc-kEYyzF gfWKdx"
+                                  className="sc-kkGfuU gqJIVH"
                                   menuData={
                                     Object {
                                       "primaryMenu": Array [
@@ -6907,7 +7267,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                   themeColor="blue"
                                 >
                                   <header
-                                    className="sc-kEYyzF gfWKdx"
+                                    className="sc-kkGfuU gqJIVH"
                                   >
                                     <Styled(Styled(Box))
                                       backgroundColor="#122b47"
@@ -7091,9 +7451,9 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                             },
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-hMqMXs",
+                                              "componentId": "sc-kEYyzF",
                                               "isStatic": false,
-                                              "lastClassName": "cPtRMU",
+                                              "lastClassName": "jhTLdn",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -7132,7 +7492,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                               "justifyContent": [Function],
                                             },
                                             "render": [Function],
-                                            "styledComponentId": "sc-hMqMXs",
+                                            "styledComponentId": "sc-kEYyzF",
                                             "target": "div",
                                             "toString": [Function],
                                             "usesTheme": false,
@@ -7229,7 +7589,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-bdVaJa sc-hMqMXs cPtRMU"
+                                          className="Box-sc-1qu1edy-0 sc-bdVaJa sc-kEYyzF jhTLdn"
                                         >
                                           <Link
                                             aria-label="Nulogy logo"
@@ -8121,9 +8481,9 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-jKJlTe",
+                                                          "componentId": "sc-eNQAEJ",
                                                           "isStatic": false,
-                                                          "lastClassName": "cfMlcP",
+                                                          "lastClassName": "fCXhDR",
                                                           "rules": Array [
                                                             "div {",
                                                             ":not(:last-of-type) {",
@@ -8135,7 +8495,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                         "displayName": "Styled(BaseDesktopMenu)",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-jKJlTe",
+                                                        "styledComponentId": "sc-eNQAEJ",
                                                         "target": [Function],
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -8201,7 +8561,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                   >
                                                     <BaseDesktopMenu
                                                       aria-label="Primary navigation"
-                                                      className="sc-jKJlTe cfMlcP"
+                                                      className="sc-eNQAEJ fCXhDR"
                                                       menuData={
                                                         Array [
                                                           Object {
@@ -8259,7 +8619,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                     >
                                                       <DesktopMenu__Nav
                                                         aria-label="Primary navigation"
-                                                        className="sc-jKJlTe cfMlcP"
+                                                        className="sc-eNQAEJ fCXhDR"
                                                         style={
                                                           Object {
                                                             "paddingRight": "24px",
@@ -8268,7 +8628,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                       >
                                                         <StyledComponent
                                                           aria-label="Primary navigation"
-                                                          className="sc-jKJlTe cfMlcP"
+                                                          className="sc-eNQAEJ fCXhDR"
                                                           forwardedComponent={
                                                             Object {
                                                               "$$typeof": Symbol(react.forward_ref),
@@ -8301,7 +8661,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                         >
                                                           <nav
                                                             aria-label="Primary navigation"
-                                                            className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-jKJlTe cfMlcP"
+                                                            className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-eNQAEJ fCXhDR"
                                                             style={
                                                               Object {
                                                                 "paddingRight": "24px",
@@ -9191,9 +9551,9 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jKJlTe",
+                                                                "componentId": "sc-eNQAEJ",
                                                                 "isStatic": false,
-                                                                "lastClassName": "cfMlcP",
+                                                                "lastClassName": "fCXhDR",
                                                                 "rules": Array [
                                                                   "div {",
                                                                   ":not(:last-of-type) {",
@@ -9205,7 +9565,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                               "displayName": "Styled(BaseDesktopMenu)",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jKJlTe",
+                                                              "styledComponentId": "sc-eNQAEJ",
                                                               "target": [Function],
                                                               "toString": [Function],
                                                               "usesTheme": false,
@@ -9266,7 +9626,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                         >
                                                           <BaseDesktopMenu
                                                             aria-label="Secondary navigation"
-                                                            className="sc-jKJlTe cfMlcP"
+                                                            className="sc-eNQAEJ fCXhDR"
                                                             menuData={
                                                               Array [
                                                                 Object {
@@ -9319,11 +9679,11 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                           >
                                                             <DesktopMenu__Nav
                                                               aria-label="Secondary navigation"
-                                                              className="sc-jKJlTe cfMlcP"
+                                                              className="sc-eNQAEJ fCXhDR"
                                                             >
                                                               <StyledComponent
                                                                 aria-label="Secondary navigation"
-                                                                className="sc-jKJlTe cfMlcP"
+                                                                className="sc-eNQAEJ fCXhDR"
                                                                 forwardedComponent={
                                                                   Object {
                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -9351,7 +9711,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                                               >
                                                                 <nav
                                                                   aria-label="Secondary navigation"
-                                                                  className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-jKJlTe cfMlcP"
+                                                                  className="DesktopMenu__Nav-e4dzdq-3 gVYxFD sc-eNQAEJ fCXhDR"
                                                                 >
                                                                   <DesktopMenu__MenuText
                                                                     background="#122b47"
