@@ -396,7 +396,7 @@ exports[`Storyshots DatePicker default 1`] = `
                 }
               }
               onChange={[Function]}
-              onChangeInput={[Function]}
+              onInputChange={[Function]}
               selected={2019-01-01T05:00:00.000Z}
             >
               <div
@@ -2663,7 +2663,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                 }
               }
               onChange={[Function]}
-              onChangeInput={[Function]}
+              onInputChange={[Function]}
               selected={2019-01-01T05:00:00.000Z}
             >
               <div
@@ -4931,7 +4931,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                 }
               }
               onChange={[Function]}
-              onChangeInput={[Function]}
+              onInputChange={[Function]}
             >
               <div
                 className="nds-date-picker"
@@ -7197,7 +7197,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                 }
               }
               onChange={[Function]}
-              onChangeInput={[Function]}
+              onInputChange={[Function]}
             >
               <div
                 className="nds-date-picker"

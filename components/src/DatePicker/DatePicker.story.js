@@ -8,7 +8,7 @@ storiesOf("DatePicker", module)
     <DatePicker
       selected={new Date("2019-01-01T05:00:00.000Z")}
       onChange={action("date changed")}
-      onChangeInput={action("input changed")}
+      onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
@@ -17,7 +17,7 @@ storiesOf("DatePicker", module)
       selected={new Date("2019-01-01T05:00:00.000Z")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
-      onChangeInput={action("input changed")}
+      onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
@@ -25,7 +25,7 @@ storiesOf("DatePicker", module)
     <DatePicker
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
-      onChangeInput={action("input changed")}
+      onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
     />
   ))
@@ -33,7 +33,7 @@ storiesOf("DatePicker", module)
     <DatePicker
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
-      onChangeInput={action("input changed")}
+      onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date", errorMessage: "The date is invalid" }}
     />
   ));

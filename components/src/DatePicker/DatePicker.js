@@ -17,9 +17,9 @@ class DatePicker extends Component {
 
   handleInputChange = event => {
     const { value } = event.target;
-    const { onChangeInput } = this.props;
-    if (onChangeInput) {
-      onChangeInput(value);
+    const { onInputChange } = this.props;
+    if (onInputChange) {
+      onInputChange(value);
     }
   };
 
@@ -66,7 +66,7 @@ DatePicker.propTypes = {
   selected: PropTypes.instanceOf(Date),
   dateFormat: PropTypes.string,
   onChange: PropTypes.func,
-  onChangeInput: PropTypes.func,
+  onInputChange: PropTypes.func,
   inputProps: PropTypes.shape({})
 };
 
@@ -74,7 +74,7 @@ DatePicker.defaultProps = {
   selected: undefined,
   dateFormat: DEFAULT_DATE_FORMAT,
   onChange: undefined,
-  onChangeInput: undefined,
+  onInputChange: undefined,
   inputProps: {}
 };
 

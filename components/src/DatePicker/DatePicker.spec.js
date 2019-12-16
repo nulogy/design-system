@@ -5,11 +5,11 @@ import { DatePicker } from ".";
 describe("DatePicker", () => {
   describe("date selection", () => {
     const onChange = jest.fn();
-    const onChangeInput = jest.fn();
+    const onInputChange = jest.fn();
 
     it("returns the selected date when the selection has changed", () => {
       const { container } = render(
-        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onChangeInput={onChangeInput} />
+        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onInputChange={onInputChange} />
       );
       const input = container.querySelectorAll("input")[0];
       const newDate = new Date("Sat, 02 Jan 2019");
@@ -25,7 +25,7 @@ describe("DatePicker", () => {
         <DatePicker
           selected={new Date("Fri, 01 Jan 2019")}
           onChange={onChange}
-          onChangeInput={onChangeInput}
+          onInputChange={onInputChange}
           inputProps={{ labelText }}
         />
       );
@@ -33,7 +33,7 @@ describe("DatePicker", () => {
       const input = getByLabelText(labelText);
       fireEvent.change(input, { target: { value } });
 
-      expect(onChangeInput).toHaveBeenCalledWith(value);
+      expect(onInputChange).toHaveBeenCalledWith(value);
     });
   });
 });

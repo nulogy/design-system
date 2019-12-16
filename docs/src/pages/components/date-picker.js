@@ -39,7 +39,7 @@ export default () => (
         selected={new Date("Fri, 01 Jan 2019")}
         dateFormat="MMMM d, yyyy"
         onChange={(val) => val}
-        onChangeInput={(val) => val}
+        onInputChange={(val) => val}
       />
 `}
       </Highlight>
