@@ -68,7 +68,7 @@ const StyledInput = styled.input(
 
 const StyledInputIcon = styled(Icon)({
   position: "absolute",
-  right: "8px",
+  right: theme.space.x1,
   color: theme.colors.darkGrey,
   bottom: "50%",
   transform: "translateY(50%)",
