@@ -5,7 +5,7 @@ describe("Datepicker", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("datepicker--default-skipstoryshot");
+      cy.renderFromStorybook("datepicker--default-skipstoryshots");
     });
 
     describe("has the correct defaults", () => {
