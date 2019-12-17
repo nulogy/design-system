@@ -6,7 +6,7 @@ import { TimePicker } from ".";
 storiesOf("TimePicker", module)
   .add("default", () => (
     <TimePicker
-      onChange={action("date changed")}
+      onChange={action("time changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Start Time" }}
     />
@@ -15,21 +15,21 @@ storiesOf("TimePicker", module)
     <TimePicker
       selected={new Date("2019-01-01T05:00:00.000Z")}
       timeFormat="hh:mm:ss"
-      onChange={action("date changed")}
+      onChange={action("time changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Duration" }}
     />
   ))
   .add("with custom placeholder", () => (
     <TimePicker
-      onChange={action("date changed")}
+      onChange={action("time changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Duration", placeholder: "--:--" }}
     />
   ))
   .add("with error state", () => (
     <TimePicker
-      onChange={action("date changed")}
+      onChange={action("time changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "End Time", errorMessage: "This time is invalid" }}
     />
