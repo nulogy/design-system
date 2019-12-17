@@ -36,7 +36,7 @@ export const TimePickerStyles = createGlobalStyle({
         listStyle: "none",
         margin: 0,
         overflowY: "scroll",
-        overflow: "hidden",
+        overflowX: "hidden",
         paddingRight: 0,
         paddingLeft: 0,
         width: "100%",
