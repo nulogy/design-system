@@ -152,6 +152,10 @@ export const menuData = [
         href: "/components/textarea"
       },
       {
+        name: "Time Picker",
+        href: "/components/time-picker"
+      },
+      {
         name: "Toggle",
         href: "/components/toggle"
       },
