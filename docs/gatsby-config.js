@@ -49,6 +49,12 @@ module.exports = {
         icon: "src/images/favicon.svg" // This path is relative to the root of the site.
       }
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: "UA-XXXXXXXXX-X"
+      }
+    },
     "gatsby-plugin-netlify" // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
   ]
 };
