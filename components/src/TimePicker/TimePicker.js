@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import ReactDatePicker from "react-datepicker";
+import { format } from "date-fns";
 import TimePickerInput from "./TimePickerInput";
 import { TimePickerStyles } from "./TimePickerStyles";
 import "react-datepicker/dist/react-datepicker.css";
@@ -23,13 +24,14 @@ class TimePicker extends Component {
     }
   };
 
-  handleSelectedDateChange = time => {
-    const { onChange } = this.props;
+  handleSelectedDateChange = date => {
+    const { onChange, timeFormat } = this.props;
+    const time = format(date, timeFormat);
     if (onChange) {
       onChange(time);
     }
     this.setState({
-      selectedTime: time
+      selectedTime: date
     });
   };
 
