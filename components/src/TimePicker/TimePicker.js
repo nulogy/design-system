@@ -5,7 +5,6 @@ import ReactDatePicker from "react-datepicker";
 import { format } from "date-fns";
 import TimePickerInput from "./TimePickerInput";
 import { TimePickerStyles } from "./TimePickerStyles";
-import "react-datepicker/dist/react-datepicker.css";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
