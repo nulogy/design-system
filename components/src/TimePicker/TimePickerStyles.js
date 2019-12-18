@@ -1,8 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 import theme from "../theme";
 
+const timeInputStyles = {
+  width: "110px"
+};
+
 export const TimePickerStyles = createGlobalStyle({
   ".nds-time-picker": {
+    ".react-datepicker": {
+      backgroundColor: theme.colors.white,
+      outline: "none",
+      border: `1px solid ${theme.colors.blue}`,
+      boxShadow: theme.shadows.focus,
+      borderRadius: theme.radii.medium,
+      position: "relative",
+      minWidth: timeInputStyles.width
+    },
+    input: {
+      width: timeInputStyles.width
+    },
     ".react-datepicker__header--time": {
       display: "none"
     },
@@ -11,15 +27,6 @@ export const TimePickerStyles = createGlobalStyle({
     },
     ".react-datepicker-popper[data-placement^='bottom']": {
       marginTop: "0"
-    },
-    ".react-datepicker": {
-      backgroundColor: theme.colors.white,
-      outline: "none",
-      border: `1px solid ${theme.colors.blue}`,
-      boxShadow: theme.shadows.focus,
-      borderRadius: theme.radii.medium,
-      position: "relative",
-      minWidth: "184px"
     },
     ".react-datepicker__time-container": {
       width: "100%"
