@@ -49,7 +49,7 @@ export const TimePickerStyles = createGlobalStyle({
         fontFamily: theme.fonts.base,
         paddingTop: theme.space.x1,
         paddingBottom: theme.space.x1,
-        paddingLeft: theme.space.x2,
+        paddingLeft: theme.space.x1,
         height: "auto",
         "&:hover": {
           backgroundColor: theme.colors.lightBlue,
