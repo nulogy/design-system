@@ -5,6 +5,9 @@ import ReactDatePicker from "react-datepicker";
 import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
+import { InlineValidation } from "../Validation";
+import { Field } from "../Form";
+import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
@@ -34,10 +37,11 @@ class DatePicker extends Component {
   };
 
   render() {
-    const { dateFormat, inputProps, minDate, maxDate } = this.props;
+    const { dateFormat, inputProps, errorMessage, errorList, minDate, maxDate } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
+      error: !!(errorMessage || errorList),
       placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
     };
 
@@ -46,7 +50,7 @@ class DatePicker extends Component {
     );
 
     return (
-      <div className="nds-date-picker">
+      <Field className="nds-date-picker">
         <DatePickerStyles />
         <ReactDatePicker
           selected={selectedDate}
@@ -60,7 +64,8 @@ class DatePicker extends Component {
           minDate={minDate}
           maxDate={maxDate}
         />
-      </div>
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      </Field>
     );
   }
 }
@@ -70,9 +75,11 @@ DatePicker.propTypes = {
   dateFormat: PropTypes.string,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
-  inputProps: PropTypes.shape({}),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date)
+  inputProps: PropTypes.shape(InputFieldPropTypes),
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.arrayOf(PropTypes.string)
 };
 
 DatePicker.defaultProps = {
@@ -80,9 +87,11 @@ DatePicker.defaultProps = {
   dateFormat: DEFAULT_DATE_FORMAT,
   onChange: undefined,
   onInputChange: undefined,
-  inputProps: {},
   minDate: undefined,
   maxDate: undefined
+  inputProps: InputFieldDefaultProps,
+  errorMessage: undefined,
+  errorList: undefined
 };
 
 export default DatePicker;

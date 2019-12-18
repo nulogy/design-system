@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import { Input } from "..";
+import { InputField } from "../Input/InputField";
+import { InputFieldDefaultProps, InputFieldPropTypes } from "../Input/InputField.type";
 
 const DatePickerInput = forwardRef(({ onChange, onClick, onInputChange, value, inputProps }, ref) => {
   const handleChange = e => {
@@ -9,7 +10,7 @@ const DatePickerInput = forwardRef(({ onChange, onClick, onInputChange, value, i
   };
 
   return (
-    <Input
+    <InputField
       ref={ref}
       {...inputProps}
       value={value}
@@ -27,14 +28,14 @@ DatePickerInput.propTypes = {
   value: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
   dateFormat: PropTypes.string.isRequired,
-  inputProps: PropTypes.shape({})
+  inputProps: PropTypes.shape(InputFieldPropTypes)
 };
 
 DatePickerInput.defaultProps = {
   onClick: undefined,
   onChange: undefined,
   value: undefined,
-  inputProps: undefined
+  inputProps: InputFieldDefaultProps
 };
 
 export default DatePickerInput;
