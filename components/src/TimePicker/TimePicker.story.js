@@ -31,6 +31,7 @@ storiesOf("TimePicker", module)
     <TimePicker
       onChange={action("time changed")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "End Time", errorMessage: "This time is invalid" }}
+      inputProps={{ labelText: "End Time" }}
+      errorMessage="This time is invalid"
     />
   ));

@@ -34,7 +34,8 @@ storiesOf("DatePicker", module)
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "Expiry Date", errorMessage: "The date is invalid" }}
+      inputProps={{ labelText: "Expiry Date" }}
+      errorMessage="The date is invalid"
     />
   ))
   .add("with a minDate (SkipStoryshot)", () => (

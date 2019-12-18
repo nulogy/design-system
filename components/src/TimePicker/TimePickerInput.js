@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import { Input } from "../Input";
+import { InputField } from "../Input/InputField";
+import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 
 const TimePickerInput = forwardRef(({ onChange, onClick, onInputChange, value, inputProps }, ref) => {
   const handleChange = e => {
@@ -8,12 +9,14 @@ const TimePickerInput = forwardRef(({ onChange, onClick, onInputChange, value, i
     onChange(e);
   };
 
+  const { placeholder } = inputProps;
+
   return (
-    <Input
+    <InputField
       ref={ref}
       {...inputProps}
       value={value}
-      placeholder={inputProps.placeholder}
+      placeholder={placeholder}
       icon="queryBuilder"
       onClick={onClick}
       onChange={handleChange}
@@ -26,14 +29,14 @@ TimePickerInput.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
-  inputProps: PropTypes.shape({})
+  inputProps: PropTypes.shape(InputFieldPropTypes)
 };
 
 TimePickerInput.defaultProps = {
   onClick: undefined,
   onChange: undefined,
   value: undefined,
-  inputProps: undefined
+  inputProps: InputFieldDefaultProps
 };
 
 export default TimePickerInput;

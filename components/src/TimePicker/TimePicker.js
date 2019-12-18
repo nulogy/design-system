@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
 import ReactDatePicker from "react-datepicker";
 import { format } from "date-fns";
+
 import TimePickerInput from "./TimePickerInput";
 import { TimePickerStyles } from "./TimePickerStyles";
+import { Field } from "../Form";
+import { InlineValidation } from "../Validation";
+import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
@@ -35,15 +38,16 @@ class TimePicker extends Component {
   };
 
   render() {
-    const { timeFormat, inputProps, interval } = this.props;
+    const { timeFormat, inputProps, interval, errorMessage, errorList } = this.props;
     const { selectedTime } = this.state;
     const customInputProps = {
       ...inputProps,
+      error: !!(errorMessage || errorList),
       placeholder: inputProps.placeholder || (timeFormat === DEFAULT_TIME_FORMAT ? DEFAULT_PLACEHOLDER : timeFormat)
     };
 
     return (
-      <div className="nds-time-picker">
+      <Field className="nds-time-picker">
         <TimePickerStyles />
         <ReactDatePicker
           selected={selectedTime}
@@ -57,7 +61,8 @@ class TimePicker extends Component {
           disabledKeyboardNavigation
           strictParsing
         />
-      </div>
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      </Field>
     );
   }
 }
@@ -67,8 +72,10 @@ TimePicker.propTypes = {
   timeFormat: PropTypes.string,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
-  inputProps: PropTypes.shape({}),
-  interval: PropTypes.number
+  inputProps: PropTypes.shape(InputFieldPropTypes),
+  interval: PropTypes.number,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.string
 };
 
 TimePicker.defaultProps = {
@@ -76,8 +83,10 @@ TimePicker.defaultProps = {
   timeFormat: DEFAULT_TIME_FORMAT,
   onChange: undefined,
   onInputChange: undefined,
-  inputProps: {},
-  interval: 15
+  inputProps: InputFieldDefaultProps,
+  interval: 15,
+  errorMessage: undefined,
+  errorList: undefined
 };
 
 export default TimePicker;
