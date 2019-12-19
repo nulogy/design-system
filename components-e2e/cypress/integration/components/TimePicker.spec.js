@@ -37,6 +37,35 @@ describe("Timepicker", () => {
         getTimeInputComponent().should("have.value", "20:00");
       });
 
+      it("reformats the time from 24 hour time", () => {
+        cy.get("input").type("20:00");
+        cy.wait(1500);
+        getTimeInputComponent().should("have.value", "08:00 PM");
+        cy.get(".react-datepicker__time-list-item--selected").should(
+          "have.text",
+          "8:00 PM"
+        );
+      });
+
+      it("reformats the time and selects it", () => {
+        cy.get("input").type("11:45");
+        cy.wait(1500);
+        getTimeInputComponent().should("have.value", "11:45 AM");
+        cy.get(".react-datepicker__time-list-item--selected").should(
+          "have.text",
+          "11:45 AM"
+        );
+      });
+
+      it("reformats the time", () => {
+        cy.get("input").type("12:35");
+        cy.wait(1500);
+        getTimeInputComponent().should("have.value", "12:35 PM");
+        cy.get(".react-datepicker__time-list-item--selected").should(
+          "not.exist"
+        );
+      });
+
       it("hides the calendar when a time is selected", () => {
         getTimeInputComponent().click();
         cy.get(".react-datepicker__time-list-item")

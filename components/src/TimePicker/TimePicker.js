@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
-import { format } from "date-fns";
+import { format, isValid } from "date-fns";
+import { debounce } from "throttle-debounce";
 
 import TimePickerInput from "./TimePickerInput";
 import { TimePickerStyles } from "./TimePickerStyles";
@@ -12,15 +13,60 @@ import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
 
+const getHours = value => {
+  const hours = Number(value.split(":")[0].replace(/\D/g, ""));
+  if (value.includes("PM") && hours < 12) {
+    return hours + 12;
+  }
+  return hours;
+};
+
+const getMinutes = value => {
+  const minutes = value.split(":")[1].replace(/\D/g, "");
+  if (minutes < 60 && minutes.length === 2) {
+    return minutes;
+  }
+  return null;
+};
+
+export const getNewDateWithTime = value => {
+  if (value.length > 4) {
+    const hours = getHours(value);
+    const minutes = getMinutes(value);
+    let date;
+    if (hours < 24 && hours > 0) {
+      date = new Date();
+      date.setHours(hours);
+      date.setMinutes(minutes);
+      return date;
+    }
+    return null;
+  }
+};
+
 class TimePicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedTime: props.selected };
   }
 
+  setSelectedTime = date => {
+    if (isValid(date)) {
+      this.setState(
+        {
+          selectedTime: date
+        },
+        () => this.handleSelectedDateChange(date)
+      );
+    }
+  };
+
+  setSelectedTimeOnInputChange = debounce(1000, value => this.setSelectedTime(getNewDateWithTime(value)));
+
   handleInputChange = event => {
     const { value } = event.target;
     const { onInputChange } = this.props;
+    this.setSelectedTimeOnInputChange(value);
     if (onInputChange) {
       onInputChange(value);
     }
@@ -42,6 +88,7 @@ class TimePicker extends Component {
     const { selectedTime } = this.state;
     const customInputProps = {
       ...inputProps,
+      debounceTime: 1000,
       error: !!(errorMessage || errorList),
       placeholder: inputProps.placeholder || (timeFormat === DEFAULT_TIME_FORMAT ? DEFAULT_PLACEHOLDER : timeFormat)
     };
