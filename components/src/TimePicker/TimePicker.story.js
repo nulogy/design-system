@@ -13,8 +13,8 @@ storiesOf("TimePicker", module)
   ))
   .add("with custom time format (SkipStoryshots)", () => (
     <TimePicker
-      selected={new Date("2019-01-01T05:00:00.000Z")}
-      timeFormat="hh:mm:ss"
+      selected="3:16"
+      timeFormat="hh:mm"
       onChange={action("time changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Duration" }}

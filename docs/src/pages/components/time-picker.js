@@ -21,7 +21,7 @@ import { inputFieldProps } from "../../shared/inputProps";
 const propsRows = [
   {
     name: "selected",
-    type: "Date",
+    type: "Date || string",
     defaultValue: "undefined",
     description: "the time to display"
   },
