@@ -40,8 +40,8 @@ export const getNewDateWithTime = value => {
       date.setMinutes(minutes);
       return date;
     }
-    return null;
   }
+  return null;
 };
 
 class TimePicker extends Component {
