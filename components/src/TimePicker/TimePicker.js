@@ -30,7 +30,7 @@ const getMinutes = value => {
 };
 
 export const getNewDateWithTime = value => {
-  if (value.length > 4) {
+  if (value && value.length >= 4) {
     const hours = getHours(value);
     const minutes = getMinutes(value);
     let date;
@@ -47,7 +47,9 @@ export const getNewDateWithTime = value => {
 class TimePicker extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedTime: props.selected };
+    this.state = {
+      selectedTime: typeof props.selected === "string" ? getNewDateWithTime(props.selected) : props.selected
+    };
   }
 
   setSelectedTime = date => {
@@ -115,7 +117,7 @@ class TimePicker extends Component {
 }
 
 TimePicker.propTypes = {
-  selected: PropTypes.instanceOf(Date),
+  selected: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
   timeFormat: PropTypes.string,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
