@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 import { format, isValid } from "date-fns";
-import { debounce } from "throttle-debounce";
 
 import TimePickerInput from "./TimePickerInput";
 import { TimePickerStyles } from "./TimePickerStyles";
@@ -38,6 +37,7 @@ export const getNewDateWithTime = value => {
       date = new Date();
       date.setHours(hours);
       date.setMinutes(minutes);
+      date.setSeconds("00");
       return date;
     }
   }
@@ -63,12 +63,12 @@ class TimePicker extends Component {
     }
   };
 
-  setSelectedTimeOnInputChange = debounce(1000, value => this.setSelectedTime(getNewDateWithTime(value)));
+  setSelectedTimeOnInputChange = value => this.setSelectedTime(getNewDateWithTime(value));
 
   handleInputChange = event => {
     const { value } = event.target;
     const { onInputChange } = this.props;
-    this.setSelectedTimeOnInputChange(value);
+
     if (onInputChange) {
       onInputChange(value);
     }
@@ -85,14 +85,35 @@ class TimePicker extends Component {
     });
   };
 
+  handleEnterKeyPress = event => {
+    if (event.key === "Enter") {
+      this.setSelectedTimeOnInputChange(event.target.value);
+    }
+  };
+
+  handleBlur = event => {
+    this.setSelectedTimeOnInputChange(event.target.value);
+  };
+
   render() {
     const { timeFormat, inputProps, interval, errorMessage, errorList } = this.props;
     const { selectedTime } = this.state;
     const customInputProps = {
       ...inputProps,
-      debounceTime: 1000,
       error: !!(errorMessage || errorList),
-      placeholder: inputProps.placeholder || (timeFormat === DEFAULT_TIME_FORMAT ? DEFAULT_PLACEHOLDER : timeFormat)
+      placeholder: inputProps.placeholder || (timeFormat === DEFAULT_TIME_FORMAT ? DEFAULT_PLACEHOLDER : timeFormat),
+      onKeyPress: event => {
+        this.handleEnterKeyPress(event);
+        if (inputProps.onKeyPress) {
+          inputProps.onKeyPress(event);
+        }
+      },
+      onBlur: event => {
+        this.setSelectedTimeOnInputChange(event.target.value);
+        if (inputProps.onKeyPress) {
+          inputProps.onBlur(event);
+        }
+      }
     };
 
     return (
@@ -107,7 +128,6 @@ class TimePicker extends Component {
           showTimeSelectOnly
           timeIntervals={interval}
           excludeDates={[selectedTime]}
-          disabledKeyboardNavigation
           strictParsing
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
