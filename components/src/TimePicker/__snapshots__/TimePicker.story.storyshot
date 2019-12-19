@@ -752,6 +752,7 @@ exports[`Storyshots TimePicker default 1`] = `
                         <ForwardRef
                           inputProps={
                             Object {
+                              "debounceTime": 1000,
                               "error": false,
                               "labelText": "Start Time",
                               "placeholder": "HH:MM",
@@ -828,6 +829,7 @@ exports[`Storyshots TimePicker default 1`] = `
                               disabled={false}
                               inputProps={
                                 Object {
+                                  "debounceTime": 1000,
                                   "error": false,
                                   "labelText": "Start Time",
                                   "placeholder": "HH:MM",
@@ -863,6 +865,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                     disabled={false}
                                     inputProps={
                                       Object {
+                                        "debounceTime": 1000,
                                         "error": false,
                                         "labelText": "Start Time",
                                         "placeholder": "HH:MM",
@@ -878,6 +881,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                     value=""
                                   >
                                     <ForwardRef
+                                      debounceTime={1000}
                                       disabled={false}
                                       error={false}
                                       helpText={null}
@@ -2025,6 +2029,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                 <InputField__StyledInput
                                                                   aria-invalid={false}
                                                                   aria-required={false}
+                                                                  debounceTime={1000}
                                                                   disabled={false}
                                                                   error={false}
                                                                   onChange={[Function]}
@@ -2036,6 +2041,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                   <StyledComponent
                                                                     aria-invalid={false}
                                                                     aria-required={false}
+                                                                    debounceTime={1000}
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -3005,6 +3011,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                         <ForwardRef
                           inputProps={
                             Object {
+                              "debounceTime": 1000,
                               "error": false,
                               "labelText": "Duration",
                               "placeholder": "--:--",
@@ -3081,6 +3088,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                               disabled={false}
                               inputProps={
                                 Object {
+                                  "debounceTime": 1000,
                                   "error": false,
                                   "labelText": "Duration",
                                   "placeholder": "--:--",
@@ -3116,6 +3124,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                     disabled={false}
                                     inputProps={
                                       Object {
+                                        "debounceTime": 1000,
                                         "error": false,
                                         "labelText": "Duration",
                                         "placeholder": "--:--",
@@ -3131,6 +3140,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                     value=""
                                   >
                                     <ForwardRef
+                                      debounceTime={1000}
                                       disabled={false}
                                       error={false}
                                       helpText={null}
@@ -4278,6 +4288,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                 <InputField__StyledInput
                                                                   aria-invalid={false}
                                                                   aria-required={false}
+                                                                  debounceTime={1000}
                                                                   disabled={false}
                                                                   error={false}
                                                                   onChange={[Function]}
@@ -4289,6 +4300,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                   <StyledComponent
                                                                     aria-invalid={false}
                                                                     aria-required={false}
+                                                                    debounceTime={1000}
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -5258,6 +5270,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                         <ForwardRef
                           inputProps={
                             Object {
+                              "debounceTime": 1000,
                               "error": true,
                               "labelText": "End Time",
                               "placeholder": "HH:MM",
@@ -5334,6 +5347,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                               disabled={false}
                               inputProps={
                                 Object {
+                                  "debounceTime": 1000,
                                   "error": true,
                                   "labelText": "End Time",
                                   "placeholder": "HH:MM",
@@ -5369,6 +5383,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                     disabled={false}
                                     inputProps={
                                       Object {
+                                        "debounceTime": 1000,
                                         "error": true,
                                         "labelText": "End Time",
                                         "placeholder": "HH:MM",
@@ -5384,6 +5399,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                     value=""
                                   >
                                     <ForwardRef
+                                      debounceTime={1000}
                                       disabled={false}
                                       error={true}
                                       helpText={null}
@@ -6531,6 +6547,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                 <InputField__StyledInput
                                                                   aria-invalid={true}
                                                                   aria-required={false}
+                                                                  debounceTime={1000}
                                                                   disabled={false}
                                                                   error={true}
                                                                   onChange={[Function]}
@@ -6542,6 +6559,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                   <StyledComponent
                                                                     aria-invalid={true}
                                                                     aria-required={false}
+                                                                    debounceTime={1000}
                                                                     disabled={false}
                                                                     error={true}
                                                                     forwardedComponent={
