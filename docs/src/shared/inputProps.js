@@ -18,18 +18,6 @@ export const inputFieldProps = [
     description: "Marks the field as disabled and disallows user input"
   },
   {
-    name: "errorMessage",
-    type: "String",
-    defaultValue: "null",
-    description: "Displays list of error messages and applies red style"
-  },
-  {
-    name: "errorList",
-    type: "Array of Strings",
-    defaultValue: "null",
-    description: "Displays list of error messages and applies red style"
-  },
-  {
     name: "helpText",
     type: "Node",
     defaultValue: "null",

@@ -43,18 +43,6 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "The error message to display"
-  },
-  {
-    name: "minDate",
-    type: "Date",
-    defaultValue: "undefined",
-    description: "The earliest date that can be selected"
-  },
-  {
-    name: "MaxDate",
-    type: "Date",
-    defaultValue: "undefined",
-    description: "The latest date that can be selected"
   }
 ];
 
