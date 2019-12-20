@@ -46,4 +46,14 @@ storiesOf("DatePicker", module)
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
     />
+  ))
+  .add("with a maxDate (SkipStoryshot)", () => (
+    <DatePicker
+      dateFormat="MMMM d, yyyy"
+      selected={new Date("2019-07-10T05:00:00.000Z")}
+      maxDate={new Date("2019-07-15T05:00:00.000Z")}
+      onChange={action("date changed")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Expiry Date" }}
+    />
   ));
