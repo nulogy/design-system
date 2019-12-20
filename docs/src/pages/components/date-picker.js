@@ -16,7 +16,47 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import radioProps from "../../shared/radioProps";
+import { inputFieldProps } from "../../shared/inputProps";
+
+const propsRows = [
+  {
+    name: "selected",
+    type: "Date",
+    defaultValue: "undefined",
+    description: "the time to display"
+  },
+  {
+    name: "inputProps",
+    type: "Object",
+    defaultValue: "undefined",
+    description: "Options for the input field, see inputProps table "
+  },
+  {
+    name: "dateFormat",
+    type: "String",
+    defaultValue: "dd MMM yyyy",
+    description:
+      "The default date format (see date-fns for available date formats)"
+  },
+  {
+    name: "errorMessage",
+    type: "String",
+    defaultValue: "undefined",
+    description: "The error message to display"
+  },
+  {
+    name: "minDate",
+    type: "Date",
+    defaultValue: "undefined",
+    description: "The earliest date that can be selected"
+  },
+  {
+    name: "MaxDate",
+    type: "Date",
+    defaultValue: "undefined",
+    description: "The latest date that can be selected"
+  }
+];
 
 export default () => (
   <Layout>
@@ -46,7 +86,11 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={radioProps} />
+      <PropsTable propsRows={propsRows} />
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Input Props</SectionTitle>
+      <PropsTable propsRows={inputFieldProps} />
     </DocSection>
 
     <DocSection>
