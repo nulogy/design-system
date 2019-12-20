@@ -412,7 +412,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                         "isStatic": false,
-                        "lastClassName": "kbwUMI",
+                        "lastClassName": "gBBsow",
                         "rules": Array [
                           [Function],
                         ],
@@ -434,7 +434,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
                 >
                   <button
                     aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 kbwUMI"
+                    className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
                     disabled={false}
                     onClick={[Function]}
                   >
@@ -958,7 +958,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                         "isStatic": false,
-                        "lastClassName": "eqWkIu",
+                        "lastClassName": "lmOCBz",
                         "rules": Array [
                           [Function],
                         ],
@@ -980,7 +980,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
                 >
                   <button
                     aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 eqWkIu"
+                    className="ControlIcon__StyledButton-sc-1h83lvi-0 lmOCBz"
                     disabled={true}
                     onClick={[Function]}
                   >
@@ -1504,7 +1504,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                         "isStatic": false,
-                        "lastClassName": "dOzcgG",
+                        "lastClassName": "cYXXAG",
                         "rules": Array [
                           [Function],
                         ],
@@ -1526,7 +1526,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
                 >
                   <button
                     aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 dOzcgG"
+                    className="ControlIcon__StyledButton-sc-1h83lvi-0 cYXXAG"
                     disabled={false}
                     onClick={[Function]}
                   >
