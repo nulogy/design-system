@@ -1,4 +1,4 @@
-const inputProps = [
+export const inputFieldProps = [
   {
     name: "id",
     type: "String",
@@ -119,6 +119,22 @@ const inputProps = [
     defaultValue: "undefined",
     description:
       "change event handler that will be run whenever the input loses focus."
+  }
+];
+
+const inputProps = [
+  ...inputFieldProps,
+  {
+    name: "errorMessage",
+    type: "String",
+    defaultValue: "null",
+    description: "Displays list of error messages and applies red style"
+  },
+  {
+    name: "errorList",
+    type: "Array of Strings",
+    defaultValue: "null",
+    description: "Displays list of error messages and applies red style"
   }
 ];
 
