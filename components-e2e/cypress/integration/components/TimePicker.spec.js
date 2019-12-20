@@ -1,7 +1,9 @@
 describe("Timepicker", () => {
   const getTimeInputComponent = () => cy.get("input");
-  const TIME_SELECTOR = ".react-datepicker-popper";
-  const getDropdownComponent = () => cy.get(TIME_SELECTOR);
+  const TIME_OPTIONS_SELECTOR = "div[class*='-Menu']";
+  const getDropdownOptions = () => cy.get("div[class*='SelectOption']");
+  const getDropdownComponent = () => cy.get(TIME_OPTIONS_SELECTOR);
+  const getValue = () => cy.get("div[class*='singleValue']");
 
   describe("Default", () => {
     beforeEach(() => {
@@ -17,7 +19,7 @@ describe("Timepicker", () => {
 
       it("can close the dropdown on click outside", () => {
         getTimeInputComponent().click();
-        cy.isInViewport(TIME_SELECTOR);
+        cy.isInViewport(TIME_OPTIONS_SELECTOR);
         cy.clickOutsideElement();
         getDropdownComponent().should("not.exist");
       });
@@ -26,61 +28,18 @@ describe("Timepicker", () => {
     describe("selects a date", () => {
       it("allows the user to select a time by clicking", () => {
         getTimeInputComponent().click();
-        cy.get(".react-datepicker__time-list-item")
+        getDropdownOptions()
           .first()
           .click();
-        getTimeInputComponent().should("have.value", "12:00 AM");
-      });
-
-      it("allows the user to select a time by typing", () => {
-        cy.get("input").type("20:00");
-        getTimeInputComponent().should("have.value", "20:00");
-      });
-
-      it("reformats the time from 24 hour time", () => {
-        cy.get("input").type("20:00");
-        cy.wait(1500);
-        getTimeInputComponent().should("have.value", "08:00 PM");
-        cy.get(".react-datepicker__time-list-item--selected").should(
-          "have.text",
-          "8:00 PM"
-        );
-      });
-
-      it("reformats the time and selects it", () => {
-        cy.get("input").type("11:45");
-        cy.wait(1500);
-        getTimeInputComponent().should("have.value", "11:45 AM");
-        cy.get(".react-datepicker__time-list-item--selected").should(
-          "have.text",
-          "11:45 AM"
-        );
-      });
-
-      it("reformats the time", () => {
-        cy.get("input").type("12:35");
-        cy.wait(1500);
-        getTimeInputComponent().should("have.value", "12:35 PM");
-        cy.get(".react-datepicker__time-list-item--selected").should(
-          "not.exist"
-        );
+        getValue().should("have.text", "12:00 AM");
       });
 
       it("hides the calendar when a time is selected", () => {
         getTimeInputComponent().click();
-        cy.get(".react-datepicker__time-list-item")
+        getDropdownOptions()
           .first()
           .click();
         getDropdownComponent().should("not.exist");
-      });
-
-      it("selects the time", () => {
-        getTimeInputComponent().click();
-        cy.get(".react-datepicker__time-list-item")
-          .eq(3)
-          .click();
-        getTimeInputComponent().click();
-        cy.get(".react-datepicker__time-list-item--selected").should("exist");
       });
     });
   });

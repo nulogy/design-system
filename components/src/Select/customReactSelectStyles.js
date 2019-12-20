@@ -1,6 +1,5 @@
 import { transparentize } from "polished";
 import theme from "../theme";
-import { subPx } from "../utils";
 
 const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -26,16 +25,7 @@ const getShadow = ({ errored, isOpen }) => {
 
 const customStyles = error => {
   return {
-    option: (provided, state) => ({
-      padding: subPx(theme.space.x1),
-      fontWeight: state.isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
-      background: state.isFocused ? theme.colors.lightBlue : null,
-      minHeight: theme.space.x4,
-      "&:last-child": {
-        borderBottomLeftRadius: theme.radii.medium,
-        borderBottomRightRadius: theme.radii.medium
-      }
-    }),
+    option: () => null,
     control: (provided, state) => ({
       display: "flex",
       minHeight: theme.space.x5,

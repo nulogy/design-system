@@ -5,33 +5,31 @@ import { TimePicker } from ".";
 
 storiesOf("TimePicker", module)
   .add("default", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      inputProps={{ labelText: "Start Time" }}
-    />
+    <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
   ))
   .add("with custom time format (SkipStoryshots)", () => (
     <TimePicker
-      selected="3:16"
+      defaultValue="03:15"
       timeFormat="hh:mm"
+      interval={30}
       onChange={action("time changed")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "Duration" }}
+      labelText="Duration"
     />
   ))
   .add("with custom placeholder", () => (
     <TimePicker
       onChange={action("time changed")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "Duration", placeholder: "--:--" }}
+      labelText="Duration"
+      placeholder="--:--"
     />
   ))
   .add("with error state", () => (
     <TimePicker
       onChange={action("time changed")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "End Time" }}
+      labelText="End Time"
       errorMessage="This time is invalid"
     />
   ));

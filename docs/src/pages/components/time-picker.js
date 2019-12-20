@@ -16,21 +16,9 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import { inputFieldProps } from "../../shared/inputProps";
+import { selectProps } from "../../shared/selectProps";
 
 const propsRows = [
-  {
-    name: "selected",
-    type: "Date || string",
-    defaultValue: "undefined",
-    description: "the time to display"
-  },
-  {
-    name: "inputProps",
-    type: "Object",
-    defaultValue: "undefined",
-    description: "Options for the input field, see inputProps table "
-  },
   {
     name: "timeFormat",
     type: "String",
@@ -38,12 +26,7 @@ const propsRows = [
     description:
       "The default time format (see date-fns for available time formats)"
   },
-  {
-    name: "errorMessage",
-    type: "String",
-    defaultValue: "undefined",
-    description: "The error message to display"
-  }
+  ...selectProps
 ];
 
 export default () => (

@@ -12,7 +12,7 @@ describe("TimePicker", () => {
       const input = container.querySelectorAll("input")[0];
       const newTime = "12:15 AM";
       fireEvent.click(input);
-      fireEvent.click(container.querySelectorAll(".react-datepicker__time-list-item")[1]);
+      fireEvent.click(container.querySelectorAll("div[class*='SelectOption']")[1]);
 
       expect(onChange.mock.calls[0][0]).toEqual(newTime);
     });
