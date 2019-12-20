@@ -71,7 +71,8 @@ DatePicker.propTypes = {
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
   inputProps: PropTypes.shape({}),
-  minDate: PropTypes.instanceOf(Date)
+  minDate: PropTypes.instanceOf(Date),
+  maxDate: PropTypes.instanceOf(Date)
 };
 
 DatePicker.defaultProps = {
@@ -80,7 +81,8 @@ DatePicker.defaultProps = {
   onChange: undefined,
   onInputChange: undefined,
   inputProps: {},
-  minDate: undefined
+  minDate: undefined,
+  maxDate: undefined
 };
 
 export default DatePicker;
