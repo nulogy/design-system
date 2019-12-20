@@ -34,7 +34,7 @@ class DatePicker extends Component {
   };
 
   render() {
-    const { dateFormat, inputProps } = this.props;
+    const { dateFormat, inputProps, minDate, maxDate } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -57,6 +57,8 @@ class DatePicker extends Component {
           excludeDates={[selectedDate]}
           disabledKeyboardNavigation
           strictParsing
+          minDate={minDate}
+          maxDate={maxDate}
         />
       </div>
     );
@@ -68,7 +70,9 @@ DatePicker.propTypes = {
   dateFormat: PropTypes.string,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
-  inputProps: PropTypes.shape({})
+  inputProps: PropTypes.shape({}),
+  minDate: PropTypes.instanceOf(Date),
+  maxDate: PropTypes.instanceOf(Date)
 };
 
 DatePicker.defaultProps = {
@@ -76,7 +80,9 @@ DatePicker.defaultProps = {
   dateFormat: DEFAULT_DATE_FORMAT,
   onChange: undefined,
   onInputChange: undefined,
-  inputProps: {}
+  inputProps: {},
+  minDate: undefined,
+  maxDate: undefined
 };
 
 export default DatePicker;

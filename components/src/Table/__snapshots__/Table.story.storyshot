@@ -3202,7 +3202,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "kbwUMI",
+                                                          "lastClassName": "gBBsow",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -3224,7 +3224,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 kbwUMI"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
