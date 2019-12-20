@@ -65,10 +65,18 @@ export const DatePickerStyles = createGlobalStyle({
       "&--outside-month": {
         color: theme.colors.darkGrey,
         fontSize: theme.fontSizes.smaller
+      },
+      "&--disabled": {
+        color: theme.colors.grey,
+        "&:hover": {
+          color: theme.colors.grey
+        }
       }
     },
     ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text": {
-      cursor: "pointer"
+      "&[aria-disabled='false']": {
+        cursor: "pointer"
+      }
     },
     ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover": {
       backgroundColor: "transparent"
