@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { components } from "react-select";
 import theme from "../theme";
 import { Select } from "../Select";
-import { SelectDefaultProps, SelectPropTypes } from "../Select/Select.type";
 import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
 import SelectOption from "../Select/SelectOption";
@@ -35,7 +34,7 @@ const StyledSelectOption = styled(SelectOption)(({ isSelected }) => ({
 const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
-      <StyledTimeIcon icon="queryBuilder" {...props} />
+      <StyledTimeIcon icon="queryBuilder" />
     </components.DropdownIndicator>
   );
 };
@@ -98,13 +97,19 @@ class TimePicker extends Component {
 TimePicker.propTypes = {
   timeFormat: PropTypes.string,
   interval: PropTypes.number,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  onInputChange: PropTypes.func
 };
 
 TimePicker.defaultProps = {
   timeFormat: DEFAULT_TIME_FORMAT,
   interval: 15,
-  placeholder: DEFAULT_PLACEHOLDER
+  placeholder: DEFAULT_PLACEHOLDER,
+  className: null,
+  onChange: undefined,
+  onInputChange: undefined
 };
 
 export default TimePicker;

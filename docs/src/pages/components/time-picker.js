@@ -16,7 +16,7 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import { selectProps } from "../../shared/selectProps";
+import selectProps from "../../shared/selectProps";
 
 const propsRows = [
   {
@@ -26,7 +26,13 @@ const propsRows = [
     description:
       "The default time format (see date-fns for available time formats)"
   },
-  ...selectProps
+  {
+    name: "interval",
+    type: "Number",
+    defaultValue: "15",
+    description: "The time difference in minutes between the time options"
+  },
+  ...selectProps.filter(prop => prop.name !== "options")
 ];
 
 export default () => (
@@ -53,10 +59,6 @@ export default () => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
-    </DocSection>
-    <DocSection>
-      <SectionTitle>Input Props</SectionTitle>
-      <PropsTable propsRows={inputFieldProps} />
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>

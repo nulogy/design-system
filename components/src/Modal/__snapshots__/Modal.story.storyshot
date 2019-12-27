@@ -11543,7 +11543,6 @@ exports[`Storyshots Modal with select 1`] = `
                                                 placeholder="Please select inventory status"
                                                 required={false}
                                                 requirementText={null}
-                                                styles={Object {}}
                                               >
                                                 <Styled(Box)
                                                   theme={
@@ -26232,7 +26231,6 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                 placeholder="Please select inventory status"
                                                 required={false}
                                                 requirementText={null}
-                                                styles={Object {}}
                                               >
                                                 <Styled(Box)
                                                   theme={

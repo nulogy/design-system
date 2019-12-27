@@ -429,7 +429,6 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
               placeholder="Please select inventory status"
               required={false}
               requirementText={null}
-              styles={Object {}}
             >
               <Styled(Box)
                 theme={

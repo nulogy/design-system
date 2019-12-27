@@ -5727,7 +5727,6 @@ exports[`Storyshots Form Demo form 1`] = `
                               }
                               required={false}
                               requirementText={null}
-                              styles={Object {}}
                             >
                               <Styled(Box)
                                 theme={

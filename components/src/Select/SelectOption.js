@@ -10,6 +10,7 @@ const StyledOption = styled.div(({ isSelected, isFocused }) => ({
   fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
   background: isFocused ? theme.colors.lightBlue : null,
   minHeight: theme.space.x4,
+  cursor: "pointer",
   "&:last-child": {
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium
@@ -24,7 +25,7 @@ const StyledOption = styled.div(({ isSelected, isFocused }) => ({
 }));
 
 const SelectOption = props => (
-  <StyledOption {...props}>
+  <StyledOption {...props} cx={null}>
     <components.Option {...props} />
   </StyledOption>
 );

@@ -800,7 +800,6 @@ exports[`Storyshots StoriesForTests/Select Base 1`] = `
                           }
                           required={false}
                           requirementText={null}
-                          styles={Object {}}
                         >
                           <Styled(Box)
                             theme={
@@ -4165,7 +4164,6 @@ exports[`Storyshots StoriesForTests/Select Controlled 1`] = `
                           }
                           required={false}
                           requirementText={null}
-                          styles={Object {}}
                           value=""
                         >
                           <Styled(Box)
