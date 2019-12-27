@@ -82,12 +82,12 @@ class TimePicker extends Component {
       <>
         <TimePickerStyles />
         <Select
-          {...this.props}
-          className={`nds-time-picker ${className || ""}`}
           onChange={this.handleSelectedDateChange}
           options={options}
           components={{ DropdownIndicator, Option: StyledSelectOption }}
           onInputChange={this.handleOnInputChange}
+          {...this.props}
+          className={`nds-time-picker ${className || ""}`}
         />
       </>
     );

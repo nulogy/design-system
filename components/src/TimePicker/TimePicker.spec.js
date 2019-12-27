@@ -8,25 +8,25 @@ describe("TimePicker", () => {
     const onInputChange = jest.fn();
 
     it("returns the selected time when the selection has changed", () => {
-      const { container } = render(<TimePicker onChange={onChange} onInputChange={onInputChange} />);
-      const input = container.querySelectorAll("input")[0];
+      const { container, queryByText } = render(<TimePicker onChange={onChange} onInputChange={onInputChange} />);
       const newTime = "12:15 AM";
-      fireEvent.click(input);
-      fireEvent.click(container.querySelectorAll("div[class*='SelectOption']")[1]);
+      fireEvent.focus(container.querySelector("input"));
+      fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
+      fireEvent.click(queryByText(newTime));
 
-      expect(onChange.mock.calls[0][0]).toEqual(newTime);
+      expect(onChange).toHaveBeenCalledWith(newTime);
     });
 
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
-      const { getByLabelText } = render(
-        <TimePicker onChange={onChange} onInputChange={onInputChange} inputProps={{ labelText }} />
+      const { container } = render(
+        <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
       );
       const value = "20:00";
-      const input = getByLabelText(labelText);
+      const input = container.querySelectorAll("input")[0];
       fireEvent.change(input, { target: { value } });
 
-      expect(onInputChange).toHaveBeenCalledWith(value);
+      expect(onInputChange).toHaveBeenCalledWith(value, { action: "input-change" });
     });
   });
 });

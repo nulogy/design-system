@@ -435,6 +435,8 @@ exports[`Storyshots TimePicker default 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
+                onChange={[Function]}
+                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -1670,6 +1672,8 @@ exports[`Storyshots TimePicker default 1`] = `
                                       labelText="Start Time"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
+                                      onChange={[Function]}
+                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
@@ -12087,6 +12091,8 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
+                onChange={[Function]}
+                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -13322,6 +13328,8 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                       labelText="Duration"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
+                                      onChange={[Function]}
+                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
@@ -23740,6 +23748,8 @@ exports[`Storyshots TimePicker with error state 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
+                onChange={[Function]}
+                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -24975,6 +24985,8 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                       labelText="End Time"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
+                                      onChange={[Function]}
+                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
