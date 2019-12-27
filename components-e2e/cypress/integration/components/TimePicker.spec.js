@@ -1,7 +1,8 @@
 describe("Timepicker", () => {
   const getTimeInputComponent = () => cy.get("input");
   const TIME_OPTIONS_SELECTOR = "div[class*='-Menu']";
-  const getDropdownOptions = () => cy.get("div[class*='SelectOption']");
+  const TIME_OPTION_SELECTOR = "div[class*='SelectOption']";
+  const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
   const getDropdownComponent = () => cy.get(TIME_OPTIONS_SELECTOR);
   const getValue = () => cy.get("div[class*='singleValue']");
 
@@ -14,14 +15,15 @@ describe("Timepicker", () => {
       it("can open a dropdown on click", () => {
         getDropdownComponent().should("not.exist");
         getTimeInputComponent().click();
-        getDropdownComponent().should("exist");
+        getDropdownOptions()
+          .first()
+          .should("exist");
       });
 
       it("can close the dropdown on click outside", () => {
         getTimeInputComponent().click();
-        cy.isInViewport(TIME_OPTIONS_SELECTOR);
         cy.clickOutsideElement();
-        getDropdownComponent().should("not.exist");
+        getDropdownOptions().should("not.exist");
       });
     });
 
