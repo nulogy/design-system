@@ -1135,6 +1135,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                 <ForwardRef
                                   aria-labelledby="global-search"
                                   disabled={false}
+                                  error={false}
                                   errorList={null}
                                   errorMessage={null}
                                   helpText={null}
@@ -1495,241 +1496,31 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                       <div
                                         className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
                                       >
-                                        <MaybeFieldLabel
+                                        <ForwardRef
+                                          aria-labelledby="global-search"
+                                          disabled={false}
+                                          error={false}
                                           helpText={null}
+                                          id="navbar-search"
                                           labelText={null}
+                                          placeholder="Search Nulogy ..."
+                                          prefix={null}
+                                          prefixAlignment="left"
+                                          prefixWidth={null}
+                                          required={true}
                                           requirementText={null}
+                                          suffix={null}
+                                          suffixAlignment="left"
+                                          suffixWidth={null}
+                                          type="search"
                                         >
-                                          <Styled(Box)
-                                            alignItems="flex-start"
-                                            theme={
-                                              Object {
-                                                "borders": Array [],
-                                                "breakpoints": Object {
-                                                  "extraLarge": "1920px",
-                                                  "extraSmall": "0px",
-                                                  "large": "1360px",
-                                                  "medium": "1024px",
-                                                  "small": "768px",
-                                                },
-                                                "colors": Object {
-                                                  "black": "#011e38",
-                                                  "blackBlue": "#122b47",
-                                                  "blue": "#216beb",
-                                                  "darkBlue": "#00438f",
-                                                  "darkGrey": "#434d59",
-                                                  "green": "#008059",
-                                                  "grey": "#c0c8d1",
-                                                  "lightBlue": "#e1ebfa",
-                                                  "lightGreen": "#e9f7f2",
-                                                  "lightGrey": "#e4e7eb",
-                                                  "lightRed": "#fae6ea",
-                                                  "lightYellow": "#fcf5e3",
-                                                  "red": "#cc1439",
-                                                  "white": "#ffffff",
-                                                  "whiteGrey": "#f0f2f5",
-                                                  "yellow": "#ffbb00",
-                                                },
-                                                "fontSizes": Object {
-                                                  "large": "20px",
-                                                  "larger": "26px",
-                                                  "largest": "46px",
-                                                  "medium": "16px",
-                                                  "small": "14px",
-                                                  "smaller": "12px",
-                                                },
-                                                "fontWeights": Object {
-                                                  "bold": "600",
-                                                  "light": "300",
-                                                  "medium": "500",
-                                                  "normal": "400",
-                                                },
-                                                "fonts": Object {
-                                                  "base": "'IBM Plex Sans', sans-serif",
-                                                  "mono": "'IBM Plex Mono', monospace",
-                                                },
-                                                "lineHeights": Object {
-                                                  "base": "1.5",
-                                                  "sectionTitle": "1.23076923",
-                                                  "smallTextBase": "1.71428571",
-                                                  "smallTextCompressed": "1.14285714",
-                                                  "smallerText": "1.33333333",
-                                                  "subsectionTitle": "1.2",
-                                                  "title": "1.04347826",
-                                                },
-                                                "radii": Object {
-                                                  "circle": "50%",
-                                                  "medium": "4px",
-                                                  "small": "2px",
-                                                },
-                                                "shadows": Object {
-                                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                },
-                                                "space": Object {
-                                                  "half": "4px",
-                                                  "none": "0px",
-                                                  "x1": "8px",
-                                                  "x2": "16px",
-                                                  "x3": "24px",
-                                                  "x4": "32px",
-                                                  "x5": "40px",
-                                                  "x6": "48px",
-                                                  "x8": "64px",
-                                                },
-                                                "zIndex": Object {
-                                                  "content": 100,
-                                                  "overlay": 1000,
-                                                  "tabsBar": 210,
-                                                  "tabsScollIndicator": 200,
-                                                },
-                                              }
-                                            }
+                                          <MaybeFieldLabel
+                                            helpText={null}
+                                            labelText={null}
+                                            requirementText={null}
                                           >
-                                            <StyledComponent
+                                            <Styled(Box)
                                               alignItems="flex-start"
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "_foldedDefaultProps": Object {
-                                                    "theme": Object {
-                                                      "borders": Array [],
-                                                      "breakpoints": Object {
-                                                        "extraLarge": "1920px",
-                                                        "extraSmall": "0px",
-                                                        "large": "1360px",
-                                                        "medium": "1024px",
-                                                        "small": "768px",
-                                                      },
-                                                      "colors": Object {
-                                                        "black": "#011e38",
-                                                        "blackBlue": "#122b47",
-                                                        "blue": "#216beb",
-                                                        "darkBlue": "#00438f",
-                                                        "darkGrey": "#434d59",
-                                                        "green": "#008059",
-                                                        "grey": "#c0c8d1",
-                                                        "lightBlue": "#e1ebfa",
-                                                        "lightGreen": "#e9f7f2",
-                                                        "lightGrey": "#e4e7eb",
-                                                        "lightRed": "#fae6ea",
-                                                        "lightYellow": "#fcf5e3",
-                                                        "red": "#cc1439",
-                                                        "white": "#ffffff",
-                                                        "whiteGrey": "#f0f2f5",
-                                                        "yellow": "#ffbb00",
-                                                      },
-                                                      "fontSizes": Object {
-                                                        "large": "20px",
-                                                        "larger": "26px",
-                                                        "largest": "46px",
-                                                        "medium": "16px",
-                                                        "small": "14px",
-                                                        "smaller": "12px",
-                                                      },
-                                                      "fontWeights": Object {
-                                                        "bold": "600",
-                                                        "light": "300",
-                                                        "medium": "500",
-                                                        "normal": "400",
-                                                      },
-                                                      "fonts": Object {
-                                                        "base": "'IBM Plex Sans', sans-serif",
-                                                        "mono": "'IBM Plex Mono', monospace",
-                                                      },
-                                                      "lineHeights": Object {
-                                                        "base": "1.5",
-                                                        "sectionTitle": "1.23076923",
-                                                        "smallTextBase": "1.71428571",
-                                                        "smallTextCompressed": "1.14285714",
-                                                        "smallerText": "1.33333333",
-                                                        "subsectionTitle": "1.2",
-                                                        "title": "1.04347826",
-                                                      },
-                                                      "radii": Object {
-                                                        "circle": "50%",
-                                                        "medium": "4px",
-                                                        "small": "2px",
-                                                      },
-                                                      "shadows": Object {
-                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                      },
-                                                      "space": Object {
-                                                        "half": "4px",
-                                                        "none": "0px",
-                                                        "x1": "8px",
-                                                        "x2": "16px",
-                                                        "x3": "24px",
-                                                        "x4": "32px",
-                                                        "x5": "40px",
-                                                        "x6": "48px",
-                                                        "x8": "64px",
-                                                      },
-                                                      "zIndex": Object {
-                                                        "content": 100,
-                                                        "overlay": 1000,
-                                                        "tabsBar": 210,
-                                                        "tabsScollIndicator": 200,
-                                                      },
-                                                    },
-                                                  },
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bdVaJa",
-                                                    "isStatic": false,
-                                                    "lastClassName": "ieTDsx",
-                                                    "rules": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      "display: flex;",
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                  },
-                                                  "displayName": "Styled(Box)",
-                                                  "foldedComponentIds": Array [
-                                                    "Box-sc-1qu1edy-0",
-                                                  ],
-                                                  "propTypes": Object {
-                                                    "alignItems": [Function],
-                                                    "flexDirection": [Function],
-                                                    "flexWrap": [Function],
-                                                    "justifyContent": [Function],
-                                                  },
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-bdVaJa",
-                                                  "target": "div",
-                                                  "toString": [Function],
-                                                  "usesTheme": false,
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
                                               theme={
                                                 Object {
                                                   "borders": Array [],
@@ -1817,27 +1608,242 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                 }
                                               }
                                             >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
+                                              <StyledComponent
+                                                alignItems="flex-start"
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "_foldedDefaultProps": Object {
+                                                      "theme": Object {
+                                                        "borders": Array [],
+                                                        "breakpoints": Object {
+                                                          "extraLarge": "1920px",
+                                                          "extraSmall": "0px",
+                                                          "large": "1360px",
+                                                          "medium": "1024px",
+                                                          "small": "768px",
+                                                        },
+                                                        "colors": Object {
+                                                          "black": "#011e38",
+                                                          "blackBlue": "#122b47",
+                                                          "blue": "#216beb",
+                                                          "darkBlue": "#00438f",
+                                                          "darkGrey": "#434d59",
+                                                          "green": "#008059",
+                                                          "grey": "#c0c8d1",
+                                                          "lightBlue": "#e1ebfa",
+                                                          "lightGreen": "#e9f7f2",
+                                                          "lightGrey": "#e4e7eb",
+                                                          "lightRed": "#fae6ea",
+                                                          "lightYellow": "#fcf5e3",
+                                                          "red": "#cc1439",
+                                                          "white": "#ffffff",
+                                                          "whiteGrey": "#f0f2f5",
+                                                          "yellow": "#ffbb00",
+                                                        },
+                                                        "fontSizes": Object {
+                                                          "large": "20px",
+                                                          "larger": "26px",
+                                                          "largest": "46px",
+                                                          "medium": "16px",
+                                                          "small": "14px",
+                                                          "smaller": "12px",
+                                                        },
+                                                        "fontWeights": Object {
+                                                          "bold": "600",
+                                                          "light": "300",
+                                                          "medium": "500",
+                                                          "normal": "400",
+                                                        },
+                                                        "fonts": Object {
+                                                          "base": "'IBM Plex Sans', sans-serif",
+                                                          "mono": "'IBM Plex Mono', monospace",
+                                                        },
+                                                        "lineHeights": Object {
+                                                          "base": "1.5",
+                                                          "sectionTitle": "1.23076923",
+                                                          "smallTextBase": "1.71428571",
+                                                          "smallTextCompressed": "1.14285714",
+                                                          "smallerText": "1.33333333",
+                                                          "subsectionTitle": "1.2",
+                                                          "title": "1.04347826",
+                                                        },
+                                                        "radii": Object {
+                                                          "circle": "50%",
+                                                          "medium": "4px",
+                                                          "small": "2px",
+                                                        },
+                                                        "shadows": Object {
+                                                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                        },
+                                                        "space": Object {
+                                                          "half": "4px",
+                                                          "none": "0px",
+                                                          "x1": "8px",
+                                                          "x2": "16px",
+                                                          "x3": "24px",
+                                                          "x4": "32px",
+                                                          "x5": "40px",
+                                                          "x6": "48px",
+                                                          "x8": "64px",
+                                                        },
+                                                        "zIndex": Object {
+                                                          "content": 100,
+                                                          "overlay": 1000,
+                                                          "tabsBar": 210,
+                                                          "tabsScollIndicator": 200,
+                                                        },
+                                                      },
+                                                    },
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-bdVaJa",
+                                                      "isStatic": false,
+                                                      "lastClassName": "ieTDsx",
+                                                      "rules": Array [
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        "display: flex;",
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                      ],
+                                                    },
+                                                    "displayName": "Styled(Box)",
+                                                    "foldedComponentIds": Array [
+                                                      "Box-sc-1qu1edy-0",
+                                                    ],
+                                                    "propTypes": Object {
+                                                      "alignItems": [Function],
+                                                      "flexDirection": [Function],
+                                                      "flexWrap": [Function],
+                                                      "justifyContent": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-bdVaJa",
+                                                    "target": "div",
+                                                    "toString": [Function],
+                                                    "usesTheme": false,
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                                theme={
+                                                  Object {
+                                                    "borders": Array [],
+                                                    "breakpoints": Object {
+                                                      "extraLarge": "1920px",
+                                                      "extraSmall": "0px",
+                                                      "large": "1360px",
+                                                      "medium": "1024px",
+                                                      "small": "768px",
+                                                    },
+                                                    "colors": Object {
+                                                      "black": "#011e38",
+                                                      "blackBlue": "#122b47",
+                                                      "blue": "#216beb",
+                                                      "darkBlue": "#00438f",
+                                                      "darkGrey": "#434d59",
+                                                      "green": "#008059",
+                                                      "grey": "#c0c8d1",
+                                                      "lightBlue": "#e1ebfa",
+                                                      "lightGreen": "#e9f7f2",
+                                                      "lightGrey": "#e4e7eb",
+                                                      "lightRed": "#fae6ea",
+                                                      "lightYellow": "#fcf5e3",
+                                                      "red": "#cc1439",
+                                                      "white": "#ffffff",
+                                                      "whiteGrey": "#f0f2f5",
+                                                      "yellow": "#ffbb00",
+                                                    },
+                                                    "fontSizes": Object {
+                                                      "large": "20px",
+                                                      "larger": "26px",
+                                                      "largest": "46px",
+                                                      "medium": "16px",
+                                                      "small": "14px",
+                                                      "smaller": "12px",
+                                                    },
+                                                    "fontWeights": Object {
+                                                      "bold": "600",
+                                                      "light": "300",
+                                                      "medium": "500",
+                                                      "normal": "400",
+                                                    },
+                                                    "fonts": Object {
+                                                      "base": "'IBM Plex Sans', sans-serif",
+                                                      "mono": "'IBM Plex Mono', monospace",
+                                                    },
+                                                    "lineHeights": Object {
+                                                      "base": "1.5",
+                                                      "sectionTitle": "1.23076923",
+                                                      "smallTextBase": "1.71428571",
+                                                      "smallTextCompressed": "1.14285714",
+                                                      "smallerText": "1.33333333",
+                                                      "subsectionTitle": "1.2",
+                                                      "title": "1.04347826",
+                                                    },
+                                                    "radii": Object {
+                                                      "circle": "50%",
+                                                      "medium": "4px",
+                                                      "small": "2px",
+                                                    },
+                                                    "shadows": Object {
+                                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                    },
+                                                    "space": Object {
+                                                      "half": "4px",
+                                                      "none": "0px",
+                                                      "x1": "8px",
+                                                      "x2": "16px",
+                                                      "x3": "24px",
+                                                      "x4": "32px",
+                                                      "x5": "40px",
+                                                      "x6": "48px",
+                                                      "x8": "64px",
+                                                    },
+                                                    "zIndex": Object {
+                                                      "content": 100,
+                                                      "overlay": 1000,
+                                                      "tabsBar": 210,
+                                                      "tabsScollIndicator": 200,
+                                                    },
+                                                  }
+                                                }
                                               >
-                                                <Prefix
-                                                  prefix={null}
-                                                  prefixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                                <InputField
-                                                  aria-invalid={false}
-                                                  aria-labelledby="global-search"
-                                                  aria-required={true}
-                                                  disabled={false}
-                                                  error={false}
-                                                  errorList={null}
-                                                  errorMessage={null}
-                                                  id="navbar-search"
-                                                  placeholder="Search Nulogy ..."
-                                                  required={true}
-                                                  type="search"
+                                                <div
+                                                  className="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                                 >
+                                                  <Prefix
+                                                    prefix={null}
+                                                    prefixWidth={null}
+                                                    textAlign="left"
+                                                  />
                                                   <Box
                                                     position="relative"
                                                     theme={
@@ -2181,14 +2187,12 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                       <div
                                                         className="Box-sc-1qu1edy-0 eMNiba"
                                                       >
-                                                        <Input__StyledInput
+                                                        <InputField__StyledInput
                                                           aria-invalid={false}
                                                           aria-labelledby="global-search"
                                                           aria-required={true}
                                                           disabled={false}
                                                           error={false}
-                                                          errorList={null}
-                                                          errorMessage={null}
                                                           id="navbar-search"
                                                           placeholder="Search Nulogy ..."
                                                           required={true}
@@ -2200,16 +2204,14 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                             aria-required={true}
                                                             disabled={false}
                                                             error={false}
-                                                            errorList={null}
-                                                            errorMessage={null}
                                                             forwardedComponent={
                                                               Object {
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                  "componentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "iDpjn",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -2226,6 +2228,9 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -2234,10 +2239,10 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                                     [Function],
                                                                   ],
                                                                 },
-                                                                "displayName": "Input__StyledInput",
+                                                                "displayName": "InputField__StyledInput",
                                                                 "foldedComponentIds": Array [],
                                                                 "render": [Function],
-                                                                "styledComponentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                "styledComponentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                                 "target": "input",
                                                                 "toString": [Function],
                                                                 "usesTheme": false,
@@ -2255,7 +2260,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                               aria-invalid={false}
                                                               aria-labelledby="global-search"
                                                               aria-required={true}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
                                                               disabled={false}
                                                               id="navbar-search"
                                                               placeholder="Search Nulogy ..."
@@ -2263,20 +2268,20 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                               type="search"
                                                             />
                                                           </StyledComponent>
-                                                        </Input__StyledInput>
+                                                        </InputField__StyledInput>
                                                       </div>
                                                     </StyledComponent>
                                                   </Box>
-                                                </InputField>
-                                                <Suffix
-                                                  suffix={null}
-                                                  suffixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                              </div>
-                                            </StyledComponent>
-                                          </Styled(Box)>
-                                        </MaybeFieldLabel>
+                                                  <Suffix
+                                                    suffix={null}
+                                                    suffixWidth={null}
+                                                    textAlign="left"
+                                                  />
+                                                </div>
+                                              </StyledComponent>
+                                            </Styled(Box)>
+                                          </MaybeFieldLabel>
+                                        </ForwardRef>
                                         <InlineValidation
                                           errorList={null}
                                           errorMessage={null}
@@ -3543,6 +3548,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                 <ForwardRef
                                   aria-labelledby="global-search-2"
                                   disabled={false}
+                                  error={false}
                                   errorList={null}
                                   errorMessage={null}
                                   helpText={null}
@@ -3903,241 +3909,31 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                       <div
                                         className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
                                       >
-                                        <MaybeFieldLabel
+                                        <ForwardRef
+                                          aria-labelledby="global-search-2"
+                                          disabled={false}
+                                          error={false}
                                           helpText={null}
+                                          id="navbar-search"
                                           labelText={null}
+                                          placeholder="Search Nulogy ..."
+                                          prefix={null}
+                                          prefixAlignment="left"
+                                          prefixWidth={null}
+                                          required={true}
                                           requirementText={null}
+                                          suffix={null}
+                                          suffixAlignment="left"
+                                          suffixWidth={null}
+                                          type="search"
                                         >
-                                          <Styled(Box)
-                                            alignItems="flex-start"
-                                            theme={
-                                              Object {
-                                                "borders": Array [],
-                                                "breakpoints": Object {
-                                                  "extraLarge": "1920px",
-                                                  "extraSmall": "0px",
-                                                  "large": "1360px",
-                                                  "medium": "1024px",
-                                                  "small": "768px",
-                                                },
-                                                "colors": Object {
-                                                  "black": "#011e38",
-                                                  "blackBlue": "#122b47",
-                                                  "blue": "#216beb",
-                                                  "darkBlue": "#00438f",
-                                                  "darkGrey": "#434d59",
-                                                  "green": "#008059",
-                                                  "grey": "#c0c8d1",
-                                                  "lightBlue": "#e1ebfa",
-                                                  "lightGreen": "#e9f7f2",
-                                                  "lightGrey": "#e4e7eb",
-                                                  "lightRed": "#fae6ea",
-                                                  "lightYellow": "#fcf5e3",
-                                                  "red": "#cc1439",
-                                                  "white": "#ffffff",
-                                                  "whiteGrey": "#f0f2f5",
-                                                  "yellow": "#ffbb00",
-                                                },
-                                                "fontSizes": Object {
-                                                  "large": "20px",
-                                                  "larger": "26px",
-                                                  "largest": "46px",
-                                                  "medium": "16px",
-                                                  "small": "14px",
-                                                  "smaller": "12px",
-                                                },
-                                                "fontWeights": Object {
-                                                  "bold": "600",
-                                                  "light": "300",
-                                                  "medium": "500",
-                                                  "normal": "400",
-                                                },
-                                                "fonts": Object {
-                                                  "base": "'IBM Plex Sans', sans-serif",
-                                                  "mono": "'IBM Plex Mono', monospace",
-                                                },
-                                                "lineHeights": Object {
-                                                  "base": "1.5",
-                                                  "sectionTitle": "1.23076923",
-                                                  "smallTextBase": "1.71428571",
-                                                  "smallTextCompressed": "1.14285714",
-                                                  "smallerText": "1.33333333",
-                                                  "subsectionTitle": "1.2",
-                                                  "title": "1.04347826",
-                                                },
-                                                "radii": Object {
-                                                  "circle": "50%",
-                                                  "medium": "4px",
-                                                  "small": "2px",
-                                                },
-                                                "shadows": Object {
-                                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                },
-                                                "space": Object {
-                                                  "half": "4px",
-                                                  "none": "0px",
-                                                  "x1": "8px",
-                                                  "x2": "16px",
-                                                  "x3": "24px",
-                                                  "x4": "32px",
-                                                  "x5": "40px",
-                                                  "x6": "48px",
-                                                  "x8": "64px",
-                                                },
-                                                "zIndex": Object {
-                                                  "content": 100,
-                                                  "overlay": 1000,
-                                                  "tabsBar": 210,
-                                                  "tabsScollIndicator": 200,
-                                                },
-                                              }
-                                            }
+                                          <MaybeFieldLabel
+                                            helpText={null}
+                                            labelText={null}
+                                            requirementText={null}
                                           >
-                                            <StyledComponent
+                                            <Styled(Box)
                                               alignItems="flex-start"
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "_foldedDefaultProps": Object {
-                                                    "theme": Object {
-                                                      "borders": Array [],
-                                                      "breakpoints": Object {
-                                                        "extraLarge": "1920px",
-                                                        "extraSmall": "0px",
-                                                        "large": "1360px",
-                                                        "medium": "1024px",
-                                                        "small": "768px",
-                                                      },
-                                                      "colors": Object {
-                                                        "black": "#011e38",
-                                                        "blackBlue": "#122b47",
-                                                        "blue": "#216beb",
-                                                        "darkBlue": "#00438f",
-                                                        "darkGrey": "#434d59",
-                                                        "green": "#008059",
-                                                        "grey": "#c0c8d1",
-                                                        "lightBlue": "#e1ebfa",
-                                                        "lightGreen": "#e9f7f2",
-                                                        "lightGrey": "#e4e7eb",
-                                                        "lightRed": "#fae6ea",
-                                                        "lightYellow": "#fcf5e3",
-                                                        "red": "#cc1439",
-                                                        "white": "#ffffff",
-                                                        "whiteGrey": "#f0f2f5",
-                                                        "yellow": "#ffbb00",
-                                                      },
-                                                      "fontSizes": Object {
-                                                        "large": "20px",
-                                                        "larger": "26px",
-                                                        "largest": "46px",
-                                                        "medium": "16px",
-                                                        "small": "14px",
-                                                        "smaller": "12px",
-                                                      },
-                                                      "fontWeights": Object {
-                                                        "bold": "600",
-                                                        "light": "300",
-                                                        "medium": "500",
-                                                        "normal": "400",
-                                                      },
-                                                      "fonts": Object {
-                                                        "base": "'IBM Plex Sans', sans-serif",
-                                                        "mono": "'IBM Plex Mono', monospace",
-                                                      },
-                                                      "lineHeights": Object {
-                                                        "base": "1.5",
-                                                        "sectionTitle": "1.23076923",
-                                                        "smallTextBase": "1.71428571",
-                                                        "smallTextCompressed": "1.14285714",
-                                                        "smallerText": "1.33333333",
-                                                        "subsectionTitle": "1.2",
-                                                        "title": "1.04347826",
-                                                      },
-                                                      "radii": Object {
-                                                        "circle": "50%",
-                                                        "medium": "4px",
-                                                        "small": "2px",
-                                                      },
-                                                      "shadows": Object {
-                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                      },
-                                                      "space": Object {
-                                                        "half": "4px",
-                                                        "none": "0px",
-                                                        "x1": "8px",
-                                                        "x2": "16px",
-                                                        "x3": "24px",
-                                                        "x4": "32px",
-                                                        "x5": "40px",
-                                                        "x6": "48px",
-                                                        "x8": "64px",
-                                                      },
-                                                      "zIndex": Object {
-                                                        "content": 100,
-                                                        "overlay": 1000,
-                                                        "tabsBar": 210,
-                                                        "tabsScollIndicator": 200,
-                                                      },
-                                                    },
-                                                  },
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bdVaJa",
-                                                    "isStatic": false,
-                                                    "lastClassName": "ieTDsx",
-                                                    "rules": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      "display: flex;",
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                  },
-                                                  "displayName": "Styled(Box)",
-                                                  "foldedComponentIds": Array [
-                                                    "Box-sc-1qu1edy-0",
-                                                  ],
-                                                  "propTypes": Object {
-                                                    "alignItems": [Function],
-                                                    "flexDirection": [Function],
-                                                    "flexWrap": [Function],
-                                                    "justifyContent": [Function],
-                                                  },
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-bdVaJa",
-                                                  "target": "div",
-                                                  "toString": [Function],
-                                                  "usesTheme": false,
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
                                               theme={
                                                 Object {
                                                   "borders": Array [],
@@ -4225,27 +4021,242 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                 }
                                               }
                                             >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
+                                              <StyledComponent
+                                                alignItems="flex-start"
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "_foldedDefaultProps": Object {
+                                                      "theme": Object {
+                                                        "borders": Array [],
+                                                        "breakpoints": Object {
+                                                          "extraLarge": "1920px",
+                                                          "extraSmall": "0px",
+                                                          "large": "1360px",
+                                                          "medium": "1024px",
+                                                          "small": "768px",
+                                                        },
+                                                        "colors": Object {
+                                                          "black": "#011e38",
+                                                          "blackBlue": "#122b47",
+                                                          "blue": "#216beb",
+                                                          "darkBlue": "#00438f",
+                                                          "darkGrey": "#434d59",
+                                                          "green": "#008059",
+                                                          "grey": "#c0c8d1",
+                                                          "lightBlue": "#e1ebfa",
+                                                          "lightGreen": "#e9f7f2",
+                                                          "lightGrey": "#e4e7eb",
+                                                          "lightRed": "#fae6ea",
+                                                          "lightYellow": "#fcf5e3",
+                                                          "red": "#cc1439",
+                                                          "white": "#ffffff",
+                                                          "whiteGrey": "#f0f2f5",
+                                                          "yellow": "#ffbb00",
+                                                        },
+                                                        "fontSizes": Object {
+                                                          "large": "20px",
+                                                          "larger": "26px",
+                                                          "largest": "46px",
+                                                          "medium": "16px",
+                                                          "small": "14px",
+                                                          "smaller": "12px",
+                                                        },
+                                                        "fontWeights": Object {
+                                                          "bold": "600",
+                                                          "light": "300",
+                                                          "medium": "500",
+                                                          "normal": "400",
+                                                        },
+                                                        "fonts": Object {
+                                                          "base": "'IBM Plex Sans', sans-serif",
+                                                          "mono": "'IBM Plex Mono', monospace",
+                                                        },
+                                                        "lineHeights": Object {
+                                                          "base": "1.5",
+                                                          "sectionTitle": "1.23076923",
+                                                          "smallTextBase": "1.71428571",
+                                                          "smallTextCompressed": "1.14285714",
+                                                          "smallerText": "1.33333333",
+                                                          "subsectionTitle": "1.2",
+                                                          "title": "1.04347826",
+                                                        },
+                                                        "radii": Object {
+                                                          "circle": "50%",
+                                                          "medium": "4px",
+                                                          "small": "2px",
+                                                        },
+                                                        "shadows": Object {
+                                                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                        },
+                                                        "space": Object {
+                                                          "half": "4px",
+                                                          "none": "0px",
+                                                          "x1": "8px",
+                                                          "x2": "16px",
+                                                          "x3": "24px",
+                                                          "x4": "32px",
+                                                          "x5": "40px",
+                                                          "x6": "48px",
+                                                          "x8": "64px",
+                                                        },
+                                                        "zIndex": Object {
+                                                          "content": 100,
+                                                          "overlay": 1000,
+                                                          "tabsBar": 210,
+                                                          "tabsScollIndicator": 200,
+                                                        },
+                                                      },
+                                                    },
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-bdVaJa",
+                                                      "isStatic": false,
+                                                      "lastClassName": "ieTDsx",
+                                                      "rules": Array [
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        "display: flex;",
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                        [Function],
+                                                      ],
+                                                    },
+                                                    "displayName": "Styled(Box)",
+                                                    "foldedComponentIds": Array [
+                                                      "Box-sc-1qu1edy-0",
+                                                    ],
+                                                    "propTypes": Object {
+                                                      "alignItems": [Function],
+                                                      "flexDirection": [Function],
+                                                      "flexWrap": [Function],
+                                                      "justifyContent": [Function],
+                                                    },
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-bdVaJa",
+                                                    "target": "div",
+                                                    "toString": [Function],
+                                                    "usesTheme": false,
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                                theme={
+                                                  Object {
+                                                    "borders": Array [],
+                                                    "breakpoints": Object {
+                                                      "extraLarge": "1920px",
+                                                      "extraSmall": "0px",
+                                                      "large": "1360px",
+                                                      "medium": "1024px",
+                                                      "small": "768px",
+                                                    },
+                                                    "colors": Object {
+                                                      "black": "#011e38",
+                                                      "blackBlue": "#122b47",
+                                                      "blue": "#216beb",
+                                                      "darkBlue": "#00438f",
+                                                      "darkGrey": "#434d59",
+                                                      "green": "#008059",
+                                                      "grey": "#c0c8d1",
+                                                      "lightBlue": "#e1ebfa",
+                                                      "lightGreen": "#e9f7f2",
+                                                      "lightGrey": "#e4e7eb",
+                                                      "lightRed": "#fae6ea",
+                                                      "lightYellow": "#fcf5e3",
+                                                      "red": "#cc1439",
+                                                      "white": "#ffffff",
+                                                      "whiteGrey": "#f0f2f5",
+                                                      "yellow": "#ffbb00",
+                                                    },
+                                                    "fontSizes": Object {
+                                                      "large": "20px",
+                                                      "larger": "26px",
+                                                      "largest": "46px",
+                                                      "medium": "16px",
+                                                      "small": "14px",
+                                                      "smaller": "12px",
+                                                    },
+                                                    "fontWeights": Object {
+                                                      "bold": "600",
+                                                      "light": "300",
+                                                      "medium": "500",
+                                                      "normal": "400",
+                                                    },
+                                                    "fonts": Object {
+                                                      "base": "'IBM Plex Sans', sans-serif",
+                                                      "mono": "'IBM Plex Mono', monospace",
+                                                    },
+                                                    "lineHeights": Object {
+                                                      "base": "1.5",
+                                                      "sectionTitle": "1.23076923",
+                                                      "smallTextBase": "1.71428571",
+                                                      "smallTextCompressed": "1.14285714",
+                                                      "smallerText": "1.33333333",
+                                                      "subsectionTitle": "1.2",
+                                                      "title": "1.04347826",
+                                                    },
+                                                    "radii": Object {
+                                                      "circle": "50%",
+                                                      "medium": "4px",
+                                                      "small": "2px",
+                                                    },
+                                                    "shadows": Object {
+                                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                    },
+                                                    "space": Object {
+                                                      "half": "4px",
+                                                      "none": "0px",
+                                                      "x1": "8px",
+                                                      "x2": "16px",
+                                                      "x3": "24px",
+                                                      "x4": "32px",
+                                                      "x5": "40px",
+                                                      "x6": "48px",
+                                                      "x8": "64px",
+                                                    },
+                                                    "zIndex": Object {
+                                                      "content": 100,
+                                                      "overlay": 1000,
+                                                      "tabsBar": 210,
+                                                      "tabsScollIndicator": 200,
+                                                    },
+                                                  }
+                                                }
                                               >
-                                                <Prefix
-                                                  prefix={null}
-                                                  prefixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                                <InputField
-                                                  aria-invalid={false}
-                                                  aria-labelledby="global-search-2"
-                                                  aria-required={true}
-                                                  disabled={false}
-                                                  error={false}
-                                                  errorList={null}
-                                                  errorMessage={null}
-                                                  id="navbar-search"
-                                                  placeholder="Search Nulogy ..."
-                                                  required={true}
-                                                  type="search"
+                                                <div
+                                                  className="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                                 >
+                                                  <Prefix
+                                                    prefix={null}
+                                                    prefixWidth={null}
+                                                    textAlign="left"
+                                                  />
                                                   <Box
                                                     position="relative"
                                                     theme={
@@ -4589,14 +4600,12 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                       <div
                                                         className="Box-sc-1qu1edy-0 eMNiba"
                                                       >
-                                                        <Input__StyledInput
+                                                        <InputField__StyledInput
                                                           aria-invalid={false}
                                                           aria-labelledby="global-search-2"
                                                           aria-required={true}
                                                           disabled={false}
                                                           error={false}
-                                                          errorList={null}
-                                                          errorMessage={null}
                                                           id="navbar-search"
                                                           placeholder="Search Nulogy ..."
                                                           required={true}
@@ -4608,16 +4617,14 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                             aria-required={true}
                                                             disabled={false}
                                                             error={false}
-                                                            errorList={null}
-                                                            errorMessage={null}
                                                             forwardedComponent={
                                                               Object {
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                  "componentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "epaPSA",
+                                                                  "lastClassName": "iDpjn",
                                                                   "rules": Array [
                                                                     "display: block;",
                                                                     "flex-grow: 1;",
@@ -4634,6 +4641,9 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                                     "color: #011e38;",
                                                                     "border-color: #216beb;",
                                                                     "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                    " ~ svg {",
+                                                                    "fill: #00438f;",
+                                                                    "}",
                                                                     "}",
                                                                     "::placeholder {",
                                                                     "color: rgba(1,30,56,0.6);",
@@ -4642,10 +4652,10 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                                     [Function],
                                                                   ],
                                                                 },
-                                                                "displayName": "Input__StyledInput",
+                                                                "displayName": "InputField__StyledInput",
                                                                 "foldedComponentIds": Array [],
                                                                 "render": [Function],
-                                                                "styledComponentId": "Input__StyledInput-sc-1x697oj-0",
+                                                                "styledComponentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                                 "target": "input",
                                                                 "toString": [Function],
                                                                 "usesTheme": false,
@@ -4663,7 +4673,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                               aria-invalid={false}
                                                               aria-labelledby="global-search-2"
                                                               aria-required={true}
-                                                              className="Input__StyledInput-sc-1x697oj-0 epaPSA"
+                                                              className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
                                                               disabled={false}
                                                               id="navbar-search"
                                                               placeholder="Search Nulogy ..."
@@ -4671,20 +4681,20 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                               type="search"
                                                             />
                                                           </StyledComponent>
-                                                        </Input__StyledInput>
+                                                        </InputField__StyledInput>
                                                       </div>
                                                     </StyledComponent>
                                                   </Box>
-                                                </InputField>
-                                                <Suffix
-                                                  suffix={null}
-                                                  suffixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                              </div>
-                                            </StyledComponent>
-                                          </Styled(Box)>
-                                        </MaybeFieldLabel>
+                                                  <Suffix
+                                                    suffix={null}
+                                                    suffixWidth={null}
+                                                    textAlign="left"
+                                                  />
+                                                </div>
+                                              </StyledComponent>
+                                            </Styled(Box)>
+                                          </MaybeFieldLabel>
+                                        </ForwardRef>
                                         <InlineValidation
                                           errorList={null}
                                           errorMessage={null}

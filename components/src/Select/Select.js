@@ -1,10 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Select from "react-select";
+import Select, { components as selectComponents } from "react-select";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
+import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
+import SelectOption from "./SelectOption";
+
+const Control = props => {
+  // eslint-disable-next-line react/prop-types
+  const { isFocused } = props;
+  return <selectComponents.Control className={isFocused ? "nds-select--is-focused" : null} {...props} />;
+};
 
 const getOption = (options, value) => {
   if (value == null || value === "") return value;
@@ -57,7 +64,8 @@ const ReactSelect = ({
   menuIsOpen,
   onMenuOpen,
   onMenuClose,
-  onInputChange
+  onInputChange,
+  components
 }) => (
   <Field>
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -86,69 +94,15 @@ const ReactSelect = ({
         onMenuOpen={onMenuOpen}
         onMenuClose={onMenuClose}
         onInputChange={onInputChange}
+        components={{ Option: SelectOption, Control, ...components }}
       />
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </MaybeFieldLabel>
   </Field>
 );
 
-ReactSelect.propTypes = {
-  autocomplete: PropTypes.bool,
-  options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  errorMessage: PropTypes.string,
-  errorList: PropTypes.arrayOf(PropTypes.string),
-  labelText: PropTypes.string,
-  helpText: PropTypes.node,
-  noOptionsMessage: PropTypes.func,
-  requirementText: PropTypes.string,
-  id: PropTypes.string,
-  initialIsOpen: PropTypes.bool,
-  maxHeight: PropTypes.string,
-  multiselect: PropTypes.bool,
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  className: PropTypes.string,
-  classNamePrefix: PropTypes.string,
-  menuIsOpen: PropTypes.bool,
-  onMenuOpen: PropTypes.func,
-  onMenuClose: PropTypes.func,
-  onInputChange: PropTypes.func
-};
+ReactSelect.propTypes = SelectPropTypes;
 
-ReactSelect.defaultProps = {
-  autocomplete: true,
-  disabled: null,
-  defaultValue: undefined,
-  error: undefined,
-  errorMessage: null,
-  errorList: null,
-  labelText: null,
-  helpText: null,
-  noOptionsMessage: () => null,
-  requirementText: null,
-  id: null,
-  initialIsOpen: undefined,
-  maxHeight: "248px",
-  multiselect: false,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  placeholder: undefined,
-  required: false,
-  value: undefined,
-  className: null,
-  classNamePrefix: undefined,
-  menuIsOpen: undefined,
-  onMenuOpen: undefined,
-  onMenuClose: undefined,
-  onInputChange: undefined
-};
+ReactSelect.defaultProps = SelectDefaultProps;
 
 export default ReactSelect;
