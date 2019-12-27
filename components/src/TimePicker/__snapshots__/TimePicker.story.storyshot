@@ -389,7 +389,6 @@ exports[`Storyshots TimePicker default 1`] = `
             }
           >
             <TimePicker
-              className={null}
               interval={15}
               labelText="Start Time"
               onChange={[Function]}
@@ -400,7 +399,7 @@ exports[`Storyshots TimePicker default 1`] = `
               <GlobalStyleComponent />
               <ReactSelect
                 autocomplete={true}
-                className={null}
+                className="nds-time-picker "
                 components={
                   Object {
                     "DropdownIndicator": [Function],
@@ -436,8 +435,6 @@ exports[`Storyshots TimePicker default 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
-                onChange={[Function]}
-                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -1636,7 +1633,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                     <StateManager
                                       aria-invalid={false}
                                       aria-required={false}
-                                      className={null}
+                                      className="nds-time-picker "
                                       components={
                                         Object {
                                           "Control": [Function],
@@ -1673,8 +1670,6 @@ exports[`Storyshots TimePicker default 1`] = `
                                       labelText="Start Time"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
-                                      onChange={[Function]}
-                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
@@ -2087,7 +2082,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                         backspaceRemovesValue={true}
                                         blurInputOnSelect={true}
                                         captureMenuScroll={false}
-                                        className={null}
+                                        className="nds-time-picker "
                                         closeMenuOnScroll={false}
                                         closeMenuOnSelect={true}
                                         components={
@@ -2558,7 +2553,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                         value={null}
                                       >
                                         <SelectContainer
-                                          className={null}
+                                          className="nds-time-picker "
                                           clearValue={[Function]}
                                           cx={[Function]}
                                           getStyles={[Function]}
@@ -2970,7 +2965,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                               "backspaceRemovesValue": true,
                                               "blurInputOnSelect": true,
                                               "captureMenuScroll": false,
-                                              "className": null,
+                                              "className": "nds-time-picker ",
                                               "classNamePrefix": undefined,
                                               "closeMenuOnScroll": false,
                                               "closeMenuOnSelect": true,
@@ -3472,7 +3467,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                           <EmotionCssPropInternal
                                             __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SelectContainer"
                                             __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                            className=""
+                                            className="nds-time-picker"
                                             css={
                                               Object {
                                                 "boxSizing": "border-box",
@@ -3485,7 +3480,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                             onKeyDown={[Function]}
                                           >
                                             <div
-                                              className=" css-2b097c-container"
+                                              className="nds-time-picker css-2b097c-container"
                                               onKeyDown={[Function]}
                                             >
                                               <Control
@@ -3902,7 +3897,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                     "backspaceRemovesValue": true,
                                                     "blurInputOnSelect": true,
                                                     "captureMenuScroll": false,
-                                                    "className": null,
+                                                    "className": "nds-time-picker ",
                                                     "classNamePrefix": undefined,
                                                     "closeMenuOnScroll": false,
                                                     "closeMenuOnSelect": true,
@@ -4816,7 +4811,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                       "backspaceRemovesValue": true,
                                                       "blurInputOnSelect": true,
                                                       "captureMenuScroll": false,
-                                                      "className": null,
+                                                      "className": "nds-time-picker ",
                                                       "classNamePrefix": undefined,
                                                       "closeMenuOnScroll": false,
                                                       "closeMenuOnSelect": true,
@@ -5753,7 +5748,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -6680,7 +6675,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -7217,7 +7212,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -8221,7 +8216,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -9143,7 +9138,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -10076,7 +10071,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -10988,7 +10983,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": null,
+                                                                    "className": "nds-time-picker ",
                                                                     "classNamePrefix": undefined,
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -12046,7 +12041,6 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
             }
           >
             <TimePicker
-              className={null}
               interval={15}
               labelText="Duration"
               onChange={[Function]}
@@ -12057,7 +12051,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
               <GlobalStyleComponent />
               <ReactSelect
                 autocomplete={true}
-                className={null}
+                className="nds-time-picker "
                 components={
                   Object {
                     "DropdownIndicator": [Function],
@@ -12093,8 +12087,6 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
-                onChange={[Function]}
-                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -13293,7 +13285,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                     <StateManager
                                       aria-invalid={false}
                                       aria-required={false}
-                                      className={null}
+                                      className="nds-time-picker "
                                       components={
                                         Object {
                                           "Control": [Function],
@@ -13330,8 +13322,6 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                       labelText="Duration"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
-                                      onChange={[Function]}
-                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
@@ -13744,7 +13734,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                         backspaceRemovesValue={true}
                                         blurInputOnSelect={true}
                                         captureMenuScroll={false}
-                                        className={null}
+                                        className="nds-time-picker "
                                         closeMenuOnScroll={false}
                                         closeMenuOnSelect={true}
                                         components={
@@ -14215,7 +14205,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                         value={null}
                                       >
                                         <SelectContainer
-                                          className={null}
+                                          className="nds-time-picker "
                                           clearValue={[Function]}
                                           cx={[Function]}
                                           getStyles={[Function]}
@@ -14627,7 +14617,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                               "backspaceRemovesValue": true,
                                               "blurInputOnSelect": true,
                                               "captureMenuScroll": false,
-                                              "className": null,
+                                              "className": "nds-time-picker ",
                                               "classNamePrefix": undefined,
                                               "closeMenuOnScroll": false,
                                               "closeMenuOnSelect": true,
@@ -15129,7 +15119,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                           <EmotionCssPropInternal
                                             __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SelectContainer"
                                             __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                            className=""
+                                            className="nds-time-picker"
                                             css={
                                               Object {
                                                 "boxSizing": "border-box",
@@ -15142,7 +15132,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                             onKeyDown={[Function]}
                                           >
                                             <div
-                                              className=" css-2b097c-container"
+                                              className="nds-time-picker css-2b097c-container"
                                               onKeyDown={[Function]}
                                             >
                                               <Control
@@ -15559,7 +15549,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                     "backspaceRemovesValue": true,
                                                     "blurInputOnSelect": true,
                                                     "captureMenuScroll": false,
-                                                    "className": null,
+                                                    "className": "nds-time-picker ",
                                                     "classNamePrefix": undefined,
                                                     "closeMenuOnScroll": false,
                                                     "closeMenuOnSelect": true,
@@ -16473,7 +16463,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                       "backspaceRemovesValue": true,
                                                       "blurInputOnSelect": true,
                                                       "captureMenuScroll": false,
-                                                      "className": null,
+                                                      "className": "nds-time-picker ",
                                                       "classNamePrefix": undefined,
                                                       "closeMenuOnScroll": false,
                                                       "closeMenuOnSelect": true,
@@ -17410,7 +17400,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -18337,7 +18327,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -18874,7 +18864,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -19878,7 +19868,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -20800,7 +20790,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -21733,7 +21723,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -22645,7 +22635,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": null,
+                                                                    "className": "nds-time-picker ",
                                                                     "classNamePrefix": undefined,
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -23703,7 +23693,6 @@ exports[`Storyshots TimePicker with error state 1`] = `
             }
           >
             <TimePicker
-              className={null}
               errorMessage="This time is invalid"
               interval={15}
               labelText="End Time"
@@ -23715,7 +23704,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
               <GlobalStyleComponent />
               <ReactSelect
                 autocomplete={true}
-                className={null}
+                className="nds-time-picker "
                 components={
                   Object {
                     "DropdownIndicator": [Function],
@@ -23751,8 +23740,6 @@ exports[`Storyshots TimePicker with error state 1`] = `
                 maxHeight="248px"
                 multiselect={false}
                 noOptionsMessage={[Function]}
-                onChange={[Function]}
-                onInputChange={[Function]}
                 options={
                   Array [
                     Object {
@@ -24951,7 +24938,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                     <StateManager
                                       aria-invalid={true}
                                       aria-required={false}
-                                      className={null}
+                                      className="nds-time-picker "
                                       components={
                                         Object {
                                           "Control": [Function],
@@ -24988,8 +24975,6 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                       labelText="End Time"
                                       maxMenuHeight="248px"
                                       noOptionsMessage={[Function]}
-                                      onChange={[Function]}
-                                      onInputChange={[Function]}
                                       options={
                                         Array [
                                           Object {
@@ -25402,7 +25387,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                         backspaceRemovesValue={true}
                                         blurInputOnSelect={true}
                                         captureMenuScroll={false}
-                                        className={null}
+                                        className="nds-time-picker "
                                         closeMenuOnScroll={false}
                                         closeMenuOnSelect={true}
                                         components={
@@ -25873,7 +25858,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                         value={null}
                                       >
                                         <SelectContainer
-                                          className={null}
+                                          className="nds-time-picker "
                                           clearValue={[Function]}
                                           cx={[Function]}
                                           getStyles={[Function]}
@@ -26285,7 +26270,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                               "backspaceRemovesValue": true,
                                               "blurInputOnSelect": true,
                                               "captureMenuScroll": false,
-                                              "className": null,
+                                              "className": "nds-time-picker ",
                                               "classNamePrefix": undefined,
                                               "closeMenuOnScroll": false,
                                               "closeMenuOnSelect": true,
@@ -26787,7 +26772,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                           <EmotionCssPropInternal
                                             __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SelectContainer"
                                             __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                            className=""
+                                            className="nds-time-picker"
                                             css={
                                               Object {
                                                 "boxSizing": "border-box",
@@ -26800,7 +26785,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                             onKeyDown={[Function]}
                                           >
                                             <div
-                                              className=" css-2b097c-container"
+                                              className="nds-time-picker css-2b097c-container"
                                               onKeyDown={[Function]}
                                             >
                                               <Control
@@ -27217,7 +27202,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                     "backspaceRemovesValue": true,
                                                     "blurInputOnSelect": true,
                                                     "captureMenuScroll": false,
-                                                    "className": null,
+                                                    "className": "nds-time-picker ",
                                                     "classNamePrefix": undefined,
                                                     "closeMenuOnScroll": false,
                                                     "closeMenuOnSelect": true,
@@ -28131,7 +28116,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                       "backspaceRemovesValue": true,
                                                       "blurInputOnSelect": true,
                                                       "captureMenuScroll": false,
-                                                      "className": null,
+                                                      "className": "nds-time-picker ",
                                                       "classNamePrefix": undefined,
                                                       "closeMenuOnScroll": false,
                                                       "closeMenuOnSelect": true,
@@ -29068,7 +29053,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -29995,7 +29980,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -30532,7 +30517,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -31536,7 +31521,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": null,
+                                                            "className": "nds-time-picker ",
                                                             "classNamePrefix": undefined,
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -32458,7 +32443,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -33391,7 +33376,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                   "backspaceRemovesValue": true,
                                                                   "blurInputOnSelect": true,
                                                                   "captureMenuScroll": false,
-                                                                  "className": null,
+                                                                  "className": "nds-time-picker ",
                                                                   "classNamePrefix": undefined,
                                                                   "closeMenuOnScroll": false,
                                                                   "closeMenuOnSelect": true,
@@ -34303,7 +34288,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": null,
+                                                                    "className": "nds-time-picker ",
                                                                     "classNamePrefix": undefined,
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,

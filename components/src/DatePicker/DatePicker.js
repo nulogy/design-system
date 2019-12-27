@@ -37,7 +37,7 @@ class DatePicker extends Component {
   };
 
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -77,7 +77,9 @@ DatePicker.propTypes = {
   onInputChange: PropTypes.func,
   inputProps: PropTypes.shape(InputFieldPropTypes),
   errorMessage: PropTypes.string,
-  errorList: PropTypes.arrayOf(PropTypes.string)
+  errorList: PropTypes.arrayOf(PropTypes.string),
+  minDate: PropTypes.instanceOf(Date),
+  maxDate: PropTypes.instanceOf(Date)
 };
 
 DatePicker.defaultProps = {
@@ -87,7 +89,9 @@ DatePicker.defaultProps = {
   onInputChange: undefined,
   inputProps: InputFieldDefaultProps,
   errorMessage: undefined,
-  errorList: undefined
+  errorList: undefined,
+  minDate: undefined,
+  maxDate: undefined
 };
 
 export default DatePicker;

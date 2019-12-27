@@ -82,12 +82,12 @@ class TimePicker extends Component {
       <>
         <TimePickerStyles />
         <Select
-          className={`nds-time-picker ${className}`}
+          {...this.props}
+          className={`nds-time-picker ${className || ""}`}
           onChange={this.handleSelectedDateChange}
           options={options}
           components={{ DropdownIndicator, Option: StyledSelectOption }}
           onInputChange={this.handleOnInputChange}
-          {...this.props}
         />
       </>
     );
@@ -107,7 +107,7 @@ TimePicker.defaultProps = {
   timeFormat: DEFAULT_TIME_FORMAT,
   interval: 15,
   placeholder: DEFAULT_PLACEHOLDER,
-  className: null,
+  className: undefined,
   onChange: undefined,
   onInputChange: undefined
 };
