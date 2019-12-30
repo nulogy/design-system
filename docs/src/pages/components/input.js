@@ -20,6 +20,47 @@ import {
 } from "../../components";
 import inputProps from "../../shared/inputProps";
 
+const prefixSuffixProps = [
+  {
+    name: "prefix",
+    type: "String",
+    defaultValue: "null",
+    description: "Displays input field prefix label"
+  },
+  {
+    name: "prefixWidth",
+    type: "String",
+    defaultValue: "null",
+    description: "Controls the width of prefix label"
+  },
+  {
+    name: "prefixAlignment",
+    type: "String",
+    defaultValue: "left",
+    description:
+      "Aligns prefix label text. Accepts left, center, and right value."
+  },
+  {
+    name: "suffix",
+    type: "String",
+    defaultValue: "null",
+    description: "Displays input field suffix label"
+  },
+  {
+    name: "suffixWidth",
+    type: "String",
+    defaultValue: "null",
+    description: "Controls the width of suffix label"
+  },
+  {
+    name: "suffixAlignment",
+    type: "String",
+    defaultValue: "left",
+    description:
+      "Aligns suffix label text. Accepts left, center, and right value."
+  }
+];
+
 const propsRows = [
   {
     name: "value",
@@ -33,7 +74,8 @@ const propsRows = [
     defaultValue: "",
     description: "Default value of input"
   },
-  ...inputProps
+  ...inputProps,
+  ...prefixSuffixProps
 ];
 
 export default () => (

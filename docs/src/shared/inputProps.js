@@ -51,44 +51,6 @@ export const inputFieldProps = [
     description: "(Optional) or (Required)."
   },
   {
-    name: "prefix",
-    type: "String",
-    defaultValue: "null",
-    description: "Displays input field prefix label"
-  },
-  {
-    name: "prefixWidth",
-    type: "String",
-    defaultValue: "null",
-    description: "Controls the width of prefix label"
-  },
-  {
-    name: "prefixAlignment",
-    type: "String",
-    defaultValue: "left",
-    description:
-      "Aligns prefix label text. Accepts left, center, and right value."
-  },
-  {
-    name: "sufix",
-    type: "String",
-    defaultValue: "null",
-    description: "Displays input field sufix label"
-  },
-  {
-    name: "sufixWidth",
-    type: "String",
-    defaultValue: "null",
-    description: "Controls the width of sufix label"
-  },
-  {
-    name: "sufixAlignment",
-    type: "String",
-    defaultValue: "left",
-    description:
-      "Aligns sufix label text. Accepts left, center, and right value."
-  },
-  {
     name: "className",
     type: "String",
     defaultValue: "undefined",
