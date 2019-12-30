@@ -69,6 +69,7 @@ export const MonthPickerStyles = createGlobalStyle({
         lineHeight: theme.space.x5,
         textAlign: "center",
         margin: `${theme.space.half} ${theme.space.x1}`,
+        cursor: "pointer",
         "&:hover": {
           backgroundColor: theme.colors.lightBlue,
           color: theme.colors.black
@@ -76,8 +77,10 @@ export const MonthPickerStyles = createGlobalStyle({
       },
       "&--disabled": {
         color: theme.colors.grey,
+        cursor: "auto",
         "&:hover": {
-          color: theme.colors.grey
+          color: theme.colors.grey,
+          backgroundColor: "transparent"
         }
       },
       "&--selected": {

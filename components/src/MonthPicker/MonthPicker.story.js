@@ -27,4 +27,14 @@ storiesOf("MonthPicker", module)
       inputProps={{ labelText: "Month and Year" }}
       errorMessage="The date is invalid"
     />
+  ))
+  .add("with a min and max date(SkipStoryshot)", () => (
+    <MonthPicker
+      selected={new Date("2019-07-10T05:00:00.000Z")}
+      minDate={new Date("2019-07-05T05:00:00.000Z")}
+      maxDate={new Date("2019-12-05T05:00:00.000Z")}
+      onChange={action("date changed")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Month and Year" }}
+    />
   ));

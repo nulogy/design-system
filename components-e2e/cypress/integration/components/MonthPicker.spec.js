@@ -73,7 +73,7 @@ describe("Monthpicker", () => {
         ).should("exist");
       });
 
-      it("allows the user to select a date in a earlier month", () => {
+      it("allows the user to select a date in a earlier year", () => {
         const getPreviousMonthButton = () =>
           cy.get("button.react-datepicker__navigation--previous");
 
@@ -82,13 +82,43 @@ describe("Monthpicker", () => {
         cy.get(".react-datepicker__header").contains("2018");
       });
 
-      it("allows the user to select a date in a later month", () => {
+      it("allows the user to select a date in a later year", () => {
         const getNextMonthButton = () =>
           cy.get("button.react-datepicker__navigation--next");
 
         getMonthInputComponent().click();
         getNextMonthButton().click();
         cy.get(".react-datepicker__header").contains("2020");
+      });
+    });
+  });
+  describe("Default", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook(
+        "monthpicker--with-a-min-and-max-date-skipstoryshots"
+      );
+    });
+    describe("selects a date", () => {
+      it("allows the user to select a date by clicking with the range", () => {
+        getMonthInputComponent().click();
+        cy.get(".react-datepicker__month-8")
+          .first()
+          .click();
+        getMonthInputComponent().should("have.value", "Sep 2019");
+      });
+      it("does not a allow selecting a date before the min date", () => {
+        getMonthInputComponent().click();
+        cy.get(".react-datepicker__month-5")
+          .first()
+          .click();
+        getMonthInputComponent().should("have.value", "Jul 2019");
+      });
+      it("does not a allow selecting a date after the max date", () => {
+        const getNextMonthButton = () =>
+          cy.get("button.react-datepicker__navigation--next");
+
+        getMonthInputComponent().click();
+        getNextMonthButton().should("not.exist");
       });
     });
   });
