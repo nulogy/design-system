@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { format } from "date-fns";
-import styled from "styled-components";
 
 import theme from "../theme";
 
@@ -16,7 +15,6 @@ const DatePickerHeader = ({ date, decreaseMonth, increaseMonth, prevMonthButtonD
       label="go to previous month"
       onClick={decreaseMonth}
       disabled={prevMonthButtonDisabled}
-      ml="x1"
     />
     <Text fontWeight="bold" color={theme.colors.blackBlue} px="x1" ml="half" fontSize="large">
       {format(date, "MMMM yyyy")}
@@ -26,7 +24,6 @@ const DatePickerHeader = ({ date, decreaseMonth, increaseMonth, prevMonthButtonD
       label="go to next month"
       onClick={increaseMonth}
       disabled={nextMonthButtonDisabled}
-      mr="x2"
     />
   </Flex>
 );
