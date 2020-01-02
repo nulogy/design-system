@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { isBefore } from "date-fns/esm";
+import { isBefore } from "date-fns";
 import { MonthPicker } from "../MonthPicker";
 import { Text } from "../Type";
 import { Flex } from "../Flex";
