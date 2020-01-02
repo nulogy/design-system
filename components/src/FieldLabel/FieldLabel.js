@@ -37,7 +37,7 @@ const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...pro
   </Label>
 );
 
-BaseFieldLabel.propTypes = {
+export const FieldLabelProps = {
   labelText: PropTypes.string.isRequired,
   children: PropTypes.node,
   requirementText: PropTypes.string,
@@ -46,12 +46,16 @@ BaseFieldLabel.propTypes = {
   ...space.PropTypes
 };
 
-BaseFieldLabel.defaultProps = {
+export const FieldLabelDefaultProps = {
   children: null,
   requirementText: null,
   helpText: null,
   id: undefined
 };
+
+BaseFieldLabel.propTypes = FieldLabelProps;
+
+BaseFieldLabel.defaultProps = FieldLabelDefaultProps;
 
 const FieldLabel = styled(BaseFieldLabel)({});
 

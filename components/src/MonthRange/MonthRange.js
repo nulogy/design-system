@@ -8,8 +8,10 @@ import { Box } from "../Box";
 import { InlineValidation } from "../Validation";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabel } from "../FieldLabel";
+import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel";
 
 const MonthRange = ({
+  dateFormat,
   onRangeChange,
   onStartDateChange,
   onEndDateChange,
@@ -21,7 +23,9 @@ const MonthRange = ({
   endDateInputProps,
   startDateInputProps,
   disableRangeValidation,
-  labelProps
+  labelProps,
+  minDate,
+  maxDate
 }) => {
   const [startMonth, setStartMonth] = useState(defaultStartDate);
   const [endMonth, setEndMonth] = useState(defaultEndDate);
@@ -61,7 +65,7 @@ const MonthRange = ({
 
   return (
     <>
-      <FieldLabel labelText="Month Range" {...labelProps}>
+      <FieldLabel {...labelProps}>
         <Box
           display="inline-flex"
           justifyContent="center"
@@ -69,19 +73,25 @@ const MonthRange = ({
           mb={rangeError || errorMessage ? "x1" : "x3"}
         >
           <MonthPicker
+            dateFormat={dateFormat}
             selected={startMonth}
             onChange={changeStartDateHandler}
             inputProps={startDateInputProps}
             errorMessage={startDateErrorMessage}
+            minDate={minDate}
+            maxDate={maxDate}
           />
           <Flex px="x2" alignItems="center" maxHeight="38px">
             <Text>-</Text>
           </Flex>
           <MonthPicker
+            dateFormat={dateFormat}
             selected={endMonth}
             onChange={changeEndDateHandler}
             inputProps={endDateInputProps}
             errorMessage={endDateErrorMessage}
+            minDate={minDate}
+            maxDate={maxDate}
           />
         </Box>
       </FieldLabel>
@@ -92,6 +102,7 @@ const MonthRange = ({
 };
 
 MonthRange.propTypes = {
+  dateFormat: PropTypes.string,
   onRangeChange: PropTypes.func,
   onStartDateChange: PropTypes.func,
   onEndDateChange: PropTypes.func,
@@ -103,10 +114,13 @@ MonthRange.propTypes = {
   endDateInputProps: PropTypes.shape(InputFieldPropTypes),
   startDateInputProps: PropTypes.shape(InputFieldPropTypes),
   disableRangeValidation: PropTypes.bool,
-  labelProps: PropTypes.shape({})
+  labelProps: PropTypes.shape(FieldLabelProps),
+  minDate: PropTypes.instanceOf(Date),
+  maxDate: PropTypes.instanceOf(Date)
 };
 
 MonthRange.defaultProps = {
+  dateFormat: undefined,
   onRangeChange: null,
   onStartDateChange: null,
   onEndDateChange: null,
@@ -118,7 +132,12 @@ MonthRange.defaultProps = {
   endDateInputProps: InputFieldDefaultProps,
   startDateInputProps: InputFieldDefaultProps,
   disableRangeValidation: false,
-  labelProps: null
+  labelProps: {
+    ...FieldLabelDefaultProps,
+    labelText: "Month Range"
+  },
+  minDate: null,
+  maxDate: null
 };
 
 export default MonthRange;
