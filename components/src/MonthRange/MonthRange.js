@@ -8,7 +8,7 @@ import { Box } from "../Box";
 import { InlineValidation } from "../Validation";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabel } from "../FieldLabel";
-import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel";
+import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 
 const MonthRange = ({
   dateFormat,
