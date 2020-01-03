@@ -43,8 +43,8 @@
     "lerna": "^3.16.4",
     "prettier": "1.17.0",
     "pretty-quick": "2.0.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "resolutions": {
     "**/svgi/js-yaml": "^3.13.1"

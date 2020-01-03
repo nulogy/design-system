@@ -116,6 +116,10 @@ export const menuData = [
         href: "/components/month-picker"
       },
       {
+        name: "Month Range",
+        href: "/components/month-range"
+      },
+      {
         name: "NavBar",
         href: "/components/navbar"
       },

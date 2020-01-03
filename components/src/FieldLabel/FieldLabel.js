@@ -6,6 +6,7 @@ import { Box } from "../Box";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import theme from "../theme";
+import { FieldLabelProps, FieldLabelDefaultProps } from "./FieldLabel.type";
 
 const labelTextStyles = {
   fontSize: theme.fontSizes.small,
@@ -37,21 +38,9 @@ const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...pro
   </Label>
 );
 
-BaseFieldLabel.propTypes = {
-  labelText: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  requirementText: PropTypes.string,
-  helpText: PropTypes.node,
-  id: PropTypes.string,
-  ...space.PropTypes
-};
+BaseFieldLabel.propTypes = FieldLabelProps;
 
-BaseFieldLabel.defaultProps = {
-  children: null,
-  requirementText: null,
-  helpText: null,
-  id: undefined
-};
+BaseFieldLabel.defaultProps = FieldLabelDefaultProps;
 
 const FieldLabel = styled(BaseFieldLabel)({});
 

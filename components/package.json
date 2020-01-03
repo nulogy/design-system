@@ -47,8 +47,8 @@
     "/dist"
   ],
   "peerDependencies": {
-    "react": ">=16.3.2",
-    "react-dom": ">=16.3.2"
+    "react": ">=16.10.2",
+    "react-dom": ">=16.10.2"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -91,6 +91,7 @@
     "@nulogy/tokens": "^0.17.0",
     "date-fns": "^2.8.1",
     "gatsby-plugin-gtag": "^1.0.12",
+    "mockdate": "^2.0.5",
     "polished": "3.0.0",
     "react-datepicker": "^2.10.1",
     "react-modal": "^3.10.1",
