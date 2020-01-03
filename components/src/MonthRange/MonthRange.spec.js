@@ -1,9 +1,16 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
+import MockDate from "mockdate";
 import { MonthRange } from ".";
 
 describe("MonthRange", () => {
   describe("range selection", () => {
+    beforeEach(() => {
+      MockDate.set("2020-04-01T04:00:00.000Z", 0);
+    });
+    afterEach(() => {
+      MockDate.reset();
+    });
     it("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
       const { container } = render(<MonthRange onRangeChange={onRangeChange} />);
