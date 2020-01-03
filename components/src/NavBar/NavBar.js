@@ -85,10 +85,18 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
   </header>
 );
 
+const MenuDataPropTypes = {
+  primaryMenu: PropTypes.arrayOf(isValidMenuItem),
+  secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
+  search: PropTypes.shape({
+    onSubmit: PropTypes.func
+  })
+};
+
 MediumNavBar.propTypes = {
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.shape(MenuDataPropTypes),
   themeColor: PropTypes.oneOf(["blue", "white"])
 };
 
@@ -219,7 +227,7 @@ SmallNavBarNoState.propTypes = {
     toggleMenu: PropTypes.func,
     closeMenu: PropTypes.func
   }).isRequired,
-  menuData: PropTypes.shape({}),
+  menuData: PropTypes.shape(MenuDataPropTypes),
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -255,13 +263,7 @@ const BaseNavBar = props => (
 );
 
 BaseNavBar.propTypes = {
-  menuData: PropTypes.shape({
-    primaryMenu: PropTypes.arrayOf(isValidMenuItem),
-    secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
-    search: PropTypes.shape({
-      onSubmit: PropTypes.func
-    })
-  }),
+  menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   themeColor: PropTypes.oneOf(["blue", "white"])

@@ -156,13 +156,20 @@ const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   </>
 );
 
+const ThemeColorObjectPropTypes = {
+  textColor: PropTypes.string,
+  background: PropTypes.string,
+  logoColor: PropTypes.string
+};
+
 SubMenu.propTypes = {
   layer: PropTypes.number.isRequired,
   menuItem: PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({})),
     name: PropTypes.string.isRequired
   }).isRequired,
   linkOnClick: PropTypes.func,
-  themeColorObject: PropTypes.shape({})
+  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes)
 };
 
 SubMenu.defaultProps = {
@@ -212,7 +219,7 @@ BaseMobileMenu.propTypes = {
   subtext: PropTypes.string,
   includeSubtext: PropTypes.bool,
   closeMenu: PropTypes.func,
-  themeColorObject: PropTypes.shape({})
+  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes)
 };
 
 BaseMobileMenu.defaultProps = {
