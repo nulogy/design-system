@@ -8563,7 +8563,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                     <ForwardRef
                                       defaultValue="WS2SB6"
                                       disabled={false}
-                                      error={false}
+                                      error={true}
                                       helpText={null}
                                       id="item-code"
                                       labelText="Item code"
@@ -9703,20 +9703,20 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                 className="Box-sc-1qu1edy-0 eMNiba"
                                                               >
                                                                 <InputField__StyledInput
-                                                                  aria-invalid={false}
+                                                                  aria-invalid={true}
                                                                   aria-required={false}
                                                                   defaultValue="WS2SB6"
                                                                   disabled={false}
-                                                                  error={false}
+                                                                  error={true}
                                                                   id="item-code"
                                                                   required={false}
                                                                 >
                                                                   <StyledComponent
-                                                                    aria-invalid={false}
+                                                                    aria-invalid={true}
                                                                     aria-required={false}
                                                                     defaultValue="WS2SB6"
                                                                     disabled={false}
-                                                                    error={false}
+                                                                    error={true}
                                                                     forwardedComponent={
                                                                       Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
@@ -9768,9 +9768,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     required={false}
                                                                   >
                                                                     <input
-                                                                      aria-invalid={false}
+                                                                      aria-invalid={true}
                                                                       aria-required={false}
-                                                                      className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
+                                                                      className="InputField__StyledInput-sc-6cu4mg-0 bghieQ"
                                                                       defaultValue="WS2SB6"
                                                                       disabled={false}
                                                                       id="item-code"
@@ -23725,7 +23725,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                     <ForwardRef
                                       defaultValue="235432"
                                       disabled={false}
-                                      error={false}
+                                      error={true}
                                       helpText={null}
                                       id="items"
                                       labelText="Item"
@@ -24865,20 +24865,20 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                 className="Box-sc-1qu1edy-0 eMNiba"
                                                               >
                                                                 <InputField__StyledInput
-                                                                  aria-invalid={false}
+                                                                  aria-invalid={true}
                                                                   aria-required={false}
                                                                   defaultValue="235432"
                                                                   disabled={false}
-                                                                  error={false}
+                                                                  error={true}
                                                                   id="items"
                                                                   required={false}
                                                                 >
                                                                   <StyledComponent
-                                                                    aria-invalid={false}
+                                                                    aria-invalid={true}
                                                                     aria-required={false}
                                                                     defaultValue="235432"
                                                                     disabled={false}
-                                                                    error={false}
+                                                                    error={true}
                                                                     forwardedComponent={
                                                                       Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
@@ -24930,9 +24930,9 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     required={false}
                                                                   >
                                                                     <input
-                                                                      aria-invalid={false}
+                                                                      aria-invalid={true}
                                                                       aria-required={false}
-                                                                      className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
+                                                                      className="InputField__StyledInput-sc-6cu4mg-0 bghieQ"
                                                                       defaultValue="235432"
                                                                       disabled={false}
                                                                       id="items"
