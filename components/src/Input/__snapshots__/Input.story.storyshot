@@ -31763,7 +31763,7 @@ exports[`Storyshots Input with error list  1`] = `
                   >
                     <ForwardRef
                       disabled={false}
-                      error={false}
+                      error={true}
                       helpText={null}
                       labelText="Label"
                       onBlur={[Function]}
@@ -32904,19 +32904,19 @@ exports[`Storyshots Input with error list  1`] = `
                                                 className="Box-sc-1qu1edy-0 eMNiba"
                                               >
                                                 <InputField__StyledInput
-                                                  aria-invalid={false}
+                                                  aria-invalid={true}
                                                   aria-required={false}
                                                   disabled={false}
-                                                  error={false}
+                                                  error={true}
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   required={false}
                                                 >
                                                   <StyledComponent
-                                                    aria-invalid={false}
+                                                    aria-invalid={true}
                                                     aria-required={false}
                                                     disabled={false}
-                                                    error={false}
+                                                    error={true}
                                                     forwardedComponent={
                                                       Object {
                                                         "$$typeof": Symbol(react.forward_ref),
@@ -32924,7 +32924,7 @@ exports[`Storyshots Input with error list  1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "iDpjn",
+                                                          "lastClassName": "bghieQ",
                                                           "rules": Array [
                                                             "display: block;",
                                                             "flex-grow: 1;",
@@ -32969,9 +32969,9 @@ exports[`Storyshots Input with error list  1`] = `
                                                     required={false}
                                                   >
                                                     <input
-                                                      aria-invalid={false}
+                                                      aria-invalid={true}
                                                       aria-required={false}
-                                                      className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
+                                                      className="InputField__StyledInput-sc-6cu4mg-0 bghieQ"
                                                       disabled={false}
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
@@ -34520,7 +34520,7 @@ exports[`Storyshots Input with error message 1`] = `
                   >
                     <ForwardRef
                       disabled={false}
-                      error={false}
+                      error={true}
                       helpText={null}
                       labelText="Label"
                       onBlur={[Function]}
@@ -35661,19 +35661,19 @@ exports[`Storyshots Input with error message 1`] = `
                                                 className="Box-sc-1qu1edy-0 eMNiba"
                                               >
                                                 <InputField__StyledInput
-                                                  aria-invalid={false}
+                                                  aria-invalid={true}
                                                   aria-required={false}
                                                   disabled={false}
-                                                  error={false}
+                                                  error={true}
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   required={false}
                                                 >
                                                   <StyledComponent
-                                                    aria-invalid={false}
+                                                    aria-invalid={true}
                                                     aria-required={false}
                                                     disabled={false}
-                                                    error={false}
+                                                    error={true}
                                                     forwardedComponent={
                                                       Object {
                                                         "$$typeof": Symbol(react.forward_ref),
@@ -35681,7 +35681,7 @@ exports[`Storyshots Input with error message 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "InputField__StyledInput-sc-6cu4mg-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "iDpjn",
+                                                          "lastClassName": "bghieQ",
                                                           "rules": Array [
                                                             "display: block;",
                                                             "flex-grow: 1;",
@@ -35726,9 +35726,9 @@ exports[`Storyshots Input with error message 1`] = `
                                                     required={false}
                                                   >
                                                     <input
-                                                      aria-invalid={false}
+                                                      aria-invalid={true}
                                                       aria-required={false}
-                                                      className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
+                                                      className="InputField__StyledInput-sc-6cu4mg-0 bghieQ"
                                                       disabled={false}
                                                       onBlur={[Function]}
                                                       onChange={[Function]}

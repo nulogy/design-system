@@ -8,7 +8,7 @@ import { InputFieldDefaultProps, InputFieldPropTypes } from "./InputField.type";
 
 const Input = forwardRef(({ errorMessage, errorList, className, ...props }, ref) => (
   <Field className={className} ref={ref}>
-    <InputField {...props} />
+    <InputField {...props} error={!!(errorMessage || errorList)} />
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 ));
