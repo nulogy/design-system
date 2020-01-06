@@ -25,7 +25,7 @@ const RangeContainer = ({ labelProps, startComponent, endComponent, errorMessage
       </Box>
     </FieldLabel>
     {errorMessages.map(errorMessage => (
-      <InlineValidation errorMessage={errorMessage} />
+      <InlineValidation key={errorMessage} errorMessage={errorMessage} />
     ))}
   </>
 );

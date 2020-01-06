@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { isBefore } from "date-fns";
 import { MonthPicker } from "../MonthPicker";
-import { Text } from "../Type";
-import { Flex } from "../Flex";
-import { Box } from "../Box";
-import { InlineValidation } from "../Validation";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
-import { FieldLabel } from "../FieldLabel";
+import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 
 const MonthRange = ({
@@ -59,45 +55,41 @@ const MonthRange = ({
     }
   };
 
+  const startDateInput = (
+    <MonthPicker
+      dateFormat={dateFormat}
+      selected={startMonth}
+      onChange={changeStartDateHandler}
+      inputProps={startDateInputProps}
+      errorMessage={startDateErrorMessage}
+      minDate={minDate}
+      maxDate={maxDate}
+    />
+  );
+
+  const endDateInput = (
+    <MonthPicker
+      dateFormat={dateFormat}
+      selected={endMonth}
+      onChange={changeEndDateHandler}
+      inputProps={endDateInputProps}
+      errorMessage={endDateErrorMessage}
+      minDate={minDate}
+      maxDate={maxDate}
+    />
+  );
+
   useEffect(() => {
     validateDateRange();
   }, [startMonth, endMonth]);
 
   return (
-    <>
-      <FieldLabel {...labelProps}>
-        <Box
-          display="inline-flex"
-          justifyContent="center"
-          alignItems="flex-start"
-          mb={rangeError || errorMessage ? "x1" : "x3"}
-        >
-          <MonthPicker
-            dateFormat={dateFormat}
-            selected={startMonth}
-            onChange={changeStartDateHandler}
-            inputProps={startDateInputProps}
-            errorMessage={startDateErrorMessage}
-            minDate={minDate}
-            maxDate={maxDate}
-          />
-          <Flex px="x2" alignItems="center" maxHeight="38px">
-            <Text>-</Text>
-          </Flex>
-          <MonthPicker
-            dateFormat={dateFormat}
-            selected={endMonth}
-            onChange={changeEndDateHandler}
-            inputProps={endDateInputProps}
-            errorMessage={endDateErrorMessage}
-            minDate={minDate}
-            maxDate={maxDate}
-          />
-        </Box>
-      </FieldLabel>
-      {!disableRangeValidation && <InlineValidation errorMessage={rangeError} />}
-      <InlineValidation errorMessage={errorMessage} />
-    </>
+    <RangeContainer
+      labelProps={labelProps}
+      startComponent={startDateInput}
+      endComponent={endDateInput}
+      errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+    />
   );
 };
 
