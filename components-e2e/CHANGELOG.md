@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/nulogy/design-system/compare/v0.16.10...v0.18.0) (2020-01-06)
+
+### Features
+
+- add a month picker ([#499](https://github.com/nulogy/design-system/issues/499)) ([b13b3f8](https://github.com/nulogy/design-system/commit/b13b3f8))
+- added a single datepicker component for selecting dates ([0e7df21](https://github.com/nulogy/design-system/commit/0e7df21))
+- adds a TimePicker component ([#496](https://github.com/nulogy/design-system/issues/496)) ([c84c07f](https://github.com/nulogy/design-system/commit/c84c07f))
+
 # [0.17.0](https://github.com/nulogy/design-system/compare/v0.16.10...v0.17.0) (2019-12-06)
 
 **Note:** Version bump only for package @nulogy/components-e2e
