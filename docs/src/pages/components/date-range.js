@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import {
   SectionTitle,
   Title,
-  MonthRange,
+  DateRange,
   ListItem,
   List,
   Link
@@ -106,18 +106,18 @@ const propsRows = [
 export default () => (
   <Layout>
     <Helmet>
-      <title>Month Range</title>
+      <title>Date Range</title>
     </Helmet>
     <Intro>
-      <Title>Month Range</Title>
+      <Title>Date Range</Title>
       <IntroText>
-        Month ranges allow users to easily enter a range of months. If the end
+        Date ranges allow users to easily enter a range of dates. If the end
         date is before the start date, by default an error message will be
         displayed.
       </IntroText>
     </Intro>
     <DocSection>
-      <MonthRange />
+      <DateRange />
       <Highlight className="js">
         {`import { MonthRange } from "@nulogy/components";
 
@@ -145,6 +145,9 @@ export default () => (
       <List>
         <ListItem>
           <Link href="/components/date-picker">Date Picker</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/month-range">Month Range</Link>
         </ListItem>
         <ListItem>
           <Link href="/components/time-picker">Time Picker</Link>

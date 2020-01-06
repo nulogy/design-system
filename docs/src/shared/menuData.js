@@ -64,6 +64,10 @@ export const menuData = [
         href: "/components/date-picker"
       },
       {
+        name: "Date Range",
+        href: "/components/date-range"
+      },
+      {
         name: "Dropdown Menu",
         href: "/components/dropdown-menu"
       },
