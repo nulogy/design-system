@@ -40,8 +40,7 @@ export const DatePickerStyles = createGlobalStyle({
         display: "inline-block",
         width: theme.space.x5,
         color: theme.colors.darkGrey,
-        textAlign: "center",
-        margin: theme.space.half
+        textAlign: "center"
       }
     },
     ".react-datepicker__day": {
@@ -51,10 +50,13 @@ export const DatePickerStyles = createGlobalStyle({
       color: theme.colors.darkGrey,
       border: "2px solid transparent",
       display: "inline-block",
-      width: theme.space.x5,
       lineHeight: theme.space.x5,
       textAlign: "center",
-      margin: theme.space.half,
+      width: theme.space.x5,
+      marginRight: 0,
+      marginLeft: 0,
+      marginTop: theme.space.half,
+      marginBottom: theme.space.half,
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
         color: theme.colors.black
