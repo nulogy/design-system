@@ -4772,7 +4772,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "Box-sc-1qu1edy-0",
                                                                 "isStatic": false,
-                                                                "lastClassName": "eMNiba",
+                                                                "lastClassName": "iylGA",
                                                                 "rules": Array [
                                                                   [Function],
                                                                   [Function],
@@ -6048,6 +6048,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                                               textAlign="left"
                                                                                             />
                                                                                             <Box
+                                                                                              display="flex"
+                                                                                              flexGrow="1"
                                                                                               position="relative"
                                                                                               theme={
                                                                                                 Object {
@@ -6137,6 +6139,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <StyledComponent
+                                                                                                display="flex"
+                                                                                                flexGrow="1"
                                                                                                 forwardedComponent={
                                                                                                   Object {
                                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -6230,7 +6234,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                                                     "componentStyle": ComponentStyle {
                                                                                                       "componentId": "Box-sc-1qu1edy-0",
                                                                                                       "isStatic": false,
-                                                                                                      "lastClassName": "eMNiba",
+                                                                                                      "lastClassName": "iylGA",
                                                                                                       "rules": Array [
                                                                                                         [Function],
                                                                                                         [Function],
@@ -6388,7 +6392,8 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                                                 }
                                                                                               >
                                                                                                 <div
-                                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                                  display="flex"
                                                                                                 >
                                                                                                   <InputField__StyledInput
                                                                                                     aria-invalid={false}
@@ -22125,7 +22130,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "Box-sc-1qu1edy-0",
                                                                 "isStatic": false,
-                                                                "lastClassName": "eMNiba",
+                                                                "lastClassName": "iylGA",
                                                                 "rules": Array [
                                                                   [Function],
                                                                   [Function],
@@ -23401,6 +23406,8 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                                               textAlign="left"
                                                                                             />
                                                                                             <Box
+                                                                                              display="flex"
+                                                                                              flexGrow="1"
                                                                                               position="relative"
                                                                                               theme={
                                                                                                 Object {
@@ -23490,6 +23497,8 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <StyledComponent
+                                                                                                display="flex"
+                                                                                                flexGrow="1"
                                                                                                 forwardedComponent={
                                                                                                   Object {
                                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -23583,7 +23592,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                                                     "componentStyle": ComponentStyle {
                                                                                                       "componentId": "Box-sc-1qu1edy-0",
                                                                                                       "isStatic": false,
-                                                                                                      "lastClassName": "eMNiba",
+                                                                                                      "lastClassName": "iylGA",
                                                                                                       "rules": Array [
                                                                                                         [Function],
                                                                                                         [Function],
@@ -23741,7 +23750,8 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                                                 }
                                                                                               >
                                                                                                 <div
-                                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                                  display="flex"
                                                                                                 >
                                                                                                   <InputField__StyledInput
                                                                                                     aria-invalid={false}
@@ -44326,7 +44336,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "Box-sc-1qu1edy-0",
                                                                 "isStatic": false,
-                                                                "lastClassName": "eMNiba",
+                                                                "lastClassName": "iylGA",
                                                                 "rules": Array [
                                                                   [Function],
                                                                   [Function],
@@ -45602,6 +45612,8 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                                               textAlign="left"
                                                                                             />
                                                                                             <Box
+                                                                                              display="flex"
+                                                                                              flexGrow="1"
                                                                                               position="relative"
                                                                                               theme={
                                                                                                 Object {
@@ -45691,6 +45703,8 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <StyledComponent
+                                                                                                display="flex"
+                                                                                                flexGrow="1"
                                                                                                 forwardedComponent={
                                                                                                   Object {
                                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -45784,7 +45798,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                                                     "componentStyle": ComponentStyle {
                                                                                                       "componentId": "Box-sc-1qu1edy-0",
                                                                                                       "isStatic": false,
-                                                                                                      "lastClassName": "eMNiba",
+                                                                                                      "lastClassName": "iylGA",
                                                                                                       "rules": Array [
                                                                                                         [Function],
                                                                                                         [Function],
@@ -45942,7 +45956,8 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                                                 }
                                                                                               >
                                                                                                 <div
-                                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                                  display="flex"
                                                                                                 >
                                                                                                   <InputField__StyledInput
                                                                                                     aria-invalid={false}
