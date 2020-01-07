@@ -24,8 +24,9 @@ const RangeContainer = ({ labelProps, startComponent, endComponent, errorMessage
         {endComponent}
       </Box>
     </FieldLabel>
-    {errorMessages.map(errorMessage => (
-      <InlineValidation key={errorMessage} errorMessage={errorMessage} />
+    {errorMessages.map((errorMessage, i) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <InlineValidation key={i} errorMessage={errorMessage} />
     ))}
   </>
 );

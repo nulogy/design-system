@@ -49,6 +49,7 @@ export const DatePickerStyles = createGlobalStyle({
       fontSize: theme.fontSizes.medium,
       borderRadius: theme.radii.medium,
       color: theme.colors.darkGrey,
+      border: "1px solid transparent",
       display: "inline-block",
       width: theme.space.x5,
       lineHeight: theme.space.x5,
@@ -87,6 +88,8 @@ export const DatePickerStyles = createGlobalStyle({
     ".react-datepicker__day--selected": {
       color: theme.colors.white,
       background: theme.colors.darkBlue,
+      border: `1px solid ${theme.colors.darkBlue}`,
+      lineHeight: theme.space.x5,
       cursor: "initial",
       "&:hover": {
         color: theme.colors.white,
