@@ -5326,6 +5326,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                         "background": "#ffffff",
                                                         "border": "1px solid #c0c8d1",
                                                         "borderBottomLeftRadius": "4px",
+                                                        "borderBottomRightRadius": "4px",
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
@@ -5343,7 +5344,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-hj87v0-Control"
+                                                      className=" css-c03r69-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -16982,6 +16983,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                         "background": "#ffffff",
                                                         "border": "1px solid #c0c8d1",
                                                         "borderBottomLeftRadius": "4px",
+                                                        "borderBottomRightRadius": "4px",
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
@@ -16999,7 +17001,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-hj87v0-Control"
+                                                      className=" css-c03r69-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -28639,6 +28641,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                         "background": "#ffffff",
                                                         "border": "1px solid #c0c8d1",
                                                         "borderBottomLeftRadius": "4px",
+                                                        "borderBottomRightRadius": "4px",
                                                         "borderColor": "#cc1439",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
@@ -28656,7 +28659,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-o6pnzq-Control"
+                                                      className=" css-sijsn1-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
