@@ -83,12 +83,13 @@ const customStyles = error => {
       borderBottomStyle: "solid",
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
-      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+      borderRadius: `0 0 4px 4px`,
       boxShadow: getShadow({ errored: error, isOpen: true })
     }),
     menuList: provided => ({
       ...provided,
-      padding: 0
+      padding: 0,
+      borderRadius: theme.radii.medium
     }),
     multiValue: provided => ({
       ...provided,
