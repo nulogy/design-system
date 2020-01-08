@@ -681,7 +681,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "Box-sc-1qu1edy-0",
                                     "isStatic": false,
-                                    "lastClassName": "bhFymm",
+                                    "lastClassName": "gtQyvp",
                                     "rules": Array [
                                       [Function],
                                       [Function],
@@ -867,6 +867,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                 display="inline-flex"
                 justifyContent="center"
                 mb="x3"
+                mt="x1"
                 theme={
                   Object {
                     "borders": Array [],
@@ -1050,7 +1051,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "Box-sc-1qu1edy-0",
                         "isStatic": false,
-                        "lastClassName": "bhFymm",
+                        "lastClassName": "gtQyvp",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -1121,6 +1122,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                   forwardedRef={null}
                   justifyContent="center"
                   mb="x3"
+                  mt="x1"
                   theme={
                     Object {
                       "borders": Array [],
@@ -1209,7 +1211,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 bhFymm"
+                    className="Box-sc-1qu1edy-0 gtQyvp"
                     display="inline-flex"
                   >
                     <Styled(Box)
