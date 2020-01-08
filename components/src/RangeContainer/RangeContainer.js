@@ -11,7 +11,13 @@ import { InlineValidation } from "../Validation";
 const RangeContainer = ({ labelProps, startComponent, endComponent, errorMessages, ...props }) => (
   <>
     <FieldLabel {...labelProps} {...props} />
-    <Box display="inline-flex" justifyContent="center" alignItems="flex-start" mb={errorMessages.length ? "x1" : "x3"}>
+    <Box
+      display="inline-flex"
+      justifyContent="center"
+      alignItems="flex-start"
+      mt="x1"
+      mb={errorMessages.length ? "x1" : "x3"}
+    >
       {startComponent}
       <Flex px="x2" alignItems="center" maxHeight="38px">
         <Text>-</Text>
