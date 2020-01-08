@@ -46,6 +46,7 @@ const customStyles = error => {
       boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen }),
       borderRadius: theme.radii.medium,
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
+      borderBottomRightRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
