@@ -10,20 +10,14 @@ import { InlineValidation } from "../Validation";
 
 const RangeContainer = ({ labelProps, startComponent, endComponent, errorMessages, ...props }) => (
   <>
-    <FieldLabel {...labelProps} {...props}>
-      <Box
-        display="inline-flex"
-        justifyContent="center"
-        alignItems="flex-start"
-        mb={errorMessages.length ? "x1" : "x3"}
-      >
-        {startComponent}
-        <Flex px="x2" alignItems="center" maxHeight="38px">
-          <Text>-</Text>
-        </Flex>
-        {endComponent}
-      </Box>
-    </FieldLabel>
+    <FieldLabel {...labelProps} {...props} />
+    <Box display="inline-flex" justifyContent="center" alignItems="flex-start" mb={errorMessages.length ? "x1" : "x3"}>
+      {startComponent}
+      <Flex px="x2" alignItems="center" maxHeight="38px">
+        <Text>-</Text>
+      </Flex>
+      {endComponent}
+    </Box>
     {errorMessages.map((errorMessage, i) => (
       // eslint-disable-next-line react/no-array-index-key
       <InlineValidation key={i} errorMessage={errorMessage} />
