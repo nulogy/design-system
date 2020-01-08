@@ -121,7 +121,7 @@ export default () => (
       <Highlight className="js">
         {`import { MonthRange } from "@nulogy/components";
 
-<MonthPicker
+<MonthRange
         onRangeChange={(val) => val}
       />
 `}
@@ -156,7 +156,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/monthpicker--default-skipstoryshot">
+          <Link href="https://storybook.nulogy.design/?path=/story/monthrange--default-skipstoryshot">
             View in Storybook
           </Link>
         </ListItem>

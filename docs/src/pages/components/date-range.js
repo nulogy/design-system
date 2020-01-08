@@ -91,9 +91,9 @@ const propsRows = [
   {
     name: "labelProps",
     type: "Object",
-    defaultValue: "{ labelText: 'Month Range'}",
+    defaultValue: "{ labelText: 'Date Range'}",
     description:
-      "Options for the month range label. See fieldLabelProps for available option keys."
+      "Options for the month range label. See Label Props for available option keys."
   },
   {
     name: "disableRangeValidation",
@@ -119,9 +119,9 @@ export default () => (
     <DocSection>
       <DateRange />
       <Highlight className="js">
-        {`import { MonthRange } from "@nulogy/components";
+        {`import { DateRange } from "@nulogy/components";
 
-<MonthPicker
+<DateRange
         onRangeChange={(val) => val}
       />
 `}
@@ -159,7 +159,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/monthpicker--default-skipstoryshot">
+          <Link href="https://storybook.nulogy.design/?path=/story/daterange--default-skipstoryshot">
             View in Storybook
           </Link>
         </ListItem>
