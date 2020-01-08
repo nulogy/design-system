@@ -1050,7 +1050,7 @@ exports[`Storyshots Input Input 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -1550,6 +1550,8 @@ exports[`Storyshots Input Input 1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -1639,6 +1641,8 @@ exports[`Storyshots Input Input 1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -1732,7 +1736,7 @@ exports[`Storyshots Input Input 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -1890,7 +1894,8 @@ exports[`Storyshots Input Input 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={false}
@@ -3052,7 +3057,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -3552,6 +3557,8 @@ exports[`Storyshots Input set to disabled 1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -3641,6 +3648,8 @@ exports[`Storyshots Input set to disabled 1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -3734,7 +3743,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -3892,7 +3901,8 @@ exports[`Storyshots Input set to disabled 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={false}
@@ -5410,7 +5420,7 @@ exports[`Storyshots Input set to required 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "Box-sc-1qu1edy-0",
                                                       "isStatic": false,
-                                                      "lastClassName": "eMNiba",
+                                                      "lastClassName": "iylGA",
                                                       "rules": Array [
                                                         [Function],
                                                         [Function],
@@ -5910,6 +5920,8 @@ exports[`Storyshots Input set to required 1`] = `
                                                     textAlign="left"
                                                   />
                                                   <Box
+                                                    display="flex"
+                                                    flexGrow="1"
                                                     position="relative"
                                                     theme={
                                                       Object {
@@ -5999,6 +6011,8 @@ exports[`Storyshots Input set to required 1`] = `
                                                     }
                                                   >
                                                     <StyledComponent
+                                                      display="flex"
+                                                      flexGrow="1"
                                                       forwardedComponent={
                                                         Object {
                                                           "$$typeof": Symbol(react.forward_ref),
@@ -6092,7 +6106,7 @@ exports[`Storyshots Input set to required 1`] = `
                                                           "componentStyle": ComponentStyle {
                                                             "componentId": "Box-sc-1qu1edy-0",
                                                             "isStatic": false,
-                                                            "lastClassName": "eMNiba",
+                                                            "lastClassName": "iylGA",
                                                             "rules": Array [
                                                               [Function],
                                                               [Function],
@@ -6250,7 +6264,8 @@ exports[`Storyshots Input set to required 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 eMNiba"
+                                                        className="Box-sc-1qu1edy-0 iylGA"
+                                                        display="flex"
                                                       >
                                                         <InputField__StyledInput
                                                           aria-invalid={false}
@@ -8003,6 +8018,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 textAlign="left"
                                               />
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -8092,6 +8109,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -8343,7 +8362,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -9569,6 +9589,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 textAlign="left"
                                               />
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -9658,6 +9680,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -9909,7 +9933,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -11501,6 +11526,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 textAlign="right"
                                               />
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -11590,6 +11617,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -11841,7 +11870,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -13067,6 +13097,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 textAlign="left"
                                               />
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -13156,6 +13188,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -13407,7 +13441,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -15463,6 +15498,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -15552,6 +15589,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -15803,7 +15842,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -17029,6 +17069,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -17118,6 +17160,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -17369,7 +17413,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -18961,6 +19006,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -19050,6 +19097,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -19301,7 +19350,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -20527,6 +20577,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -20616,6 +20668,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -20867,7 +20921,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -22459,6 +22514,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -22548,6 +22605,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -22799,7 +22858,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -24025,6 +24085,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 </Box>
                                               </Prefix>
                                               <Box
+                                                display="flex"
+                                                flexGrow="1"
                                                 position="relative"
                                                 theme={
                                                   Object {
@@ -24114,6 +24176,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -24365,7 +24429,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
                                                   >
                                                     <InputField__StyledInput
                                                       aria-invalid={false}
@@ -25960,6 +26025,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         </Box>
                                       </Prefix>
                                       <Box
+                                        display="flex"
+                                        flexGrow="1"
                                         position="relative"
                                         theme={
                                           Object {
@@ -26049,6 +26116,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         }
                                       >
                                         <StyledComponent
+                                          display="flex"
+                                          flexGrow="1"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -26300,7 +26369,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                           }
                                         >
                                           <div
-                                            className="Box-sc-1qu1edy-0 eMNiba"
+                                            className="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <InputField__StyledInput
                                               aria-invalid={false}
@@ -27885,7 +27955,7 @@ exports[`Storyshots Input with all props 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -28540,6 +28610,8 @@ exports[`Storyshots Input with all props 1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -28629,6 +28701,8 @@ exports[`Storyshots Input with all props 1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -28722,7 +28796,7 @@ exports[`Storyshots Input with all props 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -28880,7 +28954,8 @@ exports[`Storyshots Input with all props 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={false}
@@ -30049,7 +30124,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -30549,6 +30624,8 @@ exports[`Storyshots Input with custom ID 1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -30638,6 +30715,8 @@ exports[`Storyshots Input with custom ID 1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -30731,7 +30810,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -30889,7 +30968,8 @@ exports[`Storyshots Input with custom ID 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={false}
@@ -32061,7 +32141,7 @@ exports[`Storyshots Input with error list  1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -32561,6 +32641,8 @@ exports[`Storyshots Input with error list  1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -32650,6 +32732,8 @@ exports[`Storyshots Input with error list  1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -32743,7 +32827,7 @@ exports[`Storyshots Input with error list  1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -32901,7 +32985,8 @@ exports[`Storyshots Input with error list  1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={true}
@@ -34818,7 +34903,7 @@ exports[`Storyshots Input with error message 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Box-sc-1qu1edy-0",
                                               "isStatic": false,
-                                              "lastClassName": "eMNiba",
+                                              "lastClassName": "iylGA",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -35318,6 +35403,8 @@ exports[`Storyshots Input with error message 1`] = `
                                             textAlign="left"
                                           />
                                           <Box
+                                            display="flex"
+                                            flexGrow="1"
                                             position="relative"
                                             theme={
                                               Object {
@@ -35407,6 +35494,8 @@ exports[`Storyshots Input with error message 1`] = `
                                             }
                                           >
                                             <StyledComponent
+                                              display="flex"
+                                              flexGrow="1"
                                               forwardedComponent={
                                                 Object {
                                                   "$$typeof": Symbol(react.forward_ref),
@@ -35500,7 +35589,7 @@ exports[`Storyshots Input with error message 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "Box-sc-1qu1edy-0",
                                                     "isStatic": false,
-                                                    "lastClassName": "eMNiba",
+                                                    "lastClassName": "iylGA",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -35658,7 +35747,8 @@ exports[`Storyshots Input with error message 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 eMNiba"
+                                                className="Box-sc-1qu1edy-0 iylGA"
+                                                display="flex"
                                               >
                                                 <InputField__StyledInput
                                                   aria-invalid={true}

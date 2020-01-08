@@ -15502,7 +15502,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -15536,7 +15537,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -15571,7 +15573,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -15605,7 +15608,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -15640,7 +15644,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -15674,7 +15679,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
                                         >
                                           <div
-                                            class="Box-sc-1qu1edy-0 eMNiba"
+                                            class="Box-sc-1qu1edy-0 iylGA"
+                                            display="flex"
                                           >
                                             <input
                                               aria-invalid="false"
@@ -17683,6 +17689,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -17772,6 +17780,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -18023,7 +18033,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}
@@ -19293,6 +19304,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -19382,6 +19395,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -19633,7 +19648,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}
@@ -20904,6 +20920,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -20993,6 +21011,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -21244,7 +21264,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}
@@ -22514,6 +22535,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -22603,6 +22626,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -22854,7 +22879,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}
@@ -24125,6 +24151,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -24214,6 +24242,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -24465,7 +24495,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}
@@ -25735,6 +25766,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               textAlign="left"
                                                                             />
                                                                             <Box
+                                                                              display="flex"
+                                                                              flexGrow="1"
                                                                               position="relative"
                                                                               theme={
                                                                                 Object {
@@ -25824,6 +25857,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               }
                                                                             >
                                                                               <StyledComponent
+                                                                                display="flex"
+                                                                                flexGrow="1"
                                                                                 forwardedComponent={
                                                                                   Object {
                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -26075,7 +26110,8 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                 }
                                                                               >
                                                                                 <div
-                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                  display="flex"
                                                                                 >
                                                                                   <InputField__StyledInput
                                                                                     aria-invalid={false}

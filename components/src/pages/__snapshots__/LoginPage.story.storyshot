@@ -3369,6 +3369,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -3458,6 +3460,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -3709,7 +3713,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -4969,6 +4974,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -5058,6 +5065,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -5309,7 +5318,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -10264,6 +10274,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -10353,6 +10365,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -10604,7 +10618,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -11864,6 +11879,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -11953,6 +11970,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -12204,7 +12223,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -17086,6 +17106,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -17175,6 +17197,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -17426,7 +17450,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -18686,6 +18711,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -18775,6 +18802,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -19026,7 +19055,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -23123,6 +23153,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -23212,6 +23244,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -23463,7 +23497,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -24723,6 +24758,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                       textAlign="left"
                                                                     />
                                                                     <Box
+                                                                      display="flex"
+                                                                      flexGrow="1"
                                                                       position="relative"
                                                                       theme={
                                                                         Object {
@@ -24812,6 +24849,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                       }
                                                                     >
                                                                       <StyledComponent
+                                                                        display="flex"
+                                                                        flexGrow="1"
                                                                         forwardedComponent={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.forward_ref),
@@ -25063,7 +25102,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 eMNiba"
+                                                                          className="Box-sc-1qu1edy-0 iylGA"
+                                                                          display="flex"
                                                                         >
                                                                           <InputField__StyledInput
                                                                             aria-invalid={false}
@@ -29791,6 +29831,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                 textAlign="left"
                                                               />
                                                               <Box
+                                                                display="flex"
+                                                                flexGrow="1"
                                                                 position="relative"
                                                                 theme={
                                                                   Object {
@@ -29880,6 +29922,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                 }
                                                               >
                                                                 <StyledComponent
+                                                                  display="flex"
+                                                                  flexGrow="1"
                                                                   forwardedComponent={
                                                                     Object {
                                                                       "$$typeof": Symbol(react.forward_ref),
@@ -30131,7 +30175,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                   }
                                                                 >
                                                                   <div
-                                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                                    display="flex"
                                                                   >
                                                                     <InputField__StyledInput
                                                                       aria-invalid={false}
@@ -31393,6 +31438,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                 textAlign="left"
                                                               />
                                                               <Box
+                                                                display="flex"
+                                                                flexGrow="1"
                                                                 position="relative"
                                                                 theme={
                                                                   Object {
@@ -31482,6 +31529,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                 }
                                                               >
                                                                 <StyledComponent
+                                                                  display="flex"
+                                                                  flexGrow="1"
                                                                   forwardedComponent={
                                                                     Object {
                                                                       "$$typeof": Symbol(react.forward_ref),
@@ -31733,7 +31782,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                                   }
                                                                 >
                                                                   <div
-                                                                    className="Box-sc-1qu1edy-0 eMNiba"
+                                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                                    display="flex"
                                                                   >
                                                                     <InputField__StyledInput
                                                                       aria-invalid={false}

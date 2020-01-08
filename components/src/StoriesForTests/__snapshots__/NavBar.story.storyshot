@@ -3625,7 +3625,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "Box-sc-1qu1edy-0",
                                                                 "isStatic": false,
-                                                                "lastClassName": "eMNiba",
+                                                                "lastClassName": "iylGA",
                                                                 "rules": Array [
                                                                   [Function],
                                                                   [Function],
@@ -4901,6 +4901,8 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                               textAlign="left"
                                                                                             />
                                                                                             <Box
+                                                                                              display="flex"
+                                                                                              flexGrow="1"
                                                                                               position="relative"
                                                                                               theme={
                                                                                                 Object {
@@ -4990,6 +4992,8 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <StyledComponent
+                                                                                                display="flex"
+                                                                                                flexGrow="1"
                                                                                                 forwardedComponent={
                                                                                                   Object {
                                                                                                     "$$typeof": Symbol(react.forward_ref),
@@ -5083,7 +5087,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                                     "componentStyle": ComponentStyle {
                                                                                                       "componentId": "Box-sc-1qu1edy-0",
                                                                                                       "isStatic": false,
-                                                                                                      "lastClassName": "eMNiba",
+                                                                                                      "lastClassName": "iylGA",
                                                                                                       "rules": Array [
                                                                                                         [Function],
                                                                                                         [Function],
@@ -5241,7 +5245,8 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                                                 }
                                                                                               >
                                                                                                 <div
-                                                                                                  className="Box-sc-1qu1edy-0 eMNiba"
+                                                                                                  className="Box-sc-1qu1edy-0 iylGA"
+                                                                                                  display="flex"
                                                                                                 >
                                                                                                   <InputField__StyledInput
                                                                                                     aria-invalid={false}

@@ -98,7 +98,7 @@ export const InputField = forwardRef(
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
         <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <Box position="relative" ref={ref}>
+        <Box position="relative" display="flex" flexGrow="1" ref={ref}>
           <StyledInput aria-invalid={error} aria-required={required} required={required} error={error} {...props} />
           {icon && <StyledInputIcon icon={icon} size={theme.space.x2} />}
         </Box>
