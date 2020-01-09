@@ -2220,6 +2220,7 @@ exports[`Storyshots StoriesForTests/Select Base 1`] = `
                                                                   "background": "#ffffff",
                                                                   "border": "1px solid #c0c8d1",
                                                                   "borderBottomLeftRadius": "4px",
+                                                                  "borderBottomRightRadius": "4px",
                                                                   "borderColor": "#c0c8d1",
                                                                   "borderRadius": "4px",
                                                                   "boxShadow": null,
@@ -2237,7 +2238,7 @@ exports[`Storyshots StoriesForTests/Select Base 1`] = `
                                                               onTouchEnd={[Function]}
                                                             >
                                                               <div
-                                                                className="SelectTest__control css-hj87v0-Control"
+                                                                className="SelectTest__control css-c03r69-Control"
                                                                 onMouseDown={[Function]}
                                                                 onTouchEnd={[Function]}
                                                               >
@@ -5134,6 +5135,7 @@ exports[`Storyshots StoriesForTests/Select Controlled 1`] = `
                                                       "background": "#ffffff",
                                                       "border": "1px solid #c0c8d1",
                                                       "borderBottomLeftRadius": "4px",
+                                                      "borderBottomRightRadius": "4px",
                                                       "borderColor": "#c0c8d1",
                                                       "borderRadius": "4px",
                                                       "boxShadow": null,
@@ -5151,7 +5153,7 @@ exports[`Storyshots StoriesForTests/Select Controlled 1`] = `
                                                   onTouchEnd={[Function]}
                                                 >
                                                   <div
-                                                    className="SelectTest__control css-hj87v0-Control"
+                                                    className="SelectTest__control css-c03r69-Control"
                                                     onMouseDown={[Function]}
                                                     onTouchEnd={[Function]}
                                                   >

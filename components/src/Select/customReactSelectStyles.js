@@ -46,6 +46,7 @@ const customStyles = error => {
       boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen }),
       borderRadius: theme.radii.medium,
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
+      borderBottomRightRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
@@ -82,12 +83,13 @@ const customStyles = error => {
       borderBottomStyle: "solid",
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
-      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+      borderRadius: `0 0 4px 4px`,
       boxShadow: getShadow({ errored: error, isOpen: true })
     }),
     menuList: provided => ({
       ...provided,
-      padding: 0
+      padding: 0,
+      borderRadius: theme.radii.medium
     }),
     multiValue: provided => ({
       ...provided,
