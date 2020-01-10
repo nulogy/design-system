@@ -1,4 +1,4 @@
-describe("Datepicker", () => {
+describe("Date Range", () => {
   const getStartInputComponent = () => cy.get("input").eq(0);
   const getEndInputComponent = () => cy.get("input").eq(1);
   const getStartDate = () => cy.get(".nds-datepicker-day--start-date");
