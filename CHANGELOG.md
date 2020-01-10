@@ -3,8 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.18.2](https://github.com/nulogy/design-system/compare/v0.18.1...v0.18.2) (2020-01-08)
+# [0.19.0](https://github.com/nulogy/design-system/compare/v0.18.2...v0.19.0) (2020-01-10)
+
 ### Bug Fixes
+
+- prevents overlap when hovering last Select item ([389eb58](https://github.com/nulogy/design-system/commit/389eb58))
+- removes Select's bottomRightBorderRadius when menu is open ([e970fd8](https://github.com/nulogy/design-system/commit/e970fd8))
+
+### Features
+
+- add DateRange component ([#503](https://github.com/nulogy/design-system/issues/503)) ([a0c6533](https://github.com/nulogy/design-system/commit/a0c6533))
+
+## [0.18.2](https://github.com/nulogy/design-system/compare/v0.18.1...v0.18.2) (2020-01-08)
+
+### Bug Fixes
+
 - Input: bug where input stopped filling the full width of the container, now fills the container by default
 
 ## [0.18.1](https://github.com/nulogy/design-system/compare/v0.18.0...v0.18.1) (2020-01-06)
