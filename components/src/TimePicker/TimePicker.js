@@ -12,8 +12,9 @@ import SelectOption from "../Select/SelectOption";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
+const MILITARY_TIME_FORMAT = "HH:mm";
 
-const ZERO_DATE = new Date(0);
+const ZERO_DATE = new Date(0).setTime(0);
 
 const StyledTimeIcon = styled(Icon)({
   color: theme.colors.darkGrey,
@@ -39,19 +40,33 @@ const DropdownIndicator = props => {
   );
 };
 
-const getTimeIntervals = interval => {
-  const times = [];
-  const date = ZERO_DATE;
-  const numberOfOptions = 24 * 4;
-  for (let i = 0; i < numberOfOptions; i += 1) {
-    times.push(setMinutes(date, interval * i));
-  }
-  return times.sort();
+const getIntervalFromTime = (time, interval) => {
+  const timeArray = time.split(":").map(i => Number(i));
+  const hours = timeArray[0];
+  const minutes = timeArray[1];
+  return (hours * 60) / interval + minutes / interval;
 };
 
-const getTimeOptions = (interval, timeFormat) => {
-  return getTimeIntervals(interval).map(date => ({
-    value: format(date, timeFormat),
+const getTimeIntervals = (interval, minTime, maxTime) => {
+  const numberOfOptions = (24 * 60) / interval;
+  let startingInterval = 0;
+  let finalInterval = numberOfOptions;
+  if (minTime) {
+    startingInterval = getIntervalFromTime(minTime, interval);
+  }
+  if (maxTime) {
+    finalInterval = getIntervalFromTime(maxTime, interval) + 1;
+  }
+  const times = [];
+  for (let i = 0; i < numberOfOptions; i += 1) {
+    times.push(setMinutes(ZERO_DATE, interval * i));
+  }
+  return times.sort().slice(startingInterval, finalInterval);
+};
+
+const getTimeOptions = (interval, timeFormat, minTime, maxTime) => {
+  return getTimeIntervals(interval, minTime, maxTime).map(date => ({
+    value: format(date, MILITARY_TIME_FORMAT),
     label: format(date, timeFormat)
   }));
 };
@@ -75,8 +90,8 @@ class TimePicker extends Component {
   };
 
   render() {
-    const { timeFormat, interval, className } = this.props;
-    const options = getTimeOptions(interval, timeFormat) || [];
+    const { timeFormat, interval, className, minTime, maxTime, defaultValue, ...props } = this.props;
+    const options = getTimeOptions(interval, timeFormat, minTime, maxTime) || [];
 
     return (
       <>
@@ -84,9 +99,10 @@ class TimePicker extends Component {
         <Select
           onChange={this.handleSelectedDateChange}
           options={options}
+          defaultValue={defaultValue}
           components={{ DropdownIndicator, Option: StyledSelectOption }}
           onInputChange={this.handleOnInputChange}
-          {...this.props}
+          {...props}
           className={`nds-time-picker ${className || ""}`}
         />
       </>
@@ -100,7 +116,10 @@ TimePicker.propTypes = {
   placeholder: PropTypes.string,
   className: PropTypes.string,
   onChange: PropTypes.func,
-  onInputChange: PropTypes.func
+  onInputChange: PropTypes.func,
+  minTime: PropTypes.string,
+  maxTime: PropTypes.string,
+  defaultValue: PropTypes.string
 };
 
 TimePicker.defaultProps = {
@@ -109,7 +128,10 @@ TimePicker.defaultProps = {
   placeholder: DEFAULT_PLACEHOLDER,
   className: undefined,
   onChange: undefined,
-  onInputChange: undefined
+  onInputChange: undefined,
+  minTime: undefined,
+  maxTime: undefined,
+  defaultValue: undefined
 };
 
 export default TimePicker;

@@ -7,7 +7,7 @@ storiesOf("TimePicker", module)
   .add("default", () => (
     <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
   ))
-  .add("with custom time format (SkipStoryshots)", () => (
+  .add("with custom time format", () => (
     <TimePicker
       defaultValue="03:15"
       timeFormat="hh:mm"
@@ -31,5 +31,14 @@ storiesOf("TimePicker", module)
       onInputChange={action("input changed")}
       labelText="End Time"
       errorMessage="This time is invalid"
+    />
+  ))
+  .add("with min and max time", () => (
+    <TimePicker
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="End Time"
+      minTime="09:00"
+      maxTime="21:00"
     />
   ));
