@@ -156,7 +156,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/monthrange--default-skipstoryshot">
+          <Link href="https://storybook.nulogy.design/?path=/story/monthrange--default">
             View in Storybook
           </Link>
         </ListItem>

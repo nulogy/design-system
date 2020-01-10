@@ -5,7 +5,7 @@ describe("Monthpicker", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("monthpicker--default-skipstoryshots");
+      cy.renderFromStorybook("monthpicker--default");
     });
 
     describe("has the correct defaults", () => {
@@ -94,9 +94,7 @@ describe("Monthpicker", () => {
   });
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook(
-        "monthpicker--with-a-min-and-max-date-skipstoryshots"
-      );
+      cy.renderFromStorybook("monthpicker--with-a-min-and-max-date");
     });
     describe("selects a date", () => {
       it("allows the user to select a date by clicking with the range", () => {

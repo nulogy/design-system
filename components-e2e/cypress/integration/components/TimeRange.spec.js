@@ -7,7 +7,7 @@ describe("Time Range", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("timerange--default-skipstoryshot");
+      cy.renderFromStorybook("timerange--default");
     });
 
     it("shows options that are after the selected start time for the end time", () => {

@@ -2,6 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { DatePicker } from "../DatePicker";
 
-storiesOf("StoriesForTests/Datepicker", module).add("default (SkipStoryshots)", () => (
-  <DatePicker selected={new Date("Fri, 01 Jan 2019")} />
+storiesOf("StoriesForTests/Datepicker", module).add("default", () => (
+  <DatePicker selected={new Date("2019-01-01T05:00:00.000Z")} />
 ));
