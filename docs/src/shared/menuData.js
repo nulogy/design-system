@@ -168,6 +168,10 @@ export const menuData = [
         href: "/components/time-picker"
       },
       {
+        name: "Time Range",
+        href: "/components/time-range"
+      },
+      {
         name: "Toggle",
         href: "/components/toggle"
       },
