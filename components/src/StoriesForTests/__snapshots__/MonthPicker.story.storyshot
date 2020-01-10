@@ -407,7 +407,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                   "suffixWidth": null,
                 }
               }
-              selected={2019-07-10T05:00:00.000Z}
+              selected={2019-01-01T05:00:00.000Z}
             >
               <Styled(Box)
                 className="nds-month-picker"
@@ -789,7 +789,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                       dropdownMode="scroll"
                       excludeDates={
                         Array [
-                          2019-07-10T05:00:00.000Z,
+                          2019-01-01T05:00:00.000Z,
                         ]
                       }
                       inlineFocusSelectedMonth={false}
@@ -831,7 +831,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                       }
                       readOnly={false}
                       renderDayContents={[Function]}
-                      selected={2019-07-10T05:00:00.000Z}
+                      selected={2019-01-01T05:00:00.000Z}
                       shouldCloseOnSelect={true}
                       showMonthYearPicker={true}
                       showPopperArrow={true}
@@ -892,7 +892,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                               onInputChange={[Function]}
                               onKeyDown={[Function]}
                               readOnly={false}
-                              value="Jul 2019"
+                              value="Jan 2019"
                             />
                           </div>
                         }
@@ -939,7 +939,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                                     onInputChange={[Function]}
                                     onKeyDown={[Function]}
                                     readOnly={false}
-                                    value="Jul 2019"
+                                    value="Jan 2019"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -958,7 +958,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                                       suffix={null}
                                       suffixAlignment="left"
                                       suffixWidth={null}
-                                      value="Jul 2019"
+                                      value="Jan 2019"
                                     >
                                       <MaybeFieldLabel
                                         helpText={null}
@@ -1647,7 +1647,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                                                       onClick={[Function]}
                                                       placeholder="Mon YYYY"
                                                       required={false}
-                                                      value="Jul 2019"
+                                                      value="Jan 2019"
                                                     >
                                                       <StyledComponent
                                                         aria-invalid={false}
@@ -1705,7 +1705,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                                                         onClick={[Function]}
                                                         placeholder="Mon YYYY"
                                                         required={false}
-                                                        value="Jul 2019"
+                                                        value="Jan 2019"
                                                       >
                                                         <input
                                                           aria-invalid={false}
@@ -1716,7 +1716,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                                                           onClick={[Function]}
                                                           placeholder="Mon YYYY"
                                                           required={false}
-                                                          value="Jul 2019"
+                                                          value="Jan 2019"
                                                         />
                                                       </StyledComponent>
                                                     </InputField__StyledInput>

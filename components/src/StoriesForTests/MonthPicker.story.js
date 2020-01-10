@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { MonthPicker } from "../MonthPicker";
 
 storiesOf("StoriesForTests/Monthpicker", module)
-  .add("default", () => <MonthPicker selected={new Date("2019-07-10T05:00:00.000Z")} />)
+  .add("default", () => <MonthPicker selected={new Date("2019-01-01T05:00:00.000Z")} />)
   .add("with a min and max date", () => (
     <MonthPicker
       selected={new Date("2019-07-10T05:00:00.000Z")}
