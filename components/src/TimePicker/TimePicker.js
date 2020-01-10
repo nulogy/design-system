@@ -14,8 +14,7 @@ const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 
-const ZERO_DATE = new Date(0).setTime(0);
-const MILITARY_TIME_FORMAT = "HH:mm";
+const ZERO_DATE = new Date(Date.UTC(0));
 
 const StyledTimeIcon = styled(Icon)({
   color: theme.colors.darkGrey,
@@ -48,28 +47,32 @@ const getIntervalFromTime = (time, interval) => {
   return (hours * 60) / interval + minutes / interval;
 };
 
-const getTimeIntervals = (interval, minTime, maxTime) => {
+const getTimeIntervals = interval => {
   const numberOfOptions = (24 * 60) / interval;
+  const times = [];
+  for (let i = 0; i < numberOfOptions; i += 1) {
+    times.push(setMinutes(ZERO_DATE, interval * i));
+  }
+  return times;
+};
+
+const getTimeOptions = (interval, timeFormat, minTime, maxTime) => {
+  const allTimes = getTimeIntervals(interval);
   let startingInterval = 0;
-  let finalInterval = numberOfOptions;
+  let finalInterval = allTimes.length;
   if (minTime) {
     startingInterval = getIntervalFromTime(minTime, interval);
   }
   if (maxTime) {
     finalInterval = getIntervalFromTime(maxTime, interval) + 1;
   }
-  const times = [];
-  for (let i = 0; i < numberOfOptions; i += 1) {
-    times.push(setMinutes(ZERO_DATE, interval * i));
-  }
-  return times.sort().slice(startingInterval, finalInterval);
-};
-
-const getTimeOptions = (interval, timeFormat, minTime, maxTime) => {
-  return getTimeIntervals(interval, minTime, maxTime).map(date => ({
-    value: format(date, MILITARY_TIME_FORMAT),
-    label: format(date, timeFormat)
-  }));
+  return allTimes
+    .map(date => ({
+      value: format(date, MILITARY_TIME_FORMAT),
+      label: format(date, timeFormat)
+    }))
+    .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
+    .slice(startingInterval, finalInterval);
 };
 
 class TimePicker extends Component {

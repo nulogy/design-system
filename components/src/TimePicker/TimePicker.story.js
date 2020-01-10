@@ -7,7 +7,7 @@ storiesOf("TimePicker", module)
   .add("default", () => (
     <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
   ))
-  .add("with custom time format (SkipStoryshots)", () => (
+  .add("with custom time format", () => (
     <TimePicker
       defaultValue="03:30"
       timeFormat="HH:mm"
