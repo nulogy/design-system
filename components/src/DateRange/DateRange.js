@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { isBefore, addDays, differenceInDays } from "date-fns";
+import { isBefore } from "date-fns";
 import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
-import { DateRangeStyles } from "./DateRangeStyles";
+import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 
 const DateRange = ({
   dateFormat,
@@ -56,25 +56,6 @@ const DateRange = ({
     }
   };
 
-  const getAllDaysInRange = () => {
-    if (endDate && startDate && isBefore(startDate, endDate)) {
-      const days = Array(differenceInDays(new Date(endDate), new Date(startDate)) + 1);
-      return days.fill(0).map((_, i) => addDays(new Date(startDate), i));
-    }
-    return [];
-  };
-
-  const highlightDates = [
-    {
-      "nds-datepicker-day--start-date": [new Date(startDate)]
-    },
-    {
-      "nds-datepicker-day--end-date": [new Date(endDate)]
-    },
-    {
-      "nds-datepicker-day--in-range": getAllDaysInRange()
-    }
-  ];
   const startDateInput = (
     <DatePicker
       dateFormat={dateFormat}
@@ -84,7 +65,7 @@ const DateRange = ({
       errorMessage={startDateErrorMessage}
       minDate={minDate}
       maxDate={maxDate}
-      highlightDates={highlightDates}
+      highlightDates={highlightDates(startDate, endDate)}
     />
   );
 
@@ -97,7 +78,7 @@ const DateRange = ({
       errorMessage={endDateErrorMessage}
       minDate={minDate}
       maxDate={maxDate}
-      highlightDates={highlightDates}
+      highlightDates={highlightDates(startDate, endDate)}
     />
   );
 
