@@ -15,6 +15,7 @@ const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 
 const ZERO_DATE = new Date(0).setTime(0);
+const MILITARY_TIME_FORMAT = "HH:mm";
 
 const StyledTimeIcon = styled(Icon)({
   color: theme.colors.darkGrey,
