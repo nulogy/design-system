@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { isBefore } from "date-fns";
-import { MonthPicker } from "../MonthPicker";
-import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
+import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
+import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
+import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 
-const MonthRange = ({
+const DateRange = ({
   dateFormat,
   onRangeChange,
   onStartDateChange,
@@ -23,18 +24,18 @@ const MonthRange = ({
   minDate,
   maxDate
 }) => {
-  const [startMonth, setStartMonth] = useState(defaultStartDate);
-  const [endMonth, setEndMonth] = useState(defaultEndDate);
+  const [startDate, setStartDate] = useState(defaultStartDate);
+  const [endDate, setEndDate] = useState(defaultEndDate);
   const [rangeError, setRangeError] = useState();
 
   const changeStartDateHandler = date => {
-    setStartMonth(date);
+    setStartDate(date);
     if (onStartDateChange) {
       onStartDateChange(date);
     }
   };
   const changeEndDateHandler = date => {
-    setEndMonth(date);
+    setEndDate(date);
     if (onEndDateChange) {
       onEndDateChange(date);
     }
@@ -42,58 +43,63 @@ const MonthRange = ({
 
   const validateDateRange = () => {
     let error;
-    if (endMonth && startMonth && isBefore(endMonth, startMonth)) {
-      error = "End date is before start Month";
+    if (endDate && startDate && isBefore(endDate, startDate)) {
+      error = "End date is before start date";
     }
     setRangeError(error);
     if (onRangeChange) {
       onRangeChange({
-        startDate: startMonth,
-        endDate: endMonth,
+        startDate,
+        endDate,
         error
       });
     }
   };
 
   const startDateInput = (
-    <MonthPicker
+    <DatePicker
       dateFormat={dateFormat}
-      selected={startMonth}
+      selected={startDate}
       onChange={changeStartDateHandler}
-      inputProps={startDateInputProps}
+      inputProps={{ error: rangeError, ...startDateInputProps }}
       errorMessage={startDateErrorMessage}
       minDate={minDate}
       maxDate={maxDate}
+      highlightDates={highlightDates(startDate, endDate)}
     />
   );
 
   const endDateInput = (
-    <MonthPicker
+    <DatePicker
       dateFormat={dateFormat}
-      selected={endMonth}
+      selected={endDate}
       onChange={changeEndDateHandler}
       inputProps={endDateInputProps}
       errorMessage={endDateErrorMessage}
       minDate={minDate}
       maxDate={maxDate}
+      highlightDates={highlightDates(startDate, endDate)}
     />
   );
 
   useEffect(() => {
     validateDateRange();
-  }, [startMonth, endMonth]);
+  }, [startDate, endDate]);
 
   return (
-    <RangeContainer
-      labelProps={labelProps}
-      startComponent={startDateInput}
-      endComponent={endDateInput}
-      errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
-    />
+    <>
+      <DateRangeStyles />
+      <RangeContainer
+        labelProps={labelProps}
+        startComponent={startDateInput}
+        endComponent={endDateInput}
+        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+      />
+    </>
   );
 };
 
-MonthRange.propTypes = {
+DateRange.propTypes = {
   dateFormat: PropTypes.string,
   onRangeChange: PropTypes.func,
   onStartDateChange: PropTypes.func,
@@ -111,7 +117,7 @@ MonthRange.propTypes = {
   maxDate: PropTypes.instanceOf(Date)
 };
 
-MonthRange.defaultProps = {
+DateRange.defaultProps = {
   dateFormat: undefined,
   onRangeChange: null,
   onStartDateChange: null,
@@ -126,10 +132,10 @@ MonthRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: "Month Range"
+    labelText: "Date Range"
   },
   minDate: null,
   maxDate: null
 };
 
-export default MonthRange;
+export default DateRange;
