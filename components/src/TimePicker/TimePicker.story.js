@@ -9,9 +9,7 @@ storiesOf("TimePicker", module)
   ))
   .add("with custom time format", () => (
     <TimePicker
-      defaultValue="03:15"
-      timeFormat="hh:mm"
-      interval={30}
+      timeFormat="HH:mm"
       onChange={action("time changed")}
       onInputChange={action("input changed")}
       labelText="Duration"
