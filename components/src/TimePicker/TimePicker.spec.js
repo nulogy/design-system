@@ -1,6 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { TimePicker } from ".";
+import { selectOption } from "../Select/Select.spec-utils";
 
 describe("TimePicker", () => {
   describe("time selection", () => {
@@ -9,12 +10,9 @@ describe("TimePicker", () => {
 
     it("returns the selected time when the selection has changed", () => {
       const { container, queryByText } = render(<TimePicker onChange={onChange} onInputChange={onInputChange} />);
-      const newTime = "12:15 AM";
-      fireEvent.focus(container.querySelector("input"));
-      fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
-      fireEvent.click(queryByText(newTime));
+      selectOption("12:15 AM", container, queryByText);
 
-      expect(onChange).toHaveBeenCalledWith(newTime);
+      expect(onChange).toHaveBeenCalledWith("00:15");
     });
 
     it("returns the value of the input when it is typed into", () => {

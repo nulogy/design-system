@@ -32,6 +32,18 @@ const propsRows = [
     defaultValue: "15",
     description: "The time difference in minutes between the time options"
   },
+  {
+    name: "minTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The latest time that can be selected."
+  },
+  {
+    name: "maxTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The latest time that can be selected."
+  },
   ...selectProps.filter(prop => prop.name !== "options")
 ];
 

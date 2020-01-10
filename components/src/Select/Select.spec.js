@@ -1,6 +1,7 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Select } from ".";
+import { selectOption } from "./Select.spec-utils";
 
 describe("select", () => {
   it("returns the selected item on change", () => {
@@ -65,18 +66,3 @@ describe("multi select", () => {
     expect(container).toHaveTextContent("Two");
   });
 });
-
-function openDropdown(container) {
-  fireEvent.focus(container.querySelector("input"));
-  fireEvent.keyDown(container.querySelector("input"), { key: "ArrowDown", code: 40 });
-}
-
-function selectOption(optionText, container, queryByText) {
-  expect(queryByText(optionText)).toBeNull();
-
-  openDropdown(container);
-
-  expect(queryByText(optionText)).not.toBeNull();
-
-  fireEvent.click(queryByText(optionText));
-}
