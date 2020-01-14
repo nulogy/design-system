@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
+import { getDuration } from "./TimeRange.utils";
 
 const TimeRange = ({
   timeFormat,
@@ -33,20 +34,12 @@ const TimeRange = ({
       onEndTimeChange(date);
     }
   };
-
-  const convertTimeToMinutes = time => {
-    const timeArr = time.split(":").map(Number);
-    const hours = timeArr[0];
-    const minutes = timeArr[1];
-    return hours * 60 + minutes;
-  };
-
   const validateTimeRange = () => {
     let error;
     const end = endTime || defaultEndTime;
     const start = startTime || defaultStartTime;
     if (start && end) {
-      const duration = convertTimeToMinutes(end) - convertTimeToMinutes(start);
+      const duration = getDuration(start, end);
       if (duration < 0) {
         error = "End time is before start time";
       }

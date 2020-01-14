@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { isBefore } from "date-fns";
+import { isBefore, isSameDay } from "date-fns";
+import styled from "styled-components";
+
 import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
+import { TimePicker } from "../TimePicker";
+import theme from "../theme";
+import { getDuration } from "../TimeRange/TimeRange.utils";
+import { TimePickerPropTypes, TimePickerDefaultProps } from "../TimePicker/TimePicker.type";
+
+const StyledStartTime = styled(TimePicker)({
+  marginLeft: theme.space.x1
+});
+
+const StyledEndTime = styled(TimePicker)({
+  marginRight: theme.space.x1
+});
 
 const DateRange = ({
   dateFormat,
@@ -22,10 +36,17 @@ const DateRange = ({
   disableRangeValidation,
   labelProps,
   minDate,
-  maxDate
+  maxDate,
+  showTimes,
+  startTimeProps,
+  endTimeProps
 }) => {
+  const defaultStartTime = startTimeProps ? startTimeProps.defaultValue : null;
+  const defaultEndTime = endTimeProps ? endTimeProps.defaultValue : null;
   const [startDate, setStartDate] = useState(defaultStartDate);
   const [endDate, setEndDate] = useState(defaultEndDate);
+  const [startTime, setStartTime] = useState(defaultStartTime);
+  const [endTime, setEndTime] = useState(defaultEndTime);
   const [rangeError, setRangeError] = useState();
 
   const changeStartDateHandler = date => {
@@ -41,50 +62,73 @@ const DateRange = ({
     }
   };
 
+  const changeStartTimeHandler = time => {
+    setStartTime(time);
+  };
+  const changeEndTimeHandler = time => {
+    setEndTime(time);
+  };
+
   const validateDateRange = () => {
     let error;
-    if (endDate && startDate && isBefore(endDate, startDate)) {
-      error = "End date is before start date";
+    if (endDate && startDate) {
+      if (isBefore(endDate, startDate)) {
+        error = "End date is before start date";
+      }
+      if (isSameDay(endDate, startDate) && showTimes) {
+        const duration = getDuration(startTime, endTime);
+        if (duration < 0) {
+          error = "End time is before start time";
+        }
+      }
     }
     setRangeError(error);
     if (onRangeChange) {
       onRangeChange({
         startDate,
         endDate,
+        startTime,
+        endTime,
         error
       });
     }
   };
 
   const startDateInput = (
-    <DatePicker
-      dateFormat={dateFormat}
-      selected={startDate}
-      onChange={changeStartDateHandler}
-      inputProps={{ error: rangeError, ...startDateInputProps }}
-      errorMessage={startDateErrorMessage}
-      minDate={minDate}
-      maxDate={maxDate}
-      highlightDates={highlightDates(startDate, endDate)}
-    />
+    <>
+      <DatePicker
+        dateFormat={dateFormat}
+        selected={startDate}
+        onChange={changeStartDateHandler}
+        inputProps={{ error: rangeError, ...startDateInputProps }}
+        errorMessage={startDateErrorMessage}
+        minDate={minDate}
+        maxDate={maxDate}
+        highlightDates={highlightDates(startDate, endDate)}
+      />
+      {showTimes && <StyledStartTime {...startTimeProps} onChange={changeStartTimeHandler} />}
+    </>
   );
 
   const endDateInput = (
-    <DatePicker
-      dateFormat={dateFormat}
-      selected={endDate}
-      onChange={changeEndDateHandler}
-      inputProps={endDateInputProps}
-      errorMessage={endDateErrorMessage}
-      minDate={minDate}
-      maxDate={maxDate}
-      highlightDates={highlightDates(startDate, endDate)}
-    />
+    <>
+      {showTimes && <StyledEndTime {...endTimeProps} onChange={changeEndTimeHandler} />}
+      <DatePicker
+        dateFormat={dateFormat}
+        selected={endDate}
+        onChange={changeEndDateHandler}
+        inputProps={endDateInputProps}
+        errorMessage={endDateErrorMessage}
+        minDate={minDate}
+        maxDate={maxDate}
+        highlightDates={highlightDates(startDate, endDate)}
+      />
+    </>
   );
 
   useEffect(() => {
     validateDateRange();
-  }, [startDate, endDate]);
+  }, [startDate, endDate, startTime, endTime]);
 
   return (
     <>
@@ -114,7 +158,10 @@ DateRange.propTypes = {
   disableRangeValidation: PropTypes.bool,
   labelProps: PropTypes.shape(FieldLabelProps),
   minDate: PropTypes.instanceOf(Date),
-  maxDate: PropTypes.instanceOf(Date)
+  maxDate: PropTypes.instanceOf(Date),
+  showTimes: PropTypes.bool,
+  startTimeProps: PropTypes.shape(TimePickerPropTypes),
+  endTimeProps: PropTypes.shape(TimePickerPropTypes)
 };
 
 DateRange.defaultProps = {
@@ -135,7 +182,10 @@ DateRange.defaultProps = {
     labelText: "Date Range"
   },
   minDate: null,
-  maxDate: null
+  maxDate: null,
+  showTimes: false,
+  startTimeProps: TimePickerDefaultProps,
+  endTimeProps: TimePickerDefaultProps
 };
 
 export default DateRange;

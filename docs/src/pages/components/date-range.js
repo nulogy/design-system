@@ -18,6 +18,7 @@ import {
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import { timePickerProps } from "../../shared/timePickerProps";
 
 const propsRows = [
   {
@@ -99,7 +100,26 @@ const propsRows = [
     name: "disableRangeValidation",
     type: "boolean",
     defaultValue: "false",
-    description: "Disables the the end date before start date error message."
+    description: "Disables the end date before start date error message."
+  },
+  {
+    name: "showTimes",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "Shows time pickers next to the date inputs so that a times can be selected."
+  },
+  {
+    name: "startTimeProps",
+    type: "Object<TimePickerProps>",
+    defaultValue: "null",
+    description: "Exposes all time picker props for the start time input."
+  },
+  {
+    name: "endTimeProps",
+    type: "Object<TimePickerProps>",
+    defaultValue: "null",
+    description: "Exposes all time picker props for the end time input."
   }
 ];
 
@@ -138,6 +158,10 @@ export default () => (
     <DocSection>
       <SectionTitle>Label Props</SectionTitle>
       <PropsTable propsRows={fieldLabelProps} />
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Time Picker Props</SectionTitle>
+      <PropsTable propsRows={timePickerProps} />
     </DocSection>
 
     <DocSection>

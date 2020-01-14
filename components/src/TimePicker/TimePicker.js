@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { format, setMinutes } from "date-fns";
 import styled from "styled-components";
 
@@ -9,9 +8,8 @@ import { Select } from "../Select";
 import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
 import SelectOption from "../Select/SelectOption";
+import { TimePickerDefaultProps, TimePickerPropTypes } from "./TimePicker.type";
 
-const DEFAULT_TIME_FORMAT = "hh:mm aa";
-const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 
 const ZERO_DATE = new Date(Date.UTC(0));
@@ -114,28 +112,8 @@ class TimePicker extends Component {
   }
 }
 
-TimePicker.propTypes = {
-  timeFormat: PropTypes.string,
-  interval: PropTypes.number,
-  placeholder: PropTypes.string,
-  className: PropTypes.string,
-  onChange: PropTypes.func,
-  onInputChange: PropTypes.func,
-  minTime: PropTypes.string,
-  maxTime: PropTypes.string,
-  defaultValue: PropTypes.string
-};
+TimePicker.propTypes = TimePickerPropTypes;
 
-TimePicker.defaultProps = {
-  timeFormat: DEFAULT_TIME_FORMAT,
-  interval: 15,
-  placeholder: DEFAULT_PLACEHOLDER,
-  className: undefined,
-  onChange: undefined,
-  onInputChange: undefined,
-  minTime: undefined,
-  maxTime: undefined,
-  defaultValue: undefined
-};
+TimePicker.defaultProps = TimePickerDefaultProps;
 
 export default TimePicker;

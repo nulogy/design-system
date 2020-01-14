@@ -410,6 +410,7 @@ exports[`Storyshots StoriesForTests/DateRange default 1`] = `
                   "suffixWidth": null,
                 }
               }
+              endTimeProps={null}
               errorMessage={null}
               labelProps={
                 Object {
@@ -425,6 +426,7 @@ exports[`Storyshots StoriesForTests/DateRange default 1`] = `
               onEndDateChange={null}
               onRangeChange={null}
               onStartDateChange={null}
+              showTimes={false}
               startDateErrorMessage={null}
               startDateInputProps={
                 Object {
@@ -443,58 +445,61 @@ exports[`Storyshots StoriesForTests/DateRange default 1`] = `
                   "suffixWidth": null,
                 }
               }
+              startTimeProps={null}
             >
               <GlobalStyleComponent />
               <RangeContainer
                 endComponent={
-                  <DatePicker
-                    dateFormat="dd MMM yyyy"
-                    errorMessage={null}
-                    highlightDates={
-                      Array [
-                        Object {
-                          "nds-datepicker-day--start-date": Array [
-                            2019-01-01T05:00:00.000Z,
-                          ],
-                        },
-                        Object {
-                          "nds-datepicker-day--end-date": Array [
-                            2019-01-05T05:00:00.000Z,
-                          ],
-                        },
-                        Object {
-                          "nds-datepicker-day--in-range": Array [
-                            2019-01-01T05:00:00.000Z,
-                            2019-01-02T05:00:00.000Z,
-                            2019-01-03T05:00:00.000Z,
-                            2019-01-04T05:00:00.000Z,
-                            2019-01-05T05:00:00.000Z,
-                          ],
-                        },
-                      ]
-                    }
-                    inputProps={
-                      Object {
-                        "disabled": false,
-                        "error": false,
-                        "helpText": null,
-                        "icon": undefined,
-                        "labelText": null,
-                        "prefix": null,
-                        "prefixAlignment": "left",
-                        "prefixWidth": null,
-                        "required": false,
-                        "requirementText": null,
-                        "suffix": null,
-                        "suffixAlignment": "left",
-                        "suffixWidth": null,
+                  <React.Fragment>
+                    <DatePicker
+                      dateFormat="dd MMM yyyy"
+                      errorMessage={null}
+                      highlightDates={
+                        Array [
+                          Object {
+                            "nds-datepicker-day--start-date": Array [
+                              2019-01-01T05:00:00.000Z,
+                            ],
+                          },
+                          Object {
+                            "nds-datepicker-day--end-date": Array [
+                              2019-01-05T05:00:00.000Z,
+                            ],
+                          },
+                          Object {
+                            "nds-datepicker-day--in-range": Array [
+                              2019-01-01T05:00:00.000Z,
+                              2019-01-02T05:00:00.000Z,
+                              2019-01-03T05:00:00.000Z,
+                              2019-01-04T05:00:00.000Z,
+                              2019-01-05T05:00:00.000Z,
+                            ],
+                          },
+                        ]
                       }
-                    }
-                    maxDate={null}
-                    minDate={null}
-                    onChange={[Function]}
-                    selected={2019-01-05T05:00:00.000Z}
-                  />
+                      inputProps={
+                        Object {
+                          "disabled": false,
+                          "error": false,
+                          "helpText": null,
+                          "icon": undefined,
+                          "labelText": null,
+                          "prefix": null,
+                          "prefixAlignment": "left",
+                          "prefixWidth": null,
+                          "required": false,
+                          "requirementText": null,
+                          "suffix": null,
+                          "suffixAlignment": "left",
+                          "suffixWidth": null,
+                        }
+                      }
+                      maxDate={null}
+                      minDate={null}
+                      onChange={[Function]}
+                      selected={2019-01-05T05:00:00.000Z}
+                    />
+                  </React.Fragment>
                 }
                 errorMessages={
                   Array [
@@ -512,54 +517,56 @@ exports[`Storyshots StoriesForTests/DateRange default 1`] = `
                   }
                 }
                 startComponent={
-                  <DatePicker
-                    dateFormat="dd MMM yyyy"
-                    errorMessage={null}
-                    highlightDates={
-                      Array [
-                        Object {
-                          "nds-datepicker-day--start-date": Array [
-                            2019-01-01T05:00:00.000Z,
-                          ],
-                        },
-                        Object {
-                          "nds-datepicker-day--end-date": Array [
-                            2019-01-05T05:00:00.000Z,
-                          ],
-                        },
-                        Object {
-                          "nds-datepicker-day--in-range": Array [
-                            2019-01-01T05:00:00.000Z,
-                            2019-01-02T05:00:00.000Z,
-                            2019-01-03T05:00:00.000Z,
-                            2019-01-04T05:00:00.000Z,
-                            2019-01-05T05:00:00.000Z,
-                          ],
-                        },
-                      ]
-                    }
-                    inputProps={
-                      Object {
-                        "disabled": false,
-                        "error": false,
-                        "helpText": null,
-                        "icon": undefined,
-                        "labelText": null,
-                        "prefix": null,
-                        "prefixAlignment": "left",
-                        "prefixWidth": null,
-                        "required": false,
-                        "requirementText": null,
-                        "suffix": null,
-                        "suffixAlignment": "left",
-                        "suffixWidth": null,
+                  <React.Fragment>
+                    <DatePicker
+                      dateFormat="dd MMM yyyy"
+                      errorMessage={null}
+                      highlightDates={
+                        Array [
+                          Object {
+                            "nds-datepicker-day--start-date": Array [
+                              2019-01-01T05:00:00.000Z,
+                            ],
+                          },
+                          Object {
+                            "nds-datepicker-day--end-date": Array [
+                              2019-01-05T05:00:00.000Z,
+                            ],
+                          },
+                          Object {
+                            "nds-datepicker-day--in-range": Array [
+                              2019-01-01T05:00:00.000Z,
+                              2019-01-02T05:00:00.000Z,
+                              2019-01-03T05:00:00.000Z,
+                              2019-01-04T05:00:00.000Z,
+                              2019-01-05T05:00:00.000Z,
+                            ],
+                          },
+                        ]
                       }
-                    }
-                    maxDate={null}
-                    minDate={null}
-                    onChange={[Function]}
-                    selected={2019-01-01T05:00:00.000Z}
-                  />
+                      inputProps={
+                        Object {
+                          "disabled": false,
+                          "error": false,
+                          "helpText": null,
+                          "icon": undefined,
+                          "labelText": null,
+                          "prefix": null,
+                          "prefixAlignment": "left",
+                          "prefixWidth": null,
+                          "required": false,
+                          "requirementText": null,
+                          "suffix": null,
+                          "suffixAlignment": "left",
+                          "suffixWidth": null,
+                        }
+                      }
+                      maxDate={null}
+                      minDate={null}
+                      onChange={[Function]}
+                      selected={2019-01-01T05:00:00.000Z}
+                    />
+                  </React.Fragment>
                 }
               >
                 <Styled(BaseFieldLabel)
