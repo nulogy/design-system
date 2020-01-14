@@ -7,7 +7,7 @@ describe("Date Range", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("daterange--default-skipstoryshot");
+      cy.renderFromStorybook("daterange--default");
     });
 
     it("shows start date in end date input", () => {

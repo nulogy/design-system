@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { DatePicker } from ".";
 
 storiesOf("DatePicker", module)
-  .add("default (SkipStoryshot)", () => (
+  .add("default", () => (
     <DatePicker
       selected={new Date("2019-01-01T05:00:00.000Z")}
       onChange={action("date changed")}
@@ -12,7 +12,7 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
-  .add("with custom date format (SkipStoryshot)", () => (
+  .add("with custom date format", () => (
     <DatePicker
       selected={new Date("2019-01-01T05:00:00.000Z")}
       dateFormat="MMMM d, yyyy"
@@ -21,7 +21,7 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
-  .add("with custom placeholder (SkipStoryshot)", () => (
+  .add("with custom placeholder", () => (
     <DatePicker
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
@@ -29,7 +29,7 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
     />
   ))
-  .add("with error state (SkipStoryshot)", () => (
+  .add("with error state", () => (
     <DatePicker
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
@@ -38,7 +38,7 @@ storiesOf("DatePicker", module)
       errorMessage="The date is invalid"
     />
   ))
-  .add("with a minDate (SkipStoryshot)", () => (
+  .add("with a minDate", () => (
     <DatePicker
       dateFormat="MMMM d, yyyy"
       selected={new Date("2019-07-10T05:00:00.000Z")}
@@ -48,7 +48,7 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
-  .add("with a maxDate (SkipStoryshot)", () => (
+  .add("with a maxDate", () => (
     <DatePicker
       dateFormat="MMMM d, yyyy"
       selected={new Date("2019-07-10T05:00:00.000Z")}

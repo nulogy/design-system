@@ -8,7 +8,7 @@ describe("Timepicker", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("timepicker--default-skipstoryshots");
+      cy.renderFromStorybook("timepicker--default");
     });
 
     describe("displays time options", () => {
