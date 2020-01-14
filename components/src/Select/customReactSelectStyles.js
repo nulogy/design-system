@@ -43,6 +43,7 @@ const customStyles = error => {
         isOpen: state.selectProps.menuIsOpen,
         isFocused: state.isFocused
       }),
+      boxSizing: "border-box",
       boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen }),
       borderRadius: theme.radii.medium,
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,

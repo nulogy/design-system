@@ -33,7 +33,7 @@ const StyledSelectOption = styled(SelectOption)(({ isSelected }) => ({
 const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
-      <StyledTimeIcon icon="queryBuilder" />
+      <StyledTimeIcon icon="queryBuilder" size="22px" />
     </components.DropdownIndicator>
   );
 };
