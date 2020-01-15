@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { format, setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import * as allLocales from "date-fns/locale";
 
 import { components } from "react-select";
 import theme from "../theme";
@@ -58,7 +59,7 @@ const getTimeIntervals = interval => {
   return times;
 };
 
-const getTimeOptions = (interval, timeFormat, minTime, maxTime) => {
+const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
   const allTimes = getTimeIntervals(interval);
   let startingInterval = 0;
   let finalInterval = allTimes.length;
@@ -70,8 +71,8 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime) => {
   }
   return allTimes
     .map(date => ({
-      value: format(date, MILITARY_TIME_FORMAT),
-      label: format(date, timeFormat)
+      value: format(date, MILITARY_TIME_FORMAT, { locale: allLocales.enCA }),
+      label: format(date, timeFormat, { locale: allLocales[locale] })
     }))
     .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
     .slice(startingInterval, finalInterval);
@@ -87,23 +88,14 @@ class TimePicker extends Component {
     }
   };
 
-  handleSelectedTimeChange = date => {
-    const { onChange, timeFormat } = this.props;
-    const time = format(date, timeFormat);
-    if (onChange) {
-      onChange(time);
-    }
-  };
-
   render() {
-    const { timeFormat, interval, className, minTime, maxTime, defaultValue, ...props } = this.props;
-    const options = getTimeOptions(interval, timeFormat, minTime, maxTime) || [];
+    const { timeFormat, interval, className, minTime, maxTime, defaultValue, locale, ...props } = this.props;
+    const options = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
 
     return (
       <>
         <TimePickerStyles />
         <Select
-          onChange={this.handleSelectedDateChange}
           options={options}
           defaultValue={defaultValue}
           components={{ DropdownIndicator, Option: StyledSelectOption }}
@@ -125,7 +117,8 @@ TimePicker.propTypes = {
   onInputChange: PropTypes.func,
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
-  defaultValue: PropTypes.string
+  defaultValue: PropTypes.string,
+  locale: PropTypes.string
 };
 
 TimePicker.defaultProps = {
@@ -137,7 +130,8 @@ TimePicker.defaultProps = {
   onInputChange: undefined,
   minTime: undefined,
   maxTime: undefined,
-  defaultValue: undefined
+  defaultValue: undefined,
+  locale: undefined
 };
 
 export default TimePicker;

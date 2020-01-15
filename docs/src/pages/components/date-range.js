@@ -102,6 +102,13 @@ const propsRows = [
     description: "Disables the end date before start date error message."
   },
   {
+    name: "locale",
+    type: "string",
+    defaultValue: "undefined",
+    description:
+      "Locale string ex: 'uk'. For all supported locales see the knobs under the 'custom locale' example in storybook"
+  },
+  {
     name: "showTimes",
     type: "boolean",
     defaultValue: "false",

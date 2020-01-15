@@ -1,9 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { withKnobs, select } from "@storybook/addon-knobs";
+import * as allLocales from "date-fns/locale";
+
 import { MonthPicker } from ".";
 
 storiesOf("MonthPicker", module)
+  .addDecorator(withKnobs)
   .add("default", () => (
     <MonthPicker
       selected={new Date("2019-01-01T05:00:00.000Z")}
@@ -36,5 +40,11 @@ storiesOf("MonthPicker", module)
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Month and Year" }}
+    />
+  ))
+  .add("custom locale", () => (
+    <MonthPicker
+      selected={new Date("2019-07-10T05:00:00.000Z")}
+      locale={select("locale", Object.keys(allLocales), "uk", "locales")}
     />
   ));

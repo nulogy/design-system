@@ -44,6 +44,13 @@ const propsRows = [
     defaultValue: "undefined",
     description: "The latest time that can be selected."
   },
+  {
+    name: "locale",
+    type: "string",
+    defaultValue: "undefined",
+    description:
+      "Locale string ex: 'uk'. For all supported locales see the knobs under the 'custom locale' example in storybook"
+  },
   ...selectProps.filter(prop => prop.name !== "options")
 ];
 

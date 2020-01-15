@@ -5,9 +5,11 @@ import ReactDatePicker from "react-datepicker";
 import { MonthPickerStyles } from "./MonthPickerStyles";
 import DatePickerInput from "../DatePicker/DatePickerInput";
 import { InlineValidation } from "../Validation";
+
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { ControlIcon } from "../Button";
+import { registerDatePickerLocales } from "../utils/RegisterDatePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
 const DEFAULT_PLACEHOLDER = "Mon YYYY";
@@ -16,6 +18,7 @@ class MonthPicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedDate: props.selected };
+    registerDatePickerLocales();
   }
 
   handleInputChange = event => {
@@ -37,7 +40,7 @@ class MonthPicker extends Component {
   };
 
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, locale } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -65,6 +68,7 @@ class MonthPicker extends Component {
           maxDate={maxDate}
           strictParsing
           showMonthYearPicker
+          locale={locale}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
@@ -81,7 +85,8 @@ MonthPicker.propTypes = {
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
-  maxDate: PropTypes.instanceOf(Date)
+  maxDate: PropTypes.instanceOf(Date),
+  locale: PropTypes.string
 };
 
 MonthPicker.defaultProps = {
@@ -93,7 +98,8 @@ MonthPicker.defaultProps = {
   errorMessage: undefined,
   errorList: undefined,
   minDate: undefined,
-  maxDate: undefined
+  maxDate: undefined,
+  locale: undefined
 };
 
 export default MonthPicker;

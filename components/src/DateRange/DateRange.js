@@ -44,7 +44,8 @@ const DateRange = ({
   onStartTimeChange,
   onEndTimeChange,
   timeFormat,
-  interval
+  interval,
+  locale
 }) => {
   const [startDate, setStartDate] = useState(defaultStartDate);
   const [endDate, setEndDate] = useState(defaultEndDate);
@@ -114,6 +115,7 @@ const DateRange = ({
         minDate={minDate}
         maxDate={maxDate}
         highlightDates={highlightDates(startDate, endDate)}
+        locale={locale}
       />
       {showTimes && (
         <StyledStartTime
@@ -124,6 +126,7 @@ const DateRange = ({
           timeFormat={timeFormat}
           interval={interval}
           onChange={changeStartTimeHandler}
+          locale={locale}
         />
       )}
     </>
@@ -140,6 +143,7 @@ const DateRange = ({
           timeFormat={timeFormat}
           interval={interval}
           onChange={changeEndTimeHandler}
+          locale={locale}
         />
       )}
       <DatePicker
@@ -151,6 +155,7 @@ const DateRange = ({
         minDate={minDate}
         maxDate={maxDate}
         highlightDates={highlightDates(startDate, endDate)}
+        locale={locale}
       />
     </>
   );
@@ -196,7 +201,8 @@ DateRange.propTypes = {
   onStartTimeChange: PropTypes.func,
   onEndTimeChange: PropTypes.func,
   timeFormat: PropTypes.string,
-  interval: PropTypes.number
+  interval: PropTypes.number,
+  locale: PropTypes.string
 };
 
 DateRange.defaultProps = {
@@ -226,7 +232,8 @@ DateRange.defaultProps = {
   onStartTimeChange: null,
   onEndTimeChange: null,
   timeFormat: undefined,
-  interval: undefined
+  interval: undefined,
+  locale: undefined
 };
 
 export default DateRange;

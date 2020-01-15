@@ -1,10 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { withKnobs, select } from "@storybook/addon-knobs";
+import * as allLocales from "date-fns/locale";
 
 import TimeRange from "./TimeRange";
 
 storiesOf("TimeRange", module)
+  .addDecorator(withKnobs)
   .add("default", () => (
     <TimeRange
       onRangeChange={action("range changed")}
@@ -37,5 +40,15 @@ storiesOf("TimeRange", module)
       maxTime="18:30"
       onStartTimeChange={action("start date changed")}
       onEndTimeChange={action("end date changed")}
+    />
+  ))
+  .add("custom locale", () => (
+    <TimeRange
+      onRangeChange={action("range changed")}
+      defaultStartTime="12:00"
+      defaultEndTime="13:30"
+      onStartTimeChange={action("start date changed")}
+      onEndTimeChange={action("end date changed")}
+      locale={select("locale", Object.keys(allLocales), "uk", "locales")}
     />
   ));
