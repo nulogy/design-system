@@ -6870,7 +6870,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -7053,7 +7053,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bdVaJa",
                                 "isStatic": false,
-                                "lastClassName": "cRonwR",
+                                "lastClassName": "jtfPUd",
                                 "rules": Array [
                                   [Function],
                                   [Function],
@@ -7100,7 +7100,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7189,7 +7189,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"

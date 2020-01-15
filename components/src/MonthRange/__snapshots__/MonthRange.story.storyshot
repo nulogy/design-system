@@ -2705,7 +2705,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -2935,7 +2935,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -3024,7 +3024,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
@@ -7348,7 +7348,7 @@ exports[`Storyshots MonthRange default 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -7578,7 +7578,7 @@ exports[`Storyshots MonthRange default 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7667,7 +7667,7 @@ exports[`Storyshots MonthRange default 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
@@ -12039,7 +12039,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -12269,7 +12269,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -12358,7 +12358,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
@@ -16729,7 +16729,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -16959,7 +16959,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -17048,7 +17048,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
@@ -21882,7 +21882,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -22112,7 +22112,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -22201,7 +22201,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
@@ -26573,7 +26573,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                       <Styled(Box)
                         alignItems="center"
                         maxHeight="38px"
-                        px="x2"
+                        px="half"
                         theme={
                           Object {
                             "borders": Array [],
@@ -26803,7 +26803,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                           }
                           forwardedRef={null}
                           maxHeight="38px"
-                          px="x2"
+                          px="half"
                           theme={
                             Object {
                               "borders": Array [],
@@ -26892,7 +26892,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-bdVaJa cRonwR"
+                            className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
                           >
                             <styled.p
                               color="currentColor"
