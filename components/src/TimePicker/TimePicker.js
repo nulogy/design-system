@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { format, setMinutes } from "date-fns";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import { components } from "react-select";
 import theme from "../theme";
@@ -11,7 +11,9 @@ import { Icon } from "../Icon";
 import SelectOption from "../Select/SelectOption";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
+
 const DEFAULT_PLACEHOLDER = "HH:MM";
+
 const MILITARY_TIME_FORMAT = "HH:mm";
 
 const ZERO_DATE = new Date(Date.UTC(0));
@@ -35,7 +37,7 @@ const StyledSelectOption = styled(SelectOption)(({ isSelected }) => ({
 const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
-      <StyledTimeIcon icon="queryBuilder" />
+      <StyledTimeIcon icon="queryBuilder" size="22px" />
     </components.DropdownIndicator>
   );
 };

@@ -28,13 +28,13 @@ const propsRows = [
   },
   {
     name: "defaultStartTime",
-    type: "String",
+    type: "24 hour time string e.g: 02:30",
     defaultValue: "undefined",
     description: "The default start date."
   },
   {
     name: "defaultEndTime",
-    type: "String",
+    type: "24 hour time string e.g: 02:30",
     defaultValue: "undefined",
     description: "The default end date."
   },
@@ -87,6 +87,12 @@ const propsRows = [
     type: "boolean",
     defaultValue: "false",
     description: "Disables the the end date before start date error message."
+  },
+  {
+    name: "interval",
+    type: "Number",
+    defaultValue: "15",
+    description: "The time difference in minutes between the time options"
   }
 ];
 

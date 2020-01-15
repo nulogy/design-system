@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
+import { getDuration } from "./TimeRange.utils";
 
 const TimeRange = ({
   timeFormat,
@@ -15,7 +16,8 @@ const TimeRange = ({
   disableRangeValidation,
   labelProps,
   minTime,
-  maxTime
+  maxTime,
+  interval
 }) => {
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
@@ -33,20 +35,12 @@ const TimeRange = ({
       onEndTimeChange(date);
     }
   };
-
-  const convertTimeToMinutes = time => {
-    const timeArr = time.split(":").map(Number);
-    const hours = timeArr[0];
-    const minutes = timeArr[1];
-    return hours * 60 + minutes;
-  };
-
   const validateTimeRange = () => {
     let error;
     const end = endTime || defaultEndTime;
     const start = startTime || defaultStartTime;
     if (start && end) {
-      const duration = convertTimeToMinutes(end) - convertTimeToMinutes(start);
+      const duration = getDuration(start, end);
       if (duration < 0) {
         error = "End time is before start time";
       }
@@ -69,6 +63,7 @@ const TimeRange = ({
       onChange={changeStartTimeHandler}
       minTime={minTime}
       maxTime={endTime || maxTime}
+      interval={interval}
     />
   );
 
@@ -80,6 +75,7 @@ const TimeRange = ({
       onChange={changeEndTimeHandler}
       maxTime={maxTime}
       minTime={startTime || minTime}
+      interval={interval}
     />
   );
 
@@ -109,7 +105,8 @@ TimeRange.propTypes = {
   disableRangeValidation: PropTypes.bool,
   labelProps: PropTypes.shape(FieldLabelProps),
   minTime: PropTypes.string,
-  maxTime: PropTypes.string
+  maxTime: PropTypes.string,
+  interval: PropTypes.number
 };
 
 TimeRange.defaultProps = {
@@ -126,7 +123,8 @@ TimeRange.defaultProps = {
     labelText: "Time Range"
   },
   minTime: null,
-  maxTime: null
+  maxTime: null,
+  interval: undefined
 };
 
 export default TimeRange;

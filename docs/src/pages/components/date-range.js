@@ -99,7 +99,51 @@ const propsRows = [
     name: "disableRangeValidation",
     type: "boolean",
     defaultValue: "false",
-    description: "Disables the the end date before start date error message."
+    description: "Disables the end date before start date error message."
+  },
+  {
+    name: "showTimes",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "Shows time pickers next to the date inputs so that a times can be selected."
+  },
+  {
+    name: "minTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The earliest time that can be selected."
+  },
+  {
+    name: "defaultStartTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The default start date."
+  },
+  {
+    name: "defaultEndTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The default end date."
+  },
+  {
+    name: "maxTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The latest time that can be selected."
+  },
+  {
+    name: "timeFormat",
+    type: "String",
+    defaultValue: "hh:mm aa",
+    description:
+      "The default date format (see date-fns for available date formats)"
+  },
+  {
+    name: "interval",
+    type: "Number",
+    defaultValue: "15",
+    description: "The time difference in minutes between the time options"
   }
 ];
 
@@ -122,6 +166,19 @@ export default () => (
         {`import { DateRange } from "@nulogy/components";
 
 <DateRange
+        onRangeChange={(val) => val}
+      />
+`}
+      </Highlight>
+    </DocSection>
+    <DocSection>
+      <SectionTitle>Date Range with Times</SectionTitle>
+      <DateRange showTimes />
+      <Highlight className="js">
+        {`import { DateRange } from "@nulogy/components";
+
+<DateRange
+        showTimes
         onRangeChange={(val) => val}
       />
 `}

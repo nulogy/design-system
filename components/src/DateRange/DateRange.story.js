@@ -59,4 +59,36 @@ storiesOf("DateRange", module)
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}
     />
+  ))
+  .add("with times", () => (
+    <DateRange
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      showTimes
+    />
+  ))
+  .add("with default start and end times", () => (
+    <DateRange
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
+      showTimes
+      defaultStartTime="03:30"
+      defaultEndTime="13:30"
+    />
+  ))
+  .add("with time error", () => (
+    <DateRange
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
+      showTimes
+      defaultStartTime="13:30"
+      defaultEndTime="10:30"
+    />
   ));

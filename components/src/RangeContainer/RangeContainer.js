@@ -19,7 +19,7 @@ const RangeContainer = ({ labelProps, startComponent, endComponent, errorMessage
       mb={errorMessages.length ? "x1" : "x3"}
     >
       {startComponent}
-      <Flex px="x2" alignItems="center" maxHeight="38px">
+      <Flex px="half" alignItems="center" maxHeight="38px">
         <Text>-</Text>
       </Flex>
       {endComponent}

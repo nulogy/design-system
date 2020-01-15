@@ -5328,6 +5328,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
+                                                        "boxSizing": "border-box",
                                                         "display": "flex",
                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                         "fontSize": "16px",
@@ -5342,7 +5343,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-c03r69-Control"
+                                                      className=" css-1lwloy1-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -7201,7 +7202,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                               autoCorrect="off"
                                                               cx={[Function]}
                                                               getStyles={[Function]}
-                                                              id="react-select-31-input"
+                                                              id="react-select-39-input"
                                                               innerRef={[Function]}
                                                               isDisabled={null}
                                                               isHidden={false}
@@ -7732,7 +7733,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                     autoCorrect="off"
                                                                     className=""
                                                                     disabled={null}
-                                                                    id="react-select-31-input"
+                                                                    id="react-select-39-input"
                                                                     injectStyles={true}
                                                                     inputRef={[Function]}
                                                                     inputStyle={
@@ -7770,7 +7771,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                         autoComplete="off"
                                                                         autoCorrect="off"
                                                                         disabled={null}
-                                                                        id="react-select-31-input"
+                                                                        id="react-select-39-input"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onFocus={[Function]}
@@ -11515,7 +11516,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                     <Styled(Styled(Component))
                                                                       color="currentColor"
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <StyledComponent
@@ -11532,7 +11533,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "sc-hzDkRC",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "jVaXaN",
+                                                                              "lastClassName": "fnmYIy",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                                 [Function],
@@ -11582,29 +11583,29 @@ exports[`Storyshots TimePicker default 1`] = `
                                                                         }
                                                                         forwardedRef={null}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <ForwardRef
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           focusable={false}
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                            className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                             color="currentColor"
                                                                             fill="currentColor"
                                                                             focusable={false}
-                                                                            height="24px"
+                                                                            height="22px"
                                                                             icon="queryBuilder"
-                                                                            size="24px"
+                                                                            size="22px"
                                                                             title={null}
                                                                             viewBox="0 0 24 24"
-                                                                            width="24px"
+                                                                            width="22px"
                                                                           >
                                                                             <path
                                                                               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
@@ -16983,6 +16984,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
+                                                        "boxSizing": "border-box",
                                                         "display": "flex",
                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                         "fontSize": "16px",
@@ -16997,7 +16999,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-c03r69-Control"
+                                                      className=" css-1lwloy1-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -18856,7 +18858,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                               autoCorrect="off"
                                                               cx={[Function]}
                                                               getStyles={[Function]}
-                                                              id="react-select-33-input"
+                                                              id="react-select-41-input"
                                                               innerRef={[Function]}
                                                               isDisabled={null}
                                                               isHidden={false}
@@ -19387,7 +19389,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                     autoCorrect="off"
                                                                     className=""
                                                                     disabled={null}
-                                                                    id="react-select-33-input"
+                                                                    id="react-select-41-input"
                                                                     injectStyles={true}
                                                                     inputRef={[Function]}
                                                                     inputStyle={
@@ -19425,7 +19427,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                         autoComplete="off"
                                                                         autoCorrect="off"
                                                                         disabled={null}
-                                                                        id="react-select-33-input"
+                                                                        id="react-select-41-input"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onFocus={[Function]}
@@ -23170,7 +23172,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                     <Styled(Styled(Component))
                                                                       color="currentColor"
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <StyledComponent
@@ -23187,7 +23189,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "sc-hzDkRC",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "jVaXaN",
+                                                                              "lastClassName": "fnmYIy",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                                 [Function],
@@ -23237,29 +23239,29 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                                         }
                                                                         forwardedRef={null}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <ForwardRef
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           focusable={false}
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                            className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                             color="currentColor"
                                                                             fill="currentColor"
                                                                             focusable={false}
-                                                                            height="24px"
+                                                                            height="22px"
                                                                             icon="queryBuilder"
-                                                                            size="24px"
+                                                                            size="22px"
                                                                             title={null}
                                                                             viewBox="0 0 24 24"
-                                                                            width="24px"
+                                                                            width="22px"
                                                                           >
                                                                             <path
                                                                               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
@@ -26931,6 +26933,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
+                                                        "boxSizing": "border-box",
                                                         "display": "flex",
                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                         "fontSize": "16px",
@@ -26945,7 +26948,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-c03r69-Control"
+                                                      className=" css-1lwloy1-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -28057,7 +28060,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                               autoCorrect="off"
                                                               cx={[Function]}
                                                               getStyles={[Function]}
-                                                              id="react-select-32-input"
+                                                              id="react-select-40-input"
                                                               innerRef={[Function]}
                                                               isDisabled={null}
                                                               isHidden={false}
@@ -28399,7 +28402,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                                     autoCorrect="off"
                                                                     className=""
                                                                     disabled={null}
-                                                                    id="react-select-32-input"
+                                                                    id="react-select-40-input"
                                                                     injectStyles={true}
                                                                     inputRef={[Function]}
                                                                     inputStyle={
@@ -28437,7 +28440,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                                         autoComplete="off"
                                                                         autoCorrect="off"
                                                                         disabled={null}
-                                                                        id="react-select-32-input"
+                                                                        id="react-select-40-input"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onFocus={[Function]}
@@ -30658,7 +30661,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                                     <Styled(Styled(Component))
                                                                       color="currentColor"
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <StyledComponent
@@ -30675,7 +30678,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "sc-hzDkRC",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "jVaXaN",
+                                                                              "lastClassName": "fnmYIy",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                                 [Function],
@@ -30725,29 +30728,29 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                                         }
                                                                         forwardedRef={null}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <ForwardRef
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           focusable={false}
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                            className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                             color="currentColor"
                                                                             fill="currentColor"
                                                                             focusable={false}
-                                                                            height="24px"
+                                                                            height="22px"
                                                                             icon="queryBuilder"
-                                                                            size="24px"
+                                                                            size="22px"
                                                                             title={null}
                                                                             viewBox="0 0 24 24"
-                                                                            width="24px"
+                                                                            width="22px"
                                                                           >
                                                                             <path
                                                                               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
@@ -36127,6 +36130,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                         "borderColor": "#cc1439",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
+                                                        "boxSizing": "border-box",
                                                         "display": "flex",
                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                         "fontSize": "16px",
@@ -36141,7 +36145,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-sijsn1-Control"
+                                                      className=" css-17egs3x-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -38000,7 +38004,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                               autoCorrect="off"
                                                               cx={[Function]}
                                                               getStyles={[Function]}
-                                                              id="react-select-34-input"
+                                                              id="react-select-42-input"
                                                               innerRef={[Function]}
                                                               isDisabled={null}
                                                               isHidden={false}
@@ -38531,7 +38535,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                     autoCorrect="off"
                                                                     className=""
                                                                     disabled={null}
-                                                                    id="react-select-34-input"
+                                                                    id="react-select-42-input"
                                                                     injectStyles={true}
                                                                     inputRef={[Function]}
                                                                     inputStyle={
@@ -38569,7 +38573,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                         autoComplete="off"
                                                                         autoCorrect="off"
                                                                         disabled={null}
-                                                                        id="react-select-34-input"
+                                                                        id="react-select-42-input"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onFocus={[Function]}
@@ -42314,7 +42318,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                     <Styled(Styled(Component))
                                                                       color="currentColor"
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <StyledComponent
@@ -42331,7 +42335,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "sc-hzDkRC",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "jVaXaN",
+                                                                              "lastClassName": "fnmYIy",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                                 [Function],
@@ -42381,29 +42385,29 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                                         }
                                                                         forwardedRef={null}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <ForwardRef
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           focusable={false}
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                            className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                             color="currentColor"
                                                                             fill="currentColor"
                                                                             focusable={false}
-                                                                            height="24px"
+                                                                            height="22px"
                                                                             icon="queryBuilder"
-                                                                            size="24px"
+                                                                            size="22px"
                                                                             title={null}
                                                                             viewBox="0 0 24 24"
-                                                                            width="24px"
+                                                                            width="22px"
                                                                           >
                                                                             <path
                                                                               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
@@ -46628,6 +46632,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                         "borderColor": "#c0c8d1",
                                                         "borderRadius": "4px",
                                                         "boxShadow": null,
+                                                        "boxSizing": "border-box",
                                                         "display": "flex",
                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                         "fontSize": "16px",
@@ -46642,7 +46647,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                     onTouchEnd={[Function]}
                                                   >
                                                     <div
-                                                      className=" css-c03r69-Control"
+                                                      className=" css-1lwloy1-Control"
                                                       onMouseDown={[Function]}
                                                       onTouchEnd={[Function]}
                                                     >
@@ -47749,7 +47754,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                               autoCorrect="off"
                                                               cx={[Function]}
                                                               getStyles={[Function]}
-                                                              id="react-select-35-input"
+                                                              id="react-select-43-input"
                                                               innerRef={[Function]}
                                                               isDisabled={null}
                                                               isHidden={false}
@@ -48092,7 +48097,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                                     autoCorrect="off"
                                                                     className=""
                                                                     disabled={null}
-                                                                    id="react-select-35-input"
+                                                                    id="react-select-43-input"
                                                                     injectStyles={true}
                                                                     inputRef={[Function]}
                                                                     inputStyle={
@@ -48130,7 +48135,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                                         autoComplete="off"
                                                                         autoCorrect="off"
                                                                         disabled={null}
-                                                                        id="react-select-35-input"
+                                                                        id="react-select-43-input"
                                                                         onBlur={[Function]}
                                                                         onChange={[Function]}
                                                                         onFocus={[Function]}
@@ -50371,7 +50376,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                                     <Styled(Styled(Component))
                                                                       color="currentColor"
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <StyledComponent
@@ -50388,7 +50393,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                                             "componentStyle": ComponentStyle {
                                                                               "componentId": "sc-hzDkRC",
                                                                               "isStatic": false,
-                                                                              "lastClassName": "jVaXaN",
+                                                                              "lastClassName": "fnmYIy",
                                                                               "rules": Array [
                                                                                 [Function],
                                                                                 [Function],
@@ -50438,29 +50443,29 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                                         }
                                                                         forwardedRef={null}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <ForwardRef
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           focusable={false}
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                            className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                             color="currentColor"
                                                                             fill="currentColor"
                                                                             focusable={false}
-                                                                            height="24px"
+                                                                            height="22px"
                                                                             icon="queryBuilder"
-                                                                            size="24px"
+                                                                            size="22px"
                                                                             title={null}
                                                                             viewBox="0 0 24 24"
-                                                                            width="24px"
+                                                                            width="22px"
                                                                           >
                                                                             <path
                                                                               d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
