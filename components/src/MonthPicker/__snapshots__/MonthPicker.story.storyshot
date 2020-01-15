@@ -1,5 +1,1869 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots MonthPicker custom locale 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <GlobalStyleComponent />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
+              "isStatic": false,
+              "lastClassName": "gWUgWA",
+              "rules": Array [
+                [Function],
+              ],
+            },
+            "displayName": "NDSProvider__GlobalStyles",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
+            "target": "div",
+            "toString": [Function],
+            "usesTheme": false,
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        theme={
+          Object {
+            "borders": Array [],
+            "breakpoints": Object {
+              "extraLarge": "1920px",
+              "extraSmall": "0px",
+              "large": "1360px",
+              "medium": "1024px",
+              "small": "768px",
+            },
+            "colors": Object {
+              "black": "#011e38",
+              "blackBlue": "#122b47",
+              "blue": "#216beb",
+              "darkBlue": "#00438f",
+              "darkGrey": "#434d59",
+              "green": "#008059",
+              "grey": "#c0c8d1",
+              "lightBlue": "#e1ebfa",
+              "lightGreen": "#e9f7f2",
+              "lightGrey": "#e4e7eb",
+              "lightRed": "#fae6ea",
+              "lightYellow": "#fcf5e3",
+              "red": "#cc1439",
+              "white": "#ffffff",
+              "whiteGrey": "#f0f2f5",
+              "yellow": "#ffbb00",
+            },
+            "fontSizes": Object {
+              "large": "20px",
+              "larger": "26px",
+              "largest": "46px",
+              "medium": "16px",
+              "small": "14px",
+              "smaller": "12px",
+            },
+            "fontWeights": Object {
+              "bold": "600",
+              "light": "300",
+              "medium": "500",
+              "normal": "400",
+            },
+            "fonts": Object {
+              "base": "'IBM Plex Sans', sans-serif",
+              "mono": "'IBM Plex Mono', monospace",
+            },
+            "lineHeights": Object {
+              "base": "1.5",
+              "sectionTitle": "1.23076923",
+              "smallTextBase": "1.71428571",
+              "smallTextCompressed": "1.14285714",
+              "smallerText": "1.33333333",
+              "subsectionTitle": "1.2",
+              "title": "1.04347826",
+            },
+            "radii": Object {
+              "circle": "50%",
+              "medium": "4px",
+              "small": "2px",
+            },
+            "shadows": Object {
+              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+            },
+            "space": Object {
+              "half": "4px",
+              "none": "0px",
+              "x1": "8px",
+              "x2": "16px",
+              "x3": "24px",
+              "x4": "32px",
+              "x5": "40px",
+              "x6": "48px",
+              "x8": "64px",
+            },
+            "zIndex": Object {
+              "content": 100,
+              "overlay": 1000,
+              "tabsBar": 210,
+              "tabsScollIndicator": 200,
+            },
+          }
+        }
+      >
+        <div
+          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
+        >
+          <ThemeProvider
+            theme={
+              Object {
+                "borders": Array [],
+                "breakpoints": Object {
+                  "extraLarge": "1920px",
+                  "extraSmall": "0px",
+                  "large": "1360px",
+                  "medium": "1024px",
+                  "small": "768px",
+                },
+                "colors": Object {
+                  "black": "#011e38",
+                  "blackBlue": "#122b47",
+                  "blue": "#216beb",
+                  "darkBlue": "#00438f",
+                  "darkGrey": "#434d59",
+                  "green": "#008059",
+                  "grey": "#c0c8d1",
+                  "lightBlue": "#e1ebfa",
+                  "lightGreen": "#e9f7f2",
+                  "lightGrey": "#e4e7eb",
+                  "lightRed": "#fae6ea",
+                  "lightYellow": "#fcf5e3",
+                  "red": "#cc1439",
+                  "white": "#ffffff",
+                  "whiteGrey": "#f0f2f5",
+                  "yellow": "#ffbb00",
+                },
+                "fontSizes": Object {
+                  "large": "20px",
+                  "larger": "26px",
+                  "largest": "46px",
+                  "medium": "16px",
+                  "small": "14px",
+                  "smaller": "12px",
+                },
+                "fontWeights": Object {
+                  "bold": "600",
+                  "light": "300",
+                  "medium": "500",
+                  "normal": "400",
+                },
+                "fonts": Object {
+                  "base": "'IBM Plex Sans', sans-serif",
+                  "mono": "'IBM Plex Mono', monospace",
+                },
+                "lineHeights": Object {
+                  "base": "1.5",
+                  "sectionTitle": "1.23076923",
+                  "smallTextBase": "1.71428571",
+                  "smallTextCompressed": "1.14285714",
+                  "smallerText": "1.33333333",
+                  "subsectionTitle": "1.2",
+                  "title": "1.04347826",
+                },
+                "radii": Object {
+                  "circle": "50%",
+                  "medium": "4px",
+                  "small": "2px",
+                },
+                "shadows": Object {
+                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                },
+                "space": Object {
+                  "half": "4px",
+                  "none": "0px",
+                  "x1": "8px",
+                  "x2": "16px",
+                  "x3": "24px",
+                  "x4": "32px",
+                  "x5": "40px",
+                  "x6": "48px",
+                  "x8": "64px",
+                },
+                "zIndex": Object {
+                  "content": 100,
+                  "overlay": 1000,
+                  "tabsBar": 210,
+                  "tabsScollIndicator": 200,
+                },
+              }
+            }
+          >
+            <MonthPicker
+              dateFormat="MMM yyyy"
+              inputProps={
+                Object {
+                  "disabled": false,
+                  "error": false,
+                  "helpText": null,
+                  "icon": undefined,
+                  "labelText": null,
+                  "prefix": null,
+                  "prefixAlignment": "left",
+                  "prefixWidth": null,
+                  "required": false,
+                  "requirementText": null,
+                  "suffix": null,
+                  "suffixAlignment": "left",
+                  "suffixWidth": null,
+                }
+              }
+              locale="uk"
+              selected={2019-07-10T05:00:00.000Z}
+            >
+              <Styled(Box)
+                className="nds-month-picker"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <StyledComponent
+                  className="nds-month-picker"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "_foldedDefaultProps": Object {
+                        "theme": Object {
+                          "borders": Array [],
+                          "breakpoints": Object {
+                            "extraLarge": "1920px",
+                            "extraSmall": "0px",
+                            "large": "1360px",
+                            "medium": "1024px",
+                            "small": "768px",
+                          },
+                          "colors": Object {
+                            "black": "#011e38",
+                            "blackBlue": "#122b47",
+                            "blue": "#216beb",
+                            "darkBlue": "#00438f",
+                            "darkGrey": "#434d59",
+                            "green": "#008059",
+                            "grey": "#c0c8d1",
+                            "lightBlue": "#e1ebfa",
+                            "lightGreen": "#e9f7f2",
+                            "lightGrey": "#e4e7eb",
+                            "lightRed": "#fae6ea",
+                            "lightYellow": "#fcf5e3",
+                            "red": "#cc1439",
+                            "white": "#ffffff",
+                            "whiteGrey": "#f0f2f5",
+                            "yellow": "#ffbb00",
+                          },
+                          "fontSizes": Object {
+                            "large": "20px",
+                            "larger": "26px",
+                            "largest": "46px",
+                            "medium": "16px",
+                            "small": "14px",
+                            "smaller": "12px",
+                          },
+                          "fontWeights": Object {
+                            "bold": "600",
+                            "light": "300",
+                            "medium": "500",
+                            "normal": "400",
+                          },
+                          "fonts": Object {
+                            "base": "'IBM Plex Sans', sans-serif",
+                            "mono": "'IBM Plex Mono', monospace",
+                          },
+                          "lineHeights": Object {
+                            "base": "1.5",
+                            "sectionTitle": "1.23076923",
+                            "smallTextBase": "1.71428571",
+                            "smallTextCompressed": "1.14285714",
+                            "smallerText": "1.33333333",
+                            "subsectionTitle": "1.2",
+                            "title": "1.04347826",
+                          },
+                          "radii": Object {
+                            "circle": "50%",
+                            "medium": "4px",
+                            "small": "2px",
+                          },
+                          "shadows": Object {
+                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                          },
+                          "space": Object {
+                            "half": "4px",
+                            "none": "0px",
+                            "x1": "8px",
+                            "x2": "16px",
+                            "x3": "24px",
+                            "x4": "32px",
+                            "x5": "40px",
+                            "x6": "48px",
+                            "x8": "64px",
+                          },
+                          "zIndex": Object {
+                            "content": 100,
+                            "overlay": 1000,
+                            "tabsBar": 210,
+                            "tabsScollIndicator": 200,
+                          },
+                        },
+                      },
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-chPdSV",
+                        "isStatic": false,
+                        "lastClassName": "jfGaMs",
+                        "rules": Array [
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          [Function],
+                          "width: 100%;",
+                        ],
+                      },
+                      "displayName": "Styled(Box)",
+                      "foldedComponentIds": Array [
+                        "Box-sc-1qu1edy-0",
+                      ],
+                      "propTypes": Object {
+                        "bg": [Function],
+                        "border": [Function],
+                        "borderBottom": [Function],
+                        "borderLeft": [Function],
+                        "borderRadius": [Function],
+                        "borderRight": [Function],
+                        "borderTop": [Function],
+                        "boxShadow": [Function],
+                        "color": [Function],
+                        "display": [Function],
+                        "flexGrow": [Function],
+                        "height": [Function],
+                        "m": [Function],
+                        "maxHeight": [Function],
+                        "maxWidth": [Function],
+                        "mb": [Function],
+                        "minHeight": [Function],
+                        "minWidth": [Function],
+                        "ml": [Function],
+                        "mr": [Function],
+                        "mt": [Function],
+                        "mx": [Function],
+                        "my": [Function],
+                        "order": [Function],
+                        "p": [Function],
+                        "pb": [Function],
+                        "pl": [Function],
+                        "position": [Function],
+                        "pr": [Function],
+                        "pt": [Function],
+                        "px": [Function],
+                        "py": [Function],
+                        "textAlign": [Function],
+                        "width": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-chPdSV",
+                      "target": "div",
+                      "toString": [Function],
+                      "usesTheme": false,
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  theme={
+                    Object {
+                      "borders": Array [],
+                      "breakpoints": Object {
+                        "extraLarge": "1920px",
+                        "extraSmall": "0px",
+                        "large": "1360px",
+                        "medium": "1024px",
+                        "small": "768px",
+                      },
+                      "colors": Object {
+                        "black": "#011e38",
+                        "blackBlue": "#122b47",
+                        "blue": "#216beb",
+                        "darkBlue": "#00438f",
+                        "darkGrey": "#434d59",
+                        "green": "#008059",
+                        "grey": "#c0c8d1",
+                        "lightBlue": "#e1ebfa",
+                        "lightGreen": "#e9f7f2",
+                        "lightGrey": "#e4e7eb",
+                        "lightRed": "#fae6ea",
+                        "lightYellow": "#fcf5e3",
+                        "red": "#cc1439",
+                        "white": "#ffffff",
+                        "whiteGrey": "#f0f2f5",
+                        "yellow": "#ffbb00",
+                      },
+                      "fontSizes": Object {
+                        "large": "20px",
+                        "larger": "26px",
+                        "largest": "46px",
+                        "medium": "16px",
+                        "small": "14px",
+                        "smaller": "12px",
+                      },
+                      "fontWeights": Object {
+                        "bold": "600",
+                        "light": "300",
+                        "medium": "500",
+                        "normal": "400",
+                      },
+                      "fonts": Object {
+                        "base": "'IBM Plex Sans', sans-serif",
+                        "mono": "'IBM Plex Mono', monospace",
+                      },
+                      "lineHeights": Object {
+                        "base": "1.5",
+                        "sectionTitle": "1.23076923",
+                        "smallTextBase": "1.71428571",
+                        "smallTextCompressed": "1.14285714",
+                        "smallerText": "1.33333333",
+                        "subsectionTitle": "1.2",
+                        "title": "1.04347826",
+                      },
+                      "radii": Object {
+                        "circle": "50%",
+                        "medium": "4px",
+                        "small": "2px",
+                      },
+                      "shadows": Object {
+                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                      },
+                      "space": Object {
+                        "half": "4px",
+                        "none": "0px",
+                        "x1": "8px",
+                        "x2": "16px",
+                        "x3": "24px",
+                        "x4": "32px",
+                        "x5": "40px",
+                        "x6": "48px",
+                        "x8": "64px",
+                      },
+                      "zIndex": Object {
+                        "content": 100,
+                        "overlay": 1000,
+                        "tabsBar": 210,
+                        "tabsScollIndicator": 200,
+                      },
+                    }
+                  }
+                >
+                  <div
+                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                  >
+                    <GlobalStyleComponent />
+                    <t
+                      allowSameDay={false}
+                      customInput={
+                        <ForwardRef
+                          dateFormat="MMM yyyy"
+                          inputProps={
+                            Object {
+                              "disabled": false,
+                              "error": false,
+                              "helpText": null,
+                              "icon": undefined,
+                              "labelText": null,
+                              "placeholder": "Mon YYYY",
+                              "prefix": null,
+                              "prefixAlignment": "left",
+                              "prefixWidth": null,
+                              "required": false,
+                              "requirementText": null,
+                              "suffix": null,
+                              "suffixAlignment": "left",
+                              "suffixWidth": null,
+                            }
+                          }
+                          onInputChange={[Function]}
+                        />
+                      }
+                      dateFormat="MMM yyyy"
+                      dateFormatCalendar="LLLL yyyy"
+                      disabled={false}
+                      disabledKeyboardNavigation={true}
+                      dropdownMode="scroll"
+                      excludeDates={
+                        Array [
+                          2019-07-10T05:00:00.000Z,
+                        ]
+                      }
+                      inlineFocusSelectedMonth={false}
+                      locale="uk"
+                      monthsShown={1}
+                      nextMonthButtonLabel="Next Month"
+                      nextYearButtonLabel={
+                        <ForwardRef
+                          disabled={false}
+                          icon="rightArrow"
+                          label="go to next year"
+                          onClick={null}
+                          size="32px"
+                          toggled={false}
+                        />
+                      }
+                      onBlur={[Function]}
+                      onCalendarClose={[Function]}
+                      onCalendarOpen={[Function]}
+                      onChange={[Function]}
+                      onClickOutside={[Function]}
+                      onFocus={[Function]}
+                      onInputClick={[Function]}
+                      onInputError={[Function]}
+                      onKeyDown={[Function]}
+                      onMonthChange={[Function]}
+                      onSelect={[Function]}
+                      onYearChange={[Function]}
+                      preventOpenOnFocus={false}
+                      previousMonthButtonLabel="Previous Month"
+                      previousYearButtonLabel={
+                        <ForwardRef
+                          disabled={false}
+                          icon="leftArrow"
+                          label="go to previous year"
+                          onClick={null}
+                          size="32px"
+                          toggled={false}
+                        />
+                      }
+                      readOnly={false}
+                      renderDayContents={[Function]}
+                      selected={2019-07-10T05:00:00.000Z}
+                      shouldCloseOnSelect={true}
+                      showMonthYearPicker={true}
+                      showPopperArrow={true}
+                      showPreviousMonths={false}
+                      showQuarterYearPicker={false}
+                      showTimeInput={false}
+                      showTimeSelect={false}
+                      strictParsing={true}
+                      timeCaption="Time"
+                      timeInputLabel="Time"
+                      timeIntervals={30}
+                      withPortal={false}
+                    >
+                      <t
+                        hidePopper={true}
+                        popperComponent={null}
+                        popperModifiers={
+                          Object {
+                            "preventOverflow": Object {
+                              "boundariesElement": "viewport",
+                              "enabled": true,
+                              "escapeWithReference": true,
+                            },
+                          }
+                        }
+                        popperPlacement="bottom-start"
+                        popperProps={Object {}}
+                        targetComponent={
+                          <div
+                            className="react-datepicker__input-container"
+                          >
+                            <ForwardRef
+                              className=""
+                              dateFormat="MMM yyyy"
+                              disabled={false}
+                              inputProps={
+                                Object {
+                                  "disabled": false,
+                                  "error": false,
+                                  "helpText": null,
+                                  "icon": undefined,
+                                  "labelText": null,
+                                  "placeholder": "Mon YYYY",
+                                  "prefix": null,
+                                  "prefixAlignment": "left",
+                                  "prefixWidth": null,
+                                  "required": false,
+                                  "requirementText": null,
+                                  "suffix": null,
+                                  "suffixAlignment": "left",
+                                  "suffixWidth": null,
+                                }
+                              }
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              onFocus={[Function]}
+                              onInputChange={[Function]}
+                              onKeyDown={[Function]}
+                              readOnly={false}
+                              value="лип. 2019"
+                            />
+                          </div>
+                        }
+                      >
+                        <Manager
+                          className="react-datepicker-manager"
+                        >
+                          <Reference>
+                            <InnerReference
+                              setReferenceNode={[Function]}
+                            >
+                              <div
+                                className="react-datepicker-wrapper"
+                              >
+                                <div
+                                  className="react-datepicker__input-container"
+                                >
+                                  <ForwardRef
+                                    className=""
+                                    dateFormat="MMM yyyy"
+                                    disabled={false}
+                                    inputProps={
+                                      Object {
+                                        "disabled": false,
+                                        "error": false,
+                                        "helpText": null,
+                                        "icon": undefined,
+                                        "labelText": null,
+                                        "placeholder": "Mon YYYY",
+                                        "prefix": null,
+                                        "prefixAlignment": "left",
+                                        "prefixWidth": null,
+                                        "required": false,
+                                        "requirementText": null,
+                                        "suffix": null,
+                                        "suffixAlignment": "left",
+                                        "suffixWidth": null,
+                                      }
+                                    }
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onFocus={[Function]}
+                                    onInputChange={[Function]}
+                                    onKeyDown={[Function]}
+                                    readOnly={false}
+                                    value="лип. 2019"
+                                  >
+                                    <ForwardRef
+                                      disabled={false}
+                                      error={false}
+                                      helpText={null}
+                                      icon="calendarToday"
+                                      labelText={null}
+                                      onChange={[Function]}
+                                      onClick={[Function]}
+                                      placeholder="Mon YYYY"
+                                      prefix={null}
+                                      prefixAlignment="left"
+                                      prefixWidth={null}
+                                      required={false}
+                                      requirementText={null}
+                                      suffix={null}
+                                      suffixAlignment="left"
+                                      suffixWidth={null}
+                                      value="лип. 2019"
+                                    >
+                                      <MaybeFieldLabel
+                                        helpText={null}
+                                        labelText={null}
+                                        requirementText={null}
+                                      >
+                                        <Styled(Box)
+                                          alignItems="flex-start"
+                                          theme={
+                                            Object {
+                                              "borders": Array [],
+                                              "breakpoints": Object {
+                                                "extraLarge": "1920px",
+                                                "extraSmall": "0px",
+                                                "large": "1360px",
+                                                "medium": "1024px",
+                                                "small": "768px",
+                                              },
+                                              "colors": Object {
+                                                "black": "#011e38",
+                                                "blackBlue": "#122b47",
+                                                "blue": "#216beb",
+                                                "darkBlue": "#00438f",
+                                                "darkGrey": "#434d59",
+                                                "green": "#008059",
+                                                "grey": "#c0c8d1",
+                                                "lightBlue": "#e1ebfa",
+                                                "lightGreen": "#e9f7f2",
+                                                "lightGrey": "#e4e7eb",
+                                                "lightRed": "#fae6ea",
+                                                "lightYellow": "#fcf5e3",
+                                                "red": "#cc1439",
+                                                "white": "#ffffff",
+                                                "whiteGrey": "#f0f2f5",
+                                                "yellow": "#ffbb00",
+                                              },
+                                              "fontSizes": Object {
+                                                "large": "20px",
+                                                "larger": "26px",
+                                                "largest": "46px",
+                                                "medium": "16px",
+                                                "small": "14px",
+                                                "smaller": "12px",
+                                              },
+                                              "fontWeights": Object {
+                                                "bold": "600",
+                                                "light": "300",
+                                                "medium": "500",
+                                                "normal": "400",
+                                              },
+                                              "fonts": Object {
+                                                "base": "'IBM Plex Sans', sans-serif",
+                                                "mono": "'IBM Plex Mono', monospace",
+                                              },
+                                              "lineHeights": Object {
+                                                "base": "1.5",
+                                                "sectionTitle": "1.23076923",
+                                                "smallTextBase": "1.71428571",
+                                                "smallTextCompressed": "1.14285714",
+                                                "smallerText": "1.33333333",
+                                                "subsectionTitle": "1.2",
+                                                "title": "1.04347826",
+                                              },
+                                              "radii": Object {
+                                                "circle": "50%",
+                                                "medium": "4px",
+                                                "small": "2px",
+                                              },
+                                              "shadows": Object {
+                                                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                              },
+                                              "space": Object {
+                                                "half": "4px",
+                                                "none": "0px",
+                                                "x1": "8px",
+                                                "x2": "16px",
+                                                "x3": "24px",
+                                                "x4": "32px",
+                                                "x5": "40px",
+                                                "x6": "48px",
+                                                "x8": "64px",
+                                              },
+                                              "zIndex": Object {
+                                                "content": 100,
+                                                "overlay": 1000,
+                                                "tabsBar": 210,
+                                                "tabsScollIndicator": 200,
+                                              },
+                                            }
+                                          }
+                                        >
+                                          <StyledComponent
+                                            alignItems="flex-start"
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "_foldedDefaultProps": Object {
+                                                  "theme": Object {
+                                                    "borders": Array [],
+                                                    "breakpoints": Object {
+                                                      "extraLarge": "1920px",
+                                                      "extraSmall": "0px",
+                                                      "large": "1360px",
+                                                      "medium": "1024px",
+                                                      "small": "768px",
+                                                    },
+                                                    "colors": Object {
+                                                      "black": "#011e38",
+                                                      "blackBlue": "#122b47",
+                                                      "blue": "#216beb",
+                                                      "darkBlue": "#00438f",
+                                                      "darkGrey": "#434d59",
+                                                      "green": "#008059",
+                                                      "grey": "#c0c8d1",
+                                                      "lightBlue": "#e1ebfa",
+                                                      "lightGreen": "#e9f7f2",
+                                                      "lightGrey": "#e4e7eb",
+                                                      "lightRed": "#fae6ea",
+                                                      "lightYellow": "#fcf5e3",
+                                                      "red": "#cc1439",
+                                                      "white": "#ffffff",
+                                                      "whiteGrey": "#f0f2f5",
+                                                      "yellow": "#ffbb00",
+                                                    },
+                                                    "fontSizes": Object {
+                                                      "large": "20px",
+                                                      "larger": "26px",
+                                                      "largest": "46px",
+                                                      "medium": "16px",
+                                                      "small": "14px",
+                                                      "smaller": "12px",
+                                                    },
+                                                    "fontWeights": Object {
+                                                      "bold": "600",
+                                                      "light": "300",
+                                                      "medium": "500",
+                                                      "normal": "400",
+                                                    },
+                                                    "fonts": Object {
+                                                      "base": "'IBM Plex Sans', sans-serif",
+                                                      "mono": "'IBM Plex Mono', monospace",
+                                                    },
+                                                    "lineHeights": Object {
+                                                      "base": "1.5",
+                                                      "sectionTitle": "1.23076923",
+                                                      "smallTextBase": "1.71428571",
+                                                      "smallTextCompressed": "1.14285714",
+                                                      "smallerText": "1.33333333",
+                                                      "subsectionTitle": "1.2",
+                                                      "title": "1.04347826",
+                                                    },
+                                                    "radii": Object {
+                                                      "circle": "50%",
+                                                      "medium": "4px",
+                                                      "small": "2px",
+                                                    },
+                                                    "shadows": Object {
+                                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                    },
+                                                    "space": Object {
+                                                      "half": "4px",
+                                                      "none": "0px",
+                                                      "x1": "8px",
+                                                      "x2": "16px",
+                                                      "x3": "24px",
+                                                      "x4": "32px",
+                                                      "x5": "40px",
+                                                      "x6": "48px",
+                                                      "x8": "64px",
+                                                    },
+                                                    "zIndex": Object {
+                                                      "content": 100,
+                                                      "overlay": 1000,
+                                                      "tabsBar": 210,
+                                                      "tabsScollIndicator": 200,
+                                                    },
+                                                  },
+                                                },
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-bdVaJa",
+                                                  "isStatic": false,
+                                                  "lastClassName": "ieTDsx",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    "display: flex;",
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                    [Function],
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Box)",
+                                                "foldedComponentIds": Array [
+                                                  "Box-sc-1qu1edy-0",
+                                                ],
+                                                "propTypes": Object {
+                                                  "alignItems": [Function],
+                                                  "flexDirection": [Function],
+                                                  "flexWrap": [Function],
+                                                  "justifyContent": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-bdVaJa",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "usesTheme": false,
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            theme={
+                                              Object {
+                                                "borders": Array [],
+                                                "breakpoints": Object {
+                                                  "extraLarge": "1920px",
+                                                  "extraSmall": "0px",
+                                                  "large": "1360px",
+                                                  "medium": "1024px",
+                                                  "small": "768px",
+                                                },
+                                                "colors": Object {
+                                                  "black": "#011e38",
+                                                  "blackBlue": "#122b47",
+                                                  "blue": "#216beb",
+                                                  "darkBlue": "#00438f",
+                                                  "darkGrey": "#434d59",
+                                                  "green": "#008059",
+                                                  "grey": "#c0c8d1",
+                                                  "lightBlue": "#e1ebfa",
+                                                  "lightGreen": "#e9f7f2",
+                                                  "lightGrey": "#e4e7eb",
+                                                  "lightRed": "#fae6ea",
+                                                  "lightYellow": "#fcf5e3",
+                                                  "red": "#cc1439",
+                                                  "white": "#ffffff",
+                                                  "whiteGrey": "#f0f2f5",
+                                                  "yellow": "#ffbb00",
+                                                },
+                                                "fontSizes": Object {
+                                                  "large": "20px",
+                                                  "larger": "26px",
+                                                  "largest": "46px",
+                                                  "medium": "16px",
+                                                  "small": "14px",
+                                                  "smaller": "12px",
+                                                },
+                                                "fontWeights": Object {
+                                                  "bold": "600",
+                                                  "light": "300",
+                                                  "medium": "500",
+                                                  "normal": "400",
+                                                },
+                                                "fonts": Object {
+                                                  "base": "'IBM Plex Sans', sans-serif",
+                                                  "mono": "'IBM Plex Mono', monospace",
+                                                },
+                                                "lineHeights": Object {
+                                                  "base": "1.5",
+                                                  "sectionTitle": "1.23076923",
+                                                  "smallTextBase": "1.71428571",
+                                                  "smallTextCompressed": "1.14285714",
+                                                  "smallerText": "1.33333333",
+                                                  "subsectionTitle": "1.2",
+                                                  "title": "1.04347826",
+                                                },
+                                                "radii": Object {
+                                                  "circle": "50%",
+                                                  "medium": "4px",
+                                                  "small": "2px",
+                                                },
+                                                "shadows": Object {
+                                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                },
+                                                "space": Object {
+                                                  "half": "4px",
+                                                  "none": "0px",
+                                                  "x1": "8px",
+                                                  "x2": "16px",
+                                                  "x3": "24px",
+                                                  "x4": "32px",
+                                                  "x5": "40px",
+                                                  "x6": "48px",
+                                                  "x8": "64px",
+                                                },
+                                                "zIndex": Object {
+                                                  "content": 100,
+                                                  "overlay": 1000,
+                                                  "tabsBar": 210,
+                                                  "tabsScollIndicator": 200,
+                                                },
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="Box-sc-1qu1edy-0 sc-bdVaJa ieTDsx"
+                                            >
+                                              <Prefix
+                                                prefix={null}
+                                                prefixWidth={null}
+                                                textAlign="left"
+                                              />
+                                              <Box
+                                                display="flex"
+                                                flexGrow="1"
+                                                position="relative"
+                                                theme={
+                                                  Object {
+                                                    "borders": Array [],
+                                                    "breakpoints": Object {
+                                                      "extraLarge": "1920px",
+                                                      "extraSmall": "0px",
+                                                      "large": "1360px",
+                                                      "medium": "1024px",
+                                                      "small": "768px",
+                                                    },
+                                                    "colors": Object {
+                                                      "black": "#011e38",
+                                                      "blackBlue": "#122b47",
+                                                      "blue": "#216beb",
+                                                      "darkBlue": "#00438f",
+                                                      "darkGrey": "#434d59",
+                                                      "green": "#008059",
+                                                      "grey": "#c0c8d1",
+                                                      "lightBlue": "#e1ebfa",
+                                                      "lightGreen": "#e9f7f2",
+                                                      "lightGrey": "#e4e7eb",
+                                                      "lightRed": "#fae6ea",
+                                                      "lightYellow": "#fcf5e3",
+                                                      "red": "#cc1439",
+                                                      "white": "#ffffff",
+                                                      "whiteGrey": "#f0f2f5",
+                                                      "yellow": "#ffbb00",
+                                                    },
+                                                    "fontSizes": Object {
+                                                      "large": "20px",
+                                                      "larger": "26px",
+                                                      "largest": "46px",
+                                                      "medium": "16px",
+                                                      "small": "14px",
+                                                      "smaller": "12px",
+                                                    },
+                                                    "fontWeights": Object {
+                                                      "bold": "600",
+                                                      "light": "300",
+                                                      "medium": "500",
+                                                      "normal": "400",
+                                                    },
+                                                    "fonts": Object {
+                                                      "base": "'IBM Plex Sans', sans-serif",
+                                                      "mono": "'IBM Plex Mono', monospace",
+                                                    },
+                                                    "lineHeights": Object {
+                                                      "base": "1.5",
+                                                      "sectionTitle": "1.23076923",
+                                                      "smallTextBase": "1.71428571",
+                                                      "smallTextCompressed": "1.14285714",
+                                                      "smallerText": "1.33333333",
+                                                      "subsectionTitle": "1.2",
+                                                      "title": "1.04347826",
+                                                    },
+                                                    "radii": Object {
+                                                      "circle": "50%",
+                                                      "medium": "4px",
+                                                      "small": "2px",
+                                                    },
+                                                    "shadows": Object {
+                                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                    },
+                                                    "space": Object {
+                                                      "half": "4px",
+                                                      "none": "0px",
+                                                      "x1": "8px",
+                                                      "x2": "16px",
+                                                      "x3": "24px",
+                                                      "x4": "32px",
+                                                      "x5": "40px",
+                                                      "x6": "48px",
+                                                      "x8": "64px",
+                                                    },
+                                                    "zIndex": Object {
+                                                      "content": 100,
+                                                      "overlay": 1000,
+                                                      "tabsBar": 210,
+                                                      "tabsScollIndicator": 200,
+                                                    },
+                                                  }
+                                                }
+                                              >
+                                                <StyledComponent
+                                                  display="flex"
+                                                  flexGrow="1"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "_foldedDefaultProps": Object {
+                                                        "theme": Object {
+                                                          "borders": Array [],
+                                                          "breakpoints": Object {
+                                                            "extraLarge": "1920px",
+                                                            "extraSmall": "0px",
+                                                            "large": "1360px",
+                                                            "medium": "1024px",
+                                                            "small": "768px",
+                                                          },
+                                                          "colors": Object {
+                                                            "black": "#011e38",
+                                                            "blackBlue": "#122b47",
+                                                            "blue": "#216beb",
+                                                            "darkBlue": "#00438f",
+                                                            "darkGrey": "#434d59",
+                                                            "green": "#008059",
+                                                            "grey": "#c0c8d1",
+                                                            "lightBlue": "#e1ebfa",
+                                                            "lightGreen": "#e9f7f2",
+                                                            "lightGrey": "#e4e7eb",
+                                                            "lightRed": "#fae6ea",
+                                                            "lightYellow": "#fcf5e3",
+                                                            "red": "#cc1439",
+                                                            "white": "#ffffff",
+                                                            "whiteGrey": "#f0f2f5",
+                                                            "yellow": "#ffbb00",
+                                                          },
+                                                          "fontSizes": Object {
+                                                            "large": "20px",
+                                                            "larger": "26px",
+                                                            "largest": "46px",
+                                                            "medium": "16px",
+                                                            "small": "14px",
+                                                            "smaller": "12px",
+                                                          },
+                                                          "fontWeights": Object {
+                                                            "bold": "600",
+                                                            "light": "300",
+                                                            "medium": "500",
+                                                            "normal": "400",
+                                                          },
+                                                          "fonts": Object {
+                                                            "base": "'IBM Plex Sans', sans-serif",
+                                                            "mono": "'IBM Plex Mono', monospace",
+                                                          },
+                                                          "lineHeights": Object {
+                                                            "base": "1.5",
+                                                            "sectionTitle": "1.23076923",
+                                                            "smallTextBase": "1.71428571",
+                                                            "smallTextCompressed": "1.14285714",
+                                                            "smallerText": "1.33333333",
+                                                            "subsectionTitle": "1.2",
+                                                            "title": "1.04347826",
+                                                          },
+                                                          "radii": Object {
+                                                            "circle": "50%",
+                                                            "medium": "4px",
+                                                            "small": "2px",
+                                                          },
+                                                          "shadows": Object {
+                                                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                          },
+                                                          "space": Object {
+                                                            "half": "4px",
+                                                            "none": "0px",
+                                                            "x1": "8px",
+                                                            "x2": "16px",
+                                                            "x3": "24px",
+                                                            "x4": "32px",
+                                                            "x5": "40px",
+                                                            "x6": "48px",
+                                                            "x8": "64px",
+                                                          },
+                                                          "zIndex": Object {
+                                                            "content": 100,
+                                                            "overlay": 1000,
+                                                            "tabsBar": 210,
+                                                            "tabsScollIndicator": 200,
+                                                          },
+                                                        },
+                                                      },
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "Box-sc-1qu1edy-0",
+                                                        "isStatic": false,
+                                                        "lastClassName": "iylGA",
+                                                        "rules": Array [
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                          [Function],
+                                                        ],
+                                                      },
+                                                      "displayName": "Box",
+                                                      "foldedComponentIds": Array [],
+                                                      "propTypes": Object {
+                                                        "bg": [Function],
+                                                        "border": [Function],
+                                                        "borderBottom": [Function],
+                                                        "borderLeft": [Function],
+                                                        "borderRadius": [Function],
+                                                        "borderRight": [Function],
+                                                        "borderTop": [Function],
+                                                        "boxShadow": [Function],
+                                                        "color": [Function],
+                                                        "display": [Function],
+                                                        "flexGrow": [Function],
+                                                        "height": [Function],
+                                                        "m": [Function],
+                                                        "maxHeight": [Function],
+                                                        "maxWidth": [Function],
+                                                        "mb": [Function],
+                                                        "minHeight": [Function],
+                                                        "minWidth": [Function],
+                                                        "ml": [Function],
+                                                        "mr": [Function],
+                                                        "mt": [Function],
+                                                        "mx": [Function],
+                                                        "my": [Function],
+                                                        "order": [Function],
+                                                        "p": [Function],
+                                                        "pb": [Function],
+                                                        "pl": [Function],
+                                                        "position": [Function],
+                                                        "pr": [Function],
+                                                        "pt": [Function],
+                                                        "px": [Function],
+                                                        "py": [Function],
+                                                        "textAlign": [Function],
+                                                        "width": [Function],
+                                                      },
+                                                      "render": [Function],
+                                                      "styledComponentId": "Box-sc-1qu1edy-0",
+                                                      "target": "div",
+                                                      "toString": [Function],
+                                                      "usesTheme": false,
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={[Function]}
+                                                  position="relative"
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 iylGA"
+                                                    display="flex"
+                                                  >
+                                                    <InputField__StyledInput
+                                                      aria-invalid={false}
+                                                      aria-required={false}
+                                                      disabled={false}
+                                                      error={false}
+                                                      onChange={[Function]}
+                                                      onClick={[Function]}
+                                                      placeholder="Mon YYYY"
+                                                      required={false}
+                                                      value="лип. 2019"
+                                                    >
+                                                      <StyledComponent
+                                                        aria-invalid={false}
+                                                        aria-required={false}
+                                                        disabled={false}
+                                                        error={false}
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "InputField__StyledInput-sc-6cu4mg-0",
+                                                              "isStatic": false,
+                                                              "lastClassName": "iDpjn",
+                                                              "rules": Array [
+                                                                "display: block;",
+                                                                "flex-grow: 1;",
+                                                                "border: 1px solid;",
+                                                                "border-radius: 4px;",
+                                                                "padding: 7px;",
+                                                                "font-size: 16px;",
+                                                                "font-family: 'IBM Plex Sans', sans-serif;",
+                                                                "line-height: 1.5;",
+                                                                "margin: 0px;",
+                                                                "min-height: 40px;",
+                                                                "&:focus {",
+                                                                "outline: none;",
+                                                                "color: #011e38;",
+                                                                "border-color: #216beb;",
+                                                                "box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, .9);",
+                                                                " ~ svg {",
+                                                                "fill: #00438f;",
+                                                                "}",
+                                                                "}",
+                                                                "::placeholder {",
+                                                                "color: rgba(1,30,56,0.6);",
+                                                                "}",
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "displayName": "InputField__StyledInput",
+                                                            "foldedComponentIds": Array [],
+                                                            "render": [Function],
+                                                            "styledComponentId": "InputField__StyledInput-sc-6cu4mg-0",
+                                                            "target": "input",
+                                                            "toString": [Function],
+                                                            "usesTheme": false,
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        onChange={[Function]}
+                                                        onClick={[Function]}
+                                                        placeholder="Mon YYYY"
+                                                        required={false}
+                                                        value="лип. 2019"
+                                                      >
+                                                        <input
+                                                          aria-invalid={false}
+                                                          aria-required={false}
+                                                          className="InputField__StyledInput-sc-6cu4mg-0 iDpjn"
+                                                          disabled={false}
+                                                          onChange={[Function]}
+                                                          onClick={[Function]}
+                                                          placeholder="Mon YYYY"
+                                                          required={false}
+                                                          value="лип. 2019"
+                                                        />
+                                                      </StyledComponent>
+                                                    </InputField__StyledInput>
+                                                    <Styled(Styled(Component))
+                                                      color="currentColor"
+                                                      icon="calendarToday"
+                                                      size="16px"
+                                                      title={null}
+                                                    >
+                                                      <StyledComponent
+                                                        color="currentColor"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "_foldedDefaultProps": Object {
+                                                              "color": "currentColor",
+                                                              "size": "24px",
+                                                              "title": null,
+                                                            },
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-dxgOiQ",
+                                                              "isStatic": false,
+                                                              "lastClassName": "WupFx",
+                                                              "rules": Array [
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                                "position: absolute;",
+                                                                "right: 8px;",
+                                                                "color: #434d59;",
+                                                                "bottom: 50%;",
+                                                                "transform: translateY(50%);",
+                                                                "pointer-events: none;",
+                                                              ],
+                                                            },
+                                                            "displayName": "Styled(Styled(Component))",
+                                                            "foldedComponentIds": Array [
+                                                              "sc-bwzfXH",
+                                                            ],
+                                                            "propTypes": Object {
+                                                              "color": [Function],
+                                                              "icon": [Function],
+                                                              "size": [Function],
+                                                              "title": [Function],
+                                                            },
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-dxgOiQ",
+                                                            "target": Object {
+                                                              "$$typeof": Symbol(react.forward_ref),
+                                                              "defaultProps": Object {
+                                                                "className": undefined,
+                                                                "color": "currentColor",
+                                                                "focusable": false,
+                                                                "size": "24px",
+                                                                "title": null,
+                                                              },
+                                                              "propTypes": Object {
+                                                                "className": [Function],
+                                                                "color": [Function],
+                                                                "focusable": [Function],
+                                                                "icon": [Function],
+                                                                "size": [Function],
+                                                                "title": [Function],
+                                                              },
+                                                              "render": [Function],
+                                                            },
+                                                            "toString": [Function],
+                                                            "usesTheme": false,
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        icon="calendarToday"
+                                                        size="16px"
+                                                        title={null}
+                                                      >
+                                                        <ForwardRef
+                                                          className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                          color="currentColor"
+                                                          focusable={false}
+                                                          icon="calendarToday"
+                                                          size="16px"
+                                                          title={null}
+                                                        >
+                                                          <svg
+                                                            aria-hidden={true}
+                                                            className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                            color="currentColor"
+                                                            fill="currentColor"
+                                                            focusable={false}
+                                                            height="16px"
+                                                            icon="calendarToday"
+                                                            size="16px"
+                                                            title={null}
+                                                            viewBox="0 0 24 24"
+                                                            width="16px"
+                                                          >
+                                                            <path
+                                                              d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                                                              key="0"
+                                                            />
+                                                          </svg>
+                                                        </ForwardRef>
+                                                      </StyledComponent>
+                                                    </Styled(Styled(Component))>
+                                                  </div>
+                                                </StyledComponent>
+                                              </Box>
+                                              <Suffix
+                                                suffix={null}
+                                                suffixWidth={null}
+                                                textAlign="left"
+                                              />
+                                            </div>
+                                          </StyledComponent>
+                                        </Styled(Box)>
+                                      </MaybeFieldLabel>
+                                    </ForwardRef>
+                                  </ForwardRef>
+                                </div>
+                              </div>
+                            </InnerReference>
+                          </Reference>
+                        </Manager>
+                      </t>
+                    </t>
+                    <InlineValidation
+                      errorList={null}
+                      errorMessage={null}
+                      mt="x1"
+                    />
+                  </div>
+                </StyledComponent>
+              </Styled(Box)>
+            </MonthPicker>
+          </ThemeProvider>
+        </div>
+      </StyledComponent>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
 exports[`Storyshots MonthPicker default 1`] = `
 <div
   style={
