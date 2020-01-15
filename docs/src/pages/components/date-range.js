@@ -148,6 +148,19 @@ export default () => (
       </Highlight>
     </DocSection>
     <DocSection>
+      <SectionTitle>Date Range with Times</SectionTitle>
+      <DateRange showTimes />
+      <Highlight className="js">
+        {`import { DateRange } from "@nulogy/components";
+
+<DateRange
+        showTimes
+        onRangeChange={(val) => val}
+      />
+`}
+      </Highlight>
+    </DocSection>
+    <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
     </DocSection>
