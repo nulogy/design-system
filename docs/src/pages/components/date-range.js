@@ -18,7 +18,6 @@ import {
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
 import fieldLabelProps from "../../shared/fieldLabelProps";
-import { timePickerProps } from "../../shared/timePickerProps";
 
 const propsRows = [
   {
@@ -110,16 +109,41 @@ const propsRows = [
       "Shows time pickers next to the date inputs so that a times can be selected."
   },
   {
-    name: "startTimeProps",
-    type: "Object<TimePickerProps>",
-    defaultValue: "null",
-    description: "Exposes all time picker props for the start time input."
+    name: "minTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The earliest time that can be selected."
   },
   {
-    name: "endTimeProps",
-    type: "Object<TimePickerProps>",
-    defaultValue: "null",
-    description: "Exposes all time picker props for the end time input."
+    name: "defaultStartTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The default start date."
+  },
+  {
+    name: "defaultEndTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The default end date."
+  },
+  {
+    name: "maxTime",
+    type: "24 hour time string e.g: 02:30",
+    defaultValue: "undefined",
+    description: "The latest time that can be selected."
+  },
+  {
+    name: "timeFormat",
+    type: "String",
+    defaultValue: "hh:mm aa",
+    description:
+      "The default date format (see date-fns for available date formats)"
+  },
+  {
+    name: "interval",
+    type: "Number",
+    defaultValue: "15",
+    description: "The time difference in minutes between the time options"
   }
 ];
 
@@ -171,10 +195,6 @@ export default () => (
     <DocSection>
       <SectionTitle>Label Props</SectionTitle>
       <PropsTable propsRows={fieldLabelProps} />
-    </DocSection>
-    <DocSection>
-      <SectionTitle>Time Picker Props</SectionTitle>
-      <PropsTable propsRows={timePickerProps} />
     </DocSection>
 
     <DocSection>

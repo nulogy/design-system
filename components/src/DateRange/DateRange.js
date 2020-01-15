@@ -11,7 +11,6 @@ import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { TimePicker } from "../TimePicker";
 import theme from "../theme";
 import { getDuration } from "../TimeRange/TimeRange.utils";
-import { TimePickerPropTypes, TimePickerDefaultProps } from "../TimePicker/TimePicker.type";
 
 const StyledStartTime = styled(TimePicker)({
   marginLeft: theme.space.x1
@@ -38,11 +37,15 @@ const DateRange = ({
   minDate,
   maxDate,
   showTimes,
-  startTimeProps,
-  endTimeProps
+  minTime,
+  maxTime,
+  defaultStartTime,
+  defaultEndTime,
+  onStartTimeChange,
+  onEndTimeChange,
+  timeFormat,
+  interval
 }) => {
-  const defaultStartTime = startTimeProps ? startTimeProps.defaultValue : null;
-  const defaultEndTime = endTimeProps ? endTimeProps.defaultValue : null;
   const [startDate, setStartDate] = useState(defaultStartDate);
   const [endDate, setEndDate] = useState(defaultEndDate);
   const [startTime, setStartTime] = useState(defaultStartTime);
@@ -64,9 +67,15 @@ const DateRange = ({
 
   const changeStartTimeHandler = time => {
     setStartTime(time);
+    if (onStartTimeChange) {
+      onEndDateChange(time);
+    }
   };
   const changeEndTimeHandler = time => {
     setEndTime(time);
+    if (onEndTimeChange) {
+      onEndDateChange(time);
+    }
   };
 
   const validateDateRange = () => {
@@ -106,13 +115,33 @@ const DateRange = ({
         maxDate={maxDate}
         highlightDates={highlightDates(startDate, endDate)}
       />
-      {showTimes && <StyledStartTime {...startTimeProps} onChange={changeStartTimeHandler} />}
+      {showTimes && (
+        <StyledStartTime
+          selected={startTime}
+          defaultValue={defaultStartTime}
+          minTime={minTime}
+          maxTime={maxTime}
+          timeFormat={timeFormat}
+          interval={interval}
+          onChange={changeStartTimeHandler}
+        />
+      )}
     </>
   );
 
   const endDateInput = (
     <>
-      {showTimes && <StyledEndTime {...endTimeProps} onChange={changeEndTimeHandler} />}
+      {showTimes && (
+        <StyledEndTime
+          selected={endTime}
+          defaultValue={defaultEndTime}
+          minTime={minTime}
+          maxTime={maxTime}
+          timeFormat={timeFormat}
+          interval={interval}
+          onChange={changeEndTimeHandler}
+        />
+      )}
       <DatePicker
         dateFormat={dateFormat}
         selected={endDate}
@@ -160,8 +189,14 @@ DateRange.propTypes = {
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
   showTimes: PropTypes.bool,
-  startTimeProps: PropTypes.shape(TimePickerPropTypes),
-  endTimeProps: PropTypes.shape(TimePickerPropTypes)
+  minTime: PropTypes.string,
+  maxTime: PropTypes.string,
+  defaultStartTime: PropTypes.string,
+  defaultEndTime: PropTypes.string,
+  onStartTimeChange: PropTypes.func,
+  onEndTimeChange: PropTypes.func,
+  timeFormat: PropTypes.string,
+  interval: PropTypes.number
 };
 
 DateRange.defaultProps = {
@@ -184,8 +219,14 @@ DateRange.defaultProps = {
   minDate: null,
   maxDate: null,
   showTimes: false,
-  startTimeProps: TimePickerDefaultProps,
-  endTimeProps: TimePickerDefaultProps
+  minTime: null,
+  maxTime: null,
+  defaultStartTime: null,
+  defaultEndTime: null,
+  onStartTimeChange: null,
+  onEndTimeChange: null,
+  timeFormat: undefined,
+  interval: undefined
 };
 
 export default DateRange;

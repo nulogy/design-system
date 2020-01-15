@@ -76,12 +76,8 @@ storiesOf("DateRange", module)
       defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
       defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
       showTimes
-      startTimeProps={{
-        defaultValue: "03:30"
-      }}
-      endTimeProps={{
-        defaultValue: "13:30"
-      }}
+      defaultStartTime="03:30"
+      defaultEndTime="13:30"
     />
   ))
   .add("with time error", () => (
@@ -92,11 +88,7 @@ storiesOf("DateRange", module)
       defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
       defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
       showTimes
-      startTimeProps={{
-        defaultValue: "13:30"
-      }}
-      endTimeProps={{
-        defaultValue: "10:30"
-      }}
+      defaultStartTime="13:30"
+      defaultEndTime="10:30"
     />
   ));

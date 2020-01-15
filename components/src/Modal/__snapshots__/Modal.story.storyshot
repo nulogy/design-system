@@ -10684,7 +10684,7 @@ exports[`Storyshots Modal with select 1`] = `
                                           class=" css-2b097c-container"
                                         >
                                           <div
-                                            class=" css-c03r69-Control"
+                                            class=" css-1lwloy1-Control"
                                           >
                                             <div
                                               class=" css-7zc8my"
@@ -13094,6 +13094,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                         "borderColor": "#c0c8d1",
                                                                                         "borderRadius": "4px",
                                                                                         "boxShadow": null,
+                                                                                        "boxSizing": "border-box",
                                                                                         "display": "flex",
                                                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                                                         "fontSize": "16px",
@@ -13108,7 +13109,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                     onTouchEnd={[Function]}
                                                                                   >
                                                                                     <div
-                                                                                      className=" css-c03r69-Control"
+                                                                                      className=" css-1lwloy1-Control"
                                                                                       onMouseDown={[Function]}
                                                                                       onTouchEnd={[Function]}
                                                                                     >
@@ -15716,7 +15717,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class=" css-2b097c-container"
                                         >
                                           <div
-                                            class=" css-c03r69-Control"
+                                            class=" css-1lwloy1-Control"
                                           >
                                             <div
                                               class=" css-7zc8my"
@@ -27819,6 +27820,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                         "borderColor": "#c0c8d1",
                                                                                         "borderRadius": "4px",
                                                                                         "boxShadow": null,
+                                                                                        "boxSizing": "border-box",
                                                                                         "display": "flex",
                                                                                         "fontFamily": "'IBM Plex Sans', sans-serif",
                                                                                         "fontSize": "16px",
@@ -27833,7 +27835,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                     onTouchEnd={[Function]}
                                                                                   >
                                                                                     <div
-                                                                                      className=" css-c03r69-Control"
+                                                                                      className=" css-1lwloy1-Control"
                                                                                       onMouseDown={[Function]}
                                                                                       onTouchEnd={[Function]}
                                                                                     >

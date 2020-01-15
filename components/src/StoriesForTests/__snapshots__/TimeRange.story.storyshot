@@ -3621,6 +3621,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                       "borderColor": "#c0c8d1",
                                                       "borderRadius": "4px",
                                                       "boxShadow": null,
+                                                      "boxSizing": "border-box",
                                                       "display": "flex",
                                                       "fontFamily": "'IBM Plex Sans', sans-serif",
                                                       "fontSize": "16px",
@@ -3635,7 +3636,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                   onTouchEnd={[Function]}
                                                 >
                                                   <div
-                                                    className=" css-c03r69-Control"
+                                                    className=" css-1lwloy1-Control"
                                                     onMouseDown={[Function]}
                                                     onTouchEnd={[Function]}
                                                   >
@@ -4550,7 +4551,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                             autoCorrect="off"
                                                             cx={[Function]}
                                                             getStyles={[Function]}
-                                                            id="react-select-35-input"
+                                                            id="react-select-37-input"
                                                             innerRef={[Function]}
                                                             isDisabled={null}
                                                             isHidden={false}
@@ -4845,7 +4846,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                   autoCorrect="off"
                                                                   className=""
                                                                   disabled={null}
-                                                                  id="react-select-35-input"
+                                                                  id="react-select-37-input"
                                                                   injectStyles={true}
                                                                   inputRef={[Function]}
                                                                   inputStyle={
@@ -4883,7 +4884,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                       autoComplete="off"
                                                                       autoCorrect="off"
                                                                       disabled={null}
-                                                                      id="react-select-35-input"
+                                                                      id="react-select-37-input"
                                                                       onBlur={[Function]}
                                                                       onChange={[Function]}
                                                                       onFocus={[Function]}
@@ -6740,7 +6741,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                   <Styled(Styled(Component))
                                                                     color="currentColor"
                                                                     icon="queryBuilder"
-                                                                    size="24px"
+                                                                    size="22px"
                                                                     title={null}
                                                                   >
                                                                     <StyledComponent
@@ -6757,7 +6758,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-hzDkRC",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "jVaXaN",
+                                                                            "lastClassName": "fnmYIy",
                                                                             "rules": Array [
                                                                               [Function],
                                                                               [Function],
@@ -6807,29 +6808,29 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                       }
                                                                       forwardedRef={null}
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <ForwardRef
-                                                                        className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                        className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                         color="currentColor"
                                                                         focusable={false}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <svg
                                                                           aria-hidden={true}
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           fill="currentColor"
                                                                           focusable={false}
-                                                                          height="24px"
+                                                                          height="22px"
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                           viewBox="0 0 24 24"
-                                                                          width="24px"
+                                                                          width="22px"
                                                                         >
                                                                           <path
                                                                             d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
@@ -9627,6 +9628,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                       "borderColor": "#c0c8d1",
                                                       "borderRadius": "4px",
                                                       "boxShadow": null,
+                                                      "boxSizing": "border-box",
                                                       "display": "flex",
                                                       "fontFamily": "'IBM Plex Sans', sans-serif",
                                                       "fontSize": "16px",
@@ -9641,7 +9643,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                   onTouchEnd={[Function]}
                                                 >
                                                   <div
-                                                    className=" css-c03r69-Control"
+                                                    className=" css-1lwloy1-Control"
                                                     onMouseDown={[Function]}
                                                     onTouchEnd={[Function]}
                                                   >
@@ -10556,7 +10558,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                             autoCorrect="off"
                                                             cx={[Function]}
                                                             getStyles={[Function]}
-                                                            id="react-select-36-input"
+                                                            id="react-select-38-input"
                                                             innerRef={[Function]}
                                                             isDisabled={null}
                                                             isHidden={false}
@@ -10851,7 +10853,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                   autoCorrect="off"
                                                                   className=""
                                                                   disabled={null}
-                                                                  id="react-select-36-input"
+                                                                  id="react-select-38-input"
                                                                   injectStyles={true}
                                                                   inputRef={[Function]}
                                                                   inputStyle={
@@ -10889,7 +10891,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                       autoComplete="off"
                                                                       autoCorrect="off"
                                                                       disabled={null}
-                                                                      id="react-select-36-input"
+                                                                      id="react-select-38-input"
                                                                       onBlur={[Function]}
                                                                       onChange={[Function]}
                                                                       onFocus={[Function]}
@@ -12746,7 +12748,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                   <Styled(Styled(Component))
                                                                     color="currentColor"
                                                                     icon="queryBuilder"
-                                                                    size="24px"
+                                                                    size="22px"
                                                                     title={null}
                                                                   >
                                                                     <StyledComponent
@@ -12763,7 +12765,7 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-hzDkRC",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "jVaXaN",
+                                                                            "lastClassName": "fnmYIy",
                                                                             "rules": Array [
                                                                               [Function],
                                                                               [Function],
@@ -12813,29 +12815,29 @@ exports[`Storyshots StoriesForTests/TimeRange default 1`] = `
                                                                       }
                                                                       forwardedRef={null}
                                                                       icon="queryBuilder"
-                                                                      size="24px"
+                                                                      size="22px"
                                                                       title={null}
                                                                     >
                                                                       <ForwardRef
-                                                                        className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                        className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                         color="currentColor"
                                                                         focusable={false}
                                                                         icon="queryBuilder"
-                                                                        size="24px"
+                                                                        size="22px"
                                                                         title={null}
                                                                       >
                                                                         <svg
                                                                           aria-hidden={true}
-                                                                          className="sc-bwzfXH sc-hzDkRC jVaXaN"
+                                                                          className="sc-bwzfXH sc-hzDkRC fnmYIy"
                                                                           color="currentColor"
                                                                           fill="currentColor"
                                                                           focusable={false}
-                                                                          height="24px"
+                                                                          height="22px"
                                                                           icon="queryBuilder"
-                                                                          size="24px"
+                                                                          size="22px"
                                                                           title={null}
                                                                           viewBox="0 0 24 24"
-                                                                          width="24px"
+                                                                          width="22px"
                                                                         >
                                                                           <path
                                                                             d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"

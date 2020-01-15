@@ -16,7 +16,8 @@ const TimeRange = ({
   disableRangeValidation,
   labelProps,
   minTime,
-  maxTime
+  maxTime,
+  interval
 }) => {
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
@@ -62,6 +63,7 @@ const TimeRange = ({
       onChange={changeStartTimeHandler}
       minTime={minTime}
       maxTime={endTime || maxTime}
+      interval={interval}
     />
   );
 
@@ -73,6 +75,7 @@ const TimeRange = ({
       onChange={changeEndTimeHandler}
       maxTime={maxTime}
       minTime={startTime || minTime}
+      interval={interval}
     />
   );
 
@@ -102,7 +105,8 @@ TimeRange.propTypes = {
   disableRangeValidation: PropTypes.bool,
   labelProps: PropTypes.shape(FieldLabelProps),
   minTime: PropTypes.string,
-  maxTime: PropTypes.string
+  maxTime: PropTypes.string,
+  interval: PropTypes.number
 };
 
 TimeRange.defaultProps = {
@@ -119,7 +123,8 @@ TimeRange.defaultProps = {
     labelText: "Time Range"
   },
   minTime: null,
-  maxTime: null
+  maxTime: null,
+  interval: undefined
 };
 
 export default TimeRange;
