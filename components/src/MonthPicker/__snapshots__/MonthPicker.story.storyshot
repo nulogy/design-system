@@ -407,7 +407,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                   "suffixWidth": null,
                 }
               }
-              locale="uk"
+              locale="pl"
               selected={2019-07-10T05:00:00.000Z}
             >
               <Styled(Box)
@@ -794,7 +794,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                         ]
                       }
                       inlineFocusSelectedMonth={false}
-                      locale="uk"
+                      locale="pl"
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel={
@@ -894,7 +894,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                               onInputChange={[Function]}
                               onKeyDown={[Function]}
                               readOnly={false}
-                              value="лип. 2019"
+                              value="lip 2019"
                             />
                           </div>
                         }
@@ -941,7 +941,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                     onInputChange={[Function]}
                                     onKeyDown={[Function]}
                                     readOnly={false}
-                                    value="лип. 2019"
+                                    value="lip 2019"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -960,7 +960,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                       suffix={null}
                                       suffixAlignment="left"
                                       suffixWidth={null}
-                                      value="лип. 2019"
+                                      value="lip 2019"
                                     >
                                       <MaybeFieldLabel
                                         helpText={null}
@@ -1649,7 +1649,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                       onClick={[Function]}
                                                       placeholder="Mon YYYY"
                                                       required={false}
-                                                      value="лип. 2019"
+                                                      value="lip 2019"
                                                     >
                                                       <StyledComponent
                                                         aria-invalid={false}
@@ -1707,7 +1707,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                         onClick={[Function]}
                                                         placeholder="Mon YYYY"
                                                         required={false}
-                                                        value="лип. 2019"
+                                                        value="lip 2019"
                                                       >
                                                         <input
                                                           aria-invalid={false}
@@ -1718,7 +1718,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                           onClick={[Function]}
                                                           placeholder="Mon YYYY"
                                                           required={false}
-                                                          value="лип. 2019"
+                                                          value="lip 2019"
                                                         />
                                                       </StyledComponent>
                                                     </InputField__StyledInput>

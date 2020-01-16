@@ -9423,7 +9423,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                   "labelText": "Expiry Date",
                 }
               }
-              locale="uk"
+              locale="pl"
               onChange={[Function]}
               onInputChange={[Function]}
               selected={2019-07-10T05:00:00.000Z}
@@ -9796,7 +9796,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                       disabledKeyboardNavigation={true}
                       dropdownMode="scroll"
                       inlineFocusSelectedMonth={false}
-                      locale="uk"
+                      locale="pl"
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel="Next Year"
@@ -9868,7 +9868,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                               onInputChange={[Function]}
                               onKeyDown={[Function]}
                               readOnly={false}
-                              value="10 лип. 2019"
+                              value="10 lip 2019"
                             />
                           </div>
                         }
@@ -9904,7 +9904,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                     onInputChange={[Function]}
                                     onKeyDown={[Function]}
                                     readOnly={false}
-                                    value="10 лип. 2019"
+                                    value="10 lip 2019"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -9923,7 +9923,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                       suffix={null}
                                       suffixAlignment="left"
                                       suffixWidth={null}
-                                      value="10 лип. 2019"
+                                      value="10 lip 2019"
                                     >
                                       <MaybeFieldLabel
                                         helpText={null}
@@ -11065,7 +11065,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                                                   onClick={[Function]}
                                                                   placeholder="DD Mon YYYY"
                                                                   required={false}
-                                                                  value="10 лип. 2019"
+                                                                  value="10 lip 2019"
                                                                 >
                                                                   <StyledComponent
                                                                     aria-invalid={false}
@@ -11123,7 +11123,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                                                     onClick={[Function]}
                                                                     placeholder="DD Mon YYYY"
                                                                     required={false}
-                                                                    value="10 лип. 2019"
+                                                                    value="10 lip 2019"
                                                                   >
                                                                     <input
                                                                       aria-invalid={false}
@@ -11134,7 +11134,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                                                       onClick={[Function]}
                                                                       placeholder="DD Mon YYYY"
                                                                       required={false}
-                                                                      value="10 лип. 2019"
+                                                                      value="10 lip 2019"
                                                                     />
                                                                   </StyledComponent>
                                                                 </InputField__StyledInput>

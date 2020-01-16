@@ -420,7 +420,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                   "requirementText": null,
                 }
               }
-              locale="uk"
+              locale="pl"
               maxDate={null}
               minDate={null}
               onEndDateChange={[Function]}
@@ -467,7 +467,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                         "suffixWidth": null,
                       }
                     }
-                    locale="uk"
+                    locale="pl"
                     maxDate={null}
                     minDate={null}
                     onChange={[Function]}
@@ -510,7 +510,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                         "suffixWidth": null,
                       }
                     }
-                    locale="uk"
+                    locale="pl"
                     maxDate={null}
                     minDate={null}
                     onChange={[Function]}
@@ -1349,7 +1349,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                             "suffixWidth": null,
                           }
                         }
-                        locale="uk"
+                        locale="pl"
                         maxDate={null}
                         minDate={null}
                         onChange={[Function]}
@@ -1739,7 +1739,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                   ]
                                 }
                                 inlineFocusSelectedMonth={false}
-                                locale="uk"
+                                locale="pl"
                                 maxDate={null}
                                 minDate={null}
                                 monthsShown={1}
@@ -1841,7 +1841,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                         onInputChange={[Function]}
                                         onKeyDown={[Function]}
                                         readOnly={false}
-                                        value="лип. 2019"
+                                        value="lip 2019"
                                       />
                                     </div>
                                   }
@@ -1888,7 +1888,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                               onInputChange={[Function]}
                                               onKeyDown={[Function]}
                                               readOnly={false}
-                                              value="лип. 2019"
+                                              value="lip 2019"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -1907,7 +1907,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                 suffix={null}
                                                 suffixAlignment="left"
                                                 suffixWidth={null}
-                                                value="лип. 2019"
+                                                value="lip 2019"
                                               >
                                                 <MaybeFieldLabel
                                                   helpText={null}
@@ -2596,7 +2596,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                 onClick={[Function]}
                                                                 placeholder="Mon YYYY"
                                                                 required={false}
-                                                                value="лип. 2019"
+                                                                value="lip 2019"
                                                               >
                                                                 <StyledComponent
                                                                   aria-invalid={false}
@@ -2654,7 +2654,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   onClick={[Function]}
                                                                   placeholder="Mon YYYY"
                                                                   required={false}
-                                                                  value="лип. 2019"
+                                                                  value="lip 2019"
                                                                 >
                                                                   <input
                                                                     aria-invalid={false}
@@ -2665,7 +2665,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                     onClick={[Function]}
                                                                     placeholder="Mon YYYY"
                                                                     required={false}
-                                                                    value="лип. 2019"
+                                                                    value="lip 2019"
                                                                   />
                                                                 </StyledComponent>
                                                               </InputField__StyledInput>
@@ -3221,7 +3221,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                             "suffixWidth": null,
                           }
                         }
-                        locale="uk"
+                        locale="pl"
                         maxDate={null}
                         minDate={null}
                         onChange={[Function]}
@@ -3611,7 +3611,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                   ]
                                 }
                                 inlineFocusSelectedMonth={false}
-                                locale="uk"
+                                locale="pl"
                                 maxDate={null}
                                 minDate={null}
                                 monthsShown={1}
@@ -3713,7 +3713,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                         onInputChange={[Function]}
                                         onKeyDown={[Function]}
                                         readOnly={false}
-                                        value="верес. 2019"
+                                        value="wrz 2019"
                                       />
                                     </div>
                                   }
@@ -3760,7 +3760,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                               onInputChange={[Function]}
                                               onKeyDown={[Function]}
                                               readOnly={false}
-                                              value="верес. 2019"
+                                              value="wrz 2019"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -3779,7 +3779,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                 suffix={null}
                                                 suffixAlignment="left"
                                                 suffixWidth={null}
-                                                value="верес. 2019"
+                                                value="wrz 2019"
                                               >
                                                 <MaybeFieldLabel
                                                   helpText={null}
@@ -4468,7 +4468,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                 onClick={[Function]}
                                                                 placeholder="Mon YYYY"
                                                                 required={false}
-                                                                value="верес. 2019"
+                                                                value="wrz 2019"
                                                               >
                                                                 <StyledComponent
                                                                   aria-invalid={false}
@@ -4526,7 +4526,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   onClick={[Function]}
                                                                   placeholder="Mon YYYY"
                                                                   required={false}
-                                                                  value="верес. 2019"
+                                                                  value="wrz 2019"
                                                                 >
                                                                   <input
                                                                     aria-invalid={false}
@@ -4537,7 +4537,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                     onClick={[Function]}
                                                                     placeholder="Mon YYYY"
                                                                     required={false}
-                                                                    value="верес. 2019"
+                                                                    value="wrz 2019"
                                                                   />
                                                                 </StyledComponent>
                                                               </InputField__StyledInput>
