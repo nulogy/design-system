@@ -17,6 +17,7 @@ import {
   PropsTable
 } from "../../components";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -93,7 +94,8 @@ const propsRows = [
     type: "Number",
     defaultValue: "15",
     description: "The time difference in minutes between the time options"
-  }
+  },
+  localeProp
 ];
 
 export default () => (

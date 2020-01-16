@@ -18,6 +18,7 @@ import {
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -101,6 +102,7 @@ const propsRows = [
     defaultValue: "false",
     description: "Disables the end date before start date error message."
   },
+  localeProp,
   {
     name: "showTimes",
     type: "boolean",

@@ -17,7 +17,8 @@ const TimeRange = ({
   labelProps,
   minTime,
   maxTime,
-  interval
+  interval,
+  locale
 }) => {
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
@@ -64,6 +65,7 @@ const TimeRange = ({
       minTime={minTime}
       maxTime={endTime || maxTime}
       interval={interval}
+      locale={locale}
     />
   );
 
@@ -76,6 +78,7 @@ const TimeRange = ({
       maxTime={maxTime}
       minTime={startTime || minTime}
       interval={interval}
+      locale={locale}
     />
   );
 
@@ -106,7 +109,8 @@ TimeRange.propTypes = {
   labelProps: PropTypes.shape(FieldLabelProps),
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
-  interval: PropTypes.number
+  interval: PropTypes.number,
+  locale: PropTypes.string
 };
 
 TimeRange.defaultProps = {
@@ -124,7 +128,8 @@ TimeRange.defaultProps = {
   },
   minTime: null,
   maxTime: null,
-  interval: undefined
+  interval: undefined,
+  locale: undefined
 };
 
 export default TimeRange;

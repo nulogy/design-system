@@ -1,9 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { withKnobs, select } from "@storybook/addon-knobs";
+
 import { TimePicker } from ".";
+import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("TimePicker", module)
+  .addDecorator(withKnobs)
   .add("default", () => (
     <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
   ))
@@ -40,5 +44,14 @@ storiesOf("TimePicker", module)
       labelText="End Time"
       minTime="09:00"
       maxTime="21:00"
+    />
+  ))
+  .add("with custom locale", () => (
+    <TimePicker
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="End Time"
+      defaultValue="03:30"
+      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

@@ -8,6 +8,7 @@ import DatePickerHeader from "./DatePickerHeader";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
+import { registerDatePickerLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
@@ -16,6 +17,7 @@ class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedDate: props.selected };
+    registerDatePickerLocales();
   }
 
   handleInputChange = event => {
@@ -36,8 +38,13 @@ class DatePicker extends Component {
     });
   };
 
+  renderHeader = props => {
+    const { locale } = this.props;
+    return <DatePickerHeader locale={locale} {...props} />;
+  };
+
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates, locale } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -57,12 +64,13 @@ class DatePicker extends Component {
           dateFormat={dateFormat}
           onChange={this.handleSelectedDateChange}
           customInput={customInput}
-          renderCustomHeader={DatePickerHeader}
+          renderCustomHeader={this.renderHeader}
           disabledKeyboardNavigation
           strictParsing
           minDate={minDate}
           maxDate={maxDate}
           highlightDates={highlightDates}
+          locale={locale}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
@@ -80,7 +88,8 @@ DatePicker.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  highlightDates: PropTypes.arrayOf(PropTypes.shape({}))
+  highlightDates: PropTypes.arrayOf(PropTypes.shape({})),
+  locale: PropTypes.string
 };
 
 DatePicker.defaultProps = {
@@ -93,7 +102,8 @@ DatePicker.defaultProps = {
   errorList: undefined,
   minDate: undefined,
   maxDate: undefined,
-  highlightDates: undefined
+  highlightDates: undefined,
+  locale: undefined
 };
 
 export default DatePicker;

@@ -17,6 +17,7 @@ import {
   PropsTable
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
+import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -51,11 +52,12 @@ const propsRows = [
     description: "The earliest date that can be selected"
   },
   {
-    name: "MaxDate",
+    name: "maxDate",
     type: "Date",
     defaultValue: "undefined",
     description: "The latest date that can be selected"
-  }
+  },
+  localeProp
 ];
 
 export default () => (
