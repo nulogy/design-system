@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import * as allLocales from "date-fns/locale";
 
 import { DatePicker } from ".";
+import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("DatePicker", module)
   .addDecorator(withKnobs)
@@ -68,6 +68,6 @@ storiesOf("DatePicker", module)
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
-      locale={select("locale", Object.keys(allLocales), "uk", "locales")}
+      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

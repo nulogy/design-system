@@ -18,6 +18,7 @@ import {
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -101,13 +102,7 @@ const propsRows = [
     defaultValue: "false",
     description: "Disables the end date before start date error message."
   },
-  {
-    name: "locale",
-    type: "string",
-    defaultValue: "undefined",
-    description:
-      "Locale string ex: 'uk'. For all supported locales see the knobs under the 'custom locale' example in storybook"
-  },
+  localeProp,
   {
     name: "showTimes",
     type: "boolean",

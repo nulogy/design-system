@@ -17,6 +17,7 @@ import {
   PropsTable
 } from "../../components";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -94,13 +95,7 @@ const propsRows = [
     defaultValue: "15",
     description: "The time difference in minutes between the time options"
   },
-  {
-    name: "locale",
-    type: "string",
-    defaultValue: "undefined",
-    description:
-      "Locale string ex: 'uk'. For all supported locales see the knobs under the 'custom locale' example in storybook"
-  }
+  localeProp
 ];
 
 export default () => (

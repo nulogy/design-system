@@ -9,7 +9,7 @@ import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { ControlIcon } from "../Button";
-import { registerDatePickerLocales } from "../utils/RegisterDatePickerLocales";
+import { registerDatePickerLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
 const DEFAULT_PLACEHOLDER = "Mon YYYY";

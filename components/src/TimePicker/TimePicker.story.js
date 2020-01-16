@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import * as allLocales from "date-fns/locale";
 
 import { TimePicker } from ".";
+import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("TimePicker", module)
   .addDecorator(withKnobs)
@@ -52,6 +52,6 @@ storiesOf("TimePicker", module)
       onInputChange={action("input changed")}
       labelText="End Time"
       defaultValue="03:30"
-      locale={select("locale", Object.keys(allLocales), "uk", "locales")}
+      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

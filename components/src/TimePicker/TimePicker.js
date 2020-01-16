@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { format, setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import * as allLocales from "date-fns/locale";
 
 import { components } from "react-select";
 import theme from "../theme";
@@ -10,6 +9,7 @@ import { Select } from "../Select";
 import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
 import SelectOption from "../Select/SelectOption";
+import { supportedDateLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 
@@ -71,8 +71,8 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
   }
   return allTimes
     .map(date => ({
-      value: format(date, MILITARY_TIME_FORMAT, { locale: allLocales.enCA }),
-      label: format(date, timeFormat, { locale: allLocales[locale] })
+      value: format(date, MILITARY_TIME_FORMAT, { locale: supportedDateLocales.enUS }),
+      label: format(date, timeFormat, { locale: supportedDateLocales[locale] })
     }))
     .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
     .slice(startingInterval, finalInterval);

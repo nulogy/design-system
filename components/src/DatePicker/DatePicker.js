@@ -8,7 +8,7 @@ import DatePickerHeader from "./DatePickerHeader";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
-import { registerDatePickerLocales } from "../utils/RegisterDatePickerLocales";
+import { registerDatePickerLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";

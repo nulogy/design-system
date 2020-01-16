@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import * as allLocales from "date-fns/locale";
 
 import DateRange from "./DateRange";
+import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("DateRange", module)
   .addDecorator(withKnobs)
@@ -105,6 +105,6 @@ storiesOf("DateRange", module)
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}
       showTimes
-      locale={select("locale", Object.keys(allLocales), "uk", "locales")}
+      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));
