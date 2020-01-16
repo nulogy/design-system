@@ -55,7 +55,11 @@ BaseSubMenu.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
   children: PropTypes.node,
   showArrow: PropTypes.bool,
-  popperProps: PropTypes.shape({})
+  popperProps: PropTypes.shape({
+    style: PropTypes.shape({}),
+    placement: PropTypes.string,
+    arrowProps: PropTypes.shape({})
+  })
 };
 
 BaseSubMenu.defaultProps = {

@@ -86,7 +86,7 @@ class TabFocusManager extends React.Component {
 
 TabFocusManager.propTypes = {
   children: PropTypes.func.isRequired,
-  tabRefs: PropTypes.arrayOf(PropTypes.shape({ current: PropTypes.elementType }))
+  tabRefs: PropTypes.arrayOf(PropTypes.shape({ current: PropTypes.elementType, focus: PropTypes.func }))
 };
 
 TabFocusManager.defaultProps = {
