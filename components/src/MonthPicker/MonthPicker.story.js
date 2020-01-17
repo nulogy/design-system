@@ -10,7 +10,7 @@ storiesOf("MonthPicker", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <MonthPicker
-      selected={new Date("2019-01-01T05:00:00.000Z")}
+      selected={new Date("2018-01-01T05:00:00.000Z")}
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Month" }}
@@ -35,8 +35,8 @@ storiesOf("MonthPicker", module)
   .add("with a min and max date", () => (
     <MonthPicker
       selected={new Date("2019-07-10T05:00:00.000Z")}
-      minDate={new Date("2019-07-05T05:00:00.000Z")}
-      maxDate={new Date("2019-12-05T05:00:00.000Z")}
+      minDate={new Date("2019-07-01T05:00:00.000Z")}
+      maxDate={new Date("2019-12-01T05:00:00.000Z")}
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Month and Year" }}

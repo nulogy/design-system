@@ -102,7 +102,13 @@ const propsRows = [
     defaultValue: "false",
     description: "Disables the the end date before start date error message."
   },
-  localeProp
+  localeProp,
+  {
+    name: "disableAutofill",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Disables autofilling the year after typing in the month"
+  }
 ];
 
 export default () => (

@@ -89,7 +89,8 @@
   },
   "dependencies": {
     "@nulogy/tokens": "^0.20.0",
-    "date-fns": "^2.8.1",
+    "date-fns": "2.9.0",
+    "debounce": "^1.2.0",
     "gatsby-plugin-gtag": "^1.0.12",
     "mockdate": "^2.0.5",
     "polished": "3.0.0",
