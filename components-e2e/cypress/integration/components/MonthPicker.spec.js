@@ -92,20 +92,20 @@ describe("Monthpicker", () => {
       });
     });
 
-    describe("month autofill", () => {
-      it("does not autofill when typed characters don't match", () => {
+    describe("month auto-complete", () => {
+      it("does not auto-complete when typed characters don't match", () => {
         cy.get("input")
           .clear()
           .type("app");
         getMonthInputComponent().should("have.value", "app");
       });
-      it("does not autofill when not enough letters are typed", () => {
+      it("does not auto-complete when not enough letters are typed", () => {
         cy.get("input")
           .clear()
           .type("de");
         getMonthInputComponent().should("have.value", "de");
       });
-      it("autofills when typing characters that match case", () => {
+      it("auto-completes when typing characters that match case", () => {
         cy.get("input")
           .clear()
           .type("Apr");
@@ -114,7 +114,7 @@ describe("Monthpicker", () => {
         ).should("exist");
         getMonthInputComponent().should("have.value", "Apr 2019");
       });
-      it("autofills when typing characters that ignore case", () => {
+      it("auto-completes when typing characters that ignore case", () => {
         cy.get("input")
           .clear()
           .type("mar");
@@ -162,14 +162,14 @@ describe("Monthpicker", () => {
         getNextMonthButton().should("not.exist");
       });
     });
-    describe("month autofill", () => {
-      it("does not autofill when month is not in range", () => {
+    describe("month auto-complete", () => {
+      it("does not auto-complete when month is not in range", () => {
         cy.get("input")
           .clear()
           .type("jan");
         getMonthInputComponent().should("have.value", "jan");
       });
-      it("autofills when month is on range", () => {
+      it("auto-completes when month is on range", () => {
         cy.get("input")
           .clear()
           .type("jul");
@@ -178,7 +178,7 @@ describe("Monthpicker", () => {
         ).should("exist");
         getMonthInputComponent().should("have.value", "Jul 2019");
       });
-      it("autofills when month is within range", () => {
+      it("auto-completes when month is within range", () => {
         cy.get("input")
           .clear()
           .type("SEP");

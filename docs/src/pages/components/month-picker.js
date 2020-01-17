@@ -59,10 +59,10 @@ const propsRows = [
   },
   localeProp,
   {
-    name: "disableAutofill",
+    name: "disableAutoComplete",
     type: "boolean",
     defaultValue: "false",
-    description: "Disables autofilling the year after typing in the month"
+    description: "Disables auto-completing the year after typing in the month"
   }
 ];
 
