@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 
-import { subDays, addDays, isValid, isAfter } from "date-fns";
-import { isBefore, isSameDay } from "date-fns/esm";
+import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
