@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/nulogy/design-system/compare/v0.19.0...v0.20.0) (2020-01-20)
+
+### Features
+
+- add option to pass locale to all date components ([#509](https://github.com/nulogy/design-system/issues/509)) ([0322866](https://github.com/nulogy/design-system/commit/0322866))
+- Add showTimes prop to DateRange which displays time pickers next to the date pickers ([#508](https://github.com/nulogy/design-system/issues/508)) ([3f9f8e9](https://github.com/nulogy/design-system/commit/3f9f8e9))
+- added a print icon ([#513](https://github.com/nulogy/design-system/issues/513)) ([77726a0](https://github.com/nulogy/design-system/commit/77726a0))
+- NDS-1258 feat: add TimeRange component ([#507](https://github.com/nulogy/design-system/issues/507)) ([1199e35](https://github.com/nulogy/design-system/commit/1199e35))
+
 # [0.19.0](https://github.com/nulogy/design-system/compare/v0.18.2...v0.19.0) (2020-01-10)
 
 ### Bug Fixes
