@@ -5,10 +5,10 @@ import ReactDatePicker from "react-datepicker";
 import { MonthPickerStyles } from "./MonthPickerStyles";
 import DatePickerInput from "../DatePicker/DatePickerInput";
 import { InlineValidation } from "../Validation";
-
+import theme from "../theme";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
-import { ControlIcon } from "../Button";
+import { Icon } from "../Icon";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
@@ -60,8 +60,8 @@ class MonthPicker extends Component {
           dateFormat={dateFormat}
           onChange={this.handleSelectedDateChange}
           customInput={customInput}
-          previousYearButtonLabel={<ControlIcon icon="leftArrow" label="go to previous year" />}
-          nextYearButtonLabel={<ControlIcon icon="rightArrow" label="go to next year" />}
+          previousYearButtonLabel={<Icon icon="leftArrow" size={theme.space.x4} />}
+          nextYearButtonLabel={<Icon icon="rightArrow" size={theme.space.x4} />}
           excludeDates={[selectedDate]}
           disabledKeyboardNavigation
           minDate={minDate}

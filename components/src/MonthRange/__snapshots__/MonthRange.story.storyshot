@@ -1745,13 +1745,11 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -1769,13 +1767,11 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -3617,13 +3613,11 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -3641,13 +3635,11 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -6366,13 +6358,11 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -6390,13 +6380,11 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -8188,13 +8176,11 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -8212,13 +8198,11 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -10985,13 +10969,11 @@ exports[`Storyshots MonthRange default 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -11009,13 +10991,11 @@ exports[`Storyshots MonthRange default 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -12855,13 +12835,11 @@ exports[`Storyshots MonthRange default 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -12879,13 +12857,11 @@ exports[`Storyshots MonthRange default 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -15676,13 +15652,11 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -15700,13 +15674,11 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -17546,13 +17518,11 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -17570,13 +17540,11 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -20366,13 +20334,11 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -20390,13 +20356,11 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -22236,13 +22200,11 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -22260,13 +22222,11 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -25005,13 +24965,11 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -25029,13 +24987,11 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -27389,13 +27345,11 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -27413,13 +27367,11 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -30210,13 +30162,11 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -30234,13 +30184,11 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}
@@ -32080,13 +32028,11 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 monthsShown={1}
                                 nextMonthButtonLabel="Next Month"
                                 nextYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="rightArrow"
-                                    label="go to next year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 onBlur={[Function]}
@@ -32104,13 +32050,11 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
-                                  <ForwardRef
-                                    disabled={false}
+                                  <ForwardRef(Styled(Component))
+                                    color="currentColor"
                                     icon="leftArrow"
-                                    label="go to previous year"
-                                    onClick={null}
                                     size="32px"
-                                    toggled={false}
+                                    title={null}
                                   />
                                 }
                                 readOnly={false}

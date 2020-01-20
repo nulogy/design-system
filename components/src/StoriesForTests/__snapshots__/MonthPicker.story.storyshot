@@ -796,13 +796,11 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel={
-                        <ForwardRef
-                          disabled={false}
+                        <ForwardRef(Styled(Component))
+                          color="currentColor"
                           icon="rightArrow"
-                          label="go to next year"
-                          onClick={null}
                           size="32px"
-                          toggled={false}
+                          title={null}
                         />
                       }
                       onBlur={[Function]}
@@ -820,13 +818,11 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
-                        <ForwardRef
-                          disabled={false}
+                        <ForwardRef(Styled(Component))
+                          color="currentColor"
                           icon="leftArrow"
-                          label="go to previous year"
-                          onClick={null}
                           size="32px"
-                          toggled={false}
+                          title={null}
                         />
                       }
                       readOnly={false}
@@ -2639,13 +2635,11 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel={
-                        <ForwardRef
-                          disabled={false}
+                        <ForwardRef(Styled(Component))
+                          color="currentColor"
                           icon="rightArrow"
-                          label="go to next year"
-                          onClick={null}
                           size="32px"
-                          toggled={false}
+                          title={null}
                         />
                       }
                       onBlur={[Function]}
@@ -2663,13 +2657,11 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
-                        <ForwardRef
-                          disabled={false}
+                        <ForwardRef(Styled(Component))
+                          color="currentColor"
                           icon="leftArrow"
-                          label="go to previous year"
-                          onClick={null}
                           size="32px"
-                          toggled={false}
+                          title={null}
                         />
                       }
                       readOnly={false}
