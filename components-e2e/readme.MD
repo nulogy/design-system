@@ -18,7 +18,7 @@ it("renders a react component", () => {
 
 cypress works by running against an existing server. Unlike application development, NDS doesn't have an app server to run. The second best thing it has is a storybook. The components-e2e project has tasks that will build/start storybook before running cypress tests.
 
-The storybook stories can be found in `components/src/StoriesForTests`.
+Stories within any component folder can be tested and additional stories just for testing purposes can be found in `components/src/StoriesForTests`.
 
 # How do I run specs?
 
