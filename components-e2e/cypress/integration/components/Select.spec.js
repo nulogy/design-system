@@ -12,7 +12,7 @@ describe("Select", () => {
 
   describe("Multiselect", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("select--multiselect");
+      cy.renderFromStorybook("storiesfortests-select--multiselect");
     });
 
     it("has the correct initial state", () => {
@@ -96,7 +96,7 @@ describe("Select", () => {
   });
 
   it("selects the first item when opened", () => {
-    cy.renderFromStorybook("select--base");
+    cy.renderFromStorybook("storiesfortests-select--base");
 
     getSelectComponent().click();
 
@@ -106,7 +106,7 @@ describe("Select", () => {
   });
 
   it("selects an option on click", () => {
-    cy.renderFromStorybook("select--base");
+    cy.renderFromStorybook("storiesfortests-select--base");
 
     assertDropDownIsClosed();
 
@@ -121,7 +121,7 @@ describe("Select", () => {
   });
 
   it("closes the dropdown when clicking outside", () => {
-    cy.renderFromStorybook("select--base");
+    cy.renderFromStorybook("storiesfortests-select--base");
 
     getSelectComponent().click();
     assertDropDownIsOpen();
@@ -131,7 +131,7 @@ describe("Select", () => {
   });
 
   it("selects options using the keyboard", () => {
-    cy.renderFromStorybook("select--base");
+    cy.renderFromStorybook("storiesfortests-select--base");
 
     // focus the select box
     getSelectComponent().click();
@@ -145,7 +145,7 @@ describe("Select", () => {
   });
 
   it("closes the dropdown when on esc", () => {
-    cy.renderFromStorybook("select--base");
+    cy.renderFromStorybook("storiesfortests-select--base");
 
     getSelectComponent().click();
     assertDropDownIsOpen();
@@ -155,7 +155,7 @@ describe("Select", () => {
   });
 
   it("works as a controlled component", () => {
-    cy.renderFromStorybook("select--controlled");
+    cy.renderFromStorybook("storiesfortests-select--controlled");
 
     assertDropDownIsClosed();
 

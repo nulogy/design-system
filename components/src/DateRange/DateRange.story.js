@@ -17,8 +17,8 @@ storiesOf("DateRange", module)
   ))
   .add("default start and end date", () => (
     <DateRange
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
+      defaultStartDate={new Date("2019-01-01T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-01-05T05:00:00.000Z")}
       onRangeChange={action("range changed")}
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}
@@ -65,6 +65,8 @@ storiesOf("DateRange", module)
   ))
   .add("with times", () => (
     <DateRange
+      defaultStartDate={new Date("2019-01-01T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-01-05T05:00:00.000Z")}
       onRangeChange={action("range changed")}
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}

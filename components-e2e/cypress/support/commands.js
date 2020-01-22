@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("renderFromStorybook", component => {
-  cy.visit(`/iframe.html?path=/story/storiesfortests-${component}`);
+  cy.visit(`/iframe.html?path=/story/${component}`);
 });
 
 Cypress.Commands.add("pressEscapeKey", () => {

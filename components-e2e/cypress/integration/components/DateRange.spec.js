@@ -7,7 +7,7 @@ describe("Date Range", () => {
     const getStartInputComponent = () => cy.get("input").eq(0);
     const getEndInputComponent = () => cy.get("input").eq(1);
     beforeEach(() => {
-      cy.renderFromStorybook("daterange--default");
+      cy.renderFromStorybook("daterange--default-start-and-end-date");
     });
 
     it("shows start date in end date input", () => {

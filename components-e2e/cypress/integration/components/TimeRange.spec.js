@@ -7,7 +7,7 @@ describe("Time Range", () => {
 
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("timerange--default");
+      cy.renderFromStorybook("timerange--with-min-and-max-time-range");
     });
 
     it("shows options that are after the selected start time for the end time", () => {

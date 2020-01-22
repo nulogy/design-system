@@ -18,7 +18,7 @@ describe("Table", () => {
 
   const selectableRowsTests = storyName => {
     beforeEach(() => {
-      cy.renderFromStorybook(storyName);
+      cy.renderFromStorybook(`storiesfortests-${storyName}`);
     });
     it("toggles the value of the header checkbox on click", () => {
       selectAll().click();
@@ -82,7 +82,7 @@ describe("Table", () => {
   });
   describe("table--with-pagination", () => {
     it("navigates to next page when next button is clicked", () => {
-      cy.renderFromStorybook("table--with-pagination");
+      cy.renderFromStorybook("storiesfortests-table--with-pagination");
 
       paginationButtons()
         .last()
@@ -91,7 +91,7 @@ describe("Table", () => {
       cy.get("tbody").should("contain", "some data 4");
     });
     it("navigates to previous page when previous button is clicked", () => {
-      cy.renderFromStorybook("table--with-pagination");
+      cy.renderFromStorybook("storiesfortests-table--with-pagination");
 
       paginationButtons()
         .last()
@@ -105,7 +105,7 @@ describe("Table", () => {
       paginationButtons().should("be.disabled");
     });
     it("navigates to specific page when a page button is clicked", () => {
-      cy.renderFromStorybook("table--with-pagination");
+      cy.renderFromStorybook("storiesfortests-table--with-pagination");
 
       paginationButtons()
         .eq(5)
@@ -117,7 +117,7 @@ describe("Table", () => {
         .should("be.disabled");
     });
     it("disables next button when on last page", () => {
-      cy.renderFromStorybook("table--with-pagination");
+      cy.renderFromStorybook("storiesfortests-table--with-pagination");
 
       paginationButtons()
         .eq(-2)
@@ -134,7 +134,9 @@ describe("Table", () => {
   });
   describe("table--with-pagination-and-selectable-rows", () => {
     it("saves selections on between pages", () => {
-      cy.renderFromStorybook("table--with-pagination-and-selectable-rows");
+      cy.renderFromStorybook(
+        "storiesfortests-table--with-pagination-and-selectable-rows"
+      );
 
       selectAll().click();
 
