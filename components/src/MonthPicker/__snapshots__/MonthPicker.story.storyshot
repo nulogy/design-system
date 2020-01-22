@@ -390,7 +390,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "disabled": false,
@@ -2252,7 +2252,7 @@ exports[`Storyshots MonthPicker default 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month",
@@ -4528,7 +4528,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",
@@ -6808,7 +6808,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",
@@ -9082,7 +9082,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
           >
             <MonthPicker
               dateFormat="yyyy MMM"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               errorMessage="The date is invalid"
               inputProps={
                 Object {

@@ -390,7 +390,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "disabled": false,
@@ -2250,7 +2250,7 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
-              disableAutoComplete={false}
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",

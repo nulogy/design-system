@@ -24,7 +24,7 @@ class MonthPicker extends Component {
       selectedDate: props.selected,
       calendarDate: props.selected ? props.selected : new Date()
     };
-    this.debounceAutoComplete = debounce(this.autoCompleteMonth, 400);
+    this.debounceAutocomplete = debounce(this.autoCompleteMonth, 400);
     registerDatePickerLocales();
   }
 
@@ -66,10 +66,10 @@ class MonthPicker extends Component {
 
   handleInputChange = event => {
     const { value } = event.target;
-    const { onInputChange, disableAutoComplete } = this.props;
+    const { onInputChange, disableAutocomplete } = this.props;
     const { calendarDate } = this.state;
-    if (!disableAutoComplete) {
-      this.debounceAutoComplete(value, calendarDate);
+    if (!disableAutocomplete) {
+      this.debounceAutocomplete(value, calendarDate);
     }
 
     if (onInputChange) {
@@ -135,7 +135,7 @@ MonthPicker.propTypes = {
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
   locale: PropTypes.string,
-  disableAutoComplete: PropTypes.bool
+  disableAutocomplete: PropTypes.bool
 };
 
 MonthPicker.defaultProps = {
@@ -149,7 +149,7 @@ MonthPicker.defaultProps = {
   minDate: undefined,
   maxDate: undefined,
   locale: undefined,
-  disableAutoComplete: false
+  disableAutocomplete: false
 };
 
 export default MonthPicker;
