@@ -26,13 +26,27 @@ export const MonthPickerStyles = createGlobalStyle({
       background: "transparent",
       border: "none",
       cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      padding: 0,
+      borderRadius: theme.radii.circle,
+      color: theme.colors.darkGrey,
+      "&:focus": {
+        outline: "none",
+        boxShadow: theme.shadows.focus
+      },
+      "&:hover:enabled": {
+        cursor: "pointer",
+        color: theme.colors.blackBlue,
+        backgroundColor: theme.colors.lightGrey
+      },
       "&--next": {
         position: "absolute",
-        right: theme.space.half
+        right: theme.space.x1
       },
       "&--previous": {
         position: "absolute",
-        left: theme.space.half
+        left: theme.space.x1
       }
     },
     ".react-datepicker__triangle": {
