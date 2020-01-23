@@ -57,7 +57,13 @@ const propsRows = [
     defaultValue: "undefined",
     description: "The latest date that can be selected"
   },
-  localeProp
+  localeProp,
+  {
+    name: "disableAutocomplete",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Disables auto-completing the year after typing in the month"
+  }
 ];
 
 export default () => (

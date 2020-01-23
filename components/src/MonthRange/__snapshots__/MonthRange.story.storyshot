@@ -391,6 +391,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
             <MonthRange
               defaultEndDate={2019-09-10T05:00:00.000Z}
               defaultStartDate={2019-07-05T05:00:00.000Z}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -449,6 +450,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -492,6 +494,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -1331,6 +1334,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -1764,6 +1768,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-07-05T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -3199,6 +3204,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -3632,6 +3638,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-09-10T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -5081,6 +5088,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
             <MonthRange
               defaultEndDate={null}
               defaultStartDate={null}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -5114,6 +5122,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -5144,6 +5153,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -5970,6 +5980,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -6377,6 +6388,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={null}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -7788,6 +7800,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -8195,6 +8208,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={null}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -9620,6 +9634,7 @@ exports[`Storyshots MonthRange default 1`] = `
             <MonthRange
               defaultEndDate={null}
               defaultStartDate={null}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -9677,6 +9692,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -9719,6 +9735,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -10557,6 +10574,7 @@ exports[`Storyshots MonthRange default 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -10988,6 +11006,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={null}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -12423,6 +12442,7 @@ exports[`Storyshots MonthRange default 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -12854,6 +12874,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={null}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -14303,6 +14324,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
             <MonthRange
               defaultEndDate={2019-09-10T05:00:00.000Z}
               defaultStartDate={2019-07-05T05:00:00.000Z}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -14360,6 +14382,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -14402,6 +14425,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -15240,6 +15264,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -15671,6 +15696,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-07-05T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -17106,6 +17132,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -17537,6 +17564,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-09-10T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -18986,6 +19014,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
             <MonthRange
               defaultEndDate={2019-07-05T05:00:00.000Z}
               defaultStartDate={2019-09-10T05:00:00.000Z}
+              disableAutocomplete={false}
               disableRangeValidation={true}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -19043,6 +19072,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -19084,6 +19114,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -19922,6 +19953,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -20353,6 +20385,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-09-10T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -21788,6 +21821,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -22219,6 +22253,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-07-05T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -23663,6 +23698,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             <MonthRange
               defaultEndDate={2019-09-10T05:00:00.000Z}
               defaultStartDate={null}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -23708,6 +23744,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -23750,6 +23787,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage="Start date is required"
                     inputProps={
                       Object {
@@ -24576,6 +24614,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage="Start date is required"
                         inputProps={
                           Object {
@@ -24984,6 +25023,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={null}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -26933,6 +26973,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -27364,6 +27405,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-09-10T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -28813,6 +28855,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
             <MonthRange
               defaultEndDate={2019-09-10T05:00:00.000Z}
               defaultStartDate={2019-07-05T05:00:00.000Z}
+              disableAutocomplete={false}
               disableRangeValidation={false}
               endDateErrorMessage={null}
               endDateInputProps={
@@ -28870,6 +28913,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 endComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -28912,6 +28956,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 startComponent={
                   <MonthPicker
                     dateFormat="MMM yyyy"
+                    disableAutocomplete={false}
                     errorMessage={null}
                     inputProps={
                       Object {
@@ -29750,6 +29795,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                     >
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -30181,6 +30227,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-07-05T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={
@@ -31616,6 +31663,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                       </Styled(Box)>
                       <MonthPicker
                         dateFormat="MMM yyyy"
+                        disableAutocomplete={false}
                         errorMessage={null}
                         inputProps={
                           Object {
@@ -32047,6 +32095,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 onMonthChange={[Function]}
                                 onSelect={[Function]}
                                 onYearChange={[Function]}
+                                openToDate={2019-09-10T05:00:00.000Z}
                                 preventOpenOnFocus={false}
                                 previousMonthButtonLabel="Previous Month"
                                 previousYearButtonLabel={

@@ -390,6 +390,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "disabled": false,
@@ -815,6 +816,7 @@ exports[`Storyshots StoriesForTests/Monthpicker default 1`] = `
                       onMonthChange={[Function]}
                       onSelect={[Function]}
                       onYearChange={[Function]}
+                      openToDate={2019-01-01T05:00:00.000Z}
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
@@ -2248,13 +2250,14 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",
                 }
               }
-              maxDate={2019-12-05T05:00:00.000Z}
-              minDate={2019-07-05T05:00:00.000Z}
+              maxDate={2019-12-01T05:00:00.000Z}
+              minDate={2019-07-01T05:00:00.000Z}
               selected={2019-07-10T05:00:00.000Z}
             >
               <Styled(Box)
@@ -2630,8 +2633,8 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
                         ]
                       }
                       inlineFocusSelectedMonth={false}
-                      maxDate={2019-12-05T05:00:00.000Z}
-                      minDate={2019-07-05T05:00:00.000Z}
+                      maxDate={2019-12-01T05:00:00.000Z}
+                      minDate={2019-07-01T05:00:00.000Z}
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel={
@@ -2654,6 +2657,7 @@ exports[`Storyshots StoriesForTests/Monthpicker with a min and max date 1`] = `
                       onMonthChange={[Function]}
                       onSelect={[Function]}
                       onYearChange={[Function]}
+                      openToDate={2019-07-10T05:00:00.000Z}
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
