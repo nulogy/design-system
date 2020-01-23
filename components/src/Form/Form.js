@@ -4,7 +4,7 @@ import { space } from "styled-system";
 import PropTypes from "prop-types";
 import { SectionTitle } from "../Type";
 import Field from "./Field";
-import { HeaderValidation } from "../Validation";
+import { Alert } from "../Alert";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 import theme from "../theme";
@@ -21,7 +21,7 @@ const Form = styled(BaseForm)(space, ({ title }) => ({
   [`${SectionTitle}`]: {
     marginBottom: title ? theme.space.x6 : 0
   },
-  [`${HeaderValidation}`]: {
+  [`${Alert}`]: {
     marginBottom: theme.space.x6
   },
   [`${Field},${Fieldset}`]: {
