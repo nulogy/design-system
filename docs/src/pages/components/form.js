@@ -161,7 +161,7 @@ export default () => (
       </Text>
       <Text>
         When a form has returned with errors, add a{" "}
-        <Link href="/components/alert">Danger Alert</Link> to the top of the
+        <Link href="/components/alerts">Danger Alert</Link> to the top of the
         form with a summary so that users don't need to scroll around the form
         to see what needs to be fixed.
       </Text>
