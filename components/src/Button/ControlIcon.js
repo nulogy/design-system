@@ -19,7 +19,7 @@ const StyledButton = styled.button(({ toggled, disabled }) => ({
   border: "none",
   display: "flex",
   alignItems: "center",
-  padding: 0,
+  padding: theme.space.half,
   borderRadius: theme.radii.circle,
   color: getIconColorByState({ toggled, disabled }),
   "&:focus": {

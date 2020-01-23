@@ -14313,6 +14313,876 @@ exports[`Storyshots Icon Icon 1`] = `
               </StyledComponent>
             </Styled(Box)>
             <Styled(Box)
+              key="sortDown"
+              my="x2"
+              theme={
+                Object {
+                  "borders": Array [],
+                  "breakpoints": Object {
+                    "extraLarge": "1920px",
+                    "extraSmall": "0px",
+                    "large": "1360px",
+                    "medium": "1024px",
+                    "small": "768px",
+                  },
+                  "colors": Object {
+                    "black": "#011e38",
+                    "blackBlue": "#122b47",
+                    "blue": "#216beb",
+                    "darkBlue": "#00438f",
+                    "darkGrey": "#434d59",
+                    "green": "#008059",
+                    "grey": "#c0c8d1",
+                    "lightBlue": "#e1ebfa",
+                    "lightGreen": "#e9f7f2",
+                    "lightGrey": "#e4e7eb",
+                    "lightRed": "#fae6ea",
+                    "lightYellow": "#fcf5e3",
+                    "red": "#cc1439",
+                    "white": "#ffffff",
+                    "whiteGrey": "#f0f2f5",
+                    "yellow": "#ffbb00",
+                  },
+                  "fontSizes": Object {
+                    "large": "20px",
+                    "larger": "26px",
+                    "largest": "46px",
+                    "medium": "16px",
+                    "small": "14px",
+                    "smaller": "12px",
+                  },
+                  "fontWeights": Object {
+                    "bold": "600",
+                    "light": "300",
+                    "medium": "500",
+                    "normal": "400",
+                  },
+                  "fonts": Object {
+                    "base": "'IBM Plex Sans', sans-serif",
+                    "mono": "'IBM Plex Mono', monospace",
+                  },
+                  "lineHeights": Object {
+                    "base": "1.5",
+                    "sectionTitle": "1.23076923",
+                    "smallTextBase": "1.71428571",
+                    "smallTextCompressed": "1.14285714",
+                    "smallerText": "1.33333333",
+                    "subsectionTitle": "1.2",
+                    "title": "1.04347826",
+                  },
+                  "radii": Object {
+                    "circle": "50%",
+                    "medium": "4px",
+                    "small": "2px",
+                  },
+                  "shadows": Object {
+                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                  },
+                  "space": Object {
+                    "half": "4px",
+                    "none": "0px",
+                    "x1": "8px",
+                    "x2": "16px",
+                    "x3": "24px",
+                    "x4": "32px",
+                    "x5": "40px",
+                    "x6": "48px",
+                    "x8": "64px",
+                  },
+                  "zIndex": Object {
+                    "content": 100,
+                    "overlay": 1000,
+                    "tabsBar": 210,
+                    "tabsScollIndicator": 200,
+                  },
+                }
+              }
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "_foldedDefaultProps": Object {
+                      "theme": Object {
+                        "borders": Array [],
+                        "breakpoints": Object {
+                          "extraLarge": "1920px",
+                          "extraSmall": "0px",
+                          "large": "1360px",
+                          "medium": "1024px",
+                          "small": "768px",
+                        },
+                        "colors": Object {
+                          "black": "#011e38",
+                          "blackBlue": "#122b47",
+                          "blue": "#216beb",
+                          "darkBlue": "#00438f",
+                          "darkGrey": "#434d59",
+                          "green": "#008059",
+                          "grey": "#c0c8d1",
+                          "lightBlue": "#e1ebfa",
+                          "lightGreen": "#e9f7f2",
+                          "lightGrey": "#e4e7eb",
+                          "lightRed": "#fae6ea",
+                          "lightYellow": "#fcf5e3",
+                          "red": "#cc1439",
+                          "white": "#ffffff",
+                          "whiteGrey": "#f0f2f5",
+                          "yellow": "#ffbb00",
+                        },
+                        "fontSizes": Object {
+                          "large": "20px",
+                          "larger": "26px",
+                          "largest": "46px",
+                          "medium": "16px",
+                          "small": "14px",
+                          "smaller": "12px",
+                        },
+                        "fontWeights": Object {
+                          "bold": "600",
+                          "light": "300",
+                          "medium": "500",
+                          "normal": "400",
+                        },
+                        "fonts": Object {
+                          "base": "'IBM Plex Sans', sans-serif",
+                          "mono": "'IBM Plex Mono', monospace",
+                        },
+                        "lineHeights": Object {
+                          "base": "1.5",
+                          "sectionTitle": "1.23076923",
+                          "smallTextBase": "1.71428571",
+                          "smallTextCompressed": "1.14285714",
+                          "smallerText": "1.33333333",
+                          "subsectionTitle": "1.2",
+                          "title": "1.04347826",
+                        },
+                        "radii": Object {
+                          "circle": "50%",
+                          "medium": "4px",
+                          "small": "2px",
+                        },
+                        "shadows": Object {
+                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                        },
+                        "space": Object {
+                          "half": "4px",
+                          "none": "0px",
+                          "x1": "8px",
+                          "x2": "16px",
+                          "x3": "24px",
+                          "x4": "32px",
+                          "x5": "40px",
+                          "x6": "48px",
+                          "x8": "64px",
+                        },
+                        "zIndex": Object {
+                          "content": 100,
+                          "overlay": 1000,
+                          "tabsBar": 210,
+                          "tabsScollIndicator": 200,
+                        },
+                      },
+                    },
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": false,
+                      "lastClassName": "fzebai",
+                      "rules": Array [
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        "display: flex;",
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                    },
+                    "displayName": "Styled(Box)",
+                    "foldedComponentIds": Array [
+                      "Box-sc-1qu1edy-0",
+                    ],
+                    "propTypes": Object {
+                      "alignItems": [Function],
+                      "flexDirection": [Function],
+                      "flexWrap": [Function],
+                      "justifyContent": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": "div",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                my="x2"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-bdVaJa fzebai"
+                >
+                  <Styled(Component)
+                    color="currentColor"
+                    icon="sortDown"
+                    mr="20px"
+                    size="24px"
+                    title={null}
+                  >
+                    <StyledComponent
+                      color="currentColor"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "_foldedDefaultProps": Object {
+                            "color": "currentColor",
+                            "size": "24px",
+                            "title": null,
+                          },
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bwzfXH",
+                            "isStatic": false,
+                            "lastClassName": "ipPyho",
+                            "rules": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "displayName": "Styled(Component)",
+                          "foldedComponentIds": Array [],
+                          "propTypes": Object {
+                            "color": [Function],
+                            "icon": [Function],
+                            "size": [Function],
+                            "title": [Function],
+                          },
+                          "render": [Function],
+                          "styledComponentId": "sc-bwzfXH",
+                          "target": Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "defaultProps": Object {
+                              "className": undefined,
+                              "color": "currentColor",
+                              "focusable": false,
+                              "size": "24px",
+                              "title": null,
+                            },
+                            "propTypes": Object {
+                              "className": [Function],
+                              "color": [Function],
+                              "focusable": [Function],
+                              "icon": [Function],
+                              "size": [Function],
+                              "title": [Function],
+                            },
+                            "render": [Function],
+                          },
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      icon="sortDown"
+                      mr="20px"
+                      size="24px"
+                      title={null}
+                    >
+                      <ForwardRef
+                        className="sc-bwzfXH ipPyho"
+                        color="currentColor"
+                        focusable={false}
+                        icon="sortDown"
+                        mr="20px"
+                        size="24px"
+                        title={null}
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="sc-bwzfXH ipPyho"
+                          color="currentColor"
+                          fill="currentColor"
+                          focusable={false}
+                          height="24px"
+                          icon="sortDown"
+                          mr="20px"
+                          size="24px"
+                          title={null}
+                          viewBox="0 0 24 24"
+                          width="24px"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                            key="0"
+                          />
+                        </svg>
+                      </ForwardRef>
+                    </StyledComponent>
+                  </Styled(Component)>
+                  <IconCode
+                    icon="sortDown"
+                  >
+                    <code>
+                      &lt;Icon icon="
+                      <b>
+                        sortDown
+                      </b>
+                      "&gt;
+                    </code>
+                  </IconCode>
+                </div>
+              </StyledComponent>
+            </Styled(Box)>
+            <Styled(Box)
+              key="sortUp"
+              my="x2"
+              theme={
+                Object {
+                  "borders": Array [],
+                  "breakpoints": Object {
+                    "extraLarge": "1920px",
+                    "extraSmall": "0px",
+                    "large": "1360px",
+                    "medium": "1024px",
+                    "small": "768px",
+                  },
+                  "colors": Object {
+                    "black": "#011e38",
+                    "blackBlue": "#122b47",
+                    "blue": "#216beb",
+                    "darkBlue": "#00438f",
+                    "darkGrey": "#434d59",
+                    "green": "#008059",
+                    "grey": "#c0c8d1",
+                    "lightBlue": "#e1ebfa",
+                    "lightGreen": "#e9f7f2",
+                    "lightGrey": "#e4e7eb",
+                    "lightRed": "#fae6ea",
+                    "lightYellow": "#fcf5e3",
+                    "red": "#cc1439",
+                    "white": "#ffffff",
+                    "whiteGrey": "#f0f2f5",
+                    "yellow": "#ffbb00",
+                  },
+                  "fontSizes": Object {
+                    "large": "20px",
+                    "larger": "26px",
+                    "largest": "46px",
+                    "medium": "16px",
+                    "small": "14px",
+                    "smaller": "12px",
+                  },
+                  "fontWeights": Object {
+                    "bold": "600",
+                    "light": "300",
+                    "medium": "500",
+                    "normal": "400",
+                  },
+                  "fonts": Object {
+                    "base": "'IBM Plex Sans', sans-serif",
+                    "mono": "'IBM Plex Mono', monospace",
+                  },
+                  "lineHeights": Object {
+                    "base": "1.5",
+                    "sectionTitle": "1.23076923",
+                    "smallTextBase": "1.71428571",
+                    "smallTextCompressed": "1.14285714",
+                    "smallerText": "1.33333333",
+                    "subsectionTitle": "1.2",
+                    "title": "1.04347826",
+                  },
+                  "radii": Object {
+                    "circle": "50%",
+                    "medium": "4px",
+                    "small": "2px",
+                  },
+                  "shadows": Object {
+                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                  },
+                  "space": Object {
+                    "half": "4px",
+                    "none": "0px",
+                    "x1": "8px",
+                    "x2": "16px",
+                    "x3": "24px",
+                    "x4": "32px",
+                    "x5": "40px",
+                    "x6": "48px",
+                    "x8": "64px",
+                  },
+                  "zIndex": Object {
+                    "content": 100,
+                    "overlay": 1000,
+                    "tabsBar": 210,
+                    "tabsScollIndicator": 200,
+                  },
+                }
+              }
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "_foldedDefaultProps": Object {
+                      "theme": Object {
+                        "borders": Array [],
+                        "breakpoints": Object {
+                          "extraLarge": "1920px",
+                          "extraSmall": "0px",
+                          "large": "1360px",
+                          "medium": "1024px",
+                          "small": "768px",
+                        },
+                        "colors": Object {
+                          "black": "#011e38",
+                          "blackBlue": "#122b47",
+                          "blue": "#216beb",
+                          "darkBlue": "#00438f",
+                          "darkGrey": "#434d59",
+                          "green": "#008059",
+                          "grey": "#c0c8d1",
+                          "lightBlue": "#e1ebfa",
+                          "lightGreen": "#e9f7f2",
+                          "lightGrey": "#e4e7eb",
+                          "lightRed": "#fae6ea",
+                          "lightYellow": "#fcf5e3",
+                          "red": "#cc1439",
+                          "white": "#ffffff",
+                          "whiteGrey": "#f0f2f5",
+                          "yellow": "#ffbb00",
+                        },
+                        "fontSizes": Object {
+                          "large": "20px",
+                          "larger": "26px",
+                          "largest": "46px",
+                          "medium": "16px",
+                          "small": "14px",
+                          "smaller": "12px",
+                        },
+                        "fontWeights": Object {
+                          "bold": "600",
+                          "light": "300",
+                          "medium": "500",
+                          "normal": "400",
+                        },
+                        "fonts": Object {
+                          "base": "'IBM Plex Sans', sans-serif",
+                          "mono": "'IBM Plex Mono', monospace",
+                        },
+                        "lineHeights": Object {
+                          "base": "1.5",
+                          "sectionTitle": "1.23076923",
+                          "smallTextBase": "1.71428571",
+                          "smallTextCompressed": "1.14285714",
+                          "smallerText": "1.33333333",
+                          "subsectionTitle": "1.2",
+                          "title": "1.04347826",
+                        },
+                        "radii": Object {
+                          "circle": "50%",
+                          "medium": "4px",
+                          "small": "2px",
+                        },
+                        "shadows": Object {
+                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                        },
+                        "space": Object {
+                          "half": "4px",
+                          "none": "0px",
+                          "x1": "8px",
+                          "x2": "16px",
+                          "x3": "24px",
+                          "x4": "32px",
+                          "x5": "40px",
+                          "x6": "48px",
+                          "x8": "64px",
+                        },
+                        "zIndex": Object {
+                          "content": 100,
+                          "overlay": 1000,
+                          "tabsBar": 210,
+                          "tabsScollIndicator": 200,
+                        },
+                      },
+                    },
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": false,
+                      "lastClassName": "fzebai",
+                      "rules": Array [
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                        "display: flex;",
+                        [Function],
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                    },
+                    "displayName": "Styled(Box)",
+                    "foldedComponentIds": Array [
+                      "Box-sc-1qu1edy-0",
+                    ],
+                    "propTypes": Object {
+                      "alignItems": [Function],
+                      "flexDirection": [Function],
+                      "flexWrap": [Function],
+                      "justifyContent": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": "div",
+                    "toString": [Function],
+                    "usesTheme": false,
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                my="x2"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-bdVaJa fzebai"
+                >
+                  <Styled(Component)
+                    color="currentColor"
+                    icon="sortUp"
+                    mr="20px"
+                    size="24px"
+                    title={null}
+                  >
+                    <StyledComponent
+                      color="currentColor"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "_foldedDefaultProps": Object {
+                            "color": "currentColor",
+                            "size": "24px",
+                            "title": null,
+                          },
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bwzfXH",
+                            "isStatic": false,
+                            "lastClassName": "ipPyho",
+                            "rules": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                          },
+                          "displayName": "Styled(Component)",
+                          "foldedComponentIds": Array [],
+                          "propTypes": Object {
+                            "color": [Function],
+                            "icon": [Function],
+                            "size": [Function],
+                            "title": [Function],
+                          },
+                          "render": [Function],
+                          "styledComponentId": "sc-bwzfXH",
+                          "target": Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "defaultProps": Object {
+                              "className": undefined,
+                              "color": "currentColor",
+                              "focusable": false,
+                              "size": "24px",
+                              "title": null,
+                            },
+                            "propTypes": Object {
+                              "className": [Function],
+                              "color": [Function],
+                              "focusable": [Function],
+                              "icon": [Function],
+                              "size": [Function],
+                              "title": [Function],
+                            },
+                            "render": [Function],
+                          },
+                          "toString": [Function],
+                          "usesTheme": false,
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      icon="sortUp"
+                      mr="20px"
+                      size="24px"
+                      title={null}
+                    >
+                      <ForwardRef
+                        className="sc-bwzfXH ipPyho"
+                        color="currentColor"
+                        focusable={false}
+                        icon="sortUp"
+                        mr="20px"
+                        size="24px"
+                        title={null}
+                      >
+                        <svg
+                          aria-hidden={true}
+                          className="sc-bwzfXH ipPyho"
+                          color="currentColor"
+                          fill="currentColor"
+                          focusable={false}
+                          height="24px"
+                          icon="sortUp"
+                          mr="20px"
+                          size="24px"
+                          title={null}
+                          viewBox="0 0 24 24"
+                          width="24px"
+                        >
+                          <path
+                            d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                            key="0"
+                          />
+                        </svg>
+                      </ForwardRef>
+                    </StyledComponent>
+                  </Styled(Component)>
+                  <IconCode
+                    icon="sortUp"
+                  >
+                    <code>
+                      &lt;Icon icon="
+                      <b>
+                        sortUp
+                      </b>
+                      "&gt;
+                    </code>
+                  </IconCode>
+                </div>
+              </StyledComponent>
+            </Styled(Box)>
+            <Styled(Box)
               key="unlock"
               my="x2"
               theme={

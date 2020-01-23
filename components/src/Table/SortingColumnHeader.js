@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, Flex, ControlIcon } from "..";
+import theme from "../theme";
 
 const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) => {
   const defaultAriaLabel = `sort ${ascending ? "descending" : "ascending"}`;
@@ -8,7 +9,8 @@ const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) 
     <Flex alignItems="center">
       <Text mr="x1">{label}</Text>
       <ControlIcon
-        icon={ascending ? "downArrow" : "upArrow"}
+        size={theme.space.x3}
+        icon={ascending ? "sortDown" : "sortUp"}
         label={ariaLabel || defaultAriaLabel}
         toggled={active}
         onClick={onChange}

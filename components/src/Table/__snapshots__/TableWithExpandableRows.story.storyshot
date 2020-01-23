@@ -1504,7 +1504,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -1526,7 +1526,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
@@ -2319,7 +2319,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -2341,7 +2341,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
@@ -3134,7 +3134,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -3156,7 +3156,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
@@ -5675,7 +5675,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -5697,7 +5697,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
@@ -6490,7 +6490,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -6512,7 +6512,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
@@ -7735,7 +7735,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
                                                           "isStatic": false,
-                                                          "lastClassName": "gBBsow",
+                                                          "lastClassName": "cBwnHL",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -7757,7 +7757,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                                   >
                                                     <button
                                                       aria-label="toggle expansion"
-                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 gBBsow"
+                                                      className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
                                                       disabled={false}
                                                       onClick={[Function]}
                                                     >
