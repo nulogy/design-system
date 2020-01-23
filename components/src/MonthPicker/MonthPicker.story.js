@@ -10,7 +10,7 @@ storiesOf("MonthPicker", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <MonthPicker
-      selected={new Date("2018-01-01T05:00:00.000Z")}
+      selected={new Date("2019-01-01T05:00:00.000Z")}
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Month" }}
