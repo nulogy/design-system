@@ -882,9 +882,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -895,7 +895,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -909,7 +909,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -935,9 +935,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -948,7 +948,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -962,7 +962,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -988,9 +988,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1001,7 +1001,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1015,7 +1015,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -1041,9 +1041,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1054,7 +1054,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1068,7 +1068,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -1094,9 +1094,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1107,7 +1107,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1121,7 +1121,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -1223,9 +1223,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1236,7 +1236,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1250,7 +1250,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -1902,9 +1902,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1915,7 +1915,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1929,7 +1929,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -1955,9 +1955,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -1968,7 +1968,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -1982,7 +1982,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -2008,9 +2008,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2021,7 +2021,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -2035,7 +2035,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -2061,9 +2061,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2074,7 +2074,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -2088,7 +2088,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -2114,9 +2114,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2127,7 +2127,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -2141,7 +2141,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -2243,9 +2243,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2256,7 +2256,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -2270,7 +2270,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -2922,9 +2922,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2935,7 +2935,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -2949,7 +2949,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -2975,9 +2975,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -2988,7 +2988,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3002,7 +3002,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -3028,9 +3028,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -3041,7 +3041,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3055,7 +3055,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -3081,9 +3081,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -3094,7 +3094,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3108,7 +3108,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -3134,9 +3134,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -3147,7 +3147,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3161,7 +3161,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -3263,9 +3263,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -3276,7 +3276,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3290,7 +3290,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -3942,9 +3942,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -3955,7 +3955,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -3969,7 +3969,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -3995,9 +3995,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4008,7 +4008,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4022,7 +4022,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -4048,9 +4048,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4061,7 +4061,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4075,7 +4075,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -4101,9 +4101,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4114,7 +4114,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4128,7 +4128,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -4154,9 +4154,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4167,7 +4167,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4181,7 +4181,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -4283,9 +4283,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4296,7 +4296,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4310,7 +4310,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -4962,9 +4962,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -4975,7 +4975,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -4989,7 +4989,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -5015,9 +5015,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5028,7 +5028,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -5042,7 +5042,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -5068,9 +5068,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5081,7 +5081,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -5095,7 +5095,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -5121,9 +5121,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5134,7 +5134,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -5148,7 +5148,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -5174,9 +5174,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5187,7 +5187,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -5201,7 +5201,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -5303,9 +5303,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5316,7 +5316,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -5330,7 +5330,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -5982,9 +5982,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -5995,7 +5995,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6009,7 +6009,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -6111,9 +6111,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -6124,7 +6124,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6138,7 +6138,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -6164,9 +6164,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -6177,7 +6177,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6191,7 +6191,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -6217,9 +6217,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -6230,7 +6230,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6244,7 +6244,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -6270,9 +6270,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -6283,7 +6283,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6297,7 +6297,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -6323,9 +6323,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -6336,7 +6336,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -6350,7 +6350,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7002,9 +7002,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7015,7 +7015,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7029,7 +7029,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7131,9 +7131,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7144,7 +7144,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7158,7 +7158,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7184,9 +7184,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7197,7 +7197,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7211,7 +7211,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7237,9 +7237,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7250,7 +7250,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7264,7 +7264,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7290,9 +7290,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7303,7 +7303,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7317,7 +7317,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 6"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -7343,9 +7343,9 @@ exports[`Storyshots Pagination Pagination 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -7356,7 +7356,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -7370,7 +7370,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -8418,9 +8418,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8431,7 +8431,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8445,7 +8445,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -8471,9 +8471,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8484,7 +8484,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8498,7 +8498,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -8524,9 +8524,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8537,7 +8537,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8551,7 +8551,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 3"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -8577,9 +8577,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8590,7 +8590,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8604,7 +8604,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -8630,9 +8630,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8643,7 +8643,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8657,7 +8657,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 5"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -8759,9 +8759,9 @@ exports[`Storyshots Pagination on the first page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -8772,7 +8772,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -8786,7 +8786,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 10"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -9834,9 +9834,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -9847,7 +9847,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -9861,7 +9861,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -9963,9 +9963,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -9976,7 +9976,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -9990,7 +9990,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 6"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -10016,9 +10016,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -10029,7 +10029,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -10043,7 +10043,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 7"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -10069,9 +10069,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -10082,7 +10082,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -10096,7 +10096,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 8"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -10122,9 +10122,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -10135,7 +10135,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -10149,7 +10149,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 9"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -10175,9 +10175,9 @@ exports[`Storyshots Pagination on the last page 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "kTEgcl",
+                              "lastClassName": "kkOuFJ",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -10188,7 +10188,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -10202,7 +10202,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -11250,9 +11250,9 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -11263,7 +11263,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -11277,7 +11277,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 1"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -11303,9 +11303,9 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -11316,7 +11316,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -11330,7 +11330,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 2"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >
@@ -11356,9 +11356,9 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -11369,7 +11369,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -11383,7 +11383,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                         <button
                           aria-current={true}
                           aria-label={null}
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik kTEgcl"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG kkOuFJ"
                           disabled={true}
                           onClick={[Function]}
                         >
@@ -11409,9 +11409,9 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gipzik",
+                              "componentId": "sc-jlyJG",
                               "isStatic": false,
-                              "lastClassName": "khatUV",
+                              "lastClassName": "inhhrl",
                               "rules": Array [
                                 [Function],
                                 [Function],
@@ -11422,7 +11422,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                               "Pagination__PaginationButton-sc-1fsx1pp-0",
                             ],
                             "render": [Function],
-                            "styledComponentId": "sc-gipzik",
+                            "styledComponentId": "sc-jlyJG",
                             "target": "button",
                             "toString": [Function],
                             "usesTheme": false,
@@ -11436,7 +11436,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                         <button
                           aria-current={false}
                           aria-label="Go to page 4"
-                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-gipzik khatUV"
+                          className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-jlyJG inhhrl"
                           disabled={false}
                           onClick={[Function]}
                         >

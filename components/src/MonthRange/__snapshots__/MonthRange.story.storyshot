@@ -532,15 +532,15 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -554,13 +554,13 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -569,7 +569,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -609,7 +609,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -1541,9 +1541,9 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -1606,7 +1606,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1703,7 +1703,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -2688,9 +2688,9 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -2714,7 +2714,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -2746,7 +2746,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -2755,7 +2755,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -3411,9 +3411,9 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -3476,7 +3476,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3573,7 +3573,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -4558,9 +4558,9 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -4584,7 +4584,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -4616,7 +4616,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -4625,7 +4625,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -5178,15 +5178,15 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -5200,13 +5200,13 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -5215,7 +5215,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -5255,7 +5255,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -6174,9 +6174,9 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -6239,7 +6239,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -6336,7 +6336,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -7284,9 +7284,9 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -7310,7 +7310,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -7342,7 +7342,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -7351,7 +7351,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -7994,9 +7994,9 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -8059,7 +8059,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -8156,7 +8156,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -9104,9 +9104,9 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -9130,7 +9130,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -9162,7 +9162,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -9171,7 +9171,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -9772,15 +9772,15 @@ exports[`Storyshots MonthRange default 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -9794,13 +9794,13 @@ exports[`Storyshots MonthRange default 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -9809,7 +9809,7 @@ exports[`Storyshots MonthRange default 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -9849,7 +9849,7 @@ exports[`Storyshots MonthRange default 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -10780,9 +10780,9 @@ exports[`Storyshots MonthRange default 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -10845,7 +10845,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -10942,7 +10942,7 @@ exports[`Storyshots MonthRange default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -11926,9 +11926,9 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -11952,7 +11952,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -11984,7 +11984,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -11993,7 +11993,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -12648,9 +12648,9 @@ exports[`Storyshots MonthRange default 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -12713,7 +12713,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -12810,7 +12810,7 @@ exports[`Storyshots MonthRange default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -13794,9 +13794,9 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -13820,7 +13820,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -13852,7 +13852,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -13861,7 +13861,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -14462,15 +14462,15 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -14484,13 +14484,13 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -14499,7 +14499,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -14539,7 +14539,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -15470,9 +15470,9 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -15535,7 +15535,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -15632,7 +15632,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -16616,9 +16616,9 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -16642,7 +16642,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -16674,7 +16674,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -16683,7 +16683,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -17338,9 +17338,9 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -17403,7 +17403,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -17500,7 +17500,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -18484,9 +18484,9 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -18510,7 +18510,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -18542,7 +18542,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -18551,7 +18551,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -19151,15 +19151,15 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -19173,13 +19173,13 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -19188,7 +19188,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -19228,7 +19228,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -20159,9 +20159,9 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -20224,7 +20224,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -20321,7 +20321,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -21305,9 +21305,9 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -21331,7 +21331,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -21363,7 +21363,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -21372,7 +21372,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -22027,9 +22027,9 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -22092,7 +22092,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -22189,7 +22189,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -23173,9 +23173,9 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -23199,7 +23199,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -23231,7 +23231,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -23240,7 +23240,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -23812,15 +23812,15 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -23834,13 +23834,13 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -23849,7 +23849,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -23889,7 +23889,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -24808,9 +24808,9 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -24873,7 +24873,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -24970,7 +24970,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -25921,9 +25921,9 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -25947,7 +25947,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -25979,7 +25979,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -25988,7 +25988,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -27179,9 +27179,9 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -27244,7 +27244,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -27341,7 +27341,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -28325,9 +28325,9 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -28351,7 +28351,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -28383,7 +28383,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -28392,7 +28392,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -28993,15 +28993,15 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-kAzzGY",
+                          "componentId": "sc-cSHVUG",
                           "isStatic": false,
-                          "lastClassName": "jHprQs",
+                          "lastClassName": "CAuLq",
                           "rules": Array [],
                         },
                         "displayName": "Styled(BaseFieldLabel)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-kAzzGY",
+                        "styledComponentId": "sc-cSHVUG",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -29015,13 +29015,13 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                     requirementText={null}
                   >
                     <BaseFieldLabel
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       helpText={null}
                       labelText="Month Range"
                       requirementText={null}
                     >
                       <FieldLabel__Label
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -29030,7 +29030,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                         }
                       >
                         <StyledComponent
-                          className="sc-kAzzGY jHprQs"
+                          className="sc-cSHVUG CAuLq"
                           color="#011e38"
                           forwardedComponent={
                             Object {
@@ -29070,7 +29070,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                           }
                         >
                           <label
-                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                             color="#011e38"
                             style={
                               Object {
@@ -30001,9 +30001,9 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -30066,7 +30066,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -30163,7 +30163,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -31147,9 +31147,9 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -31173,7 +31173,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -31205,7 +31205,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -31214,7 +31214,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}
@@ -31869,9 +31869,9 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-chPdSV",
+                                  "componentId": "sc-kAzzGY",
                                   "isStatic": false,
-                                  "lastClassName": "jfGaMs",
+                                  "lastClassName": "lcPXpU",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -31934,7 +31934,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                   "width": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-chPdSV",
+                                "styledComponentId": "sc-kAzzGY",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -32031,7 +32031,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                             >
                               <GlobalStyleComponent />
                               <t
@@ -33015,9 +33015,9 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                       },
                                                                       "attrs": Array [],
                                                                       "componentStyle": ComponentStyle {
-                                                                        "componentId": "sc-dxgOiQ",
+                                                                        "componentId": "sc-kpOJdX",
                                                                         "isStatic": false,
-                                                                        "lastClassName": "WupFx",
+                                                                        "lastClassName": "gqcIiV",
                                                                         "rules": Array [
                                                                           [Function],
                                                                           [Function],
@@ -33041,7 +33041,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                         "title": [Function],
                                                                       },
                                                                       "render": [Function],
-                                                                      "styledComponentId": "sc-dxgOiQ",
+                                                                      "styledComponentId": "sc-kpOJdX",
                                                                       "target": Object {
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "defaultProps": Object {
@@ -33073,7 +33073,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                   title={null}
                                                                 >
                                                                   <ForwardRef
-                                                                    className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                    className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                     color="currentColor"
                                                                     focusable={false}
                                                                     icon="calendarToday"
@@ -33082,7 +33082,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                                                   >
                                                                     <svg
                                                                       aria-hidden={true}
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       fill="currentColor"
                                                                       focusable={false}

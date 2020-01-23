@@ -1473,15 +1473,15 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fjdhpX",
+                                        "componentId": "sc-jTzLTM",
                                         "isStatic": false,
-                                        "lastClassName": "nsimD",
+                                        "lastClassName": "eCMmlJ",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseBranding)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fjdhpX",
+                                      "styledComponentId": "sc-jTzLTM",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -1501,7 +1501,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                 >
                                   <BaseBranding
                                     alignment="center"
-                                    className="sc-fjdhpX nsimD"
+                                    className="sc-jTzLTM eCMmlJ"
                                     logoColor="blue"
                                     logoType="wordmark"
                                     size="large"
@@ -1515,7 +1515,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                   >
                                     <Branding__BrandingWrap
                                       alignment="center"
-                                      className="sc-fjdhpX nsimD"
+                                      className="sc-jTzLTM eCMmlJ"
                                       size="large"
                                       style={
                                         Object {
@@ -1525,7 +1525,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                     >
                                       <StyledComponent
                                         alignment="center"
-                                        className="sc-fjdhpX nsimD"
+                                        className="sc-jTzLTM eCMmlJ"
                                         forwardedComponent={
                                           Object {
                                             "$$typeof": Symbol(react.forward_ref),
@@ -1563,7 +1563,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                                           size="large"
                                           style={
                                             Object {
@@ -2168,9 +2168,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kpOJdX",
+                                        "componentId": "sc-kGXeez",
                                         "isStatic": false,
-                                        "lastClassName": "xWASZ",
+                                        "lastClassName": "gGFJmE",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -2179,7 +2179,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                       "displayName": "Styled(BaseForm)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kpOJdX",
+                                      "styledComponentId": "sc-kGXeez",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -2195,7 +2195,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                   }
                                 >
                                   <BaseForm
-                                    className="sc-kpOJdX xWASZ"
+                                    className="sc-kGXeez gGFJmE"
                                     style={
                                       Object {
                                         "width": "100%",
@@ -2204,7 +2204,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                     title={null}
                                   >
                                     <form
-                                      className="sc-kpOJdX xWASZ"
+                                      className="sc-kGXeez gGFJmE"
                                       style={
                                         Object {
                                           "width": "100%",
@@ -2407,9 +2407,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -2472,7 +2472,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -2569,7 +2569,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -2601,15 +2601,15 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -2623,13 +2623,13 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Email"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -2638,7 +2638,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -2678,7 +2678,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -4011,9 +4011,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -4076,7 +4076,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -4173,7 +4173,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -4206,15 +4206,15 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -4228,13 +4228,13 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Password"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -4243,7 +4243,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -4283,7 +4283,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -7520,15 +7520,15 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fjdhpX",
+                                        "componentId": "sc-jTzLTM",
                                         "isStatic": false,
-                                        "lastClassName": "nsimD",
+                                        "lastClassName": "eCMmlJ",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseBranding)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fjdhpX",
+                                      "styledComponentId": "sc-jTzLTM",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -7548,7 +7548,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                 >
                                   <BaseBranding
                                     alignment="center"
-                                    className="sc-fjdhpX nsimD"
+                                    className="sc-jTzLTM eCMmlJ"
                                     logoColor="blue"
                                     logoType="wordmark"
                                     size="large"
@@ -7562,7 +7562,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                   >
                                     <Branding__BrandingWrap
                                       alignment="center"
-                                      className="sc-fjdhpX nsimD"
+                                      className="sc-jTzLTM eCMmlJ"
                                       size="large"
                                       style={
                                         Object {
@@ -7572,7 +7572,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                     >
                                       <StyledComponent
                                         alignment="center"
-                                        className="sc-fjdhpX nsimD"
+                                        className="sc-jTzLTM eCMmlJ"
                                         forwardedComponent={
                                           Object {
                                             "$$typeof": Symbol(react.forward_ref),
@@ -7610,7 +7610,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                                           size="large"
                                           style={
                                             Object {
@@ -9073,9 +9073,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kpOJdX",
+                                        "componentId": "sc-kGXeez",
                                         "isStatic": false,
-                                        "lastClassName": "xWASZ",
+                                        "lastClassName": "gGFJmE",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -9084,7 +9084,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                       "displayName": "Styled(BaseForm)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kpOJdX",
+                                      "styledComponentId": "sc-kGXeez",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -9100,7 +9100,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                   }
                                 >
                                   <BaseForm
-                                    className="sc-kpOJdX xWASZ"
+                                    className="sc-kGXeez gGFJmE"
                                     style={
                                       Object {
                                         "width": "100%",
@@ -9109,7 +9109,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                     title={null}
                                   >
                                     <form
-                                      className="sc-kpOJdX xWASZ"
+                                      className="sc-kGXeez gGFJmE"
                                       style={
                                         Object {
                                           "width": "100%",
@@ -9312,9 +9312,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -9377,7 +9377,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -9474,7 +9474,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -9506,15 +9506,15 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -9528,13 +9528,13 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Email"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -9543,7 +9543,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -9583,7 +9583,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -10916,9 +10916,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -10981,7 +10981,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -11078,7 +11078,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -11111,15 +11111,15 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -11133,13 +11133,13 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Password"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -11148,7 +11148,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -11188,7 +11188,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -14425,15 +14425,15 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fjdhpX",
+                                        "componentId": "sc-jTzLTM",
                                         "isStatic": false,
-                                        "lastClassName": "nsimD",
+                                        "lastClassName": "eCMmlJ",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseBranding)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fjdhpX",
+                                      "styledComponentId": "sc-jTzLTM",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -14453,7 +14453,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                 >
                                   <BaseBranding
                                     alignment="center"
-                                    className="sc-fjdhpX nsimD"
+                                    className="sc-jTzLTM eCMmlJ"
                                     logoColor="blue"
                                     logoType="wordmark"
                                     size="large"
@@ -14467,7 +14467,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                   >
                                     <Branding__BrandingWrap
                                       alignment="center"
-                                      className="sc-fjdhpX nsimD"
+                                      className="sc-jTzLTM eCMmlJ"
                                       size="large"
                                       style={
                                         Object {
@@ -14477,7 +14477,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                     >
                                       <StyledComponent
                                         alignment="center"
-                                        className="sc-fjdhpX nsimD"
+                                        className="sc-jTzLTM eCMmlJ"
                                         forwardedComponent={
                                           Object {
                                             "$$typeof": Symbol(react.forward_ref),
@@ -14515,7 +14515,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                                           size="large"
                                           style={
                                             Object {
@@ -15905,9 +15905,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kpOJdX",
+                                        "componentId": "sc-kGXeez",
                                         "isStatic": false,
-                                        "lastClassName": "xWASZ",
+                                        "lastClassName": "gGFJmE",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -15916,7 +15916,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                       "displayName": "Styled(BaseForm)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kpOJdX",
+                                      "styledComponentId": "sc-kGXeez",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -15932,7 +15932,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                   }
                                 >
                                   <BaseForm
-                                    className="sc-kpOJdX xWASZ"
+                                    className="sc-kGXeez gGFJmE"
                                     style={
                                       Object {
                                         "width": "100%",
@@ -15941,7 +15941,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                     title={null}
                                   >
                                     <form
-                                      className="sc-kpOJdX xWASZ"
+                                      className="sc-kGXeez gGFJmE"
                                       style={
                                         Object {
                                           "width": "100%",
@@ -16144,9 +16144,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -16209,7 +16209,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -16306,7 +16306,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -16338,15 +16338,15 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -16360,13 +16360,13 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Email"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -16375,7 +16375,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -16415,7 +16415,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -17748,9 +17748,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -17813,7 +17813,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -17910,7 +17910,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -17943,15 +17943,15 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -17965,13 +17965,13 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Password"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -17980,7 +17980,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -18020,7 +18020,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -21257,15 +21257,15 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fjdhpX",
+                                        "componentId": "sc-jTzLTM",
                                         "isStatic": false,
-                                        "lastClassName": "nsimD",
+                                        "lastClassName": "eCMmlJ",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseBranding)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fjdhpX",
+                                      "styledComponentId": "sc-jTzLTM",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -21285,7 +21285,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                 >
                                   <BaseBranding
                                     alignment="center"
-                                    className="sc-fjdhpX nsimD"
+                                    className="sc-jTzLTM eCMmlJ"
                                     logoColor="blue"
                                     logoType="wordmark"
                                     size="large"
@@ -21299,7 +21299,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                   >
                                     <Branding__BrandingWrap
                                       alignment="center"
-                                      className="sc-fjdhpX nsimD"
+                                      className="sc-jTzLTM eCMmlJ"
                                       size="large"
                                       style={
                                         Object {
@@ -21309,7 +21309,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                     >
                                       <StyledComponent
                                         alignment="center"
-                                        className="sc-fjdhpX nsimD"
+                                        className="sc-jTzLTM eCMmlJ"
                                         forwardedComponent={
                                           Object {
                                             "$$typeof": Symbol(react.forward_ref),
@@ -21347,7 +21347,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                                           size="large"
                                           style={
                                             Object {
@@ -21952,9 +21952,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kpOJdX",
+                                        "componentId": "sc-kGXeez",
                                         "isStatic": false,
-                                        "lastClassName": "xWASZ",
+                                        "lastClassName": "gGFJmE",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -21963,7 +21963,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                       "displayName": "Styled(BaseForm)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kpOJdX",
+                                      "styledComponentId": "sc-kGXeez",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -21979,7 +21979,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                   }
                                 >
                                   <BaseForm
-                                    className="sc-kpOJdX xWASZ"
+                                    className="sc-kGXeez gGFJmE"
                                     style={
                                       Object {
                                         "width": "100%",
@@ -21988,7 +21988,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                     title={null}
                                   >
                                     <form
-                                      className="sc-kpOJdX xWASZ"
+                                      className="sc-kGXeez gGFJmE"
                                       style={
                                         Object {
                                           "width": "100%",
@@ -22191,9 +22191,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -22256,7 +22256,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -22353,7 +22353,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -22385,15 +22385,15 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -22407,13 +22407,13 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Email"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -22422,7 +22422,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -22462,7 +22462,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -23795,9 +23795,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                 },
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-chPdSV",
+                                                  "componentId": "sc-kAzzGY",
                                                   "isStatic": false,
-                                                  "lastClassName": "jfGaMs",
+                                                  "lastClassName": "lcPXpU",
                                                   "rules": Array [
                                                     [Function],
                                                     [Function],
@@ -23860,7 +23860,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                   "width": [Function],
                                                 },
                                                 "render": [Function],
-                                                "styledComponentId": "sc-chPdSV",
+                                                "styledComponentId": "sc-kAzzGY",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -23957,7 +23957,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                              className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                             >
                                               <ForwardRef
                                                 disabled={false}
@@ -23990,15 +23990,15 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-kAzzGY",
+                                                            "componentId": "sc-cSHVUG",
                                                             "isStatic": false,
-                                                            "lastClassName": "jHprQs",
+                                                            "lastClassName": "CAuLq",
                                                             "rules": Array [],
                                                           },
                                                           "displayName": "Styled(BaseFieldLabel)",
                                                           "foldedComponentIds": Array [],
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-kAzzGY",
+                                                          "styledComponentId": "sc-cSHVUG",
                                                           "target": [Function],
                                                           "toString": [Function],
                                                           "usesTheme": false,
@@ -24012,13 +24012,13 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                       requirementText={null}
                                                     >
                                                       <BaseFieldLabel
-                                                        className="sc-kAzzGY jHprQs"
+                                                        className="sc-cSHVUG CAuLq"
                                                         helpText={null}
                                                         labelText="Password"
                                                         requirementText={null}
                                                       >
                                                         <FieldLabel__Label
-                                                          className="sc-kAzzGY jHprQs"
+                                                          className="sc-cSHVUG CAuLq"
                                                           color="#011e38"
                                                           style={
                                                             Object {
@@ -24027,7 +24027,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                           }
                                                         >
                                                           <StyledComponent
-                                                            className="sc-kAzzGY jHprQs"
+                                                            className="sc-cSHVUG CAuLq"
                                                             color="#011e38"
                                                             forwardedComponent={
                                                               Object {
@@ -24067,7 +24067,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                                                             }
                                                           >
                                                             <label
-                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                              className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                               color="#011e38"
                                                               style={
                                                                 Object {
@@ -27982,15 +27982,15 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fjdhpX",
+                                        "componentId": "sc-jTzLTM",
                                         "isStatic": false,
-                                        "lastClassName": "nsimD",
+                                        "lastClassName": "eCMmlJ",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseBranding)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fjdhpX",
+                                      "styledComponentId": "sc-jTzLTM",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -28010,7 +28010,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                 >
                                   <BaseBranding
                                     alignment="center"
-                                    className="sc-fjdhpX nsimD"
+                                    className="sc-jTzLTM eCMmlJ"
                                     logoColor="blue"
                                     logoType="wordmark"
                                     size="large"
@@ -28024,7 +28024,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                   >
                                     <Branding__BrandingWrap
                                       alignment="center"
-                                      className="sc-fjdhpX nsimD"
+                                      className="sc-jTzLTM eCMmlJ"
                                       size="large"
                                       style={
                                         Object {
@@ -28034,7 +28034,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                     >
                                       <StyledComponent
                                         alignment="center"
-                                        className="sc-fjdhpX nsimD"
+                                        className="sc-jTzLTM eCMmlJ"
                                         forwardedComponent={
                                           Object {
                                             "$$typeof": Symbol(react.forward_ref),
@@ -28072,7 +28072,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                                          className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                                           size="large"
                                           style={
                                             Object {
@@ -28868,9 +28868,9 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                           },
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
+                                            "componentId": "sc-kAzzGY",
                                             "isStatic": false,
-                                            "lastClassName": "jfGaMs",
+                                            "lastClassName": "lcPXpU",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -28933,7 +28933,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                             "width": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
+                                          "styledComponentId": "sc-kAzzGY",
                                           "target": "div",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -29030,7 +29030,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -29063,15 +29063,15 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-kAzzGY",
+                                                      "componentId": "sc-cSHVUG",
                                                       "isStatic": false,
-                                                      "lastClassName": "jHprQs",
+                                                      "lastClassName": "CAuLq",
                                                       "rules": Array [],
                                                     },
                                                     "displayName": "Styled(BaseFieldLabel)",
                                                     "foldedComponentIds": Array [],
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-kAzzGY",
+                                                    "styledComponentId": "sc-cSHVUG",
                                                     "target": [Function],
                                                     "toString": [Function],
                                                     "usesTheme": false,
@@ -29085,13 +29085,13 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                 requirementText={null}
                                               >
                                                 <BaseFieldLabel
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   helpText={null}
                                                   labelText="Email"
                                                   requirementText={null}
                                                 >
                                                   <FieldLabel__Label
-                                                    className="sc-kAzzGY jHprQs"
+                                                    className="sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -29100,7 +29100,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                     }
                                                   >
                                                     <StyledComponent
-                                                      className="sc-kAzzGY jHprQs"
+                                                      className="sc-cSHVUG CAuLq"
                                                       color="#011e38"
                                                       forwardedComponent={
                                                         Object {
@@ -29140,7 +29140,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                       }
                                                     >
                                                       <label
-                                                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                         color="#011e38"
                                                         style={
                                                           Object {
@@ -30475,9 +30475,9 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                           },
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
+                                            "componentId": "sc-kAzzGY",
                                             "isStatic": false,
-                                            "lastClassName": "jfGaMs",
+                                            "lastClassName": "lcPXpU",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -30540,7 +30540,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                             "width": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
+                                          "styledComponentId": "sc-kAzzGY",
                                           "target": "div",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -30637,7 +30637,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -30670,15 +30670,15 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-kAzzGY",
+                                                      "componentId": "sc-cSHVUG",
                                                       "isStatic": false,
-                                                      "lastClassName": "jHprQs",
+                                                      "lastClassName": "CAuLq",
                                                       "rules": Array [],
                                                     },
                                                     "displayName": "Styled(BaseFieldLabel)",
                                                     "foldedComponentIds": Array [],
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-kAzzGY",
+                                                    "styledComponentId": "sc-cSHVUG",
                                                     "target": [Function],
                                                     "toString": [Function],
                                                     "usesTheme": false,
@@ -30692,13 +30692,13 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                 requirementText={null}
                                               >
                                                 <BaseFieldLabel
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   helpText={null}
                                                   labelText="Password"
                                                   requirementText={null}
                                                 >
                                                   <FieldLabel__Label
-                                                    className="sc-kAzzGY jHprQs"
+                                                    className="sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -30707,7 +30707,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                     }
                                                   >
                                                     <StyledComponent
-                                                      className="sc-kAzzGY jHprQs"
+                                                      className="sc-cSHVUG CAuLq"
                                                       color="#011e38"
                                                       forwardedComponent={
                                                         Object {
@@ -30747,7 +30747,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                       }
                                                     >
                                                       <label
-                                                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                         color="#011e38"
                                                         style={
                                                           Object {
@@ -31896,9 +31896,9 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-iAyFgw",
+                                          "componentId": "sc-kkGfuU",
                                           "isStatic": false,
-                                          "lastClassName": "hvObFe",
+                                          "lastClassName": "bmgVGZ",
                                           "rules": Array [
                                             "padding: 4px 0;",
                                             "& .sc-bxivhb {",
@@ -31910,7 +31910,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                         "displayName": "Styled(BaseCheckbox)",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-iAyFgw",
+                                        "styledComponentId": "sc-kkGfuU",
                                         "target": [Function],
                                         "toString": [Function],
                                         "usesTheme": false,
@@ -31923,7 +31923,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                     mb="x3"
                                   >
                                     <BaseCheckbox
-                                      className="sc-iAyFgw hvObFe"
+                                      className="sc-kkGfuU bmgVGZ"
                                       disabled={false}
                                       error={false}
                                       id={null}
@@ -31932,7 +31932,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       required={false}
                                     >
                                       <Box
-                                        className="sc-iAyFgw hvObFe"
+                                        className="sc-kkGfuU bmgVGZ"
                                         theme={
                                           Object {
                                             "borders": Array [],
@@ -32021,7 +32021,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                         }
                                       >
                                         <StyledComponent
-                                          className="sc-iAyFgw hvObFe"
+                                          className="sc-kkGfuU bmgVGZ"
                                           forwardedComponent={
                                             Object {
                                               "$$typeof": Symbol(react.forward_ref),
@@ -32272,7 +32272,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                           }
                                         >
                                           <div
-                                            className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw hvObFe"
+                                            className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU bmgVGZ"
                                           >
                                             <ClickInputLabel
                                               disabled={false}
@@ -32311,7 +32311,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                   <Checkbox__CheckboxInput
                                                     aria-invalid={false}
                                                     aria-required={false}
-                                                    className="sc-iAyFgw hvObFe"
+                                                    className="sc-kkGfuU bmgVGZ"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -32323,7 +32323,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                     <StyledComponent
                                                       aria-invalid={false}
                                                       aria-required={false}
-                                                      className="sc-iAyFgw hvObFe"
+                                                      className="sc-kkGfuU bmgVGZ"
                                                       disabled={false}
                                                       error={false}
                                                       forwardedComponent={
@@ -32359,7 +32359,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                                       <input
                                                         aria-invalid={false}
                                                         aria-required={false}
-                                                        className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw hvObFe"
+                                                        className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU bmgVGZ"
                                                         disabled={false}
                                                         id={null}
                                                         required={false}

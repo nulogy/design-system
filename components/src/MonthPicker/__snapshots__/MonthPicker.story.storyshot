@@ -593,9 +593,9 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -658,7 +658,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -755,7 +755,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                   >
                     <GlobalStyleComponent />
                     <t
@@ -1738,9 +1738,9 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                             },
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-dxgOiQ",
+                                                              "componentId": "sc-kpOJdX",
                                                               "isStatic": false,
-                                                              "lastClassName": "WupFx",
+                                                              "lastClassName": "gqcIiV",
                                                               "rules": Array [
                                                                 [Function],
                                                                 [Function],
@@ -1764,7 +1764,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                               "title": [Function],
                                                             },
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-dxgOiQ",
+                                                            "styledComponentId": "sc-kpOJdX",
                                                             "target": Object {
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "defaultProps": Object {
@@ -1796,7 +1796,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                         title={null}
                                                       >
                                                         <ForwardRef
-                                                          className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                          className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                           color="currentColor"
                                                           focusable={false}
                                                           icon="calendarToday"
@@ -1805,7 +1805,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                                         >
                                                           <svg
                                                             aria-hidden={true}
-                                                            className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                            className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                             color="currentColor"
                                                             fill="currentColor"
                                                             focusable={false}
@@ -2444,9 +2444,9 @@ exports[`Storyshots MonthPicker default 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -2509,7 +2509,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -2606,7 +2606,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                   >
                     <GlobalStyleComponent />
                     <t
@@ -2793,15 +2793,15 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-kAzzGY",
+                                                  "componentId": "sc-cSHVUG",
                                                   "isStatic": false,
-                                                  "lastClassName": "jHprQs",
+                                                  "lastClassName": "CAuLq",
                                                   "rules": Array [],
                                                 },
                                                 "displayName": "Styled(BaseFieldLabel)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-kAzzGY",
+                                                "styledComponentId": "sc-cSHVUG",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -2815,13 +2815,13 @@ exports[`Storyshots MonthPicker default 1`] = `
                                             requirementText={null}
                                           >
                                             <BaseFieldLabel
-                                              className="sc-kAzzGY jHprQs"
+                                              className="sc-cSHVUG CAuLq"
                                               helpText={null}
                                               labelText="Month"
                                               requirementText={null}
                                             >
                                               <FieldLabel__Label
-                                                className="sc-kAzzGY jHprQs"
+                                                className="sc-cSHVUG CAuLq"
                                                 color="#011e38"
                                                 style={
                                                   Object {
@@ -2830,7 +2830,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   color="#011e38"
                                                   forwardedComponent={
                                                     Object {
@@ -2870,7 +2870,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                   }
                                                 >
                                                   <label
-                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -4008,9 +4008,9 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                         },
                                                                         "attrs": Array [],
                                                                         "componentStyle": ComponentStyle {
-                                                                          "componentId": "sc-dxgOiQ",
+                                                                          "componentId": "sc-kpOJdX",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "WupFx",
+                                                                          "lastClassName": "gqcIiV",
                                                                           "rules": Array [
                                                                             [Function],
                                                                             [Function],
@@ -4034,7 +4034,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                           "title": [Function],
                                                                         },
                                                                         "render": [Function],
-                                                                        "styledComponentId": "sc-dxgOiQ",
+                                                                        "styledComponentId": "sc-kpOJdX",
                                                                         "target": Object {
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "defaultProps": Object {
@@ -4066,7 +4066,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                     title={null}
                                                                   >
                                                                     <ForwardRef
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       focusable={false}
                                                                       icon="calendarToday"
@@ -4075,7 +4075,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                     >
                                                                       <svg
                                                                         aria-hidden={true}
-                                                                        className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                        className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                         color="currentColor"
                                                                         fill="currentColor"
                                                                         focusable={false}
@@ -4722,9 +4722,9 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -4787,7 +4787,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -4884,7 +4884,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                   >
                     <GlobalStyleComponent />
                     <t
@@ -5073,15 +5073,15 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-kAzzGY",
+                                                  "componentId": "sc-cSHVUG",
                                                   "isStatic": false,
-                                                  "lastClassName": "jHprQs",
+                                                  "lastClassName": "CAuLq",
                                                   "rules": Array [],
                                                 },
                                                 "displayName": "Styled(BaseFieldLabel)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-kAzzGY",
+                                                "styledComponentId": "sc-cSHVUG",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -5095,13 +5095,13 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                             requirementText={null}
                                           >
                                             <BaseFieldLabel
-                                              className="sc-kAzzGY jHprQs"
+                                              className="sc-cSHVUG CAuLq"
                                               helpText={null}
                                               labelText="Month and Year"
                                               requirementText={null}
                                             >
                                               <FieldLabel__Label
-                                                className="sc-kAzzGY jHprQs"
+                                                className="sc-cSHVUG CAuLq"
                                                 color="#011e38"
                                                 style={
                                                   Object {
@@ -5110,7 +5110,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   color="#011e38"
                                                   forwardedComponent={
                                                     Object {
@@ -5150,7 +5150,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                   }
                                                 >
                                                   <label
-                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -6288,9 +6288,9 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                                         },
                                                                         "attrs": Array [],
                                                                         "componentStyle": ComponentStyle {
-                                                                          "componentId": "sc-dxgOiQ",
+                                                                          "componentId": "sc-kpOJdX",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "WupFx",
+                                                                          "lastClassName": "gqcIiV",
                                                                           "rules": Array [
                                                                             [Function],
                                                                             [Function],
@@ -6314,7 +6314,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                                           "title": [Function],
                                                                         },
                                                                         "render": [Function],
-                                                                        "styledComponentId": "sc-dxgOiQ",
+                                                                        "styledComponentId": "sc-kpOJdX",
                                                                         "target": Object {
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "defaultProps": Object {
@@ -6346,7 +6346,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                                     title={null}
                                                                   >
                                                                     <ForwardRef
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       focusable={false}
                                                                       icon="calendarToday"
@@ -6355,7 +6355,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                                     >
                                                                       <svg
                                                                         aria-hidden={true}
-                                                                        className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                        className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                         color="currentColor"
                                                                         fill="currentColor"
                                                                         focusable={false}
@@ -7000,9 +7000,9 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -7065,7 +7065,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -7162,7 +7162,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                   >
                     <GlobalStyleComponent />
                     <t
@@ -7347,15 +7347,15 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-kAzzGY",
+                                                  "componentId": "sc-cSHVUG",
                                                   "isStatic": false,
-                                                  "lastClassName": "jHprQs",
+                                                  "lastClassName": "CAuLq",
                                                   "rules": Array [],
                                                 },
                                                 "displayName": "Styled(BaseFieldLabel)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-kAzzGY",
+                                                "styledComponentId": "sc-cSHVUG",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -7369,13 +7369,13 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                             requirementText={null}
                                           >
                                             <BaseFieldLabel
-                                              className="sc-kAzzGY jHprQs"
+                                              className="sc-cSHVUG CAuLq"
                                               helpText={null}
                                               labelText="Month and Year"
                                               requirementText={null}
                                             >
                                               <FieldLabel__Label
-                                                className="sc-kAzzGY jHprQs"
+                                                className="sc-cSHVUG CAuLq"
                                                 color="#011e38"
                                                 style={
                                                   Object {
@@ -7384,7 +7384,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   color="#011e38"
                                                   forwardedComponent={
                                                     Object {
@@ -7424,7 +7424,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                   }
                                                 >
                                                   <label
-                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -8562,9 +8562,9 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                                         },
                                                                         "attrs": Array [],
                                                                         "componentStyle": ComponentStyle {
-                                                                          "componentId": "sc-dxgOiQ",
+                                                                          "componentId": "sc-kpOJdX",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "WupFx",
+                                                                          "lastClassName": "gqcIiV",
                                                                           "rules": Array [
                                                                             [Function],
                                                                             [Function],
@@ -8588,7 +8588,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                                           "title": [Function],
                                                                         },
                                                                         "render": [Function],
-                                                                        "styledComponentId": "sc-dxgOiQ",
+                                                                        "styledComponentId": "sc-kpOJdX",
                                                                         "target": Object {
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "defaultProps": Object {
@@ -8620,7 +8620,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                                     title={null}
                                                                   >
                                                                     <ForwardRef
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       focusable={false}
                                                                       icon="calendarToday"
@@ -8629,7 +8629,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                                     >
                                                                       <svg
                                                                         aria-hidden={true}
-                                                                        className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                        className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                         color="currentColor"
                                                                         fill="currentColor"
                                                                         focusable={false}
@@ -9274,9 +9274,9 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -9339,7 +9339,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -9436,7 +9436,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs nds-month-picker"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU nds-month-picker"
                   >
                     <GlobalStyleComponent />
                     <t
@@ -9621,15 +9621,15 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-kAzzGY",
+                                                  "componentId": "sc-cSHVUG",
                                                   "isStatic": false,
-                                                  "lastClassName": "jHprQs",
+                                                  "lastClassName": "CAuLq",
                                                   "rules": Array [],
                                                 },
                                                 "displayName": "Styled(BaseFieldLabel)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-kAzzGY",
+                                                "styledComponentId": "sc-cSHVUG",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -9643,13 +9643,13 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                             requirementText={null}
                                           >
                                             <BaseFieldLabel
-                                              className="sc-kAzzGY jHprQs"
+                                              className="sc-cSHVUG CAuLq"
                                               helpText={null}
                                               labelText="Month and Year"
                                               requirementText={null}
                                             >
                                               <FieldLabel__Label
-                                                className="sc-kAzzGY jHprQs"
+                                                className="sc-cSHVUG CAuLq"
                                                 color="#011e38"
                                                 style={
                                                   Object {
@@ -9658,7 +9658,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-kAzzGY jHprQs"
+                                                  className="sc-cSHVUG CAuLq"
                                                   color="#011e38"
                                                   forwardedComponent={
                                                     Object {
@@ -9698,7 +9698,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                   }
                                                 >
                                                   <label
-                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                     color="#011e38"
                                                     style={
                                                       Object {
@@ -10836,9 +10836,9 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                                         },
                                                                         "attrs": Array [],
                                                                         "componentStyle": ComponentStyle {
-                                                                          "componentId": "sc-dxgOiQ",
+                                                                          "componentId": "sc-kpOJdX",
                                                                           "isStatic": false,
-                                                                          "lastClassName": "WupFx",
+                                                                          "lastClassName": "gqcIiV",
                                                                           "rules": Array [
                                                                             [Function],
                                                                             [Function],
@@ -10862,7 +10862,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                                           "title": [Function],
                                                                         },
                                                                         "render": [Function],
-                                                                        "styledComponentId": "sc-dxgOiQ",
+                                                                        "styledComponentId": "sc-kpOJdX",
                                                                         "target": Object {
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "defaultProps": Object {
@@ -10894,7 +10894,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                                     title={null}
                                                                   >
                                                                     <ForwardRef
-                                                                      className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                      className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                       color="currentColor"
                                                                       focusable={false}
                                                                       icon="calendarToday"
@@ -10903,7 +10903,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                                     >
                                                                       <svg
                                                                         aria-hidden={true}
-                                                                        className="sc-bwzfXH sc-dxgOiQ WupFx"
+                                                                        className="sc-bwzfXH sc-kpOJdX gqcIiV"
                                                                         color="currentColor"
                                                                         fill="currentColor"
                                                                         focusable={false}

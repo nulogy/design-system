@@ -2255,9 +2255,9 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jzJRlG",
+                                  "componentId": "sc-fjdhpX",
                                   "isStatic": false,
-                                  "lastClassName": "cFzqlc",
+                                  "lastClassName": "iJWVcX",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -2270,7 +2270,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                                   "showArrow": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-jzJRlG",
+                                "styledComponentId": "sc-fjdhpX",
                                 "target": Object {
                                   "$$typeof": Symbol(react.forward_ref),
                                   "defaultProps": Object {
@@ -2323,7 +2323,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           >
                             <ForwardRef
                               backgroundColor="whiteGrey"
-                              className="sc-jzJRlG cFzqlc"
+                              className="sc-fjdhpX iJWVcX"
                               onBlur={[Function]}
                               onClick={[Function]}
                               onFocus={[Function]}
@@ -2351,7 +2351,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                               showArrow={true}
                             >
                               <div
-                                className="sc-jzJRlG cFzqlc"
+                                className="sc-fjdhpX iJWVcX"
                                 onBlur={[Function]}
                                 onClick={[Function]}
                                 onFocus={[Function]}
@@ -2446,7 +2446,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                                   clickRef={
                                     Array [
                                       <div
-                                        class="sc-jzJRlG cFzqlc"
+                                        class="sc-fjdhpX iJWVcX"
                                         placement="bottom-start"
                                         style="position: absolute; top: 0px; left: 0px; opacity: 0; pointer-events: none;"
                                       >

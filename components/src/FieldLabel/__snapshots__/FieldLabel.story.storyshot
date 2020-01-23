@@ -397,15 +397,15 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "jHprQs",
+                      "lastClassName": "CAuLq",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseFieldLabel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-cSHVUG",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -417,13 +417,13 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
                 labelText="Default label"
               >
                 <BaseFieldLabel
-                  className="sc-kAzzGY jHprQs"
+                  className="sc-cSHVUG CAuLq"
                   helpText={null}
                   labelText="Default label"
                   requirementText={null}
                 >
                   <FieldLabel__Label
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     color="#011e38"
                     style={
                       Object {
@@ -432,7 +432,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       forwardedComponent={
                         Object {
@@ -472,7 +472,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
                       }
                     >
                       <label
-                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -1348,15 +1348,15 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "jHprQs",
+                      "lastClassName": "CAuLq",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseFieldLabel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-cSHVUG",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -1468,7 +1468,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                 labelText="Default label"
               >
                 <BaseFieldLabel
-                  className="sc-kAzzGY jHprQs"
+                  className="sc-cSHVUG CAuLq"
                   helpText={
                     <React.Fragment>
                       I am help text. I can be a string or a node that includes a 
@@ -1573,7 +1573,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                   requirementText={null}
                 >
                   <FieldLabel__Label
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     color="#011e38"
                     style={
                       Object {
@@ -1582,7 +1582,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       forwardedComponent={
                         Object {
@@ -1622,7 +1622,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                       }
                     >
                       <label
-                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -2012,9 +2012,9 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                                           [Function],
                                         ],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-cSHVUG",
+                                          "componentId": "sc-jzJRlG",
                                           "isStatic": false,
-                                          "lastClassName": "iacbJP",
+                                          "lastClassName": "gFmhuB",
                                           "rules": Array [
                                             [Function],
                                             [Function],
@@ -2040,7 +2040,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                                           "inline": [Function],
                                         },
                                         "render": [Function],
-                                        "styledComponentId": "sc-cSHVUG",
+                                        "styledComponentId": "sc-jzJRlG",
                                         "target": "p",
                                         "toString": [Function],
                                         "usesTheme": false,
@@ -2054,7 +2054,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
                                     m={0}
                                   >
                                     <p
-                                      className="sc-bxivhb sc-cSHVUG iacbJP"
+                                      className="sc-bxivhb sc-jzJRlG gFmhuB"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -2810,15 +2810,15 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "jHprQs",
+                      "lastClassName": "CAuLq",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseFieldLabel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-cSHVUG",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -2831,13 +2831,13 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
                 requirementText="(Required)"
               >
                 <BaseFieldLabel
-                  className="sc-kAzzGY jHprQs"
+                  className="sc-cSHVUG CAuLq"
                   helpText={null}
                   labelText="Default label"
                   requirementText="(Required)"
                 >
                   <FieldLabel__Label
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     color="#011e38"
                     style={
                       Object {
@@ -2846,7 +2846,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       forwardedComponent={
                         Object {
@@ -2886,7 +2886,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
                       }
                     >
                       <label
-                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -3739,15 +3739,15 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "jHprQs",
+                      "lastClassName": "CAuLq",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseFieldLabel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-cSHVUG",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -3761,13 +3761,13 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                 requirementText="(Required)"
               >
                 <BaseFieldLabel
-                  className="sc-kAzzGY jHprQs"
+                  className="sc-cSHVUG CAuLq"
                   helpText="I am help text. I can give more details on the input below!"
                   labelText="Default label"
                   requirementText="(Required)"
                 >
                   <FieldLabel__Label
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     color="#011e38"
                     style={
                       Object {
@@ -3776,7 +3776,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       forwardedComponent={
                         Object {
@@ -3816,7 +3816,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                       }
                     >
                       <label
-                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -4281,9 +4281,9 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                                           [Function],
                                         ],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-cSHVUG",
+                                          "componentId": "sc-jzJRlG",
                                           "isStatic": false,
-                                          "lastClassName": "iacbJP",
+                                          "lastClassName": "gFmhuB",
                                           "rules": Array [
                                             [Function],
                                             [Function],
@@ -4309,7 +4309,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                                           "inline": [Function],
                                         },
                                         "render": [Function],
-                                        "styledComponentId": "sc-cSHVUG",
+                                        "styledComponentId": "sc-jzJRlG",
                                         "target": "p",
                                         "toString": [Function],
                                         "usesTheme": false,
@@ -4323,7 +4323,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
                                     m={0}
                                   >
                                     <p
-                                      className="sc-bxivhb sc-cSHVUG iacbJP"
+                                      className="sc-bxivhb sc-jzJRlG gFmhuB"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -4749,15 +4749,15 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kAzzGY",
+                      "componentId": "sc-cSHVUG",
                       "isStatic": false,
-                      "lastClassName": "jHprQs",
+                      "lastClassName": "CAuLq",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseFieldLabel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kAzzGY",
+                    "styledComponentId": "sc-cSHVUG",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -4771,13 +4771,13 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                 requirementText="(Required)"
               >
                 <BaseFieldLabel
-                  className="sc-kAzzGY jHprQs"
+                  className="sc-cSHVUG CAuLq"
                   helpText="I am help text. I can give more details on the input below!"
                   labelText="Default label"
                   requirementText="(Required)"
                 >
                   <FieldLabel__Label
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     color="#011e38"
                     style={
                       Object {
@@ -4786,7 +4786,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       forwardedComponent={
                         Object {
@@ -4826,7 +4826,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                       }
                     >
                       <label
-                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                        className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                         color="#011e38"
                         style={
                           Object {
@@ -5291,9 +5291,9 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                           [Function],
                                         ],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-cSHVUG",
+                                          "componentId": "sc-jzJRlG",
                                           "isStatic": false,
-                                          "lastClassName": "iacbJP",
+                                          "lastClassName": "gFmhuB",
                                           "rules": Array [
                                             [Function],
                                             [Function],
@@ -5319,7 +5319,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                           "inline": [Function],
                                         },
                                         "render": [Function],
-                                        "styledComponentId": "sc-cSHVUG",
+                                        "styledComponentId": "sc-jzJRlG",
                                         "target": "p",
                                         "toString": [Function],
                                         "usesTheme": false,
@@ -5333,7 +5333,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                     m={0}
                                   >
                                     <p
-                                      className="sc-bxivhb sc-cSHVUG iacbJP"
+                                      className="sc-bxivhb sc-jzJRlG gFmhuB"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -5546,9 +5546,9 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                     },
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-chPdSV",
+                                      "componentId": "sc-kAzzGY",
                                       "isStatic": false,
-                                      "lastClassName": "jfGaMs",
+                                      "lastClassName": "lcPXpU",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -5611,7 +5611,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-chPdSV",
+                                    "styledComponentId": "sc-kAzzGY",
                                     "target": "div",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -5708,7 +5708,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                  className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                 >
                                   <ForwardRef
                                     disabled={false}

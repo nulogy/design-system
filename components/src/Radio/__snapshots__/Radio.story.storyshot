@@ -401,9 +401,9 @@ exports[`Storyshots Radio Controlled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -412,7 +412,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -427,7 +427,7 @@ exports[`Storyshots Radio Controlled 1`] = `
               >
                 <BaseRadio
                   checked={true}
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={false}
                   error={false}
                   id="radio-1"
@@ -436,7 +436,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -525,7 +525,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -776,7 +776,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -817,7 +817,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                 aria-invalid={false}
                                 aria-required={false}
                                 checked={true}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={false}
                                 error={false}
                                 id="radio-1"
@@ -831,7 +831,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={true}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -869,7 +869,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={true}
-                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-hSdWYo glIYsf"
                                     disabled={false}
                                     id="radio-1"
                                     onChange={[Function]}
@@ -1012,9 +1012,9 @@ exports[`Storyshots Radio Controlled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -1023,7 +1023,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -1038,7 +1038,7 @@ exports[`Storyshots Radio Controlled 1`] = `
               >
                 <BaseRadio
                   checked={false}
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={false}
                   error={false}
                   id="radio-2"
@@ -1047,7 +1047,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -1136,7 +1136,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1387,7 +1387,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -1428,7 +1428,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                 aria-invalid={false}
                                 aria-required={false}
                                 checked={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={false}
                                 error={false}
                                 id="radio-2"
@@ -1442,7 +1442,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -1480,7 +1480,7 @@ exports[`Storyshots Radio Controlled 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-hSdWYo glIYsf"
                                     disabled={false}
                                     id="radio-2"
                                     onChange={[Function]}
@@ -2016,9 +2016,9 @@ exports[`Storyshots Radio Radio 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -2027,7 +2027,7 @@ exports[`Storyshots Radio Radio 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -2040,7 +2040,7 @@ exports[`Storyshots Radio Radio 1`] = `
                 labelText="I am a radio button"
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={false}
                   error={false}
                   id="radio"
@@ -2048,7 +2048,7 @@ exports[`Storyshots Radio Radio 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -2137,7 +2137,7 @@ exports[`Storyshots Radio Radio 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -2388,7 +2388,7 @@ exports[`Storyshots Radio Radio 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -2427,7 +2427,7 @@ exports[`Storyshots Radio Radio 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={false}
                                 error={false}
                                 id="radio"
@@ -2438,7 +2438,7 @@ exports[`Storyshots Radio Radio 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -2473,7 +2473,7 @@ exports[`Storyshots Radio Radio 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-hSdWYo glIYsf"
                                     disabled={false}
                                     id="radio"
                                     required={false}
@@ -3007,9 +3007,9 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -3018,7 +3018,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -3031,7 +3031,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                 labelText="I am checked by default"
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   defaultChecked={true}
                   disabled={false}
                   error={false}
@@ -3040,7 +3040,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -3129,7 +3129,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -3380,7 +3380,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -3419,7 +3419,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 defaultChecked={true}
                                 disabled={false}
                                 error={false}
@@ -3431,7 +3431,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   defaultChecked={true}
                                   disabled={false}
                                   error={false}
@@ -3467,7 +3467,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-hSdWYo glIYsf"
                                     defaultChecked={true}
                                     disabled={false}
                                     id="radio"
@@ -4002,9 +4002,9 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -4013,7 +4013,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -4026,7 +4026,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                 labelText="I am disabled"
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={true}
                   error={false}
                   id="radio-1"
@@ -4034,7 +4034,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -4123,7 +4123,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -4374,7 +4374,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={true}
@@ -4413,7 +4413,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={true}
                                 error={false}
                                 id="radio-1"
@@ -4424,7 +4424,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={true}
                                   error={false}
                                   forwardedComponent={
@@ -4459,7 +4459,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 kdzxxm sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 kdzxxm sc-hSdWYo glIYsf"
                                     disabled={true}
                                     id="radio-1"
                                     required={false}
@@ -4599,9 +4599,9 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -4610,7 +4610,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -4624,7 +4624,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
               >
                 <BaseRadio
                   checked={true}
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={true}
                   error={false}
                   id="radio-2"
@@ -4632,7 +4632,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -4721,7 +4721,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -4972,7 +4972,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={true}
@@ -5013,7 +5013,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                                 aria-invalid={false}
                                 aria-required={false}
                                 checked={true}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={true}
                                 error={false}
                                 id="radio-2"
@@ -5026,7 +5026,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={true}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={true}
                                   error={false}
                                   forwardedComponent={
@@ -5063,7 +5063,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={true}
-                                    className="Radio__RadioInput-sc-82dpxx-1 kdzxxm sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 kdzxxm sc-hSdWYo glIYsf"
                                     disabled={true}
                                     id="radio-2"
                                     required={false}
@@ -5600,9 +5600,9 @@ exports[`Storyshots Radio Set to error 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -5611,7 +5611,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -5624,7 +5624,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                 labelText="I am error"
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={false}
                   error={true}
                   id="radio"
@@ -5632,7 +5632,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -5721,7 +5721,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -5972,7 +5972,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -6011,7 +6011,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={true}
                                 aria-required={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={false}
                                 error={true}
                                 id="radio"
@@ -6022,7 +6022,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                                 <StyledComponent
                                   aria-invalid={true}
                                   aria-required={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={false}
                                   error={true}
                                   forwardedComponent={
@@ -6057,7 +6057,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                                   <input
                                     aria-invalid={true}
                                     aria-required={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 hLRAET sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 hLRAET sc-hSdWYo glIYsf"
                                     disabled={false}
                                     id="radio"
                                     required={false}
@@ -6197,9 +6197,9 @@ exports[`Storyshots Radio Set to error 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -6208,7 +6208,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -6221,7 +6221,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                 labelText="I am error"
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   defaultChecked={true}
                   disabled={false}
                   error={true}
@@ -6230,7 +6230,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -6319,7 +6319,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -6570,7 +6570,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -6609,7 +6609,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={true}
                                 aria-required={false}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 defaultChecked={true}
                                 disabled={false}
                                 error={true}
@@ -6621,7 +6621,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                                 <StyledComponent
                                   aria-invalid={true}
                                   aria-required={false}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   defaultChecked={true}
                                   disabled={false}
                                   error={true}
@@ -6657,7 +6657,7 @@ exports[`Storyshots Radio Set to error 1`] = `
                                   <input
                                     aria-invalid={true}
                                     aria-required={false}
-                                    className="Radio__RadioInput-sc-82dpxx-1 hLRAET sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 hLRAET sc-hSdWYo glIYsf"
                                     defaultChecked={true}
                                     disabled={false}
                                     id="radio"
@@ -7191,9 +7191,9 @@ exports[`Storyshots Radio Set to required 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eHgmQL",
+                      "componentId": "sc-hSdWYo",
                       "isStatic": false,
-                      "lastClassName": "fNZLXt",
+                      "lastClassName": "glIYsf",
                       "rules": Array [
                         "padding: 4px 0;",
                         [Function],
@@ -7202,7 +7202,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                     "displayName": "Styled(BaseRadio)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eHgmQL",
+                    "styledComponentId": "sc-hSdWYo",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -7216,7 +7216,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                 required={true}
               >
                 <BaseRadio
-                  className="sc-eHgmQL fNZLXt"
+                  className="sc-hSdWYo glIYsf"
                   disabled={false}
                   error={false}
                   id="radio"
@@ -7224,7 +7224,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                   required={true}
                 >
                   <Box
-                    className="sc-eHgmQL fNZLXt"
+                    className="sc-hSdWYo glIYsf"
                     theme={
                       Object {
                         "borders": Array [],
@@ -7313,7 +7313,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-eHgmQL fNZLXt"
+                      className="sc-hSdWYo glIYsf"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -7564,7 +7564,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-eHgmQL fNZLXt"
+                        className="Box-sc-1qu1edy-0 dusExj sc-hSdWYo glIYsf"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -7603,7 +7603,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                               <Radio__RadioInput
                                 aria-invalid={false}
                                 aria-required={true}
-                                className="sc-eHgmQL fNZLXt"
+                                className="sc-hSdWYo glIYsf"
                                 disabled={false}
                                 error={false}
                                 id="radio"
@@ -7614,7 +7614,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={true}
-                                  className="sc-eHgmQL fNZLXt"
+                                  className="sc-hSdWYo glIYsf"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -7649,7 +7649,7 @@ exports[`Storyshots Radio Set to required 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={true}
-                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-eHgmQL fNZLXt"
+                                    className="Radio__RadioInput-sc-82dpxx-1 iryGTI sc-hSdWYo glIYsf"
                                     disabled={false}
                                     id="radio"
                                     required={true}

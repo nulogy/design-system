@@ -398,9 +398,9 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -412,7 +412,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -425,7 +425,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                 labelText="I am a checkbox"
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={false}
                   error={false}
                   id="checkbox"
@@ -433,7 +433,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -522,7 +522,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -773,7 +773,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -812,7 +812,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={false}
                                 error={false}
                                 id="checkbox"
@@ -823,7 +823,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -858,7 +858,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     id="checkbox"
                                     required={false}
@@ -1402,9 +1402,9 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -1416,7 +1416,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -1427,14 +1427,14 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                 forwardedRef={null}
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={false}
                   error={false}
                   id={null}
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -1523,7 +1523,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1774,7 +1774,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -1813,7 +1813,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={false}
                                 error={false}
                                 id={null}
@@ -1823,7 +1823,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -1857,7 +1857,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     id={null}
                                     required={false}
@@ -2335,9 +2335,9 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -2349,7 +2349,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -2362,7 +2362,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                 labelText="I am checked by default"
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   defaultChecked={true}
                   disabled={false}
                   error={false}
@@ -2371,7 +2371,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -2460,7 +2460,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -2711,7 +2711,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -2750,7 +2750,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 defaultChecked={true}
                                 disabled={false}
                                 error={false}
@@ -2762,7 +2762,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   defaultChecked={true}
                                   disabled={false}
                                   error={false}
@@ -2798,7 +2798,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                     defaultChecked={true}
                                     disabled={false}
                                     id="checkbox"
@@ -3348,9 +3348,9 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -3362,7 +3362,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -3375,7 +3375,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                 labelText="I am disabled"
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={true}
                   error={false}
                   id="checkbox-1"
@@ -3383,7 +3383,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -3472,7 +3472,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -3723,7 +3723,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={true}
@@ -3762,7 +3762,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={false}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={true}
                                 error={false}
                                 id="checkbox-1"
@@ -3773,7 +3773,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={true}
                                   error={false}
                                   forwardedComponent={
@@ -3808,7 +3808,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-kkGfuU fCpvZH"
                                     disabled={true}
                                     id="checkbox-1"
                                     required={false}
@@ -3963,9 +3963,9 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -3977,7 +3977,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -3991,7 +3991,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
               >
                 <BaseCheckbox
                   checked={true}
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={true}
                   error={false}
                   id="checkbox-2"
@@ -3999,7 +3999,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -4088,7 +4088,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -4339,7 +4339,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={true}
@@ -4379,7 +4379,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                                 aria-invalid={false}
                                 aria-required={false}
                                 checked={true}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={true}
                                 error={false}
                                 id="checkbox-2"
@@ -4391,7 +4391,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={true}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={true}
                                   error={false}
                                   forwardedComponent={
@@ -4427,7 +4427,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={true}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-kkGfuU fCpvZH"
                                     disabled={true}
                                     id="checkbox-2"
                                     required={false}
@@ -4979,9 +4979,9 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -4993,7 +4993,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -5006,7 +5006,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                 labelText="I am error"
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={false}
                   error={true}
                   id="checkbox"
@@ -5014,7 +5014,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -5103,7 +5103,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -5354,7 +5354,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -5393,7 +5393,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={true}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={false}
                                 error={true}
                                 id="checkbox"
@@ -5404,7 +5404,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                                 <StyledComponent
                                   aria-invalid={true}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={true}
                                   forwardedComponent={
@@ -5439,7 +5439,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                                   <input
                                     aria-invalid={true}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     id="checkbox"
                                     required={false}
@@ -5594,9 +5594,9 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -5608,7 +5608,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -5621,7 +5621,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                 labelText="I am error"
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   defaultChecked={true}
                   disabled={false}
                   error={true}
@@ -5630,7 +5630,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                   required={false}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -5719,7 +5719,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -5970,7 +5970,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -6009,7 +6009,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={true}
                                 aria-required={false}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 defaultChecked={true}
                                 disabled={false}
                                 error={true}
@@ -6021,7 +6021,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                                 <StyledComponent
                                   aria-invalid={true}
                                   aria-required={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   defaultChecked={true}
                                   disabled={false}
                                   error={true}
@@ -6057,7 +6057,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                                   <input
                                     aria-invalid={true}
                                     aria-required={false}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                     defaultChecked={true}
                                     disabled={false}
                                     id="checkbox"
@@ -6606,9 +6606,9 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-iAyFgw",
+                      "componentId": "sc-kkGfuU",
                       "isStatic": false,
-                      "lastClassName": "kDTxQF",
+                      "lastClassName": "fCpvZH",
                       "rules": Array [
                         "padding: 4px 0;",
                         "& .sc-bxivhb {",
@@ -6620,7 +6620,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                     "displayName": "Styled(BaseCheckbox)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-iAyFgw",
+                    "styledComponentId": "sc-kkGfuU",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -6634,7 +6634,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                 required={true}
               >
                 <BaseCheckbox
-                  className="sc-iAyFgw kDTxQF"
+                  className="sc-kkGfuU fCpvZH"
                   disabled={false}
                   error={false}
                   id="checkbox"
@@ -6642,7 +6642,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                   required={true}
                 >
                   <Box
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     theme={
                       Object {
                         "borders": Array [],
@@ -6731,7 +6731,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -6982,7 +6982,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                        className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                       >
                         <ClickInputLabel
                           disabled={false}
@@ -7021,7 +7021,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                               <Checkbox__CheckboxInput
                                 aria-invalid={false}
                                 aria-required={true}
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 disabled={false}
                                 error={false}
                                 id="checkbox"
@@ -7032,7 +7032,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                                 <StyledComponent
                                   aria-invalid={false}
                                   aria-required={true}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={false}
                                   forwardedComponent={
@@ -7067,7 +7067,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                                   <input
                                     aria-invalid={false}
                                     aria-required={true}
-                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                    className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     id="checkbox"
                                     required={true}
@@ -7618,9 +7618,9 @@ exports[`Storyshots Checkbox With state 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-iAyFgw",
+                        "componentId": "sc-kkGfuU",
                         "isStatic": false,
-                        "lastClassName": "kDTxQF",
+                        "lastClassName": "fCpvZH",
                         "rules": Array [
                           "padding: 4px 0;",
                           "& .sc-bxivhb {",
@@ -7632,7 +7632,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                       "displayName": "Styled(BaseCheckbox)",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-iAyFgw",
+                      "styledComponentId": "sc-kkGfuU",
                       "target": [Function],
                       "toString": [Function],
                       "usesTheme": false,
@@ -7647,7 +7647,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                 >
                   <BaseCheckbox
                     checked={false}
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     disabled={false}
                     error={false}
                     id="checkbox-1"
@@ -7656,7 +7656,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                     required={false}
                   >
                     <Box
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       theme={
                         Object {
                           "borders": Array [],
@@ -7745,7 +7745,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                       }
                     >
                       <StyledComponent
-                        className="sc-iAyFgw kDTxQF"
+                        className="sc-kkGfuU fCpvZH"
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -7996,7 +7996,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -8036,7 +8036,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={false}
                                   id="checkbox-1"
@@ -8049,7 +8049,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={false}
-                                    className="sc-iAyFgw kDTxQF"
+                                    className="sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     error={false}
                                     forwardedComponent={
@@ -8086,7 +8086,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                       aria-invalid={false}
                                       aria-required={false}
                                       checked={false}
-                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                       disabled={false}
                                       id="checkbox-1"
                                       onChange={[Function]}
@@ -8244,9 +8244,9 @@ exports[`Storyshots Checkbox With state 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-iAyFgw",
+                        "componentId": "sc-kkGfuU",
                         "isStatic": false,
-                        "lastClassName": "kDTxQF",
+                        "lastClassName": "fCpvZH",
                         "rules": Array [
                           "padding: 4px 0;",
                           "& .sc-bxivhb {",
@@ -8258,7 +8258,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                       "displayName": "Styled(BaseCheckbox)",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-iAyFgw",
+                      "styledComponentId": "sc-kkGfuU",
                       "target": [Function],
                       "toString": [Function],
                       "usesTheme": false,
@@ -8273,7 +8273,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                 >
                   <BaseCheckbox
                     checked={false}
-                    className="sc-iAyFgw kDTxQF"
+                    className="sc-kkGfuU fCpvZH"
                     disabled={false}
                     error={false}
                     id="checkbox-2"
@@ -8282,7 +8282,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                     required={false}
                   >
                     <Box
-                      className="sc-iAyFgw kDTxQF"
+                      className="sc-kkGfuU fCpvZH"
                       theme={
                         Object {
                           "borders": Array [],
@@ -8371,7 +8371,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                       }
                     >
                       <StyledComponent
-                        className="sc-iAyFgw kDTxQF"
+                        className="sc-kkGfuU fCpvZH"
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -8622,7 +8622,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -8662,7 +8662,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                   aria-invalid={false}
                                   aria-required={false}
                                   checked={false}
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   disabled={false}
                                   error={false}
                                   id="checkbox-2"
@@ -8675,7 +8675,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                     aria-invalid={false}
                                     aria-required={false}
                                     checked={false}
-                                    className="sc-iAyFgw kDTxQF"
+                                    className="sc-kkGfuU fCpvZH"
                                     disabled={false}
                                     error={false}
                                     forwardedComponent={
@@ -8712,7 +8712,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                                       aria-invalid={false}
                                       aria-required={false}
                                       checked={false}
-                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                       disabled={false}
                                       id="checkbox-2"
                                       onChange={[Function]}
