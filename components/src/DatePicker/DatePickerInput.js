@@ -4,7 +4,20 @@ import { InputField } from "../Input/InputField";
 import { InputFieldDefaultProps, InputFieldPropTypes } from "../Input/InputField.type";
 
 const DatePickerInput = forwardRef(
-  ({ onChange, onClick, onInputChange, value, inputProps, onUpKeyPress, onDownKeyPress }, ref) => {
+  (
+    {
+      onChange,
+      onClick,
+      onInputChange,
+      value,
+      inputProps,
+      onUpKeyPress,
+      onDownKeyPress,
+      onEnterKeyPress,
+      onSpaceKeyPress
+    },
+    ref
+  ) => {
     const handleChange = e => {
       onInputChange(e);
       onChange(e);
@@ -15,6 +28,10 @@ const DatePickerInput = forwardRef(
         onUpKeyPress(event);
       } else if (event.keyCode === 40) {
         onDownKeyPress(event);
+      } else if (event.keyCode === 13) {
+        onEnterKeyPress(event);
+      } else if (event.keyCode === 32) {
+        onSpaceKeyPress(event);
       }
     };
 
@@ -38,6 +55,8 @@ DatePickerInput.propTypes = {
   onChange: PropTypes.func,
   onUpKeyPress: PropTypes.func,
   onDownKeyPress: PropTypes.func,
+  onEnterKeyPress: PropTypes.func,
+  onSpaceKeyPress: PropTypes.func,
   value: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
   dateFormat: PropTypes.string.isRequired,
@@ -49,6 +68,8 @@ DatePickerInput.defaultProps = {
   onChange: undefined,
   onUpKeyPress: undefined,
   onDownKeyPress: undefined,
+  onEnterKeyPress: undefined,
+  onSpaceKeyPress: undefined,
   value: undefined,
   inputProps: InputFieldDefaultProps
 };

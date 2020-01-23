@@ -18,6 +18,7 @@ class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedDate: props.selected };
+    this.datepickerRef = React.createRef();
     registerDatePickerLocales();
   }
 
@@ -46,23 +47,28 @@ class DatePicker extends Component {
   handleDownKey = () => {
     const { selectedDate } = this.state;
     const { minDate } = this.props;
-    if (isValid(selectedDate)) {
-      const newSelectedDate = subDays(selectedDate, 1);
-      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
-        this.setSelectedDate(newSelectedDate);
-      }
+    const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
+    if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
+      this.handleSelectedDateChange(newSelectedDate);
     }
   };
 
   handleUpKey = () => {
     const { selectedDate } = this.state;
     const { maxDate } = this.props;
-    if (isValid(selectedDate)) {
-      const newSelectedDate = addDays(selectedDate, 1);
-      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
-        this.setSelectedDate(newSelectedDate);
-      }
+    const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
+    if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
+      this.handleSelectedDateChange(newSelectedDate);
     }
+  };
+
+  handleEnterKey = () => {
+    const isOpen = this.datepickerRef.isCalendarOpen();
+    this.datepickerRef.setOpen(!isOpen);
+  };
+
+  handleSpaceKey = () => {
+    this.datepickerRef.setOpen(false);
   };
 
   renderHeader = props => {
@@ -86,6 +92,8 @@ class DatePicker extends Component {
         onInputChange={this.handleInputChange}
         onUpKeyPress={this.handleUpKey}
         onDownKeyPress={this.handleDownKey}
+        onEnterKeyPress={this.handleEnterKey}
+        onSpaceKeyPress={this.handleSpaceKey}
       />
     );
 
@@ -105,6 +113,9 @@ class DatePicker extends Component {
           maxDate={maxDate}
           highlightDates={highlightDates}
           locale={locale}
+          ref={r => {
+            this.datepickerRef = r;
+          }}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>

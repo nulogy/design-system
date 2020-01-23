@@ -15,6 +15,10 @@ describe("Datepicker", () => {
     });
 
     describe("displays a calendar", () => {
+      const closesOnKeyPress = key => {
+        cy.get("input").type(key);
+        getCalendarComponent().should("not.exist");
+      };
       it("can open a calendar on click", () => {
         getCalendarComponent().should("not.exist");
         getDateInputComponent().click();
@@ -26,6 +30,16 @@ describe("Datepicker", () => {
         cy.isInViewport(CALENDAR_SELECTOR);
         cy.clickOutsideElement();
         getCalendarComponent().should("not.exist");
+      });
+
+      it("can close a calendar on enter", () => {
+        getDateInputComponent().click();
+        closesOnKeyPress("{enter}");
+      });
+
+      it("can close a calendar on space", () => {
+        getDateInputComponent().click();
+        closesOnKeyPress(" ");
       });
 
       it("displays the selected date in the calendar", () => {
