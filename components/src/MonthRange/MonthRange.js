@@ -22,7 +22,8 @@ const MonthRange = ({
   labelProps,
   minDate,
   maxDate,
-  locale
+  locale,
+  disableAutocomplete
 }) => {
   const [startMonth, setStartMonth] = useState(defaultStartDate);
   const [endMonth, setEndMonth] = useState(defaultEndDate);
@@ -66,6 +67,7 @@ const MonthRange = ({
       minDate={minDate}
       maxDate={maxDate}
       locale={locale}
+      disableAutocomplete={disableAutocomplete}
     />
   );
 
@@ -79,6 +81,7 @@ const MonthRange = ({
       minDate={minDate}
       maxDate={maxDate}
       locale={locale}
+      disableAutocomplete={disableAutocomplete}
     />
   );
 
@@ -112,7 +115,8 @@ MonthRange.propTypes = {
   labelProps: PropTypes.shape(FieldLabelProps),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  disableAutocomplete: PropTypes.bool
 };
 
 MonthRange.defaultProps = {
@@ -134,7 +138,8 @@ MonthRange.defaultProps = {
   },
   minDate: null,
   maxDate: null,
-  locale: undefined
+  locale: undefined,
+  disableAutocomplete: false
 };
 
 export default MonthRange;

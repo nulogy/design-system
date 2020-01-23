@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
+import eachMonthOfInterval from "date-fns/eachMonthOfInterval";
+import { debounce } from "debounce";
+import { format, isSameYear, isValid } from "date-fns";
 
 import { MonthPickerStyles } from "./MonthPickerStyles";
 import DatePickerInput from "../DatePicker/DatePickerInput";
@@ -9,7 +12,7 @@ import theme from "../theme";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { Icon } from "../Icon";
-import { registerDatePickerLocales } from "../utils/datePickerLocales";
+import { registerDatePickerLocales, supportedDateLocales } from "../utils/datePickerLocales";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
 const DEFAULT_PLACEHOLDER = "Mon YYYY";
@@ -17,13 +20,58 @@ const DEFAULT_PLACEHOLDER = "Mon YYYY";
 class MonthPicker extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedDate: props.selected };
+    this.state = {
+      selectedDate: props.selected,
+      calendarDate: props.selected ? props.selected : new Date()
+    };
+    this.debounceAutocomplete = debounce(this.autoCompleteMonth, 400);
     registerDatePickerLocales();
   }
 
+  setSelectedDate = date => {
+    this.setState({
+      selectedDate: date
+    });
+  };
+
+  setCalendarDate = date => {
+    if (date && isValid(date)) {
+      this.setState({
+        calendarDate: date
+      });
+    }
+  };
+
+  autoCompleteMonth = (value, currentDate) => {
+    if (value.length > 2) {
+      const STANDALONE_MONTH_FORMAT = "LLL";
+      const { minDate, maxDate, locale } = this.props;
+      const currentYear = Number(format(currentDate, "yyyy"));
+
+      const months = eachMonthOfInterval({
+        start: isSameYear(currentDate, minDate) ? minDate : new Date(currentYear, 1),
+        end: isSameYear(currentDate, maxDate) ? maxDate : new Date(currentYear, 12)
+      }).map(date => ({
+        label: format(date, STANDALONE_MONTH_FORMAT, { locale: supportedDateLocales[locale] }),
+        date
+      }));
+
+      const matchingMonth = months.filter(month => month.label.toLowerCase() === value.toLowerCase());
+
+      if (matchingMonth.length) {
+        this.handleSelectedDateChange(matchingMonth[0].date);
+      }
+    }
+  };
+
   handleInputChange = event => {
     const { value } = event.target;
-    const { onInputChange } = this.props;
+    const { onInputChange, disableAutocomplete } = this.props;
+    const { calendarDate } = this.state;
+    if (!disableAutocomplete) {
+      this.debounceAutocomplete(value, calendarDate);
+    }
+
     if (onInputChange) {
       onInputChange(value);
     }
@@ -34,9 +82,8 @@ class MonthPicker extends Component {
     if (onChange) {
       onChange(date);
     }
-    this.setState({
-      selectedDate: date
-    });
+    this.setSelectedDate(date);
+    this.setCalendarDate(date);
   };
 
   render() {
@@ -57,6 +104,7 @@ class MonthPicker extends Component {
         <MonthPickerStyles />
         <ReactDatePicker
           selected={selectedDate}
+          openToDate={selectedDate}
           dateFormat={dateFormat}
           onChange={this.handleSelectedDateChange}
           customInput={customInput}
@@ -86,7 +134,8 @@ MonthPicker.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  disableAutocomplete: PropTypes.bool
 };
 
 MonthPicker.defaultProps = {
@@ -99,7 +148,8 @@ MonthPicker.defaultProps = {
   errorList: undefined,
   minDate: undefined,
   maxDate: undefined,
-  locale: undefined
+  locale: undefined,
+  disableAutocomplete: false
 };
 
 export default MonthPicker;

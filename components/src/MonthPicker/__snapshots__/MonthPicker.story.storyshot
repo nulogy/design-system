@@ -390,6 +390,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "disabled": false,
@@ -817,6 +818,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                       onMonthChange={[Function]}
                       onSelect={[Function]}
                       onYearChange={[Function]}
+                      openToDate={2019-07-10T05:00:00.000Z}
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
@@ -2250,6 +2252,7 @@ exports[`Storyshots MonthPicker default 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month",
@@ -2257,7 +2260,7 @@ exports[`Storyshots MonthPicker default 1`] = `
               }
               onChange={[Function]}
               onInputChange={[Function]}
-              selected={2019-01-01T05:00:00.000Z}
+              selected={2018-01-01T05:00:00.000Z}
             >
               <Styled(Box)
                 className="nds-month-picker"
@@ -2628,7 +2631,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                       dropdownMode="scroll"
                       excludeDates={
                         Array [
-                          2019-01-01T05:00:00.000Z,
+                          2018-01-01T05:00:00.000Z,
                         ]
                       }
                       inlineFocusSelectedMonth={false}
@@ -2654,6 +2657,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                       onMonthChange={[Function]}
                       onSelect={[Function]}
                       onYearChange={[Function]}
+                      openToDate={2018-01-01T05:00:00.000Z}
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
@@ -2666,7 +2670,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                       }
                       readOnly={false}
                       renderDayContents={[Function]}
-                      selected={2019-01-01T05:00:00.000Z}
+                      selected={2018-01-01T05:00:00.000Z}
                       shouldCloseOnSelect={true}
                       showMonthYearPicker={true}
                       showPopperArrow={true}
@@ -2716,7 +2720,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                               onInputChange={[Function]}
                               onKeyDown={[Function]}
                               readOnly={false}
-                              value="Jan 2019"
+                              value="Jan 2018"
                             />
                           </div>
                         }
@@ -2752,7 +2756,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                     onInputChange={[Function]}
                                     onKeyDown={[Function]}
                                     readOnly={false}
-                                    value="Jan 2019"
+                                    value="Jan 2018"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -2771,7 +2775,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                       suffix={null}
                                       suffixAlignment="left"
                                       suffixWidth={null}
-                                      value="Jan 2019"
+                                      value="Jan 2018"
                                     >
                                       <MaybeFieldLabel
                                         helpText={null}
@@ -3913,7 +3917,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                   onClick={[Function]}
                                                                   placeholder="Mon YYYY"
                                                                   required={false}
-                                                                  value="Jan 2019"
+                                                                  value="Jan 2018"
                                                                 >
                                                                   <StyledComponent
                                                                     aria-invalid={false}
@@ -3971,7 +3975,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                     onClick={[Function]}
                                                                     placeholder="Mon YYYY"
                                                                     required={false}
-                                                                    value="Jan 2019"
+                                                                    value="Jan 2018"
                                                                   >
                                                                     <input
                                                                       aria-invalid={false}
@@ -3982,7 +3986,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                                       onClick={[Function]}
                                                                       placeholder="Mon YYYY"
                                                                       required={false}
-                                                                      value="Jan 2019"
+                                                                      value="Jan 2018"
                                                                     />
                                                                   </StyledComponent>
                                                                 </InputField__StyledInput>
@@ -4524,13 +4528,14 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",
                 }
               }
-              maxDate={2019-12-05T05:00:00.000Z}
-              minDate={2019-07-05T05:00:00.000Z}
+              maxDate={2019-12-01T05:00:00.000Z}
+              minDate={2019-07-01T05:00:00.000Z}
               onChange={[Function]}
               onInputChange={[Function]}
               selected={2019-07-10T05:00:00.000Z}
@@ -4908,8 +4913,8 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                         ]
                       }
                       inlineFocusSelectedMonth={false}
-                      maxDate={2019-12-05T05:00:00.000Z}
-                      minDate={2019-07-05T05:00:00.000Z}
+                      maxDate={2019-12-01T05:00:00.000Z}
+                      minDate={2019-07-01T05:00:00.000Z}
                       monthsShown={1}
                       nextMonthButtonLabel="Next Month"
                       nextYearButtonLabel={
@@ -4932,6 +4937,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                       onMonthChange={[Function]}
                       onSelect={[Function]}
                       onYearChange={[Function]}
+                      openToDate={2019-07-10T05:00:00.000Z}
                       preventOpenOnFocus={false}
                       previousMonthButtonLabel="Previous Month"
                       previousYearButtonLabel={
@@ -6802,6 +6808,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
           >
             <MonthPicker
               dateFormat="MMM yyyy"
+              disableAutocomplete={false}
               inputProps={
                 Object {
                   "labelText": "Month and Year",
@@ -9075,6 +9082,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
           >
             <MonthPicker
               dateFormat="yyyy MMM"
+              disableAutocomplete={false}
               errorMessage="The date is invalid"
               inputProps={
                 Object {
