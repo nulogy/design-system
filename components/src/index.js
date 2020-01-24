@@ -8,7 +8,7 @@ export { Text, Title, SectionTitle, SubsectionTitle } from "./Type";
 export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton, ControlIcon } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
 export { Link } from "./Link";
-export { InlineValidation } from "./Validation";
+export { InlineValidation, HeaderValidation } from "./Validation";
 
 export { Alert } from "./Alert";
 export { Branding, BrandingText } from "./Branding";
