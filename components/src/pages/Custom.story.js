@@ -101,7 +101,7 @@ storiesOf("Pages/Custom", module)
               <SectionTitle mt="half">I am sidebar</SectionTitle>
               <IconicButton icon="close" />
             </Flex>
-            <Text>I am sidbar content.</Text>
+            <Text>I am sidebar content.</Text>
           </Box>
         </Flex>
       </Flex>
