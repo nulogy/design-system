@@ -726,9 +726,9 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                                     },
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-brqgnP",
+                                      "componentId": "sc-jWBwVP",
                                       "isStatic": false,
-                                      "lastClassName": "JmaTv",
+                                      "lastClassName": "hjigbL",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -802,7 +802,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-brqgnP",
+                                    "styledComponentId": "sc-jWBwVP",
                                     "target": "div",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -916,7 +916,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-brqgnP JmaTv"
+                                  className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
                                   id="random-id-1"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -1745,9 +1745,9 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                                     },
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-brqgnP",
+                                      "componentId": "sc-jWBwVP",
                                       "isStatic": false,
-                                      "lastClassName": "QMkEj",
+                                      "lastClassName": "gCXFcy",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -1821,7 +1821,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                                       "width": [Function],
                                     },
                                     "render": [Function],
-                                    "styledComponentId": "sc-brqgnP",
+                                    "styledComponentId": "sc-jWBwVP",
                                     "target": "div",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -1935,7 +1935,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-brqgnP QMkEj"
+                                  className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
                                   id="random-id-2"
                                   onBlur={[Function]}
                                   onFocus={[Function]}

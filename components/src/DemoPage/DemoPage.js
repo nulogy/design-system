@@ -10,7 +10,7 @@ import { Form, FormSection } from "../Form";
 import { Checkbox, CheckboxGroup } from "../Checkbox";
 import { Radio, RadioGroup } from "../Radio";
 import { Toggle } from "../Toggle";
-import { HeaderValidation } from "../Validation";
+import { Alert } from "../Alert";
 import { List, ListItem } from "../List";
 import { Select } from "../Select";
 import { Link } from "../Link";
@@ -272,7 +272,8 @@ const DemoPage = () => {
 
           <Box width={{ extraSmall: "100%", small: "80%", medium: "80%" }}>
             <Form title="Job 324400" mb="x4">
-              <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
+              <Alert type="danger" title="Errors have occured ...">
+                <Text>Instructions and description of errors</Text>
                 <List compact>
                   <ListItem>Affected field</ListItem>
                   <ListItem>Unmet criteria</ListItem>
@@ -280,7 +281,7 @@ const DemoPage = () => {
                     <a href="https://nulogy.design/">Affected field</a>
                   </ListItem>
                 </List>
-              </HeaderValidation>
+              </Alert>
 
               <FormSection title="Job Information">
                 <Input id="project" labelText="Project" placeholder="Project 128703" />

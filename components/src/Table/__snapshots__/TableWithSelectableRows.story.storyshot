@@ -801,9 +801,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iAyFgw",
+                                                  "componentId": "sc-kkGfuU",
                                                   "isStatic": false,
-                                                  "lastClassName": "kDTxQF",
+                                                  "lastClassName": "fCpvZH",
                                                   "rules": Array [
                                                     "padding: 4px 0;",
                                                     "& .sc-bxivhb {",
@@ -815,7 +815,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                 "displayName": "Styled(BaseCheckbox)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iAyFgw",
+                                                "styledComponentId": "sc-kkGfuU",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -829,7 +829,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             <BaseCheckbox
                                               aria-label="toggle all row selections"
                                               checked={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               id={null}
@@ -837,7 +837,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                               required={false}
                                             >
                                               <Box
-                                                className="sc-iAyFgw kDTxQF"
+                                                className="sc-kkGfuU fCpvZH"
                                                 theme={
                                                   Object {
                                                     "borders": Array [],
@@ -926,7 +926,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-iAyFgw kDTxQF"
+                                                  className="sc-kkGfuU fCpvZH"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -1177,7 +1177,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                   >
                                                     <ClickInputLabel
                                                       disabled={false}
@@ -1218,7 +1218,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                             aria-label="toggle all row selections"
                                                             aria-required={false}
                                                             checked={false}
-                                                            className="sc-iAyFgw kDTxQF"
+                                                            className="sc-kkGfuU fCpvZH"
                                                             disabled={false}
                                                             error={false}
                                                             id={null}
@@ -1231,7 +1231,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                               aria-label="toggle all row selections"
                                                               aria-required={false}
                                                               checked={false}
-                                                              className="sc-iAyFgw kDTxQF"
+                                                              className="sc-kkGfuU fCpvZH"
                                                               disabled={false}
                                                               error={false}
                                                               forwardedComponent={
@@ -1268,7 +1268,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                 aria-label="toggle all row selections"
                                                                 aria-required={false}
                                                                 checked={false}
-                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                 disabled={false}
                                                                 id={null}
                                                                 onChange={[Function]}
@@ -1723,9 +1723,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -1737,7 +1737,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -1751,7 +1751,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={true}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -1759,7 +1759,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -1848,7 +1848,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -2099,7 +2099,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -2140,7 +2140,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={true}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -2153,7 +2153,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={true}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -2190,7 +2190,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={true}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -2610,9 +2610,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -2624,7 +2624,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -2638,7 +2638,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -2646,7 +2646,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -2735,7 +2735,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -2986,7 +2986,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -3027,7 +3027,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -3040,7 +3040,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -3077,7 +3077,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -3497,9 +3497,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -3511,7 +3511,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -3525,7 +3525,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -3533,7 +3533,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -3622,7 +3622,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -3873,7 +3873,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -3914,7 +3914,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -3927,7 +3927,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -3964,7 +3964,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -4384,9 +4384,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -4398,7 +4398,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -4412,7 +4412,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -4420,7 +4420,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -4509,7 +4509,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -4760,7 +4760,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -4801,7 +4801,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -4814,7 +4814,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -4851,7 +4851,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -5271,9 +5271,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -5285,7 +5285,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -5299,7 +5299,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -5307,7 +5307,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -5396,7 +5396,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -5647,7 +5647,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -5688,7 +5688,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -5701,7 +5701,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -5738,7 +5738,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -6158,9 +6158,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -6172,7 +6172,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -6186,7 +6186,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -6194,7 +6194,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -6283,7 +6283,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -6534,7 +6534,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -6575,7 +6575,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -6588,7 +6588,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -6625,7 +6625,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -7045,9 +7045,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -7059,7 +7059,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -7073,7 +7073,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -7081,7 +7081,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -7170,7 +7170,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -7421,7 +7421,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -7462,7 +7462,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -7475,7 +7475,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -7512,7 +7512,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -7932,9 +7932,9 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -7946,7 +7946,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -7960,7 +7960,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -7968,7 +7968,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -8057,7 +8057,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -8308,7 +8308,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -8349,7 +8349,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -8362,7 +8362,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -8399,7 +8399,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -9493,9 +9493,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iAyFgw",
+                                                  "componentId": "sc-kkGfuU",
                                                   "isStatic": false,
-                                                  "lastClassName": "kDTxQF",
+                                                  "lastClassName": "fCpvZH",
                                                   "rules": Array [
                                                     "padding: 4px 0;",
                                                     "& .sc-bxivhb {",
@@ -9507,7 +9507,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                 "displayName": "Styled(BaseCheckbox)",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iAyFgw",
+                                                "styledComponentId": "sc-kkGfuU",
                                                 "target": [Function],
                                                 "toString": [Function],
                                                 "usesTheme": false,
@@ -9521,7 +9521,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             <BaseCheckbox
                                               aria-label="toggle all row selections"
                                               checked={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               id={null}
@@ -9529,7 +9529,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                               required={false}
                                             >
                                               <Box
-                                                className="sc-iAyFgw kDTxQF"
+                                                className="sc-kkGfuU fCpvZH"
                                                 theme={
                                                   Object {
                                                     "borders": Array [],
@@ -9618,7 +9618,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                 }
                                               >
                                                 <StyledComponent
-                                                  className="sc-iAyFgw kDTxQF"
+                                                  className="sc-kkGfuU fCpvZH"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -9869,7 +9869,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                   >
                                                     <ClickInputLabel
                                                       disabled={false}
@@ -9910,7 +9910,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                             aria-label="toggle all row selections"
                                                             aria-required={false}
                                                             checked={false}
-                                                            className="sc-iAyFgw kDTxQF"
+                                                            className="sc-kkGfuU fCpvZH"
                                                             disabled={false}
                                                             error={false}
                                                             id={null}
@@ -9923,7 +9923,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                               aria-label="toggle all row selections"
                                                               aria-required={false}
                                                               checked={false}
-                                                              className="sc-iAyFgw kDTxQF"
+                                                              className="sc-kkGfuU fCpvZH"
                                                               disabled={false}
                                                               error={false}
                                                               forwardedComponent={
@@ -9960,7 +9960,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                 aria-label="toggle all row selections"
                                                                 aria-required={false}
                                                                 checked={false}
-                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                 disabled={false}
                                                                 id={null}
                                                                 onChange={[Function]}
@@ -10415,9 +10415,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -10429,7 +10429,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -10443,7 +10443,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -10451,7 +10451,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -10540,7 +10540,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -10791,7 +10791,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -10832,7 +10832,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -10845,7 +10845,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -10882,7 +10882,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -11302,9 +11302,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -11316,7 +11316,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -11330,7 +11330,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -11338,7 +11338,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -11427,7 +11427,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -11678,7 +11678,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -11719,7 +11719,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -11732,7 +11732,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -11769,7 +11769,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -12189,9 +12189,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -12203,7 +12203,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -12217,7 +12217,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -12225,7 +12225,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -12314,7 +12314,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -12565,7 +12565,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -12606,7 +12606,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -12619,7 +12619,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -12656,7 +12656,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -13076,9 +13076,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -13090,7 +13090,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -13104,7 +13104,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -13112,7 +13112,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -13201,7 +13201,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -13452,7 +13452,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -13493,7 +13493,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -13506,7 +13506,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -13543,7 +13543,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -13963,9 +13963,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -13977,7 +13977,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -13991,7 +13991,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -13999,7 +13999,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -14088,7 +14088,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -14339,7 +14339,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -14380,7 +14380,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -14393,7 +14393,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -14430,7 +14430,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -14850,9 +14850,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -14864,7 +14864,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -14878,7 +14878,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -14886,7 +14886,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -14975,7 +14975,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -15226,7 +15226,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -15267,7 +15267,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -15280,7 +15280,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -15317,7 +15317,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -15737,9 +15737,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -15751,7 +15751,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -15765,7 +15765,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -15773,7 +15773,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -15862,7 +15862,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -16113,7 +16113,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -16154,7 +16154,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -16167,7 +16167,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -16204,7 +16204,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}
@@ -16624,9 +16624,9 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-iAyFgw",
+                                                        "componentId": "sc-kkGfuU",
                                                         "isStatic": false,
-                                                        "lastClassName": "kDTxQF",
+                                                        "lastClassName": "fCpvZH",
                                                         "rules": Array [
                                                           "padding: 4px 0;",
                                                           "& .sc-bxivhb {",
@@ -16638,7 +16638,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       "displayName": "Styled(BaseCheckbox)",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-iAyFgw",
+                                                      "styledComponentId": "sc-kkGfuU",
                                                       "target": [Function],
                                                       "toString": [Function],
                                                       "usesTheme": false,
@@ -16652,7 +16652,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                   <BaseCheckbox
                                                     aria-label="toggle row selection"
                                                     checked={false}
-                                                    className="sc-iAyFgw kDTxQF"
+                                                    className="sc-kkGfuU fCpvZH"
                                                     disabled={false}
                                                     error={false}
                                                     id={null}
@@ -16660,7 +16660,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                     required={false}
                                                   >
                                                     <Box
-                                                      className="sc-iAyFgw kDTxQF"
+                                                      className="sc-kkGfuU fCpvZH"
                                                       theme={
                                                         Object {
                                                           "borders": Array [],
@@ -16749,7 +16749,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                       }
                                                     >
                                                       <StyledComponent
-                                                        className="sc-iAyFgw kDTxQF"
+                                                        className="sc-kkGfuU fCpvZH"
                                                         forwardedComponent={
                                                           Object {
                                                             "$$typeof": Symbol(react.forward_ref),
@@ -17000,7 +17000,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                                          className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                                         >
                                                           <ClickInputLabel
                                                             disabled={false}
@@ -17041,7 +17041,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                   aria-label="toggle row selection"
                                                                   aria-required={false}
                                                                   checked={false}
-                                                                  className="sc-iAyFgw kDTxQF"
+                                                                  className="sc-kkGfuU fCpvZH"
                                                                   disabled={false}
                                                                   error={false}
                                                                   id={null}
@@ -17054,7 +17054,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                     aria-label="toggle row selection"
                                                                     aria-required={false}
                                                                     checked={false}
-                                                                    className="sc-iAyFgw kDTxQF"
+                                                                    className="sc-kkGfuU fCpvZH"
                                                                     disabled={false}
                                                                     error={false}
                                                                     forwardedComponent={
@@ -17091,7 +17091,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                                                       aria-label="toggle row selection"
                                                                       aria-required={false}
                                                                       checked={false}
-                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                                      className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                                       disabled={false}
                                                                       id={null}
                                                                       onChange={[Function]}

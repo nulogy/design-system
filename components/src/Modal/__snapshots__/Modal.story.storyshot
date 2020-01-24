@@ -475,9 +475,9 @@ exports[`Storyshots Modal Modal 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "jVIJZR",
+                          "lastClassName": "cGUssF",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -542,7 +542,7 @@ exports[`Storyshots Modal Modal 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -585,7 +585,7 @@ exports[`Storyshots Modal Modal 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj jVIJZR"
+                      className="sc-gPEVay cGUssF"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -627,7 +627,7 @@ exports[`Storyshots Modal Modal 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -680,7 +680,7 @@ exports[`Storyshots Modal Modal 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj jVIJZR"
+                          className="sc-gPEVay cGUssF"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -760,7 +760,7 @@ exports[`Storyshots Modal Modal 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -2122,9 +2122,9 @@ exports[`Storyshots Modal example controlled modal 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-iRbamj",
+                              "componentId": "sc-gPEVay",
                               "isStatic": false,
-                              "lastClassName": "fSKYyB",
+                              "lastClassName": "koahyz",
                               "rules": Array [
                                 [Function],
                                 ":focus {",
@@ -2189,7 +2189,7 @@ exports[`Storyshots Modal example controlled modal 1`] = `
                             "displayName": "Styled(Modal)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-iRbamj",
+                            "styledComponentId": "sc-gPEVay",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -2232,7 +2232,7 @@ exports[`Storyshots Modal example controlled modal 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj fSKYyB"
+                          className="sc-gPEVay koahyz"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           isOpen={false}
@@ -2279,7 +2279,7 @@ exports[`Storyshots Modal example controlled modal 1`] = `
                               }
                               ariaHideApp={false}
                               bodyOpenClassName="ReactModal__Body--open"
-                              className="sc-iRbamj fSKYyB"
+                              className="sc-gPEVay koahyz"
                               closeTimeoutMS={0}
                               contentLabel={null}
                               defaultStyles={
@@ -2828,9 +2828,9 @@ exports[`Storyshots Modal with close button 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "jVIJZR",
+                          "lastClassName": "cGUssF",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -2895,7 +2895,7 @@ exports[`Storyshots Modal with close button 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -2938,7 +2938,7 @@ exports[`Storyshots Modal with close button 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj jVIJZR"
+                      className="sc-gPEVay cGUssF"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -2980,7 +2980,7 @@ exports[`Storyshots Modal with close button 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -2997,7 +2997,7 @@ exports[`Storyshots Modal with close button 1`] = `
                                   </h2>
                                   <button
                                     aria-label="close"
-                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -3054,7 +3054,7 @@ exports[`Storyshots Modal with close button 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj jVIJZR"
+                          className="sc-gPEVay cGUssF"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -3134,7 +3134,7 @@ exports[`Storyshots Modal with close button 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -3508,9 +3508,9 @@ exports[`Storyshots Modal with close button 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gPEVay",
+                                                "componentId": "sc-jDwBTQ",
                                                 "isStatic": false,
-                                                "lastClassName": "etzYdX",
+                                                "lastClassName": "kYlSsp",
                                                 "rules": Array [
                                                   "position: absolute;",
                                                   "top: 12px;",
@@ -3523,7 +3523,7 @@ exports[`Storyshots Modal with close button 1`] = `
                                                 "sc-gqjmRU",
                                               ],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gPEVay",
+                                              "styledComponentId": "sc-jDwBTQ",
                                               "target": Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "render": [Function],
@@ -3538,17 +3538,17 @@ exports[`Storyshots Modal with close button 1`] = `
                                           onClick={[Function]}
                                         >
                                           <ForwardRef
-                                            className="sc-gqjmRU sc-gPEVay etzYdX"
+                                            className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                             onClick={[Function]}
                                           >
                                             <CloseButton__WrapperButton
                                               aria-label="close"
-                                              className="sc-gqjmRU sc-gPEVay etzYdX"
+                                              className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                               onClick={[Function]}
                                             >
                                               <StyledComponent
                                                 aria-label="close"
-                                                className="sc-gqjmRU sc-gPEVay etzYdX"
+                                                className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                 forwardedComponent={
                                                   Object {
                                                     "$$typeof": Symbol(react.forward_ref),
@@ -3577,7 +3577,7 @@ exports[`Storyshots Modal with close button 1`] = `
                                               >
                                                 <button
                                                   aria-label="close"
-                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                   onClick={[Function]}
                                                 >
                                                   <Styled(Component)
@@ -4610,9 +4610,9 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "lgJBzI",
+                          "lastClassName": "bAiiqx",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -4677,7 +4677,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -4720,7 +4720,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj lgJBzI"
+                      className="sc-gPEVay bAiiqx"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -4762,7 +4762,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj lgJBzI"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay bAiiqx"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -4815,7 +4815,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj lgJBzI"
+                          className="sc-gPEVay bAiiqx"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -4895,7 +4895,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj lgJBzI"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay bAiiqx"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -6161,9 +6161,9 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "jVIJZR",
+                          "lastClassName": "cGUssF",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -6228,7 +6228,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -6271,7 +6271,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj jVIJZR"
+                      className="sc-gPEVay cGUssF"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -6313,7 +6313,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -6330,7 +6330,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                                   </h2>
                                   <button
                                     aria-label="close"
-                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -6369,7 +6369,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj jVIJZR"
+                          className="sc-gPEVay cGUssF"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -6449,7 +6449,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -6823,9 +6823,9 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gPEVay",
+                                                "componentId": "sc-jDwBTQ",
                                                 "isStatic": false,
-                                                "lastClassName": "etzYdX",
+                                                "lastClassName": "kYlSsp",
                                                 "rules": Array [
                                                   "position: absolute;",
                                                   "top: 12px;",
@@ -6838,7 +6838,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                                                 "sc-gqjmRU",
                                               ],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gPEVay",
+                                              "styledComponentId": "sc-jDwBTQ",
                                               "target": Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "render": [Function],
@@ -6853,17 +6853,17 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                                           onClick={[Function]}
                                         >
                                           <ForwardRef
-                                            className="sc-gqjmRU sc-gPEVay etzYdX"
+                                            className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                             onClick={[Function]}
                                           >
                                             <CloseButton__WrapperButton
                                               aria-label="close"
-                                              className="sc-gqjmRU sc-gPEVay etzYdX"
+                                              className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                               onClick={[Function]}
                                             >
                                               <StyledComponent
                                                 aria-label="close"
-                                                className="sc-gqjmRU sc-gPEVay etzYdX"
+                                                className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                 forwardedComponent={
                                                   Object {
                                                     "$$typeof": Symbol(react.forward_ref),
@@ -6892,7 +6892,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
                                               >
                                                 <button
                                                   aria-label="close"
-                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                   onClick={[Function]}
                                                 >
                                                   <Styled(Component)
@@ -7536,9 +7536,9 @@ exports[`Storyshots Modal with no title 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "jVIJZR",
+                          "lastClassName": "cGUssF",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -7603,7 +7603,7 @@ exports[`Storyshots Modal with no title 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -7646,7 +7646,7 @@ exports[`Storyshots Modal with no title 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj jVIJZR"
+                      className="sc-gPEVay cGUssF"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -7687,7 +7687,7 @@ exports[`Storyshots Modal with no title 1`] = `
                               style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(18, 43, 71, 0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;"
                             >
                               <div
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -7728,7 +7728,7 @@ exports[`Storyshots Modal with no title 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj jVIJZR"
+                          className="sc-gPEVay cGUssF"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -7807,7 +7807,7 @@ exports[`Storyshots Modal with no title 1`] = `
                             <div
                               aria-describedby={null}
                               aria-label={null}
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -8737,9 +8737,9 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "jVIJZR",
+                          "lastClassName": "cGUssF",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -8804,7 +8804,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -8847,7 +8847,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj jVIJZR"
+                      className="sc-gPEVay cGUssF"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -8889,7 +8889,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -8955,7 +8955,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj jVIJZR"
+                          className="sc-gPEVay cGUssF"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -9035,7 +9035,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj jVIJZR"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay cGUssF"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -10466,9 +10466,9 @@ exports[`Storyshots Modal with select 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "fSKYyB",
+                          "lastClassName": "koahyz",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -10533,7 +10533,7 @@ exports[`Storyshots Modal with select 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -10576,7 +10576,7 @@ exports[`Storyshots Modal with select 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj fSKYyB"
+                      className="sc-gPEVay koahyz"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -10618,7 +10618,7 @@ exports[`Storyshots Modal with select 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj fSKYyB"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay koahyz"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -10635,7 +10635,7 @@ exports[`Storyshots Modal with select 1`] = `
                                   </h2>
                                   <button
                                     aria-label="close"
-                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -10659,15 +10659,15 @@ exports[`Storyshots Modal with select 1`] = `
                                   class="Modal__ModalContent-cvhury-0 eEmfXH"
                                 >
                                   <form
-                                    class="sc-kpOJdX fgKGFs"
+                                    class="sc-kGXeez gzWNxK"
                                     id="myForm"
                                     mb="x2"
                                   >
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -10781,7 +10781,7 @@ exports[`Storyshots Modal with select 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj fSKYyB"
+                          className="sc-gPEVay koahyz"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -10861,7 +10861,7 @@ exports[`Storyshots Modal with select 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj fSKYyB"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay koahyz"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -11235,9 +11235,9 @@ exports[`Storyshots Modal with select 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gPEVay",
+                                                "componentId": "sc-jDwBTQ",
                                                 "isStatic": false,
-                                                "lastClassName": "etzYdX",
+                                                "lastClassName": "kYlSsp",
                                                 "rules": Array [
                                                   "position: absolute;",
                                                   "top: 12px;",
@@ -11250,7 +11250,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                 "sc-gqjmRU",
                                               ],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gPEVay",
+                                              "styledComponentId": "sc-jDwBTQ",
                                               "target": Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "render": [Function],
@@ -11265,17 +11265,17 @@ exports[`Storyshots Modal with select 1`] = `
                                           onClick={[Function]}
                                         >
                                           <ForwardRef
-                                            className="sc-gqjmRU sc-gPEVay etzYdX"
+                                            className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                             onClick={[Function]}
                                           >
                                             <CloseButton__WrapperButton
                                               aria-label="close"
-                                              className="sc-gqjmRU sc-gPEVay etzYdX"
+                                              className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                               onClick={[Function]}
                                             >
                                               <StyledComponent
                                                 aria-label="close"
-                                                className="sc-gqjmRU sc-gPEVay etzYdX"
+                                                className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                 forwardedComponent={
                                                   Object {
                                                     "$$typeof": Symbol(react.forward_ref),
@@ -11304,7 +11304,7 @@ exports[`Storyshots Modal with select 1`] = `
                                               >
                                                 <button
                                                   aria-label="close"
-                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                   onClick={[Function]}
                                                 >
                                                   <Styled(Component)
@@ -11462,9 +11462,9 @@ exports[`Storyshots Modal with select 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
+                                                "componentId": "sc-kGXeez",
                                                 "isStatic": false,
-                                                "lastClassName": "fgKGFs",
+                                                "lastClassName": "gzWNxK",
                                                 "rules": Array [
                                                   [Function],
                                                   [Function],
@@ -11473,7 +11473,7 @@ exports[`Storyshots Modal with select 1`] = `
                                               "displayName": "Styled(BaseForm)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
+                                              "styledComponentId": "sc-kGXeez",
                                               "target": [Function],
                                               "toString": [Function],
                                               "usesTheme": false,
@@ -11486,13 +11486,13 @@ exports[`Storyshots Modal with select 1`] = `
                                           mb="x2"
                                         >
                                           <BaseForm
-                                            className="sc-kpOJdX fgKGFs"
+                                            className="sc-kGXeez gzWNxK"
                                             id="myForm"
                                             mb="x2"
                                             title={null}
                                           >
                                             <form
-                                              className="sc-kpOJdX fgKGFs"
+                                              className="sc-kGXeez gzWNxK"
                                               id="myForm"
                                               mb="x2"
                                             >
@@ -11724,9 +11724,9 @@ exports[`Storyshots Modal with select 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -11789,7 +11789,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -11886,7 +11886,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <MaybeFieldLabel
                                                         helpText={null}
@@ -11904,15 +11904,15 @@ exports[`Storyshots Modal with select 1`] = `
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-kAzzGY",
+                                                                  "componentId": "sc-cSHVUG",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "jHprQs",
+                                                                  "lastClassName": "CAuLq",
                                                                   "rules": Array [],
                                                                 },
                                                                 "displayName": "Styled(BaseFieldLabel)",
                                                                 "foldedComponentIds": Array [],
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-kAzzGY",
+                                                                "styledComponentId": "sc-cSHVUG",
                                                                 "target": [Function],
                                                                 "toString": [Function],
                                                                 "usesTheme": false,
@@ -11926,13 +11926,13 @@ exports[`Storyshots Modal with select 1`] = `
                                                             requirementText={null}
                                                           >
                                                             <BaseFieldLabel
-                                                              className="sc-kAzzGY jHprQs"
+                                                              className="sc-cSHVUG CAuLq"
                                                               helpText={null}
                                                               labelText="Inventory status"
                                                               requirementText={null}
                                                             >
                                                               <FieldLabel__Label
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 color="#011e38"
                                                                 style={
                                                                   Object {
@@ -11941,7 +11941,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                 }
                                                               >
                                                                 <StyledComponent
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   forwardedComponent={
                                                                     Object {
@@ -11981,7 +11981,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                   }
                                                                 >
                                                                   <label
-                                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     style={
                                                                       Object {
@@ -15286,9 +15286,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iRbamj",
+                          "componentId": "sc-gPEVay",
                           "isStatic": false,
-                          "lastClassName": "fSKYyB",
+                          "lastClassName": "koahyz",
                           "rules": Array [
                             [Function],
                             ":focus {",
@@ -15353,7 +15353,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                         "displayName": "Styled(Modal)",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iRbamj",
+                        "styledComponentId": "sc-gPEVay",
                         "target": [Function],
                         "toString": [Function],
                         "usesTheme": false,
@@ -15396,7 +15396,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                       }
                       ariaHideApp={false}
                       bodyOpenClassName="ReactModal__Body--open"
-                      className="sc-iRbamj fSKYyB"
+                      className="sc-gPEVay koahyz"
                       closeTimeoutMS={0}
                       contentLabel={null}
                       isOpen={true}
@@ -15438,7 +15438,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                             >
                               <div
                                 aria-labelledby="modal-title"
-                                class="ReactModal__Content ReactModal__Content--after-open sc-iRbamj fSKYyB"
+                                class="ReactModal__Content ReactModal__Content--after-open sc-gPEVay koahyz"
                                 role="dialog"
                                 tabindex="-1"
                               >
@@ -15455,7 +15455,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                   </h2>
                                   <button
                                     aria-label="close"
-                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                    class="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -15479,15 +15479,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                   class="Modal__ModalContent-cvhury-0 eEmfXH"
                                 >
                                   <form
-                                    class="sc-kpOJdX fgKGFs"
+                                    class="sc-kGXeez gzWNxK"
                                     id="myForm"
                                     mb="x2"
                                   >
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15519,10 +15519,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15555,10 +15555,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15590,10 +15590,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15626,10 +15626,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15661,10 +15661,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15697,10 +15697,10 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                       </label>
                                     </div>
                                     <div
-                                      class="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                      class="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                     >
                                       <label
-                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                        class="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style="display: block;"
                                       >
@@ -15814,7 +15814,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                           }
                           ariaHideApp={false}
                           bodyOpenClassName="ReactModal__Body--open"
-                          className="sc-iRbamj fSKYyB"
+                          className="sc-gPEVay koahyz"
                           closeTimeoutMS={0}
                           contentLabel={null}
                           defaultStyles={
@@ -15894,7 +15894,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                               aria-describedby={null}
                               aria-label={null}
                               aria-labelledby="modal-title"
-                              className="ReactModal__Content ReactModal__Content--after-open sc-iRbamj fSKYyB"
+                              className="ReactModal__Content ReactModal__Content--after-open sc-gPEVay koahyz"
                               onClick={[Function]}
                               onKeyDown={[Function]}
                               onMouseDown={[Function]}
@@ -16268,9 +16268,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-gPEVay",
+                                                "componentId": "sc-jDwBTQ",
                                                 "isStatic": false,
-                                                "lastClassName": "etzYdX",
+                                                "lastClassName": "kYlSsp",
                                                 "rules": Array [
                                                   "position: absolute;",
                                                   "top: 12px;",
@@ -16283,7 +16283,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                 "sc-gqjmRU",
                                               ],
                                               "render": [Function],
-                                              "styledComponentId": "sc-gPEVay",
+                                              "styledComponentId": "sc-jDwBTQ",
                                               "target": Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "render": [Function],
@@ -16298,17 +16298,17 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           onClick={[Function]}
                                         >
                                           <ForwardRef
-                                            className="sc-gqjmRU sc-gPEVay etzYdX"
+                                            className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                             onClick={[Function]}
                                           >
                                             <CloseButton__WrapperButton
                                               aria-label="close"
-                                              className="sc-gqjmRU sc-gPEVay etzYdX"
+                                              className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                               onClick={[Function]}
                                             >
                                               <StyledComponent
                                                 aria-label="close"
-                                                className="sc-gqjmRU sc-gPEVay etzYdX"
+                                                className="sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                 forwardedComponent={
                                                   Object {
                                                     "$$typeof": Symbol(react.forward_ref),
@@ -16337,7 +16337,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                               >
                                                 <button
                                                   aria-label="close"
-                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-gPEVay etzYdX"
+                                                  className="CloseButton__WrapperButton-sc-1xxxr4t-0 iICMjv sc-gqjmRU sc-jDwBTQ kYlSsp"
                                                   onClick={[Function]}
                                                 >
                                                   <Styled(Component)
@@ -16495,9 +16495,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-kpOJdX",
+                                                "componentId": "sc-kGXeez",
                                                 "isStatic": false,
-                                                "lastClassName": "fgKGFs",
+                                                "lastClassName": "gzWNxK",
                                                 "rules": Array [
                                                   [Function],
                                                   [Function],
@@ -16506,7 +16506,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                               "displayName": "Styled(BaseForm)",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-kpOJdX",
+                                              "styledComponentId": "sc-kGXeez",
                                               "target": [Function],
                                               "toString": [Function],
                                               "usesTheme": false,
@@ -16519,13 +16519,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           mb="x2"
                                         >
                                           <BaseForm
-                                            className="sc-kpOJdX fgKGFs"
+                                            className="sc-kGXeez gzWNxK"
                                             id="myForm"
                                             mb="x2"
                                             title={null}
                                           >
                                             <form
-                                              className="sc-kpOJdX fgKGFs"
+                                              className="sc-kGXeez gzWNxK"
                                               id="myForm"
                                               mb="x2"
                                             >
@@ -16727,9 +16727,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -16792,7 +16792,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -16889,7 +16889,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -16923,15 +16923,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -16945,13 +16945,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Name"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -16960,7 +16960,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -17000,7 +17000,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -18341,9 +18341,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -18406,7 +18406,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -18503,7 +18503,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -18538,15 +18538,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -18560,13 +18560,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Age"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -18575,7 +18575,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -18615,7 +18615,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -19958,9 +19958,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -20023,7 +20023,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -20120,7 +20120,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -20154,15 +20154,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -20176,13 +20176,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Name"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -20191,7 +20191,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -20231,7 +20231,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -21572,9 +21572,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -21637,7 +21637,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -21734,7 +21734,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -21769,15 +21769,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -21791,13 +21791,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Age"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -21806,7 +21806,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -21846,7 +21846,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -23189,9 +23189,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -23254,7 +23254,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -23351,7 +23351,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -23385,15 +23385,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -23407,13 +23407,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Name"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -23422,7 +23422,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -23462,7 +23462,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -24803,9 +24803,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -24868,7 +24868,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -24965,7 +24965,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <ForwardRef
                                                         disabled={false}
@@ -25000,15 +25000,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   "$$typeof": Symbol(react.forward_ref),
                                                                   "attrs": Array [],
                                                                   "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-kAzzGY",
+                                                                    "componentId": "sc-cSHVUG",
                                                                     "isStatic": false,
-                                                                    "lastClassName": "jHprQs",
+                                                                    "lastClassName": "CAuLq",
                                                                     "rules": Array [],
                                                                   },
                                                                   "displayName": "Styled(BaseFieldLabel)",
                                                                   "foldedComponentIds": Array [],
                                                                   "render": [Function],
-                                                                  "styledComponentId": "sc-kAzzGY",
+                                                                  "styledComponentId": "sc-cSHVUG",
                                                                   "target": [Function],
                                                                   "toString": [Function],
                                                                   "usesTheme": false,
@@ -25022,13 +25022,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                               requirementText={null}
                                                             >
                                                               <BaseFieldLabel
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 helpText={null}
                                                                 labelText="Age"
                                                                 requirementText={null}
                                                               >
                                                                 <FieldLabel__Label
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   style={
                                                                     Object {
@@ -25037,7 +25037,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <StyledComponent
-                                                                    className="sc-kAzzGY jHprQs"
+                                                                    className="sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     forwardedComponent={
                                                                       Object {
@@ -25077,7 +25077,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                     }
                                                                   >
                                                                     <label
-                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                      className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                       color="#011e38"
                                                                       style={
                                                                         Object {
@@ -26450,9 +26450,9 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                         },
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-chPdSV",
+                                                          "componentId": "sc-kAzzGY",
                                                           "isStatic": false,
-                                                          "lastClassName": "jfGaMs",
+                                                          "lastClassName": "lcPXpU",
                                                           "rules": Array [
                                                             [Function],
                                                             [Function],
@@ -26515,7 +26515,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           "width": [Function],
                                                         },
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-chPdSV",
+                                                        "styledComponentId": "sc-kAzzGY",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "usesTheme": false,
@@ -26612,7 +26612,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                                      className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                                     >
                                                       <MaybeFieldLabel
                                                         helpText={null}
@@ -26630,15 +26630,15 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-kAzzGY",
+                                                                  "componentId": "sc-cSHVUG",
                                                                   "isStatic": false,
-                                                                  "lastClassName": "jHprQs",
+                                                                  "lastClassName": "CAuLq",
                                                                   "rules": Array [],
                                                                 },
                                                                 "displayName": "Styled(BaseFieldLabel)",
                                                                 "foldedComponentIds": Array [],
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-kAzzGY",
+                                                                "styledComponentId": "sc-cSHVUG",
                                                                 "target": [Function],
                                                                 "toString": [Function],
                                                                 "usesTheme": false,
@@ -26652,13 +26652,13 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                             requirementText={null}
                                                           >
                                                             <BaseFieldLabel
-                                                              className="sc-kAzzGY jHprQs"
+                                                              className="sc-cSHVUG CAuLq"
                                                               helpText={null}
                                                               labelText="Inventory status"
                                                               requirementText={null}
                                                             >
                                                               <FieldLabel__Label
-                                                                className="sc-kAzzGY jHprQs"
+                                                                className="sc-cSHVUG CAuLq"
                                                                 color="#011e38"
                                                                 style={
                                                                   Object {
@@ -26667,7 +26667,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                 }
                                                               >
                                                                 <StyledComponent
-                                                                  className="sc-kAzzGY jHprQs"
+                                                                  className="sc-cSHVUG CAuLq"
                                                                   color="#011e38"
                                                                   forwardedComponent={
                                                                     Object {
@@ -26707,7 +26707,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                   }
                                                                 >
                                                                   <label
-                                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                                                     color="#011e38"
                                                                     style={
                                                                       Object {

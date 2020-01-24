@@ -1059,15 +1059,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1079,7 +1079,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="medium"
@@ -1088,12 +1088,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1126,7 +1126,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -1192,15 +1192,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1213,7 +1213,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="lettermark"
                               size="medium"
@@ -1222,12 +1222,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1260,7 +1260,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <LettermarkLogo
@@ -1301,15 +1301,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1322,7 +1322,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="medium"
@@ -1331,12 +1331,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1369,7 +1369,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -1825,15 +1825,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1847,7 +1847,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="medium"
@@ -1856,12 +1856,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1894,7 +1894,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -2384,15 +2384,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2405,7 +2405,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="large"
@@ -2414,12 +2414,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2452,7 +2452,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -2519,15 +2519,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2541,7 +2541,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="lettermark"
                               size="large"
@@ -2550,12 +2550,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2588,7 +2588,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <LettermarkLogo
@@ -2630,15 +2630,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2652,7 +2652,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="large"
@@ -2661,12 +2661,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2699,7 +2699,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -3156,15 +3156,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3179,7 +3179,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="blue"
                               logoType="wordmark"
                               size="large"
@@ -3188,12 +3188,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -3226,7 +3226,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -4065,15 +4065,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -4086,7 +4086,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="medium"
@@ -4095,12 +4095,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4133,7 +4133,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -4200,15 +4200,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -4222,7 +4222,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="lettermark"
                               size="medium"
@@ -4231,12 +4231,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4269,7 +4269,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <LettermarkLogo
@@ -4311,15 +4311,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -4333,7 +4333,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="medium"
@@ -4342,12 +4342,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4380,7 +4380,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -4837,15 +4837,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -4860,7 +4860,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="medium"
@@ -4869,12 +4869,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="medium"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4907,7 +4907,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="medium"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                                     size="medium"
                                   >
                                     <WordmarkLogo
@@ -5398,15 +5398,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -5420,7 +5420,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="large"
@@ -5429,12 +5429,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -5467,7 +5467,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -5535,15 +5535,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -5558,7 +5558,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="lettermark"
                               size="large"
@@ -5567,12 +5567,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -5605,7 +5605,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <LettermarkLogo
@@ -5648,15 +5648,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -5671,7 +5671,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="large"
@@ -5680,12 +5680,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -5718,7 +5718,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -6176,15 +6176,15 @@ exports[`Storyshots Branding Branding 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-fjdhpX",
+                                  "componentId": "sc-jTzLTM",
                                   "isStatic": false,
-                                  "lastClassName": "nsimD",
+                                  "lastClassName": "eCMmlJ",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseBranding)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-fjdhpX",
+                                "styledComponentId": "sc-jTzLTM",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -6200,7 +6200,7 @@ exports[`Storyshots Branding Branding 1`] = `
                           >
                             <BaseBranding
                               alignment="left"
-                              className="sc-fjdhpX nsimD"
+                              className="sc-jTzLTM eCMmlJ"
                               logoColor="white"
                               logoType="wordmark"
                               size="large"
@@ -6209,12 +6209,12 @@ exports[`Storyshots Branding Branding 1`] = `
                             >
                               <Branding__BrandingWrap
                                 alignment="left"
-                                className="sc-fjdhpX nsimD"
+                                className="sc-jTzLTM eCMmlJ"
                                 size="large"
                               >
                                 <StyledComponent
                                   alignment="left"
-                                  className="sc-fjdhpX nsimD"
+                                  className="sc-jTzLTM eCMmlJ"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -6247,7 +6247,7 @@ exports[`Storyshots Branding Branding 1`] = `
                                   size="large"
                                 >
                                   <div
-                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                                    className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                                     size="large"
                                   >
                                     <WordmarkLogo
@@ -7065,15 +7065,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -7086,7 +7086,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="left"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -7095,12 +7095,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="left"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="left"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -7133,7 +7133,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -7588,15 +7588,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -7609,7 +7609,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="center"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -7618,12 +7618,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="center"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="center"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -7656,7 +7656,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 lhrSib sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 lhrSib sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -8111,15 +8111,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -8132,7 +8132,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="right"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -8141,12 +8141,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="right"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="right"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -8179,7 +8179,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 hKlaEN sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 hKlaEN sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -8960,15 +8960,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -8982,7 +8982,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="left"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -8991,12 +8991,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="left"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="left"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -9029,7 +9029,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 gFyOQJ sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -9520,15 +9520,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -9542,7 +9542,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="center"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -9551,12 +9551,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="center"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="center"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -9589,7 +9589,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 lhrSib sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 lhrSib sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -10115,15 +10115,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -10137,7 +10137,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="right"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="medium"
@@ -10146,12 +10146,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="right"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="medium"
                         >
                           <StyledComponent
                             alignment="right"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -10184,7 +10184,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="medium"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 hKlaEN sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 hKlaEN sc-jTzLTM eCMmlJ"
                               size="medium"
                             >
                               <WordmarkLogo
@@ -11000,15 +11000,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -11022,7 +11022,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="left"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -11031,12 +11031,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="left"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="left"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -11069,7 +11069,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo
@@ -11525,15 +11525,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -11547,7 +11547,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="center"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -11556,12 +11556,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="center"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="center"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -11594,7 +11594,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo
@@ -12050,15 +12050,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -12072,7 +12072,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="right"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -12081,12 +12081,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="right"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="right"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -12119,7 +12119,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 erDyYZ sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 erDyYZ sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo
@@ -12901,15 +12901,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -12924,7 +12924,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="left"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -12933,12 +12933,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="left"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="left"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -12971,7 +12971,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 dYjcnS sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo
@@ -13463,15 +13463,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -13486,7 +13486,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="center"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -13495,12 +13495,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="center"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="center"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -13533,7 +13533,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 egqTjO sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 egqTjO sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo
@@ -14060,15 +14060,15 @@ exports[`Storyshots Branding Branding 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-fjdhpX",
+                            "componentId": "sc-jTzLTM",
                             "isStatic": false,
-                            "lastClassName": "nsimD",
+                            "lastClassName": "eCMmlJ",
                             "rules": Array [],
                           },
                           "displayName": "Styled(BaseBranding)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-fjdhpX",
+                          "styledComponentId": "sc-jTzLTM",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -14083,7 +14083,7 @@ exports[`Storyshots Branding Branding 1`] = `
                     >
                       <BaseBranding
                         alignment="right"
-                        className="sc-fjdhpX nsimD"
+                        className="sc-jTzLTM eCMmlJ"
                         logoColor="blue"
                         logoType="wordmark"
                         size="large"
@@ -14092,12 +14092,12 @@ exports[`Storyshots Branding Branding 1`] = `
                       >
                         <Branding__BrandingWrap
                           alignment="right"
-                          className="sc-fjdhpX nsimD"
+                          className="sc-jTzLTM eCMmlJ"
                           size="large"
                         >
                           <StyledComponent
                             alignment="right"
-                            className="sc-fjdhpX nsimD"
+                            className="sc-jTzLTM eCMmlJ"
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -14130,7 +14130,7 @@ exports[`Storyshots Branding Branding 1`] = `
                             size="large"
                           >
                             <div
-                              className="Branding__BrandingWrap-ranqri-0 erDyYZ sc-fjdhpX nsimD"
+                              className="Branding__BrandingWrap-ranqri-0 erDyYZ sc-jTzLTM eCMmlJ"
                               size="large"
                             >
                               <WordmarkLogo

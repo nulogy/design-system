@@ -586,9 +586,9 @@ exports[`Storyshots Input Input 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -651,7 +651,7 @@ exports[`Storyshots Input Input 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -748,7 +748,7 @@ exports[`Storyshots Input Input 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={false}
@@ -782,15 +782,15 @@ exports[`Storyshots Input Input 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -804,13 +804,13 @@ exports[`Storyshots Input Input 1`] = `
                             requirementText={null}
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText={null}
                               labelText="Input"
                               requirementText={null}
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -819,7 +819,7 @@ exports[`Storyshots Input Input 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -859,7 +859,7 @@ exports[`Storyshots Input Input 1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {
@@ -2594,9 +2594,9 @@ exports[`Storyshots Input set to disabled 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -2659,7 +2659,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -2756,7 +2756,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={true}
@@ -2789,15 +2789,15 @@ exports[`Storyshots Input set to disabled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -2811,13 +2811,13 @@ exports[`Storyshots Input set to disabled 1`] = `
                             requirementText={null}
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText={null}
                               labelText="Set to disabled"
                               requirementText={null}
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -2826,7 +2826,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -2866,7 +2866,7 @@ exports[`Storyshots Input set to disabled 1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {
@@ -4410,9 +4410,9 @@ exports[`Storyshots Input set to required 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
-                      "lastClassName": "czabIn",
+                      "lastClassName": "gxGkyt",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -4421,7 +4421,7 @@ exports[`Storyshots Input set to required 1`] = `
                     "displayName": "Styled(BaseForm)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
+                    "styledComponentId": "sc-kGXeez",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -4433,11 +4433,11 @@ exports[`Storyshots Input set to required 1`] = `
                 title="Required field example"
               >
                 <BaseForm
-                  className="sc-kpOJdX czabIn"
+                  className="sc-kGXeez gxGkyt"
                   title="Required field example"
                 >
                   <form
-                    className="sc-kpOJdX czabIn"
+                    className="sc-kGXeez gxGkyt"
                   >
                     <styled.h2
                       fontSize="26px"
@@ -4956,9 +4956,9 @@ exports[`Storyshots Input set to required 1`] = `
                               },
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-chPdSV",
+                                "componentId": "sc-kAzzGY",
                                 "isStatic": false,
-                                "lastClassName": "jfGaMs",
+                                "lastClassName": "lcPXpU",
                                 "rules": Array [
                                   [Function],
                                   [Function],
@@ -5021,7 +5021,7 @@ exports[`Storyshots Input set to required 1`] = `
                                 "width": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-chPdSV",
+                              "styledComponentId": "sc-kAzzGY",
                               "target": "div",
                               "toString": [Function],
                               "usesTheme": false,
@@ -5118,7 +5118,7 @@ exports[`Storyshots Input set to required 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                            className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                           >
                             <ForwardRef
                               disabled={false}
@@ -5152,15 +5152,15 @@ exports[`Storyshots Input set to required 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-kAzzGY",
+                                          "componentId": "sc-cSHVUG",
                                           "isStatic": false,
-                                          "lastClassName": "jHprQs",
+                                          "lastClassName": "CAuLq",
                                           "rules": Array [],
                                         },
                                         "displayName": "Styled(BaseFieldLabel)",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-kAzzGY",
+                                        "styledComponentId": "sc-cSHVUG",
                                         "target": [Function],
                                         "toString": [Function],
                                         "usesTheme": false,
@@ -5174,13 +5174,13 @@ exports[`Storyshots Input set to required 1`] = `
                                     requirementText={null}
                                   >
                                     <BaseFieldLabel
-                                      className="sc-kAzzGY jHprQs"
+                                      className="sc-cSHVUG CAuLq"
                                       helpText={null}
                                       labelText="Label"
                                       requirementText={null}
                                     >
                                       <FieldLabel__Label
-                                        className="sc-kAzzGY jHprQs"
+                                        className="sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         style={
                                           Object {
@@ -5189,7 +5189,7 @@ exports[`Storyshots Input set to required 1`] = `
                                         }
                                       >
                                         <StyledComponent
-                                          className="sc-kAzzGY jHprQs"
+                                          className="sc-cSHVUG CAuLq"
                                           color="#011e38"
                                           forwardedComponent={
                                             Object {
@@ -5229,7 +5229,7 @@ exports[`Storyshots Input set to required 1`] = `
                                           }
                                         >
                                           <label
-                                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                            className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                             color="#011e38"
                                             style={
                                               Object {
@@ -6928,9 +6928,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
-                      "lastClassName": "hVOGv",
+                      "lastClassName": "qeogR",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -6939,7 +6939,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "displayName": "Styled(BaseForm)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
+                    "styledComponentId": "sc-kGXeez",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -6952,12 +6952,12 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                 title="Suffix"
               >
                 <BaseForm
-                  className="sc-kpOJdX hVOGv"
+                  className="sc-kGXeez qeogR"
                   mb="x6"
                   title="Suffix"
                 >
                   <form
-                    className="sc-kpOJdX hVOGv"
+                    className="sc-kGXeez qeogR"
                     mb="x6"
                   >
                     <styled.h2
@@ -7286,9 +7286,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kGXeez",
+                              "componentId": "sc-kgoBCf",
                               "isStatic": false,
-                              "lastClassName": "iPVgGj",
+                              "lastClassName": "ibPOdd",
                               "rules": Array [
                                 [Function],
                               ],
@@ -7296,7 +7296,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "displayName": "Styled(BaseFormSection)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kGXeez",
+                            "styledComponentId": "sc-kgoBCf",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -7307,11 +7307,11 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         forwardedRef={null}
                       >
                         <BaseFormSection
-                          className="sc-kGXeez chOAbO"
+                          className="sc-kgoBCf keSRLr"
                           title={null}
                         >
                           <fieldset
-                            className="sc-kGXeez chOAbO"
+                            className="sc-kgoBCf keSRLr"
                           >
                             <ForwardRef
                               disabled={false}
@@ -7509,9 +7509,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -7574,7 +7574,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -7671,7 +7671,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -9080,9 +9080,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -9145,7 +9145,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -9242,7 +9242,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -10468,9 +10468,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kGXeez",
+                              "componentId": "sc-kgoBCf",
                               "isStatic": false,
-                              "lastClassName": "iPVgGj",
+                              "lastClassName": "ibPOdd",
                               "rules": Array [
                                 [Function],
                               ],
@@ -10478,7 +10478,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "displayName": "Styled(BaseFormSection)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kGXeez",
+                            "styledComponentId": "sc-kgoBCf",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -10490,11 +10490,11 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         title="With Custom Width"
                       >
                         <BaseFormSection
-                          className="sc-kGXeez iPVgGj"
+                          className="sc-kgoBCf ibPOdd"
                           title="With Custom Width"
                         >
                           <fieldset
-                            className="sc-kGXeez iPVgGj"
+                            className="sc-kgoBCf ibPOdd"
                           >
                             <Styled(Styled(styled.h3))
                               fontSize="20px"
@@ -10693,9 +10693,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                     ],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kgoBCf",
+                                      "componentId": "sc-chPdSV",
                                       "isStatic": false,
-                                      "lastClassName": "kmfHYt",
+                                      "lastClassName": "fRKevy",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -10713,7 +10713,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       "sc-gzVnrw",
                                     ],
                                     "render": [Function],
-                                    "styledComponentId": "sc-kgoBCf",
+                                    "styledComponentId": "sc-chPdSV",
                                     "target": "h3",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -10813,7 +10813,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 }
                               >
                                 <legend
-                                  className="sc-bZQynM sc-gzVnrw sc-kgoBCf kmfHYt"
+                                  className="sc-bZQynM sc-gzVnrw sc-chPdSV fRKevy"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -11017,9 +11017,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -11082,7 +11082,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -11179,7 +11179,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -12588,9 +12588,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -12653,7 +12653,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -12750,7 +12750,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -13981,9 +13981,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
-                      "lastClassName": "hVOGv",
+                      "lastClassName": "qeogR",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -13992,7 +13992,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "displayName": "Styled(BaseForm)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
+                    "styledComponentId": "sc-kGXeez",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -14005,12 +14005,12 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                 title="Prefix"
               >
                 <BaseForm
-                  className="sc-kpOJdX hVOGv"
+                  className="sc-kGXeez qeogR"
                   mb="x6"
                   title="Prefix"
                 >
                   <form
-                    className="sc-kpOJdX hVOGv"
+                    className="sc-kGXeez qeogR"
                     mb="x6"
                   >
                     <styled.h2
@@ -14339,9 +14339,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kGXeez",
+                              "componentId": "sc-kgoBCf",
                               "isStatic": false,
-                              "lastClassName": "iPVgGj",
+                              "lastClassName": "ibPOdd",
                               "rules": Array [
                                 [Function],
                               ],
@@ -14349,7 +14349,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "displayName": "Styled(BaseFormSection)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kGXeez",
+                            "styledComponentId": "sc-kgoBCf",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -14360,11 +14360,11 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         forwardedRef={null}
                       >
                         <BaseFormSection
-                          className="sc-kGXeez chOAbO"
+                          className="sc-kgoBCf keSRLr"
                           title={null}
                         >
                           <fieldset
-                            className="sc-kGXeez chOAbO"
+                            className="sc-kgoBCf keSRLr"
                           >
                             <ForwardRef
                               disabled={false}
@@ -14562,9 +14562,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -14627,7 +14627,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -14724,7 +14724,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -16133,9 +16133,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -16198,7 +16198,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -16295,7 +16295,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -17521,9 +17521,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kGXeez",
+                              "componentId": "sc-kgoBCf",
                               "isStatic": false,
-                              "lastClassName": "iPVgGj",
+                              "lastClassName": "ibPOdd",
                               "rules": Array [
                                 [Function],
                               ],
@@ -17531,7 +17531,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "displayName": "Styled(BaseFormSection)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kGXeez",
+                            "styledComponentId": "sc-kgoBCf",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -17543,11 +17543,11 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         title="With Custom Width"
                       >
                         <BaseFormSection
-                          className="sc-kGXeez iPVgGj"
+                          className="sc-kgoBCf ibPOdd"
                           title="With Custom Width"
                         >
                           <fieldset
-                            className="sc-kGXeez iPVgGj"
+                            className="sc-kgoBCf ibPOdd"
                           >
                             <Styled(Styled(styled.h3))
                               fontSize="20px"
@@ -17746,9 +17746,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                     ],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kgoBCf",
+                                      "componentId": "sc-chPdSV",
                                       "isStatic": false,
-                                      "lastClassName": "kmfHYt",
+                                      "lastClassName": "fRKevy",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -17766,7 +17766,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       "sc-gzVnrw",
                                     ],
                                     "render": [Function],
-                                    "styledComponentId": "sc-kgoBCf",
+                                    "styledComponentId": "sc-chPdSV",
                                     "target": "h3",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -17866,7 +17866,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 }
                               >
                                 <legend
-                                  className="sc-bZQynM sc-gzVnrw sc-kgoBCf kmfHYt"
+                                  className="sc-bZQynM sc-gzVnrw sc-chPdSV fRKevy"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -18070,9 +18070,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -18135,7 +18135,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -18232,7 +18232,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -19641,9 +19641,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -19706,7 +19706,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -19803,7 +19803,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -21029,9 +21029,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-kGXeez",
+                              "componentId": "sc-kgoBCf",
                               "isStatic": false,
-                              "lastClassName": "iPVgGj",
+                              "lastClassName": "ibPOdd",
                               "rules": Array [
                                 [Function],
                               ],
@@ -21039,7 +21039,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                             "displayName": "Styled(BaseFormSection)",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-kGXeez",
+                            "styledComponentId": "sc-kgoBCf",
                             "target": [Function],
                             "toString": [Function],
                             "usesTheme": false,
@@ -21051,11 +21051,11 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                         title="With right alignment"
                       >
                         <BaseFormSection
-                          className="sc-kGXeez iPVgGj"
+                          className="sc-kgoBCf ibPOdd"
                           title="With right alignment"
                         >
                           <fieldset
-                            className="sc-kGXeez iPVgGj"
+                            className="sc-kgoBCf ibPOdd"
                           >
                             <Styled(Styled(styled.h3))
                               fontSize="20px"
@@ -21254,9 +21254,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                     ],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kgoBCf",
+                                      "componentId": "sc-chPdSV",
                                       "isStatic": false,
-                                      "lastClassName": "kmfHYt",
+                                      "lastClassName": "fRKevy",
                                       "rules": Array [
                                         [Function],
                                         [Function],
@@ -21274,7 +21274,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       "sc-gzVnrw",
                                     ],
                                     "render": [Function],
-                                    "styledComponentId": "sc-kgoBCf",
+                                    "styledComponentId": "sc-chPdSV",
                                     "target": "h3",
                                     "toString": [Function],
                                     "usesTheme": false,
@@ -21374,7 +21374,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 }
                               >
                                 <legend
-                                  className="sc-bZQynM sc-gzVnrw sc-kgoBCf kmfHYt"
+                                  className="sc-bZQynM sc-gzVnrw sc-chPdSV fRKevy"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -21578,9 +21578,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -21643,7 +21643,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -21740,7 +21740,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -23149,9 +23149,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kAzzGY",
                                         "isStatic": false,
-                                        "lastClassName": "jfGaMs",
+                                        "lastClassName": "lcPXpU",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -23214,7 +23214,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                         "width": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kAzzGY",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -23311,7 +23311,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                   >
                                     <ForwardRef
                                       disabled={false}
@@ -24542,9 +24542,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
-                      "lastClassName": "hVOGv",
+                      "lastClassName": "qeogR",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -24553,7 +24553,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                     "displayName": "Styled(BaseForm)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
+                    "styledComponentId": "sc-kGXeez",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -24566,12 +24566,12 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                 title="Prefix and Suffix"
               >
                 <BaseForm
-                  className="sc-kpOJdX hVOGv"
+                  className="sc-kGXeez qeogR"
                   mb="x6"
                   title="Prefix and Suffix"
                 >
                   <form
-                    className="sc-kpOJdX hVOGv"
+                    className="sc-kGXeez qeogR"
                     mb="x6"
                   >
                     <styled.h2
@@ -25089,9 +25089,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                               },
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-chPdSV",
+                                "componentId": "sc-kAzzGY",
                                 "isStatic": false,
-                                "lastClassName": "jfGaMs",
+                                "lastClassName": "lcPXpU",
                                 "rules": Array [
                                   [Function],
                                   [Function],
@@ -25154,7 +25154,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                                 "width": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-chPdSV",
+                              "styledComponentId": "sc-kAzzGY",
                               "target": "div",
                               "toString": [Function],
                               "usesTheme": false,
@@ -25251,7 +25251,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                            className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                           >
                             <ForwardRef
                               disabled={false}
@@ -27490,9 +27490,9 @@ exports[`Storyshots Input with all props 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -27555,7 +27555,7 @@ exports[`Storyshots Input with all props 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -27652,7 +27652,7 @@ exports[`Storyshots Input with all props 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={false}
@@ -27687,15 +27687,15 @@ exports[`Storyshots Input with all props 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -27709,13 +27709,13 @@ exports[`Storyshots Input with all props 1`] = `
                             requirementText="Required"
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText="Additional help text"
                               labelText="Input"
                               requirementText="Required"
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -27724,7 +27724,7 @@ exports[`Storyshots Input with all props 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -27764,7 +27764,7 @@ exports[`Storyshots Input with all props 1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {
@@ -28229,9 +28229,9 @@ exports[`Storyshots Input with all props 1`] = `
                                                       [Function],
                                                     ],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-cSHVUG",
+                                                      "componentId": "sc-jzJRlG",
                                                       "isStatic": false,
-                                                      "lastClassName": "iacbJP",
+                                                      "lastClassName": "gFmhuB",
                                                       "rules": Array [
                                                         [Function],
                                                         [Function],
@@ -28257,7 +28257,7 @@ exports[`Storyshots Input with all props 1`] = `
                                                       "inline": [Function],
                                                     },
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-cSHVUG",
+                                                    "styledComponentId": "sc-jzJRlG",
                                                     "target": "p",
                                                     "toString": [Function],
                                                     "usesTheme": false,
@@ -28271,7 +28271,7 @@ exports[`Storyshots Input with all props 1`] = `
                                                 m={0}
                                               >
                                                 <p
-                                                  className="sc-bxivhb sc-cSHVUG iacbJP"
+                                                  className="sc-bxivhb sc-jzJRlG gFmhuB"
                                                   color="currentColor"
                                                   disabled={false}
                                                   fontSize="16px"
@@ -29659,9 +29659,9 @@ exports[`Storyshots Input with custom ID 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -29724,7 +29724,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -29821,7 +29821,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={false}
@@ -29856,15 +29856,15 @@ exports[`Storyshots Input with custom ID 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -29878,13 +29878,13 @@ exports[`Storyshots Input with custom ID 1`] = `
                             requirementText={null}
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText={null}
                               labelText="Label"
                               requirementText={null}
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -29893,7 +29893,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -29933,7 +29933,7 @@ exports[`Storyshots Input with custom ID 1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {
@@ -31677,9 +31677,9 @@ exports[`Storyshots Input with error list  1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -31742,7 +31742,7 @@ exports[`Storyshots Input with error list  1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -31839,7 +31839,7 @@ exports[`Storyshots Input with error list  1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={false}
@@ -31873,15 +31873,15 @@ exports[`Storyshots Input with error list  1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -31895,13 +31895,13 @@ exports[`Storyshots Input with error list  1`] = `
                             requirementText={null}
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText={null}
                               labelText="Label"
                               requirementText={null}
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -31910,7 +31910,7 @@ exports[`Storyshots Input with error list  1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -31950,7 +31950,7 @@ exports[`Storyshots Input with error list  1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {
@@ -34439,9 +34439,9 @@ exports[`Storyshots Input with error message 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -34504,7 +34504,7 @@ exports[`Storyshots Input with error message 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -34601,7 +34601,7 @@ exports[`Storyshots Input with error message 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <ForwardRef
                       disabled={false}
@@ -34635,15 +34635,15 @@ exports[`Storyshots Input with error message 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kAzzGY",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "jHprQs",
+                                  "lastClassName": "CAuLq",
                                   "rules": Array [],
                                 },
                                 "displayName": "Styled(BaseFieldLabel)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kAzzGY",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -34657,13 +34657,13 @@ exports[`Storyshots Input with error message 1`] = `
                             requirementText={null}
                           >
                             <BaseFieldLabel
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               helpText={null}
                               labelText="Label"
                               requirementText={null}
                             >
                               <FieldLabel__Label
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 style={
                                   Object {
@@ -34672,7 +34672,7 @@ exports[`Storyshots Input with error message 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-kAzzGY jHprQs"
+                                  className="sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   forwardedComponent={
                                     Object {
@@ -34712,7 +34712,7 @@ exports[`Storyshots Input with error message 1`] = `
                                   }
                                 >
                                   <label
-                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                    className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                     color="#011e38"
                                     style={
                                       Object {

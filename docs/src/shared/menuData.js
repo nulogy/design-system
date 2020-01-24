@@ -88,10 +88,6 @@ export const menuData = [
         href: "/components/headings"
       },
       {
-        name: "Header Validation",
-        href: "/components/header-validation"
-      },
-      {
         name: "Iconic Button",
         href: "/components/iconic-button"
       },

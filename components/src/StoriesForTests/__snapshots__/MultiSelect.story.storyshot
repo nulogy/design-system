@@ -610,9 +610,9 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -675,7 +675,7 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -772,7 +772,7 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -790,15 +790,15 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -812,13 +812,13 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Select PCN"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -827,7 +827,7 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -867,7 +867,7 @@ exports[`Storyshots StoriesForTests/Select Multiselect 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {

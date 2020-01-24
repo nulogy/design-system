@@ -740,9 +740,9 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-ckVGcZ",
+                            "componentId": "sc-dxgOiQ",
                             "isStatic": false,
-                            "lastClassName": "gaawaX",
+                            "lastClassName": "fzipLs",
                             "rules": Array [
                               "background: #e1ebfa;",
                               "border-radius: 4px;",
@@ -792,7 +792,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                           "displayName": "Styled(BaseNavBarSearch)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-ckVGcZ",
+                          "styledComponentId": "sc-dxgOiQ",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -803,12 +803,12 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                       forwardedRef={null}
                     >
                       <BaseNavBarSearch
-                        className="sc-ckVGcZ gaawaX"
+                        className="sc-dxgOiQ fzipLs"
                         name="global-search"
                         onSubmit={[Function]}
                       >
                         <form
-                          className="sc-ckVGcZ gaawaX"
+                          className="sc-dxgOiQ fzipLs"
                           onSubmit={[Function]}
                         >
                           <Styled(Box)
@@ -1332,9 +1332,9 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                           },
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
+                                            "componentId": "sc-kAzzGY",
                                             "isStatic": false,
-                                            "lastClassName": "jfGaMs",
+                                            "lastClassName": "lcPXpU",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -1397,7 +1397,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                             "width": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
+                                          "styledComponentId": "sc-kAzzGY",
                                           "target": "div",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -1494,7 +1494,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                       >
                                         <ForwardRef
                                           aria-labelledby="global-search"
@@ -3157,9 +3157,9 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-ckVGcZ",
+                            "componentId": "sc-dxgOiQ",
                             "isStatic": false,
-                            "lastClassName": "gaawaX",
+                            "lastClassName": "fzipLs",
                             "rules": Array [
                               "background: #e1ebfa;",
                               "border-radius: 4px;",
@@ -3209,7 +3209,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                           "displayName": "Styled(BaseNavBarSearch)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-ckVGcZ",
+                          "styledComponentId": "sc-dxgOiQ",
                           "target": [Function],
                           "toString": [Function],
                           "usesTheme": false,
@@ -3221,12 +3221,12 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                       name="global-search-2"
                     >
                       <BaseNavBarSearch
-                        className="sc-ckVGcZ gaawaX"
+                        className="sc-dxgOiQ fzipLs"
                         name="global-search-2"
                         onSubmit={[Function]}
                       >
                         <form
-                          className="sc-ckVGcZ gaawaX"
+                          className="sc-dxgOiQ fzipLs"
                           onSubmit={[Function]}
                         >
                           <Styled(Box)
@@ -3750,9 +3750,9 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                           },
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
+                                            "componentId": "sc-kAzzGY",
                                             "isStatic": false,
-                                            "lastClassName": "jfGaMs",
+                                            "lastClassName": "lcPXpU",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -3815,7 +3815,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                             "width": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
+                                          "styledComponentId": "sc-kAzzGY",
                                           "target": "div",
                                           "toString": [Function],
                                           "usesTheme": false,
@@ -3912,7 +3912,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                                       >
                                         <ForwardRef
                                           aria-labelledby="global-search-2"
