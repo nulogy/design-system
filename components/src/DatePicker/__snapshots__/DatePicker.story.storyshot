@@ -392,7 +392,11 @@ exports[`Storyshots DatePicker default 1`] = `
                           "placeholder": "DD Mon YYYY",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="dd MMM yyyy"
@@ -416,6 +420,7 @@ exports[`Storyshots DatePicker default 1`] = `
                   onMonthChange={[Function]}
                   onSelect={[Function]}
                   onYearChange={[Function]}
+                  openToDate={2019-01-01T05:00:00.000Z}
                   preventOpenOnFocus={false}
                   previousMonthButtonLabel="Previous Month"
                   previousYearButtonLabel="Previous Year"
@@ -468,9 +473,13 @@ exports[`Storyshots DatePicker default 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value="01 Jan 2019"
                         />
@@ -504,9 +513,13 @@ exports[`Storyshots DatePicker default 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value="01 Jan 2019"
                               >
@@ -518,6 +531,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="DD Mon YYYY"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -867,6 +881,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="DD Mon YYYY"
                                                       required={false}
                                                       value="01 Jan 2019"
@@ -878,6 +893,7 @@ exports[`Storyshots DatePicker default 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="DD Mon YYYY"
                                                         required={false}
                                                         value="01 Jan 2019"
@@ -1348,7 +1364,11 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                           "placeholder": "MMMM d, yyyy",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="MMMM d, yyyy"
@@ -1373,6 +1393,7 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                   onMonthChange={[Function]}
                   onSelect={[Function]}
                   onYearChange={[Function]}
+                  openToDate={2019-07-10T05:00:00.000Z}
                   preventOpenOnFocus={false}
                   previousMonthButtonLabel="Previous Month"
                   previousYearButtonLabel="Previous Year"
@@ -1425,9 +1446,13 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value="July 10, 2019"
                         />
@@ -1461,9 +1486,13 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value="July 10, 2019"
                               >
@@ -1475,6 +1504,7 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="MMMM d, yyyy"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -1824,6 +1854,7 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="MMMM d, yyyy"
                                                       required={false}
                                                       value="July 10, 2019"
@@ -1835,6 +1866,7 @@ exports[`Storyshots DatePicker with a maxDate 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="MMMM d, yyyy"
                                                         required={false}
                                                         value="July 10, 2019"
@@ -2305,7 +2337,11 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                           "placeholder": "MMMM d, yyyy",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="MMMM d, yyyy"
@@ -2330,6 +2366,7 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                   onMonthChange={[Function]}
                   onSelect={[Function]}
                   onYearChange={[Function]}
+                  openToDate={2019-07-10T05:00:00.000Z}
                   preventOpenOnFocus={false}
                   previousMonthButtonLabel="Previous Month"
                   previousYearButtonLabel="Previous Year"
@@ -2382,9 +2419,13 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value="July 10, 2019"
                         />
@@ -2418,9 +2459,13 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value="July 10, 2019"
                               >
@@ -2432,6 +2477,7 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="MMMM d, yyyy"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -2781,6 +2827,7 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="MMMM d, yyyy"
                                                       required={false}
                                                       value="July 10, 2019"
@@ -2792,6 +2839,7 @@ exports[`Storyshots DatePicker with a minDate 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="MMMM d, yyyy"
                                                         required={false}
                                                         value="July 10, 2019"
@@ -3261,7 +3309,11 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                           "placeholder": "MMMM d, yyyy",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="MMMM d, yyyy"
@@ -3285,6 +3337,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                   onMonthChange={[Function]}
                   onSelect={[Function]}
                   onYearChange={[Function]}
+                  openToDate={2019-01-01T05:00:00.000Z}
                   preventOpenOnFocus={false}
                   previousMonthButtonLabel="Previous Month"
                   previousYearButtonLabel="Previous Year"
@@ -3337,9 +3390,13 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value="January 1, 2019"
                         />
@@ -3373,9 +3430,13 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value="January 1, 2019"
                               >
@@ -3387,6 +3448,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="MMMM d, yyyy"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -3736,6 +3798,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="MMMM d, yyyy"
                                                       required={false}
                                                       value="January 1, 2019"
@@ -3747,6 +3810,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="MMMM d, yyyy"
                                                         required={false}
                                                         value="January 1, 2019"
@@ -4217,7 +4281,11 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                           "placeholder": "DD Mon YYYY",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="dd MMM yyyy"
@@ -4242,6 +4310,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                   onMonthChange={[Function]}
                   onSelect={[Function]}
                   onYearChange={[Function]}
+                  openToDate={2019-07-10T05:00:00.000Z}
                   preventOpenOnFocus={false}
                   previousMonthButtonLabel="Previous Month"
                   previousYearButtonLabel="Previous Year"
@@ -4294,9 +4363,13 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value="10 lip 2019"
                         />
@@ -4330,9 +4403,13 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value="10 lip 2019"
                               >
@@ -4344,6 +4421,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="DD Mon YYYY"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -4693,6 +4771,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="DD Mon YYYY"
                                                       required={false}
                                                       value="10 lip 2019"
@@ -4704,6 +4783,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="DD Mon YYYY"
                                                         required={false}
                                                         value="10 lip 2019"
@@ -5173,7 +5253,11 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                           "placeholder": "Month day, year",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="MMMM d, yyyy"
@@ -5248,9 +5332,13 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value=""
                         />
@@ -5284,9 +5372,13 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value=""
                               >
@@ -5298,6 +5390,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="Month day, year"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -5647,6 +5740,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                                                       error={false}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="Month day, year"
                                                       required={false}
                                                       value=""
@@ -5658,6 +5752,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="Month day, year"
                                                         required={false}
                                                         value=""
@@ -6127,7 +6222,11 @@ exports[`Storyshots DatePicker with error state 1`] = `
                           "placeholder": "MMMM d, yyyy",
                         }
                       }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
                       onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
                     />
                   }
                   dateFormat="MMMM d, yyyy"
@@ -6202,9 +6301,13 @@ exports[`Storyshots DatePicker with error state 1`] = `
                           onBlur={[Function]}
                           onChange={[Function]}
                           onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
                           onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
                           readOnly={false}
                           value=""
                         />
@@ -6238,9 +6341,13 @@ exports[`Storyshots DatePicker with error state 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
                                 onFocus={[Function]}
                                 onInputChange={[Function]}
                                 onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
                                 readOnly={false}
                                 value=""
                               >
@@ -6252,6 +6359,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                                   labelText="Expiry Date"
                                   onChange={[Function]}
                                   onClick={[Function]}
+                                  onKeyDown={[Function]}
                                   placeholder="MMMM d, yyyy"
                                   prefix={null}
                                   prefixAlignment="left"
@@ -6601,6 +6709,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                                                       error={true}
                                                       onChange={[Function]}
                                                       onClick={[Function]}
+                                                      onKeyDown={[Function]}
                                                       placeholder="MMMM d, yyyy"
                                                       required={false}
                                                       value=""
@@ -6612,6 +6721,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                                                         disabled={false}
                                                         onChange={[Function]}
                                                         onClick={[Function]}
+                                                        onKeyDown={[Function]}
                                                         placeholder="MMMM d, yyyy"
                                                         required={false}
                                                         value=""
