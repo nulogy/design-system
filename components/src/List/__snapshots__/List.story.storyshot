@@ -96,7 +96,7 @@ exports[`Storyshots List List 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -185,490 +185,143 @@ exports[`Storyshots List List 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <List
+            color="currentColor"
+            compact={false}
+            leftAlign={false}
           >
-            <List
+            <ul
+              className="List-sc-1cqkmnl-0 gxlfne"
               color="currentColor"
-              compact={false}
-              leftAlign={false}
             >
-              <StyledComponent
+              <ListItem
                 color="currentColor"
-                compact={false}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "_foldedDefaultProps": Object {
-                      "className": undefined,
-                      "color": "currentColor",
-                      "compact": false,
-                      "leftAlign": false,
-                    },
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "List-sc-1cqkmnl-0",
-                      "isStatic": false,
-                      "lastClassName": "dHyYFv",
-                      "rules": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                    },
-                    "displayName": "List",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "bg": [Function],
-                      "className": [Function],
-                      "color": [Function],
-                      "compact": [Function],
-                      "leftAlign": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "List-sc-1cqkmnl-0",
-                    "target": "ul",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                leftAlign={false}
+                mb="8px"
               >
-                <ul
-                  className="List-sc-1cqkmnl-0 dHyYFv"
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
                   color="currentColor"
                 >
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 1
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 2 that is really really really really really really really really really long
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 3
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                </ul>
-              </StyledComponent>
-            </List>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  List Item 1
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 2 that is really really really really really really really really really long
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 3
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -770,7 +423,7 @@ exports[`Storyshots List With compact spacing 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -859,490 +512,143 @@ exports[`Storyshots List With compact spacing 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <List
+            color="currentColor"
+            compact={true}
+            leftAlign={false}
           >
-            <List
+            <ul
+              className="List-sc-1cqkmnl-0 geydbK"
               color="currentColor"
-              compact={true}
-              leftAlign={false}
             >
-              <StyledComponent
+              <ListItem
                 color="currentColor"
-                compact={true}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "_foldedDefaultProps": Object {
-                      "className": undefined,
-                      "color": "currentColor",
-                      "compact": false,
-                      "leftAlign": false,
-                    },
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "List-sc-1cqkmnl-0",
-                      "isStatic": false,
-                      "lastClassName": "cyslos",
-                      "rules": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                    },
-                    "displayName": "List",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "bg": [Function],
-                      "className": [Function],
-                      "color": [Function],
-                      "compact": [Function],
-                      "leftAlign": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "List-sc-1cqkmnl-0",
-                    "target": "ul",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                leftAlign={false}
+                mb="8px"
               >
-                <ul
-                  className="List-sc-1cqkmnl-0 cyslos"
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
                   color="currentColor"
                 >
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 1
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 2 that is really really really really really really really really really long
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 3
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                </ul>
-              </StyledComponent>
-            </List>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  List Item 1
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 2 that is really really really really really really really really really long
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 3
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -1444,7 +750,7 @@ exports[`Storyshots List With custom colour 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -1533,490 +839,143 @@ exports[`Storyshots List With custom colour 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <List
+            color="red"
+            compact={false}
+            leftAlign={false}
           >
-            <List
+            <ul
+              className="List-sc-1cqkmnl-0 bLubqG"
               color="red"
-              compact={false}
-              leftAlign={false}
             >
-              <StyledComponent
-                color="red"
-                compact={false}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "_foldedDefaultProps": Object {
-                      "className": undefined,
-                      "color": "currentColor",
-                      "compact": false,
-                      "leftAlign": false,
-                    },
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "List-sc-1cqkmnl-0",
-                      "isStatic": false,
-                      "lastClassName": "gWSIVH",
-                      "rules": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                    },
-                    "displayName": "List",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "bg": [Function],
-                      "className": [Function],
-                      "color": [Function],
-                      "compact": [Function],
-                      "leftAlign": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "List-sc-1cqkmnl-0",
-                    "target": "ul",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                leftAlign={false}
+              <ListItem
+                color="currentColor"
+                mb="8px"
               >
-                <ul
-                  className="List-sc-1cqkmnl-0 gWSIVH"
-                  color="red"
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
                 >
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 1
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 2 that is really really really really really really really really really long
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 3
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                </ul>
-              </StyledComponent>
-            </List>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  List Item 1
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 2 that is really really really really really really really really really long
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 3
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -2118,7 +1077,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -2207,495 +1166,146 @@ exports[`Storyshots List With custom font size and line height 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <List
+            color="currentColor"
+            compact={false}
+            fontSize="small"
+            leftAlign={false}
+            lineHeight="smallTextBase"
           >
-            <List
+            <ul
+              className="List-sc-1cqkmnl-0 lmyvOo"
               color="currentColor"
-              compact={false}
               fontSize="small"
-              leftAlign={false}
-              lineHeight="smallTextBase"
             >
-              <StyledComponent
+              <ListItem
                 color="currentColor"
-                compact={false}
-                fontSize="small"
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "_foldedDefaultProps": Object {
-                      "className": undefined,
-                      "color": "currentColor",
-                      "compact": false,
-                      "leftAlign": false,
-                    },
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "List-sc-1cqkmnl-0",
-                      "isStatic": false,
-                      "lastClassName": "cwRtmw",
-                      "rules": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                    },
-                    "displayName": "List",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "bg": [Function],
-                      "className": [Function],
-                      "color": [Function],
-                      "compact": [Function],
-                      "leftAlign": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "List-sc-1cqkmnl-0",
-                    "target": "ul",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                leftAlign={false}
-                lineHeight="smallTextBase"
+                mb="8px"
               >
-                <ul
-                  className="List-sc-1cqkmnl-0 cwRtmw"
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
                   color="currentColor"
-                  fontSize="small"
                 >
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 1
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 2 that is really really really really really really really really really long
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 3
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                </ul>
-              </StyledComponent>
-            </List>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  List Item 1
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 2 that is really really really really really really really really really long
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 3
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -2797,7 +1407,7 @@ exports[`Storyshots List With left alignment 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -2886,490 +1496,143 @@ exports[`Storyshots List With left alignment 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <List
+            color="currentColor"
+            compact={false}
+            leftAlign={true}
           >
-            <List
+            <ul
+              className="List-sc-1cqkmnl-0 jNbdHP"
               color="currentColor"
-              compact={false}
-              leftAlign={true}
             >
-              <StyledComponent
+              <ListItem
                 color="currentColor"
-                compact={false}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "_foldedDefaultProps": Object {
-                      "className": undefined,
-                      "color": "currentColor",
-                      "compact": false,
-                      "leftAlign": false,
-                    },
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "List-sc-1cqkmnl-0",
-                      "isStatic": false,
-                      "lastClassName": "buIcTA",
-                      "rules": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                    },
-                    "displayName": "List",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "bg": [Function],
-                      "className": [Function],
-                      "color": [Function],
-                      "compact": [Function],
-                      "leftAlign": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "List-sc-1cqkmnl-0",
-                    "target": "ul",
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-                leftAlign={true}
+                mb="8px"
               >
-                <ul
-                  className="List-sc-1cqkmnl-0 buIcTA"
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
                   color="currentColor"
                 >
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 1
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 2 that is really really really really really really really really really long
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                  <ListItem
-                    color="currentColor"
-                    mb="8px"
-                  >
-                    <StyledComponent
-                      color="currentColor"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "_foldedDefaultProps": Object {
-                            "className": undefined,
-                            "color": "currentColor",
-                            "mb": "8px",
-                          },
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "ListItem-qqenhw-0",
-                            "isStatic": false,
-                            "lastClassName": "hioTAc",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              "&:last-child {",
-                              "margin-bottom: 0;",
-                              "}",
-                            ],
-                          },
-                          "displayName": "ListItem",
-                          "foldedComponentIds": Array [],
-                          "propTypes": Object {
-                            "bg": [Function],
-                            "className": [Function],
-                            "color": [Function],
-                            "m": [Function],
-                            "mb": [Function],
-                            "ml": [Function],
-                            "mr": [Function],
-                            "mt": [Function],
-                            "mx": [Function],
-                            "my": [Function],
-                            "p": [Function],
-                            "pb": [Function],
-                            "pl": [Function],
-                            "pr": [Function],
-                            "pt": [Function],
-                            "px": [Function],
-                            "py": [Function],
-                          },
-                          "render": [Function],
-                          "styledComponentId": "ListItem-qqenhw-0",
-                          "target": "li",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      mb="8px"
-                    >
-                      <li
-                        className="ListItem-qqenhw-0 hioTAc"
-                        color="currentColor"
-                      >
-                        List Item 3
-                      </li>
-                    </StyledComponent>
-                  </ListItem>
-                </ul>
-              </StyledComponent>
-            </List>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  List Item 1
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 2 that is really really really really really really really really really long
+                </li>
+              </ListItem>
+              <ListItem
+                color="currentColor"
+                mb="8px"
+              >
+                <li
+                  className="ListItem-qqenhw-0 jlnRPI"
+                  color="currentColor"
+                >
+                  List Item 3
+                </li>
+              </ListItem>
+            </ul>
+          </List>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
