@@ -42,21 +42,11 @@ storiesOf("DatePicker", module)
       errorMessage="The date is invalid"
     />
   ))
-  .add("with a minDate", () => (
+  .add("with min and max date", () => (
     <DatePicker
-      dateFormat="MMMM d, yyyy"
-      selected={new Date("2019-07-10T05:00:00.000Z")}
-      minDate={new Date("2019-07-05T05:00:00.000Z")}
-      onChange={action("date changed")}
-      onInputChange={action("input changed")}
-      inputProps={{ labelText: "Expiry Date" }}
-    />
-  ))
-  .add("with a maxDate", () => (
-    <DatePicker
-      dateFormat="MMMM d, yyyy"
-      selected={new Date("2019-07-10T05:00:00.000Z")}
-      maxDate={new Date("2019-07-15T05:00:00.000Z")}
+      selected={new Date("2019-01-05T05:00:00.000Z")}
+      minDate={new Date("2019-01-03T05:00:00.000Z")}
+      maxDate={new Date("2019-01-10T05:00:00.000Z")}
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}

@@ -971,1952 +971,6 @@ exports[`Storyshots DatePicker default 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker with a maxDate 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
-  >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
-    >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
-      >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <DatePicker
-            dateFormat="MMMM d, yyyy"
-            inputProps={
-              Object {
-                "labelText": "Expiry Date",
-              }
-            }
-            maxDate={2019-07-15T05:00:00.000Z}
-            onChange={[Function]}
-            onInputChange={[Function]}
-            selected={2019-07-10T05:00:00.000Z}
-          >
-            <Styled(Box)
-              className="nds-date-picker"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-date-picker"
-              >
-                <Memo(GlobalStyleComponent) />
-                <t
-                  allowSameDay={false}
-                  customInput={
-                    <ForwardRef
-                      dateFormat="MMMM d, yyyy"
-                      inputProps={
-                        Object {
-                          "error": false,
-                          "labelText": "Expiry Date",
-                          "placeholder": "MMMM d, yyyy",
-                        }
-                      }
-                      onDownKeyPress={[Function]}
-                      onEnterKeyPress={[Function]}
-                      onInputChange={[Function]}
-                      onSpaceKeyPress={[Function]}
-                      onUpKeyPress={[Function]}
-                    />
-                  }
-                  dateFormat="MMMM d, yyyy"
-                  dateFormatCalendar="LLLL yyyy"
-                  disabled={false}
-                  disabledKeyboardNavigation={true}
-                  dropdownMode="scroll"
-                  inlineFocusSelectedMonth={false}
-                  maxDate={2019-07-15T05:00:00.000Z}
-                  monthsShown={1}
-                  nextMonthButtonLabel="Next Month"
-                  nextYearButtonLabel="Next Year"
-                  onBlur={[Function]}
-                  onCalendarClose={[Function]}
-                  onCalendarOpen={[Function]}
-                  onChange={[Function]}
-                  onClickOutside={[Function]}
-                  onFocus={[Function]}
-                  onInputClick={[Function]}
-                  onInputError={[Function]}
-                  onKeyDown={[Function]}
-                  onMonthChange={[Function]}
-                  onSelect={[Function]}
-                  onYearChange={[Function]}
-                  openToDate={2019-07-10T05:00:00.000Z}
-                  preventOpenOnFocus={false}
-                  previousMonthButtonLabel="Previous Month"
-                  previousYearButtonLabel="Previous Year"
-                  readOnly={false}
-                  renderCustomHeader={[Function]}
-                  renderDayContents={[Function]}
-                  selected={2019-07-10T05:00:00.000Z}
-                  shouldCloseOnSelect={true}
-                  showMonthYearPicker={false}
-                  showPopperArrow={true}
-                  showPreviousMonths={false}
-                  showQuarterYearPicker={false}
-                  showTimeInput={false}
-                  showTimeSelect={false}
-                  strictParsing={true}
-                  timeCaption="Time"
-                  timeInputLabel="Time"
-                  timeIntervals={30}
-                  withPortal={false}
-                >
-                  <t
-                    hidePopper={true}
-                    popperComponent={null}
-                    popperModifiers={
-                      Object {
-                        "preventOverflow": Object {
-                          "boundariesElement": "viewport",
-                          "enabled": true,
-                          "escapeWithReference": true,
-                        },
-                      }
-                    }
-                    popperPlacement="bottom-start"
-                    popperProps={Object {}}
-                    targetComponent={
-                      <div
-                        className="react-datepicker__input-container"
-                      >
-                        <ForwardRef
-                          className=""
-                          dateFormat="MMMM d, yyyy"
-                          disabled={false}
-                          inputProps={
-                            Object {
-                              "error": false,
-                              "labelText": "Expiry Date",
-                              "placeholder": "MMMM d, yyyy",
-                            }
-                          }
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onDownKeyPress={[Function]}
-                          onEnterKeyPress={[Function]}
-                          onFocus={[Function]}
-                          onInputChange={[Function]}
-                          onKeyDown={[Function]}
-                          onSpaceKeyPress={[Function]}
-                          onUpKeyPress={[Function]}
-                          readOnly={false}
-                          value="July 10, 2019"
-                        />
-                      </div>
-                    }
-                  >
-                    <Manager
-                      className="react-datepicker-manager"
-                    >
-                      <Reference>
-                        <InnerReference
-                          setReferenceNode={[Function]}
-                        >
-                          <div
-                            className="react-datepicker-wrapper"
-                          >
-                            <div
-                              className="react-datepicker__input-container"
-                            >
-                              <ForwardRef
-                                className=""
-                                dateFormat="MMMM d, yyyy"
-                                disabled={false}
-                                inputProps={
-                                  Object {
-                                    "error": false,
-                                    "labelText": "Expiry Date",
-                                    "placeholder": "MMMM d, yyyy",
-                                  }
-                                }
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onDownKeyPress={[Function]}
-                                onEnterKeyPress={[Function]}
-                                onFocus={[Function]}
-                                onInputChange={[Function]}
-                                onKeyDown={[Function]}
-                                onSpaceKeyPress={[Function]}
-                                onUpKeyPress={[Function]}
-                                readOnly={false}
-                                value="July 10, 2019"
-                              >
-                                <ForwardRef
-                                  disabled={false}
-                                  error={false}
-                                  helpText={null}
-                                  icon="calendarToday"
-                                  labelText="Expiry Date"
-                                  onChange={[Function]}
-                                  onClick={[Function]}
-                                  onKeyDown={[Function]}
-                                  placeholder="MMMM d, yyyy"
-                                  prefix={null}
-                                  prefixAlignment="left"
-                                  prefixWidth={null}
-                                  required={false}
-                                  requirementText={null}
-                                  suffix={null}
-                                  suffixAlignment="left"
-                                  suffixWidth={null}
-                                  value="July 10, 2019"
-                                >
-                                  <MaybeFieldLabel
-                                    helpText={null}
-                                    labelText="Expiry Date"
-                                    requirementText={null}
-                                  >
-                                    <Styled(BaseFieldLabel)
-                                      helpText={null}
-                                      labelText="Expiry Date"
-                                      requirementText={null}
-                                    >
-                                      <BaseFieldLabel
-                                        className="sc-fzXfLW casIUc"
-                                        helpText={null}
-                                        labelText="Expiry Date"
-                                        requirementText={null}
-                                      >
-                                        <FieldLabel__Label
-                                          className="sc-fzXfLW casIUc"
-                                          color="#011e38"
-                                          style={
-                                            Object {
-                                              "display": "block",
-                                            }
-                                          }
-                                        >
-                                          <label
-                                            className="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
-                                            color="#011e38"
-                                            style={
-                                              Object {
-                                                "display": "block",
-                                              }
-                                            }
-                                          >
-                                            <Box
-                                              mb="x1"
-                                              theme={
-                                                Object {
-                                                  "borders": Array [],
-                                                  "breakpoints": Object {
-                                                    "extraLarge": "1920px",
-                                                    "extraSmall": "0px",
-                                                    "large": "1360px",
-                                                    "medium": "1024px",
-                                                    "small": "768px",
-                                                  },
-                                                  "colors": Object {
-                                                    "black": "#011e38",
-                                                    "blackBlue": "#122b47",
-                                                    "blue": "#216beb",
-                                                    "darkBlue": "#00438f",
-                                                    "darkGrey": "#434d59",
-                                                    "green": "#008059",
-                                                    "grey": "#c0c8d1",
-                                                    "lightBlue": "#e1ebfa",
-                                                    "lightGreen": "#e9f7f2",
-                                                    "lightGrey": "#e4e7eb",
-                                                    "lightRed": "#fae6ea",
-                                                    "lightYellow": "#fcf5e3",
-                                                    "red": "#cc1439",
-                                                    "white": "#ffffff",
-                                                    "whiteGrey": "#f0f2f5",
-                                                    "yellow": "#ffbb00",
-                                                  },
-                                                  "fontSizes": Object {
-                                                    "large": "20px",
-                                                    "larger": "26px",
-                                                    "largest": "46px",
-                                                    "medium": "16px",
-                                                    "small": "14px",
-                                                    "smaller": "12px",
-                                                  },
-                                                  "fontWeights": Object {
-                                                    "bold": "600",
-                                                    "light": "300",
-                                                    "medium": "500",
-                                                    "normal": "400",
-                                                  },
-                                                  "fonts": Object {
-                                                    "base": "'IBM Plex Sans', sans-serif",
-                                                    "mono": "'IBM Plex Mono', monospace",
-                                                  },
-                                                  "lineHeights": Object {
-                                                    "base": "1.5",
-                                                    "sectionTitle": "1.23076923",
-                                                    "smallTextBase": "1.71428571",
-                                                    "smallTextCompressed": "1.14285714",
-                                                    "smallerText": "1.33333333",
-                                                    "subsectionTitle": "1.2",
-                                                    "title": "1.04347826",
-                                                  },
-                                                  "radii": Object {
-                                                    "circle": "50%",
-                                                    "medium": "4px",
-                                                    "small": "2px",
-                                                  },
-                                                  "shadows": Object {
-                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                  },
-                                                  "space": Object {
-                                                    "half": "4px",
-                                                    "none": "0px",
-                                                    "x1": "8px",
-                                                    "x2": "16px",
-                                                    "x3": "24px",
-                                                    "x4": "32px",
-                                                    "x5": "40px",
-                                                    "x6": "48px",
-                                                    "x8": "64px",
-                                                  },
-                                                  "zIndex": Object {
-                                                    "content": 100,
-                                                    "overlay": 1000,
-                                                    "tabsBar": 210,
-                                                    "tabsScollIndicator": 200,
-                                                  },
-                                                }
-                                              }
-                                            >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
-                                              >
-                                                <span
-                                                  style={
-                                                    Object {
-                                                      "fontSize": "14px",
-                                                      "fontWeight": "600",
-                                                      "lineHeight": "1.71428571",
-                                                    }
-                                                  }
-                                                >
-                                                  Expiry Date
-                                                </span>
-                                              </div>
-                                            </Box>
-                                            <Styled(Box)
-                                              alignItems="flex-start"
-                                              theme={
-                                                Object {
-                                                  "borders": Array [],
-                                                  "breakpoints": Object {
-                                                    "extraLarge": "1920px",
-                                                    "extraSmall": "0px",
-                                                    "large": "1360px",
-                                                    "medium": "1024px",
-                                                    "small": "768px",
-                                                  },
-                                                  "colors": Object {
-                                                    "black": "#011e38",
-                                                    "blackBlue": "#122b47",
-                                                    "blue": "#216beb",
-                                                    "darkBlue": "#00438f",
-                                                    "darkGrey": "#434d59",
-                                                    "green": "#008059",
-                                                    "grey": "#c0c8d1",
-                                                    "lightBlue": "#e1ebfa",
-                                                    "lightGreen": "#e9f7f2",
-                                                    "lightGrey": "#e4e7eb",
-                                                    "lightRed": "#fae6ea",
-                                                    "lightYellow": "#fcf5e3",
-                                                    "red": "#cc1439",
-                                                    "white": "#ffffff",
-                                                    "whiteGrey": "#f0f2f5",
-                                                    "yellow": "#ffbb00",
-                                                  },
-                                                  "fontSizes": Object {
-                                                    "large": "20px",
-                                                    "larger": "26px",
-                                                    "largest": "46px",
-                                                    "medium": "16px",
-                                                    "small": "14px",
-                                                    "smaller": "12px",
-                                                  },
-                                                  "fontWeights": Object {
-                                                    "bold": "600",
-                                                    "light": "300",
-                                                    "medium": "500",
-                                                    "normal": "400",
-                                                  },
-                                                  "fonts": Object {
-                                                    "base": "'IBM Plex Sans', sans-serif",
-                                                    "mono": "'IBM Plex Mono', monospace",
-                                                  },
-                                                  "lineHeights": Object {
-                                                    "base": "1.5",
-                                                    "sectionTitle": "1.23076923",
-                                                    "smallTextBase": "1.71428571",
-                                                    "smallTextCompressed": "1.14285714",
-                                                    "smallerText": "1.33333333",
-                                                    "subsectionTitle": "1.2",
-                                                    "title": "1.04347826",
-                                                  },
-                                                  "radii": Object {
-                                                    "circle": "50%",
-                                                    "medium": "4px",
-                                                    "small": "2px",
-                                                  },
-                                                  "shadows": Object {
-                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                  },
-                                                  "space": Object {
-                                                    "half": "4px",
-                                                    "none": "0px",
-                                                    "x1": "8px",
-                                                    "x2": "16px",
-                                                    "x3": "24px",
-                                                    "x4": "32px",
-                                                    "x5": "40px",
-                                                    "x6": "48px",
-                                                    "x8": "64px",
-                                                  },
-                                                  "zIndex": Object {
-                                                    "content": 100,
-                                                    "overlay": 1000,
-                                                    "tabsBar": 210,
-                                                    "tabsScollIndicator": 200,
-                                                  },
-                                                }
-                                              }
-                                            >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
-                                              >
-                                                <Prefix
-                                                  prefix={null}
-                                                  prefixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                                <Box
-                                                  display="flex"
-                                                  flexGrow="1"
-                                                  position="relative"
-                                                  theme={
-                                                    Object {
-                                                      "borders": Array [],
-                                                      "breakpoints": Object {
-                                                        "extraLarge": "1920px",
-                                                        "extraSmall": "0px",
-                                                        "large": "1360px",
-                                                        "medium": "1024px",
-                                                        "small": "768px",
-                                                      },
-                                                      "colors": Object {
-                                                        "black": "#011e38",
-                                                        "blackBlue": "#122b47",
-                                                        "blue": "#216beb",
-                                                        "darkBlue": "#00438f",
-                                                        "darkGrey": "#434d59",
-                                                        "green": "#008059",
-                                                        "grey": "#c0c8d1",
-                                                        "lightBlue": "#e1ebfa",
-                                                        "lightGreen": "#e9f7f2",
-                                                        "lightGrey": "#e4e7eb",
-                                                        "lightRed": "#fae6ea",
-                                                        "lightYellow": "#fcf5e3",
-                                                        "red": "#cc1439",
-                                                        "white": "#ffffff",
-                                                        "whiteGrey": "#f0f2f5",
-                                                        "yellow": "#ffbb00",
-                                                      },
-                                                      "fontSizes": Object {
-                                                        "large": "20px",
-                                                        "larger": "26px",
-                                                        "largest": "46px",
-                                                        "medium": "16px",
-                                                        "small": "14px",
-                                                        "smaller": "12px",
-                                                      },
-                                                      "fontWeights": Object {
-                                                        "bold": "600",
-                                                        "light": "300",
-                                                        "medium": "500",
-                                                        "normal": "400",
-                                                      },
-                                                      "fonts": Object {
-                                                        "base": "'IBM Plex Sans', sans-serif",
-                                                        "mono": "'IBM Plex Mono', monospace",
-                                                      },
-                                                      "lineHeights": Object {
-                                                        "base": "1.5",
-                                                        "sectionTitle": "1.23076923",
-                                                        "smallTextBase": "1.71428571",
-                                                        "smallTextCompressed": "1.14285714",
-                                                        "smallerText": "1.33333333",
-                                                        "subsectionTitle": "1.2",
-                                                        "title": "1.04347826",
-                                                      },
-                                                      "radii": Object {
-                                                        "circle": "50%",
-                                                        "medium": "4px",
-                                                        "small": "2px",
-                                                      },
-                                                      "shadows": Object {
-                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                      },
-                                                      "space": Object {
-                                                        "half": "4px",
-                                                        "none": "0px",
-                                                        "x1": "8px",
-                                                        "x2": "16px",
-                                                        "x3": "24px",
-                                                        "x4": "32px",
-                                                        "x5": "40px",
-                                                        "x6": "48px",
-                                                        "x8": "64px",
-                                                      },
-                                                      "zIndex": Object {
-                                                        "content": 100,
-                                                        "overlay": 1000,
-                                                        "tabsBar": 210,
-                                                        "tabsScollIndicator": 200,
-                                                      },
-                                                    }
-                                                  }
-                                                >
-                                                  <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
-                                                    display="flex"
-                                                  >
-                                                    <InputField__StyledInput
-                                                      aria-invalid={false}
-                                                      aria-required={false}
-                                                      disabled={false}
-                                                      error={false}
-                                                      onChange={[Function]}
-                                                      onClick={[Function]}
-                                                      onKeyDown={[Function]}
-                                                      placeholder="MMMM d, yyyy"
-                                                      required={false}
-                                                      value="July 10, 2019"
-                                                    >
-                                                      <input
-                                                        aria-invalid={false}
-                                                        aria-required={false}
-                                                        className="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
-                                                        disabled={false}
-                                                        onChange={[Function]}
-                                                        onClick={[Function]}
-                                                        onKeyDown={[Function]}
-                                                        placeholder="MMMM d, yyyy"
-                                                        required={false}
-                                                        value="July 10, 2019"
-                                                      />
-                                                    </InputField__StyledInput>
-                                                    <Styled(Styled(Component))
-                                                      color="currentColor"
-                                                      icon="calendarToday"
-                                                      size="16px"
-                                                      title={null}
-                                                    >
-                                                      <ForwardRef
-                                                        className="sc-AykKD sc-fzXfMy edCVOB"
-                                                        color="currentColor"
-                                                        focusable={false}
-                                                        icon="calendarToday"
-                                                        size="16px"
-                                                        title={null}
-                                                      >
-                                                        <svg
-                                                          aria-hidden={true}
-                                                          className="sc-AykKD sc-fzXfMy edCVOB"
-                                                          color="currentColor"
-                                                          fill="currentColor"
-                                                          focusable={false}
-                                                          height="16px"
-                                                          icon="calendarToday"
-                                                          size="16px"
-                                                          title={null}
-                                                          viewBox="0 0 24 24"
-                                                          width="16px"
-                                                        >
-                                                          <path
-                                                            d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
-                                                            key="0"
-                                                          />
-                                                        </svg>
-                                                      </ForwardRef>
-                                                    </Styled(Styled(Component))>
-                                                  </div>
-                                                </Box>
-                                                <Suffix
-                                                  suffix={null}
-                                                  suffixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                              </div>
-                                            </Styled(Box)>
-                                          </label>
-                                        </FieldLabel__Label>
-                                      </BaseFieldLabel>
-                                    </Styled(BaseFieldLabel)>
-                                  </MaybeFieldLabel>
-                                </ForwardRef>
-                              </ForwardRef>
-                            </div>
-                          </div>
-                        </InnerReference>
-                      </Reference>
-                    </Manager>
-                  </t>
-                </t>
-                <InlineValidation
-                  errorList={null}
-                  errorMessage={null}
-                  mt="x1"
-                />
-              </div>
-            </Styled(Box)>
-          </DatePicker>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
-</div>
-`;
-
-exports[`Storyshots DatePicker with a minDate 1`] = `
-<div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
->
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
-  >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
-    >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
-      >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <DatePicker
-            dateFormat="MMMM d, yyyy"
-            inputProps={
-              Object {
-                "labelText": "Expiry Date",
-              }
-            }
-            minDate={2019-07-05T05:00:00.000Z}
-            onChange={[Function]}
-            onInputChange={[Function]}
-            selected={2019-07-10T05:00:00.000Z}
-          >
-            <Styled(Box)
-              className="nds-date-picker"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-date-picker"
-              >
-                <Memo(GlobalStyleComponent) />
-                <t
-                  allowSameDay={false}
-                  customInput={
-                    <ForwardRef
-                      dateFormat="MMMM d, yyyy"
-                      inputProps={
-                        Object {
-                          "error": false,
-                          "labelText": "Expiry Date",
-                          "placeholder": "MMMM d, yyyy",
-                        }
-                      }
-                      onDownKeyPress={[Function]}
-                      onEnterKeyPress={[Function]}
-                      onInputChange={[Function]}
-                      onSpaceKeyPress={[Function]}
-                      onUpKeyPress={[Function]}
-                    />
-                  }
-                  dateFormat="MMMM d, yyyy"
-                  dateFormatCalendar="LLLL yyyy"
-                  disabled={false}
-                  disabledKeyboardNavigation={true}
-                  dropdownMode="scroll"
-                  inlineFocusSelectedMonth={false}
-                  minDate={2019-07-05T05:00:00.000Z}
-                  monthsShown={1}
-                  nextMonthButtonLabel="Next Month"
-                  nextYearButtonLabel="Next Year"
-                  onBlur={[Function]}
-                  onCalendarClose={[Function]}
-                  onCalendarOpen={[Function]}
-                  onChange={[Function]}
-                  onClickOutside={[Function]}
-                  onFocus={[Function]}
-                  onInputClick={[Function]}
-                  onInputError={[Function]}
-                  onKeyDown={[Function]}
-                  onMonthChange={[Function]}
-                  onSelect={[Function]}
-                  onYearChange={[Function]}
-                  openToDate={2019-07-10T05:00:00.000Z}
-                  preventOpenOnFocus={false}
-                  previousMonthButtonLabel="Previous Month"
-                  previousYearButtonLabel="Previous Year"
-                  readOnly={false}
-                  renderCustomHeader={[Function]}
-                  renderDayContents={[Function]}
-                  selected={2019-07-10T05:00:00.000Z}
-                  shouldCloseOnSelect={true}
-                  showMonthYearPicker={false}
-                  showPopperArrow={true}
-                  showPreviousMonths={false}
-                  showQuarterYearPicker={false}
-                  showTimeInput={false}
-                  showTimeSelect={false}
-                  strictParsing={true}
-                  timeCaption="Time"
-                  timeInputLabel="Time"
-                  timeIntervals={30}
-                  withPortal={false}
-                >
-                  <t
-                    hidePopper={true}
-                    popperComponent={null}
-                    popperModifiers={
-                      Object {
-                        "preventOverflow": Object {
-                          "boundariesElement": "viewport",
-                          "enabled": true,
-                          "escapeWithReference": true,
-                        },
-                      }
-                    }
-                    popperPlacement="bottom-start"
-                    popperProps={Object {}}
-                    targetComponent={
-                      <div
-                        className="react-datepicker__input-container"
-                      >
-                        <ForwardRef
-                          className=""
-                          dateFormat="MMMM d, yyyy"
-                          disabled={false}
-                          inputProps={
-                            Object {
-                              "error": false,
-                              "labelText": "Expiry Date",
-                              "placeholder": "MMMM d, yyyy",
-                            }
-                          }
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onDownKeyPress={[Function]}
-                          onEnterKeyPress={[Function]}
-                          onFocus={[Function]}
-                          onInputChange={[Function]}
-                          onKeyDown={[Function]}
-                          onSpaceKeyPress={[Function]}
-                          onUpKeyPress={[Function]}
-                          readOnly={false}
-                          value="July 10, 2019"
-                        />
-                      </div>
-                    }
-                  >
-                    <Manager
-                      className="react-datepicker-manager"
-                    >
-                      <Reference>
-                        <InnerReference
-                          setReferenceNode={[Function]}
-                        >
-                          <div
-                            className="react-datepicker-wrapper"
-                          >
-                            <div
-                              className="react-datepicker__input-container"
-                            >
-                              <ForwardRef
-                                className=""
-                                dateFormat="MMMM d, yyyy"
-                                disabled={false}
-                                inputProps={
-                                  Object {
-                                    "error": false,
-                                    "labelText": "Expiry Date",
-                                    "placeholder": "MMMM d, yyyy",
-                                  }
-                                }
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onClick={[Function]}
-                                onDownKeyPress={[Function]}
-                                onEnterKeyPress={[Function]}
-                                onFocus={[Function]}
-                                onInputChange={[Function]}
-                                onKeyDown={[Function]}
-                                onSpaceKeyPress={[Function]}
-                                onUpKeyPress={[Function]}
-                                readOnly={false}
-                                value="July 10, 2019"
-                              >
-                                <ForwardRef
-                                  disabled={false}
-                                  error={false}
-                                  helpText={null}
-                                  icon="calendarToday"
-                                  labelText="Expiry Date"
-                                  onChange={[Function]}
-                                  onClick={[Function]}
-                                  onKeyDown={[Function]}
-                                  placeholder="MMMM d, yyyy"
-                                  prefix={null}
-                                  prefixAlignment="left"
-                                  prefixWidth={null}
-                                  required={false}
-                                  requirementText={null}
-                                  suffix={null}
-                                  suffixAlignment="left"
-                                  suffixWidth={null}
-                                  value="July 10, 2019"
-                                >
-                                  <MaybeFieldLabel
-                                    helpText={null}
-                                    labelText="Expiry Date"
-                                    requirementText={null}
-                                  >
-                                    <Styled(BaseFieldLabel)
-                                      helpText={null}
-                                      labelText="Expiry Date"
-                                      requirementText={null}
-                                    >
-                                      <BaseFieldLabel
-                                        className="sc-fzXfLW casIUc"
-                                        helpText={null}
-                                        labelText="Expiry Date"
-                                        requirementText={null}
-                                      >
-                                        <FieldLabel__Label
-                                          className="sc-fzXfLW casIUc"
-                                          color="#011e38"
-                                          style={
-                                            Object {
-                                              "display": "block",
-                                            }
-                                          }
-                                        >
-                                          <label
-                                            className="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
-                                            color="#011e38"
-                                            style={
-                                              Object {
-                                                "display": "block",
-                                              }
-                                            }
-                                          >
-                                            <Box
-                                              mb="x1"
-                                              theme={
-                                                Object {
-                                                  "borders": Array [],
-                                                  "breakpoints": Object {
-                                                    "extraLarge": "1920px",
-                                                    "extraSmall": "0px",
-                                                    "large": "1360px",
-                                                    "medium": "1024px",
-                                                    "small": "768px",
-                                                  },
-                                                  "colors": Object {
-                                                    "black": "#011e38",
-                                                    "blackBlue": "#122b47",
-                                                    "blue": "#216beb",
-                                                    "darkBlue": "#00438f",
-                                                    "darkGrey": "#434d59",
-                                                    "green": "#008059",
-                                                    "grey": "#c0c8d1",
-                                                    "lightBlue": "#e1ebfa",
-                                                    "lightGreen": "#e9f7f2",
-                                                    "lightGrey": "#e4e7eb",
-                                                    "lightRed": "#fae6ea",
-                                                    "lightYellow": "#fcf5e3",
-                                                    "red": "#cc1439",
-                                                    "white": "#ffffff",
-                                                    "whiteGrey": "#f0f2f5",
-                                                    "yellow": "#ffbb00",
-                                                  },
-                                                  "fontSizes": Object {
-                                                    "large": "20px",
-                                                    "larger": "26px",
-                                                    "largest": "46px",
-                                                    "medium": "16px",
-                                                    "small": "14px",
-                                                    "smaller": "12px",
-                                                  },
-                                                  "fontWeights": Object {
-                                                    "bold": "600",
-                                                    "light": "300",
-                                                    "medium": "500",
-                                                    "normal": "400",
-                                                  },
-                                                  "fonts": Object {
-                                                    "base": "'IBM Plex Sans', sans-serif",
-                                                    "mono": "'IBM Plex Mono', monospace",
-                                                  },
-                                                  "lineHeights": Object {
-                                                    "base": "1.5",
-                                                    "sectionTitle": "1.23076923",
-                                                    "smallTextBase": "1.71428571",
-                                                    "smallTextCompressed": "1.14285714",
-                                                    "smallerText": "1.33333333",
-                                                    "subsectionTitle": "1.2",
-                                                    "title": "1.04347826",
-                                                  },
-                                                  "radii": Object {
-                                                    "circle": "50%",
-                                                    "medium": "4px",
-                                                    "small": "2px",
-                                                  },
-                                                  "shadows": Object {
-                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                  },
-                                                  "space": Object {
-                                                    "half": "4px",
-                                                    "none": "0px",
-                                                    "x1": "8px",
-                                                    "x2": "16px",
-                                                    "x3": "24px",
-                                                    "x4": "32px",
-                                                    "x5": "40px",
-                                                    "x6": "48px",
-                                                    "x8": "64px",
-                                                  },
-                                                  "zIndex": Object {
-                                                    "content": 100,
-                                                    "overlay": 1000,
-                                                    "tabsBar": 210,
-                                                    "tabsScollIndicator": 200,
-                                                  },
-                                                }
-                                              }
-                                            >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
-                                              >
-                                                <span
-                                                  style={
-                                                    Object {
-                                                      "fontSize": "14px",
-                                                      "fontWeight": "600",
-                                                      "lineHeight": "1.71428571",
-                                                    }
-                                                  }
-                                                >
-                                                  Expiry Date
-                                                </span>
-                                              </div>
-                                            </Box>
-                                            <Styled(Box)
-                                              alignItems="flex-start"
-                                              theme={
-                                                Object {
-                                                  "borders": Array [],
-                                                  "breakpoints": Object {
-                                                    "extraLarge": "1920px",
-                                                    "extraSmall": "0px",
-                                                    "large": "1360px",
-                                                    "medium": "1024px",
-                                                    "small": "768px",
-                                                  },
-                                                  "colors": Object {
-                                                    "black": "#011e38",
-                                                    "blackBlue": "#122b47",
-                                                    "blue": "#216beb",
-                                                    "darkBlue": "#00438f",
-                                                    "darkGrey": "#434d59",
-                                                    "green": "#008059",
-                                                    "grey": "#c0c8d1",
-                                                    "lightBlue": "#e1ebfa",
-                                                    "lightGreen": "#e9f7f2",
-                                                    "lightGrey": "#e4e7eb",
-                                                    "lightRed": "#fae6ea",
-                                                    "lightYellow": "#fcf5e3",
-                                                    "red": "#cc1439",
-                                                    "white": "#ffffff",
-                                                    "whiteGrey": "#f0f2f5",
-                                                    "yellow": "#ffbb00",
-                                                  },
-                                                  "fontSizes": Object {
-                                                    "large": "20px",
-                                                    "larger": "26px",
-                                                    "largest": "46px",
-                                                    "medium": "16px",
-                                                    "small": "14px",
-                                                    "smaller": "12px",
-                                                  },
-                                                  "fontWeights": Object {
-                                                    "bold": "600",
-                                                    "light": "300",
-                                                    "medium": "500",
-                                                    "normal": "400",
-                                                  },
-                                                  "fonts": Object {
-                                                    "base": "'IBM Plex Sans', sans-serif",
-                                                    "mono": "'IBM Plex Mono', monospace",
-                                                  },
-                                                  "lineHeights": Object {
-                                                    "base": "1.5",
-                                                    "sectionTitle": "1.23076923",
-                                                    "smallTextBase": "1.71428571",
-                                                    "smallTextCompressed": "1.14285714",
-                                                    "smallerText": "1.33333333",
-                                                    "subsectionTitle": "1.2",
-                                                    "title": "1.04347826",
-                                                  },
-                                                  "radii": Object {
-                                                    "circle": "50%",
-                                                    "medium": "4px",
-                                                    "small": "2px",
-                                                  },
-                                                  "shadows": Object {
-                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                  },
-                                                  "space": Object {
-                                                    "half": "4px",
-                                                    "none": "0px",
-                                                    "x1": "8px",
-                                                    "x2": "16px",
-                                                    "x3": "24px",
-                                                    "x4": "32px",
-                                                    "x5": "40px",
-                                                    "x6": "48px",
-                                                    "x8": "64px",
-                                                  },
-                                                  "zIndex": Object {
-                                                    "content": 100,
-                                                    "overlay": 1000,
-                                                    "tabsBar": 210,
-                                                    "tabsScollIndicator": 200,
-                                                  },
-                                                }
-                                              }
-                                            >
-                                              <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
-                                              >
-                                                <Prefix
-                                                  prefix={null}
-                                                  prefixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                                <Box
-                                                  display="flex"
-                                                  flexGrow="1"
-                                                  position="relative"
-                                                  theme={
-                                                    Object {
-                                                      "borders": Array [],
-                                                      "breakpoints": Object {
-                                                        "extraLarge": "1920px",
-                                                        "extraSmall": "0px",
-                                                        "large": "1360px",
-                                                        "medium": "1024px",
-                                                        "small": "768px",
-                                                      },
-                                                      "colors": Object {
-                                                        "black": "#011e38",
-                                                        "blackBlue": "#122b47",
-                                                        "blue": "#216beb",
-                                                        "darkBlue": "#00438f",
-                                                        "darkGrey": "#434d59",
-                                                        "green": "#008059",
-                                                        "grey": "#c0c8d1",
-                                                        "lightBlue": "#e1ebfa",
-                                                        "lightGreen": "#e9f7f2",
-                                                        "lightGrey": "#e4e7eb",
-                                                        "lightRed": "#fae6ea",
-                                                        "lightYellow": "#fcf5e3",
-                                                        "red": "#cc1439",
-                                                        "white": "#ffffff",
-                                                        "whiteGrey": "#f0f2f5",
-                                                        "yellow": "#ffbb00",
-                                                      },
-                                                      "fontSizes": Object {
-                                                        "large": "20px",
-                                                        "larger": "26px",
-                                                        "largest": "46px",
-                                                        "medium": "16px",
-                                                        "small": "14px",
-                                                        "smaller": "12px",
-                                                      },
-                                                      "fontWeights": Object {
-                                                        "bold": "600",
-                                                        "light": "300",
-                                                        "medium": "500",
-                                                        "normal": "400",
-                                                      },
-                                                      "fonts": Object {
-                                                        "base": "'IBM Plex Sans', sans-serif",
-                                                        "mono": "'IBM Plex Mono', monospace",
-                                                      },
-                                                      "lineHeights": Object {
-                                                        "base": "1.5",
-                                                        "sectionTitle": "1.23076923",
-                                                        "smallTextBase": "1.71428571",
-                                                        "smallTextCompressed": "1.14285714",
-                                                        "smallerText": "1.33333333",
-                                                        "subsectionTitle": "1.2",
-                                                        "title": "1.04347826",
-                                                      },
-                                                      "radii": Object {
-                                                        "circle": "50%",
-                                                        "medium": "4px",
-                                                        "small": "2px",
-                                                      },
-                                                      "shadows": Object {
-                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                                      },
-                                                      "space": Object {
-                                                        "half": "4px",
-                                                        "none": "0px",
-                                                        "x1": "8px",
-                                                        "x2": "16px",
-                                                        "x3": "24px",
-                                                        "x4": "32px",
-                                                        "x5": "40px",
-                                                        "x6": "48px",
-                                                        "x8": "64px",
-                                                      },
-                                                      "zIndex": Object {
-                                                        "content": 100,
-                                                        "overlay": 1000,
-                                                        "tabsBar": 210,
-                                                        "tabsScollIndicator": 200,
-                                                      },
-                                                    }
-                                                  }
-                                                >
-                                                  <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
-                                                    display="flex"
-                                                  >
-                                                    <InputField__StyledInput
-                                                      aria-invalid={false}
-                                                      aria-required={false}
-                                                      disabled={false}
-                                                      error={false}
-                                                      onChange={[Function]}
-                                                      onClick={[Function]}
-                                                      onKeyDown={[Function]}
-                                                      placeholder="MMMM d, yyyy"
-                                                      required={false}
-                                                      value="July 10, 2019"
-                                                    >
-                                                      <input
-                                                        aria-invalid={false}
-                                                        aria-required={false}
-                                                        className="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
-                                                        disabled={false}
-                                                        onChange={[Function]}
-                                                        onClick={[Function]}
-                                                        onKeyDown={[Function]}
-                                                        placeholder="MMMM d, yyyy"
-                                                        required={false}
-                                                        value="July 10, 2019"
-                                                      />
-                                                    </InputField__StyledInput>
-                                                    <Styled(Styled(Component))
-                                                      color="currentColor"
-                                                      icon="calendarToday"
-                                                      size="16px"
-                                                      title={null}
-                                                    >
-                                                      <ForwardRef
-                                                        className="sc-AykKD sc-fzXfMy edCVOB"
-                                                        color="currentColor"
-                                                        focusable={false}
-                                                        icon="calendarToday"
-                                                        size="16px"
-                                                        title={null}
-                                                      >
-                                                        <svg
-                                                          aria-hidden={true}
-                                                          className="sc-AykKD sc-fzXfMy edCVOB"
-                                                          color="currentColor"
-                                                          fill="currentColor"
-                                                          focusable={false}
-                                                          height="16px"
-                                                          icon="calendarToday"
-                                                          size="16px"
-                                                          title={null}
-                                                          viewBox="0 0 24 24"
-                                                          width="16px"
-                                                        >
-                                                          <path
-                                                            d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
-                                                            key="0"
-                                                          />
-                                                        </svg>
-                                                      </ForwardRef>
-                                                    </Styled(Styled(Component))>
-                                                  </div>
-                                                </Box>
-                                                <Suffix
-                                                  suffix={null}
-                                                  suffixWidth={null}
-                                                  textAlign="left"
-                                                />
-                                              </div>
-                                            </Styled(Box)>
-                                          </label>
-                                        </FieldLabel__Label>
-                                      </BaseFieldLabel>
-                                    </Styled(BaseFieldLabel)>
-                                  </MaybeFieldLabel>
-                                </ForwardRef>
-                              </ForwardRef>
-                            </div>
-                          </div>
-                        </InnerReference>
-                      </Reference>
-                    </Manager>
-                  </t>
-                </t>
-                <InlineValidation
-                  errorList={null}
-                  errorMessage={null}
-                  mt="x1"
-                />
-              </div>
-            </Styled(Box)>
-          </DatePicker>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
-</div>
-`;
-
 exports[`Storyshots DatePicker with custom date format 1`] = `
 <div
   style={
@@ -6946,6 +5000,981 @@ exports[`Storyshots DatePicker with error state 1`] = `
                     </div>
                   </Styled(Box)>
                 </InlineValidation>
+              </div>
+            </Styled(Box)>
+          </DatePicker>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
+exports[`Storyshots DatePicker with min and max date 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <DatePicker
+            dateFormat="dd MMM yyyy"
+            inputProps={
+              Object {
+                "labelText": "Expiry Date",
+              }
+            }
+            maxDate={2019-01-10T05:00:00.000Z}
+            minDate={2019-01-03T05:00:00.000Z}
+            onChange={[Function]}
+            onInputChange={[Function]}
+            selected={2019-01-05T05:00:00.000Z}
+          >
+            <Styled(Box)
+              className="nds-date-picker"
+              theme={
+                Object {
+                  "borders": Array [],
+                  "breakpoints": Object {
+                    "extraLarge": "1920px",
+                    "extraSmall": "0px",
+                    "large": "1360px",
+                    "medium": "1024px",
+                    "small": "768px",
+                  },
+                  "colors": Object {
+                    "black": "#011e38",
+                    "blackBlue": "#122b47",
+                    "blue": "#216beb",
+                    "darkBlue": "#00438f",
+                    "darkGrey": "#434d59",
+                    "green": "#008059",
+                    "grey": "#c0c8d1",
+                    "lightBlue": "#e1ebfa",
+                    "lightGreen": "#e9f7f2",
+                    "lightGrey": "#e4e7eb",
+                    "lightRed": "#fae6ea",
+                    "lightYellow": "#fcf5e3",
+                    "red": "#cc1439",
+                    "white": "#ffffff",
+                    "whiteGrey": "#f0f2f5",
+                    "yellow": "#ffbb00",
+                  },
+                  "fontSizes": Object {
+                    "large": "20px",
+                    "larger": "26px",
+                    "largest": "46px",
+                    "medium": "16px",
+                    "small": "14px",
+                    "smaller": "12px",
+                  },
+                  "fontWeights": Object {
+                    "bold": "600",
+                    "light": "300",
+                    "medium": "500",
+                    "normal": "400",
+                  },
+                  "fonts": Object {
+                    "base": "'IBM Plex Sans', sans-serif",
+                    "mono": "'IBM Plex Mono', monospace",
+                  },
+                  "lineHeights": Object {
+                    "base": "1.5",
+                    "sectionTitle": "1.23076923",
+                    "smallTextBase": "1.71428571",
+                    "smallTextCompressed": "1.14285714",
+                    "smallerText": "1.33333333",
+                    "subsectionTitle": "1.2",
+                    "title": "1.04347826",
+                  },
+                  "radii": Object {
+                    "circle": "50%",
+                    "medium": "4px",
+                    "small": "2px",
+                  },
+                  "shadows": Object {
+                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                  },
+                  "space": Object {
+                    "half": "4px",
+                    "none": "0px",
+                    "x1": "8px",
+                    "x2": "16px",
+                    "x3": "24px",
+                    "x4": "32px",
+                    "x5": "40px",
+                    "x6": "48px",
+                    "x8": "64px",
+                  },
+                  "zIndex": Object {
+                    "content": 100,
+                    "overlay": 1000,
+                    "tabsBar": 210,
+                    "tabsScollIndicator": 200,
+                  },
+                }
+              }
+            >
+              <div
+                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-date-picker"
+              >
+                <Memo(GlobalStyleComponent) />
+                <t
+                  allowSameDay={false}
+                  customInput={
+                    <ForwardRef
+                      dateFormat="dd MMM yyyy"
+                      inputProps={
+                        Object {
+                          "error": false,
+                          "labelText": "Expiry Date",
+                          "placeholder": "DD Mon YYYY",
+                        }
+                      }
+                      onDownKeyPress={[Function]}
+                      onEnterKeyPress={[Function]}
+                      onInputChange={[Function]}
+                      onSpaceKeyPress={[Function]}
+                      onUpKeyPress={[Function]}
+                    />
+                  }
+                  dateFormat="dd MMM yyyy"
+                  dateFormatCalendar="LLLL yyyy"
+                  disabled={false}
+                  disabledKeyboardNavigation={true}
+                  dropdownMode="scroll"
+                  inlineFocusSelectedMonth={false}
+                  maxDate={2019-01-10T05:00:00.000Z}
+                  minDate={2019-01-03T05:00:00.000Z}
+                  monthsShown={1}
+                  nextMonthButtonLabel="Next Month"
+                  nextYearButtonLabel="Next Year"
+                  onBlur={[Function]}
+                  onCalendarClose={[Function]}
+                  onCalendarOpen={[Function]}
+                  onChange={[Function]}
+                  onClickOutside={[Function]}
+                  onFocus={[Function]}
+                  onInputClick={[Function]}
+                  onInputError={[Function]}
+                  onKeyDown={[Function]}
+                  onMonthChange={[Function]}
+                  onSelect={[Function]}
+                  onYearChange={[Function]}
+                  openToDate={2019-01-05T05:00:00.000Z}
+                  preventOpenOnFocus={false}
+                  previousMonthButtonLabel="Previous Month"
+                  previousYearButtonLabel="Previous Year"
+                  readOnly={false}
+                  renderCustomHeader={[Function]}
+                  renderDayContents={[Function]}
+                  selected={2019-01-05T05:00:00.000Z}
+                  shouldCloseOnSelect={true}
+                  showMonthYearPicker={false}
+                  showPopperArrow={true}
+                  showPreviousMonths={false}
+                  showQuarterYearPicker={false}
+                  showTimeInput={false}
+                  showTimeSelect={false}
+                  strictParsing={true}
+                  timeCaption="Time"
+                  timeInputLabel="Time"
+                  timeIntervals={30}
+                  withPortal={false}
+                >
+                  <t
+                    hidePopper={true}
+                    popperComponent={null}
+                    popperModifiers={
+                      Object {
+                        "preventOverflow": Object {
+                          "boundariesElement": "viewport",
+                          "enabled": true,
+                          "escapeWithReference": true,
+                        },
+                      }
+                    }
+                    popperPlacement="bottom-start"
+                    popperProps={Object {}}
+                    targetComponent={
+                      <div
+                        className="react-datepicker__input-container"
+                      >
+                        <ForwardRef
+                          className=""
+                          dateFormat="dd MMM yyyy"
+                          disabled={false}
+                          inputProps={
+                            Object {
+                              "error": false,
+                              "labelText": "Expiry Date",
+                              "placeholder": "DD Mon YYYY",
+                            }
+                          }
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onDownKeyPress={[Function]}
+                          onEnterKeyPress={[Function]}
+                          onFocus={[Function]}
+                          onInputChange={[Function]}
+                          onKeyDown={[Function]}
+                          onSpaceKeyPress={[Function]}
+                          onUpKeyPress={[Function]}
+                          readOnly={false}
+                          value="05 Jan 2019"
+                        />
+                      </div>
+                    }
+                  >
+                    <Manager
+                      className="react-datepicker-manager"
+                    >
+                      <Reference>
+                        <InnerReference
+                          setReferenceNode={[Function]}
+                        >
+                          <div
+                            className="react-datepicker-wrapper"
+                          >
+                            <div
+                              className="react-datepicker__input-container"
+                            >
+                              <ForwardRef
+                                className=""
+                                dateFormat="dd MMM yyyy"
+                                disabled={false}
+                                inputProps={
+                                  Object {
+                                    "error": false,
+                                    "labelText": "Expiry Date",
+                                    "placeholder": "DD Mon YYYY",
+                                  }
+                                }
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onClick={[Function]}
+                                onDownKeyPress={[Function]}
+                                onEnterKeyPress={[Function]}
+                                onFocus={[Function]}
+                                onInputChange={[Function]}
+                                onKeyDown={[Function]}
+                                onSpaceKeyPress={[Function]}
+                                onUpKeyPress={[Function]}
+                                readOnly={false}
+                                value="05 Jan 2019"
+                              >
+                                <ForwardRef
+                                  disabled={false}
+                                  error={false}
+                                  helpText={null}
+                                  icon="calendarToday"
+                                  labelText="Expiry Date"
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder="DD Mon YYYY"
+                                  prefix={null}
+                                  prefixAlignment="left"
+                                  prefixWidth={null}
+                                  required={false}
+                                  requirementText={null}
+                                  suffix={null}
+                                  suffixAlignment="left"
+                                  suffixWidth={null}
+                                  value="05 Jan 2019"
+                                >
+                                  <MaybeFieldLabel
+                                    helpText={null}
+                                    labelText="Expiry Date"
+                                    requirementText={null}
+                                  >
+                                    <Styled(BaseFieldLabel)
+                                      helpText={null}
+                                      labelText="Expiry Date"
+                                      requirementText={null}
+                                    >
+                                      <BaseFieldLabel
+                                        className="sc-fzXfLW casIUc"
+                                        helpText={null}
+                                        labelText="Expiry Date"
+                                        requirementText={null}
+                                      >
+                                        <FieldLabel__Label
+                                          className="sc-fzXfLW casIUc"
+                                          color="#011e38"
+                                          style={
+                                            Object {
+                                              "display": "block",
+                                            }
+                                          }
+                                        >
+                                          <label
+                                            className="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                                            color="#011e38"
+                                            style={
+                                              Object {
+                                                "display": "block",
+                                              }
+                                            }
+                                          >
+                                            <Box
+                                              mb="x1"
+                                              theme={
+                                                Object {
+                                                  "borders": Array [],
+                                                  "breakpoints": Object {
+                                                    "extraLarge": "1920px",
+                                                    "extraSmall": "0px",
+                                                    "large": "1360px",
+                                                    "medium": "1024px",
+                                                    "small": "768px",
+                                                  },
+                                                  "colors": Object {
+                                                    "black": "#011e38",
+                                                    "blackBlue": "#122b47",
+                                                    "blue": "#216beb",
+                                                    "darkBlue": "#00438f",
+                                                    "darkGrey": "#434d59",
+                                                    "green": "#008059",
+                                                    "grey": "#c0c8d1",
+                                                    "lightBlue": "#e1ebfa",
+                                                    "lightGreen": "#e9f7f2",
+                                                    "lightGrey": "#e4e7eb",
+                                                    "lightRed": "#fae6ea",
+                                                    "lightYellow": "#fcf5e3",
+                                                    "red": "#cc1439",
+                                                    "white": "#ffffff",
+                                                    "whiteGrey": "#f0f2f5",
+                                                    "yellow": "#ffbb00",
+                                                  },
+                                                  "fontSizes": Object {
+                                                    "large": "20px",
+                                                    "larger": "26px",
+                                                    "largest": "46px",
+                                                    "medium": "16px",
+                                                    "small": "14px",
+                                                    "smaller": "12px",
+                                                  },
+                                                  "fontWeights": Object {
+                                                    "bold": "600",
+                                                    "light": "300",
+                                                    "medium": "500",
+                                                    "normal": "400",
+                                                  },
+                                                  "fonts": Object {
+                                                    "base": "'IBM Plex Sans', sans-serif",
+                                                    "mono": "'IBM Plex Mono', monospace",
+                                                  },
+                                                  "lineHeights": Object {
+                                                    "base": "1.5",
+                                                    "sectionTitle": "1.23076923",
+                                                    "smallTextBase": "1.71428571",
+                                                    "smallTextCompressed": "1.14285714",
+                                                    "smallerText": "1.33333333",
+                                                    "subsectionTitle": "1.2",
+                                                    "title": "1.04347826",
+                                                  },
+                                                  "radii": Object {
+                                                    "circle": "50%",
+                                                    "medium": "4px",
+                                                    "small": "2px",
+                                                  },
+                                                  "shadows": Object {
+                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                  },
+                                                  "space": Object {
+                                                    "half": "4px",
+                                                    "none": "0px",
+                                                    "x1": "8px",
+                                                    "x2": "16px",
+                                                    "x3": "24px",
+                                                    "x4": "32px",
+                                                    "x5": "40px",
+                                                    "x6": "48px",
+                                                    "x8": "64px",
+                                                  },
+                                                  "zIndex": Object {
+                                                    "content": 100,
+                                                    "overlay": 1000,
+                                                    "tabsBar": 210,
+                                                    "tabsScollIndicator": 200,
+                                                  },
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                              >
+                                                <span
+                                                  style={
+                                                    Object {
+                                                      "fontSize": "14px",
+                                                      "fontWeight": "600",
+                                                      "lineHeight": "1.71428571",
+                                                    }
+                                                  }
+                                                >
+                                                  Expiry Date
+                                                </span>
+                                              </div>
+                                            </Box>
+                                            <Styled(Box)
+                                              alignItems="flex-start"
+                                              theme={
+                                                Object {
+                                                  "borders": Array [],
+                                                  "breakpoints": Object {
+                                                    "extraLarge": "1920px",
+                                                    "extraSmall": "0px",
+                                                    "large": "1360px",
+                                                    "medium": "1024px",
+                                                    "small": "768px",
+                                                  },
+                                                  "colors": Object {
+                                                    "black": "#011e38",
+                                                    "blackBlue": "#122b47",
+                                                    "blue": "#216beb",
+                                                    "darkBlue": "#00438f",
+                                                    "darkGrey": "#434d59",
+                                                    "green": "#008059",
+                                                    "grey": "#c0c8d1",
+                                                    "lightBlue": "#e1ebfa",
+                                                    "lightGreen": "#e9f7f2",
+                                                    "lightGrey": "#e4e7eb",
+                                                    "lightRed": "#fae6ea",
+                                                    "lightYellow": "#fcf5e3",
+                                                    "red": "#cc1439",
+                                                    "white": "#ffffff",
+                                                    "whiteGrey": "#f0f2f5",
+                                                    "yellow": "#ffbb00",
+                                                  },
+                                                  "fontSizes": Object {
+                                                    "large": "20px",
+                                                    "larger": "26px",
+                                                    "largest": "46px",
+                                                    "medium": "16px",
+                                                    "small": "14px",
+                                                    "smaller": "12px",
+                                                  },
+                                                  "fontWeights": Object {
+                                                    "bold": "600",
+                                                    "light": "300",
+                                                    "medium": "500",
+                                                    "normal": "400",
+                                                  },
+                                                  "fonts": Object {
+                                                    "base": "'IBM Plex Sans', sans-serif",
+                                                    "mono": "'IBM Plex Mono', monospace",
+                                                  },
+                                                  "lineHeights": Object {
+                                                    "base": "1.5",
+                                                    "sectionTitle": "1.23076923",
+                                                    "smallTextBase": "1.71428571",
+                                                    "smallTextCompressed": "1.14285714",
+                                                    "smallerText": "1.33333333",
+                                                    "subsectionTitle": "1.2",
+                                                    "title": "1.04347826",
+                                                  },
+                                                  "radii": Object {
+                                                    "circle": "50%",
+                                                    "medium": "4px",
+                                                    "small": "2px",
+                                                  },
+                                                  "shadows": Object {
+                                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                  },
+                                                  "space": Object {
+                                                    "half": "4px",
+                                                    "none": "0px",
+                                                    "x1": "8px",
+                                                    "x2": "16px",
+                                                    "x3": "24px",
+                                                    "x4": "32px",
+                                                    "x5": "40px",
+                                                    "x6": "48px",
+                                                    "x8": "64px",
+                                                  },
+                                                  "zIndex": Object {
+                                                    "content": 100,
+                                                    "overlay": 1000,
+                                                    "tabsBar": 210,
+                                                    "tabsScollIndicator": 200,
+                                                  },
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                              >
+                                                <Prefix
+                                                  prefix={null}
+                                                  prefixWidth={null}
+                                                  textAlign="left"
+                                                />
+                                                <Box
+                                                  display="flex"
+                                                  flexGrow="1"
+                                                  position="relative"
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 llphNe"
+                                                    display="flex"
+                                                  >
+                                                    <InputField__StyledInput
+                                                      aria-invalid={false}
+                                                      aria-required={false}
+                                                      disabled={false}
+                                                      error={false}
+                                                      onChange={[Function]}
+                                                      onClick={[Function]}
+                                                      onKeyDown={[Function]}
+                                                      placeholder="DD Mon YYYY"
+                                                      required={false}
+                                                      value="05 Jan 2019"
+                                                    >
+                                                      <input
+                                                        aria-invalid={false}
+                                                        aria-required={false}
+                                                        className="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                                                        disabled={false}
+                                                        onChange={[Function]}
+                                                        onClick={[Function]}
+                                                        onKeyDown={[Function]}
+                                                        placeholder="DD Mon YYYY"
+                                                        required={false}
+                                                        value="05 Jan 2019"
+                                                      />
+                                                    </InputField__StyledInput>
+                                                    <Styled(Styled(Component))
+                                                      color="currentColor"
+                                                      icon="calendarToday"
+                                                      size="16px"
+                                                      title={null}
+                                                    >
+                                                      <ForwardRef
+                                                        className="sc-AykKD sc-fzXfMy edCVOB"
+                                                        color="currentColor"
+                                                        focusable={false}
+                                                        icon="calendarToday"
+                                                        size="16px"
+                                                        title={null}
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="sc-AykKD sc-fzXfMy edCVOB"
+                                                          color="currentColor"
+                                                          fill="currentColor"
+                                                          focusable={false}
+                                                          height="16px"
+                                                          icon="calendarToday"
+                                                          size="16px"
+                                                          title={null}
+                                                          viewBox="0 0 24 24"
+                                                          width="16px"
+                                                        >
+                                                          <path
+                                                            d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                                                            key="0"
+                                                          />
+                                                        </svg>
+                                                      </ForwardRef>
+                                                    </Styled(Styled(Component))>
+                                                  </div>
+                                                </Box>
+                                                <Suffix
+                                                  suffix={null}
+                                                  suffixWidth={null}
+                                                  textAlign="left"
+                                                />
+                                              </div>
+                                            </Styled(Box)>
+                                          </label>
+                                        </FieldLabel__Label>
+                                      </BaseFieldLabel>
+                                    </Styled(BaseFieldLabel)>
+                                  </MaybeFieldLabel>
+                                </ForwardRef>
+                              </ForwardRef>
+                            </div>
+                          </div>
+                        </InnerReference>
+                      </Reference>
+                    </Manager>
+                  </t>
+                </t>
+                <InlineValidation
+                  errorList={null}
+                  errorMessage={null}
+                  mt="x1"
+                />
               </div>
             </Styled(Box)>
           </DatePicker>
