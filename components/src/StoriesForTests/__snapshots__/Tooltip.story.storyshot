@@ -96,7 +96,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -185,836 +185,337 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <Component
+            placement="bottom"
+            tooltip="I am a Tooltip!"
           >
-            <Component
-              placement="bottom"
-              tooltip="I am a Tooltip!"
-            >
-              <WithGeneratedId>
-                <MenuComponent
+            <WithGeneratedId>
+              <MenuComponent
+                defaultOpen={false}
+                hideDelay="350"
+                id="random-id-1"
+                placement="bottom"
+                showDelay="100"
+                tooltip="I am a Tooltip!"
+              >
+                <MenuState
                   defaultOpen={false}
                   hideDelay="350"
-                  id="random-id-1"
-                  placement="bottom"
                   showDelay="100"
-                  tooltip="I am a Tooltip!"
                 >
-                  <MenuState
-                    defaultOpen={false}
-                    hideDelay="350"
-                    showDelay="100"
-                  >
-                    <StatelessTooltip
-                      id="random-id-1"
-                      maxWidth="24em"
-                      menuState={
-                        Object {
-                          "closeMenu": [Function],
-                          "handleMenuKeydown": [Function],
-                          "isOpen": false,
-                          "openMenu": [Function],
-                          "toggleMenu": [Function],
-                        }
+                  <StatelessTooltip
+                    id="random-id-1"
+                    maxWidth="24em"
+                    menuState={
+                      Object {
+                        "closeMenu": [Function],
+                        "handleMenuKeydown": [Function],
+                        "isOpen": false,
+                        "openMenu": [Function],
+                        "toggleMenu": [Function],
                       }
-                      placement="bottom"
-                      tooltip="I am a Tooltip!"
-                    >
-                      <Manager>
-                        <Reference>
-                          <InnerReference
-                            setReferenceNode={[Function]}
+                    }
+                    placement="bottom"
+                    tooltip="I am a Tooltip!"
+                  >
+                    <Manager>
+                      <Reference>
+                        <InnerReference
+                          setReferenceNode={[Function]}
+                        >
+                          <ForwardRef
+                            aria-describedby="random-id-1"
+                            aria-expanded={false}
+                            aria-haspopup={true}
+                            asLink={false}
+                            disabled={false}
+                            fullWidth={false}
+                            icon={null}
+                            iconSide="right"
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            size="medium"
                           >
-                            <ForwardRef
+                            <Button__WrapperButton
                               aria-describedby="random-id-1"
                               aria-expanded={false}
                               aria-haspopup={true}
-                              asLink={false}
                               disabled={false}
                               fullWidth={false}
-                              icon={null}
-                              iconSide="right"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               size="medium"
                             >
-                              <Button__WrapperButton
+                              <button
                                 aria-describedby="random-id-1"
                                 aria-expanded={false}
                                 aria-haspopup={true}
+                                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                                 disabled={false}
-                                fullWidth={false}
                                 onBlur={[Function]}
                                 onFocus={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
                                 size="medium"
                               >
-                                <StyledComponent
-                                  aria-describedby="random-id-1"
-                                  aria-expanded={false}
-                                  aria-haspopup={true}
-                                  disabled={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                                        "isStatic": false,
-                                        "lastClassName": "idlBaC",
-                                        "rules": Array [
-                                          [Function],
-                                          [Function],
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "Button__WrapperButton",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                                      "target": "button",
-                                      "toString": [Function],
-                                      "usesTheme": false,
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  fullWidth={false}
-                                  onBlur={[Function]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  size="medium"
-                                >
-                                  <button
-                                    aria-describedby="random-id-1"
-                                    aria-expanded={false}
-                                    aria-haspopup={true}
-                                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                                    disabled={false}
-                                    onBlur={[Function]}
-                                    onFocus={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                    size="medium"
-                                  >
-                                    Hover me
-                                  </button>
-                                </StyledComponent>
-                              </Button__WrapperButton>
-                            </ForwardRef>
-                          </InnerReference>
-                        </Reference>
-                        <Popper
-                          placement="bottom"
-                        >
-                          <InnerPopper
-                            eventsEnabled={true}
-                            placement="bottom"
-                            positionFixed={false}
-                            referenceElement={
-                              <button
-                                aria-describedby="random-id-1"
-                                aria-expanded="false"
-                                aria-haspopup="true"
-                                class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                              >
                                 Hover me
                               </button>
+                            </Button__WrapperButton>
+                          </ForwardRef>
+                        </InnerReference>
+                      </Reference>
+                      <Popper
+                        placement="bottom"
+                      >
+                        <InnerPopper
+                          eventsEnabled={true}
+                          placement="bottom"
+                          positionFixed={false}
+                          referenceElement={
+                            <button
+                              aria-describedby="random-id-1"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+                            >
+                              Hover me
+                            </button>
+                          }
+                        >
+                          <Styled(Box)
+                            id="random-id-1"
+                            maxWidth="24em"
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            open={false}
+                            position={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
+                            role="tooltip"
+                            theme={
+                              Object {
+                                "borders": Array [],
+                                "breakpoints": Object {
+                                  "extraLarge": "1920px",
+                                  "extraSmall": "0px",
+                                  "large": "1360px",
+                                  "medium": "1024px",
+                                  "small": "768px",
+                                },
+                                "colors": Object {
+                                  "black": "#011e38",
+                                  "blackBlue": "#122b47",
+                                  "blue": "#216beb",
+                                  "darkBlue": "#00438f",
+                                  "darkGrey": "#434d59",
+                                  "green": "#008059",
+                                  "grey": "#c0c8d1",
+                                  "lightBlue": "#e1ebfa",
+                                  "lightGreen": "#e9f7f2",
+                                  "lightGrey": "#e4e7eb",
+                                  "lightRed": "#fae6ea",
+                                  "lightYellow": "#fcf5e3",
+                                  "red": "#cc1439",
+                                  "white": "#ffffff",
+                                  "whiteGrey": "#f0f2f5",
+                                  "yellow": "#ffbb00",
+                                },
+                                "fontSizes": Object {
+                                  "large": "20px",
+                                  "larger": "26px",
+                                  "largest": "46px",
+                                  "medium": "16px",
+                                  "small": "14px",
+                                  "smaller": "12px",
+                                },
+                                "fontWeights": Object {
+                                  "bold": "600",
+                                  "light": "300",
+                                  "medium": "500",
+                                  "normal": "400",
+                                },
+                                "fonts": Object {
+                                  "base": "'IBM Plex Sans', sans-serif",
+                                  "mono": "'IBM Plex Mono', monospace",
+                                },
+                                "lineHeights": Object {
+                                  "base": "1.5",
+                                  "sectionTitle": "1.23076923",
+                                  "smallTextBase": "1.71428571",
+                                  "smallTextCompressed": "1.14285714",
+                                  "smallerText": "1.33333333",
+                                  "subsectionTitle": "1.2",
+                                  "title": "1.04347826",
+                                },
+                                "radii": Object {
+                                  "circle": "50%",
+                                  "medium": "4px",
+                                  "small": "2px",
+                                },
+                                "shadows": Object {
+                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                },
+                                "space": Object {
+                                  "half": "4px",
+                                  "none": "0px",
+                                  "x1": "8px",
+                                  "x2": "16px",
+                                  "x3": "24px",
+                                  "x4": "32px",
+                                  "x5": "40px",
+                                  "x6": "48px",
+                                  "x8": "64px",
+                                },
+                                "zIndex": Object {
+                                  "content": 100,
+                                  "overlay": 1000,
+                                  "tabsBar": 210,
+                                  "tabsScollIndicator": 200,
+                                },
+                              }
                             }
                           >
-                            <Styled(Box)
+                            <div
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
                               id="random-id-1"
-                              maxWidth="24em"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               open={false}
-                              position={
-                                Object {
-                                  "left": 0,
-                                  "opacity": 0,
-                                  "pointerEvents": "none",
-                                  "position": "absolute",
-                                  "top": 0,
-                                }
-                              }
                               role="tooltip"
-                              theme={
-                                Object {
-                                  "borders": Array [],
-                                  "breakpoints": Object {
-                                    "extraLarge": "1920px",
-                                    "extraSmall": "0px",
-                                    "large": "1360px",
-                                    "medium": "1024px",
-                                    "small": "768px",
-                                  },
-                                  "colors": Object {
-                                    "black": "#011e38",
-                                    "blackBlue": "#122b47",
-                                    "blue": "#216beb",
-                                    "darkBlue": "#00438f",
-                                    "darkGrey": "#434d59",
-                                    "green": "#008059",
-                                    "grey": "#c0c8d1",
-                                    "lightBlue": "#e1ebfa",
-                                    "lightGreen": "#e9f7f2",
-                                    "lightGrey": "#e4e7eb",
-                                    "lightRed": "#fae6ea",
-                                    "lightYellow": "#fcf5e3",
-                                    "red": "#cc1439",
-                                    "white": "#ffffff",
-                                    "whiteGrey": "#f0f2f5",
-                                    "yellow": "#ffbb00",
-                                  },
-                                  "fontSizes": Object {
-                                    "large": "20px",
-                                    "larger": "26px",
-                                    "largest": "46px",
-                                    "medium": "16px",
-                                    "small": "14px",
-                                    "smaller": "12px",
-                                  },
-                                  "fontWeights": Object {
-                                    "bold": "600",
-                                    "light": "300",
-                                    "medium": "500",
-                                    "normal": "400",
-                                  },
-                                  "fonts": Object {
-                                    "base": "'IBM Plex Sans', sans-serif",
-                                    "mono": "'IBM Plex Mono', monospace",
-                                  },
-                                  "lineHeights": Object {
-                                    "base": "1.5",
-                                    "sectionTitle": "1.23076923",
-                                    "smallTextBase": "1.71428571",
-                                    "smallTextCompressed": "1.14285714",
-                                    "smallerText": "1.33333333",
-                                    "subsectionTitle": "1.2",
-                                    "title": "1.04347826",
-                                  },
-                                  "radii": Object {
-                                    "circle": "50%",
-                                    "medium": "4px",
-                                    "small": "2px",
-                                  },
-                                  "shadows": Object {
-                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                  },
-                                  "space": Object {
-                                    "half": "4px",
-                                    "none": "0px",
-                                    "x1": "8px",
-                                    "x2": "16px",
-                                    "x3": "24px",
-                                    "x4": "32px",
-                                    "x5": "40px",
-                                    "x6": "48px",
-                                    "x8": "64px",
-                                  },
-                                  "zIndex": Object {
-                                    "content": 100,
-                                    "overlay": 1000,
-                                    "tabsBar": 210,
-                                    "tabsScollIndicator": 200,
-                                  },
-                                }
-                              }
                             >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "_foldedDefaultProps": Object {
-                                      "theme": Object {
-                                        "borders": Array [],
-                                        "breakpoints": Object {
-                                          "extraLarge": "1920px",
-                                          "extraSmall": "0px",
-                                          "large": "1360px",
-                                          "medium": "1024px",
-                                          "small": "768px",
-                                        },
-                                        "colors": Object {
-                                          "black": "#011e38",
-                                          "blackBlue": "#122b47",
-                                          "blue": "#216beb",
-                                          "darkBlue": "#00438f",
-                                          "darkGrey": "#434d59",
-                                          "green": "#008059",
-                                          "grey": "#c0c8d1",
-                                          "lightBlue": "#e1ebfa",
-                                          "lightGreen": "#e9f7f2",
-                                          "lightGrey": "#e4e7eb",
-                                          "lightRed": "#fae6ea",
-                                          "lightYellow": "#fcf5e3",
-                                          "red": "#cc1439",
-                                          "white": "#ffffff",
-                                          "whiteGrey": "#f0f2f5",
-                                          "yellow": "#ffbb00",
-                                        },
-                                        "fontSizes": Object {
-                                          "large": "20px",
-                                          "larger": "26px",
-                                          "largest": "46px",
-                                          "medium": "16px",
-                                          "small": "14px",
-                                          "smaller": "12px",
-                                        },
-                                        "fontWeights": Object {
-                                          "bold": "600",
-                                          "light": "300",
-                                          "medium": "500",
-                                          "normal": "400",
-                                        },
-                                        "fonts": Object {
-                                          "base": "'IBM Plex Sans', sans-serif",
-                                          "mono": "'IBM Plex Mono', monospace",
-                                        },
-                                        "lineHeights": Object {
-                                          "base": "1.5",
-                                          "sectionTitle": "1.23076923",
-                                          "smallTextBase": "1.71428571",
-                                          "smallTextCompressed": "1.14285714",
-                                          "smallerText": "1.33333333",
-                                          "subsectionTitle": "1.2",
-                                          "title": "1.04347826",
-                                        },
-                                        "radii": Object {
-                                          "circle": "50%",
-                                          "medium": "4px",
-                                          "small": "2px",
-                                        },
-                                        "shadows": Object {
-                                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                        },
-                                        "space": Object {
-                                          "half": "4px",
-                                          "none": "0px",
-                                          "x1": "8px",
-                                          "x2": "16px",
-                                          "x3": "24px",
-                                          "x4": "32px",
-                                          "x5": "40px",
-                                          "x6": "48px",
-                                          "x8": "64px",
-                                        },
-                                        "zIndex": Object {
-                                          "content": 100,
-                                          "overlay": 1000,
-                                          "tabsBar": 210,
-                                          "tabsScollIndicator": 200,
-                                        },
-                                      },
-                                    },
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-jWBwVP",
-                                      "isStatic": false,
-                                      "lastClassName": "hjigbL",
-                                      "rules": Array [
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        "color: #011e38;",
-                                        "display: flex;",
-                                        "flex-direction: column;",
-                                        "font-size: 14px;",
-                                        "background-color: #ffffff;",
-                                        "border-radius: 4px;",
-                                        "border: 1px solid #c0c8d1;",
-                                        "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);",
-                                        "padding: 8px;",
-                                        "transition: opacity 0.3s;",
-                                        "z-index: 100;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Styled(Box)",
-                                    "foldedComponentIds": Array [
-                                      "Box-sc-1qu1edy-0",
-                                    ],
-                                    "propTypes": Object {
-                                      "bg": [Function],
-                                      "border": [Function],
-                                      "borderBottom": [Function],
-                                      "borderLeft": [Function],
-                                      "borderRadius": [Function],
-                                      "borderRight": [Function],
-                                      "borderTop": [Function],
-                                      "boxShadow": [Function],
-                                      "color": [Function],
-                                      "display": [Function],
-                                      "flexGrow": [Function],
-                                      "height": [Function],
-                                      "m": [Function],
-                                      "maxHeight": [Function],
-                                      "maxWidth": [Function],
-                                      "mb": [Function],
-                                      "minHeight": [Function],
-                                      "minWidth": [Function],
-                                      "ml": [Function],
-                                      "mr": [Function],
-                                      "mt": [Function],
-                                      "mx": [Function],
-                                      "my": [Function],
-                                      "order": [Function],
-                                      "p": [Function],
-                                      "pb": [Function],
-                                      "pl": [Function],
-                                      "position": [Function],
-                                      "pr": [Function],
-                                      "pt": [Function],
-                                      "px": [Function],
-                                      "py": [Function],
-                                      "textAlign": [Function],
-                                      "width": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-jWBwVP",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "usesTheme": false,
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={[Function]}
-                                id="random-id-1"
-                                maxWidth="24em"
-                                onBlur={[Function]}
-                                onFocus={[Function]}
-                                onMouseEnter={[Function]}
-                                onMouseLeave={[Function]}
-                                open={false}
-                                position={
-                                  Object {
-                                    "left": 0,
-                                    "opacity": 0,
-                                    "pointerEvents": "none",
-                                    "position": "absolute",
-                                    "top": 0,
-                                  }
-                                }
-                                role="tooltip"
-                                theme={
-                                  Object {
-                                    "borders": Array [],
-                                    "breakpoints": Object {
-                                      "extraLarge": "1920px",
-                                      "extraSmall": "0px",
-                                      "large": "1360px",
-                                      "medium": "1024px",
-                                      "small": "768px",
-                                    },
-                                    "colors": Object {
-                                      "black": "#011e38",
-                                      "blackBlue": "#122b47",
-                                      "blue": "#216beb",
-                                      "darkBlue": "#00438f",
-                                      "darkGrey": "#434d59",
-                                      "green": "#008059",
-                                      "grey": "#c0c8d1",
-                                      "lightBlue": "#e1ebfa",
-                                      "lightGreen": "#e9f7f2",
-                                      "lightGrey": "#e4e7eb",
-                                      "lightRed": "#fae6ea",
-                                      "lightYellow": "#fcf5e3",
-                                      "red": "#cc1439",
-                                      "white": "#ffffff",
-                                      "whiteGrey": "#f0f2f5",
-                                      "yellow": "#ffbb00",
-                                    },
-                                    "fontSizes": Object {
-                                      "large": "20px",
-                                      "larger": "26px",
-                                      "largest": "46px",
-                                      "medium": "16px",
-                                      "small": "14px",
-                                      "smaller": "12px",
-                                    },
-                                    "fontWeights": Object {
-                                      "bold": "600",
-                                      "light": "300",
-                                      "medium": "500",
-                                      "normal": "400",
-                                    },
-                                    "fonts": Object {
-                                      "base": "'IBM Plex Sans', sans-serif",
-                                      "mono": "'IBM Plex Mono', monospace",
-                                    },
-                                    "lineHeights": Object {
-                                      "base": "1.5",
-                                      "sectionTitle": "1.23076923",
-                                      "smallTextBase": "1.71428571",
-                                      "smallTextCompressed": "1.14285714",
-                                      "smallerText": "1.33333333",
-                                      "subsectionTitle": "1.2",
-                                      "title": "1.04347826",
-                                    },
-                                    "radii": Object {
-                                      "circle": "50%",
-                                      "medium": "4px",
-                                      "small": "2px",
-                                    },
-                                    "shadows": Object {
-                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                    },
-                                    "space": Object {
-                                      "half": "4px",
-                                      "none": "0px",
-                                      "x1": "8px",
-                                      "x2": "16px",
-                                      "x3": "24px",
-                                      "x4": "32px",
-                                      "x5": "40px",
-                                      "x6": "48px",
-                                      "x8": "64px",
-                                    },
-                                    "zIndex": Object {
-                                      "content": 100,
-                                      "overlay": 1000,
-                                      "tabsBar": 210,
-                                      "tabsScollIndicator": 200,
-                                    },
-                                  }
-                                }
+                              I am a Tooltip!
+                              <PopperArrow
+                                backgroundColor="white"
+                                borderColor="grey"
+                                placement="bottom"
+                                style={Object {}}
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-jWBwVP hjigbL"
-                                  id="random-id-1"
-                                  onBlur={[Function]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  open={false}
-                                  role="tooltip"
-                                >
-                                  I am a Tooltip!
-                                  <PopperArrow
-                                    backgroundColor="white"
-                                    borderColor="grey"
-                                    placement="bottom"
-                                    style={Object {}}
-                                  >
-                                    <StyledComponent
-                                      backgroundColor="white"
-                                      borderColor="grey"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "_foldedDefaultProps": Object {
-                                            "backgroundColor": "white",
-                                            "borderColor": "grey",
-                                            "placement": "bottom",
-                                          },
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "PopperArrow-sc-1bcgj4w-0",
-                                            "isStatic": false,
-                                            "lastClassName": "bBzGzE",
-                                            "rules": Array [
-                                              "position: absolute;",
-                                              "height: 8px;",
-                                              "width: 8px;",
-                                              "margin: 12px;",
-                                              "&:before {",
-                                              "border-style: solid;",
-                                              "content: '';",
-                                              "display: block;",
-                                              "height: 0;",
-                                              "margin: auto;",
-                                              "position: absolute;",
-                                              "width: 0;",
-                                              "}",
-                                              "&:after {",
-                                              "border-style: solid;",
-                                              "content: '';",
-                                              "display: block;",
-                                              "height: 0;",
-                                              "margin: auto;",
-                                              "position: absolute;",
-                                              "width: 0;",
-                                              "}",
-                                              [Function],
-                                              [Function],
-                                            ],
-                                          },
-                                          "displayName": "PopperArrow",
-                                          "foldedComponentIds": Array [],
-                                          "propTypes": Object {
-                                            "backgroundColor": [Function],
-                                            "borderColor": [Function],
-                                            "placement": [Function],
-                                          },
-                                          "render": [Function],
-                                          "styledComponentId": "PopperArrow-sc-1bcgj4w-0",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "usesTheme": false,
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={[Function]}
-                                      placement="bottom"
-                                      style={Object {}}
-                                    >
-                                      <div
-                                        className="PopperArrow-sc-1bcgj4w-0 bBzGzE"
-                                        style={Object {}}
-                                      />
-                                    </StyledComponent>
-                                  </PopperArrow>
-                                </div>
-                              </StyledComponent>
-                            </Styled(Box)>
-                          </InnerPopper>
-                        </Popper>
-                      </Manager>
-                    </StatelessTooltip>
-                  </MenuState>
-                </MenuComponent>
-              </WithGeneratedId>
-            </Component>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                                  className="PopperArrow-sc-1bcgj4w-0 jABZcb"
+                                  style={Object {}}
+                                />
+                              </PopperArrow>
+                            </div>
+                          </Styled(Box)>
+                        </InnerPopper>
+                      </Popper>
+                    </Manager>
+                  </StatelessTooltip>
+                </MenuState>
+              </MenuComponent>
+            </WithGeneratedId>
+          </Component>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -1116,7 +617,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -1205,844 +706,345 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <Component
+            defaultOpen={true}
+            tooltip="I am an open Tooltip!"
           >
-            <Component
-              defaultOpen={true}
-              tooltip="I am an open Tooltip!"
-            >
-              <WithGeneratedId>
-                <MenuComponent
+            <WithGeneratedId>
+              <MenuComponent
+                defaultOpen={true}
+                hideDelay="350"
+                id="random-id-2"
+                showDelay="100"
+                tooltip="I am an open Tooltip!"
+              >
+                <MenuState
                   defaultOpen={true}
                   hideDelay="350"
-                  id="random-id-2"
                   showDelay="100"
-                  tooltip="I am an open Tooltip!"
                 >
-                  <MenuState
-                    defaultOpen={true}
-                    hideDelay="350"
-                    showDelay="100"
-                  >
-                    <StatelessTooltip
-                      id="random-id-2"
-                      maxWidth="24em"
-                      menuState={
-                        Object {
-                          "closeMenu": [Function],
-                          "handleMenuKeydown": [Function],
-                          "isOpen": true,
-                          "openMenu": [Function],
-                          "toggleMenu": [Function],
-                        }
+                  <StatelessTooltip
+                    id="random-id-2"
+                    maxWidth="24em"
+                    menuState={
+                      Object {
+                        "closeMenu": [Function],
+                        "handleMenuKeydown": [Function],
+                        "isOpen": true,
+                        "openMenu": [Function],
+                        "toggleMenu": [Function],
                       }
-                      placement="bottom"
-                      tooltip="I am an open Tooltip!"
-                    >
-                      <Manager>
-                        <Reference>
-                          <InnerReference
-                            setReferenceNode={[Function]}
+                    }
+                    placement="bottom"
+                    tooltip="I am an open Tooltip!"
+                  >
+                    <Manager>
+                      <Reference>
+                        <InnerReference
+                          setReferenceNode={[Function]}
+                        >
+                          <ForwardRef
+                            aria-describedby="random-id-2"
+                            aria-expanded={true}
+                            aria-haspopup={true}
+                            asLink={false}
+                            disabled={false}
+                            fullWidth={false}
+                            icon={null}
+                            iconSide="right"
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            size="medium"
                           >
-                            <ForwardRef
+                            <Button__WrapperButton
                               aria-describedby="random-id-2"
                               aria-expanded={true}
                               aria-haspopup={true}
-                              asLink={false}
                               disabled={false}
                               fullWidth={false}
-                              icon={null}
-                              iconSide="right"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               size="medium"
                             >
-                              <Button__WrapperButton
+                              <button
                                 aria-describedby="random-id-2"
                                 aria-expanded={true}
                                 aria-haspopup={true}
+                                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                                 disabled={false}
-                                fullWidth={false}
                                 onBlur={[Function]}
                                 onFocus={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
                                 size="medium"
                               >
-                                <StyledComponent
-                                  aria-describedby="random-id-2"
-                                  aria-expanded={true}
-                                  aria-haspopup={true}
-                                  disabled={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                                        "isStatic": false,
-                                        "lastClassName": "idlBaC",
-                                        "rules": Array [
-                                          [Function],
-                                          [Function],
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "Button__WrapperButton",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                                      "target": "button",
-                                      "toString": [Function],
-                                      "usesTheme": false,
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  fullWidth={false}
-                                  onBlur={[Function]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  size="medium"
-                                >
-                                  <button
-                                    aria-describedby="random-id-2"
-                                    aria-expanded={true}
-                                    aria-haspopup={true}
-                                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                                    disabled={false}
-                                    onBlur={[Function]}
-                                    onFocus={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                    size="medium"
-                                  >
-                                    Hover me
-                                  </button>
-                                </StyledComponent>
-                              </Button__WrapperButton>
-                            </ForwardRef>
-                          </InnerReference>
-                        </Reference>
-                        <Popper
-                          placement="bottom"
-                        >
-                          <InnerPopper
-                            eventsEnabled={true}
-                            placement="bottom"
-                            positionFixed={false}
-                            referenceElement={
-                              <button
-                                aria-describedby="random-id-2"
-                                aria-expanded="true"
-                                aria-haspopup="true"
-                                class="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                              >
                                 Hover me
                               </button>
+                            </Button__WrapperButton>
+                          </ForwardRef>
+                        </InnerReference>
+                      </Reference>
+                      <Popper
+                        placement="bottom"
+                      >
+                        <InnerPopper
+                          eventsEnabled={true}
+                          placement="bottom"
+                          positionFixed={false}
+                          referenceElement={
+                            <button
+                              aria-describedby="random-id-2"
+                              aria-expanded="true"
+                              aria-haspopup="true"
+                              class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+                            >
+                              Hover me
+                            </button>
+                          }
+                        >
+                          <Styled(Box)
+                            id="random-id-2"
+                            maxWidth="24em"
+                            onBlur={[Function]}
+                            onFocus={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            open={true}
+                            position={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
+                            role="tooltip"
+                            theme={
+                              Object {
+                                "borders": Array [],
+                                "breakpoints": Object {
+                                  "extraLarge": "1920px",
+                                  "extraSmall": "0px",
+                                  "large": "1360px",
+                                  "medium": "1024px",
+                                  "small": "768px",
+                                },
+                                "colors": Object {
+                                  "black": "#011e38",
+                                  "blackBlue": "#122b47",
+                                  "blue": "#216beb",
+                                  "darkBlue": "#00438f",
+                                  "darkGrey": "#434d59",
+                                  "green": "#008059",
+                                  "grey": "#c0c8d1",
+                                  "lightBlue": "#e1ebfa",
+                                  "lightGreen": "#e9f7f2",
+                                  "lightGrey": "#e4e7eb",
+                                  "lightRed": "#fae6ea",
+                                  "lightYellow": "#fcf5e3",
+                                  "red": "#cc1439",
+                                  "white": "#ffffff",
+                                  "whiteGrey": "#f0f2f5",
+                                  "yellow": "#ffbb00",
+                                },
+                                "fontSizes": Object {
+                                  "large": "20px",
+                                  "larger": "26px",
+                                  "largest": "46px",
+                                  "medium": "16px",
+                                  "small": "14px",
+                                  "smaller": "12px",
+                                },
+                                "fontWeights": Object {
+                                  "bold": "600",
+                                  "light": "300",
+                                  "medium": "500",
+                                  "normal": "400",
+                                },
+                                "fonts": Object {
+                                  "base": "'IBM Plex Sans', sans-serif",
+                                  "mono": "'IBM Plex Mono', monospace",
+                                },
+                                "lineHeights": Object {
+                                  "base": "1.5",
+                                  "sectionTitle": "1.23076923",
+                                  "smallTextBase": "1.71428571",
+                                  "smallTextCompressed": "1.14285714",
+                                  "smallerText": "1.33333333",
+                                  "subsectionTitle": "1.2",
+                                  "title": "1.04347826",
+                                },
+                                "radii": Object {
+                                  "circle": "50%",
+                                  "medium": "4px",
+                                  "small": "2px",
+                                },
+                                "shadows": Object {
+                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                },
+                                "space": Object {
+                                  "half": "4px",
+                                  "none": "0px",
+                                  "x1": "8px",
+                                  "x2": "16px",
+                                  "x3": "24px",
+                                  "x4": "32px",
+                                  "x5": "40px",
+                                  "x6": "48px",
+                                  "x8": "64px",
+                                },
+                                "zIndex": Object {
+                                  "content": 100,
+                                  "overlay": 1000,
+                                  "tabsBar": 210,
+                                  "tabsScollIndicator": 200,
+                                },
+                              }
                             }
                           >
-                            <Styled(Box)
+                            <div
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
                               id="random-id-2"
-                              maxWidth="24em"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               open={true}
-                              position={
-                                Object {
-                                  "left": 0,
-                                  "opacity": 0,
-                                  "pointerEvents": "none",
-                                  "position": "absolute",
-                                  "top": 0,
-                                }
-                              }
                               role="tooltip"
-                              theme={
-                                Object {
-                                  "borders": Array [],
-                                  "breakpoints": Object {
-                                    "extraLarge": "1920px",
-                                    "extraSmall": "0px",
-                                    "large": "1360px",
-                                    "medium": "1024px",
-                                    "small": "768px",
-                                  },
-                                  "colors": Object {
-                                    "black": "#011e38",
-                                    "blackBlue": "#122b47",
-                                    "blue": "#216beb",
-                                    "darkBlue": "#00438f",
-                                    "darkGrey": "#434d59",
-                                    "green": "#008059",
-                                    "grey": "#c0c8d1",
-                                    "lightBlue": "#e1ebfa",
-                                    "lightGreen": "#e9f7f2",
-                                    "lightGrey": "#e4e7eb",
-                                    "lightRed": "#fae6ea",
-                                    "lightYellow": "#fcf5e3",
-                                    "red": "#cc1439",
-                                    "white": "#ffffff",
-                                    "whiteGrey": "#f0f2f5",
-                                    "yellow": "#ffbb00",
-                                  },
-                                  "fontSizes": Object {
-                                    "large": "20px",
-                                    "larger": "26px",
-                                    "largest": "46px",
-                                    "medium": "16px",
-                                    "small": "14px",
-                                    "smaller": "12px",
-                                  },
-                                  "fontWeights": Object {
-                                    "bold": "600",
-                                    "light": "300",
-                                    "medium": "500",
-                                    "normal": "400",
-                                  },
-                                  "fonts": Object {
-                                    "base": "'IBM Plex Sans', sans-serif",
-                                    "mono": "'IBM Plex Mono', monospace",
-                                  },
-                                  "lineHeights": Object {
-                                    "base": "1.5",
-                                    "sectionTitle": "1.23076923",
-                                    "smallTextBase": "1.71428571",
-                                    "smallTextCompressed": "1.14285714",
-                                    "smallerText": "1.33333333",
-                                    "subsectionTitle": "1.2",
-                                    "title": "1.04347826",
-                                  },
-                                  "radii": Object {
-                                    "circle": "50%",
-                                    "medium": "4px",
-                                    "small": "2px",
-                                  },
-                                  "shadows": Object {
-                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                  },
-                                  "space": Object {
-                                    "half": "4px",
-                                    "none": "0px",
-                                    "x1": "8px",
-                                    "x2": "16px",
-                                    "x3": "24px",
-                                    "x4": "32px",
-                                    "x5": "40px",
-                                    "x6": "48px",
-                                    "x8": "64px",
-                                  },
-                                  "zIndex": Object {
-                                    "content": 100,
-                                    "overlay": 1000,
-                                    "tabsBar": 210,
-                                    "tabsScollIndicator": 200,
-                                  },
-                                }
-                              }
                             >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "_foldedDefaultProps": Object {
-                                      "theme": Object {
-                                        "borders": Array [],
-                                        "breakpoints": Object {
-                                          "extraLarge": "1920px",
-                                          "extraSmall": "0px",
-                                          "large": "1360px",
-                                          "medium": "1024px",
-                                          "small": "768px",
-                                        },
-                                        "colors": Object {
-                                          "black": "#011e38",
-                                          "blackBlue": "#122b47",
-                                          "blue": "#216beb",
-                                          "darkBlue": "#00438f",
-                                          "darkGrey": "#434d59",
-                                          "green": "#008059",
-                                          "grey": "#c0c8d1",
-                                          "lightBlue": "#e1ebfa",
-                                          "lightGreen": "#e9f7f2",
-                                          "lightGrey": "#e4e7eb",
-                                          "lightRed": "#fae6ea",
-                                          "lightYellow": "#fcf5e3",
-                                          "red": "#cc1439",
-                                          "white": "#ffffff",
-                                          "whiteGrey": "#f0f2f5",
-                                          "yellow": "#ffbb00",
-                                        },
-                                        "fontSizes": Object {
-                                          "large": "20px",
-                                          "larger": "26px",
-                                          "largest": "46px",
-                                          "medium": "16px",
-                                          "small": "14px",
-                                          "smaller": "12px",
-                                        },
-                                        "fontWeights": Object {
-                                          "bold": "600",
-                                          "light": "300",
-                                          "medium": "500",
-                                          "normal": "400",
-                                        },
-                                        "fonts": Object {
-                                          "base": "'IBM Plex Sans', sans-serif",
-                                          "mono": "'IBM Plex Mono', monospace",
-                                        },
-                                        "lineHeights": Object {
-                                          "base": "1.5",
-                                          "sectionTitle": "1.23076923",
-                                          "smallTextBase": "1.71428571",
-                                          "smallTextCompressed": "1.14285714",
-                                          "smallerText": "1.33333333",
-                                          "subsectionTitle": "1.2",
-                                          "title": "1.04347826",
-                                        },
-                                        "radii": Object {
-                                          "circle": "50%",
-                                          "medium": "4px",
-                                          "small": "2px",
-                                        },
-                                        "shadows": Object {
-                                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                        },
-                                        "space": Object {
-                                          "half": "4px",
-                                          "none": "0px",
-                                          "x1": "8px",
-                                          "x2": "16px",
-                                          "x3": "24px",
-                                          "x4": "32px",
-                                          "x5": "40px",
-                                          "x6": "48px",
-                                          "x8": "64px",
-                                        },
-                                        "zIndex": Object {
-                                          "content": 100,
-                                          "overlay": 1000,
-                                          "tabsBar": 210,
-                                          "tabsScollIndicator": 200,
-                                        },
-                                      },
-                                    },
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-jWBwVP",
-                                      "isStatic": false,
-                                      "lastClassName": "gCXFcy",
-                                      "rules": Array [
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        [Function],
-                                        "color: #011e38;",
-                                        "display: flex;",
-                                        "flex-direction: column;",
-                                        "font-size: 14px;",
-                                        "background-color: #ffffff;",
-                                        "border-radius: 4px;",
-                                        "border: 1px solid #c0c8d1;",
-                                        "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);",
-                                        "padding: 8px;",
-                                        "transition: opacity 0.3s;",
-                                        "z-index: 100;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Styled(Box)",
-                                    "foldedComponentIds": Array [
-                                      "Box-sc-1qu1edy-0",
-                                    ],
-                                    "propTypes": Object {
-                                      "bg": [Function],
-                                      "border": [Function],
-                                      "borderBottom": [Function],
-                                      "borderLeft": [Function],
-                                      "borderRadius": [Function],
-                                      "borderRight": [Function],
-                                      "borderTop": [Function],
-                                      "boxShadow": [Function],
-                                      "color": [Function],
-                                      "display": [Function],
-                                      "flexGrow": [Function],
-                                      "height": [Function],
-                                      "m": [Function],
-                                      "maxHeight": [Function],
-                                      "maxWidth": [Function],
-                                      "mb": [Function],
-                                      "minHeight": [Function],
-                                      "minWidth": [Function],
-                                      "ml": [Function],
-                                      "mr": [Function],
-                                      "mt": [Function],
-                                      "mx": [Function],
-                                      "my": [Function],
-                                      "order": [Function],
-                                      "p": [Function],
-                                      "pb": [Function],
-                                      "pl": [Function],
-                                      "position": [Function],
-                                      "pr": [Function],
-                                      "pt": [Function],
-                                      "px": [Function],
-                                      "py": [Function],
-                                      "textAlign": [Function],
-                                      "width": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-jWBwVP",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "usesTheme": false,
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={[Function]}
-                                id="random-id-2"
-                                maxWidth="24em"
-                                onBlur={[Function]}
-                                onFocus={[Function]}
-                                onMouseEnter={[Function]}
-                                onMouseLeave={[Function]}
-                                open={true}
-                                position={
-                                  Object {
-                                    "left": 0,
-                                    "opacity": 0,
-                                    "pointerEvents": "none",
-                                    "position": "absolute",
-                                    "top": 0,
-                                  }
-                                }
-                                role="tooltip"
-                                theme={
-                                  Object {
-                                    "borders": Array [],
-                                    "breakpoints": Object {
-                                      "extraLarge": "1920px",
-                                      "extraSmall": "0px",
-                                      "large": "1360px",
-                                      "medium": "1024px",
-                                      "small": "768px",
-                                    },
-                                    "colors": Object {
-                                      "black": "#011e38",
-                                      "blackBlue": "#122b47",
-                                      "blue": "#216beb",
-                                      "darkBlue": "#00438f",
-                                      "darkGrey": "#434d59",
-                                      "green": "#008059",
-                                      "grey": "#c0c8d1",
-                                      "lightBlue": "#e1ebfa",
-                                      "lightGreen": "#e9f7f2",
-                                      "lightGrey": "#e4e7eb",
-                                      "lightRed": "#fae6ea",
-                                      "lightYellow": "#fcf5e3",
-                                      "red": "#cc1439",
-                                      "white": "#ffffff",
-                                      "whiteGrey": "#f0f2f5",
-                                      "yellow": "#ffbb00",
-                                    },
-                                    "fontSizes": Object {
-                                      "large": "20px",
-                                      "larger": "26px",
-                                      "largest": "46px",
-                                      "medium": "16px",
-                                      "small": "14px",
-                                      "smaller": "12px",
-                                    },
-                                    "fontWeights": Object {
-                                      "bold": "600",
-                                      "light": "300",
-                                      "medium": "500",
-                                      "normal": "400",
-                                    },
-                                    "fonts": Object {
-                                      "base": "'IBM Plex Sans', sans-serif",
-                                      "mono": "'IBM Plex Mono', monospace",
-                                    },
-                                    "lineHeights": Object {
-                                      "base": "1.5",
-                                      "sectionTitle": "1.23076923",
-                                      "smallTextBase": "1.71428571",
-                                      "smallTextCompressed": "1.14285714",
-                                      "smallerText": "1.33333333",
-                                      "subsectionTitle": "1.2",
-                                      "title": "1.04347826",
-                                    },
-                                    "radii": Object {
-                                      "circle": "50%",
-                                      "medium": "4px",
-                                      "small": "2px",
-                                    },
-                                    "shadows": Object {
-                                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                    },
-                                    "space": Object {
-                                      "half": "4px",
-                                      "none": "0px",
-                                      "x1": "8px",
-                                      "x2": "16px",
-                                      "x3": "24px",
-                                      "x4": "32px",
-                                      "x5": "40px",
-                                      "x6": "48px",
-                                      "x8": "64px",
-                                    },
-                                    "zIndex": Object {
-                                      "content": 100,
-                                      "overlay": 1000,
-                                      "tabsBar": 210,
-                                      "tabsScollIndicator": 200,
-                                    },
-                                  }
-                                }
+                              I am an open Tooltip!
+                              <PopperArrow
+                                backgroundColor="white"
+                                borderColor="grey"
+                                placement="bottom"
+                                style={Object {}}
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-jWBwVP gCXFcy"
-                                  id="random-id-2"
-                                  onBlur={[Function]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  open={true}
-                                  role="tooltip"
-                                >
-                                  I am an open Tooltip!
-                                  <PopperArrow
-                                    backgroundColor="white"
-                                    borderColor="grey"
-                                    placement="bottom"
-                                    style={Object {}}
-                                  >
-                                    <StyledComponent
-                                      backgroundColor="white"
-                                      borderColor="grey"
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "_foldedDefaultProps": Object {
-                                            "backgroundColor": "white",
-                                            "borderColor": "grey",
-                                            "placement": "bottom",
-                                          },
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "PopperArrow-sc-1bcgj4w-0",
-                                            "isStatic": false,
-                                            "lastClassName": "bBzGzE",
-                                            "rules": Array [
-                                              "position: absolute;",
-                                              "height: 8px;",
-                                              "width: 8px;",
-                                              "margin: 12px;",
-                                              "&:before {",
-                                              "border-style: solid;",
-                                              "content: '';",
-                                              "display: block;",
-                                              "height: 0;",
-                                              "margin: auto;",
-                                              "position: absolute;",
-                                              "width: 0;",
-                                              "}",
-                                              "&:after {",
-                                              "border-style: solid;",
-                                              "content: '';",
-                                              "display: block;",
-                                              "height: 0;",
-                                              "margin: auto;",
-                                              "position: absolute;",
-                                              "width: 0;",
-                                              "}",
-                                              [Function],
-                                              [Function],
-                                            ],
-                                          },
-                                          "displayName": "PopperArrow",
-                                          "foldedComponentIds": Array [],
-                                          "propTypes": Object {
-                                            "backgroundColor": [Function],
-                                            "borderColor": [Function],
-                                            "placement": [Function],
-                                          },
-                                          "render": [Function],
-                                          "styledComponentId": "PopperArrow-sc-1bcgj4w-0",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "usesTheme": false,
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
-                                        }
-                                      }
-                                      forwardedRef={[Function]}
-                                      placement="bottom"
-                                      style={Object {}}
-                                    >
-                                      <div
-                                        className="PopperArrow-sc-1bcgj4w-0 bBzGzE"
-                                        style={Object {}}
-                                      />
-                                    </StyledComponent>
-                                  </PopperArrow>
-                                </div>
-                              </StyledComponent>
-                            </Styled(Box)>
-                          </InnerPopper>
-                        </Popper>
-                        <DetectOutsideClick
-                          clickRef={
-                            Array [
-                              undefined,
-                              undefined,
-                            ]
-                          }
-                          onClick={[Function]}
-                        />
-                      </Manager>
-                    </StatelessTooltip>
-                  </MenuState>
-                </MenuComponent>
-              </WithGeneratedId>
-            </Component>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                                  className="PopperArrow-sc-1bcgj4w-0 jABZcb"
+                                  style={Object {}}
+                                />
+                              </PopperArrow>
+                            </div>
+                          </Styled(Box)>
+                        </InnerPopper>
+                      </Popper>
+                      <DetectOutsideClick
+                        clickRef={
+                          Array [
+                            undefined,
+                            undefined,
+                          ]
+                        }
+                        onClick={[Function]}
+                      />
+                    </Manager>
+                  </StatelessTooltip>
+                </MenuState>
+              </MenuComponent>
+            </WithGeneratedId>
+          </Component>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>

@@ -96,7 +96,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -185,784 +185,144 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
         >
-          <ThemeProvider
-            theme={
+          <RangeContainer
+            endComponent={null}
+            errorMessages={Array []}
+            labelProps={
               Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
+                "children": null,
+                "helpText": null,
+                "id": undefined,
+                "labelText": "Range",
+                "requirementText": null,
               }
             }
+            startComponent={null}
           >
-            <RangeContainer
-              endComponent={null}
-              errorMessages={Array []}
-              labelProps={
-                Object {
-                  "children": null,
-                  "helpText": null,
-                  "id": undefined,
-                  "labelText": "Range",
-                  "requirementText": null,
-                }
-              }
-              startComponent={null}
+            <Styled(BaseFieldLabel)
+              helpText={null}
+              labelText="Range"
+              requirementText={null}
             >
-              <Styled(BaseFieldLabel)
+              <BaseFieldLabel
+                className="sc-fzXfLW casIUc"
                 helpText={null}
                 labelText="Range"
                 requirementText={null}
               >
-                <StyledComponent
-                  forwardedComponent={
+                <FieldLabel__Label
+                  className="sc-fzXfLW casIUc"
+                  color="#011e38"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-cSHVUG",
-                        "isStatic": false,
-                        "lastClassName": "CAuLq",
-                        "rules": Array [],
-                      },
-                      "displayName": "Styled(BaseFieldLabel)",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-cSHVUG",
-                      "target": [Function],
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "display": "block",
                     }
                   }
-                  forwardedRef={null}
-                  helpText={null}
-                  labelText="Range"
-                  requirementText={null}
                 >
-                  <BaseFieldLabel
-                    className="sc-cSHVUG CAuLq"
-                    helpText={null}
-                    labelText="Range"
-                    requirementText={null}
-                  >
-                    <FieldLabel__Label
-                      className="sc-cSHVUG CAuLq"
-                      color="#011e38"
-                      style={
-                        Object {
-                          "display": "block",
-                        }
+                  <label
+                    className="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                    color="#011e38"
+                    style={
+                      Object {
+                        "display": "block",
                       }
-                    >
-                      <StyledComponent
-                        className="sc-cSHVUG CAuLq"
-                        color="#011e38"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "#011e38",
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "FieldLabel__Label-sc-1t1cp4f-0",
-                              "isStatic": false,
-                              "lastClassName": "gFwPaD",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "FieldLabel__Label",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "FieldLabel__Label-sc-1t1cp4f-0",
-                            "target": "label",
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "display": "block",
-                          }
-                        }
-                      >
-                        <label
-                          className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
-                          color="#011e38"
-                          style={
-                            Object {
-                              "display": "block",
-                            }
-                          }
-                        >
-                          <Box
-                            mb="x1"
-                            theme={
-                              Object {
-                                "borders": Array [],
-                                "breakpoints": Object {
-                                  "extraLarge": "1920px",
-                                  "extraSmall": "0px",
-                                  "large": "1360px",
-                                  "medium": "1024px",
-                                  "small": "768px",
-                                },
-                                "colors": Object {
-                                  "black": "#011e38",
-                                  "blackBlue": "#122b47",
-                                  "blue": "#216beb",
-                                  "darkBlue": "#00438f",
-                                  "darkGrey": "#434d59",
-                                  "green": "#008059",
-                                  "grey": "#c0c8d1",
-                                  "lightBlue": "#e1ebfa",
-                                  "lightGreen": "#e9f7f2",
-                                  "lightGrey": "#e4e7eb",
-                                  "lightRed": "#fae6ea",
-                                  "lightYellow": "#fcf5e3",
-                                  "red": "#cc1439",
-                                  "white": "#ffffff",
-                                  "whiteGrey": "#f0f2f5",
-                                  "yellow": "#ffbb00",
-                                },
-                                "fontSizes": Object {
-                                  "large": "20px",
-                                  "larger": "26px",
-                                  "largest": "46px",
-                                  "medium": "16px",
-                                  "small": "14px",
-                                  "smaller": "12px",
-                                },
-                                "fontWeights": Object {
-                                  "bold": "600",
-                                  "light": "300",
-                                  "medium": "500",
-                                  "normal": "400",
-                                },
-                                "fonts": Object {
-                                  "base": "'IBM Plex Sans', sans-serif",
-                                  "mono": "'IBM Plex Mono', monospace",
-                                },
-                                "lineHeights": Object {
-                                  "base": "1.5",
-                                  "sectionTitle": "1.23076923",
-                                  "smallTextBase": "1.71428571",
-                                  "smallTextCompressed": "1.14285714",
-                                  "smallerText": "1.33333333",
-                                  "subsectionTitle": "1.2",
-                                  "title": "1.04347826",
-                                },
-                                "radii": Object {
-                                  "circle": "50%",
-                                  "medium": "4px",
-                                  "small": "2px",
-                                },
-                                "shadows": Object {
-                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                },
-                                "space": Object {
-                                  "half": "4px",
-                                  "none": "0px",
-                                  "x1": "8px",
-                                  "x2": "16px",
-                                  "x3": "24px",
-                                  "x4": "32px",
-                                  "x5": "40px",
-                                  "x6": "48px",
-                                  "x8": "64px",
-                                },
-                                "zIndex": Object {
-                                  "content": 100,
-                                  "overlay": 1000,
-                                  "tabsBar": 210,
-                                  "tabsScollIndicator": 200,
-                                },
-                              }
-                            }
-                          >
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "_foldedDefaultProps": Object {
-                                    "theme": Object {
-                                      "borders": Array [],
-                                      "breakpoints": Object {
-                                        "extraLarge": "1920px",
-                                        "extraSmall": "0px",
-                                        "large": "1360px",
-                                        "medium": "1024px",
-                                        "small": "768px",
-                                      },
-                                      "colors": Object {
-                                        "black": "#011e38",
-                                        "blackBlue": "#122b47",
-                                        "blue": "#216beb",
-                                        "darkBlue": "#00438f",
-                                        "darkGrey": "#434d59",
-                                        "green": "#008059",
-                                        "grey": "#c0c8d1",
-                                        "lightBlue": "#e1ebfa",
-                                        "lightGreen": "#e9f7f2",
-                                        "lightGrey": "#e4e7eb",
-                                        "lightRed": "#fae6ea",
-                                        "lightYellow": "#fcf5e3",
-                                        "red": "#cc1439",
-                                        "white": "#ffffff",
-                                        "whiteGrey": "#f0f2f5",
-                                        "yellow": "#ffbb00",
-                                      },
-                                      "fontSizes": Object {
-                                        "large": "20px",
-                                        "larger": "26px",
-                                        "largest": "46px",
-                                        "medium": "16px",
-                                        "small": "14px",
-                                        "smaller": "12px",
-                                      },
-                                      "fontWeights": Object {
-                                        "bold": "600",
-                                        "light": "300",
-                                        "medium": "500",
-                                        "normal": "400",
-                                      },
-                                      "fonts": Object {
-                                        "base": "'IBM Plex Sans', sans-serif",
-                                        "mono": "'IBM Plex Mono', monospace",
-                                      },
-                                      "lineHeights": Object {
-                                        "base": "1.5",
-                                        "sectionTitle": "1.23076923",
-                                        "smallTextBase": "1.71428571",
-                                        "smallTextCompressed": "1.14285714",
-                                        "smallerText": "1.33333333",
-                                        "subsectionTitle": "1.2",
-                                        "title": "1.04347826",
-                                      },
-                                      "radii": Object {
-                                        "circle": "50%",
-                                        "medium": "4px",
-                                        "small": "2px",
-                                      },
-                                      "shadows": Object {
-                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                      },
-                                      "space": Object {
-                                        "half": "4px",
-                                        "none": "0px",
-                                        "x1": "8px",
-                                        "x2": "16px",
-                                        "x3": "24px",
-                                        "x4": "32px",
-                                        "x5": "40px",
-                                        "x6": "48px",
-                                        "x8": "64px",
-                                      },
-                                      "zIndex": Object {
-                                        "content": 100,
-                                        "overlay": 1000,
-                                        "tabsBar": 210,
-                                        "tabsScollIndicator": 200,
-                                      },
-                                    },
-                                  },
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "Box-sc-1qu1edy-0",
-                                    "isStatic": false,
-                                    "lastClassName": "gtQyvp",
-                                    "rules": Array [
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                    ],
-                                  },
-                                  "displayName": "Box",
-                                  "foldedComponentIds": Array [],
-                                  "propTypes": Object {
-                                    "bg": [Function],
-                                    "border": [Function],
-                                    "borderBottom": [Function],
-                                    "borderLeft": [Function],
-                                    "borderRadius": [Function],
-                                    "borderRight": [Function],
-                                    "borderTop": [Function],
-                                    "boxShadow": [Function],
-                                    "color": [Function],
-                                    "display": [Function],
-                                    "flexGrow": [Function],
-                                    "height": [Function],
-                                    "m": [Function],
-                                    "maxHeight": [Function],
-                                    "maxWidth": [Function],
-                                    "mb": [Function],
-                                    "minHeight": [Function],
-                                    "minWidth": [Function],
-                                    "ml": [Function],
-                                    "mr": [Function],
-                                    "mt": [Function],
-                                    "mx": [Function],
-                                    "my": [Function],
-                                    "order": [Function],
-                                    "p": [Function],
-                                    "pb": [Function],
-                                    "pl": [Function],
-                                    "position": [Function],
-                                    "pr": [Function],
-                                    "pt": [Function],
-                                    "px": [Function],
-                                    "py": [Function],
-                                    "textAlign": [Function],
-                                    "width": [Function],
-                                  },
-                                  "render": [Function],
-                                  "styledComponentId": "Box-sc-1qu1edy-0",
-                                  "target": "div",
-                                  "toString": [Function],
-                                  "usesTheme": false,
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              mb="x1"
-                              theme={
-                                Object {
-                                  "borders": Array [],
-                                  "breakpoints": Object {
-                                    "extraLarge": "1920px",
-                                    "extraSmall": "0px",
-                                    "large": "1360px",
-                                    "medium": "1024px",
-                                    "small": "768px",
-                                  },
-                                  "colors": Object {
-                                    "black": "#011e38",
-                                    "blackBlue": "#122b47",
-                                    "blue": "#216beb",
-                                    "darkBlue": "#00438f",
-                                    "darkGrey": "#434d59",
-                                    "green": "#008059",
-                                    "grey": "#c0c8d1",
-                                    "lightBlue": "#e1ebfa",
-                                    "lightGreen": "#e9f7f2",
-                                    "lightGrey": "#e4e7eb",
-                                    "lightRed": "#fae6ea",
-                                    "lightYellow": "#fcf5e3",
-                                    "red": "#cc1439",
-                                    "white": "#ffffff",
-                                    "whiteGrey": "#f0f2f5",
-                                    "yellow": "#ffbb00",
-                                  },
-                                  "fontSizes": Object {
-                                    "large": "20px",
-                                    "larger": "26px",
-                                    "largest": "46px",
-                                    "medium": "16px",
-                                    "small": "14px",
-                                    "smaller": "12px",
-                                  },
-                                  "fontWeights": Object {
-                                    "bold": "600",
-                                    "light": "300",
-                                    "medium": "500",
-                                    "normal": "400",
-                                  },
-                                  "fonts": Object {
-                                    "base": "'IBM Plex Sans', sans-serif",
-                                    "mono": "'IBM Plex Mono', monospace",
-                                  },
-                                  "lineHeights": Object {
-                                    "base": "1.5",
-                                    "sectionTitle": "1.23076923",
-                                    "smallTextBase": "1.71428571",
-                                    "smallTextCompressed": "1.14285714",
-                                    "smallerText": "1.33333333",
-                                    "subsectionTitle": "1.2",
-                                    "title": "1.04347826",
-                                  },
-                                  "radii": Object {
-                                    "circle": "50%",
-                                    "medium": "4px",
-                                    "small": "2px",
-                                  },
-                                  "shadows": Object {
-                                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                  },
-                                  "space": Object {
-                                    "half": "4px",
-                                    "none": "0px",
-                                    "x1": "8px",
-                                    "x2": "16px",
-                                    "x3": "24px",
-                                    "x4": "32px",
-                                    "x5": "40px",
-                                    "x6": "48px",
-                                    "x8": "64px",
-                                  },
-                                  "zIndex": Object {
-                                    "content": 100,
-                                    "overlay": 1000,
-                                    "tabsBar": 210,
-                                    "tabsScollIndicator": 200,
-                                  },
-                                }
-                              }
-                            >
-                              <div
-                                className="Box-sc-1qu1edy-0 dufoOa"
-                              >
-                                <span
-                                  style={
-                                    Object {
-                                      "fontSize": "14px",
-                                      "fontWeight": "600",
-                                      "lineHeight": "1.71428571",
-                                    }
-                                  }
-                                >
-                                  Range
-                                </span>
-                              </div>
-                            </StyledComponent>
-                          </Box>
-                          Example
-                        </label>
-                      </StyledComponent>
-                    </FieldLabel__Label>
-                  </BaseFieldLabel>
-                </StyledComponent>
-              </Styled(BaseFieldLabel)>
-              <Box
-                alignItems="flex-start"
-                display="inline-flex"
-                justifyContent="center"
-                mb="x3"
-                mt="x1"
-                theme={
-                  Object {
-                    "borders": Array [],
-                    "breakpoints": Object {
-                      "extraLarge": "1920px",
-                      "extraSmall": "0px",
-                      "large": "1360px",
-                      "medium": "1024px",
-                      "small": "768px",
-                    },
-                    "colors": Object {
-                      "black": "#011e38",
-                      "blackBlue": "#122b47",
-                      "blue": "#216beb",
-                      "darkBlue": "#00438f",
-                      "darkGrey": "#434d59",
-                      "green": "#008059",
-                      "grey": "#c0c8d1",
-                      "lightBlue": "#e1ebfa",
-                      "lightGreen": "#e9f7f2",
-                      "lightGrey": "#e4e7eb",
-                      "lightRed": "#fae6ea",
-                      "lightYellow": "#fcf5e3",
-                      "red": "#cc1439",
-                      "white": "#ffffff",
-                      "whiteGrey": "#f0f2f5",
-                      "yellow": "#ffbb00",
-                    },
-                    "fontSizes": Object {
-                      "large": "20px",
-                      "larger": "26px",
-                      "largest": "46px",
-                      "medium": "16px",
-                      "small": "14px",
-                      "smaller": "12px",
-                    },
-                    "fontWeights": Object {
-                      "bold": "600",
-                      "light": "300",
-                      "medium": "500",
-                      "normal": "400",
-                    },
-                    "fonts": Object {
-                      "base": "'IBM Plex Sans', sans-serif",
-                      "mono": "'IBM Plex Mono', monospace",
-                    },
-                    "lineHeights": Object {
-                      "base": "1.5",
-                      "sectionTitle": "1.23076923",
-                      "smallTextBase": "1.71428571",
-                      "smallTextCompressed": "1.14285714",
-                      "smallerText": "1.33333333",
-                      "subsectionTitle": "1.2",
-                      "title": "1.04347826",
-                    },
-                    "radii": Object {
-                      "circle": "50%",
-                      "medium": "4px",
-                      "small": "2px",
-                    },
-                    "shadows": Object {
-                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                    },
-                    "space": Object {
-                      "half": "4px",
-                      "none": "0px",
-                      "x1": "8px",
-                      "x2": "16px",
-                      "x3": "24px",
-                      "x4": "32px",
-                      "x5": "40px",
-                      "x6": "48px",
-                      "x8": "64px",
-                    },
-                    "zIndex": Object {
-                      "content": 100,
-                      "overlay": 1000,
-                      "tabsBar": 210,
-                      "tabsScollIndicator": 200,
-                    },
-                  }
-                }
-              >
-                <StyledComponent
-                  alignItems="flex-start"
-                  display="inline-flex"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "_foldedDefaultProps": Object {
-                        "theme": Object {
+                    }
+                  >
+                    <Box
+                      mb="x1"
+                      theme={
+                        Object {
                           "borders": Array [],
                           "breakpoints": Object {
                             "extraLarge": "1920px",
@@ -1045,84 +405,131 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                             "tabsBar": 210,
                             "tabsScollIndicator": 200,
                           },
-                        },
-                      },
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Box-sc-1qu1edy-0",
-                        "isStatic": false,
-                        "lastClassName": "gtQyvp",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Box",
-                      "foldedComponentIds": Array [],
-                      "propTypes": Object {
-                        "bg": [Function],
-                        "border": [Function],
-                        "borderBottom": [Function],
-                        "borderLeft": [Function],
-                        "borderRadius": [Function],
-                        "borderRight": [Function],
-                        "borderTop": [Function],
-                        "boxShadow": [Function],
-                        "color": [Function],
-                        "display": [Function],
-                        "flexGrow": [Function],
-                        "height": [Function],
-                        "m": [Function],
-                        "maxHeight": [Function],
-                        "maxWidth": [Function],
-                        "mb": [Function],
-                        "minHeight": [Function],
-                        "minWidth": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "order": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "position": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "textAlign": [Function],
-                        "width": [Function],
-                      },
-                      "render": [Function],
-                      "styledComponentId": "Box-sc-1qu1edy-0",
-                      "target": "div",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  justifyContent="center"
-                  mb="x3"
-                  mt="x1"
+                        }
+                      }
+                    >
+                      <div
+                        className="Box-sc-1qu1edy-0 fTNzpy"
+                      >
+                        <span
+                          style={
+                            Object {
+                              "fontSize": "14px",
+                              "fontWeight": "600",
+                              "lineHeight": "1.71428571",
+                            }
+                          }
+                        >
+                          Range
+                        </span>
+                      </div>
+                    </Box>
+                    Example
+                  </label>
+                </FieldLabel__Label>
+              </BaseFieldLabel>
+            </Styled(BaseFieldLabel)>
+            <Box
+              alignItems="flex-start"
+              display="inline-flex"
+              justifyContent="center"
+              mb="x3"
+              mt="x1"
+              theme={
+                Object {
+                  "borders": Array [],
+                  "breakpoints": Object {
+                    "extraLarge": "1920px",
+                    "extraSmall": "0px",
+                    "large": "1360px",
+                    "medium": "1024px",
+                    "small": "768px",
+                  },
+                  "colors": Object {
+                    "black": "#011e38",
+                    "blackBlue": "#122b47",
+                    "blue": "#216beb",
+                    "darkBlue": "#00438f",
+                    "darkGrey": "#434d59",
+                    "green": "#008059",
+                    "grey": "#c0c8d1",
+                    "lightBlue": "#e1ebfa",
+                    "lightGreen": "#e9f7f2",
+                    "lightGrey": "#e4e7eb",
+                    "lightRed": "#fae6ea",
+                    "lightYellow": "#fcf5e3",
+                    "red": "#cc1439",
+                    "white": "#ffffff",
+                    "whiteGrey": "#f0f2f5",
+                    "yellow": "#ffbb00",
+                  },
+                  "fontSizes": Object {
+                    "large": "20px",
+                    "larger": "26px",
+                    "largest": "46px",
+                    "medium": "16px",
+                    "small": "14px",
+                    "smaller": "12px",
+                  },
+                  "fontWeights": Object {
+                    "bold": "600",
+                    "light": "300",
+                    "medium": "500",
+                    "normal": "400",
+                  },
+                  "fonts": Object {
+                    "base": "'IBM Plex Sans', sans-serif",
+                    "mono": "'IBM Plex Mono', monospace",
+                  },
+                  "lineHeights": Object {
+                    "base": "1.5",
+                    "sectionTitle": "1.23076923",
+                    "smallTextBase": "1.71428571",
+                    "smallTextCompressed": "1.14285714",
+                    "smallerText": "1.33333333",
+                    "subsectionTitle": "1.2",
+                    "title": "1.04347826",
+                  },
+                  "radii": Object {
+                    "circle": "50%",
+                    "medium": "4px",
+                    "small": "2px",
+                  },
+                  "shadows": Object {
+                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                  },
+                  "space": Object {
+                    "half": "4px",
+                    "none": "0px",
+                    "x1": "8px",
+                    "x2": "16px",
+                    "x3": "24px",
+                    "x4": "32px",
+                    "x5": "40px",
+                    "x6": "48px",
+                    "x8": "64px",
+                  },
+                  "zIndex": Object {
+                    "content": 100,
+                    "overlay": 1000,
+                    "tabsBar": 210,
+                    "tabsScollIndicator": 200,
+                  },
+                }
+              }
+            >
+              <div
+                className="Box-sc-1qu1edy-0 hyyQst"
+                display="inline-flex"
+              >
+                <Styled(Box)
+                  alignItems="center"
+                  maxHeight="38px"
+                  px="half"
                   theme={
                     Object {
                       "borders": Array [],
@@ -1211,414 +618,32 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 gtQyvp"
-                    display="inline-flex"
+                    className="Box-sc-1qu1edy-0 sc-AykKC einNOw"
                   >
-                    <Styled(Box)
-                      alignItems="center"
-                      maxHeight="38px"
-                      px="half"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
+                    <styled.p
+                      color="currentColor"
+                      disabled={false}
+                      fontSize="16px"
+                      inline={false}
+                      lineHeight="1.5"
+                      m={0}
                     >
-                      <StyledComponent
-                        alignItems="center"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "theme": Object {
-                                "borders": Array [],
-                                "breakpoints": Object {
-                                  "extraLarge": "1920px",
-                                  "extraSmall": "0px",
-                                  "large": "1360px",
-                                  "medium": "1024px",
-                                  "small": "768px",
-                                },
-                                "colors": Object {
-                                  "black": "#011e38",
-                                  "blackBlue": "#122b47",
-                                  "blue": "#216beb",
-                                  "darkBlue": "#00438f",
-                                  "darkGrey": "#434d59",
-                                  "green": "#008059",
-                                  "grey": "#c0c8d1",
-                                  "lightBlue": "#e1ebfa",
-                                  "lightGreen": "#e9f7f2",
-                                  "lightGrey": "#e4e7eb",
-                                  "lightRed": "#fae6ea",
-                                  "lightYellow": "#fcf5e3",
-                                  "red": "#cc1439",
-                                  "white": "#ffffff",
-                                  "whiteGrey": "#f0f2f5",
-                                  "yellow": "#ffbb00",
-                                },
-                                "fontSizes": Object {
-                                  "large": "20px",
-                                  "larger": "26px",
-                                  "largest": "46px",
-                                  "medium": "16px",
-                                  "small": "14px",
-                                  "smaller": "12px",
-                                },
-                                "fontWeights": Object {
-                                  "bold": "600",
-                                  "light": "300",
-                                  "medium": "500",
-                                  "normal": "400",
-                                },
-                                "fonts": Object {
-                                  "base": "'IBM Plex Sans', sans-serif",
-                                  "mono": "'IBM Plex Mono', monospace",
-                                },
-                                "lineHeights": Object {
-                                  "base": "1.5",
-                                  "sectionTitle": "1.23076923",
-                                  "smallTextBase": "1.71428571",
-                                  "smallTextCompressed": "1.14285714",
-                                  "smallerText": "1.33333333",
-                                  "subsectionTitle": "1.2",
-                                  "title": "1.04347826",
-                                },
-                                "radii": Object {
-                                  "circle": "50%",
-                                  "medium": "4px",
-                                  "small": "2px",
-                                },
-                                "shadows": Object {
-                                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                                },
-                                "space": Object {
-                                  "half": "4px",
-                                  "none": "0px",
-                                  "x1": "8px",
-                                  "x2": "16px",
-                                  "x3": "24px",
-                                  "x4": "32px",
-                                  "x5": "40px",
-                                  "x6": "48px",
-                                  "x8": "64px",
-                                },
-                                "zIndex": Object {
-                                  "content": 100,
-                                  "overlay": 1000,
-                                  "tabsBar": 210,
-                                  "tabsScollIndicator": 200,
-                                },
-                              },
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bdVaJa",
-                              "isStatic": false,
-                              "lastClassName": "jtfPUd",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                                "display: flex;",
-                                [Function],
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Box)",
-                            "foldedComponentIds": Array [
-                              "Box-sc-1qu1edy-0",
-                            ],
-                            "propTypes": Object {
-                              "alignItems": [Function],
-                              "flexDirection": [Function],
-                              "flexWrap": [Function],
-                              "justifyContent": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bdVaJa",
-                            "target": "div",
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        maxHeight="38px"
-                        px="half"
-                        theme={
-                          Object {
-                            "borders": Array [],
-                            "breakpoints": Object {
-                              "extraLarge": "1920px",
-                              "extraSmall": "0px",
-                              "large": "1360px",
-                              "medium": "1024px",
-                              "small": "768px",
-                            },
-                            "colors": Object {
-                              "black": "#011e38",
-                              "blackBlue": "#122b47",
-                              "blue": "#216beb",
-                              "darkBlue": "#00438f",
-                              "darkGrey": "#434d59",
-                              "green": "#008059",
-                              "grey": "#c0c8d1",
-                              "lightBlue": "#e1ebfa",
-                              "lightGreen": "#e9f7f2",
-                              "lightGrey": "#e4e7eb",
-                              "lightRed": "#fae6ea",
-                              "lightYellow": "#fcf5e3",
-                              "red": "#cc1439",
-                              "white": "#ffffff",
-                              "whiteGrey": "#f0f2f5",
-                              "yellow": "#ffbb00",
-                            },
-                            "fontSizes": Object {
-                              "large": "20px",
-                              "larger": "26px",
-                              "largest": "46px",
-                              "medium": "16px",
-                              "small": "14px",
-                              "smaller": "12px",
-                            },
-                            "fontWeights": Object {
-                              "bold": "600",
-                              "light": "300",
-                              "medium": "500",
-                              "normal": "400",
-                            },
-                            "fonts": Object {
-                              "base": "'IBM Plex Sans', sans-serif",
-                              "mono": "'IBM Plex Mono', monospace",
-                            },
-                            "lineHeights": Object {
-                              "base": "1.5",
-                              "sectionTitle": "1.23076923",
-                              "smallTextBase": "1.71428571",
-                              "smallTextCompressed": "1.14285714",
-                              "smallerText": "1.33333333",
-                              "subsectionTitle": "1.2",
-                              "title": "1.04347826",
-                            },
-                            "radii": Object {
-                              "circle": "50%",
-                              "medium": "4px",
-                              "small": "2px",
-                            },
-                            "shadows": Object {
-                              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                            },
-                            "space": Object {
-                              "half": "4px",
-                              "none": "0px",
-                              "x1": "8px",
-                              "x2": "16px",
-                              "x3": "24px",
-                              "x4": "32px",
-                              "x5": "40px",
-                              "x6": "48px",
-                              "x8": "64px",
-                            },
-                            "zIndex": Object {
-                              "content": 100,
-                              "overlay": 1000,
-                              "tabsBar": 210,
-                              "tabsScollIndicator": 200,
-                            },
-                          }
-                        }
+                      <p
+                        className="sc-AykKF bljHeM"
+                        color="currentColor"
+                        disabled={false}
+                        fontSize="16px"
                       >
-                        <div
-                          className="Box-sc-1qu1edy-0 sc-bdVaJa jtfPUd"
-                        >
-                          <styled.p
-                            color="currentColor"
-                            disabled={false}
-                            fontSize="16px"
-                            inline={false}
-                            lineHeight="1.5"
-                            m={0}
-                          >
-                            <StyledComponent
-                              color="currentColor"
-                              disabled={false}
-                              fontSize="16px"
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "_foldedDefaultProps": Object {
-                                    "color": "currentColor",
-                                    "disabled": false,
-                                    "fontSize": "16px",
-                                    "inline": false,
-                                    "lineHeight": "1.5",
-                                    "m": 0,
-                                  },
-                                  "attrs": Array [
-                                    [Function],
-                                  ],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "sc-bxivhb",
-                                    "isStatic": false,
-                                    "lastClassName": "bWRApy",
-                                    "rules": Array [
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                    ],
-                                  },
-                                  "displayName": "styled.p",
-                                  "foldedComponentIds": Array [],
-                                  "propTypes": Object {
-                                    "disabled": [Function],
-                                    "inline": [Function],
-                                  },
-                                  "render": [Function],
-                                  "styledComponentId": "sc-bxivhb",
-                                  "target": "p",
-                                  "toString": [Function],
-                                  "usesTheme": false,
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              inline={false}
-                              lineHeight="1.5"
-                              m={0}
-                            >
-                              <p
-                                className="sc-bxivhb bWRApy"
-                                color="currentColor"
-                                disabled={false}
-                                fontSize="16px"
-                              >
-                                -
-                              </p>
-                            </StyledComponent>
-                          </styled.p>
-                        </div>
-                      </StyledComponent>
-                    </Styled(Box)>
+                        -
+                      </p>
+                    </styled.p>
                   </div>
-                </StyledComponent>
-              </Box>
-            </RangeContainer>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                </Styled(Box)>
+              </div>
+            </Box>
+          </RangeContainer>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>

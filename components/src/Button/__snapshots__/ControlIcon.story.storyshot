@@ -96,7 +96,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -185,362 +185,156 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            disabled={false}
+            icon="close"
+            label="close"
+            onClick={[Function]}
+            size="32px"
+            toggled={false}
           >
-            <ForwardRef
+            <ControlIcon__StyledButton
+              aria-label="close"
               disabled={false}
-              icon="close"
-              label="close"
               onClick={[Function]}
-              size="32px"
               toggled={false}
             >
-              <ControlIcon__StyledButton
+              <button
                 aria-label="close"
+                className="ControlIcon__StyledButton-sc-1h83lvi-0 fMjedc"
                 disabled={false}
                 onClick={[Function]}
-                toggled={false}
               >
-                <StyledComponent
-                  aria-label="close"
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                        "isStatic": false,
-                        "lastClassName": "cBwnHL",
-                        "rules": Array [
-                          [Function],
-                        ],
-                      },
-                      "displayName": "ControlIcon__StyledButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClick={[Function]}
-                  toggled={false}
+                <Styled(Component)
+                  color="currentColor"
+                  icon="close"
+                  size="32px"
+                  title={null}
                 >
-                  <button
-                    aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 cBwnHL"
-                    disabled={false}
-                    onClick={[Function]}
+                  <ForwardRef
+                    className="sc-AykKD ceXkCz"
+                    color="currentColor"
+                    focusable={false}
+                    icon="close"
+                    size="32px"
+                    title={null}
                   >
-                    <Styled(Component)
+                    <svg
+                      aria-hidden={true}
+                      className="sc-AykKD ceXkCz"
                       color="currentColor"
+                      fill="currentColor"
+                      focusable={false}
+                      height="32px"
                       icon="close"
                       size="32px"
                       title={null}
+                      viewBox="0 0 24 24"
+                      width="32px"
                     >
-                      <StyledComponent
-                        color="currentColor"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "currentColor",
-                              "size": "24px",
-                              "title": null,
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "jQNEzN",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                              "icon": [Function],
-                              "size": [Function],
-                              "title": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": Object {
-                                "className": undefined,
-                                "color": "currentColor",
-                                "focusable": false,
-                                "size": "24px",
-                                "title": null,
-                              },
-                              "propTypes": Object {
-                                "className": [Function],
-                                "color": [Function],
-                                "focusable": [Function],
-                                "icon": [Function],
-                                "size": [Function],
-                                "title": [Function],
-                              },
-                              "render": [Function],
-                            },
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        icon="close"
-                        size="32px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-bwzfXH jQNEzN"
-                          color="currentColor"
-                          focusable={false}
-                          icon="close"
-                          size="32px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-bwzfXH jQNEzN"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="32px"
-                            icon="close"
-                            size="32px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="32px"
-                          >
-                            <path
-                              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </button>
-                </StyledComponent>
-              </ControlIcon__StyledButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                        key="0"
+                      />
+                    </svg>
+                  </ForwardRef>
+                </Styled(Component)>
+              </button>
+            </ControlIcon__StyledButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -642,7 +436,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -731,362 +525,156 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            disabled={true}
+            icon="close"
+            label="close"
+            onClick={[Function]}
+            size="32px"
+            toggled={false}
           >
-            <ForwardRef
+            <ControlIcon__StyledButton
+              aria-label="close"
               disabled={true}
-              icon="close"
-              label="close"
               onClick={[Function]}
-              size="32px"
               toggled={false}
             >
-              <ControlIcon__StyledButton
+              <button
                 aria-label="close"
+                className="ControlIcon__StyledButton-sc-1h83lvi-0 gBvSee"
                 disabled={true}
                 onClick={[Function]}
-                toggled={false}
               >
-                <StyledComponent
-                  aria-label="close"
-                  disabled={true}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                        "isStatic": false,
-                        "lastClassName": "gzCHeK",
-                        "rules": Array [
-                          [Function],
-                        ],
-                      },
-                      "displayName": "ControlIcon__StyledButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClick={[Function]}
-                  toggled={false}
+                <Styled(Component)
+                  color="currentColor"
+                  icon="close"
+                  size="32px"
+                  title={null}
                 >
-                  <button
-                    aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 gzCHeK"
-                    disabled={true}
-                    onClick={[Function]}
+                  <ForwardRef
+                    className="sc-AykKD ceXkCz"
+                    color="currentColor"
+                    focusable={false}
+                    icon="close"
+                    size="32px"
+                    title={null}
                   >
-                    <Styled(Component)
+                    <svg
+                      aria-hidden={true}
+                      className="sc-AykKD ceXkCz"
                       color="currentColor"
+                      fill="currentColor"
+                      focusable={false}
+                      height="32px"
                       icon="close"
                       size="32px"
                       title={null}
+                      viewBox="0 0 24 24"
+                      width="32px"
                     >
-                      <StyledComponent
-                        color="currentColor"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "currentColor",
-                              "size": "24px",
-                              "title": null,
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "jQNEzN",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                              "icon": [Function],
-                              "size": [Function],
-                              "title": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": Object {
-                                "className": undefined,
-                                "color": "currentColor",
-                                "focusable": false,
-                                "size": "24px",
-                                "title": null,
-                              },
-                              "propTypes": Object {
-                                "className": [Function],
-                                "color": [Function],
-                                "focusable": [Function],
-                                "icon": [Function],
-                                "size": [Function],
-                                "title": [Function],
-                              },
-                              "render": [Function],
-                            },
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        icon="close"
-                        size="32px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-bwzfXH jQNEzN"
-                          color="currentColor"
-                          focusable={false}
-                          icon="close"
-                          size="32px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-bwzfXH jQNEzN"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="32px"
-                            icon="close"
-                            size="32px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="32px"
-                          >
-                            <path
-                              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </button>
-                </StyledComponent>
-              </ControlIcon__StyledButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                        key="0"
+                      />
+                    </svg>
+                  </ForwardRef>
+                </Styled(Component)>
+              </button>
+            </ControlIcon__StyledButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -1188,7 +776,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -1277,362 +865,156 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            disabled={false}
+            icon="close"
+            label="close"
+            onClick={[Function]}
+            size="32px"
+            toggled={true}
           >
-            <ForwardRef
+            <ControlIcon__StyledButton
+              aria-label="close"
               disabled={false}
-              icon="close"
-              label="close"
               onClick={[Function]}
-              size="32px"
               toggled={true}
             >
-              <ControlIcon__StyledButton
+              <button
                 aria-label="close"
+                className="ControlIcon__StyledButton-sc-1h83lvi-0 fGqcpk"
                 disabled={false}
                 onClick={[Function]}
-                toggled={true}
               >
-                <StyledComponent
-                  aria-label="close"
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                        "isStatic": false,
-                        "lastClassName": "kvmfID",
-                        "rules": Array [
-                          [Function],
-                        ],
-                      },
-                      "displayName": "ControlIcon__StyledButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "ControlIcon__StyledButton-sc-1h83lvi-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClick={[Function]}
-                  toggled={true}
+                <Styled(Component)
+                  color="currentColor"
+                  icon="close"
+                  size="32px"
+                  title={null}
                 >
-                  <button
-                    aria-label="close"
-                    className="ControlIcon__StyledButton-sc-1h83lvi-0 kvmfID"
-                    disabled={false}
-                    onClick={[Function]}
+                  <ForwardRef
+                    className="sc-AykKD ceXkCz"
+                    color="currentColor"
+                    focusable={false}
+                    icon="close"
+                    size="32px"
+                    title={null}
                   >
-                    <Styled(Component)
+                    <svg
+                      aria-hidden={true}
+                      className="sc-AykKD ceXkCz"
                       color="currentColor"
+                      fill="currentColor"
+                      focusable={false}
+                      height="32px"
                       icon="close"
                       size="32px"
                       title={null}
+                      viewBox="0 0 24 24"
+                      width="32px"
                     >
-                      <StyledComponent
-                        color="currentColor"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "currentColor",
-                              "size": "24px",
-                              "title": null,
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "jQNEzN",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                              "icon": [Function],
-                              "size": [Function],
-                              "title": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": Object {
-                                "className": undefined,
-                                "color": "currentColor",
-                                "focusable": false,
-                                "size": "24px",
-                                "title": null,
-                              },
-                              "propTypes": Object {
-                                "className": [Function],
-                                "color": [Function],
-                                "focusable": [Function],
-                                "icon": [Function],
-                                "size": [Function],
-                                "title": [Function],
-                              },
-                              "render": [Function],
-                            },
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        icon="close"
-                        size="32px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-bwzfXH jQNEzN"
-                          color="currentColor"
-                          focusable={false}
-                          icon="close"
-                          size="32px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-bwzfXH jQNEzN"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="32px"
-                            icon="close"
-                            size="32px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="32px"
-                          >
-                            <path
-                              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </button>
-                </StyledComponent>
-              </ControlIcon__StyledButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                        key="0"
+                      />
+                    </svg>
+                  </ForwardRef>
+                </Styled(Component)>
+              </button>
+            </ControlIcon__StyledButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>

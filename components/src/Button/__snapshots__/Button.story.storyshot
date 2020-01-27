@@ -96,7 +96,7 @@ exports[`Storyshots Buttons As a link 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -185,370 +185,132 @@ exports[`Storyshots Buttons As a link 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <Styled(Component)
+            asLink={true}
+            href="/"
           >
-            <Styled(Component)
+            <ForwardRef
               asLink={true}
+              className="sc-AykKK fmyQGk"
+              disabled={false}
+              fullWidth={false}
               href="/"
+              icon={null}
+              iconSide="right"
+              size="medium"
             >
-              <StyledComponent
-                asLink={true}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
-                      "isStatic": false,
-                      "lastClassName": "gQsTCv",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+              <Button__WrapperButton
+                as="a"
+                className="sc-AykKK fmyQGk"
+                disabled={false}
+                fullWidth={false}
                 href="/"
+                size="medium"
               >
-                <ForwardRef
-                  asLink={true}
-                  className="sc-htoDjs gQsTCv"
+                <a
+                  className="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
                   disabled={false}
-                  fullWidth={false}
                   href="/"
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    as="a"
-                    className="sc-htoDjs gQsTCv"
-                    disabled={false}
-                    fullWidth={false}
-                    href="/"
-                    size="medium"
-                  >
-                    <StyledComponent
-                      as="a"
-                      className="sc-htoDjs gQsTCv"
-                      disabled={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "idlBaC",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={false}
-                      href="/"
-                      size="medium"
-                    >
-                      <a
-                        className="Button__WrapperButton-sc-1omxup2-0 idlBaC sc-htoDjs gQsTCv"
-                        disabled={false}
-                        href="/"
-                        size="medium"
-                      >
-                        Create project
-                      </a>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Create project
+                </a>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -650,7 +412,7 @@ exports[`Storyshots Buttons Button 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -739,267 +501,121 @@ exports[`Storyshots Buttons Button 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon={null}
+            iconSide="right"
+            size="medium"
           >
-            <ForwardRef
-              asLink={false}
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon={null}
-              iconSide="right"
               size="medium"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                 disabled={false}
-                fullWidth={false}
                 size="medium"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "idlBaC",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="medium"
-                >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                    disabled={false}
-                    size="medium"
-                  >
-                    Create project
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                Create project
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -1101,7 +717,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -1190,359 +806,125 @@ exports[`Storyshots Buttons DangerButton 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
-          >
-            <Styled(Component)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-dnqmqq",
-                      "isStatic": false,
-                      "lastClassName": "aNxsf",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-dnqmqq",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          }
+        >
+          <Styled(Component)>
+            <ForwardRef
+              asLink={false}
+              className="sc-fzXfLO fTPgxe"
+              disabled={false}
+              fullWidth={false}
+              icon={null}
+              iconSide="right"
+              size="medium"
+            >
+              <Button__WrapperButton
+                className="sc-fzXfLO fTPgxe"
+                disabled={false}
+                fullWidth={false}
+                size="medium"
               >
-                <ForwardRef
-                  asLink={false}
-                  className="sc-dnqmqq aNxsf"
+                <button
+                  className="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLO fTPgxe"
                   disabled={false}
-                  fullWidth={false}
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    className="sc-dnqmqq aNxsf"
-                    disabled={false}
-                    fullWidth={false}
-                    size="medium"
-                  >
-                    <StyledComponent
-                      className="sc-dnqmqq aNxsf"
-                      disabled={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "idlBaC",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={false}
-                      size="medium"
-                    >
-                      <button
-                        className="Button__WrapperButton-sc-1omxup2-0 idlBaC sc-dnqmqq aNxsf"
-                        disabled={false}
-                        size="medium"
-                      >
-                        Delete project
-                      </button>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Delete project
+                </button>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -1644,7 +1026,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -1733,359 +1115,125 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
-          >
-            <Styled(Component)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
-                      "isStatic": false,
-                      "lastClassName": "gQsTCv",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          }
+        >
+          <Styled(Component)>
+            <ForwardRef
+              asLink={false}
+              className="sc-AykKK fmyQGk"
+              disabled={false}
+              fullWidth={false}
+              icon={null}
+              iconSide="right"
+              size="medium"
+            >
+              <Button__WrapperButton
+                className="sc-AykKK fmyQGk"
+                disabled={false}
+                fullWidth={false}
+                size="medium"
               >
-                <ForwardRef
-                  asLink={false}
-                  className="sc-htoDjs gQsTCv"
+                <button
+                  className="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
                   disabled={false}
-                  fullWidth={false}
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    className="sc-htoDjs gQsTCv"
-                    disabled={false}
-                    fullWidth={false}
-                    size="medium"
-                  >
-                    <StyledComponent
-                      className="sc-htoDjs gQsTCv"
-                      disabled={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "idlBaC",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={false}
-                      size="medium"
-                    >
-                      <button
-                        className="Button__WrapperButton-sc-1omxup2-0 idlBaC sc-htoDjs gQsTCv"
-                        disabled={false}
-                        size="medium"
-                      >
-                        Create project
-                      </button>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Create project
+                </button>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -2187,7 +1335,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -2276,361 +1424,125 @@ exports[`Storyshots Buttons QuietButton 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
-          >
-            <Styled(Component)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-iwsKbI",
-                      "isStatic": false,
-                      "lastClassName": "fcWEmX",
-                      "rules": Array [
-                        "color: #216beb;",
-                        "border-color: transparent;",
-                        "background-color: transparent;",
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-iwsKbI",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          }
+        >
+          <Styled(Component)>
+            <ForwardRef
+              asLink={false}
+              className="sc-fzXfLP eLLQgR"
+              disabled={false}
+              fullWidth={false}
+              icon={null}
+              iconSide="right"
+              size="medium"
+            >
+              <Button__WrapperButton
+                className="sc-fzXfLP eLLQgR"
+                disabled={false}
+                fullWidth={false}
+                size="medium"
               >
-                <ForwardRef
-                  asLink={false}
-                  className="sc-iwsKbI fcWEmX"
+                <button
+                  className="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
                   disabled={false}
-                  fullWidth={false}
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    className="sc-iwsKbI fcWEmX"
-                    disabled={false}
-                    fullWidth={false}
-                    size="medium"
-                  >
-                    <StyledComponent
-                      className="sc-iwsKbI fcWEmX"
-                      disabled={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "idlBaC",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={false}
-                      size="medium"
-                    >
-                      <button
-                        className="Button__WrapperButton-sc-1omxup2-0 idlBaC sc-iwsKbI fcWEmX"
-                        disabled={false}
-                        size="medium"
-                      >
-                        Create project
-                      </button>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Create project
+                </button>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -2732,7 +1644,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -2821,362 +1733,127 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <Styled(Component)
+            disabled={true}
           >
-            <Styled(Component)
+            <ForwardRef
+              asLink={false}
+              className="sc-AykKK dmJkIW"
               disabled={true}
+              fullWidth={false}
+              icon={null}
+              iconSide="right"
+              size="medium"
             >
-              <StyledComponent
+              <Button__WrapperButton
+                className="sc-AykKK dmJkIW"
                 disabled={true}
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
-                      "isStatic": false,
-                      "lastClassName": "iwEFjM",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+                fullWidth={false}
+                size="medium"
               >
-                <ForwardRef
-                  asLink={false}
-                  className="sc-htoDjs iwEFjM"
+                <button
+                  className="Button__WrapperButton-sc-1omxup2-0 hOMAfu sc-AykKK dmJkIW"
                   disabled={true}
-                  fullWidth={false}
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    className="sc-htoDjs iwEFjM"
-                    disabled={true}
-                    fullWidth={false}
-                    size="medium"
-                  >
-                    <StyledComponent
-                      className="sc-htoDjs iwEFjM"
-                      disabled={true}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "kbkonl",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={false}
-                      size="medium"
-                    >
-                      <button
-                        className="Button__WrapperButton-sc-1omxup2-0 kbkonl sc-htoDjs iwEFjM"
-                        disabled={true}
-                        size="medium"
-                      >
-                        Create project
-                      </button>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Create project
+                </button>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -3278,7 +1955,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -3367,362 +2044,127 @@ exports[`Storyshots Buttons Set to full width 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <Styled(Component)
+            fullWidth={true}
           >
-            <Styled(Component)
+            <ForwardRef
+              asLink={false}
+              className="sc-AykKK fmyQGk"
+              disabled={false}
               fullWidth={true}
+              icon={null}
+              iconSide="right"
+              size="medium"
             >
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
-                      "isStatic": false,
-                      "lastClassName": "gQsTCv",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(Component)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "asLink": [Function],
-                      "children": [Function],
-                      "className": [Function],
-                      "disabled": [Function],
-                      "fullWidth": [Function],
-                      "icon": [Function],
-                      "iconSide": [Function],
-                      "m": [Function],
-                      "mb": [Function],
-                      "ml": [Function],
-                      "mr": [Function],
-                      "mt": [Function],
-                      "mx": [Function],
-                      "my": [Function],
-                      "p": [Function],
-                      "pb": [Function],
-                      "pl": [Function],
-                      "pr": [Function],
-                      "pt": [Function],
-                      "px": [Function],
-                      "py": [Function],
-                      "size": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
-                    "target": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "asLink": false,
-                        "className": undefined,
-                        "disabled": false,
-                        "fullWidth": false,
-                        "icon": null,
-                        "iconSide": "right",
-                        "size": "medium",
-                      },
-                      "propTypes": Object {
-                        "asLink": [Function],
-                        "children": [Function],
-                        "className": [Function],
-                        "disabled": [Function],
-                        "fullWidth": [Function],
-                        "icon": [Function],
-                        "iconSide": [Function],
-                        "m": [Function],
-                        "mb": [Function],
-                        "ml": [Function],
-                        "mr": [Function],
-                        "mt": [Function],
-                        "mx": [Function],
-                        "my": [Function],
-                        "p": [Function],
-                        "pb": [Function],
-                        "pl": [Function],
-                        "pr": [Function],
-                        "pt": [Function],
-                        "px": [Function],
-                        "py": [Function],
-                        "size": [Function],
-                      },
-                      "render": [Function],
-                    },
-                    "toString": [Function],
-                    "usesTheme": false,
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+              <Button__WrapperButton
+                className="sc-AykKK fmyQGk"
+                disabled={false}
                 fullWidth={true}
+                size="medium"
               >
-                <ForwardRef
-                  asLink={false}
-                  className="sc-htoDjs gQsTCv"
+                <button
+                  className="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
                   disabled={false}
-                  fullWidth={true}
-                  icon={null}
-                  iconSide="right"
                   size="medium"
                 >
-                  <Button__WrapperButton
-                    className="sc-htoDjs gQsTCv"
-                    disabled={false}
-                    fullWidth={true}
-                    size="medium"
-                  >
-                    <StyledComponent
-                      className="sc-htoDjs gQsTCv"
-                      disabled={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                            "isStatic": false,
-                            "lastClassName": "hJBZtM",
-                            "rules": Array [
-                              [Function],
-                              [Function],
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "displayName": "Button__WrapperButton",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                          "target": "button",
-                          "toString": [Function],
-                          "usesTheme": false,
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      fullWidth={true}
-                      size="medium"
-                    >
-                      <button
-                        className="Button__WrapperButton-sc-1omxup2-0 hJBZtM sc-htoDjs gQsTCv"
-                        disabled={false}
-                        size="medium"
-                      >
-                        Create project
-                      </button>
-                    </StyledComponent>
-                  </Button__WrapperButton>
-                </ForwardRef>
-              </StyledComponent>
-            </Styled(Component)>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                  Create project
+                </button>
+              </Button__WrapperButton>
+            </ForwardRef>
+          </Styled(Component)>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -3824,7 +2266,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -3913,522 +2355,217 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon="add"
+            iconSide="left"
+            size="medium"
           >
-            <ForwardRef
-              asLink={false}
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon="add"
-              iconSide="left"
               size="medium"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                 disabled={false}
-                fullWidth={false}
                 size="medium"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "idlBaC",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="medium"
+                <Styled(Component)
+                  color="currentColor"
+                  icon="add"
+                  mr="half"
+                  size="1.14285714em"
+                  title={null}
                 >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                    disabled={false}
-                    size="medium"
+                  <ForwardRef
+                    className="sc-AykKD hZefax"
+                    color="currentColor"
+                    focusable={false}
+                    icon="add"
+                    mr="half"
+                    size="1.14285714em"
+                    title={null}
                   >
-                    <Styled(Component)
+                    <svg
+                      aria-hidden={true}
+                      className="sc-AykKD hZefax"
                       color="currentColor"
+                      fill="currentColor"
+                      focusable={false}
+                      height="1.14285714em"
                       icon="add"
                       mr="half"
                       size="1.14285714em"
                       title={null}
+                      viewBox="0 0 24 24"
+                      width="1.14285714em"
                     >
-                      <StyledComponent
-                        color="currentColor"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "currentColor",
-                              "size": "24px",
-                              "title": null,
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "cGXVzq",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                              "icon": [Function],
-                              "size": [Function],
-                              "title": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": Object {
-                                "className": undefined,
-                                "color": "currentColor",
-                                "focusable": false,
-                                "size": "24px",
-                                "title": null,
-                              },
-                              "propTypes": Object {
-                                "className": [Function],
-                                "color": [Function],
-                                "focusable": [Function],
-                                "icon": [Function],
-                                "size": [Function],
-                                "title": [Function],
-                              },
-                              "render": [Function],
-                            },
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        icon="add"
-                        mr="half"
-                        size="1.14285714em"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-bwzfXH iSsFqi"
-                          color="currentColor"
-                          focusable={false}
-                          icon="add"
-                          mr="half"
-                          size="1.14285714em"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-bwzfXH iSsFqi"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="1.14285714em"
-                            icon="add"
-                            mr="half"
-                            size="1.14285714em"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="1.14285714em"
-                          >
-                            <path
-                              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </StyledComponent>
-                    </Styled(Component)>
-                    Create project
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-            <ForwardRef
-              asLink={false}
+                      <path
+                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        key="0"
+                      />
+                    </svg>
+                  </ForwardRef>
+                </Styled(Component)>
+                Create project
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon="add"
+            iconSide="right"
+            size="medium"
+          >
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon="add"
-              iconSide="right"
               size="medium"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                 disabled={false}
-                fullWidth={false}
                 size="medium"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "idlBaC",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="medium"
+                Create project
+                <Styled(Component)
+                  color="currentColor"
+                  icon="add"
+                  ml="half"
+                  size="1.14285714em"
+                  title={null}
                 >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                    disabled={false}
-                    size="medium"
+                  <ForwardRef
+                    className="sc-AykKD jZBXwS"
+                    color="currentColor"
+                    focusable={false}
+                    icon="add"
+                    ml="half"
+                    size="1.14285714em"
+                    title={null}
                   >
-                    Create project
-                    <Styled(Component)
+                    <svg
+                      aria-hidden={true}
+                      className="sc-AykKD jZBXwS"
                       color="currentColor"
+                      fill="currentColor"
+                      focusable={false}
+                      height="1.14285714em"
                       icon="add"
                       ml="half"
                       size="1.14285714em"
                       title={null}
+                      viewBox="0 0 24 24"
+                      width="1.14285714em"
                     >
-                      <StyledComponent
-                        color="currentColor"
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "_foldedDefaultProps": Object {
-                              "color": "currentColor",
-                              "size": "24px",
-                              "title": null,
-                            },
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bwzfXH",
-                              "isStatic": false,
-                              "lastClassName": "cGXVzq",
-                              "rules": Array [
-                                [Function],
-                                [Function],
-                                [Function],
-                              ],
-                            },
-                            "displayName": "Styled(Component)",
-                            "foldedComponentIds": Array [],
-                            "propTypes": Object {
-                              "color": [Function],
-                              "icon": [Function],
-                              "size": [Function],
-                              "title": [Function],
-                            },
-                            "render": [Function],
-                            "styledComponentId": "sc-bwzfXH",
-                            "target": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": Object {
-                                "className": undefined,
-                                "color": "currentColor",
-                                "focusable": false,
-                                "size": "24px",
-                                "title": null,
-                              },
-                              "propTypes": Object {
-                                "className": [Function],
-                                "color": [Function],
-                                "focusable": [Function],
-                                "icon": [Function],
-                                "size": [Function],
-                                "title": [Function],
-                              },
-                              "render": [Function],
-                            },
-                            "toString": [Function],
-                            "usesTheme": false,
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        icon="add"
-                        ml="half"
-                        size="1.14285714em"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-bwzfXH cGXVzq"
-                          color="currentColor"
-                          focusable={false}
-                          icon="add"
-                          ml="half"
-                          size="1.14285714em"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-bwzfXH cGXVzq"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="1.14285714em"
-                            icon="add"
-                            ml="half"
-                            size="1.14285714em"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="1.14285714em"
-                          >
-                            <path
-                              d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </StyledComponent>
-                    </Styled(Component)>
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                      <path
+                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        key="0"
+                      />
+                    </svg>
+                  </ForwardRef>
+                </Styled(Component)>
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
@@ -4530,7 +2667,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
       }
     }
   >
-    <GlobalStyleComponent />
+    <Memo(GlobalStyleComponent) />
     <NDSProvider__GlobalStyles
       theme={
         Object {
@@ -4619,377 +2756,165 @@ exports[`Storyshots Buttons With a selected size 1`] = `
         }
       }
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "NDSProvider__GlobalStyles-f28eoq-0",
-              "isStatic": false,
-              "lastClassName": "gWUgWA",
-              "rules": Array [
-                [Function],
-              ],
-            },
-            "displayName": "NDSProvider__GlobalStyles",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "NDSProvider__GlobalStyles-f28eoq-0",
-            "target": "div",
-            "toString": [Function],
-            "usesTheme": false,
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        theme={
-          Object {
-            "borders": Array [],
-            "breakpoints": Object {
-              "extraLarge": "1920px",
-              "extraSmall": "0px",
-              "large": "1360px",
-              "medium": "1024px",
-              "small": "768px",
-            },
-            "colors": Object {
-              "black": "#011e38",
-              "blackBlue": "#122b47",
-              "blue": "#216beb",
-              "darkBlue": "#00438f",
-              "darkGrey": "#434d59",
-              "green": "#008059",
-              "grey": "#c0c8d1",
-              "lightBlue": "#e1ebfa",
-              "lightGreen": "#e9f7f2",
-              "lightGrey": "#e4e7eb",
-              "lightRed": "#fae6ea",
-              "lightYellow": "#fcf5e3",
-              "red": "#cc1439",
-              "white": "#ffffff",
-              "whiteGrey": "#f0f2f5",
-              "yellow": "#ffbb00",
-            },
-            "fontSizes": Object {
-              "large": "20px",
-              "larger": "26px",
-              "largest": "46px",
-              "medium": "16px",
-              "small": "14px",
-              "smaller": "12px",
-            },
-            "fontWeights": Object {
-              "bold": "600",
-              "light": "300",
-              "medium": "500",
-              "normal": "400",
-            },
-            "fonts": Object {
-              "base": "'IBM Plex Sans', sans-serif",
-              "mono": "'IBM Plex Mono', monospace",
-            },
-            "lineHeights": Object {
-              "base": "1.5",
-              "sectionTitle": "1.23076923",
-              "smallTextBase": "1.71428571",
-              "smallTextCompressed": "1.14285714",
-              "smallerText": "1.33333333",
-              "subsectionTitle": "1.2",
-              "title": "1.04347826",
-            },
-            "radii": Object {
-              "circle": "50%",
-              "medium": "4px",
-              "small": "2px",
-            },
-            "shadows": Object {
-              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-            },
-            "space": Object {
-              "half": "4px",
-              "none": "0px",
-              "x1": "8px",
-              "x2": "16px",
-              "x3": "24px",
-              "x4": "32px",
-              "x5": "40px",
-              "x6": "48px",
-              "x8": "64px",
-            },
-            "zIndex": Object {
-              "content": 100,
-              "overlay": 1000,
-              "tabsBar": 210,
-              "tabsScollIndicator": 200,
-            },
-          }
-        }
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
       >
-        <div
-          className="NDSProvider__GlobalStyles-f28eoq-0 gWUgWA"
-        >
-          <ThemeProvider
-            theme={
-              Object {
-                "borders": Array [],
-                "breakpoints": Object {
-                  "extraLarge": "1920px",
-                  "extraSmall": "0px",
-                  "large": "1360px",
-                  "medium": "1024px",
-                  "small": "768px",
-                },
-                "colors": Object {
-                  "black": "#011e38",
-                  "blackBlue": "#122b47",
-                  "blue": "#216beb",
-                  "darkBlue": "#00438f",
-                  "darkGrey": "#434d59",
-                  "green": "#008059",
-                  "grey": "#c0c8d1",
-                  "lightBlue": "#e1ebfa",
-                  "lightGreen": "#e9f7f2",
-                  "lightGrey": "#e4e7eb",
-                  "lightRed": "#fae6ea",
-                  "lightYellow": "#fcf5e3",
-                  "red": "#cc1439",
-                  "white": "#ffffff",
-                  "whiteGrey": "#f0f2f5",
-                  "yellow": "#ffbb00",
-                },
-                "fontSizes": Object {
-                  "large": "20px",
-                  "larger": "26px",
-                  "largest": "46px",
-                  "medium": "16px",
-                  "small": "14px",
-                  "smaller": "12px",
-                },
-                "fontWeights": Object {
-                  "bold": "600",
-                  "light": "300",
-                  "medium": "500",
-                  "normal": "400",
-                },
-                "fonts": Object {
-                  "base": "'IBM Plex Sans', sans-serif",
-                  "mono": "'IBM Plex Mono', monospace",
-                },
-                "lineHeights": Object {
-                  "base": "1.5",
-                  "sectionTitle": "1.23076923",
-                  "smallTextBase": "1.71428571",
-                  "smallTextCompressed": "1.14285714",
-                  "smallerText": "1.33333333",
-                  "subsectionTitle": "1.2",
-                  "title": "1.04347826",
-                },
-                "radii": Object {
-                  "circle": "50%",
-                  "medium": "4px",
-                  "small": "2px",
-                },
-                "shadows": Object {
-                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                },
-                "space": Object {
-                  "half": "4px",
-                  "none": "0px",
-                  "x1": "8px",
-                  "x2": "16px",
-                  "x3": "24px",
-                  "x4": "32px",
-                  "x5": "40px",
-                  "x6": "48px",
-                  "x8": "64px",
-                },
-                "zIndex": Object {
-                  "content": 100,
-                  "overlay": 1000,
-                  "tabsBar": 210,
-                  "tabsScollIndicator": 200,
-                },
-              }
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
             }
+          }
+        >
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon={null}
+            iconSide="right"
+            size="small"
           >
-            <ForwardRef
-              asLink={false}
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon={null}
-              iconSide="right"
               size="small"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 doZlSP"
                 disabled={false}
-                fullWidth={false}
                 size="small"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "jNNftI",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="small"
-                >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 fbmekh"
-                    disabled={false}
-                    size="small"
-                  >
-                    Create project
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-            <ForwardRef
-              asLink={false}
+                Create project
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon={null}
+            iconSide="right"
+            size="medium"
+          >
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon={null}
-              iconSide="right"
               size="medium"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                 disabled={false}
-                fullWidth={false}
                 size="medium"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "jNNftI",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="medium"
-                >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 idlBaC"
-                    disabled={false}
-                    size="medium"
-                  >
-                    Create project
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-            <ForwardRef
-              asLink={false}
+                Create project
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+          <ForwardRef
+            asLink={false}
+            disabled={false}
+            fullWidth={false}
+            icon={null}
+            iconSide="right"
+            size="large"
+          >
+            <Button__WrapperButton
               disabled={false}
               fullWidth={false}
-              icon={null}
-              iconSide="right"
               size="large"
             >
-              <Button__WrapperButton
+              <button
+                className="Button__WrapperButton-sc-1omxup2-0 hlItJn"
                 disabled={false}
-                fullWidth={false}
                 size="large"
               >
-                <StyledComponent
-                  disabled={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "Button__WrapperButton-sc-1omxup2-0",
-                        "isStatic": false,
-                        "lastClassName": "jNNftI",
-                        "rules": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Button__WrapperButton",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "Button__WrapperButton-sc-1omxup2-0",
-                      "target": "button",
-                      "toString": [Function],
-                      "usesTheme": false,
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  fullWidth={false}
-                  size="large"
-                >
-                  <button
-                    className="Button__WrapperButton-sc-1omxup2-0 jNNftI"
-                    disabled={false}
-                    size="large"
-                  >
-                    Create project
-                  </button>
-                </StyledComponent>
-              </Button__WrapperButton>
-            </ForwardRef>
-          </ThemeProvider>
-        </div>
-      </StyledComponent>
+                Create project
+              </button>
+            </Button__WrapperButton>
+          </ForwardRef>
+        </ThemeProvider>
+      </div>
     </NDSProvider__GlobalStyles>
   </NDSProvider>
 </div>
