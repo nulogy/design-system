@@ -156,22 +156,23 @@ export default () => (
     <DocSection>
       <SectionTitle>Handling Errors</SectionTitle>
       <Text>
-        There are two types of validation:{" "}
-        <Link href="/components/header-validation">Header validation</Link> and
-        Inline validation. Examples of inline validation are available on
-        individual form input components.
+        Inline validation can be added to individual form inputs to show a red
+        border and icon.
       </Text>
       <Text>
-        There are three important messages that a good form error message should
-        convey to the user:
+        When a form has returned with errors, add a{" "}
+        <Link href="/components/alerts">Danger Alert</Link> to the top of the
+        form with a summary so that users don't need to scroll around the form
+        to see what needs to be fixed.
       </Text>
-      <List mb="x3">
-        <ListItem>An error has occurred</ListItem>
-        <ListItem>Where the error occurred</ListItem>
-        <ListItem>How to recover from an error</ListItem>
-      </List>
-
-      <SubsectionTitle mb="x3">
+      <Text>
+        Examples of errors can be found in the storybook{" "}
+        <Link href="https://storybook.nulogy.design/?path=/story/demopage--demo-page">
+          Demo Page
+        </Link>
+        .
+      </Text>
+      <SubsectionTitle mb="x3" mt="x3">
         Error message content guidelines
       </SubsectionTitle>
       <List>
@@ -179,6 +180,16 @@ export default () => (
           The best error is one that doesn’t exist so try to prevent errors when
           possible by grouping related fields, writing effective help text and
           clearly communicating input expectations.
+        </ListItem>
+        <ListItem>
+          {" "}
+          There are three important messages that a good form error message
+          should convey to the user:
+          <List mb="x3">
+            <ListItem>An error has occurred</ListItem>
+            <ListItem>Where the error occurred</ListItem>
+            <ListItem>How to recover from an error</ListItem>
+          </List>
         </ListItem>
         <ListItem>
           When writing error text, do not blame the user. e.g “That number is

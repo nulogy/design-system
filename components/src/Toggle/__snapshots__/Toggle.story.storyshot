@@ -401,9 +401,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -412,7 +412,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -428,7 +428,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 toggled={true}
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={false}
                   helpText={null}
                   id={null}
@@ -442,7 +442,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -531,7 +531,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -623,9 +623,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -688,7 +688,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -785,7 +785,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -1457,9 +1457,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -1468,7 +1468,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -1484,7 +1484,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 toggled={false}
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={false}
                   helpText={null}
                   id={null}
@@ -1498,7 +1498,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -1587,7 +1587,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -1679,9 +1679,9 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -1744,7 +1744,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -1841,7 +1841,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -2904,9 +2904,9 @@ exports[`Storyshots Toggle Toggle 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -2915,7 +2915,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -2927,7 +2927,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                 onChange={[Function]}
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={false}
                   helpText={null}
                   id={null}
@@ -2940,7 +2940,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -3029,7 +3029,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -3121,9 +3121,9 @@ exports[`Storyshots Toggle Toggle 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -3186,7 +3186,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -3283,7 +3283,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -3909,9 +3909,9 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -3920,7 +3920,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -3933,7 +3933,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                 onChange={[Function]}
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   defaultToggled={true}
                   disabled={false}
                   helpText={null}
@@ -3947,7 +3947,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -4036,7 +4036,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -4128,9 +4128,9 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -4193,7 +4193,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -4290,7 +4290,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -5281,9 +5281,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -5292,7 +5292,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -5307,7 +5307,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 onText="on"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={true}
                   helpText={null}
                   id={null}
@@ -5320,7 +5320,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -5409,7 +5409,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -5501,9 +5501,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -5566,7 +5566,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -5663,7 +5663,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -6336,9 +6336,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -6347,7 +6347,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -6363,7 +6363,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 onText="on"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   defaultToggled={true}
                   disabled={true}
                   helpText={null}
@@ -6377,7 +6377,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -6466,7 +6466,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -6558,9 +6558,9 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -6623,7 +6623,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -6720,7 +6720,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -7791,9 +7791,9 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -7802,7 +7802,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -7820,7 +7820,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                 requirementText="(Required)"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   defaultToggled={true}
                   disabled={false}
                   helpText="Turns setting on/off"
@@ -7834,7 +7834,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -7923,7 +7923,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -8015,9 +8015,9 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -8080,7 +8080,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -8177,7 +8177,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText="Turns setting on/off"
@@ -8645,9 +8645,9 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                                               [Function],
                                             ],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-cSHVUG",
+                                              "componentId": "sc-jzJRlG",
                                               "isStatic": false,
-                                              "lastClassName": "iacbJP",
+                                              "lastClassName": "gFmhuB",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -8673,7 +8673,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                                               "inline": [Function],
                                             },
                                             "render": [Function],
-                                            "styledComponentId": "sc-cSHVUG",
+                                            "styledComponentId": "sc-jzJRlG",
                                             "target": "p",
                                             "toString": [Function],
                                             "usesTheme": false,
@@ -8687,7 +8687,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                                         m={0}
                                       >
                                         <p
-                                          className="sc-bxivhb sc-cSHVUG iacbJP"
+                                          className="sc-bxivhb sc-jzJRlG gFmhuB"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -9398,9 +9398,9 @@ exports[`Storyshots Toggle With custom id 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -9409,7 +9409,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -9425,7 +9425,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                 onText="on"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={false}
                   helpText={null}
                   id="my-custom-id"
@@ -9438,7 +9438,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -9527,7 +9527,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -9619,9 +9619,9 @@ exports[`Storyshots Toggle With custom id 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -9684,7 +9684,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -9781,7 +9781,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -10847,9 +10847,9 @@ exports[`Storyshots Toggle With long text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -10858,7 +10858,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -10873,7 +10873,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                 onText="this state has a very long text label to explain it's state"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   defaultToggled={true}
                   disabled={false}
                   helpText={null}
@@ -10887,7 +10887,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -10976,7 +10976,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -11068,9 +11068,9 @@ exports[`Storyshots Toggle With long text 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -11133,7 +11133,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -11230,7 +11230,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}
@@ -12294,9 +12294,9 @@ exports[`Storyshots Toggle With text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jWBwVP",
+                      "componentId": "sc-cvbbAY",
                       "isStatic": false,
-                      "lastClassName": "jZWhkA",
+                      "lastClassName": "lmseSz",
                       "rules": Array [
                         "padding: 4px 0;",
                         "align-items: flex-start;",
@@ -12305,7 +12305,7 @@ exports[`Storyshots Toggle With text 1`] = `
                     "displayName": "Styled(BaseToggle)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jWBwVP",
+                    "styledComponentId": "sc-cvbbAY",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -12320,7 +12320,7 @@ exports[`Storyshots Toggle With text 1`] = `
                 onText="on"
               >
                 <BaseToggle
-                  className="sc-jWBwVP jZWhkA"
+                  className="sc-cvbbAY lmseSz"
                   disabled={false}
                   helpText={null}
                   id={null}
@@ -12333,7 +12333,7 @@ exports[`Storyshots Toggle With text 1`] = `
                   value="on"
                 >
                   <Styled(Box)
-                    className="sc-jWBwVP jZWhkA"
+                    className="sc-cvbbAY lmseSz"
                     theme={
                       Object {
                         "borders": Array [],
@@ -12422,7 +12422,7 @@ exports[`Storyshots Toggle With text 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jWBwVP jZWhkA"
+                      className="sc-cvbbAY lmseSz"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -12514,9 +12514,9 @@ exports[`Storyshots Toggle With text 1`] = `
                           },
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-chPdSV",
+                            "componentId": "sc-kAzzGY",
                             "isStatic": false,
-                            "lastClassName": "jfGaMs",
+                            "lastClassName": "lcPXpU",
                             "rules": Array [
                               [Function],
                               [Function],
@@ -12579,7 +12579,7 @@ exports[`Storyshots Toggle With text 1`] = `
                             "width": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-chPdSV",
+                          "styledComponentId": "sc-kAzzGY",
                           "target": "div",
                           "toString": [Function],
                           "usesTheme": false,
@@ -12676,7 +12676,7 @@ exports[`Storyshots Toggle With text 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs sc-jWBwVP jZWhkA"
+                        className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU sc-cvbbAY lmseSz"
                       >
                         <MaybeToggleTitle
                           helpText={null}

@@ -87,6 +87,7 @@ export default () => (
         </ListItem>
         <ListItem> to inform users about upcoming service maintenance</ListItem>
         <ListItem> to warn users about a potential issue</ListItem>
+        <ListItem> a form has returned with errors</ListItem>
       </List>
     </DocSection>
 

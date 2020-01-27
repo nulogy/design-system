@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import {
+  Alert,
   Input,
   Form,
   FormSection,
@@ -9,10 +10,10 @@ import {
   Radio,
   RadioGroup,
   Toggle,
-  HeaderValidation,
   List,
   ListItem,
-  Select
+  Select,
+  Text
 } from "../index";
 
 const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
@@ -85,7 +86,8 @@ storiesOf("Form", module)
   .add("Demo form", () => (
     <>
       <Form title="Job 324400">
-        <HeaderValidation errorMessage="Instructions and description of an error" title="Error has occured ...">
+        <Alert type="danger" title="Errors have occured ...">
+          <Text>Instructions and description of errors</Text>
           <List compact>
             <ListItem>Affected field</ListItem>
             <ListItem>Unmet criteria</ListItem>
@@ -93,7 +95,7 @@ storiesOf("Form", module)
               <a href="https://nulogy.design/">Affected field</a>
             </ListItem>
           </List>
-        </HeaderValidation>
+        </Alert>
         <FormSection title="Job Information">
           <Input id="project" labelText="Project" placeholder="Project 128703" />
           <Input

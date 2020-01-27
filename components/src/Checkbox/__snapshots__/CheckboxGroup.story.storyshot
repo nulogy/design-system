@@ -398,15 +398,15 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -419,7 +419,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                 name="settingSelection"
               >
                 <BaseCheckboxGroup
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   errorList={null}
                   errorMessage={null}
                   helpText={null}
@@ -428,11 +428,11 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                   requirementText={null}
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={false}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -466,7 +466,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                       hasHelpText={false}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -501,9 +501,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -515,7 +515,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -529,7 +529,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                             value="a"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -539,7 +539,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -628,7 +628,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -879,7 +879,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -918,7 +918,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -931,7 +931,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -968,7 +968,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -1125,9 +1125,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -1139,7 +1139,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1153,7 +1153,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                             value="b"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -1163,7 +1163,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -1252,7 +1252,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1503,7 +1503,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -1542,7 +1542,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -1555,7 +1555,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -1592,7 +1592,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -1749,9 +1749,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -1763,7 +1763,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -1777,7 +1777,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                             value="c"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -1787,7 +1787,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -1876,7 +1876,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2127,7 +2127,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -2166,7 +2166,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -2179,7 +2179,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -2216,7 +2216,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -2789,15 +2789,15 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -2813,7 +2813,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                 requirementText="(Required)"
               >
                 <BaseCheckboxGroup
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   defaultValue={
                     Array [
                       "a",
@@ -2828,11 +2828,11 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                   requirementText="(Required)"
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={true}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -2866,7 +2866,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                       hasHelpText={true}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -2990,9 +2990,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                     [Function],
                                   ],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-cSHVUG",
+                                    "componentId": "sc-jzJRlG",
                                     "isStatic": false,
-                                    "lastClassName": "iacbJP",
+                                    "lastClassName": "gFmhuB",
                                     "rules": Array [
                                       [Function],
                                       [Function],
@@ -3018,7 +3018,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                     "inline": [Function],
                                   },
                                   "render": [Function],
-                                  "styledComponentId": "sc-cSHVUG",
+                                  "styledComponentId": "sc-jzJRlG",
                                   "target": "p",
                                   "toString": [Function],
                                   "usesTheme": false,
@@ -3032,7 +3032,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                               m={0}
                             >
                               <p
-                                className="sc-bxivhb sc-cSHVUG iacbJP"
+                                className="sc-bxivhb sc-jzJRlG gFmhuB"
                                 color="currentColor"
                                 disabled={false}
                                 fontSize="16px"
@@ -3059,9 +3059,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -3073,7 +3073,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3088,7 +3088,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                             value="a"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={true}
                               disabled={false}
                               error={false}
@@ -3099,7 +3099,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -3188,7 +3188,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -3439,7 +3439,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -3478,7 +3478,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={true}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={true}
                                             disabled={false}
                                             error={false}
@@ -3492,7 +3492,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={true}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={true}
                                               disabled={false}
                                               error={false}
@@ -3530,7 +3530,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={true}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 defaultChecked={true}
                                                 disabled={false}
                                                 id={null}
@@ -3691,9 +3691,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -3705,7 +3705,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3720,7 +3720,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                             value="b"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={false}
@@ -3731,7 +3731,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -3820,7 +3820,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4071,7 +4071,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -4110,7 +4110,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={true}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={false}
@@ -4124,7 +4124,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={true}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={false}
@@ -4162,7 +4162,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={true}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}
@@ -4323,9 +4323,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -4337,7 +4337,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -4352,7 +4352,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                             value="c"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={false}
@@ -4363,7 +4363,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -4452,7 +4452,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4703,7 +4703,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -4742,7 +4742,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={true}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={false}
@@ -4756,7 +4756,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={true}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={false}
@@ -4794,7 +4794,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={true}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}
@@ -5366,15 +5366,15 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -5393,7 +5393,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                       "a",
                     ]
                   }
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   errorList={null}
                   errorMessage={null}
                   helpText={null}
@@ -5403,11 +5403,11 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                   requirementText={null}
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={false}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -5441,7 +5441,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                       hasHelpText={false}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -5479,9 +5479,9 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -5493,7 +5493,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -5509,7 +5509,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                           >
                             <BaseCheckbox
                               checked={true}
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -5520,7 +5520,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -5609,7 +5609,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -5860,7 +5860,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -5900,7 +5900,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                             aria-invalid={false}
                                             aria-required={false}
                                             checked={true}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -5915,7 +5915,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                               aria-invalid={false}
                                               aria-required={false}
                                               checked={true}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -5954,7 +5954,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                                 aria-invalid={false}
                                                 aria-required={false}
                                                 checked={true}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -6118,9 +6118,9 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -6132,7 +6132,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -6148,7 +6148,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                           >
                             <BaseCheckbox
                               checked={false}
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -6159,7 +6159,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -6248,7 +6248,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -6499,7 +6499,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -6539,7 +6539,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                             aria-invalid={false}
                                             aria-required={false}
                                             checked={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -6554,7 +6554,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                               aria-invalid={false}
                                               aria-required={false}
                                               checked={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -6593,7 +6593,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                                 aria-invalid={false}
                                                 aria-required={false}
                                                 checked={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -6757,9 +6757,9 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -6771,7 +6771,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -6787,7 +6787,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                           >
                             <BaseCheckbox
                               checked={false}
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               disabled={false}
                               error={false}
                               id={null}
@@ -6798,7 +6798,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -6887,7 +6887,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -7138,7 +7138,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -7178,7 +7178,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                             aria-invalid={false}
                                             aria-required={false}
                                             checked={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             disabled={false}
                                             error={false}
                                             id={null}
@@ -7193,7 +7193,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                               aria-invalid={false}
                                               aria-required={false}
                                               checked={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               disabled={false}
                                               error={false}
                                               forwardedComponent={
@@ -7232,7 +7232,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                                                 aria-invalid={false}
                                                 aria-required={false}
                                                 checked={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 hawbaw sc-kkGfuU fCpvZH"
                                                 disabled={false}
                                                 id={null}
                                                 name="settingSelection"
@@ -7808,15 +7808,15 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -7829,7 +7829,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                 name="settingSelection"
               >
                 <BaseCheckboxGroup
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   defaultValue={
                     Array [
                       "a",
@@ -7844,11 +7844,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                   requirementText={null}
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={false}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -7882,7 +7882,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                       hasHelpText={false}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -7921,9 +7921,9 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -7935,7 +7935,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -7949,7 +7949,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                             value="a"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={true}
                               disabled={true}
                               error={false}
@@ -7960,7 +7960,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -8049,7 +8049,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -8300,7 +8300,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={true}
@@ -8339,7 +8339,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={true}
                                             disabled={true}
                                             error={false}
@@ -8353,7 +8353,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={true}
                                               disabled={true}
                                               error={false}
@@ -8391,7 +8391,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-kkGfuU fCpvZH"
                                                 defaultChecked={true}
                                                 disabled={true}
                                                 id={null}
@@ -8553,9 +8553,9 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -8567,7 +8567,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -8581,7 +8581,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                             value="b"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={true}
                               error={false}
@@ -8592,7 +8592,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -8681,7 +8681,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -8932,7 +8932,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={true}
@@ -8971,7 +8971,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={true}
                                             error={false}
@@ -8985,7 +8985,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={true}
                                               error={false}
@@ -9023,7 +9023,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={true}
                                                 id={null}
@@ -9185,9 +9185,9 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -9199,7 +9199,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -9213,7 +9213,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                             value="c"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={true}
                               error={false}
@@ -9224,7 +9224,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -9313,7 +9313,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -9564,7 +9564,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={true}
@@ -9603,7 +9603,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={false}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={true}
                                             error={false}
@@ -9617,7 +9617,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                             <StyledComponent
                                               aria-invalid={false}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={true}
                                               error={false}
@@ -9655,7 +9655,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                               <input
                                                 aria-invalid={false}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 duUKvx sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={true}
                                                 id={null}
@@ -10240,15 +10240,15 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -10261,7 +10261,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                 name="settingSelection"
               >
                 <BaseCheckboxGroup
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   defaultValue={
                     Array [
                       "a",
@@ -10280,11 +10280,11 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                   requirementText={null}
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={false}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -10318,7 +10318,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                       hasHelpText={false}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -10355,9 +10355,9 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -10369,7 +10369,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -10383,7 +10383,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                             value="a"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={true}
                               disabled={false}
                               error={true}
@@ -10394,7 +10394,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -10483,7 +10483,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -10734,7 +10734,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -10773,7 +10773,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={true}
                                             disabled={false}
                                             error={true}
@@ -10787,7 +10787,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={true}
                                               disabled={false}
                                               error={true}
@@ -10825,7 +10825,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={true}
                                                 disabled={false}
                                                 id={null}
@@ -10985,9 +10985,9 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -10999,7 +10999,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -11013,7 +11013,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                             value="b"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={true}
@@ -11024,7 +11024,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -11113,7 +11113,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -11364,7 +11364,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -11403,7 +11403,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={true}
@@ -11417,7 +11417,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={true}
@@ -11455,7 +11455,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}
@@ -11615,9 +11615,9 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -11629,7 +11629,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -11643,7 +11643,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                             value="c"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={true}
@@ -11654,7 +11654,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -11743,7 +11743,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -11994,7 +11994,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -12033,7 +12033,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={true}
@@ -12047,7 +12047,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={true}
@@ -12085,7 +12085,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}
@@ -13411,15 +13411,15 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-hSdWYo",
+                      "componentId": "sc-iAyFgw",
                       "isStatic": false,
-                      "lastClassName": "bIQQAp",
+                      "lastClassName": "gPlgsX",
                       "rules": Array [],
                     },
                     "displayName": "Styled(BaseCheckboxGroup)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-hSdWYo",
+                    "styledComponentId": "sc-iAyFgw",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -13432,7 +13432,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                 name="settingSelection"
               >
                 <BaseCheckboxGroup
-                  className="sc-hSdWYo bIQQAp"
+                  className="sc-iAyFgw gPlgsX"
                   defaultValue={
                     Array [
                       "a",
@@ -13446,11 +13446,11 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                   requirementText={null}
                 >
                   <Fieldset
-                    className="sc-hSdWYo bIQQAp"
+                    className="sc-iAyFgw gPlgsX"
                     hasHelpText={false}
                   >
                     <StyledComponent
-                      className="sc-hSdWYo bIQQAp"
+                      className="sc-iAyFgw gPlgsX"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -13484,7 +13484,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                       hasHelpText={false}
                     >
                       <fieldset
-                        className="Fieldset-sc-9aoml1-0 focAvo sc-hSdWYo bIQQAp"
+                        className="Fieldset-sc-9aoml1-0 focAvo sc-iAyFgw gPlgsX"
                       >
                         <legend
                           style={
@@ -13521,9 +13521,9 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -13535,7 +13535,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -13549,7 +13549,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                             value="a"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={true}
                               disabled={false}
                               error={true}
@@ -13560,7 +13560,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                               value="a"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -13649,7 +13649,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -13900,7 +13900,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -13939,7 +13939,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={true}
                                             disabled={false}
                                             error={true}
@@ -13953,7 +13953,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={true}
                                               disabled={false}
                                               error={true}
@@ -13991,7 +13991,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={true}
                                                 disabled={false}
                                                 id={null}
@@ -14151,9 +14151,9 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -14165,7 +14165,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -14179,7 +14179,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                             value="b"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={true}
@@ -14190,7 +14190,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                               value="b"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -14279,7 +14279,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -14530,7 +14530,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -14569,7 +14569,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={true}
@@ -14583,7 +14583,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={true}
@@ -14621,7 +14621,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}
@@ -14781,9 +14781,9 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-iAyFgw",
+                                  "componentId": "sc-kkGfuU",
                                   "isStatic": false,
-                                  "lastClassName": "kDTxQF",
+                                  "lastClassName": "fCpvZH",
                                   "rules": Array [
                                     "padding: 4px 0;",
                                     "& .sc-bxivhb {",
@@ -14795,7 +14795,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 "displayName": "Styled(BaseCheckbox)",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-iAyFgw",
+                                "styledComponentId": "sc-kkGfuU",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -14809,7 +14809,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                             value="c"
                           >
                             <BaseCheckbox
-                              className="sc-iAyFgw kDTxQF"
+                              className="sc-kkGfuU fCpvZH"
                               defaultChecked={false}
                               disabled={false}
                               error={true}
@@ -14820,7 +14820,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                               value="c"
                             >
                               <Box
-                                className="sc-iAyFgw kDTxQF"
+                                className="sc-kkGfuU fCpvZH"
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -14909,7 +14909,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 }
                               >
                                 <StyledComponent
-                                  className="sc-iAyFgw kDTxQF"
+                                  className="sc-kkGfuU fCpvZH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -15160,7 +15160,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 dusExj sc-iAyFgw kDTxQF"
+                                    className="Box-sc-1qu1edy-0 dusExj sc-kkGfuU fCpvZH"
                                   >
                                     <ClickInputLabel
                                       disabled={false}
@@ -15199,7 +15199,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                           <Checkbox__CheckboxInput
                                             aria-invalid={true}
                                             aria-required={false}
-                                            className="sc-iAyFgw kDTxQF"
+                                            className="sc-kkGfuU fCpvZH"
                                             defaultChecked={false}
                                             disabled={false}
                                             error={true}
@@ -15213,7 +15213,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                             <StyledComponent
                                               aria-invalid={true}
                                               aria-required={false}
-                                              className="sc-iAyFgw kDTxQF"
+                                              className="sc-kkGfuU fCpvZH"
                                               defaultChecked={false}
                                               disabled={false}
                                               error={true}
@@ -15251,7 +15251,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                               <input
                                                 aria-invalid={true}
                                                 aria-required={false}
-                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-iAyFgw kDTxQF"
+                                                className="Checkbox__CheckboxInput-sc-1nm58f1-1 jfshdc sc-kkGfuU fCpvZH"
                                                 defaultChecked={false}
                                                 disabled={false}
                                                 id={null}

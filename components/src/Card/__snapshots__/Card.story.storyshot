@@ -395,12 +395,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jDwBTQ",
+                      "componentId": "sc-jAaTju",
                       "isStatic": false,
-                      "lastClassName": "jhUXbw",
+                      "lastClassName": "hUAeBC",
                       "rules": Array [
                         [Function],
-                        ".sc-cMljjf, .sc-jAaTju {",
+                        ".sc-brqgnP, .sc-cMljjf {",
                         "margin-bottom: 8px;",
                         "&:last-child {",
                         "margin-bottom: 0px;",
@@ -411,7 +411,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                     "displayName": "Styled(UnstyledCardSet)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jDwBTQ",
+                    "styledComponentId": "sc-jAaTju",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -422,10 +422,10 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                 forwardedRef={null}
               >
                 <UnstyledCardSet
-                  className="sc-jDwBTQ jhUXbw"
+                  className="sc-jAaTju hUAeBC"
                 >
                   <Box
-                    className="sc-jDwBTQ jhUXbw"
+                    className="sc-jAaTju hUAeBC"
                     theme={
                       Object {
                         "borders": Array [],
@@ -514,7 +514,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jDwBTQ jhUXbw"
+                      className="sc-jAaTju hUAeBC"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -765,7 +765,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-jDwBTQ jhUXbw"
+                        className="Box-sc-1qu1edy-0 dusExj sc-jAaTju hUAeBC"
                       >
                         <Styled(Component)>
                           <StyledComponent
@@ -777,9 +777,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jAaTju",
+                                  "componentId": "sc-cMljjf",
                                   "isStatic": false,
-                                  "lastClassName": "bHMqjD",
+                                  "lastClassName": "ebtaFH",
                                   "rules": Array [
                                     [Function],
                                     "&:hover {",
@@ -804,7 +804,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   "children": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-jAaTju",
+                                "styledComponentId": "sc-cMljjf",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -815,13 +815,13 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             forwardedRef={null}
                           >
                             <Component
-                              className="sc-jAaTju bHMqjD"
+                              className="sc-cMljjf ebtaFH"
                             >
                               <Styled(Box)
                                 bg="whiteGrey"
                                 borderRadius="medium"
                                 boxShadow="small"
-                                className="sc-jAaTju bHMqjD"
+                                className="sc-cMljjf ebtaFH"
                                 p="x2"
                                 position="relative"
                                 theme={
@@ -915,7 +915,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   bg="whiteGrey"
                                   borderRadius="medium"
                                   boxShadow="small"
-                                  className="sc-jAaTju bHMqjD"
+                                  className="sc-cMljjf ebtaFH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1013,9 +1013,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-cMljjf",
+                                        "componentId": "sc-brqgnP",
                                         "isStatic": false,
-                                        "lastClassName": "fyyxUU",
+                                        "lastClassName": "dYviML",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -1044,7 +1044,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                         "children": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-cMljjf",
+                                      "styledComponentId": "sc-brqgnP",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -1143,7 +1143,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU sc-jAaTju bHMqjD"
+                                    className="Box-sc-1qu1edy-0 sc-brqgnP dYviML sc-cMljjf ebtaFH"
                                   >
                                     <Styled(styled.h3)
                                       fontSize="20px"
@@ -3114,9 +3114,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jAaTju",
+                                  "componentId": "sc-cMljjf",
                                   "isStatic": false,
-                                  "lastClassName": "bHMqjD",
+                                  "lastClassName": "ebtaFH",
                                   "rules": Array [
                                     [Function],
                                     "&:hover {",
@@ -3141,7 +3141,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   "children": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-jAaTju",
+                                "styledComponentId": "sc-cMljjf",
                                 "target": [Function],
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -3152,13 +3152,13 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             forwardedRef={null}
                           >
                             <Component
-                              className="sc-jAaTju bHMqjD"
+                              className="sc-cMljjf ebtaFH"
                             >
                               <Styled(Box)
                                 bg="whiteGrey"
                                 borderRadius="medium"
                                 boxShadow="small"
-                                className="sc-jAaTju bHMqjD"
+                                className="sc-cMljjf ebtaFH"
                                 p="x2"
                                 position="relative"
                                 theme={
@@ -3252,7 +3252,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   bg="whiteGrey"
                                   borderRadius="medium"
                                   boxShadow="small"
-                                  className="sc-jAaTju bHMqjD"
+                                  className="sc-cMljjf ebtaFH"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -3350,9 +3350,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                       },
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-cMljjf",
+                                        "componentId": "sc-brqgnP",
                                         "isStatic": false,
-                                        "lastClassName": "fyyxUU",
+                                        "lastClassName": "dYviML",
                                         "rules": Array [
                                           [Function],
                                           [Function],
@@ -3381,7 +3381,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                         "children": [Function],
                                       },
                                       "render": [Function],
-                                      "styledComponentId": "sc-cMljjf",
+                                      "styledComponentId": "sc-brqgnP",
                                       "target": "div",
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -3480,7 +3480,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU sc-jAaTju bHMqjD"
+                                    className="Box-sc-1qu1edy-0 sc-brqgnP dYviML sc-cMljjf ebtaFH"
                                   >
                                     <Styled(styled.h3)
                                       fontSize="20px"
@@ -6037,9 +6037,9 @@ exports[`Storyshots Card Card 1`] = `
                     },
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-cMljjf",
+                      "componentId": "sc-brqgnP",
                       "isStatic": false,
-                      "lastClassName": "fyyxUU",
+                      "lastClassName": "dYviML",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -6068,7 +6068,7 @@ exports[`Storyshots Card Card 1`] = `
                       "children": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-cMljjf",
+                    "styledComponentId": "sc-brqgnP",
                     "target": "div",
                     "toString": [Function],
                     "usesTheme": false,
@@ -6167,7 +6167,7 @@ exports[`Storyshots Card Card 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU"
+                  className="Box-sc-1qu1edy-0 sc-brqgnP dYviML"
                 >
                   I am a card.
                 </div>
@@ -6576,12 +6576,12 @@ exports[`Storyshots Card Cardset 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-jDwBTQ",
+                      "componentId": "sc-jAaTju",
                       "isStatic": false,
-                      "lastClassName": "jhUXbw",
+                      "lastClassName": "hUAeBC",
                       "rules": Array [
                         [Function],
-                        ".sc-cMljjf, .sc-jAaTju {",
+                        ".sc-brqgnP, .sc-cMljjf {",
                         "margin-bottom: 8px;",
                         "&:last-child {",
                         "margin-bottom: 0px;",
@@ -6592,7 +6592,7 @@ exports[`Storyshots Card Cardset 1`] = `
                     "displayName": "Styled(UnstyledCardSet)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-jDwBTQ",
+                    "styledComponentId": "sc-jAaTju",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -6603,10 +6603,10 @@ exports[`Storyshots Card Cardset 1`] = `
                 forwardedRef={null}
               >
                 <UnstyledCardSet
-                  className="sc-jDwBTQ jhUXbw"
+                  className="sc-jAaTju hUAeBC"
                 >
                   <Box
-                    className="sc-jDwBTQ jhUXbw"
+                    className="sc-jAaTju hUAeBC"
                     theme={
                       Object {
                         "borders": Array [],
@@ -6695,7 +6695,7 @@ exports[`Storyshots Card Cardset 1`] = `
                     }
                   >
                     <StyledComponent
-                      className="sc-jDwBTQ jhUXbw"
+                      className="sc-jAaTju hUAeBC"
                       forwardedComponent={
                         Object {
                           "$$typeof": Symbol(react.forward_ref),
@@ -6946,7 +6946,7 @@ exports[`Storyshots Card Cardset 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 dusExj sc-jDwBTQ jhUXbw"
+                        className="Box-sc-1qu1edy-0 dusExj sc-jAaTju hUAeBC"
                       >
                         <Styled(Box)
                           bg="whiteGrey"
@@ -7142,9 +7142,9 @@ exports[`Storyshots Card Cardset 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cMljjf",
+                                  "componentId": "sc-brqgnP",
                                   "isStatic": false,
-                                  "lastClassName": "fyyxUU",
+                                  "lastClassName": "dYviML",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -7173,7 +7173,7 @@ exports[`Storyshots Card Cardset 1`] = `
                                   "children": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-cMljjf",
+                                "styledComponentId": "sc-brqgnP",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -7272,7 +7272,7 @@ exports[`Storyshots Card Cardset 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU"
+                              className="Box-sc-1qu1edy-0 sc-brqgnP dYviML"
                             >
                               I am a 1st card in a cardset.
                             </div>
@@ -7472,9 +7472,9 @@ exports[`Storyshots Card Cardset 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cMljjf",
+                                  "componentId": "sc-brqgnP",
                                   "isStatic": false,
-                                  "lastClassName": "fyyxUU",
+                                  "lastClassName": "dYviML",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -7503,7 +7503,7 @@ exports[`Storyshots Card Cardset 1`] = `
                                   "children": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-cMljjf",
+                                "styledComponentId": "sc-brqgnP",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -7602,7 +7602,7 @@ exports[`Storyshots Card Cardset 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU"
+                              className="Box-sc-1qu1edy-0 sc-brqgnP dYviML"
                             >
                               I am a 2nd card in a cardset.
                             </div>
@@ -7802,9 +7802,9 @@ exports[`Storyshots Card Cardset 1`] = `
                                 },
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cMljjf",
+                                  "componentId": "sc-brqgnP",
                                   "isStatic": false,
-                                  "lastClassName": "fyyxUU",
+                                  "lastClassName": "dYviML",
                                   "rules": Array [
                                     [Function],
                                     [Function],
@@ -7833,7 +7833,7 @@ exports[`Storyshots Card Cardset 1`] = `
                                   "children": [Function],
                                 },
                                 "render": [Function],
-                                "styledComponentId": "sc-cMljjf",
+                                "styledComponentId": "sc-brqgnP",
                                 "target": "div",
                                 "toString": [Function],
                                 "usesTheme": false,
@@ -7932,7 +7932,7 @@ exports[`Storyshots Card Cardset 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-cMljjf fyyxUU"
+                              className="Box-sc-1qu1edy-0 sc-brqgnP dYviML"
                             >
                               I am a 3rd card in a cardset.
                             </div>
@@ -8536,9 +8536,9 @@ exports[`Storyshots Card Custom card 1`] = `
                     },
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-cMljjf",
+                      "componentId": "sc-brqgnP",
                       "isStatic": false,
-                      "lastClassName": "dTykom",
+                      "lastClassName": "bWzCkB",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -8567,7 +8567,7 @@ exports[`Storyshots Card Custom card 1`] = `
                       "children": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-cMljjf",
+                    "styledComponentId": "sc-brqgnP",
                     "target": "div",
                     "toString": [Function],
                     "usesTheme": false,
@@ -8666,7 +8666,7 @@ exports[`Storyshots Card Custom card 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-cMljjf dTykom"
+                  className="Box-sc-1qu1edy-0 sc-brqgnP bWzCkB"
                   color="white"
                 >
                   I am a custom card.

@@ -413,15 +413,15 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-kAzzGY",
+                        "componentId": "sc-cSHVUG",
                         "isStatic": false,
-                        "lastClassName": "jHprQs",
+                        "lastClassName": "CAuLq",
                         "rules": Array [],
                       },
                       "displayName": "Styled(BaseFieldLabel)",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-kAzzGY",
+                      "styledComponentId": "sc-cSHVUG",
                       "target": [Function],
                       "toString": [Function],
                       "usesTheme": false,
@@ -435,13 +435,13 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                   requirementText={null}
                 >
                   <BaseFieldLabel
-                    className="sc-kAzzGY jHprQs"
+                    className="sc-cSHVUG CAuLq"
                     helpText={null}
                     labelText="Range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
-                      className="sc-kAzzGY jHprQs"
+                      className="sc-cSHVUG CAuLq"
                       color="#011e38"
                       style={
                         Object {
@@ -450,7 +450,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                       }
                     >
                       <StyledComponent
-                        className="sc-kAzzGY jHprQs"
+                        className="sc-cSHVUG CAuLq"
                         color="#011e38"
                         forwardedComponent={
                           Object {
@@ -490,7 +490,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                         }
                       >
                         <label
-                          className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                          className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                           color="#011e38"
                           style={
                             Object {

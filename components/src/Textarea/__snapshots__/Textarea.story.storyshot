@@ -579,9 +579,9 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -644,7 +644,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -741,7 +741,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -759,15 +759,15 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -781,13 +781,13 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -796,7 +796,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -836,7 +836,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -1883,9 +1883,9 @@ exports[`Storyshots Textarea Textarea 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -1948,7 +1948,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -2045,7 +2045,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -2063,15 +2063,15 @@ exports[`Storyshots Textarea Textarea 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -2085,13 +2085,13 @@ exports[`Storyshots Textarea Textarea 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -2100,7 +2100,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -2140,7 +2140,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -3194,9 +3194,9 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -3259,7 +3259,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -3356,7 +3356,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText="here's some help..."
@@ -3374,15 +3374,15 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -3396,13 +3396,13 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                           requirementText="(Required)"
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText="here's some help..."
                             labelText="Label"
                             requirementText="(Required)"
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -3411,7 +3411,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -3451,7 +3451,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -3916,9 +3916,9 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                                     [Function],
                                                   ],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-cSHVUG",
+                                                    "componentId": "sc-jzJRlG",
                                                     "isStatic": false,
-                                                    "lastClassName": "iacbJP",
+                                                    "lastClassName": "gFmhuB",
                                                     "rules": Array [
                                                       [Function],
                                                       [Function],
@@ -3944,7 +3944,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                                     "inline": [Function],
                                                   },
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-cSHVUG",
+                                                  "styledComponentId": "sc-jzJRlG",
                                                   "target": "p",
                                                   "toString": [Function],
                                                   "usesTheme": false,
@@ -3958,7 +3958,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                               m={0}
                                             >
                                               <p
-                                                className="sc-bxivhb sc-cSHVUG iacbJP"
+                                                className="sc-bxivhb sc-jzJRlG gFmhuB"
                                                 color="currentColor"
                                                 disabled={false}
                                                 fontSize="16px"
@@ -4662,9 +4662,9 @@ exports[`Storyshots Textarea With custom id 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -4727,7 +4727,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -4824,7 +4824,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -4842,15 +4842,15 @@ exports[`Storyshots Textarea With custom id 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -4864,13 +4864,13 @@ exports[`Storyshots Textarea With custom id 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -4879,7 +4879,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -4919,7 +4919,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -5972,9 +5972,9 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -6037,7 +6037,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -6134,7 +6134,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -6152,15 +6152,15 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -6174,13 +6174,13 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -6189,7 +6189,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -6229,7 +6229,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -7098,9 +7098,9 @@ exports[`Storyshots Textarea set to required 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
+                      "componentId": "sc-kGXeez",
                       "isStatic": false,
-                      "lastClassName": "czabIn",
+                      "lastClassName": "gxGkyt",
                       "rules": Array [
                         [Function],
                         [Function],
@@ -7109,7 +7109,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                     "displayName": "Styled(BaseForm)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
+                    "styledComponentId": "sc-kGXeez",
                     "target": [Function],
                     "toString": [Function],
                     "usesTheme": false,
@@ -7121,11 +7121,11 @@ exports[`Storyshots Textarea set to required 1`] = `
                 title="Required field example"
               >
                 <BaseForm
-                  className="sc-kpOJdX czabIn"
+                  className="sc-kGXeez gxGkyt"
                   title="Required field example"
                 >
                   <form
-                    className="sc-kpOJdX czabIn"
+                    className="sc-kGXeez gxGkyt"
                   >
                     <styled.h2
                       fontSize="26px"
@@ -7639,9 +7639,9 @@ exports[`Storyshots Textarea set to required 1`] = `
                               },
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-chPdSV",
+                                "componentId": "sc-kAzzGY",
                                 "isStatic": false,
-                                "lastClassName": "jfGaMs",
+                                "lastClassName": "lcPXpU",
                                 "rules": Array [
                                   [Function],
                                   [Function],
@@ -7704,7 +7704,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                                 "width": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-chPdSV",
+                              "styledComponentId": "sc-kAzzGY",
                               "target": "div",
                               "toString": [Function],
                               "usesTheme": false,
@@ -7801,7 +7801,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                            className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                           >
                             <MaybeFieldLabel
                               helpText={null}
@@ -7819,15 +7819,15 @@ exports[`Storyshots Textarea set to required 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kAzzGY",
+                                        "componentId": "sc-cSHVUG",
                                         "isStatic": false,
-                                        "lastClassName": "jHprQs",
+                                        "lastClassName": "CAuLq",
                                         "rules": Array [],
                                       },
                                       "displayName": "Styled(BaseFieldLabel)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kAzzGY",
+                                      "styledComponentId": "sc-cSHVUG",
                                       "target": [Function],
                                       "toString": [Function],
                                       "usesTheme": false,
@@ -7841,13 +7841,13 @@ exports[`Storyshots Textarea set to required 1`] = `
                                   requirementText={null}
                                 >
                                   <BaseFieldLabel
-                                    className="sc-kAzzGY jHprQs"
+                                    className="sc-cSHVUG CAuLq"
                                     helpText={null}
                                     labelText="Label"
                                     requirementText={null}
                                   >
                                     <FieldLabel__Label
-                                      className="sc-kAzzGY jHprQs"
+                                      className="sc-cSHVUG CAuLq"
                                       color="#011e38"
                                       style={
                                         Object {
@@ -7856,7 +7856,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                                       }
                                     >
                                       <StyledComponent
-                                        className="sc-kAzzGY jHprQs"
+                                        className="sc-cSHVUG CAuLq"
                                         color="#011e38"
                                         forwardedComponent={
                                           Object {
@@ -7896,7 +7896,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                                         }
                                       >
                                         <label
-                                          className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                          className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                           color="#011e38"
                                           style={
                                             Object {
@@ -9104,9 +9104,9 @@ exports[`Storyshots Textarea with error list 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -9169,7 +9169,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -9266,7 +9266,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -9284,15 +9284,15 @@ exports[`Storyshots Textarea with error list 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -9306,13 +9306,13 @@ exports[`Storyshots Textarea with error list 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -9321,7 +9321,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -9361,7 +9361,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
@@ -11174,9 +11174,9 @@ exports[`Storyshots Textarea with error message 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-chPdSV",
+                        "componentId": "sc-kAzzGY",
                         "isStatic": false,
-                        "lastClassName": "jfGaMs",
+                        "lastClassName": "lcPXpU",
                         "rules": Array [
                           [Function],
                           [Function],
@@ -11239,7 +11239,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                         "width": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-chPdSV",
+                      "styledComponentId": "sc-kAzzGY",
                       "target": "div",
                       "toString": [Function],
                       "usesTheme": false,
@@ -11336,7 +11336,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-chPdSV jfGaMs"
+                    className="Box-sc-1qu1edy-0 sc-kAzzGY lcPXpU"
                   >
                     <MaybeFieldLabel
                       helpText={null}
@@ -11354,15 +11354,15 @@ exports[`Storyshots Textarea with error message 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-kAzzGY",
+                                "componentId": "sc-cSHVUG",
                                 "isStatic": false,
-                                "lastClassName": "jHprQs",
+                                "lastClassName": "CAuLq",
                                 "rules": Array [],
                               },
                               "displayName": "Styled(BaseFieldLabel)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-kAzzGY",
+                              "styledComponentId": "sc-cSHVUG",
                               "target": [Function],
                               "toString": [Function],
                               "usesTheme": false,
@@ -11376,13 +11376,13 @@ exports[`Storyshots Textarea with error message 1`] = `
                           requirementText={null}
                         >
                           <BaseFieldLabel
-                            className="sc-kAzzGY jHprQs"
+                            className="sc-cSHVUG CAuLq"
                             helpText={null}
                             labelText="Label"
                             requirementText={null}
                           >
                             <FieldLabel__Label
-                              className="sc-kAzzGY jHprQs"
+                              className="sc-cSHVUG CAuLq"
                               color="#011e38"
                               style={
                                 Object {
@@ -11391,7 +11391,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                               }
                             >
                               <StyledComponent
-                                className="sc-kAzzGY jHprQs"
+                                className="sc-cSHVUG CAuLq"
                                 color="#011e38"
                                 forwardedComponent={
                                   Object {
@@ -11431,7 +11431,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                                 }
                               >
                                 <label
-                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-kAzzGY jHprQs"
+                                  className="FieldLabel__Label-sc-1t1cp4f-0 gFwPaD sc-cSHVUG CAuLq"
                                   color="#011e38"
                                   style={
                                     Object {
