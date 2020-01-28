@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 
+import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
@@ -17,8 +18,15 @@ class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedDate: props.selected };
+    this.datepickerRef = React.createRef();
     registerDatePickerLocales();
   }
+
+  setSelectedDate = date => {
+    this.setState({
+      selectedDate: date
+    });
+  };
 
   handleInputChange = event => {
     const { value } = event.target;
@@ -33,9 +41,34 @@ class DatePicker extends Component {
     if (onChange) {
       onChange(date);
     }
-    this.setState({
-      selectedDate: date
-    });
+    this.setSelectedDate(date);
+  };
+
+  handleDownKey = () => {
+    const { selectedDate } = this.state;
+    const { minDate } = this.props;
+    const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
+    if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
+      this.handleSelectedDateChange(newSelectedDate);
+    }
+  };
+
+  handleUpKey = () => {
+    const { selectedDate } = this.state;
+    const { maxDate } = this.props;
+    const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
+    if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
+      this.handleSelectedDateChange(newSelectedDate);
+    }
+  };
+
+  handleEnterKey = () => {
+    const isOpen = this.datepickerRef.isCalendarOpen();
+    this.datepickerRef.setOpen(!isOpen);
+  };
+
+  handleSpaceKey = () => {
+    this.datepickerRef.setOpen(false);
   };
 
   renderHeader = props => {
@@ -53,7 +86,15 @@ class DatePicker extends Component {
     };
 
     const customInput = (
-      <DatePickerInput inputProps={customInputProps} dateFormat={dateFormat} onInputChange={this.handleInputChange} />
+      <DatePickerInput
+        inputProps={customInputProps}
+        dateFormat={dateFormat}
+        onInputChange={this.handleInputChange}
+        onUpKeyPress={this.handleUpKey}
+        onDownKeyPress={this.handleDownKey}
+        onEnterKeyPress={this.handleEnterKey}
+        onSpaceKeyPress={this.handleSpaceKey}
+      />
     );
 
     return (
@@ -61,6 +102,7 @@ class DatePicker extends Component {
         <DatePickerStyles />
         <ReactDatePicker
           selected={selectedDate}
+          openToDate={selectedDate}
           dateFormat={dateFormat}
           onChange={this.handleSelectedDateChange}
           customInput={customInput}
@@ -71,6 +113,9 @@ class DatePicker extends Component {
           maxDate={maxDate}
           highlightDates={highlightDates}
           locale={locale}
+          ref={r => {
+            this.datepickerRef = r;
+          }}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
