@@ -12,10 +12,10 @@ const radioProps = [
     description: "Identified that groups inputs together"
   },
   {
-    name: "value",
+    name: "checked",
     type: "String",
     defaultValue: "undefined",
-    description: "Value of selection for submission"
+    description: "Value of input field for submission"
   },
   {
     name: "defaultChecked",
