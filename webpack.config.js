@@ -28,14 +28,41 @@ const baseConfig = {
   }
 };
 
-const serverConfig = Object.assign({}, baseConfig, { target: "node" });
+const serverConfig = Object.assign({}, baseConfig, {
+  target: "node",
+  mode: "development"
+});
 serverConfig.output = Object.assign({}, serverConfig.output, {
   filename: "main.js"
 });
 
-const clientConfig = Object.assign({}, baseConfig, { target: "web" });
+const clientConfig = Object.assign({}, baseConfig, {
+  target: "web",
+  mode: "development"
+});
 clientConfig.output = Object.assign({}, clientConfig.output, {
   filename: "main.browser.js"
 });
 
-module.exports = [serverConfig, clientConfig];
+const serverConfigProd = Object.assign({}, baseConfig, {
+  target: "node",
+  mode: "production"
+});
+serverConfigProd.output = Object.assign({}, serverConfig.output, {
+  filename: "main.min.js"
+});
+
+const clientConfigProd = Object.assign({}, baseConfig, {
+  target: "web",
+  mode: "production"
+});
+clientConfigProd.output = Object.assign({}, clientConfig.output, {
+  filename: "main.browser.min.js"
+});
+
+module.exports = [
+  serverConfig,
+  clientConfig,
+  serverConfigProd,
+  clientConfigProd
+];

@@ -11,7 +11,7 @@
     "eslint": "eslint --config .eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
     "start": "yarn workspace @nulogy/tokens build && start-storybook -p 8080",
-    "build": "webpack --mode production --config ../webpack.config.js",
+    "build": "webpack --config ../webpack.config.js",
     "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
     "icons": "node scripts/collect-icon-svgs",

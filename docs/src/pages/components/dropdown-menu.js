@@ -82,6 +82,13 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the dropdown menu container."
+  },
+  {
+    name: "boundariesElement",
+    type: "String<'viewport' | 'scrollParent'> | HTMLElement",
+    defaultValue: "undefined",
+    description:
+      "The element which will define the boundaries of the dropdown position. The opened dropdown will never be placed outside of the defined boundaries"
   }
 ];
 
