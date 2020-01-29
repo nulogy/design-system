@@ -13,6 +13,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add auto-complete functionality to month picker input ([#511](https://github.com/nulogy/design-system/issues/511)) ([86c2a30](https://github.com/nulogy/design-system/commit/86c2a30))
 - navigate Date Picker with up and down keys ([#518](https://github.com/nulogy/design-system/issues/518)) ([5a76d16](https://github.com/nulogy/design-system/commit/5a76d16))
+- Added dev bundle which will show proptype errors and deprecated props while developing using nulogy/components ([#521](https://github.com/nulogy/design-system/pull/521))([edf7904](https://github.com/nulogy/design-system/commit/edf7904))
+
+### Breaking Changes
+
+- removed Header Validation component, please use the Alert component instead ([#489](https://github.com/nulogy/design-system/pull/489))([4d3a2f6](https://github.com/nulogy/design-system/commit/4d3a2f6)
 
 # [0.20.0](https://github.com/nulogy/design-system/compare/v0.19.0...v0.20.0) (2020-01-20)
 
