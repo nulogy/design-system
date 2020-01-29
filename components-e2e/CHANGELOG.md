@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/nulogy/design-system/compare/v0.20.0...v0.21.0) (2020-01-29)
+
+### Features
+
+- add auto-complete functionality to month picker input ([#511](https://github.com/nulogy/design-system/issues/511)) ([86c2a30](https://github.com/nulogy/design-system/commit/86c2a30))
+- navigate Date Picker with up and down keys ([#518](https://github.com/nulogy/design-system/issues/518)) ([5a76d16](https://github.com/nulogy/design-system/commit/5a76d16))
+
 # [0.20.0](https://github.com/nulogy/design-system/compare/v0.19.0...v0.20.0) (2020-01-20)
 
 ### Features
