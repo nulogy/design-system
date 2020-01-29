@@ -277,6 +277,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -287,7 +288,10 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -297,17 +301,9 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -741,6 +737,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -752,7 +749,10 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -762,17 +762,9 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>

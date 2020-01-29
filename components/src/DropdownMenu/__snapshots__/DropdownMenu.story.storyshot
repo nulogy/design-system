@@ -277,6 +277,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -287,7 +288,10 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -297,17 +301,9 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -741,6 +737,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             disabled={true}
             hideDelay="200"
@@ -752,7 +749,10 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={true}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -762,17 +762,9 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -1206,6 +1198,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={true}
             hideDelay="200"
             showDelay="100"
@@ -1216,7 +1209,10 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -1226,17 +1222,9 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -1385,6 +1373,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                   <Popper
                     modifiers={
                       Object {
+                        "boundariesElement": "viewport",
                         "preventOverflow": Object {
                           "boundariesElement": "viewport",
                           "enabled": true,
@@ -1392,12 +1381,13 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                         },
                       }
                     }
-                    placement="bottom-start"
+                    placement={false}
                   >
                     <InnerPopper
                       eventsEnabled={true}
                       modifiers={
                         Object {
+                          "boundariesElement": "viewport",
                           "preventOverflow": Object {
                             "boundariesElement": "viewport",
                             "enabled": true,
@@ -1405,7 +1395,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           },
                         }
                       }
-                      placement="bottom-start"
+                      placement={false}
                       positionFixed={false}
                       referenceElement={
                         <button
@@ -1927,6 +1917,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -1937,7 +1928,10 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -1947,17 +1941,9 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -2392,6 +2378,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
         >
           <MenuComponent
             backgroundColor="blackBlue"
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -2403,7 +2390,10 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
             >
               <StatelessDropdownMenu
                 backgroundColor="blackBlue"
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -2413,17 +2403,9 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -2857,6 +2839,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -2867,7 +2850,10 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -2877,17 +2863,9 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>
@@ -3321,6 +3299,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
           }
         >
           <MenuComponent
+            boundariesElement="viewport"
             defaultOpen={false}
             hideDelay="200"
             showDelay="100"
@@ -3332,7 +3311,10 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
               showDelay="100"
             >
               <StatelessDropdownMenu
+                boundariesElement="viewport"
+                defaultOpen={false}
                 disabled={false}
+                hideDelay="200"
                 menuState={
                   Object {
                     "closeMenu": [Function],
@@ -3342,17 +3324,9 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                     "toggleMenu": [Function],
                   }
                 }
-                modifiers={
-                  Object {
-                    "preventOverflow": Object {
-                      "boundariesElement": "viewport",
-                      "enabled": true,
-                      "padding": 8,
-                    },
-                  }
-                }
                 placement="bottom-start"
                 showArrow={true}
+                showDelay="100"
                 trigger={[Function]}
               >
                 <Manager>

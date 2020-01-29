@@ -1903,6 +1903,7 @@ exports[`Storyshots Table with everything 1`] = `
                                       className="Box-sc-1qu1edy-0 kbbndO"
                                     >
                                       <MenuComponent
+                                        boundariesElement="viewport"
                                         defaultOpen={false}
                                         hideDelay="200"
                                         showDelay="100"
@@ -1913,7 +1914,10 @@ exports[`Storyshots Table with everything 1`] = `
                                           showDelay="100"
                                         >
                                           <StatelessDropdownMenu
+                                            boundariesElement="viewport"
+                                            defaultOpen={false}
                                             disabled={false}
+                                            hideDelay="200"
                                             menuState={
                                               Object {
                                                 "closeMenu": [Function],
@@ -1923,17 +1927,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "toggleMenu": [Function],
                                               }
                                             }
-                                            modifiers={
-                                              Object {
-                                                "preventOverflow": Object {
-                                                  "boundariesElement": "viewport",
-                                                  "enabled": true,
-                                                  "padding": 8,
-                                                },
-                                              }
-                                            }
                                             placement="bottom-start"
                                             showArrow={true}
+                                            showDelay="100"
                                             trigger={[Function]}
                                           >
                                             <Manager>
@@ -2671,6 +2667,7 @@ exports[`Storyshots Table with everything 1`] = `
                                       className="Box-sc-1qu1edy-0 kbbndO"
                                     >
                                       <MenuComponent
+                                        boundariesElement="viewport"
                                         defaultOpen={false}
                                         hideDelay="200"
                                         showDelay="100"
@@ -2681,7 +2678,10 @@ exports[`Storyshots Table with everything 1`] = `
                                           showDelay="100"
                                         >
                                           <StatelessDropdownMenu
+                                            boundariesElement="viewport"
+                                            defaultOpen={false}
                                             disabled={false}
+                                            hideDelay="200"
                                             menuState={
                                               Object {
                                                 "closeMenu": [Function],
@@ -2691,17 +2691,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "toggleMenu": [Function],
                                               }
                                             }
-                                            modifiers={
-                                              Object {
-                                                "preventOverflow": Object {
-                                                  "boundariesElement": "viewport",
-                                                  "enabled": true,
-                                                  "padding": 8,
-                                                },
-                                              }
-                                            }
                                             placement="bottom-start"
                                             showArrow={true}
+                                            showDelay="100"
                                             trigger={[Function]}
                                           >
                                             <Manager>
@@ -3439,6 +3431,7 @@ exports[`Storyshots Table with everything 1`] = `
                                       className="Box-sc-1qu1edy-0 kbbndO"
                                     >
                                       <MenuComponent
+                                        boundariesElement="viewport"
                                         defaultOpen={false}
                                         hideDelay="200"
                                         showDelay="100"
@@ -3449,7 +3442,10 @@ exports[`Storyshots Table with everything 1`] = `
                                           showDelay="100"
                                         >
                                           <StatelessDropdownMenu
+                                            boundariesElement="viewport"
+                                            defaultOpen={false}
                                             disabled={false}
+                                            hideDelay="200"
                                             menuState={
                                               Object {
                                                 "closeMenu": [Function],
@@ -3459,17 +3455,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "toggleMenu": [Function],
                                               }
                                             }
-                                            modifiers={
-                                              Object {
-                                                "preventOverflow": Object {
-                                                  "boundariesElement": "viewport",
-                                                  "enabled": true,
-                                                  "padding": 8,
-                                                },
-                                              }
-                                            }
                                             placement="bottom-start"
                                             showArrow={true}
+                                            showDelay="100"
                                             trigger={[Function]}
                                           >
                                             <Manager>
@@ -4219,6 +4207,7 @@ exports[`Storyshots Table with everything 1`] = `
                                       className="Box-sc-1qu1edy-0 kbbndO"
                                     >
                                       <MenuComponent
+                                        boundariesElement="viewport"
                                         defaultOpen={false}
                                         hideDelay="200"
                                         showDelay="100"
@@ -4229,7 +4218,10 @@ exports[`Storyshots Table with everything 1`] = `
                                           showDelay="100"
                                         >
                                           <StatelessDropdownMenu
+                                            boundariesElement="viewport"
+                                            defaultOpen={false}
                                             disabled={false}
+                                            hideDelay="200"
                                             menuState={
                                               Object {
                                                 "closeMenu": [Function],
@@ -4239,17 +4231,9 @@ exports[`Storyshots Table with everything 1`] = `
                                                 "toggleMenu": [Function],
                                               }
                                             }
-                                            modifiers={
-                                              Object {
-                                                "preventOverflow": Object {
-                                                  "boundariesElement": "viewport",
-                                                  "enabled": true,
-                                                  "padding": 8,
-                                                },
-                                              }
-                                            }
                                             placement="bottom-start"
                                             showArrow={true}
+                                            showDelay="100"
                                             trigger={[Function]}
                                           >
                                             <Manager>

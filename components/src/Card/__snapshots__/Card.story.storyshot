@@ -576,6 +576,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             </h3>
                           </Styled(styled.h3)>
                           <MenuComponent
+                            boundariesElement="viewport"
                             defaultOpen={false}
                             hideDelay="200"
                             showDelay="100"
@@ -586,7 +587,10 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                               showDelay="100"
                             >
                               <StatelessDropdownMenu
+                                boundariesElement="viewport"
+                                defaultOpen={false}
                                 disabled={false}
+                                hideDelay="200"
                                 menuState={
                                   Object {
                                     "closeMenu": [Function],
@@ -596,17 +600,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     "toggleMenu": [Function],
                                   }
                                 }
-                                modifiers={
-                                  Object {
-                                    "preventOverflow": Object {
-                                      "boundariesElement": "viewport",
-                                      "enabled": true,
-                                      "padding": 8,
-                                    },
-                                  }
-                                }
                                 placement="bottom-start"
                                 showArrow={true}
+                                showDelay="100"
                                 trigger={[Function]}
                               >
                                 <Manager>
@@ -1315,6 +1311,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             </h3>
                           </Styled(styled.h3)>
                           <MenuComponent
+                            boundariesElement="viewport"
                             defaultOpen={false}
                             hideDelay="200"
                             showDelay="100"
@@ -1325,7 +1322,10 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                               showDelay="100"
                             >
                               <StatelessDropdownMenu
+                                boundariesElement="viewport"
+                                defaultOpen={false}
                                 disabled={false}
+                                hideDelay="200"
                                 menuState={
                                   Object {
                                     "closeMenu": [Function],
@@ -1335,17 +1335,9 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     "toggleMenu": [Function],
                                   }
                                 }
-                                modifiers={
-                                  Object {
-                                    "preventOverflow": Object {
-                                      "boundariesElement": "viewport",
-                                      "enabled": true,
-                                      "padding": 8,
-                                    },
-                                  }
-                                }
                                 placement="bottom-start"
                                 showArrow={true}
+                                showDelay="100"
                                 trigger={[Function]}
                               >
                                 <Manager>
