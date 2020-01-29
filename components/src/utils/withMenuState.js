@@ -107,25 +107,25 @@ MenuState.defaultProps = {
   defaultOpen: false
 };
 
-const withMenuState = MenuComponentWithoutState => {
-  const MenuComponent = ({ showDelay, hideDelay, defaultOpen, ...props }) => (
+const withMenuState = MenuComponent => {
+  const MenuComponentWithState = ({ showDelay, hideDelay, defaultOpen, ...props }) => (
     <MenuState showDelay={showDelay} hideDelay={hideDelay} defaultOpen={defaultOpen}>
-      {menuState => <MenuComponentWithoutState menuState={menuState} {...props} />}
+      {menuComponentProps => <MenuComponent menuState={menuComponentProps} {...props} />}
     </MenuState>
   );
-  MenuComponent.propTypes = {
+  MenuComponentWithState.propTypes = {
     showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     defaultOpen: PropTypes.bool
   };
 
-  MenuComponent.defaultProps = {
+  MenuComponentWithState.defaultProps = {
     showDelay: 0,
     hideDelay: 0,
     defaultOpen: false
   };
 
-  return MenuComponent;
+  return MenuComponentWithState;
 };
 
 export default withMenuState;

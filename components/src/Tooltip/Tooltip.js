@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Manager, Reference, Popper } from "react-popper";
 import { Box } from "../Box";
 import theme from "../theme";
-import { withMenuState, withGeneratedId, DetectOutsideClick, PopperArrow } from "../utils";
+import { Popper } from "../Popper";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -57,97 +56,27 @@ const TooltipContainer = styled(Box)(
   })
 );
 
-class StatelessTooltip extends React.Component {
-  constructor(props) {
-    super(props);
+const Tooltip = ({ className, tooltip, maxWidth, children, id, placement, showDelay, hideDelay, defaultOpen }) => (
+  <Popper
+    popperPlacement={placement}
+    defaultOpen={defaultOpen}
+    showDelay={showDelay}
+    hideDelay={hideDelay}
+    trigger={children}
+  >
+    <TooltipContainer className={className} maxWidth={maxWidth} role="tooltip">
+      {tooltip}
+    </TooltipContainer>
+  </Popper>
+);
 
-    this.setTriggerRef = this.setTriggerRef.bind(this);
-    this.setTooltipRef = this.setTooltipRef.bind(this);
-  }
-
-  setTriggerRef(node) {
-    this.triggerRef = node;
-  }
-
-  setTooltipRef(node) {
-    this.tooltipRef = node;
-  }
-
-  tooltipEventHandlers() {
-    const { menuState } = this.props;
-
-    return {
-      onFocus: () => menuState.openMenu(false),
-      onBlur: () => menuState.closeMenu(false),
-      onMouseEnter: () => menuState.openMenu(false),
-      onMouseLeave: () => menuState.closeMenu(false)
-    };
-  }
-
-  triggerEventHandlers() {
-    const { menuState } = this.props;
-
-    return {
-      onFocus: () => menuState.openMenu(false),
-      onBlur: () => menuState.closeMenu(false),
-      onMouseEnter: () => menuState.openMenu(false),
-      onMouseLeave: () => menuState.closeMenu(false)
-    };
-  }
-
-  render() {
-    const { className, tooltip, maxWidth, children, menuState, id, placement: popperPlacement } = this.props;
-    return (
-      <Manager>
-        <Reference>
-          {({ ref }) =>
-            React.cloneElement(children, {
-              "aria-haspopup": true,
-              "aria-expanded": menuState.isOpen,
-              "aria-describedby": id,
-              ...this.triggerEventHandlers(),
-              ref
-            })
-          }
-        </Reference>
-        <Popper placement={popperPlacement}>
-          {({ ref, style, placement, arrowProps }) => (
-            <TooltipContainer
-              className={className}
-              maxWidth={maxWidth}
-              open={menuState.isOpen}
-              role="tooltip"
-              id={id}
-              ref={node => {
-                ref(node);
-                this.setTooltipRef(node);
-              }}
-              position={style}
-              dataPlacement={placement}
-              {...this.tooltipEventHandlers()}
-            >
-              {tooltip}
-              <PopperArrow placement={placement} ref={arrowProps.ref} style={arrowProps.style} />
-            </TooltipContainer>
-          )}
-        </Popper>
-        {menuState.isOpen && (
-          <DetectOutsideClick
-            onClick={() => {
-              menuState.openMenu();
-            }}
-            clickRef={[this.triggerRef, this.tooltipRef]}
-          />
-        )}
-      </Manager>
-    );
-  }
-}
-
-StatelessTooltip.propTypes = {
+Tooltip.propTypes = {
+  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultOpen: PropTypes.bool,
   children: PropTypes.element.isRequired,
   className: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool,
@@ -171,24 +100,13 @@ StatelessTooltip.propTypes = {
   maxWidth: PropTypes.string
 };
 
-StatelessTooltip.defaultProps = {
+Tooltip.defaultProps = {
+  showDelay: "100",
+  hideDelay: "350",
+  defaultOpen: false,
   className: undefined,
   placement: "bottom",
   maxWidth: "24em"
 };
 
-const Tooltip = withMenuState(StatelessTooltip);
-
-Tooltip.propTypes = {
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  defaultOpen: PropTypes.bool
-};
-
-Tooltip.defaultProps = {
-  showDelay: "100",
-  hideDelay: "350",
-  defaultOpen: false
-};
-
-export default withGeneratedId(Tooltip);
+export default Tooltip;
