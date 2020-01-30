@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { display, themeGet } from "styled-system";
+import { display } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 import { Text, SubsectionTitle } from "../Type";
 import { BrandingText } from "../Branding";
 import theme from "../theme";

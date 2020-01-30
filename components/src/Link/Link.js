@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { color, space, themeGet } from "styled-system";
+import { color, space } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 import { darken } from "polished";
 import theme from "../theme";
 
