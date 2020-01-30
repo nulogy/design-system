@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
@@ -83,7 +84,8 @@ BaseAlert.propTypes = {
   className: PropTypes.string,
   isCloseable: PropTypes.node,
   title: PropTypes.string,
-  type: PropTypes.oneOf(["danger", "informative", "success", "warning"])
+  type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
+  ...propTypes.space
 };
 
 BaseAlert.defaultProps = {
