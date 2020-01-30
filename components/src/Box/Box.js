@@ -17,6 +17,7 @@ import {
   position,
   display
 } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 
 const flexGrow = style({ prop: "flexGrow" });
@@ -42,22 +43,22 @@ const Box = styled.div(
 );
 
 Box.propTypes = {
-  ...color.propTypes,
-  ...space.propTypes,
-  ...width.propTypes,
-  ...minWidth.propTypes,
-  ...maxWidth.propTypes,
-  ...borders.propTypes,
-  ...borderRadius.propTypes,
-  ...boxShadow.propTypes,
-  ...textAlign.propTypes,
-  ...order.propTypes,
-  ...flexGrow.propTypes,
-  ...height.propTypes,
-  ...minHeight.propTypes,
-  ...maxHeight.propTypes,
-  ...position.propTypes,
-  ...display.propTypes
+  ...propTypes.color,
+  ...propTypes.space,
+  ...propTypes.width,
+  ...propTypes.minWidth,
+  ...propTypes.maxWidth,
+  ...propTypes.borders,
+  ...propTypes.borderRadius,
+  ...propTypes.boxShadow,
+  ...propTypes.textAlign,
+  ...propTypes.order,
+  ...propTypes.flexGrow,
+  ...propTypes.height,
+  ...propTypes.minHeight,
+  ...propTypes.maxHeight,
+  ...propTypes.position,
+  ...propTypes.display
 };
 
 Box.defaultProps = {

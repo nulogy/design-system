@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import React from "react";
 import PropTypes from "prop-types";
 import { Icon } from "../Icon";
@@ -102,7 +103,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   asLink: PropTypes.bool,
-  ...space.propTypes
+  ...propTypes.space
 };
 
 Button.defaultProps = {

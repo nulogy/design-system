@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space, color, fontSize, fontWeight, lineHeight } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import ListItem from "./ListItem";
 import theme from "../theme";
 
@@ -25,8 +26,8 @@ List.propTypes = {
   className: PropTypes.string,
   compact: PropTypes.bool,
   leftAlign: PropTypes.bool,
-  ...space.propTypes,
-  ...color.propTypes
+  ...propTypes.space,
+  ...propTypes.color
 };
 
 List.defaultProps = {

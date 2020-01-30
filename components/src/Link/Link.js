@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { color, space } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
+import propTypes from "@styled-system/prop-types";
 import { darken } from "polished";
 import theme from "../theme";
 
@@ -29,8 +30,8 @@ Link.propTypes = {
   className: PropTypes.string,
   underline: PropTypes.bool,
   hover: PropTypes.string,
-  ...color.propTypes,
-  ...space.propTypes
+  ...propTypes.color,
+  ...propTypes.space
 };
 
 Link.defaultProps = {
