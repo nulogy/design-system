@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space, color, fontSize, fontWeight, lineHeight } from "styled-system";
+import { space, color, typography } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import ListItem from "./ListItem";
 import theme from "../theme";
@@ -8,9 +8,7 @@ import theme from "../theme";
 const List = styled.ul(
   space,
   color,
-  fontSize,
-  fontWeight,
-  lineHeight,
+  typography,
   ({ compact }) => ({
     margin: 0,
     [`${ListItem}`]: {
@@ -27,7 +25,8 @@ List.propTypes = {
   compact: PropTypes.bool,
   leftAlign: PropTypes.bool,
   ...propTypes.space,
-  ...propTypes.color
+  ...propTypes.color,
+  ...propTypes.typography
 };
 
 List.defaultProps = {

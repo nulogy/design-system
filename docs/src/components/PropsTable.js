@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Table, Text } from "@nulogy/components";
 import InlineCode from "./InlineCode";
 
-const propName = ({ cellData }) => (
+export const propName = ({ cellData }) => (
   <Text py="x1" fontSize="small">
     <InlineCode>{cellData}</InlineCode>
   </Text>
@@ -13,7 +13,7 @@ propName.propTypes = {
   cellData: PropTypes.string.isRequired
 };
 
-const smallTextRenderer = ({ cellData }) => (
+export const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
     {cellData}
   </Text>
@@ -51,7 +51,7 @@ const columns = [
 ];
 
 const PropsTable = ({ propsRows }) => (
-  <Table rows={propsRows} columns={columns} keyField="name" />
+  <Table rows={propsRows} columns={columns} keyField="name" rowHovers={false} />
 );
 
 PropsTable.propTypes = {

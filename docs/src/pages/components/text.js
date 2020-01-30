@@ -16,17 +16,11 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode
 } from "../../components";
-import { margins } from "../../shared/systemProps";
 
 const propsRows = [
-  {
-    name: "color",
-    type: "String",
-    defaultValue: "darkBlue",
-    description: "Sets color based on the theme.color object."
-  },
   {
     name: "disabled",
     type: "Boolean",
@@ -34,36 +28,11 @@ const propsRows = [
     description: "Lightens text to imply that it's disabled."
   },
   {
-    name: "fontSize",
-    type: "String",
-    defaultValue: "16px",
-    description: "Sets font size based on the theme.fontSize object."
-  },
-  {
-    name: "fontFamily",
-    type: "String",
-    defaultValue: "IBM Plex Sans",
-    description: "Sets font family based on the theme.fontFamily object."
-  },
-  {
     name: "inline",
     type: "Boolean",
     defaultValue: "false",
     description: "Displays text inline instead of as a block."
   },
-  {
-    name: "lineHeight",
-    type: "String",
-    defaultValue: "1.5",
-    description: "Sets line height based on the theme.lineHeight object."
-  },
-  {
-    name: "textAlign",
-    type: "String",
-    defaultValue: "left",
-    description: "Sets text-align to either left, center or right."
-  },
-  ...margins,
   {
     name: "className",
     type: "String",
@@ -233,6 +202,13 @@ export default () => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+      <Text mt="x3">
+        Text components have access to <InlineCode>typography</InlineCode>,{" "}
+        <InlineCode>colour</InlineCode>, and <InlineCode>space</InlineCode>{" "}
+        style props. See the{" "}
+        <Link href="/guides/style-props">style prop documentation</Link> for a
+        full list of available props.
+      </Text>
     </DocSection>
 
     <DocSection>
@@ -251,7 +227,7 @@ export default () => (
           <Link href="/theme/">NDS theme</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/textarea--textarea">
+          <Link href="https://storybook.nulogy.design/?path=/story/text--text">
             View in Storybook
           </Link>
         </ListItem>
