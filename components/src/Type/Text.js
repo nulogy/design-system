@@ -34,7 +34,8 @@ Text.propTypes = {
 Text.defaultProps = {
   inline: false,
   disabled: false,
-  m: 0,
+  mt: 0,
+  mb: 0,
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
   color: "currentColor"
