@@ -93,7 +93,7 @@ class StatelessDropdownMenu extends React.Component {
           }
         </Reference>
         {isOpen && (
-          <Popper placement={false} modifiers={modifiers || transformPropsToModifiers({ boundariesElement })}>
+          <Popper placement={placement} modifiers={modifiers || transformPropsToModifiers({ boundariesElement })}>
             {popperProps => (
               <DropdownMenuContainer
                 className={className}
