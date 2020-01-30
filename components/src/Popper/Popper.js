@@ -42,6 +42,7 @@ const Popper = ({ popperPlacement, defaultOpen, ariaDescribedBy, showDelay, hide
             "aria-haspopup": true,
             "aria-expanded": isOpen,
             "aria-describedby": ariaDescribedBy,
+            "aria-label": isOpen ? "Close menu" : "Open menu",
             ...eventHandlers,
             ref
           })
