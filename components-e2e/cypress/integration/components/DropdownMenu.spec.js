@@ -3,7 +3,10 @@ describe("DropdownMenu", () => {
   const getCloseButton = () => cy.get("[aria-label='Close menu']");
   const getDropdownLink = () => cy.contains("Dropdown Link");
   const getCustomTrigger = () => cy.get("button.customtrigger");
-  const assertDropdownIsOpen = () => getDropdownLink().should("exist");
+  const assertDropdownIsOpen = () => {
+    cy.isInViewport("[class*='DropdownLink']");
+    cy.get("[placement='bottom-start']").should("have.css", "opacity", "1");
+  };
   const assertDropdownIsClosed = () => getDropdownLink().should("not.exist");
 
   describe("default", () => {
