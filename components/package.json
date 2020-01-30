@@ -18,7 +18,7 @@
     "storyshots": "yarn workspace @nulogy/tokens build && jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
     "storyshots:visual:initial": "rm -rf scripts/visual-storyshots/__image_snapshots__ && yarn run storyshots:visual",
-    "storyshots:visual": "yarn && yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
+    "storyshots:visual": "yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
     "storyshots:visual:against-master": "git checkout master && yarn run storyshots:visual:initial && git checkout - && yarn run storyshots:visual",
     "test": "yarn lint && yarn jest",
     "new": "plop"
