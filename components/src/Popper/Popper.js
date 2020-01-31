@@ -129,6 +129,7 @@ const Popper = React.forwardRef(
                   children.props.children,
                   showArrow ? (
                     <PopperArrow
+                      {...arrowProps}
                       placement={placement}
                       ref={arrowProps.ref}
                       backgroundColor={backgroundColor}
