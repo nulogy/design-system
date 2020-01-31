@@ -92,7 +92,7 @@ DropdownMenu.defaultProps = {
   className: undefined,
   id: undefined,
   trigger: () => <IconicButton icon="more" />,
-  backgroundColor: undefined,
+  backgroundColor: "whiteGrey",
   showArrow: true,
   placement: "bottom-start",
   showDelay: "100",
