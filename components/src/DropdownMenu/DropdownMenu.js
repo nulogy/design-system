@@ -70,7 +70,8 @@ DropdownMenu.propTypes = {
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultOpen: PropTypes.bool,
   modifiers: deprecatedProp(PropTypes.shape({}), "boundariesElement"),
-  boundariesElement: PropTypes.string
+  boundariesElement: PropTypes.string,
+  backgroundColor: PropTypes.string
 };
 
 DropdownMenu.defaultProps = {
@@ -85,7 +86,8 @@ DropdownMenu.defaultProps = {
   hideDelay: "200",
   defaultOpen: false,
   modifiers: undefined,
-  boundariesElement: "viewport"
+  boundariesElement: "viewport",
+  backgroundColor: "whiteGrey"
 };
 
 export default DropdownMenu;

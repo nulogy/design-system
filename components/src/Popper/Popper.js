@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper as ReactPopper } from "react-popper";
 
-import { DetectOutsideClick, PopperArrow } from "../utils";
+import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
 
 const Popper = React.forwardRef(
@@ -17,7 +17,9 @@ const Popper = React.forwardRef(
       children,
       openOnClick,
       openOnHover,
-      backgroundColor
+      modifiers,
+      backgroundColor,
+      borderColor
     },
     popperRef
   ) => {
@@ -67,7 +69,7 @@ const Popper = React.forwardRef(
     };
     const onClickEventHandlers = openOnClick
       ? {
-          onMouseDown: e => {
+          onMouseDown: () => {
             if (isOpen) {
               closeMenu(false);
             } else {
@@ -107,7 +109,7 @@ const Popper = React.forwardRef(
             })
           }
         </Reference>
-        <ReactPopper placement={popperPlacement}>
+        <ReactPopper placement={popperPlacement} modifiers={modifiers}>
           {({ ref, style, placement, arrowProps }) => (
             <>
               {React.cloneElement(
@@ -129,7 +131,7 @@ const Popper = React.forwardRef(
                     placement={placement}
                     ref={arrowProps.ref}
                     backgroundColor={backgroundColor}
-                    borderColor={backgroundColor}
+                    borderColor={borderColor}
                   />
                 ]
               )}
@@ -151,7 +153,9 @@ Popper.propTypes = {
   children: PropTypes.node.isRequired,
   openOnClick: PropTypes.bool,
   openOnHover: PropTypes.bool,
-  arrowStyle: PropTypes.shape({})
+  modifiers: PropTypes.shape({}),
+  backgroundColor: PropTypes.string,
+  borderColor: PropTypes.string
 };
 
 Popper.defaultProps = {
@@ -162,7 +166,9 @@ Popper.defaultProps = {
   id: null,
   openOnClick: false,
   openOnHover: true,
-  arrowStyle: null
+  modifiers: null,
+  backgroundColor: undefined,
+  borderColor: undefined
 };
 
 export default Popper;
