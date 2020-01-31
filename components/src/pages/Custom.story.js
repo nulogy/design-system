@@ -49,8 +49,10 @@ storiesOf("Pages/Custom", module)
           </Box>
           <Box
             bg="white"
-            p="x3"
+            pt="x3"
             pr="x2"
+            pb="x3"
+            pl="x3"
             width={{ extraSmall: StorybookSidebarWidth, medium: "400px", large: "472px" }}
             borderLeft={{ medium: `solid 1px ${theme.colors.lightGrey}` }}
             position={{ extraSmall: "absolute", medium: "static" }}
@@ -71,7 +73,7 @@ storiesOf("Pages/Custom", module)
       <Flex bg="whiteGrey" flexDirection="column">
         <NavBar menuData={{ primaryMenu, secondaryMenu }} />
         <Flex m="x1" bg="white" boxShadow="large" borderRadius="medium" minHeight={StorybookContentHeight}>
-          <Box p="x3" pt="x1" flexGrow="2">
+          <Box pt="x1" pr="x3" pb="x3" pl="x3" flexGrow="2">
             <Flex justifyContent="space-between" alignItems="flex-start" height="32px">
               <Flex alignItems="center" pt="x1" width={{ extraSmall: StorybookMainWidth, medium: "auto" }}>
                 <Link fontSize="smaller" color="darkBlue" mr="half" underline={false}>
@@ -90,8 +92,10 @@ storiesOf("Pages/Custom", module)
           </Box>
           <Box
             bg="white"
-            p="x3"
+            pt="x3"
             pr="x2"
+            pb="x3"
+            pl="x3"
             width={{ extraSmall: StorybookSidebarWidth, medium: "400px", large: "472px" }}
             borderLeft={{ medium: `solid 1px ${theme.colors.lightGrey}` }}
             position={{ extraSmall: "absolute", medium: "static" }}
