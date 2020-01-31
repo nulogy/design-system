@@ -64,11 +64,7 @@ StatusIndicator.propTypes = {
 };
 
 StatusIndicator.defaultProps = {
-  type: "neutral",
-  ml: 0,
-  mr: 0,
-  mt: 0,
-  mb: 0
+  type: "neutral"
 };
 
 export default StatusIndicator;
