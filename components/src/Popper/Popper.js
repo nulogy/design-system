@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Manager, Reference, Popper as ReactPopper } from "react-popper";
+import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
@@ -33,48 +33,43 @@ const Popper = React.forwardRef(
         fnc();
       }
     };
-    const setMenuState = (nextIsOpenState, skipDelay) => {
+    const setPopUpState = (nextIsOpenState, skipDelay) => {
       clearTimeout(timeoutID);
       conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
-    const closeMenu = skipDelay => {
-      setMenuState(false, skipDelay);
-    };
-    const handleClickOutside = e => {
-      closeMenu();
+    const closePopUp = skipDelay => {
+      setPopUpState(false, skipDelay);
     };
     useEffect(() => {
       const handleKeyDown = event => {
         switch (event.keyCode) {
           case keyCodes.ESC:
-            closeMenu();
+            closePopUp();
             break;
           default:
             break;
         }
       };
-      // document.addEventListener("onmousedown", handleClickOutside);
 
       document.addEventListener("keydown", handleKeyDown);
 
       const cleanup = () => {
         document.removeEventListener("keydown", handleKeyDown);
-        document.removeEventListener("onMouseDown", handleClickOutside);
         clearTimeout(timeoutID);
       };
       return cleanup;
     }, []);
 
-    const openMenu = skipDelay => {
-      setMenuState(true, skipDelay);
+    const openPopUp = skipDelay => {
+      setPopUpState(true, skipDelay);
     };
     const onClickEventHandlers = openOnClick
       ? {
           onMouseDown: () => {
             if (isOpen) {
-              closeMenu(false);
+              closePopUp(false);
             } else {
-              openMenu(false);
+              openPopUp(false);
             }
           }
         }
@@ -82,15 +77,15 @@ const Popper = React.forwardRef(
 
     const onHoverHandlers = openOnHover
       ? {
-          onMouseEnter: () => openMenu(false),
-          onMouseLeave: () => closeMenu(false)
+          onMouseEnter: () => openPopUp(false),
+          onMouseLeave: () => closePopUp(false)
         }
       : null;
 
     const eventHandlers = {
-      onFocus: () => openMenu(false),
+      onFocus: () => openPopUp(false),
       onBlur: () => {
-        closeMenu(false);
+        closePopUp(false);
       },
       ...onHoverHandlers,
       ...onClickEventHandlers
@@ -104,13 +99,13 @@ const Popper = React.forwardRef(
               "aria-haspopup": true,
               "aria-expanded": isOpen,
               "aria-describedby": id,
-              "aria-label": isOpen ? "Close menu" : "Open menu",
+              "aria-label": isOpen ? "Close" : "Open",
               ...eventHandlers,
               ref
             })
           }
         </Reference>
-        <ReactPopper placement={popperPlacement} modifiers={modifiers}>
+        <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
           {({ ref, style, placement, arrowProps }) => (
             <>
               {React.cloneElement(
@@ -140,7 +135,7 @@ const Popper = React.forwardRef(
               )}
             </>
           )}
-        </ReactPopper>
+        </ReactPopperPopUp>
       </Manager>
     );
   }
