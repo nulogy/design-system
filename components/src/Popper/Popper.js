@@ -19,7 +19,8 @@ const Popper = React.forwardRef(
       openOnHover,
       modifiers,
       backgroundColor,
-      borderColor
+      borderColor,
+      showArrow
     },
     popperRef
   ) => {
@@ -116,7 +117,6 @@ const Popper = React.forwardRef(
                 children,
                 {
                   open: isOpen,
-                  // id={id}
                   ref: node => {
                     ref(node);
                   },
@@ -127,12 +127,14 @@ const Popper = React.forwardRef(
                 },
                 [
                   children.props.children,
-                  <PopperArrow
-                    placement={placement}
-                    ref={arrowProps.ref}
-                    backgroundColor={backgroundColor}
-                    borderColor={borderColor}
-                  />
+                  showArrow ? (
+                    <PopperArrow
+                      placement={placement}
+                      ref={arrowProps.ref}
+                      backgroundColor={backgroundColor}
+                      borderColor={borderColor}
+                    />
+                  ) : null
                 ]
               )}
             </>
@@ -155,7 +157,8 @@ Popper.propTypes = {
   openOnHover: PropTypes.bool,
   modifiers: PropTypes.shape({}),
   backgroundColor: PropTypes.string,
-  borderColor: PropTypes.string
+  borderColor: PropTypes.string,
+  showArrow: PropTypes.bool
 };
 
 Popper.defaultProps = {
@@ -168,7 +171,8 @@ Popper.defaultProps = {
   openOnHover: true,
   modifiers: null,
   backgroundColor: undefined,
-  borderColor: undefined
+  borderColor: undefined,
+  showArrow: true
 };
 
 export default Popper;

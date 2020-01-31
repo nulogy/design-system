@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick, withMenuState } from "../utils";
-import { IconicButton } from "../Button";
+
 import DropdownMenuContainer from "./DropdownMenuContainer";
+import { IconicButton } from "../Button";
 import { deprecatedProp } from "../utils/deprecatedProp";
 import { Popper } from "../Popper";
 
@@ -18,27 +17,42 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
 
 const DropdownMenu = React.forwardRef(
   (
-    { trigger, children, disabled, backgroundColor, placement, modifiers, showArrow, className, id, boundariesElement },
+    {
+      trigger,
+      children,
+      showArrow,
+      disabled,
+      defaultOpen,
+      backgroundColor,
+      placement,
+      modifiers,
+      className,
+      id,
+      boundariesElement,
+      showDelay,
+      hideDelay
+    },
     ref
   ) => (
     <Popper
-      trigger={trigger()}
+      trigger={React.cloneElement(trigger(), {
+        type: "button",
+        disabled: disabled ? true : null,
+        "aria-haspopup": true
+      })}
+      showDelay={showDelay}
+      hideDelay={hideDelay}
       popperPlacement={placement}
-      defaultOpen
+      defaultOpen={defaultOpen}
+      showArrow={showArrow}
       openOnClick
       ref={ref}
       openOnHover={false}
+      modifiers={modifiers || transformPropsToModifiers({ boundariesElement })}
       backgroundColor={backgroundColor}
       borderColor={backgroundColor}
-      // showArrow={showArrow}
     >
-      <DropdownMenuContainer
-        className={className}
-        id={id}
-        // style={style}
-        backgroundColor={backgroundColor}
-        showArrow={showArrow}
-      >
+      <DropdownMenuContainer className={className} id={id} backgroundColor={backgroundColor} showArrow={showArrow}>
         {children}
       </DropdownMenuContainer>
     </Popper>
@@ -70,8 +84,7 @@ DropdownMenu.propTypes = {
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultOpen: PropTypes.bool,
   modifiers: deprecatedProp(PropTypes.shape({}), "boundariesElement"),
-  boundariesElement: PropTypes.string,
-  backgroundColor: PropTypes.string
+  boundariesElement: PropTypes.string
 };
 
 DropdownMenu.defaultProps = {
@@ -86,8 +99,7 @@ DropdownMenu.defaultProps = {
   hideDelay: "200",
   defaultOpen: false,
   modifiers: undefined,
-  boundariesElement: "viewport",
-  backgroundColor: "whiteGrey"
+  boundariesElement: "viewport"
 };
 
 export default DropdownMenu;
