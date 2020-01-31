@@ -1,95 +1,157 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper as ReactPopper } from "react-popper";
 
 import { DetectOutsideClick, PopperArrow } from "../utils";
+import { keyCodes } from "../constants";
 
-const Popper = ({ popperPlacement, defaultOpen, ariaDescribedBy, showDelay, hideDelay, trigger, children }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-  let timeoutID;
-
-  const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
-    if (!skipDelay) {
-      timeoutID = setTimeout(fnc, delay);
-    } else {
-      fnc();
-    }
-  };
-  const setMenuState = (nextIsOpenState, skipDelay) => {
-    clearTimeout(timeoutID);
-    conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
-  };
-
-  const closeMenu = skipDelay => {
-    setMenuState(false, skipDelay);
-  };
-
-  const openMenu = skipDelay => {
-    setMenuState(true, skipDelay);
-  };
-  const eventHandlers = {
-    onFocus: () => openMenu(false),
-    onBlur: () => closeMenu(false),
-    onMouseEnter: () => openMenu(false),
-    onMouseLeave: () => closeMenu(false)
-  };
-
-  return (
-    <Manager>
-      <Reference>
-        {({ ref }) =>
-          React.cloneElement(trigger, {
-            "aria-haspopup": true,
-            "aria-expanded": isOpen,
-            "aria-describedby": ariaDescribedBy,
-            "aria-label": isOpen ? "Close menu" : "Open menu",
-            ...eventHandlers,
-            ref
-          })
+const Popper = React.forwardRef(
+  (
+    {
+      popperPlacement,
+      defaultOpen,
+      id,
+      showDelay,
+      hideDelay,
+      trigger,
+      children,
+      openOnClick,
+      openOnHover,
+      backgroundColor
+    },
+    popperRef
+  ) => {
+    let timeoutID;
+    const [isOpen, setIsOpen] = useState(defaultOpen);
+    const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
+      if (!skipDelay) {
+        timeoutID = setTimeout(fnc, delay);
+      } else {
+        fnc();
+      }
+    };
+    const setMenuState = (nextIsOpenState, skipDelay) => {
+      clearTimeout(timeoutID);
+      conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
+    };
+    const closeMenu = skipDelay => {
+      setMenuState(false, skipDelay);
+    };
+    const handleClickOutside = e => {
+      closeMenu();
+    };
+    useEffect(() => {
+      const handleKeyDown = event => {
+        switch (event.keyCode) {
+          case keyCodes.ESC:
+            closeMenu();
+            break;
+          default:
+            break;
         }
-      </Reference>
-      <ReactPopper placement={popperPlacement}>
-        {({ ref, style, placement, arrowProps }) => (
-          <>
-            {React.cloneElement(
-              children,
-              {
-                open: isOpen,
-                // id={id}
-                ref: node => {
-                  ref(node);
+      };
+      // document.addEventListener("onmousedown", handleClickOutside);
+
+      document.addEventListener("keydown", handleKeyDown);
+
+      const cleanup = () => {
+        document.removeEventListener("keydown", handleKeyDown);
+        document.removeEventListener("onMouseDown", handleClickOutside);
+        clearTimeout(timeoutID);
+      };
+      return cleanup;
+    }, []);
+
+    const openMenu = skipDelay => {
+      setMenuState(true, skipDelay);
+    };
+    const onClickEventHandlers = openOnClick
+      ? {
+          onMouseDown: e => {
+            if (isOpen) {
+              closeMenu(false);
+            } else {
+              openMenu(false);
+            }
+          }
+        }
+      : null;
+
+    const onHoverHandlers = openOnHover
+      ? {
+          onMouseEnter: () => openMenu(false),
+          onMouseLeave: () => closeMenu(false)
+        }
+      : null;
+
+    const eventHandlers = {
+      onFocus: () => openMenu(false),
+      onBlur: () => {
+        closeMenu(false);
+      },
+      ...onHoverHandlers,
+      ...onClickEventHandlers
+    };
+
+    return (
+      <Manager ref={popperRef}>
+        <Reference>
+          {({ ref }) =>
+            React.cloneElement(trigger, {
+              "aria-haspopup": true,
+              "aria-expanded": isOpen,
+              "aria-describedby": id,
+              "aria-label": isOpen ? "Close menu" : "Open menu",
+              ...eventHandlers,
+              ref
+            })
+          }
+        </Reference>
+        <ReactPopper placement={popperPlacement}>
+          {({ ref, style, placement, arrowProps }) => (
+            <>
+              {React.cloneElement(
+                children,
+                {
+                  open: isOpen,
+                  // id={id}
+                  ref: node => {
+                    ref(node);
+                  },
+                  id,
+                  position: style,
+                  dataPlacement: placement,
+                  ...eventHandlers
                 },
-                position: style,
-                dataPlacement: placement,
-                ...eventHandlers
-              },
-              [
-                children.props.children,
-                <PopperArrow placement={placement} ref={arrowProps.ref} style={arrowProps.style} />
-              ]
-            )}
-          </>
-        )}
-      </ReactPopper>
-      {isOpen && (
-        <DetectOutsideClick
-          onClick={() => {
-            openMenu();
-          }}
-        />
-      )}
-    </Manager>
-  );
-};
+                [
+                  children.props.children,
+                  <PopperArrow
+                    placement={placement}
+                    ref={arrowProps.ref}
+                    backgroundColor={backgroundColor}
+                    borderColor={backgroundColor}
+                  />
+                ]
+              )}
+            </>
+          )}
+        </ReactPopper>
+      </Manager>
+    );
+  }
+);
 
 Popper.propTypes = {
   popperPlacement: PropTypes.string,
   defaultOpen: PropTypes.bool,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ariaDescribedBy: PropTypes.string,
+  id: PropTypes.string,
   trigger: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  openOnClick: PropTypes.bool,
+  openOnHover: PropTypes.bool,
+  arrowStyle: PropTypes.shape({})
 };
 
 Popper.defaultProps = {
@@ -97,7 +159,10 @@ Popper.defaultProps = {
   hideDelay: "350",
   defaultOpen: false,
   popperPlacement: "bottom",
-  ariaDescribedBy: null
+  id: null,
+  openOnClick: false,
+  openOnHover: true,
+  arrowStyle: null
 };
 
 export default Popper;
