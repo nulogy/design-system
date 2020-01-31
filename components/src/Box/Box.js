@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { style, color, space, layout, border, boxShadow, textAlign, order, flexGrow, position } from "styled-system";
+import { color, space, layout, border, boxShadow, textAlign, order, flexGrow, position } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 

@@ -1,7 +1,5 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import { space } from "styled-system";
-import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { InputField } from "./InputField";
 import { InlineValidation } from "../Validation";
@@ -18,8 +16,7 @@ Input.propTypes = {
   className: PropTypes.string,
   errorMessage: PropTypes.string,
   errorList: PropTypes.arrayOf(PropTypes.string),
-  ...InputFieldPropTypes,
-  ...propTypes.space
+  ...InputFieldPropTypes
 };
 
 Input.defaultProps = {
