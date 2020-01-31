@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import theme from "../theme";
 import { Popper } from "../Popper";
+import { generateId } from "../utils";
 
 const tooltipStyles = {
   backgroundColor: theme.colors.white,
@@ -56,18 +57,22 @@ const TooltipContainer = styled(Box)(
   })
 );
 
-const Tooltip = ({ className, tooltip, maxWidth, children, id, placement, showDelay, hideDelay, defaultOpen }) => (
-  <Popper
-    popperPlacement={placement}
-    defaultOpen={defaultOpen}
-    showDelay={showDelay}
-    hideDelay={hideDelay}
-    trigger={children}
-  >
-    <TooltipContainer className={className} maxWidth={maxWidth} role="tooltip">
-      {tooltip}
-    </TooltipContainer>
-  </Popper>
+const Tooltip = React.forwardRef(
+  ({ className, tooltip, maxWidth, children, placement, showDelay, hideDelay, defaultOpen }, ref) => (
+    <Popper
+      ref={ref}
+      popperPlacement={placement}
+      defaultOpen={defaultOpen}
+      showDelay={showDelay}
+      hideDelay={hideDelay}
+      trigger={children}
+      id={generateId()}
+    >
+      <TooltipContainer className={className} maxWidth={maxWidth} role="tooltip">
+        {tooltip}
+      </TooltipContainer>
+    </Popper>
+  )
 );
 
 Tooltip.propTypes = {
@@ -76,13 +81,7 @@ Tooltip.propTypes = {
   defaultOpen: PropTypes.bool,
   children: PropTypes.element.isRequired,
   className: PropTypes.string,
-  // id: PropTypes.string.isRequired,
   tooltip: PropTypes.node.isRequired,
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    openMenu: PropTypes.func,
-    closeMenu: PropTypes.func
-  }).isRequired,
   placement: PropTypes.oneOf([
     "top",
     "top-start",
