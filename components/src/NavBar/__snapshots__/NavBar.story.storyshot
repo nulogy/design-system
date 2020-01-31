@@ -1907,7 +1907,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -2075,7 +2075,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -2146,7 +2146,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                   name="Inspector"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -2314,7 +2314,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -2367,7 +2367,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                   name="Operations"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -2535,7 +2535,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -3407,7 +3407,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                       name="User@Nulogy.com"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -3575,7 +3575,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                   <div
@@ -3602,7 +3602,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                       name="Settings"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -3770,7 +3770,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                 </nav>
@@ -4988,7 +4988,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                                   name="Dashboard"
                                                   textColor="#122b47"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#ffffff"
                                                     hideDelay="100"
                                                     logoColor="blue"
@@ -5156,7 +5156,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -6395,7 +6395,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -6563,7 +6563,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -8622,7 +8622,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -8790,7 +8790,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -10162,7 +10162,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -10330,7 +10330,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -12155,7 +12155,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -12323,7 +12323,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -14382,7 +14382,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -14550,7 +14550,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -14621,7 +14621,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                   name="Inspector"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -14789,7 +14789,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -14842,7 +14842,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                   name="Operations"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -15010,7 +15010,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -15270,7 +15270,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                       name="User@Nulogy.com"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -15438,7 +15438,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                   <div
@@ -15465,7 +15465,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                       name="Settings"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -15633,7 +15633,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                 </nav>
@@ -16771,7 +16771,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                                       name="User@Nulogy.com"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -16939,7 +16939,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                   <div
@@ -16966,7 +16966,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                                       name="Settings"
                                                       textColor="#c0c8d1"
                                                     >
-                                                      <MenuComponent
+                                                      <MenuComponentWithState
                                                         background="#122b47"
                                                         hideDelay="100"
                                                         logoColor="white"
@@ -17134,7 +17134,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                                             </Manager>
                                                           </StatelessNavBarDropdownMenu>
                                                         </MenuState>
-                                                      </MenuComponent>
+                                                      </MenuComponentWithState>
                                                     </MenuTrigger>
                                                   </div>
                                                 </nav>
@@ -18896,7 +18896,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -19064,7 +19064,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -19135,7 +19135,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                   name="Inspector"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -19303,7 +19303,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -19356,7 +19356,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                   name="Operations"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -19524,7 +19524,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -21422,7 +21422,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                   name="Dashboard"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -21590,7 +21590,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -21661,7 +21661,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                   name="Inspector"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -21829,7 +21829,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
@@ -21882,7 +21882,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                   name="Operations"
                                                   textColor="#c0c8d1"
                                                 >
-                                                  <MenuComponent
+                                                  <MenuComponentWithState
                                                     background="#122b47"
                                                     hideDelay="100"
                                                     logoColor="white"
@@ -22050,7 +22050,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                         </Manager>
                                                       </StatelessNavBarDropdownMenu>
                                                     </MenuState>
-                                                  </MenuComponent>
+                                                  </MenuComponentWithState>
                                                 </MenuTrigger>
                                               </div>
                                               <div
