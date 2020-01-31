@@ -1381,7 +1381,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                         },
                       }
                     }
-                    placement={false}
+                    placement="bottom-start"
                   >
                     <InnerPopper
                       eventsEnabled={true}
@@ -1395,7 +1395,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           },
                         }
                       }
-                      placement={false}
+                      placement="bottom-start"
                       positionFixed={false}
                       referenceElement={
                         <button
