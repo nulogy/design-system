@@ -54,9 +54,6 @@ const customCellRenderer = ({ cellData }) => (
     </Flex>
   </>
 );
-const dateToString = ({ cellData }) => {
-  return new Date(cellData).toDateString();
-};
 
 const milestoneColumns = [
   { label: "Milestone", dataKey: "milestone" },
@@ -306,8 +303,8 @@ storiesOf("Pages/Details page", module)
             borderLeft={{ medium: `solid 1px ${theme.colors.lightGrey}` }}
             position={{ extraSmall: "absolute", medium: "static" }}
             borderRadius="medium"
-            //height={StorybookContentHeight}
-            //overflow="auto"
+            //  height={StorybookContentHeight}
+            //  overflow="auto"
           >
             <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
               <SectionTitle mt="half">Job 324400</SectionTitle>

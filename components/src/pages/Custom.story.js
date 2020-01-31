@@ -3,7 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import theme from "../theme";
-import { Box, Flex, Title, SectionTitle, SubsectionTitle, Text, NavBar, IconicButton, Link, Icon } from "../index";
+import { Box, Flex, Title, SectionTitle, Text, NavBar, IconicButton, Link, Icon } from "../index";
 
 const primaryMenu = [
   {
