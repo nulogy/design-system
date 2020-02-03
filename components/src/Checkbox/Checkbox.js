@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import theme from "../theme";
@@ -134,5 +135,9 @@ const Checkbox = styled(BaseCheckbox)(
   },
   space
 );
+
+Checkbox.propTypes = {
+  ...propTypes.space
+};
 
 export default Checkbox;

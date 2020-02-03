@@ -392,12 +392,13 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
                     fontSize="16px"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
                     ml="half"
                     mr="half"
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF hcubmN"
+                      className="sc-AykKF jTSHcw"
                       color="currentColor"
                       disabled={false}
                       fontSize="16px"
@@ -525,12 +526,13 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
                     fontSize="16px"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
                     ml="half"
                     mr="half"
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF hcubmN"
+                      className="sc-AykKF jTSHcw"
                       color="currentColor"
                       disabled={false}
                       fontSize="16px"
@@ -1367,12 +1369,13 @@ exports[`Storyshots IconicButton with a long label 1`] = `
                     fontSize="16px"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
                     ml="half"
                     mr="half"
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF hcubmN"
+                      className="sc-AykKF jTSHcw"
                       color="currentColor"
                       disabled={false}
                       fontSize="16px"
@@ -1782,12 +1785,13 @@ exports[`Storyshots IconicButton with label 1`] = `
                     fontSize="16px"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
                     ml="half"
                     mr="half"
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF hcubmN"
+                      className="sc-AykKF jTSHcw"
                       color="currentColor"
                       disabled={false}
                       fontSize="16px"

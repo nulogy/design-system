@@ -370,7 +370,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNk dftUGf"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNk dftUGf"
                 >
                   <Styled(Component)>
                     <Component
@@ -471,15 +471,15 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen sc-fzXfNj kYYfAJ"
+                          className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC sc-fzXfNj kYYfAJ"
                         >
                           <Styled(styled.h3)
                             fontSize="20px"
                             fontWeight="500"
                             lineHeight="1.2"
-                            m={0}
                             mb="8px"
                             mr="x4"
+                            mt={0}
                             theme={
                               Object {
                                 "borders": Array [],
@@ -568,7 +568,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             }
                           >
                             <h3
-                              className="sc-AykKI sc-AykKJ eJQiXU"
+                              className="sc-AykKI sc-AykKJ keRtly"
                               fontSize="20px"
                               fontWeight="500"
                             >
@@ -842,7 +842,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                              className="Box-sc-1qu1edy-0 sc-AykKC iqqOmY"
                             >
                               <Box
                                 mr="x3"
@@ -934,7 +934,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 lpnemB"
+                                  className="Box-sc-1qu1edy-0 kyPtqg"
                                 >
                                   <styled.p
                                     color="currentColor"
@@ -942,10 +942,11 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF bljHeM"
+                                      className="sc-AykKF jKbmDj"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -959,10 +960,11 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF bljHeM"
+                                      className="sc-AykKF jKbmDj"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1061,7 +1063,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 hgJwrR"
+                                  className="Box-sc-1qu1edy-0 jgHxgc"
                                 >
                                   <styled.p
                                     color="currentColor"
@@ -1069,11 +1071,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                     textAlign="right"
                                   >
                                     <p
-                                      className="sc-AykKF bLmozI"
+                                      className="sc-AykKF cfBbAL"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1087,11 +1090,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                     textAlign="right"
                                   >
                                     <p
-                                      className="sc-AykKF bLmozI"
+                                      className="sc-AykKF cfBbAL"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1206,15 +1210,15 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen sc-fzXfNj kYYfAJ"
+                          className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC sc-fzXfNj kYYfAJ"
                         >
                           <Styled(styled.h3)
                             fontSize="20px"
                             fontWeight="500"
                             lineHeight="1.2"
-                            m={0}
                             mb="8px"
                             mr="x4"
+                            mt={0}
                             theme={
                               Object {
                                 "borders": Array [],
@@ -1303,7 +1307,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             }
                           >
                             <h3
-                              className="sc-AykKI sc-AykKJ eJQiXU"
+                              className="sc-AykKI sc-AykKJ keRtly"
                               fontSize="20px"
                               fontWeight="500"
                             >
@@ -1577,7 +1581,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                              className="Box-sc-1qu1edy-0 sc-AykKC iqqOmY"
                             >
                               <Box
                                 mr="x3"
@@ -1669,7 +1673,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 lpnemB"
+                                  className="Box-sc-1qu1edy-0 kyPtqg"
                                 >
                                   <styled.p
                                     color="currentColor"
@@ -1677,10 +1681,11 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF bljHeM"
+                                      className="sc-AykKF jKbmDj"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1694,10 +1699,11 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF bljHeM"
+                                      className="sc-AykKF jKbmDj"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1796,7 +1802,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 hgJwrR"
+                                  className="Box-sc-1qu1edy-0 jgHxgc"
                                 >
                                   <styled.p
                                     color="currentColor"
@@ -1804,11 +1810,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                     textAlign="right"
                                   >
                                     <p
-                                      className="sc-AykKF bLmozI"
+                                      className="sc-AykKF cfBbAL"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -1822,11 +1829,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                     fontSize="16px"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                     textAlign="right"
                                   >
                                     <p
-                                      className="sc-AykKF bLmozI"
+                                      className="sc-AykKF cfBbAL"
                                       color="currentColor"
                                       disabled={false}
                                       fontSize="16px"
@@ -2223,7 +2231,7 @@ exports[`Storyshots Card Card 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen"
+              className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC"
             >
               I am a card.
             </div>
@@ -2605,7 +2613,7 @@ exports[`Storyshots Card Cardset 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNk dftUGf"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNk dftUGf"
                 >
                   <Styled(Box)
                     bg="whiteGrey"
@@ -2701,7 +2709,7 @@ exports[`Storyshots Card Cardset 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen"
+                      className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC"
                     >
                       I am a 1st card in a cardset.
                     </div>
@@ -2800,7 +2808,7 @@ exports[`Storyshots Card Cardset 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen"
+                      className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC"
                     >
                       I am a 2nd card in a cardset.
                     </div>
@@ -2899,7 +2907,7 @@ exports[`Storyshots Card Cardset 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-fzXfNi dKtIen"
+                      className="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC"
                     >
                       I am a 3rd card in a cardset.
                     </div>
@@ -3286,7 +3294,7 @@ exports[`Storyshots Card Custom card 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-fzXfNi jbLDXC"
+              className="Box-sc-1qu1edy-0 sc-fzXfNi jfYnQt"
               color="white"
             >
               I am a custom card.

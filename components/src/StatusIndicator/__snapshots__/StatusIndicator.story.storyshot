@@ -277,72 +277,66 @@ exports[`Storyshots StatusIndicator All 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             mr="half"
             type="neutral"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 hlagWB"
+              className="StatusIndicator-t1vtrp-0 oimeG"
               type="neutral"
             >
               Neutral
             </p>
           </StatusIndicator>
           <StatusIndicator
-            m={0}
             mr="half"
             type="quiet"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 etutEd"
+              className="StatusIndicator-t1vtrp-0 iLYile"
               type="quiet"
             >
               Quiet
             </p>
           </StatusIndicator>
           <StatusIndicator
-            m={0}
             mr="half"
             type="informative"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 hzYnQM"
+              className="StatusIndicator-t1vtrp-0 DgsYR"
               type="informative"
             >
               Informative
             </p>
           </StatusIndicator>
           <StatusIndicator
-            m={0}
             mr="half"
             type="success"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 hEIFvY"
+              className="StatusIndicator-t1vtrp-0 HQKEd"
               type="success"
             >
               Success
             </p>
           </StatusIndicator>
           <StatusIndicator
-            m={0}
             mr="half"
             type="warning"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 dqggUR"
+              className="StatusIndicator-t1vtrp-0 hIJVBS"
               type="warning"
             >
               Warning
             </p>
           </StatusIndicator>
           <StatusIndicator
-            m={0}
             mr="half"
             type="danger"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 fRUfGy"
+              className="StatusIndicator-t1vtrp-0 kkxUnz"
               type="danger"
             >
               Danger
@@ -632,11 +626,10 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="danger"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 eybuGU"
+              className="StatusIndicator-t1vtrp-0 jYgTmJ"
               type="danger"
             >
               Danger
@@ -1015,16 +1008,16 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dLkQzm"
+              className="Box-sc-1qu1edy-0 fUpMMZ"
             >
               <styled.h2
                 fontSize="26px"
                 fontWeight="500"
                 inline={true}
                 lineHeight="1.23076923"
-                m={0}
                 mb="16px"
                 mr="x1"
+                mt={0}
                 theme={
                   Object {
                     "borders": Array [],
@@ -1113,7 +1106,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 }
               >
                 <span
-                  className="sc-AykKH boReXI"
+                  className="sc-AykKH kMmipS"
                   fontSize="26px"
                   fontWeight="500"
                 >
@@ -1121,11 +1114,10 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 </span>
               </styled.h2>
               <StatusIndicator
-                m={0}
                 type="neutral"
               >
                 <p
-                  className="StatusIndicator-t1vtrp-0 fRhvWX"
+                  className="StatusIndicator-t1vtrp-0 bRldQ"
                   type="neutral"
                 >
                   Status
@@ -1223,16 +1215,16 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dLkQzm"
+              className="Box-sc-1qu1edy-0 fUpMMZ"
             >
               <Styled(styled.h3)
                 fontSize="20px"
                 fontWeight="500"
                 inline={true}
                 lineHeight="1.2"
-                m={0}
                 mb="8px"
                 mr="x1"
+                mt={0}
                 theme={
                   Object {
                     "borders": Array [],
@@ -1321,7 +1313,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 }
               >
                 <span
-                  className="sc-AykKI sc-AykKJ gVAFnH"
+                  className="sc-AykKI sc-AykKJ caWLFB"
                   fontSize="20px"
                   fontWeight="500"
                 >
@@ -1329,11 +1321,10 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 </span>
               </Styled(styled.h3)>
               <StatusIndicator
-                m={0}
                 type="neutral"
               >
                 <p
-                  className="StatusIndicator-t1vtrp-0 fRhvWX"
+                  className="StatusIndicator-t1vtrp-0 bRldQ"
                   type="neutral"
                 >
                   Status
@@ -1431,7 +1422,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dLkQzm"
+              className="Box-sc-1qu1edy-0 fUpMMZ"
             >
               <styled.p
                 color="currentColor"
@@ -1439,11 +1430,12 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 fontSize="16px"
                 inline={true}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
                 mr="x1"
+                mt={0}
               >
                 <span
-                  className="sc-AykKF eCXA-di"
+                  className="sc-AykKF eOMZSl"
                   color="currentColor"
                   disabled={false}
                   fontSize="16px"
@@ -1452,11 +1444,10 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 </span>
               </styled.p>
               <StatusIndicator
-                m={0}
                 type="neutral"
               >
                 <p
-                  className="StatusIndicator-t1vtrp-0 fRhvWX"
+                  className="StatusIndicator-t1vtrp-0 bRldQ"
                   type="neutral"
                 >
                   Status
@@ -1554,7 +1545,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dLkQzm"
+              className="Box-sc-1qu1edy-0 fUpMMZ"
             >
               <styled.p
                 color="currentColor"
@@ -1562,11 +1553,12 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 fontSize="small"
                 inline={true}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
                 mr="x1"
+                mt={0}
               >
                 <span
-                  className="sc-AykKF iIgFsQ"
+                  className="sc-AykKF eqAfpn"
                   color="currentColor"
                   disabled={false}
                   fontSize="small"
@@ -1575,11 +1567,10 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 </span>
               </styled.p>
               <StatusIndicator
-                m={0}
                 type="neutral"
               >
                 <p
-                  className="StatusIndicator-t1vtrp-0 fRhvWX"
+                  className="StatusIndicator-t1vtrp-0 bRldQ"
                   type="neutral"
                 >
                   Status
@@ -1677,7 +1668,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dLkQzm"
+              className="Box-sc-1qu1edy-0 fUpMMZ"
             >
               <styled.p
                 color="currentColor"
@@ -1685,11 +1676,12 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 fontSize="smaller"
                 inline={true}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
                 mr="x1"
+                mt={0}
               >
                 <span
-                  className="sc-AykKF bxUbjC"
+                  className="sc-AykKF dSnkMp"
                   color="currentColor"
                   disabled={false}
                   fontSize="smaller"
@@ -1698,11 +1690,10 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
                 </span>
               </styled.p>
               <StatusIndicator
-                m={0}
                 type="neutral"
               >
                 <p
-                  className="StatusIndicator-t1vtrp-0 fRhvWX"
+                  className="StatusIndicator-t1vtrp-0 bRldQ"
                   type="neutral"
                 >
                   Status
@@ -1994,11 +1985,10 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="informative"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 ggfCRi"
+              className="StatusIndicator-t1vtrp-0 qPrYb"
               type="informative"
             >
               Informative
@@ -2288,11 +2278,10 @@ exports[`Storyshots StatusIndicator Neutral 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="neutral"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 fRhvWX"
+              className="StatusIndicator-t1vtrp-0 bRldQ"
               type="neutral"
             >
               Neutral
@@ -2582,11 +2571,10 @@ exports[`Storyshots StatusIndicator Quiet 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="quiet"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 cZBIEz"
+              className="StatusIndicator-t1vtrp-0 izHhko"
               type="quiet"
             >
               Quiet
@@ -2876,11 +2864,10 @@ exports[`Storyshots StatusIndicator Success 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="success"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 gkPUwu"
+              className="StatusIndicator-t1vtrp-0 vzJDn"
               type="success"
             >
               Success
@@ -3170,11 +3157,10 @@ exports[`Storyshots StatusIndicator Warning 1`] = `
           }
         >
           <StatusIndicator
-            m={0}
             type="warning"
           >
             <p
-              className="StatusIndicator-t1vtrp-0 bWnvVn"
+              className="StatusIndicator-t1vtrp-0 hwsUBc"
               type="warning"
             >
               Warning

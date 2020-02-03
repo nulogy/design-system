@@ -370,7 +370,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-AykKC jxa-DRX"
+                className="Box-sc-1qu1edy-0 sc-AykKC fdIsmY"
                 color="#cc1439"
               >
                 <Styled(Component)
@@ -420,10 +420,11 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
                       fontSize="16px"
                       inline={false}
                       lineHeight="1.5"
-                      m={0}
+                      mb={0}
+                      mt={0}
                     >
                       <p
-                        className="sc-AykKF bljHeM"
+                        className="sc-AykKF jKbmDj"
                         color="currentColor"
                         disabled={false}
                         fontSize="16px"
@@ -813,7 +814,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-AykKC jxa-DRX"
+                className="Box-sc-1qu1edy-0 sc-AykKC fdIsmY"
                 color="#cc1439"
               >
                 <Styled(Component)
@@ -863,10 +864,11 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
                       fontSize="16px"
                       inline={false}
                       lineHeight="1.5"
-                      m={0}
+                      mb={0}
+                      mt={0}
                     >
                       <p
-                        className="sc-AykKF bljHeM"
+                        className="sc-AykKF jKbmDj"
                         color="currentColor"
                         disabled={false}
                         fontSize="16px"
@@ -880,7 +882,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
                       leftAlign={true}
                     >
                       <ul
-                        className="List-sc-1cqkmnl-0 bnZhNb"
+                        className="List-sc-1cqkmnl-0 kMmxnE"
                         color="currentColor"
                       >
                         <ListItem
@@ -916,7 +918,6 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
                             <Link
                               color="blue"
                               href="https://nulogy.design/"
-                              p={0}
                               theme={
                                 Object {
                                   "borders": Array [],
@@ -1006,7 +1007,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
                               underline={true}
                             >
                               <a
-                                className="Link-sc-1lpx3d0-0 hEPiSQ"
+                                className="Link-sc-1lpx3d0-0 hFcUQo"
                                 color="blue"
                                 href="https://nulogy.design/"
                               >
@@ -1404,7 +1405,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-AykKC jxa-DRX"
+                className="Box-sc-1qu1edy-0 sc-AykKC fdIsmY"
                 color="#cc1439"
               >
                 <Styled(Component)
@@ -1454,10 +1455,11 @@ exports[`Storyshots Inline Validation with list items 1`] = `
                       fontSize="16px"
                       inline={false}
                       lineHeight="1.5"
-                      m={0}
+                      mb={0}
+                      mt={0}
                     >
                       <p
-                        className="sc-AykKF bljHeM"
+                        className="sc-AykKF jKbmDj"
                         color="currentColor"
                         disabled={false}
                         fontSize="16px"
@@ -1471,7 +1473,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
                       leftAlign={true}
                     >
                       <ul
-                        className="List-sc-1cqkmnl-0 bnZhNb"
+                        className="List-sc-1cqkmnl-0 kMmxnE"
                         color="currentColor"
                       >
                         <ListItem
@@ -1887,7 +1889,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-AykKC jxa-DRX"
+                className="Box-sc-1qu1edy-0 sc-AykKC fdIsmY"
                 color="#cc1439"
               >
                 <Styled(Component)
@@ -1937,7 +1939,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
                       leftAlign={true}
                     >
                       <ul
-                        className="List-sc-1cqkmnl-0 bnZhNb"
+                        className="List-sc-1cqkmnl-0 kMmxnE"
                         color="currentColor"
                       >
                         <ListItem

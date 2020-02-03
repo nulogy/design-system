@@ -14,24 +14,12 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode,
+  DocText as Text
 } from "../../components";
-import { margins } from "../../shared/systemProps";
 
 const propsRows = [
-  {
-    name: "color",
-    type: "String",
-    defaultValue: "darkBlue",
-    description: "Sets color based on the theme.color object"
-  },
-  ...margins,
-  {
-    name: "textAlign",
-    type: "String",
-    defaultValue: "left",
-    description: "Sets text-align to either left, center or right"
-  },
   {
     name: "className",
     type: "String",
@@ -70,6 +58,14 @@ export default () => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+      <Text mt="x3">
+        Heading components extend <Link href="/components/Text">Text</Link>, and
+        thus have access to <InlineCode>typography</InlineCode>,{" "}
+        <InlineCode>colour</InlineCode>, and <InlineCode>space</InlineCode>{" "}
+        style props. See the{" "}
+        <Link href="/guides/style-props">style prop documentation</Link> for a
+        full list of available props.
+      </Text>
     </DocSection>
 
     <DocSection>

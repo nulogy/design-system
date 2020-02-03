@@ -389,7 +389,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-month-picker"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
               >
                 <Memo(GlobalStyleComponent) />
                 <t
@@ -690,7 +690,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                       >
                                         <Prefix
                                           prefix={null}
@@ -789,7 +789,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                                           }
                                         >
                                           <div
-                                            className="Box-sc-1qu1edy-0 llphNe"
+                                            className="Box-sc-1qu1edy-0 klanzh"
                                             display="flex"
                                           >
                                             <InputField__StyledInput
@@ -1263,7 +1263,7 @@ exports[`Storyshots MonthPicker default 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-month-picker"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
               >
                 <Memo(GlobalStyleComponent) />
                 <t
@@ -1559,7 +1559,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                                className="Box-sc-1qu1edy-0 iPmvAN"
                                               >
                                                 <span
                                                   style={
@@ -1664,7 +1664,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                               >
                                                 <Prefix
                                                   prefix={null}
@@ -1763,7 +1763,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
+                                                    className="Box-sc-1qu1edy-0 klanzh"
                                                     display="flex"
                                                   >
                                                     <InputField__StyledInput
@@ -2243,7 +2243,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-month-picker"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
               >
                 <Memo(GlobalStyleComponent) />
                 <t
@@ -2541,7 +2541,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                                className="Box-sc-1qu1edy-0 iPmvAN"
                                               >
                                                 <span
                                                   style={
@@ -2646,7 +2646,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                               >
                                                 <Prefix
                                                   prefix={null}
@@ -2745,7 +2745,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
+                                                    className="Box-sc-1qu1edy-0 klanzh"
                                                     display="flex"
                                                   >
                                                     <InputField__StyledInput
@@ -3223,7 +3223,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-month-picker"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
               >
                 <Memo(GlobalStyleComponent) />
                 <t
@@ -3517,7 +3517,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                                className="Box-sc-1qu1edy-0 iPmvAN"
                                               >
                                                 <span
                                                   style={
@@ -3622,7 +3622,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                               >
                                                 <Prefix
                                                   prefix={null}
@@ -3721,7 +3721,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
+                                                    className="Box-sc-1qu1edy-0 klanzh"
                                                     display="flex"
                                                   >
                                                     <InputField__StyledInput
@@ -4199,7 +4199,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp nds-month-picker"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
               >
                 <Memo(GlobalStyleComponent) />
                 <t
@@ -4493,7 +4493,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                                className="Box-sc-1qu1edy-0 iPmvAN"
                                               >
                                                 <span
                                                   style={
@@ -4598,7 +4598,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                               >
                                                 <Prefix
                                                   prefix={null}
@@ -4697,7 +4697,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className="Box-sc-1qu1edy-0 llphNe"
+                                                    className="Box-sc-1qu1edy-0 klanzh"
                                                     display="flex"
                                                   >
                                                     <InputField__StyledInput
@@ -4878,7 +4878,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                      className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                       color="#cc1439"
                     >
                       <Styled(Component)
@@ -4928,10 +4928,11 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
+                            mb={0}
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF bljHeM"
+                              className="sc-AykKF jKbmDj"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"

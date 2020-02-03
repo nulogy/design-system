@@ -191,6 +191,10 @@ export const menuData = [
       {
         name: "Layout",
         href: "/guides/layout"
+      },
+      {
+        name: "Style props",
+        href: "/guides/style-props"
       }
     ]
   },

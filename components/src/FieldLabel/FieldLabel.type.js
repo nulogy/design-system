@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 
 export const FieldLabelProps = {
   labelText: PropTypes.string.isRequired,
@@ -7,7 +7,7 @@ export const FieldLabelProps = {
   requirementText: PropTypes.string,
   helpText: PropTypes.node,
   id: PropTypes.string,
-  ...space.PropTypes
+  ...propTypes.space
 };
 
 export const FieldLabelDefaultProps = {

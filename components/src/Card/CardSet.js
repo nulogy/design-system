@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
 import Card from "./Card";
@@ -20,7 +21,7 @@ const CardSet = styled(UnstyledCardSet)(space, {
 
 UnstyledCardSet.propTypes = {
   children: PropTypes.node,
-  ...space.PropTypes
+  ...propTypes.space
 };
 
 UnstyledCardSet.defaultProps = {

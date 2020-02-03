@@ -373,7 +373,7 @@ exports[`Storyshots Flex Flex 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+              className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -479,7 +479,7 @@ exports[`Storyshots Flex Flex 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -587,7 +587,7 @@ exports[`Storyshots Flex Flex 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -695,7 +695,7 @@ exports[`Storyshots Flex Flex 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -803,7 +803,7 @@ exports[`Storyshots Flex Flex 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -911,7 +911,7 @@ exports[`Storyshots Flex Flex 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1305,7 +1305,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC jyEHUX"
+              className="Box-sc-1qu1edy-0 sc-AykKC kwkuVs"
               height="400px"
               style={
                 Object {
@@ -1411,7 +1411,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1519,7 +1519,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1627,7 +1627,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1735,7 +1735,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1843,7 +1843,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -1863,11 +1863,12 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
             my="x2"
           >
             <p
-              className="sc-AykKF ioCNDy"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -2248,7 +2249,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cpMWjB"
+              className="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
             >
               <Styled(Box)
                 style={
@@ -2347,7 +2348,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                  className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                   style={
                     Object {
                       "background": "#f0f2f5",
@@ -2453,7 +2454,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -2561,7 +2562,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -2669,7 +2670,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -2777,7 +2778,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -2885,7 +2886,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -2907,11 +2908,12 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
             my="x2"
           >
             <p
-              className="sc-AykKF ioCNDy"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -3299,7 +3301,7 @@ exports[`Storyshots Flex With custom order 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+              className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -3406,7 +3408,7 @@ exports[`Storyshots Flex With custom order 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 cdPHFL"
+                  className="Box-sc-1qu1edy-0 fCpcmC"
                   order="1"
                   style={
                     Object {
@@ -3516,7 +3518,7 @@ exports[`Storyshots Flex With custom order 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 dhQSdN"
+                  className="Box-sc-1qu1edy-0 fCFVuU"
                   order="3"
                   style={
                     Object {
@@ -3626,7 +3628,7 @@ exports[`Storyshots Flex With custom order 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 cFQmRM"
+                  className="Box-sc-1qu1edy-0 fCxyQL"
                   order="2"
                   style={
                     Object {
@@ -3736,7 +3738,7 @@ exports[`Storyshots Flex With custom order 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 elScBP"
+                  className="Box-sc-1qu1edy-0 fCWODm"
                   order="5"
                   style={
                     Object {
@@ -3846,7 +3848,7 @@ exports[`Storyshots Flex With custom order 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 dJRxpO"
+                  className="Box-sc-1qu1edy-0 fCOrZd"
                   order="4"
                   style={
                     Object {
@@ -4242,7 +4244,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC iBNfmF"
+              className="Box-sc-1qu1edy-0 sc-AykKC kfmaOe"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -4348,7 +4350,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -4456,7 +4458,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -4564,7 +4566,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -4672,7 +4674,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -4780,7 +4782,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -5175,7 +5177,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC haLNYz"
+              className="Box-sc-1qu1edy-0 sc-AykKC yAmtA"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -5281,7 +5283,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -5389,7 +5391,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -5497,7 +5499,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -5605,7 +5607,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -5713,7 +5715,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -6108,7 +6110,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+              className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -6214,7 +6216,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -6322,7 +6324,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -6430,7 +6432,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -6538,7 +6540,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -6646,7 +6648,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7041,7 +7043,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC iTHvcJ"
+              className="Box-sc-1qu1edy-0 sc-AykKC khOMAy"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -7147,7 +7149,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7255,7 +7257,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7363,7 +7365,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7471,7 +7473,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7579,7 +7581,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -7974,7 +7976,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cpMWjB"
+              className="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -8080,7 +8082,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -8188,7 +8190,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -8296,7 +8298,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -8404,7 +8406,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -8512,7 +8514,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -8907,7 +8909,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC fRyEUa"
+              className="Box-sc-1qu1edy-0 sc-AykKC hCqMUL"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -9013,7 +9015,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -9121,7 +9123,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -9229,7 +9231,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -9337,7 +9339,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -9445,7 +9447,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -9840,7 +9842,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC ixJJAk"
+              className="Box-sc-1qu1edy-0 sc-AykKC jKtKTJ"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -9946,7 +9948,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -10054,7 +10056,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -10162,7 +10164,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -10270,7 +10272,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -10378,7 +10380,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -10765,7 +10767,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
             width={500}
           >
             <div
-              className="Box-sc-1qu1edy-0 lnJgtv"
+              className="Box-sc-1qu1edy-0 iKepQe"
               width={500}
             >
               <Styled(Box)
@@ -10866,7 +10868,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC ebiqKb"
+                  className="Box-sc-1qu1edy-0 sc-AykKC dKkYHc"
                   style={
                     Object {
                       "background": "#f0f2f5",
@@ -10972,7 +10974,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11080,7 +11082,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11188,7 +11190,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11296,7 +11298,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11404,7 +11406,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11512,7 +11514,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -11620,7 +11622,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12009,7 +12011,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
             width={500}
           >
             <div
-              className="Box-sc-1qu1edy-0 lnJgtv"
+              className="Box-sc-1qu1edy-0 iKepQe"
               width={500}
             >
               <Styled(Box)
@@ -12110,7 +12112,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC dQsQLW"
+                  className="Box-sc-1qu1edy-0 sc-AykKC DYcjL"
                   style={
                     Object {
                       "background": "#f0f2f5",
@@ -12216,7 +12218,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12324,7 +12326,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12432,7 +12434,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12540,7 +12542,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12648,7 +12650,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12756,7 +12758,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -12864,7 +12866,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -13253,7 +13255,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
             width={500}
           >
             <div
-              className="Box-sc-1qu1edy-0 lnJgtv"
+              className="Box-sc-1qu1edy-0 iKepQe"
               width={500}
             >
               <Styled(Box)
@@ -13354,7 +13356,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC bICOlH"
+                  className="Box-sc-1qu1edy-0 sc-AykKC cGflKI"
                   style={
                     Object {
                       "background": "#f0f2f5",
@@ -13460,7 +13462,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -13568,7 +13570,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -13676,7 +13678,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -13784,7 +13786,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -13892,7 +13894,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -14000,7 +14002,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -14108,7 +14110,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                       style={
                         Object {
                           "background": "#c0c8d1",
@@ -14505,7 +14507,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cuBaPN"
+              className="Box-sc-1qu1edy-0 sc-AykKC jNmqHm"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -14611,7 +14613,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -14719,7 +14721,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -14827,7 +14829,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -14935,7 +14937,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15043,7 +15045,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15438,7 +15440,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC bWxERX"
+              className="Box-sc-1qu1edy-0 sc-AykKC hLdNpw"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -15544,7 +15546,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15652,7 +15654,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15760,7 +15762,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15868,7 +15870,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -15976,7 +15978,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -16371,7 +16373,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC kHpwGe"
+              className="Box-sc-1qu1edy-0 sc-AykKC cSjYEX"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -16477,7 +16479,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -16585,7 +16587,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -16693,7 +16695,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -16801,7 +16803,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -16909,7 +16911,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -17304,7 +17306,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC kGiXVG"
+              className="Box-sc-1qu1edy-0 sc-AykKC kwWCOH"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -17410,7 +17412,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -17518,7 +17520,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -17626,7 +17628,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -17734,7 +17736,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -17842,7 +17844,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -18237,7 +18239,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+              className="Box-sc-1qu1edy-0 sc-AykKC iqqOmY"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -18343,7 +18345,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -18451,7 +18453,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -18559,7 +18561,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -18667,7 +18669,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -18775,7 +18777,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -19170,7 +19172,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC epBnVQ"
+              className="Box-sc-1qu1edy-0 sc-AykKC egoSOR"
               style={
                 Object {
                   "background": "#f0f2f5",
@@ -19276,7 +19278,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -19384,7 +19386,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -19492,7 +19494,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -19600,7 +19602,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",
@@ -19708,7 +19710,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR"
+                  className="Box-sc-1qu1edy-0 jgHxgc"
                   style={
                     Object {
                       "background": "#c0c8d1",

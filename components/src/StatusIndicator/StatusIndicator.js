@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 
 const StatusIndicatorColours = {
@@ -59,12 +60,11 @@ const StatusIndicator = styled.p(
 
 StatusIndicator.propTypes = {
   type: PropTypes.oneOf(["neutral", "danger", "informative", "success", "warning", "quiet"]),
-  ...space.PropTypes
+  ...propTypes.space
 };
 
 StatusIndicator.defaultProps = {
-  type: "neutral",
-  m: 0
+  type: "neutral"
 };
 
 export default StatusIndicator;

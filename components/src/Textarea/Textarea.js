@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -101,7 +102,7 @@ Textarea.propTypes = {
   helpText: PropTypes.node,
   requirementText: PropTypes.string,
   rows: PropTypes.number,
-  ...space.PropTypes
+  ...propTypes.space
 };
 
 Textarea.defaultProps = {

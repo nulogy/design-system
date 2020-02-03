@@ -16,42 +16,17 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode
 } from "../../components";
-import {
-  boxShadow,
-  color,
-  margins,
-  paddings,
-  height,
-  width
-} from "../../shared/systemProps";
 
 const propsRows = [
-  ...boxShadow,
-  ...color,
-  {
-    name: "display",
-    type: "string",
-    defaultValue: "block",
-    description: "Sets CSS display property"
-  },
-  ...height,
-  ...margins,
   {
     name: "order",
     type: "number",
     defaultValue: "",
     description: "Sets the order to be used with Flex component"
   },
-  {
-    name: "position",
-    type: "string",
-    defaultValue: "",
-    description: "Sets the CSS position property"
-  },
-  ...paddings,
-  ...width,
   {
     name: "className",
     type: "String",
@@ -177,6 +152,15 @@ export default () => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+      <Text mt="x3">
+        The Box component has access to <InlineCode>space</InlineCode>,{" "}
+        <InlineCode>colour</InlineCode>, <InlineCode>layout</InlineCode>,{" "}
+        <InlineCode>border</InlineCode>, <InlineCode>boxShadow</InlineCode>,{" "}
+        <InlineCode>textAlign</InlineCode>, and{" "}
+        <InlineCode>position</InlineCode> style props. See the{" "}
+        <Link href="/guides/style-props">style prop documentation</Link> for a
+        full list of available props.
+      </Text>
     </DocSection>
 
     <DocSection>

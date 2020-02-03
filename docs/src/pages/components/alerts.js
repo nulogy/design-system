@@ -20,7 +20,8 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode
 } from "../../components";
 
 const propsRows = [
@@ -141,19 +142,17 @@ export default () => (
 </Alert>`}
         </Highlight>
       </Box>
-      {/* <Box mb="x6">
-        <SubsectionTitle>With a title</SubsectionTitle>
-        <Alert title="Alert title">Text</Alert>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>Closeable</SubsectionTitle>
-        <Alert isCloseable="true">Text</Alert>
-      </Box> */}
     </DocSection>
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+      <Text mt="x3">
+        The Alert component has access to <InlineCode>space</InlineCode> style
+        props. See the{" "}
+        <Link href="/guides/style-props">style prop documentation</Link> for a
+        full list of available props.
+      </Text>
     </DocSection>
 
     <DocSection>

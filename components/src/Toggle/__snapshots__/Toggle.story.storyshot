@@ -387,7 +387,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -488,7 +488,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -573,12 +573,12 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -705,7 +705,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -806,7 +806,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -891,12 +891,12 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -1301,7 +1301,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -1770,7 +1770,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -1871,7 +1871,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -2349,7 +2349,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -2450,7 +2450,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -2533,12 +2533,12 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF eDGLWM"
+                              className="sc-AykKF ASBTe"
                               color="currentColor"
                               disabled={true}
                               fontSize="16px"
@@ -2667,7 +2667,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -2768,7 +2768,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -2851,12 +2851,12 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF eDGLWM"
+                              className="sc-AykKF ASBTe"
                               color="currentColor"
                               disabled={true}
                               fontSize="16px"
@@ -3269,7 +3269,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText="Turns setting on/off"
@@ -3370,7 +3370,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -3390,11 +3390,12 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                               fontSize="12px"
                               inline={true}
                               lineHeight="1.5"
-                              m={0}
+                              mb={0}
                               ml="x1"
+                              mt={0}
                             >
                               <span
-                                className="sc-AykKF fjgaNV"
+                                className="sc-AykKF bNiwGI"
                                 color="darkGrey"
                                 disabled={false}
                                 fontSize="12px"
@@ -3410,10 +3411,11 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                               fontSize="16px"
                               inline={false}
                               lineHeight="1.5"
-                              m={0}
+                              mb={0}
+                              mt={0}
                             >
                               <p
-                                className="sc-AykKF sc-fzXfLV hqFgzh"
+                                className="sc-AykKF sc-fzXfLV kckwMb"
                                 color="currentColor"
                                 disabled={false}
                                 fontSize="16px"
@@ -3492,12 +3494,12 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -3906,7 +3908,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -4007,7 +4009,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -4090,12 +4092,12 @@ exports[`Storyshots Toggle With custom id 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -4505,7 +4507,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -4606,7 +4608,7 @@ exports[`Storyshots Toggle With long text 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -4689,12 +4691,12 @@ exports[`Storyshots Toggle With long text 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -5102,7 +5104,7 @@ exports[`Storyshots Toggle With text 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                 >
                   <MaybeToggleTitle
                     helpText={null}
@@ -5203,7 +5205,7 @@ exports[`Storyshots Toggle With text 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 fTNzpy"
+                          className="Box-sc-1qu1edy-0 iPmvAN"
                         >
                           <span
                             style={
@@ -5286,12 +5288,12 @@ exports[`Storyshots Toggle With text 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
                             mb="none"
                             ml="x1"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF NfKbk"
+                              className="sc-AykKF bqQwZK"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"

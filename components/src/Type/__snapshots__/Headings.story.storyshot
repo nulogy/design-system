@@ -280,8 +280,8 @@ exports[`Storyshots Headings Section Title 1`] = `
             fontSize="26px"
             fontWeight="500"
             lineHeight="1.23076923"
-            m={0}
             mb="16px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -370,7 +370,7 @@ exports[`Storyshots Headings Section Title 1`] = `
             }
           >
             <h2
-              className="sc-AykKH iNnKKi"
+              className="sc-AykKH dIrZHw"
               fontSize="26px"
               fontWeight="500"
             >
@@ -664,8 +664,8 @@ exports[`Storyshots Headings Subsection Title 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -754,7 +754,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -1048,8 +1048,8 @@ exports[`Storyshots Headings Title 1`] = `
             fontSize="46px"
             fontWeight="300"
             lineHeight="1.04347826"
-            m={0}
             mb="48px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1138,7 +1138,7 @@ exports[`Storyshots Headings Title 1`] = `
             }
           >
             <h1
-              className="sc-AykKG lceBGU"
+              className="sc-AykKG caGURK"
               fontSize="46px"
               fontWeight="300"
             >
@@ -1432,8 +1432,8 @@ exports[`Storyshots Headings With a custom margin 1`] = `
             fontSize="46px"
             fontWeight="300"
             lineHeight="1.04347826"
-            m={0}
             mb="x6"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1522,7 +1522,7 @@ exports[`Storyshots Headings With a custom margin 1`] = `
             }
           >
             <h1
-              className="sc-AykKG lceBGU"
+              className="sc-AykKG kjjZNK"
               fontSize="46px"
               fontWeight="300"
             >
@@ -1535,10 +1535,11 @@ exports[`Storyshots Headings With a custom margin 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
           >
             <p
-              className="sc-AykKF bljHeM"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"

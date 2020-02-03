@@ -367,7 +367,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC fDydry"
+              className="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
             >
               <Styled(BaseNavBar)
                 menuData={
@@ -643,14 +643,13 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                               >
                                 <Link
                                   aria-label="Nulogy logo"
                                   color="blue"
                                   href="/"
                                   my={null}
-                                  p={0}
                                   style={
                                     Object {
                                       "display": "block",
@@ -747,7 +746,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 >
                                   <a
                                     aria-label="Nulogy logo"
-                                    className="Link-sc-1lpx3d0-0 jbhJdy"
+                                    className="Link-sc-1lpx3d0-0 ksBFcO"
                                     color="blue"
                                     href="/"
                                     style={
@@ -928,7 +927,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                    className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                     style={
                                       Object {
                                         "flexGrow": "1",
@@ -1347,7 +1346,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                         style={
                                           Object {
                                             "float": "right",
@@ -1729,7 +1728,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iAOwIR"
+                  className="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
                 >
                   <Box
                     flexGrow="2"
@@ -1822,14 +1821,14 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 krEtOl"
+                      className="Box-sc-1qu1edy-0 czbwcE"
                     >
                       <styled.h1
                         fontSize="46px"
                         fontWeight="300"
                         lineHeight="1.04347826"
-                        m={0}
                         mb="x6"
+                        mt={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -1918,7 +1917,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                         }
                       >
                         <h1
-                          className="sc-AykKG lceBGU"
+                          className="sc-AykKG kjjZNK"
                           fontSize="46px"
                           fontWeight="300"
                         >
@@ -2268,14 +2267,14 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x4"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -2364,7 +2363,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH hgVohk"
+                                  className="sc-AykKH bgiWDu"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -2463,7 +2462,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC ibfARP"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC euHflE"
                                 >
                                   <Box
                                     mb="x3"
@@ -2557,7 +2556,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -2567,11 +2566,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -2586,10 +2585,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -2691,7 +2691,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -2701,11 +2701,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -2720,10 +2720,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -2825,7 +2826,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -2835,11 +2836,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -2854,10 +2855,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -2959,7 +2961,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -2969,11 +2971,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -2988,10 +2990,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -3093,7 +3096,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -3103,11 +3106,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -3122,10 +3125,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -3227,7 +3231,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -3237,11 +3241,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -3256,10 +3260,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -3370,14 +3375,14 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fwnBEp"
+                              className="Box-sc-1qu1edy-0 llptsQ"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -3466,7 +3471,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -3997,7 +4002,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -4042,10 +4047,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -4308,7 +4314,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -4353,10 +4359,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -4619,7 +4626,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -4664,10 +4671,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -4930,7 +4938,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -4975,10 +4983,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -5127,14 +5136,14 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -5223,7 +5232,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -6099,14 +6108,14 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 PMSGR"
+                              className="Box-sc-1qu1edy-0 hxzuhQ"
                             >
                               <Styled(styled.h3)
                                 fontSize="20px"
                                 fontWeight="500"
                                 lineHeight="1.2"
-                                m={0}
                                 mb="x3"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -6195,7 +6204,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 }
                               >
                                 <h3
-                                  className="sc-AykKI sc-AykKJ fwzkgn"
+                                  className="sc-AykKI sc-AykKJ iembIV"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -6312,7 +6321,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                         >
                                           <MaybeFieldLabel
                                             helpText={null}
@@ -6441,7 +6450,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR"
+                                        className="Box-sc-1qu1edy-0 jgHxgc"
                                       >
                                         <Styled(Component)
                                           mr="x1"
@@ -6888,7 +6897,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC fDydry"
+              className="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
             >
               <Styled(BaseNavBar)
                 menuData={
@@ -7164,14 +7173,13 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                               >
                                 <Link
                                   aria-label="Nulogy logo"
                                   color="blue"
                                   href="/"
                                   my={null}
-                                  p={0}
                                   style={
                                     Object {
                                       "display": "block",
@@ -7268,7 +7276,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 >
                                   <a
                                     aria-label="Nulogy logo"
-                                    className="Link-sc-1lpx3d0-0 jbhJdy"
+                                    className="Link-sc-1lpx3d0-0 ksBFcO"
                                     color="blue"
                                     href="/"
                                     style={
@@ -7449,7 +7457,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                    className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                     style={
                                       Object {
                                         "flexGrow": "1",
@@ -7868,7 +7876,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                         style={
                                           Object {
                                             "float": "right",
@@ -8250,7 +8258,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iAOwIR"
+                  className="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
                 >
                   <Box
                     flexGrow="2"
@@ -8346,7 +8354,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gSBoPm"
+                      className="Box-sc-1qu1edy-0 ddCDMd"
                     >
                       <Styled(Box)
                         alignItems="flex-start"
@@ -8440,7 +8448,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-AykKC bCTePD"
+                          className="Box-sc-1qu1edy-0 sc-AykKC hzayjc"
                           height="32px"
                         >
                           <Styled(Box)
@@ -8540,7 +8548,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-AykKC dIxmBP"
+                              className="Box-sc-1qu1edy-0 sc-AykKC llVkbw"
                               width={
                                 Object {
                                   "extraSmall": "calc(100vw - 96px - 16px)",
@@ -8552,7 +8560,6 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 color="darkBlue"
                                 fontSize="smaller"
                                 mr="half"
-                                p={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -8642,7 +8649,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 underline={false}
                               >
                                 <a
-                                  className="Link-sc-1lpx3d0-0 bvrboF"
+                                  className="Link-sc-1lpx3d0-0 ihmJwB"
                                   color="darkBlue"
                                   fontSize="smaller"
                                 >
@@ -8690,7 +8697,6 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 color="darkBlue"
                                 fontSize="smaller"
                                 mr="half"
-                                p={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -8780,7 +8786,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 underline={false}
                               >
                                 <a
-                                  className="Link-sc-1lpx3d0-0 bvrboF"
+                                  className="Link-sc-1lpx3d0-0 ihmJwB"
                                   color="darkBlue"
                                   fontSize="smaller"
                                 >
@@ -8948,8 +8954,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         fontSize="46px"
                         fontWeight="300"
                         lineHeight="1.04347826"
-                        m={0}
                         mb="x6"
+                        mt={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -9038,7 +9044,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         }
                       >
                         <h1
-                          className="sc-AykKG lceBGU"
+                          className="sc-AykKG kjjZNK"
                           fontSize="46px"
                           fontWeight="300"
                         >
@@ -9388,14 +9394,14 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x4"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -9484,7 +9490,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH hgVohk"
+                                  className="sc-AykKH bgiWDu"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -9583,7 +9589,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC ibfARP"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC euHflE"
                                 >
                                   <Box
                                     mb="x3"
@@ -9677,7 +9683,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -9687,11 +9693,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -9706,10 +9712,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -9811,7 +9818,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -9821,11 +9828,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -9840,10 +9847,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -9945,7 +9953,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -9955,11 +9963,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -9974,10 +9982,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -10079,7 +10088,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -10089,11 +10098,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -10108,10 +10117,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -10213,7 +10223,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -10223,11 +10233,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -10242,10 +10252,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -10347,7 +10358,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -10357,11 +10368,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -10376,10 +10387,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -10490,14 +10502,14 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fwnBEp"
+                              className="Box-sc-1qu1edy-0 llptsQ"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -10586,7 +10598,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -11117,7 +11129,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -11162,10 +11174,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -11428,7 +11441,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -11473,10 +11486,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -11739,7 +11753,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -11784,10 +11798,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -12050,7 +12065,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -12095,10 +12110,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -12247,14 +12263,14 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -12343,7 +12359,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -13219,14 +13235,14 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 PMSGR"
+                              className="Box-sc-1qu1edy-0 hxzuhQ"
                             >
                               <Styled(styled.h3)
                                 fontSize="20px"
                                 fontWeight="500"
                                 lineHeight="1.2"
-                                m={0}
                                 mb="x3"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -13315,7 +13331,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 }
                               >
                                 <h3
-                                  className="sc-AykKI sc-AykKJ fwzkgn"
+                                  className="sc-AykKI sc-AykKJ iembIV"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -13432,7 +13448,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                         >
                                           <MaybeFieldLabel
                                             helpText={null}
@@ -13561,7 +13577,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR"
+                                        className="Box-sc-1qu1edy-0 jgHxgc"
                                       >
                                         <Styled(Component)
                                           mr="x1"
@@ -13743,7 +13759,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 cKzlcY"
+                      className="Box-sc-1qu1edy-0 hjLctz"
                       width={
                         Object {
                           "extraSmall": "calc(100vw - 48px - 16px)",
@@ -13844,13 +13860,12 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-AykKC bPfJve"
+                          className="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
                         >
                           <styled.h2
                             fontSize="26px"
                             fontWeight="500"
                             lineHeight="1.23076923"
-                            m={0}
                             mb="16px"
                             mt="half"
                             theme={
@@ -13941,7 +13956,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                             }
                           >
                             <h2
-                              className="sc-AykKH ifOQjZ"
+                              className="sc-AykKH caijxQ"
                               fontSize="26px"
                               fontWeight="500"
                             >
@@ -14069,10 +14084,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -14460,7 +14476,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC fDydry"
+              className="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
             >
               <Styled(BaseNavBar)
                 menuData={
@@ -14736,14 +14752,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                               >
                                 <Link
                                   aria-label="Nulogy logo"
                                   color="blue"
                                   href="/"
                                   my={null}
-                                  p={0}
                                   style={
                                     Object {
                                       "display": "block",
@@ -14840,7 +14855,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 >
                                   <a
                                     aria-label="Nulogy logo"
-                                    className="Link-sc-1lpx3d0-0 jbhJdy"
+                                    className="Link-sc-1lpx3d0-0 ksBFcO"
                                     color="blue"
                                     href="/"
                                     style={
@@ -15021,7 +15036,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                    className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                     style={
                                       Object {
                                         "flexGrow": "1",
@@ -15440,7 +15455,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                         style={
                                           Object {
                                             "float": "right",
@@ -15822,7 +15837,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iAOwIR"
+                  className="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
                 >
                   <Box
                     flexGrow="2"
@@ -15915,14 +15930,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 krEtOl"
+                      className="Box-sc-1qu1edy-0 czbwcE"
                     >
                       <styled.h1
                         fontSize="46px"
                         fontWeight="300"
                         lineHeight="1.04347826"
-                        m={0}
                         mb="x6"
+                        mt={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -16011,7 +16026,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         }
                       >
                         <h1
-                          className="sc-AykKG lceBGU"
+                          className="sc-AykKG kjjZNK"
                           fontSize="46px"
                           fontWeight="300"
                         >
@@ -16361,14 +16376,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x4"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -16457,7 +16472,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH hgVohk"
+                                  className="sc-AykKH bgiWDu"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -16556,7 +16571,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC ibfARP"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC euHflE"
                                 >
                                   <Box
                                     mb="x3"
@@ -16650,7 +16665,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -16660,11 +16675,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -16679,10 +16694,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -16784,7 +16800,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -16794,11 +16810,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -16813,10 +16829,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -16918,7 +16935,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -16928,11 +16945,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -16947,10 +16964,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -17052,7 +17070,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 cBJbhv"
+                                      className="Box-sc-1qu1edy-0 ezfApW"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -17062,11 +17080,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -17081,10 +17099,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -17186,7 +17205,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 vmlYD"
+                                      className="Box-sc-1qu1edy-0 jUEzSa"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -17196,11 +17215,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -17215,10 +17234,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -17320,7 +17340,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     width={0.3333333333333333}
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 hNQokw"
+                                      className="Box-sc-1qu1edy-0 eQZEVD"
                                       width={0.3333333333333333}
                                     >
                                       <styled.p
@@ -17330,11 +17350,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="smallTextBase"
-                                        m={0}
                                         mb="x1"
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF cuorEw"
+                                          className="sc-AykKF KmVJu"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="small"
@@ -17349,10 +17369,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -17463,14 +17484,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fwnBEp"
+                              className="Box-sc-1qu1edy-0 llptsQ"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -17559,7 +17580,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -18090,7 +18111,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -18135,10 +18156,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -18401,7 +18423,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -18446,10 +18468,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -18712,7 +18735,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -18757,10 +18780,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -19023,7 +19047,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                       >
                                                         <Styled(Component)
                                                           color="red"
@@ -19068,10 +19092,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           fontSize="16px"
                                                           inline={false}
                                                           lineHeight="1.5"
-                                                          m={0}
+                                                          mb={0}
+                                                          mt={0}
                                                         >
                                                           <p
-                                                            className="sc-AykKF bljHeM"
+                                                            className="sc-AykKF jKbmDj"
                                                             color="currentColor"
                                                             disabled={false}
                                                             fontSize="16px"
@@ -19220,14 +19245,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 kNmoWD"
+                              className="Box-sc-1qu1edy-0 fwepcq"
                             >
                               <styled.h2
                                 fontSize="26px"
                                 fontWeight="500"
                                 lineHeight="1.23076923"
-                                m={0}
                                 mb="x2"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -19316,7 +19341,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 }
                               >
                                 <h2
-                                  className="sc-AykKH iNnKKi"
+                                  className="sc-AykKH kPIttU"
                                   fontSize="26px"
                                   fontWeight="500"
                                 >
@@ -20192,14 +20217,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 PMSGR"
+                              className="Box-sc-1qu1edy-0 hxzuhQ"
                             >
                               <Styled(styled.h3)
                                 fontSize="20px"
                                 fontWeight="500"
                                 lineHeight="1.2"
-                                m={0}
                                 mb="x3"
+                                mt={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -20288,7 +20313,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 }
                               >
                                 <h3
-                                  className="sc-AykKI sc-AykKJ fwzkgn"
+                                  className="sc-AykKI sc-AykKJ iembIV"
                                   fontSize="20px"
                                   fontWeight="500"
                                 >
@@ -20405,7 +20430,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                         >
                                           <MaybeFieldLabel
                                             helpText={null}
@@ -20534,7 +20559,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR"
+                                        className="Box-sc-1qu1edy-0 jgHxgc"
                                       >
                                         <Styled(Component)
                                           mr="x1"
@@ -20716,7 +20741,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 cKzlcY"
+                      className="Box-sc-1qu1edy-0 hjLctz"
                       width={
                         Object {
                           "extraSmall": "calc(100vw - 48px - 16px)",
@@ -20817,13 +20842,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-AykKC bPfJve"
+                          className="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
                         >
                           <styled.h2
                             fontSize="26px"
                             fontWeight="500"
                             lineHeight="1.23076923"
-                            m={0}
                             mb="16px"
                             mt="half"
                             theme={
@@ -20914,7 +20938,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             }
                           >
                             <h2
-                              className="sc-AykKH ifOQjZ"
+                              className="sc-AykKH caijxQ"
                               fontSize="26px"
                               fontWeight="500"
                             >
@@ -21058,8 +21082,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     fontSize="20px"
                                     fontWeight="500"
                                     lineHeight="1.2"
-                                    m={0}
                                     mb="8px"
+                                    mt={0}
                                     theme={
                                       Object {
                                         "borders": Array [],
@@ -21148,7 +21172,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     }
                                   >
                                     <legend
-                                      className="sc-AykKI sc-AykKJ sc-fzXfMv kubvnQ"
+                                      className="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
                                       fontSize="20px"
                                       fontWeight="500"
                                     >
@@ -21262,7 +21286,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -21404,7 +21428,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -21509,7 +21533,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -21608,7 +21632,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -21759,7 +21783,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -21900,7 +21924,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -21920,11 +21944,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                             fontSize="12px"
                                                             inline={true}
                                                             lineHeight="1.5"
-                                                            m={0}
+                                                            mb={0}
                                                             ml="x1"
+                                                            mt={0}
                                                           >
                                                             <span
-                                                              className="sc-AykKF fjgaNV"
+                                                              className="sc-AykKF bNiwGI"
                                                               color="darkGrey"
                                                               disabled={false}
                                                               fontSize="12px"
@@ -21940,10 +21965,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                             fontSize="16px"
                                                             inline={false}
                                                             lineHeight="1.5"
-                                                            m={0}
+                                                            mb={0}
+                                                            mt={0}
                                                           >
                                                             <p
-                                                              className="sc-AykKF sc-fzXfLV hqFgzh"
+                                                              className="sc-AykKF sc-fzXfLV kckwMb"
                                                               color="currentColor"
                                                               disabled={false}
                                                               fontSize="16px"
@@ -22044,7 +22070,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -22143,7 +22169,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -22302,7 +22328,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <MaybeFieldLabel
                                           helpText={null}
@@ -22428,7 +22454,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="Box-sc-1qu1edy-0 fTNzpy"
+                                                      className="Box-sc-1qu1edy-0 iPmvAN"
                                                     >
                                                       <span
                                                         style={
@@ -24217,7 +24243,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           defaultValue="WS2SB6"
@@ -24359,7 +24385,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -24464,7 +24490,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -24563,7 +24589,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -24696,7 +24722,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                                              className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                                               color="#cc1439"
                                             >
                                               <Styled(Component)
@@ -24746,10 +24772,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     fontSize="16px"
                                                     inline={false}
                                                     lineHeight="1.5"
-                                                    m={0}
+                                                    mb={0}
+                                                    mt={0}
                                                   >
                                                     <p
-                                                      className="sc-AykKF bljHeM"
+                                                      className="sc-AykKF jKbmDj"
                                                       color="currentColor"
                                                       disabled={false}
                                                       fontSize="16px"
@@ -24872,7 +24899,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -25014,7 +25041,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -25119,7 +25146,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -25218,7 +25245,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -25370,7 +25397,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           defaultValue="18 000"
@@ -25512,7 +25539,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -25617,7 +25644,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -25716,7 +25743,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -25868,7 +25895,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -26010,7 +26037,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -26115,7 +26142,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -26214,7 +26241,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -26366,7 +26393,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -26508,7 +26535,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -26613,7 +26640,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -26712,7 +26739,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -26803,11 +26830,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 fontSize="12px"
                                                 inline={true}
                                                 lineHeight="1.5"
-                                                m={0}
+                                                mb={0}
                                                 ml="x1"
+                                                mt={0}
                                               >
                                                 <span
-                                                  className="sc-AykKF fjgaNV"
+                                                  className="sc-AykKF bNiwGI"
                                                   color="darkGrey"
                                                   disabled={false}
                                                   fontSize="12px"
@@ -26924,7 +26952,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={false}
@@ -26972,10 +27000,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={false}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <p
-                                                          className="sc-AykKF bljHeM"
+                                                          className="sc-AykKF jKbmDj"
                                                           color="currentColor"
                                                           disabled={false}
                                                           fontSize="16px"
@@ -27096,7 +27125,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={false}
@@ -27144,10 +27173,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={false}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <p
-                                                          className="sc-AykKF bljHeM"
+                                                          className="sc-AykKF jKbmDj"
                                                           color="currentColor"
                                                           disabled={false}
                                                           fontSize="16px"
@@ -27269,7 +27299,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={true}
@@ -27317,10 +27347,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={false}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <p
-                                                          className="sc-AykKF cestcM"
+                                                          className="sc-AykKF gRcVjH"
                                                           color="currentColor"
                                                           disabled={true}
                                                           fontSize="16px"
@@ -27442,7 +27473,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={true}
@@ -27490,10 +27521,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={false}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <p
-                                                          className="sc-AykKF cestcM"
+                                                          className="sc-AykKF gRcVjH"
                                                           color="currentColor"
                                                           disabled={true}
                                                           fontSize="16px"
@@ -27671,7 +27703,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={false}
@@ -27721,10 +27753,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={true}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <span
-                                                          className="sc-AykKF bljHeM"
+                                                          className="sc-AykKF jKbmDj"
                                                           color="currentColor"
                                                           disabled={false}
                                                           fontSize="16px"
@@ -27847,7 +27880,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={false}
@@ -27895,10 +27928,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={true}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <span
-                                                          className="sc-AykKF bljHeM"
+                                                          className="sc-AykKF jKbmDj"
                                                           color="currentColor"
                                                           disabled={false}
                                                           fontSize="16px"
@@ -28022,7 +28056,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                                                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                                                 >
                                                   <ClickInputLabel
                                                     disabled={true}
@@ -28070,10 +28104,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         fontSize="16px"
                                                         inline={true}
                                                         lineHeight="1.5"
-                                                        m={0}
+                                                        mb={0}
+                                                        mt={0}
                                                       >
                                                         <span
-                                                          className="sc-AykKF cestcM"
+                                                          className="sc-AykKF gRcVjH"
                                                           color="currentColor"
                                                           disabled={true}
                                                           fontSize="16px"
@@ -28185,7 +28220,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               }
                                             >
                                               <div
-                                                className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                                                className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                                                 color="#cc1439"
                                               >
                                                 <Styled(Component)
@@ -28235,10 +28270,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       fontSize="16px"
                                                       inline={false}
                                                       lineHeight="1.5"
-                                                      m={0}
+                                                      mb={0}
+                                                      mt={0}
                                                     >
                                                       <p
-                                                        className="sc-AykKF bljHeM"
+                                                        className="sc-AykKF jKbmDj"
                                                         color="currentColor"
                                                         disabled={false}
                                                         fontSize="16px"
@@ -28364,7 +28400,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                                         >
                                           <MaybeToggleTitle
                                             helpText={null}
@@ -28465,7 +28501,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 fTNzpy"
+                                                  className="Box-sc-1qu1edy-0 iPmvAN"
                                                 >
                                                   <span
                                                     style={
@@ -28548,12 +28584,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     fontSize="16px"
                                                     inline={false}
                                                     lineHeight="1.5"
-                                                    m={0}
                                                     mb="none"
                                                     ml="x1"
+                                                    mt={0}
                                                   >
                                                     <p
-                                                      className="sc-AykKF NfKbk"
+                                                      className="sc-AykKF bqQwZK"
                                                       color="currentColor"
                                                       disabled={false}
                                                       fontSize="16px"
@@ -28586,8 +28622,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     fontSize="20px"
                                     fontWeight="500"
                                     lineHeight="1.2"
-                                    m={0}
                                     mb="8px"
+                                    mt={0}
                                     theme={
                                       Object {
                                         "borders": Array [],
@@ -28676,7 +28712,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     }
                                   >
                                     <legend
-                                      className="sc-AykKI sc-AykKJ sc-fzXfMv kubvnQ"
+                                      className="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
                                       fontSize="20px"
                                       fontWeight="500"
                                     >
@@ -28790,7 +28826,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           defaultValue="235432"
@@ -28932,7 +28968,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -29037,7 +29073,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -29136,7 +29172,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -29269,7 +29305,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                                              className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                                               color="#cc1439"
                                             >
                                               <Styled(Component)
@@ -29319,10 +29355,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     fontSize="16px"
                                                     inline={false}
                                                     lineHeight="1.5"
-                                                    m={0}
+                                                    mb={0}
+                                                    mt={0}
                                                   >
                                                     <p
-                                                      className="sc-AykKF bljHeM"
+                                                      className="sc-AykKF jKbmDj"
                                                       color="currentColor"
                                                       disabled={false}
                                                       fontSize="16px"
@@ -29444,7 +29481,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                       >
                                         <ForwardRef
                                           disabled={false}
@@ -29585,7 +29622,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                                       >
                                                         <span
                                                           style={
@@ -29690,7 +29727,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                       >
                                                         <Prefix
                                                           prefix={null}
@@ -29789,7 +29826,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           }
                                                         >
                                                           <div
-                                                            className="Box-sc-1qu1edy-0 llphNe"
+                                                            className="Box-sc-1qu1edy-0 klanzh"
                                                             display="flex"
                                                           >
                                                             <InputField__StyledInput
@@ -29942,7 +29979,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp sc-fzXfNg dHJaZc"
+                                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
                                         >
                                           <MaybeToggleTitle
                                             helpText={null}
@@ -30043,7 +30080,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 fTNzpy"
+                                                  className="Box-sc-1qu1edy-0 iPmvAN"
                                                 >
                                                   <span
                                                     style={
@@ -30126,12 +30163,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     fontSize="16px"
                                                     inline={false}
                                                     lineHeight="1.5"
-                                                    m={0}
                                                     mb="none"
                                                     ml="x1"
+                                                    mt={0}
                                                   >
                                                     <p
-                                                      className="sc-AykKF eDGLWM"
+                                                      className="sc-AykKF ASBTe"
                                                       color="currentColor"
                                                       disabled={true}
                                                       fontSize="16px"

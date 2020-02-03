@@ -661,7 +661,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -1088,7 +1088,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -1606,7 +1606,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -2064,7 +2064,7 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 itKINo"
+                                  className="Box-sc-1qu1edy-0 fGWNgD"
                                 >
                                   <styled.p
                                     color="blackBlue"
@@ -2073,10 +2073,11 @@ exports[`Storyshots StoriesForTests/Table with expandable and selectable rows wi
                                     fontWeight="bold"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF kxJvaq"
+                                      className="sc-AykKF eruAHZ"
                                       color="blackBlue"
                                       disabled={false}
                                       fontSize="16px"
@@ -3553,7 +3554,7 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 itKINo"
+                                  className="Box-sc-1qu1edy-0 fGWNgD"
                                 >
                                   <styled.p
                                     color="blackBlue"
@@ -3562,10 +3563,11 @@ exports[`Storyshots StoriesForTests/Table with expandable rows with defaults 1`]
                                     fontWeight="bold"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF kxJvaq"
+                                      className="sc-AykKF eruAHZ"
                                       color="blackBlue"
                                       disabled={false}
                                       fontSize="16px"
@@ -10727,7 +10729,7 @@ exports[`Storyshots StoriesForTests/Table with pagination 1`] = `
                 >
                   <nav
                     aria-label="Pagination navigation"
-                    className="Box-sc-1qu1edy-0 sc-AykKC RBSqO"
+                    className="Box-sc-1qu1edy-0 sc-AykKC htLZb"
                   >
                     <PreviousButton
                       disabled={true}
@@ -14599,7 +14601,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -15463,7 +15465,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -16874,7 +16876,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -18285,7 +18287,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -19696,7 +19698,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -21107,7 +21109,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -22403,7 +22405,7 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                 >
                   <nav
                     aria-label="Pagination navigation"
-                    className="Box-sc-1qu1edy-0 sc-AykKC RBSqO"
+                    className="Box-sc-1qu1edy-0 sc-AykKC htLZb"
                   >
                     <PreviousButton
                       disabled={true}
@@ -22556,12 +22558,13 @@ exports[`Storyshots StoriesForTests/Table with pagination and selectable rows 1`
                       inline={false}
                       key="sep5"
                       lineHeight="smallTextBase"
-                      m={0}
+                      mb={0}
                       mr="x2"
+                      mt={0}
                       py="x1"
                     >
                       <p
-                        className="sc-AykKF kCmfxD"
+                        className="sc-AykKF deuCmq"
                         color="currentColor"
                         disabled={false}
                         fontSize="small"
@@ -23269,7 +23272,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -23668,7 +23671,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -24116,7 +24119,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -25037,7 +25040,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -25436,7 +25439,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -25884,7 +25887,7 @@ exports[`Storyshots StoriesForTests/Table with selected rows with defaults 1`] =
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}

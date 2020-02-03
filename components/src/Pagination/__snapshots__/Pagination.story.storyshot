@@ -375,7 +375,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={true}
@@ -528,12 +528,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -715,7 +716,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -868,12 +869,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -1055,7 +1057,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -1208,12 +1210,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -1395,7 +1398,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -1548,12 +1551,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -1735,7 +1739,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -1888,12 +1892,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -2075,7 +2080,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -2156,12 +2161,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep1"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -2415,7 +2421,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -2496,12 +2502,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   inline={false}
                   key="sep1"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -3038,7 +3045,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={true}
@@ -3191,12 +3198,13 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   inline={false}
                   key="sep5"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -3661,7 +3669,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}
@@ -3742,12 +3750,13 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   inline={false}
                   key="sep1"
                   lineHeight="smallTextBase"
-                  m={0}
+                  mb={0}
                   mr="x2"
+                  mt={0}
                   py="x1"
                 >
                   <p
-                    className="sc-AykKF kCmfxD"
+                    className="sc-AykKF deuCmq"
                     color="currentColor"
                     disabled={false}
                     fontSize="small"
@@ -4284,7 +4293,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
             >
               <nav
                 aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
               >
                 <PreviousButton
                   disabled={false}

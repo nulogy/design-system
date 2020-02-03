@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { transparentize } from "polished";
 import { Icon } from "../Icon";
@@ -116,7 +117,8 @@ BaseIconicButton.propTypes = {
   className: PropTypes.string,
   labelHidden: PropTypes.bool,
   disabled: PropTypes.bool,
-  icon: PropTypes.oneOf(iconNames).isRequired
+  icon: PropTypes.oneOf(iconNames).isRequired,
+  ...propTypes.space
 };
 
 BaseIconicButton.defaultProps = {

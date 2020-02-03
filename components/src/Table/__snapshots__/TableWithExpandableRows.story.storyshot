@@ -4183,7 +4183,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 itKINo"
+                                  className="Box-sc-1qu1edy-0 fGWNgD"
                                 >
                                   <styled.p
                                     color="blackBlue"
@@ -4192,10 +4192,11 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                     fontWeight="bold"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF kxJvaq"
+                                      className="sc-AykKF eruAHZ"
                                       color="blackBlue"
                                       disabled={false}
                                       fontSize="16px"
@@ -4746,7 +4747,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 itKINo"
+                                  className="Box-sc-1qu1edy-0 fGWNgD"
                                 >
                                   <styled.p
                                     color="blackBlue"
@@ -4755,10 +4756,11 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
                                     fontWeight="bold"
                                     inline={false}
                                     lineHeight="1.5"
-                                    m={0}
+                                    mb={0}
+                                    mt={0}
                                   >
                                     <p
-                                      className="sc-AykKF kxJvaq"
+                                      className="sc-AykKF eruAHZ"
                                       color="blackBlue"
                                       disabled={false}
                                       fontSize="16px"

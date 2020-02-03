@@ -22,7 +22,8 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode
 } from "../../components";
 
 const options = [
@@ -202,6 +203,12 @@ export default () => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+      <Text mt="x3">
+        The Form component has access to <InlineCode>space</InlineCode> style
+        props. See the{" "}
+        <Link href="/guides/style-props">style prop documentation</Link> for a
+        full list of available props.
+      </Text>
     </DocSection>
 
     <DocSection>

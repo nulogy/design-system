@@ -666,7 +666,7 @@ exports[`Storyshots StoriesForTests/Select Base 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                         >
                           <MaybeFieldLabel
                             helpText={null}
@@ -792,7 +792,7 @@ exports[`Storyshots StoriesForTests/Select Base 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 fTNzpy"
+                                        className="Box-sc-1qu1edy-0 iPmvAN"
                                       >
                                         <span
                                           style={
@@ -3232,7 +3232,7 @@ exports[`Storyshots StoriesForTests/Select Controlled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                          className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                         >
                           <MaybeFieldLabel
                             helpText={null}
