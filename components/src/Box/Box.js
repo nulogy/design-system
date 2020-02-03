@@ -3,8 +3,6 @@ import { color, space, layout, border, boxShadow, textAlign, order, flexGrow, po
 import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 
-// const flexGrow = style({ prop: "flexGrow" });
-
 const Box = styled.div(color, space, layout, border, boxShadow, textAlign, order, flexGrow, position);
 
 Box.propTypes = {
