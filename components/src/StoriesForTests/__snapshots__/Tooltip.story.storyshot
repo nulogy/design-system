@@ -287,7 +287,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
-              id="random-id-1"
+              id="random-id-14"
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -313,7 +313,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
-                      aria-describedby="random-id-1"
+                      aria-describedby="random-id-14"
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -329,7 +329,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
-                        aria-describedby="random-id-1"
+                        aria-describedby="random-id-14"
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -342,7 +342,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                         size="medium"
                       >
                         <button
-                          aria-describedby="random-id-1"
+                          aria-describedby="random-id-14"
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -371,7 +371,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
-                        aria-describedby="random-id-1"
+                        aria-describedby="random-id-14"
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -383,7 +383,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
-                      id="random-id-1"
+                      id="random-id-14"
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -489,7 +489,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-1"
+                        id="random-id-14"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -810,7 +810,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
             <ForwardRef
               defaultOpen={true}
               hideDelay="350"
-              id="random-id-2"
+              id="random-id-15"
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -836,7 +836,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
-                      aria-describedby="random-id-2"
+                      aria-describedby="random-id-15"
                       aria-expanded={true}
                       aria-haspopup={true}
                       aria-label="Close"
@@ -852,7 +852,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
-                        aria-describedby="random-id-2"
+                        aria-describedby="random-id-15"
                         aria-expanded={true}
                         aria-haspopup={true}
                         aria-label="Close"
@@ -865,7 +865,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                         size="medium"
                       >
                         <button
-                          aria-describedby="random-id-2"
+                          aria-describedby="random-id-15"
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -894,7 +894,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
-                        aria-describedby="random-id-2"
+                        aria-describedby="random-id-15"
                         aria-expanded="true"
                         aria-haspopup="true"
                         aria-label="Close"
@@ -906,7 +906,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
-                      id="random-id-2"
+                      id="random-id-15"
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -1012,7 +1012,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
-                        id="random-id-2"
+                        id="random-id-15"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}

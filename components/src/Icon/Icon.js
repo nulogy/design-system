@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { space, color } from "styled-system";
 import icons from "../../icons/icons.json";
 import theme from "../theme";
+import LoadingIcon from "./LoadingIcon";
 
 const iconNames = Object.keys(icons);
 
@@ -19,22 +20,25 @@ const getPathElements = icon => (
 
 const Svg = React.forwardRef((props, ref) => {
   const { icon, className, title, size, color: fillColor, focusable } = props;
-
-  if (!icons[icon]) return false;
+  if (icon === "loading") {
+    return <LoadingIcon color={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor} {...props} />;
+  }
   return (
-    <svg
-      ref={ref}
-      aria-hidden={title == null}
-      width={size}
-      height={size}
-      fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
-      viewBox={icons[icon].viewBox}
-      focusable={focusable}
-      className={className}
-      {...props}
-    >
-      {getPathElements(icons[icon])}
-    </svg>
+    icons[icon] && (
+      <svg
+        ref={ref}
+        aria-hidden={title == null}
+        width={size}
+        height={size}
+        fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
+        viewBox={icons[icon].viewBox}
+        focusable={focusable}
+        className={className}
+        {...props}
+      >
+        {getPathElements(icons[icon])}
+      </svg>
+    )
   );
 });
 

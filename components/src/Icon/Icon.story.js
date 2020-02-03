@@ -5,8 +5,8 @@ import { Box, Flex, Icon, InlineIcon } from "../index";
 import theme from "../theme";
 import icons from "../../icons/icons.json";
 
-const iconNames = Object.keys(icons);
-const iconSubset = iconNames.slice(0, 5);
+const iconNames = [...Object.keys(icons), "loading"];
+const iconSubset = [...iconNames.slice(0, 5), "loading"];
 
 const IconCode = ({ icon }) => (
   <code>
