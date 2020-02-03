@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import { PopperArrow } from "../utils";
 import { Box } from "../Box";
 
 const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
