@@ -524,6 +524,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -627,7 +628,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1214,6 +1215,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -1317,7 +1319,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1903,6 +1905,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -2006,7 +2009,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU gUaLhJ"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU gUaLhJ  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2613,6 +2616,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -2716,7 +2720,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3272,6 +3276,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="blackBlue"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -3375,7 +3380,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU PXhla"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU PXhla  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3961,6 +3966,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -4064,7 +4070,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4529,6 +4535,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -4632,7 +4639,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}

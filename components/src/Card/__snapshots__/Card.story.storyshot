@@ -823,6 +823,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   >
                                     <Styled(Box)
                                       backgroundColor="whiteGrey"
+                                      className=" nds-popper-pop-up"
                                       id={null}
                                       onBlur={[Function]}
                                       onFocus={[Function]}
@@ -926,7 +927,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                                         id={null}
                                         onBlur={[Function]}
                                         onFocus={[Function]}
@@ -1789,6 +1790,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                   >
                                     <Styled(Box)
                                       backgroundColor="whiteGrey"
+                                      className=" nds-popper-pop-up"
                                       id={null}
                                       onBlur={[Function]}
                                       onFocus={[Function]}
@@ -1892,7 +1894,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                                         id={null}
                                         onBlur={[Function]}
                                         onFocus={[Function]}

@@ -524,6 +524,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -627,7 +628,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1093,6 +1094,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
                   >
                     <Styled(Box)
                       backgroundColor="whiteGrey"
+                      className=" nds-popper-pop-up"
                       id={null}
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -1196,7 +1198,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}

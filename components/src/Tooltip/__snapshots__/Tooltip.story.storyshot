@@ -474,6 +474,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-3"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -579,7 +580,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                             id="random-id-3"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -998,6 +999,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-27"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -1103,7 +1105,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                         id="random-id-27"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1532,6 +1534,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-19"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -1637,7 +1640,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-19"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2172,6 +2175,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-18"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -2277,7 +2281,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-18"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2792,6 +2796,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-21"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -2897,7 +2902,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-21"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3406,6 +3411,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-5"
                           maxWidth="128px"
                           onBlur={[Function]}
@@ -3511,7 +3517,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh fIA-DHu"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh fIA-DHu  nds-popper-pop-up"
                             id="random-id-5"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -3930,6 +3936,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-20"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -4035,7 +4042,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-20"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4452,6 +4459,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-22"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -4557,7 +4565,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-22"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4845,6 +4853,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-23"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -4950,7 +4959,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-23"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -5079,6 +5088,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-24"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -5184,7 +5194,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-24"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -5468,6 +5478,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-25"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -5573,7 +5584,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-25"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -5853,6 +5864,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-26"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -5958,7 +5970,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-26"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -6469,6 +6481,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-6"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -6574,7 +6587,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-6"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -6708,6 +6721,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-7"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -6813,7 +6827,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-7"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -6947,6 +6961,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-8"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -7052,7 +7067,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-8"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7282,6 +7297,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-9"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -7387,7 +7403,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-9"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7521,6 +7537,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-10"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -7626,7 +7643,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-10"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7760,6 +7777,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-11"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -7865,7 +7883,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-11"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8095,6 +8113,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-12"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -8200,7 +8219,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-12"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8334,6 +8353,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-13"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -8439,7 +8459,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-13"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8573,6 +8593,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-14"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -8678,7 +8699,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-14"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8908,6 +8929,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-15"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -9013,7 +9035,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-15"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -9147,6 +9169,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-16"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -9252,7 +9275,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-16"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -9386,6 +9409,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-17"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -9491,7 +9515,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-17"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -10002,6 +10026,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                         }
                       >
                         <Styled(Box)
+                          className=" nds-popper-pop-up"
                           id="random-id-4"
                           maxWidth="24em"
                           onBlur={[Function]}
@@ -10107,7 +10132,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                             id="random-id-4"
                             onBlur={[Function]}
                             onFocus={[Function]}

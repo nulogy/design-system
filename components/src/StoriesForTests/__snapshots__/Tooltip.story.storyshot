@@ -382,6 +382,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-1"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -487,7 +488,7 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
                         id="random-id-1"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -904,6 +905,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                     }
                   >
                     <Styled(Box)
+                      className=" nds-popper-pop-up"
                       id="random-id-2"
                       maxWidth="24em"
                       onBlur={[Function]}
@@ -1009,7 +1011,7 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
                         id="random-id-2"
                         onBlur={[Function]}
                         onFocus={[Function]}
