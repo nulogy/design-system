@@ -1056,7 +1056,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                 name="Dashboard"
                                                 textColor="#c0c8d1"
                                               >
-                                                <MenuComponent
+                                                <MenuComponentWithState
                                                   background="#122b47"
                                                   hideDelay="100"
                                                   logoColor="white"
@@ -1224,7 +1224,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                       </Manager>
                                                     </StatelessNavBarDropdownMenu>
                                                   </MenuState>
-                                                </MenuComponent>
+                                                </MenuComponentWithState>
                                               </MenuTrigger>
                                             </div>
                                             <div
@@ -1446,7 +1446,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                     name="Settings"
                                                     textColor="#c0c8d1"
                                                   >
-                                                    <MenuComponent
+                                                    <MenuComponentWithState
                                                       background="#122b47"
                                                       hideDelay="100"
                                                       logoColor="white"
@@ -1614,7 +1614,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                           </Manager>
                                                         </StatelessNavBarDropdownMenu>
                                                       </MenuState>
-                                                    </MenuComponent>
+                                                    </MenuComponentWithState>
                                                   </MenuTrigger>
                                                 </div>
                                               </nav>
@@ -7586,7 +7586,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                 name="Dashboard"
                                                 textColor="#c0c8d1"
                                               >
-                                                <MenuComponent
+                                                <MenuComponentWithState
                                                   background="#122b47"
                                                   hideDelay="100"
                                                   logoColor="white"
@@ -7754,7 +7754,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                       </Manager>
                                                     </StatelessNavBarDropdownMenu>
                                                   </MenuState>
-                                                </MenuComponent>
+                                                </MenuComponentWithState>
                                               </MenuTrigger>
                                             </div>
                                             <div
@@ -7976,7 +7976,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                     name="Settings"
                                                     textColor="#c0c8d1"
                                                   >
-                                                    <MenuComponent
+                                                    <MenuComponentWithState
                                                       background="#122b47"
                                                       hideDelay="100"
                                                       logoColor="white"
@@ -8144,7 +8144,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                           </Manager>
                                                         </StatelessNavBarDropdownMenu>
                                                       </MenuState>
-                                                    </MenuComponent>
+                                                    </MenuComponentWithState>
                                                   </MenuTrigger>
                                                 </div>
                                               </nav>
@@ -15165,7 +15165,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 name="Dashboard"
                                                 textColor="#c0c8d1"
                                               >
-                                                <MenuComponent
+                                                <MenuComponentWithState
                                                   background="#122b47"
                                                   hideDelay="100"
                                                   logoColor="white"
@@ -15333,7 +15333,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       </Manager>
                                                     </StatelessNavBarDropdownMenu>
                                                   </MenuState>
-                                                </MenuComponent>
+                                                </MenuComponentWithState>
                                               </MenuTrigger>
                                             </div>
                                             <div
@@ -15555,7 +15555,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     name="Settings"
                                                     textColor="#c0c8d1"
                                                   >
-                                                    <MenuComponent
+                                                    <MenuComponentWithState
                                                       background="#122b47"
                                                       hideDelay="100"
                                                       logoColor="white"
@@ -15723,7 +15723,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           </Manager>
                                                         </StatelessNavBarDropdownMenu>
                                                       </MenuState>
-                                                    </MenuComponent>
+                                                    </MenuComponentWithState>
                                                   </MenuTrigger>
                                                 </div>
                                               </nav>

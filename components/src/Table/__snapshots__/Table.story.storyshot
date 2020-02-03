@@ -1903,128 +1903,160 @@ exports[`Storyshots Table with everything 1`] = `
                                     <div
                                       className="Box-sc-1qu1edy-0 dqSmZd"
                                     >
-                                      <MenuComponent
+                                      <ForwardRef
+                                        backgroundColor="whiteGrey"
                                         boundariesElement="viewport"
                                         defaultOpen={false}
+                                        disabled={false}
                                         hideDelay="200"
+                                        placement="bottom-start"
+                                        showArrow={true}
                                         showDelay="100"
+                                        trigger={[Function]}
                                       >
-                                        <MenuState
+                                        <ForwardRef
+                                          backgroundColor="whiteGrey"
+                                          borderColor="whiteGrey"
                                           defaultOpen={false}
                                           hideDelay="200"
-                                          showDelay="100"
-                                        >
-                                          <StatelessDropdownMenu
-                                            boundariesElement="viewport"
-                                            defaultOpen={false}
-                                            disabled={false}
-                                            hideDelay="200"
-                                            menuState={
-                                              Object {
-                                                "closeMenu": [Function],
-                                                "handleMenuKeydown": [Function],
-                                                "isOpen": false,
-                                                "openMenu": [Function],
-                                                "toggleMenu": [Function],
-                                              }
+                                          id={null}
+                                          modifiers={
+                                            Object {
+                                              "boundariesElement": "viewport",
+                                              "preventOverflow": Object {
+                                                "boundariesElement": "viewport",
+                                                "enabled": true,
+                                                "padding": 8,
+                                              },
                                             }
-                                            placement="bottom-start"
-                                            showArrow={true}
-                                            showDelay="100"
-                                            trigger={[Function]}
-                                          >
-                                            <Manager>
-                                              <Reference>
-                                                <InnerReference
-                                                  setReferenceNode={[Function]}
+                                          }
+                                          openOnClick={true}
+                                          openOnHover={false}
+                                          popperPlacement="bottom-start"
+                                          showArrow={true}
+                                          showDelay="100"
+                                          trigger={
+                                            <ForwardRef(Styled(Component))
+                                              aria-haspopup={true}
+                                              disabled={null}
+                                              icon="more"
+                                              type="button"
+                                            />
+                                          }
+                                        >
+                                          <Manager>
+                                            <Reference>
+                                              <InnerReference
+                                                setReferenceNode={[Function]}
+                                              >
+                                                <Styled(Component)
+                                                  aria-describedby={null}
+                                                  aria-expanded={false}
+                                                  aria-haspopup={true}
+                                                  aria-label="Open"
+                                                  disabled={null}
+                                                  icon="more"
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  type="button"
                                                 >
-                                                  <Styled(Component)
+                                                  <ForwardRef
+                                                    aria-describedby={null}
                                                     aria-expanded={false}
                                                     aria-haspopup={true}
-                                                    aria-label="Open menu"
+                                                    aria-label="Open"
+                                                    className="sc-fzXfLQ bZudva"
                                                     disabled={null}
                                                     icon="more"
+                                                    labelHidden={false}
                                                     onBlur={[Function]}
-                                                    onClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
                                                     type="button"
                                                   >
-                                                    <ForwardRef
+                                                    <IconicButton__WrapperButton
+                                                      aria-describedby={null}
                                                       aria-expanded={false}
                                                       aria-haspopup={true}
-                                                      aria-label="Open menu"
+                                                      aria-label="Open"
                                                       className="sc-fzXfLQ bZudva"
                                                       disabled={null}
-                                                      icon="more"
-                                                      labelHidden={false}
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
+                                                      onFocus={[Function]}
+                                                      onMouseDown={[Function]}
                                                       type="button"
                                                     >
-                                                      <IconicButton__WrapperButton
+                                                      <button
+                                                        aria-describedby={null}
                                                         aria-expanded={false}
                                                         aria-haspopup={true}
-                                                        aria-label="Open menu"
-                                                        className="sc-fzXfLQ bZudva"
+                                                        aria-label="Open"
+                                                        className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
                                                         disabled={null}
                                                         onBlur={[Function]}
-                                                        onClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onMouseDown={[Function]}
                                                         type="button"
                                                       >
-                                                        <button
-                                                          aria-expanded={false}
-                                                          aria-haspopup={true}
-                                                          aria-label="Open menu"
-                                                          className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
-                                                          disabled={null}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          type="button"
-                                                        >
-                                                          <Manager>
-                                                            <Reference>
-                                                              <InnerReference
-                                                                setReferenceNode={[Function]}
+                                                        <Manager>
+                                                          <Reference>
+                                                            <InnerReference
+                                                              setReferenceNode={[Function]}
+                                                            >
+                                                              <Styled(Component)
+                                                                color="currentColor"
+                                                                icon="more"
+                                                                p="half"
+                                                                size="32px"
+                                                                title={null}
                                                               >
-                                                                <Styled(Component)
+                                                                <ForwardRef
+                                                                  className="sc-AykKD kaUxeX"
                                                                   color="currentColor"
+                                                                  focusable={false}
                                                                   icon="more"
                                                                   p="half"
                                                                   size="32px"
                                                                   title={null}
                                                                 >
-                                                                  <ForwardRef
+                                                                  <svg
+                                                                    aria-hidden={true}
                                                                     className="sc-AykKD kaUxeX"
                                                                     color="currentColor"
+                                                                    fill="currentColor"
                                                                     focusable={false}
+                                                                    height="32px"
                                                                     icon="more"
                                                                     p="half"
                                                                     size="32px"
                                                                     title={null}
+                                                                    viewBox="0 0 24 24"
+                                                                    width="32px"
                                                                   >
-                                                                    <svg
-                                                                      aria-hidden={true}
-                                                                      className="sc-AykKD kaUxeX"
-                                                                      color="currentColor"
-                                                                      fill="currentColor"
-                                                                      focusable={false}
-                                                                      height="32px"
-                                                                      icon="more"
-                                                                      p="half"
-                                                                      size="32px"
-                                                                      title={null}
-                                                                      viewBox="0 0 24 24"
-                                                                      width="32px"
-                                                                    >
-                                                                      <path
-                                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                        key="0"
-                                                                      />
-                                                                    </svg>
-                                                                  </ForwardRef>
-                                                                </Styled(Component)>
-                                                              </InnerReference>
-                                                            </Reference>
-                                                            <Popper
+                                                                    <path
+                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                      key="0"
+                                                                    />
+                                                                  </svg>
+                                                                </ForwardRef>
+                                                              </Styled(Component)>
+                                                            </InnerReference>
+                                                          </Reference>
+                                                          <Popper
+                                                            modifiers={
+                                                              Object {
+                                                                "preventOverflow": Object {
+                                                                  "boundariesElement": "viewport",
+                                                                  "enabled": true,
+                                                                  "padding": 8,
+                                                                },
+                                                              }
+                                                            }
+                                                            placement="bottom"
+                                                          >
+                                                            <InnerPopper
+                                                              eventsEnabled={true}
                                                               modifiers={
                                                                 Object {
                                                                   "preventOverflow": Object {
@@ -2035,51 +2067,251 @@ exports[`Storyshots Table with everything 1`] = `
                                                                 }
                                                               }
                                                               placement="bottom"
-                                                            >
-                                                              <InnerPopper
-                                                                eventsEnabled={true}
-                                                                modifiers={
-                                                                  Object {
-                                                                    "preventOverflow": Object {
-                                                                      "boundariesElement": "viewport",
-                                                                      "enabled": true,
-                                                                      "padding": 8,
-                                                                    },
-                                                                  }
-                                                                }
-                                                                placement="bottom"
-                                                                positionFixed={false}
-                                                                referenceElement={
-                                                                  <svg
-                                                                    aria-hidden="true"
-                                                                    class="sc-AykKD kaUxeX"
-                                                                    color="currentColor"
-                                                                    fill="currentColor"
-                                                                    focusable="false"
-                                                                    height="32px"
-                                                                    icon="more"
-                                                                    p="half"
-                                                                    viewBox="0 0 24 24"
-                                                                    width="32px"
-                                                                  >
-                                                                    <path
-                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                    />
-                                                                  </svg>
-                                                                }
-                                                              />
-                                                            </Popper>
-                                                          </Manager>
-                                                        </button>
-                                                      </IconicButton__WrapperButton>
-                                                    </ForwardRef>
-                                                  </Styled(Component)>
-                                                </InnerReference>
-                                              </Reference>
-                                            </Manager>
-                                          </StatelessDropdownMenu>
-                                        </MenuState>
-                                      </MenuComponent>
+                                                              positionFixed={false}
+                                                              referenceElement={
+                                                                <svg
+                                                                  aria-hidden="true"
+                                                                  class="sc-AykKD kaUxeX"
+                                                                  color="currentColor"
+                                                                  fill="currentColor"
+                                                                  focusable="false"
+                                                                  height="32px"
+                                                                  icon="more"
+                                                                  p="half"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="32px"
+                                                                >
+                                                                  <path
+                                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                  />
+                                                                </svg>
+                                                              }
+                                                            />
+                                                          </Popper>
+                                                        </Manager>
+                                                      </button>
+                                                    </IconicButton__WrapperButton>
+                                                  </ForwardRef>
+                                                </Styled(Component)>
+                                              </InnerReference>
+                                            </Reference>
+                                            <Popper
+                                              modifiers={
+                                                Object {
+                                                  "boundariesElement": "viewport",
+                                                  "preventOverflow": Object {
+                                                    "boundariesElement": "viewport",
+                                                    "enabled": true,
+                                                    "padding": 8,
+                                                  },
+                                                }
+                                              }
+                                              placement="bottom-start"
+                                            >
+                                              <InnerPopper
+                                                eventsEnabled={true}
+                                                modifiers={
+                                                  Object {
+                                                    "boundariesElement": "viewport",
+                                                    "preventOverflow": Object {
+                                                      "boundariesElement": "viewport",
+                                                      "enabled": true,
+                                                      "padding": 8,
+                                                    },
+                                                  }
+                                                }
+                                                placement="bottom-start"
+                                                positionFixed={false}
+                                                referenceElement={
+                                                  <button
+                                                    aria-expanded="false"
+                                                    aria-haspopup="true"
+                                                    aria-label="Open"
+                                                    class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="sc-AykKD kaUxeX"
+                                                      color="currentColor"
+                                                      fill="currentColor"
+                                                      focusable="false"
+                                                      height="32px"
+                                                      icon="more"
+                                                      p="half"
+                                                      viewBox="0 0 24 24"
+                                                      width="32px"
+                                                    >
+                                                      <path
+                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                }
+                                              >
+                                                <Styled(Box)
+                                                  backgroundColor="whiteGrey"
+                                                  className=" nds-popper-pop-up"
+                                                  id={null}
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  open={false}
+                                                  position={
+                                                    Object {
+                                                      "left": 0,
+                                                      "opacity": 0,
+                                                      "pointerEvents": "none",
+                                                      "position": "absolute",
+                                                      "top": 0,
+                                                    }
+                                                  }
+                                                  showArrow={true}
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
+                                                    id={null}
+                                                    onBlur={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    open={false}
+                                                  >
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Edit
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Delete
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <PopperArrow
+                                                      backgroundColor="whiteGrey"
+                                                      borderColor="whiteGrey"
+                                                      placement="bottom"
+                                                      style={Object {}}
+                                                    >
+                                                      <div
+                                                        className="PopperArrow-sc-1bcgj4w-0 bIvJYS"
+                                                        style={Object {}}
+                                                      />
+                                                    </PopperArrow>
+                                                  </div>
+                                                </Styled(Box)>
+                                              </InnerPopper>
+                                            </Popper>
+                                          </Manager>
+                                        </ForwardRef>
+                                      </ForwardRef>
                                     </div>
                                   </Box>
                                 </td>
@@ -2667,128 +2899,160 @@ exports[`Storyshots Table with everything 1`] = `
                                     <div
                                       className="Box-sc-1qu1edy-0 dqSmZd"
                                     >
-                                      <MenuComponent
+                                      <ForwardRef
+                                        backgroundColor="whiteGrey"
                                         boundariesElement="viewport"
                                         defaultOpen={false}
+                                        disabled={false}
                                         hideDelay="200"
+                                        placement="bottom-start"
+                                        showArrow={true}
                                         showDelay="100"
+                                        trigger={[Function]}
                                       >
-                                        <MenuState
+                                        <ForwardRef
+                                          backgroundColor="whiteGrey"
+                                          borderColor="whiteGrey"
                                           defaultOpen={false}
                                           hideDelay="200"
-                                          showDelay="100"
-                                        >
-                                          <StatelessDropdownMenu
-                                            boundariesElement="viewport"
-                                            defaultOpen={false}
-                                            disabled={false}
-                                            hideDelay="200"
-                                            menuState={
-                                              Object {
-                                                "closeMenu": [Function],
-                                                "handleMenuKeydown": [Function],
-                                                "isOpen": false,
-                                                "openMenu": [Function],
-                                                "toggleMenu": [Function],
-                                              }
+                                          id={null}
+                                          modifiers={
+                                            Object {
+                                              "boundariesElement": "viewport",
+                                              "preventOverflow": Object {
+                                                "boundariesElement": "viewport",
+                                                "enabled": true,
+                                                "padding": 8,
+                                              },
                                             }
-                                            placement="bottom-start"
-                                            showArrow={true}
-                                            showDelay="100"
-                                            trigger={[Function]}
-                                          >
-                                            <Manager>
-                                              <Reference>
-                                                <InnerReference
-                                                  setReferenceNode={[Function]}
+                                          }
+                                          openOnClick={true}
+                                          openOnHover={false}
+                                          popperPlacement="bottom-start"
+                                          showArrow={true}
+                                          showDelay="100"
+                                          trigger={
+                                            <ForwardRef(Styled(Component))
+                                              aria-haspopup={true}
+                                              disabled={null}
+                                              icon="more"
+                                              type="button"
+                                            />
+                                          }
+                                        >
+                                          <Manager>
+                                            <Reference>
+                                              <InnerReference
+                                                setReferenceNode={[Function]}
+                                              >
+                                                <Styled(Component)
+                                                  aria-describedby={null}
+                                                  aria-expanded={false}
+                                                  aria-haspopup={true}
+                                                  aria-label="Open"
+                                                  disabled={null}
+                                                  icon="more"
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  type="button"
                                                 >
-                                                  <Styled(Component)
+                                                  <ForwardRef
+                                                    aria-describedby={null}
                                                     aria-expanded={false}
                                                     aria-haspopup={true}
-                                                    aria-label="Open menu"
+                                                    aria-label="Open"
+                                                    className="sc-fzXfLQ bZudva"
                                                     disabled={null}
                                                     icon="more"
+                                                    labelHidden={false}
                                                     onBlur={[Function]}
-                                                    onClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
                                                     type="button"
                                                   >
-                                                    <ForwardRef
+                                                    <IconicButton__WrapperButton
+                                                      aria-describedby={null}
                                                       aria-expanded={false}
                                                       aria-haspopup={true}
-                                                      aria-label="Open menu"
+                                                      aria-label="Open"
                                                       className="sc-fzXfLQ bZudva"
                                                       disabled={null}
-                                                      icon="more"
-                                                      labelHidden={false}
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
+                                                      onFocus={[Function]}
+                                                      onMouseDown={[Function]}
                                                       type="button"
                                                     >
-                                                      <IconicButton__WrapperButton
+                                                      <button
+                                                        aria-describedby={null}
                                                         aria-expanded={false}
                                                         aria-haspopup={true}
-                                                        aria-label="Open menu"
-                                                        className="sc-fzXfLQ bZudva"
+                                                        aria-label="Open"
+                                                        className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
                                                         disabled={null}
                                                         onBlur={[Function]}
-                                                        onClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onMouseDown={[Function]}
                                                         type="button"
                                                       >
-                                                        <button
-                                                          aria-expanded={false}
-                                                          aria-haspopup={true}
-                                                          aria-label="Open menu"
-                                                          className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
-                                                          disabled={null}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          type="button"
-                                                        >
-                                                          <Manager>
-                                                            <Reference>
-                                                              <InnerReference
-                                                                setReferenceNode={[Function]}
+                                                        <Manager>
+                                                          <Reference>
+                                                            <InnerReference
+                                                              setReferenceNode={[Function]}
+                                                            >
+                                                              <Styled(Component)
+                                                                color="currentColor"
+                                                                icon="more"
+                                                                p="half"
+                                                                size="32px"
+                                                                title={null}
                                                               >
-                                                                <Styled(Component)
+                                                                <ForwardRef
+                                                                  className="sc-AykKD kaUxeX"
                                                                   color="currentColor"
+                                                                  focusable={false}
                                                                   icon="more"
                                                                   p="half"
                                                                   size="32px"
                                                                   title={null}
                                                                 >
-                                                                  <ForwardRef
+                                                                  <svg
+                                                                    aria-hidden={true}
                                                                     className="sc-AykKD kaUxeX"
                                                                     color="currentColor"
+                                                                    fill="currentColor"
                                                                     focusable={false}
+                                                                    height="32px"
                                                                     icon="more"
                                                                     p="half"
                                                                     size="32px"
                                                                     title={null}
+                                                                    viewBox="0 0 24 24"
+                                                                    width="32px"
                                                                   >
-                                                                    <svg
-                                                                      aria-hidden={true}
-                                                                      className="sc-AykKD kaUxeX"
-                                                                      color="currentColor"
-                                                                      fill="currentColor"
-                                                                      focusable={false}
-                                                                      height="32px"
-                                                                      icon="more"
-                                                                      p="half"
-                                                                      size="32px"
-                                                                      title={null}
-                                                                      viewBox="0 0 24 24"
-                                                                      width="32px"
-                                                                    >
-                                                                      <path
-                                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                        key="0"
-                                                                      />
-                                                                    </svg>
-                                                                  </ForwardRef>
-                                                                </Styled(Component)>
-                                                              </InnerReference>
-                                                            </Reference>
-                                                            <Popper
+                                                                    <path
+                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                      key="0"
+                                                                    />
+                                                                  </svg>
+                                                                </ForwardRef>
+                                                              </Styled(Component)>
+                                                            </InnerReference>
+                                                          </Reference>
+                                                          <Popper
+                                                            modifiers={
+                                                              Object {
+                                                                "preventOverflow": Object {
+                                                                  "boundariesElement": "viewport",
+                                                                  "enabled": true,
+                                                                  "padding": 8,
+                                                                },
+                                                              }
+                                                            }
+                                                            placement="bottom"
+                                                          >
+                                                            <InnerPopper
+                                                              eventsEnabled={true}
                                                               modifiers={
                                                                 Object {
                                                                   "preventOverflow": Object {
@@ -2799,51 +3063,251 @@ exports[`Storyshots Table with everything 1`] = `
                                                                 }
                                                               }
                                                               placement="bottom"
-                                                            >
-                                                              <InnerPopper
-                                                                eventsEnabled={true}
-                                                                modifiers={
-                                                                  Object {
-                                                                    "preventOverflow": Object {
-                                                                      "boundariesElement": "viewport",
-                                                                      "enabled": true,
-                                                                      "padding": 8,
-                                                                    },
-                                                                  }
-                                                                }
-                                                                placement="bottom"
-                                                                positionFixed={false}
-                                                                referenceElement={
-                                                                  <svg
-                                                                    aria-hidden="true"
-                                                                    class="sc-AykKD kaUxeX"
-                                                                    color="currentColor"
-                                                                    fill="currentColor"
-                                                                    focusable="false"
-                                                                    height="32px"
-                                                                    icon="more"
-                                                                    p="half"
-                                                                    viewBox="0 0 24 24"
-                                                                    width="32px"
-                                                                  >
-                                                                    <path
-                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                    />
-                                                                  </svg>
-                                                                }
-                                                              />
-                                                            </Popper>
-                                                          </Manager>
-                                                        </button>
-                                                      </IconicButton__WrapperButton>
-                                                    </ForwardRef>
-                                                  </Styled(Component)>
-                                                </InnerReference>
-                                              </Reference>
-                                            </Manager>
-                                          </StatelessDropdownMenu>
-                                        </MenuState>
-                                      </MenuComponent>
+                                                              positionFixed={false}
+                                                              referenceElement={
+                                                                <svg
+                                                                  aria-hidden="true"
+                                                                  class="sc-AykKD kaUxeX"
+                                                                  color="currentColor"
+                                                                  fill="currentColor"
+                                                                  focusable="false"
+                                                                  height="32px"
+                                                                  icon="more"
+                                                                  p="half"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="32px"
+                                                                >
+                                                                  <path
+                                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                  />
+                                                                </svg>
+                                                              }
+                                                            />
+                                                          </Popper>
+                                                        </Manager>
+                                                      </button>
+                                                    </IconicButton__WrapperButton>
+                                                  </ForwardRef>
+                                                </Styled(Component)>
+                                              </InnerReference>
+                                            </Reference>
+                                            <Popper
+                                              modifiers={
+                                                Object {
+                                                  "boundariesElement": "viewport",
+                                                  "preventOverflow": Object {
+                                                    "boundariesElement": "viewport",
+                                                    "enabled": true,
+                                                    "padding": 8,
+                                                  },
+                                                }
+                                              }
+                                              placement="bottom-start"
+                                            >
+                                              <InnerPopper
+                                                eventsEnabled={true}
+                                                modifiers={
+                                                  Object {
+                                                    "boundariesElement": "viewport",
+                                                    "preventOverflow": Object {
+                                                      "boundariesElement": "viewport",
+                                                      "enabled": true,
+                                                      "padding": 8,
+                                                    },
+                                                  }
+                                                }
+                                                placement="bottom-start"
+                                                positionFixed={false}
+                                                referenceElement={
+                                                  <button
+                                                    aria-expanded="false"
+                                                    aria-haspopup="true"
+                                                    aria-label="Open"
+                                                    class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="sc-AykKD kaUxeX"
+                                                      color="currentColor"
+                                                      fill="currentColor"
+                                                      focusable="false"
+                                                      height="32px"
+                                                      icon="more"
+                                                      p="half"
+                                                      viewBox="0 0 24 24"
+                                                      width="32px"
+                                                    >
+                                                      <path
+                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                }
+                                              >
+                                                <Styled(Box)
+                                                  backgroundColor="whiteGrey"
+                                                  className=" nds-popper-pop-up"
+                                                  id={null}
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  open={false}
+                                                  position={
+                                                    Object {
+                                                      "left": 0,
+                                                      "opacity": 0,
+                                                      "pointerEvents": "none",
+                                                      "position": "absolute",
+                                                      "top": 0,
+                                                    }
+                                                  }
+                                                  showArrow={true}
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
+                                                    id={null}
+                                                    onBlur={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    open={false}
+                                                  >
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Edit
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Delete
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <PopperArrow
+                                                      backgroundColor="whiteGrey"
+                                                      borderColor="whiteGrey"
+                                                      placement="bottom"
+                                                      style={Object {}}
+                                                    >
+                                                      <div
+                                                        className="PopperArrow-sc-1bcgj4w-0 bIvJYS"
+                                                        style={Object {}}
+                                                      />
+                                                    </PopperArrow>
+                                                  </div>
+                                                </Styled(Box)>
+                                              </InnerPopper>
+                                            </Popper>
+                                          </Manager>
+                                        </ForwardRef>
+                                      </ForwardRef>
                                     </div>
                                   </Box>
                                 </td>
@@ -3431,128 +3895,160 @@ exports[`Storyshots Table with everything 1`] = `
                                     <div
                                       className="Box-sc-1qu1edy-0 dqSmZd"
                                     >
-                                      <MenuComponent
+                                      <ForwardRef
+                                        backgroundColor="whiteGrey"
                                         boundariesElement="viewport"
                                         defaultOpen={false}
+                                        disabled={false}
                                         hideDelay="200"
+                                        placement="bottom-start"
+                                        showArrow={true}
                                         showDelay="100"
+                                        trigger={[Function]}
                                       >
-                                        <MenuState
+                                        <ForwardRef
+                                          backgroundColor="whiteGrey"
+                                          borderColor="whiteGrey"
                                           defaultOpen={false}
                                           hideDelay="200"
-                                          showDelay="100"
-                                        >
-                                          <StatelessDropdownMenu
-                                            boundariesElement="viewport"
-                                            defaultOpen={false}
-                                            disabled={false}
-                                            hideDelay="200"
-                                            menuState={
-                                              Object {
-                                                "closeMenu": [Function],
-                                                "handleMenuKeydown": [Function],
-                                                "isOpen": false,
-                                                "openMenu": [Function],
-                                                "toggleMenu": [Function],
-                                              }
+                                          id={null}
+                                          modifiers={
+                                            Object {
+                                              "boundariesElement": "viewport",
+                                              "preventOverflow": Object {
+                                                "boundariesElement": "viewport",
+                                                "enabled": true,
+                                                "padding": 8,
+                                              },
                                             }
-                                            placement="bottom-start"
-                                            showArrow={true}
-                                            showDelay="100"
-                                            trigger={[Function]}
-                                          >
-                                            <Manager>
-                                              <Reference>
-                                                <InnerReference
-                                                  setReferenceNode={[Function]}
+                                          }
+                                          openOnClick={true}
+                                          openOnHover={false}
+                                          popperPlacement="bottom-start"
+                                          showArrow={true}
+                                          showDelay="100"
+                                          trigger={
+                                            <ForwardRef(Styled(Component))
+                                              aria-haspopup={true}
+                                              disabled={null}
+                                              icon="more"
+                                              type="button"
+                                            />
+                                          }
+                                        >
+                                          <Manager>
+                                            <Reference>
+                                              <InnerReference
+                                                setReferenceNode={[Function]}
+                                              >
+                                                <Styled(Component)
+                                                  aria-describedby={null}
+                                                  aria-expanded={false}
+                                                  aria-haspopup={true}
+                                                  aria-label="Open"
+                                                  disabled={null}
+                                                  icon="more"
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  type="button"
                                                 >
-                                                  <Styled(Component)
+                                                  <ForwardRef
+                                                    aria-describedby={null}
                                                     aria-expanded={false}
                                                     aria-haspopup={true}
-                                                    aria-label="Open menu"
+                                                    aria-label="Open"
+                                                    className="sc-fzXfLQ bZudva"
                                                     disabled={null}
                                                     icon="more"
+                                                    labelHidden={false}
                                                     onBlur={[Function]}
-                                                    onClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
                                                     type="button"
                                                   >
-                                                    <ForwardRef
+                                                    <IconicButton__WrapperButton
+                                                      aria-describedby={null}
                                                       aria-expanded={false}
                                                       aria-haspopup={true}
-                                                      aria-label="Open menu"
+                                                      aria-label="Open"
                                                       className="sc-fzXfLQ bZudva"
                                                       disabled={null}
-                                                      icon="more"
-                                                      labelHidden={false}
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
+                                                      onFocus={[Function]}
+                                                      onMouseDown={[Function]}
                                                       type="button"
                                                     >
-                                                      <IconicButton__WrapperButton
+                                                      <button
+                                                        aria-describedby={null}
                                                         aria-expanded={false}
                                                         aria-haspopup={true}
-                                                        aria-label="Open menu"
-                                                        className="sc-fzXfLQ bZudva"
+                                                        aria-label="Open"
+                                                        className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
                                                         disabled={null}
                                                         onBlur={[Function]}
-                                                        onClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onMouseDown={[Function]}
                                                         type="button"
                                                       >
-                                                        <button
-                                                          aria-expanded={false}
-                                                          aria-haspopup={true}
-                                                          aria-label="Open menu"
-                                                          className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
-                                                          disabled={null}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          type="button"
-                                                        >
-                                                          <Manager>
-                                                            <Reference>
-                                                              <InnerReference
-                                                                setReferenceNode={[Function]}
+                                                        <Manager>
+                                                          <Reference>
+                                                            <InnerReference
+                                                              setReferenceNode={[Function]}
+                                                            >
+                                                              <Styled(Component)
+                                                                color="currentColor"
+                                                                icon="more"
+                                                                p="half"
+                                                                size="32px"
+                                                                title={null}
                                                               >
-                                                                <Styled(Component)
+                                                                <ForwardRef
+                                                                  className="sc-AykKD kaUxeX"
                                                                   color="currentColor"
+                                                                  focusable={false}
                                                                   icon="more"
                                                                   p="half"
                                                                   size="32px"
                                                                   title={null}
                                                                 >
-                                                                  <ForwardRef
+                                                                  <svg
+                                                                    aria-hidden={true}
                                                                     className="sc-AykKD kaUxeX"
                                                                     color="currentColor"
+                                                                    fill="currentColor"
                                                                     focusable={false}
+                                                                    height="32px"
                                                                     icon="more"
                                                                     p="half"
                                                                     size="32px"
                                                                     title={null}
+                                                                    viewBox="0 0 24 24"
+                                                                    width="32px"
                                                                   >
-                                                                    <svg
-                                                                      aria-hidden={true}
-                                                                      className="sc-AykKD kaUxeX"
-                                                                      color="currentColor"
-                                                                      fill="currentColor"
-                                                                      focusable={false}
-                                                                      height="32px"
-                                                                      icon="more"
-                                                                      p="half"
-                                                                      size="32px"
-                                                                      title={null}
-                                                                      viewBox="0 0 24 24"
-                                                                      width="32px"
-                                                                    >
-                                                                      <path
-                                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                        key="0"
-                                                                      />
-                                                                    </svg>
-                                                                  </ForwardRef>
-                                                                </Styled(Component)>
-                                                              </InnerReference>
-                                                            </Reference>
-                                                            <Popper
+                                                                    <path
+                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                      key="0"
+                                                                    />
+                                                                  </svg>
+                                                                </ForwardRef>
+                                                              </Styled(Component)>
+                                                            </InnerReference>
+                                                          </Reference>
+                                                          <Popper
+                                                            modifiers={
+                                                              Object {
+                                                                "preventOverflow": Object {
+                                                                  "boundariesElement": "viewport",
+                                                                  "enabled": true,
+                                                                  "padding": 8,
+                                                                },
+                                                              }
+                                                            }
+                                                            placement="bottom"
+                                                          >
+                                                            <InnerPopper
+                                                              eventsEnabled={true}
                                                               modifiers={
                                                                 Object {
                                                                   "preventOverflow": Object {
@@ -3563,51 +4059,251 @@ exports[`Storyshots Table with everything 1`] = `
                                                                 }
                                                               }
                                                               placement="bottom"
-                                                            >
-                                                              <InnerPopper
-                                                                eventsEnabled={true}
-                                                                modifiers={
-                                                                  Object {
-                                                                    "preventOverflow": Object {
-                                                                      "boundariesElement": "viewport",
-                                                                      "enabled": true,
-                                                                      "padding": 8,
-                                                                    },
-                                                                  }
-                                                                }
-                                                                placement="bottom"
-                                                                positionFixed={false}
-                                                                referenceElement={
-                                                                  <svg
-                                                                    aria-hidden="true"
-                                                                    class="sc-AykKD kaUxeX"
-                                                                    color="currentColor"
-                                                                    fill="currentColor"
-                                                                    focusable="false"
-                                                                    height="32px"
-                                                                    icon="more"
-                                                                    p="half"
-                                                                    viewBox="0 0 24 24"
-                                                                    width="32px"
-                                                                  >
-                                                                    <path
-                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                    />
-                                                                  </svg>
-                                                                }
-                                                              />
-                                                            </Popper>
-                                                          </Manager>
-                                                        </button>
-                                                      </IconicButton__WrapperButton>
-                                                    </ForwardRef>
-                                                  </Styled(Component)>
-                                                </InnerReference>
-                                              </Reference>
-                                            </Manager>
-                                          </StatelessDropdownMenu>
-                                        </MenuState>
-                                      </MenuComponent>
+                                                              positionFixed={false}
+                                                              referenceElement={
+                                                                <svg
+                                                                  aria-hidden="true"
+                                                                  class="sc-AykKD kaUxeX"
+                                                                  color="currentColor"
+                                                                  fill="currentColor"
+                                                                  focusable="false"
+                                                                  height="32px"
+                                                                  icon="more"
+                                                                  p="half"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="32px"
+                                                                >
+                                                                  <path
+                                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                  />
+                                                                </svg>
+                                                              }
+                                                            />
+                                                          </Popper>
+                                                        </Manager>
+                                                      </button>
+                                                    </IconicButton__WrapperButton>
+                                                  </ForwardRef>
+                                                </Styled(Component)>
+                                              </InnerReference>
+                                            </Reference>
+                                            <Popper
+                                              modifiers={
+                                                Object {
+                                                  "boundariesElement": "viewport",
+                                                  "preventOverflow": Object {
+                                                    "boundariesElement": "viewport",
+                                                    "enabled": true,
+                                                    "padding": 8,
+                                                  },
+                                                }
+                                              }
+                                              placement="bottom-start"
+                                            >
+                                              <InnerPopper
+                                                eventsEnabled={true}
+                                                modifiers={
+                                                  Object {
+                                                    "boundariesElement": "viewport",
+                                                    "preventOverflow": Object {
+                                                      "boundariesElement": "viewport",
+                                                      "enabled": true,
+                                                      "padding": 8,
+                                                    },
+                                                  }
+                                                }
+                                                placement="bottom-start"
+                                                positionFixed={false}
+                                                referenceElement={
+                                                  <button
+                                                    aria-expanded="false"
+                                                    aria-haspopup="true"
+                                                    aria-label="Open"
+                                                    class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="sc-AykKD kaUxeX"
+                                                      color="currentColor"
+                                                      fill="currentColor"
+                                                      focusable="false"
+                                                      height="32px"
+                                                      icon="more"
+                                                      p="half"
+                                                      viewBox="0 0 24 24"
+                                                      width="32px"
+                                                    >
+                                                      <path
+                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                }
+                                              >
+                                                <Styled(Box)
+                                                  backgroundColor="whiteGrey"
+                                                  className=" nds-popper-pop-up"
+                                                  id={null}
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  open={false}
+                                                  position={
+                                                    Object {
+                                                      "left": 0,
+                                                      "opacity": 0,
+                                                      "pointerEvents": "none",
+                                                      "position": "absolute",
+                                                      "top": 0,
+                                                    }
+                                                  }
+                                                  showArrow={true}
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
+                                                    id={null}
+                                                    onBlur={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    open={false}
+                                                  >
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Edit
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Delete
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <PopperArrow
+                                                      backgroundColor="whiteGrey"
+                                                      borderColor="whiteGrey"
+                                                      placement="bottom"
+                                                      style={Object {}}
+                                                    >
+                                                      <div
+                                                        className="PopperArrow-sc-1bcgj4w-0 bIvJYS"
+                                                        style={Object {}}
+                                                      />
+                                                    </PopperArrow>
+                                                  </div>
+                                                </Styled(Box)>
+                                              </InnerPopper>
+                                            </Popper>
+                                          </Manager>
+                                        </ForwardRef>
+                                      </ForwardRef>
                                     </div>
                                   </Box>
                                 </td>
@@ -4207,128 +4903,160 @@ exports[`Storyshots Table with everything 1`] = `
                                     <div
                                       className="Box-sc-1qu1edy-0 dqSmZd"
                                     >
-                                      <MenuComponent
+                                      <ForwardRef
+                                        backgroundColor="whiteGrey"
                                         boundariesElement="viewport"
                                         defaultOpen={false}
+                                        disabled={false}
                                         hideDelay="200"
+                                        placement="bottom-start"
+                                        showArrow={true}
                                         showDelay="100"
+                                        trigger={[Function]}
                                       >
-                                        <MenuState
+                                        <ForwardRef
+                                          backgroundColor="whiteGrey"
+                                          borderColor="whiteGrey"
                                           defaultOpen={false}
                                           hideDelay="200"
-                                          showDelay="100"
-                                        >
-                                          <StatelessDropdownMenu
-                                            boundariesElement="viewport"
-                                            defaultOpen={false}
-                                            disabled={false}
-                                            hideDelay="200"
-                                            menuState={
-                                              Object {
-                                                "closeMenu": [Function],
-                                                "handleMenuKeydown": [Function],
-                                                "isOpen": false,
-                                                "openMenu": [Function],
-                                                "toggleMenu": [Function],
-                                              }
+                                          id={null}
+                                          modifiers={
+                                            Object {
+                                              "boundariesElement": "viewport",
+                                              "preventOverflow": Object {
+                                                "boundariesElement": "viewport",
+                                                "enabled": true,
+                                                "padding": 8,
+                                              },
                                             }
-                                            placement="bottom-start"
-                                            showArrow={true}
-                                            showDelay="100"
-                                            trigger={[Function]}
-                                          >
-                                            <Manager>
-                                              <Reference>
-                                                <InnerReference
-                                                  setReferenceNode={[Function]}
+                                          }
+                                          openOnClick={true}
+                                          openOnHover={false}
+                                          popperPlacement="bottom-start"
+                                          showArrow={true}
+                                          showDelay="100"
+                                          trigger={
+                                            <ForwardRef(Styled(Component))
+                                              aria-haspopup={true}
+                                              disabled={null}
+                                              icon="more"
+                                              type="button"
+                                            />
+                                          }
+                                        >
+                                          <Manager>
+                                            <Reference>
+                                              <InnerReference
+                                                setReferenceNode={[Function]}
+                                              >
+                                                <Styled(Component)
+                                                  aria-describedby={null}
+                                                  aria-expanded={false}
+                                                  aria-haspopup={true}
+                                                  aria-label="Open"
+                                                  disabled={null}
+                                                  icon="more"
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  type="button"
                                                 >
-                                                  <Styled(Component)
+                                                  <ForwardRef
+                                                    aria-describedby={null}
                                                     aria-expanded={false}
                                                     aria-haspopup={true}
-                                                    aria-label="Open menu"
+                                                    aria-label="Open"
+                                                    className="sc-fzXfLQ bZudva"
                                                     disabled={null}
                                                     icon="more"
+                                                    labelHidden={false}
                                                     onBlur={[Function]}
-                                                    onClick={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
                                                     type="button"
                                                   >
-                                                    <ForwardRef
+                                                    <IconicButton__WrapperButton
+                                                      aria-describedby={null}
                                                       aria-expanded={false}
                                                       aria-haspopup={true}
-                                                      aria-label="Open menu"
+                                                      aria-label="Open"
                                                       className="sc-fzXfLQ bZudva"
                                                       disabled={null}
-                                                      icon="more"
-                                                      labelHidden={false}
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
+                                                      onFocus={[Function]}
+                                                      onMouseDown={[Function]}
                                                       type="button"
                                                     >
-                                                      <IconicButton__WrapperButton
+                                                      <button
+                                                        aria-describedby={null}
                                                         aria-expanded={false}
                                                         aria-haspopup={true}
-                                                        aria-label="Open menu"
-                                                        className="sc-fzXfLQ bZudva"
+                                                        aria-label="Open"
+                                                        className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
                                                         disabled={null}
                                                         onBlur={[Function]}
-                                                        onClick={[Function]}
+                                                        onFocus={[Function]}
+                                                        onMouseDown={[Function]}
                                                         type="button"
                                                       >
-                                                        <button
-                                                          aria-expanded={false}
-                                                          aria-haspopup={true}
-                                                          aria-label="Open menu"
-                                                          className="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
-                                                          disabled={null}
-                                                          onBlur={[Function]}
-                                                          onClick={[Function]}
-                                                          type="button"
-                                                        >
-                                                          <Manager>
-                                                            <Reference>
-                                                              <InnerReference
-                                                                setReferenceNode={[Function]}
+                                                        <Manager>
+                                                          <Reference>
+                                                            <InnerReference
+                                                              setReferenceNode={[Function]}
+                                                            >
+                                                              <Styled(Component)
+                                                                color="currentColor"
+                                                                icon="more"
+                                                                p="half"
+                                                                size="32px"
+                                                                title={null}
                                                               >
-                                                                <Styled(Component)
+                                                                <ForwardRef
+                                                                  className="sc-AykKD kaUxeX"
                                                                   color="currentColor"
+                                                                  focusable={false}
                                                                   icon="more"
                                                                   p="half"
                                                                   size="32px"
                                                                   title={null}
                                                                 >
-                                                                  <ForwardRef
+                                                                  <svg
+                                                                    aria-hidden={true}
                                                                     className="sc-AykKD kaUxeX"
                                                                     color="currentColor"
+                                                                    fill="currentColor"
                                                                     focusable={false}
+                                                                    height="32px"
                                                                     icon="more"
                                                                     p="half"
                                                                     size="32px"
                                                                     title={null}
+                                                                    viewBox="0 0 24 24"
+                                                                    width="32px"
                                                                   >
-                                                                    <svg
-                                                                      aria-hidden={true}
-                                                                      className="sc-AykKD kaUxeX"
-                                                                      color="currentColor"
-                                                                      fill="currentColor"
-                                                                      focusable={false}
-                                                                      height="32px"
-                                                                      icon="more"
-                                                                      p="half"
-                                                                      size="32px"
-                                                                      title={null}
-                                                                      viewBox="0 0 24 24"
-                                                                      width="32px"
-                                                                    >
-                                                                      <path
-                                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                        key="0"
-                                                                      />
-                                                                    </svg>
-                                                                  </ForwardRef>
-                                                                </Styled(Component)>
-                                                              </InnerReference>
-                                                            </Reference>
-                                                            <Popper
+                                                                    <path
+                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                      key="0"
+                                                                    />
+                                                                  </svg>
+                                                                </ForwardRef>
+                                                              </Styled(Component)>
+                                                            </InnerReference>
+                                                          </Reference>
+                                                          <Popper
+                                                            modifiers={
+                                                              Object {
+                                                                "preventOverflow": Object {
+                                                                  "boundariesElement": "viewport",
+                                                                  "enabled": true,
+                                                                  "padding": 8,
+                                                                },
+                                                              }
+                                                            }
+                                                            placement="bottom"
+                                                          >
+                                                            <InnerPopper
+                                                              eventsEnabled={true}
                                                               modifiers={
                                                                 Object {
                                                                   "preventOverflow": Object {
@@ -4339,51 +5067,251 @@ exports[`Storyshots Table with everything 1`] = `
                                                                 }
                                                               }
                                                               placement="bottom"
-                                                            >
-                                                              <InnerPopper
-                                                                eventsEnabled={true}
-                                                                modifiers={
-                                                                  Object {
-                                                                    "preventOverflow": Object {
-                                                                      "boundariesElement": "viewport",
-                                                                      "enabled": true,
-                                                                      "padding": 8,
-                                                                    },
-                                                                  }
-                                                                }
-                                                                placement="bottom"
-                                                                positionFixed={false}
-                                                                referenceElement={
-                                                                  <svg
-                                                                    aria-hidden="true"
-                                                                    class="sc-AykKD kaUxeX"
-                                                                    color="currentColor"
-                                                                    fill="currentColor"
-                                                                    focusable="false"
-                                                                    height="32px"
-                                                                    icon="more"
-                                                                    p="half"
-                                                                    viewBox="0 0 24 24"
-                                                                    width="32px"
-                                                                  >
-                                                                    <path
-                                                                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                                                                    />
-                                                                  </svg>
-                                                                }
-                                                              />
-                                                            </Popper>
-                                                          </Manager>
-                                                        </button>
-                                                      </IconicButton__WrapperButton>
-                                                    </ForwardRef>
-                                                  </Styled(Component)>
-                                                </InnerReference>
-                                              </Reference>
-                                            </Manager>
-                                          </StatelessDropdownMenu>
-                                        </MenuState>
-                                      </MenuComponent>
+                                                              positionFixed={false}
+                                                              referenceElement={
+                                                                <svg
+                                                                  aria-hidden="true"
+                                                                  class="sc-AykKD kaUxeX"
+                                                                  color="currentColor"
+                                                                  fill="currentColor"
+                                                                  focusable="false"
+                                                                  height="32px"
+                                                                  icon="more"
+                                                                  p="half"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="32px"
+                                                                >
+                                                                  <path
+                                                                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                                  />
+                                                                </svg>
+                                                              }
+                                                            />
+                                                          </Popper>
+                                                        </Manager>
+                                                      </button>
+                                                    </IconicButton__WrapperButton>
+                                                  </ForwardRef>
+                                                </Styled(Component)>
+                                              </InnerReference>
+                                            </Reference>
+                                            <Popper
+                                              modifiers={
+                                                Object {
+                                                  "boundariesElement": "viewport",
+                                                  "preventOverflow": Object {
+                                                    "boundariesElement": "viewport",
+                                                    "enabled": true,
+                                                    "padding": 8,
+                                                  },
+                                                }
+                                              }
+                                              placement="bottom-start"
+                                            >
+                                              <InnerPopper
+                                                eventsEnabled={true}
+                                                modifiers={
+                                                  Object {
+                                                    "boundariesElement": "viewport",
+                                                    "preventOverflow": Object {
+                                                      "boundariesElement": "viewport",
+                                                      "enabled": true,
+                                                      "padding": 8,
+                                                    },
+                                                  }
+                                                }
+                                                placement="bottom-start"
+                                                positionFixed={false}
+                                                referenceElement={
+                                                  <button
+                                                    aria-expanded="false"
+                                                    aria-haspopup="true"
+                                                    aria-label="Open"
+                                                    class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="sc-AykKD kaUxeX"
+                                                      color="currentColor"
+                                                      fill="currentColor"
+                                                      focusable="false"
+                                                      height="32px"
+                                                      icon="more"
+                                                      p="half"
+                                                      viewBox="0 0 24 24"
+                                                      width="32px"
+                                                    >
+                                                      <path
+                                                        d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                }
+                                              >
+                                                <Styled(Box)
+                                                  backgroundColor="whiteGrey"
+                                                  className=" nds-popper-pop-up"
+                                                  id={null}
+                                                  onBlur={[Function]}
+                                                  onFocus={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  open={false}
+                                                  position={
+                                                    Object {
+                                                      "left": 0,
+                                                      "opacity": 0,
+                                                      "pointerEvents": "none",
+                                                      "position": "absolute",
+                                                      "top": 0,
+                                                    }
+                                                  }
+                                                  showArrow={true}
+                                                  theme={
+                                                    Object {
+                                                      "borders": Array [],
+                                                      "breakpoints": Object {
+                                                        "extraLarge": "1920px",
+                                                        "extraSmall": "0px",
+                                                        "large": "1360px",
+                                                        "medium": "1024px",
+                                                        "small": "768px",
+                                                      },
+                                                      "colors": Object {
+                                                        "black": "#011e38",
+                                                        "blackBlue": "#122b47",
+                                                        "blue": "#216beb",
+                                                        "darkBlue": "#00438f",
+                                                        "darkGrey": "#434d59",
+                                                        "green": "#008059",
+                                                        "grey": "#c0c8d1",
+                                                        "lightBlue": "#e1ebfa",
+                                                        "lightGreen": "#e9f7f2",
+                                                        "lightGrey": "#e4e7eb",
+                                                        "lightRed": "#fae6ea",
+                                                        "lightYellow": "#fcf5e3",
+                                                        "red": "#cc1439",
+                                                        "white": "#ffffff",
+                                                        "whiteGrey": "#f0f2f5",
+                                                        "yellow": "#ffbb00",
+                                                      },
+                                                      "fontSizes": Object {
+                                                        "large": "20px",
+                                                        "larger": "26px",
+                                                        "largest": "46px",
+                                                        "medium": "16px",
+                                                        "small": "14px",
+                                                        "smaller": "12px",
+                                                      },
+                                                      "fontWeights": Object {
+                                                        "bold": "600",
+                                                        "light": "300",
+                                                        "medium": "500",
+                                                        "normal": "400",
+                                                      },
+                                                      "fonts": Object {
+                                                        "base": "'IBM Plex Sans', sans-serif",
+                                                        "mono": "'IBM Plex Mono', monospace",
+                                                      },
+                                                      "lineHeights": Object {
+                                                        "base": "1.5",
+                                                        "sectionTitle": "1.23076923",
+                                                        "smallTextBase": "1.71428571",
+                                                        "smallTextCompressed": "1.14285714",
+                                                        "smallerText": "1.33333333",
+                                                        "subsectionTitle": "1.2",
+                                                        "title": "1.04347826",
+                                                      },
+                                                      "radii": Object {
+                                                        "circle": "50%",
+                                                        "medium": "4px",
+                                                        "small": "2px",
+                                                      },
+                                                      "shadows": Object {
+                                                        "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                                                        "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                                                        "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                                                        "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                                                        "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                                                      },
+                                                      "space": Object {
+                                                        "half": "4px",
+                                                        "none": "0px",
+                                                        "x1": "8px",
+                                                        "x2": "16px",
+                                                        "x3": "24px",
+                                                        "x4": "32px",
+                                                        "x5": "40px",
+                                                        "x6": "48px",
+                                                        "x8": "64px",
+                                                      },
+                                                      "zIndex": Object {
+                                                        "content": 100,
+                                                        "overlay": 1000,
+                                                        "tabsBar": 210,
+                                                        "tabsScollIndicator": 200,
+                                                      },
+                                                    }
+                                                  }
+                                                >
+                                                  <div
+                                                    className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC  nds-popper-pop-up"
+                                                    id={null}
+                                                    onBlur={[Function]}
+                                                    onFocus={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    open={false}
+                                                  >
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Edit
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <DropdownButton
+                                                      bgHoverColor="#e4e7eb"
+                                                      color="#00438f"
+                                                      disabled={false}
+                                                      hoverColor="#00438f"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <button
+                                                        className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                                                        color="#00438f"
+                                                        disabled={false}
+                                                        onClick={[Function]}
+                                                      >
+                                                        Delete
+                                                      </button>
+                                                    </DropdownButton>
+                                                    <PopperArrow
+                                                      backgroundColor="whiteGrey"
+                                                      borderColor="whiteGrey"
+                                                      placement="bottom"
+                                                      style={Object {}}
+                                                    >
+                                                      <div
+                                                        className="PopperArrow-sc-1bcgj4w-0 bIvJYS"
+                                                        style={Object {}}
+                                                      />
+                                                    </PopperArrow>
+                                                  </div>
+                                                </Styled(Box)>
+                                              </InnerPopper>
+                                            </Popper>
+                                          </Manager>
+                                        </ForwardRef>
+                                      </ForwardRef>
                                     </div>
                                   </Box>
                                 </td>
