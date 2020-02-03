@@ -118,6 +118,7 @@ const Popper = React.forwardRef(
                   id,
                   position: style,
                   dataPlacement: placement,
+                  className: `${children.props.className || ""} nds-popper-pop-up`,
                   ...eventHandlers
                 },
                 [

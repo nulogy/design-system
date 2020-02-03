@@ -1,28 +1,35 @@
 describe("DropdownMenu", () => {
-  const getOpenButton = () => cy.get("[aria-label='Open menu']");
-  const getCloseButton = () => cy.get("[aria-label='Close menu']");
+  const getOpenButton = () => cy.get("button[aria-label='Open']");
+  const getCloseButton = () => cy.get("button[aria-label='Close']");
   const getDropdownLink = () => cy.contains("Dropdown Link");
   const getCustomTrigger = () => cy.get("button.customtrigger");
+  const getDropdownContainer = () => cy.get(".nds-popper-pop-up");
   const assertDropdownIsOpen = () => {
+    getCloseButton().should("exist");
     cy.isInViewport("[class*='DropdownLink']");
-    cy.get("[placement='bottom-start']").should("have.css", "opacity", "1");
+    getDropdownContainer().should("have.css", "opacity", "1");
   };
-  const assertDropdownIsClosed = () => getDropdownLink().should("not.exist");
+  const assertDropdownIsClosed = () => {
+    getOpenButton().should("exist");
+    cy.isNotInViewport(".nds-popper-pop-up");
+  };
 
   describe("default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("storiesfortests-dropdownmenu--base");
     });
     it("toggles the menu on click", () => {
-      getOpenButton().click();
+      cy.get("button").click();
       assertDropdownIsOpen();
 
-      getCloseButton().click();
+      cy.get("button").click();
       assertDropdownIsClosed();
     });
 
     it("closes the menu on escape", () => {
-      getOpenButton().click();
+      cy.get("button")
+        .click()
+        .click();
 
       cy.pressEscapeKey();
 
@@ -30,7 +37,7 @@ describe("DropdownMenu", () => {
     });
 
     it("closes the menu when clicking outside of it", () => {
-      getOpenButton().click();
+      cy.get("button").click();
 
       cy.clickOutsideElement();
 
@@ -38,7 +45,7 @@ describe("DropdownMenu", () => {
     });
 
     it("scrolls through the list on tabpress", () => {
-      getOpenButton()
+      cy.get("button")
         .click()
         .tab();
 
