@@ -366,7 +366,7 @@ exports[`Storyshots Box Box 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 qxrGP"
+              className="Box-sc-1qu1edy-0 kgPSDa"
             >
               Hello World
             </div>
@@ -746,7 +746,7 @@ exports[`Storyshots Box With a background colour 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 kuRhUY"
+              className="Box-sc-1qu1edy-0 djsAXX"
               color="white"
             >
               Hello World
@@ -1133,7 +1133,7 @@ exports[`Storyshots Box With a responsive width 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 bjEkho"
+              className="Box-sc-1qu1edy-0 iSqypz"
               width={
                 Object {
                   "extraSmall": 1,
@@ -1520,7 +1520,7 @@ exports[`Storyshots Box With a set width 1`] = `
             width={0.5}
           >
             <div
-              className="Box-sc-1qu1edy-0 bkFmXr"
+              className="Box-sc-1qu1edy-0 kPpbia"
               width={0.5}
             >
               Half Width
@@ -1901,7 +1901,7 @@ exports[`Storyshots Box With a shadow 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 jZDejp"
+              className="Box-sc-1qu1edy-0 jdHklY"
             >
               Small shadow
             </div>
@@ -1998,7 +1998,7 @@ exports[`Storyshots Box With a shadow 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 bANlYV"
+              className="Box-sc-1qu1edy-0 iwQDQA"
             >
               Medium shadow
             </div>
@@ -2095,7 +2095,7 @@ exports[`Storyshots Box With a shadow 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 jSMlF"
+              className="Box-sc-1qu1edy-0 hfKkLc"
             >
               Large shadow
             </div>
@@ -2474,7 +2474,7 @@ exports[`Storyshots Box With a text colour 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 gXabtM"
+              className="Box-sc-1qu1edy-0 dgiJtr"
               color="blue"
             >
               Hello World
@@ -2853,7 +2853,7 @@ exports[`Storyshots Box With margin 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 qxrGP"
+              className="Box-sc-1qu1edy-0 kgPSDa"
             >
               <Box
                 bg="whiteGrey"
@@ -2946,7 +2946,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 bZsemD"
+                  className="Box-sc-1qu1edy-0 hIhzoq"
                 >
                   Margin
                 </div>
@@ -3042,7 +3042,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 jZObPP"
+                  className="Box-sc-1qu1edy-0 cuoOre"
                 >
                   Margin top
                 </div>
@@ -3138,7 +3138,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 qcvBm"
+                  className="Box-sc-1qu1edy-0 dtHOjp"
                 >
                   Margin right
                 </div>
@@ -3234,7 +3234,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hMvKsN"
+                  className="Box-sc-1qu1edy-0 ilVHVE"
                 >
                   Margin bottom
                 </div>
@@ -3330,7 +3330,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 etRlRz"
+                  className="Box-sc-1qu1edy-0 haXiZu"
                 >
                   Margin left
                 </div>
@@ -3426,7 +3426,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 bmaNlL"
+                  className="Box-sc-1qu1edy-0 hwRFIK"
                 >
                   Margin x
                 </div>
@@ -3522,7 +3522,7 @@ exports[`Storyshots Box With margin 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 kvSYXC"
+                  className="Box-sc-1qu1edy-0 cFAHtp"
                 >
                   Margin y
                 </div>
@@ -3902,7 +3902,7 @@ exports[`Storyshots Box With padding 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hDBRzw"
+              className="Box-sc-1qu1edy-0 kXqRXb"
             >
               <Box
                 bg="whiteGrey"
@@ -3996,7 +3996,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hogaQX"
+                  className="Box-sc-1qu1edy-0 DrAYC"
                 >
                   Padding
                 </div>
@@ -4093,7 +4093,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hogaQX"
+                  className="Box-sc-1qu1edy-0 DrAYC"
                 >
                   Padding top
                 </div>
@@ -4190,7 +4190,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 iOobnq"
+                  className="Box-sc-1qu1edy-0 iNWRjl"
                 >
                   Padding right
                 </div>
@@ -4287,7 +4287,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 eKsOCl"
+                  className="Box-sc-1qu1edy-0 fsPHko"
                 >
                   Padding bottom
                 </div>
@@ -4384,7 +4384,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 idjjtf"
+                  className="Box-sc-1qu1edy-0 gibXYK"
                 >
                   Padding left
                 </div>
@@ -4481,7 +4481,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 fIWaXc"
+                  className="Box-sc-1qu1edy-0 chUAKr"
                 >
                   Padding x
                 </div>
@@ -4578,7 +4578,7 @@ exports[`Storyshots Box With padding 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 dFpShj"
+                  className="Box-sc-1qu1edy-0 bwmKJe"
                 >
                   Padding y
                 </div>

@@ -371,7 +371,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC kmEpq"
+              className="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
               height="100vh"
             >
               <Styled(Box)
@@ -466,7 +466,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC daMbks"
+                  className="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
                 >
                   <Styled(Box)
                     alignItems="center"
@@ -565,7 +565,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                     width="100%"
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC hJAeRq"
+                      className="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
                       width="100%"
                     >
                       <Box
@@ -677,7 +677,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 kIHSan"
+                          className="Box-sc-1qu1edy-0 gBBctK"
                         >
                           <Styled(BaseBranding)
                             size="large"
@@ -842,7 +842,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 iabkZv"
+                          className="Box-sc-1qu1edy-0 dVgOxh"
                         >
                           <Styled(BaseAlert)
                             title="We're sorry, but something went wrong."
@@ -949,7 +949,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC dHWySM sc-fzXfLS PPCpw"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
                                   role="alert"
                                 >
                                   <Styled(Component)
@@ -1079,7 +1079,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 gTXTEU"
+                                      className="Box-sc-1qu1edy-0 jRfwdL"
                                     >
                                       <styled.p
                                         color="currentColor"
@@ -1088,10 +1088,11 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF hPCbYL"
+                                          className="sc-AykKF frKGrq"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -1209,7 +1210,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 LqwxH"
+                  className="Box-sc-1qu1edy-0 klpJm"
                   style={
                     Object {
                       "borderTop": "solid 1px #e4e7eb",
@@ -1222,10 +1223,11 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                     fontSize="small"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF kRSOBw"
+                      className="sc-AykKF kIbUBD"
                       color="darkGrey"
                       disabled={false}
                       fontSize="small"
@@ -1615,7 +1617,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC kmEpq"
+              className="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
               height="100vh"
             >
               <Styled(Box)
@@ -1710,7 +1712,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC daMbks"
+                  className="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
                 >
                   <Styled(Box)
                     alignItems="center"
@@ -1809,7 +1811,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                     width="100%"
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC hJAeRq"
+                      className="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
                       width="100%"
                     >
                       <Box
@@ -1921,7 +1923,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 kIHSan"
+                          className="Box-sc-1qu1edy-0 gBBctK"
                         >
                           <Styled(BaseBranding)
                             size="large"
@@ -2086,7 +2088,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 iabkZv"
+                          className="Box-sc-1qu1edy-0 dVgOxh"
                         >
                           <Styled(BaseAlert)>
                             <BaseAlert
@@ -2190,7 +2192,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC demztr sc-fzXfLS PPCpw"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
                                   role="alert"
                                 >
                                   <Box
@@ -2283,7 +2285,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 gTXTEU"
+                                      className="Box-sc-1qu1edy-0 jRfwdL"
                                     >
                                       We are currently adding new features to Nulogy Quality Control. We should be online shortly.
                                     </div>
@@ -2394,7 +2396,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 LqwxH"
+                  className="Box-sc-1qu1edy-0 klpJm"
                   style={
                     Object {
                       "borderTop": "solid 1px #e4e7eb",
@@ -2407,10 +2409,11 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                     fontSize="small"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF kRSOBw"
+                      className="sc-AykKF kIbUBD"
                       color="darkGrey"
                       disabled={false}
                       fontSize="small"
@@ -2800,7 +2803,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC kmEpq"
+              className="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
               height="100vh"
             >
               <Styled(Box)
@@ -2895,7 +2898,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC daMbks"
+                  className="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
                 >
                   <Styled(Box)
                     alignItems="center"
@@ -2994,7 +2997,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                     width="100%"
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC hJAeRq"
+                      className="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
                       width="100%"
                     >
                       <Box
@@ -3106,7 +3109,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 gGmRQx"
+                          className="Box-sc-1qu1edy-0 eAbxAs"
                         >
                           <Styled(BaseBranding)
                             size="large"
@@ -3271,7 +3274,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 iabkZv"
+                          className="Box-sc-1qu1edy-0 dVgOxh"
                         >
                           <Styled(BaseAlert)
                             mb="x2"
@@ -3381,7 +3384,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC bxtvlo sc-fzXfLS dyBUYE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC jJNLJZ sc-fzXfLS dyBUYE"
                                   role="alert"
                                 >
                                   <Styled(Component)
@@ -3511,7 +3514,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 gTXTEU"
+                                      className="Box-sc-1qu1edy-0 jRfwdL"
                                     >
                                       <styled.p
                                         color="currentColor"
@@ -3520,10 +3523,11 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                                         fontWeight="bold"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF hPCbYL"
+                                          className="sc-AykKF frKGrq"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -3542,7 +3546,6 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                           <Link
                             color="blue"
                             href="#"
-                            p={0}
                             theme={
                               Object {
                                 "borders": Array [],
@@ -3632,7 +3635,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                             underline={true}
                           >
                             <a
-                              className="Link-sc-1lpx3d0-0 hEPiSQ"
+                              className="Link-sc-1lpx3d0-0 hFcUQo"
                               color="blue"
                               href="#"
                             >
@@ -3741,7 +3744,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 LqwxH"
+                  className="Box-sc-1qu1edy-0 klpJm"
                   style={
                     Object {
                       "borderTop": "solid 1px #e4e7eb",
@@ -3754,10 +3757,11 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                     fontSize="small"
                     inline={false}
                     lineHeight="1.5"
-                    m={0}
+                    mb={0}
+                    mt={0}
                   >
                     <p
-                      className="sc-AykKF kRSOBw"
+                      className="sc-AykKF kIbUBD"
                       color="darkGrey"
                       disabled={false}
                       fontSize="small"

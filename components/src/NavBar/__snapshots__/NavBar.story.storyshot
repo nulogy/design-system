@@ -1254,14 +1254,13 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -1358,7 +1357,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -1539,7 +1538,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -2658,7 +2657,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -2756,7 +2755,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 bZIhxh"
+                                              className="Box-sc-1qu1edy-0 dzXcDh"
                                             >
                                               <Styled(BaseNavBarSearch)
                                                 onSubmit={[Function]}
@@ -2860,7 +2859,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                         role="search"
                                                       >
                                                         <ForwardRef
@@ -2972,7 +2971,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                             }
                                                           >
                                                             <div
-                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                                             >
                                                               <ForwardRef
                                                                 aria-labelledby="global-search"
@@ -3087,7 +3086,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                                     >
                                                                       <Prefix
                                                                         prefix={null}
@@ -3186,7 +3185,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 llphNe"
+                                                                          className="Box-sc-1qu1edy-0 klanzh"
                                                                           display="flex"
                                                                         >
                                                                           <InputField__StyledInput
@@ -4411,14 +4410,13 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD iyyWeK"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD hSBPrB"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my="-8px"
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -4515,7 +4513,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 esWdHI"
+                                      className="Link-sc-1lpx3d0-0 ixkMtM"
                                       color="blue"
                                       href="/"
                                       style={
@@ -4685,7 +4683,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                                 width="100%"
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 sc-AykKC ecDlPz"
+                                                  className="Box-sc-1qu1edy-0 sc-AykKC joAJys"
                                                   width="100%"
                                                 >
                                                   <BrandingText
@@ -4814,7 +4812,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -5300,7 +5298,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -5937,14 +5935,13 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/portal"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -6041,7 +6038,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/portal"
                                       style={
@@ -6222,7 +6219,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -6708,7 +6705,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -7146,14 +7143,13 @@ exports[`Storyshots NavBar With branding only 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -7250,7 +7246,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -7431,7 +7427,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -7533,7 +7529,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -8166,14 +8162,13 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -8270,7 +8265,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -8451,7 +8446,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -8937,7 +8932,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -9589,14 +9584,13 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my="-8px"
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -9693,7 +9687,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 esWdHI"
+                                      className="Link-sc-1lpx3d0-0 ixkMtM"
                                       color="blue"
                                       href="/"
                                       style={
@@ -9863,7 +9857,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                 width="100%"
                                               >
                                                 <div
-                                                  className="Box-sc-1qu1edy-0 sc-AykKC ecDlPz"
+                                                  className="Box-sc-1qu1edy-0 sc-AykKC joAJys"
                                                   width="100%"
                                                 >
                                                   <BrandingText
@@ -9992,7 +9986,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -10478,7 +10472,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -10576,7 +10570,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 etLtaR"
+                                              className="Box-sc-1qu1edy-0 cEcojp"
                                             >
                                               <Styled(BaseNavBarSearch)
                                                 onSubmit={[Function]}
@@ -10680,7 +10674,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                         role="search"
                                                       >
                                                         <ForwardRef
@@ -10792,7 +10786,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                             }
                                                           >
                                                             <div
-                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                                             >
                                                               <ForwardRef
                                                                 aria-labelledby="global-search"
@@ -10907,7 +10901,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                                     >
                                                                       <Prefix
                                                                         prefix={null}
@@ -11006,7 +11000,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 llphNe"
+                                                                          className="Box-sc-1qu1edy-0 klanzh"
                                                                           display="flex"
                                                                         >
                                                                           <InputField__StyledInput
@@ -11709,14 +11703,13 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -11813,7 +11806,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -11994,7 +11987,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -12468,7 +12461,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -13736,14 +13729,13 @@ exports[`Storyshots NavBar Without search 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -13840,7 +13832,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -14021,7 +14013,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -15140,7 +15132,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -16255,14 +16247,13 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -16359,7 +16350,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -16540,7 +16531,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -16642,7 +16633,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -18252,14 +18243,13 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -18356,7 +18346,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -18537,7 +18527,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -19656,7 +19646,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -20779,14 +20769,13 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -20883,7 +20872,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -21064,7 +21053,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -22183,7 +22172,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -22281,7 +22270,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 etLtaR"
+                                              className="Box-sc-1qu1edy-0 cEcojp"
                                             >
                                               <Styled(BaseNavBarSearch)
                                                 onSubmit={[Function]}
@@ -22385,7 +22374,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                         role="search"
                                                       >
                                                         <ForwardRef
@@ -22497,7 +22486,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                             }
                                                           >
                                                             <div
-                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                                             >
                                                               <ForwardRef
                                                                 aria-labelledby="global-search"
@@ -22612,7 +22601,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                                     >
                                                                       <Prefix
                                                                         prefix={null}
@@ -22711,7 +22700,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 llphNe"
+                                                                          className="Box-sc-1qu1edy-0 klanzh"
                                                                           display="flex"
                                                                         >
                                                                           <InputField__StyledInput

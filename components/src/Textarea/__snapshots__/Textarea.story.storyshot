@@ -376,7 +376,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -502,7 +502,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -936,7 +936,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -1062,7 +1062,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -1501,7 +1501,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText="here's some help..."
@@ -1627,7 +1627,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -1647,11 +1647,12 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                   fontSize="12px"
                                   inline={true}
                                   lineHeight="1.5"
-                                  m={0}
+                                  mb={0}
                                   ml="x1"
+                                  mt={0}
                                 >
                                   <span
-                                    className="sc-AykKF fjgaNV"
+                                    className="sc-AykKF bNiwGI"
                                     color="darkGrey"
                                     disabled={false}
                                     fontSize="12px"
@@ -1667,10 +1668,11 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
                                   fontSize="16px"
                                   inline={false}
                                   lineHeight="1.5"
-                                  m={0}
+                                  mb={0}
+                                  mt={0}
                                 >
                                   <p
-                                    className="sc-AykKF sc-fzXfLV hqFgzh"
+                                    className="sc-AykKF sc-fzXfLV kckwMb"
                                     color="currentColor"
                                     disabled={false}
                                     fontSize="16px"
@@ -2106,7 +2108,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -2232,7 +2234,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -2670,7 +2672,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -2796,7 +2798,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -3146,8 +3148,8 @@ exports[`Storyshots Textarea set to required 1`] = `
                   fontSize="26px"
                   fontWeight="500"
                   lineHeight="1.23076923"
-                  m={0}
                   mb="16px"
+                  mt={0}
                   theme={
                     Object {
                       "borders": Array [],
@@ -3236,7 +3238,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                   }
                 >
                   <h2
-                    className="sc-AykKH iNnKKi"
+                    className="sc-AykKH dIrZHw"
                     fontSize="26px"
                     fontWeight="500"
                   >
@@ -3345,7 +3347,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                      className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                     >
                       <MaybeFieldLabel
                         helpText={null}
@@ -3471,7 +3473,7 @@ exports[`Storyshots Textarea set to required 1`] = `
                                   }
                                 >
                                   <div
-                                    className="Box-sc-1qu1edy-0 fTNzpy"
+                                    className="Box-sc-1qu1edy-0 iPmvAN"
                                   >
                                     <span
                                       style={
@@ -3942,7 +3944,7 @@ exports[`Storyshots Textarea with error list 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -4068,7 +4070,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -4217,7 +4219,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                      className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                       color="#cc1439"
                     >
                       <Styled(Component)
@@ -4267,10 +4269,11 @@ exports[`Storyshots Textarea with error list 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
+                            mb={0}
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF bljHeM"
+                              className="sc-AykKF jKbmDj"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -4284,7 +4287,7 @@ exports[`Storyshots Textarea with error list 1`] = `
                             leftAlign={true}
                           >
                             <ul
-                              className="List-sc-1cqkmnl-0 bnZhNb"
+                              className="List-sc-1cqkmnl-0 kMmxnE"
                               color="currentColor"
                             >
                               <ListItem
@@ -4706,7 +4709,7 @@ exports[`Storyshots Textarea with error message 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
               >
                 <MaybeFieldLabel
                   helpText={null}
@@ -4832,7 +4835,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 fTNzpy"
+                              className="Box-sc-1qu1edy-0 iPmvAN"
                             >
                               <span
                                 style={
@@ -4973,7 +4976,7 @@ exports[`Storyshots Textarea with error message 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                      className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                       color="#cc1439"
                     >
                       <Styled(Component)
@@ -5023,10 +5026,11 @@ exports[`Storyshots Textarea with error message 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
+                            mb={0}
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF bljHeM"
+                              className="sc-AykKF jKbmDj"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"

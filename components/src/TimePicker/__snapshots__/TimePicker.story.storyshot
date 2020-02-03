@@ -806,7 +806,7 @@ exports[`Storyshots TimePicker default 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -932,7 +932,7 @@ exports[`Storyshots TimePicker default 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={
@@ -11722,7 +11722,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -11848,7 +11848,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={
@@ -22690,7 +22690,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -22816,7 +22816,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={
@@ -33413,7 +33413,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -33539,7 +33539,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={
@@ -40350,7 +40350,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -40476,7 +40476,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={
@@ -50532,7 +50532,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                                   color="#cc1439"
                                 >
                                   <Styled(Component)
@@ -50582,10 +50582,11 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                         fontSize="16px"
                                         inline={false}
                                         lineHeight="1.5"
-                                        m={0}
+                                        mb={0}
+                                        mt={0}
                                       >
                                         <p
-                                          className="sc-AykKF bljHeM"
+                                          className="sc-AykKF jKbmDj"
                                           color="currentColor"
                                           disabled={false}
                                           fontSize="16px"
@@ -51234,7 +51235,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                  className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                 >
                   <MaybeFieldLabel
                     helpText={null}
@@ -51360,7 +51361,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                               }
                             >
                               <div
-                                className="Box-sc-1qu1edy-0 fTNzpy"
+                                className="Box-sc-1qu1edy-0 iPmvAN"
                               >
                                 <span
                                   style={

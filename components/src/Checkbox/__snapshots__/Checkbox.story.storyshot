@@ -378,7 +378,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -422,10 +422,11 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -820,7 +821,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -1250,7 +1251,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -1296,10 +1297,11 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -1699,7 +1701,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={true}
@@ -1743,10 +1745,11 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF cestcM"
+                          className="sc-AykKF gRcVjH"
                           color="currentColor"
                           disabled={true}
                           fontSize="16px"
@@ -1865,7 +1868,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={true}
@@ -1913,10 +1916,11 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF cestcM"
+                          className="sc-AykKF gRcVjH"
                           color="currentColor"
                           disabled={true}
                           fontSize="16px"
@@ -2316,7 +2320,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -2360,10 +2364,11 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -2482,7 +2487,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -2528,10 +2533,11 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -2931,7 +2937,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                 >
                   <ClickInputLabel
                     disabled={false}
@@ -2975,10 +2981,11 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                         fontSize="16px"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF bljHeM"
+                          className="sc-AykKF jKbmDj"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"
@@ -3382,7 +3389,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                    className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                   >
                     <ClickInputLabel
                       disabled={false}
@@ -3432,10 +3439,11 @@ exports[`Storyshots Checkbox With state 1`] = `
                           fontSize="16px"
                           inline={false}
                           lineHeight="1.5"
-                          m={0}
+                          mb={0}
+                          mt={0}
                         >
                           <p
-                            className="sc-AykKF bljHeM"
+                            className="sc-AykKF jKbmDj"
                             color="currentColor"
                             disabled={false}
                             fontSize="16px"
@@ -3555,7 +3563,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                    className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                   >
                     <ClickInputLabel
                       disabled={false}
@@ -3605,10 +3613,11 @@ exports[`Storyshots Checkbox With state 1`] = `
                           fontSize="16px"
                           inline={false}
                           lineHeight="1.5"
-                          m={0}
+                          mb={0}
+                          mt={0}
                         >
                           <p
-                            className="sc-AykKF bljHeM"
+                            className="sc-AykKF jKbmDj"
                             color="currentColor"
                             disabled={false}
                             fontSize="16px"

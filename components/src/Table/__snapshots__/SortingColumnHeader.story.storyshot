@@ -373,7 +373,7 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 sc-AykKC iBNfmF"
+                className="Box-sc-1qu1edy-0 sc-AykKC kfmaOe"
               >
                 <styled.p
                   color="currentColor"
@@ -381,11 +381,12 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
                   fontSize="16px"
                   inline={false}
                   lineHeight="1.5"
-                  m={0}
+                  mb={0}
                   mr="x1"
+                  mt={0}
                 >
                   <p
-                    className="sc-AykKF eCXA-di"
+                    className="sc-AykKF eOMZSl"
                     color="currentColor"
                     disabled={false}
                     fontSize="16px"

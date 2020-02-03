@@ -280,8 +280,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="46px"
             fontWeight="300"
             lineHeight="1.04347826"
-            m={0}
             mb="48px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -370,7 +370,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h1
-              className="sc-AykKG lceBGU"
+              className="sc-AykKG caGURK"
               fontSize="46px"
               fontWeight="300"
             >
@@ -381,8 +381,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="26px"
             fontWeight="500"
             lineHeight="1.23076923"
-            m={0}
             mb="16px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -471,7 +471,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h2
-              className="sc-AykKH iNnKKi"
+              className="sc-AykKH dIrZHw"
               fontSize="26px"
               fontWeight="500"
             >
@@ -484,11 +484,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -500,8 +500,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -590,7 +590,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -603,11 +603,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -619,8 +619,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="26px"
             fontWeight="500"
             lineHeight="1.23076923"
-            m={0}
             mb="16px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -709,7 +709,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h2
-              className="sc-AykKH iNnKKi"
+              className="sc-AykKH dIrZHw"
               fontSize="26px"
               fontWeight="500"
             >
@@ -720,8 +720,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -810,7 +810,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -823,11 +823,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -839,8 +839,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -929,7 +929,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -942,11 +942,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -960,7 +960,7 @@ exports[`Storyshots Typography Article 1`] = `
             leftAlign={false}
           >
             <ul
-              className="List-sc-1cqkmnl-0 gxlfne"
+              className="List-sc-1cqkmnl-0 eLAYYL"
               color="currentColor"
             >
               <ListItem
@@ -1004,11 +1004,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -1022,11 +1022,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -1038,8 +1038,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1128,7 +1128,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -1141,11 +1141,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize={0}
             inline={false}
             lineHeight="1.71428571"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF elfvoy"
+              className="sc-AykKF iDqkiA"
               color="currentColor"
               disabled={false}
               fontSize={0}
@@ -1157,8 +1157,8 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="20px"
             fontWeight="500"
             lineHeight="1.2"
-            m={0}
             mb="8px"
+            mt={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1247,7 +1247,7 @@ exports[`Storyshots Typography Article 1`] = `
             }
           >
             <h3
-              className="sc-AykKI sc-AykKJ hriOmh"
+              className="sc-AykKI sc-AykKJ kxSqMb"
               fontSize="20px"
               fontWeight="500"
             >
@@ -1260,11 +1260,11 @@ exports[`Storyshots Typography Article 1`] = `
             fontSize="small"
             inline={false}
             lineHeight="1.14285714"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF ebVWsk"
+              className="sc-AykKF cOqBqe"
               color="currentColor"
               disabled={false}
               fontSize="small"

@@ -282,7 +282,7 @@ exports[`Storyshots List List 1`] = `
             leftAlign={false}
           >
             <ul
-              className="List-sc-1cqkmnl-0 gxlfne"
+              className="List-sc-1cqkmnl-0 eLAYYL"
               color="currentColor"
             >
               <ListItem
@@ -609,7 +609,7 @@ exports[`Storyshots List With compact spacing 1`] = `
             leftAlign={false}
           >
             <ul
-              className="List-sc-1cqkmnl-0 geydbK"
+              className="List-sc-1cqkmnl-0 fopWsv"
               color="currentColor"
             >
               <ListItem
@@ -936,7 +936,7 @@ exports[`Storyshots List With custom colour 1`] = `
             leftAlign={false}
           >
             <ul
-              className="List-sc-1cqkmnl-0 bLubqG"
+              className="List-sc-1cqkmnl-0 jCgiBP"
               color="red"
             >
               <ListItem
@@ -1265,7 +1265,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
             lineHeight="smallTextBase"
           >
             <ul
-              className="List-sc-1cqkmnl-0 lmyvOo"
+              className="List-sc-1cqkmnl-0 ruAsR"
               color="currentColor"
               fontSize="small"
             >
@@ -1593,7 +1593,7 @@ exports[`Storyshots List With left alignment 1`] = `
             leftAlign={true}
           >
             <ul
-              className="List-sc-1cqkmnl-0 jNbdHP"
+              className="List-sc-1cqkmnl-0 enngwk"
               color="currentColor"
             >
               <ListItem

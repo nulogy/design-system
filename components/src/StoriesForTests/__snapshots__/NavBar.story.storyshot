@@ -854,14 +854,13 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -958,7 +957,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -1139,7 +1138,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -1819,7 +1818,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",
@@ -1917,7 +1916,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 bZIhxh"
+                                              className="Box-sc-1qu1edy-0 dzXcDh"
                                             >
                                               <Styled(BaseNavBarSearch)
                                                 onSubmit={[Function]}
@@ -2021,7 +2020,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                       }
                                                     >
                                                       <div
-                                                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                                         role="search"
                                                       >
                                                         <ForwardRef
@@ -2133,7 +2132,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                             }
                                                           >
                                                             <div
-                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                                                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                                                             >
                                                               <ForwardRef
                                                                 aria-labelledby="global-search"
@@ -2248,7 +2247,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                                                     >
                                                                       <Prefix
                                                                         prefix={null}
@@ -2347,7 +2346,7 @@ exports[`Storyshots StoriesForTests/NavBar Base 1`] = `
                                                                         }
                                                                       >
                                                                         <div
-                                                                          className="Box-sc-1qu1edy-0 llphNe"
+                                                                          className="Box-sc-1qu1edy-0 klanzh"
                                                                           display="flex"
                                                                         >
                                                                           <InputField__StyledInput
@@ -3760,14 +3759,13 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD dGFXTE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
                                 >
                                   <Link
                                     aria-label="Nulogy logo"
                                     color="blue"
                                     href="/"
                                     my={null}
-                                    p={0}
                                     style={
                                       Object {
                                         "display": "block",
@@ -3864,7 +3862,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                   >
                                     <a
                                       aria-label="Nulogy logo"
-                                      className="Link-sc-1lpx3d0-0 jbhJdy"
+                                      className="Link-sc-1lpx3d0-0 ksBFcO"
                                       color="blue"
                                       href="/"
                                       style={
@@ -4045,7 +4043,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC cTOzPz"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
                                       style={
                                         Object {
                                           "flexGrow": "1",
@@ -4545,7 +4543,7 @@ exports[`Storyshots StoriesForTests/NavBar Custom Render Components 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                                          className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                                           style={
                                             Object {
                                               "float": "right",

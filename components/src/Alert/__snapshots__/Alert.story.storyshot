@@ -380,7 +380,7 @@ exports[`Storyshots Alert Danger 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC dHWySM sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Styled(Component)
@@ -510,7 +510,7 @@ exports[`Storyshots Alert Danger 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       Danger alert
                     </div>
@@ -904,7 +904,7 @@ exports[`Storyshots Alert Informative 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC demztr sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Box
@@ -997,7 +997,7 @@ exports[`Storyshots Alert Informative 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       Informative alert
                     </div>
@@ -1393,7 +1393,7 @@ exports[`Storyshots Alert Success 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC jeiWXS sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC BbzHH sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Styled(Component)
@@ -1523,7 +1523,7 @@ exports[`Storyshots Alert Success 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       Success alert
                     </div>
@@ -1919,7 +1919,7 @@ exports[`Storyshots Alert Warning 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iNxrGZ sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC jDJpmO sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Box
@@ -2012,7 +2012,7 @@ exports[`Storyshots Alert Warning 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       Warning alert
                     </div>
@@ -2408,7 +2408,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC demztr sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Box
@@ -2501,7 +2501,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       Warning alert
                     </div>
@@ -2595,7 +2595,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 hgJwrR"
+                      className="Box-sc-1qu1edy-0 jgHxgc"
                     >
                       <Link
                         aria-label="Close"
@@ -2603,7 +2603,6 @@ exports[`Storyshots Alert With a close button 1`] = `
                         color="darkGrey"
                         hover="blue"
                         onClick={[Function]}
-                        p={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -2694,7 +2693,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                       >
                         <button
                           aria-label="Close"
-                          className="Link-sc-1lpx3d0-0 bcnyr"
+                          className="Link-sc-1lpx3d0-0 qXvvf"
                           color="darkGrey"
                           onClick={[Function]}
                         >
@@ -3125,7 +3124,7 @@ exports[`Storyshots Alert With a link 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC demztr sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Box
@@ -3218,13 +3217,12 @@ exports[`Storyshots Alert With a link 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       An alert with 
                       <Link
                         color="blue"
                         href="/"
-                        p={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -3314,7 +3312,7 @@ exports[`Storyshots Alert With a link 1`] = `
                         underline={true}
                       >
                         <a
-                          className="Link-sc-1lpx3d0-0 hEPiSQ"
+                          className="Link-sc-1lpx3d0-0 hFcUQo"
                           color="blue"
                           href="/"
                         >
@@ -3716,7 +3714,7 @@ exports[`Storyshots Alert With a title 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC dHWySM sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
                   role="alert"
                 >
                   <Styled(Component)
@@ -3846,7 +3844,7 @@ exports[`Storyshots Alert With a title 1`] = `
                     }
                   >
                     <div
-                      className="Box-sc-1qu1edy-0 gTXTEU"
+                      className="Box-sc-1qu1edy-0 jRfwdL"
                     >
                       <styled.p
                         color="currentColor"
@@ -3855,10 +3853,11 @@ exports[`Storyshots Alert With a title 1`] = `
                         fontWeight="bold"
                         inline={false}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
+                        mt={0}
                       >
                         <p
-                          className="sc-AykKF hPCbYL"
+                          className="sc-AykKF frKGrq"
                           color="currentColor"
                           disabled={false}
                           fontSize="16px"

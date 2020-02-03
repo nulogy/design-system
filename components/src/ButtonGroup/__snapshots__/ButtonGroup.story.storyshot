@@ -368,7 +368,7 @@ exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
             width="500px"
           >
             <div
-              className="Box-sc-1qu1edy-0 fcqvqj"
+              className="Box-sc-1qu1edy-0 kkRmBi"
               width="500px"
             >
               <ButtonGroup
@@ -826,7 +826,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
             width="600px"
           >
             <div
-              className="Box-sc-1qu1edy-0 kQaFfg"
+              className="Box-sc-1qu1edy-0 cvCdjb"
               width="600px"
             >
               <ButtonGroup
@@ -1163,12 +1163,13 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
                             fontSize="16px"
                             inline={false}
                             lineHeight="1.5"
-                            m={0}
+                            mb={0}
                             ml="half"
                             mr="half"
+                            mt={0}
                           >
                             <p
-                              className="sc-AykKF hcubmN"
+                              className="sc-AykKF jTSHcw"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -1559,7 +1560,7 @@ exports[`Storyshots ButtonGroup with alignment right 1`] = `
             width="500px"
           >
             <div
-              className="Box-sc-1qu1edy-0 fcqvqj"
+              className="Box-sc-1qu1edy-0 kkRmBi"
               width="500px"
             >
               <ButtonGroup
@@ -2017,7 +2018,7 @@ exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
             width="500px"
           >
             <div
-              className="Box-sc-1qu1edy-0 fcqvqj"
+              className="Box-sc-1qu1edy-0 kkRmBi"
               width="500px"
             >
               <ButtonGroup
@@ -2452,7 +2453,7 @@ exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hblYRR"
+              className="Box-sc-1qu1edy-0 bxEkvo"
             >
               <ButtonGroup
                 alignment="left"
@@ -2776,7 +2777,7 @@ exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hdEvrf"
+              className="Box-sc-1qu1edy-0 eCnczG"
             >
               <ButtonGroup
                 alignment="right"

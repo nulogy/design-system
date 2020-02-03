@@ -368,7 +368,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 JHAgm"
+              className="Box-sc-1qu1edy-0 fgSEox"
             >
               <styled.p
                 color="currentColor"
@@ -376,10 +376,11 @@ exports[`Storyshots Text Set to disabled 1`] = `
                 fontSize="16px"
                 inline={false}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF cestcM"
+                  className="sc-AykKF gRcVjH"
                   color="currentColor"
                   disabled={true}
                   fontSize="16px"
@@ -481,7 +482,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 bvvmBP"
+              className="Box-sc-1qu1edy-0 cloHC"
             >
               <styled.p
                 color="white"
@@ -489,10 +490,11 @@ exports[`Storyshots Text Set to disabled 1`] = `
                 fontSize="16px"
                 inline={false}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF kHASWd"
+                  className="sc-AykKF dfMsAc"
                   color="white"
                   disabled={true}
                   fontSize="16px"
@@ -594,7 +596,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 dQnXLo"
+              className="Box-sc-1qu1edy-0 hpTOkf"
             >
               <styled.p
                 color="white"
@@ -602,10 +604,11 @@ exports[`Storyshots Text Set to disabled 1`] = `
                 fontSize="16px"
                 inline={false}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF kHASWd"
+                  className="sc-AykKF dfMsAc"
                   color="white"
                   disabled={true}
                   fontSize="16px"
@@ -904,11 +907,12 @@ exports[`Storyshots Text Set to inline 1`] = `
             fontSize="16px"
             inline={true}
             lineHeight="1.5"
-            m={0}
+            mb={0}
             mr="x1"
+            mt={0}
           >
             <span
-              className="sc-AykKF eCXA-di"
+              className="sc-AykKF eOMZSl"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -922,10 +926,11 @@ exports[`Storyshots Text Set to inline 1`] = `
             fontSize="16px"
             inline={true}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
           >
             <span
-              className="sc-AykKF bljHeM"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -1222,10 +1227,11 @@ exports[`Storyshots Text Text 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
           >
             <p
-              className="sc-AykKF bljHeM"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -1522,10 +1528,11 @@ exports[`Storyshots Text With a color 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
           >
             <p
-              className="sc-AykKF deXrzL"
+              className="sc-AykKF dtTTCW"
               color="blue"
               disabled={false}
               fontSize="16px"
@@ -1822,11 +1829,11 @@ exports[`Storyshots Text With a custom margin 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
             mb="x3"
+            mt={0}
           >
             <p
-              className="sc-AykKF lilIln"
+              className="sc-AykKF fIxBQt"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -1840,10 +1847,11 @@ exports[`Storyshots Text With a custom margin 1`] = `
             fontSize="16px"
             inline={false}
             lineHeight="1.5"
-            m={0}
+            mb={0}
+            mt={0}
           >
             <p
-              className="sc-AykKF bljHeM"
+              className="sc-AykKF jKbmDj"
               color="currentColor"
               disabled={false}
               fontSize="16px"
@@ -2226,7 +2234,7 @@ exports[`Storyshots Text With a size 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hkWjLw"
+              className="Box-sc-1qu1edy-0 eDSxfb"
             >
               <styled.p
                 color="currentColor"
@@ -2234,10 +2242,11 @@ exports[`Storyshots Text With a size 1`] = `
                 fontSize="16px"
                 inline={false}
                 lineHeight="1.5"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF bljHeM"
+                  className="sc-AykKF jKbmDj"
                   color="currentColor"
                   disabled={false}
                   fontSize="16px"
@@ -2339,7 +2348,7 @@ exports[`Storyshots Text With a size 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hkWjLw"
+              className="Box-sc-1qu1edy-0 eDSxfb"
             >
               <styled.p
                 color="currentColor"
@@ -2347,10 +2356,11 @@ exports[`Storyshots Text With a size 1`] = `
                 fontSize="small"
                 inline={false}
                 lineHeight="smallTextBase"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF ezMmVg"
+                  className="sc-AykKF eUlarf"
                   color="currentColor"
                   disabled={false}
                   fontSize="small"
@@ -2364,10 +2374,11 @@ exports[`Storyshots Text With a size 1`] = `
                 fontSize="small"
                 inline={false}
                 lineHeight="smallTextCompressed"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF dLNANJ"
+                  className="sc-AykKF jgPnyM"
                   color="currentColor"
                   disabled={false}
                   fontSize="small"
@@ -2469,7 +2480,7 @@ exports[`Storyshots Text With a size 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hkWjLw"
+              className="Box-sc-1qu1edy-0 eDSxfb"
             >
               <styled.p
                 color="currentColor"
@@ -2477,10 +2488,11 @@ exports[`Storyshots Text With a size 1`] = `
                 fontSize="smaller"
                 inline={false}
                 lineHeight="smallerText"
-                m={0}
+                mb={0}
+                mt={0}
               >
                 <p
-                  className="sc-AykKF ldzabr"
+                  className="sc-AykKF cvMnHO"
                   color="currentColor"
                   disabled={false}
                   fontSize="smaller"

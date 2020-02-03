@@ -697,7 +697,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -1078,7 +1078,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -1427,7 +1427,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -1776,7 +1776,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -2125,7 +2125,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -2474,7 +2474,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -2823,7 +2823,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -3172,7 +3172,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -3521,7 +3521,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -4400,7 +4400,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                       }
                                     >
                                       <div
-                                        className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                        className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                       >
                                         <ClickInputLabel
                                           disabled={false}
@@ -4781,7 +4781,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -5130,7 +5130,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -5479,7 +5479,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -5828,7 +5828,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -6177,7 +6177,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -6526,7 +6526,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -6875,7 +6875,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}
@@ -7224,7 +7224,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                                             }
                                           >
                                             <div
-                                              className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNc bSPfCk"
+                                              className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
                                             >
                                               <ClickInputLabel
                                                 disabled={false}

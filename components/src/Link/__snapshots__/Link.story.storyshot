@@ -279,7 +279,6 @@ exports[`Storyshots Link As a <button> 1`] = `
           <Link
             as="button"
             color="blue"
-            p={0}
             theme={
               Object {
                 "borders": Array [],
@@ -369,7 +368,7 @@ exports[`Storyshots Link As a <button> 1`] = `
             underline={true}
           >
             <button
-              className="Link-sc-1lpx3d0-0 hEPiSQ"
+              className="Link-sc-1lpx3d0-0 mtyWY"
               color="blue"
             >
               Link
@@ -661,7 +660,6 @@ exports[`Storyshots Link Link 1`] = `
           <Link
             color="blue"
             href="http://nulogy.design"
-            p={0}
             theme={
               Object {
                 "borders": Array [],
@@ -751,7 +749,7 @@ exports[`Storyshots Link Link 1`] = `
             underline={true}
           >
             <a
-              className="Link-sc-1lpx3d0-0 hEPiSQ"
+              className="Link-sc-1lpx3d0-0 hFcUQo"
               color="blue"
               href="http://nulogy.design"
             >
@@ -1045,7 +1043,6 @@ exports[`Storyshots Link With a different color 1`] = `
             color="black"
             hover="red"
             href="http://nulogy.design"
-            p={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1135,7 +1132,7 @@ exports[`Storyshots Link With a different color 1`] = `
             underline={true}
           >
             <a
-              className="Link-sc-1lpx3d0-0 eIrwfh"
+              className="Link-sc-1lpx3d0-0 kmDyah"
               color="black"
               href="http://nulogy.design"
             >
@@ -1428,7 +1425,6 @@ exports[`Storyshots Link Without underline 1`] = `
           <Link
             color="blue"
             href="http://nulogy.design"
-            p={0}
             theme={
               Object {
                 "borders": Array [],
@@ -1518,7 +1514,7 @@ exports[`Storyshots Link Without underline 1`] = `
             underline={false}
           >
             <a
-              className="Link-sc-1lpx3d0-0 jbhJdy"
+              className="Link-sc-1lpx3d0-0 ksBFcO"
               color="blue"
               href="http://nulogy.design"
             >

@@ -367,7 +367,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hCrpwx"
+              className="Box-sc-1qu1edy-0 cgRXwI"
             >
               <Styled(BaseNavBarSearch)>
                 <BaseNavBarSearch
@@ -469,7 +469,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                         role="search"
                       >
                         <ForwardRef
@@ -581,7 +581,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                             >
                               <ForwardRef
                                 aria-labelledby="global-search"
@@ -696,7 +696,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                     >
                                       <Prefix
                                         prefix={null}
@@ -795,7 +795,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 llphNe"
+                                          className="Box-sc-1qu1edy-0 klanzh"
                                           display="flex"
                                         >
                                           <InputField__StyledInput
@@ -1260,7 +1260,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 hCrpwx"
+              className="Box-sc-1qu1edy-0 cgRXwI"
             >
               <Styled(BaseNavBarSearch)
                 name="global-search-2"
@@ -1364,7 +1364,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-AykKC ervVt"
+                        className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
                         role="search"
                       >
                         <ForwardRef
@@ -1476,7 +1476,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfLX dzcbwp"
+                              className="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
                             >
                               <ForwardRef
                                 aria-labelledby="global-search-2"
@@ -1591,7 +1591,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                     }
                                   >
                                     <div
-                                      className="Box-sc-1qu1edy-0 sc-AykKC fycoPu"
+                                      className="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
                                     >
                                       <Prefix
                                         prefix={null}
@@ -1690,7 +1690,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                         }
                                       >
                                         <div
-                                          className="Box-sc-1qu1edy-0 llphNe"
+                                          className="Box-sc-1qu1edy-0 klanzh"
                                           display="flex"
                                         >
                                           <InputField__StyledInput

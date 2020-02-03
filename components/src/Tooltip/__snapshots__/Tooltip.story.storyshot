@@ -366,7 +366,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC lcpAQf"
+              className="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
             >
               <Component
                 placement="bottom"
@@ -575,7 +575,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                                   id="random-id-3"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -1099,7 +1099,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                               id="random-id-27"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -1665,7 +1665,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-19"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -2009,7 +2009,6 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
               <ForwardRef(Link)
                 color="blue"
                 href="/"
-                p={0}
                 theme={
                   Object {
                     "borders": Array [],
@@ -2113,7 +2112,6 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                   <ForwardRef(Link)
                     color="blue"
                     href="/"
-                    p={0}
                     theme={
                       Object {
                         "borders": Array [],
@@ -2228,7 +2226,6 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                       <ForwardRef(Link)
                         color="blue"
                         href="/"
-                        p={0}
                         theme={
                           Object {
                             "borders": Array [],
@@ -2495,7 +2492,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-18"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -2507,7 +2504,6 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                               <Link
                                 color="blue"
                                 href="/"
-                                p={0}
                                 theme={
                                   Object {
                                     "borders": Array [],
@@ -2597,7 +2593,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                                 underline={true}
                               >
                                 <a
-                                  className="Link-sc-1lpx3d0-0 hEPiSQ"
+                                  className="Link-sc-1lpx3d0-0 hFcUQo"
                                   color="blue"
                                   href="/"
                                 >
@@ -3116,7 +3112,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-21"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -3520,7 +3516,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC lcpAQf"
+              className="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
             >
               <Component
                 defaultOpen={true}
@@ -3732,7 +3728,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh gjPBlR"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh fIA-DHu"
                                   id="random-id-5"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -4265,7 +4261,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-20"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -4786,7 +4782,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-22"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -4865,7 +4861,6 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
-                            p={0}
                             theme={
                               Object {
                                 "borders": Array [],
@@ -4958,7 +4953,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-23"
                               aria-expanded={false}
                               aria-haspopup={true}
-                              className="Link-sc-1lpx3d0-0 hEPiSQ"
+                              className="Link-sc-1lpx3d0-0 hFcUQo"
                               color="blue"
                               href="/"
                               onBlur={[Function]}
@@ -4983,7 +4978,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-23"
                               aria-expanded="false"
                               aria-haspopup="true"
-                              class="Link-sc-1lpx3d0-0 hEPiSQ"
+                              class="Link-sc-1lpx3d0-0 hFcUQo"
                               color="blue"
                               href="/"
                             >
@@ -5097,7 +5092,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-23"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -5176,8 +5171,9 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             fontSize="16px"
                             inline={true}
                             lineHeight="1.5"
-                            m={0}
+                            mb={0}
                             mr="x2"
+                            mt={0}
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -5187,7 +5183,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-24"
                               aria-expanded={false}
                               aria-haspopup={true}
-                              className="sc-AykKF gQsQyz"
+                              className="sc-AykKF fhVcEi"
                               color="currentColor"
                               disabled={false}
                               fontSize="16px"
@@ -5213,7 +5209,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-24"
                               aria-expanded="false"
                               aria-haspopup="true"
-                              class="sc-AykKF gQsQyz"
+                              class="sc-AykKF fhVcEi"
                               color="currentColor"
                               font-size="16px"
                             >
@@ -5327,7 +5323,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-24"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -5497,7 +5493,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-25"
                               aria-expanded={false}
                               aria-haspopup={true}
-                              className="Box-sc-1qu1edy-0 iLYeee"
+                              className="Box-sc-1qu1edy-0 kjiPdZ"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
@@ -5521,7 +5517,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-25"
                               aria-expanded="false"
                               aria-haspopup="true"
-                              class="Box-sc-1qu1edy-0 iLYeee"
+                              class="Box-sc-1qu1edy-0 kjiPdZ"
                               width="200px"
                             >
                               Box width 200px
@@ -5634,7 +5630,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-25"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -5803,7 +5799,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-26"
                               aria-expanded={false}
                               aria-haspopup={true}
-                              className="Box-sc-1qu1edy-0 fghCXX"
+                              className="Box-sc-1qu1edy-0 cYAGmG"
                               onBlur={[Function]}
                               onFocus={[Function]}
                               onMouseEnter={[Function]}
@@ -5826,7 +5822,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                               aria-describedby="random-id-26"
                               aria-expanded="false"
                               aria-haspopup="true"
-                              class="Box-sc-1qu1edy-0 fghCXX"
+                              class="Box-sc-1qu1edy-0 cYAGmG"
                             >
                               Box
                             </div>
@@ -5938,7 +5934,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-fzXfNh kqzKJz"
+                              className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP"
                               id="random-id-26"
                               onBlur={[Function]}
                               onFocus={[Function]}
@@ -6344,7 +6340,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cTpIsr"
+              className="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
             >
               <Component
                 defaultOpen={true}
@@ -6554,7 +6550,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-6"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -6802,7 +6798,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-7"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -7050,7 +7046,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-8"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -7184,7 +7180,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cTpIsr"
+              className="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
             >
               <Component
                 defaultOpen={true}
@@ -7394,7 +7390,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-9"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -7642,7 +7638,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-10"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -7890,7 +7886,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-11"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -8024,7 +8020,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cTpIsr"
+              className="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
             >
               <Component
                 defaultOpen={true}
@@ -8234,7 +8230,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-12"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -8482,7 +8478,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-13"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -8730,7 +8726,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-14"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -8864,7 +8860,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC cTpIsr"
+              className="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
             >
               <Component
                 defaultOpen={true}
@@ -9074,7 +9070,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-15"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -9322,7 +9318,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-16"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -9570,7 +9566,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-17"
                                   onBlur={[Function]}
                                   onFocus={[Function]}
@@ -9985,7 +9981,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
             }
           >
             <div
-              className="Box-sc-1qu1edy-0 sc-AykKC lcpAQf"
+              className="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
             >
               <Component
                 defaultOpen={true}
@@ -10195,7 +10191,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-fzXfNh iycvOr"
+                                  className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP"
                                   id="random-id-4"
                                   onBlur={[Function]}
                                   onFocus={[Function]}

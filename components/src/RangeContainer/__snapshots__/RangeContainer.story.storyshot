@@ -409,7 +409,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 fTNzpy"
+                        className="Box-sc-1qu1edy-0 iPmvAN"
                       >
                         <span
                           style={
@@ -523,7 +523,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
               }
             >
               <div
-                className="Box-sc-1qu1edy-0 hyyQst"
+                className="Box-sc-1qu1edy-0 dybxbc"
                 display="inline-flex"
               >
                 <Styled(Box)
@@ -618,7 +618,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                   }
                 >
                   <div
-                    className="Box-sc-1qu1edy-0 sc-AykKC einNOw"
+                    className="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
                   >
                     <styled.p
                       color="currentColor"
@@ -626,10 +626,11 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
                       fontSize="16px"
                       inline={false}
                       lineHeight="1.5"
-                      m={0}
+                      mb={0}
+                      mt={0}
                     >
                       <p
-                        className="sc-AykKF bljHeM"
+                        className="sc-AykKF jKbmDj"
                         color="currentColor"
                         disabled={false}
                         fontSize="16px"

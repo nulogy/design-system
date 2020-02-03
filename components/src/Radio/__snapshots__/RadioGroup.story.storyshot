@@ -430,7 +430,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -486,10 +486,11 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -616,7 +617,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -672,10 +673,11 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -802,7 +804,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -858,10 +860,11 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -1315,7 +1318,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -1363,10 +1366,11 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -1489,7 +1493,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -1537,10 +1541,11 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -1663,7 +1668,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -1711,10 +1716,11 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -2073,11 +2079,12 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                         fontSize="12px"
                         inline={true}
                         lineHeight="1.5"
-                        m={0}
+                        mb={0}
                         ml="x1"
+                        mt={0}
                       >
                         <span
-                          className="sc-AykKF fjgaNV"
+                          className="sc-AykKF bNiwGI"
                           color="darkGrey"
                           disabled={false}
                           fontSize="12px"
@@ -2094,10 +2101,11 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                       fontSize="16px"
                       inline={false}
                       lineHeight="1.5"
-                      m={0}
+                      mb={0}
+                      mt={0}
                     >
                       <p
-                        className="sc-AykKF sc-fzXfLV hqFgzh"
+                        className="sc-AykKF sc-fzXfLV kckwMb"
                         color="currentColor"
                         disabled={false}
                         fontSize="16px"
@@ -2216,7 +2224,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -2266,10 +2274,11 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -2393,7 +2402,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -2441,10 +2450,11 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -2568,7 +2578,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -2616,10 +2626,11 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -3080,7 +3091,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={true}
@@ -3130,10 +3141,11 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF cestcM"
+                                  className="sc-AykKF gRcVjH"
                                   color="currentColor"
                                   disabled={true}
                                   fontSize="16px"
@@ -3257,7 +3269,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={true}
@@ -3305,10 +3317,11 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF cestcM"
+                                  className="sc-AykKF gRcVjH"
                                   color="currentColor"
                                   disabled={true}
                                   fontSize="16px"
@@ -3432,7 +3445,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={true}
@@ -3480,10 +3493,11 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF cestcM"
+                                  className="sc-AykKF gRcVjH"
                                   color="currentColor"
                                   disabled={true}
                                   fontSize="16px"
@@ -3953,7 +3967,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -4003,10 +4017,11 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -4129,7 +4144,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -4177,10 +4192,11 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -4303,7 +4319,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -4351,10 +4367,11 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -4471,7 +4488,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                        className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                         color="#cc1439"
                       >
                         <Styled(Component)
@@ -4521,10 +4538,11 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                               fontSize="16px"
                               inline={false}
                               lineHeight="1.5"
-                              m={0}
+                              mb={0}
+                              mt={0}
                             >
                               <p
-                                className="sc-AykKF bljHeM"
+                                className="sc-AykKF jKbmDj"
                                 color="currentColor"
                                 disabled={false}
                                 fontSize="16px"
@@ -4538,7 +4556,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
                               leftAlign={true}
                             >
                               <ul
-                                className="List-sc-1cqkmnl-0 bnZhNb"
+                                className="List-sc-1cqkmnl-0 kMmxnE"
                                 color="currentColor"
                               >
                                 <ListItem
@@ -5010,7 +5028,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -5060,10 +5078,11 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -5186,7 +5205,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -5234,10 +5253,11 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -5360,7 +5380,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                         }
                       >
                         <div
-                          className="Box-sc-1qu1edy-0 hgJwrR sc-fzXfNe kVFKSZ"
+                          className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
                         >
                           <ClickInputLabel
                             disabled={false}
@@ -5408,10 +5428,11 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                                 fontSize="16px"
                                 inline={true}
                                 lineHeight="1.5"
-                                m={0}
+                                mb={0}
+                                mt={0}
                               >
                                 <span
-                                  className="sc-AykKF bljHeM"
+                                  className="sc-AykKF jKbmDj"
                                   color="currentColor"
                                   disabled={false}
                                   fontSize="16px"
@@ -5523,7 +5544,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-AykKC dtICki"
+                        className="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
                         color="#cc1439"
                       >
                         <Styled(Component)
@@ -5573,10 +5594,11 @@ exports[`Storyshots RadioGroup with error message 1`] = `
                               fontSize="16px"
                               inline={false}
                               lineHeight="1.5"
-                              m={0}
+                              mb={0}
+                              mt={0}
                             >
                               <p
-                                className="sc-AykKF bljHeM"
+                                className="sc-AykKF jKbmDj"
                                 color="currentColor"
                                 disabled={false}
                                 fontSize="16px"
