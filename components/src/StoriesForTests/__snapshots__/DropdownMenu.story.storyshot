@@ -627,7 +627,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Base 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1196,7 +1196,7 @@ exports[`Storyshots StoriesForTests/DropdownMenu Custom trigger 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}

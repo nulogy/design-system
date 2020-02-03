@@ -627,7 +627,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1317,7 +1317,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2006,7 +2006,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dcgYuM"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU gUaLhJ"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2716,7 +2716,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3375,7 +3375,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU eLwwEY"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU PXhla"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4064,7 +4064,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -4632,7 +4632,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfLU dVamCp"
+                        className="Box-sc-1qu1edy-0 sc-fzXfLU jhNZZC"
                         id={null}
                         onBlur={[Function]}
                         onFocus={[Function]}
