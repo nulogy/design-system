@@ -379,7 +379,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                 <ForwardRef
                   defaultOpen={false}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-16"
+=======
+                  id="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -405,7 +409,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-16"
+=======
+                          aria-describedby="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -421,7 +429,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-16"
+=======
+                            aria-describedby="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={false}
                             aria-haspopup={true}
                             aria-label="Open"
@@ -434,7 +446,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-16"
+=======
+                              aria-describedby="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={false}
                               aria-haspopup={true}
                               aria-label="Open"
@@ -463,7 +479,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-16"
+=======
+                            aria-describedby="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="false"
                             aria-haspopup="true"
                             aria-label="Open"
@@ -475,7 +495,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-16"
+=======
+                          id="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -581,7 +605,11 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-16"
+=======
+                            id="random-id-1"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -914,12 +942,16 @@ exports[`Storyshots Tooltip open by default 1`] = `
             maxWidth="24em"
             placement="bottom"
             showDelay="100"
-            tooltip="Tooltip"
+            tooltip="I am an open Tooltip!"
           >
             <ForwardRef
               defaultOpen={true}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-40"
+=======
+              id="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -935,7 +967,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                   iconSide="right"
                   size="medium"
                 >
-                   Button 
+                  Hover me
                 </ForwardRef>
               }
             >
@@ -945,7 +977,11 @@ exports[`Storyshots Tooltip open by default 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-40"
+=======
+                      aria-describedby="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={true}
                       aria-haspopup={true}
                       aria-label="Close"
@@ -961,7 +997,11 @@ exports[`Storyshots Tooltip open by default 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-40"
+=======
+                        aria-describedby="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={true}
                         aria-haspopup={true}
                         aria-label="Close"
@@ -974,7 +1014,11 @@ exports[`Storyshots Tooltip open by default 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-40"
+=======
+                          aria-describedby="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -986,7 +1030,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                           onMouseLeave={[Function]}
                           size="medium"
                         >
-                           Button 
+                          Hover me
                         </button>
                       </Button__WrapperButton>
                     </ForwardRef>
@@ -1003,19 +1047,27 @@ exports[`Storyshots Tooltip open by default 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-40"
+=======
+                        aria-describedby="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="true"
                         aria-haspopup="true"
                         aria-label="Close"
                         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
                       >
-                         Button 
+                        Hover me
                       </button>
                     }
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-40"
+=======
+                      id="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -1121,7 +1173,11 @@ exports[`Storyshots Tooltip open by default 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-40"
+=======
+                        id="random-id-25"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -1129,6 +1185,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                         open={true}
                         role="tooltip"
                       >
+<<<<<<< HEAD
                         T
                         o
                         o
@@ -1136,6 +1193,9 @@ exports[`Storyshots Tooltip open by default 1`] = `
                         t
                         i
                         p
+=======
+                        I am an open Tooltip!
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
@@ -1461,7 +1521,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-32"
+=======
+              id="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -1487,7 +1551,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-32"
+=======
+                      aria-describedby="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -1503,7 +1571,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-32"
+=======
+                        aria-describedby="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -1516,7 +1588,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-32"
+=======
+                          aria-describedby="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -1545,7 +1621,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-32"
+=======
+                        aria-describedby="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -1557,7 +1637,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-32"
+=======
+                      id="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -1663,7 +1747,11 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-32"
+=======
+                        id="random-id-17"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -2104,7 +2192,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-31"
+=======
+              id="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -2130,7 +2222,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-31"
+=======
+                      aria-describedby="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -2146,7 +2242,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-31"
+=======
+                        aria-describedby="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -2159,7 +2259,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-31"
+=======
+                          aria-describedby="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -2188,7 +2292,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-31"
+=======
+                        aria-describedby="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -2200,7 +2308,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-31"
+=======
+                      id="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -2306,7 +2418,11 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-31"
+=======
+                        id="random-id-16"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -2727,7 +2843,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="1000"
+<<<<<<< HEAD
               id="random-id-34"
+=======
+              id="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -2753,7 +2873,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-34"
+=======
+                      aria-describedby="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -2769,7 +2893,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-34"
+=======
+                        aria-describedby="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -2782,7 +2910,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-34"
+=======
+                          aria-describedby="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -2811,7 +2943,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-34"
+=======
+                        aria-describedby="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -2823,7 +2959,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-34"
+=======
+                      id="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -2929,7 +3069,11 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-34"
+=======
+                        id="random-id-19"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -3349,7 +3493,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-18"
+=======
+                  id="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -3375,7 +3523,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-18"
+=======
+                          aria-describedby="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -3391,7 +3543,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-18"
+=======
+                            aria-describedby="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -3404,7 +3560,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-18"
+=======
+                              aria-describedby="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -3433,7 +3593,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-18"
+=======
+                            aria-describedby="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -3445,7 +3609,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-18"
+=======
+                          id="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="128px"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -3551,7 +3719,11 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh fIA-DHu  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-18"
+=======
+                            id="random-id-3"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -3982,7 +4154,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-33"
+=======
+              id="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -4008,7 +4184,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-33"
+=======
+                      aria-describedby="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -4024,7 +4204,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-33"
+=======
+                        aria-describedby="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -4037,7 +4221,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-33"
+=======
+                          aria-describedby="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -4066,7 +4254,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-33"
+=======
+                        aria-describedby="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -4078,7 +4270,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-33"
+=======
+                      id="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -4184,7 +4380,11 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-33"
+=======
+                        id="random-id-18"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -4512,7 +4712,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-35"
+=======
+              id="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -4538,7 +4742,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <ForwardRef
+<<<<<<< HEAD
                       aria-describedby="random-id-35"
+=======
+                      aria-describedby="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -4554,7 +4762,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       size="medium"
                     >
                       <Button__WrapperButton
+<<<<<<< HEAD
                         aria-describedby="random-id-35"
+=======
+                        aria-describedby="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -4567,7 +4779,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         size="medium"
                       >
                         <button
+<<<<<<< HEAD
                           aria-describedby="random-id-35"
+=======
+                          aria-describedby="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={false}
                           aria-haspopup={true}
                           aria-label="Open"
@@ -4596,7 +4812,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <button
+<<<<<<< HEAD
                         aria-describedby="random-id-35"
+=======
+                        aria-describedby="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -4608,7 +4828,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-35"
+=======
+                      id="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -4714,7 +4938,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-35"
+=======
+                        id="random-id-20"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -4759,7 +4987,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-36"
+=======
+              id="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -4868,7 +5100,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <Link
+<<<<<<< HEAD
                       aria-describedby="random-id-36"
+=======
+                      aria-describedby="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -4967,7 +5203,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       underline={true}
                     >
                       <a
+<<<<<<< HEAD
                         aria-describedby="random-id-36"
+=======
+                        aria-describedby="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -4995,7 +5235,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <a
+<<<<<<< HEAD
                         aria-describedby="random-id-36"
+=======
+                        aria-describedby="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -5009,7 +5253,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-36"
+=======
+                      id="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -5115,7 +5363,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-36"
+=======
+                        id="random-id-21"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -5160,7 +5412,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-37"
+=======
+              id="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -5189,7 +5445,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <styled.p
+<<<<<<< HEAD
                       aria-describedby="random-id-37"
+=======
+                      aria-describedby="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -5208,7 +5468,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       onMouseLeave={[Function]}
                     >
                       <span
+<<<<<<< HEAD
                         aria-describedby="random-id-37"
+=======
+                        aria-describedby="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -5237,7 +5501,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <span
+<<<<<<< HEAD
                         aria-describedby="random-id-37"
+=======
+                        aria-describedby="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -5251,7 +5519,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-37"
+=======
+                      id="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -5357,7 +5629,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-37"
+=======
+                        id="random-id-22"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -5402,7 +5678,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-38"
+=======
+              id="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -5510,7 +5790,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <Box
+<<<<<<< HEAD
                       aria-describedby="random-id-38"
+=======
+                      aria-describedby="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -5608,7 +5892,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       width="200px"
                     >
                       <div
+<<<<<<< HEAD
                         aria-describedby="random-id-38"
+=======
+                        aria-describedby="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -5635,7 +5923,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <div
+<<<<<<< HEAD
                         aria-describedby="random-id-38"
+=======
+                        aria-describedby="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -5648,7 +5940,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-38"
+=======
+                      id="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -5754,7 +6050,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-38"
+=======
+                        id="random-id-23"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -5799,7 +6099,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
             <ForwardRef
               defaultOpen={false}
               hideDelay="350"
+<<<<<<< HEAD
               id="random-id-39"
+=======
+              id="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
               modifiers={null}
               openOnClick={false}
               openOnHover={true}
@@ -5906,7 +6210,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     setReferenceNode={[Function]}
                   >
                     <Box
+<<<<<<< HEAD
                       aria-describedby="random-id-39"
+=======
+                      aria-describedby="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       aria-expanded={false}
                       aria-haspopup={true}
                       aria-label="Open"
@@ -6003,7 +6311,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                       }
                     >
                       <div
+<<<<<<< HEAD
                         aria-describedby="random-id-39"
+=======
+                        aria-describedby="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded={false}
                         aria-haspopup={true}
                         aria-label="Open"
@@ -6029,7 +6341,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     positionFixed={false}
                     referenceElement={
                       <div
+<<<<<<< HEAD
                         aria-describedby="random-id-39"
+=======
+                        aria-describedby="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         aria-expanded="false"
                         aria-haspopup="true"
                         aria-label="Open"
@@ -6041,7 +6357,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                   >
                     <Styled(Box)
                       className=" nds-popper-pop-up"
+<<<<<<< HEAD
                       id="random-id-39"
+=======
+                      id="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                       maxWidth="24em"
                       onBlur={[Function]}
                       onFocus={[Function]}
@@ -6147,7 +6467,11 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                     >
                       <div
                         className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
+<<<<<<< HEAD
                         id="random-id-39"
+=======
+                        id="random-id-24"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
@@ -6569,7 +6893,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-19"
+=======
+                  id="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -6595,7 +6923,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-19"
+=======
+                          aria-describedby="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -6611,7 +6943,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-19"
+=======
+                            aria-describedby="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -6624,7 +6960,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-19"
+=======
+                              aria-describedby="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -6653,7 +6993,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-19"
+=======
+                            aria-describedby="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -6665,7 +7009,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-19"
+=======
+                          id="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -6771,7 +7119,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-19"
+=======
+                            id="random-id-4"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -6818,7 +7170,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-20"
+=======
+                  id="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -6844,7 +7200,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-20"
+=======
+                          aria-describedby="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -6860,7 +7220,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-20"
+=======
+                            aria-describedby="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -6873,7 +7237,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-20"
+=======
+                              aria-describedby="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -6902,7 +7270,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-20"
+=======
+                            aria-describedby="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -6914,7 +7286,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-20"
+=======
+                          id="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -7020,7 +7396,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-20"
+=======
+                            id="random-id-5"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -7061,7 +7441,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-21"
+=======
+                  id="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -7087,7 +7471,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-21"
+=======
+                          aria-describedby="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -7103,7 +7491,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-21"
+=======
+                            aria-describedby="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -7116,7 +7508,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-21"
+=======
+                              aria-describedby="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -7145,7 +7541,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-21"
+=======
+                            aria-describedby="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -7157,7 +7557,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-21"
+=======
+                          id="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -7263,7 +7667,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-21"
+=======
+                            id="random-id-6"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -7404,7 +7812,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-22"
+=======
+                  id="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -7430,7 +7842,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-22"
+=======
+                          aria-describedby="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -7446,7 +7862,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-22"
+=======
+                            aria-describedby="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -7459,7 +7879,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-22"
+=======
+                              aria-describedby="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -7488,7 +7912,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-22"
+=======
+                            aria-describedby="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -7500,7 +7928,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-22"
+=======
+                          id="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -7606,7 +8038,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-22"
+=======
+                            id="random-id-7"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -7654,7 +8090,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-23"
+=======
+                  id="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -7680,7 +8120,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-23"
+=======
+                          aria-describedby="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -7696,7 +8140,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-23"
+=======
+                            aria-describedby="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -7709,7 +8157,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-23"
+=======
+                              aria-describedby="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -7738,7 +8190,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-23"
+=======
+                            aria-describedby="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -7750,7 +8206,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-23"
+=======
+                          id="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -7856,7 +8316,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-23"
+=======
+                            id="random-id-8"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -7898,7 +8362,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-24"
+=======
+                  id="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -7924,7 +8392,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-24"
+=======
+                          aria-describedby="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -7940,7 +8412,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-24"
+=======
+                            aria-describedby="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -7953,7 +8429,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-24"
+=======
+                              aria-describedby="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -7982,7 +8462,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-24"
+=======
+                            aria-describedby="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -7994,7 +8478,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-24"
+=======
+                          id="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -8100,7 +8588,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-24"
+=======
+                            id="random-id-9"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -8242,7 +8734,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-25"
+=======
+                  id="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -8268,7 +8764,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-25"
+=======
+                          aria-describedby="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -8284,7 +8784,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-25"
+=======
+                            aria-describedby="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -8297,7 +8801,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-25"
+=======
+                              aria-describedby="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -8326,7 +8834,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-25"
+=======
+                            aria-describedby="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -8338,7 +8850,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-25"
+=======
+                          id="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -8444,7 +8960,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-25"
+=======
+                            id="random-id-10"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -8493,7 +9013,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-26"
+=======
+                  id="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -8519,7 +9043,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-26"
+=======
+                          aria-describedby="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -8535,7 +9063,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-26"
+=======
+                            aria-describedby="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -8548,7 +9080,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-26"
+=======
+                              aria-describedby="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -8577,7 +9113,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-26"
+=======
+                            aria-describedby="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -8589,7 +9129,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-26"
+=======
+                          id="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -8695,7 +9239,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-26"
+=======
+                            id="random-id-11"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -8738,7 +9286,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-27"
+=======
+                  id="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -8764,7 +9316,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-27"
+=======
+                          aria-describedby="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -8780,7 +9336,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-27"
+=======
+                            aria-describedby="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -8793,7 +9353,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-27"
+=======
+                              aria-describedby="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -8822,7 +9386,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-27"
+=======
+                            aria-describedby="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -8834,7 +9402,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-27"
+=======
+                          id="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -8940,7 +9512,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-27"
+=======
+                            id="random-id-12"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -9083,7 +9659,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-28"
+=======
+                  id="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -9109,7 +9689,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-28"
+=======
+                          aria-describedby="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -9125,7 +9709,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-28"
+=======
+                            aria-describedby="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -9138,7 +9726,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-28"
+=======
+                              aria-describedby="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -9167,7 +9759,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-28"
+=======
+                            aria-describedby="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -9179,7 +9775,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-28"
+=======
+                          id="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -9285,7 +9885,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-28"
+=======
+                            id="random-id-13"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -9335,7 +9939,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-29"
+=======
+                  id="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -9361,7 +9969,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-29"
+=======
+                          aria-describedby="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -9377,7 +9989,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-29"
+=======
+                            aria-describedby="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -9390,7 +10006,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-29"
+=======
+                              aria-describedby="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -9419,7 +10039,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-29"
+=======
+                            aria-describedby="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -9431,7 +10055,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-29"
+=======
+                          id="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -9537,7 +10165,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-29"
+=======
+                            id="random-id-14"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -9581,7 +10213,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-30"
+=======
+                  id="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -9607,7 +10243,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-30"
+=======
+                          aria-describedby="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -9623,7 +10263,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-30"
+=======
+                            aria-describedby="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -9636,7 +10280,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-30"
+=======
+                              aria-describedby="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -9665,7 +10313,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-30"
+=======
+                            aria-describedby="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -9677,7 +10329,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-30"
+=======
+                          id="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -9783,7 +10439,11 @@ exports[`Storyshots Tooltip with placement 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-30"
+=======
+                            id="random-id-15"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}
@@ -10208,7 +10868,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                 <ForwardRef
                   defaultOpen={true}
                   hideDelay="350"
+<<<<<<< HEAD
                   id="random-id-17"
+=======
+                  id="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                   modifiers={null}
                   openOnClick={false}
                   openOnHover={true}
@@ -10234,7 +10898,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                         setReferenceNode={[Function]}
                       >
                         <ForwardRef
+<<<<<<< HEAD
                           aria-describedby="random-id-17"
+=======
+                          aria-describedby="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           aria-expanded={true}
                           aria-haspopup={true}
                           aria-label="Close"
@@ -10250,7 +10918,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                           size="medium"
                         >
                           <Button__WrapperButton
+<<<<<<< HEAD
                             aria-describedby="random-id-17"
+=======
+                            aria-describedby="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded={true}
                             aria-haspopup={true}
                             aria-label="Close"
@@ -10263,7 +10935,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                             size="medium"
                           >
                             <button
+<<<<<<< HEAD
                               aria-describedby="random-id-17"
+=======
+                              aria-describedby="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                               aria-expanded={true}
                               aria-haspopup={true}
                               aria-label="Close"
@@ -10292,7 +10968,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                         positionFixed={false}
                         referenceElement={
                           <button
+<<<<<<< HEAD
                             aria-describedby="random-id-17"
+=======
+                            aria-describedby="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="Close"
@@ -10304,7 +10984,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                       >
                         <Styled(Box)
                           className=" nds-popper-pop-up"
+<<<<<<< HEAD
                           id="random-id-17"
+=======
+                          id="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                           maxWidth="24em"
                           onBlur={[Function]}
                           onFocus={[Function]}
@@ -10410,7 +11094,11 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                         >
                           <div
                             className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+<<<<<<< HEAD
                             id="random-id-17"
+=======
+                            id="random-id-2"
+>>>>>>> Remove storiesForTests in favour of testing component stories directly
                             onBlur={[Function]}
                             onFocus={[Function]}
                             onMouseEnter={[Function]}

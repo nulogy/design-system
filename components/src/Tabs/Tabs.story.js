@@ -21,12 +21,20 @@ class ControlledTabs extends React.Component {
     return (
       <>
         <Tabs onTabClick={this.setSelectedTab} selectedIndex={selectedIndex}>
-          <Tab label="Tab 1">Uncontrolled Content: Tab 1</Tab>
-          <Tab label="Tab 2">Uncontrolled Content: Tab 2</Tab>
-          <Tab label="Tab 3">Uncontrolled Content: Tab 3</Tab>
-          <Tab label="Tab 4">Uncontrolled Content: Tab 4</Tab>
+          <Tab className="Tab1" label="Tab 1">
+            Uncontrolled Content: Tab 1
+          </Tab>
+          <Tab className="Tab2" label="Tab 2">
+            Uncontrolled Content: Tab 2
+          </Tab>
+          <Tab className="Tab3" label="Tab 3">
+            Uncontrolled Content: Tab 3
+          </Tab>
+          <Tab className="Tab4" label="Tab 4">
+            Uncontrolled Content: Tab 4
+          </Tab>
         </Tabs>
-        {selectedIndex !== null && <div>Controlled Content: Tab {selectedIndex + 1}</div>}
+        <div className="ControlledTabContent">Controlled Content: Tab {selectedIndex + 1}</div>
       </>
     );
   }
@@ -35,10 +43,18 @@ class ControlledTabs extends React.Component {
 storiesOf("Tabs", module)
   .add("Tabs", () => (
     <Tabs>
-      <Tab label="Tab 1">Tab 1 Content</Tab>
-      <Tab label="Tab 2">Tab 2 Content</Tab>
-      <Tab label="Tab 3">Tab 3 Content</Tab>
-      <Tab label="Tab 4">Tab 4 Content</Tab>
+      <Tab className="Tab1" label="Tab 1">
+        Tab 1 Content
+      </Tab>
+      <Tab className="Tab2" label="Tab 2">
+        Tab 2 Content
+      </Tab>
+      <Tab className="Tab3" label="Tab 3">
+        Tab 3 Content
+      </Tab>
+      <Tab className="Tab4" label="Tab 4">
+        Tab 4 Content
+      </Tab>
     </Tabs>
   ))
   .add("with a defaultSelectedIndex", () => (
@@ -68,7 +84,7 @@ storiesOf("Tabs", module)
   .add(
     "with scrolling tabs",
     () => (
-      <Tabs>
+      <Tabs className="tab-container">
         <Tab label="Tab 1">Tab 1 Content</Tab>
         <Tab label="Tab 2">Tab 2 Content</Tab>
         <Tab label="Tab 3">Tab 3 Content</Tab>
@@ -85,4 +101,24 @@ storiesOf("Tabs", module)
     ),
     { viewport: { defaultViewport: "extraSmall" } }
   )
-  .add("controlled Tabs", () => <ControlledTabs />);
+  .add("controlled", () => <ControlledTabs />)
+  .add("with inputs", () => (
+    <Tabs>
+      <Tab label="Tab 1" className="Tab1">
+        <input className="Input1" />
+      </Tab>
+      <Tab label="Tab 2" className="Tab2">
+        <input className="Input2" />
+      </Tab>
+    </Tabs>
+  ))
+  .add("with content loaded on selection", () => (
+    <Tabs renderTabContentOnlyWhenSelected>
+      <Tab label="Tab 1" className="Tab1">
+        <input className="Input1" />
+      </Tab>
+      <Tab label="Tab 2" className="Tab2">
+        <input className="Input2" />
+      </Tab>
+    </Tabs>
+  ));

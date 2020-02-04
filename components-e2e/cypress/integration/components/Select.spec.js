@@ -1,5 +1,6 @@
 describe("Select", () => {
   const getSelectComponent = () => cy.get(".Select");
+  const getSelectOptions = () => cy.get(".SelectTest__option");
   const getDropdownMenu = () => cy.get(".SelectTest__menu");
   const getValue = () => cy.get(".SelectTest__control");
   const getSelectedItems = () => cy.get("div[class*='multiValue']");
@@ -12,7 +13,7 @@ describe("Select", () => {
 
   describe("Multiselect", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("storiesfortests-select--multiselect");
+      cy.renderFromStorybook("select--with-multiselect");
     });
 
     it("has the correct initial state", () => {
@@ -95,74 +96,74 @@ describe("Select", () => {
     });
   });
 
-  it("selects the first item when opened", () => {
-    cy.renderFromStorybook("storiesfortests-select--base");
+  describe("Default", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("select--select");
+    });
+    it("selects the first item when opened", () => {
+      getSelectComponent().click();
 
-    getSelectComponent().click();
+      cy.focused().type("{enter}");
 
-    cy.focused().type("{enter}");
+      getValue().should("have.text", "Accepted");
+    });
 
-    getValue().should("have.text", "V One");
+    it("selects an option on click", () => {
+      assertDropDownIsClosed();
+
+      getSelectComponent().click();
+
+      getDropdownMenu()
+        .contains("Assigned to a line")
+        .click();
+
+      getValue().should("have.text", "Assigned to a line");
+      assertDropDownIsClosed();
+    });
+
+    it("closes the dropdown when clicking outside", () => {
+      getSelectComponent().click();
+      assertDropDownIsOpen();
+
+      cy.get("div#root").click("bottomRight");
+      assertDropDownIsClosed();
+    });
+
+    it("selects options using the keyboard", () => {
+      // focus the select box
+      getSelectComponent().click();
+
+      cy.focused()
+        .type("{downarrow}")
+        .type("{enter}");
+
+      assertDropDownIsClosed();
+      getValue().should("have.text", "Assigned to a line");
+    });
+
+    it("closes the dropdown when on esc", () => {
+      getSelectComponent().click();
+      assertDropDownIsOpen();
+
+      cy.focused().type("{esc}");
+      assertDropDownIsClosed();
+    });
   });
 
-  it("selects an option on click", () => {
-    cy.renderFromStorybook("storiesfortests-select--base");
+  describe("with state", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("select--with-state");
+    });
+    it("works as a controlled component", () => {
+      assertDropDownIsClosed();
 
-    assertDropDownIsClosed();
+      getSelectComponent().click();
+      getSelectOptions()
+        .eq(1)
+        .click();
 
-    getSelectComponent().click();
-
-    getDropdownMenu()
-      .contains("V Two")
-      .click();
-
-    getValue().should("have.text", "V Two");
-    assertDropDownIsClosed();
-  });
-
-  it("closes the dropdown when clicking outside", () => {
-    cy.renderFromStorybook("storiesfortests-select--base");
-
-    getSelectComponent().click();
-    assertDropDownIsOpen();
-
-    cy.get("div#root").click("bottomRight");
-    assertDropDownIsClosed();
-  });
-
-  it("selects options using the keyboard", () => {
-    cy.renderFromStorybook("storiesfortests-select--base");
-
-    // focus the select box
-    getSelectComponent().click();
-
-    cy.focused()
-      .type("{downarrow}")
-      .type("{enter}");
-
-    assertDropDownIsClosed();
-    getValue().should("have.text", "V Two");
-  });
-
-  it("closes the dropdown when on esc", () => {
-    cy.renderFromStorybook("storiesfortests-select--base");
-
-    getSelectComponent().click();
-    assertDropDownIsOpen();
-
-    cy.focused().type("{esc}");
-    assertDropDownIsClosed();
-  });
-
-  it("works as a controlled component", () => {
-    cy.renderFromStorybook("storiesfortests-select--controlled");
-
-    assertDropDownIsClosed();
-
-    getSelectComponent().click();
-    cy.contains("V Two").click();
-
-    getValue().should("have.text", "V Two");
-    assertDropDownIsClosed();
+      getValue().should("have.text", "Assigned to a line");
+      assertDropDownIsClosed();
+    });
   });
 });

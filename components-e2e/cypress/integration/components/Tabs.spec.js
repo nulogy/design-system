@@ -1,7 +1,7 @@
 describe("Tabs", () => {
   describe("default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("storiesfortests-tabs--base");
+      cy.renderFromStorybook("tabs--tabs");
     });
     it("renders tab components", () => {
       cy.get(".Tab1").should("have.text", "Tab 1");
@@ -77,7 +77,7 @@ describe("Tabs", () => {
 
   describe("with scrolling", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("storiesfortests-tabs--with-scrolling");
+      cy.renderFromStorybook("tabs--with-scrolling-tabs");
     });
     it("only renders right scroll indicator when tabs are hidden on the right", () => {
       cy.get("svg[icon=leftArrow]").should("not.exist");
@@ -85,14 +85,14 @@ describe("Tabs", () => {
     });
 
     it("only renders left scroll indicator when tabs are hidden on the left", () => {
-      cy.get(".TabContainer").scrollTo("right");
+      cy.get(".tab-container").scrollTo("right");
 
       cy.get("svg[icon=leftArrow]").should("exist");
       cy.get("svg[icon=rightArrow]").should("not.exist");
     });
 
     it("renders both scroll indicators when tabs are hidden on the left and right", () => {
-      cy.get(".TabContainer").scrollTo(50);
+      cy.get(".tab-container").scrollTo(50);
 
       cy.get("svg[icon=leftArrow]").should("not.exist");
       cy.get("svg[icon=rightArrow]").should("exist");
@@ -100,10 +100,10 @@ describe("Tabs", () => {
   });
 
   describe("with input and persistent content", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("tabs--with-inputs");
+    });
     it("persists input values of tab when hidden", () => {
-      cy.renderFromStorybook(
-        "storiesfortests-tabs--with-input-and-persistant-content"
-      );
       cy.get(".Tab1").click();
 
       cy.get(".Input1").type("value");
@@ -115,11 +115,13 @@ describe("Tabs", () => {
 
       cy.get(".Input1").should("have.value", "value");
     });
+  });
 
+  describe("render tab content on selection", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("tabs--with-content-loaded-on-selection");
+    });
     it("does not persists input values of tab when hidden if 'renderTabContentOnlyWhenSelected = true'", () => {
-      cy.renderFromStorybook(
-        "storiesfortests-tabs--with-input-and-not-persistant-content"
-      );
       cy.get(".Tab1").click();
 
       cy.get(".Input1").type("value");
@@ -136,7 +138,7 @@ describe("Tabs", () => {
 
   describe("with state", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("storiesfortests-tabs--controlled");
+      cy.renderFromStorybook("tabs--controlled");
     });
     it("shows the content for each tab on click", () => {
       cy.get(".Tab1").click();
