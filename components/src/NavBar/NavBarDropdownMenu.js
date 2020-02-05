@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick, withMenuState } from "../utils";
+import { DetectOutsideClick, withMenuState, PopperArrow } from "../utils";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
@@ -86,27 +86,36 @@ class StatelessNavBarDropdownMenu extends React.Component {
         {isOpen && (
           <Popper placement={placement} modifiers={modifiers}>
             {popperProps => (
-              <DropdownMenuContainer
-                placement={placement}
-                popperProps={popperProps}
-                showArrow={showArrow}
-                {...this.menuEventHandlers()}
-                ref={node => {
-                  popperProps.ref(node);
-                  this.setMenuRef(node);
-                }}
-                onMouseDown={e => {
-                  e.preventDefault();
-                  e.target.focus();
-                }}
-                {...dropdownMenuContainerEventHandlers({ openMenu, closeMenu })}
-              >
-                <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
-                {childrenFnc({
-                  closeMenu,
-                  openMenu
-                })}
-              </DropdownMenuContainer>
+              <>
+                <DropdownMenuContainer
+                  {...popperProps}
+                  placement={placement}
+                  showArrow={showArrow}
+                  {...this.menuEventHandlers()}
+                  ref={node => {
+                    popperProps.ref(node);
+                    this.setMenuRef(node);
+                  }}
+                  onMouseDown={e => {
+                    e.preventDefault();
+                    e.target.focus();
+                  }}
+                  {...dropdownMenuContainerEventHandlers({ openMenu, closeMenu })}
+                >
+                  <PopperArrow
+                    {...popperProps.arrowProps}
+                    placement={placement}
+                    ref={popperProps.arrowProps.ref}
+                    backgroundColor="whiteGrey"
+                    borderColor="whiteGrey"
+                  />
+                  <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
+                  {childrenFnc({
+                    closeMenu,
+                    openMenu
+                  })}
+                </DropdownMenuContainer>
+              </>
             )}
           </Popper>
         )}
