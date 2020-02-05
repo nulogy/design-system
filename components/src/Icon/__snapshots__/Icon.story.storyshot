@@ -5861,6 +5861,215 @@ exports[`Storyshots Icon Icon 1`] = `
               </IconCode>
             </div>
           </Styled(Box)>
+          <Styled(Box)
+            key="loading"
+            my="x2"
+            theme={
+              Object {
+                "borders": Array [],
+                "breakpoints": Object {
+                  "extraLarge": "1920px",
+                  "extraSmall": "0px",
+                  "large": "1360px",
+                  "medium": "1024px",
+                  "small": "768px",
+                },
+                "colors": Object {
+                  "black": "#011e38",
+                  "blackBlue": "#122b47",
+                  "blue": "#216beb",
+                  "darkBlue": "#00438f",
+                  "darkGrey": "#434d59",
+                  "green": "#008059",
+                  "grey": "#c0c8d1",
+                  "lightBlue": "#e1ebfa",
+                  "lightGreen": "#e9f7f2",
+                  "lightGrey": "#e4e7eb",
+                  "lightRed": "#fae6ea",
+                  "lightYellow": "#fcf5e3",
+                  "red": "#cc1439",
+                  "white": "#ffffff",
+                  "whiteGrey": "#f0f2f5",
+                  "yellow": "#ffbb00",
+                },
+                "fontSizes": Object {
+                  "large": "20px",
+                  "larger": "26px",
+                  "largest": "46px",
+                  "medium": "16px",
+                  "small": "14px",
+                  "smaller": "12px",
+                },
+                "fontWeights": Object {
+                  "bold": "600",
+                  "light": "300",
+                  "medium": "500",
+                  "normal": "400",
+                },
+                "fonts": Object {
+                  "base": "'IBM Plex Sans', sans-serif",
+                  "mono": "'IBM Plex Mono', monospace",
+                },
+                "lineHeights": Object {
+                  "base": "1.5",
+                  "sectionTitle": "1.23076923",
+                  "smallTextBase": "1.71428571",
+                  "smallTextCompressed": "1.14285714",
+                  "smallerText": "1.33333333",
+                  "subsectionTitle": "1.2",
+                  "title": "1.04347826",
+                },
+                "radii": Object {
+                  "circle": "50%",
+                  "medium": "4px",
+                  "small": "2px",
+                },
+                "shadows": Object {
+                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                },
+                "space": Object {
+                  "half": "4px",
+                  "none": "0px",
+                  "x1": "8px",
+                  "x2": "16px",
+                  "x3": "24px",
+                  "x4": "32px",
+                  "x5": "40px",
+                  "x6": "48px",
+                  "x8": "64px",
+                },
+                "zIndex": Object {
+                  "content": 100,
+                  "overlay": 1000,
+                  "tabsBar": 210,
+                  "tabsScollIndicator": 200,
+                },
+              }
+            }
+          >
+            <div
+              className="Box-sc-1qu1edy-0 sc-AykKC eJLKpo"
+            >
+              <Styled(Component)
+                color="currentColor"
+                icon="loading"
+                mr="20px"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD fwiOPE"
+                  color="currentColor"
+                  focusable={false}
+                  icon="loading"
+                  mr="20px"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD fwiOPE"
+                    color="currentColor"
+                    focusable={false}
+                    icon="loading"
+                    mr="20px"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD fwiOPE"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      mr="20px"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-1"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="currentColor"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="currentColor"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-1)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="currentColor"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
+              <IconCode
+                icon="loading"
+              >
+                <code>
+                  &lt;Icon icon="
+                  <b>
+                    loading
+                  </b>
+                  "&gt;
+                </code>
+              </IconCode>
+            </div>
+          </Styled(Box)>
         </ThemeProvider>
       </div>
     </NDSProvider__GlobalStyles>
@@ -6384,6 +6593,116 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 </span>
               </Icon__IconContainer>
             </InlineIcon>
+            <InlineIcon
+              icon="loading"
+              key="loading"
+            >
+              <Icon__IconContainer
+                icon="loading"
+              >
+                <span
+                  className="Icon__IconContainer-fc7twp-0 cKMFdt"
+                >
+                  <Styled(Component)
+                    icon="loading"
+                    size="1.25em"
+                  >
+                    <ForwardRef
+                      className="sc-AykKE hrqlIQ"
+                      color="currentColor"
+                      focusable={false}
+                      icon="loading"
+                      size="1.25em"
+                      title={null}
+                    >
+                      <LoadingIcon
+                        className="sc-AykKE hrqlIQ"
+                        color="currentColor"
+                        focusable={false}
+                        icon="loading"
+                        size="1.25em"
+                        title={null}
+                      >
+                        <svg
+                          className="sc-AykKE hrqlIQ"
+                          focusable={false}
+                          height="1.25em"
+                          icon="loading"
+                          title={null}
+                          viewBox="0 0 38 38"
+                          width="1.25em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <linearGradient
+                              id="random-id-2"
+                              x1="8.042%"
+                              x2="65.682%"
+                              y1="0%"
+                              y2="23.865%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="currentColor"
+                                stopOpacity="0"
+                              />
+                              <stop
+                                offset="63.146%"
+                                stopColor="currentColor"
+                                stopOpacity=".631"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="currentColor"
+                              />
+                            </linearGradient>
+                          </defs>
+                          <g
+                            fill="none"
+                            fillRule="evenodd"
+                          >
+                            <g
+                              transform="translate(1 1)"
+                            >
+                              <path
+                                d="M36 18c0-9.94-8.06-18-18-18"
+                                id="Oval-2"
+                                stroke="url(#random-id-2)"
+                                strokeWidth="2"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </path>
+                              <circle
+                                cx="36"
+                                cy="18"
+                                fill="currentColor"
+                                r="1"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </circle>
+                            </g>
+                          </g>
+                        </svg>
+                      </LoadingIcon>
+                    </ForwardRef>
+                  </Styled(Component)>
+                </span>
+              </Icon__IconContainer>
+            </InlineIcon>
           </p>
           <p
             key="2"
@@ -6620,6 +6939,116 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                           key="0"
                         />
                       </svg>
+                    </ForwardRef>
+                  </Styled(Component)>
+                </span>
+              </Icon__IconContainer>
+            </InlineIcon>
+            <InlineIcon
+              icon="loading"
+              key="loading"
+            >
+              <Icon__IconContainer
+                icon="loading"
+              >
+                <span
+                  className="Icon__IconContainer-fc7twp-0 cKMFdt"
+                >
+                  <Styled(Component)
+                    icon="loading"
+                    size="1.25em"
+                  >
+                    <ForwardRef
+                      className="sc-AykKE hrqlIQ"
+                      color="currentColor"
+                      focusable={false}
+                      icon="loading"
+                      size="1.25em"
+                      title={null}
+                    >
+                      <LoadingIcon
+                        className="sc-AykKE hrqlIQ"
+                        color="currentColor"
+                        focusable={false}
+                        icon="loading"
+                        size="1.25em"
+                        title={null}
+                      >
+                        <svg
+                          className="sc-AykKE hrqlIQ"
+                          focusable={false}
+                          height="1.25em"
+                          icon="loading"
+                          title={null}
+                          viewBox="0 0 38 38"
+                          width="1.25em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <linearGradient
+                              id="random-id-3"
+                              x1="8.042%"
+                              x2="65.682%"
+                              y1="0%"
+                              y2="23.865%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="currentColor"
+                                stopOpacity="0"
+                              />
+                              <stop
+                                offset="63.146%"
+                                stopColor="currentColor"
+                                stopOpacity=".631"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="currentColor"
+                              />
+                            </linearGradient>
+                          </defs>
+                          <g
+                            fill="none"
+                            fillRule="evenodd"
+                          >
+                            <g
+                              transform="translate(1 1)"
+                            >
+                              <path
+                                d="M36 18c0-9.94-8.06-18-18-18"
+                                id="Oval-2"
+                                stroke="url(#random-id-3)"
+                                strokeWidth="2"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </path>
+                              <circle
+                                cx="36"
+                                cy="18"
+                                fill="currentColor"
+                                r="1"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </circle>
+                            </g>
+                          </g>
+                        </svg>
+                      </LoadingIcon>
                     </ForwardRef>
                   </Styled(Component)>
                 </span>
@@ -6866,6 +7295,116 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 </span>
               </Icon__IconContainer>
             </InlineIcon>
+            <InlineIcon
+              icon="loading"
+              key="loading"
+            >
+              <Icon__IconContainer
+                icon="loading"
+              >
+                <span
+                  className="Icon__IconContainer-fc7twp-0 cKMFdt"
+                >
+                  <Styled(Component)
+                    icon="loading"
+                    size="1.25em"
+                  >
+                    <ForwardRef
+                      className="sc-AykKE hrqlIQ"
+                      color="currentColor"
+                      focusable={false}
+                      icon="loading"
+                      size="1.25em"
+                      title={null}
+                    >
+                      <LoadingIcon
+                        className="sc-AykKE hrqlIQ"
+                        color="currentColor"
+                        focusable={false}
+                        icon="loading"
+                        size="1.25em"
+                        title={null}
+                      >
+                        <svg
+                          className="sc-AykKE hrqlIQ"
+                          focusable={false}
+                          height="1.25em"
+                          icon="loading"
+                          title={null}
+                          viewBox="0 0 38 38"
+                          width="1.25em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <linearGradient
+                              id="random-id-4"
+                              x1="8.042%"
+                              x2="65.682%"
+                              y1="0%"
+                              y2="23.865%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="currentColor"
+                                stopOpacity="0"
+                              />
+                              <stop
+                                offset="63.146%"
+                                stopColor="currentColor"
+                                stopOpacity=".631"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="currentColor"
+                              />
+                            </linearGradient>
+                          </defs>
+                          <g
+                            fill="none"
+                            fillRule="evenodd"
+                          >
+                            <g
+                              transform="translate(1 1)"
+                            >
+                              <path
+                                d="M36 18c0-9.94-8.06-18-18-18"
+                                id="Oval-2"
+                                stroke="url(#random-id-4)"
+                                strokeWidth="2"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </path>
+                              <circle
+                                cx="36"
+                                cy="18"
+                                fill="currentColor"
+                                r="1"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </circle>
+                            </g>
+                          </g>
+                        </svg>
+                      </LoadingIcon>
+                    </ForwardRef>
+                  </Styled(Component)>
+                </span>
+              </Icon__IconContainer>
+            </InlineIcon>
           </p>
           <p
             key="4"
@@ -7102,6 +7641,116 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                           key="0"
                         />
                       </svg>
+                    </ForwardRef>
+                  </Styled(Component)>
+                </span>
+              </Icon__IconContainer>
+            </InlineIcon>
+            <InlineIcon
+              icon="loading"
+              key="loading"
+            >
+              <Icon__IconContainer
+                icon="loading"
+              >
+                <span
+                  className="Icon__IconContainer-fc7twp-0 cKMFdt"
+                >
+                  <Styled(Component)
+                    icon="loading"
+                    size="1.25em"
+                  >
+                    <ForwardRef
+                      className="sc-AykKE hrqlIQ"
+                      color="currentColor"
+                      focusable={false}
+                      icon="loading"
+                      size="1.25em"
+                      title={null}
+                    >
+                      <LoadingIcon
+                        className="sc-AykKE hrqlIQ"
+                        color="currentColor"
+                        focusable={false}
+                        icon="loading"
+                        size="1.25em"
+                        title={null}
+                      >
+                        <svg
+                          className="sc-AykKE hrqlIQ"
+                          focusable={false}
+                          height="1.25em"
+                          icon="loading"
+                          title={null}
+                          viewBox="0 0 38 38"
+                          width="1.25em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <defs>
+                            <linearGradient
+                              id="random-id-5"
+                              x1="8.042%"
+                              x2="65.682%"
+                              y1="0%"
+                              y2="23.865%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="currentColor"
+                                stopOpacity="0"
+                              />
+                              <stop
+                                offset="63.146%"
+                                stopColor="currentColor"
+                                stopOpacity=".631"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="currentColor"
+                              />
+                            </linearGradient>
+                          </defs>
+                          <g
+                            fill="none"
+                            fillRule="evenodd"
+                          >
+                            <g
+                              transform="translate(1 1)"
+                            >
+                              <path
+                                d="M36 18c0-9.94-8.06-18-18-18"
+                                id="Oval-2"
+                                stroke="url(#random-id-5)"
+                                strokeWidth="2"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </path>
+                              <circle
+                                cx="36"
+                                cy="18"
+                                fill="currentColor"
+                                r="1"
+                              >
+                                <animateTransform
+                                  attributeName="transform"
+                                  dur="0.9s"
+                                  from="0 18 18"
+                                  repeatCount="indefinite"
+                                  to="360 18 18"
+                                  type="rotate"
+                                />
+                              </circle>
+                            </g>
+                          </g>
+                        </svg>
+                      </LoadingIcon>
                     </ForwardRef>
                   </Styled(Component)>
                 </span>
@@ -7662,6 +8311,106 @@ exports[`Storyshots Icon With a color 1`] = `
                   </svg>
                 </ForwardRef>
               </Styled(Component)>
+              <Styled(Component)
+                color="#cc1439"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD clTyrU"
+                  color="#cc1439"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD clTyrU"
+                    color="#cc1439"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD clTyrU"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-6"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#cc1439"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="#cc1439"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#cc1439"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-6)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="#cc1439"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
             </div>
           </Box>
           <Box
@@ -7933,6 +8682,106 @@ exports[`Storyshots Icon With a color 1`] = `
                       key="0"
                     />
                   </svg>
+                </ForwardRef>
+              </Styled(Component)>
+              <Styled(Component)
+                color="#ffbb00"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD eXzbYd"
+                  color="#ffbb00"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD eXzbYd"
+                    color="#ffbb00"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD eXzbYd"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-7"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#ffbb00"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="#ffbb00"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#ffbb00"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-7)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="#ffbb00"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
                 </ForwardRef>
               </Styled(Component)>
             </div>
@@ -8208,6 +9057,106 @@ exports[`Storyshots Icon With a color 1`] = `
                   </svg>
                 </ForwardRef>
               </Styled(Component)>
+              <Styled(Component)
+                color="#008059"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD eGOLD"
+                  color="#008059"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD eGOLD"
+                    color="#008059"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD eGOLD"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-8"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#008059"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="#008059"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#008059"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-8)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="#008059"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
             </div>
           </Box>
           <Box
@@ -8481,6 +9430,106 @@ exports[`Storyshots Icon With a color 1`] = `
                   </svg>
                 </ForwardRef>
               </Styled(Component)>
+              <Styled(Component)
+                color="#216beb"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD kbaGLP"
+                  color="#216beb"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD kbaGLP"
+                    color="#216beb"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD kbaGLP"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-9"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#216beb"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="#216beb"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#216beb"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-9)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="#216beb"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
             </div>
           </Box>
           <Box
@@ -8752,6 +9801,106 @@ exports[`Storyshots Icon With a color 1`] = `
                       key="0"
                     />
                   </svg>
+                </ForwardRef>
+              </Styled(Component)>
+              <Styled(Component)
+                color="#122b47"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD aLmVb"
+                  color="#122b47"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD aLmVb"
+                    color="#122b47"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD aLmVb"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-10"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#122b47"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="#122b47"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#122b47"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-10)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="#122b47"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
                 </ForwardRef>
               </Styled(Component)>
             </div>
@@ -9310,6 +10459,106 @@ exports[`Storyshots Icon With a size 1`] = `
                   </svg>
                 </ForwardRef>
               </Styled(Component)>
+              <Styled(Component)
+                color="currentColor"
+                icon="loading"
+                key="loading"
+                size="8px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD eBQUbO"
+                  color="currentColor"
+                  focusable={false}
+                  icon="loading"
+                  size="8px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD eBQUbO"
+                    color="currentColor"
+                    focusable={false}
+                    icon="loading"
+                    size="8px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD eBQUbO"
+                      focusable={false}
+                      height="8px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="8px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-11"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="currentColor"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="currentColor"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-11)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="currentColor"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
             </div>
           </Box>
           <Box
@@ -9583,6 +10832,106 @@ exports[`Storyshots Icon With a size 1`] = `
                   </svg>
                 </ForwardRef>
               </Styled(Component)>
+              <Styled(Component)
+                color="currentColor"
+                icon="loading"
+                key="loading"
+                size="16px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD bUUoDN"
+                  color="currentColor"
+                  focusable={false}
+                  icon="loading"
+                  size="16px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD bUUoDN"
+                    color="currentColor"
+                    focusable={false}
+                    icon="loading"
+                    size="16px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD bUUoDN"
+                      focusable={false}
+                      height="16px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="16px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-12"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="currentColor"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="currentColor"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-12)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="currentColor"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
+                </ForwardRef>
+              </Styled(Component)>
             </div>
           </Box>
           <Box
@@ -9854,6 +11203,106 @@ exports[`Storyshots Icon With a size 1`] = `
                       key="0"
                     />
                   </svg>
+                </ForwardRef>
+              </Styled(Component)>
+              <Styled(Component)
+                color="currentColor"
+                icon="loading"
+                key="loading"
+                size="24px"
+                title={null}
+              >
+                <ForwardRef
+                  className="sc-AykKD bZVMDg"
+                  color="currentColor"
+                  focusable={false}
+                  icon="loading"
+                  size="24px"
+                  title={null}
+                >
+                  <LoadingIcon
+                    className="sc-AykKD bZVMDg"
+                    color="currentColor"
+                    focusable={false}
+                    icon="loading"
+                    size="24px"
+                    title={null}
+                  >
+                    <svg
+                      className="sc-AykKD bZVMDg"
+                      focusable={false}
+                      height="24px"
+                      icon="loading"
+                      title={null}
+                      viewBox="0 0 38 38"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient
+                          id="random-id-13"
+                          x1="8.042%"
+                          x2="65.682%"
+                          y1="0%"
+                          y2="23.865%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="currentColor"
+                            stopOpacity="0"
+                          />
+                          <stop
+                            offset="63.146%"
+                            stopColor="currentColor"
+                            stopOpacity=".631"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="currentColor"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                      >
+                        <g
+                          transform="translate(1 1)"
+                        >
+                          <path
+                            d="M36 18c0-9.94-8.06-18-18-18"
+                            id="Oval-2"
+                            stroke="url(#random-id-13)"
+                            strokeWidth="2"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </path>
+                          <circle
+                            cx="36"
+                            cy="18"
+                            fill="currentColor"
+                            r="1"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              dur="0.9s"
+                              from="0 18 18"
+                              repeatCount="indefinite"
+                              to="360 18 18"
+                              type="rotate"
+                            />
+                          </circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </LoadingIcon>
                 </ForwardRef>
               </Styled(Component)>
             </div>
