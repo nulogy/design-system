@@ -589,10 +589,25 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                             open={false}
                             role="tooltip"
                           >
-                            I am a Tooltip!
+                            I
+                             
+                            a
+                            m
+                             
+                            a
+                             
+                            T
+                            o
+                            o
+                            l
+                            t
+                            i
+                            p
+                            !
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -1114,10 +1129,17 @@ exports[`Storyshots Tooltip open by default 1`] = `
                         open={true}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -1656,6 +1678,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                           href="/"
                           icon={null}
                           iconSide="right"
+                          key="0"
                           size="medium"
                         >
                           <Button__WrapperButton
@@ -1677,6 +1700,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -2293,6 +2317,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                         <Link
                           color="blue"
                           href="/"
+                          key="0"
                           theme={
                             Object {
                               "borders": Array [],
@@ -2392,6 +2417,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -2911,10 +2937,17 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -3526,10 +3559,118 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently.
+                            I
+                             
+                            a
+                            m
+                             
+                            a
+                             
+                            T
+                            o
+                            o
+                            l
+                            t
+                            i
+                            p
+                            !
+                             
+                            I
+                             
+                            h
+                            a
+                            v
+                            e
+                             
+                            v
+                            e
+                            r
+                            y
+                             
+                            l
+                            o
+                            n
+                            g
+                             
+                            t
+                            e
+                            x
+                            t
+                            ,
+                             
+                            b
+                            u
+                            t
+                             
+                            I
+                             
+                            h
+                            a
+                            v
+                            e
+                             
+                            a
+                             
+                            s
+                            m
+                            a
+                            l
+                            l
+                            e
+                            r
+                             
+                            m
+                            a
+                            x
+                            W
+                            i
+                            d
+                            t
+                            h
+                             
+                            p
+                            r
+                            o
+                            p
+                             
+                            t
+                            h
+                            a
+                            t
+                             
+                            c
+                            a
+                            u
+                            s
+                            e
+                            s
+                             
+                            m
+                            e
+                             
+                            t
+                            o
+                             
+                            w
+                            r
+                            a
+                            p
+                             
+                            f
+                            r
+                            e
+                            q
+                            u
+                            e
+                            n
+                            t
+                            l
+                            y
+                            .
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -4051,10 +4192,17 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -4574,10 +4722,17 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -4968,10 +5123,17 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -5203,10 +5365,17 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -5593,10 +5762,17 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -5979,10 +6155,17 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        Tooltip
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -6596,10 +6779,19 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            top-start
+                            t
+                            o
+                            p
+                            -
+                            s
+                            t
+                            a
+                            r
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -6836,10 +7028,13 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            top
+                            t
+                            o
+                            p
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -7076,10 +7271,17 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            top-end
+                            t
+                            o
+                            p
+                            -
+                            e
+                            n
+                            d
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -7412,10 +7614,20 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            left-start
+                            l
+                            e
+                            f
+                            t
+                            -
+                            s
+                            t
+                            a
+                            r
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -7652,10 +7864,14 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            left
+                            l
+                            e
+                            f
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -7892,10 +8108,18 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            left-end
+                            l
+                            e
+                            f
+                            t
+                            -
+                            e
+                            n
+                            d
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -8228,10 +8452,21 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            right-start
+                            r
+                            i
+                            g
+                            h
+                            t
+                            -
+                            s
+                            t
+                            a
+                            r
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -8468,10 +8703,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            right
+                            r
+                            i
+                            g
+                            h
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -8708,10 +8948,19 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            right-end
+                            r
+                            i
+                            g
+                            h
+                            t
+                            -
+                            e
+                            n
+                            d
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -9044,10 +9293,22 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            bottom-start
+                            b
+                            o
+                            t
+                            t
+                            o
+                            m
+                            -
+                            s
+                            t
+                            a
+                            r
+                            t
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -9284,10 +9545,16 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            bottom
+                            b
+                            o
+                            t
+                            t
+                            o
+                            m
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -9524,10 +9791,20 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            bottom-end
+                            b
+                            o
+                            t
+                            t
+                            o
+                            m
+                            -
+                            e
+                            n
+                            d
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >
@@ -10141,10 +10418,165 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                             open={true}
                             role="tooltip"
                           >
-                            I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters.
+                            I
+                             
+                            a
+                            m
+                             
+                            a
+                             
+                            T
+                            o
+                            o
+                            l
+                            t
+                            i
+                            p
+                            !
+                             
+                            I
+                             
+                            h
+                            a
+                            v
+                            e
+                             
+                            v
+                            e
+                            r
+                            y
+                             
+                            l
+                            o
+                            n
+                            g
+                             
+                            t
+                            e
+                            x
+                            t
+                            ,
+                             
+                            a
+                            n
+                            d
+                             
+                            m
+                            y
+                             
+                            d
+                            e
+                            f
+                            a
+                            u
+                            l
+                            t
+                             
+                            m
+                            a
+                            x
+                            -
+                            w
+                            i
+                            d
+                            t
+                            h
+                             
+                            i
+                            s
+                             
+                            2
+                            4
+                            e
+                            m
+                             
+                            (
+                            b
+                            a
+                            s
+                            e
+                            d
+                             
+                            o
+                            n
+                             
+                            1
+                            4
+                            p
+                            x
+                             
+                            f
+                            o
+                            n
+                            t
+                            -
+                            s
+                            i
+                            z
+                            e
+                            )
+                            ,
+                             
+                            w
+                            h
+                            i
+                            c
+                            h
+                             
+                            i
+                            s
+                             
+                            e
+                            q
+                            u
+                            a
+                            l
+                             
+                            t
+                            o
+                             
+                            3
+                            3
+                            6
+                            p
+                            x
+                            ,
+                             
+                            o
+                            r
+                             
+                            a
+                            p
+                            p
+                            r
+                            o
+                            x
+                            i
+                            m
+                            a
+                            t
+                            e
+                            l
+                            y
+                             
+                            4
+                            5
+                             
+                            c
+                            h
+                            a
+                            r
+                            a
+                            c
+                            t
+                            e
+                            r
+                            s
+                            .
                             <PopperArrow
                               backgroundColor="white"
                               borderColor="grey"
+                              key="popper-arrow"
                               placement="bottom"
                               style={Object {}}
                             >

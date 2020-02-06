@@ -497,10 +497,25 @@ exports[`Storyshots StoriesForTests/Tooltip Base 1`] = `
                         open={false}
                         role="tooltip"
                       >
-                        I am a Tooltip!
+                        I
+                         
+                        a
+                        m
+                         
+                        a
+                         
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
+                        !
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -1020,10 +1035,31 @@ exports[`Storyshots StoriesForTests/Tooltip Open by default 1`] = `
                         open={true}
                         role="tooltip"
                       >
-                        I am an open Tooltip!
+                        I
+                         
+                        a
+                        m
+                         
+                        a
+                        n
+                         
+                        o
+                        p
+                        e
+                        n
+                         
+                        T
+                        o
+                        o
+                        l
+                        t
+                        i
+                        p
+                        !
                         <PopperArrow
                           backgroundColor="white"
                           borderColor="grey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >

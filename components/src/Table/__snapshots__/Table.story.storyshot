@@ -2267,6 +2267,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="0"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -2283,6 +2284,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="1"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -2297,6 +2299,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     <PopperArrow
                                                       backgroundColor="whiteGrey"
                                                       borderColor="whiteGrey"
+                                                      key="popper-arrow"
                                                       placement="bottom"
                                                       style={Object {}}
                                                     >
@@ -3263,6 +3266,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="0"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -3279,6 +3283,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="1"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -3293,6 +3298,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     <PopperArrow
                                                       backgroundColor="whiteGrey"
                                                       borderColor="whiteGrey"
+                                                      key="popper-arrow"
                                                       placement="bottom"
                                                       style={Object {}}
                                                     >
@@ -4259,6 +4265,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="0"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -4275,6 +4282,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="1"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -4289,6 +4297,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     <PopperArrow
                                                       backgroundColor="whiteGrey"
                                                       borderColor="whiteGrey"
+                                                      key="popper-arrow"
                                                       placement="bottom"
                                                       style={Object {}}
                                                     >
@@ -5267,6 +5276,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="0"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -5283,6 +5293,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                       color="#00438f"
                                                       disabled={false}
                                                       hoverColor="#00438f"
+                                                      key="1"
                                                       onClick={[Function]}
                                                     >
                                                       <button
@@ -5297,6 +5308,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                     <PopperArrow
                                                       backgroundColor="whiteGrey"
                                                       borderColor="whiteGrey"
+                                                      key="popper-arrow"
                                                       placement="bottom"
                                                       style={Object {}}
                                                     >

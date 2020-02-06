@@ -5,6 +5,15 @@ import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
 
+const makeArray = children => {
+  if (!Array.isArray(children)) {
+    return [children];
+  }
+  return children;
+};
+
+const wrapInFunction = x => (typeof x === "function" ? x : () => x);
+
 const Popper = React.forwardRef(
   (
     {
@@ -91,6 +100,28 @@ const Popper = React.forwardRef(
       ...onClickEventHandlers
     };
 
+    const transformInnerChildren = elements =>
+      makeArray(elements).map((element, i) => {
+        const transformedElement = wrapInFunction(element)({
+          closeMenu: e => {
+            closePopUp();
+            e.stopPropagation();
+          },
+          openMenu: e => {
+            openPopUp();
+            e.stopPropagation();
+          }
+        });
+        return React.cloneElement(transformedElement, {
+          // eslint-disable-next-line react/no-array-index-key
+          key: i
+        });
+      });
+
+    const renderInnerChildren = () => {
+      const innerChildren = children.props.children;
+      return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
+    };
     return (
       <Manager ref={popperRef}>
         <Reference>
@@ -112,9 +143,7 @@ const Popper = React.forwardRef(
                 children,
                 {
                   open: isOpen,
-                  ref: node => {
-                    ref(node);
-                  },
+                  ref,
                   id,
                   position: style,
                   dataPlacement: placement,
@@ -122,16 +151,17 @@ const Popper = React.forwardRef(
                   ...eventHandlers
                 },
                 [
-                  children.props.children,
-                  showArrow ? (
+                  ...renderInnerChildren(),
+                  showArrow && (
                     <PopperArrow
+                      key="popper-arrow"
                       {...arrowProps}
                       placement={placement}
                       ref={arrowProps.ref}
                       backgroundColor={backgroundColor}
                       borderColor={borderColor}
                     />
-                  ) : null
+                  )
                 ]
               )}
             </>
