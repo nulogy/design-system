@@ -939,6 +939,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                           color="#00438f"
                                           disabled={false}
                                           hoverColor="#00438f"
+                                          key="0"
                                         >
                                           <button
                                             className="DropdownButton-sc-15i1gee-0 fgIoHD"
@@ -953,6 +954,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                           color="#00438f"
                                           disabled={false}
                                           hoverColor="#00438f"
+                                          key="1"
                                         >
                                           <button
                                             className="DropdownButton-sc-15i1gee-0 fgIoHD"
@@ -965,6 +967,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                         <PopperArrow
                                           backgroundColor="whiteGrey"
                                           borderColor="whiteGrey"
+                                          key="popper-arrow"
                                           placement="bottom"
                                           style={Object {}}
                                         >
@@ -1906,6 +1909,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                           color="#00438f"
                                           disabled={false}
                                           hoverColor="#00438f"
+                                          key="0"
                                         >
                                           <button
                                             className="DropdownButton-sc-15i1gee-0 fgIoHD"
@@ -1920,6 +1924,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                           color="#00438f"
                                           disabled={false}
                                           hoverColor="#00438f"
+                                          key="1"
                                         >
                                           <button
                                             className="DropdownButton-sc-15i1gee-0 fgIoHD"
@@ -1932,6 +1937,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
                                         <PopperArrow
                                           backgroundColor="whiteGrey"
                                           borderColor="whiteGrey"
+                                          key="popper-arrow"
                                           placement="bottom"
                                           style={Object {}}
                                         >

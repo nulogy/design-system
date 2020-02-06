@@ -640,6 +640,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                           color="darkBlue"
                           hoverColor="darkBlue"
                           href="/"
+                          key="0"
                         >
                           <a
                             className="DropdownLink-sc-1myz2tl-0 klMGWg"
@@ -654,6 +655,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                           color="#00438f"
                           disabled={false}
                           hoverColor="#00438f"
+                          key="1"
                           onClick={[Function]}
                         >
                           <button
@@ -668,6 +670,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -1331,6 +1334,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                           color="darkBlue"
                           hoverColor="darkBlue"
                           href="/"
+                          key="0"
                         >
                           <a
                             className="DropdownLink-sc-1myz2tl-0 klMGWg"
@@ -1345,6 +1349,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                           color="#00438f"
                           disabled={false}
                           hoverColor="#00438f"
+                          key="1"
                           onClick={[Function]}
                         >
                           <button
@@ -1359,6 +1364,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -2021,6 +2027,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           color="darkBlue"
                           hoverColor="darkBlue"
                           href="/"
+                          key="0"
                         >
                           <a
                             className="DropdownLink-sc-1myz2tl-0 klMGWg"
@@ -2035,6 +2042,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           color="#00438f"
                           disabled={false}
                           hoverColor="#00438f"
+                          key="1"
                           onClick={[Function]}
                         >
                           <button
@@ -2050,6 +2058,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                           bgHoverColor="lightGrey"
                           color="darkBlue"
                           hoverColor="darkBlue"
+                          key="2"
                         >
                           <div
                             className="DropdownItem-sc-17fo530-0 kkcJNC"
@@ -2070,6 +2079,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -2727,9 +2737,27 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
                         onMouseDown={[Function]}
                         open={false}
                       >
+                        <DropdownButton
+                          bgHoverColor="#e4e7eb"
+                          color="#00438f"
+                          disabled={false}
+                          hoverColor="#00438f"
+                          key="0"
+                          onClick={[Function]}
+                        >
+                          <button
+                            className="DropdownButton-sc-15i1gee-0 fgIoHD"
+                            color="#00438f"
+                            disabled={false}
+                            onClick={[Function]}
+                          >
+                            Dropdown Button
+                          </button>
+                        </DropdownButton>
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -3392,6 +3420,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                           color="white"
                           hoverColor="white"
                           href="/"
+                          key="0"
                         >
                           <a
                             className="DropdownLink-sc-1myz2tl-0 cGxkvl"
@@ -3406,6 +3435,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                           color="white"
                           disabled={false}
                           hoverColor="white"
+                          key="1"
                           onClick={[Function]}
                         >
                           <button
@@ -3420,6 +3450,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
                         <PopperArrow
                           backgroundColor="blackBlue"
                           borderColor="blackBlue"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -4081,6 +4112,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                           bgHoverColor="lightGrey"
                           color="darkBlue"
                           hoverColor="darkBlue"
+                          key="0"
                         >
                           <div
                             className="DropdownItem-sc-17fo530-0 kkcJNC"
@@ -4096,6 +4128,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
@@ -4651,6 +4684,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                           color="darkBlue"
                           hoverColor="darkBlue"
                           href="/"
+                          key="0"
                         >
                           <a
                             className="DropdownLink-sc-1myz2tl-0 klMGWg"
@@ -4665,6 +4699,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                           color="#00438f"
                           disabled={false}
                           hoverColor="#00438f"
+                          key="1"
                           onClick={[Function]}
                         >
                           <button
@@ -4679,6 +4714,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
                         <PopperArrow
                           backgroundColor="whiteGrey"
                           borderColor="whiteGrey"
+                          key="popper-arrow"
                           placement="bottom"
                           style={Object {}}
                         >
