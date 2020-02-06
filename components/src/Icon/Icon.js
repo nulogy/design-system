@@ -43,7 +43,7 @@ const Svg = React.forwardRef((props, ref) => {
 });
 
 Svg.propTypes = {
-  icon: PropTypes.oneOf(iconNames).isRequired,
+  icon: PropTypes.oneOf([...iconNames, "loading"]).isRequired,
   className: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
@@ -64,7 +64,7 @@ const Icon = styled(Svg)(space, color, ({ size }) => ({
 }));
 
 Icon.propTypes = {
-  icon: PropTypes.oneOf(iconNames).isRequired,
+  icon: PropTypes.oneOf([...iconNames, "loading"]).isRequired,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   title: PropTypes.string,
   color: PropTypes.string
