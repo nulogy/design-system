@@ -193,18 +193,18 @@ storiesOf("Pages/Details page", module)
               <Tab label="Milestones">
                 <Box py="x2">
                   <SectionTitle mb="x2">Milestone Performance</SectionTitle>
-                  <Table columns={milestoneColumns} rows={milestoneRows} keyField="date" />
+                  <Table columns={milestoneColumns} rows={milestoneRows} />
                 </Box>
               </Tab>
               <Tab label="Production Records">
                 <Box pt="x2" mb="x3">
                   <SectionTitle mb="x2">Production Records</SectionTitle>
-                  <Table columns={productionColumns} rows={productionRows} keyField="date" />
+                  <Table columns={productionColumns} rows={productionRows} />
                 </Box>
                 <Box pt="x1">
                   <SubsectionTitle mb="x3">Comments</SubsectionTitle>
                   <Form>
-                    <Textarea rows="4" mb="x3" placeholder="Leave a comment..." />
+                    <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                     <Box>
                       <PrimaryButton mr="x1">Comment</PrimaryButton>
                       <QuietButton>Cancel</QuietButton>
@@ -273,18 +273,18 @@ storiesOf("Pages/Details page", module)
               <Tab label="Milestones">
                 <Box py="x2">
                   <SectionTitle mb="x2">Milestone Performance</SectionTitle>
-                  <Table columns={milestoneColumns} rows={milestoneRows} keyField="date" />
+                  <Table columns={milestoneColumns} rows={milestoneRows} />
                 </Box>
               </Tab>
               <Tab label="Production Records">
                 <Box pt="x2" mb="x3">
                   <SectionTitle mb="x2">Production Records</SectionTitle>
-                  <Table columns={productionColumns} rows={productionRows} keyField="date" />
+                  <Table columns={productionColumns} rows={productionRows} />
                 </Box>
                 <Box pt="x1">
                   <SubsectionTitle mb="x3">Comments</SubsectionTitle>
                   <Form>
-                    <Textarea rows="4" mb="x3" placeholder="Leave a comment..." />
+                    <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                     <Box>
                       <PrimaryButton mr="x1">Comment</PrimaryButton>
                       <QuietButton>Cancel</QuietButton>
@@ -440,18 +440,18 @@ storiesOf("Pages/Details page", module)
               <Tab label="Milestones">
                 <Box py="x2">
                   <SectionTitle mb="x2">Milestone Performance</SectionTitle>
-                  <Table columns={milestoneColumns} rows={milestoneRows} keyField="date" />
+                  <Table columns={milestoneColumns} rows={milestoneRows} />
                 </Box>
               </Tab>
               <Tab label="Production Records">
                 <Box pt="x2" mb="x3">
                   <SectionTitle mb="x2">Production Records</SectionTitle>
-                  <Table columns={productionColumns} rows={productionRows} keyField="date" />
+                  <Table columns={productionColumns} rows={productionRows} />
                 </Box>
                 <Box pt="x1">
                   <SubsectionTitle mb="x3">Comments</SubsectionTitle>
                   <Form>
-                    <Textarea rows="4" mb="x3" placeholder="Leave a comment..." />
+                    <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                     <Box>
                       <PrimaryButton mr="x1">Comment</PrimaryButton>
                       <QuietButton>Cancel</QuietButton>

@@ -72,6 +72,7 @@ const Textarea = ({
   helpText,
   id,
   className,
+  rows,
   ...props
 }) => (
   <Field className={className}>
@@ -84,6 +85,7 @@ const Textarea = ({
         errorMessage={errorMessage}
         errorList={errorList}
         error={error}
+        rows={rows}
         {...props}
       />
     </MaybeFieldLabel>

@@ -75,7 +75,7 @@ export default () => (
             options={options}
             labelText="Project status"
           />
-          <Textarea rows="4" mb="x6" labelText="Project description" />
+          <Textarea rows={4} mb="x6" labelText="Project description" />
           <Box mb="x6">
             <PrimaryButton mr="x1">Create project</PrimaryButton>
             <QuietButton>Cancel</QuietButton>
@@ -87,7 +87,7 @@ export default () => (
   <Input id="project" labelText="Project code" />
   <Input id="customer" labelText="Customer's name" />
   <Select placeholder="Please select project status" options={options} labelText="Project status" />
-  <Textarea rows="4" mb="x6" labelText="Project description" />
+  <Textarea rows={4} mb="x6" labelText="Project description" />
   <Box mb="x6">
     <PrimaryButton mr="x1">Create project</PrimaryButton>
     <QuietButton>Cancel</QuietButton>
