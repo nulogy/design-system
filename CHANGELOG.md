@@ -5,6 +5,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.22.0](https://github.com/nulogy/design-system/compare/v0.21.1...v0.22.0) (2020-02-07)
 
+### Breaking Changes
+
+- menuState prop object has been removed from Tooltip and DropdownMenu. Use defaultOpen=true instead of menuState={{isOpen: true}} to set the DropdownMenu or Tooltip to be open by default ([#529](https://github.com/nulogy/design-system/issues/529)) ([f4e62af](https://github.com/nulogy/design-system/commit/f4e62af))
+
 ### Features
 
 - add loading icon to icons, usage ex: <Icon icon="loading" /> ([#534](https://github.com/nulogy/design-system/issues/534)) ([32eda2a](https://github.com/nulogy/design-system/commit/32eda2a))
