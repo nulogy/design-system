@@ -3504,7 +3504,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -3569,7 +3569,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -3716,7 +3716,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -3777,7 +3777,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -4089,7 +4090,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -4401,7 +4403,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -4713,7 +4716,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -5026,7 +5030,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -5260,7 +5264,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -5316,7 +5320,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -5437,7 +5441,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -5489,8 +5493,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-01"
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,800 eaches",
@@ -5618,8 +5622,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-02"
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "2,250 eaches",
@@ -5747,8 +5751,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-03"
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,425 eaches",
@@ -5876,8 +5880,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-24"
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "-",
@@ -6006,7 +6010,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -6230,7 +6234,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                       placeholder="Leave a comment..."
                                       required={false}
                                       requirementText={null}
-                                      rows="4"
+                                      rows={4}
                                     >
                                       <Styled(Box)
                                         theme={
@@ -6339,7 +6343,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                               mb="x3"
                                               placeholder="Leave a comment..."
                                               required={false}
-                                              rows="4"
+                                              rows={4}
                                             >
                                               <textarea
                                                 aria-invalid={false}
@@ -6349,7 +6353,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                                                 id={null}
                                                 placeholder="Leave a comment..."
                                                 required={false}
-                                                rows="4"
+                                                rows={4}
                                               />
                                             </Textarea__StyledTextarea>
                                           </MaybeFieldLabel>
@@ -10631,7 +10635,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -10696,7 +10700,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -10843,7 +10847,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -10904,7 +10908,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -11216,7 +11221,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -11528,7 +11534,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -11840,7 +11847,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -12153,7 +12161,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -12387,7 +12395,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -12443,7 +12451,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -12564,7 +12572,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -12616,8 +12624,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-01"
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,800 eaches",
@@ -12745,8 +12753,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-02"
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "2,250 eaches",
@@ -12874,8 +12882,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-03"
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,425 eaches",
@@ -13003,8 +13011,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-24"
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "-",
@@ -13133,7 +13141,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -13357,7 +13365,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                       placeholder="Leave a comment..."
                                       required={false}
                                       requirementText={null}
-                                      rows="4"
+                                      rows={4}
                                     >
                                       <Styled(Box)
                                         theme={
@@ -13466,7 +13474,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                               mb="x3"
                                               placeholder="Leave a comment..."
                                               required={false}
-                                              rows="4"
+                                              rows={4}
                                             >
                                               <textarea
                                                 aria-invalid={false}
@@ -13476,7 +13484,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                                                 id={null}
                                                 placeholder="Leave a comment..."
                                                 required={false}
-                                                rows="4"
+                                                rows={4}
                                               />
                                             </Textarea__StyledTextarea>
                                           </MaybeFieldLabel>
@@ -17613,7 +17621,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -17678,7 +17686,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -17825,7 +17833,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -17886,7 +17894,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -18198,7 +18207,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -18510,7 +18520,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -18822,7 +18833,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualCompletion": "Dec 13, 2019",
@@ -19135,7 +19147,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -19369,7 +19381,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                 footerRows={Array []}
                                 hasSelectableRows={false}
                                 isHeaderSelected={false}
-                                keyField="date"
+                                keyField="id"
                                 loading={false}
                                 noRowsContent="No records have been created for this table."
                                 onRowExpansionChange={null}
@@ -19425,7 +19437,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                   footerRows={Array []}
                                   hasSelectableRows={false}
                                   isHeaderSelected={false}
-                                  keyField="date"
+                                  keyField="id"
                                   loading={false}
                                   noRowsContent="No records have been created for this table."
                                   onRowExpansionChange={null}
@@ -19546,7 +19558,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                           ]
                                         }
                                         compact={false}
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         noRowsContent="No records have been created for this table."
                                         rowHovers={true}
@@ -19598,8 +19610,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-01"
-                                            keyField="date"
+                                            key="r1"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,800 eaches",
@@ -19727,8 +19739,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-02"
-                                            keyField="date"
+                                            key="r2"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "2,250 eaches",
@@ -19856,8 +19868,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-03"
-                                            keyField="date"
+                                            key="r3"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "1,425 eaches",
@@ -19985,8 +19997,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               ]
                                             }
                                             compact={false}
-                                            key="2019-10-24"
-                                            keyField="date"
+                                            key="r8"
+                                            keyField="id"
                                             row={
                                               Object {
                                                 "actualQuantity": "-",
@@ -20115,7 +20127,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             },
                                           ]
                                         }
-                                        keyField="date"
+                                        keyField="id"
                                         loading={false}
                                         rows={Array []}
                                       >
@@ -20339,7 +20351,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                       placeholder="Leave a comment..."
                                       required={false}
                                       requirementText={null}
-                                      rows="4"
+                                      rows={4}
                                     >
                                       <Styled(Box)
                                         theme={
@@ -20448,7 +20460,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                               mb="x3"
                                               placeholder="Leave a comment..."
                                               required={false}
-                                              rows="4"
+                                              rows={4}
                                             >
                                               <textarea
                                                 aria-invalid={false}
@@ -20458,7 +20470,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                 id={null}
                                                 placeholder="Leave a comment..."
                                                 required={false}
-                                                rows="4"
+                                                rows={4}
                                               />
                                             </Textarea__StyledTextarea>
                                           </MaybeFieldLabel>
