@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/nulogy/design-system/compare/v0.21.1...v0.22.0) (2020-02-07)
+
+### Features
+
+- add loading icon to icons, usage ex: <Icon icon="loading" /> ([#534](https://github.com/nulogy/design-system/issues/534)) ([32eda2a](https://github.com/nulogy/design-system/commit/32eda2a))
+- upgrade styled system from v3 to v5 ([#532](https://github.com/nulogy/design-system/issues/532)) ([0d08f9d](https://github.com/nulogy/design-system/commit/0d08f9d))
+
 ## [0.21.1](https://github.com/nulogy/design-system/compare/v0.21.0...v0.21.1) (2020-01-30)
 
 ### Bug Fixes

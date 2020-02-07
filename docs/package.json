@@ -1,11 +1,11 @@
 {
   "name": "@nulogy/docs",
-  "version": "0.21.1",
+  "version": "0.22.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "dependencies": {
-    "@nulogy/components": "^0.21.1",
-    "@nulogy/tokens": "^0.21.0",
+    "@nulogy/components": "^0.22.0",
+    "@nulogy/tokens": "^0.22.0",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.18.2",
     "gatsby-image": "^2.2.29",
