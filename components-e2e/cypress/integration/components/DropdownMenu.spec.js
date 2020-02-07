@@ -1,8 +1,9 @@
 describe("DropdownMenu", () => {
   const getOpenButton = () => cy.get("button[aria-label='Open']");
   const getCloseButton = () => cy.get("button[aria-label='Close']");
+  const getTrigger = () => cy.get("button[class*='IconicButton'");
   const getDropdownLink = () => cy.contains("Dropdown Link");
-  const getCustomTrigger = () => cy.get("button.customtrigger");
+  const getCustomTrigger = () => cy.contains("Custom Trigger");
   const getDropdownContainer = () => cy.get(".nds-popper-pop-up");
   const assertDropdownIsOpen = () => {
     getCloseButton().should("exist");
@@ -16,18 +17,18 @@ describe("DropdownMenu", () => {
 
   describe("default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("storiesfortests-dropdownmenu--base");
+      cy.renderFromStorybook("dropdownmenu--dropdownmenu");
     });
     it("toggles the menu on click", () => {
-      cy.get("button").click();
+      getTrigger().click();
       assertDropdownIsOpen();
 
-      cy.get("button").click();
+      getTrigger().click();
       assertDropdownIsClosed();
     });
 
     it("closes the menu on escape", () => {
-      cy.get("button")
+      getTrigger()
         .click()
         .click();
 
@@ -37,7 +38,7 @@ describe("DropdownMenu", () => {
     });
 
     it("closes the menu when clicking outside of it", () => {
-      cy.get("button").click();
+      getTrigger().click();
 
       cy.clickOutsideElement();
 
@@ -45,7 +46,7 @@ describe("DropdownMenu", () => {
     });
 
     it("scrolls through the list on tabpress", () => {
-      cy.get("button")
+      getTrigger()
         .click()
         .tab();
 
@@ -53,7 +54,7 @@ describe("DropdownMenu", () => {
     });
   });
   it("can be opened with a different element", () => {
-    cy.renderFromStorybook("storiesfortests-dropdownmenu--custom-trigger");
+    cy.renderFromStorybook("dropdownmenu--with-custom-trigger");
 
     getCustomTrigger().click();
 

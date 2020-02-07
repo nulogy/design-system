@@ -5,7 +5,7 @@ import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 storiesOf("Tooltip", module)
   .add("Tooltip", () => (
     <Flex p="x8">
-      <Tooltip placement="bottom" tooltip="I am a Tooltip!">
+      <Tooltip tooltip="I am a Tooltip!">
         <Button> Button </Button>
       </Tooltip>
     </Flex>
@@ -125,7 +125,7 @@ storiesOf("Tooltip", module)
     </>
   ))
   .add("open by default", () => (
-    <Tooltip placement="bottom" tooltip="Tooltip" defaultOpen>
-      <Button> Button </Button>
+    <Tooltip tooltip="I am an open Tooltip!" defaultOpen>
+      <Button>Hover me</Button>
     </Tooltip>
   ));

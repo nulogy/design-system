@@ -18,7 +18,7 @@ describe("Table", () => {
 
   const selectableRowsTests = storyName => {
     beforeEach(() => {
-      cy.renderFromStorybook(`storiesfortests-${storyName}`);
+      cy.renderFromStorybook(storyName);
     });
     it("toggles the value of the header checkbox on click", () => {
       selectAll().click();
@@ -27,11 +27,11 @@ describe("Table", () => {
 
     it("selects a row on click", () => {
       rowCheckboxes()
-        .first()
+        .eq(1)
         .click();
 
       rowCheckboxesInput()
-        .first()
+        .eq(1)
         .should("be.checked");
     });
 
@@ -50,9 +50,9 @@ describe("Table", () => {
         selectAllInput().should("not.be.checked");
       });
       it("becomes selected if all rows are selected", () => {
-        rowCheckboxes()
-          .first()
-          .click();
+        rowCheckboxes().each($el => {
+          cy.wrap($el).click();
+        });
 
         selectAllInput().should("be.checked");
       });
@@ -78,52 +78,47 @@ describe("Table", () => {
   };
 
   describe("table--with-selected-rows-with-defaults", () => {
-    selectableRowsTests("table--with-selected-rows-with-defaults");
+    selectableRowsTests("table-with-selectable-rows--with-selectable-rows");
   });
-  describe("table--with-pagination", () => {
+  describe("pagination", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("table--with-pagination");
+    });
     it("navigates to next page when next button is clicked", () => {
-      cy.renderFromStorybook("storiesfortests-table--with-pagination");
-
       paginationButtons()
         .last()
         .click();
 
-      cy.get("tbody").should("contain", "some data 4");
+      cy.get("tbody").should("contain", "2019-10-02");
     });
     it("navigates to previous page when previous button is clicked", () => {
-      cy.renderFromStorybook("storiesfortests-table--with-pagination");
-
       paginationButtons()
         .last()
         .click();
-      cy.get("tbody").should("contain", "some data 4");
+      cy.get("tbody").should("contain", "2019-10-02");
       paginationButtons()
         .first()
         .click();
 
-      cy.get("tbody").should("contain", "some data 0");
+      cy.get("tbody").should("contain", "2019-10-01");
       paginationButtons().should("be.disabled");
     });
     it("navigates to specific page when a page button is clicked", () => {
-      cy.renderFromStorybook("storiesfortests-table--with-pagination");
-
       paginationButtons()
         .eq(5)
         .click();
 
-      cy.get("tbody").should("contain", "some data 1");
+      cy.get("tbody").should("contain", "2019-10-07");
       paginationButtons()
         .eq(5)
         .should("be.disabled");
     });
     it("disables next button when on last page", () => {
-      cy.renderFromStorybook("storiesfortests-table--with-pagination");
-
       paginationButtons()
         .eq(-2)
         .click();
 
-      cy.get("tbody").should("contain", "some data 20");
+      cy.get("tbody").should("contain", "2019-10-24");
       paginationButtons()
         .eq(-2)
         .should("be.disabled");
@@ -132,12 +127,11 @@ describe("Table", () => {
         .should("be.disabled");
     });
   });
-  describe("table--with-pagination-and-selectable-rows", () => {
+  describe("selections with pagination", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("table--with-everything");
+    });
     it("saves selections on between pages", () => {
-      cy.renderFromStorybook(
-        "storiesfortests-table--with-pagination-and-selectable-rows"
-      );
-
       selectAll().click();
 
       selectAllInput().should("be.checked");
@@ -149,7 +143,7 @@ describe("Table", () => {
       selectAll().click();
       selectAll().click();
 
-      cy.get("tbody").should("contain", "some data 5");
+      cy.get("tbody").should("contain", "Thu, 24 Oct 2019");
       selectAllInput().should("not.be.checked");
       rowCheckboxesInput().should("not.be.checked");
 
@@ -161,22 +155,22 @@ describe("Table", () => {
       rowCheckboxesInput().should("be.checked");
     });
   });
-  describe("table--with-expandable-and-selectable-rows-with-defaults", () => {
-    selectableRowsTests(
-      "table--with-expandable-and-selectable-rows-with-defaults"
-    );
-    it("collapses the row when expanded", () => {
-      expandButtons().should("not.exist");
-      collapseButtons().click();
-      expandButtons().should("exist");
-      cy.get("tbody").should("not.contain", "Expands!");
+  describe("expanding rows", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("table--with-everything");
     });
-    it("expands the row when collapsed", () => {
-      collapseButtons().click();
+    it("collapses the row when expanded", () => {
+      collapseButtons().should("not.exist");
       expandButtons().should("exist");
       expandButtons().click();
       collapseButtons().should("exist");
-      expandButtons().should("not.exist");
+      collapseButtons().click();
+      cy.get("tbody").should("not.contain", "Expands!");
+    });
+    it("expands the row when collapsed", () => {
+      collapseButtons().should("not.exist");
+      expandButtons().should("exist");
+      expandButtons().click();
       cy.get("tbody").should("contain", "Expands!");
     });
   });

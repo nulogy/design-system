@@ -59,7 +59,7 @@ const primaryMenu = [
             name: "Projects",
             items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
           },
-          { name: "Jobs", href: "/" }
+          { name: "Jobs", href: "/", items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }] }
         ]
       },
       { name: "Item cart", href: "/" },
@@ -92,7 +92,7 @@ const primaryMenuCustomLinks = [
       },
       {
         name: "Customers",
-        render: () => <a href="/">CustomLink</a>
+        render: () => <a href="/">Customers CustomLink</a>
       }
     ]
   },

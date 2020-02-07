@@ -60,7 +60,14 @@ class SelectWithState extends React.Component {
     const { selectedValue } = this.state;
     return (
       <>
-        <Select onChange={this.handleChange} value={selectedValue} options={options} {...this.props} />
+        <Select
+          className="Select"
+          classNamePrefix="SelectTest"
+          onChange={this.handleChange}
+          value={selectedValue}
+          options={options}
+          {...this.props}
+        />
         <Button onClick={this.clearSelection}>Clear selection</Button>
       </>
     );
@@ -73,6 +80,8 @@ storiesOf("Select", module)
       placeholder="Please select inventory status"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
+      className="Select"
+      classNamePrefix="SelectTest"
       options={options}
       labelText="Inventory status"
       onInputChange={action("typed input value changed")}
@@ -128,7 +137,7 @@ storiesOf("Select", module)
     </>
   ))
 
-  .add("as a controlled component", () => (
+  .add("with state", () => (
     <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
   ))
   .add("set to disabled", () => (
@@ -209,47 +218,6 @@ storiesOf("Select", module)
       </PrimaryButton>
     </form>
   ))
-  .add("with multiselect", () => (
-    <>
-      <Select
-        defaultValue={["accepted", "assigned"]}
-        noOptionsMessage={() => "No options"}
-        placeholder="Please select inventory status"
-        options={options}
-        labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        multiselect
-        onInputChange={action("typed input value changed")}
-      />
-      <Box width="300px">
-        <Select
-          defaultValue={partnerCompanyName.map(item => item.value)}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={partnerCompanyName}
-          labelText="PCN"
-          onChange={action("selection changed")}
-          onBlur={action("blurred")}
-          multiselect
-          onInputChange={action("typed input value changed")}
-        />
-      </Box>
-      <Box width="400px">
-        <Select
-          defaultValue={options.map(item => item.value)}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-          onChange={action("selection changed")}
-          onBlur={action("blurred")}
-          multiselect
-          onInputChange={action("typed input value changed")}
-        />
-      </Box>
-    </>
-  ))
   .add("with helpText", () => (
     <Select
       placeholder="Please select inventory status"
@@ -297,4 +265,64 @@ storiesOf("Select", module)
       onBlur={action("blurred")}
       onInputChange={action("typed input value changed")}
     />
+  ))
+  .add("with multiselect", () => {
+    const PCNList = [
+      { value: "2", label: "PCN2" },
+      { value: "4", label: "PCN4" },
+      { value: "1", label: "PCN1" },
+      { value: "9", label: "PCN9" }
+    ];
+    return (
+      <Select
+        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={PCNList}
+        labelText="Select PCN"
+        className="Select"
+        multiselect
+      />
+    );
+  })
+  .add("test multiselect overflow", () => (
+    <>
+      <Select
+        defaultValue={["accepted", "assigned"]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        multiselect
+        onInputChange={action("typed input value changed")}
+      />
+      <Box width="300px">
+        <Select
+          defaultValue={partnerCompanyName.map(item => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={partnerCompanyName}
+          labelText="PCN"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+          onInputChange={action("typed input value changed")}
+        />
+      </Box>
+      <Box width="400px">
+        <Select
+          defaultValue={options.map(item => item.value)}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          multiselect
+          onInputChange={action("typed input value changed")}
+        />
+      </Box>
+    </>
   ));

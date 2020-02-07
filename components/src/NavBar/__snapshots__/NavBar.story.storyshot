@@ -389,6 +389,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                           },
                           Object {
                             "href": "/",
+                            "items": Array [
+                              Object {
+                                "href": "/",
+                                "name": "Job 1",
+                              },
+                              Object {
+                                "href": "/",
+                                "name": "Job 2",
+                              },
+                            ],
                             "name": "Jobs",
                           },
                         ],
@@ -565,6 +575,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                 },
                                 Object {
                                   "href": "/",
+                                  "items": Array [
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 1",
+                                    },
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 2",
+                                    },
+                                  ],
                                   "name": "Jobs",
                                 },
                               ],
@@ -739,6 +759,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                   },
                                   Object {
                                     "href": "/",
+                                    "items": Array [
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 1",
+                                      },
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 2",
+                                      },
+                                    ],
                                     "name": "Jobs",
                                   },
                                 ],
@@ -925,6 +955,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                         },
                                         Object {
                                           "href": "/",
+                                          "items": Array [
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 1",
+                                            },
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 2",
+                                            },
+                                          ],
                                           "name": "Jobs",
                                         },
                                       ],
@@ -1100,6 +1140,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                           },
                                           Object {
                                             "href": "/",
+                                            "items": Array [
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 1",
+                                              },
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 2",
+                                              },
+                                            ],
                                             "name": "Jobs",
                                           },
                                         ],
@@ -1659,6 +1709,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                     },
                                                     Object {
                                                       "href": "/",
+                                                      "items": Array [
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 1",
+                                                        },
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 2",
+                                                        },
+                                                      ],
                                                       "name": "Jobs",
                                                     },
                                                   ],
@@ -1811,6 +1871,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                       },
                                                       Object {
                                                         "href": "/",
+                                                        "items": Array [
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 1",
+                                                          },
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 2",
+                                                          },
+                                                        ],
                                                         "name": "Jobs",
                                                       },
                                                     ],
@@ -2349,6 +2419,16 @@ exports[`Storyshots NavBar NavBar 1`] = `
                                                           },
                                                           Object {
                                                             "href": "/",
+                                                            "items": Array [
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 1",
+                                                              },
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 2",
+                                                              },
+                                                            ],
                                                             "name": "Jobs",
                                                           },
                                                         ],
@@ -12879,6 +12959,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                           },
                           Object {
                             "href": "/",
+                            "items": Array [
+                              Object {
+                                "href": "/",
+                                "name": "Job 1",
+                              },
+                              Object {
+                                "href": "/",
+                                "name": "Job 2",
+                              },
+                            ],
                             "name": "Jobs",
                           },
                         ],
@@ -13052,6 +13142,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                 },
                                 Object {
                                   "href": "/",
+                                  "items": Array [
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 1",
+                                    },
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 2",
+                                    },
+                                  ],
                                   "name": "Jobs",
                                 },
                               ],
@@ -13223,6 +13323,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                   },
                                   Object {
                                     "href": "/",
+                                    "items": Array [
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 1",
+                                      },
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 2",
+                                      },
+                                    ],
                                     "name": "Jobs",
                                   },
                                 ],
@@ -13406,6 +13516,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                         },
                                         Object {
                                           "href": "/",
+                                          "items": Array [
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 1",
+                                            },
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 2",
+                                            },
+                                          ],
                                           "name": "Jobs",
                                         },
                                       ],
@@ -13578,6 +13698,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                           },
                                           Object {
                                             "href": "/",
+                                            "items": Array [
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 1",
+                                              },
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 2",
+                                              },
+                                            ],
                                             "name": "Jobs",
                                           },
                                         ],
@@ -14134,6 +14264,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                     },
                                                     Object {
                                                       "href": "/",
+                                                      "items": Array [
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 1",
+                                                        },
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 2",
+                                                        },
+                                                      ],
                                                       "name": "Jobs",
                                                     },
                                                   ],
@@ -14286,6 +14426,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                       },
                                                       Object {
                                                         "href": "/",
+                                                        "items": Array [
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 1",
+                                                          },
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 2",
+                                                          },
+                                                        ],
                                                         "name": "Jobs",
                                                       },
                                                     ],
@@ -14824,6 +14974,16 @@ exports[`Storyshots NavBar Without search 1`] = `
                                                           },
                                                           Object {
                                                             "href": "/",
+                                                            "items": Array [
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 1",
+                                                              },
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 2",
+                                                              },
+                                                            ],
                                                             "name": "Jobs",
                                                           },
                                                         ],
@@ -17553,6 +17713,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                           },
                           Object {
                             "href": "/",
+                            "items": Array [
+                              Object {
+                                "href": "/",
+                                "name": "Job 1",
+                              },
+                              Object {
+                                "href": "/",
+                                "name": "Job 2",
+                              },
+                            ],
                             "name": "Jobs",
                           },
                         ],
@@ -17694,6 +17864,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                 },
                                 Object {
                                   "href": "/",
+                                  "items": Array [
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 1",
+                                    },
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 2",
+                                    },
+                                  ],
                                   "name": "Jobs",
                                 },
                               ],
@@ -17833,6 +18013,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                   },
                                   Object {
                                     "href": "/",
+                                    "items": Array [
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 1",
+                                      },
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 2",
+                                      },
+                                    ],
                                     "name": "Jobs",
                                   },
                                 ],
@@ -17984,6 +18174,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                         },
                                         Object {
                                           "href": "/",
+                                          "items": Array [
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 1",
+                                            },
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 2",
+                                            },
+                                          ],
                                           "name": "Jobs",
                                         },
                                       ],
@@ -18124,6 +18324,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                           },
                                           Object {
                                             "href": "/",
+                                            "items": Array [
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 1",
+                                              },
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 2",
+                                              },
+                                            ],
                                             "name": "Jobs",
                                           },
                                         ],
@@ -18648,6 +18858,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                     },
                                                     Object {
                                                       "href": "/",
+                                                      "items": Array [
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 1",
+                                                        },
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 2",
+                                                        },
+                                                      ],
                                                       "name": "Jobs",
                                                     },
                                                   ],
@@ -18800,6 +19020,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                       },
                                                       Object {
                                                         "href": "/",
+                                                        "items": Array [
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 1",
+                                                          },
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 2",
+                                                          },
+                                                        ],
                                                         "name": "Jobs",
                                                       },
                                                     ],
@@ -19338,6 +19568,16 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                                                           },
                                                           Object {
                                                             "href": "/",
+                                                            "items": Array [
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 1",
+                                                              },
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 2",
+                                                              },
+                                                            ],
                                                             "name": "Jobs",
                                                           },
                                                         ],
@@ -20064,6 +20304,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                           },
                           Object {
                             "href": "/",
+                            "items": Array [
+                              Object {
+                                "href": "/",
+                                "name": "Job 1",
+                              },
+                              Object {
+                                "href": "/",
+                                "name": "Job 2",
+                              },
+                            ],
                             "name": "Jobs",
                           },
                         ],
@@ -20208,6 +20458,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                 },
                                 Object {
                                   "href": "/",
+                                  "items": Array [
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 1",
+                                    },
+                                    Object {
+                                      "href": "/",
+                                      "name": "Job 2",
+                                    },
+                                  ],
                                   "name": "Jobs",
                                 },
                               ],
@@ -20350,6 +20610,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                   },
                                   Object {
                                     "href": "/",
+                                    "items": Array [
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 1",
+                                      },
+                                      Object {
+                                        "href": "/",
+                                        "name": "Job 2",
+                                      },
+                                    ],
                                     "name": "Jobs",
                                   },
                                 ],
@@ -20504,6 +20774,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                         },
                                         Object {
                                           "href": "/",
+                                          "items": Array [
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 1",
+                                            },
+                                            Object {
+                                              "href": "/",
+                                              "name": "Job 2",
+                                            },
+                                          ],
                                           "name": "Jobs",
                                         },
                                       ],
@@ -20647,6 +20927,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                           },
                                           Object {
                                             "href": "/",
+                                            "items": Array [
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 1",
+                                              },
+                                              Object {
+                                                "href": "/",
+                                                "name": "Job 2",
+                                              },
+                                            ],
                                             "name": "Jobs",
                                           },
                                         ],
@@ -21174,6 +21464,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                     },
                                                     Object {
                                                       "href": "/",
+                                                      "items": Array [
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 1",
+                                                        },
+                                                        Object {
+                                                          "href": "/",
+                                                          "name": "Job 2",
+                                                        },
+                                                      ],
                                                       "name": "Jobs",
                                                     },
                                                   ],
@@ -21326,6 +21626,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                       },
                                                       Object {
                                                         "href": "/",
+                                                        "items": Array [
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 1",
+                                                          },
+                                                          Object {
+                                                            "href": "/",
+                                                            "name": "Job 2",
+                                                          },
+                                                        ],
                                                         "name": "Jobs",
                                                       },
                                                     ],
@@ -21864,6 +22174,16 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                                                           },
                                                           Object {
                                                             "href": "/",
+                                                            "items": Array [
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 1",
+                                                              },
+                                                              Object {
+                                                                "href": "/",
+                                                                "name": "Job 2",
+                                                              },
+                                                            ],
                                                             "name": "Jobs",
                                                           },
                                                         ],
