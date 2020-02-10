@@ -22,6 +22,13 @@ class DatePicker extends Component {
     registerDatePickerLocales();
   }
 
+  componentDidUpdate(prevProps) {
+    const { selected } = this.props;
+    if (prevProps.selected !== selected) {
+      this.setSelectedDate(selected);
+    }
+  }
+
   setSelectedDate = date => {
     this.setState({
       selectedDate: date

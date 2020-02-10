@@ -6,11 +6,17 @@ import { withKnobs, select } from "@storybook/addon-knobs";
 import { DatePicker } from ".";
 import { supportedDateLocales } from "../utils/datePickerLocales";
 
+const selectedDateExamples = [
+  new Date("2019-01-01T05:00:00.000Z"),
+  new Date("2019-02-05T05:00:00.000Z"),
+  new Date("2019-03-07T05:00:00.000Z")
+];
+
 storiesOf("DatePicker", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <DatePicker
-      selected={new Date("2019-01-01T05:00:00.000Z")}
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
@@ -18,7 +24,7 @@ storiesOf("DatePicker", module)
   ))
   .add("with custom date format", () => (
     <DatePicker
-      selected={new Date("2019-01-01T05:00:00.000Z")}
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
       onInputChange={action("input changed")}
