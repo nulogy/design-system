@@ -7,7 +7,8 @@
       "createRelease": "github"
     },
     "publish": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "allowBranch": ["master"]
     }
   }
 }

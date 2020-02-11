@@ -1,23 +1,29 @@
 language: node_js
-
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
-
 before_script:
-  - yarn build-master
-
+  - yarn build
 branches:
   only:
     - master
-
 cache:
   yarn: true
   directories:
     - node_modules
-    - ~/.cache
-
+    - "~/.cache"
 addons:
   apt:
     packages:
       - libgconf-2-4
+deploy:
+  provider: script
+  script: yarn lerna publish --yes
+  email: marianneb@nulogy.com
+  api_key:
+    secure: GNzx5lHBiTpffGshQPbZPhKu7FNdtAzL+DjDHW5bh0sp+KYs4DA+oB8dTHsCGJxv6sJb5zYo0m1jGus9xq7PftqlvJXEexOVaTfslM1zNVnw8RZXdGO1M9IKWsZyh81C1QrG6pz778EUscMV+XV6lB96CqsEXRKvTWa4awDeYq4A4kklr2/FymaFefXXAAP7bRkpCCVqWJq7tMXGStTUktdHe6l1jDNRqWISO6McQTpD9bFwAGJCP5BiH8+Ofahave+c1DCjZ0kU/TZipYQ7FOu8QSrb+ECR4XPPxfppTjgdPAiGPu8vpUT2lwFQEMwTCTVQLVCQHfWSjeBdh1B2IHfwFMeOQRHxSx9PUQ+xjdVrilC/SzCPX+yk/qS9JLuFnAUlEvisyt+fw3H7CQ0qSU9Hcozq8B3EZ5MU5gQ3ZchGu65lAaeJz4XxbHmHTXwyEvk19HrsDdUD5h7QMRWPZb2cIsWoGkgBY0ILayU/vPioTMeiG1ZviBc0XDpPuLhqtCSwaiKPNhIOZhhiMhUl/HW/ePKV/4ZLV76+clYT+MWA2ojneCdem/YAYhuntNHmo15zjSUmfHq1z5Iz9RNzAxkPXM5Z9BioseAB3Y88fld3a9gr+w8Ukfogc9GS9ZDsj4WDwVF8kB4hkdrG8NvfU//KmmfAbe+YXFtskBqtleo=
+  skip_cleanup: true
+  keep_history: true
+  on:
+    repo: nulogy/design-system
+    branch: master
