@@ -325,4 +325,18 @@ storiesOf("Select", module)
         />
       </Box>
     </>
+  ))
+  .add("with fixed positioning", () => (
+    <>
+      <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "100px" }}>
+        <Select
+          defaultValue={["accepted", "assigned"]}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={options}
+          labelText="Inventory status"
+          menuPosition="fixed"
+        />
+      </Box>
+    </>
   ));
