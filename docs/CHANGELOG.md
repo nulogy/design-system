@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://github.com/nulogy/design-system/compare/v0.22.1...v0.23.0) (2020-02-11)
+
+### Features
+
+- Add menuPosition prop to Select ([#544](https://github.com/nulogy/design-system/issues/544)) ([ece2ac2](https://github.com/nulogy/design-system/commit/ece2ac2))
+
 ## [0.22.1](https://github.com/nulogy/design-system/compare/v0.22.0...v0.22.1) (2020-02-11)
 
 **Note:** Version bump only for package @nulogy/docs
