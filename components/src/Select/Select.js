@@ -52,6 +52,7 @@ const ReactSelect = ({
   id,
   initialIsOpen,
   maxHeight,
+  menuPosition,
   multiselect,
   name,
   onChange,
@@ -93,6 +94,7 @@ const ReactSelect = ({
         menuIsOpen={menuIsOpen}
         onMenuOpen={onMenuOpen}
         onMenuClose={onMenuClose}
+        menuPosition={menuPosition}
         onInputChange={onInputChange}
         components={{ Option: SelectOption, Control, ...components }}
       />

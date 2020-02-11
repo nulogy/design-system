@@ -22234,6 +22234,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                     id="project-status"
                                     labelText="Project status"
                                     maxHeight="248px"
+                                    menuPosition="absolute"
                                     multiselect={false}
                                     noOptionsMessage={[Function]}
                                     options={
@@ -22500,6 +22501,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                     isSearchable={true}
                                                     labelText="Project status"
                                                     maxMenuHeight="248px"
+                                                    menuPosition="absolute"
                                                     noOptionsMessage={[Function]}
                                                     options={
                                                       Array [
