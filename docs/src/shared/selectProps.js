@@ -63,6 +63,12 @@ const selectProps = [
     defaultValue: "undefined",
     description: "Event handler for when the value typed into the input changes"
   },
+  {
+    name: "menuPosition",
+    type: "string",
+    defaultValue: "absolute",
+    description: "The CSS position value of the menu. ex: 'fixed'"
+  },
   ...inputProps
 ];
 
