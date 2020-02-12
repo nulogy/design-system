@@ -277,8 +277,11 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
           }
         >
           <Styled(BaseCheckbox)
+            disabled={false}
+            error={false}
             id="checkbox"
             labelText="I am a checkbox"
+            required={false}
           >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
@@ -412,7 +415,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -723,7 +726,12 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
             }
           }
         >
-          <Styled(BaseCheckbox)>
+          <Styled(BaseCheckbox)
+            disabled={false}
+            error={false}
+            id={null}
+            required={false}
+          >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
               disabled={false}
@@ -854,7 +862,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -1149,8 +1157,11 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
         >
           <Styled(BaseCheckbox)
             defaultChecked={true}
+            disabled={false}
+            error={false}
             id="checkbox"
             labelText="I am checked by default"
+            required={false}
           >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
@@ -1287,7 +1298,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -1600,8 +1611,10 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         >
           <Styled(BaseCheckbox)
             disabled={true}
+            error={false}
             id="checkbox-1"
             labelText="I am disabled"
+            required={false}
           >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
@@ -1735,7 +1748,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                         disabled={true}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={true}
                         />
                       </Checkbox__VisualCheckbox>
@@ -1766,8 +1779,10 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
           <Styled(BaseCheckbox)
             checked={true}
             disabled={true}
+            error={false}
             id="checkbox-2"
             labelText="I am disabled"
+            required={false}
           >
             <BaseCheckbox
               checked={true}
@@ -1906,7 +1921,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
                       >
                         <div
                           checked={true}
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={true}
                         />
                       </Checkbox__VisualCheckbox>
@@ -2218,9 +2233,11 @@ exports[`Storyshots Checkbox Set to error 1`] = `
           }
         >
           <Styled(BaseCheckbox)
+            disabled={false}
             error={true}
             id="checkbox"
             labelText="I am error"
+            required={false}
           >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
@@ -2354,7 +2371,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -2384,9 +2401,11 @@ exports[`Storyshots Checkbox Set to error 1`] = `
           </Styled(BaseCheckbox)>
           <Styled(BaseCheckbox)
             defaultChecked={true}
+            disabled={false}
             error={true}
             id="checkbox"
             labelText="I am error"
+            required={false}
           >
             <BaseCheckbox
               className="sc-fzXfNc bSPfCk"
@@ -2523,7 +2542,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -2835,6 +2854,8 @@ exports[`Storyshots Checkbox Set to required 1`] = `
           }
         >
           <Styled(BaseCheckbox)
+            disabled={false}
+            error={false}
             id="checkbox"
             labelText="I am a checkbox"
             required={true}
@@ -2971,7 +2992,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
                         disabled={false}
                       >
                         <div
-                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                           disabled={false}
                         />
                       </Checkbox__VisualCheckbox>
@@ -3285,9 +3306,12 @@ exports[`Storyshots Checkbox With state 1`] = `
           <CheckboxWithState>
             <Styled(BaseCheckbox)
               checked={false}
+              disabled={false}
+              error={false}
               id="checkbox-1"
               labelText="I am controlled and checked"
               onChange={[Function]}
+              required={false}
             >
               <BaseCheckbox
                 checked={false}
@@ -3429,7 +3453,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                         >
                           <div
                             checked={false}
-                            className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                            className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                             disabled={false}
                           />
                         </Checkbox__VisualCheckbox>
@@ -3459,9 +3483,12 @@ exports[`Storyshots Checkbox With state 1`] = `
             </Styled(BaseCheckbox)>
             <Styled(BaseCheckbox)
               checked={false}
+              disabled={false}
+              error={false}
               id="checkbox-2"
               labelText="I am controlled and unchecked"
               onChange={[Function]}
+              required={false}
             >
               <BaseCheckbox
                 checked={false}
@@ -3603,7 +3630,7 @@ exports[`Storyshots Checkbox With state 1`] = `
                         >
                           <div
                             checked={false}
-                            className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                            className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                             disabled={false}
                           />
                         </Checkbox__VisualCheckbox>
@@ -3632,6 +3659,1013 @@ exports[`Storyshots Checkbox With state 1`] = `
               </BaseCheckbox>
             </Styled(BaseCheckbox)>
           </CheckboxWithState>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
+exports[`Storyshots Checkbox indeterminate 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <Styled(BaseCheckbox)
+            checked={true}
+            disabled={false}
+            error={false}
+            id="checkbox"
+            indeterminate={true}
+            labelText="I am an indeterminate checkbox"
+            readOnly={true}
+            required={false}
+          >
+            <BaseCheckbox
+              checked={true}
+              className="sc-fzXfNc bSPfCk"
+              disabled={false}
+              error={false}
+              id="checkbox"
+              indeterminate={true}
+              labelText="I am an indeterminate checkbox"
+              readOnly={true}
+              required={false}
+            >
+              <Box
+                className="sc-fzXfNc bSPfCk"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                >
+                  <ClickInputLabel
+                    disabled={false}
+                  >
+                    <label
+                      className="ClickInputLabel-j2axnv-0 hdKIjC"
+                      disabled={false}
+                    >
+                      <Checkbox__CheckboxInput
+                        aria-invalid={false}
+                        aria-required={false}
+                        checked={true}
+                        className="sc-fzXfNc bSPfCk"
+                        disabled={false}
+                        error={false}
+                        id="checkbox"
+                        indeterminate={true}
+                        labelText="I am an indeterminate checkbox"
+                        readOnly={true}
+                        required={false}
+                        type="checkbox"
+                      >
+                        <input
+                          aria-invalid={false}
+                          aria-required={false}
+                          checked={true}
+                          className="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                          disabled={false}
+                          id="checkbox"
+                          readOnly={true}
+                          required={false}
+                          type="checkbox"
+                        />
+                      </Checkbox__CheckboxInput>
+                      <Checkbox__VisualCheckbox
+                        checked={true}
+                        disabled={false}
+                        indeterminate={true}
+                      >
+                        <div
+                          checked={true}
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
+                          disabled={false}
+                        />
+                      </Checkbox__VisualCheckbox>
+                      <styled.p
+                        color="currentColor"
+                        disabled={false}
+                        fontSize="16px"
+                        inline={false}
+                        lineHeight="1.5"
+                        mb={0}
+                        mt={0}
+                      >
+                        <p
+                          className="sc-AykKF jKbmDj"
+                          color="currentColor"
+                          disabled={false}
+                          fontSize="16px"
+                        >
+                          I am an indeterminate checkbox
+                        </p>
+                      </styled.p>
+                    </label>
+                  </ClickInputLabel>
+                </div>
+              </Box>
+            </BaseCheckbox>
+          </Styled(BaseCheckbox)>
+          <Styled(BaseCheckbox)
+            checked={false}
+            disabled={false}
+            error={false}
+            id="checkbox"
+            indeterminate={true}
+            labelText="I am a unchecked indeterminate checkbox"
+            readOnly={true}
+            required={false}
+          >
+            <BaseCheckbox
+              checked={false}
+              className="sc-fzXfNc bSPfCk"
+              disabled={false}
+              error={false}
+              id="checkbox"
+              indeterminate={true}
+              labelText="I am a unchecked indeterminate checkbox"
+              readOnly={true}
+              required={false}
+            >
+              <Box
+                className="sc-fzXfNc bSPfCk"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                >
+                  <ClickInputLabel
+                    disabled={false}
+                  >
+                    <label
+                      className="ClickInputLabel-j2axnv-0 hdKIjC"
+                      disabled={false}
+                    >
+                      <Checkbox__CheckboxInput
+                        aria-invalid={false}
+                        aria-required={false}
+                        checked={false}
+                        className="sc-fzXfNc bSPfCk"
+                        disabled={false}
+                        error={false}
+                        id="checkbox"
+                        indeterminate={true}
+                        labelText="I am a unchecked indeterminate checkbox"
+                        readOnly={true}
+                        required={false}
+                        type="checkbox"
+                      >
+                        <input
+                          aria-invalid={false}
+                          aria-required={false}
+                          checked={false}
+                          className="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                          disabled={false}
+                          id="checkbox"
+                          readOnly={true}
+                          required={false}
+                          type="checkbox"
+                        />
+                      </Checkbox__CheckboxInput>
+                      <Checkbox__VisualCheckbox
+                        checked={false}
+                        disabled={false}
+                        indeterminate={true}
+                      >
+                        <div
+                          checked={false}
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
+                          disabled={false}
+                        />
+                      </Checkbox__VisualCheckbox>
+                      <styled.p
+                        color="currentColor"
+                        disabled={false}
+                        fontSize="16px"
+                        inline={false}
+                        lineHeight="1.5"
+                        mb={0}
+                        mt={0}
+                      >
+                        <p
+                          className="sc-AykKF jKbmDj"
+                          color="currentColor"
+                          disabled={false}
+                          fontSize="16px"
+                        >
+                          I am a unchecked indeterminate checkbox
+                        </p>
+                      </styled.p>
+                    </label>
+                  </ClickInputLabel>
+                </div>
+              </Box>
+            </BaseCheckbox>
+          </Styled(BaseCheckbox)>
+          <Styled(BaseCheckbox)
+            checked={true}
+            disabled={false}
+            error={true}
+            id="checkbox"
+            indeterminate={true}
+            labelText="I am an inderterminate checkbox with an error"
+            readOnly={true}
+            required={false}
+          >
+            <BaseCheckbox
+              checked={true}
+              className="sc-fzXfNc bSPfCk"
+              disabled={false}
+              error={true}
+              id="checkbox"
+              indeterminate={true}
+              labelText="I am an inderterminate checkbox with an error"
+              readOnly={true}
+              required={false}
+            >
+              <Box
+                className="sc-fzXfNc bSPfCk"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                >
+                  <ClickInputLabel
+                    disabled={false}
+                  >
+                    <label
+                      className="ClickInputLabel-j2axnv-0 hdKIjC"
+                      disabled={false}
+                    >
+                      <Checkbox__CheckboxInput
+                        aria-invalid={true}
+                        aria-required={false}
+                        checked={true}
+                        className="sc-fzXfNc bSPfCk"
+                        disabled={false}
+                        error={true}
+                        id="checkbox"
+                        indeterminate={true}
+                        labelText="I am an inderterminate checkbox with an error"
+                        readOnly={true}
+                        required={false}
+                        type="checkbox"
+                      >
+                        <input
+                          aria-invalid={true}
+                          aria-required={false}
+                          checked={true}
+                          className="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS sc-fzXfNc bSPfCk"
+                          disabled={false}
+                          id="checkbox"
+                          readOnly={true}
+                          required={false}
+                          type="checkbox"
+                        />
+                      </Checkbox__CheckboxInput>
+                      <Checkbox__VisualCheckbox
+                        checked={true}
+                        disabled={false}
+                        indeterminate={true}
+                      >
+                        <div
+                          checked={true}
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
+                          disabled={false}
+                        />
+                      </Checkbox__VisualCheckbox>
+                      <styled.p
+                        color="currentColor"
+                        disabled={false}
+                        fontSize="16px"
+                        inline={false}
+                        lineHeight="1.5"
+                        mb={0}
+                        mt={0}
+                      >
+                        <p
+                          className="sc-AykKF jKbmDj"
+                          color="currentColor"
+                          disabled={false}
+                          fontSize="16px"
+                        >
+                          I am an inderterminate checkbox with an error
+                        </p>
+                      </styled.p>
+                    </label>
+                  </ClickInputLabel>
+                </div>
+              </Box>
+            </BaseCheckbox>
+          </Styled(BaseCheckbox)>
+          <Styled(BaseCheckbox)
+            checked={true}
+            disabled={true}
+            error={false}
+            id="checkbox"
+            indeterminate={true}
+            labelText="I am a disabled indeterminate checkbox"
+            readOnly={true}
+            required={false}
+          >
+            <BaseCheckbox
+              checked={true}
+              className="sc-fzXfNc bSPfCk"
+              disabled={true}
+              error={false}
+              id="checkbox"
+              indeterminate={true}
+              labelText="I am a disabled indeterminate checkbox"
+              readOnly={true}
+              required={false}
+            >
+              <Box
+                className="sc-fzXfNc bSPfCk"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                >
+                  <ClickInputLabel
+                    disabled={true}
+                  >
+                    <label
+                      className="ClickInputLabel-j2axnv-0 jxKJCC"
+                      disabled={true}
+                    >
+                      <Checkbox__CheckboxInput
+                        aria-invalid={false}
+                        aria-required={false}
+                        checked={true}
+                        className="sc-fzXfNc bSPfCk"
+                        disabled={true}
+                        error={false}
+                        id="checkbox"
+                        indeterminate={true}
+                        labelText="I am a disabled indeterminate checkbox"
+                        readOnly={true}
+                        required={false}
+                        type="checkbox"
+                      >
+                        <input
+                          aria-invalid={false}
+                          aria-required={false}
+                          checked={true}
+                          className="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                          disabled={true}
+                          id="checkbox"
+                          readOnly={true}
+                          required={false}
+                          type="checkbox"
+                        />
+                      </Checkbox__CheckboxInput>
+                      <Checkbox__VisualCheckbox
+                        checked={true}
+                        disabled={true}
+                        indeterminate={true}
+                      >
+                        <div
+                          checked={true}
+                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
+                          disabled={true}
+                        />
+                      </Checkbox__VisualCheckbox>
+                      <styled.p
+                        color="currentColor"
+                        disabled={true}
+                        fontSize="16px"
+                        inline={false}
+                        lineHeight="1.5"
+                        mb={0}
+                        mt={0}
+                      >
+                        <p
+                          className="sc-AykKF gRcVjH"
+                          color="currentColor"
+                          disabled={true}
+                          fontSize="16px"
+                        >
+                          I am a disabled indeterminate checkbox
+                        </p>
+                      </styled.p>
+                    </label>
+                  </ClickInputLabel>
+                </div>
+              </Box>
+            </BaseCheckbox>
+          </Styled(BaseCheckbox)>
         </ThemeProvider>
       </div>
     </NDSProvider__GlobalStyles>

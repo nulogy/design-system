@@ -316,10 +316,13 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                     </span>
                   </legend>
                   <Styled(BaseCheckbox)
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
+                    required={false}
                     value="a"
                   >
                     <BaseCheckbox
@@ -460,7 +463,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -489,10 +492,13 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                     </BaseCheckbox>
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
+                    required={false}
                     value="b"
                   >
                     <BaseCheckbox
@@ -633,7 +639,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -662,10 +668,13 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                     </BaseCheckbox>
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
+                    required={false}
                     value="c"
                   >
                     <BaseCheckbox
@@ -806,7 +815,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -1222,7 +1231,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                   </HelpText>
                   <Styled(BaseCheckbox)
                     defaultChecked={true}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
@@ -1370,7 +1381,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -1400,7 +1411,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
@@ -1548,7 +1561,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -1578,7 +1591,9 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
@@ -1726,7 +1741,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -2099,11 +2114,14 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                   </legend>
                   <Styled(BaseCheckbox)
                     checked={true}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
                     onChange={[Function]}
+                    required={false}
                     value="a"
                   >
                     <BaseCheckbox
@@ -2252,7 +2270,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               >
                                 <div
                                   checked={true}
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -2282,11 +2300,14 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     checked={false}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
                     onChange={[Function]}
+                    required={false}
                     value="b"
                   >
                     <BaseCheckbox
@@ -2435,7 +2456,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               >
                                 <div
                                   checked={false}
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -2465,11 +2486,14 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     checked={false}
+                    disabled={false}
                     error={false}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
                     onChange={[Function]}
+                    required={false}
                     value="c"
                   >
                     <BaseCheckbox
@@ -2618,7 +2642,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
                               >
                                 <div
                                   checked={false}
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -2993,9 +3017,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                     defaultChecked={true}
                     disabled={true}
                     error={false}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
+                    required={false}
                     value="a"
                   >
                     <BaseCheckbox
@@ -3139,7 +3165,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 disabled={true}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={true}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -3171,9 +3197,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                     defaultChecked={false}
                     disabled={true}
                     error={false}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
+                    required={false}
                     value="b"
                   >
                     <BaseCheckbox
@@ -3317,7 +3345,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 disabled={true}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={true}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -3349,9 +3377,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                     defaultChecked={false}
                     disabled={true}
                     error={false}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
+                    required={false}
                     value="c"
                   >
                     <BaseCheckbox
@@ -3495,7 +3525,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
                                 disabled={true}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={true}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -3878,10 +3908,13 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                   </legend>
                   <Styled(BaseCheckbox)
                     defaultChecked={true}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
+                    required={false}
                     value="a"
                   >
                     <BaseCheckbox
@@ -4025,7 +4058,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -4055,10 +4088,13 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
+                    required={false}
                     value="b"
                   >
                     <BaseCheckbox
@@ -4202,7 +4238,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -4232,10 +4268,13 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
+                    required={false}
                     value="c"
                   >
                     <BaseCheckbox
@@ -4379,7 +4418,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -4949,10 +4988,13 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                   </legend>
                   <Styled(BaseCheckbox)
                     defaultChecked={true}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".0"
                     labelText="Option A"
                     name="settingSelection"
+                    required={false}
                     value="a"
                   >
                     <BaseCheckbox
@@ -5096,7 +5138,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -5126,10 +5168,13 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".1"
                     labelText="Option B"
                     name="settingSelection"
+                    required={false}
                     value="b"
                   >
                     <BaseCheckbox
@@ -5273,7 +5318,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>
@@ -5303,10 +5348,13 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                   </Styled(BaseCheckbox)>
                   <Styled(BaseCheckbox)
                     defaultChecked={false}
+                    disabled={false}
                     error={true}
+                    id={null}
                     key=".2"
                     labelText="Option C"
                     name="settingSelection"
+                    required={false}
                     value="c"
                   >
                     <BaseCheckbox
@@ -5450,7 +5498,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
                                 disabled={false}
                               >
                                 <div
-                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                  className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                   disabled={false}
                                 />
                               </Checkbox__VisualCheckbox>

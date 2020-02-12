@@ -62,8 +62,32 @@ storiesOf("Checkbox", module)
       <Checkbox id="checkbox" labelText="I am a checkbox" required />
     </>
   ))
-  .add("With state", () => (
+  .add("indeterminate", () => (
     <>
-      <CheckboxWithState />
+      <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
+      <Checkbox
+        id="checkbox"
+        labelText="I am a unchecked indeterminate checkbox"
+        readOnly
+        checked={false}
+        indeterminate
+      />
+      <Checkbox
+        id="checkbox"
+        labelText="I am an inderterminate checkbox with an error"
+        readOnly
+        checked
+        indeterminate
+        error
+      />
+      <Checkbox
+        id="checkbox"
+        labelText="I am a disabled indeterminate checkbox"
+        readOnly
+        checked
+        indeterminate
+        disabled
+      />
     </>
-  ));
+  ))
+  .add("With state", () => <CheckboxWithState />);

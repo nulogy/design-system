@@ -20,6 +20,17 @@ import {
 } from "../../components";
 import radioProps from "../../shared/radioProps";
 
+const checkboxProps = [
+  ...radioProps,
+  {
+    name: "indeterminate",
+    type: "boolean",
+    defaultValue: "undefined",
+    description:
+      "Displays the checkbox in an indeterminate state if checked. You must use the checkbox as a controlled input (give the checked prop a value) when using this prop"
+  }
+];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -70,6 +81,16 @@ export default () => (
           }
         </Highlight>
       </Box>
+
+      <Box>
+        <SubsectionTitle>indeterminate</SubsectionTitle>
+        <Checkbox labelText="I am a checkbox" defaultChecked="true" />
+        <Highlight className="js">
+          {
+            '<Checkbox id="disabled-checkbox" labelText="I am a checkbox" defaultChecked="true"/>'
+          }
+        </Highlight>
+      </Box>
     </DocSection>
 
     <DocSection>
@@ -87,7 +108,7 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={radioProps} />
+      <PropsTable propsRows={checkboxProps} />
     </DocSection>
 
     <DocSection>

@@ -7,6 +7,7 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import theme from "../theme";
 import { ClickInputLabel } from "../utils";
+import { conditionallyRequiredProp } from "../utils/conditionallyRequiredProp";
 
 const checkboxStyle = {
   checked: {
@@ -48,14 +49,25 @@ const getCheckboxStyle = (props, checked) => {
   }
   return checkboxStyle[checked].default;
 };
+const checkedStyles = {
+  borderRadius: "1px",
+  borderWidth: "0 3px 3px 0",
+  transform: "rotate(45deg)"
+};
 
-const VisualCheckbox = styled.div({
+const indeterminateStyles = {
+  borderWidth: "0 3px 0 0",
+  transform: "rotate(90deg) translateX(1px)",
+  borderRadius: 0
+};
+const VisualCheckbox = styled.div(({ indeterminate }) => ({
   minWidth: theme.space.x2,
   height: theme.space.x2,
   borderRadius: theme.radii.small,
   border: "solid 1px",
   position: "relative",
   alignSelf: "center",
+  // checkmark
   "&:before": {
     content: "''",
     display: "none",
@@ -64,11 +76,9 @@ const VisualCheckbox = styled.div({
     width: "3px",
     height: "9px",
     border: `solid ${theme.colors.white}`,
-    borderWidth: "0 3px 3px 0",
-    borderRadius: "1px",
-    transform: "rotate(45deg)"
+    ...(indeterminate ? indeterminateStyles : checkedStyles)
   }
-});
+}));
 
 const CheckboxInput = styled.input(props => ({
   position: "absolute",
@@ -90,38 +100,18 @@ const CheckboxInput = styled.input(props => ({
 }));
 
 const BaseCheckbox = props => {
-  const { className, labelText, disabled, checked, required, error } = props;
+  // disabled react prop types as they are defined in Checkbox
+  // eslint-disable-next-line react/prop-types
+  const { className, labelText, disabled, checked, required, error, indeterminate } = props;
   return (
     <Box className={className}>
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput type="checkbox" required={required} aria-required={required} aria-invalid={error} {...props} />
-        <VisualCheckbox disabled={disabled} checked={checked} />
+        <VisualCheckbox disabled={disabled} checked={checked} indeterminate={indeterminate} />
         {labelText && <Text disabled={disabled}>{labelText}</Text>}
       </ClickInputLabel>
     </Box>
   );
-};
-
-BaseCheckbox.propTypes = {
-  labelText: PropTypes.string,
-  checked: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  id: PropTypes.string,
-  className: PropTypes.string,
-  required: PropTypes.bool
-};
-
-BaseCheckbox.defaultProps = {
-  labelText: undefined,
-  checked: undefined,
-  defaultChecked: undefined,
-  disabled: false,
-  error: false,
-  id: null,
-  className: undefined,
-  required: false
 };
 
 const Checkbox = styled(BaseCheckbox)(
@@ -137,7 +127,28 @@ const Checkbox = styled(BaseCheckbox)(
 );
 
 Checkbox.propTypes = {
+  labelText: PropTypes.string,
+  checked: conditionallyRequiredProp(PropTypes.bool, "indeterminate"),
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  error: PropTypes.bool,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  required: PropTypes.bool,
+  indeterminate: PropTypes.bool,
   ...propTypes.space
+};
+
+Checkbox.defaultProps = {
+  labelText: undefined,
+  checked: undefined,
+  defaultChecked: undefined,
+  disabled: false,
+  error: false,
+  id: null,
+  className: undefined,
+  required: false,
+  indeterminate: undefined
 };
 
 export default Checkbox;
