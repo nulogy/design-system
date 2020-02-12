@@ -4310,7 +4310,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
             error={true}
             id="checkbox"
             indeterminate={true}
-            labelText="I am an inderterminate checkbox with an error"
+            labelText="I am an indeterminate checkbox with an error"
             readOnly={true}
             required={false}
           >
@@ -4321,7 +4321,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
               error={true}
               id="checkbox"
               indeterminate={true}
-              labelText="I am an inderterminate checkbox with an error"
+              labelText="I am an indeterminate checkbox with an error"
               readOnly={true}
               required={false}
             >
@@ -4433,7 +4433,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
                         error={true}
                         id="checkbox"
                         indeterminate={true}
-                        labelText="I am an inderterminate checkbox with an error"
+                        labelText="I am an indeterminate checkbox with an error"
                         readOnly={true}
                         required={false}
                         type="checkbox"
@@ -4476,7 +4476,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
                           disabled={false}
                           fontSize="16px"
                         >
-                          I am an inderterminate checkbox with an error
+                          I am an indeterminate checkbox with an error
                         </p>
                       </styled.p>
                     </label>

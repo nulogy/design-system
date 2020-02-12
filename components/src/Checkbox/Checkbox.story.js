@@ -74,7 +74,7 @@ storiesOf("Checkbox", module)
       />
       <Checkbox
         id="checkbox"
-        labelText="I am an inderterminate checkbox with an error"
+        labelText="I am an indeterminate checkbox with an error"
         readOnly
         checked
         indeterminate
