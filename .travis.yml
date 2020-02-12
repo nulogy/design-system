@@ -1,3 +1,6 @@
+# Follows the documented approach for releasing to npm https://docs.travis-ci.com/user/deployment/npm/
+# with modifications made for using lerna publish: https://github.com/geut/lerna-travis-demo https://github.com/lerna/lerna/issues/2022
+# USES ENCRYPTED KEYS: https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml
 language: node_js
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
