@@ -72,7 +72,7 @@ export default () => (
         </Highlight>
       </Box>
 
-      <Box>
+      <Box mb="x6">
         <SubsectionTitle>Default Checked</SubsectionTitle>
         <Checkbox labelText="I am a checkbox" defaultChecked="true" />
         <Highlight className="js">
@@ -81,13 +81,17 @@ export default () => (
           }
         </Highlight>
       </Box>
-
-      <Box>
-        <SubsectionTitle>indeterminate</SubsectionTitle>
-        <Checkbox labelText="I am a checkbox" defaultChecked="true" />
+      <Box mb="x6">
+        <SubsectionTitle>Indeterminate</SubsectionTitle>
+        <Checkbox
+          labelText="I am an indeterminate checkbox"
+          checked
+          indeterminate
+          readOnly
+        />
         <Highlight className="js">
           {
-            '<Checkbox id="disabled-checkbox" labelText="I am a checkbox" defaultChecked="true"/>'
+            '<Checkbox labelText="I am an indeterminate checkbox" checked indeterminate />'
           }
         </Highlight>
       </Box>
