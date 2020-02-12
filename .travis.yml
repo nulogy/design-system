@@ -1,23 +1,39 @@
+# Follows the documented approach for releasing to npm https://docs.travis-ci.com/user/deployment/npm/
+# with modifications made for using lerna publish: https://github.com/geut/lerna-travis-demo https://github.com/lerna/lerna/issues/2022
+# USES ENCRYPTED KEYS: https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml
 language: node_js
-
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
-
 before_script:
   - yarn build
-
+after_success:
+  - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+  - git checkout master
+  - git pull origin master
 branches:
   only:
     - master
-
 cache:
   yarn: true
   directories:
     - node_modules
-    - ~/.cache
-
+    - "~/.cache"
 addons:
   apt:
     packages:
       - libgconf-2-4
+deploy:
+  provider: script
+  script: yarn lerna publish --yes
+  email: marianneb@nulogy.com
+  api_key:
+    secure: GNzx5lHBiTpffGshQPbZPhKu7FNdtAzL+DjDHW5bh0sp+KYs4DA+oB8dTHsCGJxv6sJb5zYo0m1jGus9xq7PftqlvJXEexOVaTfslM1zNVnw8RZXdGO1M9IKWsZyh81C1QrG6pz778EUscMV+XV6lB96CqsEXRKvTWa4awDeYq4A4kklr2/FymaFefXXAAP7bRkpCCVqWJq7tMXGStTUktdHe6l1jDNRqWISO6McQTpD9bFwAGJCP5BiH8+Ofahave+c1DCjZ0kU/TZipYQ7FOu8QSrb+ECR4XPPxfppTjgdPAiGPu8vpUT2lwFQEMwTCTVQLVCQHfWSjeBdh1B2IHfwFMeOQRHxSx9PUQ+xjdVrilC/SzCPX+yk/qS9JLuFnAUlEvisyt+fw3H7CQ0qSU9Hcozq8B3EZ5MU5gQ3ZchGu65lAaeJz4XxbHmHTXwyEvk19HrsDdUD5h7QMRWPZb2cIsWoGkgBY0ILayU/vPioTMeiG1ZviBc0XDpPuLhqtCSwaiKPNhIOZhhiMhUl/HW/ePKV/4ZLV76+clYT+MWA2ojneCdem/YAYhuntNHmo15zjSUmfHq1z5Iz9RNzAxkPXM5Z9BioseAB3Y88fld3a9gr+w8Ukfogc9GS9ZDsj4WDwVF8kB4hkdrG8NvfU//KmmfAbe+YXFtskBqtleo=
+  skip_cleanup: true
+  keep_history: true
+  on:
+    repo: nulogy/design-system
+    branch: master
+env:
+  global:
+    secure: kJqdGYbWbN7Mxugs5Kj/GpSfJl0fYlDUOsYnEdt0u23dVKq48U95AJqMsd038F+ljmKsMwGTXXiZhANI3M0RcTzoSc+4bUGzLchw+xqBxvhwD3OIXYyVLD7Z5rdI3JQf2o4+doT1chMDRj74508bW+Y+2XWOgw5ZIyCBFbE42dL1vIePbKoK9ZBQMZe5jfWBh6oD+zvK7dzHPhEgTrDWxpzYmUZuhu9ikidPPzGim9fum8aASMNssuIsrWm5Yg1ojb61ejl9M5t0LPIDw0aGPkreMIkehXMwZ8v4CId9hSh9pHzlL6Yt0ppkLimRdsJQ/ik6Fy2srsdi100G/Tbou6lz7HKYZDwCKa9Ed15A6Kdt7L9B0cD38kUCA4wkhopbnpOzZKzZb13dYe/8G6CfK16rGFoQV25s0i+I0y17hUeX9afVH31IGb4tuaPyC9mAf+AtvyP93zUTzWtgoi1UYFBGeU69FRuDUk6NcyEyrHnr87KNsAziEh25uDWdFAU5WoPzB2prpcNyg95xswtYNCMDXcjp9uLaS25f60KRhKPs5PDfHDU4yFUcluRdYd9AWa86fCNrpFgB4h4xjeAv80aS8+TaIgwU+VNvCshANUTBT+xqq4LvYTd9ntrPEhcC3Ijo95+n7TyPdsvcp0XPyOmcEqpGW1y+wkQdfrgAZ/k=
