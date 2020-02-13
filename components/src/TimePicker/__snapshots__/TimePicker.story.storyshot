@@ -1385,6 +1385,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -1859,6 +1860,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -2741,6 +2743,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -3674,6 +3677,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -4589,6 +4593,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -5529,6 +5534,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -6457,6 +6463,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -6995,6 +7002,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -8000,6 +8008,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -8923,6 +8932,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -8976,18 +8986,12 @@ exports[`Storyshots TimePicker default 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -9857,6 +9861,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -10770,6 +10775,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -12308,6 +12314,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -12782,6 +12789,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -13669,6 +13677,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -14605,6 +14614,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -15523,6 +15533,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -16466,6 +16477,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -17401,6 +17413,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -17953,6 +17966,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -18961,6 +18975,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -19887,6 +19902,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -19943,18 +19959,12 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -20824,6 +20834,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -21740,6 +21751,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -23273,6 +23285,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -23747,6 +23760,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -24629,6 +24643,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -25562,6 +25577,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -26477,6 +26493,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -27417,6 +27434,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -28345,6 +28363,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -28883,6 +28902,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -29888,6 +29908,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -30811,6 +30832,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -30864,18 +30886,12 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -31745,6 +31761,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -32658,6 +32675,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -33811,6 +33829,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -34093,6 +34112,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -34596,6 +34616,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -35148,6 +35169,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -35682,6 +35704,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -36241,6 +36264,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -36792,6 +36816,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -37152,6 +37177,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -37776,6 +37802,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -38318,6 +38345,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -38374,18 +38402,12 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -38871,6 +38893,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -39403,6 +39426,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -40937,6 +40961,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -41411,6 +41436,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -42293,6 +42319,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -43226,6 +43253,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -44141,6 +44169,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -45081,6 +45110,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -46009,6 +46039,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -46547,6 +46578,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -47552,6 +47584,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -48475,6 +48508,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -48528,18 +48562,12 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -49409,6 +49437,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -50322,6 +50351,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -51636,6 +51666,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                 Object {
                                   "control": [Function],
                                   "dropdownIndicator": [Function],
+                                  "indicatorSeparator": [Function],
                                   "input": [Function],
                                   "menu": [Function],
                                   "menuList": [Function],
@@ -51922,6 +51953,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                   Object {
                                     "control": [Function],
                                     "dropdownIndicator": [Function],
+                                    "indicatorSeparator": [Function],
                                     "input": [Function],
                                     "menu": [Function],
                                     "menuList": [Function],
@@ -52428,6 +52460,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                       "styles": Object {
                                         "control": [Function],
                                         "dropdownIndicator": [Function],
+                                        "indicatorSeparator": [Function],
                                         "input": [Function],
                                         "menu": [Function],
                                         "menuList": [Function],
@@ -52985,6 +53018,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                             "styles": Object {
                                               "control": [Function],
                                               "dropdownIndicator": [Function],
+                                              "indicatorSeparator": [Function],
                                               "input": [Function],
                                               "menu": [Function],
                                               "menuList": [Function],
@@ -53524,6 +53558,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                               "styles": Object {
                                                 "control": [Function],
                                                 "dropdownIndicator": [Function],
+                                                "indicatorSeparator": [Function],
                                                 "input": [Function],
                                                 "menu": [Function],
                                                 "menuList": [Function],
@@ -54088,6 +54123,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -54640,6 +54676,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -54990,6 +55027,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -55619,6 +55657,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                     "styles": Object {
                                                       "control": [Function],
                                                       "dropdownIndicator": [Function],
+                                                      "indicatorSeparator": [Function],
                                                       "input": [Function],
                                                       "menu": [Function],
                                                       "menuList": [Function],
@@ -56166,6 +56205,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -56219,18 +56259,12 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                         className=""
                                                         css={
                                                           Object {
-                                                            "alignSelf": "stretch",
-                                                            "backgroundColor": "hsl(0, 0%, 80%)",
-                                                            "boxSizing": "border-box",
-                                                            "label": "indicatorSeparator",
-                                                            "marginBottom": 8,
-                                                            "marginTop": 8,
-                                                            "width": 1,
+                                                            "display": "none",
                                                           }
                                                         }
                                                       >
                                                         <span
-                                                          className=" css-1okebmr-indicatorSeparator"
+                                                          className=" css-1emuzj5-IndicatorSeparator"
                                                         />
                                                       </EmotionCssPropInternal>
                                                     </IndicatorSeparator>
@@ -56724,6 +56758,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                           "styles": Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -57261,6 +57296,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],

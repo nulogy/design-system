@@ -22519,6 +22519,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                       Object {
                                                         "control": [Function],
                                                         "dropdownIndicator": [Function],
+                                                        "indicatorSeparator": [Function],
                                                         "input": [Function],
                                                         "menu": [Function],
                                                         "menuList": [Function],
@@ -22596,6 +22597,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         Object {
                                                           "control": [Function],
                                                           "dropdownIndicator": [Function],
+                                                          "indicatorSeparator": [Function],
                                                           "input": [Function],
                                                           "menu": [Function],
                                                           "menuList": [Function],
@@ -22705,6 +22707,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                             "styles": Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -22865,6 +22868,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                   "styles": Object {
                                                                     "control": [Function],
                                                                     "dropdownIndicator": [Function],
+                                                                    "indicatorSeparator": [Function],
                                                                     "input": [Function],
                                                                     "menu": [Function],
                                                                     "menuList": [Function],
@@ -23007,6 +23011,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                     "styles": Object {
                                                                       "control": [Function],
                                                                       "dropdownIndicator": [Function],
+                                                                      "indicatorSeparator": [Function],
                                                                       "input": [Function],
                                                                       "menu": [Function],
                                                                       "menuList": [Function],
@@ -23174,6 +23179,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                           "styles": Object {
                                                                             "control": [Function],
                                                                             "dropdownIndicator": [Function],
+                                                                            "indicatorSeparator": [Function],
                                                                             "input": [Function],
                                                                             "menu": [Function],
                                                                             "menuList": [Function],
@@ -23329,6 +23335,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                 "styles": Object {
                                                                                   "control": [Function],
                                                                                   "dropdownIndicator": [Function],
+                                                                                  "indicatorSeparator": [Function],
                                                                                   "input": [Function],
                                                                                   "menu": [Function],
                                                                                   "menuList": [Function],
@@ -23470,6 +23477,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                 "styles": Object {
                                                                                   "control": [Function],
                                                                                   "dropdownIndicator": [Function],
+                                                                                  "indicatorSeparator": [Function],
                                                                                   "input": [Function],
                                                                                   "menu": [Function],
                                                                                   "menuList": [Function],
@@ -23702,6 +23710,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                           "styles": Object {
                                                                             "control": [Function],
                                                                             "dropdownIndicator": [Function],
+                                                                            "indicatorSeparator": [Function],
                                                                             "input": [Function],
                                                                             "menu": [Function],
                                                                             "menuList": [Function],
@@ -23852,6 +23861,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                 "styles": Object {
                                                                                   "control": [Function],
                                                                                   "dropdownIndicator": [Function],
+                                                                                  "indicatorSeparator": [Function],
                                                                                   "input": [Function],
                                                                                   "menu": [Function],
                                                                                   "menuList": [Function],
@@ -23905,18 +23915,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                               className=""
                                                                               css={
                                                                                 Object {
-                                                                                  "alignSelf": "stretch",
-                                                                                  "backgroundColor": "hsl(0, 0%, 80%)",
-                                                                                  "boxSizing": "border-box",
-                                                                                  "label": "indicatorSeparator",
-                                                                                  "marginBottom": 8,
-                                                                                  "marginTop": 8,
-                                                                                  "width": 1,
+                                                                                  "display": "none",
                                                                                 }
                                                                               }
                                                                             >
                                                                               <span
-                                                                                className=" css-1okebmr-indicatorSeparator"
+                                                                                className=" css-1emuzj5-IndicatorSeparator"
                                                                               />
                                                                             </EmotionCssPropInternal>
                                                                           </IndicatorSeparator>
@@ -24013,6 +24017,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                 "styles": Object {
                                                                                   "control": [Function],
                                                                                   "dropdownIndicator": [Function],
+                                                                                  "indicatorSeparator": [Function],
                                                                                   "input": [Function],
                                                                                   "menu": [Function],
                                                                                   "menuList": [Function],
