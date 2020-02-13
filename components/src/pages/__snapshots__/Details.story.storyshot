@@ -23915,12 +23915,19 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                               className=""
                                                                               css={
                                                                                 Object {
+                                                                                  "alignSelf": "stretch",
+                                                                                  "backgroundColor": "hsl(0, 0%, 80%)",
+                                                                                  "boxSizing": "border-box",
                                                                                   "display": "none",
+                                                                                  "label": "indicatorSeparator",
+                                                                                  "marginBottom": 8,
+                                                                                  "marginTop": 8,
+                                                                                  "width": 1,
                                                                                 }
                                                                               }
                                                                             >
                                                                               <span
-                                                                                className=" css-1emuzj5-IndicatorSeparator"
+                                                                                className=" css-43ykx9-indicatorSeparator"
                                                                               />
                                                                             </EmotionCssPropInternal>
                                                                           </IndicatorSeparator>
