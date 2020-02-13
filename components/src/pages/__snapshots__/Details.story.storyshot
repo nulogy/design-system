@@ -26860,10 +26860,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             </RequirementText>
                                           </legend>
                                           <Styled(BaseCheckbox)
+                                            disabled={false}
                                             error={false}
+                                            id={null}
                                             key=".0"
                                             labelText="Christiaan Oostenbrug"
                                             name="linelead"
+                                            required={false}
                                             value="christiaan"
                                           >
                                             <BaseCheckbox
@@ -27004,7 +27007,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         disabled={false}
                                                       >
                                                         <div
-                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                           disabled={false}
                                                         />
                                                       </Checkbox__VisualCheckbox>
@@ -27033,10 +27036,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                             </BaseCheckbox>
                                           </Styled(BaseCheckbox)>
                                           <Styled(BaseCheckbox)
+                                            disabled={false}
                                             error={false}
+                                            id={null}
                                             key=".1"
                                             labelText="Matt Dunn"
                                             name="linelead"
+                                            required={false}
                                             value="matt"
                                           >
                                             <BaseCheckbox
@@ -27177,7 +27183,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         disabled={false}
                                                       >
                                                         <div
-                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                           disabled={false}
                                                         />
                                                       </Checkbox__VisualCheckbox>
@@ -27208,9 +27214,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                           <Styled(BaseCheckbox)
                                             disabled={true}
                                             error={false}
+                                            id={null}
                                             key=".2"
                                             labelText="Clemens Park"
                                             name="linelead"
+                                            required={false}
                                             value="clemens"
                                           >
                                             <BaseCheckbox
@@ -27351,7 +27359,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         disabled={true}
                                                       >
                                                         <div
-                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                           disabled={true}
                                                         />
                                                       </Checkbox__VisualCheckbox>
@@ -27382,9 +27390,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                           <Styled(BaseCheckbox)
                                             disabled={true}
                                             error={false}
+                                            id={null}
                                             key=".3"
                                             labelText="Nikola Pejcic"
                                             name="linelead"
+                                            required={false}
                                             value="nikola"
                                           >
                                             <BaseCheckbox
@@ -27525,7 +27535,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                         disabled={true}
                                                       >
                                                         <div
-                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                          className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                           disabled={true}
                                                         />
                                                       </Checkbox__VisualCheckbox>

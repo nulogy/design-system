@@ -719,7 +719,11 @@ exports[`Storyshots Table with everything 1`] = `
                                 <Styled(BaseCheckbox)
                                   aria-label="toggle all row selections"
                                   checked={false}
+                                  disabled={false}
+                                  error={false}
+                                  id={null}
                                   onChange={[Function]}
+                                  required={false}
                                 >
                                   <BaseCheckbox
                                     aria-label="toggle all row selections"
@@ -862,7 +866,7 @@ exports[`Storyshots Table with everything 1`] = `
                                             >
                                               <div
                                                 checked={false}
-                                                className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                 disabled={false}
                                               />
                                             </Checkbox__VisualCheckbox>
@@ -1377,7 +1381,11 @@ exports[`Storyshots Table with everything 1`] = `
                                       <Styled(BaseCheckbox)
                                         aria-label="toggle row selection"
                                         checked={false}
+                                        disabled={false}
+                                        error={false}
+                                        id={null}
                                         onChange={[Function]}
+                                        required={false}
                                       >
                                         <BaseCheckbox
                                           aria-label="toggle row selection"
@@ -1520,7 +1528,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   >
                                                     <div
                                                       checked={false}
-                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                       disabled={false}
                                                     />
                                                   </Checkbox__VisualCheckbox>
@@ -2441,7 +2449,11 @@ exports[`Storyshots Table with everything 1`] = `
                                       <Styled(BaseCheckbox)
                                         aria-label="toggle row selection"
                                         checked={false}
+                                        disabled={false}
+                                        error={false}
+                                        id={null}
                                         onChange={[Function]}
+                                        required={false}
                                       >
                                         <BaseCheckbox
                                           aria-label="toggle row selection"
@@ -2584,7 +2596,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   >
                                                     <div
                                                       checked={false}
-                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                       disabled={false}
                                                     />
                                                   </Checkbox__VisualCheckbox>
@@ -3440,7 +3452,11 @@ exports[`Storyshots Table with everything 1`] = `
                                       <Styled(BaseCheckbox)
                                         aria-label="toggle row selection"
                                         checked={false}
+                                        disabled={false}
+                                        error={false}
+                                        id={null}
                                         onChange={[Function]}
+                                        required={false}
                                       >
                                         <BaseCheckbox
                                           aria-label="toggle row selection"
@@ -3583,7 +3599,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   >
                                                     <div
                                                       checked={false}
-                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                       disabled={false}
                                                     />
                                                   </Checkbox__VisualCheckbox>
@@ -4442,7 +4458,11 @@ exports[`Storyshots Table with everything 1`] = `
                                       <Styled(BaseCheckbox)
                                         aria-label="toggle row selection"
                                         checked={false}
+                                        disabled={false}
+                                        error={false}
+                                        id={null}
                                         onChange={[Function]}
+                                        required={false}
                                       >
                                         <BaseCheckbox
                                           aria-label="toggle row selection"
@@ -4585,7 +4605,7 @@ exports[`Storyshots Table with everything 1`] = `
                                                   >
                                                     <div
                                                       checked={false}
-                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                                      className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                                       disabled={false}
                                                     />
                                                   </Checkbox__VisualCheckbox>

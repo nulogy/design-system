@@ -10725,8 +10725,12 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                           </Styled(Box)>
                         </ForwardRef>
                         <Styled(BaseCheckbox)
+                          disabled={false}
+                          error={false}
+                          id={null}
                           labelText="Remember me"
                           mb="x3"
+                          required={false}
                         >
                           <BaseCheckbox
                             className="sc-fzXfNc dmqVOD"
@@ -10862,7 +10866,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                                       disabled={false}
                                     >
                                       <div
-                                        className="Checkbox__VisualCheckbox-sc-1nm58f1-0 hqCscW"
+                                        className="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                                         disabled={false}
                                       />
                                     </Checkbox__VisualCheckbox>
