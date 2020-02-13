@@ -5457,7 +5457,7 @@ exports[`Storyshots Modal with select 1`] = `
                                           class=" css-1g48xl4-IndicatorsContainer"
                                         >
                                           <span
-                                            class=" css-1okebmr-indicatorSeparator"
+                                            class=" css-43ykx9-indicatorSeparator"
                                           />
                                           <div
                                             aria-hidden="true"
@@ -6130,6 +6130,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                           Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -6227,6 +6228,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                             Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -6376,6 +6378,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                 "styles": Object {
                                                                   "control": [Function],
                                                                   "dropdownIndicator": [Function],
+                                                                  "indicatorSeparator": [Function],
                                                                   "input": [Function],
                                                                   "menu": [Function],
                                                                   "menuList": [Function],
@@ -6576,6 +6579,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                       "styles": Object {
                                                                         "control": [Function],
                                                                         "dropdownIndicator": [Function],
+                                                                        "indicatorSeparator": [Function],
                                                                         "input": [Function],
                                                                         "menu": [Function],
                                                                         "menuList": [Function],
@@ -6758,6 +6762,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                         "styles": Object {
                                                                           "control": [Function],
                                                                           "dropdownIndicator": [Function],
+                                                                          "indicatorSeparator": [Function],
                                                                           "input": [Function],
                                                                           "menu": [Function],
                                                                           "menuList": [Function],
@@ -6965,6 +6970,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                               "styles": Object {
                                                                                 "control": [Function],
                                                                                 "dropdownIndicator": [Function],
+                                                                                "indicatorSeparator": [Function],
                                                                                 "input": [Function],
                                                                                 "menu": [Function],
                                                                                 "menuList": [Function],
@@ -7160,6 +7166,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -7321,6 +7328,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -7593,6 +7601,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                               "styles": Object {
                                                                                 "control": [Function],
                                                                                 "dropdownIndicator": [Function],
+                                                                                "indicatorSeparator": [Function],
                                                                                 "input": [Function],
                                                                                 "menu": [Function],
                                                                                 "menuList": [Function],
@@ -7783,6 +7792,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -7839,6 +7849,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                       "alignSelf": "stretch",
                                                                                       "backgroundColor": "hsl(0, 0%, 80%)",
                                                                                       "boxSizing": "border-box",
+                                                                                      "display": "none",
                                                                                       "label": "indicatorSeparator",
                                                                                       "marginBottom": 8,
                                                                                       "marginTop": 8,
@@ -7847,7 +7858,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                   }
                                                                                 >
                                                                                   <span
-                                                                                    className=" css-1okebmr-indicatorSeparator"
+                                                                                    className=" css-43ykx9-indicatorSeparator"
                                                                                   />
                                                                                 </EmotionCssPropInternal>
                                                                               </IndicatorSeparator>
@@ -7984,6 +7995,7 @@ exports[`Storyshots Modal with select 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -8928,7 +8940,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                           class=" css-1g48xl4-IndicatorsContainer"
                                         >
                                           <span
-                                            class=" css-1okebmr-indicatorSeparator"
+                                            class=" css-43ykx9-indicatorSeparator"
                                           />
                                           <div
                                             aria-hidden="true"
@@ -12601,6 +12613,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                           Object {
                                                             "control": [Function],
                                                             "dropdownIndicator": [Function],
+                                                            "indicatorSeparator": [Function],
                                                             "input": [Function],
                                                             "menu": [Function],
                                                             "menuList": [Function],
@@ -12698,6 +12711,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                             Object {
                                                               "control": [Function],
                                                               "dropdownIndicator": [Function],
+                                                              "indicatorSeparator": [Function],
                                                               "input": [Function],
                                                               "menu": [Function],
                                                               "menuList": [Function],
@@ -12847,6 +12861,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                 "styles": Object {
                                                                   "control": [Function],
                                                                   "dropdownIndicator": [Function],
+                                                                  "indicatorSeparator": [Function],
                                                                   "input": [Function],
                                                                   "menu": [Function],
                                                                   "menuList": [Function],
@@ -13047,6 +13062,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                       "styles": Object {
                                                                         "control": [Function],
                                                                         "dropdownIndicator": [Function],
+                                                                        "indicatorSeparator": [Function],
                                                                         "input": [Function],
                                                                         "menu": [Function],
                                                                         "menuList": [Function],
@@ -13229,6 +13245,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                         "styles": Object {
                                                                           "control": [Function],
                                                                           "dropdownIndicator": [Function],
+                                                                          "indicatorSeparator": [Function],
                                                                           "input": [Function],
                                                                           "menu": [Function],
                                                                           "menuList": [Function],
@@ -13436,6 +13453,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               "styles": Object {
                                                                                 "control": [Function],
                                                                                 "dropdownIndicator": [Function],
+                                                                                "indicatorSeparator": [Function],
                                                                                 "input": [Function],
                                                                                 "menu": [Function],
                                                                                 "menuList": [Function],
@@ -13631,6 +13649,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -13792,6 +13811,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -14064,6 +14084,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                               "styles": Object {
                                                                                 "control": [Function],
                                                                                 "dropdownIndicator": [Function],
+                                                                                "indicatorSeparator": [Function],
                                                                                 "input": [Function],
                                                                                 "menu": [Function],
                                                                                 "menuList": [Function],
@@ -14254,6 +14275,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
@@ -14310,6 +14332,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                       "alignSelf": "stretch",
                                                                                       "backgroundColor": "hsl(0, 0%, 80%)",
                                                                                       "boxSizing": "border-box",
+                                                                                      "display": "none",
                                                                                       "label": "indicatorSeparator",
                                                                                       "marginBottom": 8,
                                                                                       "marginTop": 8,
@@ -14318,7 +14341,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                   }
                                                                                 >
                                                                                   <span
-                                                                                    className=" css-1okebmr-indicatorSeparator"
+                                                                                    className=" css-43ykx9-indicatorSeparator"
                                                                                   />
                                                                                 </EmotionCssPropInternal>
                                                                               </IndicatorSeparator>
@@ -14455,6 +14478,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
                                                                                     "styles": Object {
                                                                                       "control": [Function],
                                                                                       "dropdownIndicator": [Function],
+                                                                                      "indicatorSeparator": [Function],
                                                                                       "input": [Function],
                                                                                       "menu": [Function],
                                                                                       "menuList": [Function],
