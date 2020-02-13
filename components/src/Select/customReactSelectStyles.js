@@ -127,6 +127,9 @@ const customStyles = error => {
       color: theme.colors.black,
       fontSize: "14px"
     }),
+    indicatorSeparator: () => ({
+      display: "none"
+    }),
     placeholder: (provided, state) => ({
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
     })
