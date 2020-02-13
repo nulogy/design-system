@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.1](https://github.com/nulogy/design-system/compare/v0.24.0...v0.24.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* remove divider in Select ([#548](https://github.com/nulogy/design-system/issues/548)) ([eb65408](https://github.com/nulogy/design-system/commit/eb65408))
+
+
+
+
+
 # [0.24.0](https://github.com/nulogy/design-system/compare/v0.23.0...v0.24.0) (2020-02-13)
 
 
