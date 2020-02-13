@@ -23,6 +23,9 @@ addons:
   apt:
     packages:
       - libgconf-2-4
+before_deploy:
+  # create npmrc to store the token to pass npm auth
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null
 deploy:
   provider: script
   script: yarn lerna publish --yes
