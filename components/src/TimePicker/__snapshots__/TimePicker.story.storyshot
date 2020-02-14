@@ -4672,7 +4672,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-1lwloy1-Control"
+                                              className=" css-1liu8yu-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -6522,7 +6522,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className=" css-1pcc2mb-Placeholder"
+                                                          className=" css-1yhx6vz-Placeholder"
                                                         >
                                                           HH:MM
                                                         </div>
@@ -7059,7 +7059,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -8071,7 +8071,7 @@ exports[`Storyshots TimePicker default 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}
@@ -15622,7 +15622,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-1lwloy1-Control"
+                                              className=" css-1liu8yu-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -18033,7 +18033,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -19048,7 +19048,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}
@@ -26586,7 +26586,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-1lwloy1-Control"
+                                              className=" css-1liu8yu-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -28436,7 +28436,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className=" css-1pcc2mb-Placeholder"
+                                                          className=" css-1yhx6vz-Placeholder"
                                                         >
                                                           --:--
                                                         </div>
@@ -28973,7 +28973,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -29985,7 +29985,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}
@@ -35807,7 +35807,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-1lwloy1-Control"
+                                              className=" css-1liu8yu-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -37258,7 +37258,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -37889,7 +37889,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}
@@ -44276,7 +44276,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-17egs3x-Control"
+                                              className=" css-1j4q2ea-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -46126,7 +46126,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className=" css-1pcc2mb-Placeholder"
+                                                          className=" css-1yhx6vz-Placeholder"
                                                         >
                                                           HH:MM
                                                         </div>
@@ -46663,7 +46663,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -47675,7 +47675,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}
@@ -53672,7 +53672,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                             onTouchEnd={[Function]}
                                           >
                                             <div
-                                              className=" css-1lwloy1-Control"
+                                              className=" css-1liu8yu-Control"
                                               onMouseDown={[Function]}
                                               onTouchEnd={[Function]}
                                             >
@@ -54770,7 +54770,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className=" css-1pcc2mb-Placeholder"
+                                                          className=" css-1yhx6vz-Placeholder"
                                                         >
                                                           HH:MM
                                                         </div>
@@ -55119,7 +55119,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                         css={Object {}}
                                                       >
                                                         <div
-                                                          className="css-zz0hea-Input"
+                                                          className="css-17yls17-Input"
                                                         >
                                                           <AutosizeInput
                                                             aria-autocomplete="list"
@@ -55755,7 +55755,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                                                   }
                                                 >
                                                   <div
-                                                    className=" css-1g48xl4-IndicatorsContainer"
+                                                    className=" css-1hb7zxy-IndicatorsContainer"
                                                   >
                                                     <IndicatorSeparator
                                                       clearValue={[Function]}

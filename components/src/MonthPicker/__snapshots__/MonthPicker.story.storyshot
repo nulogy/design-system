@@ -418,19 +418,16 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                       onInputChange={[Function]}
                     />
                   }
-                  customTimeInput={null}
                   dateFormat="MMM yyyy"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
                   dropdownMode="scroll"
-                  enableTabLoop={true}
                   excludeDates={
                     Array [
                       2019-07-10T05:00:00.000Z,
                     ]
                   }
-                  excludeScrollbar={true}
                   inlineFocusSelectedMonth={false}
                   locale="pl"
                   monthsShown={1}
@@ -483,7 +480,6 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                   withPortal={false}
                 >
                   <t
-                    enableTabLoop={true}
                     hidePopper={true}
                     popperComponent={null}
                     popperModifiers={
@@ -495,7 +491,6 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                         },
                       }
                     }
-                    popperOnKeyDown={[Function]}
                     popperPlacement="bottom-start"
                     popperProps={Object {}}
                     targetComponent={
@@ -1286,19 +1281,16 @@ exports[`Storyshots MonthPicker default 1`] = `
                       onInputChange={[Function]}
                     />
                   }
-                  customTimeInput={null}
                   dateFormat="MMM yyyy"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
                   dropdownMode="scroll"
-                  enableTabLoop={true}
                   excludeDates={
                     Array [
                       2019-01-01T05:00:00.000Z,
                     ]
                   }
-                  excludeScrollbar={true}
                   inlineFocusSelectedMonth={false}
                   monthsShown={1}
                   nextMonthButtonLabel="Next Month"
@@ -1350,7 +1342,6 @@ exports[`Storyshots MonthPicker default 1`] = `
                   withPortal={false}
                 >
                   <t
-                    enableTabLoop={true}
                     hidePopper={true}
                     popperComponent={null}
                     popperModifiers={
@@ -1362,7 +1353,6 @@ exports[`Storyshots MonthPicker default 1`] = `
                         },
                       }
                     }
-                    popperOnKeyDown={[Function]}
                     popperPlacement="bottom-start"
                     popperProps={Object {}}
                     targetComponent={
@@ -2271,19 +2261,16 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                       onInputChange={[Function]}
                     />
                   }
-                  customTimeInput={null}
                   dateFormat="MMM yyyy"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
                   dropdownMode="scroll"
-                  enableTabLoop={true}
                   excludeDates={
                     Array [
                       2019-07-10T05:00:00.000Z,
                     ]
                   }
-                  excludeScrollbar={true}
                   inlineFocusSelectedMonth={false}
                   maxDate={2019-12-01T05:00:00.000Z}
                   minDate={2019-07-01T05:00:00.000Z}
@@ -2337,7 +2324,6 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                   withPortal={false}
                 >
                   <t
-                    enableTabLoop={true}
                     hidePopper={true}
                     popperComponent={null}
                     popperModifiers={
@@ -2349,7 +2335,6 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                         },
                       }
                     }
-                    popperOnKeyDown={[Function]}
                     popperPlacement="bottom-start"
                     popperProps={Object {}}
                     targetComponent={
@@ -3256,19 +3241,16 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                       onInputChange={[Function]}
                     />
                   }
-                  customTimeInput={null}
                   dateFormat="MMM yyyy"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
                   dropdownMode="scroll"
-                  enableTabLoop={true}
                   excludeDates={
                     Array [
                       undefined,
                     ]
                   }
-                  excludeScrollbar={true}
                   inlineFocusSelectedMonth={false}
                   monthsShown={1}
                   nextMonthButtonLabel="Next Month"
@@ -3318,7 +3300,6 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                   withPortal={false}
                 >
                   <t
-                    enableTabLoop={true}
                     hidePopper={true}
                     popperComponent={null}
                     popperModifiers={
@@ -3330,7 +3311,6 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                         },
                       }
                     }
-                    popperOnKeyDown={[Function]}
                     popperPlacement="bottom-start"
                     popperProps={Object {}}
                     targetComponent={
@@ -4237,19 +4217,16 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                       onInputChange={[Function]}
                     />
                   }
-                  customTimeInput={null}
                   dateFormat="yyyy MMM"
                   dateFormatCalendar="LLLL yyyy"
                   disabled={false}
                   disabledKeyboardNavigation={true}
                   dropdownMode="scroll"
-                  enableTabLoop={true}
                   excludeDates={
                     Array [
                       undefined,
                     ]
                   }
-                  excludeScrollbar={true}
                   inlineFocusSelectedMonth={false}
                   monthsShown={1}
                   nextMonthButtonLabel="Next Month"
@@ -4299,7 +4276,6 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                   withPortal={false}
                 >
                   <t
-                    enableTabLoop={true}
                     hidePopper={true}
                     popperComponent={null}
                     popperModifiers={
@@ -4311,7 +4287,6 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                         },
                       }
                     }
-                    popperOnKeyDown={[Function]}
                     popperPlacement="bottom-start"
                     popperProps={Object {}}
                     targetComponent={
