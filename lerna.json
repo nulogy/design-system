@@ -11,7 +11,9 @@
         "**/__snapshots__/**",
         "**/**.spec.js",
         "**/**.story.js",
-        "*.md"
+        "*.md",
+        "./docs/*",
+        "./components-e2e/*"
       ],
       "conventionalCommits": true,
       "allowBranch": ["master"]
