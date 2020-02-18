@@ -7,7 +7,12 @@
       "createRelease": "github"
     },
     "publish": {
-      "ignoreChanges": ["**/__snapshots__/**", "**/**.spec.js", "*.md"],
+      "ignoreChanges": [
+        "**/__snapshots__/**",
+        "**/**.spec.js",
+        "**/**.story.js",
+        "*.md"
+      ],
       "conventionalCommits": true,
       "allowBranch": ["master"]
     }
