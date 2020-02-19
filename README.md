@@ -29,10 +29,6 @@ Designers can use the Nulogy Design System in Sketch by downloading the [Sketch 
 - [@nulogy/css on npm](https://www.npmjs.com/package/@nulogy/css)
 - [@nulogy/tokens on npm](https://www.npmjs.com/package/@nulogy/tokens)
 
-## Requests
-
-If you would like to request a specific component please fill out the trello card template on the [Component Request Board](https://trello.com/b/t2zYuzI7/nds-component-requests)
-
 ## Contributing
 
 - [CONTRIBUTING.md](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md)
