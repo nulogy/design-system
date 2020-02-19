@@ -139,31 +139,36 @@ const Popper = React.forwardRef(
         <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
           {({ ref, style, placement, arrowProps }) => (
             <>
-              {React.cloneElement(
-                children,
-                {
-                  open: isOpen,
-                  ref,
-                  id,
-                  position: style,
-                  dataPlacement: placement,
-                  className: `${children.props.className || ""} nds-popper-pop-up`,
-                  ...eventHandlers
-                },
-                [
-                  ...renderInnerChildren(),
-                  showArrow && (
-                    <PopperArrow
-                      key="popper-arrow"
-                      {...arrowProps}
-                      placement={placement}
-                      ref={arrowProps.ref}
-                      backgroundColor={backgroundColor}
-                      borderColor={borderColor}
-                    />
-                  )
-                ]
-              )}
+              {isOpen &&
+                React.cloneElement(
+                  children,
+                  {
+                    open: isOpen,
+                    ref,
+                    id,
+                    style: {
+                      position: "absolute",
+                      ...(isOpen ? style : null),
+                      top: isOpen ? 0 : "-9999px"
+                    },
+                    dataPlacement: placement,
+                    className: `${children.props.className || ""} nds-popper-pop-up`,
+                    ...eventHandlers
+                  },
+                  [
+                    ...renderInnerChildren(),
+                    showArrow && (
+                      <PopperArrow
+                        key="popper-arrow"
+                        {...arrowProps}
+                        placement={placement}
+                        ref={arrowProps.ref}
+                        backgroundColor={backgroundColor}
+                        borderColor={borderColor}
+                      />
+                    )
+                  ]
+                )}
             </>
           )}
         </ReactPopperPopUp>

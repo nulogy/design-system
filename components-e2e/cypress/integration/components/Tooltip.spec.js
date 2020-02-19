@@ -25,7 +25,7 @@ describe("Tooltip", () => {
       cy.get('[aria-haspopup="true"]').trigger("mouseover");
       cy.get('[aria-haspopup="true"]').trigger("mouseout");
       cy.wait(2000);
-      cy.isNotInViewport('[role="tooltip"]');
+      cy.get('[role="tooltip"]').should("not.exist");
     });
   });
 });

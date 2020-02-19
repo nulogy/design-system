@@ -30,9 +30,7 @@ const getMenuMargin = (placement, showArrow) => {
   }
 };
 
-const DropdownMenuContainer = styled(Box)(({ open, position, placement, showArrow, backgroundColor }) => ({
-  ...position,
-  top: open ? 0 : "-9999px",
+const DropdownMenuContainer = styled(Box)(({ dataPlacement, showArrow, backgroundColor }) => ({
   backgroundColor: getThemeColor(backgroundColor),
   borderRadius: theme.radii.medium,
   borderTop: `1px solid  ${getThemeColor(backgroundColor)}`,
@@ -40,7 +38,7 @@ const DropdownMenuContainer = styled(Box)(({ open, position, placement, showArro
   boxShadow: theme.shadows.small,
   padding: "7px 0",
   zIndex: "100",
-  ...getMenuMargin(placement, showArrow)
+  ...getMenuMargin(dataPlacement, showArrow)
 }));
 
 DropdownMenuContainer.propTypes = {
