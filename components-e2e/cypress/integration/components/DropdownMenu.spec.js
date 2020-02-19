@@ -1,7 +1,7 @@
 describe("DropdownMenu", () => {
   const getOpenButton = () => cy.get("button[aria-label='Open']");
   const getCloseButton = () => cy.get("button[aria-label='Close']");
-  const getTrigger = () => cy.get("button[class*='IconicButton'");
+  const getTrigger = () => cy.get("button[class*='IconicButton']");
   const getDropdownLink = () => cy.contains("Dropdown Link");
   const getCustomTrigger = () => cy.contains("Custom Trigger");
   const getDropdownContainer = () => cy.get(".nds-popper-pop-up");
@@ -12,7 +12,7 @@ describe("DropdownMenu", () => {
   };
   const assertDropdownIsClosed = () => {
     getOpenButton().should("exist");
-    cy.isNotInViewport(".nds-popper-pop-up");
+    cy.get(".nds-popper-pop-up").should("not.exist");
   };
 
   describe("default", () => {
@@ -46,9 +46,10 @@ describe("DropdownMenu", () => {
     });
 
     it("scrolls through the list on tabpress", () => {
-      getTrigger()
-        .click()
-        .tab();
+      getTrigger().click();
+      // Add wait for dropdown to render
+      cy.wait(500);
+      getTrigger().tab();
 
       getDropdownLink().should("be.focused");
     });
