@@ -1,12 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button } from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button, Card, Text, Box } from "../index";
 
 const customColors = {
   color: "white",
   hoverColor: "white",
   bgHoverColor: "black"
 };
+const cards = Array.from({ length: 100 }, (v, k) => k + 1);
 
 storiesOf("DropdownMenu", module)
   .add("DropdownMenu", () => (
@@ -59,4 +60,17 @@ storiesOf("DropdownMenu", module)
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     </DropdownMenu>
+  ))
+  .add("Many dropdowns", () => (
+    <>
+      {cards.map(i => (
+        <Card key={i}>
+          <Text>Card {i}</Text>
+          <DropdownMenu>
+            <DropdownLink href="/">Dropdown Link</DropdownLink>
+            <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+          </DropdownMenu>
+        </Card>
+      ))}
+    </>
   ));
