@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button, Card, Text, Box } from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button, Card, Text } from "../index";
 
 const customColors = {
   color: "white",
