@@ -31,7 +31,7 @@ Designers can use the Nulogy Design System in Sketch by downloading the [Sketch 
 
 ## Requests
 
-- https://trello.com/b/t2zYuzI7/nds-component-requests
+If you would like to request a specific component please fill out the trello card template on the [Component Request Board](https://trello.com/b/t2zYuzI7/nds-component-requests)
 
 ## Contributing
 
