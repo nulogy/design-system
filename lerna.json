@@ -7,10 +7,16 @@
       "createRelease": "github"
     },
     "publish": {
+      "ignoreChanges": [
+        "**/__snapshots__/**",
+        "**/**.spec.js",
+        "**/**.story.js",
+        "*.md",
+        "./docs/*",
+        "./components-e2e/*"
+      ],
       "conventionalCommits": true,
-      "allowBranch": [
-        "master"
-      ]
+      "allowBranch": ["master"]
     }
   }
 }
